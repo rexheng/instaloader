@@ -224,3 +224,18 @@ It refuses files larger than 95 MB and refuses to run from another branch. It ne
 | Stale-looking output | `render.sh --no-cache ...` |
 | Whisper fails in review_kit | Groq unreachable: re-run later or use `--no-whisper` |
 | Audio slightly late or early vs a cue | Use the `offset=` on `until`/`wait_until` (typically -0.1 to -0.2 s) |
+
+## 11. Lessons from critic rounds (read before scripting and before every revision)
+
+Round-1 critics scored first drafts 6.0–8.4. These recurring defects cost the most points; check each one explicitly.
+
+1. **On-screen arithmetic must be exactly right as displayed.** If the screen shows `0.39 × 576 ≈ 227`, that is a factual error (it is 224.6) → cap 6. Show the precision you computed with, or round the result from the displayed inputs. Recompute every displayed number in `facts.md`, including simulated values (rerun sims with a fixed seed and enough draws; quote "about" when noisy).
+2. **Picture and numbers must agree at every moment.** No readout that says r = −0.06 while the ellipse shows r ≈ 0.85; no "N = 1,000,000" header over 400-dart histograms. Live labels need correct singular/plural ("1 target").
+3. **Build key equations from the picture.** Every term of the central formula arrives by `TransformFromCopy` from the object it measures. A symbol-only morph (e.g. mean(k²) → μ² + σ²) with no geometric reason behind it reads as "announced", not derived.
+4. **Respect reading time (BAR §5).** Results and equations hold ≥ 2 s + 0.4 s per term before they move. Each state of a flipbook or sequence must stay fully formed ≥ 1.5 s.
+5. **No hard resets or whole-scene dissolves.** Transform persistent objects into the next beat. Never leave a near-empty frame (a lone axis, a blank background) while narration speaks.
+6. **Check overlaps during motion, not just at rest.** Keyframes show settled layouts only. Extract frames every 0.25 s across each transform (`ffmpeg -ss T -t 2 -vf fps=4`) and look for labels struck through by moving lines, labels flying through formulas, and Indicate/scale effects that grow into neighbours.
+7. **Show the payoff, don't assert it.** If the narration says "only X passes the test", the animation must show the others failing.
+8. **Be original against the reference channels.** Don't reuse a famous video's exact example and numbers (e.g. Veritasium's "Bayesian Trap" 0.1% / 99% setup). Choose a fresh concrete case, a different real dataset, or a new angle on it.
+9. **Specific stakes and landings.** "Every survey leans on this" is generic. Name a real data-science or social-science consequence (study, dataset, decision) and land the closing line on the cold-open image.
+10. **Name the mechanism.** When a step depends on a causal or intuitive link (e.g. "more friends → exposed earlier"), say it in one sentence; don't leave the viewer to bridge it.
