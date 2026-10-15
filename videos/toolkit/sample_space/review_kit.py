@@ -388,6 +388,64 @@ def load_narration(path: Path) -> tuple[str, list[dict]]:
     return text, []
 
 
+def load_layout_audit(path: Path | None) -> dict | None:
+    """narration.json["layout_audit"], written by NarratedScene's overlap audit."""
+    if not path or path.suffix != ".json" or not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text()).get("layout_audit")
+    except (OSError, ValueError):
+        return None
+
+
+AUDIT_ORDER = {"overlap": 0, "safe-area": 1, "caption-zone": 2, "clearance": 3}
+
+
+def audit_section(audit: dict, top: int = 10) -> list[str]:
+    """report.md lines: issue counts plus the top issues (overlaps first, longest held)."""
+    c = audit.get("counts", {})
+    issues = audit.get("issues", [])
+    allowed = audit.get("allowed", [])
+    R = ["## Layout audit (automatic overlap check, BAR §5)\n"]
+    R.append(f"{audit.get('count', len(issues))} issue(s): {c.get('overlap', 0)} overlapping/touching, "
+             f"{c.get('clearance', 0)} closer than {audit.get('clearance', 0.15):g}, "
+             f"{c.get('safe-area', 0)} outside the safe area, {c.get('caption-zone', 0)} in the caption zone; "
+             f"{len(allowed)} allowed by the producer. {audit.get('checks', 0)} frames checked "
+             f"(after every animation and hold).\n")
+    if issues:
+        R.append("`overlap`, `safe-area` and `caption-zone` are cap-7 defects (text overlapping another "
+                 "element or leaving the frame); `clearance` is cramped spacing under BAR's 0.15 (Visual "
+                 "points). Fix each, or declare a deliberate one in scene.py with "
+                 "`self.allow_overlap(a, b, reason=...)`.\n")
+        R.append(f"| # | time | held | kind | text | other / detail | gap |\n|---|---|---|---|---|---|---|")
+        def rank(d):
+            k = AUDIT_ORDER.get(d["kind"], 9)
+            if d["kind"] == "clearance":       # tightest first, held ones before momentary
+                return (k, d.get("held", 0) < 1.0, round(d.get("gap", 0), 2), -d.get("held", 0), d["start"])
+            return (k, -d.get("held", 0), d.get("gap", 0), 0, d["start"])
+        ranked = sorted(issues, key=rank)
+        for n, d in enumerate(ranked[:top], 1):
+            span = fmt_t(d["start"]) if d.get("held", 0) < 0.05 else f"{fmt_t(d['start'])}–{fmt_t(d['end'])}"
+            held = f"{d['held']:.1f}s" if d.get("held", 0) >= 0.05 else "in motion"
+            pos = d.get("text_pos") or ["?", "?"]
+            txt = f"{d['text']} @({pos[0]}, {pos[1]})".replace("|", "\\|")
+            if d["kind"] in ("overlap", "clearance"):
+                op = d.get("other_pos") or ["?", "?"]
+                other = f"{d.get('other', '')} @({op[0]}, {op[1]})"
+                gap = f"{d.get('gap', 0):+.2f}"
+            else:
+                other, gap = d.get("detail", ""), ""
+            R.append(f"| {n} | {span} | {held} | {d['kind']} | {txt} | {other.replace('|', chr(92) + '|')} | {gap} |")
+        if len(issues) > top:
+            R.append(f"\n…and {len(issues) - top} more in narration.json → layout_audit.issues.")
+    if allowed:
+        R.append("\nAllowed by the producer (check that each reason holds):\n")
+        R.extend(f"- [{fmt_t(d['start'])}–{fmt_t(d['end'])}] {d['text']} vs {d.get('other', '')}: "
+                 f"“{d.get('allowed')}”" for d in allowed[:top])
+    R.append("")
+    return R
+
+
 def diff_narration(script: str, words: list[dict]) -> tuple[float, list[str], int]:
     ref = normalize_words(script)
     hyp, hyp_t = [], []
@@ -616,6 +674,19 @@ def main(argv=None):
                         f"WER {m['wer']:.0%} — dropped/garbled words or mispronunciations (see diff)")
     if scene_warnings:
         flags.append(f"{len(scene_warnings)} scene warning(s) from NarratedScene (timing/layout)")
+    layout = load_layout_audit(narration_path)
+    if layout is not None:
+        lc = layout.get("counts", {})
+        m["layout_audit"] = {"count": layout.get("count", 0), "counts": lc,
+                             "allowed": len(layout.get("allowed", [])), "checks": layout.get("checks")}
+        if layout.get("count"):
+            flags.append(f"layout audit: {layout['count']} issue(s) — {lc.get('overlap', 0)} overlapping, "
+                         f"{lc.get('clearance', 0)} < {layout.get('clearance', 0.15):g} apart, "
+                         f"{lc.get('safe-area', 0)} outside the safe area, {lc.get('caption-zone', 0)} in "
+                         f"the caption zone (see 'Layout audit')")
+            if any(d["kind"] in ("overlap", "safe-area") and d.get("held", 0) >= 0.5
+                   for d in layout.get("issues", [])):
+                caps.append("cap 7 (text overlapping/overflowing, layout audit)")
 
     # ---- images
     sheets = contact_sheets(video, out / "sheets", duration, words, a.interval, fps=fps,
@@ -673,6 +744,11 @@ def main(argv=None):
     if scene_warnings:
         R.append("## Scene warnings (NarratedScene timing / layout self-check)\n")
         R.append("\n".join(f"- [{fmt_t(w['t'])}] {w['msg']}" for w in scene_warnings) + "\n")
+    if layout is not None:
+        R.extend(audit_section(layout))
+    elif narration_path and narration_path.suffix == ".json":
+        R.append("## Layout audit\n\nNot in narration.json: this video was rendered before the overlap "
+                 "audit existed. Re-render with render.sh to get it.\n")
     R.append("## Contact sheets (one frame every %gs; words spoken ±%gs under each)\n" % (a.interval, a.interval / 2))
     for t0, t1, p in sheets:
         R.append(f"- `{p.relative_to(out)}` — {fmt_t(t0)}–{fmt_t(t1)}")

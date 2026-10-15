@@ -17,6 +17,12 @@ Each beat's audio is added with ``self.add_sound`` at the beat's start time.  At
 end of the render the scene writes ``narration.json`` + ``narration.txt`` (beat start
 times, word timings, timing/layout warnings) into $SS_NARRATION_DIR (set by render.sh
 to the output directory) or next to the scene file.
+
+After every play() and wait()/hold() the overlap audit (sample_space.overlap_audit) checks
+the frame for text closer than 0.15 units to anything else or outside the safe area; the
+findings are merged into time ranges, printed as ``[sample_space] WARNING overlap ...``
+and stored in narration.json["layout_audit"].  Opt out with ``LAYOUT_AUDIT = False``;
+exempt a deliberate overlap with ``self.allow_overlap(a, b, reason="...")``.
 """
 from __future__ import annotations
 
@@ -25,13 +31,13 @@ import inspect
 import json
 import logging
 import os
+import time as _time
 from pathlib import Path
 
 import numpy as np
-from manim import (FadeIn, FadeOut, MathTex, MovingCameraScene, Scene, SingleStringMathTex,
-                   Tex, Text, MarkupText, Paragraph, DecimalNumber, VMobject, config)
+from manim import FadeIn, FadeOut, MovingCameraScene, Scene, Wait, config
 
-from . import style
+from . import overlap_audit, style
 from .voice import Speech, synthesize
 
 log = logging.getLogger("sample_space")
@@ -42,7 +48,7 @@ if not log.handlers:
     log.setLevel(logging.INFO)
     log.propagate = False
 
-TEXT_TYPES = (Text, MarkupText, Paragraph, MathTex, Tex, SingleStringMathTex, DecimalNumber)
+TEXT_TYPES = overlap_audit.TEXT_TYPES
 
 
 class Beat:
@@ -129,7 +135,9 @@ class NarrationMixin:
     PRONUNCIATIONS: dict[str, str] = {}   # per-episode extra overrides
     BEAT_GAP = 0.35                       # breathing room after each beat (s)
     STATIC_WARN = 4.0                     # BAR: a fully static frame lasts <= 4 s
-    CHECK_LAYOUT = True
+    LAYOUT_AUDIT = True                   # overlap audit after every play()/wait() (BAR §5)
+    LAYOUT_CLEARANCE = style.MIN_GAP      # 0.15 units between text and anything else
+    CHECK_LAYOUT = True                   # legacy switch; False also disables the audit
 
     # ------------------------------------------------------------------ lifecycle
     def setup(self):
@@ -139,9 +147,14 @@ class NarrationMixin:
         self._beats: list[dict] = []
         self._warnings: list[dict] = []
         self._beat_index = 0
+        self._audit = overlap_audit.AuditLog()
+        self._audit_allowed: list[tuple] = []
+        self._audit_excluded: list[tuple] = []
+        self._wall_start = _time.perf_counter()
 
     def tear_down(self):
         try:
+            self._finish_audit()
             self._write_narration()
         finally:
             super().tear_down()
@@ -167,6 +180,9 @@ class NarrationMixin:
         # video time is always a whole number of frames; drop accumulated float noise so
         # timings (and therefore cache hashes) are identical between cold and cached runs
         r.time = round(r.time * self.camera.frame_rate) / self.camera.frame_rate
+        if self.LAYOUT_AUDIT and self.CHECK_LAYOUT:
+            held = len(args) == 1 and isinstance(args[0], Wait)
+            self._run_audit(t0, r.time, held)
 
     def add_audio(self, path: str, gain: float | None = None) -> None:
         """Cache-safe add_sound (use it for sound effects too).
@@ -236,9 +252,7 @@ class NarrationMixin:
                       for w in speech.words],
             "wav": speech.wav_path,
         })
-        if self.CHECK_LAYOUT:
-            for issue in layout_issues(self):
-                self._warn(self.time, f"beat {idx} layout: {issue}")
+        # layout: the overlap audit runs after every play()/wait() (see _run_audit)
 
     def say(self, text: str, **kw) -> Beat:
         """Narrate over whatever is on screen (no new animation)."""
@@ -268,10 +282,84 @@ class NarrationMixin:
         self.hold(hold)
 
     def check_layout(self, tag: str = "manual") -> list[str]:
+        """Audit the current frame now and warn about every issue (also runs by itself
+        after each play()/wait() unless LAYOUT_AUDIT = False)."""
         issues = layout_issues(self)
         for i in issues:
             self._warn(self.time, f"{tag} layout: {i}")
         return issues
+
+    def allow_overlap(self, a, b=None, reason: str = ""):
+        """Declare a deliberate overlap so the audit stops reporting it.
+            self.allow_overlap(label, axis_line, reason="label marks the crossing point")
+        With one argument, `a` (and everything in it) is left out of the audit entirely.
+        Give a reason: it is stored in narration.json for the critics."""
+        if b is None:
+            allow_overlap(a)
+            self._audit_excluded.append((a, reason or "excluded (no reason given)"))
+            return a
+        self._audit_allowed.append((a, b, reason or "allowed (no reason given)"))
+        return a
+
+    # ------------------------------------------------------------------ overlap audit
+    def _run_audit(self, t0: float, t1: float, held: bool) -> None:
+        """Audit the frame after an animation (never raises into the render)."""
+        log_ = getattr(self, "_audit", None)
+        if log_ is None:
+            return
+        c0 = _time.perf_counter()
+        try:
+            issues = overlap_audit.audit(self.mobjects, camera=getattr(self.renderer, "camera", None),
+                                         allowed_pairs=self._audit_allowed,
+                                         clearance=self.LAYOUT_CLEARANCE)
+            log_.update(issues, t0, t1, held)
+        except Exception as e:                       # the audit must never break a render
+            log_.errors += 1
+            if log_.errors == 1:
+                log.debug("overlap audit failed at t=%.2fs (%s: %s); skipping that check",
+                          t1, type(e).__name__, e)
+        finally:
+            log_.seconds += _time.perf_counter() - c0
+
+    def _finish_audit(self) -> None:
+        log_ = getattr(self, "_audit", None)
+        if log_ is None:
+            return
+        try:
+            log_.close_all(self.time)
+            found = log_.findings()
+            live = [f for f in found if not f.issue.allowed]
+            # every overlap / frame problem; the 25 tightest clearance findings
+            ranked = overlap_audit.rank_findings(live)
+            severe = [f for f in ranked if f.issue.kind != "clearance"]
+            tight = [f for f in ranked if f.issue.kind == "clearance"][:25]
+            sev = overlap_audit.SEVERITY
+            for f in sorted(severe + tight, key=lambda f: (sev.get(f.issue.kind, 9), f.start)):
+                log.warning("%s %s", f.issue.kind, overlap_audit.finding_line(f))
+            more = len(live) - len(severe) - len(tight)
+            if more:
+                log.warning("clearance ... and %d more (smaller or shorter) in narration.json -> "
+                            "layout_audit", more)
+            self._audit_summary = self._audit_report(found)
+        except Exception as e:
+            log.debug("overlap audit summary failed (%s: %s)", type(e).__name__, e)
+            self._audit_summary = None
+
+    def _audit_report(self, found) -> dict:
+        log_ = self._audit
+        live = [f for f in found if not f.issue.allowed]
+        counts = {k: sum(1 for f in live if f.issue.kind == k)
+                  for k in ("overlap", "clearance", "safe-area", "caption-zone")}
+        wall = _time.perf_counter() - getattr(self, "_wall_start", _time.perf_counter())
+        return {
+            "clearance": self.LAYOUT_CLEARANCE, "checks": log_.checks,
+            "audit_seconds": round(log_.seconds, 3), "render_seconds": round(wall, 1),
+            "errors": log_.errors, "count": len(live), "counts": counts,
+            "issues": [overlap_audit.finding_dict(f) for f in live],
+            "allowed": [overlap_audit.finding_dict(f) for f in found if f.issue.allowed],
+            "excluded": [{"mobject": type(m).__name__, "reason": r}
+                         for m, r in getattr(self, "_audit_excluded", [])],
+        }
 
     def _warn(self, t: float, msg: str):
         self._warnings.append({"t": round(t, 2), "msg": msg})
@@ -288,7 +376,9 @@ class NarrationMixin:
             return Path.cwd()
 
     def _write_narration(self):
-        if not getattr(self, "_beats", None) and not getattr(self, "_warnings", None):
+        audit = getattr(self, "_audit_summary", None)
+        if not getattr(self, "_beats", None) and not getattr(self, "_warnings", None) and \
+                not (audit and (audit["issues"] or audit["allowed"] or audit["errors"])):
             return
         out = self._narration_dir()
         out.mkdir(parents=True, exist_ok=True)
@@ -297,6 +387,8 @@ class NarrationMixin:
             "scene": type(self).__name__, "episode": self.EPISODE, "title": self.TITLE,
             "video_duration": round(total, 3), "beats": self._beats, "warnings": self._warnings,
         }
+        if audit is not None:
+            data["layout_audit"] = audit
         (out / "narration.json").write_text(json.dumps(data, ensure_ascii=False, indent=1))
         lines = []
         for b in self._beats:
@@ -308,6 +400,15 @@ class NarrationMixin:
         log.info("narration: %d beats, %d words, %.1fs speech in %.1fs video (%.0f wpm overall), "
                  "%d warnings -> %s", len(self._beats), n_words, speech, total,
                  60 * n_words / max(total, 1e-6), len(self._warnings), out / "narration.json")
+        if audit is not None:
+            c = audit["counts"]
+            log.info("layout audit: %d issue(s) (%d overlap, %d clearance < %.2f, %d safe-area, "
+                     "%d caption-zone; %d allowed) in %d checks%s; audit %.1fs = %.1f%% of %.0fs render",
+                     audit["count"], c["overlap"], c["clearance"], audit["clearance"],
+                     c["safe-area"], c["caption-zone"], len(audit["allowed"]), audit["checks"],
+                     f" ({audit['errors']} skipped after an internal error)" if audit["errors"] else "",
+                     audit["audit_seconds"], 100 * audit["audit_seconds"] / max(audit["render_seconds"], 1e-6),
+                     audit["render_seconds"])
 
 
 class NarratedScene(NarrationMixin, Scene):
@@ -319,85 +420,20 @@ class NarratedMovingCameraScene(NarrationMixin, MovingCameraScene):
 
 
 # ---------------------------------------------------------------------- layout check
-def _self_visible(x) -> bool:
-    try:
-        stroke = x.get_stroke_opacity() if x.get_stroke_width() > 0 else 0.0
-        return len(x.points) > 0 and max(x.get_fill_opacity(), stroke) > 0.05
-    except Exception:
-        return len(getattr(x, "points", ())) > 0
-
-
-def _visible(m: VMobject) -> bool:
-    return any(_self_visible(x) for x in m.get_family())
-
-
-def _collect(mobs, texts, shapes):
-    for m in mobs:
-        if getattr(m, "ss_allow_overlap", False):
-            continue
-        if isinstance(m, TEXT_TYPES):
-            if _visible(m) and m.width > 0 and m.height > 0:
-                texts.append(m)
-            continue
-        if isinstance(m, VMobject) and _self_visible(m):
-            shapes.append(m)
-        _collect(m.submobjects, texts, shapes)
-
-
 def allow_overlap(m):
-    """Exclude a mobject (and its children) from the automatic layout check."""
+    """Leave a mobject (and its children) out of the overlap audit entirely.  Prefer
+    scene.allow_overlap(a, b, reason=...) for one deliberate pair."""
     m.ss_allow_overlap = True
     return m
 
 
-def _name(m) -> str:
-    if isinstance(m, (Text, MarkupText)):
-        return f"Text({getattr(m, 'original_text', m.text)[:30]!r})"
-    if isinstance(m, (MathTex, Tex, SingleStringMathTex)):
-        return f"{type(m).__name__}({getattr(m, 'tex_string', '')[:30]!r})"
-    if isinstance(m, DecimalNumber):
-        return f"DecimalNumber({m.get_value():g})"
-    return type(m).__name__
-
-
-def layout_issues(scene, shrink: float = 0.03) -> list[str]:
-    """Cheap static check of the current frame: text outside the BAR safe area, text
-    overlapping text, and shapes cutting through text.  Bounding-box based, so treat
-    hits as 'look at this frame', not gospel."""
-    texts, shapes = [], []
-    _collect(scene.mobjects, texts, shapes)
-    issues = []
-    boxes = []
-    for t in texts:
-        lo, hi = t.get_corner([-1, -1, 0]), t.get_corner([1, 1, 0])
-        boxes.append((lo, hi))
-        if lo[0] < -style.SAFE_X - 0.02 or hi[0] > style.SAFE_X + 0.02 or \
-                lo[1] < style.SAFE_BOTTOM - 0.02 or hi[1] > style.SAFE_TOP + 0.02:
-            issues.append(f"{_name(t)} outside safe area x[{lo[0]:.2f},{hi[0]:.2f}] "
-                          f"y[{lo[1]:.2f},{hi[1]:.2f}]")
-        elif lo[1] < style.CONTENT_BOTTOM - 0.02 and not getattr(t, "ss_caption_zone", False):
-            issues.append(f"{_name(t)} reaches y={lo[1]:.2f}, below y=-3.2 (caption/player zone; "
-                          f"BAR: nothing essential there)")
-    # text vs text
-    for i in range(len(texts)):
-        for j in range(i + 1, len(texts)):
-            (a0, a1), (b0, b1) = boxes[i], boxes[j]
-            if texts[i] in texts[j].get_family() or texts[j] in texts[i].get_family():
-                continue
-            ox = min(a1[0], b1[0]) - max(a0[0], b0[0])
-            oy = min(a1[1], b1[1]) - max(a0[1], b0[1])
-            if ox > shrink and oy > shrink:
-                issues.append(f"{_name(texts[i])} overlaps {_name(texts[j])}")
-    # shapes through text
-    for t, (lo, hi) in zip(texts, boxes):
-        lo2, hi2 = lo + shrink, hi - shrink
-        fam = set(map(id, t.get_family()))
-        for s in shapes:
-            if id(s) in fam:
-                continue
-            pts = s.points
-            inside = np.all((pts[:, :2] > lo2[:2]) & (pts[:, :2] < hi2[:2]), axis=1)
-            if inside.any():
-                issues.append(f"{type(s).__name__} crosses {_name(t)}")
-                break
-    return issues
+def layout_issues(scene, clearance: float | None = None) -> list[str]:
+    """Overlap audit of the current frame (see sample_space.overlap_audit), as strings:
+    text outside the safe area or in the caption zone, text within `clearance` (0.15) of
+    other text or of any line, curve, dot or shape, text crossed by a panel's outline."""
+    issues = overlap_audit.audit(
+        scene.mobjects, camera=getattr(getattr(scene, "renderer", None), "camera", None),
+        allowed_pairs=getattr(scene, "_audit_allowed", ()),
+        clearance=clearance if clearance is not None else
+        getattr(scene, "LAYOUT_CLEARANCE", style.MIN_GAP))
+    return [f"{i.kind}: {i.describe()}" for i in issues if not i.allowed]

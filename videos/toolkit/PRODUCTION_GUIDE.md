@@ -66,9 +66,9 @@ The scene logs **warnings**, which render.sh prints and stores in `narration.jso
 - an animation reached a cue word more than 0.3 s late (sync);
 - the scene waits on a static frame for more than 4 s;
 - the first beat starts after 1 s;
-- the layout check fails at the end of a beat: text outside x∈[-6.4, 6.4] or y∈[-3.6, 3.6], text below y = -3.2, text overlapping text, or a shape running through text.
+- the **overlap audit** finds text closer than 0.15 to anything, or outside the safe area (after every animation and hold; see §6, "Automatic overlap audit").
 
-Call `self.check_layout()` at any point, and use `allow_overlap(m)` to exempt a deliberate overlap. Every warning is something a critic will also see, so fix them all.
+Call `self.check_layout()` to audit the frame at any point. Every warning is something a critic will also see, so fix them all.
 
 Other members:
 - `NarratedMovingCameraScene` adds camera moves (`self.camera.frame.animate...`).
@@ -160,10 +160,51 @@ For bar charts, pad the x range so the edge bars stay inside the axes, as in `ax
    - `review/keyframes/*.png`: full-resolution frames where each layout settles. Check margins, overlaps, clipping, LaTeX glyphs, label sizes, at most 12 words of prose on screen, and the palette.
 4. Fix, re-render, re-run. Then `publish.sh videos/episodes/NNN-slug`.
 
+### Automatic overlap audit
+
+Critics cap an episode at 7 for a single small overlap, such as a token's digit covering the "e" of a name, or a fraction's "7" crossing the x-axis. The audit runs inside every render, after each `play()` and each `wait()`/`hold()`, so you see these defects before the critics do.
+
+**What it checks.** For every visible text object (Text, each MathTex part, DecimalNumber), it measures real geometry: the text's bounding box against the actual stroke path of everything else (Bezier curves, not bounding boxes):
+- text within 0.15 units of other text, or of any line, curve, arrow, graph edge, ellipse, dot, bar or panel;
+- text outside x∈[-6.4, 6.4], y∈[-3.6, 3.6], or below y = -3.2 (the caption zone).
+
+**What it lets pass.** These cases are reported only if the ink actually touches:
+- a closed shape that fully contains the text, such as a label in its box, a digit in its token or a name inside an ellipse;
+- the text's own small group, such as a fraction bar, a token's square, `underline(m)` or `box(m)`;
+- axis lines and ticks, because tick labels and axis titles hug the axis by design;
+- context fainter than 20 %.
+
+It also skips anything under 5 % opacity, and anything drawn beneath an opaque panel that holds the text (a graph edge running under a token).
+
+**Reading the warnings.** render.sh prints one line per finding, merged into time ranges. The most serious kinds come first:
+```
+[sample_space] WARNING overlap 0:57.2-1:12.9 (held 15.7s) Text 'Sue' @(-4.40, +1.44) vs Square [with MathTex '4'] @(-4.11, +1.20): overlapping by 0.02 (need >= 0.15)
+[sample_space] WARNING overlap 2:41.4-2:50.9 (held 9.5s) MathTex '\frac{2}{7}' @(-1.70, -1.32) vs NumberLine (x-axis) of Axes @(-1.80, -1.62): overlapping by 0.05 (must not touch)
+[sample_space] WARNING clearance 1:42.6-1:48.0 (held 5.4s) MathTex '\text{peak} \approx 11' @(-1.81, -0.90) vs Arrow @(-2.85, -0.81): gap 0.08 (need >= 0.15)
+[sample_space] INFO layout audit: 12 issue(s) (5 overlap, 7 clearance < 0.15, 0 safe-area, 0 caption-zone; 0 allowed) in 164 checks; ...
+```
+- **`overlap`** means the text is touching or crossing something. That is a cap 7 for the critics, so fix every one.
+- **`safe-area`** and **`caption-zone`** mean text that leaves the frame or sits in the player-bar zone. That is also a cap 7.
+- **`clearance`** means the text keeps clear but sits closer than BAR's 0.15. It reads as cramped and costs Visual points.
+- **`@(x, y)`** is each object's centre, in scene units.
+- **`held 9.3s`** is how long the defect stays on screen. **"end of an animation, not held"** means it shows only in the last frame of an animation.
+
+The findings also go to `narration.json` → `layout_audit`, with the kind, time range, both objects and the gap. `review_kit.sh` puts the count and the top 10 in `report.md`, and turns a held overlap into an implied cap 7.
+
+**Fix it or allow it, with a reason.** To fix a finding, use `next_to(..., buff=0.2)`, move the label into free space, or put the label on an opaque `add_background_rectangle(color=BG, opacity=1)`. If an overlap is deliberate, such as a label meant to sit on its line or a strikethrough, declare it:
+```python
+self.allow_overlap(label, axis_line, reason="label marks where the curve crosses")
+self.allow_overlap(watermark, reason="...")   # leave one mobject out of the audit entirely
+```
+- Allowed pairs are listed in `narration.json` and `report.md`, with their reasons, so critics can check them.
+- `LAYOUT_AUDIT = False` turns the audit off for a whole scene, which you should rarely need: the critics' cap still applies.
+- `LAYOUT_CLEARANCE` (default 0.15) changes the threshold. Never set it below the BAR value.
+- The audit costs about 1–2 % of render time: it took 1.0 % on the demo, 1.8 % on episode 60 and 1.0 % on episode 75. It can never stop a render: if it fails internally, that check is skipped and counted in the summary line.
+
 ## 7. Manim pitfalls (CE 0.22)
 
 - **Text overflow:** build prose with `wrap()`, and run `fit()`/`keep_in_safe()` on any group you place near an edge. The layout check catches most cases; the keyframes catch the rest.
-- **Overlapping labels:**
+- **Overlapping labels** (the overlap audit reports them; see §6):
   - Use `next_to(target, dir, buff=0.2)`, never absolute coordinates guessed for a moving object.
   - Re-place labels after `scale`/`shift`.
   - For labels that follow moving things, use `add_updater(lambda m: m.next_to(dot, UP, buff=0.15))`.

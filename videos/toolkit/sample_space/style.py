@@ -293,14 +293,26 @@ def dots(ax: Axes, xs, ys, color=BLUE, radius: float = 0.06, opacity: float = 1.
 # --------------------------------------------------------------------------- emphasis
 def underline(m: VMobject, color=YELLOW, buff: float = 0.1, stroke_width: float = 4) -> Line:
     """Line under m; animate with Create(underline(m))."""
-    return Line(m.get_corner(DOWN + LEFT) + DOWN * buff, m.get_corner(DOWN + RIGHT) + DOWN * buff,
+    line = Line(m.get_corner(DOWN + LEFT) + DOWN * buff, m.get_corner(DOWN + RIGHT) + DOWN * buff,
                 color=color, stroke_width=stroke_width)
+    return _decorates(line, m)
 
 
 def box(m: VMobject, color=YELLOW, buff: float = 0.15, stroke_width: float = 3) -> SurroundingRectangle:
     """Rounded highlight rectangle around m; animate with Create(box(m))."""
-    return SurroundingRectangle(m, color=color, buff=buff, corner_radius=0.08,
+    rect = SurroundingRectangle(m, color=color, buff=buff, corner_radius=0.08,
                                 stroke_width=stroke_width)
+    return _decorates(rect, m)
+
+
+def _decorates(deco: VMobject, target: VMobject) -> VMobject:
+    """Tell the overlap audit that deco belongs to target (held to 'must not touch')."""
+    try:
+        from .overlap_audit import mark_decoration
+        mark_decoration(deco, target)
+    except Exception:
+        pass
+    return deco
 
 
 def flag(m: VMobject, color=YELLOW, run_time: float = 0.8):
