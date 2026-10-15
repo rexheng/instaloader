@@ -239,3 +239,17 @@ Round-1 critics scored first drafts 6.0–8.4. These recurring defects cost the 
 8. **Be original against the reference channels.** Don't reuse a famous video's exact example and numbers (e.g. Veritasium's "Bayesian Trap" 0.1% / 99% setup). Choose a fresh concrete case, a different real dataset, or a new angle on it.
 9. **Specific stakes and landings.** "Every survey leans on this" is generic. Name a real data-science or social-science consequence (study, dataset, decision) and land the closing line on the cold-open image.
 10. **Name the mechanism.** When a step depends on a causal or intuitive link (e.g. "more friends → exposed earlier"), say it in one sentence; don't leave the viewer to bridge it.
+
+## 12. From 8.5 to 9 (every revision)
+
+Polish alone plateaus around 8.4–8.5: critics' dimension scores cluster at 8–8.5. Passing needs a weighted score ≥ 9.0 with no dimension below 7 and no cap, which in practice means most dimensions at 9.
+
+1. **Clear every cap first.** One overlap (cap 7) or one arithmetic slip (cap 6) sinks an otherwise strong episode. Sweep frames during motion as well as at rest (§11.6), and recompute every displayed number.
+2. **Plan the climb.** At the start of a revision, for each dimension any critic scored below 9: quote BAR §3's "9" anchor, say concretely where the episode falls short, and name the specific upgrade. Write this in CHANGELOG.md before editing.
+3. **Upgrades that move a dimension to 9:**
+   - **Hook:** the first frame poses a concrete question with an explicit prediction prompt and a 1.5 s hold, by 0:12. The landing answers exactly that question on the same image.
+   - **Concision:** cut 10–15 % of the words. Every sentence must change what is on screen; delete restatements and throat-clearing.
+   - **Originality:** one image or angle unique to this episode (not the textbook figure) that a viewer would remember and describe to a friend; a fresh real-world anchor.
+   - **Visual:** one focal point per frame; enlarge the subject; dim context rather than adding it; keep ≥ 0.15 units of clearance everywhere.
+   - **Motion:** every move encodes a relation (origin, change, correspondence). Replace fades with transforms that carry meaning.
+   - **Audio:** deictic words land on their highlight (`beat.until`); planned pauses at the prediction and at the reveal.
