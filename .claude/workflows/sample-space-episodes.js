@@ -66,7 +66,7 @@ function producerPrompt(id) {
 You are the writer, director and animator of episode ${id}. Make it a video that a harsh critic holding it to 3Blue1Brown/Veritasium standards scores >= 9.0 under BAR.md. Two independent critics (a motion-design/craft critic and a science+story editor who fact-checks everything) will score it; both must give >= 9.0.
 
 1. Read videos/BAR.md in full, videos/toolkit/PRODUCTION_GUIDE.md in full, videos/toolkit/demo/ (scene + how it uses the API), and the curriculum.json entry with id ${id}. If any episode under videos/episodes/ already has a REVIEW.md marked PASS, skim its script.md and scene.py for the house style (do not copy its content).
-2. Create your episode directory videos/episodes/${pad(id)}-<slug from curriculum>/.
+2. Create your episode directory videos/episodes/${pad(id)}-<slug from curriculum>/. If it already exists with files from an earlier, interrupted attempt (script.md, facts.md, scene.py, final.mp4, review/), do NOT start over: read them, keep what is good, and continue from where it stopped (re-render only if needed).
 3. Research and fact-check first (use web search/fetch tools via ToolSearch, e.g. WebSearch/WebFetch or the Firecrawl tools). Verify the hook, every number, and the real-world anchor (authors, year, venue, finding). Recompute every number you will show with a quick numpy simulation or exact calculation. Write facts.md: each claim, its verification, its source. Never fabricate; if something cannot be verified, cut it or state it with appropriate uncertainty. Mark simulated data as "simulated" on screen.
 4. Write script.md following BAR §6 (cold open by 0:12 that makes the viewer commit to a likely-wrong prediction, naive build, measured failure, the one visual insight with the formula emerging from the picture, a real cited payoff, a landing that re-sees the opening). Target 2:45-3:30 at ~150 wpm (roughly 410-520 words). Include a palette block (colour -> one meaning). Write for the ear: say numbers and symbols the way a person would ("a hundred and twenty", "p less than point oh five"). Zero BAR §4 banned phrases/patterns. Every sentence must point at something visible. One idea only.
 5. Write scene.py (class Episode(NarratedScene)) implementing the script: objects persist and transform (TransformFromCopy / TransformMatchingTex / ValueTracker-driven updates), deictic words ("this bar") land via beat.until("word"), equations built from their visual referents, a planned prediction pause, on-screen citation(s), no prose paragraphs, nothing outside the safe area, nothing overlapping, nothing static > 4 s, nothing too fast to read. Aim for frames people would screenshot to teach from: a clear focal point, generous negative space used deliberately, consistent semantic colour. Avoid generic looks (title card + bullets, icons, decorative motion).
@@ -137,9 +137,13 @@ async function runEpisode(id) {
   const history = []
   for (let round = 1; round <= MAX_ROUNDS; round++) {
     const crits = await parallel(LENSES.map(lens => () =>
-      agent(criticPrompt(id, prod, lens, round), { label: `critic:${id}:${lens}:r${round}`, phase: 'Critique', schema: CRITIC_SCHEMA })))
+      agent(criticPrompt(id, prod, lens, round), { label: `critic:${id}:${lens}:r${round}`, phase: 'Critique', schema: CRITIC_SCHEMA, effort: 'high' })))
     const ok = crits.filter(Boolean)
     const scores = crits.map(c => (c ? c.final : 'n/a'))
+    if (ok.length < LENSES.length) {
+      log(`ep ${id} round ${round}: a critic did not return (likely usage limit) -> interrupted`)
+      return { id, status: 'interrupted', stage: `critique r${round}`, history, dir: prod.episode_dir, title: prod.title }
+    }
     const pass = ok.length === LENSES.length && ok.every(c => c.pass && c.final >= PASS)
     history.push({ round, scores, pass })
     log(`ep ${id} round ${round}: craft ${scores[0]} / substance ${scores[1]} -> ${pass ? 'PASS' : 'revise'}`)
@@ -148,9 +152,9 @@ async function runEpisode(id) {
       return { id, status: 'passed', rounds: round, history, dir: prod.episode_dir, title: prod.title, publish: pub }
     }
     if (round === MAX_ROUNDS) break
-    if (!ok.length) continue
     const next = await agent(revisePrompt(id, prod, ok, round), { label: `revise:${id}:r${round}`, phase: 'Revise', schema: PRODUCER_SCHEMA })
-    if (next) prod = next
+    if (!next) return { id, status: 'interrupted', stage: `revise r${round}`, history, dir: prod.episode_dir, title: prod.title }
+    prod = next
   }
   return { id, status: 'not_passed', history, dir: prod.episode_dir, title: prod.title }
 }
