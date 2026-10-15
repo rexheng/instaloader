@@ -1,2 +1,14 @@
 __pycache__/
 .mypy_cache/
+
+# Sample Space video toolkit (videos/): caches and bulky review images stay local.
+# Committed: scene/script files, final.mp4, narration.*, review/report.md + text evidence.
+videos/**/media/
+videos/**/.cache/
+videos/**/partial_movie_files/
+videos/**/*.onnx
+videos/**/*.pyc
+videos/toolkit/models/
+videos/**/review/sheets/
+videos/**/review/keyframes/
+videos/**/review/_*

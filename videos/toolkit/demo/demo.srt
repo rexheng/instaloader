@@ -1,0 +1,28 @@
+1
+00:00:00,000 --> 00:00:02,250
+Flip a fair coin ten times.
+
+2
+00:00:02,630 --> 00:00:06,750
+How likely is it that exactly seven of them land heads?
+
+3
+00:00:07,100 --> 00:00:12,610
+Ten flips give one thousand and twenty four equally likely sequences.
+
+4
+00:00:12,990 --> 00:00:16,480
+One hundred and twenty of them have seven heads.
+
+5
+00:00:16,833 --> 00:00:23,223
+So the chance is one hundred twenty out of one thousand twenty four, about twelve percent.
+
+6
+00:00:23,566 --> 00:00:28,556
+Do that count for every number of heads, and the chances form this hump.
+
+7
+00:00:28,936 --> 00:00:31,296
+Seven sits on its right shoulder.
+

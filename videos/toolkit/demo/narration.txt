@@ -1,0 +1,7 @@
+[00:00.0] Flip a fair coin ten times. How likely is it that exactly seven of them land heads?
+
+[00:07.1] Ten flips give one thousand and twenty four equally likely sequences. One hundred and twenty of them have seven heads.
+
+[00:16.8] So the chance is one hundred twenty out of one thousand twenty four, about twelve percent.
+
+[00:23.6] Do that count for every number of heads, and the chances form this hump. Seven sits on its right shoulder.

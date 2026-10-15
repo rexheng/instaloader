@@ -1,0 +1,418 @@
+{
+ "scene": "Demo",
+ "episode": 0,
+ "title": "Toolkit demo",
+ "video_duration": 32.933,
+ "beats": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "duration": 6.75,
+   "end": 6.75,
+   "text": "Flip a fair coin ten times. How likely is it that exactly seven of them land heads?",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Flip",
+     "t": 0.08,
+     "end": 0.293
+    },
+    {
+     "w": "a",
+     "t": 0.305,
+     "end": 0.392
+    },
+    {
+     "w": "fair",
+     "t": 0.43,
+     "end": 0.718
+    },
+    {
+     "w": "coin",
+     "t": 0.755,
+     "end": 1.118
+    },
+    {
+     "w": "ten",
+     "t": 1.155,
+     "end": 1.492
+    },
+    {
+     "w": "times",
+     "t": 1.53,
+     "end": 2.25
+    },
+    {
+     "w": "How",
+     "t": 2.685,
+     "end": 2.948
+    },
+    {
+     "w": "likely",
+     "t": 2.985,
+     "end": 3.498
+    },
+    {
+     "w": "is",
+     "t": 3.535,
+     "end": 3.71
+    },
+    {
+     "w": "it",
+     "t": 3.76,
+     "end": 4.123
+    },
+    {
+     "w": "that",
+     "t": 4.16,
+     "end": 4.285
+    },
+    {
+     "w": "exactly",
+     "t": 4.31,
+     "end": 5.072
+    },
+    {
+     "w": "seven",
+     "t": 5.135,
+     "end": 5.472
+    },
+    {
+     "w": "of",
+     "t": 5.485,
+     "end": 5.547
+    },
+    {
+     "w": "them",
+     "t": 5.56,
+     "end": 5.748
+    },
+    {
+     "w": "land",
+     "t": 5.785,
+     "end": 6.123
+    },
+    {
+     "w": "heads",
+     "t": 6.16,
+     "end": 6.75
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f9/f91dbe66e1c6c39e74d4bb8a.wav"
+  },
+  {
+   "index": 1,
+   "start": 7.1,
+   "duration": 9.38,
+   "end": 16.48,
+   "text": "Ten flips give one thousand and twenty four equally likely sequences. One hundred and twenty of them have seven heads.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Ten",
+     "t": 7.125,
+     "end": 7.463
+    },
+    {
+     "w": "flips",
+     "t": 7.5,
+     "end": 7.938
+    },
+    {
+     "w": "give",
+     "t": 7.975,
+     "end": 8.25
+    },
+    {
+     "w": "one",
+     "t": 8.3,
+     "end": 8.613
+    },
+    {
+     "w": "thousand",
+     "t": 8.65,
+     "end": 9.225
+    },
+    {
+     "w": "and",
+     "t": 9.25,
+     "end": 9.362
+    },
+    {
+     "w": "twenty",
+     "t": 9.4,
+     "end": 9.75
+    },
+    {
+     "w": "four",
+     "t": 9.8,
+     "end": 10.55
+    },
+    {
+     "w": "equally",
+     "t": 10.625,
+     "end": 11.138
+    },
+    {
+     "w": "likely",
+     "t": 11.175,
+     "end": 11.612
+    },
+    {
+     "w": "sequences",
+     "t": 11.65,
+     "end": 12.61
+    },
+    {
+     "w": "One",
+     "t": 13.06,
+     "end": 13.397
+    },
+    {
+     "w": "hundred",
+     "t": 13.435,
+     "end": 14.222
+    },
+    {
+     "w": "and",
+     "t": 14.285,
+     "end": 14.397
+    },
+    {
+     "w": "twenty",
+     "t": 14.435,
+     "end": 14.747
+    },
+    {
+     "w": "of",
+     "t": 14.76,
+     "end": 14.822
+    },
+    {
+     "w": "them",
+     "t": 14.835,
+     "end": 15.072
+    },
+    {
+     "w": "have",
+     "t": 15.11,
+     "end": 15.385
+    },
+    {
+     "w": "seven",
+     "t": 15.435,
+     "end": 15.847
+    },
+    {
+     "w": "heads",
+     "t": 15.885,
+     "end": 16.48
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/74/74d56e39c0f72919bed0b0df.wav"
+  },
+  {
+   "index": 2,
+   "start": 16.833,
+   "duration": 6.39,
+   "end": 23.223,
+   "text": "So the chance is one hundred twenty out of one thousand twenty four, about twelve percent.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "So",
+     "t": 16.898,
+     "end": 17.073
+    },
+    {
+     "w": "the",
+     "t": 17.098,
+     "end": 17.223
+    },
+    {
+     "w": "chance",
+     "t": 17.273,
+     "end": 17.761
+    },
+    {
+     "w": "is",
+     "t": 17.798,
+     "end": 17.985
+    },
+    {
+     "w": "one",
+     "t": 18.023,
+     "end": 18.198
+    },
+    {
+     "w": "hundred",
+     "t": 18.223,
+     "end": 18.61
+    },
+    {
+     "w": "twenty",
+     "t": 18.648,
+     "end": 19.01
+    },
+    {
+     "w": "out",
+     "t": 19.048,
+     "end": 19.298
+    },
+    {
+     "w": "of",
+     "t": 19.323,
+     "end": 19.498
+    },
+    {
+     "w": "one",
+     "t": 19.548,
+     "end": 19.861
+    },
+    {
+     "w": "thousand",
+     "t": 19.898,
+     "end": 20.373
+    },
+    {
+     "w": "twenty",
+     "t": 20.398,
+     "end": 20.748
+    },
+    {
+     "w": "four",
+     "t": 20.798,
+     "end": 21.473
+    },
+    {
+     "w": "about",
+     "t": 21.673,
+     "end": 22.036
+    },
+    {
+     "w": "twelve",
+     "t": 22.073,
+     "end": 22.486
+    },
+    {
+     "w": "percent",
+     "t": 22.523,
+     "end": 23.223
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/bb/bb0e5f492e83428ca2a44154.wav"
+  },
+  {
+   "index": 3,
+   "start": 23.567,
+   "duration": 7.73,
+   "end": 31.297,
+   "text": "Do that count for every number of heads, and the chances form this hump. Seven sits on its right shoulder.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Do",
+     "t": 23.632,
+     "end": 23.794
+    },
+    {
+     "w": "that",
+     "t": 23.832,
+     "end": 24.144
+    },
+    {
+     "w": "count",
+     "t": 24.182,
+     "end": 24.519
+    },
+    {
+     "w": "for",
+     "t": 24.557,
+     "end": 24.732
+    },
+    {
+     "w": "every",
+     "t": 24.782,
+     "end": 25.132
+    },
+    {
+     "w": "number",
+     "t": 25.157,
+     "end": 25.369
+    },
+    {
+     "w": "of",
+     "t": 25.382,
+     "end": 25.469
+    },
+    {
+     "w": "heads",
+     "t": 25.507,
+     "end": 26.282
+    },
+    {
+     "w": "and",
+     "t": 26.457,
+     "end": 26.545
+    },
+    {
+     "w": "the",
+     "t": 26.557,
+     "end": 26.645
+    },
+    {
+     "w": "chances",
+     "t": 26.682,
+     "end": 27.357
+    },
+    {
+     "w": "form",
+     "t": 27.407,
+     "end": 27.757
+    },
+    {
+     "w": "this",
+     "t": 27.782,
+     "end": 28.02
+    },
+    {
+     "w": "hump",
+     "t": 28.057,
+     "end": 28.557
+    },
+    {
+     "w": "Seven",
+     "t": 29.042,
+     "end": 29.655
+    },
+    {
+     "w": "sits",
+     "t": 29.717,
+     "end": 29.979
+    },
+    {
+     "w": "on",
+     "t": 29.992,
+     "end": 30.079
+    },
+    {
+     "w": "its",
+     "t": 30.092,
+     "end": 30.255
+    },
+    {
+     "w": "right",
+     "t": 30.292,
+     "end": 30.579
+    },
+    {
+     "w": "shoulder",
+     "t": 30.617,
+     "end": 31.297
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/79/79374fb76df9dfb7f2e327d5.wav"
+  }
+ ],
+ "warnings": []
+}

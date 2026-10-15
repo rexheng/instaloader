@@ -1,0 +1,84 @@
+{
+ "file": "/home/user/instaloader/videos/toolkit/demo/demo.mp4",
+ "duration_s": 32.933,
+ "width": 1920,
+ "height": 1080,
+ "fps": 30.0,
+ "video_codec": "h264",
+ "pix_fmt": "yuv420p",
+ "audio_codec": "aac",
+ "audio_rate": 48000,
+ "size_mb": 1.23,
+ "integrated_lufs": -14.0,
+ "lra_lu": 1.8,
+ "true_peak_dbtp": -2.3,
+ "leading_silence_s": 0.0,
+ "trailing_silence_s": 1.73,
+ "longest_internal_silence_s": 0.51,
+ "silences_over_1_5s": [],
+ "frames": 988,
+ "longest_static_s": 2.87,
+ "static_stretches_over_3s": [],
+ "black_frame_runs": [],
+ "blank_runs_over_0_5s": [],
+ "background_luma": 22.01013888888889,
+ "transcript_words": 76,
+ "first_word_s": 0.1,
+ "last_word_s": 31.68,
+ "wpm_speech": 144.4,
+ "wpm_overall": 138.5,
+ "wpm_excluding_all_pauses": 168.0,
+ "narration_file": "/home/user/instaloader/videos/toolkit/demo/narration.json",
+ "wer": 0.0143,
+ "narration_words": 70,
+ "banned_phrase_hits": 0,
+ "slop_hits": [],
+ "contact_sheets": [
+  "sheets/sheet_01.png",
+  "sheets/sheet_02.png"
+ ],
+ "keyframes": [
+  {
+   "t": 4.37,
+   "file": "keyframes/kf_01_00-04.4.png"
+  },
+  {
+   "t": 7.93,
+   "file": "keyframes/kf_02_00-07.9.png"
+  },
+  {
+   "t": 12.53,
+   "file": "keyframes/kf_03_00-12.5.png"
+  },
+  {
+   "t": 16.47,
+   "file": "keyframes/kf_04_00-16.5.png"
+  },
+  {
+   "t": 21.27,
+   "file": "keyframes/kf_05_00-21.3.png"
+  },
+  {
+   "t": 23.3,
+   "file": "keyframes/kf_06_00-23.3.png"
+  },
+  {
+   "t": 27.03,
+   "file": "keyframes/kf_07_00-27.0.png"
+  },
+  {
+   "t": 31.23,
+   "file": "keyframes/kf_08_00-31.2.png"
+  },
+  {
+   "t": 32.9,
+   "file": "keyframes/kf_09_00-32.9.png"
+  }
+ ],
+ "flags": [
+  "runtime: 0:32.9 outside 2:30–4:00"
+ ],
+ "implied_caps": [
+  "cap 7 (runtime)"
+ ]
+}

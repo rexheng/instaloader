@@ -1,0 +1,4 @@
+WER 1.4% over 70 script words (numbers spelled out, 'and' ignored)
+script: /home/user/instaloader/videos/toolkit/demo/narration.json
+
+[0:29.0] insert   script: '∅'                                      heard: 's'

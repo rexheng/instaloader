@@ -1,0 +1,520 @@
+{
+ "task": "transcribe",
+ "language": "English",
+ "duration": 32.938686464,
+ "text": " Flip a fair coin 10 times. How likely is it that exactly seven of them land heads? 10 flips give 1,024 equally likely sequences. 100 and 20 of them have seven heads. So the chance is 120 out of 1,024, about 12%. Do that count for every number of heads and the chances form this hump. S7 sits on its right shoulder.",
+ "words": [
+  {
+   "word": "Flip",
+   "start": 0.1,
+   "end": 0.26
+  },
+  {
+   "word": "a",
+   "start": 0.26,
+   "end": 0.5
+  },
+  {
+   "word": "fair",
+   "start": 0.5,
+   "end": 0.62
+  },
+  {
+   "word": "coin",
+   "start": 0.62,
+   "end": 1.06
+  },
+  {
+   "word": "10",
+   "start": 1.06,
+   "end": 1.42
+  },
+  {
+   "word": "times.",
+   "start": 1.42,
+   "end": 2
+  },
+  {
+   "word": "How",
+   "start": 2.16,
+   "end": 2.9
+  },
+  {
+   "word": "likely",
+   "start": 2.9,
+   "end": 3.36
+  },
+  {
+   "word": "is",
+   "start": 3.36,
+   "end": 3.68
+  },
+  {
+   "word": "it",
+   "start": 3.68,
+   "end": 3.92
+  },
+  {
+   "word": "that",
+   "start": 3.92,
+   "end": 4.28
+  },
+  {
+   "word": "exactly",
+   "start": 4.28,
+   "end": 4.9
+  },
+  {
+   "word": "seven",
+   "start": 4.9,
+   "end": 5.42
+  },
+  {
+   "word": "of",
+   "start": 5.42,
+   "end": 5.58
+  },
+  {
+   "word": "them",
+   "start": 5.58,
+   "end": 5.7
+  },
+  {
+   "word": "land",
+   "start": 5.7,
+   "end": 6.08
+  },
+  {
+   "word": "heads?",
+   "start": 6.08,
+   "end": 6.68
+  },
+  {
+   "word": "10",
+   "start": 7.06,
+   "end": 7.42
+  },
+  {
+   "word": "flips",
+   "start": 7.42,
+   "end": 7.86
+  },
+  {
+   "word": "give",
+   "start": 7.86,
+   "end": 8.2
+  },
+  {
+   "word": "1,024",
+   "start": 8.2,
+   "end": 9.88
+  },
+  {
+   "word": "equally",
+   "start": 9.88,
+   "end": 11
+  },
+  {
+   "word": "likely",
+   "start": 11,
+   "end": 11.5
+  },
+  {
+   "word": "sequences.",
+   "start": 11.5,
+   "end": 12.6
+  },
+  {
+   "word": "100",
+   "start": 13.06,
+   "end": 13.64
+  },
+  {
+   "word": "and",
+   "start": 13.64,
+   "end": 14.42
+  },
+  {
+   "word": "20",
+   "start": 14.42,
+   "end": 14.66
+  },
+  {
+   "word": "of",
+   "start": 14.66,
+   "end": 14.88
+  },
+  {
+   "word": "them",
+   "start": 14.88,
+   "end": 15
+  },
+  {
+   "word": "have",
+   "start": 15,
+   "end": 15.32
+  },
+  {
+   "word": "seven",
+   "start": 15.32,
+   "end": 15.78
+  },
+  {
+   "word": "heads.",
+   "start": 15.78,
+   "end": 16.52
+  },
+  {
+   "word": "So",
+   "start": 16.36,
+   "end": 17.06
+  },
+  {
+   "word": "the",
+   "start": 17.06,
+   "end": 17.2
+  },
+  {
+   "word": "chance",
+   "start": 17.2,
+   "end": 17.7
+  },
+  {
+   "word": "is",
+   "start": 17.7,
+   "end": 17.92
+  },
+  {
+   "word": "120",
+   "start": 17.92,
+   "end": 18.84
+  },
+  {
+   "word": "out",
+   "start": 18.84,
+   "end": 19.24
+  },
+  {
+   "word": "of",
+   "start": 19.24,
+   "end": 19.44
+  },
+  {
+   "word": "1,024,",
+   "start": 19.44,
+   "end": 21.28
+  },
+  {
+   "word": "about",
+   "start": 21.28,
+   "end": 22
+  },
+  {
+   "word": "12%.",
+   "start": 22,
+   "end": 22.34
+  },
+  {
+   "word": "Do",
+   "start": 23.6,
+   "end": 23.78
+  },
+  {
+   "word": "that",
+   "start": 23.78,
+   "end": 24.1
+  },
+  {
+   "word": "count",
+   "start": 24.1,
+   "end": 24.46
+  },
+  {
+   "word": "for",
+   "start": 24.46,
+   "end": 24.68
+  },
+  {
+   "word": "every",
+   "start": 24.68,
+   "end": 25.08
+  },
+  {
+   "word": "number",
+   "start": 25.08,
+   "end": 25.36
+  },
+  {
+   "word": "of",
+   "start": 25.36,
+   "end": 25.48
+  },
+  {
+   "word": "heads",
+   "start": 25.48,
+   "end": 25.94
+  },
+  {
+   "word": "and",
+   "start": 25.94,
+   "end": 26.56
+  },
+  {
+   "word": "the",
+   "start": 26.56,
+   "end": 26.66
+  },
+  {
+   "word": "chances",
+   "start": 26.66,
+   "end": 27.2
+  },
+  {
+   "word": "form",
+   "start": 27.2,
+   "end": 27.72
+  },
+  {
+   "word": "this",
+   "start": 27.72,
+   "end": 27.98
+  },
+  {
+   "word": "hump.",
+   "start": 27.98,
+   "end": 28.8
+  },
+  {
+   "word": "S7",
+   "start": 29.02,
+   "end": 29.38
+  },
+  {
+   "word": "sits",
+   "start": 29.38,
+   "end": 29.94
+  },
+  {
+   "word": "on",
+   "start": 29.94,
+   "end": 30.14
+  },
+  {
+   "word": "its",
+   "start": 30.14,
+   "end": 30.22
+  },
+  {
+   "word": "right",
+   "start": 30.22,
+   "end": 30.48
+  },
+  {
+   "word": "shoulder.",
+   "start": 30.48,
+   "end": 31.68
+  }
+ ],
+ "segments": [
+  {
+   "id": 0,
+   "seek": 0,
+   "start": 0,
+   "end": 2.6599998,
+   "text": " Flip a fair coin 10 times.",
+   "tokens": [
+    50365,
+    28210,
+    257,
+    3143,
+    11464,
+    1266,
+    1413,
+    13,
+    50498
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12864488,
+   "compression_ratio": 1.5187166,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 1,
+   "seek": 0,
+   "start": 2.6599998,
+   "end": 7.12,
+   "text": " How likely is it that exactly seven of them land heads?",
+   "tokens": [
+    50498,
+    1012,
+    3700,
+    307,
+    309,
+    300,
+    2293,
+    3407,
+    295,
+    552,
+    2117,
+    8050,
+    30,
+    50721
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12864488,
+   "compression_ratio": 1.5187166,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 2,
+   "seek": 0,
+   "start": 7.12,
+   "end": 12.12,
+   "text": " 10 flips give 1,024 equally likely sequences.",
+   "tokens": [
+    50721,
+    1266,
+    40249,
+    976,
+    502,
+    11,
+    15,
+    7911,
+    12309,
+    3700,
+    22978,
+    13,
+    50971
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12864488,
+   "compression_ratio": 1.5187166,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 3,
+   "seek": 0,
+   "start": 13.0199995,
+   "end": 16.859999,
+   "text": " 100 and 20 of them have seven heads.",
+   "tokens": [
+    51016,
+    2319,
+    293,
+    945,
+    295,
+    552,
+    362,
+    3407,
+    8050,
+    13,
+    51208
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12864488,
+   "compression_ratio": 1.5187166,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 4,
+   "seek": 0,
+   "start": 16.859999,
+   "end": 21.859999,
+   "text": " So the chance is 120 out of 1,024, about 12%.",
+   "tokens": [
+    51208,
+    407,
+    264,
+    2931,
+    307,
+    10411,
+    484,
+    295,
+    502,
+    11,
+    15,
+    7911,
+    11,
+    466,
+    2272,
+    6856,
+    51458
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12864488,
+   "compression_ratio": 1.5187166,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 5,
+   "seek": 0,
+   "start": 23.6,
+   "end": 26.439999,
+   "text": " Do that count for every number of heads",
+   "tokens": [
+    51545,
+    1144,
+    300,
+    1207,
+    337,
+    633,
+    1230,
+    295,
+    8050,
+    51687
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12864488,
+   "compression_ratio": 1.5187166,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 6,
+   "seek": 0,
+   "start": 26.439999,
+   "end": 29,
+   "text": " and the chances form this hump.",
+   "tokens": [
+    51687,
+    293,
+    264,
+    10486,
+    1254,
+    341,
+    47093,
+    13,
+    51815
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12864488,
+   "compression_ratio": 1.5187166,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 7,
+   "seek": 2900,
+   "start": 29,
+   "end": 31.3,
+   "text": " S7 sits on its right shoulder.",
+   "tokens": [
+    50365,
+    318,
+    22,
+    12696,
+    322,
+    1080,
+    558,
+    7948,
+    13,
+    50480
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.20497932,
+   "compression_ratio": 0.8611111,
+   "no_speech_prob": 0
+  }
+ ],
+ "x_groq": {
+  "id": "req_01m4z9h23ae518ts56p85czyjd"
+ }
+}
