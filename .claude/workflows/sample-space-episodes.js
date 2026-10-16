@@ -131,11 +131,20 @@ Then run: videos/toolkit/publish.sh ${prod.episode_dir}
 If publish.sh fails, read its output, fix the cause (only within ${prod.episode_dir}, e.g. a file too large or a stray untracked file), and retry. Return one line: the commit hash pushed, or the error.`
 }
 
-async function runEpisode(id) {
-  let prod = await agent(producerPrompt(id), { label: `produce:${id}`, phase: 'Produce', schema: PRODUCER_SCHEMA })
+async function runEpisode(item) {
+  // item is either an episode id, or {id, dir, title, startRound} to resume an episode that already
+  // has a master render and earlier critic rounds (skips the producer; round numbers continue).
+  const id = typeof item === 'object' ? item.id : item
+  const startRound = (typeof item === 'object' && item.startRound) || 1
+  let prod
+  if (typeof item === 'object' && item.dir && startRound > 1) {
+    prod = { episode_dir: item.dir, final_mp4: `${item.dir}/final.mp4`, title: item.title || `Episode ${id}`, runtime_s: 0, self_score: 0, changes: 'resumed', unresolved: [] }
+  } else {
+    prod = await agent(producerPrompt(id), { label: `produce:${id}`, phase: 'Produce', schema: PRODUCER_SCHEMA })
+  }
   if (!prod) return { id, status: 'producer_failed' }
   const history = []
-  for (let round = 1; round <= MAX_ROUNDS; round++) {
+  for (let round = startRound; round < startRound + MAX_ROUNDS; round++) {
     const crits = await parallel(LENSES.map(lens => () =>
       agent(criticPrompt(id, prod, lens, round), { label: `critic:${id}:${lens}:r${round}`, phase: 'Critique', schema: CRITIC_SCHEMA, effort: 'high' })))
     const ok = crits.filter(Boolean)
@@ -151,7 +160,7 @@ async function runEpisode(id) {
       const pub = await agent(publishPrompt(id, prod, history), { label: `publish:${id}`, phase: 'Publish', effort: 'low' })
       return { id, status: 'passed', rounds: round, history, dir: prod.episode_dir, title: prod.title, publish: pub }
     }
-    if (round === MAX_ROUNDS) break
+    if (round === startRound + MAX_ROUNDS - 1) break
     const next = await agent(revisePrompt(id, prod, ok, round), { label: `revise:${id}:r${round}`, phase: 'Revise', schema: PRODUCER_SCHEMA })
     if (!next) return { id, status: 'interrupted', stage: `revise r${round}`, history, dir: prod.episode_dir, title: prod.title }
     prod = next
