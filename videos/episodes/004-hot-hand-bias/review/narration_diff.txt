@@ -1,0 +1,6 @@
+WER 0.6% over 473 script words (numbers spelled out, 'and' ignored)
+script: videos/episodes/004-hot-hand-bias/narration.json
+
+[2:14.3] replace  script: 'a'                                      heard: 'one'
+[2:27.9] replace  script: "sanjurjo's"                             heard: "sanjorjo's"
+[2:39.0] replace  script: 'a'                                      heard: 'one'

@@ -1,0 +1,4416 @@
+{
+ "task": "transcribe",
+ "language": "English",
+ "duration": 232.76800153599999,
+ "text": " A hundred waits for a bus, mostly short with a long tail. Textbooks say the average of 30 is safe to treat as a bell. For these waits, does it take 30, 300, or over 1,000? A-B tests lean on that bell, and on revenue data, 30 is off by a factor of thousands. First, look for the bell in the data itself. Collect 1,000, 10,000, 100,000. The bars get smoother, but the shape doesn't budge. Measure the lean with skewness. The average cubed gap from the mean left gaps counting negative over the spread cubed. A perfect bell scores zero. These weights for a bus score about two at every sample size. So average instead. Four bus weights, the one long wait gets diluted by three short ones. Drop that one number here. Do that 10,000 times. These averages lean less, skewness one. 16 per average, 0.5, 64, 0.25, nearly this perfect bell in green. Each time the group grows four times, the skewness halves. 2 over root n, and 2 is the skewness of one weight. The root comes from the cubes. Add four weights, their cubed gaps add up four times one weights. But the spread only doubles, so its cube grows eight times. 4 over 8, half the lean. In general, n over n to the 1 and a half. A coin that lands heads one time in 10 is just two spikes, yet its averages make the same bell by the same rule. Kurtosis, the extra tail weight, fades faster as 1 over n, and every finer difference faster still. Only the bell survives. That's the central limit theorem. It needs independent pieces and one more condition. Back to the textbook 30 2 over root 30 close to a bell by eye But tests live in the tails A 95 interval should miss 2 on each side Tests estimate the spread from the same data, so a low average gets a small spread, and its interval stops short. With 30 weights, 7% low, 1% high. Ron Kohavi and colleagues, using Bing's data, want each side between 2 and 3%. Their rule, n at least 355 times the skewness squared. Divide by n and take the root. It's our formula. The average's skewness at most .053. 300 still misses. For these weights, 1420 and both misses reach the band. Bing's revenue per user had a skewness near 18. 114,000 users capping each user at $10 a week under 10,000 now the condition a lighthouse one mile off a straight shore flashes at random angles and each flash lands somewhere on the shore track the average landing spot it never settles a flash aimed almost along the shore lands absurdly far away and yanks it among a thousand flashes, the farthest typically lands about 900 miles off. Divided by a thousand, it still drags the average about a mile. Half of single flashes land within a mile of the middle. Repeat the thousand flash average 200 times and still only half do. The theorem needs finite variance. No single piece can outweigh the rest. Here the variance is infinite. The median ignores how far the extremes fly, so it homes in. So the answer is over a thousand, not thirty. And collect forever. This histogram stays lopsided. The bell was never in the data. It's in the average.",
+ "words": [
+  {
+   "word": "A",
+   "start": 0,
+   "end": 0.16
+  },
+  {
+   "word": "hundred",
+   "start": 0.16,
+   "end": 0.4
+  },
+  {
+   "word": "waits",
+   "start": 0.4,
+   "end": 0.76
+  },
+  {
+   "word": "for",
+   "start": 0.76,
+   "end": 0.96
+  },
+  {
+   "word": "a",
+   "start": 0.96,
+   "end": 1.06
+  },
+  {
+   "word": "bus,",
+   "start": 1.06,
+   "end": 1.5
+  },
+  {
+   "word": "mostly",
+   "start": 1.5,
+   "end": 2.16
+  },
+  {
+   "word": "short",
+   "start": 2.16,
+   "end": 2.62
+  },
+  {
+   "word": "with",
+   "start": 2.62,
+   "end": 2.84
+  },
+  {
+   "word": "a",
+   "start": 2.84,
+   "end": 3
+  },
+  {
+   "word": "long",
+   "start": 3,
+   "end": 3.22
+  },
+  {
+   "word": "tail.",
+   "start": 3.22,
+   "end": 3.9
+  },
+  {
+   "word": "Textbooks",
+   "start": 3.84,
+   "end": 4.56
+  },
+  {
+   "word": "say",
+   "start": 4.56,
+   "end": 4.8
+  },
+  {
+   "word": "the",
+   "start": 4.8,
+   "end": 4.98
+  },
+  {
+   "word": "average",
+   "start": 4.98,
+   "end": 5.36
+  },
+  {
+   "word": "of",
+   "start": 5.36,
+   "end": 5.52
+  },
+  {
+   "word": "30",
+   "start": 5.52,
+   "end": 5.8
+  },
+  {
+   "word": "is",
+   "start": 5.8,
+   "end": 6.38
+  },
+  {
+   "word": "safe",
+   "start": 6.38,
+   "end": 6.68
+  },
+  {
+   "word": "to",
+   "start": 6.68,
+   "end": 6.86
+  },
+  {
+   "word": "treat",
+   "start": 6.86,
+   "end": 7.16
+  },
+  {
+   "word": "as",
+   "start": 7.16,
+   "end": 7.4
+  },
+  {
+   "word": "a",
+   "start": 7.4,
+   "end": 7.56
+  },
+  {
+   "word": "bell.",
+   "start": 7.56,
+   "end": 7.9
+  },
+  {
+   "word": "For",
+   "start": 7.6,
+   "end": 8.24
+  },
+  {
+   "word": "these",
+   "start": 8.24,
+   "end": 8.5
+  },
+  {
+   "word": "waits,",
+   "start": 8.5,
+   "end": 9.08
+  },
+  {
+   "word": "does",
+   "start": 9.08,
+   "end": 9.3
+  },
+  {
+   "word": "it",
+   "start": 9.3,
+   "end": 9.38
+  },
+  {
+   "word": "take",
+   "start": 9.38,
+   "end": 9.6
+  },
+  {
+   "word": "30,",
+   "start": 9.6,
+   "end": 10.16
+  },
+  {
+   "word": "300,",
+   "start": 10.16,
+   "end": 11.04
+  },
+  {
+   "word": "or",
+   "start": 11.04,
+   "end": 11.14
+  },
+  {
+   "word": "over",
+   "start": 11.14,
+   "end": 11.36
+  },
+  {
+   "word": "1,000?",
+   "start": 11.36,
+   "end": 12.08
+  },
+  {
+   "word": "A-B",
+   "start": 13.72,
+   "end": 14.14
+  },
+  {
+   "word": "tests",
+   "start": 14.14,
+   "end": 14.62
+  },
+  {
+   "word": "lean",
+   "start": 14.62,
+   "end": 14.82
+  },
+  {
+   "word": "on",
+   "start": 14.82,
+   "end": 14.98
+  },
+  {
+   "word": "that",
+   "start": 14.98,
+   "end": 15.14
+  },
+  {
+   "word": "bell,",
+   "start": 15.14,
+   "end": 15.6
+  },
+  {
+   "word": "and",
+   "start": 15.6,
+   "end": 16.04
+  },
+  {
+   "word": "on",
+   "start": 16.04,
+   "end": 16.18
+  },
+  {
+   "word": "revenue",
+   "start": 16.18,
+   "end": 16.48
+  },
+  {
+   "word": "data,",
+   "start": 16.48,
+   "end": 17.04
+  },
+  {
+   "word": "30",
+   "start": 16.78,
+   "end": 17.6
+  },
+  {
+   "word": "is",
+   "start": 17.6,
+   "end": 17.86
+  },
+  {
+   "word": "off",
+   "start": 17.86,
+   "end": 18.14
+  },
+  {
+   "word": "by",
+   "start": 18.14,
+   "end": 18.34
+  },
+  {
+   "word": "a",
+   "start": 18.34,
+   "end": 18.46
+  },
+  {
+   "word": "factor",
+   "start": 18.46,
+   "end": 18.78
+  },
+  {
+   "word": "of",
+   "start": 18.78,
+   "end": 18.96
+  },
+  {
+   "word": "thousands.",
+   "start": 18.96,
+   "end": 19.76
+  },
+  {
+   "word": "First,",
+   "start": 19.62,
+   "end": 20.7
+  },
+  {
+   "word": "look",
+   "start": 20.7,
+   "end": 20.96
+  },
+  {
+   "word": "for",
+   "start": 20.96,
+   "end": 21.1
+  },
+  {
+   "word": "the",
+   "start": 21.1,
+   "end": 21.22
+  },
+  {
+   "word": "bell",
+   "start": 21.22,
+   "end": 21.44
+  },
+  {
+   "word": "in",
+   "start": 21.44,
+   "end": 21.56
+  },
+  {
+   "word": "the",
+   "start": 21.56,
+   "end": 21.68
+  },
+  {
+   "word": "data",
+   "start": 21.68,
+   "end": 21.9
+  },
+  {
+   "word": "itself.",
+   "start": 21.9,
+   "end": 22.64
+  },
+  {
+   "word": "Collect",
+   "start": 22.3,
+   "end": 23.18
+  },
+  {
+   "word": "1,000,",
+   "start": 23.18,
+   "end": 24.02
+  },
+  {
+   "word": "10,000,",
+   "start": 24.02,
+   "end": 25.1
+  },
+  {
+   "word": "100,000.",
+   "start": 25.1,
+   "end": 26.26
+  },
+  {
+   "word": "The",
+   "start": 25.94,
+   "end": 26.6
+  },
+  {
+   "word": "bars",
+   "start": 26.6,
+   "end": 26.92
+  },
+  {
+   "word": "get",
+   "start": 26.92,
+   "end": 27.16
+  },
+  {
+   "word": "smoother,",
+   "start": 27.16,
+   "end": 27.76
+  },
+  {
+   "word": "but",
+   "start": 27.76,
+   "end": 28.06
+  },
+  {
+   "word": "the",
+   "start": 28.06,
+   "end": 28.18
+  },
+  {
+   "word": "shape",
+   "start": 28.18,
+   "end": 28.46
+  },
+  {
+   "word": "doesn't",
+   "start": 28.46,
+   "end": 28.78
+  },
+  {
+   "word": "budge.",
+   "start": 28.78,
+   "end": 29.34
+  },
+  {
+   "word": "Measure",
+   "start": 29.58,
+   "end": 29.86
+  },
+  {
+   "word": "the",
+   "start": 29.86,
+   "end": 30.1
+  },
+  {
+   "word": "lean",
+   "start": 30.1,
+   "end": 30.32
+  },
+  {
+   "word": "with",
+   "start": 30.32,
+   "end": 30.54
+  },
+  {
+   "word": "skewness.",
+   "start": 30.54,
+   "end": 31.28
+  },
+  {
+   "word": "The",
+   "start": 31.6,
+   "end": 31.84
+  },
+  {
+   "word": "average",
+   "start": 31.84,
+   "end": 32.28
+  },
+  {
+   "word": "cubed",
+   "start": 32.28,
+   "end": 32.62
+  },
+  {
+   "word": "gap",
+   "start": 32.62,
+   "end": 32.96
+  },
+  {
+   "word": "from",
+   "start": 32.96,
+   "end": 33.12
+  },
+  {
+   "word": "the",
+   "start": 33.12,
+   "end": 33.26
+  },
+  {
+   "word": "mean",
+   "start": 33.26,
+   "end": 33.56
+  },
+  {
+   "word": "left",
+   "start": 33.94,
+   "end": 34.28
+  },
+  {
+   "word": "gaps",
+   "start": 34.28,
+   "end": 34.66
+  },
+  {
+   "word": "counting",
+   "start": 34.66,
+   "end": 35.08
+  },
+  {
+   "word": "negative",
+   "start": 35.08,
+   "end": 35.56
+  },
+  {
+   "word": "over",
+   "start": 35.56,
+   "end": 36.04
+  },
+  {
+   "word": "the",
+   "start": 36.04,
+   "end": 36.16
+  },
+  {
+   "word": "spread",
+   "start": 36.16,
+   "end": 36.46
+  },
+  {
+   "word": "cubed.",
+   "start": 36.46,
+   "end": 37.12
+  },
+  {
+   "word": "A",
+   "start": 36.82,
+   "end": 37.42
+  },
+  {
+   "word": "perfect",
+   "start": 37.42,
+   "end": 37.82
+  },
+  {
+   "word": "bell",
+   "start": 37.82,
+   "end": 38.06
+  },
+  {
+   "word": "scores",
+   "start": 38.06,
+   "end": 38.38
+  },
+  {
+   "word": "zero.",
+   "start": 38.38,
+   "end": 38.96
+  },
+  {
+   "word": "These",
+   "start": 38.7,
+   "end": 39.46
+  },
+  {
+   "word": "weights",
+   "start": 39.46,
+   "end": 39.74
+  },
+  {
+   "word": "for",
+   "start": 39.74,
+   "end": 39.94
+  },
+  {
+   "word": "a",
+   "start": 39.94,
+   "end": 40.1
+  },
+  {
+   "word": "bus",
+   "start": 40.1,
+   "end": 40.16
+  },
+  {
+   "word": "score",
+   "start": 40.16,
+   "end": 40.46
+  },
+  {
+   "word": "about",
+   "start": 40.46,
+   "end": 40.72
+  },
+  {
+   "word": "two",
+   "start": 40.72,
+   "end": 41.14
+  },
+  {
+   "word": "at",
+   "start": 41.04,
+   "end": 41.66
+  },
+  {
+   "word": "every",
+   "start": 41.66,
+   "end": 41.98
+  },
+  {
+   "word": "sample",
+   "start": 41.98,
+   "end": 42.4
+  },
+  {
+   "word": "size.",
+   "start": 42.4,
+   "end": 43.04
+  },
+  {
+   "word": "So",
+   "start": 43.5,
+   "end": 44.08
+  },
+  {
+   "word": "average",
+   "start": 44.08,
+   "end": 44.5
+  },
+  {
+   "word": "instead.",
+   "start": 44.5,
+   "end": 45.26
+  },
+  {
+   "word": "Four",
+   "start": 45.32,
+   "end": 46.08
+  },
+  {
+   "word": "bus",
+   "start": 46.08,
+   "end": 46.3
+  },
+  {
+   "word": "weights,",
+   "start": 46.3,
+   "end": 46.92
+  },
+  {
+   "word": "the",
+   "start": 46.92,
+   "end": 47.38
+  },
+  {
+   "word": "one",
+   "start": 47.38,
+   "end": 47.6
+  },
+  {
+   "word": "long",
+   "start": 47.6,
+   "end": 47.92
+  },
+  {
+   "word": "wait",
+   "start": 47.92,
+   "end": 48.22
+  },
+  {
+   "word": "gets",
+   "start": 47.98,
+   "end": 48.5
+  },
+  {
+   "word": "diluted",
+   "start": 48.5,
+   "end": 48.9
+  },
+  {
+   "word": "by",
+   "start": 48.9,
+   "end": 49.14
+  },
+  {
+   "word": "three",
+   "start": 49.14,
+   "end": 49.44
+  },
+  {
+   "word": "short",
+   "start": 49.44,
+   "end": 49.76
+  },
+  {
+   "word": "ones.",
+   "start": 49.76,
+   "end": 50.58
+  },
+  {
+   "word": "Drop",
+   "start": 51.02,
+   "end": 51.38
+  },
+  {
+   "word": "that",
+   "start": 51.38,
+   "end": 51.64
+  },
+  {
+   "word": "one",
+   "start": 51.64,
+   "end": 51.9
+  },
+  {
+   "word": "number",
+   "start": 51.9,
+   "end": 52.18
+  },
+  {
+   "word": "here.",
+   "start": 52.18,
+   "end": 52.74
+  },
+  {
+   "word": "Do",
+   "start": 52.42,
+   "end": 53.08
+  },
+  {
+   "word": "that",
+   "start": 53.08,
+   "end": 53.32
+  },
+  {
+   "word": "10,000",
+   "start": 53.32,
+   "end": 53.94
+  },
+  {
+   "word": "times.",
+   "start": 53.94,
+   "end": 54.7
+  },
+  {
+   "word": "These",
+   "start": 54.42,
+   "end": 55.14
+  },
+  {
+   "word": "averages",
+   "start": 55.14,
+   "end": 55.6
+  },
+  {
+   "word": "lean",
+   "start": 55.6,
+   "end": 55.86
+  },
+  {
+   "word": "less,",
+   "start": 55.86,
+   "end": 56.4
+  },
+  {
+   "word": "skewness",
+   "start": 56.4,
+   "end": 57.04
+  },
+  {
+   "word": "one.",
+   "start": 57.04,
+   "end": 57.6
+  },
+  {
+   "word": "16",
+   "start": 57.78,
+   "end": 58.14
+  },
+  {
+   "word": "per",
+   "start": 58.14,
+   "end": 58.44
+  },
+  {
+   "word": "average,",
+   "start": 58.44,
+   "end": 59
+  },
+  {
+   "word": "0.5,",
+   "start": 59,
+   "end": 59.94
+  },
+  {
+   "word": "64,",
+   "start": 59.94,
+   "end": 60.98
+  },
+  {
+   "word": "0.25,",
+   "start": 60.98,
+   "end": 62.04
+  },
+  {
+   "word": "nearly",
+   "start": 62.04,
+   "end": 62.46
+  },
+  {
+   "word": "this",
+   "start": 62.46,
+   "end": 62.74
+  },
+  {
+   "word": "perfect",
+   "start": 62.74,
+   "end": 63.1
+  },
+  {
+   "word": "bell",
+   "start": 63.1,
+   "end": 63.46
+  },
+  {
+   "word": "in",
+   "start": 63.46,
+   "end": 63.66
+  },
+  {
+   "word": "green.",
+   "start": 63.66,
+   "end": 64.22
+  },
+  {
+   "word": "Each",
+   "start": 64.48,
+   "end": 64.7
+  },
+  {
+   "word": "time",
+   "start": 64.7,
+   "end": 64.96
+  },
+  {
+   "word": "the",
+   "start": 64.96,
+   "end": 65.08
+  },
+  {
+   "word": "group",
+   "start": 65.08,
+   "end": 65.26
+  },
+  {
+   "word": "grows",
+   "start": 65.26,
+   "end": 65.66
+  },
+  {
+   "word": "four",
+   "start": 65.66,
+   "end": 65.88
+  },
+  {
+   "word": "times,",
+   "start": 65.88,
+   "end": 66.36
+  },
+  {
+   "word": "the",
+   "start": 66.36,
+   "end": 66.76
+  },
+  {
+   "word": "skewness",
+   "start": 66.76,
+   "end": 67.12
+  },
+  {
+   "word": "halves.",
+   "start": 67.12,
+   "end": 67.7
+  },
+  {
+   "word": "2",
+   "start": 68.16,
+   "end": 68.38
+  },
+  {
+   "word": "over",
+   "start": 68.38,
+   "end": 68.66
+  },
+  {
+   "word": "root",
+   "start": 68.66,
+   "end": 68.92
+  },
+  {
+   "word": "n,",
+   "start": 68.92,
+   "end": 69.26
+  },
+  {
+   "word": "and",
+   "start": 69.26,
+   "end": 69.66
+  },
+  {
+   "word": "2",
+   "start": 69.66,
+   "end": 69.92
+  },
+  {
+   "word": "is",
+   "start": 69.92,
+   "end": 70.22
+  },
+  {
+   "word": "the",
+   "start": 70.22,
+   "end": 70.36
+  },
+  {
+   "word": "skewness",
+   "start": 70.36,
+   "end": 70.86
+  },
+  {
+   "word": "of",
+   "start": 70.86,
+   "end": 71.06
+  },
+  {
+   "word": "one",
+   "start": 71.06,
+   "end": 71.26
+  },
+  {
+   "word": "weight.",
+   "start": 71.26,
+   "end": 71.54
+  },
+  {
+   "word": "The",
+   "start": 72.62,
+   "end": 72.78
+  },
+  {
+   "word": "root",
+   "start": 72.78,
+   "end": 73.02
+  },
+  {
+   "word": "comes",
+   "start": 73.02,
+   "end": 73.32
+  },
+  {
+   "word": "from",
+   "start": 73.32,
+   "end": 73.5
+  },
+  {
+   "word": "the",
+   "start": 73.5,
+   "end": 73.62
+  },
+  {
+   "word": "cubes.",
+   "start": 73.62,
+   "end": 73.9
+  },
+  {
+   "word": "Add",
+   "start": 74.42,
+   "end": 74.66
+  },
+  {
+   "word": "four",
+   "start": 74.66,
+   "end": 74.88
+  },
+  {
+   "word": "weights,",
+   "start": 74.88,
+   "end": 75.26
+  },
+  {
+   "word": "their",
+   "start": 75.26,
+   "end": 75.86
+  },
+  {
+   "word": "cubed",
+   "start": 75.86,
+   "end": 76.12
+  },
+  {
+   "word": "gaps",
+   "start": 76.12,
+   "end": 76.42
+  },
+  {
+   "word": "add",
+   "start": 76.42,
+   "end": 76.72
+  },
+  {
+   "word": "up",
+   "start": 76.72,
+   "end": 76.94
+  },
+  {
+   "word": "four",
+   "start": 76.94,
+   "end": 77.3
+  },
+  {
+   "word": "times",
+   "start": 77.3,
+   "end": 77.66
+  },
+  {
+   "word": "one",
+   "start": 77.66,
+   "end": 77.94
+  },
+  {
+   "word": "weights.",
+   "start": 77.94,
+   "end": 78.52
+  },
+  {
+   "word": "But",
+   "start": 77.84,
+   "end": 78.82
+  },
+  {
+   "word": "the",
+   "start": 78.82,
+   "end": 78.92
+  },
+  {
+   "word": "spread",
+   "start": 78.92,
+   "end": 79.16
+  },
+  {
+   "word": "only",
+   "start": 79.16,
+   "end": 79.48
+  },
+  {
+   "word": "doubles,",
+   "start": 79.48,
+   "end": 79.82
+  },
+  {
+   "word": "so",
+   "start": 79.82,
+   "end": 80.5
+  },
+  {
+   "word": "its",
+   "start": 80.5,
+   "end": 80.64
+  },
+  {
+   "word": "cube",
+   "start": 80.64,
+   "end": 80.92
+  },
+  {
+   "word": "grows",
+   "start": 80.92,
+   "end": 81.3
+  },
+  {
+   "word": "eight",
+   "start": 81.3,
+   "end": 81.48
+  },
+  {
+   "word": "times.",
+   "start": 81.48,
+   "end": 81.9
+  },
+  {
+   "word": "4",
+   "start": 82.44,
+   "end": 82.64
+  },
+  {
+   "word": "over",
+   "start": 82.64,
+   "end": 82.88
+  },
+  {
+   "word": "8,",
+   "start": 82.88,
+   "end": 83.38
+  },
+  {
+   "word": "half",
+   "start": 83.38,
+   "end": 83.5
+  },
+  {
+   "word": "the",
+   "start": 83.5,
+   "end": 83.72
+  },
+  {
+   "word": "lean.",
+   "start": 83.72,
+   "end": 84.14
+  },
+  {
+   "word": "In",
+   "start": 84.44,
+   "end": 84.58
+  },
+  {
+   "word": "general,",
+   "start": 84.58,
+   "end": 85.14
+  },
+  {
+   "word": "n",
+   "start": 85.14,
+   "end": 85.58
+  },
+  {
+   "word": "over",
+   "start": 85.58,
+   "end": 85.84
+  },
+  {
+   "word": "n",
+   "start": 85.84,
+   "end": 86.14
+  },
+  {
+   "word": "to",
+   "start": 86.14,
+   "end": 86.24
+  },
+  {
+   "word": "the",
+   "start": 86.24,
+   "end": 86.38
+  },
+  {
+   "word": "1",
+   "start": 86.38,
+   "end": 86.52
+  },
+  {
+   "word": "and",
+   "start": 86.52,
+   "end": 86.64
+  },
+  {
+   "word": "a",
+   "start": 86.64,
+   "end": 86.72
+  },
+  {
+   "word": "half.",
+   "start": 86.72,
+   "end": 87.18
+  },
+  {
+   "word": "A",
+   "start": 88.1,
+   "end": 88.16
+  },
+  {
+   "word": "coin",
+   "start": 88.16,
+   "end": 88.46
+  },
+  {
+   "word": "that",
+   "start": 88.46,
+   "end": 88.68
+  },
+  {
+   "word": "lands",
+   "start": 88.68,
+   "end": 89.02
+  },
+  {
+   "word": "heads",
+   "start": 89.02,
+   "end": 89.26
+  },
+  {
+   "word": "one",
+   "start": 89.26,
+   "end": 89.54
+  },
+  {
+   "word": "time",
+   "start": 89.54,
+   "end": 89.86
+  },
+  {
+   "word": "in",
+   "start": 89.86,
+   "end": 90.08
+  },
+  {
+   "word": "10",
+   "start": 90.08,
+   "end": 90.32
+  },
+  {
+   "word": "is",
+   "start": 90.32,
+   "end": 90.72
+  },
+  {
+   "word": "just",
+   "start": 90.72,
+   "end": 90.94
+  },
+  {
+   "word": "two",
+   "start": 90.94,
+   "end": 91.2
+  },
+  {
+   "word": "spikes,",
+   "start": 91.2,
+   "end": 91.7
+  },
+  {
+   "word": "yet",
+   "start": 91.7,
+   "end": 92.48
+  },
+  {
+   "word": "its",
+   "start": 92.48,
+   "end": 92.62
+  },
+  {
+   "word": "averages",
+   "start": 92.62,
+   "end": 93.08
+  },
+  {
+   "word": "make",
+   "start": 93.08,
+   "end": 93.48
+  },
+  {
+   "word": "the",
+   "start": 93.48,
+   "end": 93.66
+  },
+  {
+   "word": "same",
+   "start": 93.14,
+   "end": 93.98
+  },
+  {
+   "word": "bell",
+   "start": 93.98,
+   "end": 94.28
+  },
+  {
+   "word": "by",
+   "start": 94.28,
+   "end": 94.76
+  },
+  {
+   "word": "the",
+   "start": 94.76,
+   "end": 94.92
+  },
+  {
+   "word": "same",
+   "start": 94.92,
+   "end": 95.18
+  },
+  {
+   "word": "rule.",
+   "start": 95.18,
+   "end": 95.72
+  },
+  {
+   "word": "Kurtosis,",
+   "start": 95.82,
+   "end": 96.58
+  },
+  {
+   "word": "the",
+   "start": 96.58,
+   "end": 96.92
+  },
+  {
+   "word": "extra",
+   "start": 96.92,
+   "end": 97.3
+  },
+  {
+   "word": "tail",
+   "start": 97.3,
+   "end": 97.56
+  },
+  {
+   "word": "weight,",
+   "start": 97.56,
+   "end": 98.02
+  },
+  {
+   "word": "fades",
+   "start": 98.02,
+   "end": 98.58
+  },
+  {
+   "word": "faster",
+   "start": 98.58,
+   "end": 99.08
+  },
+  {
+   "word": "as",
+   "start": 99.08,
+   "end": 99.46
+  },
+  {
+   "word": "1",
+   "start": 99.46,
+   "end": 99.6
+  },
+  {
+   "word": "over",
+   "start": 99.6,
+   "end": 99.82
+  },
+  {
+   "word": "n,",
+   "start": 99.82,
+   "end": 100.3
+  },
+  {
+   "word": "and",
+   "start": 100.3,
+   "end": 100.76
+  },
+  {
+   "word": "every",
+   "start": 100.76,
+   "end": 101.08
+  },
+  {
+   "word": "finer",
+   "start": 101.08,
+   "end": 101.5
+  },
+  {
+   "word": "difference",
+   "start": 101.5,
+   "end": 101.92
+  },
+  {
+   "word": "faster",
+   "start": 101.92,
+   "end": 102.42
+  },
+  {
+   "word": "still.",
+   "start": 102.14,
+   "end": 103.04
+  },
+  {
+   "word": "Only",
+   "start": 103.14,
+   "end": 103.5
+  },
+  {
+   "word": "the",
+   "start": 103.5,
+   "end": 103.66
+  },
+  {
+   "word": "bell",
+   "start": 103.66,
+   "end": 103.82
+  },
+  {
+   "word": "survives.",
+   "start": 103.82,
+   "end": 104.62
+  },
+  {
+   "word": "That's",
+   "start": 104.14,
+   "end": 105.16
+  },
+  {
+   "word": "the",
+   "start": 105.16,
+   "end": 105.34
+  },
+  {
+   "word": "central",
+   "start": 105.34,
+   "end": 105.7
+  },
+  {
+   "word": "limit",
+   "start": 105.7,
+   "end": 106.04
+  },
+  {
+   "word": "theorem.",
+   "start": 106.04,
+   "end": 106.68
+  },
+  {
+   "word": "It",
+   "start": 106.46,
+   "end": 107.02
+  },
+  {
+   "word": "needs",
+   "start": 107.02,
+   "end": 107.26
+  },
+  {
+   "word": "independent",
+   "start": 107.26,
+   "end": 107.82
+  },
+  {
+   "word": "pieces",
+   "start": 107.82,
+   "end": 108.3
+  },
+  {
+   "word": "and",
+   "start": 108.3,
+   "end": 109
+  },
+  {
+   "word": "one",
+   "start": 109,
+   "end": 109.2
+  },
+  {
+   "word": "more",
+   "start": 109.2,
+   "end": 109.42
+  },
+  {
+   "word": "condition.",
+   "start": 109.42,
+   "end": 110.2
+  },
+  {
+   "word": "Back",
+   "start": 111.36,
+   "end": 111.38
+  },
+  {
+   "word": "to",
+   "start": 111.38,
+   "end": 111.5
+  },
+  {
+   "word": "the",
+   "start": 111.5,
+   "end": 111.58
+  },
+  {
+   "word": "textbook's",
+   "start": 111.58,
+   "end": 112.3
+  },
+  {
+   "word": "30,",
+   "start": 112.3,
+   "end": 112.68
+  },
+  {
+   "word": "2",
+   "start": 112.68,
+   "end": 113.52
+  },
+  {
+   "word": "over",
+   "start": 113.52,
+   "end": 113.86
+  },
+  {
+   "word": "root",
+   "start": 113.86,
+   "end": 114.06
+  },
+  {
+   "word": "30, .37,",
+   "start": 114.06,
+   "end": 115.94
+  },
+  {
+   "word": "close",
+   "start": 115.94,
+   "end": 116.32
+  },
+  {
+   "word": "to",
+   "start": 116.32,
+   "end": 116.5
+  },
+  {
+   "word": "a",
+   "start": 116.524,
+   "end": 116.684006
+  },
+  {
+   "word": "bell",
+   "start": 116.684006,
+   "end": 116.784004
+  },
+  {
+   "word": "by",
+   "start": 116.784004,
+   "end": 117.04401
+  },
+  {
+   "word": "eye.",
+   "start": 117.04401,
+   "end": 117.564
+  },
+  {
+   "word": "But",
+   "start": 117.424,
+   "end": 117.964005
+  },
+  {
+   "word": "tests",
+   "start": 117.964005,
+   "end": 118.344
+  },
+  {
+   "word": "live",
+   "start": 118.344,
+   "end": 118.684006
+  },
+  {
+   "word": "in",
+   "start": 118.684006,
+   "end": 118.864006
+  },
+  {
+   "word": "the",
+   "start": 118.864006,
+   "end": 118.964005
+  },
+  {
+   "word": "tails.",
+   "start": 118.964005,
+   "end": 119.604004
+  },
+  {
+   "word": "A",
+   "start": 119.604004,
+   "end": 120.244
+  },
+  {
+   "word": "95%",
+   "start": 120.244,
+   "end": 121.244
+  },
+  {
+   "word": "interval",
+   "start": 121.244,
+   "end": 121.664
+  },
+  {
+   "word": "should",
+   "start": 121.664,
+   "end": 122.204
+  },
+  {
+   "word": "miss",
+   "start": 122.204,
+   "end": 122.464005
+  },
+  {
+   "word": "2.5%",
+   "start": 122.464005,
+   "end": 123.40401
+  },
+  {
+   "word": "on",
+   "start": 123.40401,
+   "end": 123.724
+  },
+  {
+   "word": "each",
+   "start": 123.724,
+   "end": 123.944
+  },
+  {
+   "word": "side.",
+   "start": 123.944,
+   "end": 124.504005
+  },
+  {
+   "word": "Tests",
+   "start": 124.644005,
+   "end": 125.124
+  },
+  {
+   "word": "estimate",
+   "start": 125.124,
+   "end": 125.624
+  },
+  {
+   "word": "the",
+   "start": 125.624,
+   "end": 125.804
+  },
+  {
+   "word": "spread",
+   "start": 125.804,
+   "end": 126.024
+  },
+  {
+   "word": "from",
+   "start": 126.024,
+   "end": 126.224
+  },
+  {
+   "word": "the",
+   "start": 126.224,
+   "end": 126.384
+  },
+  {
+   "word": "same",
+   "start": 126.384,
+   "end": 126.564
+  },
+  {
+   "word": "data,",
+   "start": 126.564,
+   "end": 127.124
+  },
+  {
+   "word": "so",
+   "start": 127.124,
+   "end": 127.604004
+  },
+  {
+   "word": "a",
+   "start": 127.604004,
+   "end": 127.744
+  },
+  {
+   "word": "low",
+   "start": 127.744,
+   "end": 127.964005
+  },
+  {
+   "word": "average",
+   "start": 127.964005,
+   "end": 128.464
+  },
+  {
+   "word": "gets",
+   "start": 128.464,
+   "end": 128.764
+  },
+  {
+   "word": "a",
+   "start": 128.764,
+   "end": 128.904
+  },
+  {
+   "word": "small",
+   "start": 128.904,
+   "end": 129.164
+  },
+  {
+   "word": "spread,",
+   "start": 129.164,
+   "end": 129.904
+  },
+  {
+   "word": "and",
+   "start": 129.904,
+   "end": 130.404
+  },
+  {
+   "word": "its",
+   "start": 130.12401,
+   "end": 130.544
+  },
+  {
+   "word": "interval",
+   "start": 130.544,
+   "end": 130.884
+  },
+  {
+   "word": "stops",
+   "start": 130.884,
+   "end": 131.324
+  },
+  {
+   "word": "short.",
+   "start": 131.324,
+   "end": 131.884
+  },
+  {
+   "word": "With",
+   "start": 131.784,
+   "end": 132.324
+  },
+  {
+   "word": "30",
+   "start": 132.324,
+   "end": 132.664
+  },
+  {
+   "word": "weights,",
+   "start": 132.664,
+   "end": 133.164
+  },
+  {
+   "word": "7%",
+   "start": 133.164,
+   "end": 134.084
+  },
+  {
+   "word": "low,",
+   "start": 134.084,
+   "end": 134.664
+  },
+  {
+   "word": "1%",
+   "start": 134.664,
+   "end": 135.164
+  },
+  {
+   "word": "high.",
+   "start": 135.164,
+   "end": 135.744
+  },
+  {
+   "word": "Ron",
+   "start": 135.98401,
+   "end": 136.244
+  },
+  {
+   "word": "Kohavi",
+   "start": 136.244,
+   "end": 136.70401
+  },
+  {
+   "word": "and",
+   "start": 136.70401,
+   "end": 136.92401
+  },
+  {
+   "word": "colleagues,",
+   "start": 136.92401,
+   "end": 137.62401
+  },
+  {
+   "word": "using",
+   "start": 137.62401,
+   "end": 138.084
+  },
+  {
+   "word": "Bing's",
+   "start": 138.084,
+   "end": 138.404
+  },
+  {
+   "word": "data,",
+   "start": 138.404,
+   "end": 139.244
+  },
+  {
+   "word": "want",
+   "start": 139.244,
+   "end": 139.444
+  },
+  {
+   "word": "each",
+   "start": 139.444,
+   "end": 139.644
+  },
+  {
+   "word": "side",
+   "start": 139.644,
+   "end": 139.944
+  },
+  {
+   "word": "between",
+   "start": 139.944,
+   "end": 140.264
+  },
+  {
+   "word": "2",
+   "start": 140.264,
+   "end": 140.70401
+  },
+  {
+   "word": "and",
+   "start": 140.70401,
+   "end": 140.92401
+  },
+  {
+   "word": "3%.",
+   "start": 140.92401,
+   "end": 141.604
+  },
+  {
+   "word": "Their",
+   "start": 141.244,
+   "end": 142.224
+  },
+  {
+   "word": "rule,",
+   "start": 142.224,
+   "end": 142.724
+  },
+  {
+   "word": "n",
+   "start": 142.724,
+   "end": 143.264
+  },
+  {
+   "word": "at",
+   "start": 143.264,
+   "end": 143.384
+  },
+  {
+   "word": "least",
+   "start": 143.384,
+   "end": 143.564
+  },
+  {
+   "word": "355",
+   "start": 143.564,
+   "end": 144.784
+  },
+  {
+   "word": "times",
+   "start": 144.784,
+   "end": 145.164
+  },
+  {
+   "word": "the",
+   "start": 145.164,
+   "end": 145.384
+  },
+  {
+   "word": "skewness",
+   "start": 145.384,
+   "end": 145.684
+  },
+  {
+   "word": "squared.",
+   "start": 145.684,
+   "end": 145.964
+  },
+  {
+   "word": "Divide",
+   "start": 146.70401,
+   "end": 147.044
+  },
+  {
+   "word": "by",
+   "start": 147.044,
+   "end": 147.20401
+  },
+  {
+   "word": "n",
+   "start": 147.20401,
+   "end": 147.524
+  },
+  {
+   "word": "and",
+   "start": 147.524,
+   "end": 147.744
+  },
+  {
+   "word": "take",
+   "start": 147.744,
+   "end": 147.964
+  },
+  {
+   "word": "the",
+   "start": 147.964,
+   "end": 148.144
+  },
+  {
+   "word": "root.",
+   "start": 148.144,
+   "end": 148.324
+  },
+  {
+   "word": "It's",
+   "start": 149.584,
+   "end": 149.804
+  },
+  {
+   "word": "our",
+   "start": 149.804,
+   "end": 149.904
+  },
+  {
+   "word": "formula.",
+   "start": 149.904,
+   "end": 150.264
+  },
+  {
+   "word": "The",
+   "start": 150.944,
+   "end": 151.064
+  },
+  {
+   "word": "average's",
+   "start": 151.064,
+   "end": 151.544
+  },
+  {
+   "word": "skewness",
+   "start": 151.544,
+   "end": 152.004
+  },
+  {
+   "word": "at",
+   "start": 152.004,
+   "end": 152.244
+  },
+  {
+   "word": "most .053.",
+   "start": 152.244,
+   "end": 153.564
+  },
+  {
+   "word": "300",
+   "start": 154.104,
+   "end": 154.42401
+  },
+  {
+   "word": "still",
+   "start": 154.42401,
+   "end": 154.92401
+  },
+  {
+   "word": "misses.",
+   "start": 154.92401,
+   "end": 155.244
+  },
+  {
+   "word": "For",
+   "start": 155.824,
+   "end": 155.964
+  },
+  {
+   "word": "these",
+   "start": 155.964,
+   "end": 156.224
+  },
+  {
+   "word": "weights,",
+   "start": 156.224,
+   "end": 156.784
+  },
+  {
+   "word": "1420",
+   "start": 156.784,
+   "end": 157.824
+  },
+  {
+   "word": "and",
+   "start": 157.824,
+   "end": 158.304
+  },
+  {
+   "word": "both",
+   "start": 158.304,
+   "end": 158.544
+  },
+  {
+   "word": "misses",
+   "start": 158.544,
+   "end": 158.864
+  },
+  {
+   "word": "reach",
+   "start": 158.864,
+   "end": 159.184
+  },
+  {
+   "word": "the",
+   "start": 159.184,
+   "end": 159.384
+  },
+  {
+   "word": "band.",
+   "start": 159.384,
+   "end": 160.024
+  },
+  {
+   "word": "Bing's",
+   "start": 161.264,
+   "end": 161.70401
+  },
+  {
+   "word": "revenue",
+   "start": 161.70401,
+   "end": 162.144
+  },
+  {
+   "word": "per",
+   "start": 162.144,
+   "end": 162.384
+  },
+  {
+   "word": "user",
+   "start": 162.384,
+   "end": 162.70401
+  },
+  {
+   "word": "had",
+   "start": 162.70401,
+   "end": 163.064
+  },
+  {
+   "word": "a",
+   "start": 163.064,
+   "end": 163.144
+  },
+  {
+   "word": "skewness",
+   "start": 163.144,
+   "end": 163.604
+  },
+  {
+   "word": "near",
+   "start": 163.604,
+   "end": 163.824
+  },
+  {
+   "word": "18.",
+   "start": 163.824,
+   "end": 164.224
+  },
+  {
+   "word": "114,000",
+   "start": 165.12401,
+   "end": 166.664
+  },
+  {
+   "word": "users",
+   "start": 166.664,
+   "end": 167.144
+  },
+  {
+   "word": "capping",
+   "start": 167.144,
+   "end": 167.884
+  },
+  {
+   "word": "each",
+   "start": 167.884,
+   "end": 168.224
+  },
+  {
+   "word": "user",
+   "start": 168.224,
+   "end": 168.544
+  },
+  {
+   "word": "at $10",
+   "start": 168.544,
+   "end": 169.164
+  },
+  {
+   "word": "a",
+   "start": 169.164,
+   "end": 169.524
+  },
+  {
+   "word": "week",
+   "start": 169.524,
+   "end": 169.784
+  },
+  {
+   "word": "under",
+   "start": 169.784,
+   "end": 170.504
+  },
+  {
+   "word": "10,000",
+   "start": 170.504,
+   "end": 171.364
+  },
+  {
+   "word": "now",
+   "start": 171.364,
+   "end": 172.884
+  },
+  {
+   "word": "the",
+   "start": 172.884,
+   "end": 173.044
+  },
+  {
+   "word": "condition",
+   "start": 173.044,
+   "end": 173.464
+  },
+  {
+   "word": "a",
+   "start": 173.464,
+   "end": 174.104
+  },
+  {
+   "word": "lighthouse",
+   "start": 173.324,
+   "end": 174.504
+  },
+  {
+   "word": "one",
+   "start": 174.504,
+   "end": 174.864
+  },
+  {
+   "word": "mile",
+   "start": 174.864,
+   "end": 175.20401
+  },
+  {
+   "word": "off",
+   "start": 175.20401,
+   "end": 175.40399
+  },
+  {
+   "word": "a",
+   "start": 175.40399,
+   "end": 175.564
+  },
+  {
+   "word": "straight",
+   "start": 175.564,
+   "end": 175.764
+  },
+  {
+   "word": "shore",
+   "start": 175.764,
+   "end": 176.124
+  },
+  {
+   "word": "flashes",
+   "start": 176.124,
+   "end": 176.744
+  },
+  {
+   "word": "at",
+   "start": 176.744,
+   "end": 176.98401
+  },
+  {
+   "word": "random",
+   "start": 176.98401,
+   "end": 177.36401
+  },
+  {
+   "word": "angles",
+   "start": 177.36401,
+   "end": 177.844
+  },
+  {
+   "word": "and",
+   "start": 177.844,
+   "end": 178.604
+  },
+  {
+   "word": "each",
+   "start": 178.604,
+   "end": 178.844
+  },
+  {
+   "word": "flash",
+   "start": 178.844,
+   "end": 179.184
+  },
+  {
+   "word": "lands",
+   "start": 178.70401,
+   "end": 179.784
+  },
+  {
+   "word": "somewhere",
+   "start": 179.784,
+   "end": 180.344
+  },
+  {
+   "word": "on",
+   "start": 180.344,
+   "end": 180.544
+  },
+  {
+   "word": "the",
+   "start": 180.544,
+   "end": 180.684
+  },
+  {
+   "word": "shore",
+   "start": 180.684,
+   "end": 180.92401
+  },
+  {
+   "word": "track",
+   "start": 180.92401,
+   "end": 181.64401
+  },
+  {
+   "word": "the",
+   "start": 181.64401,
+   "end": 181.784
+  },
+  {
+   "word": "average",
+   "start": 181.784,
+   "end": 182.164
+  },
+  {
+   "word": "landing",
+   "start": 182.164,
+   "end": 182.524
+  },
+  {
+   "word": "spot",
+   "start": 182.524,
+   "end": 182.98401
+  },
+  {
+   "word": "it",
+   "start": 182.98401,
+   "end": 183.48401
+  },
+  {
+   "word": "never",
+   "start": 183.48401,
+   "end": 183.724
+  },
+  {
+   "word": "settles",
+   "start": 183.724,
+   "end": 184.20401
+  },
+  {
+   "word": "a",
+   "start": 184.20401,
+   "end": 184.90399
+  },
+  {
+   "word": "flash",
+   "start": 184.844,
+   "end": 185.324
+  },
+  {
+   "word": "aimed",
+   "start": 185.324,
+   "end": 185.64401
+  },
+  {
+   "word": "almost",
+   "start": 185.64401,
+   "end": 186.064
+  },
+  {
+   "word": "along",
+   "start": 186.064,
+   "end": 186.384
+  },
+  {
+   "word": "the",
+   "start": 186.384,
+   "end": 186.584
+  },
+  {
+   "word": "shore",
+   "start": 186.584,
+   "end": 186.744
+  },
+  {
+   "word": "lands",
+   "start": 186.744,
+   "end": 187.14401
+  },
+  {
+   "word": "absurdly",
+   "start": 187.14401,
+   "end": 187.744
+  },
+  {
+   "word": "far",
+   "start": 187.744,
+   "end": 188.064
+  },
+  {
+   "word": "away",
+   "start": 188.064,
+   "end": 188.42401
+  },
+  {
+   "word": "and",
+   "start": 188.42401,
+   "end": 189.004
+  },
+  {
+   "word": "yanks",
+   "start": 189.004,
+   "end": 189.244
+  },
+  {
+   "word": "it",
+   "start": 189.244,
+   "end": 189.48401
+  },
+  {
+   "word": "among",
+   "start": 189.48401,
+   "end": 190.384
+  },
+  {
+   "word": "a",
+   "start": 190.384,
+   "end": 190.564
+  },
+  {
+   "word": "thousand",
+   "start": 190.544,
+   "end": 190.944
+  },
+  {
+   "word": "flashes,",
+   "start": 190.944,
+   "end": 191.86401
+  },
+  {
+   "word": "the",
+   "start": 191.86401,
+   "end": 192.264
+  },
+  {
+   "word": "farthest",
+   "start": 192.264,
+   "end": 192.684
+  },
+  {
+   "word": "typically",
+   "start": 192.684,
+   "end": 193.124
+  },
+  {
+   "word": "lands",
+   "start": 193.124,
+   "end": 193.584
+  },
+  {
+   "word": "about",
+   "start": 193.584,
+   "end": 193.844
+  },
+  {
+   "word": "900",
+   "start": 193.844,
+   "end": 194.444
+  },
+  {
+   "word": "miles",
+   "start": 194.444,
+   "end": 194.844
+  },
+  {
+   "word": "off.",
+   "start": 194.844,
+   "end": 195.444
+  },
+  {
+   "word": "Divided",
+   "start": 195.444,
+   "end": 196.104
+  },
+  {
+   "word": "by",
+   "start": 196.104,
+   "end": 196.244
+  },
+  {
+   "word": "a",
+   "start": 196.244,
+   "end": 196.464
+  },
+  {
+   "word": "thousand,",
+   "start": 195.804,
+   "end": 197.124
+  },
+  {
+   "word": "it",
+   "start": 197.124,
+   "end": 197.624
+  },
+  {
+   "word": "still",
+   "start": 197.624,
+   "end": 197.844
+  },
+  {
+   "word": "drags",
+   "start": 197.844,
+   "end": 198.384
+  },
+  {
+   "word": "the",
+   "start": 198.384,
+   "end": 198.48401
+  },
+  {
+   "word": "average",
+   "start": 198.48401,
+   "end": 198.90399
+  },
+  {
+   "word": "about",
+   "start": 198.90399,
+   "end": 199.164
+  },
+  {
+   "word": "a",
+   "start": 199.164,
+   "end": 199.324
+  },
+  {
+   "word": "mile.",
+   "start": 199.324,
+   "end": 199.804
+  },
+  {
+   "word": "Half",
+   "start": 199.804,
+   "end": 200.224
+  },
+  {
+   "word": "of",
+   "start": 200.224,
+   "end": 200.384
+  },
+  {
+   "word": "single",
+   "start": 200.384,
+   "end": 200.784
+  },
+  {
+   "word": "flashes",
+   "start": 200.784,
+   "end": 201.304
+  },
+  {
+   "word": "land",
+   "start": 201.304,
+   "end": 202.164
+  },
+  {
+   "word": "within",
+   "start": 201.824,
+   "end": 202.48401
+  },
+  {
+   "word": "a",
+   "start": 202.48401,
+   "end": 202.64401
+  },
+  {
+   "word": "mile",
+   "start": 202.64401,
+   "end": 202.844
+  },
+  {
+   "word": "of",
+   "start": 202.844,
+   "end": 203.024
+  },
+  {
+   "word": "the",
+   "start": 203.024,
+   "end": 203.084
+  },
+  {
+   "word": "middle.",
+   "start": 203.084,
+   "end": 203.48401
+  },
+  {
+   "word": "Repeat",
+   "start": 203.48401,
+   "end": 204.004
+  },
+  {
+   "word": "the",
+   "start": 204.004,
+   "end": 204.20401
+  },
+  {
+   "word": "thousand",
+   "start": 204.20401,
+   "end": 204.604
+  },
+  {
+   "word": "flash",
+   "start": 204.604,
+   "end": 205.064
+  },
+  {
+   "word": "average",
+   "start": 205.064,
+   "end": 205.40399
+  },
+  {
+   "word": "200",
+   "start": 205.40399,
+   "end": 205.804
+  },
+  {
+   "word": "times",
+   "start": 205.804,
+   "end": 206.324
+  },
+  {
+   "word": "and",
+   "start": 206.324,
+   "end": 207.064
+  },
+  {
+   "word": "still",
+   "start": 206.164,
+   "end": 207.284
+  },
+  {
+   "word": "only",
+   "start": 207.284,
+   "end": 207.604
+  },
+  {
+   "word": "half",
+   "start": 207.604,
+   "end": 207.90399
+  },
+  {
+   "word": "do.",
+   "start": 207.90399,
+   "end": 208.304
+  },
+  {
+   "word": "The",
+   "start": 208.304,
+   "end": 209.304
+  },
+  {
+   "word": "theorem",
+   "start": 209.304,
+   "end": 209.724
+  },
+  {
+   "word": "needs",
+   "start": 209.724,
+   "end": 210.044
+  },
+  {
+   "word": "finite",
+   "start": 210.044,
+   "end": 210.524
+  },
+  {
+   "word": "variance.",
+   "start": 210.524,
+   "end": 211.304
+  },
+  {
+   "word": "No",
+   "start": 211.304,
+   "end": 211.844
+  },
+  {
+   "word": "single",
+   "start": 211.844,
+   "end": 212.20401
+  },
+  {
+   "word": "piece",
+   "start": 212.20401,
+   "end": 212.584
+  },
+  {
+   "word": "can",
+   "start": 212.584,
+   "end": 212.804
+  },
+  {
+   "word": "outweigh",
+   "start": 212.36401,
+   "end": 213.14401
+  },
+  {
+   "word": "the",
+   "start": 213.14401,
+   "end": 213.36401
+  },
+  {
+   "word": "rest.",
+   "start": 213.36401,
+   "end": 213.884
+  },
+  {
+   "word": "Here",
+   "start": 213.884,
+   "end": 214.344
+  },
+  {
+   "word": "the",
+   "start": 214.344,
+   "end": 214.444
+  },
+  {
+   "word": "variance",
+   "start": 214.444,
+   "end": 214.90399
+  },
+  {
+   "word": "is",
+   "start": 214.90399,
+   "end": 215.164
+  },
+  {
+   "word": "infinite.",
+   "start": 215.164,
+   "end": 215.92401
+  },
+  {
+   "word": "The",
+   "start": 215.92401,
+   "end": 216.224
+  },
+  {
+   "word": "median",
+   "start": 216.224,
+   "end": 216.48401
+  },
+  {
+   "word": "ignores",
+   "start": 216.48401,
+   "end": 217.044
+  },
+  {
+   "word": "how",
+   "start": 217.044,
+   "end": 217.264
+  },
+  {
+   "word": "far",
+   "start": 217.264,
+   "end": 217.48401
+  },
+  {
+   "word": "the",
+   "start": 217.48401,
+   "end": 217.64401
+  },
+  {
+   "word": "extremes",
+   "start": 217.664,
+   "end": 218.064
+  },
+  {
+   "word": "fly,",
+   "start": 218.064,
+   "end": 219.044
+  },
+  {
+   "word": "so",
+   "start": 219.044,
+   "end": 219.084
+  },
+  {
+   "word": "it",
+   "start": 219.084,
+   "end": 219.224
+  },
+  {
+   "word": "homes",
+   "start": 219.224,
+   "end": 219.48401
+  },
+  {
+   "word": "in.",
+   "start": 219.48401,
+   "end": 219.944
+  },
+  {
+   "word": "So",
+   "start": 219.944,
+   "end": 221.164
+  },
+  {
+   "word": "the",
+   "start": 221.164,
+   "end": 221.264
+  },
+  {
+   "word": "answer",
+   "start": 221.264,
+   "end": 221.604
+  },
+  {
+   "word": "is",
+   "start": 221.604,
+   "end": 221.844
+  },
+  {
+   "word": "over",
+   "start": 221.844,
+   "end": 222.044
+  },
+  {
+   "word": "a",
+   "start": 222.044,
+   "end": 222.224
+  },
+  {
+   "word": "thousand,",
+   "start": 222.224,
+   "end": 222.884
+  },
+  {
+   "word": "not",
+   "start": 222.884,
+   "end": 223.184
+  },
+  {
+   "word": "thirty.",
+   "start": 223.184,
+   "end": 223.804
+  },
+  {
+   "word": "And",
+   "start": 223.804,
+   "end": 224.124
+  },
+  {
+   "word": "collect",
+   "start": 224.124,
+   "end": 224.40399
+  },
+  {
+   "word": "forever.",
+   "start": 223.98401,
+   "end": 225.104
+  },
+  {
+   "word": "This",
+   "start": 225.104,
+   "end": 225.544
+  },
+  {
+   "word": "histogram",
+   "start": 225.544,
+   "end": 225.98401
+  },
+  {
+   "word": "stays",
+   "start": 225.98401,
+   "end": 226.544
+  },
+  {
+   "word": "lopsided.",
+   "start": 226.544,
+   "end": 227.464
+  },
+  {
+   "word": "The",
+   "start": 227.464,
+   "end": 227.804
+  },
+  {
+   "word": "bell",
+   "start": 227.804,
+   "end": 228.024
+  },
+  {
+   "word": "was",
+   "start": 228.024,
+   "end": 228.304
+  },
+  {
+   "word": "never",
+   "start": 228.304,
+   "end": 228.624
+  },
+  {
+   "word": "in",
+   "start": 228.624,
+   "end": 228.86401
+  },
+  {
+   "word": "the",
+   "start": 228.86401,
+   "end": 228.964
+  },
+  {
+   "word": "data.",
+   "start": 228.964,
+   "end": 229.444
+  },
+  {
+   "word": "It's",
+   "start": 229.444,
+   "end": 229.884
+  },
+  {
+   "word": "in",
+   "start": 229.884,
+   "end": 230.004
+  },
+  {
+   "word": "the",
+   "start": 230.004,
+   "end": 230.124
+  },
+  {
+   "word": "average.",
+   "start": 230.124,
+   "end": 231.224
+  }
+ ],
+ "segments": [
+  {
+   "id": 0,
+   "seek": 0,
+   "start": 0,
+   "end": 4.08,
+   "text": " A hundred waits for a bus, mostly short with a long tail.",
+   "tokens": [
+    50365,
+    316,
+    3262,
+    40597,
+    337,
+    257,
+    1255,
+    11,
+    5240,
+    2099,
+    365,
+    257,
+    938,
+    6838,
+    13,
+    50569
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1355982,
+   "compression_ratio": 1.5542169,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 1,
+   "seek": 0,
+   "start": 4.08,
+   "end": 8.099999,
+   "text": " Textbooks say the average of 30 is safe to treat as a bell.",
+   "tokens": [
+    50569,
+    18643,
+    15170,
+    584,
+    264,
+    4274,
+    295,
+    2217,
+    307,
+    3273,
+    281,
+    2387,
+    382,
+    257,
+    4549,
+    13,
+    50770
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1355982,
+   "compression_ratio": 1.5542169,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 2,
+   "seek": 0,
+   "start": 8.099999,
+   "end": 13.78,
+   "text": " For these waits, does it take 30, 300, or over 1,000?",
+   "tokens": [
+    50770,
+    1171,
+    613,
+    40597,
+    11,
+    775,
+    309,
+    747,
+    2217,
+    11,
+    6641,
+    11,
+    420,
+    670,
+    502,
+    11,
+    1360,
+    30,
+    51054
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1355982,
+   "compression_ratio": 1.5542169,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 3,
+   "seek": 0,
+   "start": 13.78,
+   "end": 17.279999,
+   "text": " A-B tests lean on that bell, and on revenue data,",
+   "tokens": [
+    51054,
+    316,
+    12,
+    33,
+    6921,
+    11659,
+    322,
+    300,
+    4549,
+    11,
+    293,
+    322,
+    9324,
+    1412,
+    11,
+    51229
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1355982,
+   "compression_ratio": 1.5542169,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 4,
+   "seek": 0,
+   "start": 17.279999,
+   "end": 20.119999,
+   "text": " 30 is off by a factor of thousands.",
+   "tokens": [
+    51229,
+    2217,
+    307,
+    766,
+    538,
+    257,
+    5952,
+    295,
+    5383,
+    13,
+    51371
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1355982,
+   "compression_ratio": 1.5542169,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 5,
+   "seek": 0,
+   "start": 20.119999,
+   "end": 22.8,
+   "text": " First, look for the bell in the data itself.",
+   "tokens": [
+    51371,
+    2386,
+    11,
+    574,
+    337,
+    264,
+    4549,
+    294,
+    264,
+    1412,
+    2564,
+    13,
+    51505
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1355982,
+   "compression_ratio": 1.5542169,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 6,
+   "seek": 0,
+   "start": 22.8,
+   "end": 26.439999,
+   "text": " Collect 1,000, 10,000, 100,000.",
+   "tokens": [
+    51505,
+    31896,
+    502,
+    11,
+    1360,
+    11,
+    1266,
+    11,
+    1360,
+    11,
+    2319,
+    11,
+    1360,
+    13,
+    51687
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1355982,
+   "compression_ratio": 1.5542169,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 7,
+   "seek": 0,
+   "start": 26.439999,
+   "end": 29.539999,
+   "text": " The bars get smoother, but the shape doesn't budge.",
+   "tokens": [
+    51687,
+    440,
+    10228,
+    483,
+    28640,
+    11,
+    457,
+    264,
+    3909,
+    1177,
+    380,
+    3265,
+    432,
+    13,
+    51842
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1355982,
+   "compression_ratio": 1.5542169,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 8,
+   "seek": 2954,
+   "start": 29.539999,
+   "end": 31.72,
+   "text": " Measure the lean with skewness.",
+   "tokens": [
+    50365,
+    41436,
+    264,
+    11659,
+    365,
+    8756,
+    895,
+    442,
+    13,
+    50474
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10005544,
+   "compression_ratio": 1.623431,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 9,
+   "seek": 2954,
+   "start": 31.72,
+   "end": 33.98,
+   "text": " The average cubed gap from the mean",
+   "tokens": [
+    50474,
+    440,
+    4274,
+    36510,
+    7417,
+    490,
+    264,
+    914,
+    50587
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10005544,
+   "compression_ratio": 1.623431,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 10,
+   "seek": 2954,
+   "start": 33.98,
+   "end": 37.32,
+   "text": " left gaps counting negative over the spread cubed.",
+   "tokens": [
+    50587,
+    1411,
+    15031,
+    13251,
+    3671,
+    670,
+    264,
+    3974,
+    36510,
+    13,
+    50754
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10005544,
+   "compression_ratio": 1.623431,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 11,
+   "seek": 2954,
+   "start": 37.32,
+   "end": 39.199997,
+   "text": " A perfect bell scores zero.",
+   "tokens": [
+    50754,
+    316,
+    2176,
+    4549,
+    13444,
+    4018,
+    13,
+    50848
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10005544,
+   "compression_ratio": 1.623431,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 12,
+   "seek": 2954,
+   "start": 39.199997,
+   "end": 41.539997,
+   "text": " These weights for a bus score about two",
+   "tokens": [
+    50848,
+    1981,
+    17443,
+    337,
+    257,
+    1255,
+    6175,
+    466,
+    732,
+    50965
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10005544,
+   "compression_ratio": 1.623431,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 13,
+   "seek": 2954,
+   "start": 41.539997,
+   "end": 43.879997,
+   "text": " at every sample size.",
+   "tokens": [
+    50965,
+    412,
+    633,
+    6889,
+    2744,
+    13,
+    51082
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10005544,
+   "compression_ratio": 1.623431,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 14,
+   "seek": 2954,
+   "start": 43.879997,
+   "end": 45.8,
+   "text": " So average instead.",
+   "tokens": [
+    51082,
+    407,
+    4274,
+    2602,
+    13,
+    51178
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10005544,
+   "compression_ratio": 1.623431,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 15,
+   "seek": 2954,
+   "start": 45.8,
+   "end": 48.3,
+   "text": " Four bus weights, the one long wait",
+   "tokens": [
+    51178,
+    7451,
+    1255,
+    17443,
+    11,
+    264,
+    472,
+    938,
+    1699,
+    51303
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10005544,
+   "compression_ratio": 1.623431,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 16,
+   "seek": 2954,
+   "start": 48.3,
+   "end": 51.1,
+   "text": " gets diluted by three short ones.",
+   "tokens": [
+    51303,
+    2170,
+    11504,
+    4866,
+    538,
+    1045,
+    2099,
+    2306,
+    13,
+    51443
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10005544,
+   "compression_ratio": 1.623431,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 17,
+   "seek": 2954,
+   "start": 51.1,
+   "end": 52.92,
+   "text": " Drop that one number here.",
+   "tokens": [
+    51443,
+    17675,
+    300,
+    472,
+    1230,
+    510,
+    13,
+    51534
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10005544,
+   "compression_ratio": 1.623431,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 18,
+   "seek": 2954,
+   "start": 52.92,
+   "end": 54.92,
+   "text": " Do that 10,000 times.",
+   "tokens": [
+    51534,
+    1144,
+    300,
+    1266,
+    11,
+    1360,
+    1413,
+    13,
+    51634
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10005544,
+   "compression_ratio": 1.623431,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 19,
+   "seek": 2954,
+   "start": 54.92,
+   "end": 57.76,
+   "text": " These averages lean less, skewness one.",
+   "tokens": [
+    51634,
+    1981,
+    42257,
+    11659,
+    1570,
+    11,
+    8756,
+    895,
+    442,
+    472,
+    13,
+    51776
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10005544,
+   "compression_ratio": 1.623431,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 20,
+   "seek": 5776,
+   "start": 57.76,
+   "end": 64.02,
+   "text": " 16 per average, 0.5, 64, 0.25, nearly this perfect bell in green.",
+   "tokens": [
+    50365,
+    3165,
+    680,
+    4274,
+    11,
+    1958,
+    13,
+    20,
+    11,
+    12145,
+    11,
+    1958,
+    13,
+    6074,
+    11,
+    6217,
+    341,
+    2176,
+    4549,
+    294,
+    3092,
+    13,
+    50678
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15714839,
+   "compression_ratio": 1.6848739,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 21,
+   "seek": 5776,
+   "start": 64.479996,
+   "end": 67.54,
+   "text": " Each time the group grows four times, the skewness halves.",
+   "tokens": [
+    50701,
+    6947,
+    565,
+    264,
+    1594,
+    13156,
+    1451,
+    1413,
+    11,
+    264,
+    8756,
+    895,
+    442,
+    38490,
+    13,
+    50854
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15714839,
+   "compression_ratio": 1.6848739,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 22,
+   "seek": 5776,
+   "start": 68.18,
+   "end": 71.6,
+   "text": " 2 over root n, and 2 is the skewness of one weight.",
+   "tokens": [
+    50886,
+    568,
+    670,
+    5593,
+    297,
+    11,
+    293,
+    568,
+    307,
+    264,
+    8756,
+    895,
+    442,
+    295,
+    472,
+    3364,
+    13,
+    51057
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15714839,
+   "compression_ratio": 1.6848739,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 23,
+   "seek": 5776,
+   "start": 72.56,
+   "end": 74,
+   "text": " The root comes from the cubes.",
+   "tokens": [
+    51105,
+    440,
+    5593,
+    1487,
+    490,
+    264,
+    25415,
+    13,
+    51177
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15714839,
+   "compression_ratio": 1.6848739,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 24,
+   "seek": 5776,
+   "start": 74.42,
+   "end": 78.34,
+   "text": " Add four weights, their cubed gaps add up four times one weights.",
+   "tokens": [
+    51198,
+    5349,
+    1451,
+    17443,
+    11,
+    641,
+    36510,
+    15031,
+    909,
+    493,
+    1451,
+    1413,
+    472,
+    17443,
+    13,
+    51394
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15714839,
+   "compression_ratio": 1.6848739,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 25,
+   "seek": 5776,
+   "start": 78.34,
+   "end": 82.02,
+   "text": " But the spread only doubles, so its cube grows eight times.",
+   "tokens": [
+    51394,
+    583,
+    264,
+    3974,
+    787,
+    31634,
+    11,
+    370,
+    1080,
+    13728,
+    13156,
+    3180,
+    1413,
+    13,
+    51578
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15714839,
+   "compression_ratio": 1.6848739,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 26,
+   "seek": 5776,
+   "start": 82.46,
+   "end": 83.979996,
+   "text": " 4 over 8, half the lean.",
+   "tokens": [
+    51600,
+    1017,
+    670,
+    1649,
+    11,
+    1922,
+    264,
+    11659,
+    13,
+    51676
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15714839,
+   "compression_ratio": 1.6848739,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 27,
+   "seek": 5776,
+   "start": 84.439995,
+   "end": 87.02,
+   "text": " In general, n over n to the 1 and a half.",
+   "tokens": [
+    51699,
+    682,
+    2674,
+    11,
+    297,
+    670,
+    297,
+    281,
+    264,
+    502,
+    293,
+    257,
+    1922,
+    13,
+    51828
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15714839,
+   "compression_ratio": 1.6848739,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 28,
+   "seek": 8776,
+   "start": 87.759995,
+   "end": 93.63999,
+   "text": " A coin that lands heads one time in 10 is just two spikes, yet its averages make the",
+   "tokens": [
+    50365,
+    316,
+    11464,
+    300,
+    5949,
+    8050,
+    472,
+    565,
+    294,
+    1266,
+    307,
+    445,
+    732,
+    28997,
+    11,
+    1939,
+    1080,
+    42257,
+    652,
+    264,
+    50659
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16786952,
+   "compression_ratio": 1.5023255,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 29,
+   "seek": 8776,
+   "start": 93.63999,
+   "end": 95.91999,
+   "text": " same bell by the same rule.",
+   "tokens": [
+    50659,
+    912,
+    4549,
+    538,
+    264,
+    912,
+    4978,
+    13,
+    50773
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16786952,
+   "compression_ratio": 1.5023255,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 30,
+   "seek": 8776,
+   "start": 95.91999,
+   "end": 102.63999,
+   "text": " Kurtosis, the extra tail weight, fades faster as 1 over n, and every finer difference faster",
+   "tokens": [
+    50773,
+    26168,
+    8211,
+    11,
+    264,
+    2857,
+    6838,
+    3364,
+    11,
+    32679,
+    4663,
+    382,
+    502,
+    670,
+    297,
+    11,
+    293,
+    633,
+    39130,
+    2649,
+    4663,
+    51109
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16786952,
+   "compression_ratio": 1.5023255,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 31,
+   "seek": 8776,
+   "start": 102.63999,
+   "end": 103.63999,
+   "text": " still.",
+   "tokens": [
+    51109,
+    920,
+    13,
+    51159
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16786952,
+   "compression_ratio": 1.5023255,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 32,
+   "seek": 8776,
+   "start": 103.63999,
+   "end": 104.63999,
+   "text": " Only the bell survives.",
+   "tokens": [
+    51159,
+    5686,
+    264,
+    4549,
+    46231,
+    13,
+    51209
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16786952,
+   "compression_ratio": 1.5023255,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 33,
+   "seek": 8776,
+   "start": 104.63999,
+   "end": 106.95999,
+   "text": " That's the central limit theorem.",
+   "tokens": [
+    51209,
+    663,
+    311,
+    264,
+    5777,
+    4948,
+    20904,
+    13,
+    51325
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16786952,
+   "compression_ratio": 1.5023255,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 34,
+   "seek": 8776,
+   "start": 106.95999,
+   "end": 111.35999,
+   "text": " It needs independent pieces and one more condition.",
+   "tokens": [
+    51325,
+    467,
+    2203,
+    6695,
+    3755,
+    293,
+    472,
+    544,
+    4188,
+    13,
+    51545
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16786952,
+   "compression_ratio": 1.5023255,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 35,
+   "seek": 111,
+   "start": 111.36,
+   "end": 125.144005,
+   "text": " Back to the textbook 30 2 over root 30 close to a bell by eye But tests live in the tails A 95 interval should miss 2 on each side",
+   "tokens": [
+    50365,
+    5833,
+    281,
+    264,
+    25591,
+    311,
+    2217,
+    11,
+    568,
+    670,
+    5593,
+    2217,
+    11,
+    2411,
+    12851,
+    11,
+    1998,
+    1998,
+    281,
+    257,
+    4549,
+    538,
+    3313,
+    13,
+    50692,
+    50692,
+    583,
+    6921,
+    1621,
+    294,
+    264,
+    28537,
+    13,
+    50801,
+    50801,
+    316,
+    13420,
+    4,
+    15035,
+    820,
+    1713,
+    568,
+    13,
+    20,
+    4,
+    322,
+    1184,
+    1252,
+    13,
+    51053
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16569424,
+   "compression_ratio": 1.4439025,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 36,
+   "seek": 111,
+   "start": 125.144005,
+   "end": 130.424,
+   "text": " Tests estimate the spread from the same data, so a low average gets a small spread, and",
+   "tokens": [
+    51053,
+    314,
+    4409,
+    12539,
+    264,
+    3974,
+    490,
+    264,
+    912,
+    1412,
+    11,
+    370,
+    257,
+    2295,
+    4274,
+    2170,
+    257,
+    1359,
+    3974,
+    11,
+    293,
+    51317
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16569424,
+   "compression_ratio": 1.4439025,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 37,
+   "seek": 111,
+   "start": 130.424,
+   "end": 132.284,
+   "text": " its interval stops short.",
+   "tokens": [
+    51317,
+    1080,
+    15035,
+    10094,
+    2099,
+    13,
+    51410
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16569424,
+   "compression_ratio": 1.4439025,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 38,
+   "seek": 111,
+   "start": 132.284,
+   "end": 135.98401,
+   "text": " With 30 weights, 7% low, 1% high.",
+   "tokens": [
+    51410,
+    2022,
+    2217,
+    17443,
+    11,
+    1614,
+    4,
+    2295,
+    11,
+    502,
+    4,
+    1090,
+    13,
+    51595
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16569424,
+   "compression_ratio": 1.4439025,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 39,
+   "seek": 2571,
+   "start": 135.98401,
+   "end": 141.744,
+   "text": " Ron Kohavi and colleagues, using Bing's data, want each side between 2 and 3%.",
+   "tokens": [
+    50365,
+    9949,
+    30861,
+    18442,
+    293,
+    7734,
+    11,
+    1228,
+    30755,
+    311,
+    1412,
+    11,
+    528,
+    1184,
+    1252,
+    1296,
+    568,
+    293,
+    805,
+    6856,
+    50653
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.21679848,
+   "compression_ratio": 1.4805195,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 40,
+   "seek": 2571,
+   "start": 141.744,
+   "end": 146.044,
+   "text": " Their rule, n at least 355 times the skewness squared.",
+   "tokens": [
+    50653,
+    6710,
+    4978,
+    11,
+    297,
+    412,
+    1935,
+    6976,
+    20,
+    1413,
+    264,
+    8756,
+    895,
+    442,
+    8889,
+    13,
+    50868
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.21679848,
+   "compression_ratio": 1.4805195,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 41,
+   "seek": 2571,
+   "start": 146.664,
+   "end": 148.404,
+   "text": " Divide by n and take the root.",
+   "tokens": [
+    50899,
+    9886,
+    482,
+    538,
+    297,
+    293,
+    747,
+    264,
+    5593,
+    13,
+    50986
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.21679848,
+   "compression_ratio": 1.4805195,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 42,
+   "seek": 2571,
+   "start": 149.584,
+   "end": 150.344,
+   "text": " It's our formula.",
+   "tokens": [
+    51045,
+    467,
+    311,
+    527,
+    8513,
+    13,
+    51083
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.21679848,
+   "compression_ratio": 1.4805195,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 43,
+   "seek": 2571,
+   "start": 150.944,
+   "end": 153.644,
+   "text": " The average's skewness at most .053.",
+   "tokens": [
+    51113,
+    440,
+    4274,
+    311,
+    8756,
+    895,
+    442,
+    412,
+    881,
+    2411,
+    13328,
+    18,
+    13,
+    51248
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.21679848,
+   "compression_ratio": 1.4805195,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 44,
+   "seek": 2571,
+   "start": 154.024,
+   "end": 155.264,
+   "text": " 300 still misses.",
+   "tokens": [
+    51267,
+    6641,
+    920,
+    29394,
+    13,
+    51329
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.21679848,
+   "compression_ratio": 1.4805195,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 45,
+   "seek": 2571,
+   "start": 155.824,
+   "end": 159.764,
+   "text": " For these weights, 1420 and both misses reach the band.",
+   "tokens": [
+    51357,
+    1171,
+    613,
+    17443,
+    11,
+    3499,
+    2009,
+    293,
+    1293,
+    29394,
+    2524,
+    264,
+    4116,
+    13,
+    51554
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.21679848,
+   "compression_ratio": 1.4805195,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 46,
+   "seek": 2571,
+   "start": 161.024,
+   "end": 164.384,
+   "text": " Bing's revenue per user had a skewness near 18.",
+   "tokens": [
+    51617,
+    30755,
+    311,
+    9324,
+    680,
+    4195,
+    632,
+    257,
+    8756,
+    895,
+    442,
+    2651,
+    2443,
+    13,
+    51785
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.21679848,
+   "compression_ratio": 1.4805195,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 47,
+   "seek": 5411,
+   "start": 164.384,
+   "end": 173.804,
+   "text": " 114,000 users capping each user at $10 a week under 10,000 now the condition a",
+   "tokens": [
+    50365,
+    2975,
+    19,
+    11,
+    1360,
+    5022,
+    1335,
+    3759,
+    1184,
+    4195,
+    412,
+    1848,
+    3279,
+    257,
+    1243,
+    833,
+    1266,
+    11,
+    1360,
+    586,
+    264,
+    4188,
+    257,
+    50836
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12584966,
+   "compression_ratio": 1.6275511,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 48,
+   "seek": 5411,
+   "start": 173.804,
+   "end": 179.20401,
+   "text": " lighthouse one mile off a straight shore flashes at random angles and each flash",
+   "tokens": [
+    50836,
+    47481,
+    472,
+    12620,
+    766,
+    257,
+    2997,
+    17805,
+    39665,
+    412,
+    4974,
+    14708,
+    293,
+    1184,
+    7319,
+    51106
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12584966,
+   "compression_ratio": 1.6275511,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 49,
+   "seek": 5411,
+   "start": 179.20401,
+   "end": 184.42401,
+   "text": " lands somewhere on the shore track the average landing spot it never settles a",
+   "tokens": [
+    51106,
+    5949,
+    4079,
+    322,
+    264,
+    17805,
+    2837,
+    264,
+    4274,
+    11202,
+    4008,
+    309,
+    1128,
+    5584,
+    904,
+    257,
+    51367
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12584966,
+   "compression_ratio": 1.6275511,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 50,
+   "seek": 5411,
+   "start": 184.42401,
+   "end": 190.544,
+   "text": " flash aimed almost along the shore lands absurdly far away and yanks it among a",
+   "tokens": [
+    51367,
+    7319,
+    20540,
+    1920,
+    2051,
+    264,
+    17805,
+    5949,
+    19774,
+    356,
+    1400,
+    1314,
+    293,
+    288,
+    14592,
+    309,
+    3654,
+    257,
+    51673
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12584966,
+   "compression_ratio": 1.6275511,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 51,
+   "seek": 8027,
+   "start": 190.544,
+   "end": 196.304,
+   "text": " thousand flashes, the farthest typically lands about 900 miles off. Divided by a",
+   "tokens": [
+    50365,
+    4714,
+    39665,
+    11,
+    264,
+    1400,
+    36356,
+    5850,
+    5949,
+    466,
+    22016,
+    6193,
+    766,
+    13,
+    413,
+    1843,
+    292,
+    538,
+    257,
+    50653
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.11094289,
+   "compression_ratio": 1.6939656,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 52,
+   "seek": 8027,
+   "start": 196.304,
+   "end": 202.124,
+   "text": " thousand, it still drags the average about a mile. Half of single flashes land",
+   "tokens": [
+    50653,
+    4714,
+    11,
+    309,
+    920,
+    5286,
+    82,
+    264,
+    4274,
+    466,
+    257,
+    12620,
+    13,
+    15917,
+    295,
+    2167,
+    39665,
+    2117,
+    50944
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.11094289,
+   "compression_ratio": 1.6939656,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 53,
+   "seek": 8027,
+   "start": 202.124,
+   "end": 206.664,
+   "text": " within a mile of the middle. Repeat the thousand flash average 200 times and",
+   "tokens": [
+    50944,
+    1951,
+    257,
+    12620,
+    295,
+    264,
+    2808,
+    13,
+    28523,
+    264,
+    4714,
+    7319,
+    4274,
+    2331,
+    1413,
+    293,
+    51171
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.11094289,
+   "compression_ratio": 1.6939656,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 54,
+   "seek": 8027,
+   "start": 206.664,
+   "end": 212.864,
+   "text": " still only half do. The theorem needs finite variance. No single piece can",
+   "tokens": [
+    51171,
+    920,
+    787,
+    1922,
+    360,
+    13,
+    440,
+    20904,
+    2203,
+    19362,
+    21977,
+    13,
+    883,
+    2167,
+    2522,
+    393,
+    51481
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.11094289,
+   "compression_ratio": 1.6939656,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 55,
+   "seek": 8027,
+   "start": 212.864,
+   "end": 217.664,
+   "text": " outweigh the rest. Here the variance is infinite. The median ignores how far the",
+   "tokens": [
+    51481,
+    484,
+    826,
+    910,
+    264,
+    1472,
+    13,
+    1692,
+    264,
+    21977,
+    307,
+    13785,
+    13,
+    440,
+    26779,
+    5335,
+    2706,
+    577,
+    1400,
+    264,
+    51721
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.11094289,
+   "compression_ratio": 1.6939656,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 56,
+   "seek": 10739,
+   "start": 217.664,
+   "end": 224.48401,
+   "text": " extremes fly, so it homes in. So the answer is over a thousand, not thirty. And collect",
+   "tokens": [
+    50365,
+    41119,
+    3603,
+    11,
+    370,
+    309,
+    7388,
+    294,
+    13,
+    407,
+    264,
+    1867,
+    307,
+    670,
+    257,
+    4714,
+    11,
+    406,
+    11790,
+    13,
+    400,
+    2500,
+    50706
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16856103,
+   "compression_ratio": 1.3308823,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 57,
+   "seek": 10739,
+   "start": 224.48401,
+   "end": 230.944,
+   "text": " forever. This histogram stays lopsided. The bell was never in the data. It's in the average.",
+   "tokens": [
+    50706,
+    5680,
+    13,
+    639,
+    49816,
+    10834,
+    287,
+    3370,
+    2112,
+    13,
+    440,
+    4549,
+    390,
+    1128,
+    294,
+    264,
+    1412,
+    13,
+    467,
+    311,
+    294,
+    264,
+    4274,
+    13,
+    51029
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.16856103,
+   "compression_ratio": 1.3308823,
+   "no_speech_prob": 0
+  }
+ ],
+ "x_groq": {
+  "id": "req_01m5129b1merg8aatdv7nreqrt"
+ }
+}

@@ -1,0 +1,19 @@
+WER 3.3% over 552 script words (numbers spelled out, 'and' ignored)
+script: videos/episodes/003-clumpy-randomness/narration.json
+
+[1:44.4] insert   script: '∅'                                      heard: 'hundred'
+[1:45.8] insert   script: '∅'                                      heard: 'hundred'
+[1:50.8] insert   script: '∅'                                      heard: 'hundred'
+[1:56.7] insert   script: '∅'                                      heard: 'hundred'
+[1:58.5] insert   script: '∅'                                      heard: 'hundred'
+[2:31.2] replace  script: 'oh'                                     heard: 'zero'
+[2:34.6] replace  script: 'in'                                     heard: 'than'
+[2:36.2] insert   script: '∅'                                      heard: 'zero'
+[2:53.5] replace  script: 'pile ups'                               heard: 'pileups'
+[2:58.0] replace  script: 'clarke'                                 heard: 'clark'
+[3:03.8] insert   script: '∅'                                      heard: 'hundred'
+[3:10.2] replace  script: 'clarke'                                 heard: 'clark'
+[3:18.8] insert   script: '∅'                                      heard: 'zero'
+[3:23.2] replace  script: 'unaimed'                                heard: 'un aimed'
+[3:34.6] replace  script: 'clarke'                                 heard: 'clark'
+[3:46.0] replace  script: 'picked'                                 heard: 'pick'

@@ -1,0 +1,2995 @@
+{
+ "scene": "Episode",
+ "episode": 3,
+ "title": "Which Map Is Random?",
+ "video_duration": 229.533,
+ "beats": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "duration": 11.44,
+   "end": 11.44,
+   "text": "Each map holds five hundred and thirty-seven hits. On one, every hit landed by pure chance. The other follows a rule. Which one is chance? [pause 1.5]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Each",
+     "t": 0.01,
+     "end": 0.285
+    },
+    {
+     "w": "map",
+     "t": 0.31,
+     "end": 0.585
+    },
+    {
+     "w": "holds",
+     "t": 0.61,
+     "end": 0.96
+    },
+    {
+     "w": "five",
+     "t": 1.01,
+     "end": 1.31
+    },
+    {
+     "w": "hundred",
+     "t": 1.335,
+     "end": 1.798
+    },
+    {
+     "w": "and",
+     "t": 1.835,
+     "end": 1.935
+    },
+    {
+     "w": "thirty-seven",
+     "t": 1.96,
+     "end": 2.56
+    },
+    {
+     "w": "hits",
+     "t": 2.585,
+     "end": 3.11
+    },
+    {
+     "w": "On",
+     "t": 3.495,
+     "end": 3.695
+    },
+    {
+     "w": "one",
+     "t": 3.72,
+     "end": 4.145
+    },
+    {
+     "w": "every",
+     "t": 4.32,
+     "end": 4.595
+    },
+    {
+     "w": "hit",
+     "t": 4.62,
+     "end": 4.795
+    },
+    {
+     "w": "landed",
+     "t": 4.82,
+     "end": 5.195
+    },
+    {
+     "w": "by",
+     "t": 5.22,
+     "end": 5.382
+    },
+    {
+     "w": "pure",
+     "t": 5.42,
+     "end": 5.682
+    },
+    {
+     "w": "chance",
+     "t": 5.72,
+     "end": 6.33
+    },
+    {
+     "w": "The",
+     "t": 6.725,
+     "end": 6.85
+    },
+    {
+     "w": "other",
+     "t": 6.875,
+     "end": 7.175
+    },
+    {
+     "w": "follows",
+     "t": 7.225,
+     "end": 7.65
+    },
+    {
+     "w": "a",
+     "t": 7.675,
+     "end": 7.75
+    },
+    {
+     "w": "rule",
+     "t": 7.775,
+     "end": 8.26
+    },
+    {
+     "w": "Which",
+     "t": 8.7,
+     "end": 8.95
+    },
+    {
+     "w": "one",
+     "t": 8.975,
+     "end": 9.1
+    },
+    {
+     "w": "is",
+     "t": 9.125,
+     "end": 9.263
+    },
+    {
+     "w": "chance",
+     "t": 9.3,
+     "end": 9.94
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/5f/5f5c95263b77770e2e7342df.wav"
+  },
+  {
+   "index": 1,
+   "start": 11.8,
+   "duration": 11.77,
+   "end": 23.57,
+   "text": "Both are simulated, but the question is real. In nineteen forty-four, Londoners claimed German flying bombs fell in clusters, and precise aim would put factories at risk.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Both",
+     "t": 11.86,
+     "end": 12.185
+    },
+    {
+     "w": "are",
+     "t": 12.21,
+     "end": 12.36
+    },
+    {
+     "w": "simulated",
+     "t": 12.41,
+     "end": 13.21
+    },
+    {
+     "w": "but",
+     "t": 13.335,
+     "end": 13.448
+    },
+    {
+     "w": "the",
+     "t": 13.46,
+     "end": 13.535
+    },
+    {
+     "w": "question",
+     "t": 13.56,
+     "end": 14.06
+    },
+    {
+     "w": "is",
+     "t": 14.085,
+     "end": 14.222
+    },
+    {
+     "w": "real",
+     "t": 14.26,
+     "end": 14.79
+    },
+    {
+     "w": "In",
+     "t": 15.19,
+     "end": 15.29
+    },
+    {
+     "w": "nineteen",
+     "t": 15.315,
+     "end": 15.752
+    },
+    {
+     "w": "forty-four",
+     "t": 15.79,
+     "end": 16.665
+    },
+    {
+     "w": "Londoners",
+     "t": 16.89,
+     "end": 17.478
+    },
+    {
+     "w": "claimed",
+     "t": 17.515,
+     "end": 17.94
+    },
+    {
+     "w": "German",
+     "t": 17.99,
+     "end": 18.402
+    },
+    {
+     "w": "flying",
+     "t": 18.44,
+     "end": 18.865
+    },
+    {
+     "w": "bombs",
+     "t": 18.89,
+     "end": 19.352
+    },
+    {
+     "w": "fell",
+     "t": 19.39,
+     "end": 19.552
+    },
+    {
+     "w": "in",
+     "t": 19.565,
+     "end": 19.69
+    },
+    {
+     "w": "clusters",
+     "t": 19.715,
+     "end": 20.69
+    },
+    {
+     "w": "and",
+     "t": 20.84,
+     "end": 20.94
+    },
+    {
+     "w": "precise",
+     "t": 20.965,
+     "end": 21.578
+    },
+    {
+     "w": "aim",
+     "t": 21.615,
+     "end": 21.94
+    },
+    {
+     "w": "would",
+     "t": 21.965,
+     "end": 22.065
+    },
+    {
+     "w": "put",
+     "t": 22.09,
+     "end": 22.29
+    },
+    {
+     "w": "factories",
+     "t": 22.315,
+     "end": 22.89
+    },
+    {
+     "w": "at",
+     "t": 22.915,
+     "end": 23.015
+    },
+    {
+     "w": "risk",
+     "t": 23.04,
+     "end": 23.57
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/fe/fe1d0ae5149c1d8440d5290c.wav"
+  },
+  {
+   "index": 2,
+   "start": 23.933,
+   "duration": 10.65,
+   "end": 34.583,
+   "text": "Build the detector your eye is running. Cut each map into five hundred and seventy-six squares, count the hits, and flag any square with three or more, like this one.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Build",
+     "t": 23.973,
+     "end": 24.236
+    },
+    {
+     "w": "the",
+     "t": 24.248,
+     "end": 24.323
+    },
+    {
+     "w": "detector",
+     "t": 24.348,
+     "end": 24.873
+    },
+    {
+     "w": "your",
+     "t": 24.898,
+     "end": 25.073
+    },
+    {
+     "w": "eye",
+     "t": 25.123,
+     "end": 25.46
+    },
+    {
+     "w": "is",
+     "t": 25.498,
+     "end": 25.623
+    },
+    {
+     "w": "running",
+     "t": 25.648,
+     "end": 26.203
+    },
+    {
+     "w": "Cut",
+     "t": 26.608,
+     "end": 26.896
+    },
+    {
+     "w": "each",
+     "t": 26.933,
+     "end": 27.221
+    },
+    {
+     "w": "map",
+     "t": 27.258,
+     "end": 27.521
+    },
+    {
+     "w": "into",
+     "t": 27.533,
+     "end": 27.783
+    },
+    {
+     "w": "five",
+     "t": 27.833,
+     "end": 28.121
+    },
+    {
+     "w": "hundred",
+     "t": 28.133,
+     "end": 28.483
+    },
+    {
+     "w": "and",
+     "t": 28.508,
+     "end": 28.621
+    },
+    {
+     "w": "seventy-six",
+     "t": 28.658,
+     "end": 29.308
+    },
+    {
+     "w": "squares",
+     "t": 29.333,
+     "end": 30.183
+    },
+    {
+     "w": "count",
+     "t": 30.358,
+     "end": 30.633
+    },
+    {
+     "w": "the",
+     "t": 30.658,
+     "end": 30.733
+    },
+    {
+     "w": "hits",
+     "t": 30.758,
+     "end": 31.483
+    },
+    {
+     "w": "and",
+     "t": 31.608,
+     "end": 31.721
+    },
+    {
+     "w": "flag",
+     "t": 31.758,
+     "end": 32.095
+    },
+    {
+     "w": "any",
+     "t": 32.133,
+     "end": 32.358
+    },
+    {
+     "w": "square",
+     "t": 32.383,
+     "end": 32.683
+    },
+    {
+     "w": "with",
+     "t": 32.708,
+     "end": 32.871
+    },
+    {
+     "w": "three",
+     "t": 32.908,
+     "end": 33.208
+    },
+    {
+     "w": "or",
+     "t": 33.233,
+     "end": 33.358
+    },
+    {
+     "w": "more",
+     "t": 33.383,
+     "end": 33.683
+    },
+    {
+     "w": "like",
+     "t": 33.783,
+     "end": 33.983
+    },
+    {
+     "w": "this",
+     "t": 34.008,
+     "end": 34.183
+    },
+    {
+     "w": "one",
+     "t": 34.208,
+     "end": 34.583
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/d5/d590a51bf02cc486d2a5504b.wav"
+  },
+  {
+   "index": 3,
+   "start": 34.933,
+   "duration": 7.26,
+   "end": 42.193,
+   "text": "Map A lights up with thirty-nine targets. Map B gets none. So A looks aimed, and B looks like chance.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Map",
+     "t": 34.973,
+     "end": 35.26
+    },
+    {
+     "w": "A",
+     "t": 35.298,
+     "end": 35.523
+    },
+    {
+     "w": "lights",
+     "t": 35.548,
+     "end": 35.785
+    },
+    {
+     "w": "up",
+     "t": 35.798,
+     "end": 35.96
+    },
+    {
+     "w": "with",
+     "t": 35.973,
+     "end": 36.135
+    },
+    {
+     "w": "thirty-nine",
+     "t": 36.173,
+     "end": 36.623
+    },
+    {
+     "w": "targets",
+     "t": 36.648,
+     "end": 37.373
+    },
+    {
+     "w": "Map",
+     "t": 37.823,
+     "end": 38.073
+    },
+    {
+     "w": "B",
+     "t": 38.098,
+     "end": 38.248
+    },
+    {
+     "w": "gets",
+     "t": 38.273,
+     "end": 38.498
+    },
+    {
+     "w": "none",
+     "t": 38.523,
+     "end": 39.013
+    },
+    {
+     "w": "So",
+     "t": 39.453,
+     "end": 39.641
+    },
+    {
+     "w": "A",
+     "t": 39.678,
+     "end": 39.828
+    },
+    {
+     "w": "looks",
+     "t": 39.853,
+     "end": 40.091
+    },
+    {
+     "w": "aimed",
+     "t": 40.128,
+     "end": 40.703
+    },
+    {
+     "w": "and",
+     "t": 40.828,
+     "end": 40.928
+    },
+    {
+     "w": "B",
+     "t": 40.953,
+     "end": 41.103
+    },
+    {
+     "w": "looks",
+     "t": 41.128,
+     "end": 41.341
+    },
+    {
+     "w": "like",
+     "t": 41.353,
+     "end": 41.541
+    },
+    {
+     "w": "chance",
+     "t": 41.578,
+     "end": 42.193
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/4b/4b964bfe593ed34e4374d53e.wav"
+  },
+  {
+   "index": 4,
+   "start": 42.533,
+   "duration": 16.82,
+   "end": 59.353,
+   "text": "Backwards. [pause 0.9] I dropped every hit on map A at random, so all thirty-nine targets are false alarms. Map B's rule: no two hits closer than four fifths of a square. The detector, like your eye, expected chance to spread out that evenly.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Backwards",
+     "t": 42.603,
+     "end": 43.433
+    },
+    {
+     "w": "I",
+     "t": 44.333,
+     "end": 44.463
+    },
+    {
+     "w": "dropped",
+     "t": 44.488,
+     "end": 44.851
+    },
+    {
+     "w": "every",
+     "t": 44.888,
+     "end": 45.163
+    },
+    {
+     "w": "hit",
+     "t": 45.188,
+     "end": 45.351
+    },
+    {
+     "w": "on",
+     "t": 45.363,
+     "end": 45.463
+    },
+    {
+     "w": "map",
+     "t": 45.488,
+     "end": 45.813
+    },
+    {
+     "w": "A",
+     "t": 45.863,
+     "end": 46.063
+    },
+    {
+     "w": "at",
+     "t": 46.088,
+     "end": 46.163
+    },
+    {
+     "w": "random",
+     "t": 46.188,
+     "end": 46.963
+    },
+    {
+     "w": "so",
+     "t": 47.138,
+     "end": 47.325
+    },
+    {
+     "w": "all",
+     "t": 47.363,
+     "end": 47.663
+    },
+    {
+     "w": "thirty-nine",
+     "t": 47.713,
+     "end": 48.238
+    },
+    {
+     "w": "targets",
+     "t": 48.263,
+     "end": 48.713
+    },
+    {
+     "w": "are",
+     "t": 48.738,
+     "end": 48.851
+    },
+    {
+     "w": "false",
+     "t": 48.888,
+     "end": 49.213
+    },
+    {
+     "w": "alarms",
+     "t": 49.238,
+     "end": 49.983
+    },
+    {
+     "w": "Map",
+     "t": 50.438,
+     "end": 50.713
+    },
+    {
+     "w": "B's",
+     "t": 50.738,
+     "end": 51.038
+    },
+    {
+     "w": "rule",
+     "t": 51.063,
+     "end": 51.638
+    },
+    {
+     "w": "no",
+     "t": 51.813,
+     "end": 52.051
+    },
+    {
+     "w": "two",
+     "t": 52.088,
+     "end": 52.263
+    },
+    {
+     "w": "hits",
+     "t": 52.288,
+     "end": 52.538
+    },
+    {
+     "w": "closer",
+     "t": 52.563,
+     "end": 52.925
+    },
+    {
+     "w": "than",
+     "t": 52.938,
+     "end": 53.101
+    },
+    {
+     "w": "four",
+     "t": 53.138,
+     "end": 53.376
+    },
+    {
+     "w": "fifths",
+     "t": 53.413,
+     "end": 53.675
+    },
+    {
+     "w": "of",
+     "t": 53.688,
+     "end": 53.751
+    },
+    {
+     "w": "a",
+     "t": 53.763,
+     "end": 53.813
+    },
+    {
+     "w": "square",
+     "t": 53.838,
+     "end": 54.423
+    },
+    {
+     "w": "The",
+     "t": 54.838,
+     "end": 54.913
+    },
+    {
+     "w": "detector",
+     "t": 54.938,
+     "end": 55.638
+    },
+    {
+     "w": "like",
+     "t": 55.738,
+     "end": 55.926
+    },
+    {
+     "w": "your",
+     "t": 55.938,
+     "end": 56.101
+    },
+    {
+     "w": "eye",
+     "t": 56.138,
+     "end": 56.638
+    },
+    {
+     "w": "expected",
+     "t": 56.813,
+     "end": 57.401
+    },
+    {
+     "w": "chance",
+     "t": 57.438,
+     "end": 57.788
+    },
+    {
+     "w": "to",
+     "t": 57.813,
+     "end": 57.926
+    },
+    {
+     "w": "spread",
+     "t": 57.963,
+     "end": 58.251
+    },
+    {
+     "w": "out",
+     "t": 58.263,
+     "end": 58.438
+    },
+    {
+     "w": "that",
+     "t": 58.463,
+     "end": 58.676
+    },
+    {
+     "w": "evenly",
+     "t": 58.713,
+     "end": 59.353
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/18/18721d1d8ea2bb661e8c725b.wav"
+  },
+  {
+   "index": 5,
+   "start": 59.7,
+   "duration": 10.51,
+   "end": 70.21,
+   "text": "Take one square. Each bomb has a one in five hundred and seventy-six chance of landing in it. To stay empty, all five hundred and thirty-seven must miss.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Take",
+     "t": 59.715,
+     "end": 59.94
+    },
+    {
+     "w": "one",
+     "t": 59.965,
+     "end": 60.19
+    },
+    {
+     "w": "square",
+     "t": 60.215,
+     "end": 60.81
+    },
+    {
+     "w": "Each",
+     "t": 61.19,
+     "end": 61.478
+    },
+    {
+     "w": "bomb",
+     "t": 61.515,
+     "end": 61.89
+    },
+    {
+     "w": "has",
+     "t": 61.915,
+     "end": 62.052
+    },
+    {
+     "w": "a",
+     "t": 62.065,
+     "end": 62.14
+    },
+    {
+     "w": "one",
+     "t": 62.165,
+     "end": 62.39
+    },
+    {
+     "w": "in",
+     "t": 62.415,
+     "end": 62.552
+    },
+    {
+     "w": "five",
+     "t": 62.59,
+     "end": 62.89
+    },
+    {
+     "w": "hundred",
+     "t": 62.915,
+     "end": 63.652
+    },
+    {
+     "w": "and",
+     "t": 63.715,
+     "end": 63.865
+    },
+    {
+     "w": "seventy-six",
+     "t": 63.915,
+     "end": 64.628
+    },
+    {
+     "w": "chance",
+     "t": 64.665,
+     "end": 65.002
+    },
+    {
+     "w": "of",
+     "t": 65.015,
+     "end": 65.115
+    },
+    {
+     "w": "landing",
+     "t": 65.14,
+     "end": 65.565
+    },
+    {
+     "w": "in",
+     "t": 65.59,
+     "end": 65.702
+    },
+    {
+     "w": "it",
+     "t": 65.74,
+     "end": 66.04
+    },
+    {
+     "w": "To",
+     "t": 66.435,
+     "end": 66.535
+    },
+    {
+     "w": "stay",
+     "t": 66.56,
+     "end": 66.848
+    },
+    {
+     "w": "empty",
+     "t": 66.885,
+     "end": 67.535
+    },
+    {
+     "w": "all",
+     "t": 67.735,
+     "end": 67.972
+    },
+    {
+     "w": "five",
+     "t": 68.01,
+     "end": 68.298
+    },
+    {
+     "w": "hundred",
+     "t": 68.31,
+     "end": 68.66
+    },
+    {
+     "w": "and",
+     "t": 68.685,
+     "end": 68.785
+    },
+    {
+     "w": "thirty-seven",
+     "t": 68.81,
+     "end": 69.41
+    },
+    {
+     "w": "must",
+     "t": 69.435,
+     "end": 69.685
+    },
+    {
+     "w": "miss",
+     "t": 69.71,
+     "end": 70.21
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/c0/c0f0e8c19f0db82abd4dea16.wav"
+  },
+  {
+   "index": 6,
+   "start": 70.567,
+   "duration": 3.6,
+   "end": 74.167,
+   "text": "Guess how many squares get no hit at all. [pause 1.5]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Guess",
+     "t": 70.592,
+     "end": 70.842
+    },
+    {
+     "w": "how",
+     "t": 70.867,
+     "end": 70.98
+    },
+    {
+     "w": "many",
+     "t": 70.992,
+     "end": 71.192
+    },
+    {
+     "w": "squares",
+     "t": 71.217,
+     "end": 71.642
+    },
+    {
+     "w": "get",
+     "t": 71.667,
+     "end": 71.817
+    },
+    {
+     "w": "no",
+     "t": 71.842,
+     "end": 71.992
+    },
+    {
+     "w": "hit",
+     "t": 72.017,
+     "end": 72.129
+    },
+    {
+     "w": "at",
+     "t": 72.142,
+     "end": 72.217
+    },
+    {
+     "w": "all",
+     "t": 72.242,
+     "end": 72.667
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/b0/b03b32f448064d39daccf009.wav"
+  },
+  {
+   "index": 7,
+   "start": 74.5,
+   "duration": 6.49,
+   "end": 80.99,
+   "text": "About two hundred and twenty-seven squares stay empty. Map A has two hundred and twenty-two. [pause 0.6]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "About",
+     "t": 74.515,
+     "end": 74.827
+    },
+    {
+     "w": "two",
+     "t": 74.865,
+     "end": 75.04
+    },
+    {
+     "w": "hundred",
+     "t": 75.065,
+     "end": 75.715
+    },
+    {
+     "w": "and",
+     "t": 75.765,
+     "end": 75.865
+    },
+    {
+     "w": "twenty-seven",
+     "t": 75.89,
+     "end": 76.49
+    },
+    {
+     "w": "squares",
+     "t": 76.515,
+     "end": 76.89
+    },
+    {
+     "w": "stay",
+     "t": 76.915,
+     "end": 77.177
+    },
+    {
+     "w": "empty",
+     "t": 77.215,
+     "end": 77.81
+    },
+    {
+     "w": "Map",
+     "t": 78.23,
+     "end": 78.48
+    },
+    {
+     "w": "A",
+     "t": 78.505,
+     "end": 78.68
+    },
+    {
+     "w": "has",
+     "t": 78.705,
+     "end": 78.892
+    },
+    {
+     "w": "two",
+     "t": 78.93,
+     "end": 79.105
+    },
+    {
+     "w": "hundred",
+     "t": 79.13,
+     "end": 79.48
+    },
+    {
+     "w": "and",
+     "t": 79.505,
+     "end": 79.605
+    },
+    {
+     "w": "twenty-two",
+     "t": 79.63,
+     "end": 80.39
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/a7/a748d259aab75b085b0b5846.wav"
+  },
+  {
+   "index": 8,
+   "start": 81.333,
+   "duration": 9.29,
+   "end": 90.623,
+   "text": "Those gaps force the clumps: the other three hundred and fifty-four squares share all the hits, one and a half each, so plenty must double up.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Those",
+     "t": 81.393,
+     "end": 81.718
+    },
+    {
+     "w": "gaps",
+     "t": 81.743,
+     "end": 82.18
+    },
+    {
+     "w": "force",
+     "t": 82.218,
+     "end": 82.493
+    },
+    {
+     "w": "the",
+     "t": 82.518,
+     "end": 82.593
+    },
+    {
+     "w": "clumps",
+     "t": 82.618,
+     "end": 83.443
+    },
+    {
+     "w": "the",
+     "t": 83.593,
+     "end": 83.718
+    },
+    {
+     "w": "other",
+     "t": 83.743,
+     "end": 84.043
+    },
+    {
+     "w": "three",
+     "t": 84.093,
+     "end": 84.343
+    },
+    {
+     "w": "hundred",
+     "t": 84.368,
+     "end": 84.731
+    },
+    {
+     "w": "and",
+     "t": 84.743,
+     "end": 84.843
+    },
+    {
+     "w": "fifty-four",
+     "t": 84.868,
+     "end": 85.443
+    },
+    {
+     "w": "squares",
+     "t": 85.468,
+     "end": 86.068
+    },
+    {
+     "w": "share",
+     "t": 86.118,
+     "end": 86.355
+    },
+    {
+     "w": "all",
+     "t": 86.393,
+     "end": 86.618
+    },
+    {
+     "w": "the",
+     "t": 86.643,
+     "end": 86.743
+    },
+    {
+     "w": "hits",
+     "t": 86.768,
+     "end": 87.418
+    },
+    {
+     "w": "one",
+     "t": 87.593,
+     "end": 87.731
+    },
+    {
+     "w": "and",
+     "t": 87.743,
+     "end": 87.831
+    },
+    {
+     "w": "a",
+     "t": 87.843,
+     "end": 87.893
+    },
+    {
+     "w": "half",
+     "t": 87.918,
+     "end": 88.181
+    },
+    {
+     "w": "each",
+     "t": 88.193,
+     "end": 88.743
+    },
+    {
+     "w": "so",
+     "t": 88.918,
+     "end": 89.081
+    },
+    {
+     "w": "plenty",
+     "t": 89.118,
+     "end": 89.631
+    },
+    {
+     "w": "must",
+     "t": 89.668,
+     "end": 89.893
+    },
+    {
+     "w": "double",
+     "t": 89.918,
+     "end": 90.193
+    },
+    {
+     "w": "up",
+     "t": 90.218,
+     "end": 90.623
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/00/009972a67325ba4f4d30b668.wav"
+  },
+  {
+   "index": 9,
+   "start": 90.967,
+   "duration": 9.95,
+   "end": 100.917,
+   "text": "Call the average hits per square lambda. [pause 0.5] One minus a small slice, raised to a big power, is almost exactly e to the minus lambda. [pause 0.7]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Call",
+     "t": 90.977,
+     "end": 91.164
+    },
+    {
+     "w": "the",
+     "t": 91.177,
+     "end": 91.315
+    },
+    {
+     "w": "average",
+     "t": 91.352,
+     "end": 91.752
+    },
+    {
+     "w": "hits",
+     "t": 91.777,
+     "end": 92.027
+    },
+    {
+     "w": "per",
+     "t": 92.052,
+     "end": 92.227
+    },
+    {
+     "w": "square",
+     "t": 92.252,
+     "end": 92.577
+    },
+    {
+     "w": "lambda",
+     "t": 92.602,
+     "end": 93.197
+    },
+    {
+     "w": "One",
+     "t": 93.742,
+     "end": 93.967
+    },
+    {
+     "w": "minus",
+     "t": 93.992,
+     "end": 94.317
+    },
+    {
+     "w": "a",
+     "t": 94.342,
+     "end": 94.442
+    },
+    {
+     "w": "small",
+     "t": 94.492,
+     "end": 94.892
+    },
+    {
+     "w": "slice",
+     "t": 94.942,
+     "end": 95.642
+    },
+    {
+     "w": "raised",
+     "t": 95.817,
+     "end": 96.192
+    },
+    {
+     "w": "to",
+     "t": 96.217,
+     "end": 96.279
+    },
+    {
+     "w": "a",
+     "t": 96.292,
+     "end": 96.342
+    },
+    {
+     "w": "big",
+     "t": 96.367,
+     "end": 96.567
+    },
+    {
+     "w": "power",
+     "t": 96.592,
+     "end": 97.392
+    },
+    {
+     "w": "is",
+     "t": 97.567,
+     "end": 97.705
+    },
+    {
+     "w": "almost",
+     "t": 97.742,
+     "end": 98.142
+    },
+    {
+     "w": "exactly",
+     "t": 98.167,
+     "end": 98.842
+    },
+    {
+     "w": "e",
+     "t": 98.892,
+     "end": 99.092
+    },
+    {
+     "w": "to",
+     "t": 99.117,
+     "end": 99.179
+    },
+    {
+     "w": "the",
+     "t": 99.192,
+     "end": 99.267
+    },
+    {
+     "w": "minus",
+     "t": 99.292,
+     "end": 99.617
+    },
+    {
+     "w": "lambda",
+     "t": 99.642,
+     "end": 100.217
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/5a/5aad82c7c77a546825da471a.wav"
+  },
+  {
+   "index": 10,
+   "start": 101.267,
+   "duration": 15.06,
+   "end": 116.327,
+   "text": "For two hits, pick which two bombs land here: five thirty-seven times five thirty-six, over two, ways. [pause 0.6] Each lands with chance one in five seventy-six, and the rest miss: e to the minus lambda again. [pause 0.6]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "For",
+     "t": 101.292,
+     "end": 101.43
+    },
+    {
+     "w": "two",
+     "t": 101.467,
+     "end": 101.642
+    },
+    {
+     "w": "hits",
+     "t": 101.667,
+     "end": 102.042
+    },
+    {
+     "w": "pick",
+     "t": 102.142,
+     "end": 102.355
+    },
+    {
+     "w": "which",
+     "t": 102.367,
+     "end": 102.579
+    },
+    {
+     "w": "two",
+     "t": 102.617,
+     "end": 102.792
+    },
+    {
+     "w": "bombs",
+     "t": 102.817,
+     "end": 103.192
+    },
+    {
+     "w": "land",
+     "t": 103.217,
+     "end": 103.517
+    },
+    {
+     "w": "here",
+     "t": 103.542,
+     "end": 104.167
+    },
+    {
+     "w": "five",
+     "t": 104.392,
+     "end": 104.767
+    },
+    {
+     "w": "thirty-seven",
+     "t": 104.792,
+     "end": 105.417
+    },
+    {
+     "w": "times",
+     "t": 105.442,
+     "end": 105.829
+    },
+    {
+     "w": "five",
+     "t": 105.867,
+     "end": 106.255
+    },
+    {
+     "w": "thirty-six",
+     "t": 106.292,
+     "end": 107.042
+    },
+    {
+     "w": "over",
+     "t": 107.167,
+     "end": 107.442
+    },
+    {
+     "w": "two",
+     "t": 107.492,
+     "end": 107.717
+    },
+    {
+     "w": "ways",
+     "t": 107.792,
+     "end": 108.417
+    },
+    {
+     "w": "Each",
+     "t": 109.027,
+     "end": 109.302
+    },
+    {
+     "w": "lands",
+     "t": 109.327,
+     "end": 109.752
+    },
+    {
+     "w": "with",
+     "t": 109.777,
+     "end": 109.939
+    },
+    {
+     "w": "chance",
+     "t": 109.977,
+     "end": 110.339
+    },
+    {
+     "w": "one",
+     "t": 110.377,
+     "end": 110.602
+    },
+    {
+     "w": "in",
+     "t": 110.627,
+     "end": 110.765
+    },
+    {
+     "w": "five",
+     "t": 110.802,
+     "end": 111.152
+    },
+    {
+     "w": "seventy-six",
+     "t": 111.177,
+     "end": 112.227
+    },
+    {
+     "w": "and",
+     "t": 112.352,
+     "end": 112.439
+    },
+    {
+     "w": "the",
+     "t": 112.452,
+     "end": 112.527
+    },
+    {
+     "w": "rest",
+     "t": 112.552,
+     "end": 112.902
+    },
+    {
+     "w": "miss",
+     "t": 112.927,
+     "end": 113.652
+    },
+    {
+     "w": "e",
+     "t": 113.877,
+     "end": 114.115
+    },
+    {
+     "w": "to",
+     "t": 114.152,
+     "end": 114.215
+    },
+    {
+     "w": "the",
+     "t": 114.227,
+     "end": 114.327
+    },
+    {
+     "w": "minus",
+     "t": 114.352,
+     "end": 114.777
+    },
+    {
+     "w": "lambda",
+     "t": 114.802,
+     "end": 115.177
+    },
+    {
+     "w": "again",
+     "t": 115.202,
+     "end": 115.727
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/23/23b0b7a0867ee451ee47e347.wav"
+  },
+  {
+   "index": 11,
+   "start": 116.667,
+   "duration": 18.15,
+   "end": 134.817,
+   "text": "Five thirty-six is almost five thirty-seven, so for any k, each two becomes a k. The powers merge into lambda to the k: the Poisson distribution. [pause 0.7] Times five hundred and seventy-six squares, it predicts these purple bars.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Five",
+     "t": 116.767,
+     "end": 117.179
+    },
+    {
+     "w": "thirty-six",
+     "t": 117.217,
+     "end": 117.917
+    },
+    {
+     "w": "is",
+     "t": 117.942,
+     "end": 118.079
+    },
+    {
+     "w": "almost",
+     "t": 118.117,
+     "end": 118.667
+    },
+    {
+     "w": "five",
+     "t": 118.717,
+     "end": 119.092
+    },
+    {
+     "w": "thirty-seven",
+     "t": 119.117,
+     "end": 120.267
+    },
+    {
+     "w": "so",
+     "t": 120.442,
+     "end": 120.592
+    },
+    {
+     "w": "for",
+     "t": 120.617,
+     "end": 120.717
+    },
+    {
+     "w": "any",
+     "t": 120.742,
+     "end": 120.979
+    },
+    {
+     "w": "k",
+     "t": 121.017,
+     "end": 121.617
+    },
+    {
+     "w": "each",
+     "t": 121.817,
+     "end": 122.167
+    },
+    {
+     "w": "two",
+     "t": 122.217,
+     "end": 122.505
+    },
+    {
+     "w": "becomes",
+     "t": 122.542,
+     "end": 122.929
+    },
+    {
+     "w": "a",
+     "t": 122.942,
+     "end": 123.029
+    },
+    {
+     "w": "k.",
+     "t": 123.067,
+     "end": 123.392
+    },
+    {
+     "w": "The",
+     "t": 123.417,
+     "end": 123.529
+    },
+    {
+     "w": "powers",
+     "t": 123.567,
+     "end": 124.179
+    },
+    {
+     "w": "merge",
+     "t": 124.217,
+     "end": 124.617
+    },
+    {
+     "w": "into",
+     "t": 124.642,
+     "end": 124.929
+    },
+    {
+     "w": "lambda",
+     "t": 124.967,
+     "end": 125.455
+    },
+    {
+     "w": "to",
+     "t": 125.492,
+     "end": 125.567
+    },
+    {
+     "w": "the",
+     "t": 125.592,
+     "end": 125.679
+    },
+    {
+     "w": "k",
+     "t": 125.717,
+     "end": 126.517
+    },
+    {
+     "w": "the",
+     "t": 126.742,
+     "end": 126.829
+    },
+    {
+     "w": "Poisson",
+     "t": 126.867,
+     "end": 127.567
+    },
+    {
+     "w": "distribution",
+     "t": 127.592,
+     "end": 128.577
+    },
+    {
+     "w": "Times",
+     "t": 129.287,
+     "end": 129.749
+    },
+    {
+     "w": "five",
+     "t": 129.787,
+     "end": 130.162
+    },
+    {
+     "w": "hundred",
+     "t": 130.187,
+     "end": 130.725
+    },
+    {
+     "w": "and",
+     "t": 130.762,
+     "end": 130.899
+    },
+    {
+     "w": "seventy-six",
+     "t": 130.937,
+     "end": 131.662
+    },
+    {
+     "w": "squares",
+     "t": 131.687,
+     "end": 132.587
+    },
+    {
+     "w": "it",
+     "t": 132.762,
+     "end": 132.862
+    },
+    {
+     "w": "predicts",
+     "t": 132.887,
+     "end": 133.387
+    },
+    {
+     "w": "these",
+     "t": 133.412,
+     "end": 133.699
+    },
+    {
+     "w": "purple",
+     "t": 133.737,
+     "end": 134.137
+    },
+    {
+     "w": "bars",
+     "t": 134.162,
+     "end": 134.817
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/14/142283c78aa60a20abfe836c.wav"
+  },
+  {
+   "index": 12,
+   "start": 135.167,
+   "duration": 22.2,
+   "end": 157.367,
+   "text": "The honest detector compares whole histograms. Map A sits on the purple bars: thirty-nine targets, and chance predicts thirty-nine. The chi-squared misfit: square each bar's gap, divide by chance's bar, and add them up. Map A scores two point oh. Pure-chance maps score worse three times in four: p equals point seven four.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 135.182,
+     "end": 135.332
+    },
+    {
+     "w": "honest",
+     "t": 135.382,
+     "end": 135.695
+    },
+    {
+     "w": "detector",
+     "t": 135.707,
+     "end": 136.395
+    },
+    {
+     "w": "compares",
+     "t": 136.432,
+     "end": 136.895
+    },
+    {
+     "w": "whole",
+     "t": 136.932,
+     "end": 137.207
+    },
+    {
+     "w": "histograms",
+     "t": 137.232,
+     "end": 138.117
+    },
+    {
+     "w": "Map",
+     "t": 138.572,
+     "end": 138.909
+    },
+    {
+     "w": "A",
+     "t": 138.947,
+     "end": 139.197
+    },
+    {
+     "w": "sits",
+     "t": 139.247,
+     "end": 139.485
+    },
+    {
+     "w": "on",
+     "t": 139.497,
+     "end": 139.585
+    },
+    {
+     "w": "the",
+     "t": 139.597,
+     "end": 139.672
+    },
+    {
+     "w": "purple",
+     "t": 139.697,
+     "end": 140.022
+    },
+    {
+     "w": "bars",
+     "t": 140.047,
+     "end": 140.822
+    },
+    {
+     "w": "thirty-nine",
+     "t": 140.997,
+     "end": 141.497
+    },
+    {
+     "w": "targets",
+     "t": 141.522,
+     "end": 142.172
+    },
+    {
+     "w": "and",
+     "t": 142.272,
+     "end": 142.397
+    },
+    {
+     "w": "chance",
+     "t": 142.447,
+     "end": 142.772
+    },
+    {
+     "w": "predicts",
+     "t": 142.797,
+     "end": 143.222
+    },
+    {
+     "w": "thirty-nine",
+     "t": 143.247,
+     "end": 143.957
+    },
+    {
+     "w": "The",
+     "t": 144.347,
+     "end": 144.447
+    },
+    {
+     "w": "chi-squared",
+     "t": 144.472,
+     "end": 145.047
+    },
+    {
+     "w": "misfit",
+     "t": 145.072,
+     "end": 145.797
+    },
+    {
+     "w": "square",
+     "t": 145.997,
+     "end": 146.322
+    },
+    {
+     "w": "each",
+     "t": 146.347,
+     "end": 146.572
+    },
+    {
+     "w": "bar's",
+     "t": 146.597,
+     "end": 146.922
+    },
+    {
+     "w": "gap",
+     "t": 146.947,
+     "end": 147.372
+    },
+    {
+     "w": "divide",
+     "t": 147.497,
+     "end": 147.872
+    },
+    {
+     "w": "by",
+     "t": 147.897,
+     "end": 148.06
+    },
+    {
+     "w": "chance's",
+     "t": 148.097,
+     "end": 148.547
+    },
+    {
+     "w": "bar",
+     "t": 148.572,
+     "end": 148.972
+    },
+    {
+     "w": "and",
+     "t": 149.072,
+     "end": 149.222
+    },
+    {
+     "w": "add",
+     "t": 149.272,
+     "end": 149.459
+    },
+    {
+     "w": "them",
+     "t": 149.472,
+     "end": 149.597
+    },
+    {
+     "w": "up",
+     "t": 149.622,
+     "end": 150.007
+    },
+    {
+     "w": "Map",
+     "t": 150.437,
+     "end": 150.687
+    },
+    {
+     "w": "A",
+     "t": 150.712,
+     "end": 150.837
+    },
+    {
+     "w": "scores",
+     "t": 150.862,
+     "end": 151.225
+    },
+    {
+     "w": "two",
+     "t": 151.262,
+     "end": 151.437
+    },
+    {
+     "w": "point",
+     "t": 151.462,
+     "end": 151.687
+    },
+    {
+     "w": "oh",
+     "t": 151.712,
+     "end": 152.117
+    },
+    {
+     "w": "Pure-chance",
+     "t": 152.497,
+     "end": 153.097
+    },
+    {
+     "w": "maps",
+     "t": 153.122,
+     "end": 153.422
+    },
+    {
+     "w": "score",
+     "t": 153.447,
+     "end": 153.722
+    },
+    {
+     "w": "worse",
+     "t": 153.747,
+     "end": 154.059
+    },
+    {
+     "w": "three",
+     "t": 154.097,
+     "end": 154.297
+    },
+    {
+     "w": "times",
+     "t": 154.322,
+     "end": 154.609
+    },
+    {
+     "w": "in",
+     "t": 154.622,
+     "end": 154.759
+    },
+    {
+     "w": "four",
+     "t": 154.797,
+     "end": 155.372
+    },
+    {
+     "w": "p",
+     "t": 155.597,
+     "end": 155.822
+    },
+    {
+     "w": "equals",
+     "t": 155.847,
+     "end": 156.222
+    },
+    {
+     "w": "point",
+     "t": 156.247,
+     "end": 156.497
+    },
+    {
+     "w": "seven",
+     "t": 156.522,
+     "end": 156.859
+    },
+    {
+     "w": "four",
+     "t": 156.897,
+     "end": 157.367
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/4c/4c4ac3668a2a16681101b122.wav"
+  },
+  {
+   "index": 13,
+   "start": 157.7,
+   "duration": 11.21,
+   "end": 168.91,
+   "text": "Map B: half the expected empty squares, a tower of single hits, and a misfit of two hundred and seventy-two. A pattern this even is the fingerprint of a spacing rule.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Map",
+     "t": 157.775,
+     "end": 158.075
+    },
+    {
+     "w": "B",
+     "t": 158.1,
+     "end": 158.55
+    },
+    {
+     "w": "half",
+     "t": 158.725,
+     "end": 158.962
+    },
+    {
+     "w": "the",
+     "t": 158.975,
+     "end": 159.1
+    },
+    {
+     "w": "expected",
+     "t": 159.125,
+     "end": 159.675
+    },
+    {
+     "w": "empty",
+     "t": 159.7,
+     "end": 160.0
+    },
+    {
+     "w": "squares",
+     "t": 160.025,
+     "end": 160.8
+    },
+    {
+     "w": "a",
+     "t": 160.975,
+     "end": 161.063
+    },
+    {
+     "w": "tower",
+     "t": 161.1,
+     "end": 161.5
+    },
+    {
+     "w": "of",
+     "t": 161.525,
+     "end": 161.663
+    },
+    {
+     "w": "single",
+     "t": 161.7,
+     "end": 162.05
+    },
+    {
+     "w": "hits",
+     "t": 162.075,
+     "end": 162.625
+    },
+    {
+     "w": "and",
+     "t": 162.725,
+     "end": 162.812
+    },
+    {
+     "w": "a",
+     "t": 162.825,
+     "end": 162.888
+    },
+    {
+     "w": "misfit",
+     "t": 162.925,
+     "end": 163.262
+    },
+    {
+     "w": "of",
+     "t": 163.275,
+     "end": 163.388
+    },
+    {
+     "w": "two",
+     "t": 163.425,
+     "end": 163.6
+    },
+    {
+     "w": "hundred",
+     "t": 163.625,
+     "end": 164.0
+    },
+    {
+     "w": "and",
+     "t": 164.025,
+     "end": 164.138
+    },
+    {
+     "w": "seventy-two",
+     "t": 164.175,
+     "end": 165.03
+    },
+    {
+     "w": "A",
+     "t": 165.42,
+     "end": 165.632
+    },
+    {
+     "w": "pattern",
+     "t": 165.67,
+     "end": 166.12
+    },
+    {
+     "w": "this",
+     "t": 166.145,
+     "end": 166.495
+    },
+    {
+     "w": "even",
+     "t": 166.545,
+     "end": 166.845
+    },
+    {
+     "w": "is",
+     "t": 166.87,
+     "end": 166.995
+    },
+    {
+     "w": "the",
+     "t": 167.02,
+     "end": 167.145
+    },
+    {
+     "w": "fingerprint",
+     "t": 167.195,
+     "end": 167.82
+    },
+    {
+     "w": "of",
+     "t": 167.845,
+     "end": 167.908
+    },
+    {
+     "w": "a",
+     "t": 167.92,
+     "end": 167.97
+    },
+    {
+     "w": "spacing",
+     "t": 167.995,
+     "end": 168.47
+    },
+    {
+     "w": "rule",
+     "t": 168.495,
+     "end": 168.91
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/2a/2a5e1d3ffec9f15021ad75e0.wav"
+  },
+  {
+   "index": 14,
+   "start": 169.267,
+   "duration": 17.25,
+   "end": 186.517,
+   "text": "Aimed bombs would miss the other way: extra empty squares, extra pile-ups. In nineteen forty-six, the actuary R D Clarke published this test on real flying-bomb hits: five hundred and thirty-seven, in five seventy-six squares of south London.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Aimed",
+     "t": 169.312,
+     "end": 169.637
+    },
+    {
+     "w": "bombs",
+     "t": 169.662,
+     "end": 170.087
+    },
+    {
+     "w": "would",
+     "t": 170.112,
+     "end": 170.262
+    },
+    {
+     "w": "miss",
+     "t": 170.287,
+     "end": 170.462
+    },
+    {
+     "w": "the",
+     "t": 170.487,
+     "end": 170.599
+    },
+    {
+     "w": "other",
+     "t": 170.612,
+     "end": 170.862
+    },
+    {
+     "w": "way",
+     "t": 170.887,
+     "end": 171.462
+    },
+    {
+     "w": "extra",
+     "t": 171.687,
+     "end": 172.062
+    },
+    {
+     "w": "empty",
+     "t": 172.087,
+     "end": 172.387
+    },
+    {
+     "w": "squares",
+     "t": 172.412,
+     "end": 173.037
+    },
+    {
+     "w": "extra",
+     "t": 173.162,
+     "end": 173.512
+    },
+    {
+     "w": "pile-ups",
+     "t": 173.537,
+     "end": 174.217
+    },
+    {
+     "w": "In",
+     "t": 174.617,
+     "end": 174.717
+    },
+    {
+     "w": "nineteen",
+     "t": 174.742,
+     "end": 175.229
+    },
+    {
+     "w": "forty-six",
+     "t": 175.267,
+     "end": 176.267
+    },
+    {
+     "w": "the",
+     "t": 176.392,
+     "end": 176.542
+    },
+    {
+     "w": "actuary",
+     "t": 176.592,
+     "end": 177.267
+    },
+    {
+     "w": "R",
+     "t": 177.317,
+     "end": 177.555
+    },
+    {
+     "w": "D",
+     "t": 177.592,
+     "end": 177.805
+    },
+    {
+     "w": "Clarke",
+     "t": 177.842,
+     "end": 178.205
+    },
+    {
+     "w": "published",
+     "t": 178.242,
+     "end": 178.642
+    },
+    {
+     "w": "this",
+     "t": 178.667,
+     "end": 178.855
+    },
+    {
+     "w": "test",
+     "t": 178.892,
+     "end": 179.292
+    },
+    {
+     "w": "on",
+     "t": 179.317,
+     "end": 179.505
+    },
+    {
+     "w": "real",
+     "t": 179.542,
+     "end": 179.817
+    },
+    {
+     "w": "flying-bomb",
+     "t": 179.867,
+     "end": 180.492
+    },
+    {
+     "w": "hits",
+     "t": 180.517,
+     "end": 181.342
+    },
+    {
+     "w": "five",
+     "t": 181.542,
+     "end": 181.892
+    },
+    {
+     "w": "hundred",
+     "t": 181.917,
+     "end": 182.317
+    },
+    {
+     "w": "and",
+     "t": 182.342,
+     "end": 182.442
+    },
+    {
+     "w": "thirty-seven",
+     "t": 182.467,
+     "end": 183.467
+    },
+    {
+     "w": "in",
+     "t": 183.642,
+     "end": 183.792
+    },
+    {
+     "w": "five",
+     "t": 183.842,
+     "end": 184.279
+    },
+    {
+     "w": "seventy-six",
+     "t": 184.317,
+     "end": 184.992
+    },
+    {
+     "w": "squares",
+     "t": 185.017,
+     "end": 185.492
+    },
+    {
+     "w": "of",
+     "t": 185.517,
+     "end": 185.642
+    },
+    {
+     "w": "south",
+     "t": 185.667,
+     "end": 185.967
+    },
+    {
+     "w": "London",
+     "t": 185.992,
+     "end": 186.517
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/a9/a9412ed24cefc030cefff5f6.wav"
+  },
+  {
+   "index": 15,
+   "start": 186.867,
+   "duration": 14.6,
+   "end": 201.467,
+   "text": "Chance predicted two hundred and twenty-seven empty squares; Clarke counted two hundred and twenty-nine. [pause 0.2] Single hits: two hundred and eleven, exactly as predicted. [pause 0.2] Same test: p equals point eight eight. [pause 0.2] No sign of clustering.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Chance",
+     "t": 186.902,
+     "end": 187.227
+    },
+    {
+     "w": "predicted",
+     "t": 187.252,
+     "end": 187.727
+    },
+    {
+     "w": "two",
+     "t": 187.777,
+     "end": 188.002
+    },
+    {
+     "w": "hundred",
+     "t": 188.027,
+     "end": 188.465
+    },
+    {
+     "w": "and",
+     "t": 188.502,
+     "end": 188.602
+    },
+    {
+     "w": "twenty-seven",
+     "t": 188.627,
+     "end": 189.265
+    },
+    {
+     "w": "empty",
+     "t": 189.302,
+     "end": 189.602
+    },
+    {
+     "w": "squares",
+     "t": 189.627,
+     "end": 190.477
+    },
+    {
+     "w": "Clarke",
+     "t": 190.652,
+     "end": 190.927
+    },
+    {
+     "w": "counted",
+     "t": 190.952,
+     "end": 191.415
+    },
+    {
+     "w": "two",
+     "t": 191.477,
+     "end": 191.702
+    },
+    {
+     "w": "hundred",
+     "t": 191.727,
+     "end": 192.127
+    },
+    {
+     "w": "and",
+     "t": 192.152,
+     "end": 192.252
+    },
+    {
+     "w": "twenty-nine",
+     "t": 192.277,
+     "end": 192.957
+    },
+    {
+     "w": "Single",
+     "t": 193.242,
+     "end": 193.592
+    },
+    {
+     "w": "hits",
+     "t": 193.617,
+     "end": 194.192
+    },
+    {
+     "w": "two",
+     "t": 194.342,
+     "end": 194.517
+    },
+    {
+     "w": "hundred",
+     "t": 194.542,
+     "end": 194.805
+    },
+    {
+     "w": "and",
+     "t": 194.817,
+     "end": 194.905
+    },
+    {
+     "w": "eleven",
+     "t": 194.917,
+     "end": 195.417
+    },
+    {
+     "w": "exactly",
+     "t": 195.542,
+     "end": 196.205
+    },
+    {
+     "w": "as",
+     "t": 196.242,
+     "end": 196.367
+    },
+    {
+     "w": "predicted",
+     "t": 196.392,
+     "end": 197.097
+    },
+    {
+     "w": "Same",
+     "t": 197.382,
+     "end": 197.632
+    },
+    {
+     "w": "test",
+     "t": 197.657,
+     "end": 198.132
+    },
+    {
+     "w": "p",
+     "t": 198.282,
+     "end": 198.457
+    },
+    {
+     "w": "equals",
+     "t": 198.482,
+     "end": 198.832
+    },
+    {
+     "w": "point",
+     "t": 198.857,
+     "end": 199.107
+    },
+    {
+     "w": "eight",
+     "t": 199.132,
+     "end": 199.307
+    },
+    {
+     "w": "eight",
+     "t": 199.332,
+     "end": 199.797
+    },
+    {
+     "w": "No",
+     "t": 200.072,
+     "end": 200.284
+    },
+    {
+     "w": "sign",
+     "t": 200.322,
+     "end": 200.559
+    },
+    {
+     "w": "of",
+     "t": 200.572,
+     "end": 200.672
+    },
+    {
+     "w": "clustering",
+     "t": 200.697,
+     "end": 201.467
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/7c/7cc96e41951dc451afcc7d73.wav"
+  },
+  {
+   "index": 16,
+   "start": 201.8,
+   "duration": 15.47,
+   "end": 217.27,
+   "text": "That doesn't mean the bombs were unaimed: they were aimed at London, just too loosely to choose a street. And the test needs one lambda everywhere: farther north, hits fell about half as densely, so Clarke chose an area where lambda held steady.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "That",
+     "t": 201.835,
+     "end": 202.048
+    },
+    {
+     "w": "doesn't",
+     "t": 202.06,
+     "end": 202.298
+    },
+    {
+     "w": "mean",
+     "t": 202.31,
+     "end": 202.498
+    },
+    {
+     "w": "the",
+     "t": 202.51,
+     "end": 202.585
+    },
+    {
+     "w": "bombs",
+     "t": 202.61,
+     "end": 203.022
+    },
+    {
+     "w": "were",
+     "t": 203.035,
+     "end": 203.16
+    },
+    {
+     "w": "unaimed",
+     "t": 203.185,
+     "end": 204.085
+    },
+    {
+     "w": "they",
+     "t": 204.285,
+     "end": 204.41
+    },
+    {
+     "w": "were",
+     "t": 204.435,
+     "end": 204.572
+    },
+    {
+     "w": "aimed",
+     "t": 204.61,
+     "end": 204.872
+    },
+    {
+     "w": "at",
+     "t": 204.885,
+     "end": 204.96
+    },
+    {
+     "w": "London",
+     "t": 204.985,
+     "end": 205.635
+    },
+    {
+     "w": "just",
+     "t": 205.785,
+     "end": 206.06
+    },
+    {
+     "w": "too",
+     "t": 206.11,
+     "end": 206.322
+    },
+    {
+     "w": "loosely",
+     "t": 206.36,
+     "end": 206.86
+    },
+    {
+     "w": "to",
+     "t": 206.885,
+     "end": 206.998
+    },
+    {
+     "w": "choose",
+     "t": 207.035,
+     "end": 207.272
+    },
+    {
+     "w": "a",
+     "t": 207.285,
+     "end": 207.335
+    },
+    {
+     "w": "street",
+     "t": 207.36,
+     "end": 207.93
+    },
+    {
+     "w": "And",
+     "t": 208.31,
+     "end": 208.442
+    },
+    {
+     "w": "the",
+     "t": 208.455,
+     "end": 208.542
+    },
+    {
+     "w": "test",
+     "t": 208.58,
+     "end": 208.955
+    },
+    {
+     "w": "needs",
+     "t": 208.98,
+     "end": 209.267
+    },
+    {
+     "w": "one",
+     "t": 209.305,
+     "end": 209.53
+    },
+    {
+     "w": "lambda",
+     "t": 209.555,
+     "end": 209.968
+    },
+    {
+     "w": "everywhere",
+     "t": 210.005,
+     "end": 210.98
+    },
+    {
+     "w": "farther",
+     "t": 211.23,
+     "end": 211.555
+    },
+    {
+     "w": "north",
+     "t": 211.58,
+     "end": 212.13
+    },
+    {
+     "w": "hits",
+     "t": 212.28,
+     "end": 212.53
+    },
+    {
+     "w": "fell",
+     "t": 212.555,
+     "end": 212.718
+    },
+    {
+     "w": "about",
+     "t": 212.73,
+     "end": 213.005
+    },
+    {
+     "w": "half",
+     "t": 213.03,
+     "end": 213.292
+    },
+    {
+     "w": "as",
+     "t": 213.305,
+     "end": 213.43
+    },
+    {
+     "w": "densely",
+     "t": 213.455,
+     "end": 214.28
+    },
+    {
+     "w": "so",
+     "t": 214.48,
+     "end": 214.63
+    },
+    {
+     "w": "Clarke",
+     "t": 214.655,
+     "end": 214.968
+    },
+    {
+     "w": "chose",
+     "t": 215.005,
+     "end": 215.292
+    },
+    {
+     "w": "an",
+     "t": 215.305,
+     "end": 215.405
+    },
+    {
+     "w": "area",
+     "t": 215.43,
+     "end": 215.83
+    },
+    {
+     "w": "where",
+     "t": 215.855,
+     "end": 216.03
+    },
+    {
+     "w": "lambda",
+     "t": 216.055,
+     "end": 216.43
+    },
+    {
+     "w": "held",
+     "t": 216.455,
+     "end": 216.705
+    },
+    {
+     "w": "steady",
+     "t": 216.73,
+     "end": 217.27
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/95/957fcc25b3f21679db29670e.wav"
+  },
+  {
+   "index": 17,
+   "start": 217.633,
+   "duration": 10.25,
+   "end": 227.883,
+   "text": "So look again. [pause 0.9] The clumps in map A are what no aim at all looks like. If you picked map B, you picked the one following a rule.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "So",
+     "t": 217.738,
+     "end": 217.938
+    },
+    {
+     "w": "look",
+     "t": 217.963,
+     "end": 218.163
+    },
+    {
+     "w": "again",
+     "t": 218.188,
+     "end": 218.823
+    },
+    {
+     "w": "The",
+     "t": 219.763,
+     "end": 219.875
+    },
+    {
+     "w": "clumps",
+     "t": 219.913,
+     "end": 220.3
+    },
+    {
+     "w": "in",
+     "t": 220.313,
+     "end": 220.413
+    },
+    {
+     "w": "map",
+     "t": 220.438,
+     "end": 220.825
+    },
+    {
+     "w": "A",
+     "t": 220.888,
+     "end": 221.475
+    },
+    {
+     "w": "are",
+     "t": 221.538,
+     "end": 221.638
+    },
+    {
+     "w": "what",
+     "t": 221.663,
+     "end": 221.801
+    },
+    {
+     "w": "no",
+     "t": 221.838,
+     "end": 222.051
+    },
+    {
+     "w": "aim",
+     "t": 222.088,
+     "end": 222.325
+    },
+    {
+     "w": "at",
+     "t": 222.338,
+     "end": 222.413
+    },
+    {
+     "w": "all",
+     "t": 222.438,
+     "end": 222.675
+    },
+    {
+     "w": "looks",
+     "t": 222.713,
+     "end": 223.038
+    },
+    {
+     "w": "like",
+     "t": 223.063,
+     "end": 223.533
+    },
+    {
+     "w": "If",
+     "t": 223.963,
+     "end": 224.138
+    },
+    {
+     "w": "you",
+     "t": 224.163,
+     "end": 224.301
+    },
+    {
+     "w": "picked",
+     "t": 224.338,
+     "end": 224.725
+    },
+    {
+     "w": "map",
+     "t": 224.763,
+     "end": 225.101
+    },
+    {
+     "w": "B",
+     "t": 225.138,
+     "end": 225.638
+    },
+    {
+     "w": "you",
+     "t": 225.838,
+     "end": 225.976
+    },
+    {
+     "w": "picked",
+     "t": 226.013,
+     "end": 226.275
+    },
+    {
+     "w": "the",
+     "t": 226.288,
+     "end": 226.363
+    },
+    {
+     "w": "one",
+     "t": 226.388,
+     "end": 226.638
+    },
+    {
+     "w": "following",
+     "t": 226.688,
+     "end": 227.163
+    },
+    {
+     "w": "a",
+     "t": 227.188,
+     "end": 227.275
+    },
+    {
+     "w": "rule",
+     "t": 227.313,
+     "end": 227.883
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/21/21a0e24a649a1c0e60d66054.wav"
+  }
+ ],
+ "warnings": [],
+ "layout_audit": {
+  "clearance": 0.15,
+  "checks": 221,
+  "audit_seconds": 3.874,
+  "render_seconds": 634.2,
+  "errors": 0,
+  "count": 1,
+  "counts": {
+   "overlap": 0,
+   "clearance": 1,
+   "safe-area": 0,
+   "caption-zone": 0
+  },
+  "issues": [
+   {
+    "kind": "clearance",
+    "start": 125.83,
+    "end": 125.83,
+    "held": 0.0,
+    "text": "MathTex 'e^{-\\lambda}'",
+    "text_pos": [
+     3.52,
+     -1.29
+    ],
+    "other": "Rectangle",
+    "other_pos": [
+     2.86,
+     -1.37
+    ],
+    "gap": 0.076,
+    "need": 0.15,
+    "msg": "clearance 2:05.8 (end of an animation, not held) MathTex 'e^{-\\lambda}' @(+3.52, -1.29) vs Rectangle @(+2.86, -1.37): gap 0.08 (need >= 0.15)"
+   }
+  ],
+  "allowed": [
+   {
+    "kind": "clearance",
+    "start": 68.73,
+    "end": 94.4,
+    "held": 25.67,
+    "text": "MathTex '\\Big)^{537}'",
+    "text_pos": [
+     3.1,
+     1.06
+    ],
+    "other": "Rectangle",
+    "other_pos": [
+     2.4,
+     1.02
+    ],
+    "gap": 0.062,
+    "need": 0.15,
+    "allowed": "fraction bar and the closing \\Big) of the same typeset equation (TeX spacing)",
+    "msg": "clearance 1:08.7-1:34.4 (held 25.7s) MathTex '\\Big)^{537}' @(+3.10, +1.06) vs Rectangle @(+2.40, +1.02): gap 0.06 (need >= 0.15)"
+   }
+  ],
+  "excluded": []
+ }
+}

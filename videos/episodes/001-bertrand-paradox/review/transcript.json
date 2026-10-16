@@ -1,0 +1,4347 @@
+{
+ "task": "transcribe",
+ "language": "English",
+ "duration": 231.33871616599998,
+ "text": " Draw a chord across this circle at random. What's the chance it comes out longer than a side of this triangle? Pick a number. Joseph Bertrand published this puzzle in 1889 as a warning about two words. At random. Every survey and every simulation has to decide what they mean. Start with the obvious simulation. Pick two points on the rim at random and join them. If the cord beats the triangle side, it turns gold. Run 10,000 cords, and the gold share settles near point 3-3. Geometry agrees. Put a corner of the triangle on the first point. The cord is long only when the second point lands on this far arc, a third of the rim. Case closed until you code it a second way. Pick a random radius, a random point along it, and draw the chord through that point at right angles. Same circle, same gold rule. This one settles near point five. A third program picks a random point anywhere inside and makes it the chord's midpoint. That settles near point two five. Bertrand printed all three and wrote that none is wrong and none is right. Each tally is good to about one percentage point. They disagree by 25 percentage points and none of the code has a bug. One point sets a chord's length, its midpoint. Slide it outward and the chord shrinks. It matches the triangle's side when the midpoint is half a radius out on the circle that fits inside the triangle. So a chord is long exactly when its midpoint lands inside this gold circle. Each program is really asking what share of midpoints land here. Shrink every chord to its midpoint The midpoint program spreads them evenly So this circle with a quarter of the area catches a quarter of them The radius program spreads them evenly along the radius Where will they crowd? Toward the center. Every ring gets an equal share, and inner rings are small. Half the radius, so one half. And the endpoints program piles them against the rim, so only a third land inside, the third we found. three programs three things spread evenly rim radius area at random never said which in 1973 Edwin Jane said a physical process picks one straws tossed from a standing height can't be aimed so the answer can't depend on where the circle sits or how big it is one rain lands on both circles at once, so an honest program must score the same on both. Midpoint gives a quarter, then .41. Endpoints give a third, then .47. Only the radius program gives a half on both. Janes and Charles Tyler tossed real broom straws at a 5-inch circle, and the 128 that crossed it matched the radius program's spread of chord lengths. A skilled tosser, Janes noted, could produce other answers. Surveys hide the same two words. Take classes of 10, 10, and 100. Pick a class at random, and the average size is 40. Pick a student at random, and it's 85. At Stony Brook in 1974, that was 40 for a random class, and 147 for a random student. So whatever number you picked, some way of drawing chords makes it right. Name the way, and only one is. 40 and 147 are both right, once you say who's picked.",
+ "words": [
+  {
+   "word": "Draw",
+   "start": 0.02,
+   "end": 0.22
+  },
+  {
+   "word": "a",
+   "start": 0.22,
+   "end": 0.5
+  },
+  {
+   "word": "chord",
+   "start": 0.5,
+   "end": 0.64
+  },
+  {
+   "word": "across",
+   "start": 0.64,
+   "end": 0.96
+  },
+  {
+   "word": "this",
+   "start": 0.96,
+   "end": 1.22
+  },
+  {
+   "word": "circle",
+   "start": 1.22,
+   "end": 1.54
+  },
+  {
+   "word": "at",
+   "start": 1.54,
+   "end": 1.74
+  },
+  {
+   "word": "random.",
+   "start": 1.74,
+   "end": 2.12
+  },
+  {
+   "word": "What's",
+   "start": 2.84,
+   "end": 3.08
+  },
+  {
+   "word": "the",
+   "start": 3.08,
+   "end": 3.22
+  },
+  {
+   "word": "chance",
+   "start": 3.22,
+   "end": 3.52
+  },
+  {
+   "word": "it",
+   "start": 3.52,
+   "end": 3.68
+  },
+  {
+   "word": "comes",
+   "start": 3.68,
+   "end": 3.9
+  },
+  {
+   "word": "out",
+   "start": 3.9,
+   "end": 4.14
+  },
+  {
+   "word": "longer",
+   "start": 4.14,
+   "end": 4.6
+  },
+  {
+   "word": "than",
+   "start": 4.6,
+   "end": 4.92
+  },
+  {
+   "word": "a",
+   "start": 4.92,
+   "end": 5.08
+  },
+  {
+   "word": "side",
+   "start": 5.08,
+   "end": 5.26
+  },
+  {
+   "word": "of",
+   "start": 5.26,
+   "end": 5.44
+  },
+  {
+   "word": "this",
+   "start": 5.44,
+   "end": 5.58
+  },
+  {
+   "word": "triangle?",
+   "start": 5.58,
+   "end": 6.08
+  },
+  {
+   "word": "Pick",
+   "start": 6.82,
+   "end": 7.02
+  },
+  {
+   "word": "a",
+   "start": 7.02,
+   "end": 7.18
+  },
+  {
+   "word": "number.",
+   "start": 7.18,
+   "end": 7.44
+  },
+  {
+   "word": "Joseph",
+   "start": 9.64,
+   "end": 10
+  },
+  {
+   "word": "Bertrand",
+   "start": 10,
+   "end": 10.58
+  },
+  {
+   "word": "published",
+   "start": 10.58,
+   "end": 11
+  },
+  {
+   "word": "this",
+   "start": 11,
+   "end": 11.3
+  },
+  {
+   "word": "puzzle",
+   "start": 11.3,
+   "end": 11.58
+  },
+  {
+   "word": "in",
+   "start": 11.58,
+   "end": 11.86
+  },
+  {
+   "word": "1889",
+   "start": 11.86,
+   "end": 12.8
+  },
+  {
+   "word": "as",
+   "start": 12.8,
+   "end": 13.6
+  },
+  {
+   "word": "a",
+   "start": 13.6,
+   "end": 13.68
+  },
+  {
+   "word": "warning",
+   "start": 13.68,
+   "end": 14.02
+  },
+  {
+   "word": "about",
+   "start": 14.02,
+   "end": 14.38
+  },
+  {
+   "word": "two",
+   "start": 14.38,
+   "end": 14.64
+  },
+  {
+   "word": "words.",
+   "start": 14.64,
+   "end": 15.08
+  },
+  {
+   "word": "At",
+   "start": 15.64,
+   "end": 15.82
+  },
+  {
+   "word": "random.",
+   "start": 15.82,
+   "end": 16.14
+  },
+  {
+   "word": "Every",
+   "start": 16.88,
+   "end": 17.14
+  },
+  {
+   "word": "survey",
+   "start": 17.14,
+   "end": 17.58
+  },
+  {
+   "word": "and",
+   "start": 17.58,
+   "end": 18.3
+  },
+  {
+   "word": "every",
+   "start": 18.3,
+   "end": 18.66
+  },
+  {
+   "word": "simulation",
+   "start": 18.66,
+   "end": 19.04
+  },
+  {
+   "word": "has",
+   "start": 19.04,
+   "end": 19.7
+  },
+  {
+   "word": "to",
+   "start": 19.7,
+   "end": 19.84
+  },
+  {
+   "word": "decide",
+   "start": 19.84,
+   "end": 20.18
+  },
+  {
+   "word": "what",
+   "start": 20.18,
+   "end": 20.56
+  },
+  {
+   "word": "they",
+   "start": 20.56,
+   "end": 20.7
+  },
+  {
+   "word": "mean.",
+   "start": 20.7,
+   "end": 21.18
+  },
+  {
+   "word": "Start",
+   "start": 21.62,
+   "end": 21.84
+  },
+  {
+   "word": "with",
+   "start": 21.84,
+   "end": 22.02
+  },
+  {
+   "word": "the",
+   "start": 22.02,
+   "end": 22.12
+  },
+  {
+   "word": "obvious",
+   "start": 22.12,
+   "end": 22.54
+  },
+  {
+   "word": "simulation.",
+   "start": 22.54,
+   "end": 23
+  },
+  {
+   "word": "Pick",
+   "start": 23.92,
+   "end": 24.12
+  },
+  {
+   "word": "two",
+   "start": 24.12,
+   "end": 24.34
+  },
+  {
+   "word": "points",
+   "start": 24.34,
+   "end": 24.68
+  },
+  {
+   "word": "on",
+   "start": 24.68,
+   "end": 24.84
+  },
+  {
+   "word": "the",
+   "start": 24.84,
+   "end": 24.94
+  },
+  {
+   "word": "rim",
+   "start": 24.94,
+   "end": 25.08
+  },
+  {
+   "word": "at",
+   "start": 25.08,
+   "end": 25.24
+  },
+  {
+   "word": "random",
+   "start": 25.24,
+   "end": 25.58
+  },
+  {
+   "word": "and",
+   "start": 25.58,
+   "end": 26.12
+  },
+  {
+   "word": "join",
+   "start": 26.12,
+   "end": 26.4
+  },
+  {
+   "word": "them.",
+   "start": 26.4,
+   "end": 26.64
+  },
+  {
+   "word": "If",
+   "start": 27.34,
+   "end": 27.4
+  },
+  {
+   "word": "the",
+   "start": 27.4,
+   "end": 27.58
+  },
+  {
+   "word": "cord",
+   "start": 27.58,
+   "end": 27.8
+  },
+  {
+   "word": "beats",
+   "start": 27.8,
+   "end": 28.08
+  },
+  {
+   "word": "the",
+   "start": 28.08,
+   "end": 28.26
+  },
+  {
+   "word": "triangle",
+   "start": 28.26,
+   "end": 28.74
+  },
+  {
+   "word": "side,",
+   "start": 28.74,
+   "end": 29.36
+  },
+  {
+   "word": "it",
+   "start": 29.36,
+   "end": 29.72
+  },
+  {
+   "word": "turns",
+   "start": 29.72,
+   "end": 30.08
+  },
+  {
+   "word": "gold.",
+   "start": 30.08,
+   "end": 30.76
+  },
+  {
+   "word": "Run",
+   "start": 31.06,
+   "end": 31.38
+  },
+  {
+   "word": "10,000",
+   "start": 31.38,
+   "end": 32.06
+  },
+  {
+   "word": "cords,",
+   "start": 32.06,
+   "end": 32.76
+  },
+  {
+   "word": "and",
+   "start": 32.76,
+   "end": 33.16
+  },
+  {
+   "word": "the",
+   "start": 33.16,
+   "end": 33.26
+  },
+  {
+   "word": "gold",
+   "start": 33.26,
+   "end": 33.5
+  },
+  {
+   "word": "share",
+   "start": 33.5,
+   "end": 33.8
+  },
+  {
+   "word": "settles",
+   "start": 33.8,
+   "end": 34.24
+  },
+  {
+   "word": "near",
+   "start": 34.24,
+   "end": 34.52
+  },
+  {
+   "word": "point",
+   "start": 34.52,
+   "end": 34.72
+  },
+  {
+   "word": "3-3.",
+   "start": 34.72,
+   "end": 35.46
+  },
+  {
+   "word": "Geometry",
+   "start": 36.42,
+   "end": 37.02
+  },
+  {
+   "word": "agrees.",
+   "start": 37.02,
+   "end": 37.78
+  },
+  {
+   "word": "Put",
+   "start": 37.2,
+   "end": 38.32
+  },
+  {
+   "word": "a",
+   "start": 38.32,
+   "end": 38.4
+  },
+  {
+   "word": "corner",
+   "start": 38.4,
+   "end": 38.72
+  },
+  {
+   "word": "of",
+   "start": 38.72,
+   "end": 38.92
+  },
+  {
+   "word": "the",
+   "start": 38.92,
+   "end": 39
+  },
+  {
+   "word": "triangle",
+   "start": 39,
+   "end": 39.46
+  },
+  {
+   "word": "on",
+   "start": 39.46,
+   "end": 39.8
+  },
+  {
+   "word": "the",
+   "start": 39.8,
+   "end": 39.92
+  },
+  {
+   "word": "first",
+   "start": 39.92,
+   "end": 40.14
+  },
+  {
+   "word": "point.",
+   "start": 40.14,
+   "end": 40.64
+  },
+  {
+   "word": "The",
+   "start": 40.38,
+   "end": 41.24
+  },
+  {
+   "word": "cord",
+   "start": 41.24,
+   "end": 41.62
+  },
+  {
+   "word": "is",
+   "start": 41.62,
+   "end": 41.8
+  },
+  {
+   "word": "long",
+   "start": 41.8,
+   "end": 42.22
+  },
+  {
+   "word": "only",
+   "start": 42.22,
+   "end": 42.54
+  },
+  {
+   "word": "when",
+   "start": 42.54,
+   "end": 42.74
+  },
+  {
+   "word": "the",
+   "start": 42.74,
+   "end": 42.86
+  },
+  {
+   "word": "second",
+   "start": 42.86,
+   "end": 43.1
+  },
+  {
+   "word": "point",
+   "start": 43.1,
+   "end": 43.44
+  },
+  {
+   "word": "lands",
+   "start": 43.44,
+   "end": 43.9
+  },
+  {
+   "word": "on",
+   "start": 43.9,
+   "end": 44.04
+  },
+  {
+   "word": "this",
+   "start": 44.04,
+   "end": 44.2
+  },
+  {
+   "word": "far",
+   "start": 44.2,
+   "end": 44.44
+  },
+  {
+   "word": "arc,",
+   "start": 44.44,
+   "end": 44.98
+  },
+  {
+   "word": "a",
+   "start": 44.8,
+   "end": 45.46
+  },
+  {
+   "word": "third",
+   "start": 45.46,
+   "end": 45.64
+  },
+  {
+   "word": "of",
+   "start": 45.64,
+   "end": 45.82
+  },
+  {
+   "word": "the",
+   "start": 45.82,
+   "end": 45.9
+  },
+  {
+   "word": "rim.",
+   "start": 45.9,
+   "end": 46.3
+  },
+  {
+   "word": "Case",
+   "start": 47.82,
+   "end": 48.2
+  },
+  {
+   "word": "closed",
+   "start": 48.2,
+   "end": 48.8
+  },
+  {
+   "word": "until",
+   "start": 48.8,
+   "end": 49.32
+  },
+  {
+   "word": "you",
+   "start": 49.32,
+   "end": 49.54
+  },
+  {
+   "word": "code",
+   "start": 49.54,
+   "end": 49.74
+  },
+  {
+   "word": "it",
+   "start": 49.74,
+   "end": 49.86
+  },
+  {
+   "word": "a",
+   "start": 49.86,
+   "end": 49.96
+  },
+  {
+   "word": "second",
+   "start": 49.96,
+   "end": 50.18
+  },
+  {
+   "word": "way.",
+   "start": 50.18,
+   "end": 50.76
+  },
+  {
+   "word": "Pick",
+   "start": 51.08,
+   "end": 51.34
+  },
+  {
+   "word": "a",
+   "start": 51.34,
+   "end": 51.5
+  },
+  {
+   "word": "random",
+   "start": 51.5,
+   "end": 51.92
+  },
+  {
+   "word": "radius,",
+   "start": 51.92,
+   "end": 52.66
+  },
+  {
+   "word": "a",
+   "start": 52.66,
+   "end": 53.16
+  },
+  {
+   "word": "random",
+   "start": 53.16,
+   "end": 53.54
+  },
+  {
+   "word": "point",
+   "start": 53.54,
+   "end": 53.88
+  },
+  {
+   "word": "along",
+   "start": 53.88,
+   "end": 54.2
+  },
+  {
+   "word": "it,",
+   "start": 54.2,
+   "end": 54.56
+  },
+  {
+   "word": "and",
+   "start": 54.86,
+   "end": 54.98
+  },
+  {
+   "word": "draw",
+   "start": 54.98,
+   "end": 55.2
+  },
+  {
+   "word": "the",
+   "start": 55.2,
+   "end": 55.4
+  },
+  {
+   "word": "chord",
+   "start": 55.4,
+   "end": 55.68
+  },
+  {
+   "word": "through",
+   "start": 55.68,
+   "end": 55.92
+  },
+  {
+   "word": "that",
+   "start": 55.92,
+   "end": 56.18
+  },
+  {
+   "word": "point",
+   "start": 56.18,
+   "end": 56.54
+  },
+  {
+   "word": "at",
+   "start": 56.54,
+   "end": 56.84
+  },
+  {
+   "word": "right",
+   "start": 56.84,
+   "end": 57.06
+  },
+  {
+   "word": "angles.",
+   "start": 57.06,
+   "end": 57.78
+  },
+  {
+   "word": "Same",
+   "start": 58.02,
+   "end": 58.42
+  },
+  {
+   "word": "circle,",
+   "start": 58.42,
+   "end": 59.04
+  },
+  {
+   "word": "same",
+   "start": 59.04,
+   "end": 59.44
+  },
+  {
+   "word": "gold",
+   "start": 59.44,
+   "end": 59.68
+  },
+  {
+   "word": "rule.",
+   "start": 59.68,
+   "end": 60.2
+  },
+  {
+   "word": "This",
+   "start": 60.16,
+   "end": 60.86
+  },
+  {
+   "word": "one",
+   "start": 60.86,
+   "end": 61.06
+  },
+  {
+   "word": "settles",
+   "start": 61.06,
+   "end": 61.52
+  },
+  {
+   "word": "near",
+   "start": 61.52,
+   "end": 61.76
+  },
+  {
+   "word": "point",
+   "start": 61.76,
+   "end": 61.96
+  },
+  {
+   "word": "five.",
+   "start": 61.96,
+   "end": 62.6
+  },
+  {
+   "word": "A",
+   "start": 62.48,
+   "end": 63.06
+  },
+  {
+   "word": "third",
+   "start": 63.06,
+   "end": 63.32
+  },
+  {
+   "word": "program",
+   "start": 63.32,
+   "end": 63.78
+  },
+  {
+   "word": "picks",
+   "start": 63.78,
+   "end": 64.18
+  },
+  {
+   "word": "a",
+   "start": 64.18,
+   "end": 64.32
+  },
+  {
+   "word": "random",
+   "start": 64.32,
+   "end": 64.7
+  },
+  {
+   "word": "point",
+   "start": 64.7,
+   "end": 65.1
+  },
+  {
+   "word": "anywhere",
+   "start": 65.1,
+   "end": 65.56
+  },
+  {
+   "word": "inside",
+   "start": 65.56,
+   "end": 66.12
+  },
+  {
+   "word": "and",
+   "start": 66.36,
+   "end": 66.98
+  },
+  {
+   "word": "makes",
+   "start": 66.98,
+   "end": 67.22
+  },
+  {
+   "word": "it",
+   "start": 67.22,
+   "end": 67.34
+  },
+  {
+   "word": "the",
+   "start": 67.34,
+   "end": 67.48
+  },
+  {
+   "word": "chord's",
+   "start": 67.48,
+   "end": 67.8
+  },
+  {
+   "word": "midpoint.",
+   "start": 67.8,
+   "end": 68.54
+  },
+  {
+   "word": "That",
+   "start": 68.44,
+   "end": 69.2
+  },
+  {
+   "word": "settles",
+   "start": 69.2,
+   "end": 69.58
+  },
+  {
+   "word": "near",
+   "start": 69.58,
+   "end": 69.82
+  },
+  {
+   "word": "point",
+   "start": 69.82,
+   "end": 70.04
+  },
+  {
+   "word": "two",
+   "start": 70.04,
+   "end": 70.24
+  },
+  {
+   "word": "five.",
+   "start": 70.24,
+   "end": 70.96
+  },
+  {
+   "word": "Bertrand",
+   "start": 71.64,
+   "end": 72.24
+  },
+  {
+   "word": "printed",
+   "start": 72.24,
+   "end": 72.58
+  },
+  {
+   "word": "all",
+   "start": 72.58,
+   "end": 72.86
+  },
+  {
+   "word": "three",
+   "start": 72.86,
+   "end": 73.18
+  },
+  {
+   "word": "and",
+   "start": 73.18,
+   "end": 73.74
+  },
+  {
+   "word": "wrote",
+   "start": 73.74,
+   "end": 73.94
+  },
+  {
+   "word": "that",
+   "start": 73.94,
+   "end": 74.12
+  },
+  {
+   "word": "none",
+   "start": 74.12,
+   "end": 74.36
+  },
+  {
+   "word": "is",
+   "start": 74.36,
+   "end": 74.56
+  },
+  {
+   "word": "wrong",
+   "start": 74.56,
+   "end": 74.9
+  },
+  {
+   "word": "and",
+   "start": 74.7,
+   "end": 75.32
+  },
+  {
+   "word": "none",
+   "start": 75.32,
+   "end": 75.52
+  },
+  {
+   "word": "is",
+   "start": 75.52,
+   "end": 75.72
+  },
+  {
+   "word": "right.",
+   "start": 75.72,
+   "end": 76.26
+  },
+  {
+   "word": "Each",
+   "start": 76.18,
+   "end": 76.88
+  },
+  {
+   "word": "tally",
+   "start": 76.88,
+   "end": 77.26
+  },
+  {
+   "word": "is",
+   "start": 77.26,
+   "end": 77.46
+  },
+  {
+   "word": "good",
+   "start": 77.46,
+   "end": 77.64
+  },
+  {
+   "word": "to",
+   "start": 77.64,
+   "end": 77.82
+  },
+  {
+   "word": "about",
+   "start": 77.82,
+   "end": 78.08
+  },
+  {
+   "word": "one",
+   "start": 78.08,
+   "end": 78.36
+  },
+  {
+   "word": "percentage",
+   "start": 78.36,
+   "end": 78.8
+  },
+  {
+   "word": "point.",
+   "start": 78.8,
+   "end": 79.42
+  },
+  {
+   "word": "They",
+   "start": 79.34,
+   "end": 80
+  },
+  {
+   "word": "disagree",
+   "start": 80,
+   "end": 80.52
+  },
+  {
+   "word": "by",
+   "start": 80.52,
+   "end": 80.88
+  },
+  {
+   "word": "25",
+   "start": 80.88,
+   "end": 81.48
+  },
+  {
+   "word": "percentage",
+   "start": 81.48,
+   "end": 82.16
+  },
+  {
+   "word": "points",
+   "start": 82.16,
+   "end": 82.64
+  },
+  {
+   "word": "and",
+   "start": 83.18,
+   "end": 83.3
+  },
+  {
+   "word": "none",
+   "start": 83.3,
+   "end": 83.48
+  },
+  {
+   "word": "of",
+   "start": 83.48,
+   "end": 83.6
+  },
+  {
+   "word": "the",
+   "start": 83.6,
+   "end": 83.7
+  },
+  {
+   "word": "code",
+   "start": 83.7,
+   "end": 84.04
+  },
+  {
+   "word": "has",
+   "start": 84.04,
+   "end": 84.28
+  },
+  {
+   "word": "a",
+   "start": 84.28,
+   "end": 84.42
+  },
+  {
+   "word": "bug.",
+   "start": 84.42,
+   "end": 84.88
+  },
+  {
+   "word": "One",
+   "start": 85.1,
+   "end": 85.48
+  },
+  {
+   "word": "point",
+   "start": 85.48,
+   "end": 85.74
+  },
+  {
+   "word": "sets",
+   "start": 85.74,
+   "end": 86.04
+  },
+  {
+   "word": "a",
+   "start": 86.04,
+   "end": 86.2
+  },
+  {
+   "word": "chord's",
+   "start": 86.2,
+   "end": 86.48
+  },
+  {
+   "word": "length,",
+   "start": 86.48,
+   "end": 86.88
+  },
+  {
+   "word": "its",
+   "start": 86.88,
+   "end": 87.32
+  },
+  {
+   "word": "midpoint.",
+   "start": 87.32,
+   "end": 88.12
+  },
+  {
+   "word": "Slide",
+   "start": 88.46,
+   "end": 88.88
+  },
+  {
+   "word": "it",
+   "start": 88.88,
+   "end": 89.04
+  },
+  {
+   "word": "outward",
+   "start": 89.04,
+   "end": 89.36
+  },
+  {
+   "word": "and",
+   "start": 89.36,
+   "end": 89.72
+  },
+  {
+   "word": "the",
+   "start": 89.72,
+   "end": 89.84
+  },
+  {
+   "word": "chord",
+   "start": 89.84,
+   "end": 90.04
+  },
+  {
+   "word": "shrinks.",
+   "start": 90.04,
+   "end": 90.7
+  },
+  {
+   "word": "It",
+   "start": 90.64,
+   "end": 91.32
+  },
+  {
+   "word": "matches",
+   "start": 91.32,
+   "end": 91.72
+  },
+  {
+   "word": "the",
+   "start": 91.72,
+   "end": 91.94
+  },
+  {
+   "word": "triangle's",
+   "start": 91.94,
+   "end": 92.7
+  },
+  {
+   "word": "side",
+   "start": 92.7,
+   "end": 93.08
+  },
+  {
+   "word": "when",
+   "start": 92.8,
+   "end": 93.42
+  },
+  {
+   "word": "the",
+   "start": 93.42,
+   "end": 93.54
+  },
+  {
+   "word": "midpoint",
+   "start": 93.54,
+   "end": 94.02
+  },
+  {
+   "word": "is",
+   "start": 94.02,
+   "end": 94.32
+  },
+  {
+   "word": "half",
+   "start": 94.32,
+   "end": 94.64
+  },
+  {
+   "word": "a",
+   "start": 94.64,
+   "end": 94.8
+  },
+  {
+   "word": "radius",
+   "start": 94.8,
+   "end": 95.2
+  },
+  {
+   "word": "out",
+   "start": 95.2,
+   "end": 95.58
+  },
+  {
+   "word": "on",
+   "start": 95.64,
+   "end": 96.26
+  },
+  {
+   "word": "the",
+   "start": 96.26,
+   "end": 96.34
+  },
+  {
+   "word": "circle",
+   "start": 96.34,
+   "end": 96.7
+  },
+  {
+   "word": "that",
+   "start": 96.7,
+   "end": 96.92
+  },
+  {
+   "word": "fits",
+   "start": 96.92,
+   "end": 97.24
+  },
+  {
+   "word": "inside",
+   "start": 97.24,
+   "end": 97.7
+  },
+  {
+   "word": "the",
+   "start": 97.7,
+   "end": 97.86
+  },
+  {
+   "word": "triangle.",
+   "start": 97.86,
+   "end": 98.56
+  },
+  {
+   "word": "So",
+   "start": 98.44,
+   "end": 99.12
+  },
+  {
+   "word": "a",
+   "start": 99.12,
+   "end": 99.28
+  },
+  {
+   "word": "chord",
+   "start": 99.28,
+   "end": 99.56
+  },
+  {
+   "word": "is",
+   "start": 99.56,
+   "end": 99.76
+  },
+  {
+   "word": "long",
+   "start": 99.76,
+   "end": 100.06
+  },
+  {
+   "word": "exactly",
+   "start": 100.06,
+   "end": 100.62
+  },
+  {
+   "word": "when",
+   "start": 100.62,
+   "end": 101.22
+  },
+  {
+   "word": "its",
+   "start": 101.22,
+   "end": 101.36
+  },
+  {
+   "word": "midpoint",
+   "start": 101.36,
+   "end": 101.82
+  },
+  {
+   "word": "lands",
+   "start": 101.82,
+   "end": 102.3
+  },
+  {
+   "word": "inside",
+   "start": 102.24,
+   "end": 103.16
+  },
+  {
+   "word": "this",
+   "start": 103.16,
+   "end": 103.44
+  },
+  {
+   "word": "gold",
+   "start": 103.44,
+   "end": 103.68
+  },
+  {
+   "word": "circle.",
+   "start": 103.68,
+   "end": 104.34
+  },
+  {
+   "word": "Each",
+   "start": 104.26,
+   "end": 104.98
+  },
+  {
+   "word": "program",
+   "start": 104.98,
+   "end": 105.48
+  },
+  {
+   "word": "is",
+   "start": 105.48,
+   "end": 105.82
+  },
+  {
+   "word": "really",
+   "start": 105.82,
+   "end": 106.08
+  },
+  {
+   "word": "asking",
+   "start": 106.08,
+   "end": 106.56
+  },
+  {
+   "word": "what",
+   "start": 106.32,
+   "end": 106.82
+  },
+  {
+   "word": "share",
+   "start": 106.82,
+   "end": 107.14
+  },
+  {
+   "word": "of",
+   "start": 107.14,
+   "end": 107.32
+  },
+  {
+   "word": "midpoints",
+   "start": 107.32,
+   "end": 107.78
+  },
+  {
+   "word": "land",
+   "start": 107.78,
+   "end": 108.14
+  },
+  {
+   "word": "here.",
+   "start": 108.14,
+   "end": 108.58
+  },
+  {
+   "word": "Shrink",
+   "start": 108.44,
+   "end": 109.28
+  },
+  {
+   "word": "every",
+   "start": 109.28,
+   "end": 109.66
+  },
+  {
+   "word": "chord",
+   "start": 109.66,
+   "end": 109.94
+  },
+  {
+   "word": "to",
+   "start": 109.94,
+   "end": 110.16
+  },
+  {
+   "word": "its",
+   "start": 110.16,
+   "end": 110.3
+  },
+  {
+   "word": "midpoint.",
+   "start": 110.3,
+   "end": 111.04
+  },
+  {
+   "word": "The",
+   "start": 111.46,
+   "end": 111.6
+  },
+  {
+   "word": "midpoint",
+   "start": 111.6,
+   "end": 112.02
+  },
+  {
+   "word": "program",
+   "start": 112.02,
+   "end": 112.4
+  },
+  {
+   "word": "spreads",
+   "start": 112.4,
+   "end": 112.92
+  },
+  {
+   "word": "them",
+   "start": 112.92,
+   "end": 113.12
+  },
+  {
+   "word": "evenly.",
+   "start": 113.12,
+   "end": 113.94
+  },
+  {
+   "word": "So",
+   "start": 113.78,
+   "end": 114.44
+  },
+  {
+   "word": "this",
+   "start": 114.44,
+   "end": 114.7
+  },
+  {
+   "word": "circle",
+   "start": 114.7,
+   "end": 115.16
+  },
+  {
+   "word": "with",
+   "start": 115.16,
+   "end": 115.56
+  },
+  {
+   "word": "a",
+   "start": 115.56,
+   "end": 115.64
+  },
+  {
+   "word": "quarter",
+   "start": 115.64,
+   "end": 115.98
+  },
+  {
+   "word": "of",
+   "start": 115.94934,
+   "end": 116.149345
+  },
+  {
+   "word": "the",
+   "start": 116.149345,
+   "end": 116.26934
+  },
+  {
+   "word": "area,",
+   "start": 116.26934,
+   "end": 116.789345
+  },
+  {
+   "word": "catches",
+   "start": 116.66934,
+   "end": 117.26934
+  },
+  {
+   "word": "a",
+   "start": 117.26934,
+   "end": 117.469345
+  },
+  {
+   "word": "quarter",
+   "start": 117.469345,
+   "end": 117.789345
+  },
+  {
+   "word": "of",
+   "start": 117.789345,
+   "end": 118.06934
+  },
+  {
+   "word": "them.",
+   "start": 118.06934,
+   "end": 118.429344
+  },
+  {
+   "word": "The",
+   "start": 118.429344,
+   "end": 118.88934
+  },
+  {
+   "word": "radius",
+   "start": 118.88934,
+   "end": 119.289345
+  },
+  {
+   "word": "program",
+   "start": 119.289345,
+   "end": 119.789345
+  },
+  {
+   "word": "spreads",
+   "start": 119.789345,
+   "end": 120.429344
+  },
+  {
+   "word": "them",
+   "start": 120.429344,
+   "end": 120.62934
+  },
+  {
+   "word": "evenly",
+   "start": 120.62934,
+   "end": 121.08934
+  },
+  {
+   "word": "along",
+   "start": 121.08934,
+   "end": 121.54934
+  },
+  {
+   "word": "the",
+   "start": 121.54934,
+   "end": 121.76934
+  },
+  {
+   "word": "radius.",
+   "start": 121.76934,
+   "end": 122.44934
+  },
+  {
+   "word": "Where",
+   "start": 122.64934,
+   "end": 123.14934
+  },
+  {
+   "word": "will",
+   "start": 123.14934,
+   "end": 123.30934
+  },
+  {
+   "word": "they",
+   "start": 123.30934,
+   "end": 123.44934
+  },
+  {
+   "word": "crowd?",
+   "start": 123.44934,
+   "end": 124.06934
+  },
+  {
+   "word": "Toward",
+   "start": 124.06934,
+   "end": 125.88934
+  },
+  {
+   "word": "the",
+   "start": 125.88934,
+   "end": 126.02934
+  },
+  {
+   "word": "center.",
+   "start": 126.02934,
+   "end": 126.62934
+  },
+  {
+   "word": "Every",
+   "start": 126.62934,
+   "end": 127.329346
+  },
+  {
+   "word": "ring",
+   "start": 127.329346,
+   "end": 127.609344
+  },
+  {
+   "word": "gets",
+   "start": 127.609344,
+   "end": 127.86934
+  },
+  {
+   "word": "an",
+   "start": 127.86934,
+   "end": 128.00934
+  },
+  {
+   "word": "equal",
+   "start": 128.00934,
+   "end": 128.28934
+  },
+  {
+   "word": "share,",
+   "start": 128.28934,
+   "end": 129.14934
+  },
+  {
+   "word": "and",
+   "start": 128.16934,
+   "end": 129.22934
+  },
+  {
+   "word": "inner",
+   "start": 129.22934,
+   "end": 129.50934
+  },
+  {
+   "word": "rings",
+   "start": 129.50934,
+   "end": 129.80934
+  },
+  {
+   "word": "are",
+   "start": 129.80934,
+   "end": 129.98935
+  },
+  {
+   "word": "small.",
+   "start": 129.98935,
+   "end": 130.74934
+  },
+  {
+   "word": "Half",
+   "start": 130.74934,
+   "end": 131.26935
+  },
+  {
+   "word": "the",
+   "start": 131.26935,
+   "end": 131.42934
+  },
+  {
+   "word": "radius,",
+   "start": 131.42934,
+   "end": 132.16934
+  },
+  {
+   "word": "so",
+   "start": 132.16934,
+   "end": 132.32935
+  },
+  {
+   "word": "one",
+   "start": 132.32935,
+   "end": 132.50934
+  },
+  {
+   "word": "half.",
+   "start": 132.50934,
+   "end": 133.00934
+  },
+  {
+   "word": "And",
+   "start": 133.00934,
+   "end": 133.46935
+  },
+  {
+   "word": "the",
+   "start": 133.46935,
+   "end": 133.58934
+  },
+  {
+   "word": "endpoints",
+   "start": 133.58934,
+   "end": 134.02934
+  },
+  {
+   "word": "program",
+   "start": 134.02934,
+   "end": 134.42934
+  },
+  {
+   "word": "piles",
+   "start": 134.16934,
+   "end": 134.98935
+  },
+  {
+   "word": "them",
+   "start": 134.98935,
+   "end": 135.22934
+  },
+  {
+   "word": "against",
+   "start": 135.22934,
+   "end": 135.42934
+  },
+  {
+   "word": "the",
+   "start": 135.42934,
+   "end": 135.64934
+  },
+  {
+   "word": "rim,",
+   "start": 135.64934,
+   "end": 136.04935
+  },
+  {
+   "word": "so",
+   "start": 136.04935,
+   "end": 136.54935
+  },
+  {
+   "word": "only",
+   "start": 136.54935,
+   "end": 136.90935
+  },
+  {
+   "word": "a",
+   "start": 136.90935,
+   "end": 137.18935
+  },
+  {
+   "word": "third",
+   "start": 137.18935,
+   "end": 137.34933
+  },
+  {
+   "word": "land",
+   "start": 137.34933,
+   "end": 137.76935
+  },
+  {
+   "word": "inside,",
+   "start": 137.76935,
+   "end": 138.54935
+  },
+  {
+   "word": "the",
+   "start": 138.54935,
+   "end": 138.92934
+  },
+  {
+   "word": "third",
+   "start": 138.92934,
+   "end": 139.18935
+  },
+  {
+   "word": "we",
+   "start": 139.18935,
+   "end": 139.42934
+  },
+  {
+   "word": "found.",
+   "start": 139.42934,
+   "end": 140.08934
+  },
+  {
+   "word": "three",
+   "start": 139.66934,
+   "end": 140.58934
+  },
+  {
+   "word": "programs",
+   "start": 140.58934,
+   "end": 141.18935
+  },
+  {
+   "word": "three",
+   "start": 141.18935,
+   "end": 141.54935
+  },
+  {
+   "word": "things",
+   "start": 141.54935,
+   "end": 141.80934
+  },
+  {
+   "word": "spread",
+   "start": 141.80934,
+   "end": 142.08934
+  },
+  {
+   "word": "evenly",
+   "start": 142.08934,
+   "end": 142.56934
+  },
+  {
+   "word": "rim",
+   "start": 142.56934,
+   "end": 143.58934
+  },
+  {
+   "word": "radius",
+   "start": 143.58934,
+   "end": 144.34933
+  },
+  {
+   "word": "area",
+   "start": 144.34933,
+   "end": 144.86934
+  },
+  {
+   "word": "at",
+   "start": 144.86934,
+   "end": 145.66934
+  },
+  {
+   "word": "random",
+   "start": 145.66934,
+   "end": 146.08934
+  },
+  {
+   "word": "never",
+   "start": 146.08934,
+   "end": 146.58934
+  },
+  {
+   "word": "said",
+   "start": 146.58934,
+   "end": 146.90935
+  },
+  {
+   "word": "which",
+   "start": 146.90935,
+   "end": 147.16934
+  },
+  {
+   "word": "in",
+   "start": 148.76935,
+   "end": 148.92934
+  },
+  {
+   "word": "1973",
+   "start": 148.92934,
+   "end": 149.70935
+  },
+  {
+   "word": "Edwin",
+   "start": 149.70935,
+   "end": 150.90935
+  },
+  {
+   "word": "Jane",
+   "start": 150.90935,
+   "end": 151.18935
+  },
+  {
+   "word": "said",
+   "start": 151.18935,
+   "end": 151.64934
+  },
+  {
+   "word": "a",
+   "start": 151.64934,
+   "end": 151.80934
+  },
+  {
+   "word": "physical",
+   "start": 151.80934,
+   "end": 152.10934
+  },
+  {
+   "word": "process",
+   "start": 152.10934,
+   "end": 152.72934
+  },
+  {
+   "word": "picks",
+   "start": 152.72934,
+   "end": 153.10934
+  },
+  {
+   "word": "one",
+   "start": 153.10934,
+   "end": 153.48935
+  },
+  {
+   "word": "straws",
+   "start": 153.48935,
+   "end": 154.88934
+  },
+  {
+   "word": "tossed",
+   "start": 154.88934,
+   "end": 155.10934
+  },
+  {
+   "word": "from",
+   "start": 155.10934,
+   "end": 155.34933
+  },
+  {
+   "word": "a",
+   "start": 155.34933,
+   "end": 155.50934
+  },
+  {
+   "word": "standing",
+   "start": 155.50934,
+   "end": 155.78934
+  },
+  {
+   "word": "height",
+   "start": 155.78934,
+   "end": 156.12933
+  },
+  {
+   "word": "can't",
+   "start": 156.12933,
+   "end": 156.58934
+  },
+  {
+   "word": "be",
+   "start": 156.58934,
+   "end": 156.68935
+  },
+  {
+   "word": "aimed",
+   "start": 156.34933,
+   "end": 157.16934
+  },
+  {
+   "word": "so",
+   "start": 157.16934,
+   "end": 157.82935
+  },
+  {
+   "word": "the",
+   "start": 157.82935,
+   "end": 157.94934
+  },
+  {
+   "word": "answer",
+   "start": 157.94934,
+   "end": 158.34933
+  },
+  {
+   "word": "can't",
+   "start": 158.34933,
+   "end": 158.80934
+  },
+  {
+   "word": "depend",
+   "start": 158.80934,
+   "end": 159.10934
+  },
+  {
+   "word": "on",
+   "start": 159.10934,
+   "end": 159.42934
+  },
+  {
+   "word": "where",
+   "start": 159.42934,
+   "end": 159.52934
+  },
+  {
+   "word": "the",
+   "start": 159.52934,
+   "end": 159.68935
+  },
+  {
+   "word": "circle",
+   "start": 159.68935,
+   "end": 160.04935
+  },
+  {
+   "word": "sits",
+   "start": 160.04935,
+   "end": 160.50934
+  },
+  {
+   "word": "or",
+   "start": 160.50934,
+   "end": 160.86934
+  },
+  {
+   "word": "how",
+   "start": 160.86934,
+   "end": 161.02934
+  },
+  {
+   "word": "big",
+   "start": 161.02934,
+   "end": 161.30934
+  },
+  {
+   "word": "it",
+   "start": 161.30934,
+   "end": 161.46935
+  },
+  {
+   "word": "is",
+   "start": 161.46935,
+   "end": 161.76935
+  },
+  {
+   "word": "one",
+   "start": 161.76935,
+   "end": 162.50934
+  },
+  {
+   "word": "rain",
+   "start": 162.50934,
+   "end": 162.74934
+  },
+  {
+   "word": "lands",
+   "start": 162.74934,
+   "end": 163.20935
+  },
+  {
+   "word": "on",
+   "start": 163.20935,
+   "end": 163.38934
+  },
+  {
+   "word": "both",
+   "start": 163.36934,
+   "end": 163.60934
+  },
+  {
+   "word": "circles",
+   "start": 163.60934,
+   "end": 164.08934
+  },
+  {
+   "word": "at",
+   "start": 164.08934,
+   "end": 164.28934
+  },
+  {
+   "word": "once,",
+   "start": 164.28934,
+   "end": 165.22934
+  },
+  {
+   "word": "so",
+   "start": 165.22934,
+   "end": 165.26935
+  },
+  {
+   "word": "an",
+   "start": 165.26935,
+   "end": 165.42934
+  },
+  {
+   "word": "honest",
+   "start": 165.42934,
+   "end": 165.84933
+  },
+  {
+   "word": "program",
+   "start": 165.84933,
+   "end": 166.26935
+  },
+  {
+   "word": "must",
+   "start": 166.26935,
+   "end": 166.70935
+  },
+  {
+   "word": "score",
+   "start": 166.70935,
+   "end": 167.00934
+  },
+  {
+   "word": "the",
+   "start": 167.00934,
+   "end": 167.20935
+  },
+  {
+   "word": "same",
+   "start": 167.20935,
+   "end": 167.42934
+  },
+  {
+   "word": "on",
+   "start": 167.42934,
+   "end": 167.64934
+  },
+  {
+   "word": "both.",
+   "start": 167.64934,
+   "end": 168.26935
+  },
+  {
+   "word": "Midpoint",
+   "start": 168.56934,
+   "end": 169.20935
+  },
+  {
+   "word": "gives",
+   "start": 169.20935,
+   "end": 169.48935
+  },
+  {
+   "word": "a",
+   "start": 169.48935,
+   "end": 169.56934
+  },
+  {
+   "word": "quarter,",
+   "start": 169.56934,
+   "end": 170.16934
+  },
+  {
+   "word": "then .41.",
+   "start": 170.16934,
+   "end": 171.24934
+  },
+  {
+   "word": "Endpoints",
+   "start": 171.24934,
+   "end": 172.84933
+  },
+  {
+   "word": "give",
+   "start": 172.84933,
+   "end": 173.08934
+  },
+  {
+   "word": "a",
+   "start": 173.08934,
+   "end": 173.20935
+  },
+  {
+   "word": "third,",
+   "start": 173.20935,
+   "end": 173.76935
+  },
+  {
+   "word": "then .47.",
+   "start": 173.76935,
+   "end": 175.18933
+  },
+  {
+   "word": "Only",
+   "start": 175.96935,
+   "end": 176.30934
+  },
+  {
+   "word": "the",
+   "start": 176.30934,
+   "end": 176.50934
+  },
+  {
+   "word": "radius",
+   "start": 176.50934,
+   "end": 176.92935
+  },
+  {
+   "word": "program",
+   "start": 176.92935,
+   "end": 177.44934
+  },
+  {
+   "word": "gives",
+   "start": 177.44934,
+   "end": 177.78934
+  },
+  {
+   "word": "a",
+   "start": 177.78934,
+   "end": 177.90933
+  },
+  {
+   "word": "half",
+   "start": 177.90933,
+   "end": 178.06934
+  },
+  {
+   "word": "on",
+   "start": 178.06934,
+   "end": 178.26935
+  },
+  {
+   "word": "both.",
+   "start": 178.26935,
+   "end": 178.88934
+  },
+  {
+   "word": "Janes",
+   "start": 180.08934,
+   "end": 180.66934
+  },
+  {
+   "word": "and",
+   "start": 180.66934,
+   "end": 180.84933
+  },
+  {
+   "word": "Charles",
+   "start": 180.84933,
+   "end": 181.26935
+  },
+  {
+   "word": "Tyler",
+   "start": 181.26935,
+   "end": 181.70935
+  },
+  {
+   "word": "tossed",
+   "start": 181.70935,
+   "end": 182.32935
+  },
+  {
+   "word": "real",
+   "start": 182.32935,
+   "end": 182.70935
+  },
+  {
+   "word": "broom",
+   "start": 182.70935,
+   "end": 183.04935
+  },
+  {
+   "word": "straws",
+   "start": 183.04935,
+   "end": 183.68933
+  },
+  {
+   "word": "at",
+   "start": 183.68933,
+   "end": 183.84933
+  },
+  {
+   "word": "a",
+   "start": 183.84933,
+   "end": 183.92935
+  },
+  {
+   "word": "5-inch",
+   "start": 183.92935,
+   "end": 184.44934
+  },
+  {
+   "word": "circle,",
+   "start": 184.44934,
+   "end": 185.04935
+  },
+  {
+   "word": "and",
+   "start": 185.04935,
+   "end": 185.68933
+  },
+  {
+   "word": "the",
+   "start": 185.68933,
+   "end": 185.80934
+  },
+  {
+   "word": "128",
+   "start": 185.80934,
+   "end": 186.44934
+  },
+  {
+   "word": "that",
+   "start": 186.44934,
+   "end": 187.16934
+  },
+  {
+   "word": "crossed",
+   "start": 186.68933,
+   "end": 187.50934
+  },
+  {
+   "word": "it",
+   "start": 187.50934,
+   "end": 187.76935
+  },
+  {
+   "word": "matched",
+   "start": 187.76935,
+   "end": 188.40933
+  },
+  {
+   "word": "the",
+   "start": 188.40933,
+   "end": 188.62933
+  },
+  {
+   "word": "radius",
+   "start": 188.62933,
+   "end": 189.10934
+  },
+  {
+   "word": "program's",
+   "start": 189.10934,
+   "end": 189.78934
+  },
+  {
+   "word": "spread",
+   "start": 189.78934,
+   "end": 190.06934
+  },
+  {
+   "word": "of",
+   "start": 190.06934,
+   "end": 190.22934
+  },
+  {
+   "word": "chord",
+   "start": 190.22934,
+   "end": 190.46935
+  },
+  {
+   "word": "lengths.",
+   "start": 190.46935,
+   "end": 191.04935
+  },
+  {
+   "word": "A",
+   "start": 191.38934,
+   "end": 191.50934
+  },
+  {
+   "word": "skilled",
+   "start": 191.50934,
+   "end": 191.82935
+  },
+  {
+   "word": "tosser,",
+   "start": 191.82935,
+   "end": 192.44934
+  },
+  {
+   "word": "Janes",
+   "start": 192.44934,
+   "end": 192.94934
+  },
+  {
+   "word": "noted,",
+   "start": 192.94934,
+   "end": 193.50934
+  },
+  {
+   "word": "could",
+   "start": 193.50934,
+   "end": 193.90933
+  },
+  {
+   "word": "produce",
+   "start": 193.90933,
+   "end": 194.22934
+  },
+  {
+   "word": "other",
+   "start": 194.22934,
+   "end": 194.48935
+  },
+  {
+   "word": "answers.",
+   "start": 194.48935,
+   "end": 195.40933
+  },
+  {
+   "word": "Surveys",
+   "start": 196.42935,
+   "end": 197.02934
+  },
+  {
+   "word": "hide",
+   "start": 197.02934,
+   "end": 197.32935
+  },
+  {
+   "word": "the",
+   "start": 197.32935,
+   "end": 197.44934
+  },
+  {
+   "word": "same",
+   "start": 197.44934,
+   "end": 197.72934
+  },
+  {
+   "word": "two",
+   "start": 197.72934,
+   "end": 197.96935
+  },
+  {
+   "word": "words.",
+   "start": 197.96935,
+   "end": 198.50934
+  },
+  {
+   "word": "Take",
+   "start": 198.46935,
+   "end": 199.18933
+  },
+  {
+   "word": "classes",
+   "start": 199.18933,
+   "end": 199.58934
+  },
+  {
+   "word": "of",
+   "start": 199.58934,
+   "end": 199.80934
+  },
+  {
+   "word": "10,",
+   "start": 199.80934,
+   "end": 200.32935
+  },
+  {
+   "word": "10,",
+   "start": 200.32935,
+   "end": 200.96935
+  },
+  {
+   "word": "and",
+   "start": 200.96935,
+   "end": 201.08934
+  },
+  {
+   "word": "100.",
+   "start": 201.08934,
+   "end": 201.68933
+  },
+  {
+   "word": "Pick",
+   "start": 201.62933,
+   "end": 202.28934
+  },
+  {
+   "word": "a",
+   "start": 202.28934,
+   "end": 202.44934
+  },
+  {
+   "word": "class",
+   "start": 202.44934,
+   "end": 202.66934
+  },
+  {
+   "word": "at",
+   "start": 202.66934,
+   "end": 202.82935
+  },
+  {
+   "word": "random,",
+   "start": 202.82935,
+   "end": 203.36934
+  },
+  {
+   "word": "and",
+   "start": 203.36934,
+   "end": 203.80934
+  },
+  {
+   "word": "the",
+   "start": 203.80934,
+   "end": 203.86934
+  },
+  {
+   "word": "average",
+   "start": 203.86934,
+   "end": 204.30934
+  },
+  {
+   "word": "size",
+   "start": 204.30934,
+   "end": 204.68933
+  },
+  {
+   "word": "is",
+   "start": 204.68933,
+   "end": 204.92935
+  },
+  {
+   "word": "40.",
+   "start": 204.92935,
+   "end": 205.50934
+  },
+  {
+   "word": "Pick",
+   "start": 205.40933,
+   "end": 206.08934
+  },
+  {
+   "word": "a",
+   "start": 206.08934,
+   "end": 206.20935
+  },
+  {
+   "word": "student",
+   "start": 206.20935,
+   "end": 206.50934
+  },
+  {
+   "word": "at",
+   "start": 206.50934,
+   "end": 206.66934
+  },
+  {
+   "word": "random,",
+   "start": 206.66934,
+   "end": 207.24934
+  },
+  {
+   "word": "and",
+   "start": 207.24934,
+   "end": 207.56934
+  },
+  {
+   "word": "it's",
+   "start": 207.56934,
+   "end": 207.74934
+  },
+  {
+   "word": "85.",
+   "start": 207.74934,
+   "end": 208.62933
+  },
+  {
+   "word": "At",
+   "start": 208.56934,
+   "end": 209.24934
+  },
+  {
+   "word": "Stony",
+   "start": 209.24934,
+   "end": 209.62933
+  },
+  {
+   "word": "Brook",
+   "start": 209.62933,
+   "end": 209.94934
+  },
+  {
+   "word": "in",
+   "start": 209.94934,
+   "end": 210.26935
+  },
+  {
+   "word": "1974,",
+   "start": 210.26935,
+   "end": 211.64935
+  },
+  {
+   "word": "that",
+   "start": 211.64935,
+   "end": 212.18933
+  },
+  {
+   "word": "was",
+   "start": 212.18933,
+   "end": 212.32935
+  },
+  {
+   "word": "40",
+   "start": 212.32935,
+   "end": 212.72934
+  },
+  {
+   "word": "for",
+   "start": 212.72934,
+   "end": 212.94934
+  },
+  {
+   "word": "a",
+   "start": 212.94934,
+   "end": 213.04935
+  },
+  {
+   "word": "random",
+   "start": 213.04935,
+   "end": 213.40933
+  },
+  {
+   "word": "class,",
+   "start": 213.40933,
+   "end": 214.08934
+  },
+  {
+   "word": "and",
+   "start": 213.94934,
+   "end": 214.58934
+  },
+  {
+   "word": "147",
+   "start": 214.58934,
+   "end": 215.70935
+  },
+  {
+   "word": "for",
+   "start": 215.70935,
+   "end": 216.00934
+  },
+  {
+   "word": "a",
+   "start": 216.00934,
+   "end": 216.14935
+  },
+  {
+   "word": "random",
+   "start": 216.14935,
+   "end": 216.50934
+  },
+  {
+   "word": "student.",
+   "start": 216.50934,
+   "end": 217.20935
+  },
+  {
+   "word": "So",
+   "start": 218.12933,
+   "end": 218.30934
+  },
+  {
+   "word": "whatever",
+   "start": 218.30934,
+   "end": 218.62933
+  },
+  {
+   "word": "number",
+   "start": 218.62933,
+   "end": 218.94934
+  },
+  {
+   "word": "you",
+   "start": 218.94934,
+   "end": 219.16934
+  },
+  {
+   "word": "picked,",
+   "start": 219.16934,
+   "end": 220.18933
+  },
+  {
+   "word": "some",
+   "start": 220.18933,
+   "end": 220.30934
+  },
+  {
+   "word": "way",
+   "start": 220.30934,
+   "end": 220.48935
+  },
+  {
+   "word": "of",
+   "start": 220.48935,
+   "end": 220.60934
+  },
+  {
+   "word": "drawing",
+   "start": 220.60934,
+   "end": 220.84933
+  },
+  {
+   "word": "chords",
+   "start": 220.84933,
+   "end": 221.24934
+  },
+  {
+   "word": "makes",
+   "start": 221.24934,
+   "end": 221.52934
+  },
+  {
+   "word": "it",
+   "start": 221.52934,
+   "end": 221.70935
+  },
+  {
+   "word": "right.",
+   "start": 221.70935,
+   "end": 222.14935
+  },
+  {
+   "word": "Name",
+   "start": 222.62933,
+   "end": 222.88934
+  },
+  {
+   "word": "the",
+   "start": 222.88934,
+   "end": 223.02934
+  },
+  {
+   "word": "way,",
+   "start": 223.02934,
+   "end": 223.36934
+  },
+  {
+   "word": "and",
+   "start": 223.36934,
+   "end": 223.62933
+  },
+  {
+   "word": "only",
+   "start": 223.62933,
+   "end": 223.82935
+  },
+  {
+   "word": "one",
+   "start": 223.82935,
+   "end": 224.06934
+  },
+  {
+   "word": "is.",
+   "start": 224.06934,
+   "end": 224.60934
+  },
+  {
+   "word": "40",
+   "start": 225.08934,
+   "end": 225.36934
+  },
+  {
+   "word": "and",
+   "start": 225.36934,
+   "end": 225.64935
+  },
+  {
+   "word": "147",
+   "start": 225.64935,
+   "end": 226.70935
+  },
+  {
+   "word": "are",
+   "start": 226.70935,
+   "end": 227.00934
+  },
+  {
+   "word": "both",
+   "start": 227.00934,
+   "end": 227.26935
+  },
+  {
+   "word": "right,",
+   "start": 227.26935,
+   "end": 227.78934
+  },
+  {
+   "word": "once",
+   "start": 227.78934,
+   "end": 228.32935
+  },
+  {
+   "word": "you",
+   "start": 228.32935,
+   "end": 228.52934
+  },
+  {
+   "word": "say",
+   "start": 228.52934,
+   "end": 228.74934
+  },
+  {
+   "word": "who's",
+   "start": 228.74934,
+   "end": 229.02934
+  },
+  {
+   "word": "picked.",
+   "start": 229.02934,
+   "end": 229.88934
+  }
+ ],
+ "segments": [
+  {
+   "id": 0,
+   "seek": 0,
+   "start": 0,
+   "end": 2.1599998,
+   "text": " Draw a chord across this circle at random.",
+   "tokens": [
+    50365,
+    20386,
+    257,
+    14137,
+    2108,
+    341,
+    6329,
+    412,
+    4974,
+    13,
+    50473
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19237928,
+   "compression_ratio": 1.5622318,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 1,
+   "seek": 0,
+   "start": 2.82,
+   "end": 6.16,
+   "text": " What's the chance it comes out longer than a side of this triangle?",
+   "tokens": [
+    50506,
+    708,
+    311,
+    264,
+    2931,
+    309,
+    1487,
+    484,
+    2854,
+    813,
+    257,
+    1252,
+    295,
+    341,
+    13369,
+    30,
+    50673
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19237928,
+   "compression_ratio": 1.5622318,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 2,
+   "seek": 0,
+   "start": 6.7799997,
+   "end": 7.48,
+   "text": " Pick a number.",
+   "tokens": [
+    50704,
+    14129,
+    257,
+    1230,
+    13,
+    50739
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19237928,
+   "compression_ratio": 1.5622318,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 3,
+   "seek": 0,
+   "start": 9.639999,
+   "end": 15.139999,
+   "text": " Joseph Bertrand published this puzzle in 1889 as a warning about two words.",
+   "tokens": [
+    50847,
+    11170,
+    29594,
+    3699,
+    6572,
+    341,
+    12805,
+    294,
+    2443,
+    21115,
+    382,
+    257,
+    9164,
+    466,
+    732,
+    2283,
+    13,
+    51122
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19237928,
+   "compression_ratio": 1.5622318,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 4,
+   "seek": 0,
+   "start": 15.679999,
+   "end": 16.22,
+   "text": " At random.",
+   "tokens": [
+    51149,
+    1711,
+    4974,
+    13,
+    51176
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19237928,
+   "compression_ratio": 1.5622318,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 5,
+   "seek": 0,
+   "start": 16.859999,
+   "end": 21.06,
+   "text": " Every survey and every simulation has to decide what they mean.",
+   "tokens": [
+    51208,
+    2048,
+    8984,
+    293,
+    633,
+    16575,
+    575,
+    281,
+    4536,
+    437,
+    436,
+    914,
+    13,
+    51418
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19237928,
+   "compression_ratio": 1.5622318,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 6,
+   "seek": 0,
+   "start": 21.6,
+   "end": 23.16,
+   "text": " Start with the obvious simulation.",
+   "tokens": [
+    51445,
+    6481,
+    365,
+    264,
+    6322,
+    16575,
+    13,
+    51523
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19237928,
+   "compression_ratio": 1.5622318,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 7,
+   "seek": 0,
+   "start": 23.96,
+   "end": 26.699999,
+   "text": " Pick two points on the rim at random and join them.",
+   "tokens": [
+    51563,
+    14129,
+    732,
+    2793,
+    322,
+    264,
+    15982,
+    412,
+    4974,
+    293,
+    3917,
+    552,
+    13,
+    51700
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19237928,
+   "compression_ratio": 1.5622318,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 8,
+   "seek": 2670,
+   "start": 26.699999,
+   "end": 30.699999,
+   "text": " If the cord beats the triangle side, it turns gold.",
+   "tokens": [
+    50365,
+    759,
+    264,
+    12250,
+    16447,
+    264,
+    13369,
+    1252,
+    11,
+    309,
+    4523,
+    3821,
+    13,
+    50565
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12043884,
+   "compression_ratio": 1.6227273,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 9,
+   "seek": 2670,
+   "start": 30.699999,
+   "end": 35.699997,
+   "text": " Run 10,000 cords, and the gold share settles near point 3-3.",
+   "tokens": [
+    50565,
+    8950,
+    1266,
+    11,
+    1360,
+    36302,
+    11,
+    293,
+    264,
+    3821,
+    2073,
+    5584,
+    904,
+    2651,
+    935,
+    805,
+    12,
+    18,
+    13,
+    50815
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12043884,
+   "compression_ratio": 1.6227273,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 10,
+   "seek": 2670,
+   "start": 35.699997,
+   "end": 37.699997,
+   "text": " Geometry agrees.",
+   "tokens": [
+    50815,
+    2876,
+    34730,
+    26383,
+    13,
+    50915
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12043884,
+   "compression_ratio": 1.6227273,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 11,
+   "seek": 2670,
+   "start": 37.699997,
+   "end": 40.699997,
+   "text": " Put a corner of the triangle on the first point.",
+   "tokens": [
+    50915,
+    4935,
+    257,
+    4538,
+    295,
+    264,
+    13369,
+    322,
+    264,
+    700,
+    935,
+    13,
+    51065
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12043884,
+   "compression_ratio": 1.6227273,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 12,
+   "seek": 2670,
+   "start": 40.699997,
+   "end": 44.699997,
+   "text": " The cord is long only when the second point lands on this far arc,",
+   "tokens": [
+    51065,
+    440,
+    12250,
+    307,
+    938,
+    787,
+    562,
+    264,
+    1150,
+    935,
+    5949,
+    322,
+    341,
+    1400,
+    10346,
+    11,
+    51265
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12043884,
+   "compression_ratio": 1.6227273,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 13,
+   "seek": 2670,
+   "start": 44.699997,
+   "end": 46.699997,
+   "text": " a third of the rim.",
+   "tokens": [
+    51265,
+    257,
+    2636,
+    295,
+    264,
+    15982,
+    13,
+    51365
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12043884,
+   "compression_ratio": 1.6227273,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 14,
+   "seek": 2670,
+   "start": 46.699997,
+   "end": 50.699997,
+   "text": " Case closed until you code it a second way.",
+   "tokens": [
+    51365,
+    17791,
+    5395,
+    1826,
+    291,
+    3089,
+    309,
+    257,
+    1150,
+    636,
+    13,
+    51565
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12043884,
+   "compression_ratio": 1.6227273,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 15,
+   "seek": 2670,
+   "start": 50.699997,
+   "end": 54.699997,
+   "text": " Pick a random radius, a random point along it,",
+   "tokens": [
+    51565,
+    14129,
+    257,
+    4974,
+    15845,
+    11,
+    257,
+    4974,
+    935,
+    2051,
+    309,
+    11,
+    51765
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12043884,
+   "compression_ratio": 1.6227273,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 16,
+   "seek": 5470,
+   "start": 54.699997,
+   "end": 58.139996,
+   "text": " and draw the chord through that point at right angles.",
+   "tokens": [
+    50365,
+    293,
+    2642,
+    264,
+    14137,
+    807,
+    300,
+    935,
+    412,
+    558,
+    14708,
+    13,
+    50537
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.107056834,
+   "compression_ratio": 1.7296138,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 17,
+   "seek": 5470,
+   "start": 58.139996,
+   "end": 60.659996,
+   "text": " Same circle, same gold rule.",
+   "tokens": [
+    50537,
+    10635,
+    6329,
+    11,
+    912,
+    3821,
+    4978,
+    13,
+    50663
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.107056834,
+   "compression_ratio": 1.7296138,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 18,
+   "seek": 5470,
+   "start": 60.659996,
+   "end": 62.979996,
+   "text": " This one settles near point five.",
+   "tokens": [
+    50663,
+    639,
+    472,
+    5584,
+    904,
+    2651,
+    935,
+    1732,
+    13,
+    50779
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.107056834,
+   "compression_ratio": 1.7296138,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 19,
+   "seek": 5470,
+   "start": 62.979996,
+   "end": 66.85999,
+   "text": " A third program picks a random point anywhere inside",
+   "tokens": [
+    50779,
+    316,
+    2636,
+    1461,
+    16137,
+    257,
+    4974,
+    935,
+    4992,
+    1854,
+    50973
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.107056834,
+   "compression_ratio": 1.7296138,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 20,
+   "seek": 5470,
+   "start": 66.85999,
+   "end": 68.939995,
+   "text": " and makes it the chord's midpoint.",
+   "tokens": [
+    50973,
+    293,
+    1669,
+    309,
+    264,
+    14137,
+    311,
+    2062,
+    6053,
+    13,
+    51077
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.107056834,
+   "compression_ratio": 1.7296138,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 21,
+   "seek": 5470,
+   "start": 68.939995,
+   "end": 71.71999,
+   "text": " That settles near point two five.",
+   "tokens": [
+    51077,
+    663,
+    5584,
+    904,
+    2651,
+    935,
+    732,
+    1732,
+    13,
+    51216
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.107056834,
+   "compression_ratio": 1.7296138,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 22,
+   "seek": 5470,
+   "start": 71.71999,
+   "end": 75.2,
+   "text": " Bertrand printed all three and wrote that none is wrong",
+   "tokens": [
+    51216,
+    29594,
+    3699,
+    13567,
+    439,
+    1045,
+    293,
+    4114,
+    300,
+    6022,
+    307,
+    2085,
+    51390
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.107056834,
+   "compression_ratio": 1.7296138,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 23,
+   "seek": 5470,
+   "start": 75.2,
+   "end": 76.67999,
+   "text": " and none is right.",
+   "tokens": [
+    51390,
+    293,
+    6022,
+    307,
+    558,
+    13,
+    51464
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.107056834,
+   "compression_ratio": 1.7296138,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 24,
+   "seek": 5470,
+   "start": 76.67999,
+   "end": 79.84,
+   "text": " Each tally is good to about one percentage point.",
+   "tokens": [
+    51464,
+    6947,
+    256,
+    379,
+    307,
+    665,
+    281,
+    466,
+    472,
+    9668,
+    935,
+    13,
+    51622
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.107056834,
+   "compression_ratio": 1.7296138,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 25,
+   "seek": 5470,
+   "start": 79.84,
+   "end": 83.17999,
+   "text": " They disagree by 25 percentage points",
+   "tokens": [
+    51622,
+    814,
+    14091,
+    538,
+    3552,
+    9668,
+    2793,
+    51789
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.107056834,
+   "compression_ratio": 1.7296138,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 26,
+   "seek": 8318,
+   "start": 83.18,
+   "end": 85.2,
+   "text": " and none of the code has a bug.",
+   "tokens": [
+    50365,
+    293,
+    6022,
+    295,
+    264,
+    3089,
+    575,
+    257,
+    7426,
+    13,
+    50466
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07178876,
+   "compression_ratio": 1.8026316,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 27,
+   "seek": 8318,
+   "start": 85.2,
+   "end": 88.52,
+   "text": " One point sets a chord's length, its midpoint.",
+   "tokens": [
+    50466,
+    1485,
+    935,
+    6352,
+    257,
+    14137,
+    311,
+    4641,
+    11,
+    1080,
+    2062,
+    6053,
+    13,
+    50632
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07178876,
+   "compression_ratio": 1.8026316,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 28,
+   "seek": 8318,
+   "start": 88.52,
+   "end": 91.14,
+   "text": " Slide it outward and the chord shrinks.",
+   "tokens": [
+    50632,
+    26405,
+    309,
+    26914,
+    293,
+    264,
+    14137,
+    9884,
+    16431,
+    13,
+    50763
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07178876,
+   "compression_ratio": 1.8026316,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 29,
+   "seek": 8318,
+   "start": 91.14,
+   "end": 93.3,
+   "text": " It matches the triangle's side",
+   "tokens": [
+    50763,
+    467,
+    10676,
+    264,
+    13369,
+    311,
+    1252,
+    50871
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07178876,
+   "compression_ratio": 1.8026316,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 30,
+   "seek": 8318,
+   "start": 93.3,
+   "end": 96.14,
+   "text": " when the midpoint is half a radius out",
+   "tokens": [
+    50871,
+    562,
+    264,
+    2062,
+    6053,
+    307,
+    1922,
+    257,
+    15845,
+    484,
+    51013
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07178876,
+   "compression_ratio": 1.8026316,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 31,
+   "seek": 8318,
+   "start": 96.14,
+   "end": 98.94,
+   "text": " on the circle that fits inside the triangle.",
+   "tokens": [
+    51013,
+    322,
+    264,
+    6329,
+    300,
+    9001,
+    1854,
+    264,
+    13369,
+    13,
+    51153
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07178876,
+   "compression_ratio": 1.8026316,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 32,
+   "seek": 8318,
+   "start": 98.94,
+   "end": 102.74,
+   "text": " So a chord is long exactly when its midpoint lands",
+   "tokens": [
+    51153,
+    407,
+    257,
+    14137,
+    307,
+    938,
+    2293,
+    562,
+    1080,
+    2062,
+    6053,
+    5949,
+    51343
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07178876,
+   "compression_ratio": 1.8026316,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 33,
+   "seek": 8318,
+   "start": 102.74,
+   "end": 104.76,
+   "text": " inside this gold circle.",
+   "tokens": [
+    51343,
+    1854,
+    341,
+    3821,
+    6329,
+    13,
+    51444
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07178876,
+   "compression_ratio": 1.8026316,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 34,
+   "seek": 8318,
+   "start": 104.76,
+   "end": 106.68,
+   "text": " Each program is really asking",
+   "tokens": [
+    51444,
+    6947,
+    1461,
+    307,
+    534,
+    3365,
+    51540
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07178876,
+   "compression_ratio": 1.8026316,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 35,
+   "seek": 8318,
+   "start": 106.68,
+   "end": 108.94,
+   "text": " what share of midpoints land here.",
+   "tokens": [
+    51540,
+    437,
+    2073,
+    295,
+    2062,
+    20552,
+    2117,
+    510,
+    13,
+    51653
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07178876,
+   "compression_ratio": 1.8026316,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 36,
+   "seek": 110,
+   "start": 108.94,
+   "end": 122.66934,
+   "text": " Shrink every chord to its midpoint The midpoint program spreads them evenly So this circle with a quarter of the area catches a quarter of them The radius program spreads them evenly along the radius",
+   "tokens": [
+    51653,
+    1160,
+    81,
+    475,
+    633,
+    14137,
+    281,
+    1080,
+    2062,
+    6053,
+    13,
+    51779,
+    50365,
+    440,
+    2062,
+    6053,
+    1461,
+    25728,
+    552,
+    17658,
+    13,
+    50506,
+    50506,
+    407,
+    341,
+    6329,
+    365,
+    257,
+    6555,
+    295,
+    1859,
+    11,
+    50665,
+    50665,
+    25496,
+    257,
+    6555,
+    295,
+    552,
+    13,
+    440,
+    15845,
+    1461,
+    25728,
+    552,
+    17658,
+    2051,
+    264,
+    15845,
+    13,
+    50965
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12712769,
+   "compression_ratio": 1.7719299,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 37,
+   "seek": 110,
+   "start": 122.66934,
+   "end": 128.66934,
+   "text": " Where will they crowd? Toward the center. Every ring gets an equal share,",
+   "tokens": [
+    50965,
+    2305,
+    486,
+    436,
+    6919,
+    30,
+    33814,
+    515,
+    264,
+    3056,
+    13,
+    2048,
+    4875,
+    2170,
+    364,
+    2681,
+    2073,
+    11,
+    51265
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12712769,
+   "compression_ratio": 1.7719299,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 38,
+   "seek": 110,
+   "start": 128.66934,
+   "end": 134.66934,
+   "text": " and inner rings are small. Half the radius, so one half. And the endpoints program",
+   "tokens": [
+    51265,
+    293,
+    7284,
+    11136,
+    366,
+    1359,
+    13,
+    15917,
+    264,
+    15845,
+    11,
+    370,
+    472,
+    1922,
+    13,
+    400,
+    264,
+    917,
+    20552,
+    1461,
+    51565
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12712769,
+   "compression_ratio": 1.7719299,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 39,
+   "seek": 110,
+   "start": 134.66934,
+   "end": 139.66934,
+   "text": " piles them against the rim, so only a third land inside, the third we found.",
+   "tokens": [
+    51565,
+    34861,
+    552,
+    1970,
+    264,
+    15982,
+    11,
+    370,
+    787,
+    257,
+    2636,
+    2117,
+    1854,
+    11,
+    264,
+    2636,
+    321,
+    1352,
+    13,
+    51815
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12712769,
+   "compression_ratio": 1.7719299,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 40,
+   "seek": 3010,
+   "start": 139.66934,
+   "end": 147.10934,
+   "text": " three programs three things spread evenly rim radius area at random never said which",
+   "tokens": [
+    50365,
+    1045,
+    4268,
+    1045,
+    721,
+    3974,
+    17658,
+    15982,
+    15845,
+    1859,
+    412,
+    4974,
+    1128,
+    848,
+    597,
+    50737
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15898925,
+   "compression_ratio": 1.5136611,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 41,
+   "seek": 3010,
+   "start": 148.22934,
+   "end": 156.70935,
+   "text": " in 1973 Edwin Jane said a physical process picks one straws tossed from a standing height can't be",
+   "tokens": [
+    50793,
+    294,
+    33530,
+    3977,
+    9136,
+    13048,
+    848,
+    257,
+    4001,
+    1399,
+    16137,
+    472,
+    10099,
+    82,
+    42768,
+    490,
+    257,
+    4877,
+    6681,
+    393,
+    380,
+    312,
+    51217
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15898925,
+   "compression_ratio": 1.5136611,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 42,
+   "seek": 3010,
+   "start": 156.70935,
+   "end": 163.36934,
+   "text": " aimed so the answer can't depend on where the circle sits or how big it is one rain lands on",
+   "tokens": [
+    51217,
+    20540,
+    370,
+    264,
+    1867,
+    393,
+    380,
+    5672,
+    322,
+    689,
+    264,
+    6329,
+    12696,
+    420,
+    577,
+    955,
+    309,
+    307,
+    472,
+    4830,
+    5949,
+    322,
+    51550
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15898925,
+   "compression_ratio": 1.5136611,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 43,
+   "seek": 5380,
+   "start": 163.36934,
+   "end": 168.68933,
+   "text": " both circles at once, so an honest program must score the same on both.",
+   "tokens": [
+    50365,
+    1293,
+    13040,
+    412,
+    1564,
+    11,
+    370,
+    364,
+    3245,
+    1461,
+    1633,
+    6175,
+    264,
+    912,
+    322,
+    1293,
+    13,
+    50631
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19287105,
+   "compression_ratio": 1.5990566,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 44,
+   "seek": 5380,
+   "start": 168.68933,
+   "end": 176.04935,
+   "text": " Midpoint gives a quarter, then .41. Endpoints give a third, then .47.",
+   "tokens": [
+    50631,
+    7033,
+    6053,
+    2709,
+    257,
+    6555,
+    11,
+    550,
+    2411,
+    17344,
+    13,
+    6967,
+    20552,
+    976,
+    257,
+    2636,
+    11,
+    550,
+    2411,
+    14060,
+    13,
+    50999
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19287105,
+   "compression_ratio": 1.5990566,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 45,
+   "seek": 5380,
+   "start": 176.04935,
+   "end": 180.12933,
+   "text": " Only the radius program gives a half on both.",
+   "tokens": [
+    50999,
+    5686,
+    264,
+    15845,
+    1461,
+    2709,
+    257,
+    1922,
+    322,
+    1293,
+    13,
+    51203
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19287105,
+   "compression_ratio": 1.5990566,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 46,
+   "seek": 5380,
+   "start": 180.12933,
+   "end": 187.18933,
+   "text": " Janes and Charles Tyler tossed real broom straws at a 5-inch circle, and the 128 that",
+   "tokens": [
+    51203,
+    4956,
+    279,
+    293,
+    10523,
+    16869,
+    42768,
+    957,
+    41544,
+    10099,
+    82,
+    412,
+    257,
+    1025,
+    12,
+    12415,
+    6329,
+    11,
+    293,
+    264,
+    29810,
+    300,
+    51556
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19287105,
+   "compression_ratio": 1.5990566,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 47,
+   "seek": 5380,
+   "start": 187.18933,
+   "end": 191.38934,
+   "text": " crossed it matched the radius program's spread of chord lengths.",
+   "tokens": [
+    51556,
+    14622,
+    309,
+    21447,
+    264,
+    15845,
+    1461,
+    311,
+    3974,
+    295,
+    14137,
+    26329,
+    13,
+    51766
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19287105,
+   "compression_ratio": 1.5990566,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 48,
+   "seek": 8182,
+   "start": 191.38934,
+   "end": 196.50934,
+   "text": " A skilled tosser, Janes noted, could produce other answers.",
+   "tokens": [
+    50365,
+    316,
+    19690,
+    14432,
+    260,
+    11,
+    4956,
+    279,
+    12964,
+    11,
+    727,
+    5258,
+    661,
+    6338,
+    13,
+    50621
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.109316625,
+   "compression_ratio": 1.5538461,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 49,
+   "seek": 8182,
+   "start": 196.50934,
+   "end": 198.96935,
+   "text": " Surveys hide the same two words.",
+   "tokens": [
+    50621,
+    6732,
+    303,
+    749,
+    6479,
+    264,
+    912,
+    732,
+    2283,
+    13,
+    50744
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.109316625,
+   "compression_ratio": 1.5538461,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 50,
+   "seek": 8182,
+   "start": 198.96935,
+   "end": 202.12933,
+   "text": " Take classes of 10, 10, and 100.",
+   "tokens": [
+    50744,
+    3664,
+    5359,
+    295,
+    1266,
+    11,
+    1266,
+    11,
+    293,
+    2319,
+    13,
+    50902
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.109316625,
+   "compression_ratio": 1.5538461,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 51,
+   "seek": 8182,
+   "start": 202.12933,
+   "end": 205.90933,
+   "text": " Pick a class at random, and the average size is 40.",
+   "tokens": [
+    50902,
+    14129,
+    257,
+    1508,
+    412,
+    4974,
+    11,
+    293,
+    264,
+    4274,
+    2744,
+    307,
+    3356,
+    13,
+    51091
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.109316625,
+   "compression_ratio": 1.5538461,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 52,
+   "seek": 8182,
+   "start": 205.90933,
+   "end": 209.06934,
+   "text": " Pick a student at random, and it's 85.",
+   "tokens": [
+    51091,
+    14129,
+    257,
+    3107,
+    412,
+    4974,
+    11,
+    293,
+    309,
+    311,
+    14695,
+    13,
+    51249
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.109316625,
+   "compression_ratio": 1.5538461,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 53,
+   "seek": 8182,
+   "start": 209.06934,
+   "end": 214.44934,
+   "text": " At Stony Brook in 1974, that was 40 for a random class,",
+   "tokens": [
+    51249,
+    1711,
+    745,
+    2526,
+    13945,
+    294,
+    33422,
+    11,
+    300,
+    390,
+    3356,
+    337,
+    257,
+    4974,
+    1508,
+    11,
+    51518
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.109316625,
+   "compression_ratio": 1.5538461,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 54,
+   "seek": 8182,
+   "start": 214.44934,
+   "end": 218.12933,
+   "text": " and 147 for a random student.",
+   "tokens": [
+    51518,
+    293,
+    3499,
+    22,
+    337,
+    257,
+    4974,
+    3107,
+    13,
+    51702
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.109316625,
+   "compression_ratio": 1.5538461,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 55,
+   "seek": 10856,
+   "start": 218.12933,
+   "end": 222.04935,
+   "text": " So whatever number you picked, some way of drawing chords makes it right.",
+   "tokens": [
+    50365,
+    407,
+    2035,
+    1230,
+    291,
+    6183,
+    11,
+    512,
+    636,
+    295,
+    6316,
+    21733,
+    1669,
+    309,
+    558,
+    13,
+    50561
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.17956677,
+   "compression_ratio": 1.2619047,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 56,
+   "seek": 10856,
+   "start": 222.66934,
+   "end": 224.42935,
+   "text": " Name the way, and only one is.",
+   "tokens": [
+    50592,
+    13866,
+    264,
+    636,
+    11,
+    293,
+    787,
+    472,
+    307,
+    13,
+    50680
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.17956677,
+   "compression_ratio": 1.2619047,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 57,
+   "seek": 10856,
+   "start": 225.04935,
+   "end": 229.40933,
+   "text": " 40 and 147 are both right, once you say who's picked.",
+   "tokens": [
+    50711,
+    3356,
+    293,
+    3499,
+    22,
+    366,
+    1293,
+    558,
+    11,
+    1564,
+    291,
+    584,
+    567,
+    311,
+    6183,
+    13,
+    50929
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.17956677,
+   "compression_ratio": 1.2619047,
+   "no_speech_prob": 0
+  }
+ ],
+ "x_groq": {
+  "id": "req_01m50y2x9te35v02qkemcp58fd"
+ }
+}

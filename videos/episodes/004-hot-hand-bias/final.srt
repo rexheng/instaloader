@@ -1,0 +1,188 @@
+1
+00:00:00,000 --> 00:00:01,950
+Flip a fair coin four times.
+
+2
+00:00:02,070 --> 00:00:06,420
+After each heads, check the next flip: here, one of the two is heads.
+
+3
+00:00:06,540 --> 00:00:10,400
+Do it for all sixteen sequences and average the shares.
+
+4
+00:00:10,780 --> 00:00:11,810
+What do you get?
+
+5
+00:00:13,766 --> 00:00:17,256
+One half feels obvious, since a coin has no memory.
+
+6
+00:00:17,636 --> 00:00:25,706
+In nineteen eighty five, a famous study ran this same check on basketball shots, and called the hot hand an illusion.
+
+7
+00:00:26,300 --> 00:00:27,460
+Heads are hits.
+
+8
+00:00:27,580 --> 00:00:32,010
+A hot shooter beats their usual rate; a random one should match it.
+
+9
+00:00:32,366 --> 00:00:37,116
+So first, test the test on a shooter we know is random: a fair coin.
+
+10
+00:00:37,236 --> 00:00:41,186
+Four flips can land sixteen ways, all equally likely.
+
+11
+00:00:41,533 --> 00:00:44,773
+This row checks three flips, and two of them are heads.
+
+12
+00:00:45,373 --> 00:00:47,343
+Score every row the same way.
+
+13
+00:00:47,700 --> 00:00:52,290
+Two rows never show a heads before the last flip, so they get no score.
+
+14
+00:00:52,633 --> 00:00:55,473
+Drop the other fourteen scores onto the line.
+
+15
+00:00:55,853 --> 00:01:01,253
+Their average is seventeen out of forty two: about forty point five percent.
+
+16
+00:01:01,600 --> 00:01:06,660
+On a perfectly fair coin, the test reads cold, by nine and a half points.
+
+17
+00:01:07,466 --> 00:01:09,246
+Yet no flip is biased.
+
+18
+00:01:09,846 --> 00:01:14,096
+Gather all twenty four checked flips: twelve heads, twelve tails.
+
+19
+00:01:14,216 --> 00:01:15,496
+Exactly half.
+
+20
+00:01:15,833 --> 00:01:22,723
+The skew comes from scoring row by row, because each row gets one vote, however many flips it checked.
+
+21
+00:01:23,066 --> 00:01:27,706
+And checked heads come in crowds, since a heads gets the next flip checked too.
+
+22
+00:01:28,086 --> 00:01:33,306
+This row's three heads share a single vote, while this lone tails gets a whole one.
+
+23
+00:01:33,900 --> 00:01:36,120
+Twelve heads crowd into eight rows.
+
+24
+00:01:36,500 --> 00:01:38,820
+Twelve tails spread across eleven.
+
+25
+00:01:39,370 --> 00:01:43,350
+Line up the votes, and heads hold seventeen out of forty two.
+
+26
+00:01:43,700 --> 00:01:45,390
+That's one vote per row.
+
+27
+00:01:45,690 --> 00:01:49,180
+Count all the flips together first, and you get one half.
+
+28
+00:01:50,066 --> 00:01:51,716
+Tails crowd the same way.
+
+29
+00:01:52,096 --> 00:01:55,856
+Swap heads and tails, and the strip flips over one half.
+
+30
+00:01:56,236 --> 00:02:01,036
+So after a tails, the test reads hot: twenty five out of forty two.
+
+31
+00:02:01,400 --> 00:02:06,880
+Subtract the two averages, and a fair coin shows a gap of minus nineteen points.
+
+32
+00:02:07,566 --> 00:02:17,626
+The nineteen eighty five study ran the same comparison on twenty six Cornell players: up to a hundred shots each, from where they'd hit about half.
+
+33
+00:02:18,006 --> 00:02:21,196
+After three hits, versus after three misses.
+
+34
+00:02:21,533 --> 00:02:27,133
+For a random shooter, the same crowding pulls those to forty six and fifty four percent.
+
+35
+00:02:27,253 --> 00:02:33,253
+Miller and Sanjurjo's twenty eighteen paper puts the gap at about minus eight points.
+
+36
+00:02:33,853 --> 00:02:35,763
+Longer streaks grow the bias.
+
+37
+00:02:36,663 --> 00:02:38,313
+Longer records shrink it,
+
+38
+00:02:38,813 --> 00:02:40,763
+but a hundred shots isn't long.
+
+39
+00:02:41,100 --> 00:02:47,640
+Cornell's players hit forty nine percent after three hits, and forty five after three misses.
+
+40
+00:02:48,020 --> 00:02:51,000
+The study took that plus four to mean no hot hand.
+
+41
+00:02:51,366 --> 00:02:54,446
+Measured from minus eight, it's twelve points hot.
+
+42
+00:02:55,046 --> 00:03:00,596
+That's evidence for a hot hand in a gym, not proof it survives defenders in a game.
+
+43
+00:03:02,200 --> 00:03:04,530
+One half is what a fair coin does.
+
+44
+00:03:04,650 --> 00:03:08,130
+Seventeen out of forty two is what this test sees.
+
+45
+00:03:08,510 --> 00:03:10,100
+A fifty percent shooter
+
+46
+00:03:10,400 --> 00:03:12,550
+who averages one half on this test
+
+47
+00:03:12,750 --> 00:03:14,330
+is already running hot.
+

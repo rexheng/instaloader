@@ -1,0 +1,244 @@
+{
+ "file": "/home/user/instaloader/videos/episodes/004-hot-hand-bias/final.mp4",
+ "duration_s": 195.133,
+ "width": 1920,
+ "height": 1080,
+ "fps": 30.0,
+ "video_codec": "h264",
+ "pix_fmt": "yuv420p",
+ "audio_codec": "aac",
+ "audio_rate": 48000,
+ "size_mb": 9.54,
+ "integrated_lufs": -14.0,
+ "lra_lu": 2.2,
+ "true_peak_dbtp": -2.1,
+ "leading_silence_s": 0.0,
+ "trailing_silence_s": 0.89,
+ "longest_internal_silence_s": 2.07,
+ "silences_over_1_5s": [
+  [
+   11.73,
+   13.8
+  ],
+  [
+   180.51,
+   182.23
+  ]
+ ],
+ "frames": 5854,
+ "longest_static_s": 3.87,
+ "static_stretches_over_3s": [
+  [
+   9.97,
+   13.83,
+   3.87
+  ],
+  [
+   18.53,
+   21.9,
+   3.37
+  ]
+ ],
+ "black_frame_runs": [],
+ "blank_runs_over_0_5s": [],
+ "background_luma": 22.055364583333333,
+ "transcript_words": 486,
+ "first_word_s": 0.02,
+ "last_word_s": 194.608,
+ "wpm_speech": 154.5,
+ "wpm_overall": 149.4,
+ "wpm_excluding_all_pauses": 179.9,
+ "narration_file": "videos/episodes/004-hot-hand-bias/narration.json",
+ "wer": 0.0063,
+ "narration_words": 473,
+ "banned_phrase_hits": 0,
+ "slop_hits": [],
+ "layout_audit": {
+  "count": 0,
+  "counts": {
+   "overlap": 0,
+   "clearance": 0,
+   "safe-area": 0,
+   "caption-zone": 0
+  },
+  "allowed": 0,
+  "checks": 198
+ },
+ "contact_sheets": [
+  "sheets/sheet_01.png",
+  "sheets/sheet_02.png",
+  "sheets/sheet_03.png",
+  "sheets/sheet_04.png",
+  "sheets/sheet_05.png",
+  "sheets/sheet_06.png",
+  "sheets/sheet_07.png",
+  "sheets/sheet_08.png",
+  "sheets/sheet_09.png",
+  "sheets/sheet_10.png",
+  "sheets/sheet_11.png"
+ ],
+ "keyframes": [
+  {
+   "t": 2.83,
+   "file": "keyframes/kf_01_00-02.8.png"
+  },
+  {
+   "t": 4.77,
+   "file": "keyframes/kf_02_00-04.8.png"
+  },
+  {
+   "t": 8.8,
+   "file": "keyframes/kf_03_00-08.8.png"
+  },
+  {
+   "t": 12.87,
+   "file": "keyframes/kf_04_00-12.9.png"
+  },
+  {
+   "t": 17.43,
+   "file": "keyframes/kf_05_00-17.4.png"
+  },
+  {
+   "t": 21.03,
+   "file": "keyframes/kf_06_00-21.0.png"
+  },
+  {
+   "t": 26.07,
+   "file": "keyframes/kf_07_00-26.1.png"
+  },
+  {
+   "t": 27.6,
+   "file": "keyframes/kf_08_00-27.6.png"
+  },
+  {
+   "t": 32.37,
+   "file": "keyframes/kf_09_00-32.4.png"
+  },
+  {
+   "t": 34.53,
+   "file": "keyframes/kf_10_00-34.5.png"
+  },
+  {
+   "t": 37.17,
+   "file": "keyframes/kf_11_00-37.2.png"
+  },
+  {
+   "t": 41.5,
+   "file": "keyframes/kf_12_00-41.5.png"
+  },
+  {
+   "t": 45.17,
+   "file": "keyframes/kf_13_00-45.2.png"
+  },
+  {
+   "t": 49.53,
+   "file": "keyframes/kf_14_00-49.5.png"
+  },
+  {
+   "t": 52.47,
+   "file": "keyframes/kf_15_00-52.5.png"
+  },
+  {
+   "t": 56.47,
+   "file": "keyframes/kf_16_00-56.5.png"
+  },
+  {
+   "t": 63.67,
+   "file": "keyframes/kf_17_01-03.7.png"
+  },
+  {
+   "t": 76.77,
+   "file": "keyframes/kf_18_01-16.8.png"
+  },
+  {
+   "t": 86.7,
+   "file": "keyframes/kf_19_01-26.7.png"
+  },
+  {
+   "t": 91.03,
+   "file": "keyframes/kf_20_01-31.0.png"
+  },
+  {
+   "t": 92.47,
+   "file": "keyframes/kf_21_01-32.5.png"
+  },
+  {
+   "t": 98.73,
+   "file": "keyframes/kf_22_01-38.7.png"
+  },
+  {
+   "t": 103.33,
+   "file": "keyframes/kf_23_01-43.3.png"
+  },
+  {
+   "t": 108.17,
+   "file": "keyframes/kf_24_01-48.2.png"
+  },
+  {
+   "t": 109.87,
+   "file": "keyframes/kf_25_01-49.9.png"
+  },
+  {
+   "t": 112.37,
+   "file": "keyframes/kf_26_01-52.4.png"
+  },
+  {
+   "t": 116.1,
+   "file": "keyframes/kf_27_01-56.1.png"
+  },
+  {
+   "t": 129.27,
+   "file": "keyframes/kf_28_02-09.3.png"
+  },
+  {
+   "t": 133.77,
+   "file": "keyframes/kf_29_02-13.8.png"
+  },
+  {
+   "t": 141.4,
+   "file": "keyframes/kf_30_02-21.4.png"
+  },
+  {
+   "t": 145.7,
+   "file": "keyframes/kf_31_02-25.7.png"
+  },
+  {
+   "t": 153.63,
+   "file": "keyframes/kf_32_02-33.6.png"
+  },
+  {
+   "t": 159.33,
+   "file": "keyframes/kf_33_02-39.3.png"
+  },
+  {
+   "t": 162.33,
+   "file": "keyframes/kf_34_02-42.3.png"
+  },
+  {
+   "t": 175.33,
+   "file": "keyframes/kf_35_02-55.3.png"
+  },
+  {
+   "t": 176.73,
+   "file": "keyframes/kf_36_02-56.7.png"
+  },
+  {
+   "t": 183.37,
+   "file": "keyframes/kf_37_03-03.4.png"
+  },
+  {
+   "t": 184.5,
+   "file": "keyframes/kf_38_03-04.5.png"
+  },
+  {
+   "t": 190.77,
+   "file": "keyframes/kf_39_03-10.8.png"
+  },
+  {
+   "t": 195.1,
+   "file": "keyframes/kf_40_03-15.1.png"
+  }
+ ],
+ "flags": [],
+ "implied_caps": []
+}

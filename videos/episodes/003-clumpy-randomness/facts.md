@@ -1,0 +1,128 @@
+# Episode 3 — facts and verification
+
+Every number spoken or shown, how it was checked, and the source. Simulations are in
+`sim.py` (deterministic; `python3 sim.py` reprints the checks); the real V-1 map numbers are in
+`realdata.py` (`python3 realdata.py`). Both simulated maps on screen are labelled "simulated";
+the London map is labelled "real V-1 hits".
+
+## Real-world anchor
+
+| Claim (as used in the episode) | Verification | Source |
+|---|---|---|
+| During the 1944 flying-bomb attack on London, "frequent assertions were made that the points of impact of the bombs tended to be grouped in clusters." (on-screen quote: "tended to be grouped in clusters") | Read on the scanned original page (JIA 72, p. 481); also quoted verbatim in Shaw & Shaw 2019 | R. D. Clarke, "An application of the Poisson distribution", *Journal of the Institute of Actuaries* 72 (1946), p. 481, doi:10.1017/S0020268100035435 |
+| Londoners claimed the bombs fell in clusters | Clarke: "frequent assertions"; Shaw & Shaw: "As Londoners observed at the time, there are multiple clusters" | Clarke 1946; Shaw & Shaw 2019 |
+| If the bombs could be aimed precisely, factories (the war effort) were at risk | Shaw & Shaw: "if it could be accurately targeted at munitions factories it would also become a strategic threat to the war effort" | Shaw & Shaw 2019, *Significance* 16(5):12–17, doi:10.1111/j.1740-9713.2019.01315.x |
+| These were V-1 flying bombs (not V-2 rockets) | Clarke says "flying bombs"; Shaw & Shaw identify them as V-1s | Shaw & Shaw 2019 |
+| Clarke was an actuary | Byline: "R. D. Clarke, F.I.A., of the Prudential Assurance Company, Ltd." | Clarke 1946 |
+| "In nineteen forty-six, the actuary R D Clarke **published** this test on real flying-bomb hits" (round 2 said "ran this test" in 1946) | The paper appeared in 1946; the analysis itself was done earlier, during the war ("recently had occasion to make in the course of a practical investigation"). "Published" is exactly right; the narration no longer dates the analysis | Clarke 1946; Shaw & Shaw 2019 |
+| 144 km² of south London, 576 squares of ¼ km², 537 bombs | Read on the original page | Clarke 1946 |
+| "Clarke chose an area where lambda held steady" | Clarke chose the area so that "the theoretical mean density was not subject to material variation" | Clarke 1946 |
+| Table: squares with 0,1,2,3,4,5+ hits — expected 226.74, 211.39, 98.54, 30.62, 7.14, 1.57; actual 229, 211, 93, 35, 7, 1 | Read on original page; expected column recomputed exactly (`sim.py`: 576·Poisson(537/576)) | Clarke 1946 |
+| (round 4) The blue row is headed "Clarke" (was "London"; "Clarke, 1946" would collide with the citations beside it, and the citation "R. D. Clarke, 1946 · J. Inst. Actuaries 72:481" sits right there) and the narration says "Clarke counted two hundred and twenty-nine" (was "London had") | Round-3 substance review: next to the re-created, gridded rectangle (whose 532 dots count 237, 189, 115, 28, 6, 1) the header "London" let "Single hits: 211, exactly as predicted" read as a claim about the squares on screen. The bars and the row are Clarke's own counts of his 537 hits; the rectangle now carries a GRAY "re-created" tag beside "≈ Clarke's area" | Clarke 1946; `realdata.py` |
+| What aim/clustering would look like: extra empty squares and extra pile-ups | Clarke: "an excess number of squares containing either a high number of flying bombs or none at all, with a deficiency in the intermediate classes" | Clarke 1946 |
+| "Same test: p = 0.88" | Clarke: χ² = 1.17, 4 degrees of freedom, P = .88; recomputed χ² = 1.171, p(df 4) = 0.883 (Shaw & Shaw's supplement recreates 0.8832 and explains why df = 4: six classes − 1 − 1 estimated λ). The episode's own A/B tests use the same six classes and df = 4 | Clarke 1946; Shaw & Shaw supplementary analysis (2019) |
+| "No sign of clustering" | Clarke: the result "lends no support to the clustering hypothesis" | Clarke 1946 |
+| The bombs were aimed at London (but imprecisely) | Shaw & Shaw describe the V-1 campaign "at London" and that V-1s "tended to fall short of the centre of London"; the real map shows hits spread across the whole ~25 km-wide county (5 km scale bar drawn from the data's coordinates) | Shaw & Shaw 2019; `real_data.npz` |
+
+## The real V-1 map (new in round 1 revisions)
+
+Data: L. Shaw, "V1 and V2 impact sites in London", Zenodo, doi:10.5281/zenodo.14883986
+(CC-BY 4.0), file `V1-impacts.csv`, md5 `6fc152898e06207014322ca4481ccbf6`, copied unchanged to
+`v1_impacts.csv`. It lists every V-1 impact site marked on the London County Council bomb damage
+maps (Ward 2015), digitised for Shaw & Shaw 2019, with British National Grid eastings/northings.
+
+| Claim / on-screen element | Check (`python3 realdata.py`) |
+|---|---|
+| 887 dots, "real V-1 hits, 1944–45" | 887 rows; the V-1 campaign on London ran June 1944 – March 1945 (Shaw & Shaw: "Over the following nine months") |
+| Yellow rectangle "≈ Clarke's area", gridded into 576 squares | Clarke did not publish his grid's location. The Zenodo record gives Shaw & Shaw's re-creation: easting 525–543 km, northing 172–180 km = 18 km × 8 km = 144 km² = 36 × 16 = 576 squares of 500 m. Hence the "≈". It holds 532 of the dataset's hits (Clarke counted 537; the LCC maps may not cover all of his area, per Shaw & Shaw). The histogram on screen is Clarke's own 1946 table, not a recount of these dots |
+| (not on screen) the re-created area also fits chance | 532 hits: 237, 189, 115, 28, 6, 1 squares with 0…5+ hits; λ = 0.924. Our Pearson goodness-of-fit test (the test the episode uses): χ² = 6.2, df 4, p = 0.18. **Shaw & Shaw publish p = 0.70 for the same table** ("chi-squared test: p = 0.70", Significance 2019). The two figures come from different procedures: their supplementary code (§3.2) runs R's `chisq.test` on the two-column table (expected, actual), i.e. a homogeneity test that treats the Poisson expectations as a second sample; that gives χ² = 3.06, df 5, p = 0.69 ≈ 0.70 (recomputed with `scipy.stats.chi2_contingency`). Either way the re-created area does not reject chance. Not on screen |
+| The yellow rectangle crosses the Thames | Shaw & Shaw's re-creation (E 525–543, N 172–180 km) includes a strip north of the river (Chelsea to the Isle of Dogs): 20.6 km² of it lies north of the OS Thames centreline, holding 56 of its 532 hits (2.7 hits/km², vs 3.9 south of the river; point-in-polygon against `thames_os_open_rivers.csv`). Clarke only says "south London"; the rectangle is labelled "≈ Clarke's area" with a "re-created" tag. Because of this strip, round 4 no longer says "north of the river" (see next rows) |
+| "3.7 hits/km²" in Clarke's area | Clarke: 537/144 = 3.73; Shaw & Shaw's rectangle: 532/144 = 3.69 |
+| "Farther north, hits fell about half as densely": box "north: 1.9 hits/km²" (round 3 said "north of the river", over a rectangle that itself straddles the river; round-3 substance fix 2) | Box easting 526–535 km, northing 181–186 km (45 km², wholly north of the Thames, wholly north of the rectangle's N 180 km edge, and inside the County of London): 86 hits → 1.91 per km², ratio 0.52 to Clarke's area (537/144 = 3.73) or to the re-created area (532/144 = 3.69). One-density test (binomial share of the two boxes' 618 hits vs their area share): p = 1.2 × 10⁻⁹. The box is drawn and flashed on "Farther north"; the river is no longer flashed |
+| 5 km scale bar | drawn at the data's own scale (0.2 scene units per km) |
+| River Thames line (new in round 2) | OS Open Rivers (Ordnance Survey, GeoPackage, downloaded 2026-10-15, zip md5 4b62effb1c7980f3320d400b76b4f4b0), Open Government Licence v3: "Contains OS data © Crown copyright and database right 2026". Already in British National Grid metres, so it uses the same transform as the V-1 sites. `thames.py` walks the tidal main channel through the watercourse network from Putney (E 521.3 km) past Woolwich and writes `thames_os_open_rivers.csv` (152 vertices); `realdata.py` stores it in `real_data.npz`. Shaw & Shaw's own supplementary figures also draw the Thames (from geotheory's londonShapefiles) |
+| The north box is north of the river | Highest point of the Thames below the box's eastings: N 180.68 km; the box starts at N 181 km (`realdata.py` prints this) |
+| "hits/km²: our count · L. Shaw, 2025 · Zenodo" credit on the 1.9 / 3.7 labels | The densities are this channel's count of the Zenodo data, not figures from the paper, so they carry their own credit (round-2 substance fix 6) |
+| Real-map dot radius 0.035 (not the series' 0.05) | One of Clarke's 0.5 km squares is 0.1 scene units wide; at radius 0.05 a dot is as wide as a square and the 532 dots in the rectangle merge into a block that hides the grid. Radius 0.035 keeps each dot inside a square (9 px across at 1080p) |
+
+**Why the round-1 "whole county p = 0.02" was removed.** Shaw & Shaw's published whole-map
+figure (p = 0.02) came from one random circle-sampling simulation. Their own supplementary
+analysis (lukefshaw.netlify.app, archived in the Zenodo record as
+`flying-bomb-supplementary-analysis.html`, §4.4) says a re-run gives p = 0.148–0.157 and that p
+varies widely across simulation seeds. Quoting 0.02 as "it fails" would overstate a fragile
+number, so the limit is now shown with a robust, directly computed quantity from the same
+data: the hit density north of the Thames is about half that of Clarke's area. (Also checked:
+pooling the two boxes (756 squares) and running the count-histogram test gives χ² = 10.0,
+df 4, p = 0.04, far weaker evidence than the density comparison — the histogram test alone has
+little power against a smooth density gradient, which is exactly why Clarke
+restricted himself to an area of constant density.) Shaw & Shaw's statement that "the
+distribution of V-1s was not uniformly random over London but was skewed to the south" is
+consistent with the density comparison.
+
+## The mathematics (exact recomputation)
+
+| Claim | Check |
+|---|---|
+| λ = 537/576 ≈ 0.93 | 0.932292 |
+| One bomb lands in a given square with probability 1/576 | uniform landing over 576 equal squares |
+| P(square empty) = (1 − 1/576)^537 ≈ 0.3933 (on screen; round 4 no longer reads it aloud) | 0.393332 |
+| **On screen "0.3933 × 576 ≈ 227"** (round 1 showed "0.39 × 576 ≈ 227", which is false: 224.6) | 0.3933 × 576 = 226.54 → 227 to the nearest square; exact 576 × 0.393332 = 226.56 |
+| 1/576 = λ/537, so (1 − 1/576)^537 = (1 − λ/537)^537 | λ/537 = (537/576)/537 = 1/576 exactly |
+| (1 − λ/n)^n ≈ e^−λ for large n; "almost exactly": 0.3933 vs 0.3937 | e^−0.932292 = 0.393651 → 0.3937; difference 0.0003 |
+| (cut in round 3: "four in ten" squares empty) | 39.3 % |
+| Map A: 576 − 222 = 354 non-empty squares share 537 hits, "one and a half each" | 537/354 = 1.517 |
+| "a hundred and thirty-one take two or more" | Map A: 92 + 28 + 9 + 2 = 131 squares with ≥ 2 hits (`sim.py`) |
+| "For two hits … five thirty-seven times five thirty-six, over two, ways" | C(537, 2) = 537·536/2! = 143,916 unordered pairs |
+| P(2) ≈ (537·536/2!)(1/576)² e^−λ | = 0.1708; binomial exact C(537,2)(1/576)²(575/576)^535 = 0.1712; Poisson 0.1711 |
+| "Five thirty-six is almost five thirty-seven": on screen 537·536 ≈ 537² | 287,832 vs 288,369 (0.19 % apart) |
+| "so for any k, each two becomes a k": P(2) → P(k) ≈ (537^k/k!)(1/576)^k e^−λ = λ^k e^−λ/k! | C(537,k) = 537·536·…·(538−k)/k! ≈ 537^k/k! and (575/576)^(537−k) ≈ e^−λ for small k (the "≈" on screen); at k = 0…4 binomial and Poisson differ by < 0.3 squares |
+| Purple bars (576·P(k)): 227, 211, 98.5, 30.6, 7.1, 1.6 | 226.74, 211.39, 98.54, 30.62, 7.14, 1.57 |
+| "chance predicts thirty-nine" / on screen "chance: 39.3" (squares with ≥ 3 hits) | 30.62 + 7.14 + 1.57 = 39.33 |
+| ×5 inset | the 3, 4, 5+ bars redrawn with heights × 5, same columns, labelled "×5" |
+
+## The two simulated maps (`sim.py`)
+
+| Claim | Check |
+|---|---|
+| Map A: 537 points, each uniform and independent on a 24 × 24 square grid (seed 0, the first seed tried — *not* cherry-picked) | counts per square 0..5+: **222, 223, 92, 28, 9, 2** |
+| "Map A lights up with thirty-nine targets" (squares with ≥ 3 hits) | 28 + 9 + 2 = 39; over 1000 random maps 39.4 ± 4.6 |
+| "Map A has two hundred and twenty-two" empty squares | 222 (expected 226.7) |
+| "so plenty must double up" (round 2 said "so a hundred and thirty-one take two or more", which implied 131 follows from the average) | 354 occupied squares share 537 hits, so at least 183 hits are "extra": some squares must hold two or more. The 131 is then shown as a count on map A ("131 squares with 2+"), not derived |
+| "The chi-squared misfit: square each bar's gap, divide by chance's bar, and add them up." On screen χ² = Σ gap²/chance | Pearson's statistic Σ (observed − expected)²/expected over the six classes 0…4, 5+ |
+| Map A's six terms on screen: 0.10, 0.64, 0.43, 0.22, 0.49, 0.12; "Map A scores two point oh" (2.0) | exact terms 0.0992, 0.6376, 0.4339, 0.2246, 0.4862, 0.1186; sum 2.0000. The displayed two-decimal terms also add to 2.00 (asserted in scene.py) |
+| "Pure-chance maps score worse three times in four: p equals point seven four"; left panel "20,000 chance maps (simulated)", bins from 2.0 up highlighted, "p = 0.74" | `sim.null_misfits()`: 20,000 maps of 537 uniform hits (seed 2026), each scored the same way: 74.5 % score ≥ 2.0 (Monte Carlo s.e. 0.3 %). The χ²₄ approximation Clarke used gives 0.736. Both round to 0.74. (Earlier exploratory runs: 10,000 maps, seed 11: 0.753; 1,000-map subsets range 0.72–0.77, which is why 20,000 are shown.) The histogram is drawn in bins of width 1 from 0 to 16; 0.56 % of maps score above 16 and fall off the drawn axis |
+| Map B "a misfit of two hundred and seventy-two", readout 271.7, arrow off the end of the 0–16 axis | χ² = 271.7 (terms 61.1, 163.0, 8.3, 30.6, 7.1, 1.6); the highest of the 20,000 chance maps is 36.6; χ²₄ tail p = 1.4 × 10⁻⁵⁷ |
+| Map B: 537 points placed one at a time uniformly, rejecting any closer than 0.8 square-widths to an earlier one ("no two hits closer than four fifths of a square") | random sequential addition, d = 0.8, seed 1; min pair distance 0.8005 |
+| "Map B gets none" (no square with ≥ 3) | counts 0..5+: **109, 397, 70, 0, 0, 0** |
+| "half the expected empty squares" | 109 / 226.7 = 0.48 |
+| "a tower of single hits" | 397 vs 211 expected |
+| Map B: (round 2 showed "p < 10^−50"; round 3 shows its misfit, 271.7, instead) | χ² = 271.7, df 4, p = 1.4 × 10⁻⁵⁷ |
+| "Aimed bombs would miss the other way: extra empty squares, extra pile-ups"; red outline bars "aimed (simulated)" | `sim.aimed_map()`: 537 hits, each normal (s.d. 2 squares) around one of 3 aim points drawn uniformly in the map's central 16 × 16 squares, seed 0 (the first tried); hits off the map are re-drawn. Counts 0…5+: **399, 58, 37, 30, 13, 39** vs chance 227, 211, 98.5, 30.6, 7.1, 1.6: 172 extra empty squares, 82 squares with 3+ hits vs 39.3; misfit 1178.6. This matches Clarke's description of clustering ("an excess number of squares containing either a high number of flying bombs or none at all, with a deficiency in the intermediate classes") |
+| Zoom discs: radius 0.4 square, so two discs overlap exactly when two hits are closer than 0.8 square (B's rule) | Round 4 moves each zoom into the gutter to its map's right, so the zoomed block is taken on the map's right edge (columns 21–24). A: the densest such block (rows 9–12, 23 hits): 22 of 23 discs overlap a neighbour (24 close pairs) and turn red. B: the edge block whose count is closest to the 16-hit average (rows 8–11, 16 hits): none can overlap. (Round 3's A block, the densest anywhere in columns 2–12: 16 of 20, 19 pairs) |
+
+## Wording guards
+
+- The episode never says the bombs were unaimed: they were aimed at London, too loosely to
+  choose a street, and the test only shows no clustering *at that scale, within an area of
+  constant density*.
+- "Flying bombs" throughout (V-1), never "rockets".
+- "A pattern this even is the fingerprint of a **spacing** rule" (round 1 said "a rule", which
+  over-generalised: aim is also a rule, and it produces the opposite fingerprint; round 2's "Too
+  even" was heard as "two even").
+- "The detector, like your eye, expected chance to spread out that evenly" now carries an
+  on-screen citation (round-3 substance fix 7): **Falk & Konold, 1997 · Psych. Review 104(2)**
+  (R. Falk & C. Konold, "Making sense of randomness: Implicit encoding as a basis for
+  judgment", *Psychological Review* 104(2):301–318, doi:10.1037/0033-295X.104.2.301). Read in
+  the paper (p. 301): "The most prominent and consistent finding of the research on both
+  generation and perception of randomness of binary sequences (and two-dimensional [2-D]
+  grids) is that people identify randomness with an excess of alternations between symbol
+  types … Typical random sequences … are not perceived by participants as maximally random
+  because the runs appear too long to be random." Their own experiments include 2-D grids
+  ("Sequences and grids with P(A)s equally distant from .50 are not judged equally random").
+  Over-alternation in a grid is exactly "too even": the eye expects chance to spread hits out.
+- Closing line (round 4): "If you picked map B, you picked the one following a rule." Round 3
+  said "the one with a plan", which a reviewer read as conflating B's spacing rule with aim
+  (aim produces the opposite fingerprint, shown at 2:56). "Following a rule" repeats the cold
+  open's "The other follows a rule" and the rule tag that flashes.
+- The "≈ Clarke's area" rectangle is Shaw & Shaw's re-creation, and the numbers in the table are
+  Clarke's; facts above explain the 537 vs 532 difference.

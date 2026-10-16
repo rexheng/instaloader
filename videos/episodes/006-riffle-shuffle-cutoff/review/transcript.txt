@@ -1,0 +1,49 @@
+[0:00.0–0:03.6] Heads, I riffle shuffle a sorted deck four times.
+[0:03.6–0:06.7] Tails, a computer shuffles it perfectly.
+[0:06.7–0:10.2] From the deck alone, how often could you tell which?
+[0:10.2–0:15.1] Pick 50, 75, or 100%.
+[0:15.1–0:18.0] Any simulation that mixes by random steps
+[0:18.0–0:19.9] faces this question.
+[0:19.9–0:23.8] Stopped too early, it still remembers where it started.
+[0:23.8–0:27.6] The obvious check is the top card, the one you'd be dealt.
+[0:27.6–0:31.2] Here's how often each card lands there, after four riffles.
+[0:31.8–0:32.7] Almost flat.
+[0:33.3–0:36.8] Only the old top card stands out, one time in 15.
+[0:37.5–0:41.4] Judging by the top card, you'd be right 52% of the time.
+[0:42.0–0:43.6] Four riffles look like plenty.
+[0:44.3–0:47.0] A guesser who sees the whole deck does far better.
+[0:47.1–0:52.8] The model cuts near the middle, then drops cards from each half in proportion to its size.
+[0:53.3–0:57.5] Each half stays in order, so one riffle leaves two rising sequences.
+[0:57.6–1:01.6] Runs of consecutive cards, reading left to right.
+[1:01.6–1:03.6] Give each sequence its own level.
+[1:03.6–1:08.6] The cut crosses each level once, so a riffle can at most split it in two.
+[1:08.6–1:10.6] Three riffles.
+[1:10.6–1:11.6] Eight.
+[1:11.6–1:12.6] Four riffles.
+[1:12.6–1:16.6] At most 16, this deck has 14.
+[1:16.6–1:23.6] A perfect shuffle averages 26.5, and gives 16 or fewer once in 2 million decks.
+[1:23.6–1:30.1] Call any deck with 16 or fewer riffled, and you'd be wrong about once in 4 million games.
+[1:30.7–1:34.5] The top card can't see this. It lives in the order between cards.
+[1:35.1–1:40.7] Bayer and Diaconis proved that in this model, decks with the same count are equally likely.
+[1:42.0–1:43.9] So pile each deck onto its count.
+[1:44.9–1:47.8] Blue is a perfect shuffle. Purple is 4 riffles.
+[1:48.4–2:06.6] The red area purple above blue is the distance from random right now it one how many more riffles to bring it below a half A fifth riffle A sixth Guess riffled wherever purple is higher You
+[2:06.6–2:14.3] catch 78% of riffled decks but flag 17% of perfect ones. Accuracy is a half plus
+[2:14.3–2:20.3] half the difference, the red area. A seventh riffle .33. Meanwhile the gap
+[2:20.3–2:24.9] between the centers roughly halved each riffle, while purple's spread settled to
+[2:24.9–2:30.6] blues. About two. While the gap spans several spreads, the distance stays near
+[2:30.6–2:36.3] one. Once it's down to about one spread, the distance halves two. That's the cliff.
+[2:36.3–2:43.9] Gap times two to the K levels, off near 230. So the gap meets the spread when two
+[2:43.9–2:50.3] to the K is about a hundred and ten just under seven both numbers come from the
+[2:50.3–2:57.0] deck size for n cards the gap grows like n squared but the spread only like root
+[2:57.0–3:03.2] n so the cliff sits near three halves log base two of n all does then Bayer and
+[3:03.2–3:09.6] Diaconis proved it for 52 cards seven riffles is the first count that brings
+[3:09.6–3:16.1] the distance below a half seven belongs to this yardstick trefethen and trefethen measured
+[3:16.1–3:24.0] information instead no cliff and five or six shuffles do a reasonable job many markov chains
+[3:24.0–3:31.1] share this cliff and samplers share the trap one statistic can settle like the top card long before
+[3:31.1–3:38.1] the whole chain has back to the coin flip after four riffles you'd almost never be wrong same as
+[3:38.1–3:40.1] with an unshuffled deck.
+[3:40.1–3:42.1] Three more riffles,
+[3:42.1–3:45.1] and you'd be right only two times in three.
+[3:45.1–3:48.1] Four riffles fool someone watching the top card,
+[3:48.1–3:52.1] fooling someone who counts sequences that well takes ten,

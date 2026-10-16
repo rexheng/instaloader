@@ -1,0 +1,184 @@
+1
+00:00:00,000 --> 00:00:03,110
+Each map holds five hundred and thirty-seven hits.
+
+2
+00:00:03,490 --> 00:00:06,330
+On one, every hit landed by pure chance.
+
+3
+00:00:06,710 --> 00:00:08,260
+The other follows a rule.
+
+4
+00:00:08,640 --> 00:00:09,940
+Which one is chance?
+
+5
+00:00:11,800 --> 00:00:14,790
+Both are simulated, but the question is real.
+
+6
+00:00:15,170 --> 00:00:23,570
+In nineteen forty-four, Londoners claimed German flying bombs fell in clusters, and precise aim would put factories at risk.
+
+7
+00:00:23,933 --> 00:00:26,203
+Build the detector your eye is running.
+
+8
+00:00:26,583 --> 00:00:34,583
+Cut each map into five hundred and seventy-six squares, count the hits, and flag any square with three or more, like this one.
+
+9
+00:00:34,933 --> 00:00:37,373
+Map A lights up with thirty-nine targets.
+
+10
+00:00:37,753 --> 00:00:39,013
+Map B gets none.
+
+11
+00:00:39,393 --> 00:00:42,193
+So A looks aimed, and B looks like chance.
+
+12
+00:00:42,533 --> 00:00:43,433
+Backwards.
+
+13
+00:00:44,333 --> 00:00:49,983
+I dropped every hit on map A at random, so all thirty-nine targets are false alarms.
+
+14
+00:00:50,363 --> 00:00:54,423
+Map B's rule: no two hits closer than four fifths of a square.
+
+15
+00:00:54,803 --> 00:00:59,353
+The detector, like your eye, expected chance to spread out that evenly.
+
+16
+00:00:59,700 --> 00:01:00,810
+Take one square.
+
+17
+00:01:01,190 --> 00:01:06,040
+Each bomb has a one in five hundred and seventy-six chance of landing in it.
+
+18
+00:01:06,420 --> 00:01:10,210
+To stay empty, all five hundred and thirty-seven must miss.
+
+19
+00:01:10,566 --> 00:01:12,666
+Guess how many squares get no hit at all.
+
+20
+00:01:14,500 --> 00:01:17,810
+About two hundred and twenty-seven squares stay empty.
+
+21
+00:01:18,190 --> 00:01:20,390
+Map A has two hundred and twenty-two.
+
+22
+00:01:21,333 --> 00:01:30,623
+Those gaps force the clumps: the other three hundred and fifty-four squares share all the hits, one and a half each, so plenty must double up.
+
+23
+00:01:30,966 --> 00:01:33,196
+Call the average hits per square lambda.
+
+24
+00:01:33,696 --> 00:01:40,216
+One minus a small slice, raised to a big power, is almost exactly e to the minus lambda.
+
+25
+00:01:41,266 --> 00:01:48,416
+For two hits, pick which two bombs land here: five thirty-seven times five thirty-six, over two, ways.
+
+26
+00:01:49,016 --> 00:01:55,726
+Each lands with chance one in five seventy-six, and the rest miss: e to the minus lambda again.
+
+27
+00:01:56,666 --> 00:02:08,576
+Five thirty-six is almost five thirty-seven, so for any k, each two becomes a k. The powers merge into lambda to the k: the Poisson distribution.
+
+28
+00:02:09,276 --> 00:02:14,816
+Times five hundred and seventy-six squares, it predicts these purple bars.
+
+29
+00:02:15,166 --> 00:02:18,116
+The honest detector compares whole histograms.
+
+30
+00:02:18,496 --> 00:02:23,956
+Map A sits on the purple bars: thirty-nine targets, and chance predicts thirty-nine.
+
+31
+00:02:24,336 --> 00:02:30,006
+The chi-squared misfit: square each bar's gap, divide by chance's bar, and add them up.
+
+32
+00:02:30,386 --> 00:02:32,116
+Map A scores two point oh.
+
+33
+00:02:32,496 --> 00:02:37,366
+Pure-chance maps score worse three times in four: p equals point seven four.
+
+34
+00:02:37,700 --> 00:02:45,030
+Map B: half the expected empty squares, a tower of single hits, and a misfit of two hundred and seventy-two.
+
+35
+00:02:45,410 --> 00:02:48,910
+A pattern this even is the fingerprint of a spacing rule.
+
+36
+00:02:49,266 --> 00:02:54,216
+Aimed bombs would miss the other way: extra empty squares, extra pile-ups.
+
+37
+00:02:54,596 --> 00:03:06,516
+In nineteen forty-six, the actuary R D Clarke published this test on real flying-bomb hits: five hundred and thirty-seven, in five seventy-six squares of south London.
+
+38
+00:03:06,866 --> 00:03:12,956
+Chance predicted two hundred and twenty-seven empty squares; Clarke counted two hundred and twenty-nine.
+
+39
+00:03:13,156 --> 00:03:17,096
+Single hits: two hundred and eleven, exactly as predicted.
+
+40
+00:03:17,296 --> 00:03:19,796
+Same test: p equals point eight eight.
+
+41
+00:03:19,996 --> 00:03:21,466
+No sign of clustering.
+
+42
+00:03:21,800 --> 00:03:27,930
+That doesn't mean the bombs were unaimed: they were aimed at London, just too loosely to choose a street.
+
+43
+00:03:28,310 --> 00:03:37,270
+And the test needs one lambda everywhere: farther north, hits fell about half as densely, so Clarke chose an area where lambda held steady.
+
+44
+00:03:37,633 --> 00:03:38,823
+So look again.
+
+45
+00:03:39,723 --> 00:03:43,533
+The clumps in map A are what no aim at all looks like.
+
+46
+00:03:43,913 --> 00:03:47,883
+If you picked map B, you picked the one following a rule.
+

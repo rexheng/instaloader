@@ -1,0 +1,1645 @@
+"""Sample Space, episode 7: How Much Information Is in a Letter? (entropy).
+
+    videos/toolkit/render.sh --preview videos/episodes/007-entropy-information/scene.py Episode /tmp/ep7.mp4
+    videos/toolkit/render.sh videos/episodes/007-entropy-information/scene.py Episode \
+        videos/episodes/007-entropy-information/final.mp4
+
+Palette (one meaning each, see script.md):
+    BLUE    probability (tile/column widths, every p, share strips, % braces)
+    YELLOW  questions = bits (? box, cuts, counters, 2^k, k, log2(1/p), H, the level line)
+    GREEN   Shannon's measurements (the 0.6-1.3 band, first-guess tally, "1 guess")
+    PURPLE  context: characters already read (the row, Q, TH, THE OTHER DA)
+    GRAY    axes, citations, the abandoned 4.75 line
+    INK     letters, labels, the language-model marker
+Data: data.json, written by data.py (Brown Corpus counts + Shannon 1951 record).
+"""
+from __future__ import annotations
+
+import collections
+import json
+import math
+from pathlib import Path
+
+import numpy as np
+from manim import *
+from sample_space import *
+
+HERE = Path(__file__).resolve().parent
+D = json.loads((HERE / "data.json").read_text())
+P = D["p"]                                   # Brown Corpus, 27 symbols
+ALPHA = [chr(65 + i) for i in range(26)] + [" "]
+ORDER = D["order"]                           # most to least frequent
+H0 = math.log2(27)
+H1 = D["H1"]
+P_Q, H_Q = D["after_Q"]["p"], D["after_Q"]["H"]
+P_TH, H_TH = D["after_TH"]["p"], D["after_TH"]["H"]
+REC_TEXT, REC_G = D["record"]["text"], D["record"]["guesses"]
+LO, HI = D["shannon_bounds_N100"]
+UNIFORM = {s: 1 / 27 for s in ALPHA}
+GUESS = collections.Counter(sum(REC_G, []))  # guess number -> how often (Shannon p. 56)
+N_REC = sum(GUESS.values())                  # 102
+H_GUESS = -sum(c / N_REC * math.log2(c / N_REC) for c in GUESS.values())   # 1.42
+H_C2 = D["H_given_2_prev"]                   # 2.81: averaged over EVERY two-letter context
+LLM_BPC = 0.8426                             # Valmeekam et al. 2023, Table IV: LLaMA-7B + AC
+                                             # on a book (Dobie 1924, on Gutenberg 25 May 2023)
+
+# ------------------------------------------------------------------ chart geometry
+X0, X1 = -5.2, 4.4                 # probability 0 .. 1 (room on the right for the tail inset)
+W = X1 - X0
+Y0 = -1.85                         # 0 questions
+UNIT_A = 0.55                      # units per question while the chart only needs 0..6.5
+UNIT_B = 0.345                     # ... and once it must hold costs up to 10.4
+UNIT_C = 0.69                      # zoomed in (0..5.5) whenever everything drawn is a poured level
+UNIT = UNIT_A
+TICKS_B, TICKS_C = (0, 5, 10), (0, 2, 4)
+YMAX = 11                          # full axis (skyline)
+YTOP0 = 6.5                        # short axis until costs need the room
+LAB_Y = Y0 - 0.32                  # symbol labels under the axis
+XTICK_Y = Y0 - 0.72                # x tick labels (0% ... 100%), a row below the symbols
+XTITLE_Y = -2.98                   # x-axis title, on the citation's row (right side)
+COL_A = X1 + 0.62                  # right gutter: level values
+
+# doubling strips sit ABOVE the (short) axis, the formula to their right
+SX0, SX1 = -3.3, 1.5
+SW = SX1 - SX0
+STRIP_YE, STRIP_YZ, STRIP_HEAD_Y = 1.75, 1.1, 2.32
+CNT_X = 2.2
+FORM_POS = np.array([4.45, 1.42, 0])
+EQ_X = 4.25                        # x of the '=' in p*2^k = 1, 2^k = 1/p and k = log2(1/p)
+TOP_Y = 2.3                        # formula row above the skyline
+FS_TOP = 44                        # its font size (clears the context row and the 10 tick)
+
+# tail inset (rare letters, widths magnified, heights true), 0.45 clear of the main axis
+TAIL = ORDER[-4:]                  # X J Q Z
+ZOOM = 28
+INSET_GAP = 0.07                   # inset columns stand apart so their letters never crowd
+INSET_X0 = 4.9                     # first inset column
+INSET_FRAME_X0 = 4.83              # the inset's own frame (main axis ends at X1 + 0.05)
+
+
+def cx(share: float) -> float:
+    return X0 + W * share
+
+
+def cy(q: float) -> float:
+    return Y0 + UNIT * q
+
+
+def set_unit(u: float) -> None:
+    global UNIT
+    UNIT = u
+
+
+def cost(p: float) -> float:
+    return 0.0 if p <= 0 else min(-math.log2(p), 10.4)
+
+
+# ------------------------------------------------------------------ cold-open layout (reused by the landing)
+ROW_Y_OPEN, ROW_Y_TOP = 1.4, 3.27
+TILE_Y, CHAIN_Y, QLINE_Y = 0.15, -0.62, -1.62
+TILE_LAB_Y = 0.785                 # '26 letters + space', between the row and the tiles
+BOX, PITCH = 0.5, 0.6
+Q_X = 3.6
+CTX = "THE OTHER DA"
+
+
+def row_x(i: int) -> float:
+    return Q_X - (len(CTX) - i) * PITCH
+
+
+# ------------------------------------------------------------------ small builders
+def space_glyph(w: float = 0.17, h: float = 0.075, color=INK, sw: float = 2.6) -> VMobject:
+    """The open-box space symbol, drawn (no font glyph needed)."""
+    g = VMobject(stroke_color=color, stroke_width=sw)
+    g.set_points_as_corners([[-w / 2, h, 0], [-w / 2, 0, 0], [w / 2, 0, 0], [w / 2, h, 0]])
+    g.set_fill(opacity=0)
+    return g
+
+
+def glyph(s: str, size: float = 24, color=INK, font=SERIF) -> VMobject:
+    if s == " ":
+        k = size / 24
+        return space_glyph(0.17 * k, 0.075 * k, color, 2.6 * k)
+    return Text(s, font=font, font_size=size, color=color)
+
+
+def set_glyph_opacity(m: VMobject, o: float) -> None:
+    if isinstance(m, Text):
+        m.set_opacity(o)
+    else:                                   # open path: stroke only
+        m.set_stroke(opacity=o)
+
+
+def tile(s: str, side: float = 0.4) -> VGroup:
+    sq = Square(side, stroke_color=BLUE, stroke_width=2, fill_color=BLUE, fill_opacity=0.14)
+    g = glyph(s, 24)
+    g.move_to(sq.get_center() + (DOWN * 0.04 if s == " " else ORIGIN))
+    return VGroup(sq, g)
+
+
+def tile_opacity(t: VGroup, o: float) -> VGroup:
+    """Dim a candidate tile without filling the open space glyph."""
+    t[0].set_stroke(opacity=o).set_fill(opacity=0.14 * o)
+    set_glyph_opacity(t[1], o)
+    return t
+
+
+def dim_tiles(tiles, o: float, run_time: float = 0.5):
+    return AnimationGroup(*[t[0].animate.set_stroke(opacity=o).set_fill(opacity=0.14 * o)
+                            for t in tiles],
+                          *[(t[1].animate.set_opacity(o) if isinstance(t[1], Text)
+                             else t[1].animate.set_stroke(opacity=o)) for t in tiles],
+                          run_time=run_time)
+
+
+def column(xl: float, w: float, h: float, base: float = Y0, fill: float = 0.85) -> Rectangle:
+    """A probability column. Hairline columns get no edge (so they stay visible), and
+    flattened ones a blue outline (so they never vanish into the axis)."""
+    empty = w <= 1e-9                       # zero probability: nothing to draw
+    w, h = max(w, 0.002), max(h, 0.002)
+    if empty:
+        sc, sw, fill = BLUE, 0, 0.0
+    elif w < 0.03:
+        sc, sw = BLUE, 0
+    elif h < 0.08:
+        sc, sw = BLUE, 3
+    else:
+        sc, sw = BG, 1.6
+    r = Rectangle(width=w, height=h, stroke_color=sc, stroke_width=sw,
+                  fill_color=BLUE, fill_opacity=fill)
+    return r.move_to([xl + w / 2, base + h / 2, 0])
+
+
+def layout(order, probs, heights) -> dict:
+    out, xl = {}, X0
+    for s in order:
+        w = W * probs[s]
+        out[s] = column(xl, w, UNIT * heights[s])
+        xl += w
+    return out
+
+
+def slab(x_left: float, width: float, y_bottom: float, h: float) -> Rectangle:
+    hh = max(h, 0.0015)
+    r = Rectangle(width=width, height=hh, stroke_color=BG, stroke_width=1.2 if h > 0.03 else 0,
+                  fill_color=BLUE, fill_opacity=0.85)
+    return r.move_to([x_left + width / 2, y_bottom + hh / 2, 0])
+
+
+def poured(order, probs, heights) -> dict:
+    """Each column becomes a full-width slab of the SAME area; stacked, the slabs reach the
+    average height.  (area = p * cost, width 1 -> height p * cost)"""
+    out, yb = {}, Y0
+    for s in order:
+        h = UNIT * probs[s] * heights[s]
+        out[s] = slab(X0, W, yb, h)
+        yb += h
+    return out
+
+
+def hidden_box() -> Square:
+    """A character already read (context), shown dim because the viewer can't see it."""
+    return Square(BOX, stroke_color=PURPLE, stroke_width=2, stroke_opacity=0.45,
+                  fill_color=PURPLE, fill_opacity=0.07)
+
+
+def ctx_box(ch: str) -> VGroup:
+    sq = Square(BOX, stroke_color=PURPLE, stroke_width=3, fill_color=PURPLE, fill_opacity=0.16)
+    g = glyph(ch, 30, PURPLE)
+    g.move_to(sq.get_center() + (DOWN * 0.05 if ch == " " else ORIGIN))
+    return VGroup(sq, g)
+
+
+def pflash(m: VMobject, scale: float = 1.1):
+    """Context emphasis: a purple flash (yellow already means 'questions')."""
+    return Indicate(m, color=PURPLE, scale_factor=scale, run_time=0.9)
+
+
+def glyph_fade(cells, o: float):
+    """Fade record glyphs; the open space glyph is stroke-only (never fill it)."""
+    return [c.animate.set_opacity(o) if isinstance(c, Text) else c.animate.set_stroke(opacity=o)
+            for c in cells]
+
+
+def outline_flash(cols, run_time: float = 0.9, lag: float = 0.0):
+    """Emphasis on probability columns: white edge + brighter blue, then back."""
+    anims = [c.animate(rate_func=there_and_back).set_stroke(INK, 3.5).set_fill(BLUE, opacity=1.0)
+             for c in cols]
+    if lag:
+        return LaggedStart(*anims, lag_ratio=lag, run_time=run_time)
+    return AnimationGroup(*anims, run_time=run_time)
+
+
+def rect_box(m: VMobject):
+    lo, hi = m.get_corner(DL), m.get_corner(UR)
+    return lo[0], lo[1], max(hi[0] - lo[0], 1e-4), max(hi[1] - lo[1], 1e-4)
+
+
+def geo_morph(mob: VMobject, tgt: VMobject, rate=smooth):
+    """Rectangle -> rectangle with width and height interpolated geometrically.  A column
+    poured into a slab of the same area keeps exactly that area at every frame, so the
+    pour reads as liquid spreading instead of boxes ballooning."""
+    x0, y0, w0, h0 = rect_box(mob)
+    x1, y1, w1, h1 = rect_box(tgt)
+    sc0, sc1 = mob.get_stroke_color(), tgt.get_stroke_color()
+    sw0, sw1 = mob.get_stroke_width(), tgt.get_stroke_width()
+    f0, f1 = mob.get_fill_opacity(), tgt.get_fill_opacity()
+
+    def upd(m, a):
+        a = rate(a)
+        w, h = w0 ** (1 - a) * w1 ** a, h0 ** (1 - a) * h1 ** a
+        x, y = x0 + (x1 - x0) * a, y0 + (y1 - y0) * a
+        m.set_points_as_corners([[x + w, y + h, 0], [x, y + h, 0], [x, y, 0], [x + w, y, 0],
+                                 [x + w, y + h, 0]])
+        m.set_stroke(color=interpolate_color(sc0, sc1, a), width=sw0 + (sw1 - sw0) * a)
+        m.set_fill(opacity=f0 + (f1 - f0) * a)
+    return UpdateFromAlphaFunc(mob, upd)
+
+
+def hatching(x0: float, y0: float, x1: float, y1: float, step: float = 0.34) -> VGroup:
+    """45-degree yellow hatching over a rectangle: marks 'wasted questions' while the
+    blue bars underneath stay blue."""
+    g, h = VGroup(), y1 - y0
+    c = x0 - h
+    while c < x1:
+        t0, t1 = max(0.0, x0 - c), min(h, x1 - c)
+        if t1 - t0 > 0.02:
+            g.add(Line([c + t0, y0 + t0, 0], [c + t1, y0 + t1, 0], stroke_width=2.2))
+        c += step
+    return g.set_stroke(YELLOW, width=2.2, opacity=0.55)
+
+
+def frac_glyphs(part: VMobject) -> dict:
+    """Glyphs of a rendered '\\log_2\\!\\frac{1}{p}': l o g 2, then 1 / bar / p by height."""
+    g = list(part.submobjects)
+    rest = sorted(g[4:], key=lambda m: -m.get_center()[1])
+    return {"log": VGroup(*g[:3]), "two": g[3], "one": rest[0], "bar": rest[1], "p": rest[2]}
+
+
+def log_formula(*parts: str, size: float = 48) -> MathTex:
+    """MathTex whose '\\log_2\\!\\frac{1}{p}' part is yellow with a BLUE p."""
+    m = MathTex(*parts, font_size=size)
+    for i, t in enumerate(parts):
+        if t == r"\log_2\!\frac{1}{p}":
+            m[i].set_color(YELLOW)
+            frac_glyphs(m[i])["p"].set_color(BLUE)
+        elif t == "p":
+            m[i].set_color(BLUE)
+    return m
+
+
+def route(points) -> VMobject:
+    """A smooth path through the given waypoints (used to steer flying glyphs around text)."""
+    p = VMobject()
+    p.set_points_smoothly([np.array([x, y, 0.0]) for x, y in points])
+    return p
+
+
+def fly(mob: VMobject, target: VMobject, path: VMobject, rate=linear):
+    """Move `mob` along `path` onto `target` (same glyph, possibly another size): its height
+    interpolates to the target's, so the arrival is seamless."""
+    h0, h1 = max(mob.height, 1e-3), max(target.height, 1e-3)
+    start = mob.copy()
+
+    def upd(m, a):
+        a = rate(a)
+        m.become(start)
+        m.scale((h0 + (h1 - h0) * a) / h0)
+        m.move_to(path.point_from_proportion(a))
+    return UpdateFromAlphaFunc(mob, upd)
+
+
+def tile_columns(cols: dict, old_order, new_order, probs, heights, unit, rank_lag=0.028):
+    """Re-sort columns with NO gaps and NO overlaps in any frame.
+
+    Each column is poured from its old slot into its new one: the part already moved sits in
+    the sorted block that grows from the left (in the new order), the rest stays in the old
+    block (old order) packed against it.  Widths always sum to 100 %, so every frame tiles
+    0..100 %.  Columns move in rank order (the most frequent first).  Returns (animation,
+    cleanup); the old-slot pieces are temporary mobjects removed by cleanup."""
+    ghosts = {s: cols[s].copy() for s in old_order}
+    rank = {s: i for i, s in enumerate(new_order)}
+    n = len(new_order)
+    span = 1 - rank_lag * (n - 1)
+    memo = {}
+
+    def frame(a):
+        """(x, w) of every new-slot piece and every old-slot piece at progress a."""
+        if a not in memo:
+            e = {s: smooth(float(np.clip((a - rank[s] * rank_lag) / span, 0, 1)))
+                 for s in new_order}
+            new, old, x = {}, {}, X0
+            for s in new_order:                       # the sorted block grows from the left
+                w = W * probs[s] * e[s]
+                new[s] = (x, w)
+                x += w
+            for s in old_order:                       # what is left, still in the old order
+                w = W * probs[s] * (1 - e[s])
+                old[s] = (x, w)
+                x += w
+            memo.clear()
+            memo[a] = (new, old)
+        return memo[a]
+
+    def rect(m, x, w, h):
+        w = max(w, 0.0)
+        m.set_points_as_corners([[x + w, Y0 + h, 0], [x, Y0 + h, 0], [x, Y0, 0], [x + w, Y0, 0],
+                                 [x + w, Y0 + h, 0]])
+        m.set_stroke(BG, width=1.6 if w > 0.03 else 0)
+        m.set_fill(BLUE, opacity=0.85 if w > 1e-4 else 0)
+
+    def piece(s, which):
+        m = cols[s] if which == 0 else ghosts[s]
+
+        def upd(mob, a):
+            x, w = frame(a)[which][s]
+            rect(mob, x, w, unit * heights[s])
+        return UpdateFromAlphaFunc(m, upd)
+
+    for s in new_order:                               # start: everything still in its old slot
+        rect(cols[s], X0, 0, unit * heights[s])
+    anims = [piece(s, 0) for s in new_order] + [piece(s, 1) for s in old_order]
+    return ghosts, anims
+
+
+class Episode(NarratedScene):
+    EPISODE = 7
+    TITLE = "How Much Information Is in a Letter?"
+    SPEED = 0.84
+    PRONUNCIATIONS = {"TH": "tee aitch"}
+
+    # ============================================================== construct
+    def construct(self):
+        self.cold_open()
+        self.halve_alphabet()
+        self.target()
+        self.fail_alike()
+        self.split_probability()
+        self.doublings()
+        self.skyline()
+        self.entropy()
+        self.context()
+        self.payoff()
+        self.landing()
+        # no end card: the landing frame (the cold open, re-seen) holds to the end
+        self.hold(0.8)
+
+    def exclude(self, group: VMobject, reason: str) -> None:
+        """Leave a deliberately tight group out of the overlap audit (with a reason for the
+        critics).  Every member is flagged, because members get animated (and so reach the
+        scene) on their own."""
+        self.allow_overlap(group, reason=reason)
+        for m in group.get_family():
+            allow_overlap(m)
+
+    def visible(self) -> list:
+        """Top-level mobjects worth fading (drivers and trackers are removed outright)."""
+        out = []
+        for m in list(self.mobjects):
+            if isinstance(m, ValueTracker) or type(m) is Mobject:
+                m.clear_updaters()
+                self.remove(m)
+            else:
+                out.append(m)
+        return out
+
+    # ============================================================== 1 cold open
+    def cold_open(self):
+        self.hidden = VGroup(*[hidden_box() for _ in CTX])
+        for i, b in enumerate(self.hidden):
+            b.move_to([row_x(i), ROW_Y_OPEN, 0])
+        self.lead = MathTex(r"\cdots", color=PURPLE, font_size=40).set_opacity(0.6)
+        self.lead.next_to(self.hidden, LEFT, buff=0.22)
+        self.qbox = Square(BOX + 0.06, stroke_color=YELLOW, stroke_width=4)
+        self.qbox.move_to([Q_X, ROW_Y_OPEN, 0])
+        self.qmark = Text("?", font=SERIF, font_size=36, color=YELLOW).move_to(self.qbox)
+        self.row = VGroup(self.lead, self.hidden, self.qbox, self.qmark)
+        self.read_lab = text("already read", size=26, color=PURPLE)
+        self.read_lab.next_to(self.hidden, UP, buff=0.2)
+
+        self.tiles = VGroup(*[tile(s) for s in ALPHA]).arrange(RIGHT, buff=0.06)
+        self.exclude(self.tiles, "alphabet tile row: each letter sits inside its own tile, tiles "
+                     "0.06 apart; the halving cuts sit in the gaps between tiles")
+        self.tiles.move_to([0, TILE_Y, 0])
+        self.tile = dict(zip(ALPHA, self.tiles))
+
+        self.tile_lab = text("26 letters + space", size=24, color=GRAY)
+        self.tile_lab.move_to([0, TILE_LAB_Y, 0]).align_to(self.qbox, RIGHT)
+
+        self.qlabel = text("questions per character", size=LABEL, color=INK)
+        self.qval = MathTex("?", font_size=EQ, color=YELLOW)
+        self.qline = VGroup(self.qlabel, self.qval).arrange(RIGHT, buff=0.3).move_to([0, QLINE_Y, 0])
+
+        # the row is real text: a faint glimpse of it (too faint to read), then it is hidden.
+        # The landing reveals it as THE OTHER DA.
+        ghosts = VGroup()
+        for i, ch in enumerate(CTX):
+            g = glyph(ch, 30, PURPLE).move_to(self.hidden[i])
+            if ch == " ":
+                g.shift(DOWN * 0.05)
+            set_glyph_opacity(g, 0.0)
+            ghosts.add(g)
+
+        # frame 1 already holds the whole puzzle: the text so far, the hidden slot, and the
+        # 27 candidates for it
+        with self.narrate("You've read this English sentence up to one hidden character. With "
+                          "yes-or-no questions, how many do you need per character, on "
+                          "average? [pause 1.5]") as beat:
+            self.add(self.row, self.read_lab, self.tiles, self.tile_lab, ghosts)
+            self.play(LaggedStart(*glyph_fade(ghosts, 0.09), lag_ratio=0.12), run_time=0.9)
+            self.play(*glyph_fade(ghosts, 0.0), run_time=0.5)
+            self.remove(ghosts)
+            beat.wait_until("hidden", offset=-0.2)
+            # the hidden slot, and the candidates that could fill it
+            self.play(flag(VGroup(self.qbox, self.qmark), run_time=0.8),
+                      LaggedStart(*[t.animate(rate_func=there_and_back).shift(0.12 * UP)
+                                    for t in self.tiles], lag_ratio=0.04),
+                      run_time=1.1)
+            beat.wait_until("With", offset=-0.1)
+            self.play(FadeIn(self.qline, shift=0.1 * UP), run_time=0.7)
+            beat.wait_until("average", offset=-0.1)
+            self.play(flag(self.qval), run_time=0.9)
+
+    # ============================================================== 2 halve the alphabet
+    def halve_alphabet(self):
+        five = MathTex("5", font_size=EQ, color=YELLOW).move_to(self.qval)
+        # kept groups close on Y: A-N | O-_, O-U | V-_, VWX | YZ_, YZ | _, Y | Z
+        cuts = [(13, list(range(0, 14))), (20, list(range(14, 21))),
+                (23, list(range(21, 24))), (25, [26]), (24, [25])]
+        chain = MathTex("27", r"\to", "13", r"\to", "6", r"\to", "3", r"\to", "2", r"\to", "1",
+                        font_size=MATH)
+        for i in range(1, 11, 2):
+            chain[i].set_color(YELLOW)
+        chain.move_to([0, CHAIN_Y, 0])
+        self.chain = chain
+        lines = VGroup()
+        with self.narrate("The natural answer is five. Each answer can cut what's left in half, "
+                          "and five cuts take twenty-seven down to one.") as beat:
+            beat.wait_until("five", offset=-0.15)
+            self.play(ReplacementTransform(self.qval, five), run_time=0.6)
+            self.qval = five
+            beat.wait_until("Each", offset=-0.1)
+            self.play(FadeIn(chain[0], shift=0.1 * UP), run_time=0.5)
+            step_rt = [beat.until("half", offset=0.3), 0.75, 0.75, 0.75, 0.75]
+            for k, (after, dropped) in enumerate(cuts):
+                a, b = self.tiles[after], self.tiles[after + 1]
+                x = (a.get_right()[0] + b.get_left()[0]) / 2
+                cut = Line([x, TILE_Y - 0.3, 0], [x, TILE_Y + 0.3, 0], color=YELLOW, stroke_width=4)
+                lines.add(cut)
+                rt = max(0.6, step_rt[k]) if k else max(0.7, step_rt[0])
+                self.play(Create(cut),
+                          dim_tiles([self.tiles[j] for j in dropped], 0.22),
+                          FadeIn(chain[2 * k + 1], shift=0.1 * RIGHT),
+                          FadeIn(chain[2 * k + 2], shift=0.1 * RIGHT), run_time=rt)
+            self.play(Indicate(self.tiles[24], color=YELLOW, scale_factor=1.2), run_time=0.8)
+        self.cuts = lines
+
+        # the finished line 'questions per character  log2 27 ~ 4.75' is centred at x = 0;
+        # its pieces arrive one at a time, each from where it comes from
+        logf = MathTex(r"\log_2", "27", r"\approx", "4.75", font_size=EQ)
+        logf[3].set_color(YELLOW)
+        lab_to = self.qlabel.copy()
+        VGroup(lab_to, logf).arrange(RIGHT, buff=0.3).move_to([0, QLINE_Y, 0])
+        c27 = chain[0].copy()
+        # the 27 travels BELOW the chain and above the label, then drops into its slot
+        a, b = chain[0].get_center(), logf[1].get_center()
+        y_lane = (chain.get_bottom()[1] + lab_to.get_top()[1]) / 2
+        path = route([(a[0], a[1]), (a[0] + 0.35, y_lane), (b[0] - 0.7, y_lane), (b[0], b[1])])
+        with self.narrate("With perfect fifty-fifty splits, the ideal is log base two of twenty-seven, about "
+                          "four point seven five.") as beat:
+            beat.wait_until("ideal", offset=-0.2)
+            # make room: the label steps left, the 5 waits where the answer will stand
+            self.play(self.qlabel.animate.move_to(lab_to), self.qval.animate.move_to(logf[3]),
+                      run_time=0.7)
+            beat.wait_until("log", offset=-0.1)
+            self.play(Write(logf[0]), run_time=0.6)
+            self.add(c27)
+            self.play(fly(c27, logf[1], path), rate_func=rate_functions.ease_out_sine,
+                      run_time=beat.until("about", offset=-0.15, min_time=0.9))
+            self.remove(c27)
+            self.add(logf[1])
+            self.play(Write(logf[2]), FadeTransform(self.qval, logf[3]), run_time=1.0)
+        self.logf = logf
+
+    # ============================================================== 3 target + stakes
+    def target(self):
+        # the baseline stays on top of every column (they flash and re-layer)
+        self.x_axis = Line([X0, Y0, 0], [X1 + 0.05, Y0, 0], color=GRAY, stroke_width=2.5).set_z_index(1)
+        self.y_axis = Line([X0, Y0, 0], [X0, cy(YTOP0), 0], color=GRAY, stroke_width=2.5)
+        self.ytick = {v: self.make_ytick(v) for v in (0, 5)}
+        self.y_ticks = VGroup(*self.ytick.values())
+        yt = self.y_ticks
+        self.y_title = text("questions", size=LABEL - 2, color=GRAY)
+        self.y_title.next_to(self.y_axis.get_top(), UP, buff=0.2).align_to(yt, LEFT)
+
+        cols = layout(ALPHA, UNIFORM, {s: H0 for s in ALPHA})
+        self.cols = cols
+        self.colg = VGroup(*[cols[s] for s in ALPHA])
+        labs = {s: glyph(s, 24) for s in ALPHA}
+        for s in ALPHA:
+            labs[s].move_to([cols[s].get_center()[0], LAB_Y + (0.06 if s == " " else 0), 0])
+        self.labs = labs
+        self.lab_op = {s: ValueTracker(1.0) for s in ALPHA}   # each label's opacity
+
+        self.avg_line = DashedLine([X0, cy(H0), 0], [X1, cy(H0), 0], color=YELLOW,
+                                   stroke_width=3.5, dash_length=0.14).set_z_index(3)
+        self.avg_num = MathTex("4.75", font_size=36, color=YELLOW).move_to([COL_A, cy(H0), 0])
+
+        # Shannon's band sits BEHIND the bars; thin edges on top keep it readable
+        fill = Rectangle(width=W, height=UNIT * (HI - LO), stroke_width=0, fill_color=GREEN,
+                         fill_opacity=0.28).move_to([X0 + W / 2, cy((LO + HI) / 2), 0])
+        fill.set_z_index(-1)
+        edges = VGroup(Line([X0, cy(LO), 0], [X1, cy(LO), 0]), Line([X0, cy(HI), 0], [X1, cy(HI), 0]))
+        edges.set_stroke(GREEN, 2).set_z_index(2)
+        self.band_fill, self.band_edges = fill, edges
+        self.band = VGroup(fill, edges)
+        self.band_lab = MathTex(r"\approx\!1", font_size=36, color=GREEN)
+        self.place_band_lab(self.band_lab)
+        self.cite_sh = citation("Shannon, 1951 · Bell System Technical Journal")
+
+        with self.narrate("In 1951, Claude Shannon estimated the true figure at about one. "
+                          "Whatever it is, no text compressor can beat it on average, and "
+                          "guessing what comes next is how language models are "
+                          "trained.", gap=0.45) as beat:
+            # 1. clear the halving diagram; 4.75 steps right into the gutter at its own
+            #    height, clear of where any column will stand
+            self.play(FadeOut(self.chain), FadeOut(self.cuts), FadeOut(self.qlabel),
+                      FadeOut(self.tile_lab),
+                      FadeOut(VGroup(self.logf[0], self.logf[1], self.logf[2])),
+                      self.read_lab.animate.shift(UP * (ROW_Y_TOP - ROW_Y_OPEN)).set_opacity(0),
+                      self.row.animate.shift(UP * (ROW_Y_TOP - ROW_Y_OPEN)),
+                      self.logf[3].animate.move_to([COL_A + 0.2, self.logf[3].get_y(), 0]),
+                      run_time=0.7)
+            self.remove(self.read_lab)
+            # 2. the baseline grows (the tile row is still up, so no vertical axis yet)
+            self.play(Create(self.x_axis), run_time=0.5)
+            # 3. each tile drops onto the baseline as the foot of its column ...
+            feet = {s: column(cols[s].get_left()[0], cols[s].width, 0.42) for s in ALPHA}
+            moves = []
+            for s in ALPHA:
+                moves.append(ReplacementTransform(self.tile[s][0], feet[s]))
+                moves.append(ReplacementTransform(self.tile[s][1], labs[s]))
+            self.play(LaggedStart(*moves, lag_ratio=0.02),
+                      run_time=beat.until("estimated", offset=-0.1, min_time=1.0))
+            # 4. ... the vertical axis grows ...
+            self.play(Create(self.y_axis), FadeIn(self.y_ticks), FadeIn(self.y_title), run_time=0.6)
+            self.remove(self.y_ticks)              # ticks live on their own (they re-scale)
+            self.add(*self.ytick.values())
+            self._tick_leavers, self._tick_arrivals = [], []
+            # 5. ... and every column rises to the same price; 4.75 rides up the gutter with
+            #    the column tops and the line is born there
+            self.play(*[ReplacementTransform(feet[s], cols[s]) for s in ALPHA],
+                      ReplacementTransform(self.logf[3], self.avg_num),
+                      Create(self.avg_line), FadeIn(self.cite_sh, shift=0.1 * UP),
+                      run_time=0.9)
+            self.add_label_updater()
+            beat.wait_until("about one", offset=-0.2)
+            self.play(FadeIn(self.band), FadeIn(self.band_lab, shift=0.1 * LEFT), run_time=0.9)
+            beat.wait_until("compressor", offset=-0.25)
+            self.play(Indicate(self.band_edges, color=GREEN, scale_factor=1.0),
+                      flag(self.band_lab, color=GREEN), run_time=0.9)
+            beat.wait_until("guessing", offset=-0.15)
+            self.play(LaggedStart(*[pflash(b) for b in self.hidden],
+                                  flag(VGroup(self.qbox, self.qmark)), lag_ratio=0.12),
+                      run_time=beat.until("models", offset=0.2, min_time=1.8))
+
+    def make_ytick(self, v: float) -> VGroup:
+        tk = Line([X0 - 0.06, cy(v), 0], [X0, cy(v), 0], color=GRAY, stroke_width=2.5)
+        lb = MathTex(str(v), font_size=MATH_SMALL, color=GRAY).next_to(tk, LEFT, buff=0.12)
+        return VGroup(tk, lb)
+
+    def add_label_updater(self):
+        driver = Mobject()
+
+        def upd(_):
+            for s in ALPHA:
+                r, m = self.cols[s], self.labs[s]
+                m.move_to([r.get_center()[0], LAB_Y + (0.06 if s == " " else 0), 0])
+                o = float(np.clip((r.width - 0.265) / 0.03, 0, 1))   # narrow columns: no label
+                set_glyph_opacity(m, o * self.lab_op[s].get_value())
+        driver.add_updater(upd)
+        self.add(driver)
+        self.bring_to_back(driver)
+        self.lab_driver = driver
+
+    def labels_to(self, value: float, only=None, keep=()):
+        """Animations taking the axis letters to `value` opacity (all, or `only`, minus `keep`)."""
+        syms = ALPHA if only is None else only
+        return [self.lab_op[s].animate.set_value(value) for s in syms if s not in keep]
+
+    def zoom(self, unit: float, extra_lines=()):
+        """Re-fit the y-axis to what is drawn: switch the scale to `unit` and return the
+        animations that carry every y-anchored object to it (ticks spread or close up, the
+        band, reference lines and their labels ride along).  Columns are not included: their
+        new targets are computed by the caller with the new unit."""
+        old = UNIT
+        set_unit(unit)
+        k = unit / old
+        new_vals = TICKS_C if unit == UNIT_C else TICKS_B
+        anims = []
+        # ticks: survivors move, leavers slide with the scale and fade, arrivals come from
+        # where they would have been on the old scale
+        for v, g in list(self.ytick.items()):
+            if v in new_vals:
+                anims.append(g.animate.shift(UP * (Y0 + unit * v - g[0].get_y())))
+            else:
+                tgt = g.copy().shift(UP * (Y0 + unit * v - g[0].get_y())).set_opacity(0)
+                if tgt[0].get_y() > cy(5.5) + 0.01:
+                    tgt.move_to(g).set_opacity(0)
+                anims.append(Transform(g, tgt))
+                self._tick_leavers.append(g)
+                del self.ytick[v]
+        for v in new_vals:
+            if v not in self.ytick:
+                g = self.make_ytick(v)
+                start = g.copy().shift(DOWN * (cy(v) - (Y0 + old * v))).set_opacity(0)
+                if start[0].get_y() > Y0 + old * 5.5:
+                    start = g.copy().set_opacity(0)
+                self.ytick[v] = g
+                self.add(start)
+                anims.append(Transform(start, g))
+                self._tick_arrivals.append((start, g))
+        self.y_ticks = VGroup(*self.ytick.values())
+        # Shannon's band and its label
+        anims.append(self.band_fill.animate.stretch_to_fit_height(UNIT * (HI - LO))
+                     .move_to([X0 + W / 2, cy((LO + HI) / 2), 0]))
+        anims.append(self.band_edges[0].animate.move_to([X0 + W / 2, cy(LO), 0]))
+        anims.append(self.band_edges[1].animate.move_to([X0 + W / 2, cy(HI), 0]))
+        anims.append(self.place_band_lab(self.band_lab.copy(), animate_from=self.band_lab))
+        # dashed reference levels with their gutter numbers: (line, number, value)
+        for line, num, v in extra_lines:
+            anims.append(line.animate.move_to([line.get_x(), cy(v), 0]))
+            anims.append(num.animate.move_to([num.get_x(), cy(v), 0]))
+        return anims
+
+    def zoom_done(self):
+        """After a zoom: drop the faded leavers, swap arrivals for their real ticks."""
+        for g in self._tick_leavers:
+            self.remove(g)
+        for start, g in self._tick_arrivals:
+            self.remove(start)
+            self.add(g)
+        self._tick_leavers, self._tick_arrivals = [], []
+
+    def morph(self, order, probs, heights, run_time, extra=(), rate_func=smooth):
+        tgt = layout(order, probs, heights)
+        anims = [Transform(self.cols[s], tgt[s], rate_func=rate_func) for s in ALPHA]
+        self.play(*anims, *extra, run_time=run_time)     # extras keep their own timing
+
+    def hide_labels(self, run_time=0.3):
+        self.play(*self.labels_to(0.0), run_time=run_time)
+
+    def show_labels(self, run_time=0.4):
+        self.play(*self.labels_to(1.0), run_time=run_time)
+
+    def pour(self, probs, heights, run_time, extra=()):
+        """Columns flow, left to right, into full-width slabs stacked from the floor."""
+        tgt = poured(ORDER, probs, heights)
+        self.play(LaggedStart(*[geo_morph(self.cols[s], tgt[s]) for s in ORDER],
+                              lag_ratio=0.06), *extra, run_time=run_time)
+
+    def unpour(self, probs, heights, run_time, extra=()):
+        """The stack rises back into a skyline, top slab first."""
+        tgt = layout(ORDER, probs, heights)
+        self.play(LaggedStart(*[geo_morph(self.cols[s], tgt[s]) for s in reversed(ORDER)],
+                              lag_ratio=0.05), *extra, run_time=run_time)
+
+    def place_band_lab(self, m, animate_from=None):
+        """Shannon's band is labelled like an axis value: left of the y-axis at the band's top."""
+        m.move_to([0, cy(HI) - 0.02, 0]).align_to([X0 - 0.18, 0, 0], RIGHT)
+        if animate_from is not None:
+            return animate_from.animate.move_to(m)
+        return m
+
+    def level_marks(self, value: float):
+        line = DashedLine([X0, cy(value), 0], [X1, cy(value), 0], color=YELLOW,
+                          stroke_width=3.5, dash_length=0.14).set_z_index(3)
+        num = DecimalNumber(value, num_decimal_places=2, font_size=36, color=YELLOW)
+        num.move_to([COL_A, cy(value), 0]).set_z_index(3)
+        return line, num
+
+    # ============================================================== 4 fail: alike
+    def fail_alike(self):
+        # a light yellow wash (13 %) + outline, so the bars under it stay blue
+        waste = Rectangle(width=W, height=UNIT * (H0 - 1.0), stroke_color=YELLOW, stroke_width=3,
+                          fill_color=YELLOW, fill_opacity=0.13)
+        waste.set_fill(opacity=0)
+        waste.move_to([X0 + W / 2, cy((H0 + 1.0) / 2), 0]).set_z_index(4)
+        hatch = hatching(X0, cy(1.0), X1, cy(H0)).set_z_index(4)
+        arrow = DoubleArrow([0, cy(1.0), 0], [0, cy(H0), 0], buff=0, color=YELLOW,
+                            stroke_width=4, tip_length=0.16,
+                            max_tip_length_to_length_ratio=0.2).set_z_index(5)
+        wlab = MathTex(r"3.75\ \text{extra}\ (79\%)", font_size=36, color=YELLOW)
+        wlab.move_to([0, cy(H0) + 0.38, 0])
+        self.cite_br = citation("Letter counts: Brown Corpus (Francis & Kučera, 1964)")
+        xt = VGroup()
+        for v in (0, 0.25, 0.5, 0.75, 1.0):
+            tk = Line([cx(v), Y0, 0], [cx(v), Y0 - 0.07, 0], color=GRAY, stroke_width=2.5)
+            lb = MathTex(f"{int(v * 100)}\\%", font_size=26, color=GRAY)
+            lb.move_to([cx(v), XTICK_Y, 0])
+            xt.add(VGroup(tk, lb))
+        self.x_ticks = xt
+        self.x_title = self.x_title_for(None)
+
+        with self.narrate("So where do four of every five questions go? Splitting the alphabet "
+                          "evenly charges every character the same price. Z costs as much as E, yet in "
+                          "real text E turns up a hundred and thirty times as often.", gap=0.45) as beat:
+            beat.wait_until("where", offset=-0.15)
+            self.play(FadeIn(waste), FadeIn(hatch), GrowFromCenter(arrow),
+                      FadeIn(wlab, shift=0.1 * DOWN), run_time=1.0)
+            beat.wait_until("Splitting", offset=-0.2)
+            self.play(FadeOut(hatch), run_time=0.6)     # keep the outline
+            beat.wait_until("same", offset=-0.2)
+            self.play(Indicate(self.avg_line, color=INK, scale_factor=1.0),
+                      flag(self.avg_num), run_time=0.9)
+            beat.wait_until("Z", offset=-0.15)
+            self.play(FadeOut(waste), FadeOut(arrow), FadeOut(wlab), FadeOut(self.cite_sh),
+                      *[self.cols[s].animate.set_fill(opacity=0.25) for s in ALPHA
+                        if s not in ("E", "Z")], *self.labels_to(0.3, keep=("E", "Z")),
+                      Indicate(self.labs["Z"], color=BLUE, scale_factor=1.4),
+                      run_time=beat.until("E", offset=-0.1, min_time=0.6))
+            self.play(Indicate(self.labs["E"], color=BLUE, scale_factor=1.4), run_time=0.8)
+            beat.wait_until("real", offset=-0.2)
+            # real widths; E and Z stay the only bright columns, and Z keeps a label of its
+            # own (its column is a hairline, too narrow for an axis letter)
+            tgt = layout(ALPHA, P, {s: H0 for s in ALPHA})
+            for s in ALPHA:
+                if s not in ("E", "Z"):
+                    tgt[s].set_fill(opacity=0.25)
+            z_x = tgt["Z"].get_center()[0]
+            z_lab = glyph("Z", 24).move_to([z_x, LAB_Y, 0])
+            self.play(*[Transform(self.cols[s], tgt[s]) for s in ALPHA],
+                      FadeIn(self.x_ticks), FadeIn(self.x_title), FadeIn(z_lab),
+                      FadeIn(self.cite_br),
+                      run_time=beat.until("turns", offset=0.0, min_time=1.0))
+            # each share sits on a short grey leader above its own column
+            top = cy(H0)
+            row_y = top + 0.68
+            e_x = self.cols["E"].get_center()[0]
+            e_pct = MathTex(r"10.3\%", font_size=36, color=BLUE).move_to([e_x, row_y, 0])
+            z_pct = MathTex(r"0.08\%", font_size=36, color=BLUE).move_to([z_x, row_y, 0])
+            leads = VGroup(*[Line([x, top + 0.07, 0], [x, row_y - 0.3, 0], color=GRAY,
+                                  stroke_width=2) for x in (e_x, z_x)])
+            times = MathTex(r"\times 130", font_size=40, color=BLUE)
+            times.move_to([(e_pct.get_right()[0] + z_pct.get_left()[0]) / 2, row_y, 0])
+            self.play(FadeIn(e_pct, shift=0.1 * UP), FadeIn(z_pct, shift=0.1 * UP),
+                      Create(leads), run_time=beat.until("hundred", offset=-0.1, min_time=0.4))
+            self.play(GrowFromCenter(times), run_time=beat.until("thirty", end=True, min_time=0.6))
+        self.pcts = VGroup(e_pct, z_pct, leads, times, z_lab)
+
+    # ============================================================== 5a split probability
+    def split_probability(self):
+        cum5 = sum(P[s] for s in ORDER[:5])
+        cut = Line([cx(cum5), Y0, 0], [cx(cum5), cy(H0) + 0.45, 0], color=YELLOW,
+                   stroke_width=4).set_z_index(4)
+        brace = BraceBetweenPoints([cx(0), cy(H0) + 0.12, 0], [cx(cum5), cy(H0) + 0.12, 0],
+                                   direction=UP, color=BLUE)
+        half = MathTex(r"48\%", font_size=36, color=BLUE).next_to(brace, UP, buff=0.16)
+        with self.narrate("Instead, ask questions that split the probability, not the alphabet. Is it a "
+                          "space, E, T, A, or O? Those five make up nearly half of all "
+                          "text.") as beat:
+            # Shannon's band is not discussed until 'four times': dim it to 40 %
+            self.play(FadeOut(self.pcts), *self.labels_to(0.0),
+                      *[self.cols[s].animate.set_fill(opacity=0.85) for s in ALPHA],
+                      self.band_fill.animate.set_fill(opacity=0.11),
+                      self.band_edges.animate.set_stroke(opacity=0.4),
+                      self.band_lab.animate.set_opacity(0.4), run_time=0.5)
+            # the re-sort pours each column from its old slot into its new one: the bar
+            # stays one solid 0..100 % block in every frame
+            ghosts, anims = tile_columns(self.cols, ALPHA, ORDER, P, {s: H0 for s in ALPHA}, UNIT)
+            self.add(*ghosts.values())
+            self.bring_to_front(self.x_axis)
+            self.play(*anims, run_time=beat.until("Is", offset=-0.6, min_time=1.5),
+                      rate_func=linear)
+            self.remove(*ghosts.values())
+            clean = layout(ORDER, P, {x: H0 for x in ALPHA})
+            for s in ALPHA:                     # rebuild clean rectangles in the new layout
+                self.cols[s].become(clean[s])
+            self.play(*self.labels_to(1.0), run_time=0.4)
+            beat.wait_until("space", offset=-0.15)
+            self.play(outline_flash([self.cols[s] for s in ORDER[:5]], lag=0.45,
+                                    run_time=beat.until("O", offset=0.45, end=True, min_time=1.2)))
+            beat.wait_until("Those", offset=-0.15)
+            self.play(Create(cut), GrowFromCenter(brace), FadeIn(half, shift=0.1 * UP),
+                      run_time=1.0)
+        self.half = VGroup(cut, brace, half)
+
+    # ============================================================== 5b doublings
+    def doublings(self):
+        def strip(y, s, tracker):
+            frame = Rectangle(width=SW, height=0.34, stroke_color=GRAY, stroke_width=2)
+            frame.move_to([SX0 + SW / 2, y, 0])
+            piece = Rectangle(width=SW * P[s], height=0.34, stroke_width=0, fill_color=BLUE,
+                              fill_opacity=0.85).move_to([SX0 + SW * P[s] / 2, y, 0])
+
+            def upd(m):
+                w = SW * min(1.0, P[s] * 2 ** tracker.get_value())
+                m.stretch_to_fit_width(max(w, 0.002))
+                m.move_to([SX0 + max(w, 0.002) / 2, y, 0])
+            num = DecimalNumber(0, num_decimal_places=1, font_size=36, color=YELLOW)
+            num.add_updater(lambda m: m.set_value(tracker.get_value()).move_to([CNT_X, y, 0]))
+            name = glyph(s, 30).move_to([SX0 - 0.35, y, 0])
+            return frame, piece, upd, num, name
+
+        kE, kZ = ValueTracker(0), ValueTracker(0)
+        yE, yZ = STRIP_YE, STRIP_YZ
+        fE, pE, uE, nE, lE = strip(yE, "E", kE)
+        fZ, pZ, uZ, nZ, lZ = strip(yZ, "Z", kZ)
+        head = text("doublings", size=26, color=GRAY).move_to([CNT_X, STRIP_HEAD_Y, 0])
+        left_lab = text("what's still possible", size=26, color=GRAY)
+        left_lab.move_to([0, STRIP_HEAD_Y, 0]).align_to(fE, LEFT)
+        e_share = MathTex(r"10\%", font_size=30, color=BLUE)
+        # rescale: the chart steps back (smaller unit, 30 %) to free the band above it
+        old_cy = {v: cy(v) for v in (5, H0, YTOP0, LO, HI, (LO + HI) / 2)}
+        set_unit(UNIT_B)
+        tgt = layout(ORDER, P, {s: H0 for s in ALPHA})
+        for s in ALPHA:
+            if s != "E":
+                tgt[s].set_fill(opacity=0.26)
+        title_to = self.y_title.copy().next_to([X0, cy(YTOP0), 0], UP, buff=0.2).align_to(self.y_title, LEFT)
+        rescale = [*[Transform(self.cols[s], tgt[s]) for s in ALPHA],
+                   self.y_axis.animate.put_start_and_end_on([X0, Y0, 0], [X0, cy(YTOP0), 0]),
+                   self.ytick[5].animate.shift(UP * (cy(5) - old_cy[5])).set_opacity(0.3),
+                   self.ytick[0].animate.set_opacity(0.3),
+                   # the dimmed chart is not read while the strips work: its title steps out,
+                   # and everything except E (the strip's referent) drops to 30 %
+                   self.y_title.animate.move_to(title_to).set_opacity(0),
+                   *self.labels_to(0.3, keep=("E",)),
+                   self.x_ticks.animate.set_opacity(0.3), self.x_title.animate.set_opacity(0.3),
+                   self.avg_line.animate.shift(UP * (cy(H0) - old_cy[H0])).set_stroke(opacity=0.3),
+                   self.avg_num.animate.move_to([COL_A, cy(H0), 0]).set_opacity(0.3),
+                   self.band_fill.animate.stretch_to_fit_height(UNIT * (HI - LO))
+                   .move_to([X0 + W / 2, cy((LO + HI) / 2), 0]).set_fill(opacity=0.08),
+                   self.band_edges[0].animate.shift(UP * (cy(LO) - old_cy[LO])).set_stroke(opacity=0.3),
+                   self.band_edges[1].animate.shift(UP * (cy(HI) - old_cy[HI])).set_stroke(opacity=0.3),
+                   self.band_lab.animate.move_to(self.place_band_lab(self.band_lab.copy()))
+                   .set_opacity(0.3)]
+        with self.narrate("E starts near a tenth of the bar. Each ideal answer keeps half the "
+                          "probability, so E doubles its share of what's left. Three point three "
+                          "doublings, and E fills the whole bar.") as beat:
+            # the chart steps back (30 %) while the strips work above its axis
+            self.play(FadeOut(self.half), *rescale, run_time=0.9)
+            self.play(Create(fE), FadeIn(lE), FadeIn(left_lab),
+                      TransformFromCopy(self.cols["E"], pE), run_time=0.9)
+            e_share.next_to(pE, RIGHT, buff=0.15)
+            self.play(FadeIn(e_share), FadeIn(head), FadeIn(nE), run_time=0.6)
+            nE.update()
+            beat.wait_until("keeps", offset=-0.2)
+            mid = SX0 + SW / 2
+            cutl = Line([mid, yE - 0.25, 0], [mid, yE + 0.25, 0], color=YELLOW, stroke_width=4)
+            shade = Rectangle(width=SW / 2, height=0.34, stroke_width=0, fill_color=GRAY,
+                              fill_opacity=0.35).move_to([mid + SW / 4, yE, 0])
+            self.play(Create(cutl), FadeIn(shade), FadeOut(e_share),
+                      run_time=beat.until("doubles", offset=-0.3, min_time=0.8))
+            pE.add_updater(uE)
+            self.play(kE.animate.set_value(1), cutl.animate.move_to([SX1, yE, 0]),
+                      shade.animate.stretch_to_fit_width(0.01).move_to([SX1, yE, 0]),
+                      run_time=1.0, rate_func=SMOOTH)
+            self.play(FadeOut(cutl), FadeOut(shade), run_time=0.4)
+            beat.wait_until("Three", offset=-0.1)
+            self.play(kE.animate.set_value(-math.log2(P["E"])),
+                      run_time=beat.until("fills", offset=0.3, min_time=1.6), rate_func=LINEAR)
+            pE.clear_updaters()
+
+        # Z's starting share, named under its sliver (the sliver itself is ~1 px wide)
+        z_one = MathTex(r"1/1260", font_size=36, color=BLUE)
+        z_one.next_to(fZ, DOWN, buff=0.16).align_to(fZ, LEFT)
+        with self.narrate("Z starts at one in twelve hundred and sixty, and needs ten point "
+                          "three.") as beat:
+            self.play(Create(fZ), FadeIn(lZ), TransformFromCopy(self.cols["Z"], pZ),
+                      self.cols["Z"].animate.set_fill(opacity=0.85),
+                      FadeIn(nZ), run_time=beat.until("one in", offset=-0.1, min_time=0.8))
+            self.play(FadeIn(z_one, shift=0.1 * UP), run_time=0.6)
+            beat.wait_until("needs", offset=-0.2)
+            pZ.add_updater(uZ)
+            # the label leaves in the first fifth of the count (the counter is time-like)
+            self.play(kZ.animate(rate_func=linear).set_value(-math.log2(P["Z"])),
+                      FadeOut(z_one, rate_func=lambda t: smooth(min(1.0, 5 * t))),
+                      run_time=max(2.0, beat.remaining() - 0.2))
+            pZ.clear_updaters()
+        nE.clear_updaters()
+        nZ.clear_updaters()
+        self.strips = VGroup(fE, pE, lE, fZ, pZ, lZ, head, left_lab)
+        self.nE, self.nZ = nE, nZ
+
+        # formula: p * 2^k = 1  ->  2^k = 1/p  ->  k = log2(1/p), one legal step at a time
+        f1 = MathTex("p", r"\cdot", "2^{k}", "=", "1", font_size=48)
+        f1[0].set_color(BLUE)
+        f1[2].set_color(YELLOW)
+        eq_at = np.array([EQ_X, FORM_POS[1], 0])     # every version keeps its '=' here
+        f1.shift(eq_at - f1[3].get_center())
+        mid = MathTex("2^{k}", "=", r"\frac{1}{p}", font_size=48)
+        mid[0].set_color(YELLOW)
+        mid.shift(eq_at - mid[1].get_center())
+        m_rest = sorted(mid[2].submobjects, key=lambda m: -m.get_center()[1])
+        m_one, m_bar, m_p = m_rest
+        m_p.set_color(BLUE)
+        f2 = log_formula("k", "=", r"\log_2\!\frac{1}{p}")
+        f2[0].set_color(YELLOW)                # k counts questions: yellow, like its counters
+        f2.shift(eq_at - f2[1].get_center())
+        fg = frac_glyphs(f2[2])
+        full = VGroup(pE, pZ)
+        with self.narrate("In general, a character with probability p needs k questions, where "
+                          "p times two to the k equals one. [pause 1.5] So two to the k equals "
+                          "one over p, and k equals log base two of one over p.") as beat:
+            beat.wait_until("probability", offset=-0.1)
+            self.play(ReplacementTransform(self.cols["E"].copy(), f1[0]), run_time=1.0)
+            beat.wait_until("k", offset=-0.1)
+            self.play(flag(self.nE), flag(self.nZ), run_time=0.8)
+            beat.wait_until("times", offset=-0.1)
+            self.play(Write(f1[1]), run_time=0.4)
+            beat.wait_until("two to the k", offset=-0.1)
+            # 2^k IS the doublings counter
+            self.play(ReplacementTransform(self.nE.copy(), f1[2]), flag(self.nE), flag(self.nZ),
+                      run_time=0.9)
+            beat.wait_until("equals", offset=-0.1)
+            self.play(Write(f1[3:]), run_time=0.7)
+            # '= 1': the whole bar, which both strips now fill
+            self.play(outline_flash(full), flag(f1[4]), run_time=0.9)
+            # hold the complete equation (pause in the narration) before any glyph moves
+            beat.wait_until("So two", offset=0.15)
+            # step 1: divide by p -- p dips under the '=' and lands under the 1
+            self.play(ReplacementTransform(f1[2], mid[0]), ReplacementTransform(f1[3], mid[1]),
+                      ReplacementTransform(f1[4], m_one),
+                      ReplacementTransform(f1[0], m_p, path_arc=0.6 * PI),
+                      FadeOut(f1[1]), GrowFromCenter(m_bar),
+                      run_time=beat.until("over p", offset=0.0, end=True, min_time=1.0))
+            beat.wait_until("and k", offset=0.0)
+            # step 2: take log base 2 -- first the 2 arcs over the '=' to become the base,
+            # then k drops out of the exponent into its place, then 'log' is written
+            two_move = AnimationGroup(
+                ReplacementTransform(mid[0][0], fg["two"], path_arc=-0.8 * PI),
+                ReplacementTransform(mid[1], f2[1]),
+                ReplacementTransform(m_one, fg["one"]), ReplacementTransform(m_bar, fg["bar"]),
+                ReplacementTransform(m_p, fg["p"]))
+            self.play(LaggedStart(two_move,
+                                  ReplacementTransform(mid[0][1], f2[0], path_arc=-0.4 * PI),
+                                  Write(fg["log"]), lag_ratio=0.4),
+                      run_time=beat.until("two", occurrence=3, end=True, offset=0.15, min_time=1.3))
+            self.remove(f1, mid)
+            self.add(f2)                       # one clean formula object from here on
+            # k is the counter: 3.3 for E, 10.3 for Z
+            self.play(flag(f2[0]), flag(self.nE), flag(self.nZ),
+                      run_time=beat.until("over p", occurrence=2, end=True, min_time=0.8))
+        self.f2 = f2
+
+    # ============================================================== 5c skyline
+    def skyline(self):
+        # where the formula row will sit (log part fixed while k becomes 'average')
+        f3 = log_formula(r"\text{average}", "=", r"\sum", "p", r"\log_2\!\frac{1}{p}", size=FS_TOP)
+        f3.move_to([-0.6, TOP_Y, 0])
+        f2_top = self.f2.copy().scale(FS_TOP / 48)
+        f2_top.shift(f3[4].get_center() - f2_top[2].get_center())
+
+        y_ext = Line([X0, cy(YTOP0), 0], [X0, cy(YMAX), 0], color=GRAY, stroke_width=2.5)
+        t10 = self.make_ytick(10)
+        title_top = self.y_title.copy().next_to(y_ext.get_top(), UP, buff=0.2).align_to(self.y_title, LEFT)
+        self.ytick[10] = t10
+        self.y_ticks = VGroup(*self.ytick.values())
+
+        ghost_lab = MathTex("4.75", font_size=30, color=GRAY).move_to([X0 + 0.5, cy(H0) + 0.3, 0])
+        self.ghost, self.ghost_lab = self.avg_line, ghost_lab
+        e_cost = -math.log2(P["E"])
+
+        # inset: the four rarest letters, widths x30, heights true.  It stands clear of the
+        # main axis in its own frame, on its own baseline, with dashed leaders from the four
+        # hairlines it magnifies.
+        inset, xl = VGroup(), INSET_X0
+        inset_cols = {}
+        for s in TAIL:
+            w = W * P[s] * ZOOM
+            inset_cols[s] = column(xl, w, UNIT * cost(P[s]))
+            inset.add(inset_cols[s])
+            xl += w + INSET_GAP
+        xl -= INSET_GAP
+        inset_base = Line([INSET_X0 - 0.04, Y0, 0], [xl + 0.04, Y0, 0], color=GRAY, stroke_width=2.5)
+        inset_labs = VGroup(*[glyph(s, 18).move_to([inset_cols[s].get_center()[0], LAB_Y, 0])
+                              for s in TAIL])
+        zoom_lab = MathTex(rf"\times {ZOOM}\ \text{{wide}}", font_size=26, color=GRAY)
+        z_cost = MathTex(f"{cost(P['Z']):.1f}", font_size=30, color=YELLOW)
+        z_cost.next_to(inset_cols["Z"], UP, buff=0.16).align_to([6.38, 0, 0], RIGHT)
+        f_top, f_bot, f_right = z_cost.get_top()[1] + 0.16, LAB_Y - 0.19, xl + 0.1
+        frame = Polygon([INSET_FRAME_X0, f_bot, 0], [f_right, f_bot, 0], [f_right, f_top, 0],
+                        [INSET_FRAME_X0, f_top, 0], color=GRAY, stroke_width=1.5)
+        zoom_lab.move_to([(INSET_FRAME_X0 + f_right) / 2, XTITLE_Y, 0])
+        tail_w = W * sum(P[s] for s in TAIL)
+        src = Polygon([X1 - tail_w - 0.04, Y0 - 0.04, 0], [X1 + 0.04, Y0 - 0.04, 0],
+                      [X1 + 0.04, cy(10.4) + 0.08, 0], [X1 - tail_w - 0.04, cy(10.4) + 0.08, 0],
+                      color=GRAY, stroke_width=1.5)
+        leaders = VGroup(DashedLine([X1 + 0.04, cy(10.4) + 0.08, 0], [INSET_FRAME_X0, f_top, 0],
+                                    dash_length=0.07),
+                         DashedLine([X1 + 0.04, Y0 - 0.04, 0], [INSET_FRAME_X0, f_bot, 0],
+                                    dash_length=0.07)).set_stroke(GRAY, 1.5)
+        self.inset = VGroup(inset, inset_base, inset_labs, zoom_lab, z_cost, frame, src, leaders)
+
+        with self.narrate("Now give each character its own cost as a height. Common characters "
+                          "sit wide and low, rare ones narrow and tall.") as beat:
+            self.play(FadeOut(self.strips), FadeOut(self.nZ),
+                      self.nE.animate.move_to([self.cols["E"].get_center()[0],
+                                               cy(e_cost) + 0.25, 0]).scale(0.85),
+                      *[self.cols[s].animate.set_fill(opacity=0.85) for s in ALPHA],
+                      Transform(self.f2, f2_top), Create(y_ext), FadeIn(t10),
+                      self.y_title.animate.move_to(title_top),
+                      # the chart comes back to full strength
+                      *self.labels_to(1.0), self.x_ticks.animate.set_opacity(1),
+                      self.x_title.animate.set_opacity(1),
+                      self.ytick[0].animate.set_opacity(1), self.ytick[5].animate.set_opacity(1),
+                      self.band_fill.animate.set_fill(opacity=0.11),
+                      self.band_edges.animate.set_stroke(opacity=0.4),
+                      self.band_lab.animate.set_opacity(0.4),
+                      self.avg_line.animate.set_color(GRAY).set_stroke(width=3, opacity=1),
+                      FadeOut(self.avg_num), FadeIn(ghost_lab), run_time=1.0)
+            self.y_axis.put_start_and_end_on([X0, Y0, 0], [X0, cy(YMAX), 0])
+            self.remove(y_ext)
+            self.avg_line.set_z_index(2)
+            self.morph(ORDER, P, {s: cost(P[s]) for s in ALPHA},
+                       run_time=beat.until("Common", offset=-0.2, min_time=1.5),
+                       extra=[self.y_title.animate.set_opacity(1)])
+            self.play(FadeOut(self.nE), run_time=0.4)
+            beat.wait_until("wide", offset=-0.2)
+            self.play(outline_flash([self.cols[" "], self.cols["E"]]), run_time=0.9)
+            beat.wait_until("rare", offset=-0.15)
+            self.play(Create(src), Create(leaders), Create(frame),
+                      *[TransformFromCopy(self.cols[s], inset_cols[s]) for s in TAIL],
+                      FadeIn(inset_base), FadeIn(inset_labs), FadeIn(zoom_lab),
+                      FadeIn(z_cost, shift=0.1 * UP), run_time=1.0)
+            self.play(outline_flash(list(inset)), run_time=0.8)
+
+        sweep = Line([X0, Y0 + 0.02, 0], [X1, Y0 + 0.02, 0], color=BLUE,
+                     stroke_width=9).set_z_index(5)
+        with self.narrate("The widths add up to one, so the total area is the average number of "
+                          "questions per character. Then pour the skyline flat, and its height is that "
+                          "average.") as beat:
+            beat.wait_until("widths", offset=-0.15)
+            self.play(Create(sweep), run_time=beat.until("to one", offset=0.0, end=True, min_time=0.8))
+            self.play(flag(self.x_ticks[-1][1], color=BLUE), run_time=0.6)
+            beat.wait_until("area", offset=-0.2)
+            # each term arrives from what it measures: p from the widths, the cost from k
+            self.play(*[c.animate(rate_func=there_and_back).set_fill(YELLOW, opacity=0.85)
+                        for c in self.colg],
+                      ReplacementTransform(self.f2[0], f3[0]), ReplacementTransform(self.f2[1], f3[1]),
+                      ReplacementTransform(self.f2[2], f3[4]), Write(f3[2]),
+                      ReplacementTransform(sweep, f3[3]), FadeOut(self.inset), run_time=1.4)
+            for c in self.colg:
+                c.set_fill(BLUE, opacity=0.85)
+            self.remove(self.f2)
+            self.add(f3)
+            beat.wait_until("Pour", offset=-0.35)
+            self.hide_labels()
+            self.pour(P, {s: cost(P[s]) for s in ALPHA},
+                      run_time=beat.until("height", offset=-0.15, min_time=1.6))
+            line, num = self.level_marks(H1)
+            self.play(Create(line), FadeIn(num, shift=0.1 * LEFT), run_time=0.8)
+        self.f3, self.level_line, self.level_num = f3, line, num
+
+    # ============================================================== 5d entropy
+    def entropy(self):
+        f4 = log_formula("H", "=", r"\sum", "p", r"\log_2\!\frac{1}{p}", size=FS_TOP)
+        f4[0].set_color(YELLOW)
+        eq_val = DecimalNumber(H1, num_decimal_places=2, font_size=FS_TOP, color=YELLOW)
+        eq_tail = VGroup(MathTex("=", font_size=FS_TOP), eq_val, MathTex(r"\text{bits}", font_size=FS_TOP))
+        eq_tail.arrange(RIGHT, buff=0.18)
+        VGroup(f4, eq_tail).arrange(RIGHT, buff=0.22).move_to([-0.35, TOP_Y, 0])
+        new_title = text("bits", size=LABEL - 2, color=GRAY).move_to(self.y_title, aligned_edge=LEFT)
+        with self.narrate("Shannon called that average the entropy, counted in bits, one bit "
+                          "per yes-or-no answer. For English letters, it's four point "
+                          "one one.") as beat:
+            beat.wait_until("entropy", offset=-0.25)
+            self.play(*[ReplacementTransform(self.f3[i], f4[i]) for i in range(5)], run_time=1.0)
+            self.remove(self.f3)
+            self.add(f4)
+            beat.wait_until("bits", offset=-0.15)
+            self.play(ReplacementTransform(self.y_title, new_title), run_time=0.8)
+            self.y_title = new_title
+            beat.wait_until("answer", offset=-0.3)
+            self.play(Indicate(self.level_line, color=INK, scale_factor=1.0), flag(self.level_num),
+                      run_time=0.9)
+            beat.wait_until("four", offset=-0.15)
+            self.play(TransformFromCopy(self.level_num, eq_val), FadeIn(eq_tail[0]),
+                      FadeIn(eq_tail[2]), run_time=0.9)
+        self.f4, self.eq_tail, self.eq_val = f4, eq_tail, eq_val
+        self.eq_eq, self.eq_bits = eq_tail[0], eq_tail[2]
+        self.eq_y, self.bits_y = eq_val.get_y(), eq_tail[2].get_y()
+
+        with self.narrate("That beats four point seven five, but it's still four times "
+                          "Shannon's estimate: it prices every character as if nothing "
+                          "came before it.") as beat:
+            beat.wait_until("beats", offset=-0.1)
+            self.play(Indicate(VGroup(self.ghost, self.ghost_lab), color=INK, scale_factor=1.0),
+                      run_time=0.9)
+            self.play(self.ghost.animate.set_stroke(opacity=0.3),
+                      self.ghost_lab.animate.set_opacity(0.3), run_time=0.6)
+            beat.wait_until("four times", offset=-0.15)
+            self.play(self.band_fill.animate.set_fill(opacity=0.28),
+                      self.band_edges.animate.set_stroke(opacity=1.0),
+                      self.band_lab.animate.set_opacity(1.0), run_time=0.5)
+            self.play(Indicate(self.band_edges, color=GREEN, scale_factor=1.0),
+                      flag(self.band_lab, color=GREEN), flag(self.level_num), run_time=0.9)
+            beat.wait_until("prices", offset=-0.1)
+            self.play(outline_flash([self.cols[x] for x in ORDER[:14]], lag=0.12),
+                      run_time=beat.until("nothing", offset=-0.25, min_time=1.0))
+            self.play(pflash(VGroup(self.lead, self.hidden), scale=1.0), run_time=0.9)
+
+    # ============================================================== 6 context
+    def eq_unknown(self):
+        """While a new context is being priced, the equation's value is '?', never a stale
+        number.  Returns the animations."""
+        q = MathTex("?", font_size=FS_TOP, color=YELLOW)
+        q.next_to(self.eq_eq, RIGHT, buff=0.18).set_y(self.eq_y)
+        anims = [FadeTransform(self.eq_val, q),          # a cross-fade, not a glyph morph
+                 self.eq_bits.animate.next_to(q, RIGHT, buff=0.18).set_y(self.bits_y)]
+        self.eq_val = q
+        return anims
+
+    def eq_known(self, value: float, source: VMobject):
+        """The newborn level value is copied into the equation's slot."""
+        v = DecimalNumber(value, num_decimal_places=2, font_size=FS_TOP, color=YELLOW)
+        v.next_to(self.eq_eq, RIGHT, buff=0.18).set_y(self.eq_y)
+        anims = [TransformFromCopy(source, v), FadeOut(self.eq_val, scale=0.6),
+                 self.eq_bits.animate.next_to(v, RIGHT, buff=0.18).set_y(self.bits_y)]
+        self.eq_val = v
+        return anims
+
+    def swap_title(self, new: Text, ctx_glyphs) -> tuple[list, callable]:
+        """'share' stays put; only the tail changes, and the purple context letters fly in
+        from the context boxes.  They travel over the row and down the right gutter, so
+        they never cross a column, a tick label or the formula."""
+        old = self.x_title
+        anims, extra, flyers = [], [], []
+        if old.text.startswith("share of"):                         # 'of text' -> 'after X'
+            after = new[5:10]
+            extra.append(after)
+            # the old tail is gone before the new one arrives: never two words in one place
+            anims += [FadeOut(old[5:], shift=0.12 * DOWN, rate_func=lambda t: smooth(min(1, 3 * t))),
+                      FadeIn(after, shift=0.12 * DOWN,
+                             rate_func=lambda t: smooth(min(1, max(0, 3 * t - 1))))]
+        else:                                                       # 'after Q' -> 'after TH'
+            anims += [FadeOut(old[10:], shift=0.12 * DOWN, rate_func=lambda t: smooth(min(1, 3 * t)))]
+        n = len(ctx_glyphs)
+        for i, g in enumerate(ctx_glyphs):
+            c, tgt = g.copy(), new[10 + i]
+            a, b = c.get_center(), tgt.get_center()
+            lane = 6.15 - 0.36 * (n - 1 - i)                       # T inside, H outside
+            path = route([(a[0], a[1]), (a[0] + 0.35, 3.66), (4.7, 3.68), (lane - 0.1, 3.15),
+                          (lane, 1.6), (lane, -2.3), (lane - 0.45, b[1]), (b[0], b[1])])
+            self.add(c)
+            flyers.append(c)
+            anims.append(fly(c, tgt, path))
+
+        def done():
+            # FadeOut of a slice splits `old` into loose glyphs in the scene: remove them all
+            self.remove(old, *old.submobjects, *extra, *new.submobjects, *flyers)
+            self.add(new)
+            self.x_title = new
+        return anims, done
+
+    def tracking_brace(self, sym: str, y: float, tex: str):
+        """A blue % brace that grows WITH a widening column (it spans the column in every
+        frame).  Returns (group, animation): put the animation after the column's own."""
+        br, lab = VMobject(), MathTex(tex, font_size=36, color=BLUE)
+        grp = VGroup(br, lab)
+
+        def upd(g, _a):
+            c = self.cols[sym]
+            l, r = c.get_left()[0], c.get_right()[0]
+            o = float(np.clip((r - l - 0.6) / 1.2, 0, 1))
+            if r - l > 0.5:
+                br.become(BraceBetweenPoints([l + 0.08, y, 0], [r - 0.08, y, 0], direction=UP,
+                                             color=BLUE))
+                lab.next_to(br, UP, buff=0.16)
+            br.set_opacity(o)
+            lab.set_opacity(o)
+        return grp, UpdateFromAlphaFunc(grp, upd)
+
+    def run_box(self):
+        """The hidden slot widens into a run of four: one question about the whole run."""
+        sq = self.qbox
+        back = sq.copy()
+        wide = Rectangle(width=sq.width + 3 * PITCH, height=sq.height, stroke_color=YELLOW,
+                         stroke_width=4).move_to(sq, aligned_edge=LEFT)
+        qs = VGroup(*[Text("?", font=SERIF, font_size=36, color=YELLOW)
+                      .move_to([sq.get_x() + PITCH * (k + 1), sq.get_y(), 0]) for k in range(3)])
+        return back, wide, qs
+
+    def context(self):
+        qb = ctx_box("Q").move_to(self.hidden[-1])
+        prior = {s: cost(P[s]) for s in ALPHA}          # costs before the context re-prices
+        # the no-context answer stays as a 30 % grey reference at its level
+        ref_line, ref_num = self.level_line, self.level_num
+        ref = (ref_line, ref_num, H1)
+        with self.narrate("What comes after a Q? [pause 1.3]") as beat:
+            self.play(FadeOut(self.hidden[-1]), FadeIn(qb, scale=1.2),
+                      FadeOut(self.ghost), FadeOut(self.ghost_lab),
+                      ref_line.animate.set_stroke(color=GRAY, opacity=0.3),
+                      ref_num.animate.set_color(GRAY).set_opacity(0.3),
+                      *self.eq_unknown(),
+                      run_time=beat.until("Q", offset=0.1, min_time=0.8))
+            self.unpour(P, prior, run_time=1.4, extra=[pflash(qb)])
+            self.show_labels()
+
+        with self.narrate("It's U, ninety-eight times out of a hundred. U swallows "
+                          "the bar, its cost drops to almost nothing, and the average falls to "
+                          "point one six bits. [pause 0.45]") as beat:
+            beat.wait_until("U", offset=-0.3)
+            t_anims, t_done = self.swap_title(self.x_title_for("Q"), [qb[1]])
+            u98, u_grow = self.tracking_brace("U", cy(prior["U"]) + 0.16, r"98\%")
+            self.add(u98)
+            # U widens to 98 % at its old price; the brace widens with it
+            self.morph(ORDER, P_Q, prior,
+                       run_time=beat.until("hundred", end=True, min_time=1.8),
+                       extra=[*t_anims, u_grow])
+            t_done()
+            beat.wait_until("swallows", offset=-0.15)
+            self.play(outline_flash([self.cols["U"]]), run_time=0.9)
+            beat.wait_until("cost", offset=-0.2)
+            self.morph(ORDER, P_Q, {s: cost(P_Q[s]) for s in ALPHA},
+                       run_time=beat.until("nothing", end=True, offset=-0.3, min_time=1.1))
+            self.play(FadeOut(u98), *self.labels_to(0.0), run_time=0.3)
+            # pour; everything left is a level under 4.2, so the axis zooms to 0..5 with it
+            zoom = self.zoom(UNIT_C, extra_lines=[ref])
+            self.pour(P_Q, {s: cost(P_Q[s]) for s in ALPHA},
+                      run_time=beat.until("falls", offset=-0.1, min_time=1.0), extra=zoom)
+            self.zoom_done()
+            line, num = self.level_marks(H_Q)
+            self.play(Create(line), FadeIn(num, shift=0.1 * LEFT), run_time=0.5)
+            # the value lands in the equation as it is spoken
+            self.play(*self.eq_known(H_Q, num), run_time=beat.until("six", end=True, min_time=0.6))
+        self.level_line, self.level_num = line, num
+
+        th = VGroup(ctx_box("T").move_to(self.hidden[-2]), ctx_box("H").move_to(self.hidden[-1]))
+        with self.narrate("After TH, E takes two thirds of the bar, and its cost shrinks to "
+                          "about half a question.") as beat:
+            self.play(FadeOut(qb), FadeOut(self.hidden[-2]), FadeIn(th, scale=1.2),
+                      FadeOut(self.level_line), FadeOut(self.level_num),
+                      *self.eq_unknown(), run_time=0.55)
+            t_anims, t_done = self.swap_title(self.x_title_for("TH"), [th[0][1], th[1][1]])
+            # the stack rises into the new skyline; tall costs are back, so the axis zooms out
+            zoom = self.zoom(UNIT_B, extra_lines=[ref])
+            self.unpour(P_TH, prior, run_time=beat.until("thirds", offset=-0.05, min_time=1.2),
+                        extra=[*t_anims, *zoom])
+            self.zoom_done()
+            t_done()
+            e68 = self.share_brace("E", P_TH, prior["E"], r"68\%")
+            self.play(GrowFromCenter(e68[0]), FadeIn(e68[1], shift=0.1 * UP),
+                      *self.labels_to(1.0), run_time=0.55)
+            beat.wait_until("its cost", offset=-0.2)
+            self.morph(ORDER, P_TH, {s: cost(P_TH[s]) for s in ALPHA},
+                       run_time=beat.until("half", offset=-0.15, min_time=1.0))
+            # E's cost: about half a question (its height, outlined in the questions colour)
+            self.play(self.cols["E"].animate.set_stroke(YELLOW, width=4),
+                      self.band_fill.animate.set_fill(opacity=0.1),
+                      self.band_edges.animate.set_stroke(opacity=0.35), run_time=0.5)
+        self.th = th
+
+        back, wide, qs = self.run_box()
+        with self.narrate("Half a question sounds impossible, but a compressor asks about long "
+                          "runs of letters, and the fractions add up. Here they average one "
+                          "point seven.") as beat:
+            self.play(Indicate(self.cols["E"], color=YELLOW, scale_factor=1.0), run_time=0.9)
+            beat.wait_until("long", offset=-0.2)
+            self.play(Transform(self.qbox, wide), LaggedStart(*[FadeIn(q, shift=0.1 * RIGHT)
+                                                                for q in qs], lag_ratio=0.3),
+                      run_time=beat.until("letters", end=True, min_time=0.9))
+            beat.wait_until("and the", offset=-0.1)
+            self.play(FadeOut(e68), *self.labels_to(0.0),
+                      self.cols["E"].animate.set_stroke(BG, width=1.6),
+                      self.band_fill.animate.set_fill(opacity=0.28),
+                      self.band_edges.animate.set_stroke(opacity=1.0), run_time=0.3)
+            zoom = self.zoom(UNIT_C, extra_lines=[ref])
+            self.pour(P_TH, {s: cost(P_TH[s]) for s in ALPHA},
+                      run_time=beat.until("Here", offset=-0.1, min_time=1.2), extra=zoom)
+            self.zoom_done()
+            beat.wait_until("average", offset=-0.25)
+            line, num = self.level_marks(H_TH)
+            self.play(Create(line), FadeIn(num, shift=0.1 * LEFT), run_time=0.5)
+            self.play(*self.eq_known(H_TH, num),
+                      run_time=beat.until("seven", end=True, min_time=0.6))
+        self.level_line, self.level_num = line, num
+
+        # honest limits: Q and TH are the best cases; the average over every two-letter
+        # context (Brown, recomputed) is 2.81 -- between them and the no-context 4.11
+        c2_line = DashedLine([X0, cy(H_C2), 0], [X1, cy(H_C2), 0], color=GRAY, stroke_width=3.5,
+                             dash_length=0.14).set_z_index(3)
+        c2_num = MathTex(f"{H_C2:.2f}", font_size=36, color=GRAY).move_to([COL_A, cy(H_C2), 0])
+        c2_lab = text("all two-letter contexts", size=26, color=GRAY)
+        c2_lab.next_to(c2_line, UP, buff=0.2).align_to([X0 + 0.35, 0, 0], LEFT)
+        with self.narrate("Q and TH are the easy cases. Averaged over every two-letter context, "
+                          "it's still two point eight.", gap=0.45) as beat:
+            beat.wait_until("easy", offset=-0.3)
+            self.play(pflash(th, scale=1.0), Transform(self.qbox, back), FadeOut(qs),
+                      run_time=0.9)
+            beat.wait_until("Averaged", offset=-0.1)
+            self.play(Create(c2_line), FadeIn(c2_lab, shift=0.1 * UP),
+                      run_time=beat.until("context", end=True, min_time=1.0))
+            beat.wait_until("two point", offset=-0.2)
+            self.play(FadeIn(c2_num, shift=0.1 * LEFT), run_time=0.6)
+            self.play(Indicate(c2_line, color=INK, scale_factor=1.0), flag(c2_num, color=GRAY),
+                      run_time=0.9)
+
+    def x_title_for(self, ctx: str | None) -> Text:
+        """x-axis title: share of all text, or share of what follows the context.  'share'
+        sits at the same place in every version."""
+        s = "share of text" if ctx is None else f"share after {ctx}"
+        t = text(s, size=LABEL - 2, color=GRAY, t2c={ctx: PURPLE} if ctx else None)
+        ref = text("share after TH", size=LABEL - 2, color=GRAY)
+        ref.move_to([0, XTITLE_Y, 0]).align_to([X1, 0, 0], RIGHT)
+        t.shift(ref[:5].get_center() - t[:5].get_center())
+        t.text = s
+        return t
+
+    def share_brace(self, sym: str, probs: dict, prior_h: float, tex: str) -> VGroup:
+        """Blue brace over a widened column, parked ABOVE its tallest state, so no level
+        line ever crosses the label (levels are always below the prior height here)."""
+        xl = X0 + W * sum(probs[s] for s in ORDER[:ORDER.index(sym)])
+        xr = xl + W * probs[sym]
+        y = max(cy(prior_h), cy(H1)) + 0.16     # above the grey 4.11 reference line too
+        br = BraceBetweenPoints([xl + 0.08, y, 0], [xr - 0.08, y, 0], direction=UP, color=BLUE)
+        lab = MathTex(tex, font_size=36, color=BLUE).next_to(br, UP, buff=0.16)
+        return VGroup(br, lab)
+
+    # ============================================================== 7 payoff
+    def payoff(self):
+        self.lab_driver.clear_updaters()
+        self.remove(self.lab_driver)
+        mobs = self.visible()
+
+        # Shannon's record, one fixed cell per symbol (pitch 0.32; two-digit counts get 0.44,
+        # so '11 5' can never read as '115').
+        # It is revealed centred in the frame and lifted (LIFT) when the skyline needs room.
+        pitch, LIFT = 0.32, 1.2
+        line_y = [2.95 - LIFT, 1.95 - LIFT, 0.95 - LIFT]
+        widths = [[0.44 if g >= 10 else pitch for g in lg] for lg in REC_G]
+        x_left = -sum(widths[0]) / 2
+        cells, nums, gvals, rows = VGroup(), VGroup(), [], []
+        for li, (line_s, line_g) in enumerate(zip(REC_TEXT, REC_G)):
+            y, x = line_y[li], x_left
+            for ch, g, w in zip(line_s, line_g, widths[li]):
+                xc = x + w / 2
+                x += w
+                c = glyph(ch, 24, INK) if ch != " " else space_glyph(0.12, 0.05, GRAY, 2)
+                c.move_to([xc, y - (0.06 if ch == " " else 0), 0])
+                n = Text(str(g), font=SERIF, font_size=22, color=GRAY if g == 1 else YELLOW)
+                n.move_to([xc, y - 0.4, 0])
+                cells.add(c)
+                nums.add(n)
+                gvals.append(g)
+                rows.append(li)
+        self.cells, self.nums = cells, nums
+        n_cells = len(cells)
+        ones = [g == 1 for g in gvals]
+        prog = ValueTracker(0)
+        base = ValueTracker(0)              # opacity of the not-yet-read record
+        cursor = Rectangle(width=0.34, height=0.8, stroke_color=YELLOW, stroke_width=3)
+
+        def show(_):
+            k, b = prog.get_value(), base.get_value()
+            for i in range(n_cells):
+                o = 1.0 if i < k else b
+                set_glyph_opacity(cells[i], o)
+                nums[i].set_opacity(o)
+        show(None)
+        rec_driver = Mobject()
+        rec_driver.add_updater(show)
+
+        def cur_upd(m):
+            i = int(min(n_cells - 1, max(0, math.floor(prog.get_value()))))
+            m.move_to([cells[i].get_x(), line_y[rows[i]] - 0.2, 0])
+        cursor.add_updater(cur_upd)
+        self.exclude(cells, "Shannon's record set as fixed-pitch text (0.32 per symbol); the "
+                     "open-box space markers are part of the line")
+        self.allow_overlap(cursor, reason="reading cursor frames one symbol of the fixed-pitch "
+                           "record, so its edges sit close to the neighbouring symbols by design")
+        cur_upd(cursor)
+
+        tally_lab = MathTex(r"\text{first guess: }", font_size=MATH)
+        tally_n = DecimalNumber(0, num_decimal_places=0, font_size=MATH, color=GREEN)
+        tally_of = MathTex(r"/\ 102", font_size=MATH)
+        tally_n.set_value(79)
+        tally = VGroup(tally_lab, tally_n, tally_of).arrange(RIGHT, buff=0.15)
+        tally.move_to([3.4, -0.05 - LIFT, 0])
+        right_edge = tally_n.get_right()
+        tally_n.add_updater(lambda m: m.set_value(sum(ones[:int(prog.get_value())]))
+                            .move_to(right_edge, aligned_edge=RIGHT))
+        tally_n.update()
+        cite = citation("Shannon, 1951 · Bell System Technical Journal")
+
+        with self.narrate("Shannon measured this with a person, who read a passage one character "
+                          "at a time, guessing each next one until right. Seventy-nine of "
+                          "a hundred and two came on the first guess.") as beat:
+            # the whole passage fades in faint while the chart goes: the frame is never empty
+            self.add(rec_driver, cells, nums)
+            self.bring_to_back(rec_driver)
+            self.play(*[FadeOut(m) for m in mobs], base.animate.set_value(0.2), run_time=0.9)
+            self.play(FadeIn(cursor), FadeIn(tally), FadeIn(cite, shift=0.1 * UP), run_time=0.6)
+            beat.wait_until("read", offset=-0.1)
+            self.play(prog.animate.set_value(n_cells),
+                      run_time=beat.until("seventy-nine", offset=-0.2, min_time=5.0),
+                      rate_func=LINEAR)
+            rec_driver.clear_updaters()
+            self.remove(rec_driver)
+            cursor.clear_updaters()
+            tally_n.clear_updaters()
+            tally_n.set_value(79).move_to(right_edge, aligned_edge=RIGHT)
+            self.play(FadeOut(cursor), flag(tally_n, color=GREEN), run_time=0.9)
+        self.tally, self.cite = tally, cite
+
+        # ---- the guess numbers as a new alphabet: the same skyline, then the same pour
+        X2, W2, Y2, U2 = -5.0, 7.6, -1.9, 0.22
+        keys = sorted(GUESS)
+        mcols, xl = {}, X2
+        for k in keys:
+            w = W2 * GUESS[k] / N_REC
+            mcols[k] = column(xl, w, U2 * math.log2(N_REC / GUESS[k]), base=Y2)
+            xl += w
+        mx_axis = Line([X2, Y2, 0], [X2 + W2 + 0.05, Y2, 0], color=GRAY, stroke_width=2.5).set_z_index(1)
+        my_axis = Line([X2, Y2, 0], [X2, Y2 + U2 * 7.4, 0], color=GRAY, stroke_width=2.5)
+        my_ticks = VGroup()
+        for v in (0, 5):
+            tk = Line([X2 - 0.06, Y2 + U2 * v, 0], [X2, Y2 + U2 * v, 0], color=GRAY, stroke_width=2.5)
+            lb = MathTex(str(v), font_size=26, color=GRAY).next_to(tk, LEFT, buff=0.1)
+            my_ticks.add(VGroup(tk, lb))
+        mx_ticks = VGroup()
+        for v, lab in ((0, r"0\%"), (1, r"100\%")):
+            tk = Line([X2 + W2 * v, Y2, 0], [X2 + W2 * v, Y2 - 0.07, 0], color=GRAY, stroke_width=2.5)
+            lb = MathTex(lab, font_size=26, color=GRAY).move_to([X2 + W2 * v, Y2 - 0.62, 0])
+            mx_ticks.add(VGroup(tk, lb))
+        my_title = text("bits", size=24, color=GRAY).next_to(my_axis.get_top(), UP, buff=0.15)
+        my_title.align_to(my_ticks, LEFT)
+        mx_title = text("share of guesses", size=24, color=GRAY)
+        mx_title.move_to([-0.45, Y2 - 0.62, 0])          # between the '1st' and '2nd' labels
+        tail_l, tail_r = mcols[3].get_left()[0], mcols[keys[-1]].get_right()[0]
+        mlabs = VGroup(text("1st", size=22).move_to([mcols[1].get_x(), Y2 - 0.27, 0]),
+                       text("2nd", size=22).move_to([mcols[2].get_x(), Y2 - 0.27, 0]),
+                       text("3rd+", size=22).move_to([(tail_l + tail_r) / 2, Y2 - 0.27, 0]))
+        mframe = VGroup(mx_axis, my_axis, my_ticks, mx_ticks, my_title, mx_title)
+        mstack, yb = {}, Y2
+        for k in keys:
+            h = U2 * GUESS[k] / N_REC * math.log2(N_REC / GUESS[k])
+            mstack[k] = slab(X2, W2, yb, h)
+            yb += h
+        lvl_y = Y2 + U2 * H_GUESS
+        mline = DashedLine([X2, lvl_y, 0], [X2 + W2, lvl_y, 0], color=YELLOW, stroke_width=3.5,
+                           dash_length=0.12).set_z_index(3)
+        mnum = MathTex(f"{H_GUESS:.2f}", font_size=40, color=YELLOW).move_to([X2 + W2 + 0.75, lvl_y, 0])
+        down = Arrow([0, 0.35, 0], [0, -0.35, 0], buff=0, color=YELLOW, stroke_width=4,
+                     max_tip_length_to_length_ratio=0.35).next_to(mnum, RIGHT, buff=0.2)
+        by_key = {k: VGroup(*[nums[i] for i in range(n_cells) if gvals[i] == k]) for k in keys}
+        with self.narrate("A twin who guesses the same way could rebuild the passage from these "
+                          "counts alone. Treat each guess count as a symbol, and the same skyline "
+                          "pours flat at about one point four bits. A better "
+                          "guesser could only lower it.") as beat:
+            # Shannon's identical twin: hide the letters, keep only the counts...
+            beat.wait_until("twin", offset=-0.2)
+            self.play(*glyph_fade(cells, 0.12), FadeOut(tally, shift=UP * 0.3), run_time=0.8)
+            # ...and the twin, guessing the same way, writes them back from the counts
+            beat.wait_until("rebuild", offset=-0.1)
+            self.play(LaggedStart(*glyph_fade(cells, 1.0), lag_ratio=0.02),
+                      run_time=beat.until("counts", offset=-0.1, min_time=1.2))
+            # the counts carry everything: the letters step back, the record steps up
+            self.play(*glyph_fade(cells, 0.3), run_time=0.6)
+            beat.wait_until("Treat", offset=-0.2)
+            self.play(*[c.animate.shift(UP * LIFT) for c in cells], nums.animate.shift(UP * LIFT),
+                      run_time=0.8)
+            self.play(Create(mx_axis), Create(my_axis), FadeIn(my_ticks), FadeIn(mx_ticks),
+                      FadeIn(my_title), FadeIn(mx_title), run_time=0.6)
+            self.play(LaggedStart(*[ReplacementTransform(by_key[k].copy(), mcols[k]) for k in keys],
+                                  lag_ratio=0.12),
+                      FadeIn(mlabs), run_time=beat.until("skyline", offset=-0.1, min_time=1.6))
+            self.play(nums.animate.set_opacity(0.3), run_time=0.4)
+            beat.wait_until("pours", offset=-0.1)
+            self.play(LaggedStart(*[geo_morph(mcols[k], mstack[k]) for k in keys], lag_ratio=0.08),
+                      FadeOut(mlabs), run_time=beat.until("one point", offset=-0.15, min_time=1.4))
+            self.play(Create(mline), FadeIn(mnum, shift=0.1 * LEFT), run_time=0.8)
+            beat.wait_until("lower", offset=-0.2)
+            self.play(GrowArrow(down), run_time=0.6)
+        self.mini = VGroup(*mcols.values(), mframe, mline, down)
+
+        # ---- the bits-per-character line: our attempts, this passage, Shannon, a 2023 model
+        nl_y, u = -1.5, 2.2
+
+        def nx(v):
+            return -5.5 + u * v
+        nline = Line([nx(0), nl_y, 0], [nx(5), nl_y, 0], color=GRAY, stroke_width=2.5)
+        nt = VGroup()
+        for v in range(6):
+            tk = Line([nx(v), nl_y - 0.07, 0], [nx(v), nl_y + 0.07, 0], color=GRAY, stroke_width=2.5)
+            lb = MathTex(str(v), font_size=MATH_SMALL, color=GRAY).move_to([nx(v), nl_y - 0.42, 0])
+            nt.add(VGroup(tk, lb))
+        ntitle = text("bits per character", size=24, color=GRAY)
+        ntitle.move_to([0, nl_y - 0.88, 0]).align_to([nx(5), 0, 0], RIGHT)
+        nband = Rectangle(width=u * (HI - LO), height=0.3, stroke_color=GREEN, stroke_width=2,
+                          fill_color=GREEN, fill_opacity=0.35).move_to([nx((LO + HI) / 2), nl_y, 0])
+        nband_lab = MathTex(r"0.6\text{--}1.3", font_size=36, color=GREEN)
+        nband_lab.move_to([nx((LO + HI) / 2), nl_y - 0.86, 0])      # under the band
+
+        def marker(v, color, lab):
+            tri = Triangle(color=color, fill_opacity=1).scale(0.09).rotate(PI).move_to([nx(v), nl_y + 0.22, 0])
+            lab.move_to([nx(v), nl_y + 0.56, 0])
+            return VGroup(tri, lab)
+        m475 = marker(H0, GRAY, MathTex("4.75", font_size=32, color=GRAY))
+        m411 = marker(H1, YELLOW, MathTex("4.11", font_size=32, color=YELLOW))
+        m281 = marker(H_C2, GRAY, MathTex(f"{H_C2:.2f}", font_size=32, color=GRAY))
+        m142 = marker(H_GUESS, YELLOW, MathTex(f"{H_GUESS:.2f}", font_size=32, color=YELLOW))
+        llm_val = MathTex(f"{LLM_BPC:.2f}", font_size=32, color=INK)
+        mllm = marker(LLM_BPC, INK, llm_val)
+        llm_name = text("LLM", size=24, color=INK).next_to(llm_val, UP, buff=0.17)
+        mllm.add(llm_name)
+        cite_llm = citation("Valmeekam et al., 2023 · arXiv:2306.04050 (LLMZip), Table IV")
+        with self.narrate("Shannon's tests, with a hundred letters of context, put English "
+                          "between point six and one point three bits per character.") as beat:
+            self.play(FadeOut(VGroup(*mcols.values(), mframe, mline, down)), run_time=0.4)
+            self.play(ReplacementTransform(mnum, m142[1]), FadeIn(m142[0]),
+                      Create(nline), FadeIn(nt), FadeIn(ntitle),
+                      FadeIn(m475), FadeIn(m411), FadeIn(m281), run_time=1.4)
+            # two letters of context bought 2.81; Shannon's subjects had a hundred
+            beat.wait_until("context", offset=-0.2)
+            self.play(flag(m281[1], color=GRAY), Indicate(m281[0], color=INK, scale_factor=1.3),
+                      run_time=0.9)
+            beat.wait_until("between", offset=-0.2)
+            self.play(FadeIn(nband), FadeIn(nband_lab, shift=0.1 * DOWN),
+                      run_time=beat.until("bits", offset=0, min_time=1.0))
+            self.play(Indicate(nband, color=GREEN, scale_factor=1.15), run_time=0.9)
+
+        # the model's marker enters at the 'knows nothing' end and slides down to its value
+        # on a higher track (it never crosses another label), then drops onto the line
+        hi = nl_y + 1.25
+        s_tri = mllm[0].copy().move_to([nx(H0), hi, 0])
+        s_name = llm_name.copy().next_to(s_tri, UP, buff=0.18)
+        with self.narrate("In twenty twenty-three, a language model compressing part of a new "
+                          "book in the same twenty-seven symbols needed point eight four bits, "
+                          "inside that range.", gap=0.45) as beat:
+            beat.wait_until("language", offset=-0.2)
+            self.play(FadeOut(self.cite), FadeIn(cite_llm, shift=0.1 * UP),
+                      FadeIn(s_tri, shift=0.15 * DOWN), FadeIn(s_name, shift=0.15 * DOWN),
+                      run_time=0.7)
+            beat.wait_until("compressing", offset=-0.1)
+            self.play(VGroup(s_tri, s_name).animate.shift(RIGHT * (nx(LLM_BPC) - nx(H0))),
+                      run_time=beat.until("needed", offset=-0.1, min_time=2.0), rate_func=smooth)
+            self.play(ReplacementTransform(s_tri, mllm[0]), ReplacementTransform(s_name, llm_name),
+                      run_time=beat.until("point", offset=0.1, min_time=0.5))
+            self.play(FadeIn(llm_val, shift=0.1 * DOWN),
+                      run_time=beat.until("eight four", end=True, min_time=0.5))
+            beat.wait_until("inside", offset=-0.2)
+            self.play(Indicate(nband, color=GREEN, scale_factor=1.15), flag(mllm, color=INK),
+                      run_time=0.9)
+        self.meter = VGroup(nline, nt, ntitle, nband, nband_lab, m475, m411, m281, m142, mllm, cite_llm)
+
+    # ============================================================== 8 landing
+    def landing(self):
+        start = len(REC_TEXT[0]) + len(REC_TEXT[1])
+        idx_ctx = [start + 20 + i for i in range(12)]          # T H E _ O T H E R _ D A
+        idx_y = start + 32
+        qbox = Square(BOX + 0.06, stroke_color=YELLOW, stroke_width=4).move_to([Q_X, ROW_Y_OPEN, 0])
+        ctx_boxes = VGroup(*[ctx_box(ch).move_to([row_x(i), ROW_Y_OPEN, 0]) for i, ch in enumerate(CTX)])
+        lead = MathTex(r"\cdots", color=PURPLE, font_size=40).set_opacity(0.6)
+        lead.next_to(ctx_boxes, LEFT, buff=0.22)
+        ybox_letter = Text("Y", font=SERIF, font_size=34, color=INK).move_to(qbox)
+        one = MathTex(r"1\ \text{guess}", font_size=MATH, color=GREEN).next_to(qbox, RIGHT, buff=0.3)
+
+        keep_idx = set(idx_ctx + [idx_y])
+        drop_cells = [self.cells[i] for i in range(len(self.cells)) if i not in keep_idx]
+        keep_cells = [self.cells[i] for i in idx_ctx + [idx_y]]
+        # everything else on screen goes; anything that holds record cells (the record
+        # group, or the cells themselves if the group was split) is handled cell by cell
+        cell_ids = {id(c) for c in self.cells}
+        rest = [m for m in self.visible()
+                if not any(id(f) in cell_ids for f in m.get_family())]
+        tiles = VGroup(*[tile(s) for s in ALPHA]).arrange(RIGHT, buff=0.06).move_to([0, TILE_Y, 0])
+        self.exclude(tiles, "the cold-open alphabet tile row, returning (letters in their own "
+                     "tiles, tiles 0.06 apart)")
+        for j in list(range(0, 24)) + [25, 26]:
+            tile_opacity(tiles[j], 0.22)
+        chain = MathTex("27", r"\to", "13", r"\to", "6", r"\to", "3", r"\to", "2", r"\to", "1",
+                        font_size=MATH)
+        for i in range(1, 11, 2):
+            chain[i].set_color(YELLOW)
+        chain.move_to([0, CHAIN_Y, 0])
+        five = MathTex(r"5\ \text{questions}", font_size=MATH, color=YELLOW).move_to([0, QLINE_Y, 0])
+
+        with self.narrate("The hidden character from the start is the Y at the end of the "
+                          "other day. Shannon's subject got it on the first guess, a single "
+                          "yes-or-no question. Splitting the alphabet took five. In English, "
+                          "almost no letter arrives without a past.") as beat:
+            # 1. everything goes except THE OTHER DAY, which comes back to full strength
+            self.play(*[FadeOut(m) for m in rest], *[FadeOut(c) for c in drop_cells],
+                      *glyph_fade(keep_cells, 1.0),
+                      run_time=1.0)
+            # 2. the phrase flies into the cold-open row...
+            beat.wait_until("Y", offset=-0.3)
+            self.play(*[ReplacementTransform(self.cells[idx_ctx[i]], ctx_boxes[i][1]) for i in range(12)],
+                      ReplacementTransform(self.cells[idx_y], ybox_letter),
+                      run_time=beat.until("other day", offset=0.0, min_time=1.2))
+            # 3. ...and the boxes come in under it, with the 27 candidates below: frame one
+            self.play(*[FadeIn(ctx_boxes[i][0]) for i in range(12)], FadeIn(lead),
+                      Create(qbox), FadeIn(tiles, shift=0.1 * UP), run_time=0.8)
+            beat.wait_until("first", offset=-0.2)
+            self.play(FadeIn(one, shift=0.1 * UP), run_time=0.7)
+            # one question against the halving's five
+            beat.wait_until("single", offset=-0.2)
+            self.play(FadeIn(chain), FadeIn(five, shift=0.1 * UP),
+                      run_time=beat.until("question", end=True, min_time=0.9))
+            beat.wait_until("five", offset=-0.2)
+            self.play(flag(five), Indicate(chain, color=YELLOW, scale_factor=1.04), run_time=0.9)
+            beat.wait_until("English", offset=-0.2)
+            self.play(dim_tiles([tiles[24]], 0.3), chain.animate.set_opacity(0.3),
+                      five.animate.set_opacity(0.3), pflash(VGroup(lead, ctx_boxes), scale=1.0), run_time=1.0)

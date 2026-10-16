@@ -1,0 +1,216 @@
+1
+00:00:00,000 --> 00:00:06,310
+In this simulated town, on average, three quarters of a household's neighbors match its color.
+
+2
+00:00:06,690 --> 00:00:09,260
+How much matching do these households demand?
+
+3
+00:00:11,100 --> 00:00:12,230
+Just a third.
+
+4
+00:00:12,480 --> 00:00:16,150
+Each household counts the occupied squares around it.
+
+5
+00:00:16,530 --> 00:00:19,310
+If fewer than a third of them match, it moves.
+
+6
+00:00:19,690 --> 00:00:22,130
+It is happy to be outnumbered two to one.
+
+7
+00:00:22,466 --> 00:00:27,436
+We read maps of real cities the same way, guessing motives from patterns.
+
+8
+00:00:27,816 --> 00:00:31,876
+So how does a demand of a third build a town of three quarters?
+
+9
+00:00:32,633 --> 00:00:35,073
+Rewind to the start, a random mix.
+
+10
+00:00:35,453 --> 00:00:40,433
+Here, on average, half of a household's neighbors match, well above a third.
+
+11
+00:00:40,566 --> 00:00:42,506
+So most households are content.
+
+12
+00:00:42,886 --> 00:00:46,926
+Only these two hundred and thirty-eight are not, about one in six.
+
+13
+00:00:47,266 --> 00:00:53,286
+The obvious plan is to move each of them to a random empty square where it would be content.
+
+14
+00:00:53,486 --> 00:00:57,056
+Then everyone is content, and the town stays mixed.
+
+15
+00:00:57,400 --> 00:01:02,930
+Round one takes two hundred moves, and the matching share jumps to sixty-four percent.
+
+16
+00:01:03,266 --> 00:01:06,376
+If the plan had worked, this counter would read zero.
+
+17
+00:01:06,756 --> 00:01:11,816
+It reads seventy-four, and sixty-seven of these were content before round one.
+
+18
+00:01:11,966 --> 00:01:13,166
+They never moved.
+
+19
+00:01:13,546 --> 00:01:14,776
+Their neighbors did.
+
+20
+00:01:15,533 --> 00:01:16,833
+Replay one corner.
+
+21
+00:01:17,133 --> 00:01:21,783
+Before round one, this gold household had three gold neighbors out of eight.
+
+22
+00:01:22,163 --> 00:01:25,013
+Three eighths is more than a third, so it stayed.
+
+23
+00:01:25,366 --> 00:01:27,076
+Then this neighbor moved away.
+
+24
+00:01:27,456 --> 00:01:28,916
+Is it still content?
+
+25
+00:01:30,466 --> 00:01:32,196
+Two gold out of seven.
+
+26
+00:01:32,576 --> 00:01:36,486
+Two sevenths is less than a third, so now it wants out.
+
+27
+00:01:36,833 --> 00:01:39,293
+Its neighbor here also has three eighths.
+
+28
+00:01:39,673 --> 00:01:44,233
+In round two, our household leaves, and this one drops to two sevenths.
+
+29
+00:01:44,933 --> 00:01:46,973
+Then the next one, at three eighths,
+
+30
+00:01:47,273 --> 00:01:48,063
+tips.
+
+31
+00:01:49,166 --> 00:01:50,636
+Now run the whole town.
+
+32
+00:01:51,016 --> 00:01:56,136
+Round after round, the tipping spreads, and after round seven, nobody wants to move.
+
+33
+00:01:56,516 --> 00:01:59,776
+Seventy-six percent, the town we started with.
+
+34
+00:02:00,466 --> 00:02:03,086
+That whole town is one point on this chart.
+
+35
+00:02:03,466 --> 00:02:07,396
+Thirty towns at each demand, from zero to sixty percent.
+
+36
+00:02:07,733 --> 00:02:12,803
+Demand a quarter, and the same starting town barely sorts: fifty-eight percent.
+
+37
+00:02:13,183 --> 00:02:16,213
+Demand a third, and it jumps to seventy-six.
+
+38
+00:02:16,366 --> 00:02:22,086
+To see why that happens, sort the random start by each household's share of matching neighbors.
+
+39
+00:02:22,466 --> 00:02:27,036
+With at most eight neighbors, these are the only shares up to sixty percent.
+
+40
+00:02:27,400 --> 00:02:36,480
+At a third, everyone left of it is unhappy, two hundred and thirty-eight, including the neighbor that started our corner's chain, at two sevenths.
+
+41
+00:02:36,900 --> 00:02:40,950
+Every household at three eighths is one lost match away from it.
+
+42
+00:02:41,233 --> 00:02:43,883
+At a quarter, how many would start unhappy?
+
+43
+00:02:45,333 --> 00:02:53,143
+Only these two bars change sides, and they're tall: now just ninety-five start unhappy, and that chain never starts.
+
+44
+00:02:53,500 --> 00:02:57,620
+In his 1971 paper, Thomas Schelling ran this model.
+
+45
+00:02:58,000 --> 00:03:07,470
+His households moved to the nearest square that suited them, on emptier boards, and there the jump came later, between about a third and a half.
+
+46
+00:03:08,533 --> 00:03:12,043
+Two simulated towns, both seventy-six percent.
+
+47
+00:03:12,423 --> 00:03:18,083
+In one, households demand a third; in the other, nobody minds their neighbors at all.
+
+48
+00:03:18,463 --> 00:03:20,093
+Which one wanted a third?
+
+49
+00:03:21,933 --> 00:03:22,763
+This one.
+
+50
+00:03:22,963 --> 00:03:26,613
+The other was placed by a rule, with no preferences at all.
+
+51
+00:03:26,993 --> 00:03:35,463
+In real cities, one study finds that 1930s federal lending maps increased racial segregation for decades.
+
+52
+00:03:35,843 --> 00:03:39,563
+It traces this to reduced credit in the areas marked in red.
+
+53
+00:03:40,166 --> 00:03:41,976
+Look again at the first town.
+
+54
+00:03:42,356 --> 00:03:48,756
+As Schelling argued, whatever you guessed its people demanded, the map alone could not have told you.
+

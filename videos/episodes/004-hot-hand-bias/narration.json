@@ -1,0 +1,2861 @@
+{
+ "scene": "Episode",
+ "episode": 4,
+ "title": "The Hidden Bias That Hid the Hot Hand",
+ "video_duration": 195.133,
+ "beats": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "duration": 13.41,
+   "end": 13.41,
+   "text": "Flip a fair coin four times. [pause 0.12] After each heads, check the next flip: here, one of the two is heads. [pause 0.12] Do it for all sixteen sequences and average the shares. What do you get? [pause 1.6]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Flip",
+     "t": 0.075,
+     "end": 0.262
+    },
+    {
+     "w": "a",
+     "t": 0.275,
+     "end": 0.362
+    },
+    {
+     "w": "fair",
+     "t": 0.4,
+     "end": 0.625
+    },
+    {
+     "w": "coin",
+     "t": 0.65,
+     "end": 0.988
+    },
+    {
+     "w": "four",
+     "t": 1.025,
+     "end": 1.25
+    },
+    {
+     "w": "times",
+     "t": 1.275,
+     "end": 1.95
+    },
+    {
+     "w": "After",
+     "t": 2.165,
+     "end": 2.44
+    },
+    {
+     "w": "each",
+     "t": 2.465,
+     "end": 2.69
+    },
+    {
+     "w": "heads",
+     "t": 2.715,
+     "end": 3.115
+    },
+    {
+     "w": "check",
+     "t": 3.24,
+     "end": 3.465
+    },
+    {
+     "w": "the",
+     "t": 3.49,
+     "end": 3.565
+    },
+    {
+     "w": "next",
+     "t": 3.59,
+     "end": 3.865
+    },
+    {
+     "w": "flip",
+     "t": 3.89,
+     "end": 4.44
+    },
+    {
+     "w": "here",
+     "t": 4.665,
+     "end": 4.99
+    },
+    {
+     "w": "one",
+     "t": 5.09,
+     "end": 5.202
+    },
+    {
+     "w": "of",
+     "t": 5.215,
+     "end": 5.278
+    },
+    {
+     "w": "the",
+     "t": 5.29,
+     "end": 5.377
+    },
+    {
+     "w": "two",
+     "t": 5.415,
+     "end": 5.64
+    },
+    {
+     "w": "is",
+     "t": 5.665,
+     "end": 5.79
+    },
+    {
+     "w": "heads",
+     "t": 5.815,
+     "end": 6.42
+    },
+    {
+     "w": "Do",
+     "t": 6.605,
+     "end": 6.78
+    },
+    {
+     "w": "it",
+     "t": 6.805,
+     "end": 6.905
+    },
+    {
+     "w": "for",
+     "t": 6.93,
+     "end": 7.068
+    },
+    {
+     "w": "all",
+     "t": 7.105,
+     "end": 7.38
+    },
+    {
+     "w": "sixteen",
+     "t": 7.43,
+     "end": 7.88
+    },
+    {
+     "w": "sequences",
+     "t": 7.905,
+     "end": 8.905
+    },
+    {
+     "w": "and",
+     "t": 8.955,
+     "end": 9.105
+    },
+    {
+     "w": "average",
+     "t": 9.155,
+     "end": 9.555
+    },
+    {
+     "w": "the",
+     "t": 9.58,
+     "end": 9.705
+    },
+    {
+     "w": "shares",
+     "t": 9.755,
+     "end": 10.4
+    },
+    {
+     "w": "What",
+     "t": 10.84,
+     "end": 10.952
+    },
+    {
+     "w": "do",
+     "t": 10.965,
+     "end": 11.053
+    },
+    {
+     "w": "you",
+     "t": 11.065,
+     "end": 11.165
+    },
+    {
+     "w": "get",
+     "t": 11.19,
+     "end": 11.81
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/dc/dcde4700d3928933c2038e24.wav"
+  },
+  {
+   "index": 1,
+   "start": 13.767,
+   "duration": 11.94,
+   "end": 25.707,
+   "text": "One half feels obvious, since a coin has no memory. In nineteen eighty five, a famous study ran this same check on basketball shots, and called the hot hand an illusion.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "One",
+     "t": 13.812,
+     "end": 14.037
+    },
+    {
+     "w": "half",
+     "t": 14.062,
+     "end": 14.337
+    },
+    {
+     "w": "feels",
+     "t": 14.362,
+     "end": 14.649
+    },
+    {
+     "w": "obvious",
+     "t": 14.687,
+     "end": 15.437
+    },
+    {
+     "w": "since",
+     "t": 15.612,
+     "end": 15.774
+    },
+    {
+     "w": "a",
+     "t": 15.787,
+     "end": 15.875
+    },
+    {
+     "w": "coin",
+     "t": 15.912,
+     "end": 16.287
+    },
+    {
+     "w": "has",
+     "t": 16.312,
+     "end": 16.487
+    },
+    {
+     "w": "no",
+     "t": 16.512,
+     "end": 16.662
+    },
+    {
+     "w": "memory",
+     "t": 16.687,
+     "end": 17.257
+    },
+    {
+     "w": "In",
+     "t": 17.672,
+     "end": 17.772
+    },
+    {
+     "w": "nineteen",
+     "t": 17.797,
+     "end": 18.222
+    },
+    {
+     "w": "eighty",
+     "t": 18.247,
+     "end": 18.535
+    },
+    {
+     "w": "five",
+     "t": 18.572,
+     "end": 19.297
+    },
+    {
+     "w": "a",
+     "t": 19.472,
+     "end": 19.585
+    },
+    {
+     "w": "famous",
+     "t": 19.647,
+     "end": 20.072
+    },
+    {
+     "w": "study",
+     "t": 20.097,
+     "end": 20.497
+    },
+    {
+     "w": "ran",
+     "t": 20.522,
+     "end": 20.772
+    },
+    {
+     "w": "this",
+     "t": 20.797,
+     "end": 20.96
+    },
+    {
+     "w": "same",
+     "t": 20.997,
+     "end": 21.347
+    },
+    {
+     "w": "check",
+     "t": 21.397,
+     "end": 21.697
+    },
+    {
+     "w": "on",
+     "t": 21.722,
+     "end": 21.897
+    },
+    {
+     "w": "basketball",
+     "t": 21.922,
+     "end": 22.647
+    },
+    {
+     "w": "shots",
+     "t": 22.697,
+     "end": 23.497
+    },
+    {
+     "w": "and",
+     "t": 23.672,
+     "end": 23.772
+    },
+    {
+     "w": "called",
+     "t": 23.797,
+     "end": 24.009
+    },
+    {
+     "w": "the",
+     "t": 24.022,
+     "end": 24.11
+    },
+    {
+     "w": "hot",
+     "t": 24.147,
+     "end": 24.422
+    },
+    {
+     "w": "hand",
+     "t": 24.447,
+     "end": 24.847
+    },
+    {
+     "w": "an",
+     "t": 24.872,
+     "end": 24.947
+    },
+    {
+     "w": "illusion",
+     "t": 24.972,
+     "end": 25.707
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/16/162d68b325e6e12208bf9730.wav"
+  },
+  {
+   "index": 2,
+   "start": 26.3,
+   "duration": 5.71,
+   "end": 32.01,
+   "text": "Heads are hits. [pause 0.12] A hot shooter beats their usual rate; a random one should match it.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Heads",
+     "t": 26.38,
+     "end": 26.68
+    },
+    {
+     "w": "are",
+     "t": 26.705,
+     "end": 26.83
+    },
+    {
+     "w": "hits",
+     "t": 26.855,
+     "end": 27.46
+    },
+    {
+     "w": "A",
+     "t": 27.625,
+     "end": 27.712
+    },
+    {
+     "w": "hot",
+     "t": 27.75,
+     "end": 28.075
+    },
+    {
+     "w": "shooter",
+     "t": 28.125,
+     "end": 28.462
+    },
+    {
+     "w": "beats",
+     "t": 28.5,
+     "end": 28.8
+    },
+    {
+     "w": "their",
+     "t": 28.825,
+     "end": 29.012
+    },
+    {
+     "w": "usual",
+     "t": 29.05,
+     "end": 29.45
+    },
+    {
+     "w": "rate",
+     "t": 29.475,
+     "end": 30.125
+    },
+    {
+     "w": "a",
+     "t": 30.3,
+     "end": 30.4
+    },
+    {
+     "w": "random",
+     "t": 30.45,
+     "end": 30.85
+    },
+    {
+     "w": "one",
+     "t": 30.875,
+     "end": 31.075
+    },
+    {
+     "w": "should",
+     "t": 31.1,
+     "end": 31.275
+    },
+    {
+     "w": "match",
+     "t": 31.3,
+     "end": 31.662
+    },
+    {
+     "w": "it",
+     "t": 31.7,
+     "end": 32.01
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f3/f32dc7b0b62badad1c8f7b4e.wav"
+  },
+  {
+   "index": 3,
+   "start": 32.367,
+   "duration": 8.82,
+   "end": 41.187,
+   "text": "So first, test the test on a shooter we know is random: a fair coin. [pause 0.12] Four flips can land sixteen ways, all equally likely.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "So",
+     "t": 32.452,
+     "end": 32.652
+    },
+    {
+     "w": "first",
+     "t": 32.702,
+     "end": 33.127
+    },
+    {
+     "w": "test",
+     "t": 33.227,
+     "end": 33.465
+    },
+    {
+     "w": "the",
+     "t": 33.477,
+     "end": 33.565
+    },
+    {
+     "w": "test",
+     "t": 33.602,
+     "end": 33.914
+    },
+    {
+     "w": "on",
+     "t": 33.927,
+     "end": 34.015
+    },
+    {
+     "w": "a",
+     "t": 34.027,
+     "end": 34.127
+    },
+    {
+     "w": "shooter",
+     "t": 34.177,
+     "end": 34.502
+    },
+    {
+     "w": "we",
+     "t": 34.527,
+     "end": 34.652
+    },
+    {
+     "w": "know",
+     "t": 34.677,
+     "end": 34.902
+    },
+    {
+     "w": "is",
+     "t": 34.927,
+     "end": 35.052
+    },
+    {
+     "w": "random",
+     "t": 35.077,
+     "end": 35.852
+    },
+    {
+     "w": "a",
+     "t": 36.052,
+     "end": 36.152
+    },
+    {
+     "w": "fair",
+     "t": 36.202,
+     "end": 36.489
+    },
+    {
+     "w": "coin",
+     "t": 36.527,
+     "end": 37.117
+    },
+    {
+     "w": "Four",
+     "t": 37.337,
+     "end": 37.587
+    },
+    {
+     "w": "flips",
+     "t": 37.612,
+     "end": 37.912
+    },
+    {
+     "w": "can",
+     "t": 37.937,
+     "end": 38.087
+    },
+    {
+     "w": "land",
+     "t": 38.112,
+     "end": 38.45
+    },
+    {
+     "w": "sixteen",
+     "t": 38.487,
+     "end": 38.937
+    },
+    {
+     "w": "ways",
+     "t": 38.962,
+     "end": 39.637
+    },
+    {
+     "w": "all",
+     "t": 39.812,
+     "end": 40.049
+    },
+    {
+     "w": "equally",
+     "t": 40.087,
+     "end": 40.487
+    },
+    {
+     "w": "likely",
+     "t": 40.512,
+     "end": 41.187
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/47/47ecc86160fea6aebc84d7ad.wav"
+  },
+  {
+   "index": 4,
+   "start": 41.533,
+   "duration": 5.81,
+   "end": 47.343,
+   "text": "This row checks three flips, and two of them are heads. [pause 0.6] Score every row the same way.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "This",
+     "t": 41.583,
+     "end": 41.808
+    },
+    {
+     "w": "row",
+     "t": 41.833,
+     "end": 42.071
+    },
+    {
+     "w": "checks",
+     "t": 42.108,
+     "end": 42.421
+    },
+    {
+     "w": "three",
+     "t": 42.458,
+     "end": 42.708
+    },
+    {
+     "w": "flips",
+     "t": 42.758,
+     "end": 43.333
+    },
+    {
+     "w": "and",
+     "t": 43.458,
+     "end": 43.583
+    },
+    {
+     "w": "two",
+     "t": 43.633,
+     "end": 43.795
+    },
+    {
+     "w": "of",
+     "t": 43.808,
+     "end": 43.871
+    },
+    {
+     "w": "them",
+     "t": 43.883,
+     "end": 44.008
+    },
+    {
+     "w": "are",
+     "t": 44.033,
+     "end": 44.158
+    },
+    {
+     "w": "heads",
+     "t": 44.183,
+     "end": 44.773
+    },
+    {
+     "w": "Score",
+     "t": 45.458,
+     "end": 45.845
+    },
+    {
+     "w": "every",
+     "t": 45.883,
+     "end": 46.183
+    },
+    {
+     "w": "row",
+     "t": 46.208,
+     "end": 46.396
+    },
+    {
+     "w": "the",
+     "t": 46.408,
+     "end": 46.521
+    },
+    {
+     "w": "same",
+     "t": 46.558,
+     "end": 46.858
+    },
+    {
+     "w": "way",
+     "t": 46.883,
+     "end": 47.343
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/3c/3cf39699c32e3e56924d1902.wav"
+  },
+  {
+   "index": 5,
+   "start": 47.7,
+   "duration": 4.59,
+   "end": 52.29,
+   "text": "Two rows never show a heads before the last flip, so they get no score.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Two",
+     "t": 47.735,
+     "end": 48.022
+    },
+    {
+     "w": "rows",
+     "t": 48.06,
+     "end": 48.422
+    },
+    {
+     "w": "never",
+     "t": 48.46,
+     "end": 48.747
+    },
+    {
+     "w": "show",
+     "t": 48.785,
+     "end": 48.985
+    },
+    {
+     "w": "a",
+     "t": 49.01,
+     "end": 49.06
+    },
+    {
+     "w": "heads",
+     "t": 49.085,
+     "end": 49.385
+    },
+    {
+     "w": "before",
+     "t": 49.41,
+     "end": 49.722
+    },
+    {
+     "w": "the",
+     "t": 49.735,
+     "end": 49.81
+    },
+    {
+     "w": "last",
+     "t": 49.835,
+     "end": 50.21
+    },
+    {
+     "w": "flip",
+     "t": 50.235,
+     "end": 50.81
+    },
+    {
+     "w": "so",
+     "t": 50.985,
+     "end": 51.11
+    },
+    {
+     "w": "they",
+     "t": 51.135,
+     "end": 51.26
+    },
+    {
+     "w": "get",
+     "t": 51.285,
+     "end": 51.435
+    },
+    {
+     "w": "no",
+     "t": 51.46,
+     "end": 51.635
+    },
+    {
+     "w": "score",
+     "t": 51.685,
+     "end": 52.29
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/74/74b3956805af14b0f1b855f6.wav"
+  },
+  {
+   "index": 6,
+   "start": 52.633,
+   "duration": 8.62,
+   "end": 61.253,
+   "text": "Drop the other fourteen scores onto the line. Their average is seventeen out of forty two: about forty point five percent.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Drop",
+     "t": 52.688,
+     "end": 52.975
+    },
+    {
+     "w": "the",
+     "t": 52.988,
+     "end": 53.113
+    },
+    {
+     "w": "other",
+     "t": 53.138,
+     "end": 53.425
+    },
+    {
+     "w": "fourteen",
+     "t": 53.463,
+     "end": 54.001
+    },
+    {
+     "w": "scores",
+     "t": 54.038,
+     "end": 54.55
+    },
+    {
+     "w": "onto",
+     "t": 54.588,
+     "end": 54.801
+    },
+    {
+     "w": "the",
+     "t": 54.813,
+     "end": 54.888
+    },
+    {
+     "w": "line",
+     "t": 54.913,
+     "end": 55.473
+    },
+    {
+     "w": "Their",
+     "t": 55.893,
+     "end": 56.118
+    },
+    {
+     "w": "average",
+     "t": 56.168,
+     "end": 56.705
+    },
+    {
+     "w": "is",
+     "t": 56.743,
+     "end": 56.893
+    },
+    {
+     "w": "seventeen",
+     "t": 56.943,
+     "end": 57.643
+    },
+    {
+     "w": "out",
+     "t": 57.668,
+     "end": 57.831
+    },
+    {
+     "w": "of",
+     "t": 57.843,
+     "end": 57.918
+    },
+    {
+     "w": "forty",
+     "t": 57.943,
+     "end": 58.318
+    },
+    {
+     "w": "two",
+     "t": 58.368,
+     "end": 58.968
+    },
+    {
+     "w": "about",
+     "t": 59.218,
+     "end": 59.543
+    },
+    {
+     "w": "forty",
+     "t": 59.593,
+     "end": 59.918
+    },
+    {
+     "w": "point",
+     "t": 59.943,
+     "end": 60.218
+    },
+    {
+     "w": "five",
+     "t": 60.243,
+     "end": 60.518
+    },
+    {
+     "w": "percent",
+     "t": 60.543,
+     "end": 61.253
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/7f/7fc4edfbc05ec03bff70c752.wav"
+  },
+  {
+   "index": 7,
+   "start": 61.6,
+   "duration": 5.06,
+   "end": 66.66,
+   "text": "On a perfectly fair coin, the test reads cold, by nine and a half points.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "On",
+     "t": 61.65,
+     "end": 61.763
+    },
+    {
+     "w": "a",
+     "t": 61.775,
+     "end": 61.838
+    },
+    {
+     "w": "perfectly",
+     "t": 61.875,
+     "end": 62.412
+    },
+    {
+     "w": "fair",
+     "t": 62.45,
+     "end": 62.675
+    },
+    {
+     "w": "coin",
+     "t": 62.7,
+     "end": 63.3
+    },
+    {
+     "w": "the",
+     "t": 63.45,
+     "end": 63.563
+    },
+    {
+     "w": "test",
+     "t": 63.6,
+     "end": 63.975
+    },
+    {
+     "w": "reads",
+     "t": 64.0,
+     "end": 64.288
+    },
+    {
+     "w": "cold",
+     "t": 64.325,
+     "end": 65.0
+    },
+    {
+     "w": "by",
+     "t": 65.125,
+     "end": 65.3
+    },
+    {
+     "w": "nine",
+     "t": 65.325,
+     "end": 65.563
+    },
+    {
+     "w": "and",
+     "t": 65.575,
+     "end": 65.662
+    },
+    {
+     "w": "a",
+     "t": 65.675,
+     "end": 65.725
+    },
+    {
+     "w": "half",
+     "t": 65.75,
+     "end": 66.0
+    },
+    {
+     "w": "points",
+     "t": 66.025,
+     "end": 66.66
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/58/589bf9ae4b979172374e4a4f.wav"
+  },
+  {
+   "index": 8,
+   "start": 67.467,
+   "duration": 8.03,
+   "end": 75.497,
+   "text": "Yet no flip is biased. [pause 0.6] Gather all twenty four checked flips: twelve heads, twelve tails. [pause 0.12] Exactly half.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Yet",
+     "t": 67.522,
+     "end": 67.76
+    },
+    {
+     "w": "no",
+     "t": 67.797,
+     "end": 68.034
+    },
+    {
+     "w": "flip",
+     "t": 68.072,
+     "end": 68.322
+    },
+    {
+     "w": "is",
+     "t": 68.347,
+     "end": 68.484
+    },
+    {
+     "w": "biased",
+     "t": 68.522,
+     "end": 69.247
+    },
+    {
+     "w": "Gather",
+     "t": 69.947,
+     "end": 70.322
+    },
+    {
+     "w": "all",
+     "t": 70.347,
+     "end": 70.522
+    },
+    {
+     "w": "twenty",
+     "t": 70.547,
+     "end": 70.822
+    },
+    {
+     "w": "four",
+     "t": 70.847,
+     "end": 71.06
+    },
+    {
+     "w": "checked",
+     "t": 71.097,
+     "end": 71.372
+    },
+    {
+     "w": "flips",
+     "t": 71.397,
+     "end": 72.022
+    },
+    {
+     "w": "twelve",
+     "t": 72.197,
+     "end": 72.522
+    },
+    {
+     "w": "heads",
+     "t": 72.547,
+     "end": 72.972
+    },
+    {
+     "w": "twelve",
+     "t": 73.097,
+     "end": 73.397
+    },
+    {
+     "w": "tails",
+     "t": 73.422,
+     "end": 74.097
+    },
+    {
+     "w": "Exactly",
+     "t": 74.297,
+     "end": 74.897
+    },
+    {
+     "w": "half",
+     "t": 74.922,
+     "end": 75.497
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/6c/6ceb5bed53b3c3c36ec21513.wav"
+  },
+  {
+   "index": 9,
+   "start": 75.833,
+   "duration": 6.89,
+   "end": 82.723,
+   "text": "The skew comes from scoring row by row, because each row gets one vote, however many flips it checked.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 75.883,
+     "end": 76.008
+    },
+    {
+     "w": "skew",
+     "t": 76.058,
+     "end": 76.383
+    },
+    {
+     "w": "comes",
+     "t": 76.408,
+     "end": 76.683
+    },
+    {
+     "w": "from",
+     "t": 76.708,
+     "end": 76.895
+    },
+    {
+     "w": "scoring",
+     "t": 76.933,
+     "end": 77.358
+    },
+    {
+     "w": "row",
+     "t": 77.383,
+     "end": 77.633
+    },
+    {
+     "w": "by",
+     "t": 77.658,
+     "end": 77.895
+    },
+    {
+     "w": "row",
+     "t": 77.933,
+     "end": 78.533
+    },
+    {
+     "w": "because",
+     "t": 78.683,
+     "end": 79.033
+    },
+    {
+     "w": "each",
+     "t": 79.083,
+     "end": 79.408
+    },
+    {
+     "w": "row",
+     "t": 79.433,
+     "end": 79.708
+    },
+    {
+     "w": "gets",
+     "t": 79.733,
+     "end": 79.958
+    },
+    {
+     "w": "one",
+     "t": 79.983,
+     "end": 80.183
+    },
+    {
+     "w": "vote",
+     "t": 80.208,
+     "end": 80.833
+    },
+    {
+     "w": "however",
+     "t": 81.008,
+     "end": 81.358
+    },
+    {
+     "w": "many",
+     "t": 81.383,
+     "end": 81.658
+    },
+    {
+     "w": "flips",
+     "t": 81.708,
+     "end": 81.983
+    },
+    {
+     "w": "it",
+     "t": 82.008,
+     "end": 82.121
+    },
+    {
+     "w": "checked",
+     "t": 82.158,
+     "end": 82.723
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f7/f7a04807f34a65679fd43347.wav"
+  },
+  {
+   "index": 10,
+   "start": 83.067,
+   "duration": 10.24,
+   "end": 93.307,
+   "text": "And checked heads come in crowds, since a heads gets the next flip checked too. This row's three heads share a single vote, while this lone tails gets a whole one.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "And",
+     "t": 83.117,
+     "end": 83.292
+    },
+    {
+     "w": "checked",
+     "t": 83.342,
+     "end": 83.592
+    },
+    {
+     "w": "heads",
+     "t": 83.617,
+     "end": 83.942
+    },
+    {
+     "w": "come",
+     "t": 83.967,
+     "end": 84.129
+    },
+    {
+     "w": "in",
+     "t": 84.142,
+     "end": 84.267
+    },
+    {
+     "w": "crowds",
+     "t": 84.292,
+     "end": 85.092
+    },
+    {
+     "w": "since",
+     "t": 85.267,
+     "end": 85.43
+    },
+    {
+     "w": "a",
+     "t": 85.442,
+     "end": 85.517
+    },
+    {
+     "w": "heads",
+     "t": 85.542,
+     "end": 85.867
+    },
+    {
+     "w": "gets",
+     "t": 85.892,
+     "end": 86.117
+    },
+    {
+     "w": "the",
+     "t": 86.142,
+     "end": 86.217
+    },
+    {
+     "w": "next",
+     "t": 86.242,
+     "end": 86.542
+    },
+    {
+     "w": "flip",
+     "t": 86.567,
+     "end": 86.829
+    },
+    {
+     "w": "checked",
+     "t": 86.867,
+     "end": 87.167
+    },
+    {
+     "w": "too",
+     "t": 87.217,
+     "end": 87.707
+    },
+    {
+     "w": "This",
+     "t": 88.127,
+     "end": 88.352
+    },
+    {
+     "w": "row's",
+     "t": 88.377,
+     "end": 88.802
+    },
+    {
+     "w": "three",
+     "t": 88.852,
+     "end": 89.077
+    },
+    {
+     "w": "heads",
+     "t": 89.102,
+     "end": 89.489
+    },
+    {
+     "w": "share",
+     "t": 89.527,
+     "end": 89.752
+    },
+    {
+     "w": "a",
+     "t": 89.777,
+     "end": 89.877
+    },
+    {
+     "w": "single",
+     "t": 89.927,
+     "end": 90.277
+    },
+    {
+     "w": "vote",
+     "t": 90.302,
+     "end": 90.952
+    },
+    {
+     "w": "while",
+     "t": 91.102,
+     "end": 91.277
+    },
+    {
+     "w": "this",
+     "t": 91.302,
+     "end": 91.502
+    },
+    {
+     "w": "lone",
+     "t": 91.527,
+     "end": 91.827
+    },
+    {
+     "w": "tails",
+     "t": 91.852,
+     "end": 92.352
+    },
+    {
+     "w": "gets",
+     "t": 92.377,
+     "end": 92.564
+    },
+    {
+     "w": "a",
+     "t": 92.577,
+     "end": 92.627
+    },
+    {
+     "w": "whole",
+     "t": 92.652,
+     "end": 92.902
+    },
+    {
+     "w": "one",
+     "t": 92.927,
+     "end": 93.307
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/c7/c7236ad4add5368c0c93684b.wav"
+  },
+  {
+   "index": 11,
+   "start": 93.9,
+   "duration": 9.45,
+   "end": 103.35,
+   "text": "Twelve heads crowd into eight rows. Twelve tails spread across eleven. [pause 0.55] Line up the votes, and heads hold seventeen out of forty two.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Twelve",
+     "t": 93.91,
+     "end": 94.26
+    },
+    {
+     "w": "heads",
+     "t": 94.285,
+     "end": 94.647
+    },
+    {
+     "w": "crowd",
+     "t": 94.685,
+     "end": 94.972
+    },
+    {
+     "w": "into",
+     "t": 94.985,
+     "end": 95.222
+    },
+    {
+     "w": "eight",
+     "t": 95.26,
+     "end": 95.485
+    },
+    {
+     "w": "rows",
+     "t": 95.51,
+     "end": 96.12
+    },
+    {
+     "w": "Twelve",
+     "t": 96.52,
+     "end": 96.882
+    },
+    {
+     "w": "tails",
+     "t": 96.92,
+     "end": 97.445
+    },
+    {
+     "w": "spread",
+     "t": 97.495,
+     "end": 97.758
+    },
+    {
+     "w": "across",
+     "t": 97.77,
+     "end": 98.145
+    },
+    {
+     "w": "eleven",
+     "t": 98.17,
+     "end": 98.82
+    },
+    {
+     "w": "Line",
+     "t": 99.45,
+     "end": 99.688
+    },
+    {
+     "w": "up",
+     "t": 99.7,
+     "end": 99.85
+    },
+    {
+     "w": "the",
+     "t": 99.875,
+     "end": 99.95
+    },
+    {
+     "w": "votes",
+     "t": 99.975,
+     "end": 100.625
+    },
+    {
+     "w": "and",
+     "t": 100.75,
+     "end": 100.85
+    },
+    {
+     "w": "heads",
+     "t": 100.875,
+     "end": 101.1
+    },
+    {
+     "w": "hold",
+     "t": 101.125,
+     "end": 101.425
+    },
+    {
+     "w": "seventeen",
+     "t": 101.475,
+     "end": 102.175
+    },
+    {
+     "w": "out",
+     "t": 102.2,
+     "end": 102.362
+    },
+    {
+     "w": "of",
+     "t": 102.375,
+     "end": 102.45
+    },
+    {
+     "w": "forty",
+     "t": 102.475,
+     "end": 102.825
+    },
+    {
+     "w": "two",
+     "t": 102.875,
+     "end": 103.35
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/4d/4dfe7e33bd8e8f9037202799.wav"
+  },
+  {
+   "index": 12,
+   "start": 103.7,
+   "duration": 5.48,
+   "end": 109.18,
+   "text": "That's one vote per row. [pause 0.3] Count all the flips together first, and you get one half.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "That's",
+     "t": 103.75,
+     "end": 104.088
+    },
+    {
+     "w": "one",
+     "t": 104.125,
+     "end": 104.35
+    },
+    {
+     "w": "vote",
+     "t": 104.375,
+     "end": 104.65
+    },
+    {
+     "w": "per",
+     "t": 104.675,
+     "end": 104.85
+    },
+    {
+     "w": "row",
+     "t": 104.875,
+     "end": 105.39
+    },
+    {
+     "w": "Count",
+     "t": 105.72,
+     "end": 106.032
+    },
+    {
+     "w": "all",
+     "t": 106.07,
+     "end": 106.282
+    },
+    {
+     "w": "the",
+     "t": 106.295,
+     "end": 106.382
+    },
+    {
+     "w": "flips",
+     "t": 106.42,
+     "end": 106.72
+    },
+    {
+     "w": "together",
+     "t": 106.745,
+     "end": 107.158
+    },
+    {
+     "w": "first",
+     "t": 107.195,
+     "end": 107.82
+    },
+    {
+     "w": "and",
+     "t": 107.97,
+     "end": 108.07
+    },
+    {
+     "w": "you",
+     "t": 108.095,
+     "end": 108.17
+    },
+    {
+     "w": "get",
+     "t": 108.195,
+     "end": 108.345
+    },
+    {
+     "w": "one",
+     "t": 108.37,
+     "end": 108.57
+    },
+    {
+     "w": "half",
+     "t": 108.595,
+     "end": 109.18
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/8e/8eea5c99f9ba1555e45c99b8.wav"
+  },
+  {
+   "index": 13,
+   "start": 110.067,
+   "duration": 10.97,
+   "end": 121.037,
+   "text": "Tails crowd the same way. Swap heads and tails, and the strip flips over one half. So after a tails, the test reads hot: twenty five out of forty two.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Tails",
+     "t": 110.087,
+     "end": 110.512
+    },
+    {
+     "w": "crowd",
+     "t": 110.537,
+     "end": 110.799
+    },
+    {
+     "w": "the",
+     "t": 110.812,
+     "end": 110.887
+    },
+    {
+     "w": "same",
+     "t": 110.912,
+     "end": 111.212
+    },
+    {
+     "w": "way",
+     "t": 111.237,
+     "end": 111.717
+    },
+    {
+     "w": "Swap",
+     "t": 112.182,
+     "end": 112.557
+    },
+    {
+     "w": "heads",
+     "t": 112.582,
+     "end": 112.907
+    },
+    {
+     "w": "and",
+     "t": 112.932,
+     "end": 113.032
+    },
+    {
+     "w": "tails",
+     "t": 113.057,
+     "end": 113.857
+    },
+    {
+     "w": "and",
+     "t": 113.982,
+     "end": 114.069
+    },
+    {
+     "w": "the",
+     "t": 114.082,
+     "end": 114.157
+    },
+    {
+     "w": "strip",
+     "t": 114.182,
+     "end": 114.495
+    },
+    {
+     "w": "flips",
+     "t": 114.532,
+     "end": 114.794
+    },
+    {
+     "w": "over",
+     "t": 114.807,
+     "end": 115.032
+    },
+    {
+     "w": "one",
+     "t": 115.057,
+     "end": 115.257
+    },
+    {
+     "w": "half",
+     "t": 115.282,
+     "end": 115.857
+    },
+    {
+     "w": "So",
+     "t": 116.312,
+     "end": 116.499
+    },
+    {
+     "w": "after",
+     "t": 116.537,
+     "end": 116.799
+    },
+    {
+     "w": "a",
+     "t": 116.812,
+     "end": 116.862
+    },
+    {
+     "w": "tails",
+     "t": 116.887,
+     "end": 117.462
+    },
+    {
+     "w": "the",
+     "t": 117.562,
+     "end": 117.674
+    },
+    {
+     "w": "test",
+     "t": 117.712,
+     "end": 118.087
+    },
+    {
+     "w": "reads",
+     "t": 118.112,
+     "end": 118.362
+    },
+    {
+     "w": "hot",
+     "t": 118.387,
+     "end": 118.962
+    },
+    {
+     "w": "twenty",
+     "t": 119.137,
+     "end": 119.449
+    },
+    {
+     "w": "five",
+     "t": 119.487,
+     "end": 119.887
+    },
+    {
+     "w": "out",
+     "t": 119.912,
+     "end": 120.049
+    },
+    {
+     "w": "of",
+     "t": 120.062,
+     "end": 120.137
+    },
+    {
+     "w": "forty",
+     "t": 120.162,
+     "end": 120.512
+    },
+    {
+     "w": "two",
+     "t": 120.562,
+     "end": 121.037
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/13/13225082c4a94dace92e68f2.wav"
+  },
+  {
+   "index": 14,
+   "start": 121.4,
+   "duration": 5.48,
+   "end": 126.88,
+   "text": "Subtract the two averages, and a fair coin shows a gap of minus nineteen points.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Subtract",
+     "t": 121.465,
+     "end": 122.002
+    },
+    {
+     "w": "the",
+     "t": 122.015,
+     "end": 122.102
+    },
+    {
+     "w": "two",
+     "t": 122.14,
+     "end": 122.328
+    },
+    {
+     "w": "averages",
+     "t": 122.365,
+     "end": 123.315
+    },
+    {
+     "w": "and",
+     "t": 123.44,
+     "end": 123.528
+    },
+    {
+     "w": "a",
+     "t": 123.54,
+     "end": 123.64
+    },
+    {
+     "w": "fair",
+     "t": 123.69,
+     "end": 123.952
+    },
+    {
+     "w": "coin",
+     "t": 123.99,
+     "end": 124.378
+    },
+    {
+     "w": "shows",
+     "t": 124.415,
+     "end": 124.678
+    },
+    {
+     "w": "a",
+     "t": 124.69,
+     "end": 124.74
+    },
+    {
+     "w": "gap",
+     "t": 124.765,
+     "end": 125.102
+    },
+    {
+     "w": "of",
+     "t": 125.14,
+     "end": 125.278
+    },
+    {
+     "w": "minus",
+     "t": 125.315,
+     "end": 125.728
+    },
+    {
+     "w": "nineteen",
+     "t": 125.765,
+     "end": 126.265
+    },
+    {
+     "w": "points",
+     "t": 126.29,
+     "end": 126.88
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/3b/3b0b44fcc31c0e90871dc75d.wav"
+  },
+  {
+   "index": 15,
+   "start": 127.567,
+   "duration": 13.63,
+   "end": 141.197,
+   "text": "The nineteen eighty five study ran the same comparison on twenty six Cornell players: up to a hundred shots each, from where they'd hit about half. After three hits, versus after three misses.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 127.607,
+     "end": 127.707
+    },
+    {
+     "w": "nineteen",
+     "t": 127.732,
+     "end": 128.245
+    },
+    {
+     "w": "eighty",
+     "t": 128.282,
+     "end": 128.707
+    },
+    {
+     "w": "five",
+     "t": 128.757,
+     "end": 129.157
+    },
+    {
+     "w": "study",
+     "t": 129.182,
+     "end": 129.632
+    },
+    {
+     "w": "ran",
+     "t": 129.682,
+     "end": 129.919
+    },
+    {
+     "w": "the",
+     "t": 129.932,
+     "end": 130.057
+    },
+    {
+     "w": "same",
+     "t": 130.107,
+     "end": 130.457
+    },
+    {
+     "w": "comparison",
+     "t": 130.482,
+     "end": 131.207
+    },
+    {
+     "w": "on",
+     "t": 131.232,
+     "end": 131.419
+    },
+    {
+     "w": "twenty",
+     "t": 131.457,
+     "end": 131.857
+    },
+    {
+     "w": "six",
+     "t": 131.907,
+     "end": 132.182
+    },
+    {
+     "w": "Cornell",
+     "t": 132.207,
+     "end": 132.607
+    },
+    {
+     "w": "players",
+     "t": 132.632,
+     "end": 133.732
+    },
+    {
+     "w": "up",
+     "t": 133.932,
+     "end": 134.107
+    },
+    {
+     "w": "to",
+     "t": 134.132,
+     "end": 134.207
+    },
+    {
+     "w": "a",
+     "t": 134.232,
+     "end": 134.282
+    },
+    {
+     "w": "hundred",
+     "t": 134.307,
+     "end": 134.72
+    },
+    {
+     "w": "shots",
+     "t": 134.757,
+     "end": 135.107
+    },
+    {
+     "w": "each",
+     "t": 135.132,
+     "end": 135.782
+    },
+    {
+     "w": "from",
+     "t": 135.957,
+     "end": 136.107
+    },
+    {
+     "w": "where",
+     "t": 136.132,
+     "end": 136.282
+    },
+    {
+     "w": "they'd",
+     "t": 136.307,
+     "end": 136.545
+    },
+    {
+     "w": "hit",
+     "t": 136.582,
+     "end": 136.719
+    },
+    {
+     "w": "about",
+     "t": 136.732,
+     "end": 137.007
+    },
+    {
+     "w": "half",
+     "t": 137.032,
+     "end": 137.627
+    },
+    {
+     "w": "After",
+     "t": 138.052,
+     "end": 138.39
+    },
+    {
+     "w": "three",
+     "t": 138.427,
+     "end": 138.652
+    },
+    {
+     "w": "hits",
+     "t": 138.677,
+     "end": 139.227
+    },
+    {
+     "w": "versus",
+     "t": 139.402,
+     "end": 139.915
+    },
+    {
+     "w": "after",
+     "t": 139.952,
+     "end": 140.265
+    },
+    {
+     "w": "three",
+     "t": 140.302,
+     "end": 140.527
+    },
+    {
+     "w": "misses",
+     "t": 140.552,
+     "end": 141.197
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/78/78f3fad6736b892537096c03.wav"
+  },
+  {
+   "index": 16,
+   "start": 141.533,
+   "duration": 19.23,
+   "end": 160.763,
+   "text": "For a random shooter, the same crowding pulls those to forty six and fifty four percent. [pause 0.12] Miller and Sanjurjo's twenty eighteen paper puts the gap at about minus eight points. [pause 0.6] Longer streaks grow the bias. [pause 0.9] Longer records shrink it, [pause 0.5] but a hundred shots isn't long.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "For",
+     "t": 141.563,
+     "end": 141.688
+    },
+    {
+     "w": "a",
+     "t": 141.713,
+     "end": 141.788
+    },
+    {
+     "w": "random",
+     "t": 141.813,
+     "end": 142.263
+    },
+    {
+     "w": "shooter",
+     "t": 142.313,
+     "end": 142.938
+    },
+    {
+     "w": "the",
+     "t": 143.088,
+     "end": 143.213
+    },
+    {
+     "w": "same",
+     "t": 143.263,
+     "end": 143.588
+    },
+    {
+     "w": "crowding",
+     "t": 143.613,
+     "end": 144.013
+    },
+    {
+     "w": "pulls",
+     "t": 144.038,
+     "end": 144.388
+    },
+    {
+     "w": "those",
+     "t": 144.413,
+     "end": 144.763
+    },
+    {
+     "w": "to",
+     "t": 144.788,
+     "end": 144.901
+    },
+    {
+     "w": "forty",
+     "t": 144.938,
+     "end": 145.313
+    },
+    {
+     "w": "six",
+     "t": 145.363,
+     "end": 145.738
+    },
+    {
+     "w": "and",
+     "t": 145.763,
+     "end": 145.875
+    },
+    {
+     "w": "fifty",
+     "t": 145.913,
+     "end": 146.188
+    },
+    {
+     "w": "four",
+     "t": 146.213,
+     "end": 146.413
+    },
+    {
+     "w": "percent",
+     "t": 146.438,
+     "end": 147.133
+    },
+    {
+     "w": "Miller",
+     "t": 147.333,
+     "end": 147.733
+    },
+    {
+     "w": "and",
+     "t": 147.758,
+     "end": 147.858
+    },
+    {
+     "w": "Sanjurjo's",
+     "t": 147.883,
+     "end": 148.883
+    },
+    {
+     "w": "twenty",
+     "t": 148.933,
+     "end": 149.221
+    },
+    {
+     "w": "eighteen",
+     "t": 149.233,
+     "end": 149.658
+    },
+    {
+     "w": "paper",
+     "t": 149.683,
+     "end": 150.433
+    },
+    {
+     "w": "puts",
+     "t": 150.483,
+     "end": 150.708
+    },
+    {
+     "w": "the",
+     "t": 150.733,
+     "end": 150.808
+    },
+    {
+     "w": "gap",
+     "t": 150.833,
+     "end": 151.308
+    },
+    {
+     "w": "at",
+     "t": 151.358,
+     "end": 151.421
+    },
+    {
+     "w": "about",
+     "t": 151.433,
+     "end": 151.783
+    },
+    {
+     "w": "minus",
+     "t": 151.833,
+     "end": 152.321
+    },
+    {
+     "w": "eight",
+     "t": 152.358,
+     "end": 152.608
+    },
+    {
+     "w": "points",
+     "t": 152.633,
+     "end": 153.253
+    },
+    {
+     "w": "Longer",
+     "t": 153.923,
+     "end": 154.323
+    },
+    {
+     "w": "streaks",
+     "t": 154.348,
+     "end": 154.71
+    },
+    {
+     "w": "grow",
+     "t": 154.748,
+     "end": 154.985
+    },
+    {
+     "w": "the",
+     "t": 154.998,
+     "end": 155.073
+    },
+    {
+     "w": "bias",
+     "t": 155.098,
+     "end": 155.763
+    },
+    {
+     "w": "Longer",
+     "t": 156.743,
+     "end": 157.168
+    },
+    {
+     "w": "records",
+     "t": 157.193,
+     "end": 157.643
+    },
+    {
+     "w": "shrink",
+     "t": 157.693,
+     "end": 157.955
+    },
+    {
+     "w": "it",
+     "t": 157.993,
+     "end": 158.313
+    },
+    {
+     "w": "but",
+     "t": 158.828,
+     "end": 158.941
+    },
+    {
+     "w": "a",
+     "t": 158.953,
+     "end": 159.041
+    },
+    {
+     "w": "hundred",
+     "t": 159.078,
+     "end": 159.528
+    },
+    {
+     "w": "shots",
+     "t": 159.578,
+     "end": 159.903
+    },
+    {
+     "w": "isn't",
+     "t": 159.928,
+     "end": 160.178
+    },
+    {
+     "w": "long",
+     "t": 160.203,
+     "end": 160.763
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/b3/b3ca48b4ab5db9fbf0b88e41.wav"
+  },
+  {
+   "index": 17,
+   "start": 161.1,
+   "duration": 9.9,
+   "end": 171.0,
+   "text": "Cornell's players hit forty nine percent after three hits, and forty five after three misses. The study took that plus four to mean no hot hand.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Cornell's",
+     "t": 161.12,
+     "end": 161.657
+    },
+    {
+     "w": "players",
+     "t": 161.695,
+     "end": 162.258
+    },
+    {
+     "w": "hit",
+     "t": 162.295,
+     "end": 162.545
+    },
+    {
+     "w": "forty",
+     "t": 162.595,
+     "end": 162.945
+    },
+    {
+     "w": "nine",
+     "t": 162.97,
+     "end": 163.27
+    },
+    {
+     "w": "percent",
+     "t": 163.295,
+     "end": 163.745
+    },
+    {
+     "w": "after",
+     "t": 163.77,
+     "end": 164.07
+    },
+    {
+     "w": "three",
+     "t": 164.12,
+     "end": 164.37
+    },
+    {
+     "w": "hits",
+     "t": 164.395,
+     "end": 165.12
+    },
+    {
+     "w": "and",
+     "t": 165.27,
+     "end": 165.42
+    },
+    {
+     "w": "forty",
+     "t": 165.47,
+     "end": 165.845
+    },
+    {
+     "w": "five",
+     "t": 165.895,
+     "end": 166.382
+    },
+    {
+     "w": "after",
+     "t": 166.42,
+     "end": 166.708
+    },
+    {
+     "w": "three",
+     "t": 166.745,
+     "end": 166.97
+    },
+    {
+     "w": "misses",
+     "t": 166.995,
+     "end": 167.64
+    },
+    {
+     "w": "The",
+     "t": 168.035,
+     "end": 168.135
+    },
+    {
+     "w": "study",
+     "t": 168.16,
+     "end": 168.51
+    },
+    {
+     "w": "took",
+     "t": 168.535,
+     "end": 168.785
+    },
+    {
+     "w": "that",
+     "t": 168.81,
+     "end": 168.96
+    },
+    {
+     "w": "plus",
+     "t": 168.985,
+     "end": 169.272
+    },
+    {
+     "w": "four",
+     "t": 169.31,
+     "end": 169.585
+    },
+    {
+     "w": "to",
+     "t": 169.61,
+     "end": 169.672
+    },
+    {
+     "w": "mean",
+     "t": 169.685,
+     "end": 169.898
+    },
+    {
+     "w": "no",
+     "t": 169.935,
+     "end": 170.135
+    },
+    {
+     "w": "hot",
+     "t": 170.16,
+     "end": 170.385
+    },
+    {
+     "w": "hand",
+     "t": 170.41,
+     "end": 171.0
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/b4/b44df4c042fbe4cd30459c50.wav"
+  },
+  {
+   "index": 18,
+   "start": 171.367,
+   "duration": 9.23,
+   "end": 180.597,
+   "text": "Measured from minus eight, it's twelve points hot. [pause 0.6] That's evidence for a hot hand in a gym, not proof it survives defenders in a game.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Measured",
+     "t": 171.467,
+     "end": 171.842
+    },
+    {
+     "w": "from",
+     "t": 171.867,
+     "end": 172.017
+    },
+    {
+     "w": "minus",
+     "t": 172.042,
+     "end": 172.392
+    },
+    {
+     "w": "eight",
+     "t": 172.417,
+     "end": 172.892
+    },
+    {
+     "w": "it's",
+     "t": 173.042,
+     "end": 173.217
+    },
+    {
+     "w": "twelve",
+     "t": 173.242,
+     "end": 173.567
+    },
+    {
+     "w": "points",
+     "t": 173.592,
+     "end": 173.892
+    },
+    {
+     "w": "hot",
+     "t": 173.917,
+     "end": 174.447
+    },
+    {
+     "w": "That's",
+     "t": 175.087,
+     "end": 175.425
+    },
+    {
+     "w": "evidence",
+     "t": 175.462,
+     "end": 175.962
+    },
+    {
+     "w": "for",
+     "t": 175.987,
+     "end": 176.087
+    },
+    {
+     "w": "a",
+     "t": 176.112,
+     "end": 176.187
+    },
+    {
+     "w": "hot",
+     "t": 176.212,
+     "end": 176.487
+    },
+    {
+     "w": "hand",
+     "t": 176.512,
+     "end": 176.849
+    },
+    {
+     "w": "in",
+     "t": 176.862,
+     "end": 176.925
+    },
+    {
+     "w": "a",
+     "t": 176.937,
+     "end": 177.025
+    },
+    {
+     "w": "gym",
+     "t": 177.062,
+     "end": 177.712
+    },
+    {
+     "w": "not",
+     "t": 177.887,
+     "end": 178.125
+    },
+    {
+     "w": "proof",
+     "t": 178.162,
+     "end": 178.487
+    },
+    {
+     "w": "it",
+     "t": 178.512,
+     "end": 178.637
+    },
+    {
+     "w": "survives",
+     "t": 178.662,
+     "end": 179.237
+    },
+    {
+     "w": "defenders",
+     "t": 179.262,
+     "end": 179.887
+    },
+    {
+     "w": "in",
+     "t": 179.912,
+     "end": 179.975
+    },
+    {
+     "w": "a",
+     "t": 179.987,
+     "end": 180.037
+    },
+    {
+     "w": "game",
+     "t": 180.062,
+     "end": 180.597
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/01/01e8838f98a6f82f39221d59.wav"
+  },
+  {
+   "index": 19,
+   "start": 182.2,
+   "duration": 12.13,
+   "end": 194.33,
+   "text": "One half is what a fair coin does. [pause 0.12] Seventeen out of forty two is what this test sees. A fifty percent shooter [pause 0.3] who averages one half on this test [pause 0.2] is already running hot.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "One",
+     "t": 182.27,
+     "end": 182.507
+    },
+    {
+     "w": "half",
+     "t": 182.545,
+     "end": 183.007
+    },
+    {
+     "w": "is",
+     "t": 183.045,
+     "end": 183.158
+    },
+    {
+     "w": "what",
+     "t": 183.17,
+     "end": 183.282
+    },
+    {
+     "w": "a",
+     "t": 183.295,
+     "end": 183.37
+    },
+    {
+     "w": "fair",
+     "t": 183.42,
+     "end": 183.645
+    },
+    {
+     "w": "coin",
+     "t": 183.67,
+     "end": 183.97
+    },
+    {
+     "w": "does",
+     "t": 183.995,
+     "end": 184.53
+    },
+    {
+     "w": "Seventeen",
+     "t": 184.75,
+     "end": 185.425
+    },
+    {
+     "w": "out",
+     "t": 185.45,
+     "end": 185.613
+    },
+    {
+     "w": "of",
+     "t": 185.625,
+     "end": 185.7
+    },
+    {
+     "w": "forty",
+     "t": 185.725,
+     "end": 186.075
+    },
+    {
+     "w": "two",
+     "t": 186.125,
+     "end": 186.688
+    },
+    {
+     "w": "is",
+     "t": 186.75,
+     "end": 186.875
+    },
+    {
+     "w": "what",
+     "t": 186.9,
+     "end": 187.025
+    },
+    {
+     "w": "this",
+     "t": 187.05,
+     "end": 187.225
+    },
+    {
+     "w": "test",
+     "t": 187.25,
+     "end": 187.525
+    },
+    {
+     "w": "sees",
+     "t": 187.55,
+     "end": 188.13
+    },
+    {
+     "w": "A",
+     "t": 188.56,
+     "end": 188.66
+    },
+    {
+     "w": "fifty",
+     "t": 188.71,
+     "end": 189.11
+    },
+    {
+     "w": "percent",
+     "t": 189.135,
+     "end": 189.548
+    },
+    {
+     "w": "shooter",
+     "t": 189.585,
+     "end": 190.1
+    },
+    {
+     "w": "who",
+     "t": 190.43,
+     "end": 190.605
+    },
+    {
+     "w": "averages",
+     "t": 190.655,
+     "end": 191.155
+    },
+    {
+     "w": "one",
+     "t": 191.18,
+     "end": 191.305
+    },
+    {
+     "w": "half",
+     "t": 191.33,
+     "end": 191.617
+    },
+    {
+     "w": "on",
+     "t": 191.63,
+     "end": 191.717
+    },
+    {
+     "w": "this",
+     "t": 191.73,
+     "end": 191.918
+    },
+    {
+     "w": "test",
+     "t": 191.955,
+     "end": 192.55
+    },
+    {
+     "w": "is",
+     "t": 192.825,
+     "end": 192.975
+    },
+    {
+     "w": "already",
+     "t": 193.0,
+     "end": 193.35
+    },
+    {
+     "w": "running",
+     "t": 193.375,
+     "end": 193.712
+    },
+    {
+     "w": "hot",
+     "t": 193.75,
+     "end": 194.33
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/5f/5f9d0909fca696e34fc22d52.wav"
+  }
+ ],
+ "warnings": [],
+ "layout_audit": {
+  "clearance": 0.15,
+  "checks": 198,
+  "audit_seconds": 5.28,
+  "render_seconds": 328.4,
+  "errors": 0,
+  "count": 0,
+  "counts": {
+   "overlap": 0,
+   "clearance": 0,
+   "safe-area": 0,
+   "caption-zone": 0
+  },
+  "issues": [],
+  "allowed": [],
+  "excluded": [
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "for 0.5 s each score shrinks into its own dot, in place, before the dot falls to the line"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   },
+   {
+    "mobject": "VGroup",
+    "reason": "ghost miniature of the 16-row table (60% opacity): each letter sits inside its own small coin"
+   }
+  ]
+ }
+}

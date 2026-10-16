@@ -1,0 +1,172 @@
+1
+00:00:00,000 --> 00:00:04,490
+Eight girls at an Illinois high school, and every friendship between them.
+
+2
+00:00:04,700 --> 00:00:07,880
+On average, each girl has two and a half friends.
+
+3
+00:00:08,066 --> 00:00:10,706
+How many friends does the average friend have?
+
+4
+00:00:10,966 --> 00:00:11,826
+Pick one.
+
+5
+00:00:13,933 --> 00:00:21,613
+It matters to health researchers choosing whom to watch for flu: random students, or the friends those students name.
+
+6
+00:00:22,300 --> 00:00:27,860
+The natural guess is two and a half again: every friend is one of these same eight girls.
+
+7
+00:00:28,200 --> 00:00:32,200
+Check that on a rewired class where every girl has two friends.
+
+8
+00:00:32,460 --> 00:00:35,840
+Send a token both ways along every friendship.
+
+9
+00:00:36,200 --> 00:00:40,310
+Each token reads the friend count where it lands, here always two.
+
+10
+00:00:40,570 --> 00:00:43,250
+Both averages are two: the guess holds.
+
+11
+00:00:43,933 --> 00:00:47,783
+Now restore the real friendships and send the tokens again.
+
+12
+00:00:48,043 --> 00:00:50,513
+They read one, two, three, or four.
+
+13
+00:00:50,773 --> 00:00:54,663
+Twenty tokens add up to sixty: friends average three.
+
+14
+00:00:55,000 --> 00:01:00,200
+The guess was half a friend too low: friends average twenty percent more than girls.
+
+15
+00:01:00,460 --> 00:01:05,750
+The tokens piled up unevenly: four on Sue, four on Alice, one on Betty.
+
+16
+00:01:06,466 --> 00:01:13,156
+Line the girls up by friend count: two at each count, from one to four, so they balance at two and a half.
+
+17
+00:01:13,500 --> 00:01:18,500
+The tokens stack higher on the right, one per friend, so they balance at three.
+
+18
+00:01:18,833 --> 00:01:22,443
+Sue holds four tokens, each worth four: sixteen.
+
+19
+00:01:22,703 --> 00:01:27,223
+A girl with k friends adds k squared on top, and k on the bottom.
+
+20
+00:01:27,483 --> 00:01:28,983
+Sixty over twenty.
+
+21
+00:01:29,333 --> 00:01:37,853
+Divide top and bottom by the eight girls: the average of k squared, seven and a half, over the average girl, two and a half.
+
+22
+00:01:38,200 --> 00:01:45,820
+Measure each girl's distance from the balance point and square it: two and a quarter at the ends, a quarter in the middle.
+
+23
+00:01:46,080 --> 00:01:49,970
+They average one and a quarter, the variance, sigma squared.
+
+24
+00:01:50,933 --> 00:01:56,573
+Split Sue's four into the balance point, two and a half, plus her distance, one and a half.
+
+25
+00:01:56,833 --> 00:02:01,523
+Squaring gives two and a half squared, her distance squared, and a cross term.
+
+26
+00:02:02,123 --> 00:02:11,083
+Every girl splits this way, and because the beam balances, the left and right distances add to zero and the cross terms cancel.
+
+27
+00:02:12,033 --> 00:02:19,973
+So the average of k squared is mu squared plus sigma squared, and friends average mu, plus sigma squared over mu.
+
+28
+00:02:20,233 --> 00:02:25,473
+Here that's two and a half, plus a half: exactly the extra half friend we measured.
+
+29
+00:02:25,733 --> 00:02:28,383
+The ring had no spread, so it had no gap.
+
+30
+00:02:30,466 --> 00:02:35,756
+In twenty eleven, Facebook users averaged about a hundred and ninety friends.
+
+31
+00:02:36,016 --> 00:02:40,216
+If every friendship sent tokens, what would the tokens average?
+
+32
+00:02:42,166 --> 00:02:44,516
+About six hundred and thirty five.
+
+33
+00:02:44,776 --> 00:02:50,806
+A few users had thousands of friends, so the spread term is more than twice the mean itself.
+
+34
+00:02:51,500 --> 00:02:55,640
+In twenty oh nine, Christakis and Fowler tested this at Harvard.
+
+35
+00:02:55,900 --> 00:03:00,780
+Friends sit closer to everyone else in the network, so they should catch it first.
+
+36
+00:03:01,040 --> 00:03:08,840
+They tracked flu diagnoses in three hundred nineteen random students and four hundred twenty five friends they named.
+
+37
+00:03:09,100 --> 00:03:14,580
+The friends' curve rose first: fitted curves put them thirteen point nine days ahead.
+
+38
+00:03:14,840 --> 00:03:18,650
+With self-reported symptoms, the lead shrank to about three.
+
+39
+00:03:19,366 --> 00:03:20,916
+Back to the eight girls.
+
+40
+00:03:21,176 --> 00:03:26,476
+Five have fewer friends than their friends average, and only Sue and Alice have more.
+
+41
+00:03:26,833 --> 00:03:33,463
+Follow any friendship, yours included, and you land on a Sue four times as often as on a Betty.
+
+42
+00:03:33,723 --> 00:03:36,673
+So Betty looks at her one friend and sees four.
+
+43
+00:03:36,933 --> 00:03:40,003
+From most seats in this class, the view is the same.
+

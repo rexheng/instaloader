@@ -1,0 +1,14 @@
+WER 2.0% over 562 script words (numbers spelled out, 'and' ignored)
+script: videos/episodes/001-bertrand-paradox/narration.json
+
+[0:27.6] replace  script: 'chord'                                  heard: 'cord'
+[0:28.3] replace  script: "triangle's"                             heard: 'triangle'
+[0:32.1] replace  script: 'chords'                                 heard: 'cords'
+[0:41.2] replace  script: 'chord'                                  heard: 'cord'
+[2:30.9] replace  script: 'jaynes'                                 heard: 'jane'
+[3:00.1] replace  script: 'jaynes'                                 heard: 'janes'
+[3:05.8] insert   script: '∅'                                      heard: 'one'
+[3:12.4] replace  script: 'jaynes'                                 heard: 'janes'
+[3:21.1] replace  script: 'a'                                      heard: 'one'
+[3:34.6] replace  script: 'a'                                      heard: 'one'
+[3:45.6] replace  script: 'a'                                      heard: 'one'

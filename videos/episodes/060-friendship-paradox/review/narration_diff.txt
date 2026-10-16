@@ -1,0 +1,8 @@
+WER 1.5% over 532 script words (numbers spelled out, 'and' ignored)
+script: videos/episodes/060-friendship-paradox/narration.json
+
+[0:57.9] delete   script: 'friends'                                heard: '∅'
+[1:51.3] replace  script: "sue's"                                  heard: 'sus four'
+[2:33.8] replace  script: 'a'                                      heard: 'one'
+[2:51.7] replace  script: 'twenty oh'                              heard: 'two thousand'
+[3:40.8] insert   script: '∅'                                      heard: 'thank you'

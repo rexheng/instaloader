@@ -1,0 +1,8 @@
+WER 1.3% over 522 script words (numbers spelled out, 'and' ignored)
+script: videos/episodes/008-kl-divergence/narration.json
+
+[0:17.2] replace  script: 'kullback leibler'                       heard: 'cullback lie blur'
+[0:30.5] insert   script: '∅'                                      heard: 'zero'
+[1:24.2] replace  script: 'grey'                                   heard: 'gray'
+[1:27.5] insert   script: '∅'                                      heard: 'zero'
+[2:46.0] replace  script: 'blei'                                   heard: 'bly'

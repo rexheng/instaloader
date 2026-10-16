@@ -1,0 +1,9 @@
+WER 1.4% over 562 script words (numbers spelled out, 'and' ignored)
+script: videos/episodes/006-riffle-shuffle-cutoff/narration.json
+
+[0:12.2] replace  script: 'a'                                      heard: 'one'
+[1:18.5] replace  script: 'a half'                                 heard: 'point five'
+[2:24.4] replace  script: "blue's"                                 heard: 'blues'
+[2:34.5] replace  script: 'too'                                    heard: 'two'
+[2:49.8] replace  script: "deck's"                                 heard: 'deck'
+[3:01.1] replace  script: 'aldous'                                 heard: 'all does'

@@ -1,0 +1,228 @@
+1
+00:00:00,000 --> 00:00:03,910
+A hundred waits for a bus: mostly short, with a long tail.
+
+2
+00:00:04,060 --> 00:00:07,920
+Textbooks say the average of thirty is safe to treat as a bell.
+
+3
+00:00:08,070 --> 00:00:12,150
+For these waits, does it take thirty, three hundred, or over a thousand?
+
+4
+00:00:13,766 --> 00:00:19,746
+A-B tests lean on that bell, and on revenue data, thirty is off by a factor of thousands.
+
+5
+00:00:20,100 --> 00:00:22,660
+First, look for the bell in the data itself.
+
+6
+00:00:22,810 --> 00:00:26,290
+Collect a thousand, ten thousand, a hundred thousand.
+
+7
+00:00:26,440 --> 00:00:29,330
+The bars get smoother, but the shape doesn't budge.
+
+8
+00:00:29,533 --> 00:00:37,143
+Measure the lean with skewness: the average cubed gap from the mean, left gaps counting negative, over the spread cubed.
+
+9
+00:00:37,293 --> 00:00:39,033
+A perfect bell scores zero.
+
+10
+00:00:39,183 --> 00:00:43,053
+These waits for a bus score about two at every sample size.
+
+11
+00:00:43,866 --> 00:00:45,266
+So average instead.
+
+12
+00:00:45,766 --> 00:00:50,276
+Four bus waits: the one long wait gets diluted by three short ones.
+
+13
+00:00:51,076 --> 00:00:52,746
+Drop that one number here.
+
+14
+00:00:52,896 --> 00:00:54,746
+Do that ten thousand times.
+
+15
+00:00:54,900 --> 00:00:57,580
+These averages lean less: skewness one.
+
+16
+00:00:57,730 --> 00:00:59,990
+Sixteen per average: point five.
+
+17
+00:01:00,140 --> 00:01:04,260
+Sixty-four: point two five, nearly this perfect bell in green.
+
+18
+00:01:04,466 --> 00:01:11,786
+Each time the group grows four times, the skewness halves: two over root n, and two is the skewness of one wait.
+
+19
+00:01:12,600 --> 00:01:14,240
+The root comes from the cubes.
+
+20
+00:01:14,390 --> 00:01:18,550
+Add four waits: their cubed gaps add up, four times one wait's.
+
+21
+00:01:18,700 --> 00:01:22,190
+But the spread only doubles, so its cube grows eight times.
+
+22
+00:01:22,340 --> 00:01:24,260
+Four over eight: half the lean.
+
+23
+00:01:24,410 --> 00:01:27,220
+In general, n over n to the one and a half.
+
+24
+00:01:28,033 --> 00:01:35,713
+A coin that lands heads one time in ten is just two spikes, yet its averages make the same bell, by the same rule.
+
+25
+00:01:35,863 --> 00:01:43,053
+Kurtosis, the extra tail weight, fades faster, as one over n, and every finer difference faster still.
+
+26
+00:01:43,203 --> 00:01:44,673
+Only the bell survives.
+
+27
+00:01:44,823 --> 00:01:46,693
+That's the central limit theorem.
+
+28
+00:01:46,843 --> 00:01:50,253
+It needs independent pieces, and one more condition.
+
+29
+00:01:51,066 --> 00:01:52,766
+Back to the textbook's thirty.
+
+30
+00:01:53,266 --> 00:01:55,956
+Two over root thirty: point three seven.
+
+31
+00:01:56,106 --> 00:01:57,586
+Close to a bell, by eye.
+
+32
+00:01:57,800 --> 00:02:04,550
+But tests live in the tails: a ninety-five percent interval should miss two and a half percent on each side.
+
+33
+00:02:04,700 --> 00:02:11,970
+Tests estimate the spread from the same data, so a low average gets a small spread, and its interval stops short.
+
+34
+00:02:12,120 --> 00:02:15,770
+With thirty waits: seven percent low, one percent high.
+
+35
+00:02:15,966 --> 00:02:21,846
+Ron Kohavi and colleagues, using Bing's data, want each side between two and three percent.
+
+36
+00:02:21,996 --> 00:02:26,336
+Their rule: n at least three hundred fifty-five times the skewness squared.
+
+37
+00:02:26,636 --> 00:02:28,586
+Divide by n and take the root:
+
+38
+00:02:29,586 --> 00:02:33,826
+it's our formula: the average's skewness at most point oh five three.
+
+39
+00:02:33,976 --> 00:02:35,636
+Three hundred still misses.
+
+40
+00:02:35,786 --> 00:02:39,946
+For these waits: fourteen twenty, and both misses reach the band.
+
+41
+00:02:41,200 --> 00:02:47,430
+Bing's revenue per user had a skewness near eighteen: a hundred and fourteen thousand users.
+
+42
+00:02:47,580 --> 00:02:51,580
+Capping each user at ten dollars a week: under ten thousand.
+
+43
+00:02:52,633 --> 00:02:53,853
+Now the condition.
+
+44
+00:02:54,003 --> 00:03:01,133
+A lighthouse one mile off a straight shore flashes at random angles, and each flash lands somewhere on the shore.
+
+45
+00:03:01,333 --> 00:03:03,213
+Track the average landing spot.
+
+46
+00:03:03,363 --> 00:03:09,663
+It never settles: a flash aimed almost along the shore lands absurdly far away, and yanks it.
+
+47
+00:03:10,133 --> 00:03:15,473
+Among a thousand flashes, the farthest typically lands about nine hundred miles off.
+
+48
+00:03:15,623 --> 00:03:19,823
+Divided by a thousand, it still drags the average about a mile.
+
+49
+00:03:19,973 --> 00:03:23,503
+Half of single flashes land within a mile of the middle.
+
+50
+00:03:23,653 --> 00:03:28,363
+Repeat the thousand-flash average two hundred times, and still only half do.
+
+51
+00:03:29,166 --> 00:03:33,946
+The theorem needs finite variance: no single piece can outweigh the rest.
+
+52
+00:03:34,096 --> 00:03:35,946
+Here the variance is infinite.
+
+53
+00:03:36,096 --> 00:03:39,966
+The median ignores how far the extremes fly, so it homes in.
+
+54
+00:03:41,000 --> 00:03:43,810
+So the answer is over a thousand, not thirty.
+
+55
+00:03:43,960 --> 00:03:47,490
+And collect forever: this histogram stays lopsided.
+
+56
+00:03:47,640 --> 00:03:49,460
+The bell was never in the data.
+
+57
+00:03:49,610 --> 00:03:50,950
+It's in the average.
+

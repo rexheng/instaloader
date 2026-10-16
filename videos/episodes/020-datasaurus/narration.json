@@ -1,0 +1,3066 @@
+{
+ "scene": "Episode",
+ "episode": 20,
+ "title": "A Dinosaur Hiding in Your Summary Statistics",
+ "video_duration": 222.3,
+ "beats": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "duration": 13.2,
+   "end": 13.2,
+   "text": "A hundred and forty-two points: two averages, two standard deviations, and a correlation of minus point oh six. Which way does their best-fit line tilt, and how steeply? [pause 1.5]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "A",
+     "t": 0.02,
+     "end": 0.107
+    },
+    {
+     "w": "hundred",
+     "t": 0.145,
+     "end": 0.545
+    },
+    {
+     "w": "and",
+     "t": 0.57,
+     "end": 0.67
+    },
+    {
+     "w": "forty-two",
+     "t": 0.695,
+     "end": 1.17
+    },
+    {
+     "w": "points",
+     "t": 1.195,
+     "end": 2.045
+    },
+    {
+     "w": "two",
+     "t": 2.27,
+     "end": 2.482
+    },
+    {
+     "w": "averages",
+     "t": 2.52,
+     "end": 3.295
+    },
+    {
+     "w": "two",
+     "t": 3.445,
+     "end": 3.67
+    },
+    {
+     "w": "standard",
+     "t": 3.695,
+     "end": 4.12
+    },
+    {
+     "w": "deviations",
+     "t": 4.145,
+     "end": 5.27
+    },
+    {
+     "w": "and",
+     "t": 5.395,
+     "end": 5.482
+    },
+    {
+     "w": "a",
+     "t": 5.495,
+     "end": 5.558
+    },
+    {
+     "w": "correlation",
+     "t": 5.595,
+     "end": 6.295
+    },
+    {
+     "w": "of",
+     "t": 6.32,
+     "end": 6.458
+    },
+    {
+     "w": "minus",
+     "t": 6.495,
+     "end": 6.845
+    },
+    {
+     "w": "point",
+     "t": 6.87,
+     "end": 7.145
+    },
+    {
+     "w": "oh",
+     "t": 7.17,
+     "end": 7.32
+    },
+    {
+     "w": "six",
+     "t": 7.37,
+     "end": 7.97
+    },
+    {
+     "w": "Which",
+     "t": 8.375,
+     "end": 8.575
+    },
+    {
+     "w": "way",
+     "t": 8.6,
+     "end": 8.85
+    },
+    {
+     "w": "does",
+     "t": 8.875,
+     "end": 9.038
+    },
+    {
+     "w": "their",
+     "t": 9.05,
+     "end": 9.2
+    },
+    {
+     "w": "best-fit",
+     "t": 9.225,
+     "end": 9.625
+    },
+    {
+     "w": "line",
+     "t": 9.65,
+     "end": 9.937
+    },
+    {
+     "w": "tilt",
+     "t": 9.975,
+     "end": 10.55
+    },
+    {
+     "w": "and",
+     "t": 10.675,
+     "end": 10.775
+    },
+    {
+     "w": "how",
+     "t": 10.8,
+     "end": 10.962
+    },
+    {
+     "w": "steeply",
+     "t": 11.0,
+     "end": 11.7
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/fb/fbe7bf2fdf9e927f9a813c08.wav"
+  },
+  {
+   "index": 1,
+   "start": 13.533,
+   "duration": 11.47,
+   "end": 25.003,
+   "text": "A shapeless oval cloud with a nearly flat line is the reasonable guess. Here are the real points: a dinosaur, drawn by Alberto Cairo, with these same five numbers.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "A",
+     "t": 13.553,
+     "end": 13.665
+    },
+    {
+     "w": "shapeless",
+     "t": 13.728,
+     "end": 14.215
+    },
+    {
+     "w": "oval",
+     "t": 14.253,
+     "end": 14.578
+    },
+    {
+     "w": "cloud",
+     "t": 14.603,
+     "end": 15.053
+    },
+    {
+     "w": "with",
+     "t": 15.078,
+     "end": 15.191
+    },
+    {
+     "w": "a",
+     "t": 15.203,
+     "end": 15.278
+    },
+    {
+     "w": "nearly",
+     "t": 15.303,
+     "end": 15.678
+    },
+    {
+     "w": "flat",
+     "t": 15.728,
+     "end": 16.028
+    },
+    {
+     "w": "line",
+     "t": 16.053,
+     "end": 16.765
+    },
+    {
+     "w": "is",
+     "t": 16.828,
+     "end": 16.953
+    },
+    {
+     "w": "the",
+     "t": 16.978,
+     "end": 17.091
+    },
+    {
+     "w": "reasonable",
+     "t": 17.128,
+     "end": 17.728
+    },
+    {
+     "w": "guess",
+     "t": 17.753,
+     "end": 18.313
+    },
+    {
+     "w": "Here",
+     "t": 18.753,
+     "end": 18.965
+    },
+    {
+     "w": "are",
+     "t": 18.978,
+     "end": 19.041
+    },
+    {
+     "w": "the",
+     "t": 19.053,
+     "end": 19.153
+    },
+    {
+     "w": "real",
+     "t": 19.178,
+     "end": 19.453
+    },
+    {
+     "w": "points",
+     "t": 19.478,
+     "end": 20.303
+    },
+    {
+     "w": "a",
+     "t": 20.478,
+     "end": 20.553
+    },
+    {
+     "w": "dinosaur",
+     "t": 20.578,
+     "end": 21.278
+    },
+    {
+     "w": "drawn",
+     "t": 21.378,
+     "end": 21.678
+    },
+    {
+     "w": "by",
+     "t": 21.703,
+     "end": 21.853
+    },
+    {
+     "w": "Alberto",
+     "t": 21.878,
+     "end": 22.44
+    },
+    {
+     "w": "Cairo",
+     "t": 22.478,
+     "end": 23.053
+    },
+    {
+     "w": "with",
+     "t": 23.178,
+     "end": 23.303
+    },
+    {
+     "w": "these",
+     "t": 23.328,
+     "end": 23.565
+    },
+    {
+     "w": "same",
+     "t": 23.603,
+     "end": 23.94
+    },
+    {
+     "w": "five",
+     "t": 23.978,
+     "end": 24.303
+    },
+    {
+     "w": "numbers",
+     "t": 24.328,
+     "end": 25.003
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/be/be0f5740f4a6d1b083a5957f.wav"
+  },
+  {
+   "index": 2,
+   "start": 25.667,
+   "duration": 11.36,
+   "end": 37.027,
+   "text": "In a review of seven hundred and three physiology papers, eighty-six percent used bar graphs: an average and an error bar. Only thirteen percent showed the points.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "In",
+     "t": 25.692,
+     "end": 25.792
+    },
+    {
+     "w": "a",
+     "t": 25.817,
+     "end": 25.867
+    },
+    {
+     "w": "review",
+     "t": 25.892,
+     "end": 26.342
+    },
+    {
+     "w": "of",
+     "t": 26.367,
+     "end": 26.517
+    },
+    {
+     "w": "seven",
+     "t": 26.567,
+     "end": 26.892
+    },
+    {
+     "w": "hundred",
+     "t": 26.917,
+     "end": 27.317
+    },
+    {
+     "w": "and",
+     "t": 27.342,
+     "end": 27.455
+    },
+    {
+     "w": "three",
+     "t": 27.492,
+     "end": 27.792
+    },
+    {
+     "w": "physiology",
+     "t": 27.842,
+     "end": 28.492
+    },
+    {
+     "w": "papers",
+     "t": 28.517,
+     "end": 29.367
+    },
+    {
+     "w": "eighty-six",
+     "t": 29.542,
+     "end": 30.217
+    },
+    {
+     "w": "percent",
+     "t": 30.242,
+     "end": 30.755
+    },
+    {
+     "w": "used",
+     "t": 30.792,
+     "end": 31.092
+    },
+    {
+     "w": "bar",
+     "t": 31.117,
+     "end": 31.367
+    },
+    {
+     "w": "graphs",
+     "t": 31.392,
+     "end": 32.267
+    },
+    {
+     "w": "an",
+     "t": 32.442,
+     "end": 32.592
+    },
+    {
+     "w": "average",
+     "t": 32.642,
+     "end": 33.292
+    },
+    {
+     "w": "and",
+     "t": 33.342,
+     "end": 33.43
+    },
+    {
+     "w": "an",
+     "t": 33.442,
+     "end": 33.567
+    },
+    {
+     "w": "error",
+     "t": 33.617,
+     "end": 33.892
+    },
+    {
+     "w": "bar",
+     "t": 33.917,
+     "end": 34.387
+    },
+    {
+     "w": "Only",
+     "t": 34.777,
+     "end": 35.077
+    },
+    {
+     "w": "thirteen",
+     "t": 35.102,
+     "end": 35.527
+    },
+    {
+     "w": "percent",
+     "t": 35.552,
+     "end": 36.077
+    },
+    {
+     "w": "showed",
+     "t": 36.127,
+     "end": 36.34
+    },
+    {
+     "w": "the",
+     "t": 36.352,
+     "end": 36.427
+    },
+    {
+     "w": "points",
+     "t": 36.452,
+     "end": 37.027
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/74/74b55ed846d47853e3980253.wav"
+  },
+  {
+   "index": 3,
+   "start": 37.367,
+   "duration": 8.33,
+   "end": 45.697,
+   "text": "So how much can five numbers hide? Let's hide a star in them, and demand that all five still match the dinosaur's to two decimals.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "So",
+     "t": 37.427,
+     "end": 37.602
+    },
+    {
+     "w": "how",
+     "t": 37.627,
+     "end": 37.777
+    },
+    {
+     "w": "much",
+     "t": 37.802,
+     "end": 38.002
+    },
+    {
+     "w": "can",
+     "t": 38.027,
+     "end": 38.227
+    },
+    {
+     "w": "five",
+     "t": 38.277,
+     "end": 38.615
+    },
+    {
+     "w": "numbers",
+     "t": 38.627,
+     "end": 38.952
+    },
+    {
+     "w": "hide",
+     "t": 38.977,
+     "end": 39.507
+    },
+    {
+     "w": "Let's",
+     "t": 39.917,
+     "end": 40.167
+    },
+    {
+     "w": "hide",
+     "t": 40.192,
+     "end": 40.379
+    },
+    {
+     "w": "a",
+     "t": 40.392,
+     "end": 40.455
+    },
+    {
+     "w": "star",
+     "t": 40.492,
+     "end": 40.805
+    },
+    {
+     "w": "in",
+     "t": 40.817,
+     "end": 40.905
+    },
+    {
+     "w": "them",
+     "t": 40.917,
+     "end": 41.467
+    },
+    {
+     "w": "and",
+     "t": 41.642,
+     "end": 41.73
+    },
+    {
+     "w": "demand",
+     "t": 41.742,
+     "end": 42.142
+    },
+    {
+     "w": "that",
+     "t": 42.167,
+     "end": 42.342
+    },
+    {
+     "w": "all",
+     "t": 42.392,
+     "end": 42.692
+    },
+    {
+     "w": "five",
+     "t": 42.742,
+     "end": 43.155
+    },
+    {
+     "w": "still",
+     "t": 43.192,
+     "end": 43.442
+    },
+    {
+     "w": "match",
+     "t": 43.467,
+     "end": 43.792
+    },
+    {
+     "w": "the",
+     "t": 43.817,
+     "end": 43.892
+    },
+    {
+     "w": "dinosaur's",
+     "t": 43.917,
+     "end": 44.592
+    },
+    {
+     "w": "to",
+     "t": 44.617,
+     "end": 44.729
+    },
+    {
+     "w": "two",
+     "t": 44.767,
+     "end": 44.942
+    },
+    {
+     "w": "decimals",
+     "t": 44.967,
+     "end": 45.697
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/90/9099247c7ce795d977619952.wav"
+  },
+  {
+   "index": 4,
+   "start": 45.9,
+   "duration": 4.12,
+   "end": 50.02,
+   "text": "Version one slides every point onto its own spot on a star.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Version",
+     "t": 45.955,
+     "end": 46.355
+    },
+    {
+     "w": "one",
+     "t": 46.38,
+     "end": 47.005
+    },
+    {
+     "w": "slides",
+     "t": 47.08,
+     "end": 47.568
+    },
+    {
+     "w": "every",
+     "t": 47.605,
+     "end": 47.88
+    },
+    {
+     "w": "point",
+     "t": 47.905,
+     "end": 48.18
+    },
+    {
+     "w": "onto",
+     "t": 48.205,
+     "end": 48.442
+    },
+    {
+     "w": "its",
+     "t": 48.455,
+     "end": 48.605
+    },
+    {
+     "w": "own",
+     "t": 48.63,
+     "end": 48.892
+    },
+    {
+     "w": "spot",
+     "t": 48.93,
+     "end": 49.255
+    },
+    {
+     "w": "on",
+     "t": 49.28,
+     "end": 49.392
+    },
+    {
+     "w": "a",
+     "t": 49.405,
+     "end": 49.455
+    },
+    {
+     "w": "star",
+     "t": 49.48,
+     "end": 50.02
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/79/796db9a327dcb6d28d98a604.wav"
+  },
+  {
+   "index": 5,
+   "start": 50.367,
+   "duration": 8.44,
+   "end": 58.807,
+   "text": "We got the star, and lost all five numbers. [pause 0.2] The center moved, the x spread grew, and the y spread shrank by almost a quarter.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "We",
+     "t": 50.382,
+     "end": 50.482
+    },
+    {
+     "w": "got",
+     "t": 50.507,
+     "end": 50.645
+    },
+    {
+     "w": "the",
+     "t": 50.657,
+     "end": 50.745
+    },
+    {
+     "w": "star",
+     "t": 50.782,
+     "end": 51.407
+    },
+    {
+     "w": "and",
+     "t": 51.557,
+     "end": 51.644
+    },
+    {
+     "w": "lost",
+     "t": 51.657,
+     "end": 51.995
+    },
+    {
+     "w": "all",
+     "t": 52.032,
+     "end": 52.269
+    },
+    {
+     "w": "five",
+     "t": 52.307,
+     "end": 52.632
+    },
+    {
+     "w": "numbers",
+     "t": 52.657,
+     "end": 53.297
+    },
+    {
+     "w": "The",
+     "t": 53.532,
+     "end": 53.645
+    },
+    {
+     "w": "center",
+     "t": 53.682,
+     "end": 54.032
+    },
+    {
+     "w": "moved",
+     "t": 54.057,
+     "end": 54.632
+    },
+    {
+     "w": "the",
+     "t": 54.757,
+     "end": 54.895
+    },
+    {
+     "w": "x",
+     "t": 54.932,
+     "end": 55.132
+    },
+    {
+     "w": "spread",
+     "t": 55.157,
+     "end": 55.457
+    },
+    {
+     "w": "grew",
+     "t": 55.482,
+     "end": 56.132
+    },
+    {
+     "w": "and",
+     "t": 56.307,
+     "end": 56.395
+    },
+    {
+     "w": "the",
+     "t": 56.407,
+     "end": 56.482
+    },
+    {
+     "w": "y",
+     "t": 56.507,
+     "end": 56.782
+    },
+    {
+     "w": "spread",
+     "t": 56.807,
+     "end": 57.132
+    },
+    {
+     "w": "shrank",
+     "t": 57.182,
+     "end": 57.532
+    },
+    {
+     "w": "by",
+     "t": 57.557,
+     "end": 57.744
+    },
+    {
+     "w": "almost",
+     "t": 57.782,
+     "end": 58.145
+    },
+    {
+     "w": "a",
+     "t": 58.157,
+     "end": 58.207
+    },
+    {
+     "w": "quarter",
+     "t": 58.232,
+     "end": 58.807
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/02/021a707fcd675d5072eb7d37.wav"
+  },
+  {
+   "index": 6,
+   "start": 59.467,
+   "duration": 2.69,
+   "end": 62.157,
+   "text": "So what exactly do five numbers pin down?",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "So",
+     "t": 59.527,
+     "end": 59.702
+    },
+    {
+     "w": "what",
+     "t": 59.727,
+     "end": 59.839
+    },
+    {
+     "w": "exactly",
+     "t": 59.852,
+     "end": 60.452
+    },
+    {
+     "w": "do",
+     "t": 60.477,
+     "end": 60.677
+    },
+    {
+     "w": "five",
+     "t": 60.727,
+     "end": 61.039
+    },
+    {
+     "w": "numbers",
+     "t": 61.052,
+     "end": 61.402
+    },
+    {
+     "w": "pin",
+     "t": 61.427,
+     "end": 61.652
+    },
+    {
+     "w": "down",
+     "t": 61.677,
+     "end": 62.157
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/1a/1a84212583cf375c4f831766.wav"
+  },
+  {
+   "index": 7,
+   "start": 62.5,
+   "duration": 4.17,
+   "end": 66.67,
+   "text": "The two averages mark a single point: the cloud's balance point.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 62.535,
+     "end": 62.66
+    },
+    {
+     "w": "two",
+     "t": 62.71,
+     "end": 62.923
+    },
+    {
+     "w": "averages",
+     "t": 62.96,
+     "end": 63.56
+    },
+    {
+     "w": "mark",
+     "t": 63.585,
+     "end": 63.772
+    },
+    {
+     "w": "a",
+     "t": 63.785,
+     "end": 63.885
+    },
+    {
+     "w": "single",
+     "t": 63.935,
+     "end": 64.285
+    },
+    {
+     "w": "point",
+     "t": 64.31,
+     "end": 64.935
+    },
+    {
+     "w": "the",
+     "t": 65.11,
+     "end": 65.21
+    },
+    {
+     "w": "cloud's",
+     "t": 65.235,
+     "end": 65.685
+    },
+    {
+     "w": "balance",
+     "t": 65.71,
+     "end": 66.135
+    },
+    {
+     "w": "point",
+     "t": 66.16,
+     "end": 66.67
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f1/f14991f2a6783b266073e8dc.wav"
+  },
+  {
+   "index": 8,
+   "start": 66.833,
+   "duration": 5.08,
+   "end": 71.913,
+   "text": "The two standard deviations draw a box, one deviation out on each side.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 66.848,
+     "end": 66.973
+    },
+    {
+     "w": "two",
+     "t": 67.023,
+     "end": 67.311
+    },
+    {
+     "w": "standard",
+     "t": 67.348,
+     "end": 67.748
+    },
+    {
+     "w": "deviations",
+     "t": 67.773,
+     "end": 68.573
+    },
+    {
+     "w": "draw",
+     "t": 68.598,
+     "end": 68.735
+    },
+    {
+     "w": "a",
+     "t": 68.748,
+     "end": 68.798
+    },
+    {
+     "w": "box",
+     "t": 68.823,
+     "end": 69.548
+    },
+    {
+     "w": "one",
+     "t": 69.723,
+     "end": 69.948
+    },
+    {
+     "w": "deviation",
+     "t": 69.973,
+     "end": 70.661
+    },
+    {
+     "w": "out",
+     "t": 70.698,
+     "end": 70.885
+    },
+    {
+     "w": "on",
+     "t": 70.898,
+     "end": 71.048
+    },
+    {
+     "w": "each",
+     "t": 71.073,
+     "end": 71.311
+    },
+    {
+     "w": "side",
+     "t": 71.348,
+     "end": 71.913
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/10/1060e033303f50308ab2bbb6.wav"
+  },
+  {
+   "index": 9,
+   "start": 72.1,
+   "duration": 20.14,
+   "end": 92.24,
+   "text": "Many ellipses touch all four walls. [pause 0.2] The correlation picks one. Correlation r means one standard deviation to the right, on average r standard deviations up. So the touch point on the right wall sits r times s y above the center. At minus point oh six, that's just below the middle.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Many",
+     "t": 72.155,
+     "end": 72.405
+    },
+    {
+     "w": "ellipses",
+     "t": 72.43,
+     "end": 72.98
+    },
+    {
+     "w": "touch",
+     "t": 73.005,
+     "end": 73.292
+    },
+    {
+     "w": "all",
+     "t": 73.33,
+     "end": 73.518
+    },
+    {
+     "w": "four",
+     "t": 73.555,
+     "end": 73.755
+    },
+    {
+     "w": "walls",
+     "t": 73.78,
+     "end": 74.39
+    },
+    {
+     "w": "The",
+     "t": 74.625,
+     "end": 74.7
+    },
+    {
+     "w": "correlation",
+     "t": 74.725,
+     "end": 75.425
+    },
+    {
+     "w": "picks",
+     "t": 75.45,
+     "end": 75.725
+    },
+    {
+     "w": "one",
+     "t": 75.75,
+     "end": 76.25
+    },
+    {
+     "w": "Correlation",
+     "t": 76.635,
+     "end": 77.51
+    },
+    {
+     "w": "r",
+     "t": 77.56,
+     "end": 77.86
+    },
+    {
+     "w": "means",
+     "t": 77.885,
+     "end": 78.21
+    },
+    {
+     "w": "one",
+     "t": 78.26,
+     "end": 78.548
+    },
+    {
+     "w": "standard",
+     "t": 78.585,
+     "end": 79.035
+    },
+    {
+     "w": "deviation",
+     "t": 79.06,
+     "end": 79.735
+    },
+    {
+     "w": "to",
+     "t": 79.76,
+     "end": 79.822
+    },
+    {
+     "w": "the",
+     "t": 79.835,
+     "end": 79.91
+    },
+    {
+     "w": "right",
+     "t": 79.935,
+     "end": 80.635
+    },
+    {
+     "w": "on",
+     "t": 80.785,
+     "end": 80.985
+    },
+    {
+     "w": "average",
+     "t": 81.035,
+     "end": 81.535
+    },
+    {
+     "w": "r",
+     "t": 81.585,
+     "end": 81.81
+    },
+    {
+     "w": "standard",
+     "t": 81.835,
+     "end": 82.26
+    },
+    {
+     "w": "deviations",
+     "t": 82.285,
+     "end": 83.048
+    },
+    {
+     "w": "up",
+     "t": 83.085,
+     "end": 83.48
+    },
+    {
+     "w": "So",
+     "t": 83.9,
+     "end": 83.988
+    },
+    {
+     "w": "the",
+     "t": 84.0,
+     "end": 84.075
+    },
+    {
+     "w": "touch",
+     "t": 84.1,
+     "end": 84.437
+    },
+    {
+     "w": "point",
+     "t": 84.475,
+     "end": 84.775
+    },
+    {
+     "w": "on",
+     "t": 84.8,
+     "end": 84.888
+    },
+    {
+     "w": "the",
+     "t": 84.9,
+     "end": 84.988
+    },
+    {
+     "w": "right",
+     "t": 85.025,
+     "end": 85.3
+    },
+    {
+     "w": "wall",
+     "t": 85.325,
+     "end": 85.612
+    },
+    {
+     "w": "sits",
+     "t": 85.65,
+     "end": 86.25
+    },
+    {
+     "w": "r",
+     "t": 86.3,
+     "end": 86.5
+    },
+    {
+     "w": "times",
+     "t": 86.525,
+     "end": 87.0
+    },
+    {
+     "w": "s",
+     "t": 87.05,
+     "end": 87.362
+    },
+    {
+     "w": "y",
+     "t": 87.4,
+     "end": 87.65
+    },
+    {
+     "w": "above",
+     "t": 87.675,
+     "end": 87.937
+    },
+    {
+     "w": "the",
+     "t": 87.95,
+     "end": 88.038
+    },
+    {
+     "w": "center",
+     "t": 88.075,
+     "end": 88.66
+    },
+    {
+     "w": "At",
+     "t": 89.045,
+     "end": 89.22
+    },
+    {
+     "w": "minus",
+     "t": 89.245,
+     "end": 89.595
+    },
+    {
+     "w": "point",
+     "t": 89.62,
+     "end": 89.87
+    },
+    {
+     "w": "oh",
+     "t": 89.895,
+     "end": 90.045
+    },
+    {
+     "w": "six",
+     "t": 90.095,
+     "end": 90.645
+    },
+    {
+     "w": "that's",
+     "t": 90.77,
+     "end": 91.095
+    },
+    {
+     "w": "just",
+     "t": 91.12,
+     "end": 91.345
+    },
+    {
+     "w": "below",
+     "t": 91.37,
+     "end": 91.695
+    },
+    {
+     "w": "the",
+     "t": 91.72,
+     "end": 91.795
+    },
+    {
+     "w": "middle",
+     "t": 91.82,
+     "end": 92.24
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/16/16963df046fb5db474b7d467.wav"
+  },
+  {
+   "index": 10,
+   "start": 92.6,
+   "duration": 2.88,
+   "end": 95.48,
+   "text": "That ellipse is everything the five numbers know.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "That",
+     "t": 92.64,
+     "end": 92.84
+    },
+    {
+     "w": "ellipse",
+     "t": 92.865,
+     "end": 93.328
+    },
+    {
+     "w": "is",
+     "t": 93.365,
+     "end": 93.54
+    },
+    {
+     "w": "everything",
+     "t": 93.59,
+     "end": 94.078
+    },
+    {
+     "w": "the",
+     "t": 94.09,
+     "end": 94.202
+    },
+    {
+     "w": "five",
+     "t": 94.24,
+     "end": 94.615
+    },
+    {
+     "w": "numbers",
+     "t": 94.64,
+     "end": 95.015
+    },
+    {
+     "w": "know",
+     "t": 95.04,
+     "end": 95.48
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/dd/dd0afe1c41cebf3836f54c95.wav"
+  },
+  {
+   "index": 11,
+   "start": 95.833,
+   "duration": 2.92,
+   "end": 98.753,
+   "text": "Now replay version one, and watch the ellipse.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Now",
+     "t": 95.913,
+     "end": 96.138
+    },
+    {
+     "w": "replay",
+     "t": 96.163,
+     "end": 96.513
+    },
+    {
+     "w": "version",
+     "t": 96.538,
+     "end": 96.863
+    },
+    {
+     "w": "one",
+     "t": 96.888,
+     "end": 97.338
+    },
+    {
+     "w": "and",
+     "t": 97.463,
+     "end": 97.575
+    },
+    {
+     "w": "watch",
+     "t": 97.613,
+     "end": 97.963
+    },
+    {
+     "w": "the",
+     "t": 97.988,
+     "end": 98.113
+    },
+    {
+     "w": "ellipse",
+     "t": 98.138,
+     "end": 98.753
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/46/467e07c3e4d0a36d10a4e338.wav"
+  },
+  {
+   "index": 12,
+   "start": 99.267,
+   "duration": 3.13,
+   "end": 102.397,
+   "text": "How would you fix the star? [pause 1.5]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "How",
+     "t": 99.317,
+     "end": 99.517
+    },
+    {
+     "w": "would",
+     "t": 99.542,
+     "end": 99.667
+    },
+    {
+     "w": "you",
+     "t": 99.692,
+     "end": 99.829
+    },
+    {
+     "w": "fix",
+     "t": 99.867,
+     "end": 100.142
+    },
+    {
+     "w": "the",
+     "t": 100.167,
+     "end": 100.267
+    },
+    {
+     "w": "star",
+     "t": 100.292,
+     "end": 100.897
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/34/34448aa9b563463c02cba383.wav"
+  },
+  {
+   "index": 13,
+   "start": 102.733,
+   "duration": 9.43,
+   "end": 112.163,
+   "text": "Slide it until the centers meet. Stretch it until the boxes match. Then tip it, a slight shear, until it touches the walls at the same height.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Slide",
+     "t": 102.828,
+     "end": 103.178
+    },
+    {
+     "w": "it",
+     "t": 103.203,
+     "end": 103.328
+    },
+    {
+     "w": "until",
+     "t": 103.353,
+     "end": 103.616
+    },
+    {
+     "w": "the",
+     "t": 103.628,
+     "end": 103.741
+    },
+    {
+     "w": "centers",
+     "t": 103.778,
+     "end": 104.178
+    },
+    {
+     "w": "meet",
+     "t": 104.203,
+     "end": 104.693
+    },
+    {
+     "w": "Stretch",
+     "t": 105.143,
+     "end": 105.543
+    },
+    {
+     "w": "it",
+     "t": 105.568,
+     "end": 105.693
+    },
+    {
+     "w": "until",
+     "t": 105.718,
+     "end": 105.98
+    },
+    {
+     "w": "the",
+     "t": 105.993,
+     "end": 106.068
+    },
+    {
+     "w": "boxes",
+     "t": 106.093,
+     "end": 106.593
+    },
+    {
+     "w": "match",
+     "t": 106.618,
+     "end": 107.193
+    },
+    {
+     "w": "Then",
+     "t": 107.623,
+     "end": 107.835
+    },
+    {
+     "w": "tip",
+     "t": 107.873,
+     "end": 108.111
+    },
+    {
+     "w": "it",
+     "t": 108.148,
+     "end": 108.348
+    },
+    {
+     "w": "a",
+     "t": 108.448,
+     "end": 108.548
+    },
+    {
+     "w": "slight",
+     "t": 108.598,
+     "end": 108.973
+    },
+    {
+     "w": "shear",
+     "t": 109.023,
+     "end": 109.648
+    },
+    {
+     "w": "until",
+     "t": 109.798,
+     "end": 110.061
+    },
+    {
+     "w": "it",
+     "t": 110.073,
+     "end": 110.148
+    },
+    {
+     "w": "touches",
+     "t": 110.173,
+     "end": 110.548
+    },
+    {
+     "w": "the",
+     "t": 110.573,
+     "end": 110.686
+    },
+    {
+     "w": "walls",
+     "t": 110.723,
+     "end": 111.111
+    },
+    {
+     "w": "at",
+     "t": 111.123,
+     "end": 111.185
+    },
+    {
+     "w": "the",
+     "t": 111.198,
+     "end": 111.311
+    },
+    {
+     "w": "same",
+     "t": 111.348,
+     "end": 111.648
+    },
+    {
+     "w": "height",
+     "t": 111.673,
+     "end": 112.163
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f4/f42393af323b03fbbbc10232.wav"
+  },
+  {
+   "index": 14,
+   "start": 112.5,
+   "duration": 3.11,
+   "end": 115.61,
+   "text": "All five match now, to every decimal place.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "All",
+     "t": 112.51,
+     "end": 112.722
+    },
+    {
+     "w": "five",
+     "t": 112.76,
+     "end": 113.085
+    },
+    {
+     "w": "match",
+     "t": 113.11,
+     "end": 113.41
+    },
+    {
+     "w": "now",
+     "t": 113.435,
+     "end": 113.86
+    },
+    {
+     "w": "to",
+     "t": 114.01,
+     "end": 114.148
+    },
+    {
+     "w": "every",
+     "t": 114.185,
+     "end": 114.485
+    },
+    {
+     "w": "decimal",
+     "t": 114.51,
+     "end": 114.96
+    },
+    {
+     "w": "place",
+     "t": 114.985,
+     "end": 115.61
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/9c/9c552955b3ade32560e6b072.wav"
+  },
+  {
+   "index": 15,
+   "start": 116.267,
+   "duration": 4.69,
+   "end": 120.957,
+   "text": "But add a sixth number, the median of y, and our star misses it by six.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "But",
+     "t": 116.267,
+     "end": 116.385
+    },
+    {
+     "w": "add",
+     "t": 116.422,
+     "end": 116.609
+    },
+    {
+     "w": "a",
+     "t": 116.622,
+     "end": 116.722
+    },
+    {
+     "w": "sixth",
+     "t": 116.772,
+     "end": 117.097
+    },
+    {
+     "w": "number",
+     "t": 117.122,
+     "end": 117.622
+    },
+    {
+     "w": "the",
+     "t": 117.747,
+     "end": 117.847
+    },
+    {
+     "w": "median",
+     "t": 117.872,
+     "end": 118.247
+    },
+    {
+     "w": "of",
+     "t": 118.272,
+     "end": 118.397
+    },
+    {
+     "w": "y",
+     "t": 118.422,
+     "end": 118.922
+    },
+    {
+     "w": "and",
+     "t": 119.047,
+     "end": 119.135
+    },
+    {
+     "w": "our",
+     "t": 119.147,
+     "end": 119.285
+    },
+    {
+     "w": "star",
+     "t": 119.322,
+     "end": 119.672
+    },
+    {
+     "w": "misses",
+     "t": 119.697,
+     "end": 119.997
+    },
+    {
+     "w": "it",
+     "t": 120.022,
+     "end": 120.122
+    },
+    {
+     "w": "by",
+     "t": 120.147,
+     "end": 120.347
+    },
+    {
+     "w": "six",
+     "t": 120.397,
+     "end": 120.957
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/75/756ed0490fb21b4da5c25df1.wav"
+  },
+  {
+   "index": 16,
+   "start": 121.3,
+   "duration": 8.84,
+   "end": 130.14,
+   "text": "In 2017, Justin Matejka and George Fitzmaurice built a search that holds whatever numbers you choose. [pause 0.15] They chose these five.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "In",
+     "t": 121.32,
+     "end": 121.445
+    },
+    {
+     "w": "2017",
+     "t": 121.47,
+     "end": 122.87
+    },
+    {
+     "w": "Justin",
+     "t": 123.095,
+     "end": 123.52
+    },
+    {
+     "w": "Matejka",
+     "t": 123.545,
+     "end": 124.232
+    },
+    {
+     "w": "and",
+     "t": 124.27,
+     "end": 124.382
+    },
+    {
+     "w": "George",
+     "t": 124.42,
+     "end": 124.795
+    },
+    {
+     "w": "Fitzmaurice",
+     "t": 124.82,
+     "end": 125.57
+    },
+    {
+     "w": "built",
+     "t": 125.62,
+     "end": 125.832
+    },
+    {
+     "w": "a",
+     "t": 125.845,
+     "end": 125.945
+    },
+    {
+     "w": "search",
+     "t": 125.995,
+     "end": 126.445
+    },
+    {
+     "w": "that",
+     "t": 126.47,
+     "end": 126.595
+    },
+    {
+     "w": "holds",
+     "t": 126.62,
+     "end": 126.97
+    },
+    {
+     "w": "whatever",
+     "t": 126.995,
+     "end": 127.37
+    },
+    {
+     "w": "numbers",
+     "t": 127.395,
+     "end": 127.745
+    },
+    {
+     "w": "you",
+     "t": 127.77,
+     "end": 127.92
+    },
+    {
+     "w": "choose",
+     "t": 127.97,
+     "end": 128.54
+    },
+    {
+     "w": "They",
+     "t": 128.74,
+     "end": 128.928
+    },
+    {
+     "w": "chose",
+     "t": 128.965,
+     "end": 129.29
+    },
+    {
+     "w": "these",
+     "t": 129.315,
+     "end": 129.54
+    },
+    {
+     "w": "five",
+     "t": 129.565,
+     "end": 130.14
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/fa/fa8311b98ccd6dcaca45238b.wav"
+  },
+  {
+   "index": 17,
+   "start": 130.333,
+   "duration": 11.89,
+   "end": 142.223,
+   "text": "Nudge a point at random, biased toward a target shape, and keep the nudge only if the five numbers still hold to two decimals. Repeat it enough times, and the dinosaur becomes a circle.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Nudge",
+     "t": 130.408,
+     "end": 130.67
+    },
+    {
+     "w": "a",
+     "t": 130.683,
+     "end": 130.771
+    },
+    {
+     "w": "point",
+     "t": 130.808,
+     "end": 131.095
+    },
+    {
+     "w": "at",
+     "t": 131.108,
+     "end": 131.183
+    },
+    {
+     "w": "random",
+     "t": 131.208,
+     "end": 131.983
+    },
+    {
+     "w": "biased",
+     "t": 132.158,
+     "end": 132.608
+    },
+    {
+     "w": "toward",
+     "t": 132.633,
+     "end": 132.895
+    },
+    {
+     "w": "a",
+     "t": 132.908,
+     "end": 132.958
+    },
+    {
+     "w": "target",
+     "t": 132.983,
+     "end": 133.395
+    },
+    {
+     "w": "shape",
+     "t": 133.433,
+     "end": 134.108
+    },
+    {
+     "w": "and",
+     "t": 134.283,
+     "end": 134.383
+    },
+    {
+     "w": "keep",
+     "t": 134.408,
+     "end": 134.633
+    },
+    {
+     "w": "the",
+     "t": 134.658,
+     "end": 134.758
+    },
+    {
+     "w": "nudge",
+     "t": 134.783,
+     "end": 135.145
+    },
+    {
+     "w": "only",
+     "t": 135.183,
+     "end": 135.458
+    },
+    {
+     "w": "if",
+     "t": 135.483,
+     "end": 135.595
+    },
+    {
+     "w": "the",
+     "t": 135.608,
+     "end": 135.733
+    },
+    {
+     "w": "five",
+     "t": 135.783,
+     "end": 136.108
+    },
+    {
+     "w": "numbers",
+     "t": 136.133,
+     "end": 136.496
+    },
+    {
+     "w": "still",
+     "t": 136.533,
+     "end": 136.783
+    },
+    {
+     "w": "hold",
+     "t": 136.808,
+     "end": 137.083
+    },
+    {
+     "w": "to",
+     "t": 137.108,
+     "end": 137.221
+    },
+    {
+     "w": "two",
+     "t": 137.258,
+     "end": 137.433
+    },
+    {
+     "w": "decimals",
+     "t": 137.458,
+     "end": 138.203
+    },
+    {
+     "w": "Repeat",
+     "t": 138.633,
+     "end": 139.021
+    },
+    {
+     "w": "it",
+     "t": 139.033,
+     "end": 139.095
+    },
+    {
+     "w": "enough",
+     "t": 139.108,
+     "end": 139.383
+    },
+    {
+     "w": "times",
+     "t": 139.408,
+     "end": 140.183
+    },
+    {
+     "w": "and",
+     "t": 140.333,
+     "end": 140.421
+    },
+    {
+     "w": "the",
+     "t": 140.433,
+     "end": 140.508
+    },
+    {
+     "w": "dinosaur",
+     "t": 140.533,
+     "end": 141.108
+    },
+    {
+     "w": "becomes",
+     "t": 141.133,
+     "end": 141.471
+    },
+    {
+     "w": "a",
+     "t": 141.483,
+     "end": 141.571
+    },
+    {
+     "w": "circle",
+     "t": 141.608,
+     "end": 142.223
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/62/624e370112af743ebb7bd747.wav"
+  },
+  {
+   "index": 18,
+   "start": 142.567,
+   "duration": 15.75,
+   "end": 158.317,
+   "text": "From the dinosaur they grew twelve shapes, like this star, [pause 1.3] this bullseye, [pause 1.0] this X, [pause 1.2] these stripes, [pause 0.9] and these dots. Every one of them has this same ellipse, and a different median.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "From",
+     "t": 142.602,
+     "end": 142.74
+    },
+    {
+     "w": "the",
+     "t": 142.752,
+     "end": 142.827
+    },
+    {
+     "w": "dinosaur",
+     "t": 142.852,
+     "end": 143.702
+    },
+    {
+     "w": "they",
+     "t": 143.752,
+     "end": 143.877
+    },
+    {
+     "w": "grew",
+     "t": 143.902,
+     "end": 144.102
+    },
+    {
+     "w": "twelve",
+     "t": 144.127,
+     "end": 144.465
+    },
+    {
+     "w": "shapes",
+     "t": 144.502,
+     "end": 144.902
+    },
+    {
+     "w": "like",
+     "t": 144.952,
+     "end": 145.127
+    },
+    {
+     "w": "this",
+     "t": 145.152,
+     "end": 145.302
+    },
+    {
+     "w": "star",
+     "t": 145.327,
+     "end": 145.857
+    },
+    {
+     "w": "this",
+     "t": 147.227,
+     "end": 147.427
+    },
+    {
+     "w": "bullseye",
+     "t": 147.452,
+     "end": 148.217
+    },
+    {
+     "w": "this",
+     "t": 149.287,
+     "end": 149.525
+    },
+    {
+     "w": "X",
+     "t": 149.562,
+     "end": 150.087
+    },
+    {
+     "w": "these",
+     "t": 151.342,
+     "end": 151.617
+    },
+    {
+     "w": "stripes",
+     "t": 151.642,
+     "end": 152.337
+    },
+    {
+     "w": "and",
+     "t": 153.317,
+     "end": 153.43
+    },
+    {
+     "w": "these",
+     "t": 153.442,
+     "end": 153.667
+    },
+    {
+     "w": "dots",
+     "t": 153.692,
+     "end": 154.337
+    },
+    {
+     "w": "Every",
+     "t": 154.737,
+     "end": 155.037
+    },
+    {
+     "w": "one",
+     "t": 155.062,
+     "end": 155.175
+    },
+    {
+     "w": "of",
+     "t": 155.187,
+     "end": 155.287
+    },
+    {
+     "w": "them",
+     "t": 155.312,
+     "end": 155.512
+    },
+    {
+     "w": "has",
+     "t": 155.537,
+     "end": 155.737
+    },
+    {
+     "w": "this",
+     "t": 155.762,
+     "end": 155.925
+    },
+    {
+     "w": "same",
+     "t": 155.962,
+     "end": 156.237
+    },
+    {
+     "w": "ellipse",
+     "t": 156.262,
+     "end": 157.012
+    },
+    {
+     "w": "and",
+     "t": 157.162,
+     "end": 157.25
+    },
+    {
+     "w": "a",
+     "t": 157.262,
+     "end": 157.312
+    },
+    {
+     "w": "different",
+     "t": 157.337,
+     "end": 157.637
+    },
+    {
+     "w": "median",
+     "t": 157.662,
+     "end": 158.317
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/fa/fa294fc30f310c3425132da5.wav"
+  },
+  {
+   "index": 19,
+   "start": 159.033,
+   "duration": 5.4,
+   "end": 164.433,
+   "text": "Francis Anscombe made the point in 1973, with eleven points of his own.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Francis",
+     "t": 159.093,
+     "end": 159.643
+    },
+    {
+     "w": "Anscombe",
+     "t": 159.693,
+     "end": 160.293
+    },
+    {
+     "w": "made",
+     "t": 160.318,
+     "end": 160.481
+    },
+    {
+     "w": "the",
+     "t": 160.493,
+     "end": 160.58
+    },
+    {
+     "w": "point",
+     "t": 160.618,
+     "end": 160.993
+    },
+    {
+     "w": "in",
+     "t": 161.018,
+     "end": 161.118
+    },
+    {
+     "w": "1973",
+     "t": 161.143,
+     "end": 162.568
+    },
+    {
+     "w": "with",
+     "t": 162.743,
+     "end": 162.893
+    },
+    {
+     "w": "eleven",
+     "t": 162.918,
+     "end": 163.343
+    },
+    {
+     "w": "points",
+     "t": 163.368,
+     "end": 163.705
+    },
+    {
+     "w": "of",
+     "t": 163.718,
+     "end": 163.781
+    },
+    {
+     "w": "his",
+     "t": 163.793,
+     "end": 163.943
+    },
+    {
+     "w": "own",
+     "t": 163.968,
+     "end": 164.433
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/3c/3c8a1bbbd809be82980bbe71.wav"
+  },
+  {
+   "index": 20,
+   "start": 164.967,
+   "duration": 4.79,
+   "end": 169.757,
+   "text": "His correlation is point eight two, so the ellipse touches the right wall high up.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "His",
+     "t": 164.982,
+     "end": 165.157
+    },
+    {
+     "w": "correlation",
+     "t": 165.182,
+     "end": 165.857
+    },
+    {
+     "w": "is",
+     "t": 165.882,
+     "end": 166.007
+    },
+    {
+     "w": "point",
+     "t": 166.032,
+     "end": 166.244
+    },
+    {
+     "w": "eight",
+     "t": 166.257,
+     "end": 166.445
+    },
+    {
+     "w": "two",
+     "t": 166.482,
+     "end": 166.982
+    },
+    {
+     "w": "so",
+     "t": 167.207,
+     "end": 167.319
+    },
+    {
+     "w": "the",
+     "t": 167.332,
+     "end": 167.457
+    },
+    {
+     "w": "ellipse",
+     "t": 167.482,
+     "end": 167.894
+    },
+    {
+     "w": "touches",
+     "t": 167.932,
+     "end": 168.357
+    },
+    {
+     "w": "the",
+     "t": 168.382,
+     "end": 168.495
+    },
+    {
+     "w": "right",
+     "t": 168.532,
+     "end": 168.782
+    },
+    {
+     "w": "wall",
+     "t": 168.807,
+     "end": 169.107
+    },
+    {
+     "w": "high",
+     "t": 169.132,
+     "end": 169.357
+    },
+    {
+     "w": "up",
+     "t": 169.382,
+     "end": 169.757
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/3f/3f1d664e157c312600fadcb6.wav"
+  },
+  {
+   "index": 21,
+   "start": 170.1,
+   "duration": 12.81,
+   "end": 182.91,
+   "text": "Least squares sets the slope of the best-fit line to the covariance over the x variance. [pause 0.8] The covariance is r times s x times s y, [pause 1.0] so one s x cancels.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Least",
+     "t": 170.155,
+     "end": 170.455
+    },
+    {
+     "w": "squares",
+     "t": 170.48,
+     "end": 171.205
+    },
+    {
+     "w": "sets",
+     "t": 171.255,
+     "end": 171.53
+    },
+    {
+     "w": "the",
+     "t": 171.555,
+     "end": 171.668
+    },
+    {
+     "w": "slope",
+     "t": 171.705,
+     "end": 172.043
+    },
+    {
+     "w": "of",
+     "t": 172.055,
+     "end": 172.118
+    },
+    {
+     "w": "the",
+     "t": 172.13,
+     "end": 172.205
+    },
+    {
+     "w": "best-fit",
+     "t": 172.23,
+     "end": 172.63
+    },
+    {
+     "w": "line",
+     "t": 172.655,
+     "end": 173.405
+    },
+    {
+     "w": "to",
+     "t": 173.455,
+     "end": 173.518
+    },
+    {
+     "w": "the",
+     "t": 173.53,
+     "end": 173.605
+    },
+    {
+     "w": "covariance",
+     "t": 173.63,
+     "end": 174.468
+    },
+    {
+     "w": "over",
+     "t": 174.505,
+     "end": 174.692
+    },
+    {
+     "w": "the",
+     "t": 174.705,
+     "end": 174.842
+    },
+    {
+     "w": "x",
+     "t": 174.88,
+     "end": 175.105
+    },
+    {
+     "w": "variance",
+     "t": 175.13,
+     "end": 175.84
+    },
+    {
+     "w": "The",
+     "t": 176.655,
+     "end": 176.73
+    },
+    {
+     "w": "covariance",
+     "t": 176.755,
+     "end": 177.492
+    },
+    {
+     "w": "is",
+     "t": 177.53,
+     "end": 177.668
+    },
+    {
+     "w": "r",
+     "t": 177.705,
+     "end": 177.905
+    },
+    {
+     "w": "times",
+     "t": 177.93,
+     "end": 178.63
+    },
+    {
+     "w": "s",
+     "t": 178.68,
+     "end": 178.855
+    },
+    {
+     "w": "x",
+     "t": 178.88,
+     "end": 179.105
+    },
+    {
+     "w": "times",
+     "t": 179.13,
+     "end": 179.48
+    },
+    {
+     "w": "s",
+     "t": 179.505,
+     "end": 179.705
+    },
+    {
+     "w": "y",
+     "t": 179.73,
+     "end": 180.17
+    },
+    {
+     "w": "so",
+     "t": 181.245,
+     "end": 181.395
+    },
+    {
+     "w": "one",
+     "t": 181.42,
+     "end": 181.62
+    },
+    {
+     "w": "s",
+     "t": 181.645,
+     "end": 181.845
+    },
+    {
+     "w": "x",
+     "t": 181.87,
+     "end": 182.095
+    },
+    {
+     "w": "cancels",
+     "t": 182.12,
+     "end": 182.91
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/54/54fd74267fd39e99a3701df0.wav"
+  },
+  {
+   "index": 22,
+   "start": 183.367,
+   "duration": 10.66,
+   "end": 194.027,
+   "text": "What's left is the rise to the touch point over the run to the wall. [pause 0.2] So the line runs through the center and that touch point. Plug in his numbers, and the slope is one half.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "What's",
+     "t": 183.397,
+     "end": 183.672
+    },
+    {
+     "w": "left",
+     "t": 183.697,
+     "end": 184.159
+    },
+    {
+     "w": "is",
+     "t": 184.197,
+     "end": 184.322
+    },
+    {
+     "w": "the",
+     "t": 184.347,
+     "end": 184.459
+    },
+    {
+     "w": "rise",
+     "t": 184.497,
+     "end": 184.897
+    },
+    {
+     "w": "to",
+     "t": 184.922,
+     "end": 184.985
+    },
+    {
+     "w": "the",
+     "t": 184.997,
+     "end": 185.109
+    },
+    {
+     "w": "touch",
+     "t": 185.147,
+     "end": 185.597
+    },
+    {
+     "w": "point",
+     "t": 185.647,
+     "end": 185.972
+    },
+    {
+     "w": "over",
+     "t": 185.997,
+     "end": 186.185
+    },
+    {
+     "w": "the",
+     "t": 186.197,
+     "end": 186.297
+    },
+    {
+     "w": "run",
+     "t": 186.322,
+     "end": 186.572
+    },
+    {
+     "w": "to",
+     "t": 186.597,
+     "end": 186.659
+    },
+    {
+     "w": "the",
+     "t": 186.672,
+     "end": 186.747
+    },
+    {
+     "w": "wall",
+     "t": 186.772,
+     "end": 187.257
+    },
+    {
+     "w": "So",
+     "t": 187.507,
+     "end": 187.632
+    },
+    {
+     "w": "the",
+     "t": 187.657,
+     "end": 187.757
+    },
+    {
+     "w": "line",
+     "t": 187.782,
+     "end": 188.107
+    },
+    {
+     "w": "runs",
+     "t": 188.132,
+     "end": 188.432
+    },
+    {
+     "w": "through",
+     "t": 188.457,
+     "end": 188.619
+    },
+    {
+     "w": "the",
+     "t": 188.632,
+     "end": 188.744
+    },
+    {
+     "w": "center",
+     "t": 188.782,
+     "end": 189.519
+    },
+    {
+     "w": "and",
+     "t": 189.582,
+     "end": 189.669
+    },
+    {
+     "w": "that",
+     "t": 189.682,
+     "end": 189.882
+    },
+    {
+     "w": "touch",
+     "t": 189.907,
+     "end": 190.157
+    },
+    {
+     "w": "point",
+     "t": 190.182,
+     "end": 190.717
+    },
+    {
+     "w": "Plug",
+     "t": 191.102,
+     "end": 191.389
+    },
+    {
+     "w": "in",
+     "t": 191.402,
+     "end": 191.465
+    },
+    {
+     "w": "his",
+     "t": 191.477,
+     "end": 191.627
+    },
+    {
+     "w": "numbers",
+     "t": 191.652,
+     "end": 192.352
+    },
+    {
+     "w": "and",
+     "t": 192.477,
+     "end": 192.565
+    },
+    {
+     "w": "the",
+     "t": 192.577,
+     "end": 192.665
+    },
+    {
+     "w": "slope",
+     "t": 192.702,
+     "end": 193.052
+    },
+    {
+     "w": "is",
+     "t": 193.077,
+     "end": 193.202
+    },
+    {
+     "w": "one",
+     "t": 193.227,
+     "end": 193.452
+    },
+    {
+     "w": "half",
+     "t": 193.477,
+     "end": 194.027
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/8d/8d1f921a3a97ccd632bc31b2.wav"
+  },
+  {
+   "index": 23,
+   "start": 194.367,
+   "duration": 9.6,
+   "end": 203.967,
+   "text": "All four of his datasets share these five numbers, so they share the ellipse and the line. [pause 0.3] A trend, a curve, an outlier, and one point doing all the work.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "All",
+     "t": 194.382,
+     "end": 194.62
+    },
+    {
+     "w": "four",
+     "t": 194.657,
+     "end": 194.819
+    },
+    {
+     "w": "of",
+     "t": 194.832,
+     "end": 194.895
+    },
+    {
+     "w": "his",
+     "t": 194.907,
+     "end": 195.057
+    },
+    {
+     "w": "datasets",
+     "t": 195.082,
+     "end": 195.707
+    },
+    {
+     "w": "share",
+     "t": 195.757,
+     "end": 195.982
+    },
+    {
+     "w": "these",
+     "t": 196.007,
+     "end": 196.232
+    },
+    {
+     "w": "five",
+     "t": 196.257,
+     "end": 196.557
+    },
+    {
+     "w": "numbers",
+     "t": 196.582,
+     "end": 197.357
+    },
+    {
+     "w": "so",
+     "t": 197.532,
+     "end": 197.657
+    },
+    {
+     "w": "they",
+     "t": 197.682,
+     "end": 197.832
+    },
+    {
+     "w": "share",
+     "t": 197.882,
+     "end": 198.107
+    },
+    {
+     "w": "the",
+     "t": 198.132,
+     "end": 198.257
+    },
+    {
+     "w": "ellipse",
+     "t": 198.282,
+     "end": 198.794
+    },
+    {
+     "w": "and",
+     "t": 198.832,
+     "end": 198.919
+    },
+    {
+     "w": "the",
+     "t": 198.932,
+     "end": 199.007
+    },
+    {
+     "w": "line",
+     "t": 199.032,
+     "end": 199.567
+    },
+    {
+     "w": "A",
+     "t": 199.882,
+     "end": 199.969
+    },
+    {
+     "w": "trend",
+     "t": 200.007,
+     "end": 200.532
+    },
+    {
+     "w": "a",
+     "t": 200.632,
+     "end": 200.72
+    },
+    {
+     "w": "curve",
+     "t": 200.757,
+     "end": 201.307
+    },
+    {
+     "w": "an",
+     "t": 201.432,
+     "end": 201.519
+    },
+    {
+     "w": "outlier",
+     "t": 201.557,
+     "end": 202.182
+    },
+    {
+     "w": "and",
+     "t": 202.257,
+     "end": 202.37
+    },
+    {
+     "w": "one",
+     "t": 202.407,
+     "end": 202.645
+    },
+    {
+     "w": "point",
+     "t": 202.682,
+     "end": 202.982
+    },
+    {
+     "w": "doing",
+     "t": 203.007,
+     "end": 203.232
+    },
+    {
+     "w": "all",
+     "t": 203.257,
+     "end": 203.395
+    },
+    {
+     "w": "the",
+     "t": 203.407,
+     "end": 203.482
+    },
+    {
+     "w": "work",
+     "t": 203.507,
+     "end": 203.967
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/7f/7fc1e68b818ee7131907e9e0.wav"
+  },
+  {
+   "index": 24,
+   "start": 205.233,
+   "duration": 15.32,
+   "end": 220.553,
+   "text": "Your line was exactly right: five numbers fix it. Your cloud was this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Your",
+     "t": 205.263,
+     "end": 205.438
+    },
+    {
+     "w": "line",
+     "t": 205.463,
+     "end": 205.763
+    },
+    {
+     "w": "was",
+     "t": 205.788,
+     "end": 205.938
+    },
+    {
+     "w": "exactly",
+     "t": 205.963,
+     "end": 206.538
+    },
+    {
+     "w": "right",
+     "t": 206.563,
+     "end": 207.063
+    },
+    {
+     "w": "five",
+     "t": 207.263,
+     "end": 207.638
+    },
+    {
+     "w": "numbers",
+     "t": 207.663,
+     "end": 208.013
+    },
+    {
+     "w": "fix",
+     "t": 208.038,
+     "end": 208.301
+    },
+    {
+     "w": "it",
+     "t": 208.338,
+     "end": 208.643
+    },
+    {
+     "w": "Your",
+     "t": 209.053,
+     "end": 209.203
+    },
+    {
+     "w": "cloud",
+     "t": 209.228,
+     "end": 209.591
+    },
+    {
+     "w": "was",
+     "t": 209.603,
+     "end": 209.753
+    },
+    {
+     "w": "this",
+     "t": 209.778,
+     "end": 209.953
+    },
+    {
+     "w": "ellipse",
+     "t": 209.978,
+     "end": 210.628
+    },
+    {
+     "w": "all",
+     "t": 210.803,
+     "end": 210.991
+    },
+    {
+     "w": "that",
+     "t": 211.003,
+     "end": 211.228
+    },
+    {
+     "w": "five",
+     "t": 211.278,
+     "end": 211.653
+    },
+    {
+     "w": "numbers",
+     "t": 211.678,
+     "end": 212.003
+    },
+    {
+     "w": "can",
+     "t": 212.028,
+     "end": 212.178
+    },
+    {
+     "w": "draw",
+     "t": 212.203,
+     "end": 212.713
+    },
+    {
+     "w": "Most",
+     "t": 213.368,
+     "end": 213.655
+    },
+    {
+     "w": "of",
+     "t": 213.668,
+     "end": 213.743
+    },
+    {
+     "w": "those",
+     "t": 213.768,
+     "end": 213.993
+    },
+    {
+     "w": "papers",
+     "t": 214.018,
+     "end": 214.468
+    },
+    {
+     "w": "used",
+     "t": 214.493,
+     "end": 214.705
+    },
+    {
+     "w": "a",
+     "t": 214.718,
+     "end": 214.768
+    },
+    {
+     "w": "bar",
+     "t": 214.793,
+     "end": 215.043
+    },
+    {
+     "w": "graph",
+     "t": 215.068,
+     "end": 215.693
+    },
+    {
+     "w": "which",
+     "t": 215.818,
+     "end": 215.993
+    },
+    {
+     "w": "draws",
+     "t": 216.018,
+     "end": 216.393
+    },
+    {
+     "w": "only",
+     "t": 216.418,
+     "end": 216.743
+    },
+    {
+     "w": "two",
+     "t": 216.793,
+     "end": 217.253
+    },
+    {
+     "w": "The",
+     "t": 217.853,
+     "end": 217.948
+    },
+    {
+     "w": "dinosaur",
+     "t": 217.973,
+     "end": 218.623
+    },
+    {
+     "w": "lived",
+     "t": 218.673,
+     "end": 218.948
+    },
+    {
+     "w": "in",
+     "t": 218.973,
+     "end": 219.111
+    },
+    {
+     "w": "everything",
+     "t": 219.148,
+     "end": 219.673
+    },
+    {
+     "w": "they",
+     "t": 219.698,
+     "end": 219.823
+    },
+    {
+     "w": "leave",
+     "t": 219.848,
+     "end": 220.098
+    },
+    {
+     "w": "out",
+     "t": 220.123,
+     "end": 220.553
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/67/67a22f134173e937231af396.wav"
+  }
+ ],
+ "warnings": [],
+ "layout_audit": {
+  "clearance": 0.15,
+  "checks": 256,
+  "audit_seconds": 2.342,
+  "render_seconds": 694.2,
+  "errors": 0,
+  "count": 0,
+  "counts": {
+   "overlap": 0,
+   "clearance": 0,
+   "safe-area": 0,
+   "caption-zone": 0
+  },
+  "issues": [],
+  "allowed": [],
+  "excluded": [
+   {
+    "mobject": "VGroup",
+    "reason": "strike-through of the cancelled s_x and its exponent; on screen for 0.45 s before they fade"
+   }
+  ]
+ }
+}

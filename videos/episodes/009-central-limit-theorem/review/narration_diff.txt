@@ -1,0 +1,19 @@
+WER 2.9% over 585 script words (numbers spelled out, 'and' ignored)
+script: videos/episodes/009-central-limit-theorem/narration.json
+
+[0:11.4] replace  script: 'a'                                      heard: 'one'
+[0:23.2] replace  script: 'a'                                      heard: 'one'
+[0:25.1] replace  script: 'a'                                      heard: 'one'
+[0:39.5] replace  script: 'waits'                                  heard: 'weights'
+[0:46.3] replace  script: 'waits'                                  heard: 'weights'
+[0:59.0] insert   script: '∅'                                      heard: 'zero'
+[1:01.0] insert   script: '∅'                                      heard: 'zero'
+[1:11.3] replace  script: 'wait'                                   heard: 'weight'
+[1:14.9] replace  script: 'waits'                                  heard: 'weights'
+[1:17.9] replace  script: "wait's"                                 heard: 'weights'
+[2:02.5] replace  script: 'a half'                                 heard: 'point five'
+[2:12.7] replace  script: 'waits'                                  heard: 'weights'
+[2:32.2] replace  script: 'oh'                                     heard: 'zero'
+[2:36.2] replace  script: 'waits'                                  heard: 'weights'
+[2:45.1] replace  script: 'a'                                      heard: 'one'
+[2:49.2] delete   script: 'dollars'                                heard: '∅'

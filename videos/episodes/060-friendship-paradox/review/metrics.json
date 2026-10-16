@@ -1,0 +1,239 @@
+{
+ "file": "/home/user/instaloader/videos/episodes/060-friendship-paradox/final.mp4",
+ "duration_s": 221.4,
+ "width": 1920,
+ "height": 1080,
+ "fps": 30.0,
+ "video_codec": "h264",
+ "pix_fmt": "yuv420p",
+ "audio_codec": "aac",
+ "audio_rate": 48000,
+ "size_mb": 9.89,
+ "integrated_lufs": -14.0,
+ "lra_lu": 2.1,
+ "true_peak_dbtp": -2.1,
+ "leading_silence_s": 0.0,
+ "trailing_silence_s": 1.49,
+ "longest_internal_silence_s": 2.23,
+ "silences_over_1_5s": [
+  [
+   11.74,
+   13.97
+  ],
+  [
+   148.29,
+   150.5
+  ],
+  [
+   160.13,
+   162.19
+  ]
+ ],
+ "frames": 6642,
+ "longest_static_s": 2.5,
+ "static_stretches_over_3s": [],
+ "black_frame_runs": [],
+ "blank_runs_over_0_5s": [],
+ "background_luma": null,
+ "transcript_words": 566,
+ "first_word_s": 0.02,
+ "last_word_s": 221.52934,
+ "wpm_speech": 159.5,
+ "wpm_overall": 153.4,
+ "wpm_excluding_all_pauses": 183.6,
+ "narration_file": "videos/episodes/060-friendship-paradox/narration.json",
+ "wer": 0.015,
+ "narration_words": 532,
+ "banned_phrase_hits": 0,
+ "slop_hits": [],
+ "layout_audit": {
+  "count": 0,
+  "counts": {
+   "overlap": 0,
+   "clearance": 0,
+   "safe-area": 0,
+   "caption-zone": 0
+  },
+  "allowed": 0,
+  "checks": 198
+ },
+ "contact_sheets": [
+  "sheets/sheet_01.png",
+  "sheets/sheet_02.png",
+  "sheets/sheet_03.png",
+  "sheets/sheet_04.png",
+  "sheets/sheet_05.png",
+  "sheets/sheet_06.png",
+  "sheets/sheet_07.png",
+  "sheets/sheet_08.png",
+  "sheets/sheet_09.png",
+  "sheets/sheet_10.png",
+  "sheets/sheet_11.png",
+  "sheets/sheet_12.png",
+  "sheets/sheet_13.png"
+ ],
+ "keyframes": [
+  {
+   "t": 0.3,
+   "file": "keyframes/kf_01_00-00.3.png"
+  },
+  {
+   "t": 2.83,
+   "file": "keyframes/kf_02_00-02.8.png"
+  },
+  {
+   "t": 7.9,
+   "file": "keyframes/kf_03_00-07.9.png"
+  },
+  {
+   "t": 28.63,
+   "file": "keyframes/kf_04_00-28.6.png"
+  },
+  {
+   "t": 32.37,
+   "file": "keyframes/kf_05_00-32.4.png"
+  },
+  {
+   "t": 36.67,
+   "file": "keyframes/kf_06_00-36.7.png"
+  },
+  {
+   "t": 45.7,
+   "file": "keyframes/kf_07_00-45.7.png"
+  },
+  {
+   "t": 52.9,
+   "file": "keyframes/kf_08_00-52.9.png"
+  },
+  {
+   "t": 60.37,
+   "file": "keyframes/kf_09_01-00.4.png"
+  },
+  {
+   "t": 73.3,
+   "file": "keyframes/kf_10_01-13.3.png"
+  },
+  {
+   "t": 78.6,
+   "file": "keyframes/kf_11_01-18.6.png"
+  },
+  {
+   "t": 92.33,
+   "file": "keyframes/kf_12_01-32.3.png"
+  },
+  {
+   "t": 95.07,
+   "file": "keyframes/kf_13_01-35.1.png"
+  },
+  {
+   "t": 99.3,
+   "file": "keyframes/kf_14_01-39.3.png"
+  },
+  {
+   "t": 101.37,
+   "file": "keyframes/kf_15_01-41.4.png"
+  },
+  {
+   "t": 104.2,
+   "file": "keyframes/kf_16_01-44.2.png"
+  },
+  {
+   "t": 107.97,
+   "file": "keyframes/kf_17_01-48.0.png"
+  },
+  {
+   "t": 111.37,
+   "file": "keyframes/kf_18_01-51.4.png"
+  },
+  {
+   "t": 124.77,
+   "file": "keyframes/kf_19_02-04.8.png"
+  },
+  {
+   "t": 130.33,
+   "file": "keyframes/kf_20_02-10.3.png"
+  },
+  {
+   "t": 133.13,
+   "file": "keyframes/kf_21_02-13.1.png"
+  },
+  {
+   "t": 136.07,
+   "file": "keyframes/kf_22_02-16.1.png"
+  },
+  {
+   "t": 137.9,
+   "file": "keyframes/kf_23_02-17.9.png"
+  },
+  {
+   "t": 140.07,
+   "file": "keyframes/kf_24_02-20.1.png"
+  },
+  {
+   "t": 143.27,
+   "file": "keyframes/kf_25_02-23.3.png"
+  },
+  {
+   "t": 145.37,
+   "file": "keyframes/kf_26_02-25.4.png"
+  },
+  {
+   "t": 149.37,
+   "file": "keyframes/kf_27_02-29.4.png"
+  },
+  {
+   "t": 152.27,
+   "file": "keyframes/kf_28_02-32.3.png"
+  },
+  {
+   "t": 155.8,
+   "file": "keyframes/kf_29_02-35.8.png"
+  },
+  {
+   "t": 167.43,
+   "file": "keyframes/kf_30_02-47.4.png"
+  },
+  {
+   "t": 174.1,
+   "file": "keyframes/kf_31_02-54.1.png"
+  },
+  {
+   "t": 181.3,
+   "file": "keyframes/kf_32_03-01.3.png"
+  },
+  {
+   "t": 191.17,
+   "file": "keyframes/kf_33_03-11.2.png"
+  },
+  {
+   "t": 194.77,
+   "file": "keyframes/kf_34_03-14.8.png"
+  },
+  {
+   "t": 201.07,
+   "file": "keyframes/kf_35_03-21.1.png"
+  },
+  {
+   "t": 204.1,
+   "file": "keyframes/kf_36_03-24.1.png"
+  },
+  {
+   "t": 206.6,
+   "file": "keyframes/kf_37_03-26.6.png"
+  },
+  {
+   "t": 212.4,
+   "file": "keyframes/kf_38_03-32.4.png"
+  },
+  {
+   "t": 219.83,
+   "file": "keyframes/kf_39_03-39.8.png"
+  },
+  {
+   "t": 221.37,
+   "file": "keyframes/kf_40_03-41.4.png"
+  }
+ ],
+ "flags": [],
+ "implied_caps": []
+}

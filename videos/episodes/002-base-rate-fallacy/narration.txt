@@ -1,0 +1,57 @@
+[00:00.0] One in five hundred people has this disease. A test catches ninety-nine percent of cases and wrongly flags one percent of the healthy. If yours says positive, what's the chance you're sick? [pause 0.3] Pick a number. [pause 1.6]
+
+[00:15.5] Most doctors given a problem like this got it wrong.
+
+[00:18.9] The tempting answer is the test's own hit rate, ninety-nine percent: you'd start treatment today.
+
+[00:25.2] Check that rule by counting. [pause 0.2] Here are ten thousand people, and suppose half of them are sick.
+
+[00:31.3] Test everyone. [pause 0.2] Ninety-nine percent of the sick light up, and one percent of the healthy.
+
+[00:37.2] Of the five thousand who lit up, ninety-nine percent are sick. [pause 0.3] Here, the rule holds.
+
+[00:43.2] Now make the disease rare, like yours: one in five hundred. [pause 0.2] That leaves twenty sick people.
+
+[00:49.6] Run the same test. [pause 0.2] About twenty sick people light up, plus one percent of the nine thousand nine hundred eighty healthy ones. [pause 0.2] That's about a hundred.
+
+[00:59.6] So of a hundred and twenty positives, only twenty are sick.
+
+[01:03.6] That's seventeen percent.
+
+[01:06.4] The rule said ninety-nine. [pause 0.2] Six times too high.
+
+[01:10.9] One percent sounds small, but here it's one percent of nearly everyone.
+
+[01:15.9] Your positive result ruled out everyone who tested negative.
+
+[01:21.0] What's left is a smaller sample space: these hundred and twenty people.
+
+[01:26.5] Your chance of being sick is the red share of this crowd. [pause 0.3] Twenty, out of twenty plus a hundred. [pause 1.1]
+
+[01:34.1] Before rounding, these are nineteen point eight and ninety-nine point eight. That's twenty sick people times ninety-nine percent. And nine thousand nine hundred eighty healthy times one percent.
+
+[01:46.5] Divide top and bottom by ten thousand. [pause 0.2] The share stays the same, but each head count becomes a fraction of everyone: two in a thousand, and nine hundred ninety-eight in a thousand.
+
+[01:58.8] These two say how common each group is. [pause 0.2] These two, how often each group tests positive. [pause 0.3] That's Bayes' theorem.
+
+[02:06.5] All it does is shrink the sample space to what the evidence allows, then take the share.
+
+[02:12.1] As for those gynecologists: after one session turning percentages into counts of women, the way we just counted people, eighty-seven percent got it right.
+
+[02:23.1] Swap the disease for a police watch list.
+
+[02:26.0] At the twenty seventeen Champions League final, about a hundred and seventy thousand people were in Cardiff. [pause 0.2] The watch lists held about twelve hundred faces, so even a small error rate per face would swamp the real matches.
+
+[02:40.9] Face-recognition cameras scanned the crowd and raised two thousand four hundred and seventy alerts.
+
+[02:47.7] Police counted a hundred and seventy-three as right: seven percent.
+
+[02:52.6] In machine learning, the share of alerts that are right is called precision.
+
+[02:57.3] Later, a new algorithm and better photos cut the false alarms, and forty-six percent of alerts were judged right.
+
+[03:05.2] Back to your test. [pause 0.9] The title's ninety-nine percent accuracy is real. But a test that calls everyone healthy scores ninety-nine point eight: more accurate, and useless.
+
+[03:17.6] Your seventeen percent assumes a random screen. [pause 0.3] Symptoms raise the one in five hundred, and the answer climbs: fifty percent at one in a hundred, ninety-nine at one in two, where the rule held. [pause 1.0] On a random screen, twenty reach this plus along the red, a hundred along the blue.
+
+[03:37.9] Ninety-nine percent is the test's recall: how often the sick test positive. [pause 0.3] Seventeen percent is its precision: how often the positive are sick.

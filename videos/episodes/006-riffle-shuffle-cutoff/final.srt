@@ -1,0 +1,212 @@
+1
+00:00:00,000 --> 00:00:03,230
+Heads, I riffle shuffle a sorted deck four times.
+
+2
+00:00:03,610 --> 00:00:06,340
+Tails, a computer shuffles it perfectly.
+
+3
+00:00:06,720 --> 00:00:09,780
+From the deck alone, how often could you tell which?
+
+4
+00:00:10,160 --> 00:00:13,280
+Pick fifty, seventy five, or a hundred percent.
+
+5
+00:00:15,133 --> 00:00:23,413
+Any simulation that mixes by random steps faces this question: stopped too early, it still remembers where it started.
+
+6
+00:00:23,766 --> 00:00:27,236
+The obvious check is the top card, the one you'd be dealt.
+
+7
+00:00:27,616 --> 00:00:31,406
+Here's how often each card lands there after four riffles.
+
+8
+00:00:31,766 --> 00:00:32,876
+Almost flat.
+
+9
+00:00:33,256 --> 00:00:37,116
+Only the old top card stands out: one time in fifteen.
+
+10
+00:00:37,496 --> 00:00:41,606
+Judging by the top card, you'd be right fifty two percent of the time.
+
+11
+00:00:41,986 --> 00:00:43,946
+Four riffles look like plenty.
+
+12
+00:00:44,300 --> 00:00:47,180
+A guesser who sees the whole deck does far better.
+
+13
+00:00:47,560 --> 00:00:52,950
+The model cuts near the middle, then drops cards from each half in proportion to its size.
+
+14
+00:00:53,300 --> 00:01:01,760
+Each half stays in order, so one riffle leaves two rising sequences: runs of consecutive cards, reading left to right.
+
+15
+00:01:02,100 --> 00:01:04,020
+Give each sequence its own level.
+
+16
+00:01:04,400 --> 00:01:08,920
+The cut crosses each level once, so a riffle can at most split it in two.
+
+17
+00:01:09,266 --> 00:01:10,356
+Three riffles,
+
+18
+00:01:11,156 --> 00:01:11,806
+eight.
+
+19
+00:01:12,186 --> 00:01:13,256
+Four riffles,
+
+20
+00:01:13,856 --> 00:01:16,646
+at most sixteen; this deck has fourteen.
+
+21
+00:01:17,000 --> 00:01:23,680
+A perfect shuffle averages twenty six and a half, and gives sixteen or fewer once in two million decks.
+
+22
+00:01:24,033 --> 00:01:30,323
+Call any deck with sixteen or fewer riffled, and you'd be wrong about once in four million games.
+
+23
+00:01:30,703 --> 00:01:34,643
+The top card can't see this; it lives in the order between cards.
+
+24
+00:01:35,000 --> 00:01:40,890
+Bayer and Diaconis proved that in this model, decks with the same count are equally likely.
+
+25
+00:01:41,966 --> 00:01:44,056
+So pile each deck onto its count.
+
+26
+00:01:44,800 --> 00:01:48,100
+Blue is a perfect shuffle, purple is four riffles.
+
+27
+00:01:48,480 --> 00:01:52,550
+The red area, purple above blue, is the distance from random.
+
+28
+00:01:52,930 --> 00:01:54,160
+Right now it's one.
+
+29
+00:01:54,500 --> 00:01:56,970
+How many more riffles to bring it below a half?
+
+30
+00:01:58,833 --> 00:02:00,993
+A fifth riffle: point nine two.
+
+31
+00:02:01,373 --> 00:02:03,203
+A sixth: point six one.
+
+32
+00:02:03,566 --> 00:02:05,996
+Guess riffled wherever purple is higher.
+
+33
+00:02:06,376 --> 00:02:12,506
+You catch seventy eight percent of riffled decks, but flag seventeen percent of perfect ones.
+
+34
+00:02:12,886 --> 00:02:16,556
+Accuracy is a half plus half the difference: the red area.
+
+35
+00:02:16,900 --> 00:02:19,130
+A seventh riffle: point three three.
+
+36
+00:02:19,466 --> 00:02:26,846
+Meanwhile the gap between the centers roughly halved each riffle, while purple's spread settled to blue's: about two.
+
+37
+00:02:27,200 --> 00:02:31,080
+While the gap spans several spreads, the distance stays near one.
+
+38
+00:02:31,460 --> 00:02:35,140
+Once it's down to about one spread, the distance halves too.
+
+39
+00:02:35,520 --> 00:02:36,630
+That's the cliff.
+
+40
+00:02:36,966 --> 00:02:40,736
+Gap times two to the k levels off near two hundred thirty.
+
+41
+00:02:41,936 --> 00:02:47,806
+So the gap meets the spread when two to the k is about a hundred and ten: just under seven.
+
+42
+00:02:48,966 --> 00:02:51,116
+Both numbers come from the deck's size.
+
+43
+00:02:52,116 --> 00:03:01,366
+For n cards, the gap grows like n squared, but the spread only like root n, so the cliff sits near three halves log base two of n.
+
+44
+00:03:01,733 --> 00:03:11,343
+Aldous, then Bayer and Diaconis, proved it: for fifty two cards, seven riffles is the first count that brings the distance below a half.
+
+45
+00:03:11,700 --> 00:03:13,760
+Seven belongs to this yardstick.
+
+46
+00:03:14,140 --> 00:03:22,240
+Trefethen and Trefethen measured information instead: no cliff, and five or six shuffles do a reasonable job.
+
+47
+00:03:22,600 --> 00:03:32,450
+Many Markov chains share this cliff, and samplers share the trap: one statistic can settle, like the top card, long before the whole chain has.
+
+48
+00:03:32,800 --> 00:03:34,220
+Back to the coin flip.
+
+49
+00:03:34,600 --> 00:03:39,760
+After four riffles you'd almost never be wrong, same as with an unshuffled deck.
+
+50
+00:03:40,100 --> 00:03:41,410
+Three more riffles,
+
+51
+00:03:42,610 --> 00:03:44,860
+and you'd be right only two times in three.
+
+52
+00:03:45,200 --> 00:03:48,110
+Four riffles fool someone watching the top card.
+
+53
+00:03:48,490 --> 00:03:52,100
+Fooling someone who counts sequences that well takes ten.
+

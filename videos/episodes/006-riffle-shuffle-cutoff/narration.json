@@ -1,0 +1,3183 @@
+{
+ "scene": "Episode",
+ "episode": 6,
+ "title": "Seven Shuffles",
+ "video_duration": 233.9,
+ "beats": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "duration": 14.78,
+   "end": 14.78,
+   "text": "Heads, I riffle shuffle a sorted deck four times. Tails, a computer shuffles it perfectly. From the deck alone, how often could you tell which? Pick fifty, seventy five, or a hundred percent. [pause 1.5]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Heads",
+     "t": 0.05,
+     "end": 0.5
+    },
+    {
+     "w": "I",
+     "t": 0.6,
+     "end": 0.725
+    },
+    {
+     "w": "riffle",
+     "t": 0.75,
+     "end": 1.05
+    },
+    {
+     "w": "shuffle",
+     "t": 1.1,
+     "end": 1.388
+    },
+    {
+     "w": "a",
+     "t": 1.4,
+     "end": 1.488
+    },
+    {
+     "w": "sorted",
+     "t": 1.525,
+     "end": 1.9
+    },
+    {
+     "w": "deck",
+     "t": 1.925,
+     "end": 2.275
+    },
+    {
+     "w": "four",
+     "t": 2.325,
+     "end": 2.55
+    },
+    {
+     "w": "times",
+     "t": 2.575,
+     "end": 3.23
+    },
+    {
+     "w": "Tails",
+     "t": 3.63,
+     "end": 4.255
+    },
+    {
+     "w": "a",
+     "t": 4.355,
+     "end": 4.43
+    },
+    {
+     "w": "computer",
+     "t": 4.455,
+     "end": 5.005
+    },
+    {
+     "w": "shuffles",
+     "t": 5.055,
+     "end": 5.43
+    },
+    {
+     "w": "it",
+     "t": 5.455,
+     "end": 5.555
+    },
+    {
+     "w": "perfectly",
+     "t": 5.58,
+     "end": 6.34
+    },
+    {
+     "w": "From",
+     "t": 6.77,
+     "end": 6.908
+    },
+    {
+     "w": "the",
+     "t": 6.92,
+     "end": 6.995
+    },
+    {
+     "w": "deck",
+     "t": 7.02,
+     "end": 7.245
+    },
+    {
+     "w": "alone",
+     "t": 7.27,
+     "end": 7.895
+    },
+    {
+     "w": "how",
+     "t": 8.07,
+     "end": 8.32
+    },
+    {
+     "w": "often",
+     "t": 8.37,
+     "end": 8.745
+    },
+    {
+     "w": "could",
+     "t": 8.77,
+     "end": 8.87
+    },
+    {
+     "w": "you",
+     "t": 8.895,
+     "end": 8.995
+    },
+    {
+     "w": "tell",
+     "t": 9.02,
+     "end": 9.245
+    },
+    {
+     "w": "which",
+     "t": 9.27,
+     "end": 9.78
+    },
+    {
+     "w": "Pick",
+     "t": 10.165,
+     "end": 10.39
+    },
+    {
+     "w": "fifty",
+     "t": 10.415,
+     "end": 10.965
+    },
+    {
+     "w": "seventy",
+     "t": 11.14,
+     "end": 11.465
+    },
+    {
+     "w": "five",
+     "t": 11.49,
+     "end": 11.94
+    },
+    {
+     "w": "or",
+     "t": 12.04,
+     "end": 12.128
+    },
+    {
+     "w": "a",
+     "t": 12.14,
+     "end": 12.19
+    },
+    {
+     "w": "hundred",
+     "t": 12.215,
+     "end": 12.565
+    },
+    {
+     "w": "percent",
+     "t": 12.59,
+     "end": 13.28
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f5/f594c09ee1e62139fe860fef.wav"
+  },
+  {
+   "index": 1,
+   "start": 15.133,
+   "duration": 8.28,
+   "end": 23.413,
+   "text": "Any simulation that mixes by random steps faces this question: stopped too early, it still remembers where it started.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Any",
+     "t": 15.143,
+     "end": 15.405
+    },
+    {
+     "w": "simulation",
+     "t": 15.443,
+     "end": 16.168
+    },
+    {
+     "w": "that",
+     "t": 16.193,
+     "end": 16.38
+    },
+    {
+     "w": "mixes",
+     "t": 16.418,
+     "end": 16.868
+    },
+    {
+     "w": "by",
+     "t": 16.893,
+     "end": 17.068
+    },
+    {
+     "w": "random",
+     "t": 17.093,
+     "end": 17.518
+    },
+    {
+     "w": "steps",
+     "t": 17.543,
+     "end": 18.018
+    },
+    {
+     "w": "faces",
+     "t": 18.068,
+     "end": 18.593
+    },
+    {
+     "w": "this",
+     "t": 18.618,
+     "end": 18.793
+    },
+    {
+     "w": "question",
+     "t": 18.818,
+     "end": 19.768
+    },
+    {
+     "w": "stopped",
+     "t": 19.993,
+     "end": 20.393
+    },
+    {
+     "w": "too",
+     "t": 20.443,
+     "end": 20.618
+    },
+    {
+     "w": "early",
+     "t": 20.643,
+     "end": 21.318
+    },
+    {
+     "w": "it",
+     "t": 21.493,
+     "end": 21.631
+    },
+    {
+     "w": "still",
+     "t": 21.668,
+     "end": 21.918
+    },
+    {
+     "w": "remembers",
+     "t": 21.943,
+     "end": 22.468
+    },
+    {
+     "w": "where",
+     "t": 22.493,
+     "end": 22.668
+    },
+    {
+     "w": "it",
+     "t": 22.693,
+     "end": 22.793
+    },
+    {
+     "w": "started",
+     "t": 22.818,
+     "end": 23.413
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/21/219fa462e793ab1bfb6749ed.wav"
+  },
+  {
+   "index": 2,
+   "start": 23.767,
+   "duration": 7.64,
+   "end": 31.407,
+   "text": "The obvious check is the top card, the one you'd be dealt. Here's how often each card lands there after four riffles.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 23.792,
+     "end": 23.942
+    },
+    {
+     "w": "obvious",
+     "t": 23.992,
+     "end": 24.479
+    },
+    {
+     "w": "check",
+     "t": 24.517,
+     "end": 24.792
+    },
+    {
+     "w": "is",
+     "t": 24.817,
+     "end": 24.929
+    },
+    {
+     "w": "the",
+     "t": 24.942,
+     "end": 25.017
+    },
+    {
+     "w": "top",
+     "t": 25.042,
+     "end": 25.317
+    },
+    {
+     "w": "card",
+     "t": 25.342,
+     "end": 25.917
+    },
+    {
+     "w": "the",
+     "t": 26.067,
+     "end": 26.142
+    },
+    {
+     "w": "one",
+     "t": 26.167,
+     "end": 26.342
+    },
+    {
+     "w": "you'd",
+     "t": 26.367,
+     "end": 26.505
+    },
+    {
+     "w": "be",
+     "t": 26.517,
+     "end": 26.655
+    },
+    {
+     "w": "dealt",
+     "t": 26.692,
+     "end": 27.237
+    },
+    {
+     "w": "Here's",
+     "t": 27.642,
+     "end": 27.942
+    },
+    {
+     "w": "how",
+     "t": 27.967,
+     "end": 28.192
+    },
+    {
+     "w": "often",
+     "t": 28.242,
+     "end": 28.655
+    },
+    {
+     "w": "each",
+     "t": 28.692,
+     "end": 28.917
+    },
+    {
+     "w": "card",
+     "t": 28.942,
+     "end": 29.217
+    },
+    {
+     "w": "lands",
+     "t": 29.242,
+     "end": 29.592
+    },
+    {
+     "w": "there",
+     "t": 29.617,
+     "end": 30.067
+    },
+    {
+     "w": "after",
+     "t": 30.117,
+     "end": 30.417
+    },
+    {
+     "w": "four",
+     "t": 30.467,
+     "end": 30.717
+    },
+    {
+     "w": "riffles",
+     "t": 30.742,
+     "end": 31.407
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/a9/a9a289acf5a90df4a662459b.wav"
+  },
+  {
+   "index": 3,
+   "start": 31.767,
+   "duration": 12.18,
+   "end": 43.947,
+   "text": "Almost flat. Only the old top card stands out: one time in fifteen. Judging by the top card, you'd be right fifty two percent of the time. Four riffles look like plenty.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Almost",
+     "t": 31.822,
+     "end": 32.272
+    },
+    {
+     "w": "flat",
+     "t": 32.297,
+     "end": 32.877
+    },
+    {
+     "w": "Only",
+     "t": 33.257,
+     "end": 33.557
+    },
+    {
+     "w": "the",
+     "t": 33.582,
+     "end": 33.707
+    },
+    {
+     "w": "old",
+     "t": 33.732,
+     "end": 33.932
+    },
+    {
+     "w": "top",
+     "t": 33.957,
+     "end": 34.232
+    },
+    {
+     "w": "card",
+     "t": 34.257,
+     "end": 34.532
+    },
+    {
+     "w": "stands",
+     "t": 34.557,
+     "end": 34.932
+    },
+    {
+     "w": "out",
+     "t": 34.957,
+     "end": 35.457
+    },
+    {
+     "w": "one",
+     "t": 35.657,
+     "end": 35.882
+    },
+    {
+     "w": "time",
+     "t": 35.907,
+     "end": 36.207
+    },
+    {
+     "w": "in",
+     "t": 36.232,
+     "end": 36.357
+    },
+    {
+     "w": "fifteen",
+     "t": 36.382,
+     "end": 37.117
+    },
+    {
+     "w": "Judging",
+     "t": 37.572,
+     "end": 37.922
+    },
+    {
+     "w": "by",
+     "t": 37.947,
+     "end": 38.097
+    },
+    {
+     "w": "the",
+     "t": 38.122,
+     "end": 38.197
+    },
+    {
+     "w": "top",
+     "t": 38.222,
+     "end": 38.547
+    },
+    {
+     "w": "card",
+     "t": 38.572,
+     "end": 39.247
+    },
+    {
+     "w": "you'd",
+     "t": 39.397,
+     "end": 39.509
+    },
+    {
+     "w": "be",
+     "t": 39.522,
+     "end": 39.647
+    },
+    {
+     "w": "right",
+     "t": 39.672,
+     "end": 39.935
+    },
+    {
+     "w": "fifty",
+     "t": 39.972,
+     "end": 40.259
+    },
+    {
+     "w": "two",
+     "t": 40.297,
+     "end": 40.472
+    },
+    {
+     "w": "percent",
+     "t": 40.497,
+     "end": 40.834
+    },
+    {
+     "w": "of",
+     "t": 40.847,
+     "end": 40.909
+    },
+    {
+     "w": "the",
+     "t": 40.922,
+     "end": 40.997
+    },
+    {
+     "w": "time",
+     "t": 41.022,
+     "end": 41.607
+    },
+    {
+     "w": "Four",
+     "t": 42.082,
+     "end": 42.357
+    },
+    {
+     "w": "riffles",
+     "t": 42.382,
+     "end": 42.857
+    },
+    {
+     "w": "look",
+     "t": 42.882,
+     "end": 43.045
+    },
+    {
+     "w": "like",
+     "t": 43.057,
+     "end": 43.257
+    },
+    {
+     "w": "plenty",
+     "t": 43.282,
+     "end": 43.947
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/e6/e6fe4d7900555605c0258701.wav"
+  },
+  {
+   "index": 4,
+   "start": 44.3,
+   "duration": 8.65,
+   "end": 52.95,
+   "text": "A guesser who sees the whole deck does far better. The model cuts near the middle, then drops cards from each half in proportion to its size.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "A",
+     "t": 44.315,
+     "end": 44.39
+    },
+    {
+     "w": "guesser",
+     "t": 44.415,
+     "end": 44.89
+    },
+    {
+     "w": "who",
+     "t": 44.915,
+     "end": 45.04
+    },
+    {
+     "w": "sees",
+     "t": 45.065,
+     "end": 45.365
+    },
+    {
+     "w": "the",
+     "t": 45.39,
+     "end": 45.49
+    },
+    {
+     "w": "whole",
+     "t": 45.515,
+     "end": 45.74
+    },
+    {
+     "w": "deck",
+     "t": 45.765,
+     "end": 46.128
+    },
+    {
+     "w": "does",
+     "t": 46.165,
+     "end": 46.39
+    },
+    {
+     "w": "far",
+     "t": 46.415,
+     "end": 46.665
+    },
+    {
+     "w": "better",
+     "t": 46.69,
+     "end": 47.18
+    },
+    {
+     "w": "The",
+     "t": 47.575,
+     "end": 47.675
+    },
+    {
+     "w": "model",
+     "t": 47.7,
+     "end": 48.087
+    },
+    {
+     "w": "cuts",
+     "t": 48.125,
+     "end": 48.4
+    },
+    {
+     "w": "near",
+     "t": 48.425,
+     "end": 48.625
+    },
+    {
+     "w": "the",
+     "t": 48.65,
+     "end": 48.725
+    },
+    {
+     "w": "middle",
+     "t": 48.75,
+     "end": 49.35
+    },
+    {
+     "w": "then",
+     "t": 49.5,
+     "end": 49.7
+    },
+    {
+     "w": "drops",
+     "t": 49.725,
+     "end": 50.1
+    },
+    {
+     "w": "cards",
+     "t": 50.125,
+     "end": 50.5
+    },
+    {
+     "w": "from",
+     "t": 50.525,
+     "end": 50.65
+    },
+    {
+     "w": "each",
+     "t": 50.675,
+     "end": 50.875
+    },
+    {
+     "w": "half",
+     "t": 50.9,
+     "end": 51.225
+    },
+    {
+     "w": "in",
+     "t": 51.25,
+     "end": 51.35
+    },
+    {
+     "w": "proportion",
+     "t": 51.375,
+     "end": 51.975
+    },
+    {
+     "w": "to",
+     "t": 52.0,
+     "end": 52.125
+    },
+    {
+     "w": "its",
+     "t": 52.15,
+     "end": 52.3
+    },
+    {
+     "w": "size",
+     "t": 52.325,
+     "end": 52.95
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/36/3652ee5d9e3011649bdd3926.wav"
+  },
+  {
+   "index": 5,
+   "start": 53.3,
+   "duration": 8.46,
+   "end": 61.76,
+   "text": "Each half stays in order, so one riffle leaves two rising sequences: runs of consecutive cards, reading left to right.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Each",
+     "t": 53.31,
+     "end": 53.56
+    },
+    {
+     "w": "half",
+     "t": 53.585,
+     "end": 53.835
+    },
+    {
+     "w": "stays",
+     "t": 53.86,
+     "end": 54.235
+    },
+    {
+     "w": "in",
+     "t": 54.26,
+     "end": 54.36
+    },
+    {
+     "w": "order",
+     "t": 54.385,
+     "end": 54.91
+    },
+    {
+     "w": "so",
+     "t": 55.085,
+     "end": 55.248
+    },
+    {
+     "w": "one",
+     "t": 55.285,
+     "end": 55.51
+    },
+    {
+     "w": "riffle",
+     "t": 55.535,
+     "end": 55.81
+    },
+    {
+     "w": "leaves",
+     "t": 55.835,
+     "end": 56.185
+    },
+    {
+     "w": "two",
+     "t": 56.235,
+     "end": 56.498
+    },
+    {
+     "w": "rising",
+     "t": 56.535,
+     "end": 56.985
+    },
+    {
+     "w": "sequences",
+     "t": 57.01,
+     "end": 58.21
+    },
+    {
+     "w": "runs",
+     "t": 58.435,
+     "end": 58.86
+    },
+    {
+     "w": "of",
+     "t": 58.885,
+     "end": 58.985
+    },
+    {
+     "w": "consecutive",
+     "t": 59.01,
+     "end": 59.635
+    },
+    {
+     "w": "cards",
+     "t": 59.66,
+     "end": 60.335
+    },
+    {
+     "w": "reading",
+     "t": 60.51,
+     "end": 60.835
+    },
+    {
+     "w": "left",
+     "t": 60.86,
+     "end": 61.085
+    },
+    {
+     "w": "to",
+     "t": 61.11,
+     "end": 61.21
+    },
+    {
+     "w": "right",
+     "t": 61.235,
+     "end": 61.76
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/d5/d5bf1337fbdc22560322083a.wav"
+  },
+  {
+   "index": 6,
+   "start": 62.1,
+   "duration": 6.82,
+   "end": 68.92,
+   "text": "Give each sequence its own level. The cut crosses each level once, so a riffle can at most split it in two.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Give",
+     "t": 62.15,
+     "end": 62.375
+    },
+    {
+     "w": "each",
+     "t": 62.4,
+     "end": 62.638
+    },
+    {
+     "w": "sequence",
+     "t": 62.675,
+     "end": 63.1
+    },
+    {
+     "w": "its",
+     "t": 63.125,
+     "end": 63.3
+    },
+    {
+     "w": "own",
+     "t": 63.325,
+     "end": 63.525
+    },
+    {
+     "w": "level",
+     "t": 63.55,
+     "end": 64.02
+    },
+    {
+     "w": "The",
+     "t": 64.425,
+     "end": 64.525
+    },
+    {
+     "w": "cut",
+     "t": 64.55,
+     "end": 64.8
+    },
+    {
+     "w": "crosses",
+     "t": 64.825,
+     "end": 65.362
+    },
+    {
+     "w": "each",
+     "t": 65.4,
+     "end": 65.625
+    },
+    {
+     "w": "level",
+     "t": 65.65,
+     "end": 65.95
+    },
+    {
+     "w": "once",
+     "t": 65.975,
+     "end": 66.6
+    },
+    {
+     "w": "so",
+     "t": 66.775,
+     "end": 66.875
+    },
+    {
+     "w": "a",
+     "t": 66.9,
+     "end": 66.975
+    },
+    {
+     "w": "riffle",
+     "t": 67.0,
+     "end": 67.3
+    },
+    {
+     "w": "can",
+     "t": 67.325,
+     "end": 67.437
+    },
+    {
+     "w": "at",
+     "t": 67.45,
+     "end": 67.525
+    },
+    {
+     "w": "most",
+     "t": 67.55,
+     "end": 67.8
+    },
+    {
+     "w": "split",
+     "t": 67.85,
+     "end": 68.112
+    },
+    {
+     "w": "it",
+     "t": 68.125,
+     "end": 68.225
+    },
+    {
+     "w": "in",
+     "t": 68.25,
+     "end": 68.4
+    },
+    {
+     "w": "two",
+     "t": 68.45,
+     "end": 68.92
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/0e/0eb488a43ff64f9246279879.wav"
+  },
+  {
+   "index": 7,
+   "start": 69.267,
+   "duration": 7.38,
+   "end": 76.647,
+   "text": "Three riffles, [pause 0.8] eight. Four riffles, [pause 0.6] at most sixteen; this deck has fourteen.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Three",
+     "t": 69.347,
+     "end": 69.597
+    },
+    {
+     "w": "riffles",
+     "t": 69.622,
+     "end": 70.357
+    },
+    {
+     "w": "eight",
+     "t": 71.252,
+     "end": 71.807
+    },
+    {
+     "w": "Four",
+     "t": 72.267,
+     "end": 72.492
+    },
+    {
+     "w": "riffles",
+     "t": 72.517,
+     "end": 73.257
+    },
+    {
+     "w": "at",
+     "t": 73.897,
+     "end": 73.985
+    },
+    {
+     "w": "most",
+     "t": 73.997,
+     "end": 74.197
+    },
+    {
+     "w": "sixteen",
+     "t": 74.222,
+     "end": 75.022
+    },
+    {
+     "w": "this",
+     "t": 75.172,
+     "end": 75.347
+    },
+    {
+     "w": "deck",
+     "t": 75.372,
+     "end": 75.597
+    },
+    {
+     "w": "has",
+     "t": 75.622,
+     "end": 75.797
+    },
+    {
+     "w": "fourteen",
+     "t": 75.822,
+     "end": 76.647
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/aa/aa83a30ba42763c6910fffee.wav"
+  },
+  {
+   "index": 8,
+   "start": 77.0,
+   "duration": 6.68,
+   "end": 83.68,
+   "text": "A perfect shuffle averages twenty six and a half, and gives sixteen or fewer once in two million decks.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "A",
+     "t": 77.015,
+     "end": 77.102
+    },
+    {
+     "w": "perfect",
+     "t": 77.14,
+     "end": 77.615
+    },
+    {
+     "w": "shuffle",
+     "t": 77.665,
+     "end": 78.102
+    },
+    {
+     "w": "averages",
+     "t": 78.14,
+     "end": 78.615
+    },
+    {
+     "w": "twenty",
+     "t": 78.64,
+     "end": 78.915
+    },
+    {
+     "w": "six",
+     "t": 78.94,
+     "end": 79.128
+    },
+    {
+     "w": "and",
+     "t": 79.14,
+     "end": 79.228
+    },
+    {
+     "w": "a",
+     "t": 79.24,
+     "end": 79.29
+    },
+    {
+     "w": "half",
+     "t": 79.315,
+     "end": 80.09
+    },
+    {
+     "w": "and",
+     "t": 80.215,
+     "end": 80.315
+    },
+    {
+     "w": "gives",
+     "t": 80.34,
+     "end": 80.565
+    },
+    {
+     "w": "sixteen",
+     "t": 80.615,
+     "end": 81.328
+    },
+    {
+     "w": "or",
+     "t": 81.365,
+     "end": 81.515
+    },
+    {
+     "w": "fewer",
+     "t": 81.565,
+     "end": 81.878
+    },
+    {
+     "w": "once",
+     "t": 81.915,
+     "end": 82.29
+    },
+    {
+     "w": "in",
+     "t": 82.315,
+     "end": 82.465
+    },
+    {
+     "w": "two",
+     "t": 82.515,
+     "end": 82.715
+    },
+    {
+     "w": "million",
+     "t": 82.74,
+     "end": 83.09
+    },
+    {
+     "w": "decks",
+     "t": 83.115,
+     "end": 83.68
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/e8/e8a5b1e928c47583d51f2b1d.wav"
+  },
+  {
+   "index": 9,
+   "start": 84.033,
+   "duration": 10.61,
+   "end": 94.643,
+   "text": "Call any deck with sixteen or fewer riffled, and you'd be wrong about once in four million games. The top card can't see this; it lives in the order between cards.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Call",
+     "t": 84.038,
+     "end": 84.288
+    },
+    {
+     "w": "any",
+     "t": 84.313,
+     "end": 84.575
+    },
+    {
+     "w": "deck",
+     "t": 84.613,
+     "end": 84.938
+    },
+    {
+     "w": "with",
+     "t": 84.963,
+     "end": 85.138
+    },
+    {
+     "w": "sixteen",
+     "t": 85.188,
+     "end": 85.813
+    },
+    {
+     "w": "or",
+     "t": 85.838,
+     "end": 85.988
+    },
+    {
+     "w": "fewer",
+     "t": 86.038,
+     "end": 86.338
+    },
+    {
+     "w": "riffled",
+     "t": 86.363,
+     "end": 87.213
+    },
+    {
+     "w": "and",
+     "t": 87.363,
+     "end": 87.451
+    },
+    {
+     "w": "you'd",
+     "t": 87.463,
+     "end": 87.551
+    },
+    {
+     "w": "be",
+     "t": 87.563,
+     "end": 87.701
+    },
+    {
+     "w": "wrong",
+     "t": 87.738,
+     "end": 87.976
+    },
+    {
+     "w": "about",
+     "t": 87.988,
+     "end": 88.288
+    },
+    {
+     "w": "once",
+     "t": 88.313,
+     "end": 88.688
+    },
+    {
+     "w": "in",
+     "t": 88.713,
+     "end": 88.888
+    },
+    {
+     "w": "four",
+     "t": 88.963,
+     "end": 89.263
+    },
+    {
+     "w": "million",
+     "t": 89.288,
+     "end": 89.638
+    },
+    {
+     "w": "games",
+     "t": 89.663,
+     "end": 90.323
+    },
+    {
+     "w": "The",
+     "t": 90.738,
+     "end": 90.838
+    },
+    {
+     "w": "top",
+     "t": 90.863,
+     "end": 91.163
+    },
+    {
+     "w": "card",
+     "t": 91.188,
+     "end": 91.475
+    },
+    {
+     "w": "can't",
+     "t": 91.513,
+     "end": 91.763
+    },
+    {
+     "w": "see",
+     "t": 91.788,
+     "end": 91.963
+    },
+    {
+     "w": "this",
+     "t": 91.988,
+     "end": 92.513
+    },
+    {
+     "w": "it",
+     "t": 92.688,
+     "end": 92.788
+    },
+    {
+     "w": "lives",
+     "t": 92.813,
+     "end": 93.075
+    },
+    {
+     "w": "in",
+     "t": 93.088,
+     "end": 93.151
+    },
+    {
+     "w": "the",
+     "t": 93.163,
+     "end": 93.263
+    },
+    {
+     "w": "order",
+     "t": 93.288,
+     "end": 93.588
+    },
+    {
+     "w": "between",
+     "t": 93.613,
+     "end": 93.963
+    },
+    {
+     "w": "cards",
+     "t": 93.988,
+     "end": 94.643
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/e1/e1ed970c3c6b9e21b3872950.wav"
+  },
+  {
+   "index": 10,
+   "start": 95.0,
+   "duration": 6.59,
+   "end": 101.59,
+   "text": "Bayer and Diaconis proved that in this model, decks with the same count are equally likely. [pause 0.7]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Bayer",
+     "t": 95.05,
+     "end": 95.425
+    },
+    {
+     "w": "and",
+     "t": 95.45,
+     "end": 95.55
+    },
+    {
+     "w": "Diaconis",
+     "t": 95.575,
+     "end": 96.375
+    },
+    {
+     "w": "proved",
+     "t": 96.425,
+     "end": 96.825
+    },
+    {
+     "w": "that",
+     "t": 96.85,
+     "end": 96.975
+    },
+    {
+     "w": "in",
+     "t": 97.0,
+     "end": 97.1
+    },
+    {
+     "w": "this",
+     "t": 97.125,
+     "end": 97.3
+    },
+    {
+     "w": "model",
+     "t": 97.325,
+     "end": 98.025
+    },
+    {
+     "w": "decks",
+     "t": 98.25,
+     "end": 98.6
+    },
+    {
+     "w": "with",
+     "t": 98.625,
+     "end": 98.738
+    },
+    {
+     "w": "the",
+     "t": 98.75,
+     "end": 98.862
+    },
+    {
+     "w": "same",
+     "t": 98.9,
+     "end": 99.212
+    },
+    {
+     "w": "count",
+     "t": 99.25,
+     "end": 99.638
+    },
+    {
+     "w": "are",
+     "t": 99.675,
+     "end": 99.812
+    },
+    {
+     "w": "equally",
+     "t": 99.85,
+     "end": 100.25
+    },
+    {
+     "w": "likely",
+     "t": 100.275,
+     "end": 100.89
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/ab/ab0fba0a082516a2a860792e.wav"
+  },
+  {
+   "index": 11,
+   "start": 101.967,
+   "duration": 2.49,
+   "end": 104.457,
+   "text": "So pile each deck onto its count. [pause 0.4]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "So",
+     "t": 102.027,
+     "end": 102.202
+    },
+    {
+     "w": "pile",
+     "t": 102.227,
+     "end": 102.552
+    },
+    {
+     "w": "each",
+     "t": 102.577,
+     "end": 102.827
+    },
+    {
+     "w": "deck",
+     "t": 102.852,
+     "end": 103.077
+    },
+    {
+     "w": "onto",
+     "t": 103.102,
+     "end": 103.339
+    },
+    {
+     "w": "its",
+     "t": 103.352,
+     "end": 103.527
+    },
+    {
+     "w": "count",
+     "t": 103.552,
+     "end": 104.057
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/92/924ef930dfe5b8ea5a604e06.wav"
+  },
+  {
+   "index": 12,
+   "start": 104.8,
+   "duration": 9.36,
+   "end": 114.16,
+   "text": "Blue is a perfect shuffle, purple is four riffles. The red area, purple above blue, is the distance from random. Right now it's one.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Blue",
+     "t": 104.86,
+     "end": 105.135
+    },
+    {
+     "w": "is",
+     "t": 105.16,
+     "end": 105.248
+    },
+    {
+     "w": "a",
+     "t": 105.26,
+     "end": 105.31
+    },
+    {
+     "w": "perfect",
+     "t": 105.335,
+     "end": 105.772
+    },
+    {
+     "w": "shuffle",
+     "t": 105.81,
+     "end": 106.385
+    },
+    {
+     "w": "purple",
+     "t": 106.535,
+     "end": 106.885
+    },
+    {
+     "w": "is",
+     "t": 106.91,
+     "end": 107.072
+    },
+    {
+     "w": "four",
+     "t": 107.11,
+     "end": 107.36
+    },
+    {
+     "w": "riffles",
+     "t": 107.385,
+     "end": 108.1
+    },
+    {
+     "w": "The",
+     "t": 108.495,
+     "end": 108.632
+    },
+    {
+     "w": "red",
+     "t": 108.67,
+     "end": 108.895
+    },
+    {
+     "w": "area",
+     "t": 108.92,
+     "end": 109.395
+    },
+    {
+     "w": "purple",
+     "t": 109.545,
+     "end": 109.92
+    },
+    {
+     "w": "above",
+     "t": 109.945,
+     "end": 110.22
+    },
+    {
+     "w": "blue",
+     "t": 110.245,
+     "end": 110.77
+    },
+    {
+     "w": "is",
+     "t": 110.97,
+     "end": 111.095
+    },
+    {
+     "w": "the",
+     "t": 111.12,
+     "end": 111.195
+    },
+    {
+     "w": "distance",
+     "t": 111.22,
+     "end": 111.695
+    },
+    {
+     "w": "from",
+     "t": 111.72,
+     "end": 111.895
+    },
+    {
+     "w": "random",
+     "t": 111.92,
+     "end": 112.55
+    },
+    {
+     "w": "Right",
+     "t": 113.005,
+     "end": 113.23
+    },
+    {
+     "w": "now",
+     "t": 113.255,
+     "end": 113.48
+    },
+    {
+     "w": "it's",
+     "t": 113.505,
+     "end": 113.68
+    },
+    {
+     "w": "one",
+     "t": 113.705,
+     "end": 114.16
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/40/406bf4a826146a80c7cc3fea.wav"
+  },
+  {
+   "index": 13,
+   "start": 114.5,
+   "duration": 3.97,
+   "end": 118.47,
+   "text": "How many more riffles to bring it below a half? [pause 1.5]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "How",
+     "t": 114.53,
+     "end": 114.717
+    },
+    {
+     "w": "many",
+     "t": 114.73,
+     "end": 114.93
+    },
+    {
+     "w": "more",
+     "t": 114.955,
+     "end": 115.192
+    },
+    {
+     "w": "riffles",
+     "t": 115.23,
+     "end": 115.555
+    },
+    {
+     "w": "to",
+     "t": 115.58,
+     "end": 115.68
+    },
+    {
+     "w": "bring",
+     "t": 115.705,
+     "end": 115.868
+    },
+    {
+     "w": "it",
+     "t": 115.88,
+     "end": 115.955
+    },
+    {
+     "w": "below",
+     "t": 115.98,
+     "end": 116.305
+    },
+    {
+     "w": "a",
+     "t": 116.33,
+     "end": 116.38
+    },
+    {
+     "w": "half",
+     "t": 116.405,
+     "end": 116.97
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/88/88430209850515d62eecc18e.wav"
+  },
+  {
+   "index": 14,
+   "start": 118.833,
+   "duration": 4.37,
+   "end": 123.203,
+   "text": "A fifth riffle: point nine two. A sixth: point six one.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "A",
+     "t": 118.858,
+     "end": 118.958
+    },
+    {
+     "w": "fifth",
+     "t": 119.008,
+     "end": 119.308
+    },
+    {
+     "w": "riffle",
+     "t": 119.333,
+     "end": 119.858
+    },
+    {
+     "w": "point",
+     "t": 119.983,
+     "end": 120.208
+    },
+    {
+     "w": "nine",
+     "t": 120.233,
+     "end": 120.495
+    },
+    {
+     "w": "two",
+     "t": 120.533,
+     "end": 120.993
+    },
+    {
+     "w": "A",
+     "t": 121.443,
+     "end": 121.543
+    },
+    {
+     "w": "sixth",
+     "t": 121.593,
+     "end": 122.018
+    },
+    {
+     "w": "point",
+     "t": 122.118,
+     "end": 122.368
+    },
+    {
+     "w": "six",
+     "t": 122.393,
+     "end": 122.643
+    },
+    {
+     "w": "one",
+     "t": 122.668,
+     "end": 123.203
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/7d/7d26666a7be7c9b406eaaeed.wav"
+  },
+  {
+   "index": 15,
+   "start": 123.567,
+   "duration": 12.99,
+   "end": 136.557,
+   "text": "Guess riffled wherever purple is higher. You catch seventy eight percent of riffled decks, but flag seventeen percent of perfect ones. Accuracy is a half plus half the difference: the red area.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Guess",
+     "t": 123.617,
+     "end": 123.955
+    },
+    {
+     "w": "riffled",
+     "t": 123.992,
+     "end": 124.479
+    },
+    {
+     "w": "wherever",
+     "t": 124.517,
+     "end": 124.867
+    },
+    {
+     "w": "purple",
+     "t": 124.892,
+     "end": 125.242
+    },
+    {
+     "w": "is",
+     "t": 125.267,
+     "end": 125.392
+    },
+    {
+     "w": "higher",
+     "t": 125.417,
+     "end": 125.997
+    },
+    {
+     "w": "You",
+     "t": 126.417,
+     "end": 126.592
+    },
+    {
+     "w": "catch",
+     "t": 126.642,
+     "end": 127.105
+    },
+    {
+     "w": "seventy",
+     "t": 127.167,
+     "end": 127.517
+    },
+    {
+     "w": "eight",
+     "t": 127.542,
+     "end": 127.742
+    },
+    {
+     "w": "percent",
+     "t": 127.767,
+     "end": 128.217
+    },
+    {
+     "w": "of",
+     "t": 128.242,
+     "end": 128.367
+    },
+    {
+     "w": "riffled",
+     "t": 128.392,
+     "end": 128.717
+    },
+    {
+     "w": "decks",
+     "t": 128.742,
+     "end": 129.517
+    },
+    {
+     "w": "but",
+     "t": 129.642,
+     "end": 129.817
+    },
+    {
+     "w": "flag",
+     "t": 129.867,
+     "end": 130.355
+    },
+    {
+     "w": "seventeen",
+     "t": 130.417,
+     "end": 131.067
+    },
+    {
+     "w": "percent",
+     "t": 131.092,
+     "end": 131.479
+    },
+    {
+     "w": "of",
+     "t": 131.492,
+     "end": 131.567
+    },
+    {
+     "w": "perfect",
+     "t": 131.592,
+     "end": 131.967
+    },
+    {
+     "w": "ones",
+     "t": 131.992,
+     "end": 132.507
+    },
+    {
+     "w": "Accuracy",
+     "t": 132.912,
+     "end": 133.587
+    },
+    {
+     "w": "is",
+     "t": 133.612,
+     "end": 133.699
+    },
+    {
+     "w": "a",
+     "t": 133.712,
+     "end": 133.762
+    },
+    {
+     "w": "half",
+     "t": 133.787,
+     "end": 134.062
+    },
+    {
+     "w": "plus",
+     "t": 134.087,
+     "end": 134.337
+    },
+    {
+     "w": "half",
+     "t": 134.362,
+     "end": 134.575
+    },
+    {
+     "w": "the",
+     "t": 134.587,
+     "end": 134.662
+    },
+    {
+     "w": "difference",
+     "t": 134.687,
+     "end": 135.412
+    },
+    {
+     "w": "the",
+     "t": 135.587,
+     "end": 135.699
+    },
+    {
+     "w": "red",
+     "t": 135.737,
+     "end": 135.962
+    },
+    {
+     "w": "area",
+     "t": 135.987,
+     "end": 136.557
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f3/f3a38e549ac15256c4c8e366.wav"
+  },
+  {
+   "index": 16,
+   "start": 136.9,
+   "duration": 2.23,
+   "end": 139.13,
+   "text": "A seventh riffle: point three three.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "A",
+     "t": 136.95,
+     "end": 137.05
+    },
+    {
+     "w": "seventh",
+     "t": 137.1,
+     "end": 137.475
+    },
+    {
+     "w": "riffle",
+     "t": 137.5,
+     "end": 138.0
+    },
+    {
+     "w": "point",
+     "t": 138.125,
+     "end": 138.375
+    },
+    {
+     "w": "three",
+     "t": 138.4,
+     "end": 138.613
+    },
+    {
+     "w": "three",
+     "t": 138.65,
+     "end": 139.13
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/1e/1e77b0ca847844f5bfaf995c.wav"
+  },
+  {
+   "index": 17,
+   "start": 139.467,
+   "duration": 7.38,
+   "end": 146.847,
+   "text": "Meanwhile the gap between the centers roughly halved each riffle, while purple's spread settled to blue's: about two.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Meanwhile",
+     "t": 139.522,
+     "end": 139.972
+    },
+    {
+     "w": "the",
+     "t": 139.997,
+     "end": 140.072
+    },
+    {
+     "w": "gap",
+     "t": 140.097,
+     "end": 140.372
+    },
+    {
+     "w": "between",
+     "t": 140.397,
+     "end": 140.685
+    },
+    {
+     "w": "the",
+     "t": 140.697,
+     "end": 140.785
+    },
+    {
+     "w": "centers",
+     "t": 140.822,
+     "end": 141.347
+    },
+    {
+     "w": "roughly",
+     "t": 141.397,
+     "end": 141.797
+    },
+    {
+     "w": "halved",
+     "t": 141.822,
+     "end": 142.135
+    },
+    {
+     "w": "each",
+     "t": 142.172,
+     "end": 142.435
+    },
+    {
+     "w": "riffle",
+     "t": 142.472,
+     "end": 143.097
+    },
+    {
+     "w": "while",
+     "t": 143.222,
+     "end": 143.422
+    },
+    {
+     "w": "purple's",
+     "t": 143.447,
+     "end": 143.959
+    },
+    {
+     "w": "spread",
+     "t": 143.997,
+     "end": 144.335
+    },
+    {
+     "w": "settled",
+     "t": 144.372,
+     "end": 144.722
+    },
+    {
+     "w": "to",
+     "t": 144.747,
+     "end": 144.822
+    },
+    {
+     "w": "blue's",
+     "t": 144.847,
+     "end": 145.772
+    },
+    {
+     "w": "about",
+     "t": 145.972,
+     "end": 146.322
+    },
+    {
+     "w": "two",
+     "t": 146.372,
+     "end": 146.847
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/60/6073621c0baa6fbda2f167b3.wav"
+  },
+  {
+   "index": 18,
+   "start": 147.2,
+   "duration": 9.43,
+   "end": 156.63,
+   "text": "While the gap spans several spreads, the distance stays near one. Once it's down to about one spread, the distance halves too. That's the cliff.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "While",
+     "t": 147.205,
+     "end": 147.343
+    },
+    {
+     "w": "the",
+     "t": 147.355,
+     "end": 147.43
+    },
+    {
+     "w": "gap",
+     "t": 147.455,
+     "end": 147.73
+    },
+    {
+     "w": "spans",
+     "t": 147.755,
+     "end": 148.118
+    },
+    {
+     "w": "several",
+     "t": 148.155,
+     "end": 148.48
+    },
+    {
+     "w": "spreads",
+     "t": 148.505,
+     "end": 149.23
+    },
+    {
+     "w": "the",
+     "t": 149.38,
+     "end": 149.48
+    },
+    {
+     "w": "distance",
+     "t": 149.505,
+     "end": 149.955
+    },
+    {
+     "w": "stays",
+     "t": 149.98,
+     "end": 150.355
+    },
+    {
+     "w": "near",
+     "t": 150.38,
+     "end": 150.58
+    },
+    {
+     "w": "one",
+     "t": 150.605,
+     "end": 151.08
+    },
+    {
+     "w": "Once",
+     "t": 151.5,
+     "end": 151.762
+    },
+    {
+     "w": "it's",
+     "t": 151.775,
+     "end": 151.95
+    },
+    {
+     "w": "down",
+     "t": 151.975,
+     "end": 152.25
+    },
+    {
+     "w": "to",
+     "t": 152.275,
+     "end": 152.4
+    },
+    {
+     "w": "about",
+     "t": 152.425,
+     "end": 152.675
+    },
+    {
+     "w": "one",
+     "t": 152.7,
+     "end": 152.9
+    },
+    {
+     "w": "spread",
+     "t": 152.925,
+     "end": 153.55
+    },
+    {
+     "w": "the",
+     "t": 153.7,
+     "end": 153.775
+    },
+    {
+     "w": "distance",
+     "t": 153.8,
+     "end": 154.25
+    },
+    {
+     "w": "halves",
+     "t": 154.275,
+     "end": 154.625
+    },
+    {
+     "w": "too",
+     "t": 154.675,
+     "end": 155.14
+    },
+    {
+     "w": "That's",
+     "t": 155.595,
+     "end": 155.895
+    },
+    {
+     "w": "the",
+     "t": 155.92,
+     "end": 155.995
+    },
+    {
+     "w": "cliff",
+     "t": 156.02,
+     "end": 156.63
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/ee/ee6ff006bcd26e9124c43476.wav"
+  },
+  {
+   "index": 19,
+   "start": 156.967,
+   "duration": 11.64,
+   "end": 168.607,
+   "text": "Gap times two to the k levels off near two hundred thirty. [pause 1.2] So the gap meets the spread when two to the k is about a hundred and ten: just under seven. [pause 0.8]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Gap",
+     "t": 157.017,
+     "end": 157.292
+    },
+    {
+     "w": "times",
+     "t": 157.317,
+     "end": 157.692
+    },
+    {
+     "w": "two",
+     "t": 157.742,
+     "end": 157.967
+    },
+    {
+     "w": "to",
+     "t": 157.992,
+     "end": 158.055
+    },
+    {
+     "w": "the",
+     "t": 158.067,
+     "end": 158.142
+    },
+    {
+     "w": "k",
+     "t": 158.167,
+     "end": 158.392
+    },
+    {
+     "w": "levels",
+     "t": 158.417,
+     "end": 159.129
+    },
+    {
+     "w": "off",
+     "t": 159.192,
+     "end": 159.417
+    },
+    {
+     "w": "near",
+     "t": 159.442,
+     "end": 159.667
+    },
+    {
+     "w": "two",
+     "t": 159.717,
+     "end": 159.892
+    },
+    {
+     "w": "hundred",
+     "t": 159.917,
+     "end": 160.192
+    },
+    {
+     "w": "thirty",
+     "t": 160.217,
+     "end": 160.737
+    },
+    {
+     "w": "So",
+     "t": 161.987,
+     "end": 162.162
+    },
+    {
+     "w": "the",
+     "t": 162.187,
+     "end": 162.262
+    },
+    {
+     "w": "gap",
+     "t": 162.287,
+     "end": 162.637
+    },
+    {
+     "w": "meets",
+     "t": 162.662,
+     "end": 162.912
+    },
+    {
+     "w": "the",
+     "t": 162.937,
+     "end": 163.025
+    },
+    {
+     "w": "spread",
+     "t": 163.062,
+     "end": 163.487
+    },
+    {
+     "w": "when",
+     "t": 163.512,
+     "end": 163.687
+    },
+    {
+     "w": "two",
+     "t": 163.737,
+     "end": 163.937
+    },
+    {
+     "w": "to",
+     "t": 163.962,
+     "end": 164.025
+    },
+    {
+     "w": "the",
+     "t": 164.037,
+     "end": 164.149
+    },
+    {
+     "w": "k",
+     "t": 164.187,
+     "end": 164.599
+    },
+    {
+     "w": "is",
+     "t": 164.637,
+     "end": 164.725
+    },
+    {
+     "w": "about",
+     "t": 164.737,
+     "end": 164.949
+    },
+    {
+     "w": "a",
+     "t": 164.962,
+     "end": 165.025
+    },
+    {
+     "w": "hundred",
+     "t": 165.062,
+     "end": 165.449
+    },
+    {
+     "w": "and",
+     "t": 165.462,
+     "end": 165.575
+    },
+    {
+     "w": "ten",
+     "t": 165.612,
+     "end": 166.312
+    },
+    {
+     "w": "just",
+     "t": 166.562,
+     "end": 166.849
+    },
+    {
+     "w": "under",
+     "t": 166.887,
+     "end": 167.212
+    },
+    {
+     "w": "seven",
+     "t": 167.262,
+     "end": 167.807
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/cc/cc9e898229a78add312bb93a.wav"
+  },
+  {
+   "index": 20,
+   "start": 168.967,
+   "duration": 12.4,
+   "end": 181.367,
+   "text": "Both numbers come from the deck's size. [pause 1.0] For n cards, the gap grows like n squared, but the spread only like root n, so the cliff sits near three halves log base two of n.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Both",
+     "t": 169.017,
+     "end": 169.317
+    },
+    {
+     "w": "numbers",
+     "t": 169.342,
+     "end": 169.742
+    },
+    {
+     "w": "come",
+     "t": 169.767,
+     "end": 169.992
+    },
+    {
+     "w": "from",
+     "t": 170.017,
+     "end": 170.129
+    },
+    {
+     "w": "the",
+     "t": 170.142,
+     "end": 170.217
+    },
+    {
+     "w": "deck's",
+     "t": 170.242,
+     "end": 170.492
+    },
+    {
+     "w": "size",
+     "t": 170.517,
+     "end": 171.117
+    },
+    {
+     "w": "For",
+     "t": 172.152,
+     "end": 172.302
+    },
+    {
+     "w": "n",
+     "t": 172.327,
+     "end": 172.515
+    },
+    {
+     "w": "cards",
+     "t": 172.552,
+     "end": 173.127
+    },
+    {
+     "w": "the",
+     "t": 173.227,
+     "end": 173.302
+    },
+    {
+     "w": "gap",
+     "t": 173.327,
+     "end": 173.602
+    },
+    {
+     "w": "grows",
+     "t": 173.627,
+     "end": 174.002
+    },
+    {
+     "w": "like",
+     "t": 174.027,
+     "end": 174.239
+    },
+    {
+     "w": "n",
+     "t": 174.277,
+     "end": 174.452
+    },
+    {
+     "w": "squared",
+     "t": 174.477,
+     "end": 175.352
+    },
+    {
+     "w": "but",
+     "t": 175.477,
+     "end": 175.59
+    },
+    {
+     "w": "the",
+     "t": 175.602,
+     "end": 175.689
+    },
+    {
+     "w": "spread",
+     "t": 175.727,
+     "end": 176.114
+    },
+    {
+     "w": "only",
+     "t": 176.152,
+     "end": 176.477
+    },
+    {
+     "w": "like",
+     "t": 176.502,
+     "end": 176.727
+    },
+    {
+     "w": "root",
+     "t": 176.777,
+     "end": 177.002
+    },
+    {
+     "w": "n",
+     "t": 177.027,
+     "end": 177.652
+    },
+    {
+     "w": "so",
+     "t": 177.852,
+     "end": 178.002
+    },
+    {
+     "w": "the",
+     "t": 178.027,
+     "end": 178.139
+    },
+    {
+     "w": "cliff",
+     "t": 178.177,
+     "end": 178.477
+    },
+    {
+     "w": "sits",
+     "t": 178.502,
+     "end": 178.752
+    },
+    {
+     "w": "near",
+     "t": 178.777,
+     "end": 179.027
+    },
+    {
+     "w": "three",
+     "t": 179.077,
+     "end": 179.439
+    },
+    {
+     "w": "halves",
+     "t": 179.477,
+     "end": 179.777
+    },
+    {
+     "w": "log",
+     "t": 179.827,
+     "end": 180.177
+    },
+    {
+     "w": "base",
+     "t": 180.202,
+     "end": 180.565
+    },
+    {
+     "w": "two",
+     "t": 180.602,
+     "end": 180.777
+    },
+    {
+     "w": "of",
+     "t": 180.802,
+     "end": 180.902
+    },
+    {
+     "w": "n.",
+     "t": 180.927,
+     "end": 181.367
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/30/30e498da9099b137b87b4c67.wav"
+  },
+  {
+   "index": 21,
+   "start": 181.733,
+   "duration": 9.61,
+   "end": 191.343,
+   "text": "Aldous, then Bayer and Diaconis, proved it: for fifty two cards, seven riffles is the first count that brings the distance below a half.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Aldous",
+     "t": 181.743,
+     "end": 182.343
+    },
+    {
+     "w": "then",
+     "t": 182.418,
+     "end": 182.605
+    },
+    {
+     "w": "Bayer",
+     "t": 182.643,
+     "end": 183.068
+    },
+    {
+     "w": "and",
+     "t": 183.093,
+     "end": 183.193
+    },
+    {
+     "w": "Diaconis",
+     "t": 183.218,
+     "end": 184.218
+    },
+    {
+     "w": "proved",
+     "t": 184.368,
+     "end": 184.755
+    },
+    {
+     "w": "it",
+     "t": 184.793,
+     "end": 185.368
+    },
+    {
+     "w": "for",
+     "t": 185.568,
+     "end": 185.705
+    },
+    {
+     "w": "fifty",
+     "t": 185.743,
+     "end": 186.055
+    },
+    {
+     "w": "two",
+     "t": 186.093,
+     "end": 186.268
+    },
+    {
+     "w": "cards",
+     "t": 186.293,
+     "end": 187.043
+    },
+    {
+     "w": "seven",
+     "t": 187.243,
+     "end": 187.568
+    },
+    {
+     "w": "riffles",
+     "t": 187.593,
+     "end": 188.106
+    },
+    {
+     "w": "is",
+     "t": 188.143,
+     "end": 188.268
+    },
+    {
+     "w": "the",
+     "t": 188.293,
+     "end": 188.418
+    },
+    {
+     "w": "first",
+     "t": 188.468,
+     "end": 188.793
+    },
+    {
+     "w": "count",
+     "t": 188.818,
+     "end": 189.168
+    },
+    {
+     "w": "that",
+     "t": 189.193,
+     "end": 189.318
+    },
+    {
+     "w": "brings",
+     "t": 189.343,
+     "end": 189.668
+    },
+    {
+     "w": "the",
+     "t": 189.693,
+     "end": 189.768
+    },
+    {
+     "w": "distance",
+     "t": 189.793,
+     "end": 190.293
+    },
+    {
+     "w": "below",
+     "t": 190.318,
+     "end": 190.693
+    },
+    {
+     "w": "a",
+     "t": 190.718,
+     "end": 190.768
+    },
+    {
+     "w": "half",
+     "t": 190.793,
+     "end": 191.343
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/7b/7b26056d8163c09d70577102.wav"
+  },
+  {
+   "index": 22,
+   "start": 191.7,
+   "duration": 10.54,
+   "end": 202.24,
+   "text": "Seven belongs to this yardstick. Trefethen and Trefethen measured information instead: no cliff, and five or six shuffles do a reasonable job.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Seven",
+     "t": 191.8,
+     "end": 192.2
+    },
+    {
+     "w": "belongs",
+     "t": 192.225,
+     "end": 192.725
+    },
+    {
+     "w": "to",
+     "t": 192.75,
+     "end": 192.812
+    },
+    {
+     "w": "this",
+     "t": 192.825,
+     "end": 193.0
+    },
+    {
+     "w": "yardstick",
+     "t": 193.025,
+     "end": 193.76
+    },
+    {
+     "w": "Trefethen",
+     "t": 194.145,
+     "end": 194.908
+    },
+    {
+     "w": "and",
+     "t": 194.945,
+     "end": 195.045
+    },
+    {
+     "w": "Trefethen",
+     "t": 195.07,
+     "end": 195.795
+    },
+    {
+     "w": "measured",
+     "t": 195.845,
+     "end": 196.182
+    },
+    {
+     "w": "information",
+     "t": 196.195,
+     "end": 196.87
+    },
+    {
+     "w": "instead",
+     "t": 196.895,
+     "end": 197.87
+    },
+    {
+     "w": "no",
+     "t": 198.12,
+     "end": 198.395
+    },
+    {
+     "w": "cliff",
+     "t": 198.445,
+     "end": 199.12
+    },
+    {
+     "w": "and",
+     "t": 199.245,
+     "end": 199.37
+    },
+    {
+     "w": "five",
+     "t": 199.42,
+     "end": 199.708
+    },
+    {
+     "w": "or",
+     "t": 199.72,
+     "end": 199.795
+    },
+    {
+     "w": "six",
+     "t": 199.82,
+     "end": 200.095
+    },
+    {
+     "w": "shuffles",
+     "t": 200.145,
+     "end": 200.67
+    },
+    {
+     "w": "do",
+     "t": 200.695,
+     "end": 200.845
+    },
+    {
+     "w": "a",
+     "t": 200.87,
+     "end": 200.97
+    },
+    {
+     "w": "reasonable",
+     "t": 201.02,
+     "end": 201.658
+    },
+    {
+     "w": "job",
+     "t": 201.695,
+     "end": 202.24
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/1f/1f31a48d28cc5ab89200f6e1.wav"
+  },
+  {
+   "index": 23,
+   "start": 202.6,
+   "duration": 9.85,
+   "end": 212.45,
+   "text": "Many Markov chains share this cliff, and samplers share the trap: one statistic can settle, like the top card, long before the whole chain has.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Many",
+     "t": 202.665,
+     "end": 202.965
+    },
+    {
+     "w": "Markov",
+     "t": 202.99,
+     "end": 203.502
+    },
+    {
+     "w": "chains",
+     "t": 203.54,
+     "end": 204.065
+    },
+    {
+     "w": "share",
+     "t": 204.115,
+     "end": 204.34
+    },
+    {
+     "w": "this",
+     "t": 204.365,
+     "end": 204.54
+    },
+    {
+     "w": "cliff",
+     "t": 204.565,
+     "end": 205.115
+    },
+    {
+     "w": "and",
+     "t": 205.24,
+     "end": 205.365
+    },
+    {
+     "w": "samplers",
+     "t": 205.415,
+     "end": 206.015
+    },
+    {
+     "w": "share",
+     "t": 206.065,
+     "end": 206.29
+    },
+    {
+     "w": "the",
+     "t": 206.315,
+     "end": 206.402
+    },
+    {
+     "w": "trap",
+     "t": 206.44,
+     "end": 207.29
+    },
+    {
+     "w": "one",
+     "t": 207.54,
+     "end": 207.765
+    },
+    {
+     "w": "statistic",
+     "t": 207.79,
+     "end": 208.415
+    },
+    {
+     "w": "can",
+     "t": 208.44,
+     "end": 208.64
+    },
+    {
+     "w": "settle",
+     "t": 208.69,
+     "end": 209.015
+    },
+    {
+     "w": "like",
+     "t": 209.065,
+     "end": 209.202
+    },
+    {
+     "w": "the",
+     "t": 209.215,
+     "end": 209.29
+    },
+    {
+     "w": "top",
+     "t": 209.315,
+     "end": 209.615
+    },
+    {
+     "w": "card",
+     "t": 209.64,
+     "end": 210.265
+    },
+    {
+     "w": "long",
+     "t": 210.49,
+     "end": 210.84
+    },
+    {
+     "w": "before",
+     "t": 210.865,
+     "end": 211.152
+    },
+    {
+     "w": "the",
+     "t": 211.165,
+     "end": 211.24
+    },
+    {
+     "w": "whole",
+     "t": 211.265,
+     "end": 211.502
+    },
+    {
+     "w": "chain",
+     "t": 211.54,
+     "end": 211.84
+    },
+    {
+     "w": "has",
+     "t": 211.865,
+     "end": 212.45
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/2b/2bfa0495773ec838badb392e.wav"
+  },
+  {
+   "index": 24,
+   "start": 212.8,
+   "duration": 6.96,
+   "end": 219.76,
+   "text": "Back to the coin flip. After four riffles you'd almost never be wrong, same as with an unshuffled deck.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Back",
+     "t": 212.86,
+     "end": 213.135
+    },
+    {
+     "w": "to",
+     "t": 213.16,
+     "end": 213.223
+    },
+    {
+     "w": "the",
+     "t": 213.235,
+     "end": 213.31
+    },
+    {
+     "w": "coin",
+     "t": 213.335,
+     "end": 213.672
+    },
+    {
+     "w": "flip",
+     "t": 213.71,
+     "end": 214.22
+    },
+    {
+     "w": "After",
+     "t": 214.62,
+     "end": 214.995
+    },
+    {
+     "w": "four",
+     "t": 215.045,
+     "end": 215.295
+    },
+    {
+     "w": "riffles",
+     "t": 215.32,
+     "end": 215.845
+    },
+    {
+     "w": "you'd",
+     "t": 215.87,
+     "end": 215.97
+    },
+    {
+     "w": "almost",
+     "t": 215.995,
+     "end": 216.432
+    },
+    {
+     "w": "never",
+     "t": 216.47,
+     "end": 216.695
+    },
+    {
+     "w": "be",
+     "t": 216.72,
+     "end": 216.845
+    },
+    {
+     "w": "wrong",
+     "t": 216.87,
+     "end": 217.545
+    },
+    {
+     "w": "same",
+     "t": 217.77,
+     "end": 218.07
+    },
+    {
+     "w": "as",
+     "t": 218.095,
+     "end": 218.22
+    },
+    {
+     "w": "with",
+     "t": 218.245,
+     "end": 218.358
+    },
+    {
+     "w": "an",
+     "t": 218.37,
+     "end": 218.508
+    },
+    {
+     "w": "unshuffled",
+     "t": 218.57,
+     "end": 219.22
+    },
+    {
+     "w": "deck",
+     "t": 219.245,
+     "end": 219.76
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/c1/c1e170a6c21ce709350c56eb.wav"
+  },
+  {
+   "index": 25,
+   "start": 220.1,
+   "duration": 4.76,
+   "end": 224.86,
+   "text": "Three more riffles, [pause 1.2] and you'd be right only two times in three.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Three",
+     "t": 220.175,
+     "end": 220.425
+    },
+    {
+     "w": "more",
+     "t": 220.45,
+     "end": 220.65
+    },
+    {
+     "w": "riffles",
+     "t": 220.675,
+     "end": 221.41
+    },
+    {
+     "w": "and",
+     "t": 222.63,
+     "end": 222.73
+    },
+    {
+     "w": "you'd",
+     "t": 222.755,
+     "end": 222.842
+    },
+    {
+     "w": "be",
+     "t": 222.855,
+     "end": 222.98
+    },
+    {
+     "w": "right",
+     "t": 223.005,
+     "end": 223.23
+    },
+    {
+     "w": "only",
+     "t": 223.255,
+     "end": 223.555
+    },
+    {
+     "w": "two",
+     "t": 223.605,
+     "end": 223.78
+    },
+    {
+     "w": "times",
+     "t": 223.805,
+     "end": 224.18
+    },
+    {
+     "w": "in",
+     "t": 224.205,
+     "end": 224.342
+    },
+    {
+     "w": "three",
+     "t": 224.38,
+     "end": 224.86
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/b0/b01a6886156d0d06ec17d16a.wav"
+  },
+  {
+   "index": 26,
+   "start": 225.2,
+   "duration": 6.9,
+   "end": 232.1,
+   "text": "Four riffles fool someone watching the top card. Fooling someone who counts sequences that well takes ten.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Four",
+     "t": 225.275,
+     "end": 225.525
+    },
+    {
+     "w": "riffles",
+     "t": 225.55,
+     "end": 226.125
+    },
+    {
+     "w": "fool",
+     "t": 226.175,
+     "end": 226.45
+    },
+    {
+     "w": "someone",
+     "t": 226.475,
+     "end": 226.725
+    },
+    {
+     "w": "watching",
+     "t": 226.75,
+     "end": 227.163
+    },
+    {
+     "w": "the",
+     "t": 227.175,
+     "end": 227.25
+    },
+    {
+     "w": "top",
+     "t": 227.275,
+     "end": 227.55
+    },
+    {
+     "w": "card",
+     "t": 227.575,
+     "end": 228.11
+    },
+    {
+     "w": "Fooling",
+     "t": 228.55,
+     "end": 228.962
+    },
+    {
+     "w": "someone",
+     "t": 229.0,
+     "end": 229.375
+    },
+    {
+     "w": "who",
+     "t": 229.4,
+     "end": 229.525
+    },
+    {
+     "w": "counts",
+     "t": 229.55,
+     "end": 229.825
+    },
+    {
+     "w": "sequences",
+     "t": 229.85,
+     "end": 230.812
+    },
+    {
+     "w": "that",
+     "t": 230.85,
+     "end": 231.0
+    },
+    {
+     "w": "well",
+     "t": 231.025,
+     "end": 231.225
+    },
+    {
+     "w": "takes",
+     "t": 231.25,
+     "end": 231.562
+    },
+    {
+     "w": "ten",
+     "t": 231.6,
+     "end": 232.1
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/0c/0cf707f90acfd53ac277ad3a.wav"
+  }
+ ],
+ "warnings": [],
+ "layout_audit": {
+  "clearance": 0.15,
+  "checks": 269,
+  "audit_seconds": 2.41,
+  "render_seconds": 415.9,
+  "errors": 0,
+  "count": 0,
+  "counts": {
+   "overlap": 0,
+   "clearance": 0,
+   "safe-area": 0,
+   "caption-zone": 0
+  },
+  "issues": [],
+  "allowed": [],
+  "excluded": []
+ }
+}

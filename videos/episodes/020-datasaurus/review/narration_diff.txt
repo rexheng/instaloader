@@ -1,0 +1,15 @@
+WER 3.1% over 540 script words (numbers spelled out, 'and' ignored)
+script: videos/episodes/020-datasaurus/narration.json
+
+[0:00.0] replace  script: 'a'                                      heard: 'one'
+[0:06.8] insert   script: '∅'                                      heard: 'zero'
+[0:06.8] replace  script: 'oh'                                     heard: 'zero'
+[0:43.9] replace  script: "dinosaur's"                             heard: 'dinosaurs'
+[1:22.2] replace  script: 'deviations'                             heard: "deviation's"
+[2:12.2] replace  script: 'biased'                                 heard: 'bias'
+[2:46.0] insert   script: '∅'                                      heard: 'zero'
+[2:58.4] replace  script: 's x'                                    heard: 'sx'
+[2:59.5] replace  script: 's y'                                    heard: 'sy'
+[3:01.4] replace  script: 'one s x'                                heard: 'when sx'
+[3:14.5] replace  script: 'datasets'                               heard: 'data sets'
+[3:34.0] insert   script: '∅'                                      heard: 'those'

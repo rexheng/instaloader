@@ -1,0 +1,3066 @@
+{
+ "scene": "Episode",
+ "episode": 60,
+ "title": "Why Your Friends Have More Friends Than You",
+ "video_duration": 221.4,
+ "beats": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "duration": 4.49,
+   "end": 4.49,
+   "text": "Eight girls at an Illinois high school, and every friendship between them.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Eight",
+     "t": 0.025,
+     "end": 0.3
+    },
+    {
+     "w": "girls",
+     "t": 0.325,
+     "end": 0.763
+    },
+    {
+     "w": "at",
+     "t": 0.8,
+     "end": 0.862
+    },
+    {
+     "w": "an",
+     "t": 0.875,
+     "end": 0.987
+    },
+    {
+     "w": "Illinois",
+     "t": 1.025,
+     "end": 1.5
+    },
+    {
+     "w": "high",
+     "t": 1.525,
+     "end": 1.812
+    },
+    {
+     "w": "school",
+     "t": 1.85,
+     "end": 2.525
+    },
+    {
+     "w": "and",
+     "t": 2.7,
+     "end": 2.85
+    },
+    {
+     "w": "every",
+     "t": 2.9,
+     "end": 3.2
+    },
+    {
+     "w": "friendship",
+     "t": 3.225,
+     "end": 3.725
+    },
+    {
+     "w": "between",
+     "t": 3.75,
+     "end": 4.1
+    },
+    {
+     "w": "them",
+     "t": 4.125,
+     "end": 4.49
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/c8/c81131c138c86c9cf3d92e9f.wav"
+  },
+  {
+   "index": 1,
+   "start": 4.7,
+   "duration": 3.18,
+   "end": 7.88,
+   "text": "On average, each girl has two and a half friends.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "On",
+     "t": 4.72,
+     "end": 4.932
+    },
+    {
+     "w": "average",
+     "t": 4.97,
+     "end": 5.645
+    },
+    {
+     "w": "each",
+     "t": 5.82,
+     "end": 6.07
+    },
+    {
+     "w": "girl",
+     "t": 6.095,
+     "end": 6.345
+    },
+    {
+     "w": "has",
+     "t": 6.37,
+     "end": 6.558
+    },
+    {
+     "w": "two",
+     "t": 6.595,
+     "end": 6.758
+    },
+    {
+     "w": "and",
+     "t": 6.77,
+     "end": 6.857
+    },
+    {
+     "w": "a",
+     "t": 6.87,
+     "end": 6.92
+    },
+    {
+     "w": "half",
+     "t": 6.945,
+     "end": 7.22
+    },
+    {
+     "w": "friends",
+     "t": 7.245,
+     "end": 7.88
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/14/148f775a43b108bc77940b5f.wav"
+  },
+  {
+   "index": 2,
+   "start": 8.067,
+   "duration": 5.76,
+   "end": 13.827,
+   "text": "How many friends does the average friend have? Pick one. [pause 2.0]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "How",
+     "t": 8.097,
+     "end": 8.259
+    },
+    {
+     "w": "many",
+     "t": 8.272,
+     "end": 8.497
+    },
+    {
+     "w": "friends",
+     "t": 8.547,
+     "end": 9.035
+    },
+    {
+     "w": "does",
+     "t": 9.072,
+     "end": 9.259
+    },
+    {
+     "w": "the",
+     "t": 9.272,
+     "end": 9.409
+    },
+    {
+     "w": "average",
+     "t": 9.447,
+     "end": 9.847
+    },
+    {
+     "w": "friend",
+     "t": 9.872,
+     "end": 10.147
+    },
+    {
+     "w": "have",
+     "t": 10.172,
+     "end": 10.707
+    },
+    {
+     "w": "Pick",
+     "t": 11.022,
+     "end": 11.247
+    },
+    {
+     "w": "one",
+     "t": 11.272,
+     "end": 11.827
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/d0/d0a64a8ea32e267cb139a257.wav"
+  },
+  {
+   "index": 3,
+   "start": 13.933,
+   "duration": 7.68,
+   "end": 21.613,
+   "text": "It matters to health researchers choosing whom to watch for flu: random students, or the friends those students name.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "It",
+     "t": 13.933,
+     "end": 14.078
+    },
+    {
+     "w": "matters",
+     "t": 14.103,
+     "end": 14.553
+    },
+    {
+     "w": "to",
+     "t": 14.578,
+     "end": 14.678
+    },
+    {
+     "w": "health",
+     "t": 14.703,
+     "end": 14.953
+    },
+    {
+     "w": "researchers",
+     "t": 14.978,
+     "end": 15.84
+    },
+    {
+     "w": "choosing",
+     "t": 15.903,
+     "end": 16.353
+    },
+    {
+     "w": "whom",
+     "t": 16.378,
+     "end": 16.603
+    },
+    {
+     "w": "to",
+     "t": 16.628,
+     "end": 16.728
+    },
+    {
+     "w": "watch",
+     "t": 16.753,
+     "end": 17.078
+    },
+    {
+     "w": "for",
+     "t": 17.103,
+     "end": 17.253
+    },
+    {
+     "w": "flu",
+     "t": 17.303,
+     "end": 17.953
+    },
+    {
+     "w": "random",
+     "t": 18.278,
+     "end": 18.703
+    },
+    {
+     "w": "students",
+     "t": 18.728,
+     "end": 19.478
+    },
+    {
+     "w": "or",
+     "t": 19.628,
+     "end": 19.728
+    },
+    {
+     "w": "the",
+     "t": 19.753,
+     "end": 19.878
+    },
+    {
+     "w": "friends",
+     "t": 19.928,
+     "end": 20.378
+    },
+    {
+     "w": "those",
+     "t": 20.403,
+     "end": 20.628
+    },
+    {
+     "w": "students",
+     "t": 20.653,
+     "end": 21.078
+    },
+    {
+     "w": "name",
+     "t": 21.103,
+     "end": 21.613
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f2/f2e9e8e617f459374de0c471.wav"
+  },
+  {
+   "index": 4,
+   "start": 22.3,
+   "duration": 5.56,
+   "end": 27.86,
+   "text": "The natural guess is two and a half again: every friend is one of these same eight girls.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 22.315,
+     "end": 22.415
+    },
+    {
+     "w": "natural",
+     "t": 22.44,
+     "end": 22.94
+    },
+    {
+     "w": "guess",
+     "t": 22.965,
+     "end": 23.378
+    },
+    {
+     "w": "is",
+     "t": 23.415,
+     "end": 23.565
+    },
+    {
+     "w": "two",
+     "t": 23.615,
+     "end": 23.778
+    },
+    {
+     "w": "and",
+     "t": 23.79,
+     "end": 23.878
+    },
+    {
+     "w": "a",
+     "t": 23.89,
+     "end": 23.94
+    },
+    {
+     "w": "half",
+     "t": 23.965,
+     "end": 24.202
+    },
+    {
+     "w": "again",
+     "t": 24.215,
+     "end": 24.89
+    },
+    {
+     "w": "every",
+     "t": 25.09,
+     "end": 25.415
+    },
+    {
+     "w": "friend",
+     "t": 25.465,
+     "end": 25.84
+    },
+    {
+     "w": "is",
+     "t": 25.865,
+     "end": 25.99
+    },
+    {
+     "w": "one",
+     "t": 26.015,
+     "end": 26.128
+    },
+    {
+     "w": "of",
+     "t": 26.14,
+     "end": 26.215
+    },
+    {
+     "w": "these",
+     "t": 26.24,
+     "end": 26.515
+    },
+    {
+     "w": "same",
+     "t": 26.59,
+     "end": 26.965
+    },
+    {
+     "w": "eight",
+     "t": 26.99,
+     "end": 27.24
+    },
+    {
+     "w": "girls",
+     "t": 27.265,
+     "end": 27.86
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/37/3778aae8f744aabd2db3d86e.wav"
+  },
+  {
+   "index": 5,
+   "start": 28.2,
+   "duration": 7.64,
+   "end": 35.84,
+   "text": "Check that on a rewired class where every girl has two friends. Send a token both ways along every friendship.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Check",
+     "t": 28.24,
+     "end": 28.465
+    },
+    {
+     "w": "that",
+     "t": 28.49,
+     "end": 28.74
+    },
+    {
+     "w": "on",
+     "t": 28.765,
+     "end": 28.853
+    },
+    {
+     "w": "a",
+     "t": 28.865,
+     "end": 28.915
+    },
+    {
+     "w": "rewired",
+     "t": 28.94,
+     "end": 29.54
+    },
+    {
+     "w": "class",
+     "t": 29.565,
+     "end": 30.252
+    },
+    {
+     "w": "where",
+     "t": 30.29,
+     "end": 30.452
+    },
+    {
+     "w": "every",
+     "t": 30.49,
+     "end": 30.79
+    },
+    {
+     "w": "girl",
+     "t": 30.815,
+     "end": 31.09
+    },
+    {
+     "w": "has",
+     "t": 31.115,
+     "end": 31.29
+    },
+    {
+     "w": "two",
+     "t": 31.315,
+     "end": 31.502
+    },
+    {
+     "w": "friends",
+     "t": 31.54,
+     "end": 32.2
+    },
+    {
+     "w": "Send",
+     "t": 32.535,
+     "end": 32.748
+    },
+    {
+     "w": "a",
+     "t": 32.76,
+     "end": 32.81
+    },
+    {
+     "w": "token",
+     "t": 32.835,
+     "end": 33.548
+    },
+    {
+     "w": "both",
+     "t": 33.61,
+     "end": 33.96
+    },
+    {
+     "w": "ways",
+     "t": 33.985,
+     "end": 34.335
+    },
+    {
+     "w": "along",
+     "t": 34.36,
+     "end": 34.722
+    },
+    {
+     "w": "every",
+     "t": 34.76,
+     "end": 35.06
+    },
+    {
+     "w": "friendship",
+     "t": 35.085,
+     "end": 35.84
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/cb/cb8b8244b160a6925ceb059d.wav"
+  },
+  {
+   "index": 6,
+   "start": 36.2,
+   "duration": 7.05,
+   "end": 43.25,
+   "text": "Each token reads the friend count where it lands, here always two. Both averages are two: the guess holds.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Each",
+     "t": 36.22,
+     "end": 36.507
+    },
+    {
+     "w": "token",
+     "t": 36.545,
+     "end": 36.97
+    },
+    {
+     "w": "reads",
+     "t": 36.995,
+     "end": 37.282
+    },
+    {
+     "w": "the",
+     "t": 37.295,
+     "end": 37.37
+    },
+    {
+     "w": "friend",
+     "t": 37.395,
+     "end": 37.695
+    },
+    {
+     "w": "count",
+     "t": 37.72,
+     "end": 37.982
+    },
+    {
+     "w": "where",
+     "t": 37.995,
+     "end": 38.107
+    },
+    {
+     "w": "it",
+     "t": 38.12,
+     "end": 38.195
+    },
+    {
+     "w": "lands",
+     "t": 38.22,
+     "end": 38.92
+    },
+    {
+     "w": "here",
+     "t": 39.095,
+     "end": 39.308
+    },
+    {
+     "w": "always",
+     "t": 39.345,
+     "end": 39.795
+    },
+    {
+     "w": "two",
+     "t": 39.845,
+     "end": 40.31
+    },
+    {
+     "w": "Both",
+     "t": 40.635,
+     "end": 40.973
+    },
+    {
+     "w": "averages",
+     "t": 41.01,
+     "end": 41.485
+    },
+    {
+     "w": "are",
+     "t": 41.51,
+     "end": 41.66
+    },
+    {
+     "w": "two",
+     "t": 41.71,
+     "end": 42.11
+    },
+    {
+     "w": "the",
+     "t": 42.26,
+     "end": 42.335
+    },
+    {
+     "w": "guess",
+     "t": 42.36,
+     "end": 42.66
+    },
+    {
+     "w": "holds",
+     "t": 42.685,
+     "end": 43.25
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/60/6022f137ac2ab94b32df47a4.wav"
+  },
+  {
+   "index": 7,
+   "start": 43.933,
+   "duration": 10.73,
+   "end": 54.663,
+   "text": "Now restore the real friendships and send the tokens again. They read one, two, three, or four. Twenty tokens add up to sixty: friends average three.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Now",
+     "t": 44.013,
+     "end": 44.313
+    },
+    {
+     "w": "restore",
+     "t": 44.338,
+     "end": 44.813
+    },
+    {
+     "w": "the",
+     "t": 44.838,
+     "end": 44.938
+    },
+    {
+     "w": "real",
+     "t": 44.963,
+     "end": 45.238
+    },
+    {
+     "w": "friendships",
+     "t": 45.263,
+     "end": 46.251
+    },
+    {
+     "w": "and",
+     "t": 46.313,
+     "end": 46.451
+    },
+    {
+     "w": "send",
+     "t": 46.488,
+     "end": 46.675
+    },
+    {
+     "w": "the",
+     "t": 46.688,
+     "end": 46.763
+    },
+    {
+     "w": "tokens",
+     "t": 46.788,
+     "end": 47.238
+    },
+    {
+     "w": "again",
+     "t": 47.263,
+     "end": 47.783
+    },
+    {
+     "w": "They",
+     "t": 48.083,
+     "end": 48.233
+    },
+    {
+     "w": "read",
+     "t": 48.258,
+     "end": 48.483
+    },
+    {
+     "w": "one",
+     "t": 48.508,
+     "end": 48.908
+    },
+    {
+     "w": "two",
+     "t": 49.058,
+     "end": 49.333
+    },
+    {
+     "w": "three",
+     "t": 49.458,
+     "end": 49.733
+    },
+    {
+     "w": "or",
+     "t": 49.808,
+     "end": 49.958
+    },
+    {
+     "w": "four",
+     "t": 50.008,
+     "end": 50.513
+    },
+    {
+     "w": "Twenty",
+     "t": 50.783,
+     "end": 51.108
+    },
+    {
+     "w": "tokens",
+     "t": 51.133,
+     "end": 51.683
+    },
+    {
+     "w": "add",
+     "t": 51.733,
+     "end": 51.921
+    },
+    {
+     "w": "up",
+     "t": 51.933,
+     "end": 52.083
+    },
+    {
+     "w": "to",
+     "t": 52.108,
+     "end": 52.208
+    },
+    {
+     "w": "sixty",
+     "t": 52.233,
+     "end": 52.933
+    },
+    {
+     "w": "friends",
+     "t": 53.183,
+     "end": 53.595
+    },
+    {
+     "w": "average",
+     "t": 53.633,
+     "end": 54.083
+    },
+    {
+     "w": "three",
+     "t": 54.133,
+     "end": 54.663
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/e5/e5c45b9863494286e756b608.wav"
+  },
+  {
+   "index": 8,
+   "start": 55.0,
+   "duration": 10.75,
+   "end": 65.75,
+   "text": "The guess was half a friend too low: friends average twenty percent more than girls. The tokens piled up unevenly: four on Sue, four on Alice, one on Betty.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 55.025,
+     "end": 55.138
+    },
+    {
+     "w": "guess",
+     "t": 55.175,
+     "end": 55.55
+    },
+    {
+     "w": "was",
+     "t": 55.575,
+     "end": 55.725
+    },
+    {
+     "w": "half",
+     "t": 55.75,
+     "end": 55.988
+    },
+    {
+     "w": "a",
+     "t": 56.0,
+     "end": 56.05
+    },
+    {
+     "w": "friend",
+     "t": 56.075,
+     "end": 56.338
+    },
+    {
+     "w": "too",
+     "t": 56.375,
+     "end": 56.55
+    },
+    {
+     "w": "low",
+     "t": 56.575,
+     "end": 57.175
+    },
+    {
+     "w": "friends",
+     "t": 57.45,
+     "end": 57.863
+    },
+    {
+     "w": "average",
+     "t": 57.9,
+     "end": 58.262
+    },
+    {
+     "w": "twenty",
+     "t": 58.3,
+     "end": 58.6
+    },
+    {
+     "w": "percent",
+     "t": 58.625,
+     "end": 59.138
+    },
+    {
+     "w": "more",
+     "t": 59.175,
+     "end": 59.375
+    },
+    {
+     "w": "than",
+     "t": 59.4,
+     "end": 59.55
+    },
+    {
+     "w": "girls",
+     "t": 59.575,
+     "end": 60.2
+    },
+    {
+     "w": "The",
+     "t": 60.475,
+     "end": 60.55
+    },
+    {
+     "w": "tokens",
+     "t": 60.575,
+     "end": 61.088
+    },
+    {
+     "w": "piled",
+     "t": 61.125,
+     "end": 61.438
+    },
+    {
+     "w": "up",
+     "t": 61.45,
+     "end": 61.625
+    },
+    {
+     "w": "unevenly",
+     "t": 61.65,
+     "end": 62.675
+    },
+    {
+     "w": "four",
+     "t": 62.9,
+     "end": 63.113
+    },
+    {
+     "w": "on",
+     "t": 63.125,
+     "end": 63.325
+    },
+    {
+     "w": "Sue",
+     "t": 63.375,
+     "end": 63.725
+    },
+    {
+     "w": "four",
+     "t": 63.9,
+     "end": 64.112
+    },
+    {
+     "w": "on",
+     "t": 64.125,
+     "end": 64.288
+    },
+    {
+     "w": "Alice",
+     "t": 64.325,
+     "end": 64.775
+    },
+    {
+     "w": "one",
+     "t": 64.9,
+     "end": 65.062
+    },
+    {
+     "w": "on",
+     "t": 65.075,
+     "end": 65.225
+    },
+    {
+     "w": "Betty",
+     "t": 65.25,
+     "end": 65.75
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/41/41409679a7550327c480feca.wav"
+  },
+  {
+   "index": 9,
+   "start": 66.467,
+   "duration": 6.69,
+   "end": 73.157,
+   "text": "Line the girls up by friend count: two at each count, from one to four, so they balance at two and a half.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Line",
+     "t": 66.547,
+     "end": 66.835
+    },
+    {
+     "w": "the",
+     "t": 66.847,
+     "end": 66.922
+    },
+    {
+     "w": "girls",
+     "t": 66.947,
+     "end": 67.284
+    },
+    {
+     "w": "up",
+     "t": 67.297,
+     "end": 67.472
+    },
+    {
+     "w": "by",
+     "t": 67.497,
+     "end": 67.647
+    },
+    {
+     "w": "friend",
+     "t": 67.672,
+     "end": 67.897
+    },
+    {
+     "w": "count",
+     "t": 67.922,
+     "end": 68.647
+    },
+    {
+     "w": "two",
+     "t": 68.872,
+     "end": 69.16
+    },
+    {
+     "w": "at",
+     "t": 69.197,
+     "end": 69.322
+    },
+    {
+     "w": "each",
+     "t": 69.347,
+     "end": 69.609
+    },
+    {
+     "w": "count",
+     "t": 69.647,
+     "end": 70.047
+    },
+    {
+     "w": "from",
+     "t": 70.147,
+     "end": 70.297
+    },
+    {
+     "w": "one",
+     "t": 70.322,
+     "end": 70.447
+    },
+    {
+     "w": "to",
+     "t": 70.472,
+     "end": 70.585
+    },
+    {
+     "w": "four",
+     "t": 70.622,
+     "end": 71.122
+    },
+    {
+     "w": "so",
+     "t": 71.297,
+     "end": 71.422
+    },
+    {
+     "w": "they",
+     "t": 71.447,
+     "end": 71.572
+    },
+    {
+     "w": "balance",
+     "t": 71.597,
+     "end": 72.072
+    },
+    {
+     "w": "at",
+     "t": 72.097,
+     "end": 72.209
+    },
+    {
+     "w": "two",
+     "t": 72.247,
+     "end": 72.409
+    },
+    {
+     "w": "and",
+     "t": 72.422,
+     "end": 72.509
+    },
+    {
+     "w": "a",
+     "t": 72.522,
+     "end": 72.572
+    },
+    {
+     "w": "half",
+     "t": 72.597,
+     "end": 73.157
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/dc/dcae7ccdd4edf5966bc4e27b.wav"
+  },
+  {
+   "index": 10,
+   "start": 73.5,
+   "duration": 5.0,
+   "end": 78.5,
+   "text": "The tokens stack higher on the right, one per friend, so they balance at three.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 73.525,
+     "end": 73.6
+    },
+    {
+     "w": "tokens",
+     "t": 73.625,
+     "end": 74.125
+    },
+    {
+     "w": "stack",
+     "t": 74.15,
+     "end": 74.475
+    },
+    {
+     "w": "higher",
+     "t": 74.5,
+     "end": 74.787
+    },
+    {
+     "w": "on",
+     "t": 74.8,
+     "end": 74.888
+    },
+    {
+     "w": "the",
+     "t": 74.9,
+     "end": 74.975
+    },
+    {
+     "w": "right",
+     "t": 75.0,
+     "end": 75.525
+    },
+    {
+     "w": "one",
+     "t": 75.7,
+     "end": 75.925
+    },
+    {
+     "w": "per",
+     "t": 75.95,
+     "end": 76.138
+    },
+    {
+     "w": "friend",
+     "t": 76.175,
+     "end": 76.825
+    },
+    {
+     "w": "so",
+     "t": 77.0,
+     "end": 77.125
+    },
+    {
+     "w": "they",
+     "t": 77.15,
+     "end": 77.275
+    },
+    {
+     "w": "balance",
+     "t": 77.3,
+     "end": 77.775
+    },
+    {
+     "w": "at",
+     "t": 77.8,
+     "end": 77.938
+    },
+    {
+     "w": "three",
+     "t": 77.975,
+     "end": 78.5
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/e8/e87c893014d2a08c780ebc34.wav"
+  },
+  {
+   "index": 11,
+   "start": 78.833,
+   "duration": 10.15,
+   "end": 88.983,
+   "text": "Sue holds four tokens, each worth four: sixteen. A girl with k friends adds k squared on top, and k on the bottom. Sixty over twenty.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Sue",
+     "t": 78.918,
+     "end": 79.093
+    },
+    {
+     "w": "holds",
+     "t": 79.118,
+     "end": 79.418
+    },
+    {
+     "w": "four",
+     "t": 79.443,
+     "end": 79.643
+    },
+    {
+     "w": "tokens",
+     "t": 79.668,
+     "end": 80.293
+    },
+    {
+     "w": "each",
+     "t": 80.393,
+     "end": 80.618
+    },
+    {
+     "w": "worth",
+     "t": 80.643,
+     "end": 80.843
+    },
+    {
+     "w": "four",
+     "t": 80.868,
+     "end": 81.368
+    },
+    {
+     "w": "sixteen",
+     "t": 81.593,
+     "end": 82.443
+    },
+    {
+     "w": "A",
+     "t": 82.723,
+     "end": 82.798
+    },
+    {
+     "w": "girl",
+     "t": 82.823,
+     "end": 83.135
+    },
+    {
+     "w": "with",
+     "t": 83.148,
+     "end": 83.298
+    },
+    {
+     "w": "k",
+     "t": 83.323,
+     "end": 83.573
+    },
+    {
+     "w": "friends",
+     "t": 83.598,
+     "end": 84.123
+    },
+    {
+     "w": "adds",
+     "t": 84.173,
+     "end": 84.448
+    },
+    {
+     "w": "k",
+     "t": 84.473,
+     "end": 84.723
+    },
+    {
+     "w": "squared",
+     "t": 84.748,
+     "end": 85.061
+    },
+    {
+     "w": "on",
+     "t": 85.073,
+     "end": 85.223
+    },
+    {
+     "w": "top",
+     "t": 85.248,
+     "end": 85.848
+    },
+    {
+     "w": "and",
+     "t": 85.998,
+     "end": 86.123
+    },
+    {
+     "w": "k",
+     "t": 86.173,
+     "end": 86.435
+    },
+    {
+     "w": "on",
+     "t": 86.448,
+     "end": 86.535
+    },
+    {
+     "w": "the",
+     "t": 86.548,
+     "end": 86.623
+    },
+    {
+     "w": "bottom",
+     "t": 86.648,
+     "end": 87.223
+    },
+    {
+     "w": "Sixty",
+     "t": 87.583,
+     "end": 88.008
+    },
+    {
+     "w": "over",
+     "t": 88.033,
+     "end": 88.233
+    },
+    {
+     "w": "twenty",
+     "t": 88.258,
+     "end": 88.983
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/55/555e54fac55bdab4f69d739d.wav"
+  },
+  {
+   "index": 12,
+   "start": 89.333,
+   "duration": 8.52,
+   "end": 97.853,
+   "text": "Divide top and bottom by the eight girls: the average of k squared, seven and a half, over the average girl, two and a half.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Divide",
+     "t": 89.383,
+     "end": 89.883
+    },
+    {
+     "w": "top",
+     "t": 89.933,
+     "end": 90.271
+    },
+    {
+     "w": "and",
+     "t": 90.283,
+     "end": 90.383
+    },
+    {
+     "w": "bottom",
+     "t": 90.408,
+     "end": 90.808
+    },
+    {
+     "w": "by",
+     "t": 90.833,
+     "end": 90.945
+    },
+    {
+     "w": "the",
+     "t": 90.958,
+     "end": 91.095
+    },
+    {
+     "w": "eight",
+     "t": 91.133,
+     "end": 91.383
+    },
+    {
+     "w": "girls",
+     "t": 91.408,
+     "end": 92.283
+    },
+    {
+     "w": "the",
+     "t": 92.433,
+     "end": 92.583
+    },
+    {
+     "w": "average",
+     "t": 92.633,
+     "end": 93.058
+    },
+    {
+     "w": "of",
+     "t": 93.083,
+     "end": 93.221
+    },
+    {
+     "w": "k",
+     "t": 93.258,
+     "end": 93.583
+    },
+    {
+     "w": "squared",
+     "t": 93.633,
+     "end": 94.333
+    },
+    {
+     "w": "seven",
+     "t": 94.533,
+     "end": 94.795
+    },
+    {
+     "w": "and",
+     "t": 94.808,
+     "end": 94.895
+    },
+    {
+     "w": "a",
+     "t": 94.908,
+     "end": 94.958
+    },
+    {
+     "w": "half",
+     "t": 94.983,
+     "end": 95.408
+    },
+    {
+     "w": "over",
+     "t": 95.508,
+     "end": 95.695
+    },
+    {
+     "w": "the",
+     "t": 95.708,
+     "end": 95.845
+    },
+    {
+     "w": "average",
+     "t": 95.883,
+     "end": 96.308
+    },
+    {
+     "w": "girl",
+     "t": 96.333,
+     "end": 96.783
+    },
+    {
+     "w": "two",
+     "t": 96.958,
+     "end": 97.121
+    },
+    {
+     "w": "and",
+     "t": 97.133,
+     "end": 97.221
+    },
+    {
+     "w": "a",
+     "t": 97.233,
+     "end": 97.283
+    },
+    {
+     "w": "half",
+     "t": 97.308,
+     "end": 97.853
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/0c/0c23ca5e52b9ac0bde39eba5.wav"
+  },
+  {
+   "index": 13,
+   "start": 98.2,
+   "duration": 12.37,
+   "end": 110.57,
+   "text": "Measure each girl's distance from the balance point and square it: two and a quarter at the ends, a quarter in the middle. They average one and a quarter, the variance, sigma squared. [pause]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Measure",
+     "t": 98.28,
+     "end": 98.718
+    },
+    {
+     "w": "each",
+     "t": 98.755,
+     "end": 99.03
+    },
+    {
+     "w": "girl's",
+     "t": 99.055,
+     "end": 99.455
+    },
+    {
+     "w": "distance",
+     "t": 99.48,
+     "end": 99.955
+    },
+    {
+     "w": "from",
+     "t": 99.98,
+     "end": 100.092
+    },
+    {
+     "w": "the",
+     "t": 100.105,
+     "end": 100.18
+    },
+    {
+     "w": "balance",
+     "t": 100.205,
+     "end": 100.63
+    },
+    {
+     "w": "point",
+     "t": 100.655,
+     "end": 101.005
+    },
+    {
+     "w": "and",
+     "t": 101.03,
+     "end": 101.143
+    },
+    {
+     "w": "square",
+     "t": 101.18,
+     "end": 101.518
+    },
+    {
+     "w": "it",
+     "t": 101.555,
+     "end": 102.13
+    },
+    {
+     "w": "two",
+     "t": 102.355,
+     "end": 102.855
+    },
+    {
+     "w": "and",
+     "t": 102.905,
+     "end": 102.992
+    },
+    {
+     "w": "a",
+     "t": 103.005,
+     "end": 103.055
+    },
+    {
+     "w": "quarter",
+     "t": 103.08,
+     "end": 103.48
+    },
+    {
+     "w": "at",
+     "t": 103.505,
+     "end": 103.568
+    },
+    {
+     "w": "the",
+     "t": 103.58,
+     "end": 103.718
+    },
+    {
+     "w": "ends",
+     "t": 103.755,
+     "end": 104.43
+    },
+    {
+     "w": "a",
+     "t": 104.605,
+     "end": 104.692
+    },
+    {
+     "w": "quarter",
+     "t": 104.73,
+     "end": 105.155
+    },
+    {
+     "w": "in",
+     "t": 105.18,
+     "end": 105.242
+    },
+    {
+     "w": "the",
+     "t": 105.255,
+     "end": 105.33
+    },
+    {
+     "w": "middle",
+     "t": 105.355,
+     "end": 105.82
+    },
+    {
+     "w": "They",
+     "t": 106.11,
+     "end": 106.285
+    },
+    {
+     "w": "average",
+     "t": 106.335,
+     "end": 106.785
+    },
+    {
+     "w": "one",
+     "t": 106.81,
+     "end": 107.035
+    },
+    {
+     "w": "and",
+     "t": 107.06,
+     "end": 107.148
+    },
+    {
+     "w": "a",
+     "t": 107.16,
+     "end": 107.21
+    },
+    {
+     "w": "quarter",
+     "t": 107.235,
+     "end": 107.81
+    },
+    {
+     "w": "the",
+     "t": 107.935,
+     "end": 108.035
+    },
+    {
+     "w": "variance",
+     "t": 108.06,
+     "end": 108.76
+    },
+    {
+     "w": "sigma",
+     "t": 108.96,
+     "end": 109.31
+    },
+    {
+     "w": "squared",
+     "t": 109.335,
+     "end": 109.97
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/ce/ce313d7274fa59e3b5ba682c.wav"
+  },
+  {
+   "index": 14,
+   "start": 110.933,
+   "duration": 20.75,
+   "end": 131.683,
+   "text": "Split Sue's four into the balance point, two and a half, plus her distance, one and a half. Squaring gives two and a half squared, her distance squared, and a cross term. [pause] Every girl splits this way, and because the beam balances, the left and right distances add to zero and the cross terms cancel. [pause]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Split",
+     "t": 111.013,
+     "end": 111.338
+    },
+    {
+     "w": "Sue's",
+     "t": 111.363,
+     "end": 111.675
+    },
+    {
+     "w": "four",
+     "t": 111.713,
+     "end": 111.975
+    },
+    {
+     "w": "into",
+     "t": 111.988,
+     "end": 112.151
+    },
+    {
+     "w": "the",
+     "t": 112.163,
+     "end": 112.238
+    },
+    {
+     "w": "balance",
+     "t": 112.263,
+     "end": 112.688
+    },
+    {
+     "w": "point",
+     "t": 112.713,
+     "end": 113.288
+    },
+    {
+     "w": "two",
+     "t": 113.463,
+     "end": 113.625
+    },
+    {
+     "w": "and",
+     "t": 113.638,
+     "end": 113.725
+    },
+    {
+     "w": "a",
+     "t": 113.738,
+     "end": 113.788
+    },
+    {
+     "w": "half",
+     "t": 113.813,
+     "end": 114.213
+    },
+    {
+     "w": "plus",
+     "t": 114.338,
+     "end": 114.551
+    },
+    {
+     "w": "her",
+     "t": 114.563,
+     "end": 114.688
+    },
+    {
+     "w": "distance",
+     "t": 114.713,
+     "end": 115.463
+    },
+    {
+     "w": "one",
+     "t": 115.638,
+     "end": 115.825
+    },
+    {
+     "w": "and",
+     "t": 115.838,
+     "end": 115.925
+    },
+    {
+     "w": "a",
+     "t": 115.938,
+     "end": 115.988
+    },
+    {
+     "w": "half",
+     "t": 116.013,
+     "end": 116.573
+    },
+    {
+     "w": "Squaring",
+     "t": 116.903,
+     "end": 117.378
+    },
+    {
+     "w": "gives",
+     "t": 117.403,
+     "end": 117.665
+    },
+    {
+     "w": "two",
+     "t": 117.703,
+     "end": 117.84
+    },
+    {
+     "w": "and",
+     "t": 117.853,
+     "end": 117.94
+    },
+    {
+     "w": "a",
+     "t": 117.953,
+     "end": 118.003
+    },
+    {
+     "w": "half",
+     "t": 118.028,
+     "end": 118.278
+    },
+    {
+     "w": "squared",
+     "t": 118.303,
+     "end": 119.003
+    },
+    {
+     "w": "her",
+     "t": 119.128,
+     "end": 119.253
+    },
+    {
+     "w": "distance",
+     "t": 119.278,
+     "end": 119.678
+    },
+    {
+     "w": "squared",
+     "t": 119.703,
+     "end": 120.328
+    },
+    {
+     "w": "and",
+     "t": 120.453,
+     "end": 120.54
+    },
+    {
+     "w": "a",
+     "t": 120.553,
+     "end": 120.603
+    },
+    {
+     "w": "cross",
+     "t": 120.628,
+     "end": 120.978
+    },
+    {
+     "w": "term",
+     "t": 121.003,
+     "end": 121.523
+    },
+    {
+     "w": "Every",
+     "t": 122.133,
+     "end": 122.433
+    },
+    {
+     "w": "girl",
+     "t": 122.458,
+     "end": 122.771
+    },
+    {
+     "w": "splits",
+     "t": 122.808,
+     "end": 123.183
+    },
+    {
+     "w": "this",
+     "t": 123.208,
+     "end": 123.433
+    },
+    {
+     "w": "way",
+     "t": 123.458,
+     "end": 124.083
+    },
+    {
+     "w": "and",
+     "t": 124.258,
+     "end": 124.345
+    },
+    {
+     "w": "because",
+     "t": 124.358,
+     "end": 124.733
+    },
+    {
+     "w": "the",
+     "t": 124.758,
+     "end": 124.871
+    },
+    {
+     "w": "beam",
+     "t": 124.908,
+     "end": 125.233
+    },
+    {
+     "w": "balances",
+     "t": 125.258,
+     "end": 126.233
+    },
+    {
+     "w": "the",
+     "t": 126.358,
+     "end": 126.483
+    },
+    {
+     "w": "left",
+     "t": 126.533,
+     "end": 126.945
+    },
+    {
+     "w": "and",
+     "t": 126.983,
+     "end": 127.121
+    },
+    {
+     "w": "right",
+     "t": 127.158,
+     "end": 127.458
+    },
+    {
+     "w": "distances",
+     "t": 127.483,
+     "end": 128.208
+    },
+    {
+     "w": "add",
+     "t": 128.258,
+     "end": 128.483
+    },
+    {
+     "w": "to",
+     "t": 128.508,
+     "end": 128.621
+    },
+    {
+     "w": "zero",
+     "t": 128.658,
+     "end": 129.421
+    },
+    {
+     "w": "and",
+     "t": 129.483,
+     "end": 129.571
+    },
+    {
+     "w": "the",
+     "t": 129.583,
+     "end": 129.658
+    },
+    {
+     "w": "cross",
+     "t": 129.683,
+     "end": 130.033
+    },
+    {
+     "w": "terms",
+     "t": 130.058,
+     "end": 130.383
+    },
+    {
+     "w": "cancel",
+     "t": 130.408,
+     "end": 131.083
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/02/02da5f7818bda3698db4ed0f.wav"
+  },
+  {
+   "index": 15,
+   "start": 132.033,
+   "duration": 17.65,
+   "end": 149.683,
+   "text": "So the average of k squared is mu squared plus sigma squared, and friends average mu, plus sigma squared over mu. Here that's two and a half, plus a half: exactly the extra half friend we measured. The ring had no spread, so it had no gap. [pause 1.3]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "So",
+     "t": 132.083,
+     "end": 132.245
+    },
+    {
+     "w": "the",
+     "t": 132.258,
+     "end": 132.408
+    },
+    {
+     "w": "average",
+     "t": 132.458,
+     "end": 132.883
+    },
+    {
+     "w": "of",
+     "t": 132.908,
+     "end": 133.045
+    },
+    {
+     "w": "k",
+     "t": 133.083,
+     "end": 133.395
+    },
+    {
+     "w": "squared",
+     "t": 133.433,
+     "end": 133.908
+    },
+    {
+     "w": "is",
+     "t": 133.933,
+     "end": 134.071
+    },
+    {
+     "w": "mu",
+     "t": 134.108,
+     "end": 134.345
+    },
+    {
+     "w": "squared",
+     "t": 134.383,
+     "end": 134.783
+    },
+    {
+     "w": "plus",
+     "t": 134.808,
+     "end": 135.033
+    },
+    {
+     "w": "sigma",
+     "t": 135.058,
+     "end": 135.383
+    },
+    {
+     "w": "squared",
+     "t": 135.408,
+     "end": 136.258
+    },
+    {
+     "w": "and",
+     "t": 136.433,
+     "end": 136.558
+    },
+    {
+     "w": "friends",
+     "t": 136.608,
+     "end": 136.971
+    },
+    {
+     "w": "average",
+     "t": 137.008,
+     "end": 137.433
+    },
+    {
+     "w": "mu",
+     "t": 137.458,
+     "end": 137.958
+    },
+    {
+     "w": "plus",
+     "t": 138.208,
+     "end": 138.471
+    },
+    {
+     "w": "sigma",
+     "t": 138.508,
+     "end": 138.833
+    },
+    {
+     "w": "squared",
+     "t": 138.858,
+     "end": 139.233
+    },
+    {
+     "w": "over",
+     "t": 139.258,
+     "end": 139.508
+    },
+    {
+     "w": "mu",
+     "t": 139.533,
+     "end": 139.973
+    },
+    {
+     "w": "Here",
+     "t": 140.283,
+     "end": 140.508
+    },
+    {
+     "w": "that's",
+     "t": 140.533,
+     "end": 140.783
+    },
+    {
+     "w": "two",
+     "t": 140.808,
+     "end": 140.946
+    },
+    {
+     "w": "and",
+     "t": 140.958,
+     "end": 141.046
+    },
+    {
+     "w": "a",
+     "t": 141.058,
+     "end": 141.108
+    },
+    {
+     "w": "half",
+     "t": 141.133,
+     "end": 141.533
+    },
+    {
+     "w": "plus",
+     "t": 141.633,
+     "end": 141.871
+    },
+    {
+     "w": "a",
+     "t": 141.883,
+     "end": 141.933
+    },
+    {
+     "w": "half",
+     "t": 141.958,
+     "end": 142.658
+    },
+    {
+     "w": "exactly",
+     "t": 142.883,
+     "end": 143.508
+    },
+    {
+     "w": "the",
+     "t": 143.533,
+     "end": 143.683
+    },
+    {
+     "w": "extra",
+     "t": 143.733,
+     "end": 144.108
+    },
+    {
+     "w": "half",
+     "t": 144.133,
+     "end": 144.383
+    },
+    {
+     "w": "friend",
+     "t": 144.408,
+     "end": 144.683
+    },
+    {
+     "w": "we",
+     "t": 144.708,
+     "end": 144.833
+    },
+    {
+     "w": "measured",
+     "t": 144.858,
+     "end": 145.473
+    },
+    {
+     "w": "The",
+     "t": 145.783,
+     "end": 145.883
+    },
+    {
+     "w": "ring",
+     "t": 145.908,
+     "end": 146.133
+    },
+    {
+     "w": "had",
+     "t": 146.158,
+     "end": 146.308
+    },
+    {
+     "w": "no",
+     "t": 146.333,
+     "end": 146.483
+    },
+    {
+     "w": "spread",
+     "t": 146.508,
+     "end": 147.108
+    },
+    {
+     "w": "so",
+     "t": 147.283,
+     "end": 147.395
+    },
+    {
+     "w": "it",
+     "t": 147.408,
+     "end": 147.471
+    },
+    {
+     "w": "had",
+     "t": 147.483,
+     "end": 147.658
+    },
+    {
+     "w": "no",
+     "t": 147.683,
+     "end": 147.833
+    },
+    {
+     "w": "gap",
+     "t": 147.858,
+     "end": 148.383
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/66/667d1f12ffccd46753fcbbc4.wav"
+  },
+  {
+   "index": 16,
+   "start": 150.467,
+   "duration": 11.35,
+   "end": 161.817,
+   "text": "In twenty eleven, Facebook users averaged about a hundred and ninety friends. If every friendship sent tokens, what would the tokens average? [pause 1.6]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "In",
+     "t": 150.512,
+     "end": 150.649
+    },
+    {
+     "w": "twenty",
+     "t": 150.687,
+     "end": 150.987
+    },
+    {
+     "w": "eleven",
+     "t": 151.012,
+     "end": 151.762
+    },
+    {
+     "w": "Facebook",
+     "t": 151.987,
+     "end": 152.537
+    },
+    {
+     "w": "users",
+     "t": 152.562,
+     "end": 152.987
+    },
+    {
+     "w": "averaged",
+     "t": 153.037,
+     "end": 153.537
+    },
+    {
+     "w": "about",
+     "t": 153.562,
+     "end": 153.775
+    },
+    {
+     "w": "a",
+     "t": 153.787,
+     "end": 153.887
+    },
+    {
+     "w": "hundred",
+     "t": 153.937,
+     "end": 154.475
+    },
+    {
+     "w": "and",
+     "t": 154.512,
+     "end": 154.637
+    },
+    {
+     "w": "ninety",
+     "t": 154.662,
+     "end": 155.049
+    },
+    {
+     "w": "friends",
+     "t": 155.087,
+     "end": 155.757
+    },
+    {
+     "w": "If",
+     "t": 156.022,
+     "end": 156.247
+    },
+    {
+     "w": "every",
+     "t": 156.297,
+     "end": 156.609
+    },
+    {
+     "w": "friendship",
+     "t": 156.647,
+     "end": 157.122
+    },
+    {
+     "w": "sent",
+     "t": 157.147,
+     "end": 157.347
+    },
+    {
+     "w": "tokens",
+     "t": 157.372,
+     "end": 158.272
+    },
+    {
+     "w": "what",
+     "t": 158.447,
+     "end": 158.622
+    },
+    {
+     "w": "would",
+     "t": 158.647,
+     "end": 158.759
+    },
+    {
+     "w": "the",
+     "t": 158.772,
+     "end": 158.859
+    },
+    {
+     "w": "tokens",
+     "t": 158.897,
+     "end": 159.435
+    },
+    {
+     "w": "average",
+     "t": 159.472,
+     "end": 160.217
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/98/98100c7b36766104d6eb9ae5.wav"
+  },
+  {
+   "index": 17,
+   "start": 162.167,
+   "duration": 8.64,
+   "end": 170.807,
+   "text": "About six hundred and thirty five. A few users had thousands of friends, so the spread term is more than twice the mean itself.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "About",
+     "t": 162.197,
+     "end": 162.522
+    },
+    {
+     "w": "six",
+     "t": 162.547,
+     "end": 162.734
+    },
+    {
+     "w": "hundred",
+     "t": 162.747,
+     "end": 163.322
+    },
+    {
+     "w": "and",
+     "t": 163.372,
+     "end": 163.509
+    },
+    {
+     "w": "thirty",
+     "t": 163.547,
+     "end": 163.885
+    },
+    {
+     "w": "five",
+     "t": 163.922,
+     "end": 164.517
+    },
+    {
+     "w": "A",
+     "t": 164.797,
+     "end": 164.897
+    },
+    {
+     "w": "few",
+     "t": 164.947,
+     "end": 165.185
+    },
+    {
+     "w": "users",
+     "t": 165.222,
+     "end": 165.747
+    },
+    {
+     "w": "had",
+     "t": 165.772,
+     "end": 165.96
+    },
+    {
+     "w": "thousands",
+     "t": 165.997,
+     "end": 166.459
+    },
+    {
+     "w": "of",
+     "t": 166.472,
+     "end": 166.547
+    },
+    {
+     "w": "friends",
+     "t": 166.572,
+     "end": 167.397
+    },
+    {
+     "w": "so",
+     "t": 167.572,
+     "end": 167.709
+    },
+    {
+     "w": "the",
+     "t": 167.722,
+     "end": 167.809
+    },
+    {
+     "w": "spread",
+     "t": 167.847,
+     "end": 168.197
+    },
+    {
+     "w": "term",
+     "t": 168.222,
+     "end": 168.635
+    },
+    {
+     "w": "is",
+     "t": 168.672,
+     "end": 168.809
+    },
+    {
+     "w": "more",
+     "t": 168.847,
+     "end": 169.047
+    },
+    {
+     "w": "than",
+     "t": 169.072,
+     "end": 169.235
+    },
+    {
+     "w": "twice",
+     "t": 169.272,
+     "end": 169.747
+    },
+    {
+     "w": "the",
+     "t": 169.772,
+     "end": 169.847
+    },
+    {
+     "w": "mean",
+     "t": 169.872,
+     "end": 170.047
+    },
+    {
+     "w": "itself",
+     "t": 170.072,
+     "end": 170.807
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/53/535962d39ec401436c97460b.wav"
+  },
+  {
+   "index": 18,
+   "start": 171.5,
+   "duration": 27.15,
+   "end": 198.65,
+   "text": "In twenty oh nine, Christakis and Fowler tested this at Harvard. Friends sit closer to everyone else in the network, so they should catch it first. They tracked flu diagnoses in three hundred nineteen random students and four hundred twenty five friends they named. The friends' curve rose first: fitted curves put them thirteen point nine days ahead. With self-reported symptoms, the lead shrank to about three.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "In",
+     "t": 171.555,
+     "end": 171.68
+    },
+    {
+     "w": "twenty",
+     "t": 171.705,
+     "end": 172.03
+    },
+    {
+     "w": "oh",
+     "t": 172.055,
+     "end": 172.18
+    },
+    {
+     "w": "nine",
+     "t": 172.205,
+     "end": 172.805
+    },
+    {
+     "w": "Christakis",
+     "t": 172.955,
+     "end": 173.705
+    },
+    {
+     "w": "and",
+     "t": 173.73,
+     "end": 173.855
+    },
+    {
+     "w": "Fowler",
+     "t": 173.905,
+     "end": 174.343
+    },
+    {
+     "w": "tested",
+     "t": 174.38,
+     "end": 174.73
+    },
+    {
+     "w": "this",
+     "t": 174.755,
+     "end": 174.93
+    },
+    {
+     "w": "at",
+     "t": 174.955,
+     "end": 175.03
+    },
+    {
+     "w": "Harvard",
+     "t": 175.055,
+     "end": 175.64
+    },
+    {
+     "w": "Friends",
+     "t": 175.975,
+     "end": 176.475
+    },
+    {
+     "w": "sit",
+     "t": 176.525,
+     "end": 176.75
+    },
+    {
+     "w": "closer",
+     "t": 176.775,
+     "end": 177.225
+    },
+    {
+     "w": "to",
+     "t": 177.25,
+     "end": 177.362
+    },
+    {
+     "w": "everyone",
+     "t": 177.4,
+     "end": 177.825
+    },
+    {
+     "w": "else",
+     "t": 177.85,
+     "end": 178.087
+    },
+    {
+     "w": "in",
+     "t": 178.1,
+     "end": 178.162
+    },
+    {
+     "w": "the",
+     "t": 178.175,
+     "end": 178.25
+    },
+    {
+     "w": "network",
+     "t": 178.275,
+     "end": 179.025
+    },
+    {
+     "w": "so",
+     "t": 179.2,
+     "end": 179.375
+    },
+    {
+     "w": "they",
+     "t": 179.4,
+     "end": 179.525
+    },
+    {
+     "w": "should",
+     "t": 179.55,
+     "end": 179.738
+    },
+    {
+     "w": "catch",
+     "t": 179.775,
+     "end": 180.025
+    },
+    {
+     "w": "it",
+     "t": 180.05,
+     "end": 180.175
+    },
+    {
+     "w": "first",
+     "t": 180.2,
+     "end": 180.78
+    },
+    {
+     "w": "They",
+     "t": 181.055,
+     "end": 181.218
+    },
+    {
+     "w": "tracked",
+     "t": 181.255,
+     "end": 181.68
+    },
+    {
+     "w": "flu",
+     "t": 181.73,
+     "end": 181.955
+    },
+    {
+     "w": "diagnoses",
+     "t": 181.98,
+     "end": 183.205
+    },
+    {
+     "w": "in",
+     "t": 183.255,
+     "end": 183.405
+    },
+    {
+     "w": "three",
+     "t": 183.455,
+     "end": 183.705
+    },
+    {
+     "w": "hundred",
+     "t": 183.73,
+     "end": 184.08
+    },
+    {
+     "w": "nineteen",
+     "t": 184.105,
+     "end": 184.755
+    },
+    {
+     "w": "random",
+     "t": 184.78,
+     "end": 185.205
+    },
+    {
+     "w": "students",
+     "t": 185.23,
+     "end": 186.167
+    },
+    {
+     "w": "and",
+     "t": 186.23,
+     "end": 186.405
+    },
+    {
+     "w": "four",
+     "t": 186.455,
+     "end": 186.705
+    },
+    {
+     "w": "hundred",
+     "t": 186.73,
+     "end": 187.03
+    },
+    {
+     "w": "twenty",
+     "t": 187.055,
+     "end": 187.33
+    },
+    {
+     "w": "five",
+     "t": 187.355,
+     "end": 187.68
+    },
+    {
+     "w": "friends",
+     "t": 187.705,
+     "end": 188.055
+    },
+    {
+     "w": "they",
+     "t": 188.08,
+     "end": 188.205
+    },
+    {
+     "w": "named",
+     "t": 188.23,
+     "end": 188.84
+    },
+    {
+     "w": "The",
+     "t": 189.125,
+     "end": 189.238
+    },
+    {
+     "w": "friends'",
+     "t": 189.275,
+     "end": 189.625
+    },
+    {
+     "w": "curve",
+     "t": 189.65,
+     "end": 190.025
+    },
+    {
+     "w": "rose",
+     "t": 190.05,
+     "end": 190.4
+    },
+    {
+     "w": "first",
+     "t": 190.425,
+     "end": 191.15
+    },
+    {
+     "w": "fitted",
+     "t": 191.4,
+     "end": 191.675
+    },
+    {
+     "w": "curves",
+     "t": 191.7,
+     "end": 192.125
+    },
+    {
+     "w": "put",
+     "t": 192.15,
+     "end": 192.262
+    },
+    {
+     "w": "them",
+     "t": 192.275,
+     "end": 192.475
+    },
+    {
+     "w": "thirteen",
+     "t": 192.525,
+     "end": 193.075
+    },
+    {
+     "w": "point",
+     "t": 193.1,
+     "end": 193.35
+    },
+    {
+     "w": "nine",
+     "t": 193.375,
+     "end": 193.675
+    },
+    {
+     "w": "days",
+     "t": 193.7,
+     "end": 194.025
+    },
+    {
+     "w": "ahead",
+     "t": 194.05,
+     "end": 194.58
+    },
+    {
+     "w": "With",
+     "t": 194.855,
+     "end": 195.043
+    },
+    {
+     "w": "self-reported",
+     "t": 195.08,
+     "end": 195.83
+    },
+    {
+     "w": "symptoms",
+     "t": 195.855,
+     "end": 196.655
+    },
+    {
+     "w": "the",
+     "t": 196.78,
+     "end": 196.893
+    },
+    {
+     "w": "lead",
+     "t": 196.93,
+     "end": 197.268
+    },
+    {
+     "w": "shrank",
+     "t": 197.305,
+     "end": 197.605
+    },
+    {
+     "w": "to",
+     "t": 197.63,
+     "end": 197.755
+    },
+    {
+     "w": "about",
+     "t": 197.78,
+     "end": 198.093
+    },
+    {
+     "w": "three",
+     "t": 198.13,
+     "end": 198.65
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/d1/d1fb2195b6cb1bc2e9e50a4c.wav"
+  },
+  {
+   "index": 19,
+   "start": 199.367,
+   "duration": 7.11,
+   "end": 206.477,
+   "text": "Back to the eight girls. Five have fewer friends than their friends average, and only Sue and Alice have more.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Back",
+     "t": 199.442,
+     "end": 199.717
+    },
+    {
+     "w": "to",
+     "t": 199.742,
+     "end": 199.805
+    },
+    {
+     "w": "the",
+     "t": 199.817,
+     "end": 199.954
+    },
+    {
+     "w": "eight",
+     "t": 199.992,
+     "end": 200.242
+    },
+    {
+     "w": "girls",
+     "t": 200.267,
+     "end": 200.917
+    },
+    {
+     "w": "Five",
+     "t": 201.252,
+     "end": 201.652
+    },
+    {
+     "w": "have",
+     "t": 201.677,
+     "end": 201.902
+    },
+    {
+     "w": "fewer",
+     "t": 201.952,
+     "end": 202.265
+    },
+    {
+     "w": "friends",
+     "t": 202.302,
+     "end": 202.727
+    },
+    {
+     "w": "than",
+     "t": 202.752,
+     "end": 202.839
+    },
+    {
+     "w": "their",
+     "t": 202.852,
+     "end": 203.002
+    },
+    {
+     "w": "friends",
+     "t": 203.027,
+     "end": 203.339
+    },
+    {
+     "w": "average",
+     "t": 203.377,
+     "end": 204.252
+    },
+    {
+     "w": "and",
+     "t": 204.427,
+     "end": 204.527
+    },
+    {
+     "w": "only",
+     "t": 204.552,
+     "end": 204.889
+    },
+    {
+     "w": "Sue",
+     "t": 204.952,
+     "end": 205.177
+    },
+    {
+     "w": "and",
+     "t": 205.202,
+     "end": 205.315
+    },
+    {
+     "w": "Alice",
+     "t": 205.352,
+     "end": 205.752
+    },
+    {
+     "w": "have",
+     "t": 205.777,
+     "end": 206.002
+    },
+    {
+     "w": "more",
+     "t": 206.027,
+     "end": 206.477
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/2b/2b5b6681023e1ca35bc25204.wav"
+  },
+  {
+   "index": 20,
+   "start": 206.833,
+   "duration": 13.17,
+   "end": 220.003,
+   "text": "Follow any friendship, yours included, and you land on a Sue four times as often as on a Betty. So Betty looks at her one friend and sees four. From most seats in this class, the view is the same.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Follow",
+     "t": 206.883,
+     "end": 207.233
+    },
+    {
+     "w": "any",
+     "t": 207.258,
+     "end": 207.496
+    },
+    {
+     "w": "friendship",
+     "t": 207.533,
+     "end": 208.258
+    },
+    {
+     "w": "yours",
+     "t": 208.433,
+     "end": 208.833
+    },
+    {
+     "w": "included",
+     "t": 208.858,
+     "end": 209.833
+    },
+    {
+     "w": "and",
+     "t": 210.008,
+     "end": 210.108
+    },
+    {
+     "w": "you",
+     "t": 210.133,
+     "end": 210.258
+    },
+    {
+     "w": "land",
+     "t": 210.283,
+     "end": 210.595
+    },
+    {
+     "w": "on",
+     "t": 210.608,
+     "end": 210.695
+    },
+    {
+     "w": "a",
+     "t": 210.708,
+     "end": 210.808
+    },
+    {
+     "w": "Sue",
+     "t": 210.858,
+     "end": 211.083
+    },
+    {
+     "w": "four",
+     "t": 211.133,
+     "end": 211.371
+    },
+    {
+     "w": "times",
+     "t": 211.408,
+     "end": 211.908
+    },
+    {
+     "w": "as",
+     "t": 211.933,
+     "end": 212.095
+    },
+    {
+     "w": "often",
+     "t": 212.158,
+     "end": 212.621
+    },
+    {
+     "w": "as",
+     "t": 212.658,
+     "end": 212.746
+    },
+    {
+     "w": "on",
+     "t": 212.758,
+     "end": 212.871
+    },
+    {
+     "w": "a",
+     "t": 212.883,
+     "end": 212.933
+    },
+    {
+     "w": "Betty",
+     "t": 212.958,
+     "end": 213.463
+    },
+    {
+     "w": "So",
+     "t": 213.798,
+     "end": 213.973
+    },
+    {
+     "w": "Betty",
+     "t": 213.998,
+     "end": 214.298
+    },
+    {
+     "w": "looks",
+     "t": 214.323,
+     "end": 214.535
+    },
+    {
+     "w": "at",
+     "t": 214.548,
+     "end": 214.611
+    },
+    {
+     "w": "her",
+     "t": 214.623,
+     "end": 214.723
+    },
+    {
+     "w": "one",
+     "t": 214.748,
+     "end": 214.935
+    },
+    {
+     "w": "friend",
+     "t": 214.973,
+     "end": 215.598
+    },
+    {
+     "w": "and",
+     "t": 215.648,
+     "end": 215.785
+    },
+    {
+     "w": "sees",
+     "t": 215.823,
+     "end": 216.148
+    },
+    {
+     "w": "four",
+     "t": 216.173,
+     "end": 216.673
+    },
+    {
+     "w": "From",
+     "t": 216.983,
+     "end": 217.133
+    },
+    {
+     "w": "most",
+     "t": 217.158,
+     "end": 217.358
+    },
+    {
+     "w": "seats",
+     "t": 217.383,
+     "end": 217.67
+    },
+    {
+     "w": "in",
+     "t": 217.683,
+     "end": 217.745
+    },
+    {
+     "w": "this",
+     "t": 217.758,
+     "end": 217.908
+    },
+    {
+     "w": "class",
+     "t": 217.933,
+     "end": 218.508
+    },
+    {
+     "w": "the",
+     "t": 218.658,
+     "end": 218.771
+    },
+    {
+     "w": "view",
+     "t": 218.808,
+     "end": 219.083
+    },
+    {
+     "w": "is",
+     "t": 219.108,
+     "end": 219.233
+    },
+    {
+     "w": "the",
+     "t": 219.258,
+     "end": 219.383
+    },
+    {
+     "w": "same",
+     "t": 219.433,
+     "end": 220.003
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f2/f29a93044907f55469f22377.wav"
+  }
+ ],
+ "warnings": [],
+ "layout_audit": {
+  "clearance": 0.15,
+  "checks": 198,
+  "audit_seconds": 4.36,
+  "render_seconds": 363.4,
+  "errors": 0,
+  "count": 0,
+  "counts": {
+   "overlap": 0,
+   "clearance": 0,
+   "safe-area": 0,
+   "caption-zone": 0
+  },
+  "issues": [],
+  "allowed": [],
+  "excluded": [
+   {
+    "mobject": "Dot",
+    "reason": "transient: each Facebook bar lands on its curve's origin, just above the x-axis '0', and fades as the curve grows"
+   },
+   {
+    "mobject": "Dot",
+    "reason": "transient: each Facebook bar lands on its curve's origin, just above the x-axis '0', and fades as the curve grows"
+   }
+  ]
+ }
+}

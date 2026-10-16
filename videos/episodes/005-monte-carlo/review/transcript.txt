@@ -1,0 +1,55 @@
+[0:00.0–0:05.2] Your budget, a million evaluations to average a function of 100 inputs.
+[0:05.7–0:07.3] Spread them out as an even grid.
+[0:07.7–0:08.7] That feels thorough.
+[0:09.2–0:11.2] How many values does each input get?
+[0:12.7–0:16.7] One, the whole grid is one point, the center of the box.
+[0:16.7–0:20.4] Two values per input would take two to the hundredth points.
+[0:21.5–0:25.3] Pricing an option on 100 stocks is this kind of average.
+[0:25.3–0:29.3] Since Metropolis and Ulam's 1949 paper,
+[0:29.3–0:34.3] such averages are usually done with random points, like this one.
+[0:34.3–0:36.3] How far off would a million of them land?
+[0:36.3–0:38.3] Hold that thought.
+[0:38.3–0:40.3] Start with two inputs, a square.
+[0:40.3–0:44.3] Our function is one inside this quarter disk, zero outside,
+[0:44.3–0:48.3] so its average is the disk's share, exactly one-half.
+[0:48.3–0:54.3] A 10 by 10 grid puts 52 of its 100 points inside, two points off.
+[0:54.3–0:58.7] A hundred random darts put 44 inside, six points off.
+[0:58.7–1:01.6] In two dimensions, the grid wins.
+[1:01.6–1:04.8] Now give each a million points and add inputs.
+[1:04.8–1:06.3] The disc becomes a ball
+[1:06.3–1:08.9] that always covers exactly half the box.
+[1:08.9–1:12.2] The grid splits its million across the axes.
+[1:12.2–1:15.5] A thousand values per axis in two dimensions,
+[1:15.5–1:17.7] then a hundred, 10, three.
+[1:17.7–1:20.1] From 20 dimensions on, just one.
+[1:20.1–1:22.6] The center, which sits inside the ball.
+[1:22.6–1:25.9] So the grid says the ball fills the box 50 points off.
+[1:26.2–1:32.1] Even two values on 19 of the axes, half a million points, is 18 points off.
+[1:32.5–1:35.6] The darts stay under a tenth of a point in every dimension.
+[1:36.6–1:38.3] Look at the shadows on one axis.
+[1:39.0–1:42.9] The grid's 100 points cast 10, 100 darts cast 100.
+[1:43.3–1:47.7] With n points over d axes, each axis gets the dth root of n.
+[1:48.0–1:50.4] But shadows alone are not the fix.
+[1:50.4–1:52.5] a million points on the diagonal,
+[1:52.5–2:06.5] each one a flat line here give every axis a million values and still miss by 8 points Darts win another way Each one lands inside with a chance equal to the answer on its own in
+[2:06.5–2:12.5] two dimensions or a hundred. Their estimate is a share of heads in n-coin flips. One flip
+[2:12.5–2:19.1] is zero or one. Its average is a half, and every flip misses that by exactly a half.
+[2:19.1–2:25.3] the 100 dart experiment 300 times. In two dimensions, the estimates spread this wide.
+[2:25.3–2:31.6] In 100, just as wide. Quadruple the darts, and both get twice as narrow. Each dart misses
+[2:31.6–2:38.5] by a half, up or down at random, so the misses partly cancel. 16 darts stray about 4 halves,
+[2:38.5–2:44.6] not 16. N darts stray about root n halves. Per dart, that's a half over the square root
+[2:44.6–2:51.6] root of n. Any other function swaps that half for its own spread, sigma. The root n stays,
+[2:51.6–2:59.1] and there's no d in it. A grid's error, even for smooth functions, has d in its exponent.
+[2:59.1–3:07.1] So back to our ball with a million darts in any dimension. How far off is a typical estimate?
+[3:07.1–3:13.8] half over a thousand, five hundredths of a point. Two runs in three land closer, all six
+[3:13.8–3:20.8] of ours did. In 2012, Bergstra and Bengio found that random search tuned neural networks
+[3:20.8–3:26.8] as well as grid search, in a fraction of the time. If one setting matters most, nine grid
+[3:26.8–3:33.9] trials test three values of it, nine random trials test nine. Darts do have a blind spot,
+[3:33.9–3:35.2] Tiny answers.
+[3:35.2–3:39.2] By 30 dimensions, a radius one ball fills two parts
+[3:39.2–3:41.2] in a hundred trillion of the box.
+[3:41.2–3:44.8] Below this line, a million darts expect under one hit,
+[3:44.8–3:47.1] so they usually report zero.
+[3:47.1–3:48.7] Off by the whole answer.
+[3:49.7–3:52.1] The darts never notice the axes.
+[3:52.1–3:54.8] A million coin flips in any dimension.

@@ -1,0 +1,39 @@
+[00:00.0] Flip a fair coin four times. [pause 0.12] After each heads, check the next flip: here, one of the two is heads. [pause 0.12] Do it for all sixteen sequences and average the shares. What do you get? [pause 1.6]
+
+[00:13.8] One half feels obvious, since a coin has no memory. In nineteen eighty five, a famous study ran this same check on basketball shots, and called the hot hand an illusion.
+
+[00:26.3] Heads are hits. [pause 0.12] A hot shooter beats their usual rate; a random one should match it.
+
+[00:32.4] So first, test the test on a shooter we know is random: a fair coin. [pause 0.12] Four flips can land sixteen ways, all equally likely.
+
+[00:41.5] This row checks three flips, and two of them are heads. [pause 0.6] Score every row the same way.
+
+[00:47.7] Two rows never show a heads before the last flip, so they get no score.
+
+[00:52.6] Drop the other fourteen scores onto the line. Their average is seventeen out of forty two: about forty point five percent.
+
+[01:01.6] On a perfectly fair coin, the test reads cold, by nine and a half points.
+
+[01:07.5] Yet no flip is biased. [pause 0.6] Gather all twenty four checked flips: twelve heads, twelve tails. [pause 0.12] Exactly half.
+
+[01:15.8] The skew comes from scoring row by row, because each row gets one vote, however many flips it checked.
+
+[01:23.1] And checked heads come in crowds, since a heads gets the next flip checked too. This row's three heads share a single vote, while this lone tails gets a whole one.
+
+[01:33.9] Twelve heads crowd into eight rows. Twelve tails spread across eleven. [pause 0.55] Line up the votes, and heads hold seventeen out of forty two.
+
+[01:43.7] That's one vote per row. [pause 0.3] Count all the flips together first, and you get one half.
+
+[01:50.1] Tails crowd the same way. Swap heads and tails, and the strip flips over one half. So after a tails, the test reads hot: twenty five out of forty two.
+
+[02:01.4] Subtract the two averages, and a fair coin shows a gap of minus nineteen points.
+
+[02:07.6] The nineteen eighty five study ran the same comparison on twenty six Cornell players: up to a hundred shots each, from where they'd hit about half. After three hits, versus after three misses.
+
+[02:21.5] For a random shooter, the same crowding pulls those to forty six and fifty four percent. [pause 0.12] Miller and Sanjurjo's twenty eighteen paper puts the gap at about minus eight points. [pause 0.6] Longer streaks grow the bias. [pause 0.9] Longer records shrink it, [pause 0.5] but a hundred shots isn't long.
+
+[02:41.1] Cornell's players hit forty nine percent after three hits, and forty five after three misses. The study took that plus four to mean no hot hand.
+
+[02:51.4] Measured from minus eight, it's twelve points hot. [pause 0.6] That's evidence for a hot hand in a gym, not proof it survives defenders in a game.
+
+[03:02.2] One half is what a fair coin does. [pause 0.12] Seventeen out of forty two is what this test sees. A fifty percent shooter [pause 0.3] who averages one half on this test [pause 0.2] is already running hot.

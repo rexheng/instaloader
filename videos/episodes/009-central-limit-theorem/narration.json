@@ -1,0 +1,3245 @@
+{
+ "scene": "Episode",
+ "episode": 9,
+ "title": "Why Bell Curves Are Everywhere, and When They're Not",
+ "video_duration": 232.767,
+ "beats": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "duration": 13.65,
+   "end": 13.65,
+   "text": "A hundred waits for a bus: mostly short, with a long tail. [pause 0.15] Textbooks say the average of thirty is safe to treat as a bell. [pause 0.15] For these waits, does it take thirty, three hundred, or over a thousand? [pause 1.5]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "A",
+     "t": 0.015,
+     "end": 0.09
+    },
+    {
+     "w": "hundred",
+     "t": 0.115,
+     "end": 0.515
+    },
+    {
+     "w": "waits",
+     "t": 0.54,
+     "end": 0.815
+    },
+    {
+     "w": "for",
+     "t": 0.84,
+     "end": 0.928
+    },
+    {
+     "w": "a",
+     "t": 0.94,
+     "end": 0.99
+    },
+    {
+     "w": "bus",
+     "t": 1.015,
+     "end": 1.665
+    },
+    {
+     "w": "mostly",
+     "t": 1.84,
+     "end": 2.265
+    },
+    {
+     "w": "short",
+     "t": 2.315,
+     "end": 2.69
+    },
+    {
+     "w": "with",
+     "t": 2.74,
+     "end": 2.852
+    },
+    {
+     "w": "a",
+     "t": 2.865,
+     "end": 2.94
+    },
+    {
+     "w": "long",
+     "t": 2.965,
+     "end": 3.29
+    },
+    {
+     "w": "tail",
+     "t": 3.315,
+     "end": 3.91
+    },
+    {
+     "w": "Textbooks",
+     "t": 4.075,
+     "end": 4.625
+    },
+    {
+     "w": "say",
+     "t": 4.65,
+     "end": 4.838
+    },
+    {
+     "w": "the",
+     "t": 4.85,
+     "end": 5.0
+    },
+    {
+     "w": "average",
+     "t": 5.05,
+     "end": 5.388
+    },
+    {
+     "w": "of",
+     "t": 5.4,
+     "end": 5.5
+    },
+    {
+     "w": "thirty",
+     "t": 5.525,
+     "end": 6.212
+    },
+    {
+     "w": "is",
+     "t": 6.275,
+     "end": 6.4
+    },
+    {
+     "w": "safe",
+     "t": 6.45,
+     "end": 6.725
+    },
+    {
+     "w": "to",
+     "t": 6.75,
+     "end": 6.863
+    },
+    {
+     "w": "treat",
+     "t": 6.9,
+     "end": 7.238
+    },
+    {
+     "w": "as",
+     "t": 7.275,
+     "end": 7.363
+    },
+    {
+     "w": "a",
+     "t": 7.375,
+     "end": 7.425
+    },
+    {
+     "w": "bell",
+     "t": 7.45,
+     "end": 7.92
+    },
+    {
+     "w": "For",
+     "t": 8.105,
+     "end": 8.23
+    },
+    {
+     "w": "these",
+     "t": 8.255,
+     "end": 8.505
+    },
+    {
+     "w": "waits",
+     "t": 8.53,
+     "end": 9.055
+    },
+    {
+     "w": "does",
+     "t": 9.155,
+     "end": 9.292
+    },
+    {
+     "w": "it",
+     "t": 9.305,
+     "end": 9.38
+    },
+    {
+     "w": "take",
+     "t": 9.405,
+     "end": 9.63
+    },
+    {
+     "w": "thirty",
+     "t": 9.68,
+     "end": 10.18
+    },
+    {
+     "w": "three",
+     "t": 10.33,
+     "end": 10.555
+    },
+    {
+     "w": "hundred",
+     "t": 10.58,
+     "end": 10.955
+    },
+    {
+     "w": "or",
+     "t": 11.03,
+     "end": 11.13
+    },
+    {
+     "w": "over",
+     "t": 11.155,
+     "end": 11.343
+    },
+    {
+     "w": "a",
+     "t": 11.355,
+     "end": 11.442
+    },
+    {
+     "w": "thousand",
+     "t": 11.48,
+     "end": 12.15
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/ec/ec0c2168c99a07d91225ea93.wav"
+  },
+  {
+   "index": 1,
+   "start": 13.767,
+   "duration": 5.98,
+   "end": 19.747,
+   "text": "A-B tests lean on that bell, and on revenue data, thirty is off by a factor of thousands.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "A-B",
+     "t": 13.797,
+     "end": 14.185
+    },
+    {
+     "w": "tests",
+     "t": 14.222,
+     "end": 14.647
+    },
+    {
+     "w": "lean",
+     "t": 14.672,
+     "end": 14.835
+    },
+    {
+     "w": "on",
+     "t": 14.847,
+     "end": 14.935
+    },
+    {
+     "w": "that",
+     "t": 14.947,
+     "end": 15.147
+    },
+    {
+     "w": "bell",
+     "t": 15.172,
+     "end": 15.772
+    },
+    {
+     "w": "and",
+     "t": 15.922,
+     "end": 16.009
+    },
+    {
+     "w": "on",
+     "t": 16.022,
+     "end": 16.122
+    },
+    {
+     "w": "revenue",
+     "t": 16.147,
+     "end": 16.547
+    },
+    {
+     "w": "data",
+     "t": 16.572,
+     "end": 17.147
+    },
+    {
+     "w": "thirty",
+     "t": 17.347,
+     "end": 17.697
+    },
+    {
+     "w": "is",
+     "t": 17.722,
+     "end": 17.859
+    },
+    {
+     "w": "off",
+     "t": 17.897,
+     "end": 18.172
+    },
+    {
+     "w": "by",
+     "t": 18.197,
+     "end": 18.347
+    },
+    {
+     "w": "a",
+     "t": 18.372,
+     "end": 18.447
+    },
+    {
+     "w": "factor",
+     "t": 18.472,
+     "end": 18.835
+    },
+    {
+     "w": "of",
+     "t": 18.847,
+     "end": 18.947
+    },
+    {
+     "w": "thousands",
+     "t": 18.972,
+     "end": 19.747
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/1a/1a9ac34d9fe26d55c86d9907.wav"
+  },
+  {
+   "index": 2,
+   "start": 20.1,
+   "duration": 9.23,
+   "end": 29.33,
+   "text": "First, look for the bell in the data itself. [pause 0.15] Collect a thousand, ten thousand, a hundred thousand. [pause 0.15] The bars get smoother, but the shape doesn't budge.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "First",
+     "t": 20.17,
+     "end": 20.645
+    },
+    {
+     "w": "look",
+     "t": 20.795,
+     "end": 20.97
+    },
+    {
+     "w": "for",
+     "t": 20.995,
+     "end": 21.082
+    },
+    {
+     "w": "the",
+     "t": 21.095,
+     "end": 21.17
+    },
+    {
+     "w": "bell",
+     "t": 21.195,
+     "end": 21.458
+    },
+    {
+     "w": "in",
+     "t": 21.47,
+     "end": 21.532
+    },
+    {
+     "w": "the",
+     "t": 21.545,
+     "end": 21.62
+    },
+    {
+     "w": "data",
+     "t": 21.645,
+     "end": 21.945
+    },
+    {
+     "w": "itself",
+     "t": 21.97,
+     "end": 22.66
+    },
+    {
+     "w": "Collect",
+     "t": 22.825,
+     "end": 23.162
+    },
+    {
+     "w": "a",
+     "t": 23.175,
+     "end": 23.275
+    },
+    {
+     "w": "thousand",
+     "t": 23.325,
+     "end": 24.025
+    },
+    {
+     "w": "ten",
+     "t": 24.15,
+     "end": 24.375
+    },
+    {
+     "w": "thousand",
+     "t": 24.4,
+     "end": 25.0
+    },
+    {
+     "w": "a",
+     "t": 25.1,
+     "end": 25.175
+    },
+    {
+     "w": "hundred",
+     "t": 25.2,
+     "end": 25.575
+    },
+    {
+     "w": "thousand",
+     "t": 25.6,
+     "end": 26.29
+    },
+    {
+     "w": "The",
+     "t": 26.475,
+     "end": 26.55
+    },
+    {
+     "w": "bars",
+     "t": 26.575,
+     "end": 26.975
+    },
+    {
+     "w": "get",
+     "t": 27.0,
+     "end": 27.188
+    },
+    {
+     "w": "smoother",
+     "t": 27.225,
+     "end": 27.8
+    },
+    {
+     "w": "but",
+     "t": 27.925,
+     "end": 28.038
+    },
+    {
+     "w": "the",
+     "t": 28.05,
+     "end": 28.175
+    },
+    {
+     "w": "shape",
+     "t": 28.225,
+     "end": 28.5
+    },
+    {
+     "w": "doesn't",
+     "t": 28.525,
+     "end": 28.775
+    },
+    {
+     "w": "budge",
+     "t": 28.8,
+     "end": 29.33
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/d0/d00410749f1192a6080ae1fa.wav"
+  },
+  {
+   "index": 3,
+   "start": 29.533,
+   "duration": 13.52,
+   "end": 43.053,
+   "text": "Measure the lean with skewness: the average cubed gap from the mean, left gaps counting negative, over the spread cubed. [pause 0.15] A perfect bell scores zero. [pause 0.15] These waits for a bus score about two at every sample size.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Measure",
+     "t": 29.598,
+     "end": 29.923
+    },
+    {
+     "w": "the",
+     "t": 29.948,
+     "end": 30.048
+    },
+    {
+     "w": "lean",
+     "t": 30.073,
+     "end": 30.373
+    },
+    {
+     "w": "with",
+     "t": 30.398,
+     "end": 30.548
+    },
+    {
+     "w": "skewness",
+     "t": 30.573,
+     "end": 31.548
+    },
+    {
+     "w": "the",
+     "t": 31.698,
+     "end": 31.848
+    },
+    {
+     "w": "average",
+     "t": 31.898,
+     "end": 32.311
+    },
+    {
+     "w": "cubed",
+     "t": 32.348,
+     "end": 32.673
+    },
+    {
+     "w": "gap",
+     "t": 32.698,
+     "end": 32.973
+    },
+    {
+     "w": "from",
+     "t": 32.998,
+     "end": 33.111
+    },
+    {
+     "w": "the",
+     "t": 33.123,
+     "end": 33.198
+    },
+    {
+     "w": "mean",
+     "t": 33.223,
+     "end": 33.848
+    },
+    {
+     "w": "left",
+     "t": 34.023,
+     "end": 34.298
+    },
+    {
+     "w": "gaps",
+     "t": 34.323,
+     "end": 34.698
+    },
+    {
+     "w": "counting",
+     "t": 34.723,
+     "end": 35.123
+    },
+    {
+     "w": "negative",
+     "t": 35.148,
+     "end": 35.748
+    },
+    {
+     "w": "over",
+     "t": 35.873,
+     "end": 36.061
+    },
+    {
+     "w": "the",
+     "t": 36.073,
+     "end": 36.148
+    },
+    {
+     "w": "spread",
+     "t": 36.173,
+     "end": 36.511
+    },
+    {
+     "w": "cubed",
+     "t": 36.548,
+     "end": 37.143
+    },
+    {
+     "w": "A",
+     "t": 37.318,
+     "end": 37.393
+    },
+    {
+     "w": "perfect",
+     "t": 37.418,
+     "end": 37.843
+    },
+    {
+     "w": "bell",
+     "t": 37.868,
+     "end": 38.093
+    },
+    {
+     "w": "scores",
+     "t": 38.118,
+     "end": 38.443
+    },
+    {
+     "w": "zero",
+     "t": 38.468,
+     "end": 39.033
+    },
+    {
+     "w": "These",
+     "t": 39.208,
+     "end": 39.458
+    },
+    {
+     "w": "waits",
+     "t": 39.483,
+     "end": 39.783
+    },
+    {
+     "w": "for",
+     "t": 39.808,
+     "end": 39.895
+    },
+    {
+     "w": "a",
+     "t": 39.908,
+     "end": 39.958
+    },
+    {
+     "w": "bus",
+     "t": 39.983,
+     "end": 40.183
+    },
+    {
+     "w": "score",
+     "t": 40.208,
+     "end": 40.483
+    },
+    {
+     "w": "about",
+     "t": 40.508,
+     "end": 40.808
+    },
+    {
+     "w": "two",
+     "t": 40.858,
+     "end": 41.471
+    },
+    {
+     "w": "at",
+     "t": 41.533,
+     "end": 41.671
+    },
+    {
+     "w": "every",
+     "t": 41.708,
+     "end": 42.021
+    },
+    {
+     "w": "sample",
+     "t": 42.058,
+     "end": 42.433
+    },
+    {
+     "w": "size",
+     "t": 42.458,
+     "end": 43.053
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f7/f7b66fc7e35a5518b01933fe.wav"
+  },
+  {
+   "index": 4,
+   "start": 43.867,
+   "duration": 10.88,
+   "end": 54.747,
+   "text": "So average instead. [pause 0.5] Four bus waits: the one long wait gets diluted by three short ones. [pause 0.8] Drop that one number here. [pause 0.15] Do that ten thousand times.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "So",
+     "t": 43.922,
+     "end": 44.109
+    },
+    {
+     "w": "average",
+     "t": 44.147,
+     "end": 44.547
+    },
+    {
+     "w": "instead",
+     "t": 44.572,
+     "end": 45.267
+    },
+    {
+     "w": "Four",
+     "t": 45.837,
+     "end": 46.087
+    },
+    {
+     "w": "bus",
+     "t": 46.112,
+     "end": 46.362
+    },
+    {
+     "w": "waits",
+     "t": 46.387,
+     "end": 47.087
+    },
+    {
+     "w": "the",
+     "t": 47.237,
+     "end": 47.349
+    },
+    {
+     "w": "one",
+     "t": 47.387,
+     "end": 47.612
+    },
+    {
+     "w": "long",
+     "t": 47.637,
+     "end": 47.937
+    },
+    {
+     "w": "wait",
+     "t": 47.962,
+     "end": 48.262
+    },
+    {
+     "w": "gets",
+     "t": 48.287,
+     "end": 48.512
+    },
+    {
+     "w": "diluted",
+     "t": 48.537,
+     "end": 48.987
+    },
+    {
+     "w": "by",
+     "t": 49.012,
+     "end": 49.212
+    },
+    {
+     "w": "three",
+     "t": 49.262,
+     "end": 49.499
+    },
+    {
+     "w": "short",
+     "t": 49.537,
+     "end": 49.775
+    },
+    {
+     "w": "ones",
+     "t": 49.787,
+     "end": 50.277
+    },
+    {
+     "w": "Drop",
+     "t": 51.127,
+     "end": 51.427
+    },
+    {
+     "w": "that",
+     "t": 51.452,
+     "end": 51.665
+    },
+    {
+     "w": "one",
+     "t": 51.702,
+     "end": 51.927
+    },
+    {
+     "w": "number",
+     "t": 51.952,
+     "end": 52.252
+    },
+    {
+     "w": "here",
+     "t": 52.277,
+     "end": 52.747
+    },
+    {
+     "w": "Do",
+     "t": 52.922,
+     "end": 53.072
+    },
+    {
+     "w": "that",
+     "t": 53.097,
+     "end": 53.359
+    },
+    {
+     "w": "ten",
+     "t": 53.397,
+     "end": 53.622
+    },
+    {
+     "w": "thousand",
+     "t": 53.647,
+     "end": 54.047
+    },
+    {
+     "w": "times",
+     "t": 54.072,
+     "end": 54.747
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/95/9520cba7fe5559d325c0cb6c.wav"
+  },
+  {
+   "index": 5,
+   "start": 54.9,
+   "duration": 9.36,
+   "end": 64.26,
+   "text": "These averages lean less: skewness one. [pause 0.15] Sixteen per average: point five. [pause 0.15] Sixty-four: point two five, nearly this perfect bell in green.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "These",
+     "t": 54.925,
+     "end": 55.162
+    },
+    {
+     "w": "averages",
+     "t": 55.2,
+     "end": 55.675
+    },
+    {
+     "w": "lean",
+     "t": 55.7,
+     "end": 55.9
+    },
+    {
+     "w": "less",
+     "t": 55.925,
+     "end": 56.425
+    },
+    {
+     "w": "skewness",
+     "t": 56.625,
+     "end": 57.075
+    },
+    {
+     "w": "one",
+     "t": 57.1,
+     "end": 57.58
+    },
+    {
+     "w": "Sixteen",
+     "t": 57.8,
+     "end": 58.25
+    },
+    {
+     "w": "per",
+     "t": 58.275,
+     "end": 58.425
+    },
+    {
+     "w": "average",
+     "t": 58.45,
+     "end": 59.0
+    },
+    {
+     "w": "point",
+     "t": 59.125,
+     "end": 59.375
+    },
+    {
+     "w": "five",
+     "t": 59.4,
+     "end": 59.99
+    },
+    {
+     "w": "Sixty-four",
+     "t": 60.21,
+     "end": 60.985
+    },
+    {
+     "w": "point",
+     "t": 61.11,
+     "end": 61.31
+    },
+    {
+     "w": "two",
+     "t": 61.335,
+     "end": 61.498
+    },
+    {
+     "w": "five",
+     "t": 61.535,
+     "end": 62.085
+    },
+    {
+     "w": "nearly",
+     "t": 62.235,
+     "end": 62.56
+    },
+    {
+     "w": "this",
+     "t": 62.585,
+     "end": 62.76
+    },
+    {
+     "w": "perfect",
+     "t": 62.785,
+     "end": 63.21
+    },
+    {
+     "w": "bell",
+     "t": 63.235,
+     "end": 63.51
+    },
+    {
+     "w": "in",
+     "t": 63.535,
+     "end": 63.66
+    },
+    {
+     "w": "green",
+     "t": 63.685,
+     "end": 64.26
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/71/71b105f676605783f6257620.wav"
+  },
+  {
+   "index": 6,
+   "start": 64.467,
+   "duration": 7.32,
+   "end": 71.787,
+   "text": "Each time the group grows four times, the skewness halves: two over root n, and two is the skewness of one wait.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Each",
+     "t": 64.477,
+     "end": 64.702
+    },
+    {
+     "w": "time",
+     "t": 64.727,
+     "end": 64.965
+    },
+    {
+     "w": "the",
+     "t": 64.977,
+     "end": 65.052
+    },
+    {
+     "w": "group",
+     "t": 65.077,
+     "end": 65.327
+    },
+    {
+     "w": "grows",
+     "t": 65.352,
+     "end": 65.702
+    },
+    {
+     "w": "four",
+     "t": 65.727,
+     "end": 65.952
+    },
+    {
+     "w": "times",
+     "t": 65.977,
+     "end": 66.527
+    },
+    {
+     "w": "the",
+     "t": 66.627,
+     "end": 66.727
+    },
+    {
+     "w": "skewness",
+     "t": 66.752,
+     "end": 67.127
+    },
+    {
+     "w": "halves",
+     "t": 67.152,
+     "end": 67.952
+    },
+    {
+     "w": "two",
+     "t": 68.177,
+     "end": 68.402
+    },
+    {
+     "w": "over",
+     "t": 68.427,
+     "end": 68.677
+    },
+    {
+     "w": "root",
+     "t": 68.702,
+     "end": 68.902
+    },
+    {
+     "w": "n",
+     "t": 68.927,
+     "end": 69.352
+    },
+    {
+     "w": "and",
+     "t": 69.502,
+     "end": 69.665
+    },
+    {
+     "w": "two",
+     "t": 69.727,
+     "end": 70.065
+    },
+    {
+     "w": "is",
+     "t": 70.102,
+     "end": 70.227
+    },
+    {
+     "w": "the",
+     "t": 70.252,
+     "end": 70.365
+    },
+    {
+     "w": "skewness",
+     "t": 70.402,
+     "end": 70.902
+    },
+    {
+     "w": "of",
+     "t": 70.927,
+     "end": 71.052
+    },
+    {
+     "w": "one",
+     "t": 71.077,
+     "end": 71.277
+    },
+    {
+     "w": "wait",
+     "t": 71.302,
+     "end": 71.787
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/dc/dc182886c060a304e4da0b99.wav"
+  },
+  {
+   "index": 7,
+   "start": 72.6,
+   "duration": 14.62,
+   "end": 87.22,
+   "text": "The root comes from the cubes. [pause 0.15] Add four waits: their cubed gaps add up, four times one wait's. [pause 0.15] But the spread only doubles, so its cube grows eight times. [pause 0.15] Four over eight: half the lean. [pause 0.15] In general, n over n to the one and a half.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 72.625,
+     "end": 72.763
+    },
+    {
+     "w": "root",
+     "t": 72.8,
+     "end": 73.05
+    },
+    {
+     "w": "comes",
+     "t": 73.075,
+     "end": 73.35
+    },
+    {
+     "w": "from",
+     "t": 73.375,
+     "end": 73.488
+    },
+    {
+     "w": "the",
+     "t": 73.5,
+     "end": 73.575
+    },
+    {
+     "w": "cubes",
+     "t": 73.6,
+     "end": 74.24
+    },
+    {
+     "w": "Add",
+     "t": 74.42,
+     "end": 74.657
+    },
+    {
+     "w": "four",
+     "t": 74.695,
+     "end": 74.895
+    },
+    {
+     "w": "waits",
+     "t": 74.92,
+     "end": 75.57
+    },
+    {
+     "w": "their",
+     "t": 75.695,
+     "end": 75.845
+    },
+    {
+     "w": "cubed",
+     "t": 75.87,
+     "end": 76.145
+    },
+    {
+     "w": "gaps",
+     "t": 76.17,
+     "end": 76.482
+    },
+    {
+     "w": "add",
+     "t": 76.52,
+     "end": 76.72
+    },
+    {
+     "w": "up",
+     "t": 76.745,
+     "end": 76.97
+    },
+    {
+     "w": "four",
+     "t": 77.095,
+     "end": 77.345
+    },
+    {
+     "w": "times",
+     "t": 77.37,
+     "end": 77.72
+    },
+    {
+     "w": "one",
+     "t": 77.745,
+     "end": 77.945
+    },
+    {
+     "w": "wait's",
+     "t": 77.97,
+     "end": 78.55
+    },
+    {
+     "w": "But",
+     "t": 78.7,
+     "end": 78.792
+    },
+    {
+     "w": "the",
+     "t": 78.805,
+     "end": 78.88
+    },
+    {
+     "w": "spread",
+     "t": 78.905,
+     "end": 79.23
+    },
+    {
+     "w": "only",
+     "t": 79.255,
+     "end": 79.53
+    },
+    {
+     "w": "doubles",
+     "t": 79.555,
+     "end": 80.23
+    },
+    {
+     "w": "so",
+     "t": 80.355,
+     "end": 80.468
+    },
+    {
+     "w": "its",
+     "t": 80.48,
+     "end": 80.668
+    },
+    {
+     "w": "cube",
+     "t": 80.705,
+     "end": 80.98
+    },
+    {
+     "w": "grows",
+     "t": 81.005,
+     "end": 81.33
+    },
+    {
+     "w": "eight",
+     "t": 81.355,
+     "end": 81.53
+    },
+    {
+     "w": "times",
+     "t": 81.555,
+     "end": 82.19
+    },
+    {
+     "w": "Four",
+     "t": 82.445,
+     "end": 82.658
+    },
+    {
+     "w": "over",
+     "t": 82.67,
+     "end": 82.895
+    },
+    {
+     "w": "eight",
+     "t": 82.92,
+     "end": 83.22
+    },
+    {
+     "w": "half",
+     "t": 83.32,
+     "end": 83.57
+    },
+    {
+     "w": "the",
+     "t": 83.595,
+     "end": 83.67
+    },
+    {
+     "w": "lean",
+     "t": 83.695,
+     "end": 84.26
+    },
+    {
+     "w": "In",
+     "t": 84.44,
+     "end": 84.578
+    },
+    {
+     "w": "general",
+     "t": 84.615,
+     "end": 85.215
+    },
+    {
+     "w": "n",
+     "t": 85.39,
+     "end": 85.565
+    },
+    {
+     "w": "over",
+     "t": 85.59,
+     "end": 85.902
+    },
+    {
+     "w": "n",
+     "t": 85.94,
+     "end": 86.14
+    },
+    {
+     "w": "to",
+     "t": 86.165,
+     "end": 86.228
+    },
+    {
+     "w": "the",
+     "t": 86.24,
+     "end": 86.315
+    },
+    {
+     "w": "one",
+     "t": 86.34,
+     "end": 86.478
+    },
+    {
+     "w": "and",
+     "t": 86.49,
+     "end": 86.578
+    },
+    {
+     "w": "a",
+     "t": 86.59,
+     "end": 86.64
+    },
+    {
+     "w": "half",
+     "t": 86.665,
+     "end": 87.22
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/e9/e99339fc000ff90f9e4ffb15.wav"
+  },
+  {
+   "index": 8,
+   "start": 88.033,
+   "duration": 22.22,
+   "end": 110.253,
+   "text": "A coin that lands heads one time in ten is just two spikes, yet its averages make the same bell, by the same rule. [pause 0.15] Kurtosis, the extra tail weight, fades faster, as one over n, and every finer difference faster still. [pause 0.15] Only the bell survives. [pause 0.15] That's the central limit theorem. [pause 0.15] It needs independent pieces, and one more condition.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "A",
+     "t": 88.048,
+     "end": 88.135
+    },
+    {
+     "w": "coin",
+     "t": 88.173,
+     "end": 88.523
+    },
+    {
+     "w": "that",
+     "t": 88.548,
+     "end": 88.698
+    },
+    {
+     "w": "lands",
+     "t": 88.723,
+     "end": 89.048
+    },
+    {
+     "w": "heads",
+     "t": 89.073,
+     "end": 89.335
+    },
+    {
+     "w": "one",
+     "t": 89.373,
+     "end": 89.598
+    },
+    {
+     "w": "time",
+     "t": 89.623,
+     "end": 89.898
+    },
+    {
+     "w": "in",
+     "t": 89.923,
+     "end": 90.06
+    },
+    {
+     "w": "ten",
+     "t": 90.098,
+     "end": 90.573
+    },
+    {
+     "w": "is",
+     "t": 90.623,
+     "end": 90.748
+    },
+    {
+     "w": "just",
+     "t": 90.773,
+     "end": 91.011
+    },
+    {
+     "w": "two",
+     "t": 91.048,
+     "end": 91.261
+    },
+    {
+     "w": "spikes",
+     "t": 91.298,
+     "end": 92.198
+    },
+    {
+     "w": "yet",
+     "t": 92.348,
+     "end": 92.486
+    },
+    {
+     "w": "its",
+     "t": 92.498,
+     "end": 92.661
+    },
+    {
+     "w": "averages",
+     "t": 92.698,
+     "end": 93.298
+    },
+    {
+     "w": "make",
+     "t": 93.323,
+     "end": 93.523
+    },
+    {
+     "w": "the",
+     "t": 93.548,
+     "end": 93.661
+    },
+    {
+     "w": "same",
+     "t": 93.698,
+     "end": 93.998
+    },
+    {
+     "w": "bell",
+     "t": 94.023,
+     "end": 94.498
+    },
+    {
+     "w": "by",
+     "t": 94.623,
+     "end": 94.773
+    },
+    {
+     "w": "the",
+     "t": 94.798,
+     "end": 94.911
+    },
+    {
+     "w": "same",
+     "t": 94.948,
+     "end": 95.248
+    },
+    {
+     "w": "rule",
+     "t": 95.273,
+     "end": 95.713
+    },
+    {
+     "w": "Kurtosis",
+     "t": 95.873,
+     "end": 96.673
+    },
+    {
+     "w": "the",
+     "t": 96.773,
+     "end": 96.911
+    },
+    {
+     "w": "extra",
+     "t": 96.948,
+     "end": 97.323
+    },
+    {
+     "w": "tail",
+     "t": 97.348,
+     "end": 97.623
+    },
+    {
+     "w": "weight",
+     "t": 97.648,
+     "end": 98.098
+    },
+    {
+     "w": "fades",
+     "t": 98.273,
+     "end": 98.648
+    },
+    {
+     "w": "faster",
+     "t": 98.673,
+     "end": 99.198
+    },
+    {
+     "w": "as",
+     "t": 99.323,
+     "end": 99.448
+    },
+    {
+     "w": "one",
+     "t": 99.473,
+     "end": 99.598
+    },
+    {
+     "w": "over",
+     "t": 99.623,
+     "end": 99.898
+    },
+    {
+     "w": "n",
+     "t": 99.923,
+     "end": 100.498
+    },
+    {
+     "w": "and",
+     "t": 100.648,
+     "end": 100.786
+    },
+    {
+     "w": "every",
+     "t": 100.823,
+     "end": 101.148
+    },
+    {
+     "w": "finer",
+     "t": 101.198,
+     "end": 101.573
+    },
+    {
+     "w": "difference",
+     "t": 101.598,
+     "end": 102.036
+    },
+    {
+     "w": "faster",
+     "t": 102.073,
+     "end": 102.536
+    },
+    {
+     "w": "still",
+     "t": 102.573,
+     "end": 103.053
+    },
+    {
+     "w": "Only",
+     "t": 103.203,
+     "end": 103.503
+    },
+    {
+     "w": "the",
+     "t": 103.528,
+     "end": 103.603
+    },
+    {
+     "w": "bell",
+     "t": 103.628,
+     "end": 103.853
+    },
+    {
+     "w": "survives",
+     "t": 103.878,
+     "end": 104.673
+    },
+    {
+     "w": "That's",
+     "t": 104.873,
+     "end": 105.173
+    },
+    {
+     "w": "the",
+     "t": 105.198,
+     "end": 105.323
+    },
+    {
+     "w": "central",
+     "t": 105.373,
+     "end": 105.773
+    },
+    {
+     "w": "limit",
+     "t": 105.798,
+     "end": 106.073
+    },
+    {
+     "w": "theorem",
+     "t": 106.098,
+     "end": 106.693
+    },
+    {
+     "w": "It",
+     "t": 106.843,
+     "end": 106.958
+    },
+    {
+     "w": "needs",
+     "t": 106.983,
+     "end": 107.295
+    },
+    {
+     "w": "independent",
+     "t": 107.333,
+     "end": 107.883
+    },
+    {
+     "w": "pieces",
+     "t": 107.908,
+     "end": 108.708
+    },
+    {
+     "w": "and",
+     "t": 108.858,
+     "end": 108.995
+    },
+    {
+     "w": "one",
+     "t": 109.033,
+     "end": 109.258
+    },
+    {
+     "w": "more",
+     "t": 109.283,
+     "end": 109.483
+    },
+    {
+     "w": "condition",
+     "t": 109.508,
+     "end": 110.253
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/6f/6f0ddd5b4a8bd69101bd5343.wav"
+  },
+  {
+   "index": 9,
+   "start": 111.067,
+   "duration": 6.52,
+   "end": 117.587,
+   "text": "Back to the textbook's thirty. [pause 0.5] Two over root thirty: point three seven. [pause 0.15] Close to a bell, by eye.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Back",
+     "t": 111.112,
+     "end": 111.387
+    },
+    {
+     "w": "to",
+     "t": 111.412,
+     "end": 111.475
+    },
+    {
+     "w": "the",
+     "t": 111.487,
+     "end": 111.562
+    },
+    {
+     "w": "textbook's",
+     "t": 111.587,
+     "end": 112.137
+    },
+    {
+     "w": "thirty",
+     "t": 112.162,
+     "end": 112.767
+    },
+    {
+     "w": "Two",
+     "t": 113.307,
+     "end": 113.595
+    },
+    {
+     "w": "over",
+     "t": 113.632,
+     "end": 113.882
+    },
+    {
+     "w": "root",
+     "t": 113.907,
+     "end": 114.132
+    },
+    {
+     "w": "thirty",
+     "t": 114.157,
+     "end": 114.682
+    },
+    {
+     "w": "point",
+     "t": 114.882,
+     "end": 115.107
+    },
+    {
+     "w": "three",
+     "t": 115.132,
+     "end": 115.357
+    },
+    {
+     "w": "seven",
+     "t": 115.407,
+     "end": 115.957
+    },
+    {
+     "w": "Close",
+     "t": 116.122,
+     "end": 116.372
+    },
+    {
+     "w": "to",
+     "t": 116.397,
+     "end": 116.46
+    },
+    {
+     "w": "a",
+     "t": 116.472,
+     "end": 116.522
+    },
+    {
+     "w": "bell",
+     "t": 116.547,
+     "end": 116.797
+    },
+    {
+     "w": "by",
+     "t": 116.872,
+     "end": 117.085
+    },
+    {
+     "w": "eye",
+     "t": 117.122,
+     "end": 117.587
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/9a/9a19b4dbc27733f03b633ac1.wav"
+  },
+  {
+   "index": 10,
+   "start": 117.8,
+   "duration": 17.97,
+   "end": 135.77,
+   "text": "But tests live in the tails: a ninety-five percent interval should miss two and a half percent on each side. [pause 0.15] Tests estimate the spread from the same data, so a low average gets a small spread, and its interval stops short. [pause 0.15] With thirty waits: seven percent low, one percent high.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "But",
+     "t": 117.8,
+     "end": 117.918
+    },
+    {
+     "w": "tests",
+     "t": 117.955,
+     "end": 118.455
+    },
+    {
+     "w": "live",
+     "t": 118.505,
+     "end": 118.742
+    },
+    {
+     "w": "in",
+     "t": 118.755,
+     "end": 118.817
+    },
+    {
+     "w": "the",
+     "t": 118.83,
+     "end": 118.905
+    },
+    {
+     "w": "tails",
+     "t": 118.93,
+     "end": 119.905
+    },
+    {
+     "w": "a",
+     "t": 120.105,
+     "end": 120.205
+    },
+    {
+     "w": "ninety-five",
+     "t": 120.255,
+     "end": 120.98
+    },
+    {
+     "w": "percent",
+     "t": 121.005,
+     "end": 121.355
+    },
+    {
+     "w": "interval",
+     "t": 121.38,
+     "end": 122.005
+    },
+    {
+     "w": "should",
+     "t": 122.055,
+     "end": 122.23
+    },
+    {
+     "w": "miss",
+     "t": 122.255,
+     "end": 122.505
+    },
+    {
+     "w": "two",
+     "t": 122.555,
+     "end": 122.717
+    },
+    {
+     "w": "and",
+     "t": 122.73,
+     "end": 122.818
+    },
+    {
+     "w": "a",
+     "t": 122.83,
+     "end": 122.88
+    },
+    {
+     "w": "half",
+     "t": 122.905,
+     "end": 123.13
+    },
+    {
+     "w": "percent",
+     "t": 123.155,
+     "end": 123.58
+    },
+    {
+     "w": "on",
+     "t": 123.605,
+     "end": 123.755
+    },
+    {
+     "w": "each",
+     "t": 123.78,
+     "end": 123.98
+    },
+    {
+     "w": "side",
+     "t": 124.005,
+     "end": 124.55
+    },
+    {
+     "w": "Tests",
+     "t": 124.715,
+     "end": 125.153
+    },
+    {
+     "w": "estimate",
+     "t": 125.19,
+     "end": 125.653
+    },
+    {
+     "w": "the",
+     "t": 125.665,
+     "end": 125.74
+    },
+    {
+     "w": "spread",
+     "t": 125.765,
+     "end": 126.09
+    },
+    {
+     "w": "from",
+     "t": 126.115,
+     "end": 126.228
+    },
+    {
+     "w": "the",
+     "t": 126.24,
+     "end": 126.328
+    },
+    {
+     "w": "same",
+     "t": 126.365,
+     "end": 126.64
+    },
+    {
+     "w": "data",
+     "t": 126.665,
+     "end": 127.265
+    },
+    {
+     "w": "so",
+     "t": 127.465,
+     "end": 127.615
+    },
+    {
+     "w": "a",
+     "t": 127.64,
+     "end": 127.715
+    },
+    {
+     "w": "low",
+     "t": 127.74,
+     "end": 128.04
+    },
+    {
+     "w": "average",
+     "t": 128.09,
+     "end": 128.59
+    },
+    {
+     "w": "gets",
+     "t": 128.615,
+     "end": 128.803
+    },
+    {
+     "w": "a",
+     "t": 128.815,
+     "end": 128.915
+    },
+    {
+     "w": "small",
+     "t": 128.965,
+     "end": 129.328
+    },
+    {
+     "w": "spread",
+     "t": 129.365,
+     "end": 130.115
+    },
+    {
+     "w": "and",
+     "t": 130.29,
+     "end": 130.378
+    },
+    {
+     "w": "its",
+     "t": 130.39,
+     "end": 130.54
+    },
+    {
+     "w": "interval",
+     "t": 130.565,
+     "end": 130.965
+    },
+    {
+     "w": "stops",
+     "t": 130.99,
+     "end": 131.39
+    },
+    {
+     "w": "short",
+     "t": 131.44,
+     "end": 131.97
+    },
+    {
+     "w": "With",
+     "t": 132.12,
+     "end": 132.332
+    },
+    {
+     "w": "thirty",
+     "t": 132.37,
+     "end": 132.67
+    },
+    {
+     "w": "waits",
+     "t": 132.695,
+     "end": 133.345
+    },
+    {
+     "w": "seven",
+     "t": 133.545,
+     "end": 133.87
+    },
+    {
+     "w": "percent",
+     "t": 133.895,
+     "end": 134.22
+    },
+    {
+     "w": "low",
+     "t": 134.245,
+     "end": 134.57
+    },
+    {
+     "w": "one",
+     "t": 134.695,
+     "end": 134.92
+    },
+    {
+     "w": "percent",
+     "t": 134.945,
+     "end": 135.27
+    },
+    {
+     "w": "high",
+     "t": 135.295,
+     "end": 135.77
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/38/38869e0357b8817add7bf439.wav"
+  },
+  {
+   "index": 11,
+   "start": 135.967,
+   "duration": 25.18,
+   "end": 161.147,
+   "text": "Ron Kohavi and colleagues, using Bing's data, want each side between two and three percent. [pause 0.15] Their rule: n at least three hundred fifty-five times the skewness squared. [pause 0.3] Divide by n and take the root: [pause 1.0] it's our formula: the average's skewness at most point oh five three. [pause 0.15] Three hundred still misses. [pause 0.15] For these waits: fourteen twenty, and both misses reach the band. [pause 1.2]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Ron",
+     "t": 135.997,
+     "end": 136.247
+    },
+    {
+     "w": "Kohavi",
+     "t": 136.272,
+     "end": 136.797
+    },
+    {
+     "w": "and",
+     "t": 136.822,
+     "end": 136.922
+    },
+    {
+     "w": "colleagues",
+     "t": 136.947,
+     "end": 137.672
+    },
+    {
+     "w": "using",
+     "t": 137.797,
+     "end": 138.122
+    },
+    {
+     "w": "Bing's",
+     "t": 138.147,
+     "end": 138.422
+    },
+    {
+     "w": "data",
+     "t": 138.447,
+     "end": 139.072
+    },
+    {
+     "w": "want",
+     "t": 139.272,
+     "end": 139.447
+    },
+    {
+     "w": "each",
+     "t": 139.472,
+     "end": 139.672
+    },
+    {
+     "w": "side",
+     "t": 139.697,
+     "end": 140.022
+    },
+    {
+     "w": "between",
+     "t": 140.047,
+     "end": 140.397
+    },
+    {
+     "w": "two",
+     "t": 140.447,
+     "end": 140.835
+    },
+    {
+     "w": "and",
+     "t": 140.872,
+     "end": 140.985
+    },
+    {
+     "w": "three",
+     "t": 141.022,
+     "end": 141.222
+    },
+    {
+     "w": "percent",
+     "t": 141.247,
+     "end": 141.847
+    },
+    {
+     "w": "Their",
+     "t": 142.032,
+     "end": 142.245
+    },
+    {
+     "w": "rule",
+     "t": 142.282,
+     "end": 142.907
+    },
+    {
+     "w": "n",
+     "t": 143.082,
+     "end": 143.257
+    },
+    {
+     "w": "at",
+     "t": 143.282,
+     "end": 143.345
+    },
+    {
+     "w": "least",
+     "t": 143.357,
+     "end": 143.619
+    },
+    {
+     "w": "three",
+     "t": 143.657,
+     "end": 143.857
+    },
+    {
+     "w": "hundred",
+     "t": 143.882,
+     "end": 144.207
+    },
+    {
+     "w": "fifty-five",
+     "t": 144.232,
+     "end": 144.832
+    },
+    {
+     "w": "times",
+     "t": 144.857,
+     "end": 145.22
+    },
+    {
+     "w": "the",
+     "t": 145.232,
+     "end": 145.307
+    },
+    {
+     "w": "skewness",
+     "t": 145.332,
+     "end": 145.682
+    },
+    {
+     "w": "squared",
+     "t": 145.707,
+     "end": 146.337
+    },
+    {
+     "w": "Divide",
+     "t": 146.637,
+     "end": 147.057
+    },
+    {
+     "w": "by",
+     "t": 147.082,
+     "end": 147.307
+    },
+    {
+     "w": "n",
+     "t": 147.357,
+     "end": 147.607
+    },
+    {
+     "w": "and",
+     "t": 147.632,
+     "end": 147.732
+    },
+    {
+     "w": "take",
+     "t": 147.757,
+     "end": 147.982
+    },
+    {
+     "w": "the",
+     "t": 148.007,
+     "end": 148.082
+    },
+    {
+     "w": "root",
+     "t": 148.107,
+     "end": 148.587
+    },
+    {
+     "w": "it's",
+     "t": 149.602,
+     "end": 149.739
+    },
+    {
+     "w": "our",
+     "t": 149.752,
+     "end": 149.89
+    },
+    {
+     "w": "formula",
+     "t": 149.927,
+     "end": 150.727
+    },
+    {
+     "w": "the",
+     "t": 150.902,
+     "end": 151.039
+    },
+    {
+     "w": "average's",
+     "t": 151.077,
+     "end": 151.54
+    },
+    {
+     "w": "skewness",
+     "t": 151.577,
+     "end": 152.09
+    },
+    {
+     "w": "at",
+     "t": 152.127,
+     "end": 152.227
+    },
+    {
+     "w": "most",
+     "t": 152.252,
+     "end": 152.552
+    },
+    {
+     "w": "point",
+     "t": 152.577,
+     "end": 152.827
+    },
+    {
+     "w": "oh",
+     "t": 152.852,
+     "end": 152.989
+    },
+    {
+     "w": "five",
+     "t": 153.027,
+     "end": 153.34
+    },
+    {
+     "w": "three",
+     "t": 153.377,
+     "end": 153.827
+    },
+    {
+     "w": "Three",
+     "t": 154.027,
+     "end": 154.277
+    },
+    {
+     "w": "hundred",
+     "t": 154.302,
+     "end": 154.689
+    },
+    {
+     "w": "still",
+     "t": 154.727,
+     "end": 154.977
+    },
+    {
+     "w": "misses",
+     "t": 155.002,
+     "end": 155.637
+    },
+    {
+     "w": "For",
+     "t": 155.822,
+     "end": 155.947
+    },
+    {
+     "w": "these",
+     "t": 155.972,
+     "end": 156.222
+    },
+    {
+     "w": "waits",
+     "t": 156.247,
+     "end": 156.872
+    },
+    {
+     "w": "fourteen",
+     "t": 157.047,
+     "end": 157.472
+    },
+    {
+     "w": "twenty",
+     "t": 157.497,
+     "end": 158.047
+    },
+    {
+     "w": "and",
+     "t": 158.172,
+     "end": 158.272
+    },
+    {
+     "w": "both",
+     "t": 158.297,
+     "end": 158.572
+    },
+    {
+     "w": "misses",
+     "t": 158.597,
+     "end": 158.972
+    },
+    {
+     "w": "reach",
+     "t": 158.997,
+     "end": 159.247
+    },
+    {
+     "w": "the",
+     "t": 159.272,
+     "end": 159.347
+    },
+    {
+     "w": "band",
+     "t": 159.372,
+     "end": 159.947
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/8f/8f3746e5c1ea05a7d35c3845.wav"
+  },
+  {
+   "index": 12,
+   "start": 161.2,
+   "duration": 10.38,
+   "end": 171.58,
+   "text": "Bing's revenue per user had a skewness near eighteen: a hundred and fourteen thousand users. [pause 0.15] Capping each user at ten dollars a week: under ten thousand.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Bing's",
+     "t": 161.265,
+     "end": 161.74
+    },
+    {
+     "w": "revenue",
+     "t": 161.79,
+     "end": 162.215
+    },
+    {
+     "w": "per",
+     "t": 162.24,
+     "end": 162.415
+    },
+    {
+     "w": "user",
+     "t": 162.44,
+     "end": 162.89
+    },
+    {
+     "w": "had",
+     "t": 162.915,
+     "end": 163.028
+    },
+    {
+     "w": "a",
+     "t": 163.04,
+     "end": 163.115
+    },
+    {
+     "w": "skewness",
+     "t": 163.165,
+     "end": 163.64
+    },
+    {
+     "w": "near",
+     "t": 163.665,
+     "end": 163.865
+    },
+    {
+     "w": "eighteen",
+     "t": 163.89,
+     "end": 164.84
+    },
+    {
+     "w": "a",
+     "t": 165.065,
+     "end": 165.152
+    },
+    {
+     "w": "hundred",
+     "t": 165.19,
+     "end": 165.653
+    },
+    {
+     "w": "and",
+     "t": 165.69,
+     "end": 165.802
+    },
+    {
+     "w": "fourteen",
+     "t": 165.84,
+     "end": 166.353
+    },
+    {
+     "w": "thousand",
+     "t": 166.39,
+     "end": 166.79
+    },
+    {
+     "w": "users",
+     "t": 166.815,
+     "end": 167.43
+    },
+    {
+     "w": "Capping",
+     "t": 167.595,
+     "end": 167.983
+    },
+    {
+     "w": "each",
+     "t": 168.02,
+     "end": 168.27
+    },
+    {
+     "w": "user",
+     "t": 168.295,
+     "end": 168.645
+    },
+    {
+     "w": "at",
+     "t": 168.67,
+     "end": 168.783
+    },
+    {
+     "w": "ten",
+     "t": 168.82,
+     "end": 169.045
+    },
+    {
+     "w": "dollars",
+     "t": 169.07,
+     "end": 169.395
+    },
+    {
+     "w": "a",
+     "t": 169.42,
+     "end": 169.495
+    },
+    {
+     "w": "week",
+     "t": 169.52,
+     "end": 170.095
+    },
+    {
+     "w": "under",
+     "t": 170.27,
+     "end": 170.582
+    },
+    {
+     "w": "ten",
+     "t": 170.62,
+     "end": 170.845
+    },
+    {
+     "w": "thousand",
+     "t": 170.87,
+     "end": 171.58
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/a0/a049e89abce144e3ed1de727.wav"
+  },
+  {
+   "index": 13,
+   "start": 172.633,
+   "duration": 8.5,
+   "end": 181.133,
+   "text": "Now the condition. [pause 0.15] A lighthouse one mile off a straight shore flashes at random angles, and each flash lands somewhere on the shore.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Now",
+     "t": 172.733,
+     "end": 172.945
+    },
+    {
+     "w": "the",
+     "t": 172.958,
+     "end": 173.033
+    },
+    {
+     "w": "condition",
+     "t": 173.058,
+     "end": 173.853
+    },
+    {
+     "w": "A",
+     "t": 174.013,
+     "end": 174.088
+    },
+    {
+     "w": "lighthouse",
+     "t": 174.113,
+     "end": 174.625
+    },
+    {
+     "w": "one",
+     "t": 174.663,
+     "end": 174.863
+    },
+    {
+     "w": "mile",
+     "t": 174.888,
+     "end": 175.238
+    },
+    {
+     "w": "off",
+     "t": 175.263,
+     "end": 175.401
+    },
+    {
+     "w": "a",
+     "t": 175.413,
+     "end": 175.488
+    },
+    {
+     "w": "straight",
+     "t": 175.513,
+     "end": 175.825
+    },
+    {
+     "w": "shore",
+     "t": 175.863,
+     "end": 176.263
+    },
+    {
+     "w": "flashes",
+     "t": 176.313,
+     "end": 176.863
+    },
+    {
+     "w": "at",
+     "t": 176.888,
+     "end": 176.988
+    },
+    {
+     "w": "random",
+     "t": 177.013,
+     "end": 177.438
+    },
+    {
+     "w": "angles",
+     "t": 177.463,
+     "end": 178.338
+    },
+    {
+     "w": "and",
+     "t": 178.488,
+     "end": 178.625
+    },
+    {
+     "w": "each",
+     "t": 178.663,
+     "end": 178.925
+    },
+    {
+     "w": "flash",
+     "t": 178.963,
+     "end": 179.363
+    },
+    {
+     "w": "lands",
+     "t": 179.388,
+     "end": 179.925
+    },
+    {
+     "w": "somewhere",
+     "t": 179.988,
+     "end": 180.401
+    },
+    {
+     "w": "on",
+     "t": 180.413,
+     "end": 180.501
+    },
+    {
+     "w": "the",
+     "t": 180.513,
+     "end": 180.613
+    },
+    {
+     "w": "shore",
+     "t": 180.663,
+     "end": 181.133
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/91/91508213a989ad6e5364b345.wav"
+  },
+  {
+   "index": 14,
+   "start": 181.333,
+   "duration": 8.33,
+   "end": 189.663,
+   "text": "Track the average landing spot. [pause 0.15] It never settles: a flash aimed almost along the shore lands absurdly far away, and yanks it.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Track",
+     "t": 181.348,
+     "end": 181.648
+    },
+    {
+     "w": "the",
+     "t": 181.673,
+     "end": 181.811
+    },
+    {
+     "w": "average",
+     "t": 181.848,
+     "end": 182.198
+    },
+    {
+     "w": "landing",
+     "t": 182.223,
+     "end": 182.623
+    },
+    {
+     "w": "spot",
+     "t": 182.648,
+     "end": 183.213
+    },
+    {
+     "w": "It",
+     "t": 183.363,
+     "end": 183.493
+    },
+    {
+     "w": "never",
+     "t": 183.518,
+     "end": 183.805
+    },
+    {
+     "w": "settles",
+     "t": 183.843,
+     "end": 184.668
+    },
+    {
+     "w": "a",
+     "t": 184.843,
+     "end": 184.943
+    },
+    {
+     "w": "flash",
+     "t": 184.993,
+     "end": 185.393
+    },
+    {
+     "w": "aimed",
+     "t": 185.418,
+     "end": 185.705
+    },
+    {
+     "w": "almost",
+     "t": 185.743,
+     "end": 186.143
+    },
+    {
+     "w": "along",
+     "t": 186.168,
+     "end": 186.431
+    },
+    {
+     "w": "the",
+     "t": 186.443,
+     "end": 186.531
+    },
+    {
+     "w": "shore",
+     "t": 186.568,
+     "end": 186.793
+    },
+    {
+     "w": "lands",
+     "t": 186.818,
+     "end": 187.168
+    },
+    {
+     "w": "absurdly",
+     "t": 187.193,
+     "end": 187.818
+    },
+    {
+     "w": "far",
+     "t": 187.868,
+     "end": 188.118
+    },
+    {
+     "w": "away",
+     "t": 188.143,
+     "end": 188.668
+    },
+    {
+     "w": "and",
+     "t": 188.843,
+     "end": 188.943
+    },
+    {
+     "w": "yanks",
+     "t": 188.968,
+     "end": 189.331
+    },
+    {
+     "w": "it",
+     "t": 189.368,
+     "end": 189.663
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/6d/6d4ad997445f8cd3c3bf0138.wav"
+  },
+  {
+   "index": 15,
+   "start": 190.133,
+   "duration": 18.23,
+   "end": 208.363,
+   "text": "Among a thousand flashes, the farthest typically lands about nine hundred miles off. [pause 0.15] Divided by a thousand, it still drags the average about a mile. [pause 0.15] Half of single flashes land within a mile of the middle. [pause 0.15] Repeat the thousand-flash average two hundred times, and still only half do.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Among",
+     "t": 190.153,
+     "end": 190.453
+    },
+    {
+     "w": "a",
+     "t": 190.478,
+     "end": 190.578
+    },
+    {
+     "w": "thousand",
+     "t": 190.628,
+     "end": 191.078
+    },
+    {
+     "w": "flashes",
+     "t": 191.103,
+     "end": 192.003
+    },
+    {
+     "w": "the",
+     "t": 192.128,
+     "end": 192.253
+    },
+    {
+     "w": "farthest",
+     "t": 192.303,
+     "end": 192.765
+    },
+    {
+     "w": "typically",
+     "t": 192.803,
+     "end": 193.228
+    },
+    {
+     "w": "lands",
+     "t": 193.253,
+     "end": 193.641
+    },
+    {
+     "w": "about",
+     "t": 193.653,
+     "end": 193.978
+    },
+    {
+     "w": "nine",
+     "t": 194.028,
+     "end": 194.278
+    },
+    {
+     "w": "hundred",
+     "t": 194.303,
+     "end": 194.603
+    },
+    {
+     "w": "miles",
+     "t": 194.628,
+     "end": 194.978
+    },
+    {
+     "w": "off",
+     "t": 195.003,
+     "end": 195.473
+    },
+    {
+     "w": "Divided",
+     "t": 195.623,
+     "end": 196.118
+    },
+    {
+     "w": "by",
+     "t": 196.143,
+     "end": 196.293
+    },
+    {
+     "w": "a",
+     "t": 196.318,
+     "end": 196.405
+    },
+    {
+     "w": "thousand",
+     "t": 196.443,
+     "end": 197.318
+    },
+    {
+     "w": "it",
+     "t": 197.493,
+     "end": 197.618
+    },
+    {
+     "w": "still",
+     "t": 197.643,
+     "end": 197.905
+    },
+    {
+     "w": "drags",
+     "t": 197.943,
+     "end": 198.355
+    },
+    {
+     "w": "the",
+     "t": 198.368,
+     "end": 198.505
+    },
+    {
+     "w": "average",
+     "t": 198.543,
+     "end": 198.968
+    },
+    {
+     "w": "about",
+     "t": 198.993,
+     "end": 199.205
+    },
+    {
+     "w": "a",
+     "t": 199.218,
+     "end": 199.268
+    },
+    {
+     "w": "mile",
+     "t": 199.293,
+     "end": 199.823
+    },
+    {
+     "w": "Half",
+     "t": 200.013,
+     "end": 200.276
+    },
+    {
+     "w": "of",
+     "t": 200.288,
+     "end": 200.438
+    },
+    {
+     "w": "single",
+     "t": 200.488,
+     "end": 200.851
+    },
+    {
+     "w": "flashes",
+     "t": 200.888,
+     "end": 201.813
+    },
+    {
+     "w": "land",
+     "t": 201.888,
+     "end": 202.263
+    },
+    {
+     "w": "within",
+     "t": 202.288,
+     "end": 202.501
+    },
+    {
+     "w": "a",
+     "t": 202.513,
+     "end": 202.588
+    },
+    {
+     "w": "mile",
+     "t": 202.613,
+     "end": 202.901
+    },
+    {
+     "w": "of",
+     "t": 202.913,
+     "end": 202.976
+    },
+    {
+     "w": "the",
+     "t": 202.988,
+     "end": 203.063
+    },
+    {
+     "w": "middle",
+     "t": 203.088,
+     "end": 203.503
+    },
+    {
+     "w": "Repeat",
+     "t": 203.678,
+     "end": 204.053
+    },
+    {
+     "w": "the",
+     "t": 204.078,
+     "end": 204.191
+    },
+    {
+     "w": "thousand-flash",
+     "t": 204.228,
+     "end": 205.103
+    },
+    {
+     "w": "average",
+     "t": 205.128,
+     "end": 205.441
+    },
+    {
+     "w": "two",
+     "t": 205.478,
+     "end": 205.653
+    },
+    {
+     "w": "hundred",
+     "t": 205.678,
+     "end": 205.978
+    },
+    {
+     "w": "times",
+     "t": 206.003,
+     "end": 206.828
+    },
+    {
+     "w": "and",
+     "t": 206.978,
+     "end": 207.078
+    },
+    {
+     "w": "still",
+     "t": 207.103,
+     "end": 207.353
+    },
+    {
+     "w": "only",
+     "t": 207.378,
+     "end": 207.653
+    },
+    {
+     "w": "half",
+     "t": 207.678,
+     "end": 207.953
+    },
+    {
+     "w": "do",
+     "t": 207.978,
+     "end": 208.363
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/e3/e387652e6aa6ec2676ba93ab.wav"
+  },
+  {
+   "index": 16,
+   "start": 209.167,
+   "duration": 10.8,
+   "end": 219.967,
+   "text": "The theorem needs finite variance: no single piece can outweigh the rest. [pause 0.15] Here the variance is infinite. [pause 0.15] The median ignores how far the extremes fly, so it homes in.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 209.192,
+     "end": 209.317
+    },
+    {
+     "w": "theorem",
+     "t": 209.367,
+     "end": 209.792
+    },
+    {
+     "w": "needs",
+     "t": 209.817,
+     "end": 210.117
+    },
+    {
+     "w": "finite",
+     "t": 210.167,
+     "end": 210.592
+    },
+    {
+     "w": "variance",
+     "t": 210.617,
+     "end": 211.492
+    },
+    {
+     "w": "no",
+     "t": 211.692,
+     "end": 211.942
+    },
+    {
+     "w": "single",
+     "t": 211.992,
+     "end": 212.292
+    },
+    {
+     "w": "piece",
+     "t": 212.317,
+     "end": 212.667
+    },
+    {
+     "w": "can",
+     "t": 212.692,
+     "end": 212.817
+    },
+    {
+     "w": "outweigh",
+     "t": 212.842,
+     "end": 213.242
+    },
+    {
+     "w": "the",
+     "t": 213.267,
+     "end": 213.342
+    },
+    {
+     "w": "rest",
+     "t": 213.367,
+     "end": 213.947
+    },
+    {
+     "w": "Here",
+     "t": 214.132,
+     "end": 214.345
+    },
+    {
+     "w": "the",
+     "t": 214.357,
+     "end": 214.432
+    },
+    {
+     "w": "variance",
+     "t": 214.457,
+     "end": 215.02
+    },
+    {
+     "w": "is",
+     "t": 215.057,
+     "end": 215.195
+    },
+    {
+     "w": "infinite",
+     "t": 215.232,
+     "end": 215.947
+    },
+    {
+     "w": "The",
+     "t": 216.112,
+     "end": 216.187
+    },
+    {
+     "w": "median",
+     "t": 216.212,
+     "end": 216.612
+    },
+    {
+     "w": "ignores",
+     "t": 216.637,
+     "end": 217.112
+    },
+    {
+     "w": "how",
+     "t": 217.137,
+     "end": 217.3
+    },
+    {
+     "w": "far",
+     "t": 217.337,
+     "end": 217.525
+    },
+    {
+     "w": "the",
+     "t": 217.537,
+     "end": 217.662
+    },
+    {
+     "w": "extremes",
+     "t": 217.687,
+     "end": 218.187
+    },
+    {
+     "w": "fly",
+     "t": 218.212,
+     "end": 218.762
+    },
+    {
+     "w": "so",
+     "t": 218.962,
+     "end": 219.075
+    },
+    {
+     "w": "it",
+     "t": 219.087,
+     "end": 219.162
+    },
+    {
+     "w": "homes",
+     "t": 219.187,
+     "end": 219.562
+    },
+    {
+     "w": "in",
+     "t": 219.587,
+     "end": 219.967
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/a7/a7444aeede7d98ad127e51f5.wav"
+  },
+  {
+   "index": 17,
+   "start": 221.0,
+   "duration": 9.95,
+   "end": 230.95,
+   "text": "So the answer is over a thousand, not thirty. [pause 0.15] And collect forever: this histogram stays lopsided. [pause 0.15] The bell was never in the data. [pause 0.15] It's in the average.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "So",
+     "t": 221.06,
+     "end": 221.148
+    },
+    {
+     "w": "the",
+     "t": 221.16,
+     "end": 221.298
+    },
+    {
+     "w": "answer",
+     "t": 221.335,
+     "end": 221.71
+    },
+    {
+     "w": "is",
+     "t": 221.735,
+     "end": 221.835
+    },
+    {
+     "w": "over",
+     "t": 221.86,
+     "end": 222.047
+    },
+    {
+     "w": "a",
+     "t": 222.06,
+     "end": 222.148
+    },
+    {
+     "w": "thousand",
+     "t": 222.185,
+     "end": 222.885
+    },
+    {
+     "w": "not",
+     "t": 223.01,
+     "end": 223.235
+    },
+    {
+     "w": "thirty",
+     "t": 223.26,
+     "end": 223.81
+    },
+    {
+     "w": "And",
+     "t": 223.965,
+     "end": 224.115
+    },
+    {
+     "w": "collect",
+     "t": 224.14,
+     "end": 224.515
+    },
+    {
+     "w": "forever",
+     "t": 224.54,
+     "end": 225.19
+    },
+    {
+     "w": "this",
+     "t": 225.365,
+     "end": 225.54
+    },
+    {
+     "w": "histogram",
+     "t": 225.565,
+     "end": 226.178
+    },
+    {
+     "w": "stays",
+     "t": 226.215,
+     "end": 226.627
+    },
+    {
+     "w": "lopsided",
+     "t": 226.665,
+     "end": 227.49
+    },
+    {
+     "w": "The",
+     "t": 227.645,
+     "end": 227.745
+    },
+    {
+     "w": "bell",
+     "t": 227.77,
+     "end": 228.12
+    },
+    {
+     "w": "was",
+     "t": 228.145,
+     "end": 228.37
+    },
+    {
+     "w": "never",
+     "t": 228.42,
+     "end": 228.745
+    },
+    {
+     "w": "in",
+     "t": 228.77,
+     "end": 228.833
+    },
+    {
+     "w": "the",
+     "t": 228.845,
+     "end": 228.92
+    },
+    {
+     "w": "data",
+     "t": 228.945,
+     "end": 229.46
+    },
+    {
+     "w": "It's",
+     "t": 229.61,
+     "end": 229.86
+    },
+    {
+     "w": "in",
+     "t": 229.885,
+     "end": 229.973
+    },
+    {
+     "w": "the",
+     "t": 229.985,
+     "end": 230.135
+    },
+    {
+     "w": "average",
+     "t": 230.185,
+     "end": 230.95
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/8b/8bda5944fc28064fbe0e0c97.wav"
+  }
+ ],
+ "warnings": [],
+ "layout_audit": {
+  "clearance": 0.15,
+  "checks": 249,
+  "audit_seconds": 2.752,
+  "render_seconds": 340.0,
+  "errors": 0,
+  "count": 0,
+  "counts": {
+   "overlap": 0,
+   "clearance": 0,
+   "safe-area": 0,
+   "caption-zone": 0
+  },
+  "issues": [],
+  "allowed": [
+   {
+    "kind": "overlap",
+    "start": 184.93,
+    "end": 184.93,
+    "held": 0.0,
+    "text": "MathTex '1\\text{ mi}'",
+    "text_pos": [
+     -0.43,
+     -0.38
+    ],
+    "other": "Line (85% opacity)",
+    "other_pos": [
+     -0.28,
+     -0.5
+    ],
+    "gap": -0.047,
+    "need": 0.15,
+    "allowed": "a light beam sweeping past the lamp crosses the '1 mi' label for a frame",
+    "msg": "overlap 3:04.9 (end of an animation, not held) MathTex '1\\text{ mi}' @(-0.43, -0.38) vs Line (85% opacity) @(-0.28, -0.50): overlapping by 0.05 (need >= 0.15)"
+   },
+   {
+    "kind": "overlap",
+    "start": 192.0,
+    "end": 192.0,
+    "held": 0.0,
+    "text": "MathTex '1\\text{ mi}'",
+    "text_pos": [
+     -0.43,
+     -0.38
+    ],
+    "other": "Line (85% opacity)",
+    "other_pos": [
+     -0.53,
+     -0.5
+    ],
+    "gap": -0.068,
+    "need": 0.15,
+    "allowed": "a light beam sweeping past the lamp crosses the '1 mi' label for a frame",
+    "msg": "overlap 3:12.0 (end of an animation, not held) MathTex '1\\text{ mi}' @(-0.43, -0.38) vs Line (85% opacity) @(-0.53, -0.50): overlapping by 0.07 (need >= 0.15)"
+   }
+  ],
+  "excluded": []
+ }
+}

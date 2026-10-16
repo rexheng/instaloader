@@ -1,0 +1,51 @@
+[0:00.0–0:01.6] 142 points.
+[0:02.3–0:04.9] Two averages, two standard deviations,
+[0:05.3–0:07.5] and a correlation of minus 0.06.
+[0:08.3–0:11.5] Which way does their best-fit line tilt, and how steeply?
+[0:13.0–0:16.4] A shapeless oval cloud with a nearly flat line
+[0:16.4–0:18.1] is the reasonable guess.
+[0:18.7–0:19.9] Here are the real points.
+[0:20.4–0:22.9] A dinosaur drawn by Alberto Cairo
+[0:22.9–0:24.7] with these same five numbers.
+[0:25.7–0:28.9] In a review of 703 physiology papers,
+[0:28.9–0:33.9] 86% used bar graphs, an average and an error bar.
+[0:34.8–0:37.4] Only 13% showed the points.
+[0:37.4–0:39.9] So how much can five numbers hide?
+[0:39.9–0:41.6] Let's hide a star in them
+[0:41.6–0:44.6] and demand that all five still match the dinosaurs
+[0:44.6–0:45.9] to two decimals.
+[0:45.9–0:50.4] Version one slides every point onto its own spot on a star.
+[0:50.4–0:53.5] We got the star and lost all five numbers.
+[0:53.5–0:56.3] The center moved, the X spread grew,
+[0:56.3–0:58.8] and the Y spread shrank by almost a quarter.
+[0:58.9–1:02.2] So what exactly do five numbers pin down?
+[1:02.2–1:04.8] The two averages mark a single point.
+[1:04.8–1:09.4] The cloud's balance point, the two standard deviations draw a box,
+[1:09.4–1:11.9] one deviation out on each side.
+[1:11.9–1:14.4] Many ellipses touch all four walls.
+[1:14.4–1:16.3] The correlation picks one.
+[1:16.3–1:20.4] Correlation r means one standard deviation to the right.
+[1:20.4–1:23.5] On average, r standard deviation's up.
+[1:23.5–1:28.7] So the touch point on the right wall sits r times s y above the center.
+[1:28.9–1:32.5] At minus point oh six, that's just below the middle.
+[1:32.5–1:35.7] That ellipse is everything the five numbers know.
+[1:35.7–1:39.2] Now replay version one and watch the ellipse.
+[1:39.2–1:42.7] How would you fix the star?
+[1:42.7–1:45.0] Slide it until the centers meet.
+[1:45.0–1:59.2] Stretch it until the boxes match Then tip it a slight shear until it touches the walls at the same height All five match now to every decimal place But add a sixth number the median of Y and
+[1:59.2–2:06.5] our star misses it by six. In 2017, Justin Matejka and George Fitzmaurice built a search
+[2:06.5–2:12.2] that holds whatever numbers you choose. They chose these five. Nudge a point at random,
+[2:12.2–2:17.4] bias toward a target shape, and keep the nudge only if the five numbers still hold to two
+[2:17.4–2:23.9] decimals. Repeat it enough times, and the dinosaur becomes a circle. From the dinosaur,
+[2:23.9–2:33.6] they grew twelve shapes like this star. This bullseye, this X, these stripes, and these
+[2:33.6–2:40.5] dots. Every one of them has this same ellipse and a different median. Francis Anscombe made
+[2:40.5–2:48.3] the point in 1973, with 11 points of his own. His correlation is 0.82, so the ellipse touches
+[2:48.3–2:54.5] the right wall high up. Least squares sets the slope of the best fit line to the covariance
+[2:54.5–3:04.2] over the x-variance. The covariance is r times sx times sy. So when sx cancels, what's left
+[3:04.2–3:08.7] is the rise to the touch point over the run to the wall, so the line runs through the
+[3:08.7–3:15.0] center and that touch point. Plug in his numbers and the slope is one half. All four of his
+[3:15.0–3:20.7] data sets share these five numbers, so they share the ellipse and the line. A trend, a
+[3:20.7–3:27.6] curve, an outlier and one point doing all the work. Your line was exactly right, five
+[3:27.6–3:34.0] numbers fix it. Your cloud was this ellipse, all that five numbers can draw. Most of those
+[3:34.0–3:38.0] Those papers used a bar graph, which draws only two.
+[3:38.0–3:40.6] The dinosaur lived in everything they leave out.

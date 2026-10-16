@@ -1,0 +1,3394 @@
+{
+ "scene": "Episode",
+ "episode": 5,
+ "title": "Why Random Darts Beat Grids in 100 Dimensions",
+ "video_duration": 236.567,
+ "beats": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "duration": 12.86,
+   "end": 12.86,
+   "text": "Your budget: a million evaluations to average a function of a hundred inputs. [pause 0.25] Spread them out as an even grid; that feels thorough. [pause 0.2] How many values does each input get? [pause 1.5]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Your",
+     "t": 0.015,
+     "end": 0.19
+    },
+    {
+     "w": "budget",
+     "t": 0.215,
+     "end": 0.815
+    },
+    {
+     "w": "a",
+     "t": 0.965,
+     "end": 1.078
+    },
+    {
+     "w": "million",
+     "t": 1.14,
+     "end": 1.515
+    },
+    {
+     "w": "evaluations",
+     "t": 1.54,
+     "end": 2.652
+    },
+    {
+     "w": "to",
+     "t": 2.69,
+     "end": 2.815
+    },
+    {
+     "w": "average",
+     "t": 2.865,
+     "end": 3.24
+    },
+    {
+     "w": "a",
+     "t": 3.265,
+     "end": 3.352
+    },
+    {
+     "w": "function",
+     "t": 3.39,
+     "end": 3.952
+    },
+    {
+     "w": "of",
+     "t": 3.99,
+     "end": 4.09
+    },
+    {
+     "w": "a",
+     "t": 4.115,
+     "end": 4.203
+    },
+    {
+     "w": "hundred",
+     "t": 4.24,
+     "end": 4.665
+    },
+    {
+     "w": "inputs",
+     "t": 4.69,
+     "end": 5.39
+    },
+    {
+     "w": "Spread",
+     "t": 5.72,
+     "end": 6.007
+    },
+    {
+     "w": "them",
+     "t": 6.02,
+     "end": 6.145
+    },
+    {
+     "w": "out",
+     "t": 6.17,
+     "end": 6.42
+    },
+    {
+     "w": "as",
+     "t": 6.445,
+     "end": 6.532
+    },
+    {
+     "w": "an",
+     "t": 6.545,
+     "end": 6.645
+    },
+    {
+     "w": "even",
+     "t": 6.67,
+     "end": 6.945
+    },
+    {
+     "w": "grid",
+     "t": 6.97,
+     "end": 7.57
+    },
+    {
+     "w": "that",
+     "t": 7.77,
+     "end": 7.995
+    },
+    {
+     "w": "feels",
+     "t": 8.02,
+     "end": 8.345
+    },
+    {
+     "w": "thorough",
+     "t": 8.37,
+     "end": 8.92
+    },
+    {
+     "w": "How",
+     "t": 9.145,
+     "end": 9.282
+    },
+    {
+     "w": "many",
+     "t": 9.295,
+     "end": 9.495
+    },
+    {
+     "w": "values",
+     "t": 9.52,
+     "end": 9.995
+    },
+    {
+     "w": "does",
+     "t": 10.02,
+     "end": 10.22
+    },
+    {
+     "w": "each",
+     "t": 10.245,
+     "end": 10.47
+    },
+    {
+     "w": "input",
+     "t": 10.495,
+     "end": 10.87
+    },
+    {
+     "w": "get",
+     "t": 10.895,
+     "end": 11.36
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/32/3215bdf92e599e442c406e4c.wav"
+  },
+  {
+   "index": 1,
+   "start": 12.967,
+   "duration": 8.45,
+   "end": 21.417,
+   "text": "One. [pause 0.2] The whole grid is one point, the centre of the box. [pause 0.2] Two values per input would take two to the hundredth points. [pause 0.8]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "One",
+     "t": 13.052,
+     "end": 13.617
+    },
+    {
+     "w": "The",
+     "t": 13.842,
+     "end": 13.967
+    },
+    {
+     "w": "whole",
+     "t": 13.992,
+     "end": 14.217
+    },
+    {
+     "w": "grid",
+     "t": 14.242,
+     "end": 14.517
+    },
+    {
+     "w": "is",
+     "t": 14.542,
+     "end": 14.68
+    },
+    {
+     "w": "one",
+     "t": 14.717,
+     "end": 14.942
+    },
+    {
+     "w": "point",
+     "t": 14.967,
+     "end": 15.492
+    },
+    {
+     "w": "the",
+     "t": 15.617,
+     "end": 15.729
+    },
+    {
+     "w": "centre",
+     "t": 15.767,
+     "end": 16.105
+    },
+    {
+     "w": "of",
+     "t": 16.117,
+     "end": 16.18
+    },
+    {
+     "w": "the",
+     "t": 16.192,
+     "end": 16.267
+    },
+    {
+     "w": "box",
+     "t": 16.292,
+     "end": 16.907
+    },
+    {
+     "w": "Two",
+     "t": 17.137,
+     "end": 17.362
+    },
+    {
+     "w": "values",
+     "t": 17.387,
+     "end": 17.837
+    },
+    {
+     "w": "per",
+     "t": 17.862,
+     "end": 18.037
+    },
+    {
+     "w": "input",
+     "t": 18.062,
+     "end": 18.699
+    },
+    {
+     "w": "would",
+     "t": 18.737,
+     "end": 18.837
+    },
+    {
+     "w": "take",
+     "t": 18.862,
+     "end": 19.112
+    },
+    {
+     "w": "two",
+     "t": 19.162,
+     "end": 19.387
+    },
+    {
+     "w": "to",
+     "t": 19.412,
+     "end": 19.475
+    },
+    {
+     "w": "the",
+     "t": 19.487,
+     "end": 19.562
+    },
+    {
+     "w": "hundredth",
+     "t": 19.587,
+     "end": 20.012
+    },
+    {
+     "w": "points",
+     "t": 20.037,
+     "end": 20.617
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/02/02b9d5d2fe6d98066408b850.wav"
+  },
+  {
+   "index": 2,
+   "start": 21.5,
+   "duration": 16.3,
+   "end": 37.8,
+   "text": "Pricing an option on a hundred stocks is this kind of average. [pause 0.2] Since Metropolis and Ulam's 1949 paper, such averages are usually done with random points, like this one. [pause 0.25] How far off would a million of them land? [pause 0.15] Hold that thought.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Pricing",
+     "t": 21.5,
+     "end": 21.928
+    },
+    {
+     "w": "an",
+     "t": 21.94,
+     "end": 22.052
+    },
+    {
+     "w": "option",
+     "t": 22.09,
+     "end": 22.565
+    },
+    {
+     "w": "on",
+     "t": 22.59,
+     "end": 22.678
+    },
+    {
+     "w": "a",
+     "t": 22.69,
+     "end": 22.74
+    },
+    {
+     "w": "hundred",
+     "t": 22.765,
+     "end": 23.165
+    },
+    {
+     "w": "stocks",
+     "t": 23.19,
+     "end": 23.978
+    },
+    {
+     "w": "is",
+     "t": 24.04,
+     "end": 24.19
+    },
+    {
+     "w": "this",
+     "t": 24.215,
+     "end": 24.415
+    },
+    {
+     "w": "kind",
+     "t": 24.44,
+     "end": 24.628
+    },
+    {
+     "w": "of",
+     "t": 24.64,
+     "end": 24.728
+    },
+    {
+     "w": "average",
+     "t": 24.765,
+     "end": 25.47
+    },
+    {
+     "w": "Since",
+     "t": 25.71,
+     "end": 25.935
+    },
+    {
+     "w": "Metropolis",
+     "t": 25.96,
+     "end": 26.735
+    },
+    {
+     "w": "and",
+     "t": 26.76,
+     "end": 26.872
+    },
+    {
+     "w": "Ulam",
+     "t": 26.91,
+     "end": 27.335
+    },
+    {
+     "w": "'s",
+     "t": 27.335,
+     "end": 27.51
+    },
+    {
+     "w": "1949",
+     "t": 27.56,
+     "end": 28.935
+    },
+    {
+     "w": "paper",
+     "t": 28.96,
+     "end": 29.735
+    },
+    {
+     "w": "such",
+     "t": 29.935,
+     "end": 30.21
+    },
+    {
+     "w": "averages",
+     "t": 30.26,
+     "end": 30.885
+    },
+    {
+     "w": "are",
+     "t": 30.91,
+     "end": 31.06
+    },
+    {
+     "w": "usually",
+     "t": 31.11,
+     "end": 31.535
+    },
+    {
+     "w": "done",
+     "t": 31.56,
+     "end": 31.81
+    },
+    {
+     "w": "with",
+     "t": 31.835,
+     "end": 31.998
+    },
+    {
+     "w": "random",
+     "t": 32.035,
+     "end": 32.46
+    },
+    {
+     "w": "points",
+     "t": 32.485,
+     "end": 33.06
+    },
+    {
+     "w": "like",
+     "t": 33.185,
+     "end": 33.385
+    },
+    {
+     "w": "this",
+     "t": 33.41,
+     "end": 33.585
+    },
+    {
+     "w": "one",
+     "t": 33.61,
+     "end": 33.96
+    },
+    {
+     "w": "How",
+     "t": 34.235,
+     "end": 34.447
+    },
+    {
+     "w": "far",
+     "t": 34.485,
+     "end": 34.71
+    },
+    {
+     "w": "off",
+     "t": 34.735,
+     "end": 34.985
+    },
+    {
+     "w": "would",
+     "t": 35.01,
+     "end": 35.097
+    },
+    {
+     "w": "a",
+     "t": 35.11,
+     "end": 35.21
+    },
+    {
+     "w": "million",
+     "t": 35.26,
+     "end": 35.622
+    },
+    {
+     "w": "of",
+     "t": 35.635,
+     "end": 35.697
+    },
+    {
+     "w": "them",
+     "t": 35.71,
+     "end": 35.885
+    },
+    {
+     "w": "land",
+     "t": 35.91,
+     "end": 36.48
+    },
+    {
+     "w": "Hold",
+     "t": 36.68,
+     "end": 36.93
+    },
+    {
+     "w": "that",
+     "t": 36.955,
+     "end": 37.23
+    },
+    {
+     "w": "thought",
+     "t": 37.255,
+     "end": 37.8
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/98/98681791a133d79e353149bf.wav"
+  },
+  {
+   "index": 3,
+   "start": 38.4,
+   "duration": 10.58,
+   "end": 48.98,
+   "text": "Start with two inputs: a square. [pause 0.2] Our function is one inside this quarter disc, zero outside, so its average is the disc's share: exactly one half.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Start",
+     "t": 38.465,
+     "end": 38.728
+    },
+    {
+     "w": "with",
+     "t": 38.74,
+     "end": 38.89
+    },
+    {
+     "w": "two",
+     "t": 38.915,
+     "end": 39.078
+    },
+    {
+     "w": "inputs",
+     "t": 39.09,
+     "end": 39.69
+    },
+    {
+     "w": "a",
+     "t": 39.84,
+     "end": 39.928
+    },
+    {
+     "w": "square",
+     "t": 39.965,
+     "end": 40.62
+    },
+    {
+     "w": "Our",
+     "t": 40.82,
+     "end": 40.973
+    },
+    {
+     "w": "function",
+     "t": 41.01,
+     "end": 41.46
+    },
+    {
+     "w": "is",
+     "t": 41.485,
+     "end": 41.635
+    },
+    {
+     "w": "one",
+     "t": 41.685,
+     "end": 41.935
+    },
+    {
+     "w": "inside",
+     "t": 41.96,
+     "end": 42.41
+    },
+    {
+     "w": "this",
+     "t": 42.435,
+     "end": 42.585
+    },
+    {
+     "w": "quarter",
+     "t": 42.61,
+     "end": 42.96
+    },
+    {
+     "w": "disc",
+     "t": 42.985,
+     "end": 43.535
+    },
+    {
+     "w": "zero",
+     "t": 43.735,
+     "end": 44.085
+    },
+    {
+     "w": "outside",
+     "t": 44.11,
+     "end": 44.985
+    },
+    {
+     "w": "so",
+     "t": 45.16,
+     "end": 45.273
+    },
+    {
+     "w": "its",
+     "t": 45.285,
+     "end": 45.485
+    },
+    {
+     "w": "average",
+     "t": 45.535,
+     "end": 46.035
+    },
+    {
+     "w": "is",
+     "t": 46.06,
+     "end": 46.185
+    },
+    {
+     "w": "the",
+     "t": 46.21,
+     "end": 46.285
+    },
+    {
+     "w": "disc's",
+     "t": 46.31,
+     "end": 46.66
+    },
+    {
+     "w": "share",
+     "t": 46.71,
+     "end": 47.385
+    },
+    {
+     "w": "exactly",
+     "t": 47.61,
+     "end": 48.185
+    },
+    {
+     "w": "one",
+     "t": 48.21,
+     "end": 48.41
+    },
+    {
+     "w": "half",
+     "t": 48.435,
+     "end": 48.98
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/2a/2aed0e08d8990c6e22279b05.wav"
+  },
+  {
+   "index": 4,
+   "start": 49.067,
+   "duration": 5.05,
+   "end": 54.117,
+   "text": "A ten by ten grid puts fifty-two of its hundred points inside: two points off.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "A",
+     "t": 49.092,
+     "end": 49.192
+    },
+    {
+     "w": "ten",
+     "t": 49.242,
+     "end": 49.517
+    },
+    {
+     "w": "by",
+     "t": 49.542,
+     "end": 49.73
+    },
+    {
+     "w": "ten",
+     "t": 49.767,
+     "end": 49.992
+    },
+    {
+     "w": "grid",
+     "t": 50.017,
+     "end": 50.267
+    },
+    {
+     "w": "puts",
+     "t": 50.292,
+     "end": 50.517
+    },
+    {
+     "w": "fifty-two",
+     "t": 50.542,
+     "end": 51.017
+    },
+    {
+     "w": "of",
+     "t": 51.042,
+     "end": 51.105
+    },
+    {
+     "w": "its",
+     "t": 51.117,
+     "end": 51.242
+    },
+    {
+     "w": "hundred",
+     "t": 51.267,
+     "end": 51.617
+    },
+    {
+     "w": "points",
+     "t": 51.642,
+     "end": 51.967
+    },
+    {
+     "w": "inside",
+     "t": 51.992,
+     "end": 52.892
+    },
+    {
+     "w": "two",
+     "t": 53.117,
+     "end": 53.292
+    },
+    {
+     "w": "points",
+     "t": 53.317,
+     "end": 53.617
+    },
+    {
+     "w": "off",
+     "t": 53.642,
+     "end": 54.117
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/41/41eb7b2ef0659129607d1c60.wav"
+  },
+  {
+   "index": 5,
+   "start": 54.233,
+   "duration": 6.65,
+   "end": 60.883,
+   "text": "A hundred random darts put forty-four inside: six points off. [pause 0.25] In two dimensions, the grid wins.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "A",
+     "t": 54.248,
+     "end": 54.335
+    },
+    {
+     "w": "hundred",
+     "t": 54.373,
+     "end": 54.773
+    },
+    {
+     "w": "random",
+     "t": 54.798,
+     "end": 55.223
+    },
+    {
+     "w": "darts",
+     "t": 55.248,
+     "end": 55.573
+    },
+    {
+     "w": "put",
+     "t": 55.598,
+     "end": 55.748
+    },
+    {
+     "w": "forty-four",
+     "t": 55.773,
+     "end": 56.298
+    },
+    {
+     "w": "inside",
+     "t": 56.323,
+     "end": 57.098
+    },
+    {
+     "w": "six",
+     "t": 57.323,
+     "end": 57.598
+    },
+    {
+     "w": "points",
+     "t": 57.623,
+     "end": 57.923
+    },
+    {
+     "w": "off",
+     "t": 57.948,
+     "end": 58.413
+    },
+    {
+     "w": "In",
+     "t": 58.693,
+     "end": 58.83
+    },
+    {
+     "w": "two",
+     "t": 58.868,
+     "end": 59.043
+    },
+    {
+     "w": "dimensions",
+     "t": 59.068,
+     "end": 59.818
+    },
+    {
+     "w": "the",
+     "t": 59.918,
+     "end": 59.993
+    },
+    {
+     "w": "grid",
+     "t": 60.018,
+     "end": 60.268
+    },
+    {
+     "w": "wins",
+     "t": 60.293,
+     "end": 60.883
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/ce/ce5c3db90139e81aa1a4cf27.wav"
+  },
+  {
+   "index": 6,
+   "start": 61.5,
+   "duration": 7.26,
+   "end": 68.76,
+   "text": "Now give each a million points, and add inputs. [pause 0.2] The disc becomes a ball that always covers exactly half the box.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Now",
+     "t": 61.555,
+     "end": 61.78
+    },
+    {
+     "w": "give",
+     "t": 61.805,
+     "end": 61.942
+    },
+    {
+     "w": "each",
+     "t": 61.955,
+     "end": 62.143
+    },
+    {
+     "w": "a",
+     "t": 62.155,
+     "end": 62.23
+    },
+    {
+     "w": "million",
+     "t": 62.255,
+     "end": 62.63
+    },
+    {
+     "w": "points",
+     "t": 62.655,
+     "end": 63.205
+    },
+    {
+     "w": "and",
+     "t": 63.33,
+     "end": 63.48
+    },
+    {
+     "w": "add",
+     "t": 63.53,
+     "end": 63.755
+    },
+    {
+     "w": "inputs",
+     "t": 63.78,
+     "end": 64.53
+    },
+    {
+     "w": "The",
+     "t": 64.745,
+     "end": 64.858
+    },
+    {
+     "w": "disc",
+     "t": 64.895,
+     "end": 65.245
+    },
+    {
+     "w": "becomes",
+     "t": 65.27,
+     "end": 65.632
+    },
+    {
+     "w": "a",
+     "t": 65.645,
+     "end": 65.732
+    },
+    {
+     "w": "ball",
+     "t": 65.77,
+     "end": 66.17
+    },
+    {
+     "w": "that",
+     "t": 66.195,
+     "end": 66.358
+    },
+    {
+     "w": "always",
+     "t": 66.395,
+     "end": 66.745
+    },
+    {
+     "w": "covers",
+     "t": 66.77,
+     "end": 67.17
+    },
+    {
+     "w": "exactly",
+     "t": 67.195,
+     "end": 67.795
+    },
+    {
+     "w": "half",
+     "t": 67.82,
+     "end": 68.058
+    },
+    {
+     "w": "the",
+     "t": 68.07,
+     "end": 68.145
+    },
+    {
+     "w": "box",
+     "t": 68.17,
+     "end": 68.76
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/8a/8a87795cc9c2bf3e1649c2c1.wav"
+  },
+  {
+   "index": 7,
+   "start": 68.867,
+   "duration": 8.62,
+   "end": 77.487,
+   "text": "The grid splits its million across the axes: a thousand values per axis in two dimensions, then a hundred, ten, three.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 68.892,
+     "end": 69.005
+    },
+    {
+     "w": "grid",
+     "t": 69.042,
+     "end": 69.329
+    },
+    {
+     "w": "splits",
+     "t": 69.367,
+     "end": 69.717
+    },
+    {
+     "w": "its",
+     "t": 69.742,
+     "end": 69.929
+    },
+    {
+     "w": "million",
+     "t": 69.967,
+     "end": 70.392
+    },
+    {
+     "w": "across",
+     "t": 70.417,
+     "end": 70.729
+    },
+    {
+     "w": "the",
+     "t": 70.742,
+     "end": 70.88
+    },
+    {
+     "w": "axes",
+     "t": 70.917,
+     "end": 71.942
+    },
+    {
+     "w": "a",
+     "t": 72.117,
+     "end": 72.217
+    },
+    {
+     "w": "thousand",
+     "t": 72.267,
+     "end": 72.742
+    },
+    {
+     "w": "values",
+     "t": 72.767,
+     "end": 73.242
+    },
+    {
+     "w": "per",
+     "t": 73.267,
+     "end": 73.442
+    },
+    {
+     "w": "axis",
+     "t": 73.492,
+     "end": 74.017
+    },
+    {
+     "w": "in",
+     "t": 74.042,
+     "end": 74.179
+    },
+    {
+     "w": "two",
+     "t": 74.217,
+     "end": 74.392
+    },
+    {
+     "w": "dimensions",
+     "t": 74.417,
+     "end": 75.367
+    },
+    {
+     "w": "then",
+     "t": 75.492,
+     "end": 75.617
+    },
+    {
+     "w": "a",
+     "t": 75.642,
+     "end": 75.729
+    },
+    {
+     "w": "hundred",
+     "t": 75.767,
+     "end": 76.342
+    },
+    {
+     "w": "ten",
+     "t": 76.517,
+     "end": 76.892
+    },
+    {
+     "w": "three",
+     "t": 77.017,
+     "end": 77.487
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/98/98586991b19578a1d08ba717.wav"
+  },
+  {
+   "index": 8,
+   "start": 77.6,
+   "duration": 8.46,
+   "end": 86.06,
+   "text": "From twenty dimensions on, just one: the centre, which sits inside the ball. [pause 0.15] So the grid says the ball fills the box: fifty points off.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "From",
+     "t": 77.635,
+     "end": 77.785
+    },
+    {
+     "w": "twenty",
+     "t": 77.81,
+     "end": 78.11
+    },
+    {
+     "w": "dimensions",
+     "t": 78.135,
+     "end": 78.66
+    },
+    {
+     "w": "on",
+     "t": 78.685,
+     "end": 78.91
+    },
+    {
+     "w": "just",
+     "t": 78.985,
+     "end": 79.21
+    },
+    {
+     "w": "one",
+     "t": 79.235,
+     "end": 79.835
+    },
+    {
+     "w": "the",
+     "t": 80.01,
+     "end": 80.135
+    },
+    {
+     "w": "centre",
+     "t": 80.185,
+     "end": 80.76
+    },
+    {
+     "w": "which",
+     "t": 80.86,
+     "end": 81.048
+    },
+    {
+     "w": "sits",
+     "t": 81.085,
+     "end": 81.335
+    },
+    {
+     "w": "inside",
+     "t": 81.36,
+     "end": 81.748
+    },
+    {
+     "w": "the",
+     "t": 81.76,
+     "end": 81.835
+    },
+    {
+     "w": "ball",
+     "t": 81.86,
+     "end": 82.36
+    },
+    {
+     "w": "So",
+     "t": 82.57,
+     "end": 82.658
+    },
+    {
+     "w": "the",
+     "t": 82.67,
+     "end": 82.745
+    },
+    {
+     "w": "grid",
+     "t": 82.77,
+     "end": 83.02
+    },
+    {
+     "w": "says",
+     "t": 83.045,
+     "end": 83.27
+    },
+    {
+     "w": "the",
+     "t": 83.295,
+     "end": 83.37
+    },
+    {
+     "w": "ball",
+     "t": 83.395,
+     "end": 83.682
+    },
+    {
+     "w": "fills",
+     "t": 83.72,
+     "end": 83.995
+    },
+    {
+     "w": "the",
+     "t": 84.02,
+     "end": 84.095
+    },
+    {
+     "w": "box",
+     "t": 84.12,
+     "end": 84.77
+    },
+    {
+     "w": "fifty",
+     "t": 84.945,
+     "end": 85.22
+    },
+    {
+     "w": "points",
+     "t": 85.245,
+     "end": 85.57
+    },
+    {
+     "w": "off",
+     "t": 85.595,
+     "end": 86.06
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/b0/b05b52a6dbd2fd376eb38ae9.wav"
+  },
+  {
+   "index": 9,
+   "start": 86.167,
+   "duration": 9.77,
+   "end": 95.937,
+   "text": "Even two values on nineteen of the axes, half a million points, is eighteen points off. [pause 0.25] The darts stay under a tenth of a point in every dimension.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Even",
+     "t": 86.177,
+     "end": 86.515
+    },
+    {
+     "w": "two",
+     "t": 86.552,
+     "end": 86.727
+    },
+    {
+     "w": "values",
+     "t": 86.752,
+     "end": 87.277
+    },
+    {
+     "w": "on",
+     "t": 87.302,
+     "end": 87.427
+    },
+    {
+     "w": "nineteen",
+     "t": 87.452,
+     "end": 87.865
+    },
+    {
+     "w": "of",
+     "t": 87.877,
+     "end": 87.939
+    },
+    {
+     "w": "the",
+     "t": 87.952,
+     "end": 88.064
+    },
+    {
+     "w": "axes",
+     "t": 88.102,
+     "end": 89.002
+    },
+    {
+     "w": "half",
+     "t": 89.177,
+     "end": 89.389
+    },
+    {
+     "w": "a",
+     "t": 89.402,
+     "end": 89.477
+    },
+    {
+     "w": "million",
+     "t": 89.502,
+     "end": 89.877
+    },
+    {
+     "w": "points",
+     "t": 89.902,
+     "end": 90.527
+    },
+    {
+     "w": "is",
+     "t": 90.677,
+     "end": 90.852
+    },
+    {
+     "w": "eighteen",
+     "t": 90.902,
+     "end": 91.452
+    },
+    {
+     "w": "points",
+     "t": 91.477,
+     "end": 91.777
+    },
+    {
+     "w": "off",
+     "t": 91.802,
+     "end": 92.257
+    },
+    {
+     "w": "The",
+     "t": 92.532,
+     "end": 92.632
+    },
+    {
+     "w": "darts",
+     "t": 92.657,
+     "end": 92.957
+    },
+    {
+     "w": "stay",
+     "t": 92.982,
+     "end": 93.357
+    },
+    {
+     "w": "under",
+     "t": 93.382,
+     "end": 93.544
+    },
+    {
+     "w": "a",
+     "t": 93.557,
+     "end": 93.607
+    },
+    {
+     "w": "tenth",
+     "t": 93.632,
+     "end": 93.895
+    },
+    {
+     "w": "of",
+     "t": 93.907,
+     "end": 93.969
+    },
+    {
+     "w": "a",
+     "t": 93.982,
+     "end": 94.032
+    },
+    {
+     "w": "point",
+     "t": 94.057,
+     "end": 94.657
+    },
+    {
+     "w": "in",
+     "t": 94.707,
+     "end": 94.845
+    },
+    {
+     "w": "every",
+     "t": 94.882,
+     "end": 95.182
+    },
+    {
+     "w": "dimension",
+     "t": 95.207,
+     "end": 95.937
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/ec/ec04ecc464d6f1d270c7cc82.wav"
+  },
+  {
+   "index": 10,
+   "start": 96.533,
+   "duration": 6.66,
+   "end": 103.193,
+   "text": "Look at the shadows on one axis: the grid's hundred points cast ten, a hundred darts cast a hundred.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Look",
+     "t": 96.573,
+     "end": 96.711
+    },
+    {
+     "w": "at",
+     "t": 96.723,
+     "end": 96.785
+    },
+    {
+     "w": "the",
+     "t": 96.798,
+     "end": 96.923
+    },
+    {
+     "w": "shadows",
+     "t": 96.973,
+     "end": 97.473
+    },
+    {
+     "w": "on",
+     "t": 97.498,
+     "end": 97.673
+    },
+    {
+     "w": "one",
+     "t": 97.698,
+     "end": 97.898
+    },
+    {
+     "w": "axis",
+     "t": 97.923,
+     "end": 98.898
+    },
+    {
+     "w": "the",
+     "t": 99.098,
+     "end": 99.173
+    },
+    {
+     "w": "grid's",
+     "t": 99.198,
+     "end": 99.498
+    },
+    {
+     "w": "hundred",
+     "t": 99.523,
+     "end": 99.898
+    },
+    {
+     "w": "points",
+     "t": 99.923,
+     "end": 100.273
+    },
+    {
+     "w": "cast",
+     "t": 100.298,
+     "end": 100.623
+    },
+    {
+     "w": "ten",
+     "t": 100.648,
+     "end": 101.198
+    },
+    {
+     "w": "a",
+     "t": 101.373,
+     "end": 101.448
+    },
+    {
+     "w": "hundred",
+     "t": 101.473,
+     "end": 101.873
+    },
+    {
+     "w": "darts",
+     "t": 101.898,
+     "end": 102.198
+    },
+    {
+     "w": "cast",
+     "t": 102.223,
+     "end": 102.511
+    },
+    {
+     "w": "a",
+     "t": 102.523,
+     "end": 102.573
+    },
+    {
+     "w": "hundred",
+     "t": 102.598,
+     "end": 103.193
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/57/578223d08dd557c64100adae.wav"
+  },
+  {
+   "index": 11,
+   "start": 103.3,
+   "duration": 4.84,
+   "end": 108.14,
+   "text": "With N points over d axes, [pause 0.4] each axis gets the d-th root of N. [pause 0.3]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "With",
+     "t": 103.3,
+     "end": 103.488
+    },
+    {
+     "w": "N",
+     "t": 103.525,
+     "end": 103.7
+    },
+    {
+     "w": "points",
+     "t": 103.725,
+     "end": 103.988
+    },
+    {
+     "w": "over",
+     "t": 104.0,
+     "end": 104.2
+    },
+    {
+     "w": "d",
+     "t": 104.225,
+     "end": 104.412
+    },
+    {
+     "w": "axes",
+     "t": 104.45,
+     "end": 105.2
+    },
+    {
+     "w": "each",
+     "t": 105.605,
+     "end": 105.842
+    },
+    {
+     "w": "axis",
+     "t": 105.88,
+     "end": 106.33
+    },
+    {
+     "w": "gets",
+     "t": 106.355,
+     "end": 106.58
+    },
+    {
+     "w": "the",
+     "t": 106.605,
+     "end": 106.705
+    },
+    {
+     "w": "d-th",
+     "t": 106.73,
+     "end": 107.005
+    },
+    {
+     "w": "root",
+     "t": 107.03,
+     "end": 107.217
+    },
+    {
+     "w": "of",
+     "t": 107.23,
+     "end": 107.368
+    },
+    {
+     "w": "N.",
+     "t": 107.405,
+     "end": 107.84
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/61/619e5c033f684f7f56d785b8.wav"
+  },
+  {
+   "index": 12,
+   "start": 108.433,
+   "duration": 11.13,
+   "end": 119.563,
+   "text": "But shadows alone are not the fix. [pause 0.15] A million points on the diagonal, each one a flat line here, give every axis a million values, and still miss by eight points. [pause 0.6]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "But",
+     "t": 108.433,
+     "end": 108.588
+    },
+    {
+     "w": "shadows",
+     "t": 108.638,
+     "end": 109.113
+    },
+    {
+     "w": "alone",
+     "t": 109.138,
+     "end": 109.513
+    },
+    {
+     "w": "are",
+     "t": 109.538,
+     "end": 109.613
+    },
+    {
+     "w": "not",
+     "t": 109.638,
+     "end": 109.825
+    },
+    {
+     "w": "the",
+     "t": 109.838,
+     "end": 109.95
+    },
+    {
+     "w": "fix",
+     "t": 109.988,
+     "end": 110.543
+    },
+    {
+     "w": "A",
+     "t": 110.713,
+     "end": 110.813
+    },
+    {
+     "w": "million",
+     "t": 110.863,
+     "end": 111.275
+    },
+    {
+     "w": "points",
+     "t": 111.313,
+     "end": 111.651
+    },
+    {
+     "w": "on",
+     "t": 111.663,
+     "end": 111.751
+    },
+    {
+     "w": "the",
+     "t": 111.763,
+     "end": 111.838
+    },
+    {
+     "w": "diagonal",
+     "t": 111.863,
+     "end": 112.688
+    },
+    {
+     "w": "each",
+     "t": 112.838,
+     "end": 113.063
+    },
+    {
+     "w": "one",
+     "t": 113.088,
+     "end": 113.263
+    },
+    {
+     "w": "a",
+     "t": 113.288,
+     "end": 113.375
+    },
+    {
+     "w": "flat",
+     "t": 113.413,
+     "end": 113.713
+    },
+    {
+     "w": "line",
+     "t": 113.738,
+     "end": 114.013
+    },
+    {
+     "w": "here",
+     "t": 114.038,
+     "end": 114.588
+    },
+    {
+     "w": "give",
+     "t": 114.738,
+     "end": 114.951
+    },
+    {
+     "w": "every",
+     "t": 114.988,
+     "end": 115.275
+    },
+    {
+     "w": "axis",
+     "t": 115.313,
+     "end": 115.788
+    },
+    {
+     "w": "a",
+     "t": 115.813,
+     "end": 115.9
+    },
+    {
+     "w": "million",
+     "t": 115.938,
+     "end": 116.288
+    },
+    {
+     "w": "values",
+     "t": 116.313,
+     "end": 117.113
+    },
+    {
+     "w": "and",
+     "t": 117.238,
+     "end": 117.375
+    },
+    {
+     "w": "still",
+     "t": 117.413,
+     "end": 117.663
+    },
+    {
+     "w": "miss",
+     "t": 117.688,
+     "end": 117.938
+    },
+    {
+     "w": "by",
+     "t": 117.963,
+     "end": 118.151
+    },
+    {
+     "w": "eight",
+     "t": 118.188,
+     "end": 118.363
+    },
+    {
+     "w": "points",
+     "t": 118.388,
+     "end": 118.963
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/9d/9d171210f3870d12621a0cd2.wav"
+  },
+  {
+   "index": 13,
+   "start": 119.8,
+   "duration": 11.99,
+   "end": 131.79,
+   "text": "Darts win another way: each one lands inside with a chance equal to the answer, on its own, in two dimensions or a hundred. [pause 0.2] Their estimate is a share of heads in N coin flips.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Darts",
+     "t": 119.86,
+     "end": 120.235
+    },
+    {
+     "w": "win",
+     "t": 120.26,
+     "end": 120.385
+    },
+    {
+     "w": "another",
+     "t": 120.41,
+     "end": 120.735
+    },
+    {
+     "w": "way",
+     "t": 120.76,
+     "end": 121.46
+    },
+    {
+     "w": "each",
+     "t": 121.685,
+     "end": 121.935
+    },
+    {
+     "w": "one",
+     "t": 121.96,
+     "end": 122.16
+    },
+    {
+     "w": "lands",
+     "t": 122.185,
+     "end": 122.51
+    },
+    {
+     "w": "inside",
+     "t": 122.535,
+     "end": 123.135
+    },
+    {
+     "w": "with",
+     "t": 123.16,
+     "end": 123.272
+    },
+    {
+     "w": "a",
+     "t": 123.285,
+     "end": 123.385
+    },
+    {
+     "w": "chance",
+     "t": 123.435,
+     "end": 123.848
+    },
+    {
+     "w": "equal",
+     "t": 123.885,
+     "end": 124.21
+    },
+    {
+     "w": "to",
+     "t": 124.235,
+     "end": 124.298
+    },
+    {
+     "w": "the",
+     "t": 124.31,
+     "end": 124.435
+    },
+    {
+     "w": "answer",
+     "t": 124.46,
+     "end": 125.21
+    },
+    {
+     "w": "on",
+     "t": 125.36,
+     "end": 125.472
+    },
+    {
+     "w": "its",
+     "t": 125.485,
+     "end": 125.66
+    },
+    {
+     "w": "own",
+     "t": 125.685,
+     "end": 126.235
+    },
+    {
+     "w": "in",
+     "t": 126.385,
+     "end": 126.522
+    },
+    {
+     "w": "two",
+     "t": 126.56,
+     "end": 126.735
+    },
+    {
+     "w": "dimensions",
+     "t": 126.76,
+     "end": 127.498
+    },
+    {
+     "w": "or",
+     "t": 127.535,
+     "end": 127.635
+    },
+    {
+     "w": "a",
+     "t": 127.66,
+     "end": 127.71
+    },
+    {
+     "w": "hundred",
+     "t": 127.735,
+     "end": 128.34
+    },
+    {
+     "w": "Their",
+     "t": 128.565,
+     "end": 128.777
+    },
+    {
+     "w": "estimate",
+     "t": 128.815,
+     "end": 129.515
+    },
+    {
+     "w": "is",
+     "t": 129.565,
+     "end": 129.652
+    },
+    {
+     "w": "a",
+     "t": 129.665,
+     "end": 129.765
+    },
+    {
+     "w": "share",
+     "t": 129.815,
+     "end": 130.002
+    },
+    {
+     "w": "of",
+     "t": 130.015,
+     "end": 130.09
+    },
+    {
+     "w": "heads",
+     "t": 130.115,
+     "end": 130.515
+    },
+    {
+     "w": "in",
+     "t": 130.54,
+     "end": 130.665
+    },
+    {
+     "w": "N",
+     "t": 130.69,
+     "end": 130.865
+    },
+    {
+     "w": "coin",
+     "t": 130.89,
+     "end": 131.202
+    },
+    {
+     "w": "flips",
+     "t": 131.24,
+     "end": 131.79
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/d3/d358ae5903194e715d3d369f.wav"
+  },
+  {
+   "index": 14,
+   "start": 131.9,
+   "duration": 6.64,
+   "end": 138.54,
+   "text": "One flip is zero or one. [pause 0.15] Its average is a half, and every flip misses that by exactly a half.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "One",
+     "t": 131.94,
+     "end": 132.165
+    },
+    {
+     "w": "flip",
+     "t": 132.19,
+     "end": 132.44
+    },
+    {
+     "w": "is",
+     "t": 132.465,
+     "end": 132.602
+    },
+    {
+     "w": "zero",
+     "t": 132.64,
+     "end": 133.015
+    },
+    {
+     "w": "or",
+     "t": 133.04,
+     "end": 133.165
+    },
+    {
+     "w": "one",
+     "t": 133.19,
+     "end": 133.65
+    },
+    {
+     "w": "Its",
+     "t": 133.8,
+     "end": 134.028
+    },
+    {
+     "w": "average",
+     "t": 134.065,
+     "end": 134.652
+    },
+    {
+     "w": "is",
+     "t": 134.69,
+     "end": 134.79
+    },
+    {
+     "w": "a",
+     "t": 134.815,
+     "end": 134.902
+    },
+    {
+     "w": "half",
+     "t": 134.94,
+     "end": 135.615
+    },
+    {
+     "w": "and",
+     "t": 135.74,
+     "end": 135.89
+    },
+    {
+     "w": "every",
+     "t": 135.94,
+     "end": 136.24
+    },
+    {
+     "w": "flip",
+     "t": 136.29,
+     "end": 136.54
+    },
+    {
+     "w": "misses",
+     "t": 136.565,
+     "end": 137.015
+    },
+    {
+     "w": "that",
+     "t": 137.04,
+     "end": 137.165
+    },
+    {
+     "w": "by",
+     "t": 137.19,
+     "end": 137.34
+    },
+    {
+     "w": "exactly",
+     "t": 137.365,
+     "end": 137.928
+    },
+    {
+     "w": "a",
+     "t": 137.94,
+     "end": 137.99
+    },
+    {
+     "w": "half",
+     "t": 138.015,
+     "end": 138.54
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/7c/7cbba5ba4279ceb83c4180e2.wav"
+  },
+  {
+   "index": 15,
+   "start": 138.9,
+   "duration": 11.86,
+   "end": 150.76,
+   "text": "Repeat the hundred-dart experiment three hundred times. [pause 0.2] In two dimensions the estimates spread this wide; in a hundred, just as wide. [pause 0.25] Quadruple the darts, and both get twice as narrow.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Repeat",
+     "t": 138.915,
+     "end": 139.34
+    },
+    {
+     "w": "the",
+     "t": 139.365,
+     "end": 139.465
+    },
+    {
+     "w": "hundred-dart",
+     "t": 139.49,
+     "end": 140.065
+    },
+    {
+     "w": "experiment",
+     "t": 140.09,
+     "end": 140.84
+    },
+    {
+     "w": "three",
+     "t": 140.915,
+     "end": 141.165
+    },
+    {
+     "w": "hundred",
+     "t": 141.19,
+     "end": 141.515
+    },
+    {
+     "w": "times",
+     "t": 141.54,
+     "end": 142.23
+    },
+    {
+     "w": "In",
+     "t": 142.46,
+     "end": 142.598
+    },
+    {
+     "w": "two",
+     "t": 142.635,
+     "end": 142.81
+    },
+    {
+     "w": "dimensions",
+     "t": 142.835,
+     "end": 143.51
+    },
+    {
+     "w": "the",
+     "t": 143.535,
+     "end": 143.673
+    },
+    {
+     "w": "estimates",
+     "t": 143.71,
+     "end": 144.185
+    },
+    {
+     "w": "spread",
+     "t": 144.21,
+     "end": 144.485
+    },
+    {
+     "w": "this",
+     "t": 144.51,
+     "end": 144.685
+    },
+    {
+     "w": "wide",
+     "t": 144.71,
+     "end": 145.36
+    },
+    {
+     "w": "in",
+     "t": 145.51,
+     "end": 145.585
+    },
+    {
+     "w": "a",
+     "t": 145.61,
+     "end": 145.685
+    },
+    {
+     "w": "hundred",
+     "t": 145.71,
+     "end": 146.285
+    },
+    {
+     "w": "just",
+     "t": 146.435,
+     "end": 146.685
+    },
+    {
+     "w": "as",
+     "t": 146.71,
+     "end": 146.848
+    },
+    {
+     "w": "wide",
+     "t": 146.885,
+     "end": 147.44
+    },
+    {
+     "w": "Quadruple",
+     "t": 147.69,
+     "end": 148.202
+    },
+    {
+     "w": "the",
+     "t": 148.215,
+     "end": 148.29
+    },
+    {
+     "w": "darts",
+     "t": 148.315,
+     "end": 148.89
+    },
+    {
+     "w": "and",
+     "t": 149.015,
+     "end": 149.115
+    },
+    {
+     "w": "both",
+     "t": 149.14,
+     "end": 149.415
+    },
+    {
+     "w": "get",
+     "t": 149.44,
+     "end": 149.602
+    },
+    {
+     "w": "twice",
+     "t": 149.64,
+     "end": 150.04
+    },
+    {
+     "w": "as",
+     "t": 150.065,
+     "end": 150.19
+    },
+    {
+     "w": "narrow",
+     "t": 150.215,
+     "end": 150.76
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/1a/1aa5790c33046bdc26f0ce74.wav"
+  },
+  {
+   "index": 16,
+   "start": 150.867,
+   "duration": 15.33,
+   "end": 166.197,
+   "text": "Each dart misses by a half, up or down at random, so the misses partly cancel: sixteen darts stray about four halves, not sixteen. [pause 0.25] N darts stray about root N halves; per dart, that's a half over the square root of N. [pause 0.8]",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Each",
+     "t": 150.887,
+     "end": 151.174
+    },
+    {
+     "w": "dart",
+     "t": 151.212,
+     "end": 151.462
+    },
+    {
+     "w": "misses",
+     "t": 151.487,
+     "end": 151.837
+    },
+    {
+     "w": "by",
+     "t": 151.862,
+     "end": 152.012
+    },
+    {
+     "w": "a",
+     "t": 152.037,
+     "end": 152.112
+    },
+    {
+     "w": "half",
+     "t": 152.137,
+     "end": 152.562
+    },
+    {
+     "w": "up",
+     "t": 152.662,
+     "end": 152.837
+    },
+    {
+     "w": "or",
+     "t": 152.862,
+     "end": 152.987
+    },
+    {
+     "w": "down",
+     "t": 153.012,
+     "end": 153.274
+    },
+    {
+     "w": "at",
+     "t": 153.287,
+     "end": 153.362
+    },
+    {
+     "w": "random",
+     "t": 153.387,
+     "end": 154.087
+    },
+    {
+     "w": "so",
+     "t": 154.212,
+     "end": 154.362
+    },
+    {
+     "w": "the",
+     "t": 154.387,
+     "end": 154.462
+    },
+    {
+     "w": "misses",
+     "t": 154.487,
+     "end": 154.824
+    },
+    {
+     "w": "partly",
+     "t": 154.862,
+     "end": 155.237
+    },
+    {
+     "w": "cancel",
+     "t": 155.262,
+     "end": 156.212
+    },
+    {
+     "w": "sixteen",
+     "t": 156.437,
+     "end": 156.862
+    },
+    {
+     "w": "darts",
+     "t": 156.887,
+     "end": 157.162
+    },
+    {
+     "w": "stray",
+     "t": 157.187,
+     "end": 157.537
+    },
+    {
+     "w": "about",
+     "t": 157.562,
+     "end": 157.849
+    },
+    {
+     "w": "four",
+     "t": 157.887,
+     "end": 158.112
+    },
+    {
+     "w": "halves",
+     "t": 158.137,
+     "end": 158.662
+    },
+    {
+     "w": "not",
+     "t": 158.787,
+     "end": 159.012
+    },
+    {
+     "w": "sixteen",
+     "t": 159.037,
+     "end": 159.787
+    },
+    {
+     "w": "N",
+     "t": 160.057,
+     "end": 160.232
+    },
+    {
+     "w": "darts",
+     "t": 160.257,
+     "end": 160.557
+    },
+    {
+     "w": "stray",
+     "t": 160.582,
+     "end": 160.907
+    },
+    {
+     "w": "about",
+     "t": 160.932,
+     "end": 161.207
+    },
+    {
+     "w": "root",
+     "t": 161.232,
+     "end": 161.432
+    },
+    {
+     "w": "N",
+     "t": 161.457,
+     "end": 161.607
+    },
+    {
+     "w": "halves",
+     "t": 161.632,
+     "end": 162.357
+    },
+    {
+     "w": "per",
+     "t": 162.507,
+     "end": 162.682
+    },
+    {
+     "w": "dart",
+     "t": 162.707,
+     "end": 163.257
+    },
+    {
+     "w": "that's",
+     "t": 163.382,
+     "end": 163.619
+    },
+    {
+     "w": "a",
+     "t": 163.632,
+     "end": 163.682
+    },
+    {
+     "w": "half",
+     "t": 163.707,
+     "end": 163.969
+    },
+    {
+     "w": "over",
+     "t": 163.982,
+     "end": 164.169
+    },
+    {
+     "w": "the",
+     "t": 164.182,
+     "end": 164.257
+    },
+    {
+     "w": "square",
+     "t": 164.282,
+     "end": 164.632
+    },
+    {
+     "w": "root",
+     "t": 164.657,
+     "end": 164.819
+    },
+    {
+     "w": "of",
+     "t": 164.832,
+     "end": 164.932
+    },
+    {
+     "w": "N.",
+     "t": 164.957,
+     "end": 165.397
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/5e/5ee6833b22c068a4b32702a1.wav"
+  },
+  {
+   "index": 17,
+   "start": 166.3,
+   "duration": 11.25,
+   "end": 177.55,
+   "text": "Any other function swaps that half for its own spread, sigma. [pause 0.6] The root N stays, and there's no d in it. [pause 0.2] A grid's error, even for smooth functions, has d in its exponent.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Any",
+     "t": 166.32,
+     "end": 166.52
+    },
+    {
+     "w": "other",
+     "t": 166.545,
+     "end": 166.77
+    },
+    {
+     "w": "function",
+     "t": 166.795,
+     "end": 167.282
+    },
+    {
+     "w": "swaps",
+     "t": 167.32,
+     "end": 167.658
+    },
+    {
+     "w": "that",
+     "t": 167.67,
+     "end": 167.845
+    },
+    {
+     "w": "half",
+     "t": 167.87,
+     "end": 168.145
+    },
+    {
+     "w": "for",
+     "t": 168.17,
+     "end": 168.258
+    },
+    {
+     "w": "its",
+     "t": 168.27,
+     "end": 168.37
+    },
+    {
+     "w": "own",
+     "t": 168.395,
+     "end": 168.595
+    },
+    {
+     "w": "spread",
+     "t": 168.62,
+     "end": 169.195
+    },
+    {
+     "w": "sigma",
+     "t": 169.42,
+     "end": 170.0
+    },
+    {
+     "w": "The",
+     "t": 170.625,
+     "end": 170.725
+    },
+    {
+     "w": "root",
+     "t": 170.75,
+     "end": 170.95
+    },
+    {
+     "w": "N",
+     "t": 170.975,
+     "end": 171.15
+    },
+    {
+     "w": "stays",
+     "t": 171.175,
+     "end": 171.8
+    },
+    {
+     "w": "and",
+     "t": 171.925,
+     "end": 172.012
+    },
+    {
+     "w": "there's",
+     "t": 172.025,
+     "end": 172.225
+    },
+    {
+     "w": "no",
+     "t": 172.25,
+     "end": 172.4
+    },
+    {
+     "w": "d",
+     "t": 172.425,
+     "end": 172.625
+    },
+    {
+     "w": "in",
+     "t": 172.65,
+     "end": 172.775
+    },
+    {
+     "w": "it",
+     "t": 172.8,
+     "end": 173.11
+    },
+    {
+     "w": "A",
+     "t": 173.325,
+     "end": 173.4
+    },
+    {
+     "w": "grid's",
+     "t": 173.425,
+     "end": 173.725
+    },
+    {
+     "w": "error",
+     "t": 173.75,
+     "end": 174.225
+    },
+    {
+     "w": "even",
+     "t": 174.35,
+     "end": 174.625
+    },
+    {
+     "w": "for",
+     "t": 174.65,
+     "end": 174.788
+    },
+    {
+     "w": "smooth",
+     "t": 174.825,
+     "end": 175.15
+    },
+    {
+     "w": "functions",
+     "t": 175.175,
+     "end": 175.95
+    },
+    {
+     "w": "has",
+     "t": 176.05,
+     "end": 176.238
+    },
+    {
+     "w": "d",
+     "t": 176.275,
+     "end": 176.55
+    },
+    {
+     "w": "in",
+     "t": 176.575,
+     "end": 176.638
+    },
+    {
+     "w": "its",
+     "t": 176.65,
+     "end": 176.8
+    },
+    {
+     "w": "exponent",
+     "t": 176.825,
+     "end": 177.55
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/68/689320d8f25383afc1f19cc1.wav"
+  },
+  {
+   "index": 18,
+   "start": 179.167,
+   "duration": 15.85,
+   "end": 195.017,
+   "text": "So, back to our ball, with a million darts, in any dimension: how far off is a typical estimate? [pause 1.5] One half over a thousand: five hundredths of a point. [pause 0.8] Two runs in three land closer; all six of ours did.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "So",
+     "t": 179.247,
+     "end": 179.522
+    },
+    {
+     "w": "back",
+     "t": 179.622,
+     "end": 179.872
+    },
+    {
+     "w": "to",
+     "t": 179.897,
+     "end": 179.959
+    },
+    {
+     "w": "our",
+     "t": 179.972,
+     "end": 180.097
+    },
+    {
+     "w": "ball",
+     "t": 180.122,
+     "end": 180.522
+    },
+    {
+     "w": "with",
+     "t": 180.622,
+     "end": 180.735
+    },
+    {
+     "w": "a",
+     "t": 180.747,
+     "end": 180.847
+    },
+    {
+     "w": "million",
+     "t": 180.897,
+     "end": 181.297
+    },
+    {
+     "w": "darts",
+     "t": 181.322,
+     "end": 181.772
+    },
+    {
+     "w": "in",
+     "t": 181.872,
+     "end": 181.997
+    },
+    {
+     "w": "any",
+     "t": 182.022,
+     "end": 182.222
+    },
+    {
+     "w": "dimension",
+     "t": 182.247,
+     "end": 183.197
+    },
+    {
+     "w": "how",
+     "t": 183.422,
+     "end": 183.659
+    },
+    {
+     "w": "far",
+     "t": 183.697,
+     "end": 183.947
+    },
+    {
+     "w": "off",
+     "t": 183.972,
+     "end": 184.272
+    },
+    {
+     "w": "is",
+     "t": 184.297,
+     "end": 184.397
+    },
+    {
+     "w": "a",
+     "t": 184.422,
+     "end": 184.509
+    },
+    {
+     "w": "typical",
+     "t": 184.547,
+     "end": 184.947
+    },
+    {
+     "w": "estimate",
+     "t": 184.972,
+     "end": 185.617
+    },
+    {
+     "w": "One",
+     "t": 187.182,
+     "end": 187.407
+    },
+    {
+     "w": "half",
+     "t": 187.432,
+     "end": 187.695
+    },
+    {
+     "w": "over",
+     "t": 187.707,
+     "end": 187.895
+    },
+    {
+     "w": "a",
+     "t": 187.907,
+     "end": 187.982
+    },
+    {
+     "w": "thousand",
+     "t": 188.007,
+     "end": 188.757
+    },
+    {
+     "w": "five",
+     "t": 188.982,
+     "end": 189.282
+    },
+    {
+     "w": "hundredths",
+     "t": 189.307,
+     "end": 189.719
+    },
+    {
+     "w": "of",
+     "t": 189.732,
+     "end": 189.795
+    },
+    {
+     "w": "a",
+     "t": 189.807,
+     "end": 189.857
+    },
+    {
+     "w": "point",
+     "t": 189.882,
+     "end": 190.477
+    },
+    {
+     "w": "Two",
+     "t": 191.307,
+     "end": 191.619
+    },
+    {
+     "w": "runs",
+     "t": 191.657,
+     "end": 192.007
+    },
+    {
+     "w": "in",
+     "t": 192.032,
+     "end": 192.17
+    },
+    {
+     "w": "three",
+     "t": 192.207,
+     "end": 192.432
+    },
+    {
+     "w": "land",
+     "t": 192.457,
+     "end": 192.732
+    },
+    {
+     "w": "closer",
+     "t": 192.757,
+     "end": 193.407
+    },
+    {
+     "w": "all",
+     "t": 193.607,
+     "end": 193.795
+    },
+    {
+     "w": "six",
+     "t": 193.832,
+     "end": 194.045
+    },
+    {
+     "w": "of",
+     "t": 194.057,
+     "end": 194.132
+    },
+    {
+     "w": "ours",
+     "t": 194.157,
+     "end": 194.532
+    },
+    {
+     "w": "did",
+     "t": 194.557,
+     "end": 195.017
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/a1/a154801bf42be349a6da1790.wav"
+  },
+  {
+   "index": 19,
+   "start": 195.6,
+   "duration": 16.05,
+   "end": 211.65,
+   "text": "In 2012, Bergstra and Bengio found that random search tuned neural networks as well as grid search, in a fraction of the time. [pause 0.2] If one setting matters most, nine grid trials test three values of it; nine random trials test nine.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "In",
+     "t": 195.63,
+     "end": 195.78
+    },
+    {
+     "w": "2012",
+     "t": 195.805,
+     "end": 196.755
+    },
+    {
+     "w": "Bergstra",
+     "t": 196.93,
+     "end": 197.38
+    },
+    {
+     "w": "and",
+     "t": 197.405,
+     "end": 197.505
+    },
+    {
+     "w": "Bengio",
+     "t": 197.53,
+     "end": 198.418
+    },
+    {
+     "w": "found",
+     "t": 198.48,
+     "end": 198.742
+    },
+    {
+     "w": "that",
+     "t": 198.755,
+     "end": 198.943
+    },
+    {
+     "w": "random",
+     "t": 198.98,
+     "end": 199.418
+    },
+    {
+     "w": "search",
+     "t": 199.455,
+     "end": 199.792
+    },
+    {
+     "w": "tuned",
+     "t": 199.83,
+     "end": 200.18
+    },
+    {
+     "w": "neural",
+     "t": 200.23,
+     "end": 200.53
+    },
+    {
+     "w": "networks",
+     "t": 200.555,
+     "end": 201.042
+    },
+    {
+     "w": "as",
+     "t": 201.08,
+     "end": 201.218
+    },
+    {
+     "w": "well",
+     "t": 201.255,
+     "end": 201.455
+    },
+    {
+     "w": "as",
+     "t": 201.48,
+     "end": 201.618
+    },
+    {
+     "w": "grid",
+     "t": 201.655,
+     "end": 201.918
+    },
+    {
+     "w": "search",
+     "t": 201.955,
+     "end": 202.63
+    },
+    {
+     "w": "in",
+     "t": 202.78,
+     "end": 202.842
+    },
+    {
+     "w": "a",
+     "t": 202.855,
+     "end": 202.942
+    },
+    {
+     "w": "fraction",
+     "t": 202.98,
+     "end": 203.455
+    },
+    {
+     "w": "of",
+     "t": 203.48,
+     "end": 203.542
+    },
+    {
+     "w": "the",
+     "t": 203.555,
+     "end": 203.63
+    },
+    {
+     "w": "time",
+     "t": 203.655,
+     "end": 204.23
+    },
+    {
+     "w": "If",
+     "t": 204.43,
+     "end": 204.585
+    },
+    {
+     "w": "one",
+     "t": 204.61,
+     "end": 204.822
+    },
+    {
+     "w": "setting",
+     "t": 204.86,
+     "end": 205.185
+    },
+    {
+     "w": "matters",
+     "t": 205.21,
+     "end": 205.61
+    },
+    {
+     "w": "most",
+     "t": 205.635,
+     "end": 206.31
+    },
+    {
+     "w": "nine",
+     "t": 206.51,
+     "end": 206.835
+    },
+    {
+     "w": "grid",
+     "t": 206.86,
+     "end": 207.085
+    },
+    {
+     "w": "trials",
+     "t": 207.11,
+     "end": 207.485
+    },
+    {
+     "w": "test",
+     "t": 207.51,
+     "end": 207.86
+    },
+    {
+     "w": "three",
+     "t": 207.91,
+     "end": 208.135
+    },
+    {
+     "w": "values",
+     "t": 208.16,
+     "end": 208.635
+    },
+    {
+     "w": "of",
+     "t": 208.66,
+     "end": 208.772
+    },
+    {
+     "w": "it",
+     "t": 208.81,
+     "end": 209.335
+    },
+    {
+     "w": "nine",
+     "t": 209.535,
+     "end": 209.86
+    },
+    {
+     "w": "random",
+     "t": 209.885,
+     "end": 210.285
+    },
+    {
+     "w": "trials",
+     "t": 210.31,
+     "end": 210.76
+    },
+    {
+     "w": "test",
+     "t": 210.785,
+     "end": 211.085
+    },
+    {
+     "w": "nine",
+     "t": 211.11,
+     "end": 211.65
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/ab/ab7171551264d69f6a7f7776.wav"
+  },
+  {
+   "index": 20,
+   "start": 212.233,
+   "duration": 16.55,
+   "end": 228.783,
+   "text": "Darts do have a blind spot: tiny answers. [pause 0.2] By thirty dimensions, a radius-one ball fills two parts in a hundred trillion of the box. [pause 0.2] Below this line, a million darts expect under one hit, so they usually report zero: off by the whole answer.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "Darts",
+     "t": 212.293,
+     "end": 212.618
+    },
+    {
+     "w": "do",
+     "t": 212.643,
+     "end": 212.768
+    },
+    {
+     "w": "have",
+     "t": 212.793,
+     "end": 212.931
+    },
+    {
+     "w": "a",
+     "t": 212.943,
+     "end": 212.993
+    },
+    {
+     "w": "blind",
+     "t": 213.018,
+     "end": 213.368
+    },
+    {
+     "w": "spot",
+     "t": 213.393,
+     "end": 213.968
+    },
+    {
+     "w": "tiny",
+     "t": 214.143,
+     "end": 214.493
+    },
+    {
+     "w": "answers",
+     "t": 214.518,
+     "end": 215.243
+    },
+    {
+     "w": "By",
+     "t": 215.443,
+     "end": 215.663
+    },
+    {
+     "w": "thirty",
+     "t": 215.713,
+     "end": 216.013
+    },
+    {
+     "w": "dimensions",
+     "t": 216.038,
+     "end": 217.038
+    },
+    {
+     "w": "a",
+     "t": 217.213,
+     "end": 217.301
+    },
+    {
+     "w": "radius-one",
+     "t": 217.338,
+     "end": 218.013
+    },
+    {
+     "w": "ball",
+     "t": 218.038,
+     "end": 218.375
+    },
+    {
+     "w": "fills",
+     "t": 218.413,
+     "end": 218.751
+    },
+    {
+     "w": "two",
+     "t": 218.788,
+     "end": 218.975
+    },
+    {
+     "w": "parts",
+     "t": 219.013,
+     "end": 219.413
+    },
+    {
+     "w": "in",
+     "t": 219.438,
+     "end": 219.501
+    },
+    {
+     "w": "a",
+     "t": 219.513,
+     "end": 219.601
+    },
+    {
+     "w": "hundred",
+     "t": 219.638,
+     "end": 220.051
+    },
+    {
+     "w": "trillion",
+     "t": 220.088,
+     "end": 220.475
+    },
+    {
+     "w": "of",
+     "t": 220.488,
+     "end": 220.55
+    },
+    {
+     "w": "the",
+     "t": 220.563,
+     "end": 220.638
+    },
+    {
+     "w": "box",
+     "t": 220.663,
+     "end": 221.263
+    },
+    {
+     "w": "Below",
+     "t": 221.463,
+     "end": 221.763
+    },
+    {
+     "w": "this",
+     "t": 221.788,
+     "end": 221.963
+    },
+    {
+     "w": "line",
+     "t": 221.988,
+     "end": 222.438
+    },
+    {
+     "w": "a",
+     "t": 222.588,
+     "end": 222.688
+    },
+    {
+     "w": "million",
+     "t": 222.738,
+     "end": 223.113
+    },
+    {
+     "w": "darts",
+     "t": 223.138,
+     "end": 223.488
+    },
+    {
+     "w": "expect",
+     "t": 223.513,
+     "end": 223.951
+    },
+    {
+     "w": "under",
+     "t": 223.963,
+     "end": 224.163
+    },
+    {
+     "w": "one",
+     "t": 224.188,
+     "end": 224.388
+    },
+    {
+     "w": "hit",
+     "t": 224.413,
+     "end": 224.938
+    },
+    {
+     "w": "so",
+     "t": 225.088,
+     "end": 225.238
+    },
+    {
+     "w": "they",
+     "t": 225.263,
+     "end": 225.438
+    },
+    {
+     "w": "usually",
+     "t": 225.488,
+     "end": 225.938
+    },
+    {
+     "w": "report",
+     "t": 225.963,
+     "end": 226.363
+    },
+    {
+     "w": "zero",
+     "t": 226.388,
+     "end": 227.063
+    },
+    {
+     "w": "off",
+     "t": 227.338,
+     "end": 227.588
+    },
+    {
+     "w": "by",
+     "t": 227.613,
+     "end": 227.763
+    },
+    {
+     "w": "the",
+     "t": 227.788,
+     "end": 227.863
+    },
+    {
+     "w": "whole",
+     "t": 227.888,
+     "end": 228.113
+    },
+    {
+     "w": "answer",
+     "t": 228.138,
+     "end": 228.783
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/36/3686c1ffa8952defddf62e30.wav"
+  },
+  {
+   "index": 21,
+   "start": 229.867,
+   "duration": 4.99,
+   "end": 234.857,
+   "text": "The darts never noticed the axes: [pause 0.3] a million coin flips, in any dimension.",
+   "voice": "af_heart",
+   "words": [
+    {
+     "w": "The",
+     "t": 229.882,
+     "end": 229.982
+    },
+    {
+     "w": "darts",
+     "t": 230.007,
+     "end": 230.369
+    },
+    {
+     "w": "never",
+     "t": 230.407,
+     "end": 230.682
+    },
+    {
+     "w": "noticed",
+     "t": 230.707,
+     "end": 231.019
+    },
+    {
+     "w": "the",
+     "t": 231.032,
+     "end": 231.169
+    },
+    {
+     "w": "axes",
+     "t": 231.207,
+     "end": 231.977
+    },
+    {
+     "w": "a",
+     "t": 232.292,
+     "end": 232.379
+    },
+    {
+     "w": "million",
+     "t": 232.417,
+     "end": 232.792
+    },
+    {
+     "w": "coin",
+     "t": 232.817,
+     "end": 233.129
+    },
+    {
+     "w": "flips",
+     "t": 233.167,
+     "end": 233.617
+    },
+    {
+     "w": "in",
+     "t": 233.742,
+     "end": 233.867
+    },
+    {
+     "w": "any",
+     "t": 233.892,
+     "end": 234.092
+    },
+    {
+     "w": "dimension",
+     "t": 234.117,
+     "end": 234.857
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/b5/b5bb2d23934807bfc5b67b9e.wav"
+  }
+ ],
+ "warnings": [],
+ "layout_audit": {
+  "clearance": 0.15,
+  "checks": 223,
+  "audit_seconds": 1.631,
+  "render_seconds": 419.1,
+  "errors": 0,
+  "count": 0,
+  "counts": {
+   "overlap": 0,
+   "clearance": 0,
+   "safe-area": 0,
+   "caption-zone": 0
+  },
+  "issues": [],
+  "allowed": [
+   {
+    "kind": "clearance",
+    "start": 165.4,
+    "end": 165.4,
+    "held": 0.0,
+    "text": "MathTex '\\sqrt{'",
+    "text_pos": [
+     1.26,
+     2.26
+    ],
+    "other": "Rectangle",
+    "other_pos": [
+     1.24,
+     2.65
+    ],
+    "gap": 0.093,
+    "need": 0.15,
+    "allowed": "parts of one LaTeX-typeset formula, spaced by LaTeX",
+    "msg": "clearance 2:45.4 (end of an animation, not held) MathTex '\\sqrt{' @(+1.26, +2.26) vs Rectangle @(+1.24, +2.65): gap 0.09 (need >= 0.15)"
+   },
+   {
+    "kind": "clearance",
+    "start": 168.53,
+    "end": 179.17,
+    "held": 10.63,
+    "text": "MathTex '\\sqrt{'",
+    "text_pos": [
+     1.26,
+     1.01
+    ],
+    "other": "Rectangle",
+    "other_pos": [
+     1.24,
+     1.4
+    ],
+    "gap": 0.093,
+    "need": 0.15,
+    "allowed": "parts of one LaTeX-typeset formula, spaced by LaTeX",
+    "msg": "clearance 2:48.5-2:59.2 (held 10.6s) MathTex '\\sqrt{' @(+1.26, +1.01) vs Rectangle @(+1.24, +1.40): gap 0.09 (need >= 0.15)"
+   },
+   {
+    "kind": "clearance",
+    "start": 180.53,
+    "end": 181.03,
+    "held": 0.5,
+    "text": "MathTex '\\sqrt{'",
+    "text_pos": [
+     1.45,
+     0.09
+    ],
+    "other": "Rectangle",
+    "other_pos": [
+     1.42,
+     0.55
+    ],
+    "gap": 0.107,
+    "need": 0.15,
+    "allowed": "parts of one LaTeX-typeset formula, spaced by LaTeX",
+    "msg": "clearance 3:00.5-3:01.0 (held 0.5s) MathTex '\\sqrt{' @(+1.45, +0.09) vs Rectangle @(+1.42, +0.55): gap 0.11 (need >= 0.15)"
+   },
+   {
+    "kind": "clearance",
+    "start": 181.63,
+    "end": 181.63,
+    "held": 0.0,
+    "text": "MathTex '\\frac{\\tfrac{1}{2}}{'",
+    "text_pos": [
+     1.42,
+     0.99
+    ],
+    "other": "MathTex '\\sqrt{'",
+    "other_pos": [
+     1.45,
+     0.09
+    ],
+    "gap": 0.107,
+    "need": 0.15,
+    "allowed": "parts of one LaTeX-typeset formula, spaced by LaTeX",
+    "msg": "clearance 3:01.6 (end of an animation, not held) MathTex '\\frac{\\tfrac{1}{2}}{' @(+1.42, +0.99) vs MathTex '\\sqrt{' @(+1.45, +0.09): gap 0.11 (need >= 0.15)"
+   }
+  ],
+  "excluded": []
+ }
+}

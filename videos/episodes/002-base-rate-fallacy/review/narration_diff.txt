@@ -1,0 +1,13 @@
+WER 2.0% over 543 script words (numbers spelled out, 'and' ignored)
+script: videos/episodes/002-base-rate-fallacy/narration.json
+
+[0:58.5] replace  script: 'a'                                      heard: 'one'
+[0:60.0] replace  script: 'a'                                      heard: 'one'
+[1:24.4] insert   script: '∅'                                      heard: 'one'
+[1:31.8] replace  script: 'a'                                      heard: 'one'
+[1:51.5] replace  script: 'head count'                             heard: 'headcount'
+[2:29.6] replace  script: 'a'                                      heard: 'one'
+[2:48.5] replace  script: 'a'                                      heard: 'one'
+[3:27.2] replace  script: 'a'                                      heard: 'one'
+[3:29.7] replace  script: 'where'                                  heard: 'were'
+[3:35.9] replace  script: 'a'                                      heard: 'one'
