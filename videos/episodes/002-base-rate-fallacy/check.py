@@ -78,3 +78,17 @@ for n in (74, 100, 15, 5, 2, 394, 500):
 # ---- round 4: derivation states and markers
 print("stage 2a (transient) 20*0.99/(20*0.99+100) =", f"{19.8 / 119.8:.4f}", "-> 17%")
 print("evaluators' tick at the final: 78/2632 =", f"{78 / 2632:.4f}", "-> 3%")
+# ---- review cycle 2, round 1 revisions
+print("6x bracket label: 99 / 17 =", f"{99 / 17:.2f}", "-> '99 / 17 ~ 6x'; exact 0.99 / ppv =",
+      f"{float(sens / P):.2f}")
+print("watch-list base rate (upper bound): 170,000 / 1,200 =", f"{170000 / 1200:.1f}",
+      "-> 1 in", f"{170000 / 1200:.0f}", "; shown '<= 1 in 140' since 1/141.7 <= 1/140 =",
+      f"{1 / 140:.5f}", ">=", f"{1200 / 170000:.5f}")
+print("  (more common than the hook's 1 in 500 =", 1 / 500, "-> no comparison is drawn)")
+print("sums shown under the positives column: half sick 4950 + 50 =", 4950 + 50,
+      "; 1 in 500: 20 + 100 =", 20 + 100)
+print("evaluators' bar: final 78/2632 =", f"{78 / 2632:.3f}", "-> 3% ; Six Nations 22/48 =",
+      f"{22 / 48:.3f}", "-> 46% ; false at Six Nations 22 of 48, missing 4")
+print("crowd raster: 100 x 100 squares in 7 px cells =", 100 * 7, "px =", f"{700 / 135:.3f}", "units")
+print("fail beat: positives drawn at 3x (18 px): 20 sick + 100 healthy =", 20 + 100,
+      "; healthy share of the ringed squares =", f"{100 / 120:.3f}")

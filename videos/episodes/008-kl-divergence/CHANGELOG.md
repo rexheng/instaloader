@@ -120,3 +120,43 @@ keyframes at every fixed timestamp, and 3–5 fps strips across every layout cha
 1:13, 1:19, 1:46, 1:59, 2:33): no text overlaps at rest or in motion, no double prints. One
 Manim gotcha found and fixed on the way: a play-level `rate_func` overrides an animation's own,
 so the second block's delayed fade is now its own 0.35 s play after the move.
+
+
+## Round 3 revisions
+
+Round-3 critics: craft 8.6, substance 8.6 (no caps; every number recomputed by both). The one
+borderline cap (craft: a transient false equation "D(bell‖data) = ∫p log₂(p/q) dx = 5.77 bits"
+during the swap at 1:48) is treated as a factual error and removed at the root.
+
+**Plan of the climb (BAR §3 "9" anchors → upgrade).**
+- *Hook 8.5 → 9 ("tension rises…; ending resolves the opening exactly").* Stakes made concrete
+  at 0:20: "Bayesian machine learning uses it with the order flipped" + grey "variational
+  inference" tag under the flipped line (Blei 2017 cited there). The bet's answer gets the
+  cold-open picture back: the dashed ghosts 2 (25 %) and 3 (60 %) and the yellow 1/2/3 return on
+  "Now start from A", B slides exactly into ghost 3, the 1→3 arrow lands on "three", then a 1 s
+  pause and a ≈2.5 s hold. Landing line "One or three, depending on which curve goes first",
+  with the yellow 1 and 3 re-shown on A's and B's crowns.
+- *Clarity 8.5 → 9 ("all numbers check out; sources correct").* The swap never shows a false
+  equation: the copy drops in already reading "= ?", arguments, weight and fraction swap in one
+  move. The payoff's number is now a real measured result, not a relabelled data curve:
+  Giordano, Broderick & Jordan (2018, JMLR 19:1–49, Table 3), a logistic GLMM on Criteo
+  ad-conversion logs: for covariate effect β₃, MCMC 0.110 ± 0.020 vs mean-field VI 0.110 ± 0.004
+  (same mean, a fifth of the spread). Toy brackets labelled "±1.14"/"±0.44"; the curve is tagged
+  "if this were a posterior". "a one-bell fit stretches", "tends to settle" (Bishop's wording).
+  "a distance" goes grey with a strike on "more than twice as far". Footnote now "Raw points:
+  data first still ranks bells; bell first is ∞ for all".
+- *Visual 8.5 → 9.* Formula blocks become two lines ("D(·‖·) = x bits" over "= ∫…dx"), each
+  centred on its own bill panel, so the blocks are separated by 3× their line gap (the stacked
+  chart is narrowed to 7 units to make room). Axis titles dimmed with the posterior relabel.
+  Honest-limit fit label pinned up-right of the fit's crown with a dashed leader that follows
+  the fit through both morphs (live numbers), y-axis extended to 1.1. The bell-first panel stays
+  hidden until "Which bell wins now?". "peak ≈ 11" on one baseline.
+- *Motion 8.5 → 9.* Whole-curve pulses (stroke + fill) on "supplies"/"judges" instead of pip
+  flashes; the 2:33 teardown fades bills, blocks, panel axes, ghosts and labels first (chart at
+  full strength), then scales the chart; panel tick labels fade, never morph; "?" fades before
+  the bits number arrives; landing: A solid with its fill sweep on "Bell A", back to dashed as B
+  fills on "Bell B".
+- *Audio 8.5 → 9.* 1.0 s after "five point eight bits" before "Now keep that bill"; [pause 1.0]
+  after "moves to three".
+- *Concision 8.5 → 9.* Honest limit merged into two short sentences (≈ 4 s shorter); the landing's
+  first line now answers the bet instead of restating the title.

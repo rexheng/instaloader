@@ -1,4 +1,4 @@
-WER 3.0% over 609 script words (numbers spelled out, 'and' ignored)
+WER 2.5% over 609 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/005-monte-carlo/narration.json
 
 [0:04.1] replace  script: 'a'                                      heard: 'one'
@@ -12,9 +12,6 @@ script: videos/episodes/005-monte-carlo/narration.json
 [1:41.1] replace  script: 'a'                                      heard: 'one'
 [1:42.5] replace  script: 'a'                                      heard: 'one'
 [1:46.7] replace  script: 'd th'                                   heard: 'dth'
-[2:19.1] delete   script: 'repeat'                                 heard: '∅'
-[2:19.2] insert   script: '∅'                                      heard: 'one'
-[2:25.4] replace  script: 'a'                                      heard: 'one'
-[2:44.3] insert   script: '∅'                                      heard: 'root'
-[3:07.1] delete   script: 'one'                                    heard: '∅'
-[3:50.4] replace  script: 'noticed'                                heard: 'notice'
+[2:26.0] replace  script: 'a'                                      heard: 'one'
+[3:40.0] replace  script: 'a'                                      heard: 'one'
+[3:51.1] replace  script: 'noticed'                                heard: 'notice'

@@ -1,82 +1,49 @@
-# Review, round 1 (science and story editor): episode 003
+EPISODE: 003 — "Which Map Is Random?" (curriculum: "Randomness Looks Clumpier Than You Think")
+IDEA: Pure chance leaves about 39% of squares empty, so the hits have to pile up elsewhere; clumps alone are not evidence of aim, and the honest test (Poisson histogram plus chi-squared misfit) shows Clarke's 1946 London V-1 hits look like chance while a too-even map gives away a spacing rule.
+SCORES: Hook 8.5 · Clarity 8.5 · Visual 8 · Motion 8.5 · Audio 8 · Concision 8 · Originality 8.5
+WEIGHTED: 8.3   AFTER CEILING: 8.3 (lowest 8 + 2 = 10, not binding)
+CAPS: none (no factual errors found; every empirical claim has an on-screen citation; layout audit 0 overlaps; all mechanics in range)
+FINAL: 8.3   PASS: no
 
-```
-EPISODE: 003 — "Randomness Looks Clumpier Than You Think"
-IDEA: Pure chance leaves gaps, and the gaps force clumps, so a cluster is not evidence of aim. The honest test compares the whole count histogram with Poisson's prediction, and a pattern that is too even is the sign of a rule.
-SCORES: Hook 8.5 · Clarity 7.5 · Visual 8 · Motion 8 · Audio 8 · Concision 8 · Originality 8
-WEIGHTED: 8.0 (7.95)   AFTER CEILING: 8.0 (ceiling 7.5 + 2 = 9.5, not binding)
-CAPS: Factual/mathematical error → 6: on-screen "0.39 × 576 ≈ 227" @ 1:19–2:05 (kf_12 @ 1:27.6; scene.py:366). 0.39 × 576 = 224.6. The 227 comes from 0.3933 × 576 = 226.6, but the screen states the false product.
-FINAL: 6.0   PASS: no
-```
+FACTS (all recomputed independently; citations checked by web search):
+- 537 hits, 576 squares, λ = 537/576 ≈ 0.93 | Verified | 0.93229; Clarke 1946 (JIA 72:481; R documentation for VGAM::V1 and Caltech scan give the same figures)
+- P(empty) = (1 − 1/576)^537 ≈ 0.3933; 0.3933 × 576 ≈ 227 | Verified | 0.393332 → 226.56
+- (1 − λ/537)^537 ≈ e^−λ ≈ 0.3937 | Verified | e^−0.932292 = 0.393651
+- Map A: 222 empty, 39 squares with 3+, 131 with 2+, 537/354 ≈ 1.5 | Verified | reran sim.py: [222, 223, 92, 28, 9, 2]; 1.517
+- C(537,2) = 537·536/2!, 537·536 ≈ 537², P(k) ≈ λ^k e^−λ / k! | Verified | re-derived; binomial vs Poisson differ < 0.3 squares for k ≤ 4
+- Purple bars 227, 211, 98.5, 30.6, 7.1, 1.6; "chance: 39.3" | Verified | 226.74, 211.39, 98.54, 30.62, 7.14, 1.57; sum of 3+ = 39.33
+- Map A terms 0.10 + 0.64 + 0.43 + 0.22 + 0.49 + 0.12 = 2.0 | Verified | 0.099, 0.638, 0.434, 0.225, 0.486, 0.119; sum 2.0000
+- p = 0.74 ("worse three times in four") | Verified | sim.py: 74.48% of 20,000 null maps ≥ 2.0 (s.e. 0.3%); χ²₄ tail 0.736
+- Map B: 109 empty (≈ half of 227), 397 singles, misfit 271.7 → "272"; min gap 0.8 square | Verified | recomputed 271.708; 109/226.74 = 0.48; min pair distance 0.801
+- Aimed map: extra empties and extra pile-ups | Verified | sim.py [399, 58, 37, 30, 13, 39]; matches Clarke's wording about "an excess number of squares containing either a high number … or none at all"
+- Clarke table 229, 211, 93, 35, 7, 1; χ² = 1.17, p = 0.88 | Verified | my recompute: χ² = 1.169, p(df 4) = 0.883
+- R. D. Clarke, actuary, 1946, J. Inst. Actuaries 72:481; quote "…tended to be grouped in clusters" | Verified | web search (VGAM docs cite JIA 72(3):481; Britannica entry on R. D. Clarke); facts.md reads the quote off the original page
+- Shaw & Shaw 2019, Significance 16(5):12–17; re-created 18 × 8 km rectangle; "precise aim would put factories at risk" | Verified (venue, year, authors: web search; the factories line is quoted in facts.md, and I could not open the paywalled full text myself) | significancemagazine.com, RSS Oct 2019 issue
+- Falk & Konold 1997, Psych. Review 104(2):301–318: people treat over-alternation (too even) as random | Verified, with a caveat: the paper is about binary sequences and 2-D black/white grids, not point patterns, so applying it to "your eye expects chance to spread out evenly" stretches it a little but is defensible | srri.umass.edu; causeweb
+- "Farther north, hits fell about half as densely"; north 1.9 vs 3.7 hits/km² | Verified | my own count of v1_impacts.csv: 86/45 km² = 1.91; 532/144 = 3.69; ratio 0.51. Credited "our count · L. Shaw, 2025 · Zenodo"
+- Re-created rectangle holds 532 hits [237, 189, 115, 28, 6, 1] | Verified (not on screen) | the table on screen is correctly labelled "Clarke", not a recount of the dots
+- "too loosely to choose a street" | Unverifiable as stated (a qualitative accuracy claim, no specific source) | see fix 6
 
-## FACTS
+MECHANICS: runtime 3:49.5 · wpm 161 (speech time; 154 overall) · max silence 1.98 s (0:09.8, the planned prediction hold) · leading 0.00 s / trailing 1.74 s · max static 3.57 s (0:45.1–0:48.7) · −14.0 LUFS / −1.8 dBTP · WER 3.3% · 0 banned phrases
 
-| Claim | Status | Source / check |
-|---|---|---|
-| Each map has 537 hits on 576 squares (24×24) | Verified | sim_data.npz recount: A and B both 537 points |
-| Map A lights up with 39 squares with ≥ 3 hits | Verified | recount A: 0..5+ = 222, 223, 92, 28, 9, 2 → 28+9+2 = 39 |
-| Map B has none | Verified | recount B: 109, 397, 70, 0, 0, 0 |
-| B's rule: no two hits closer than 4/5 square | Verified | min pairwise distance = 0.8005 squares |
-| One bomb lands in a given square with chance 1/576; P(empty) = (1 − 1/576)^537 ≈ 0.39 | Verified | 0.39333 |
-| "about 227 squares stay empty" (spoken) | Verified | 576 × 0.39333 = 226.6; 576·e^−λ = 226.7 |
-| **On screen "0.39 × 576 ≈ 227" (1:19–2:05)** | **Wrong** | 0.39 × 576 = 224.64. The rounded factor gives 225, not 227 |
-| "four in ten, with almost a bomb per square" | Verified | 39.3 %; λ = 0.932 |
-| Map A has 222 empty squares | Verified | recount |
-| The other 354 squares share the hits, about 1.5 each | Verified | 576 − 222 = 354; 537/354 = 1.517 |
-| λ = 537/576 ≈ 0.93; P(0) ≈ e^−λ ≈ 0.39 | Verified | 0.9323; e^−0.9323 = 0.3937 |
-| P(k) ≈ (537^k/k!)(1/576)^k e^−λ → λ^k e^−λ / k! | Verified (approximation) | binomial→Poisson. C(537,k) ≈ 537^k/k! and (575/576)^(537−k) ≈ e^−λ are used but never said |
-| Purple bars 227, 211, 98.5, 30.6, 7.1, 1.6 | Verified | 576·Pois(0.9323) = 226.74, 211.39, 98.54, 30.62, 7.14, 1.57 |
-| Map B: half the expected empty squares, a tower of single hits | Verified | 109/226.7 = 0.48; 397 vs 211 |
-| 1944: Londoners claimed the flying bombs fell in clusters; quote "…tended to be grouped in clusters." | Verified | Clarke 1946 p. 481, quoted verbatim in Shaw & Shaw 2019 ("frequent assertions were made that the points of impact of the bombs tended to be grouped in clusters") |
-| Precise aim would put factories at risk | Verified | Shaw & Shaw 2019: "if it could be accurately targeted at munitions factories it would also become a strategic threat to the war effort" |
-| R. D. Clarke, an actuary, 1946, J. Inst. Actuaries 72:481 | Verified | Byline "R. D. Clarke, F.I.A., of the Prudential Assurance Company"; doi:10.1017/S0020268100035435 |
-| 537 hits over 576 squares of south London; expected 226.74/211.39/98.54/30.62/7.14/1.57 vs actual 229/211/93/35/7/1 | Verified | Clarke 1946 table, reproduced in Shaw & Shaw 2019 |
-| χ² test p = 0.88 | Verified | Clarke; recomputed χ² = 1.171, df = 4 → p = 0.883 |
-| "…no support to the clustering hypothesis" | Verified (secondary) | Clarke 1946 per facts.md; consistent with Shaw & Shaw's summary |
-| Clustering would show as extra empty squares and extra pile-ups | Verified | Clarke's stated alternative (excess of high and zero classes) |
-| Aimed at London, but too loosely to choose a street | Verified (paraphrase) | Shaw & Shaw: V-1s "tended to fall short of the centre of London" |
-| Over the whole county map more hits fell in the south; whole-county test p = 0.02 | Verified | Shaw & Shaw 2019, *Significance* 16(5):12–17: "skewed to the south", "the chi-squared test gives p=0.02" |
+TRANSCRIPT / SLOP: no §4 phrase or pattern found. "Backwards." is a one-word reveal, not a colon fake-reveal. There is one real question ("Which one is chance?") plus one prediction prompt ("Guess how many…"), with no chains. The ending reframes the cold open and does not recap. Whisper's mishearings point to cadence problems, not wrong words: "1 in 500 and 76" at 1:01 ("and" stretched to 0.80 s, 63.04–63.84), "200 and 27" at 1:14 ("and" 0.66 s), "three times **than** four" at 2:34, and "you **pick** the one" at 3:46 (the final -ed is swallowed). At 2:03.1 "each two becomes a k. The powers merge…" runs on with a 0.12 s gap across a sentence boundary.
 
-## MECHANICS
+WHAT WORKS (and why the score is still 8.3): the cold-open frame comes back as the closing frame (0:08 vs 3:41), and the London rectangle turns into map A at 3:38. The detector fails on a measured number (39 false alarms). The empty-square fill at 1:19 is the single best image: the gaps you were not looking at are what force the clumps. Every number checks out to the decimal. What keeps it below 9: (a) the opening question is answered at 0:42, and from 1:31 to 2:14 the derivation runs without a stated question pulling it along; (b) the general-k step (1:57–2:09) does four glyph swaps in about 10 s at speed 0.80, and the χ² beat never says why each gap is divided by chance's bar, so these two steps need a rewatch; (c) yellow carries five jobs (focus square, empty-square fill, gap slivers and misfit terms, A's score marker, Clarke's area), and at 2:33–2:49 three of them share a frame; (d) the TTS stretches "and" inside numbers; (e) at 3:49.5 the episode is 11 s from the runtime cap and dense throughout.
 
-```
-MECHANICS: runtime 3:22.6 · wpm 158 (speech) / 154 overall · max silence 1.98 s (0:10.1, planned prediction hold) · max static 3.97 s (3:14.0) · −14.0 LUFS / −2.0 dBTP
-```
-Leading silence 0.00 s, trailing 1.74 s, 0 black frames, WER 2.0 %, 0 banned phrases. No mechanical cap is triggered.
+FIXES (highest impact first):
+1. [1:57–2:09][Clarity/Motion] The general case arrives in one rushed move: 537·536 ≈ 537², then four simultaneous lift-and-replace swaps (2→k four times) and the merge into λ^k, all under "so for any k, each two becomes a k. The powers merge…" with a 0.12 s gap at 2:03.1. → Add one concrete k = 3 line before the swap: "537 · 536 · 535 ≈ 537³" copied from the numerator (1.5 s, 536 and 535 flagged yellow). Then do the k swaps one at a time at ≥ 0.6 s each. Add a 0.6 s pause after "becomes a k.", and hold the finished P(k) ≈ λ^k e^−λ / k! for ≥ 3.2 s (2 s + 0.4 s × 3 terms) before the axes grow at 2:09.
+2. [2:24–2:37][Clarity/Audio] Two problems. The χ² recipe gives no reason for the division, and p is used without being named ("Pure-chance maps score worse three times in four: p equals point seven four", heard as "three times than four"). → Rewrite as: "Square each bar's gap, divide by chance's bar, so a miss of five counts more on a bar of seven than on one of two hundred, and add them up. Map A scores two point oh. Three in four pure-chance maps fit worse. That share, p, is point seven four." Flag the 5+ bar (1.6) and the 0 bar (227) on "seven" and "two hundred". Cost is about 3 s; recover it with fix 7.
+3. [1:30–1:31][Hook] Tension sags at the start of the derivation: once "Backwards" (0:42) and the 227 answer (1:14) land, nothing says why the viewer needs P(k). → After "so plenty must double up." add one forward-pointing line before "Call the average…": "To judge London's clusters, we need chance's count for every pile size." Show it as a GRAY header "0, 1, 2, 3… hits?" over the empty histogram axes (drawn dim at 30% here, then grown at 2:09). This ties the derivation to the 2:54 payoff.
+4. [1:01–1:05, 1:14–1:17][Audio] Kokoro stretches "and" inside numbers: 0.80 s in "five hundred **and** seventy-six" (63.04–63.84) and 0.66 s in "two hundred **and** twenty-seven" (75.24–75.90). Whisper hears both as two separate numbers. → In narration_text.py write "five hundred seventy-six" and "two hundred twenty-seven" (US style, no "and") for these two spoken numbers. Or render each number as its own chunk at speed 0.92, then check transcript_words.tsv for an "and" ≤ 0.25 s. Also write "you picked" as "you picked," with a following pause, or as "if you chose map B", so the final -ed is not swallowed at 3:46.
+5. [2:33–2:49][Visual] Yellow is overloaded within one frame. The A and B thumbnails keep their solid yellow empty-square fill, while yellow also marks A's score line at 2.0 and the χ² readout (kf 2:36.4, 2:48.9). The 20,000-map histogram also has no y-axis name, which breaks §5 "every axis carries a quantity name". → Render both thumbnails with blue count shading only (no yellow fill). Keep yellow only for the score marker and the readout. Add a GRAY "maps" label (Text ≥ 18) at the top of the left histogram's y-extent, left-aligned with the "0" tick.
+6. [3:24–3:28][Clarity/Correctness] "aimed at London, just too loosely to choose a street" is an unsourced accuracy claim. → Replace it with a measured statement from data already on screen: "They were aimed at London, but they scattered across twenty kilometres," with the 5 km scale bar drawing on "twenty kilometres" and a brace across the dots' east–west extent. Verify the extent in realdata.py and put the number in facts.md.
+7. [Concision, 0:11.8–0:15.2 and 2:15.2–2:21.0][Concision] The runtime is 3:49.5, and fixes 1–3 add about 6 s. → Cut "Map A sits on the purple bars:" (2:18.5–2:21.0); the blue bars visibly landing in the purple outlines already show it, and "thirty-nine targets, and chance predicts thirty-nine" carries the point. Shorten "Both are simulated, but the question is real." to "Both are simulated. The question isn't." Net runtime should stay ≤ 3:52.
+8. [1:19–1:29][Visual] The empty-square fill is full-opacity yellow over about 39% of map A (kf 1:22.1). It swamps the red 3+ outlines and the dots exactly when narration says "Those gaps force the clumps", which needs both visible. → Drop the fill to about 0.6 opacity once the "222 empty" counter lands (1:20.2), and raise the red 3+ outlines to full stroke on "clumps" (1:22.5), so gap and clump read together.
+9. [0:35.0–0:39.0][Audio/Motion] "thirty-nine targets" is spoken at 0:35.0–0:37.8, but the live counter still reads "28 targets" at 0:37.0 and reaches 39 only at about 0:38.5. → Start the red-outline lag-in 1.0 s earlier, or shorten its run_time, so the counter lands on 39 on the word "thirty-nine".
 
-## Transcript and story notes
+REACHES 9 IF ALL FIXED: yes, narrowly. The structure is right: misconception-first cold open, a detector that fails by a measured amount, the empty-square picture, a derived Poisson, the χ² v2, an aimed counterexample, Clarke's real data, honest limits, and an ending that returns to the cold-open frame. Fixes 1–3 would move Clarity and Hook to 9. Fixes 4, 5 and 8 would move Audio and Visual to 8.5–9. The weighted score would land around 8.9–9.1. If fixes 1–3 are skipped, it will not reach 9.
 
-- **Hook (0:00–0:12):** strong. The first frame shows the two maps with live counters, the question "Which one is chance?" comes at 0:09, and a 1.9 s hold follows. Real stakes arrive by 0:24 (V-1s, factories). The landing at 3:12–3:21 returns to the exact cold-open frame, and "If you picked map B, you picked the one with a plan" resolves the opening.
-- **Fail beat (0:43–1:00):** good StuffMadeHere structure. "Backwards." is followed by a measured failure ("39 false alarms") and a named cause ("expected chance to spread out evenly").
-- **Sag (1:38–2:05):** about 27 s of symbol work beside a static map, and its key step is announced, not shown (e^−λ, see fix 2).
-- **The v2 detector has no number:** "So the honest detector compares whole histograms" (2:04). Unlike v1, which gave a count, v2 gives no measured verdict for A or B. It is judged by eye, which is weak for an episode about eyes being fooled.
-- **Slop scan:** no §4 phrases. "Backwards." is a one-word reveal but it carries content, so it is not counted. "Too even is the fingerprint of a rule" (2:19) is aphoristic and logically loose, because aim is also a rule and the next sentence says aim produces the opposite pattern.
-- **Pronunciation:** "Poisson" is correct (whisper heard "Poisson"). "Clarke" is heard as "Clark", which is a homophone and fine. "too/two" is a homophone. Nothing is mispronounced.
-
-## Contact-sheet and keyframe notes
-
-- **Persistence:** good. The same Map A carries from 0:00 to 2:13; its cells shade, outline, fill and then become bars. The formula is assembled with TransformMatchingTex (1:47–1:57; a transient glyph scramble appears at 1:52.0 mid-morph, which is acceptable).
-- **1:29–1:37:** the narration says "so many take two or more", but the highlighted squares are the red outlines of the 39 squares with 3+ hits. The 131 squares with 2+ hits are never shown.
-- **1:23–2:13:** the declared YELLOW "empty" fill renders as a muddy olive brown (kf_12, kf_14, kf_24) and does not match the yellow "222 empty" label next to it.
-- **2:09–2:19 (kf_24):** the 3/4/5+ bars are a few pixels tall, so the "39 targets" brace points at bars too small to see. The central comparison of the fix beat cannot be read from the chart.
-- **1:59–2:05:** "Times 576" is never shown on screen, because the axis is in squares while the formula is P(k). "These purple bars" is spoken at 2:03.4, but the bars only start growing after 2:04.0 (axes are still empty at 2:04.0).
-- **3:10.3–3:11.9:** the Shaw & Shaw citation and "whole county p = 0.02" are on screen for about 1.6 s before the cross-fade to the landing. That breaks the ≥ 3 s citation hold and the reading time, so the one non-Clarke empirical number is effectively unreadable.
-- **3:01–3:11 schematic:** labelled "schematic" honestly, but it is thin. The payoff never shows a real map of real hits, even though Shaw & Shaw digitised all 887 London County V-1 locations.
-- **Layout:** type sizes, margins and contrast are fine on all keyframes checked (0:15, 0:19.5, 0:34, 0:52.8, 1:02.4, 1:27.6, 1:35.7, 1:45.8, 1:52.5, 2:13.6, 2:59, 3:11.5, 3:22.5). No overlaps or clipping. Every chart axis is labelled.
-
-## FIXES (highest impact first)
-
-1. **[1:19–2:05][Clarity, removes cap 6]** The on-screen "0.39 × 576 ≈ 227" is arithmetically false (224.6). In scene.py:366, change `formula(r"0.39", r"\times", r"576", r"\approx", r"227")` to `0.393 × 576 ≈ 227` and the line above to `≈ 0.393`. The spoken "point three nine … about two hundred and twenty-seven" can stay.
-2. **[1:38–1:45][Clarity]** e^−λ is announced, not derived. Add one transform chain under P(empty): `(1 − 1/576)^537` → `(1 − λ/537)^537` (TransformFromCopy of λ from the λ line) → `≈ e^{−λ}`, with a side-by-side check "0.3933 vs 0.3937". Narration (+5 s): "One over five seventy-six is lambda over five thirty-seven, and one minus a tiny slice, raised to a big power, is e to the minus lambda: point three nine three either way."
-3. **[2:04–2:22][Clarity/Hook]** The v2 detector needs a measured verdict, as v1 had. After the bars settle, add a live `DecimalNumber` "fit to chance: p = 0.74" under Map A. When B slides in, morph it to "p < 10⁻⁵⁰" (recomputed: A χ² = 2.0, df 4, p = 0.74; B χ² = 271.7, p ≈ 1e−57). Narration: "Map A: p point seven four. Map B: p below ten to the minus fifty." This also sets up Clarke's p = 0.88 as the same number on real data.
-4. **[2:09–2:19][Visual]** The tail bars are unreadable. Add a 4× zoom inset over k = 3–5+ (purple outline 39.3 vs blue 39), or count labels over those bars, so "39 targets in all" can be read off the chart.
-5. **[1:29–1:37][Clarity/Visual]** "So many take two or more" is shown with the 3+ outlines. Outline the 131 squares with ≥ 2 hits in BLUE with a counter "131 squares with 2+", then fade it out, keeping RED for detector targets only.
-6. **[3:10–3:12][Visual/Clarity]** "whole county p = 0.02" and the Shaw & Shaw citation are visible for about 1.6 s. Hold them ≥ 3 s (add a 1.5 s wait before the landing cross-fade, or let the citation persist until 3:14).
-7. **[2:29–2:41][Originality/Hook]** The payoff on real data shows no real map. Shaw & Shaw digitised the LCC V-1 locations (887 hits). If the dataset is available, open the Clarke beat with the real dots over a 144 km² square (labelled "V-1 hits, LCC bomb damage maps"), gridded the same way as Maps A and B, before the histogram. This is the screenshot moment the episode lacks. If it is not available, say so in facts.md and keep the schematic.
-8. **[2:19–2:22][Clarity]** "Too even is the fingerprint of a rule" over-generalises, since aim is also a rule and the next line says it does the opposite. Change it to "Too even is the fingerprint of a spacing rule."
-9. **[1:59–2:05][Clarity/Audio sync]** Show "× 576" on screen: transform P(k) into "576 · P(k)" beside the y-axis "squares" as the bars grow. Start the purple bar growth on "Times" (1:59.5) so "these purple bars" (2:03.4) lands on visible bars.
-10. **[1:23–2:13][Visual]** The YELLOW fill reads as olive brown. Raise the empty-cell fill opacity (or use a yellow 2 px cell outline plus 30 % fill) so it matches the yellow "222 empty" counter and the palette's single meaning for YELLOW.
-
-REACHES 9 IF ALL FIXED: yes, narrowly. Fix 1 alone lifts the final to 8.0. Fixes 2–6 and 8–9 should bring Clarity to 8.5–9, Visual to 8.5 and Hook to 9. Getting Originality above 8 depends on fix 7 (a real map of the real hits), because the flying-bomb Poisson example is the canonical textbook case (Feller). The detector-with-39-false-alarms framing is the fresh part and must stay.
-
-KEEP: (1) The cold open and landing on the same two maps, closing with "If you picked map B, you picked the one with a plan". (2) The naive ≥ 3-hit detector failing with a measured "39 false alarms", and "Those gaps force the clumps". (3) The honest-limits beat (aimed at London but too loosely to choose a street; one λ everywhere; whole county p = 0.02).
+KEEP:
+- The 1:19 yellow empty-square fill, followed by "537 hits / 354 squares ≈ 1.5" and the 2+ outlines: gaps force clumps, shown rather than asserted.
+- The bookends: the cold-open frame (0:08) returns exactly at 3:41, entered by Clarke's rectangle turning into map A (3:38).
+- The measured honesty: "≈ Clarke's area · re-created", the table labelled "Clarke" rather than recounted dots, the 1.9 vs 3.7 hits/km² limit credited as "our count", and the aimed map showing what real clustering would look like.

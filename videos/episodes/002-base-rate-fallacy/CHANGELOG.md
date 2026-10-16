@@ -404,3 +404,20 @@ pulses once in it.
 - The flow line ("On a random screen, twenty reach this plus…") is cut; "20" / "100" fade in outside
   their flows during the silent return to 1 in 500.
 - Closing tags "recall" / "precision" are size 34 and each is underlined as it is written.
+
+## Round 1 revisions (review cycle 2)
+
+Reviews: `reviews/round1-craft.md` (8.4) and `reviews/round1-substance.md` (8.4). No caps and no factual
+errors claimed. Both say every fix together reaches about 9.0, narrowly, with no structural rebuild.
+
+### Climb plan (written before editing)
+
+| Dimension (score) | BAR "9" anchor | Where it falls short | Upgrade |
+|---|---|---|---|
+| Visual 8 / 8.5 | one focal point per frame; nothing to remove | fail beat weights the 20 sick (big rings) over the 100 false alarms (6 px); bird-shaped brace; 3 precision figures on one bar; dim crowd, empty right half; 6x brace reads as measuring nothing | every positive gets the same yellow ring and the same 3x size (100 blue visibly outnumber 20 red); straight brackets everywhere (6x bracket runs 17 % -> 99 %); police 7 % alone on the main bar, evaluators on their own bar; brighter, larger crowd with legend under the meter on the right |
+| Clarity 8.5 | re-derive after one watch; numbers like-for-like | "44% said 95%" next to a 99 % test; 3 % vs 7 % unexplained; "forty-six" without unit; no 5,000 / 120 on screen | narration names the doctors' test as 95 % accurate and morphs 95 % into our 99 %; evaluators counted only logbook-confirmed alerts (Davies et al. 2018, Champions League Final section: "Operator logs were then used…", re-read); "forty-six percent"; column sums 5,000 and 120 |
+| Concision 8 | cutting any sentence loses something | /10,000 sub-beat 14 s; landing with three moves | /10,000 in about 9 s, table and formula change together on each number; accuracy paradox cut (it is episode 44's whole topic) |
+| Motion 8.5 | every motion encodes a relation | cold-open diagram falls apart before the table forms; near-empty frame on "police watch list" | one 1.5 s morph (node+label -> row, arrow + rate -> row arrow, + -> header); the 120-dot strip spreads into the Cardiff crowd while the meter retitles |
+| Hook 8.5 | commit by 0:12; ending resolves the opening | question ends 0:13.4 | cold open at speed 0.88, no pause before "Pick a number"; a "your guess" marker slides along the empty meter during the hold |
+| Audio 8.5 | deictics land | "watch list" had nothing to land on | red "on a watch list" legend lands on the words |
+| Originality 8 / 8.5 | an image viewers would remember | Cardiff base rate never shown | "≤ 1 in 140" under the watch-list legend; evaluators' bar visibly sheds false alarms 3 % -> 46 % |

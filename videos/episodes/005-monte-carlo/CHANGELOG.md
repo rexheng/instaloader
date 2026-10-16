@@ -174,7 +174,7 @@ points" (substance 6: quasi-random points exist, Paskov & Traub 1995); B9 "Even 
 B10–B11 shortened to "Look at the shadows on one axis: the grid's hundred points cast ten, a hundred darts cast a
 hundred. With N points over d axes, each axis gets the d-th root of N."; B12 adds "each one a flat line here" and
 [pause 0.6]; B15 ends at "twice as narrow"; new B15b (the walk, ending "per dart, that's a half over the square root of
-N" + [pause 0.8]); B16 adds [pause 0.6] and "A grid's error, even for smooth functions, has d in its exponent."; B17
+N" + [pause 0.8]); B16 adds [pause 0.6], "The root N remains" (the transcriber heard "root N stays" as "root end stays") and "A grid's error, even for smooth functions, has d in its exponent."; B17
 "So, back to our ball", [pause 0.8] before "Two runs in three"; B20 "The darts never noticed the axes: a million coin
 flips, in any dimension."
 

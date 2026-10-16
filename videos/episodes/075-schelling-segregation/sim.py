@@ -248,38 +248,50 @@ def round1_breakdown(seed=SEED, t=1 / 3):
 
 
 # ----------------------------------------------------------------------------- zoned town
-# A second, preference-free town for the landing: the board is split into irregular zones
-# (a smoothed random field cut at its median), each zone marked for one colour; each
-# square's occupant has the zone's colour with probability ZONE_P, otherwise the other
-# colour; totals are then fixed at exactly 720 / 720 and 160 empty squares are random.
-# Nobody has a demand and nobody moves.
-ZONE_SEED, ZONE_P, ZONE_SIGMA = 9, 0.92, 2.0
+# A second, preference-free town for the two-town test: 160 squares are left empty at
+# random; the board is split into irregular zones by a rule (a fine random field, cut at the
+# median over the occupied squares, so the two colours get exactly 720 squares each); every
+# household lives in a zone marked for its colour.  Nobody has a demand and nobody moves.
+# The field's grain (ZONE_SIGMA, ZONE_NOISE) is chosen so the town's texture matches a
+# Schelling town (no stray single tiles), not just its 76 %: the map alone cannot tell them
+# apart (texture statistics: texture_stats(), printed by `python sim.py`).
+ZONE_SEED, ZONE_SIGMA, ZONE_NOISE = 73, 1.1, 0.1
 
 
-def zoned_town(seed=ZONE_SEED, p=ZONE_P, sigma=ZONE_SIGMA, n=N, vac=VACANCY):
+def zoned_town(seed=ZONE_SEED, sigma=ZONE_SIGMA, noise=ZONE_NOISE, n=N, vac=VACANCY):
     from scipy.ndimage import gaussian_filter
     rng = np.random.default_rng(seed)
     field = gaussian_filter(rng.standard_normal((n, n)), sigma, mode="reflect")
-    zone = np.where(field > np.median(field), BLUE_H, GOLD_H)
+    field = field / field.std() + noise * rng.standard_normal((n, n))
     total = n * n
     ne = int(round(vac * total))
-    nb = (total - ne) // 2
-    cells = rng.permutation(total)
-    occ = cells[ne:]
-    occ_z = zone.ravel()[occ]
-    col = np.where(rng.random(len(occ)) < p, occ_z, 3 - occ_z)
-    diff = int((col == BLUE_H).sum()) - nb
-    if diff > 0:
-        idx = np.flatnonzero(col == BLUE_H)
-        rng.shuffle(idx)
-        col[idx[:diff]] = GOLD_H
-    elif diff < 0:
-        idx = np.flatnonzero(col == GOLD_H)
-        rng.shuffle(idx)
-        col[idx[:-diff]] = BLUE_H
-    g = np.zeros((n, n), int)
-    g.ravel()[occ] = col
+    empty = np.zeros(total, bool)
+    empty[rng.permutation(total)[:ne]] = True
+    empty = empty.reshape(n, n)
+    cut = np.median(field[~empty])
+    zone = np.where(field > cut, BLUE_H, GOLD_H)
+    g = np.where(empty, EMPTY, zone)
+    assert int((g == BLUE_H).sum()) == int((g == GOLD_H).sum()) == (total - ne) // 2
     return g, zone
+
+
+def texture_stats(g):
+    """Map texture: mean share, households below 1/3, single-colour clusters (8-connected),
+    clusters of <= 3 households, 4-neighbour unlike pairs."""
+    from scipy.ndimage import label
+    same, occ = same_occ(g)
+    m = (g > 0) & (occ > 0)
+    s = same[m] / occ[m]
+    sizes = []
+    for col in (BLUE_H, GOLD_H):
+        lab, k = label(g == col, structure=np.ones((3, 3)))
+        sizes += list(np.bincount(lab.ravel())[1:])
+    sizes = np.array(sizes)
+    unlike = sum(int(((a > 0) & (b > 0) & (a != b)).sum())
+                 for a, b in ((g[:, :-1], g[:, 1:]), (g[:-1, :], g[1:, :])))
+    return {"share": round(float(s.mean()), 4), "below_third": round(float((s < 1 / 3).mean()), 3),
+            "clusters": int(len(sizes)), "clusters_le3": int((sizes <= 3).sum()),
+            "unlike_pairs": unlike}
 
 
 def report_extra():
@@ -299,6 +311,8 @@ def report_extra():
     in_own = float(((gz > 0) & (gz == zone)).sum() / (gz > 0).sum())
     print(f"zoned town: share {avg_share(gz):.4f} (seed-3 town {avg_share(run(SEED)[0][-1][0]):.4f}); "
           f"blue {bl} gold {gd} empty {int((gz == 0).sum())}; living in own colour's zone {in_own:.3f}")
+    print("texture, seed-3 Schelling town:", texture_stats(run(SEED)[0][-1][0]))
+    print("texture, zoned town:           ", texture_stats(gz))
 
 
 def verify_chain():

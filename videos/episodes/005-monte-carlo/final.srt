@@ -123,74 +123,74 @@ One flip is zero or one.
 Its average is a half, and every flip misses that by exactly a half.
 
 32
-00:02:18,633 --> 00:02:21,963
+00:02:19,200 --> 00:02:22,530
 Repeat the hundred-dart experiment three hundred times.
 
 33
-00:02:22,163 --> 00:02:27,173
+00:02:22,730 --> 00:02:27,740
 In two dimensions the estimates spread this wide; in a hundred, just as wide.
 
 34
-00:02:27,423 --> 00:02:30,493
+00:02:27,990 --> 00:02:31,060
 Quadruple the darts, and both get twice as narrow.
 
 35
-00:02:30,600 --> 00:02:39,520
+00:02:31,166 --> 00:02:40,086
 Each dart misses by a half, up or down at random, so the misses partly cancel: sixteen darts stray about four halves, not sixteen.
 
 36
-00:02:39,770 --> 00:02:45,130
+00:02:40,336 --> 00:02:45,696
 N darts stray about root N halves; per dart, that's a half over the square root of N.
 
 37
-00:02:46,033 --> 00:02:49,733
+00:02:46,600 --> 00:02:50,300
 Any other function swaps that half for its own spread, sigma.
 
 38
-00:02:50,333 --> 00:02:52,843
-The root N stays, and there's no d in it.
+00:02:50,900 --> 00:02:53,610
+The root N remains, and there's no d in it.
 
 39
-00:02:53,043 --> 00:02:57,283
+00:02:53,810 --> 00:02:58,050
 A grid's error, even for smooth functions, has d in its exponent.
 
 40
-00:02:58,866 --> 00:03:05,316
+00:02:59,633 --> 00:03:06,083
 So, back to our ball, with a million darts, in any dimension: how far off is a typical estimate?
 
 41
-00:03:06,816 --> 00:03:10,176
+00:03:07,583 --> 00:03:10,943
 One half over a thousand: five hundredths of a point.
 
 42
-00:03:10,976 --> 00:03:14,716
+00:03:11,743 --> 00:03:15,483
 Two runs in three land closer; all six of ours did.
 
 43
-00:03:15,333 --> 00:03:23,963
+00:03:16,066 --> 00:03:24,696
 In 2012, Bergstra and Bengio found that random search tuned neural networks as well as grid search, in a fraction of the time.
 
 44
-00:03:24,163 --> 00:03:31,383
+00:03:24,896 --> 00:03:32,116
 If one setting matters most, nine grid trials test three values of it; nine random trials test nine.
 
 45
-00:03:32,000 --> 00:03:35,010
+00:03:32,700 --> 00:03:35,710
 Darts do have a blind spot: tiny answers.
 
 46
-00:03:35,210 --> 00:03:41,030
+00:03:35,910 --> 00:03:41,730
 By thirty dimensions, a radius-one ball fills two parts in a hundred trillion of the box.
 
 47
-00:03:41,230 --> 00:03:48,550
+00:03:41,930 --> 00:03:49,250
 Below this line, a million darts expect under one hit, so they usually report zero: off by the whole answer.
 
 48
-00:03:49,666 --> 00:03:51,776
+00:03:50,366 --> 00:03:52,476
 The darts never noticed the axes:
 
 49
-00:03:52,076 --> 00:03:54,656
+00:03:52,776 --> 00:03:55,356
 a million coin flips, in any dimension.
 

@@ -1,8 +1,8 @@
 {
  "task": "transcribe",
  "language": "English",
- "duration": 229.78134629800002,
- "text": " One in 500 people has this disease. A test catches 99% of cases and wrongly flags 1% of the healthy. If yours says positive, what's the chance you're sick? Pick a number. Most doctors given a problem like this got it wrong. The tempting answer is the test's own hit rate, 99%. You'd start treatment today. Check that rule by counting. Here are 10,000 people and suppose half of them are sick. Test everyone. 99% of the sick light up, and 1% of the healthy. Of the 5,000 who lit up, 99% are sick. Here, the rule holds. Now make the disease rare, like yours, one in 500. That leaves 20 sick people. Run the same test. About 20 sick people light up, plus 1% of the 9,980 healthy ones. That's about 100. So of 120 positives, only 20 are sick. That's 17%. The rule said 99, six times too high. 1% sounds small, but here it's 1% of nearly everyone. Your positive result ruled out everyone who tested negative. What's left is a smaller sample space, these 120 people. Your chance of being sick is the red share of this crowd. 20 out of 20 plus 100. Before rounding, these are 19.8 and 99.8. That's 20 sick people times 99% and 9980 healthy times 1%. Divide top and bottom by 10,000. The share stays the same but each headcount becomes a fraction of everyone two in a thousand and nine hundred ninety eight in a thousand these two say how common each group is these two how often each group tests positive that's Bayes theorem all it does is shrink the sample space to what the evidence allows then take the share as for those gynecologists after one session turning percentages into counts of women, the way we just counted people, 87% got it right. Swap the disease for a police watch list. At the 2017 Champions League final, about 170,000 people were in Cardiff. The watch lists held about 1,200 faces, so even a small error rate per face would swamp the real matches. Face recognition cameras scanned the crowd and raised 2,470 alerts. Police counted 173 as right, 7%. In machine learning, the share of alerts that are right is called precision. Later, a new algorithm and better photos cut the false alarms, and 46% of alerts were judged right. Back to your test. The title's 99% accuracy is real, but a test that calls Everyone Healthy scores 99.8, more accurate and useless. Your 17% assumes a random screen. Symptoms raise the 1 in 500, and the answer climbs. 50% at 1 in 100, 99 at 1 in 2 were the rule held. On a random screen, 20 reach this plus along the red, 100 along the blue. 99% is the test's recall, how often the sick test positive. 17% is its precision, how often the positive are sick.",
+ "duration": 222.91199744,
+ "text": " One in 500 people has this disease. A test catches 99% of cases and wrongly flags 1% of the healthy. If yours says positive, what's the chance you're sick? Pick a number. Most doctors and medical students, given a problem like this, got it wrong. Their most common answer was the test's own accuracy, here 99%. You'd start treatment today. Check that rule by counting. Here are 10,000 people, and suppose half of them are sick. Test everyone. 99% of the sick light up, and 1% of the healthy. Of the 5,000 who lit up, 99% are sick. Here, the rule holds. Now make the disease rare, like yours, one in 500. That leaves 20 sick people. Run the same test. About 20 sick people light up, plus 1% of the 9,980 healthy ones. That's about 100. So of 120 positives, only 20 are sick, 17%. The rule said 99, six times too high. 1% sounds small, but here it's 1% of nearly everyone. Your positive result ruled out everyone who tested negative. What's left is a smaller sample space, these 120 people. Your chance of being sick is the red share of this crowd, 20 out of 20 plus 100. Unrounded, the red count is 20 sick people times 99%. The blue count is 9 healthy people times 1 Divide top and bottom by the 10 we started with 20 people become 2 in 1 and 9 become 998 in 1 The share can't change. These are how common each group is, and these, how often each group tests positive. Bayes' theorem. All it does is shrink the sample space to what the evidence allows, then take the share. Swap the disease for a police watchlist. At the 2017 Champions League final, about 170,000 people were in Cardiff. The watchlists held about 1,200 faces, so even a small error rate per face would swamp the real matches. Face recognition cameras scanned the crowd. They raised 2,400 and 70 alerts. Shrink to the alerts and take the red share. counted 173 as right, 7%. In machine learning, the share of alerts that are right is called precision. The university's evaluators counted 3% here. After a new algorithm and better photos cut the false alarms, they counted 46 at the Six Nations. Back to your test. The title's 99% accuracy is real. But a test that calls Everyone Healthy scores 99.8, more accurate and useless. Your 17% assumes a random screen. Symptoms raise the 1 in 500, and the answer climbs. At 1 in 100, 50%. At 1 in 2, 99, where the rule held. 99% is the test's recall, how often the sick test positive. 17% is its precision, how often the positive are sick.",
  "words": [
   {
    "word": "One",
@@ -71,12 +71,12 @@
   },
   {
    "word": "and",
-   "start": 5.88,
-   "end": 6.52
+   "start": 5.72,
+   "end": 6.5
   },
   {
    "word": "wrongly",
-   "start": 6.52,
+   "start": 6.5,
    "end": 6.94
   },
   {
@@ -106,7 +106,7 @@
   },
   {
    "word": "If",
-   "start": 8.78,
+   "start": 9.2,
    "end": 9.46
   },
   {
@@ -122,16 +122,16 @@
   {
    "word": "positive,",
    "start": 9.98,
-   "end": 10.74
+   "end": 10.72
   },
   {
    "word": "what's",
-   "start": 10.74,
-   "end": 11.12
+   "start": 10.72,
+   "end": 11.08
   },
   {
    "word": "the",
-   "start": 11.12,
+   "start": 11.08,
    "end": 11.22
   },
   {
@@ -147,7 +147,7 @@
   {
    "word": "sick?",
    "start": 11.68,
-   "end": 12.24
+   "end": 12.22
   },
   {
    "word": "Pick",
@@ -162,2257 +162,2122 @@
   {
    "word": "number.",
    "start": 12.92,
-   "end": 13.46
+   "end": 13.42
   },
   {
    "word": "Most",
-   "start": 15.5,
-   "end": 15.9
+   "start": 15.44,
+   "end": 15.84
   },
   {
    "word": "doctors",
-   "start": 15.9,
-   "end": 16.42
+   "start": 15.84,
+   "end": 16.4
+  },
+  {
+   "word": "and",
+   "start": 16.4,
+   "end": 16.68
+  },
+  {
+   "word": "medical",
+   "start": 16.68,
+   "end": 17.04
+  },
+  {
+   "word": "students,",
+   "start": 17.04,
+   "end": 17.72
   },
   {
    "word": "given",
-   "start": 16.42,
-   "end": 16.7
+   "start": 17.72,
+   "end": 18.22
   },
   {
    "word": "a",
-   "start": 16.7,
-   "end": 16.8
+   "start": 18.22,
+   "end": 18.38
   },
   {
    "word": "problem",
-   "start": 16.8,
-   "end": 17.16
+   "start": 18.38,
+   "end": 18.68
   },
   {
    "word": "like",
-   "start": 17.16,
-   "end": 17.4
+   "start": 18.68,
+   "end": 18.94
   },
   {
-   "word": "this",
-   "start": 17.4,
-   "end": 17.68
+   "word": "this,",
+   "start": 18.94,
+   "end": 19.28
   },
   {
    "word": "got",
-   "start": 17.68,
-   "end": 17.92
+   "start": 18.76,
+   "end": 19.4
   },
   {
    "word": "it",
-   "start": 17.92,
-   "end": 18.06
+   "start": 19.4,
+   "end": 19.54
   },
   {
    "word": "wrong.",
-   "start": 18.06,
-   "end": 18.54
+   "start": 19.54,
+   "end": 19.96
   },
   {
-   "word": "The",
-   "start": 18.42,
-   "end": 19.06
+   "word": "Their",
+   "start": 19.88,
+   "end": 20.54
   },
   {
-   "word": "tempting",
-   "start": 19.06,
-   "end": 19.36
+   "word": "most",
+   "start": 20.54,
+   "end": 20.8
+  },
+  {
+   "word": "common",
+   "start": 20.8,
+   "end": 21.18
   },
   {
    "word": "answer",
-   "start": 19.36,
-   "end": 19.86
-  },
-  {
-   "word": "is",
-   "start": 19.86,
-   "end": 20.2
-  },
-  {
-   "word": "the",
-   "start": 20.2,
-   "end": 20.38
-  },
-  {
-   "word": "test's",
-   "start": 20.38,
-   "end": 20.86
-  },
-  {
-   "word": "own",
-   "start": 20.86,
-   "end": 21
-  },
-  {
-   "word": "hit",
-   "start": 21,
-   "end": 21.22
-  },
-  {
-   "word": "rate,",
-   "start": 21.22,
+   "start": 21.18,
    "end": 21.64
   },
   {
-   "word": "99%.",
+   "word": "was",
    "start": 21.64,
-   "end": 22.86
+   "end": 21.92
+  },
+  {
+   "word": "the",
+   "start": 21.92,
+   "end": 22.06
+  },
+  {
+   "word": "test's",
+   "start": 22.06,
+   "end": 22.56
+  },
+  {
+   "word": "own",
+   "start": 22.56,
+   "end": 22.7
+  },
+  {
+   "word": "accuracy,",
+   "start": 22.7,
+   "end": 23.58
+  },
+  {
+   "word": "here",
+   "start": 23.58,
+   "end": 24.04
+  },
+  {
+   "word": "99%.",
+   "start": 24.04,
+   "end": 25.3
   },
   {
    "word": "You'd",
-   "start": 22.94,
-   "end": 23.64
+   "start": 25.34,
+   "end": 26.06
   },
   {
    "word": "start",
-   "start": 23.64,
-   "end": 23.9
+   "start": 26.06,
+   "end": 26.32
   },
   {
    "word": "treatment",
-   "start": 23.9,
-   "end": 24.24
+   "start": 26.32,
+   "end": 26.72
   },
   {
    "word": "today.",
-   "start": 24.24,
-   "end": 24.84
+   "start": 26.72,
+   "end": 27.3
   },
   {
    "word": "Check",
-   "start": 24.72,
-   "end": 25.44
+   "start": 27.2,
+   "end": 27.94
   },
   {
    "word": "that",
-   "start": 25.44,
-   "end": 25.66
+   "start": 27.94,
+   "end": 28.16
   },
   {
    "word": "rule",
-   "start": 25.66,
-   "end": 25.96
+   "start": 28.16,
+   "end": 28.44
   },
   {
    "word": "by",
-   "start": 25.96,
-   "end": 26.16
+   "start": 28.44,
+   "end": 28.66
   },
   {
    "word": "counting.",
-   "start": 26.16,
-   "end": 26.9
+   "start": 28.66,
+   "end": 29.38
   },
   {
    "word": "Here",
-   "start": 26.64,
-   "end": 27.42
+   "start": 29.66,
+   "end": 29.92
   },
   {
    "word": "are",
-   "start": 27.42,
-   "end": 27.56
+   "start": 29.92,
+   "end": 30.06
   },
   {
    "word": "10,000",
-   "start": 27.56,
-   "end": 28.22
+   "start": 30.06,
+   "end": 30.74
   },
   {
-   "word": "people",
-   "start": 28.22,
-   "end": 28.68
+   "word": "people,",
+   "start": 30.74,
+   "end": 31.36
   },
   {
    "word": "and",
-   "start": 29.12,
-   "end": 29.24
+   "start": 31.36,
+   "end": 31.74
   },
   {
    "word": "suppose",
-   "start": 29.24,
-   "end": 29.6
+   "start": 31.74,
+   "end": 32.16
   },
   {
    "word": "half",
-   "start": 29.6,
-   "end": 29.96
+   "start": 32.16,
+   "end": 32.46
   },
   {
    "word": "of",
-   "start": 29.96,
-   "end": 30.12
+   "start": 32.46,
+   "end": 32.62
   },
   {
    "word": "them",
-   "start": 30.12,
-   "end": 30.22
+   "start": 32.62,
+   "end": 32.72
   },
   {
    "word": "are",
-   "start": 30.22,
-   "end": 30.36
+   "start": 32.72,
+   "end": 32.86
   },
   {
    "word": "sick.",
-   "start": 30.36,
-   "end": 30.94
+   "start": 32.86,
+   "end": 33.4
   },
   {
    "word": "Test",
-   "start": 30.86,
-   "end": 31.66
+   "start": 33.76,
+   "end": 34.16
   },
   {
    "word": "everyone.",
-   "start": 31.66,
-   "end": 32.34
+   "start": 34.16,
+   "end": 34.88
   },
   {
    "word": "99%",
-   "start": 32.18,
-   "end": 33.64
+   "start": 35.1,
+   "end": 36.14
   },
   {
    "word": "of",
-   "start": 33.64,
-   "end": 33.86
+   "start": 36.14,
+   "end": 36.36
   },
   {
    "word": "the",
-   "start": 33.86,
-   "end": 33.96
+   "start": 36.36,
+   "end": 36.46
   },
   {
    "word": "sick",
-   "start": 33.96,
-   "end": 34.26
+   "start": 36.46,
+   "end": 36.76
   },
   {
    "word": "light",
-   "start": 34.26,
-   "end": 34.56
+   "start": 36.76,
+   "end": 37.02
   },
   {
    "word": "up,",
-   "start": 34.56,
-   "end": 34.96
+   "start": 37.02,
+   "end": 37.46
   },
   {
    "word": "and",
-   "start": 34.96,
-   "end": 35.4
+   "start": 37.46,
+   "end": 37.92
   },
   {
    "word": "1%",
-   "start": 35.4,
-   "end": 35.94
+   "start": 37.92,
+   "end": 38.44
   },
   {
    "word": "of",
-   "start": 35.94,
-   "end": 36.16
+   "start": 38.44,
+   "end": 38.66
   },
   {
    "word": "the",
-   "start": 36.16,
-   "end": 36.24
+   "start": 38.66,
+   "end": 38.74
   },
   {
    "word": "healthy.",
-   "start": 36.24,
-   "end": 36.88
+   "start": 38.74,
+   "end": 39.32
   },
   {
    "word": "Of",
-   "start": 36.74,
-   "end": 37.34
+   "start": 39.64,
+   "end": 39.84
   },
   {
    "word": "the",
-   "start": 37.34,
-   "end": 37.44
+   "start": 39.84,
+   "end": 39.94
   },
   {
    "word": "5,000",
-   "start": 37.44,
-   "end": 38.18
+   "start": 39.94,
+   "end": 40.68
   },
   {
    "word": "who",
-   "start": 38.18,
-   "end": 38.4
+   "start": 40.68,
+   "end": 40.9
   },
   {
    "word": "lit",
-   "start": 38.4,
-   "end": 38.56
+   "start": 40.9,
+   "end": 41.06
   },
   {
    "word": "up,",
-   "start": 38.56,
-   "end": 38.98
+   "start": 41.06,
+   "end": 41.44
   },
   {
    "word": "99%",
-   "start": 38.98,
-   "end": 40.14
+   "start": 41.44,
+   "end": 42.64
   },
   {
    "word": "are",
-   "start": 40.14,
-   "end": 40.44
+   "start": 42.64,
+   "end": 42.94
   },
   {
    "word": "sick.",
-   "start": 40.44,
-   "end": 41
+   "start": 42.94,
+   "end": 43.54
   },
   {
    "word": "Here,",
-   "start": 40.86,
-   "end": 41.82
+   "start": 43.36,
+   "end": 44.32
   },
   {
    "word": "the",
-   "start": 41.82,
-   "end": 41.94
+   "start": 44.32,
+   "end": 44.44
   },
   {
    "word": "rule",
-   "start": 41.94,
-   "end": 42.12
+   "start": 44.44,
+   "end": 44.62
   },
   {
    "word": "holds.",
-   "start": 42.12,
-   "end": 42.86
+   "start": 44.62,
+   "end": 45.56
   },
   {
    "word": "Now",
-   "start": 42.7,
-   "end": 43.44
+   "start": 45.2,
+   "end": 45.94
   },
   {
    "word": "make",
-   "start": 43.44,
-   "end": 43.7
+   "start": 45.94,
+   "end": 46.18
   },
   {
    "word": "the",
-   "start": 43.7,
-   "end": 43.82
+   "start": 46.18,
+   "end": 46.34
   },
   {
    "word": "disease",
-   "start": 43.82,
-   "end": 44.24
+   "start": 46.34,
+   "end": 46.74
   },
   {
    "word": "rare,",
-   "start": 44.24,
-   "end": 44.74
+   "start": 46.74,
+   "end": 47.24
   },
   {
    "word": "like",
-   "start": 44.74,
-   "end": 44.9
+   "start": 47.24,
+   "end": 47.4
   },
   {
    "word": "yours,",
-   "start": 44.9,
-   "end": 45.54
+   "start": 47.4,
+   "end": 48.04
   },
   {
    "word": "one",
-   "start": 45.54,
-   "end": 46.08
+   "start": 48.04,
+   "end": 48.58
   },
   {
    "word": "in",
-   "start": 46.08,
-   "end": 46.24
+   "start": 48.58,
+   "end": 48.74
   },
   {
    "word": "500.",
-   "start": 46.24,
-   "end": 47.16
+   "start": 48.74,
+   "end": 49.64
   },
   {
    "word": "That",
-   "start": 46.9,
-   "end": 47.64
+   "start": 49.4,
+   "end": 50.14
   },
   {
    "word": "leaves",
-   "start": 47.64,
-   "end": 48
+   "start": 50.14,
+   "end": 50.5
   },
   {
    "word": "20",
-   "start": 48,
-   "end": 48.32
+   "start": 50.5,
+   "end": 50.82
   },
   {
    "word": "sick",
-   "start": 48.32,
-   "end": 48.64
+   "start": 50.82,
+   "end": 51.12
   },
   {
    "word": "people.",
-   "start": 48.64,
-   "end": 49.32
+   "start": 51.12,
+   "end": 51.86
   },
   {
    "word": "Run",
-   "start": 49.18,
-   "end": 49.9
+   "start": 51.66,
+   "end": 52.4
   },
   {
    "word": "the",
-   "start": 49.9,
-   "end": 50.06
+   "start": 52.4,
+   "end": 52.58
   },
   {
    "word": "same",
-   "start": 50.06,
-   "end": 50.3
-  },
-  {
-   "word": "test.",
-   "start": 50.3,
-   "end": 50.94
-  },
-  {
-   "word": "About",
-   "start": 50.72,
-   "end": 51.46
-  },
-  {
-   "word": "20",
-   "start": 51.46,
-   "end": 51.82
-  },
-  {
-   "word": "sick",
-   "start": 51.82,
-   "end": 52.18
-  },
-  {
-   "word": "people",
-   "start": 52.18,
-   "end": 52.52
-  },
-  {
-   "word": "light",
-   "start": 52.52,
+   "start": 52.58,
    "end": 52.8
   },
   {
-   "word": "up,",
+   "word": "test.",
    "start": 52.8,
-   "end": 53.24
+   "end": 53.42
   },
   {
-   "word": "plus",
-   "start": 53.06,
-   "end": 53.78
+   "word": "About",
+   "start": 53.2,
+   "end": 53.96
   },
   {
-   "word": "1%",
-   "start": 53.78,
+   "word": "20",
+   "start": 53.96,
    "end": 54.32
   },
   {
-   "word": "of",
+   "word": "sick",
    "start": 54.32,
    "end": 54.68
   },
   {
-   "word": "the",
+   "word": "people",
    "start": 54.68,
-   "end": 54.8
+   "end": 55.02
+  },
+  {
+   "word": "light",
+   "start": 55.02,
+   "end": 55.28
+  },
+  {
+   "word": "up,",
+   "start": 55.28,
+   "end": 55.74
+  },
+  {
+   "word": "plus",
+   "start": 56.06,
+   "end": 56.26
+  },
+  {
+   "word": "1%",
+   "start": 56.26,
+   "end": 56.82
+  },
+  {
+   "word": "of",
+   "start": 56.82,
+   "end": 57.18
+  },
+  {
+   "word": "the",
+   "start": 57.18,
+   "end": 57.3
   },
   {
    "word": "9,980",
-   "start": 54.8,
-   "end": 56.5
+   "start": 57.3,
+   "end": 59
   },
   {
    "word": "healthy",
-   "start": 56.5,
-   "end": 56.94
+   "start": 59,
+   "end": 59.4
   },
   {
    "word": "ones.",
-   "start": 56.94,
-   "end": 57.6
-  },
-  {
-   "word": "That's",
-   "start": 57.88,
-   "end": 58.26
-  },
-  {
-   "word": "about",
-   "start": 58.26,
-   "end": 58.48
-  },
-  {
-   "word": "100.",
-   "start": 58.48,
-   "end": 59.24
-  },
-  {
-   "word": "So",
-   "start": 59.2,
-   "end": 59.86
-  },
-  {
-   "word": "of",
-   "start": 59.86,
+   "start": 59.4,
    "end": 59.98
   },
   {
-   "word": "120",
-   "start": 59.98,
-   "end": 60.84
-  },
-  {
-   "word": "positives,",
-   "start": 60.84,
-   "end": 61.76
-  },
-  {
-   "word": "only",
-   "start": 61.76,
-   "end": 62.24
-  },
-  {
-   "word": "20",
-   "start": 62.24,
-   "end": 62.64
-  },
-  {
-   "word": "are",
-   "start": 62.64,
-   "end": 62.82
-  },
-  {
-   "word": "sick.",
-   "start": 62.82,
-   "end": 63.38
-  },
-  {
    "word": "That's",
-   "start": 63.18,
-   "end": 64.04
+   "start": 59.9,
+   "end": 60.76
   },
   {
-   "word": "17%.",
-   "start": 64.04,
-   "end": 65.24
-  },
-  {
-   "word": "The",
-   "start": 65.98,
-   "end": 66.58
-  },
-  {
-   "word": "rule",
-   "start": 66.58,
-   "end": 66.9
-  },
-  {
-   "word": "said",
-   "start": 66.9,
-   "end": 67.18
-  },
-  {
-   "word": "99,",
-   "start": 67.18,
-   "end": 68.14
-  },
-  {
-   "word": "six",
-   "start": 68.14,
-   "end": 68.64
-  },
-  {
-   "word": "times",
-   "start": 68.64,
-   "end": 69.04
-  },
-  {
-   "word": "too",
-   "start": 69.04,
-   "end": 69.32
-  },
-  {
-   "word": "high.",
-   "start": 69.32,
-   "end": 70.54
-  },
-  {
-   "word": "1%",
-   "start": 70.8,
-   "end": 71.46
-  },
-  {
-   "word": "sounds",
-   "start": 71.46,
-   "end": 72
-  },
-  {
-   "word": "small,",
-   "start": 72,
-   "end": 72.6
-  },
-  {
-   "word": "but",
-   "start": 72.6,
-   "end": 73.08
-  },
-  {
-   "word": "here",
-   "start": 73.08,
-   "end": 73.3
-  },
-  {
-   "word": "it's",
-   "start": 73.3,
-   "end": 73.5
-  },
-  {
-   "word": "1%",
-   "start": 73.5,
-   "end": 74.06
-  },
-  {
-   "word": "of",
-   "start": 74.06,
-   "end": 74.38
-  },
-  {
-   "word": "nearly",
-   "start": 74.38,
-   "end": 74.64
-  },
-  {
-   "word": "everyone.",
-   "start": 74.64,
-   "end": 75.68
-  },
-  {
-   "word": "Your",
-   "start": 75.42,
-   "end": 76.04
-  },
-  {
-   "word": "positive",
-   "start": 76.04,
-   "end": 76.66
-  },
-  {
-   "word": "result",
-   "start": 76.66,
-   "end": 77.24
-  },
-  {
-   "word": "ruled",
-   "start": 77.24,
-   "end": 77.98
-  },
-  {
-   "word": "out",
-   "start": 77.98,
-   "end": 78.2
-  },
-  {
-   "word": "everyone",
-   "start": 78.2,
-   "end": 78.72
-  },
-  {
-   "word": "who",
-   "start": 78.72,
-   "end": 79
-  },
-  {
-   "word": "tested",
-   "start": 79,
-   "end": 79.48
-  },
-  {
-   "word": "negative.",
-   "start": 79.48,
-   "end": 80.44
-  },
-  {
-   "word": "What's",
-   "start": 80.76,
-   "end": 81.38
-  },
-  {
-   "word": "left",
-   "start": 81.38,
-   "end": 81.74
-  },
-  {
-   "word": "is",
-   "start": 81.74,
-   "end": 81.98
-  },
-  {
-   "word": "a",
-   "start": 81.98,
-   "end": 82.06
-  },
-  {
-   "word": "smaller",
-   "start": 82.06,
-   "end": 82.56
-  },
-  {
-   "word": "sample",
-   "start": 82.56,
-   "end": 83.06
-  },
-  {
-   "word": "space,",
-   "start": 83.06,
-   "end": 83.8
-  },
-  {
-   "word": "these",
-   "start": 83.8,
-   "end": 84.36
-  },
-  {
-   "word": "120",
-   "start": 84.36,
-   "end": 85.3
-  },
-  {
-   "word": "people.",
-   "start": 85.3,
-   "end": 86.28
-  },
-  {
-   "word": "Your",
-   "start": 86.52,
-   "end": 86.66
-  },
-  {
-   "word": "chance",
-   "start": 86.66,
-   "end": 87
-  },
-  {
-   "word": "of",
-   "start": 87,
-   "end": 87.12
-  },
-  {
-   "word": "being",
-   "start": 87.12,
-   "end": 87.3
-  },
-  {
-   "word": "sick",
-   "start": 87.3,
-   "end": 87.76
-  },
-  {
-   "word": "is",
-   "start": 87.76,
-   "end": 88.22
-  },
-  {
-   "word": "the",
-   "start": 88.22,
-   "end": 88.36
-  },
-  {
-   "word": "red",
-   "start": 88.36,
-   "end": 88.6
-  },
-  {
-   "word": "share",
-   "start": 88.6,
-   "end": 88.92
-  },
-  {
-   "word": "of",
-   "start": 88.92,
-   "end": 89.08
-  },
-  {
-   "word": "this",
-   "start": 89.08,
-   "end": 89.24
-  },
-  {
-   "word": "crowd.",
-   "start": 89.24,
-   "end": 89.6
-  },
-  {
-   "word": "20",
-   "start": 90.06,
-   "end": 90.56
-  },
-  {
-   "word": "out",
-   "start": 90.56,
-   "end": 91.08
-  },
-  {
-   "word": "of",
-   "start": 91.08,
-   "end": 91.2
-  },
-  {
-   "word": "20",
-   "start": 91.2,
-   "end": 91.52
-  },
-  {
-   "word": "plus",
-   "start": 91.52,
-   "end": 91.8
+   "word": "about",
+   "start": 60.76,
+   "end": 60.98
   },
   {
    "word": "100.",
-   "start": 91.8,
-   "end": 92.52
+   "start": 60.98,
+   "end": 61.82
   },
   {
-   "word": "Before",
-   "start": 94.08,
-   "end": 94.46
+   "word": "So",
+   "start": 61.68,
+   "end": 62.36
   },
   {
-   "word": "rounding,",
-   "start": 94.46,
-   "end": 95.14
+   "word": "of",
+   "start": 62.36,
+   "end": 62.48
   },
   {
-   "word": "these",
-   "start": 95.14,
-   "end": 95.66
+   "word": "120",
+   "start": 62.48,
+   "end": 63.34
   },
   {
-   "word": "are",
-   "start": 95.66,
-   "end": 95.78
+   "word": "positives,",
+   "start": 63.34,
+   "end": 64.3
   },
   {
-   "word": "19.8",
-   "start": 95.78,
-   "end": 96.76
-  },
-  {
-   "word": "and",
-   "start": 96.76,
-   "end": 97.06
-  },
-  {
-   "word": "99.8.",
-   "start": 97.06,
-   "end": 98.38
-  },
-  {
-   "word": "That's",
-   "start": 98.36,
-   "end": 99.14
+   "word": "only",
+   "start": 64.3,
+   "end": 64.74
   },
   {
    "word": "20",
-   "start": 99.14,
-   "end": 99.44
-  },
-  {
-   "word": "sick",
-   "start": 99.44,
-   "end": 99.78
-  },
-  {
-   "word": "people",
-   "start": 99.78,
-   "end": 100.12
-  },
-  {
-   "word": "times",
-   "start": 100.12,
-   "end": 100.44
-  },
-  {
-   "word": "99%",
-   "start": 100.44,
-   "end": 101.5
-  },
-  {
-   "word": "and",
-   "start": 101.88,
-   "end": 102.48
-  },
-  {
-   "word": "9980",
-   "start": 102.48,
-   "end": 104.24
-  },
-  {
-   "word": "healthy",
-   "start": 104.24,
-   "end": 104.76
-  },
-  {
-   "word": "times",
-   "start": 104.76,
-   "end": 105.18
-  },
-  {
-   "word": "1%.",
-   "start": 105.18,
-   "end": 106.02
-  },
-  {
-   "word": "Divide",
-   "start": 106.08,
-   "end": 106.92
-  },
-  {
-   "word": "top",
-   "start": 106.92,
-   "end": 107.22
-  },
-  {
-   "word": "and",
-   "start": 107.22,
-   "end": 107.34
-  },
-  {
-   "word": "bottom",
-   "start": 107.34,
-   "end": 107.68
-  },
-  {
-   "word": "by",
-   "start": 107.68,
-   "end": 107.9
-  },
-  {
-   "word": "10,000.",
-   "start": 107.9,
-   "end": 108.9
-  },
-  {
-   "word": "The",
-   "start": 108.7,
-   "end": 109.32
-  },
-  {
-   "word": "share",
-   "start": 109.32,
-   "end": 109.58
-  },
-  {
-   "word": "stays",
-   "start": 109.58,
-   "end": 110
-  },
-  {
-   "word": "the",
-   "start": 110,
-   "end": 110.16
-  },
-  {
-   "word": "same,",
-   "start": 110.16,
-   "end": 110.74
-  },
-  {
-   "word": "but",
-   "start": 110.6,
-   "end": 111.2
-  },
-  {
-   "word": "each",
-   "start": 111.2,
-   "end": 111.5
-  },
-  {
-   "word": "headcount",
-   "start": 111.5,
-   "end": 112.02
-  },
-  {
-   "word": "becomes",
-   "start": 112.02,
-   "end": 112.5
-  },
-  {
-   "word": "a",
-   "start": 112.5,
-   "end": 112.62
-  },
-  {
-   "word": "fraction",
-   "start": 112.62,
-   "end": 113.08
-  },
-  {
-   "word": "of",
-   "start": 113.08,
-   "end": 113.3
-  },
-  {
-   "word": "everyone.",
-   "start": 113.3,
-   "end": 114.08
-  },
-  {
-   "word": "two",
-   "start": 113.77065,
-   "end": 114.83066
-  },
-  {
-   "word": "in",
-   "start": 114.83066,
-   "end": 115.13065
-  },
-  {
-   "word": "a",
-   "start": 115.13065,
-   "end": 115.210655
-  },
-  {
-   "word": "thousand",
-   "start": 115.210655,
-   "end": 115.61066
-  },
-  {
-   "word": "and",
-   "start": 115.250656,
-   "end": 116.29066
-  },
-  {
-   "word": "nine",
-   "start": 116.29066,
-   "end": 116.45065
-  },
-  {
-   "word": "hundred",
-   "start": 116.45065,
-   "end": 116.750656
-  },
-  {
-   "word": "ninety",
-   "start": 116.750656,
-   "end": 117.19066
-  },
-  {
-   "word": "eight",
-   "start": 117.19066,
-   "end": 117.490654
-  },
-  {
-   "word": "in",
-   "start": 117.490654,
-   "end": 117.69066
-  },
-  {
-   "word": "a",
-   "start": 117.69066,
-   "end": 117.77065
-  },
-  {
-   "word": "thousand",
-   "start": 117.77065,
-   "end": 118.15066
-  },
-  {
-   "word": "these",
-   "start": 118.15066,
-   "end": 119.11066
-  },
-  {
-   "word": "two",
-   "start": 119.11066,
-   "end": 119.29066
-  },
-  {
-   "word": "say",
-   "start": 119.29066,
-   "end": 119.51066
-  },
-  {
-   "word": "how",
-   "start": 119.51066,
-   "end": 119.710655
-  },
-  {
-   "word": "common",
-   "start": 119.710655,
-   "end": 120.09065
-  },
-  {
-   "word": "each",
-   "start": 120.09065,
-   "end": 120.33066
-  },
-  {
-   "word": "group",
-   "start": 119.79066,
-   "end": 120.59065
-  },
-  {
-   "word": "is",
-   "start": 120.59065,
-   "end": 120.890656
-  },
-  {
-   "word": "these",
-   "start": 120.890656,
-   "end": 121.63065
-  },
-  {
-   "word": "two",
-   "start": 121.63065,
-   "end": 121.87065
-  },
-  {
-   "word": "how",
-   "start": 121.87065,
-   "end": 122.29066
-  },
-  {
-   "word": "often",
-   "start": 122.29066,
-   "end": 122.61066
-  },
-  {
-   "word": "each",
-   "start": 122.61066,
-   "end": 122.890656
-  },
-  {
-   "word": "group",
-   "start": 122.890656,
-   "end": 123.13065
-  },
-  {
-   "word": "tests",
-   "start": 123.13065,
-   "end": 123.51066
-  },
-  {
-   "word": "positive",
-   "start": 123.51066,
-   "end": 124.05066
-  },
-  {
-   "word": "that's",
-   "start": 124.05066,
-   "end": 125.15066
-  },
-  {
-   "word": "Bayes",
-   "start": 125.15066,
-   "end": 125.41066
-  },
-  {
-   "word": "theorem",
-   "start": 125.41066,
-   "end": 125.77065
-  },
-  {
-   "word": "all",
-   "start": 125.77065,
-   "end": 126.570656
-  },
-  {
-   "word": "it",
-   "start": 125.59065,
-   "end": 126.79066
-  },
-  {
-   "word": "does",
-   "start": 126.79066,
-   "end": 127.11066
-  },
-  {
-   "word": "is",
-   "start": 127.11066,
-   "end": 127.27065
-  },
-  {
-   "word": "shrink",
-   "start": 127.27065,
-   "end": 127.670654
-  },
-  {
-   "word": "the",
-   "start": 127.670654,
-   "end": 127.850655
-  },
-  {
-   "word": "sample",
-   "start": 127.850655,
-   "end": 128.29065
-  },
-  {
-   "word": "space",
-   "start": 128.29065,
-   "end": 128.65065
-  },
-  {
-   "word": "to",
-   "start": 128.65065,
-   "end": 128.89066
-  },
-  {
-   "word": "what",
-   "start": 128.89066,
-   "end": 128.99066
-  },
-  {
-   "word": "the",
-   "start": 128.99066,
-   "end": 129.11066
-  },
-  {
-   "word": "evidence",
-   "start": 129.11066,
-   "end": 129.49066
-  },
-  {
-   "word": "allows",
-   "start": 129.49066,
-   "end": 130.05066
-  },
-  {
-   "word": "then",
-   "start": 130.05066,
-   "end": 130.79065
-  },
-  {
-   "word": "take",
-   "start": 130.79065,
-   "end": 131.05066
-  },
-  {
-   "word": "the",
-   "start": 131.05066,
-   "end": 131.21066
-  },
-  {
-   "word": "share",
-   "start": 130.71066,
-   "end": 131.53065
-  },
-  {
-   "word": "as",
-   "start": 131.53065,
-   "end": 132.49066
-  },
-  {
-   "word": "for",
-   "start": 132.49066,
-   "end": 132.59065
-  },
-  {
-   "word": "those",
-   "start": 132.59065,
-   "end": 133.01065
-  },
-  {
-   "word": "gynecologists",
-   "start": 133.01065,
-   "end": 133.89066
-  },
-  {
-   "word": "after",
-   "start": 133.89066,
-   "end": 135.03065
-  },
-  {
-   "word": "one",
-   "start": 135.03065,
-   "end": 135.33066
-  },
-  {
-   "word": "session",
-   "start": 135.33066,
-   "end": 135.71066
-  },
-  {
-   "word": "turning",
-   "start": 135.71066,
-   "end": 136.19066
-  },
-  {
-   "word": "percentages",
-   "start": 136.19066,
-   "end": 136.79065
-  },
-  {
-   "word": "into",
-   "start": 136.79065,
-   "end": 137.25066
-  },
-  {
-   "word": "counts",
-   "start": 137.31065,
-   "end": 137.55066
-  },
-  {
-   "word": "of",
-   "start": 137.55066,
-   "end": 137.79065
-  },
-  {
-   "word": "women,",
-   "start": 137.79065,
-   "end": 138.31065
-  },
-  {
-   "word": "the",
-   "start": 138.31065,
-   "end": 138.73065
-  },
-  {
-   "word": "way",
-   "start": 138.73065,
-   "end": 138.93066
-  },
-  {
-   "word": "we",
-   "start": 138.93066,
-   "end": 139.13066
-  },
-  {
-   "word": "just",
-   "start": 139.13066,
-   "end": 139.35065
-  },
-  {
-   "word": "counted",
-   "start": 139.35065,
-   "end": 139.75066
-  },
-  {
-   "word": "people,",
-   "start": 139.75066,
-   "end": 140.71066
-  },
-  {
-   "word": "87%",
-   "start": 140.71066,
-   "end": 141.75066
-  },
-  {
-   "word": "got",
-   "start": 141.75066,
-   "end": 142.15065
-  },
-  {
-   "word": "it",
-   "start": 142.15065,
-   "end": 142.29065
-  },
-  {
-   "word": "right.",
-   "start": 142.29065,
-   "end": 142.75066
-  },
-  {
-   "word": "Swap",
-   "start": 142.75066,
-   "end": 143.47066
-  },
-  {
-   "word": "the",
-   "start": 143.47066,
-   "end": 143.63066
-  },
-  {
-   "word": "disease",
-   "start": 143.63066,
-   "end": 143.99066
-  },
-  {
-   "word": "for",
-   "start": 143.99066,
-   "end": 144.39066
-  },
-  {
-   "word": "a",
-   "start": 144.39066,
-   "end": 144.49066
-  },
-  {
-   "word": "police",
-   "start": 144.49066,
-   "end": 144.73065
-  },
-  {
-   "word": "watch",
-   "start": 144.31065,
-   "end": 145.07065
-  },
-  {
-   "word": "list.",
-   "start": 145.07065,
-   "end": 145.63066
-  },
-  {
-   "word": "At",
-   "start": 145.63066,
-   "end": 146.09065
-  },
-  {
-   "word": "the",
-   "start": 146.09065,
-   "end": 146.17065
-  },
-  {
-   "word": "2017",
-   "start": 146.17065,
-   "end": 146.83066
-  },
-  {
-   "word": "Champions",
-   "start": 146.83066,
-   "end": 147.93066
-  },
-  {
-   "word": "League",
-   "start": 147.93066,
-   "end": 148.33066
-  },
-  {
-   "word": "final,",
-   "start": 148.33066,
-   "end": 149.43066
-  },
-  {
-   "word": "about",
-   "start": 149.43066,
-   "end": 149.57065
-  },
-  {
-   "word": "170,000",
-   "start": 149.57065,
-   "end": 151.21066
-  },
-  {
-   "word": "people",
-   "start": 151.21066,
-   "end": 151.67065
-  },
-  {
-   "word": "were",
-   "start": 151.67065,
-   "end": 151.97066
-  },
-  {
-   "word": "in",
-   "start": 151.97066,
-   "end": 152.15065
-  },
-  {
-   "word": "Cardiff.",
-   "start": 152.15065,
-   "end": 152.71066
-  },
-  {
-   "word": "The",
-   "start": 152.71066,
-   "end": 153.09065
-  },
-  {
-   "word": "watch",
-   "start": 153.09065,
-   "end": 153.45065
-  },
-  {
-   "word": "lists",
-   "start": 152.99066,
-   "end": 153.75066
-  },
-  {
-   "word": "held",
-   "start": 153.75066,
-   "end": 154.03065
-  },
-  {
-   "word": "about",
-   "start": 154.03065,
-   "end": 154.31065
-  },
-  {
-   "word": "1,200",
-   "start": 154.31065,
-   "end": 154.81065
-  },
-  {
-   "word": "faces,",
-   "start": 154.81065,
-   "end": 155.71066
-  },
-  {
-   "word": "so",
-   "start": 155.71066,
-   "end": 156.27066
-  },
-  {
-   "word": "even",
-   "start": 156.27066,
-   "end": 156.57065
-  },
-  {
-   "word": "a",
-   "start": 156.57065,
-   "end": 156.75066
-  },
-  {
-   "word": "small",
-   "start": 156.75066,
-   "end": 157.19066
-  },
-  {
-   "word": "error",
-   "start": 157.19066,
-   "end": 157.57065
-  },
-  {
-   "word": "rate",
-   "start": 157.57065,
-   "end": 157.93066
-  },
-  {
-   "word": "per",
-   "start": 157.93066,
-   "end": 158.11066
-  },
-  {
-   "word": "face",
-   "start": 158.11066,
-   "end": 158.59065
-  },
-  {
-   "word": "would",
-   "start": 158.59065,
-   "end": 158.93066
-  },
-  {
-   "word": "swamp",
-   "start": 158.93066,
-   "end": 159.31065
-  },
-  {
-   "word": "the",
-   "start": 159.31065,
-   "end": 159.53065
-  },
-  {
-   "word": "real",
-   "start": 159.53065,
-   "end": 159.75066
-  },
-  {
-   "word": "matches.",
-   "start": 159.75066,
-   "end": 160.49066
-  },
-  {
-   "word": "Face",
-   "start": 160.97066,
-   "end": 161.13066
-  },
-  {
-   "word": "recognition",
-   "start": 161.13066,
-   "end": 161.73065
-  },
-  {
-   "word": "cameras",
-   "start": 161.73065,
-   "end": 162.55066
-  },
-  {
-   "word": "scanned",
-   "start": 162.55066,
-   "end": 163.11066
-  },
-  {
-   "word": "the",
-   "start": 163.11066,
-   "end": 163.25066
-  },
-  {
-   "word": "crowd",
-   "start": 163.25066,
-   "end": 163.53065
-  },
-  {
-   "word": "and",
-   "start": 163.53065,
-   "end": 164.29065
-  },
-  {
-   "word": "raised",
-   "start": 164.29065,
-   "end": 164.67065
-  },
-  {
-   "word": "2,470",
-   "start": 164.67065,
-   "end": 166.55066
-  },
-  {
-   "word": "alerts.",
-   "start": 166.55066,
-   "end": 167.27066
-  },
-  {
-   "word": "Police",
-   "start": 167.67065,
-   "end": 168.11066
-  },
-  {
-   "word": "counted",
-   "start": 168.11066,
-   "end": 168.51065
-  },
-  {
-   "word": "173",
-   "start": 168.51065,
-   "end": 169.99066
-  },
-  {
-   "word": "as",
-   "start": 169.99066,
-   "end": 170.25066
-  },
-  {
-   "word": "right,",
-   "start": 170.25066,
-   "end": 170.79065
-  },
-  {
-   "word": "7%.",
-   "start": 170.79065,
-   "end": 171.79065
-  },
-  {
-   "word": "In",
-   "start": 171.69066,
-   "end": 172.73065
-  },
-  {
-   "word": "machine",
-   "start": 172.73065,
-   "end": 173.07065
-  },
-  {
-   "word": "learning,",
-   "start": 173.07065,
-   "end": 174.03065
-  },
-  {
-   "word": "the",
-   "start": 174.03065,
-   "end": 174.13065
-  },
-  {
-   "word": "share",
-   "start": 174.13065,
-   "end": 174.37067
-  },
-  {
-   "word": "of",
-   "start": 174.37067,
-   "end": 174.53065
-  },
-  {
-   "word": "alerts",
-   "start": 174.53065,
-   "end": 174.89066
-  },
-  {
-   "word": "that",
-   "start": 174.89066,
-   "end": 175.13065
+   "start": 64.74,
+   "end": 65.14
   },
   {
    "word": "are",
-   "start": 175.13065,
-   "end": 175.23065
+   "start": 65.14,
+   "end": 65.34
   },
   {
-   "word": "right",
-   "start": 175.23065,
-   "end": 175.57065
+   "word": "sick,",
+   "start": 65.34,
+   "end": 65.92
   },
   {
-   "word": "is",
-   "start": 175.57065,
-   "end": 175.87067
-  },
-  {
-   "word": "called",
-   "start": 175.87067,
-   "end": 176.09065
-  },
-  {
-   "word": "precision.",
-   "start": 176.09065,
-   "end": 176.87067
-  },
-  {
-   "word": "Later,",
-   "start": 177.19066,
-   "end": 177.97066
-  },
-  {
-   "word": "a",
-   "start": 177.97066,
-   "end": 178.17065
-  },
-  {
-   "word": "new",
-   "start": 178.17065,
-   "end": 178.33066
-  },
-  {
-   "word": "algorithm",
-   "start": 178.33066,
-   "end": 178.93066
-  },
-  {
-   "word": "and",
-   "start": 178.93066,
-   "end": 179.21066
-  },
-  {
-   "word": "better",
-   "start": 179.21066,
-   "end": 179.45065
-  },
-  {
-   "word": "photos",
-   "start": 179.45065,
-   "end": 180.03065
-  },
-  {
-   "word": "cut",
-   "start": 180.03065,
-   "end": 180.35065
-  },
-  {
-   "word": "the",
-   "start": 180.35065,
-   "end": 180.51065
-  },
-  {
-   "word": "false",
-   "start": 180.51065,
-   "end": 180.77066
-  },
-  {
-   "word": "alarms,",
-   "start": 180.77066,
-   "end": 181.59065
-  },
-  {
-   "word": "and",
-   "start": 181.59065,
-   "end": 182.11066
-  },
-  {
-   "word": "46%",
-   "start": 182.11066,
-   "end": 183.05066
-  },
-  {
-   "word": "of",
-   "start": 183.05066,
-   "end": 183.27066
-  },
-  {
-   "word": "alerts",
-   "start": 183.27066,
-   "end": 183.57065
-  },
-  {
-   "word": "were",
-   "start": 183.57065,
-   "end": 183.83066
-  },
-  {
-   "word": "judged",
-   "start": 183.83066,
-   "end": 184.15067
-  },
-  {
-   "word": "right.",
-   "start": 184.15067,
-   "end": 184.79065
-  },
-  {
-   "word": "Back",
-   "start": 184.69066,
-   "end": 185.49066
-  },
-  {
-   "word": "to",
-   "start": 185.49066,
-   "end": 185.67065
-  },
-  {
-   "word": "your",
-   "start": 185.67065,
-   "end": 185.77066
-  },
-  {
-   "word": "test.",
-   "start": 185.77066,
-   "end": 186.37067
+   "word": "17%.",
+   "start": 65.92,
+   "end": 67.44
   },
   {
    "word": "The",
-   "start": 187.31065,
-   "end": 187.47066
-  },
-  {
-   "word": "title's",
-   "start": 187.47066,
-   "end": 187.87067
-  },
-  {
-   "word": "99%",
-   "start": 187.87067,
-   "end": 188.79065
-  },
-  {
-   "word": "accuracy",
-   "start": 188.79065,
-   "end": 189.39066
-  },
-  {
-   "word": "is",
-   "start": 189.39066,
-   "end": 190.01065
-  },
-  {
-   "word": "real,",
-   "start": 190.01065,
-   "end": 190.53065
-  },
-  {
-   "word": "but",
-   "start": 190.53065,
-   "end": 191.03065
-  },
-  {
-   "word": "a",
-   "start": 191.03065,
-   "end": 191.15067
-  },
-  {
-   "word": "test",
-   "start": 191.15067,
-   "end": 191.55066
-  },
-  {
-   "word": "that",
-   "start": 191.55066,
-   "end": 191.75066
-  },
-  {
-   "word": "calls",
-   "start": 191.75066,
-   "end": 192.03065
-  },
-  {
-   "word": "Everyone",
-   "start": 192.03065,
-   "end": 192.41064
-  },
-  {
-   "word": "Healthy",
-   "start": 192.41064,
-   "end": 192.83066
-  },
-  {
-   "word": "scores",
-   "start": 192.83066,
-   "end": 193.37067
-  },
-  {
-   "word": "99.8,",
-   "start": 193.37067,
-   "end": 195.01065
-  },
-  {
-   "word": "more",
-   "start": 195.47066,
-   "end": 195.71066
-  },
-  {
-   "word": "accurate",
-   "start": 195.71066,
-   "end": 196.19066
-  },
-  {
-   "word": "and",
-   "start": 196.19066,
-   "end": 196.51065
-  },
-  {
-   "word": "useless.",
-   "start": 196.51065,
-   "end": 196.87067
-  },
-  {
-   "word": "Your",
-   "start": 196.87067,
-   "end": 197.75066
-  },
-  {
-   "word": "17%",
-   "start": 197.75066,
-   "end": 198.69066
-  },
-  {
-   "word": "assumes",
-   "start": 198.69066,
-   "end": 199.57065
-  },
-  {
-   "word": "a",
-   "start": 199.57065,
-   "end": 199.79065
-  },
-  {
-   "word": "random",
-   "start": 199.79065,
-   "end": 200.11066
-  },
-  {
-   "word": "screen.",
-   "start": 200.11066,
-   "end": 200.81065
-  },
-  {
-   "word": "Symptoms",
-   "start": 200.81065,
-   "end": 201.71066
-  },
-  {
-   "word": "raise",
-   "start": 201.71066,
-   "end": 202.09065
-  },
-  {
-   "word": "the",
-   "start": 202.09065,
-   "end": 202.31065
-  },
-  {
-   "word": "1",
-   "start": 202.31065,
-   "end": 202.53065
-  },
-  {
-   "word": "in",
-   "start": 202.53065,
-   "end": 202.71066
-  },
-  {
-   "word": "500,",
-   "start": 202.71066,
-   "end": 203.63065
-  },
-  {
-   "word": "and",
-   "start": 203.25066,
-   "end": 204.05066
-  },
-  {
-   "word": "the",
-   "start": 204.05066,
-   "end": 204.13065
-  },
-  {
-   "word": "answer",
-   "start": 204.13065,
-   "end": 204.47066
-  },
-  {
-   "word": "climbs.",
-   "start": 204.47066,
-   "end": 205.19066
-  },
-  {
-   "word": "50%",
-   "start": 205.19066,
-   "end": 206.43066
-  },
-  {
-   "word": "at",
-   "start": 206.43066,
-   "end": 206.81065
-  },
-  {
-   "word": "1",
-   "start": 206.81065,
-   "end": 207.03065
-  },
-  {
-   "word": "in",
-   "start": 207.03065,
-   "end": 207.17065
-  },
-  {
-   "word": "100,",
-   "start": 207.17065,
-   "end": 207.75066
-  },
-  {
-   "word": "99",
-   "start": 207.75066,
-   "end": 208.47066
-  },
-  {
-   "word": "at",
-   "start": 208.47066,
-   "end": 208.93066
-  },
-  {
-   "word": "1",
-   "start": 208.93066,
-   "end": 209.19066
-  },
-  {
-   "word": "in",
-   "start": 209.19066,
-   "end": 209.37067
-  },
-  {
-   "word": "2",
-   "start": 209.37067,
-   "end": 209.69066
-  },
-  {
-   "word": "were",
-   "start": 209.69066,
-   "end": 210.19066
-  },
-  {
-   "word": "the",
-   "start": 210.19066,
-   "end": 210.33066
+   "start": 68.58,
+   "end": 68.78
   },
   {
    "word": "rule",
-   "start": 210.33066,
-   "end": 210.61066
+   "start": 68.78,
+   "end": 69.1
   },
   {
-   "word": "held.",
-   "start": 210.61066,
-   "end": 211.15067
+   "word": "said",
+   "start": 69.1,
+   "end": 69.38
   },
   {
-   "word": "On",
-   "start": 212.27066,
-   "end": 212.33066
+   "word": "99,",
+   "start": 69.38,
+   "end": 70.32
   },
   {
-   "word": "a",
-   "start": 212.33066,
-   "end": 212.47066
+   "word": "six",
+   "start": 70.32,
+   "end": 70.86
   },
   {
-   "word": "random",
-   "start": 212.47066,
-   "end": 212.83066
+   "word": "times",
+   "start": 70.86,
+   "end": 71.24
   },
   {
-   "word": "screen,",
-   "start": 212.83066,
-   "end": 213.53065
+   "word": "too",
+   "start": 71.24,
+   "end": 71.52
   },
   {
-   "word": "20",
-   "start": 213.53065,
-   "end": 214.07065
+   "word": "high.",
+   "start": 71.52,
+   "end": 72.56
   },
   {
-   "word": "reach",
-   "start": 214.07065,
-   "end": 214.35065
+   "word": "1%",
+   "start": 73.04,
+   "end": 73.66
   },
   {
-   "word": "this",
-   "start": 214.35065,
-   "end": 214.59065
+   "word": "sounds",
+   "start": 73.66,
+   "end": 74.2
   },
   {
-   "word": "plus",
-   "start": 214.59065,
-   "end": 214.81065
+   "word": "small,",
+   "start": 74.2,
+   "end": 74.8
   },
   {
-   "word": "along",
-   "start": 214.81065,
-   "end": 215.15067
+   "word": "but",
+   "start": 74.8,
+   "end": 75.3
   },
   {
-   "word": "the",
-   "start": 215.15067,
-   "end": 215.37067
+   "word": "here",
+   "start": 75.3,
+   "end": 75.5
   },
   {
-   "word": "red,",
-   "start": 215.37067,
-   "end": 215.85065
+   "word": "it's",
+   "start": 75.5,
+   "end": 75.7
   },
   {
-   "word": "100",
-   "start": 215.87067,
-   "end": 216.43066
+   "word": "1%",
+   "start": 75.7,
+   "end": 76.26
   },
   {
-   "word": "along",
-   "start": 216.43066,
-   "end": 216.89066
+   "word": "of",
+   "start": 76.26,
+   "end": 76.58
   },
   {
-   "word": "the",
-   "start": 216.89066,
-   "end": 217.09065
+   "word": "nearly",
+   "start": 76.58,
+   "end": 76.86
   },
   {
-   "word": "blue.",
-   "start": 217.09065,
-   "end": 217.51065
+   "word": "everyone.",
+   "start": 76.86,
+   "end": 78.24
   },
   {
-   "word": "99%",
-   "start": 217.85065,
-   "end": 218.85065
-  },
-  {
-   "word": "is",
-   "start": 218.85065,
-   "end": 219.27066
-  },
-  {
-   "word": "the",
-   "start": 219.27066,
-   "end": 219.43066
-  },
-  {
-   "word": "test's",
-   "start": 219.43066,
-   "end": 219.75066
-  },
-  {
-   "word": "recall,",
-   "start": 219.75066,
-   "end": 220.45065
-  },
-  {
-   "word": "how",
-   "start": 220.45065,
-   "end": 220.95065
-  },
-  {
-   "word": "often",
-   "start": 220.95065,
-   "end": 221.45065
-  },
-  {
-   "word": "the",
-   "start": 221.45065,
-   "end": 221.65067
-  },
-  {
-   "word": "sick",
-   "start": 221.65067,
-   "end": 221.89066
-  },
-  {
-   "word": "test",
-   "start": 221.89066,
-   "end": 222.19066
-  },
-  {
-   "word": "positive.",
-   "start": 222.19066,
-   "end": 222.99066
-  },
-  {
-   "word": "17%",
-   "start": 223.35065,
-   "end": 224.31065
-  },
-  {
-   "word": "is",
-   "start": 224.31065,
-   "end": 224.75066
-  },
-  {
-   "word": "its",
-   "start": 224.75066,
-   "end": 224.89066
-  },
-  {
-   "word": "precision,",
-   "start": 224.89066,
-   "end": 225.73065
-  },
-  {
-   "word": "how",
-   "start": 225.73065,
-   "end": 226.25066
-  },
-  {
-   "word": "often",
-   "start": 226.25066,
-   "end": 226.73065
-  },
-  {
-   "word": "the",
-   "start": 226.73065,
-   "end": 226.93066
+   "word": "Your",
+   "start": 77.6,
+   "end": 78.24
   },
   {
    "word": "positive",
-   "start": 226.93066,
-   "end": 227.37067
+   "start": 78.24,
+   "end": 78.86
+  },
+  {
+   "word": "result",
+   "start": 78.86,
+   "end": 79.44
+  },
+  {
+   "word": "ruled",
+   "start": 79.44,
+   "end": 80.18
+  },
+  {
+   "word": "out",
+   "start": 80.18,
+   "end": 80.4
+  },
+  {
+   "word": "everyone",
+   "start": 80.4,
+   "end": 80.92
+  },
+  {
+   "word": "who",
+   "start": 80.64,
+   "end": 81.2
+  },
+  {
+   "word": "tested",
+   "start": 81.2,
+   "end": 81.72
+  },
+  {
+   "word": "negative.",
+   "start": 81.72,
+   "end": 82.6
+  },
+  {
+   "word": "What's",
+   "start": 83.26,
+   "end": 83.6
+  },
+  {
+   "word": "left",
+   "start": 83.6,
+   "end": 83.94
+  },
+  {
+   "word": "is",
+   "start": 83.94,
+   "end": 84.18
+  },
+  {
+   "word": "a",
+   "start": 84.18,
+   "end": 84.28
+  },
+  {
+   "word": "smaller",
+   "start": 84.28,
+   "end": 84.74
+  },
+  {
+   "word": "sample",
+   "start": 84.74,
+   "end": 85.22
+  },
+  {
+   "word": "space,",
+   "start": 85.22,
+   "end": 86
+  },
+  {
+   "word": "these",
+   "start": 86,
+   "end": 86.54
+  },
+  {
+   "word": "120",
+   "start": 86.54,
+   "end": 87.14
+  },
+  {
+   "word": "people.",
+   "start": 87.14,
+   "end": 88.32
+  },
+  {
+   "word": "Your",
+   "start": 88.7,
+   "end": 88.86
+  },
+  {
+   "word": "chance",
+   "start": 88.86,
+   "end": 89.2
+  },
+  {
+   "word": "of",
+   "start": 89.2,
+   "end": 89.32
+  },
+  {
+   "word": "being",
+   "start": 89.32,
+   "end": 89.52
+  },
+  {
+   "word": "sick",
+   "start": 89.52,
+   "end": 89.98
+  },
+  {
+   "word": "is",
+   "start": 89.98,
+   "end": 90.42
+  },
+  {
+   "word": "the",
+   "start": 90.42,
+   "end": 90.58
+  },
+  {
+   "word": "red",
+   "start": 90.58,
+   "end": 90.82
+  },
+  {
+   "word": "share",
+   "start": 90.82,
+   "end": 91.14
+  },
+  {
+   "word": "of",
+   "start": 91.14,
+   "end": 91.28
+  },
+  {
+   "word": "this",
+   "start": 91.28,
+   "end": 91.44
+  },
+  {
+   "word": "crowd,",
+   "start": 91.44,
+   "end": 92.08
+  },
+  {
+   "word": "20",
+   "start": 91.9,
+   "end": 92.8
+  },
+  {
+   "word": "out",
+   "start": 92.8,
+   "end": 93.26
+  },
+  {
+   "word": "of",
+   "start": 93.26,
+   "end": 93.4
+  },
+  {
+   "word": "20",
+   "start": 93.4,
+   "end": 93.72
+  },
+  {
+   "word": "plus",
+   "start": 93.72,
+   "end": 94
+  },
+  {
+   "word": "100.",
+   "start": 94,
+   "end": 94.74
+  },
+  {
+   "word": "Unrounded,",
+   "start": 96.36,
+   "end": 97.16
+  },
+  {
+   "word": "the",
+   "start": 97.16,
+   "end": 97.46
+  },
+  {
+   "word": "red",
+   "start": 97.46,
+   "end": 97.66
+  },
+  {
+   "word": "count",
+   "start": 97.66,
+   "end": 97.98
+  },
+  {
+   "word": "is",
+   "start": 97.98,
+   "end": 98.24
+  },
+  {
+   "word": "20",
+   "start": 98.24,
+   "end": 98.58
+  },
+  {
+   "word": "sick",
+   "start": 98.58,
+   "end": 98.94
+  },
+  {
+   "word": "people",
+   "start": 98.94,
+   "end": 99.28
+  },
+  {
+   "word": "times",
+   "start": 99.28,
+   "end": 99.64
+  },
+  {
+   "word": "99%.",
+   "start": 99.64,
+   "end": 100.92
+  },
+  {
+   "word": "The",
+   "start": 101.64,
+   "end": 101.88
+  },
+  {
+   "word": "blue",
+   "start": 101.88,
+   "end": 102.06
+  },
+  {
+   "word": "count",
+   "start": 102.06,
+   "end": 102.52
+  },
+  {
+   "word": "is",
+   "start": 102.52,
+   "end": 102.94
+  },
+  {
+   "word": "9,980",
+   "start": 102.94,
+   "end": 104.62
+  },
+  {
+   "word": "healthy",
+   "start": 104.62,
+   "end": 105
+  },
+  {
+   "word": "people",
+   "start": 105,
+   "end": 105.46
+  },
+  {
+   "word": "times",
+   "start": 105.46,
+   "end": 106.22
+  },
+  {
+   "word": "1%.",
+   "start": 106.22,
+   "end": 107.14
+  },
+  {
+   "word": "Divide",
+   "start": 107.56,
+   "end": 108.06
+  },
+  {
+   "word": "top",
+   "start": 108.06,
+   "end": 108.4
+  },
+  {
+   "word": "and",
+   "start": 108.4,
+   "end": 108.54
+  },
+  {
+   "word": "bottom",
+   "start": 108.54,
+   "end": 108.9
+  },
+  {
+   "word": "by",
+   "start": 108.9,
+   "end": 109.4
+  },
+  {
+   "word": "the",
+   "start": 109.4,
+   "end": 109.58
+  },
+  {
+   "word": "10,000",
+   "start": 109.58,
+   "end": 110.22
+  },
+  {
+   "word": "we",
+   "start": 110.22,
+   "end": 110.5
+  },
+  {
+   "word": "started",
+   "start": 110.5,
+   "end": 110.88
+  },
+  {
+   "word": "with.",
+   "start": 110.836,
+   "end": 111.376
+  },
+  {
+   "word": "20",
+   "start": 111.616,
+   "end": 111.896
+  },
+  {
+   "word": "people",
+   "start": 111.896,
+   "end": 112.216
+  },
+  {
+   "word": "become",
+   "start": 112.216,
+   "end": 112.656
+  },
+  {
+   "word": "2",
+   "start": 112.656,
+   "end": 113.076004
+  },
+  {
+   "word": "in",
+   "start": 113.076004,
+   "end": 113.436005
+  },
+  {
+   "word": "1,000,",
+   "start": 113.436005,
+   "end": 114.316
+  },
+  {
+   "word": "and",
+   "start": 114.316,
+   "end": 114.916
+  },
+  {
+   "word": "9,980",
+   "start": 114.916,
+   "end": 116.516
+  },
+  {
+   "word": "become",
+   "start": 116.516,
+   "end": 117.136
+  },
+  {
+   "word": "998",
+   "start": 117.136,
+   "end": 118.476
+  },
+  {
+   "word": "in",
+   "start": 118.476,
+   "end": 118.736
+  },
+  {
+   "word": "1,000.",
+   "start": 118.736,
+   "end": 119.516
+  },
+  {
+   "word": "The",
+   "start": 118.956,
+   "end": 119.916
+  },
+  {
+   "word": "share",
+   "start": 119.916,
+   "end": 120.136
+  },
+  {
+   "word": "can't",
+   "start": 120.136,
+   "end": 120.476
+  },
+  {
+   "word": "change.",
+   "start": 120.476,
+   "end": 121.076004
+  },
+  {
+   "word": "These",
+   "start": 121.456,
+   "end": 121.796005
   },
   {
    "word": "are",
-   "start": 227.37067,
-   "end": 227.55066
+   "start": 121.796005,
+   "end": 121.956
+  },
+  {
+   "word": "how",
+   "start": 121.956,
+   "end": 122.056
+  },
+  {
+   "word": "common",
+   "start": 122.056,
+   "end": 122.456
+  },
+  {
+   "word": "each",
+   "start": 122.456,
+   "end": 122.716
+  },
+  {
+   "word": "group",
+   "start": 122.716,
+   "end": 122.976
+  },
+  {
+   "word": "is,",
+   "start": 122.976,
+   "end": 123.556
+  },
+  {
+   "word": "and",
+   "start": 123.556,
+   "end": 123.716
+  },
+  {
+   "word": "these,",
+   "start": 123.716,
+   "end": 124.156006
+  },
+  {
+   "word": "how",
+   "start": 124.156006,
+   "end": 124.476
+  },
+  {
+   "word": "often",
+   "start": 124.476,
+   "end": 124.896
+  },
+  {
+   "word": "each",
+   "start": 124.896,
+   "end": 125.196
+  },
+  {
+   "word": "group",
+   "start": 125.196,
+   "end": 125.456
+  },
+  {
+   "word": "tests",
+   "start": 125.456,
+   "end": 125.836
+  },
+  {
+   "word": "positive.",
+   "start": 125.836,
+   "end": 126.636
+  },
+  {
+   "word": "Bayes'",
+   "start": 126.936005,
+   "end": 127.416
+  },
+  {
+   "word": "theorem.",
+   "start": 127.416,
+   "end": 127.916
+  },
+  {
+   "word": "All",
+   "start": 126.956,
+   "end": 128.456
+  },
+  {
+   "word": "it",
+   "start": 128.456,
+   "end": 128.59601
+  },
+  {
+   "word": "does",
+   "start": 128.59601,
+   "end": 128.876
+  },
+  {
+   "word": "is",
+   "start": 128.876,
+   "end": 129.076
+  },
+  {
+   "word": "shrink",
+   "start": 129.076,
+   "end": 129.456
+  },
+  {
+   "word": "the",
+   "start": 129.456,
+   "end": 129.676
+  },
+  {
+   "word": "sample",
+   "start": 129.676,
+   "end": 130.036
+  },
+  {
+   "word": "space",
+   "start": 130.036,
+   "end": 130.436
+  },
+  {
+   "word": "to",
+   "start": 130.436,
+   "end": 130.696
+  },
+  {
+   "word": "what",
+   "start": 130.696,
+   "end": 130.796
+  },
+  {
+   "word": "the",
+   "start": 130.796,
+   "end": 130.896
+  },
+  {
+   "word": "evidence",
+   "start": 130.896,
+   "end": 131.296
+  },
+  {
+   "word": "allows,",
+   "start": 131.296,
+   "end": 132.056
+  },
+  {
+   "word": "then",
+   "start": 132.056,
+   "end": 132.576
+  },
+  {
+   "word": "take",
+   "start": 132.576,
+   "end": 132.856
+  },
+  {
+   "word": "the",
+   "start": 132.856,
+   "end": 133.016
+  },
+  {
+   "word": "share.",
+   "start": 133.016,
+   "end": 133.496
+  },
+  {
+   "word": "Swap",
+   "start": 134.836,
+   "end": 135.076
+  },
+  {
+   "word": "the",
+   "start": 135.076,
+   "end": 135.216
+  },
+  {
+   "word": "disease",
+   "start": 135.216,
+   "end": 135.556
+  },
+  {
+   "word": "for",
+   "start": 135.556,
+   "end": 135.956
+  },
+  {
+   "word": "a",
+   "start": 135.956,
+   "end": 136.056
+  },
+  {
+   "word": "police",
+   "start": 136.056,
+   "end": 136.336
+  },
+  {
+   "word": "watchlist.",
+   "start": 136.336,
+   "end": 137.116
+  },
+  {
+   "word": "At",
+   "start": 137.456,
+   "end": 137.676
+  },
+  {
+   "word": "the",
+   "start": 137.676,
+   "end": 137.73601
+  },
+  {
+   "word": "2017",
+   "start": 137.73601,
+   "end": 138.396
+  },
+  {
+   "word": "Champions",
+   "start": 138.396,
+   "end": 139.496
+  },
+  {
+   "word": "League",
+   "start": 139.496,
+   "end": 139.896
+  },
+  {
+   "word": "final,",
+   "start": 139.896,
+   "end": 140.996
+  },
+  {
+   "word": "about",
+   "start": 140.996,
+   "end": 141.136
+  },
+  {
+   "word": "170,000",
+   "start": 141.136,
+   "end": 142.856
+  },
+  {
+   "word": "people",
+   "start": 142.856,
+   "end": 143.256
+  },
+  {
+   "word": "were",
+   "start": 143.256,
+   "end": 143.53601
+  },
+  {
+   "word": "in",
+   "start": 143.53601,
+   "end": 143.716
+  },
+  {
+   "word": "Cardiff.",
+   "start": 143.716,
+   "end": 144.296
+  },
+  {
+   "word": "The",
+   "start": 144.156,
+   "end": 144.716
+  },
+  {
+   "word": "watchlists",
+   "start": 144.716,
+   "end": 145.31601
+  },
+  {
+   "word": "held",
+   "start": 145.31601,
+   "end": 145.59601
+  },
+  {
+   "word": "about",
+   "start": 145.59601,
+   "end": 145.836
+  },
+  {
+   "word": "1,200",
+   "start": 145.836,
+   "end": 146.396
+  },
+  {
+   "word": "faces,",
+   "start": 146.396,
+   "end": 147.276
+  },
+  {
+   "word": "so",
+   "start": 147.276,
+   "end": 147.836
+  },
+  {
+   "word": "even",
+   "start": 147.836,
+   "end": 148.136
+  },
+  {
+   "word": "a",
+   "start": 148.136,
+   "end": 148.31601
+  },
+  {
+   "word": "small",
+   "start": 148.31601,
+   "end": 148.756
+  },
+  {
+   "word": "error",
+   "start": 148.756,
+   "end": 149.136
+  },
+  {
+   "word": "rate",
+   "start": 149.136,
+   "end": 149.476
+  },
+  {
+   "word": "per",
+   "start": 149.476,
+   "end": 149.656
+  },
+  {
+   "word": "face",
+   "start": 149.656,
+   "end": 150.156
+  },
+  {
+   "word": "would",
+   "start": 150.156,
+   "end": 150.496
+  },
+  {
+   "word": "swamp",
+   "start": 150.496,
+   "end": 150.896
+  },
+  {
+   "word": "the",
+   "start": 150.456,
+   "end": 151.09601
+  },
+  {
+   "word": "real",
+   "start": 151.09601,
+   "end": 151.296
+  },
+  {
+   "word": "matches.",
+   "start": 151.296,
+   "end": 152.09601
+  },
+  {
+   "word": "Face",
+   "start": 152.436,
+   "end": 152.776
+  },
+  {
+   "word": "recognition",
+   "start": 152.776,
+   "end": 153.276
+  },
+  {
+   "word": "cameras",
+   "start": 153.276,
+   "end": 153.896
+  },
+  {
+   "word": "scanned",
+   "start": 153.896,
+   "end": 154.396
+  },
+  {
+   "word": "the",
+   "start": 154.396,
+   "end": 154.556
+  },
+  {
+   "word": "crowd.",
+   "start": 154.556,
+   "end": 155.09601
+  },
+  {
+   "word": "They",
+   "start": 155.076,
+   "end": 155.676
+  },
+  {
+   "word": "raised",
+   "start": 155.676,
+   "end": 155.996
+  },
+  {
+   "word": "2,400",
+   "start": 155.996,
+   "end": 157.03601
+  },
+  {
+   "word": "and",
+   "start": 157.03601,
+   "end": 157.676
+  },
+  {
+   "word": "70",
+   "start": 157.676,
+   "end": 158.116
+  },
+  {
+   "word": "alerts.",
+   "start": 158.116,
+   "end": 158.856
+  },
+  {
+   "word": "Shrink",
+   "start": 159.216,
+   "end": 159.59601
+  },
+  {
+   "word": "to",
+   "start": 159.59601,
+   "end": 159.756
+  },
+  {
+   "word": "the",
+   "start": 159.756,
+   "end": 159.856
+  },
+  {
+   "word": "alerts",
+   "start": 159.856,
+   "end": 160.296
+  },
+  {
+   "word": "and",
+   "start": 160.296,
+   "end": 160.716
+  },
+  {
+   "word": "take",
+   "start": 160.716,
+   "end": 160.896
+  },
+  {
+   "word": "the",
+   "start": 160.896,
+   "end": 161.116
+  },
+  {
+   "word": "red",
+   "start": 161.116,
+   "end": 161.276
+  },
+  {
+   "word": "share.",
+   "start": 161.276,
+   "end": 161.836
+  },
+  {
+   "word": "counted",
+   "start": 162.756,
+   "end": 162.956
+  },
+  {
+   "word": "173",
+   "start": 162.956,
+   "end": 164.556
+  },
+  {
+   "word": "as",
+   "start": 164.556,
+   "end": 164.81601
+  },
+  {
+   "word": "right,",
+   "start": 164.81601,
+   "end": 165.31601
+  },
+  {
+   "word": "7%.",
+   "start": 165.31601,
+   "end": 166.376
+  },
+  {
+   "word": "In",
+   "start": 166.376,
+   "end": 167.296
+  },
+  {
+   "word": "machine",
+   "start": 167.296,
+   "end": 167.616
+  },
+  {
+   "word": "learning,",
+   "start": 167.616,
+   "end": 168.59601
+  },
+  {
+   "word": "the",
+   "start": 168.59601,
+   "end": 168.676
+  },
+  {
+   "word": "share",
+   "start": 168.676,
+   "end": 168.896
+  },
+  {
+   "word": "of",
+   "start": 168.896,
+   "end": 169.076
+  },
+  {
+   "word": "alerts",
+   "start": 169.076,
+   "end": 169.436
+  },
+  {
+   "word": "that",
+   "start": 169.436,
+   "end": 169.676
+  },
+  {
+   "word": "are",
+   "start": 169.676,
+   "end": 169.776
+  },
+  {
+   "word": "right",
+   "start": 169.776,
+   "end": 170.076
+  },
+  {
+   "word": "is",
+   "start": 170.076,
+   "end": 170.416
+  },
+  {
+   "word": "called",
+   "start": 170.416,
+   "end": 170.656
+  },
+  {
+   "word": "precision.",
+   "start": 170.196,
+   "end": 171.416
+  },
+  {
+   "word": "The",
+   "start": 171.416,
+   "end": 171.976
+  },
+  {
+   "word": "university's",
+   "start": 171.976,
+   "end": 172.81601
+  },
+  {
+   "word": "evaluators",
+   "start": 172.81601,
+   "end": 173.496
+  },
+  {
+   "word": "counted",
+   "start": 173.496,
+   "end": 174.156
+  },
+  {
+   "word": "3%",
+   "start": 174.156,
+   "end": 174.79599
+  },
+  {
+   "word": "here.",
+   "start": 174.79599,
+   "end": 175.356
+  },
+  {
+   "word": "After",
+   "start": 175.356,
+   "end": 176.09601
+  },
+  {
+   "word": "a",
+   "start": 176.09601,
+   "end": 176.25601
+  },
+  {
+   "word": "new",
+   "start": 176.25601,
+   "end": 176.456
+  },
+  {
+   "word": "algorithm",
+   "start": 176.456,
+   "end": 177.056
+  },
+  {
+   "word": "and",
+   "start": 177.056,
+   "end": 177.416
+  },
+  {
+   "word": "better",
+   "start": 177.416,
+   "end": 177.656
+  },
+  {
+   "word": "photos",
+   "start": 177.176,
+   "end": 178.236
+  },
+  {
+   "word": "cut",
+   "start": 178.236,
+   "end": 178.576
+  },
+  {
+   "word": "the",
+   "start": 178.576,
+   "end": 178.736
+  },
+  {
+   "word": "false",
+   "start": 178.736,
+   "end": 178.996
+  },
+  {
+   "word": "alarms,",
+   "start": 178.996,
+   "end": 179.736
+  },
+  {
+   "word": "they",
+   "start": 179.736,
+   "end": 180.25601
+  },
+  {
+   "word": "counted",
+   "start": 180.25601,
+   "end": 180.636
+  },
+  {
+   "word": "46",
+   "start": 180.636,
+   "end": 181.236
+  },
+  {
+   "word": "at",
+   "start": 181.236,
+   "end": 181.53601
+  },
+  {
+   "word": "the",
+   "start": 181.53601,
+   "end": 181.676
+  },
+  {
+   "word": "Six",
+   "start": 181.676,
+   "end": 181.896
+  },
+  {
+   "word": "Nations.",
+   "start": 181.896,
+   "end": 182.636
+  },
+  {
+   "word": "Back",
+   "start": 182.636,
+   "end": 183.336
+  },
+  {
+   "word": "to",
+   "start": 183.336,
+   "end": 183.476
+  },
+  {
+   "word": "your",
+   "start": 183.476,
+   "end": 183.59601
+  },
+  {
+   "word": "test.",
+   "start": 183.59601,
+   "end": 184.216
+  },
+  {
+   "word": "The",
+   "start": 185.276,
+   "end": 185.29599
+  },
+  {
+   "word": "title's",
+   "start": 185.29599,
+   "end": 185.696
+  },
+  {
+   "word": "99%",
+   "start": 185.696,
+   "end": 186.636
+  },
+  {
+   "word": "accuracy",
+   "start": 186.636,
+   "end": 187.25601
+  },
+  {
+   "word": "is",
+   "start": 187.25601,
+   "end": 187.856
+  },
+  {
+   "word": "real.",
+   "start": 187.856,
+   "end": 188.356
+  },
+  {
+   "word": "But",
+   "start": 188.396,
+   "end": 188.936
+  },
+  {
+   "word": "a",
+   "start": 188.936,
+   "end": 188.976
+  },
+  {
+   "word": "test",
+   "start": 188.976,
+   "end": 189.396
+  },
+  {
+   "word": "that",
+   "start": 189.396,
+   "end": 189.59601
+  },
+  {
+   "word": "calls",
+   "start": 189.59601,
+   "end": 189.876
+  },
+  {
+   "word": "Everyone",
+   "start": 189.876,
+   "end": 190.31601
+  },
+  {
+   "word": "Healthy",
+   "start": 190.31601,
+   "end": 190.656
+  },
+  {
+   "word": "scores",
+   "start": 190.656,
+   "end": 191.216
+  },
+  {
+   "word": "99.8,",
+   "start": 191.216,
+   "end": 192.856
+  },
+  {
+   "word": "more",
+   "start": 192.856,
+   "end": 193.53601
+  },
+  {
+   "word": "accurate",
+   "start": 193.53601,
+   "end": 193.996
+  },
+  {
+   "word": "and",
+   "start": 193.996,
+   "end": 194.336
+  },
+  {
+   "word": "useless.",
+   "start": 194.336,
+   "end": 194.996
+  },
+  {
+   "word": "Your",
+   "start": 195.376,
+   "end": 195.656
+  },
+  {
+   "word": "17%",
+   "start": 195.656,
+   "end": 196.51599
+  },
+  {
+   "word": "assumes",
+   "start": 196.51599,
+   "end": 197.416
+  },
+  {
+   "word": "a",
+   "start": 197.416,
+   "end": 197.636
+  },
+  {
+   "word": "random",
+   "start": 197.636,
+   "end": 198.01599
+  },
+  {
+   "word": "screen.",
+   "start": 198.01599,
+   "end": 198.656
+  },
+  {
+   "word": "Symptoms",
+   "start": 199.076,
+   "end": 199.576
+  },
+  {
+   "word": "raise",
+   "start": 199.576,
+   "end": 199.976
+  },
+  {
+   "word": "the",
+   "start": 199.976,
+   "end": 200.156
+  },
+  {
+   "word": "1",
+   "start": 200.156,
+   "end": 200.376
+  },
+  {
+   "word": "in",
+   "start": 200.376,
+   "end": 200.51599
+  },
+  {
+   "word": "500,",
+   "start": 200.51599,
+   "end": 201.436
+  },
+  {
+   "word": "and",
+   "start": 201.436,
+   "end": 201.81601
+  },
+  {
+   "word": "the",
+   "start": 201.81601,
+   "end": 201.896
+  },
+  {
+   "word": "answer",
+   "start": 201.896,
+   "end": 202.236
+  },
+  {
+   "word": "climbs.",
+   "start": 202.236,
+   "end": 203.03601
+  },
+  {
+   "word": "At",
+   "start": 203.356,
+   "end": 203.656
+  },
+  {
+   "word": "1",
+   "start": 203.656,
+   "end": 203.836
+  },
+  {
+   "word": "in",
+   "start": 203.836,
+   "end": 203.956
+  },
+  {
+   "word": "100,",
+   "start": 203.956,
+   "end": 204.476
+  },
+  {
+   "word": "50%.",
+   "start": 204.476,
+   "end": 205.416
+  },
+  {
+   "word": "At",
+   "start": 205.836,
+   "end": 206.196
+  },
+  {
+   "word": "1",
+   "start": 206.196,
+   "end": 206.396
+  },
+  {
+   "word": "in",
+   "start": 206.396,
+   "end": 206.556
+  },
+  {
+   "word": "2,",
+   "start": 206.556,
+   "end": 207.196
+  },
+  {
+   "word": "99,",
+   "start": 207.196,
+   "end": 207.856
+  },
+  {
+   "word": "where",
+   "start": 207.856,
+   "end": 207.976
+  },
+  {
+   "word": "the",
+   "start": 207.976,
+   "end": 208.136
+  },
+  {
+   "word": "rule",
+   "start": 208.136,
+   "end": 208.396
+  },
+  {
+   "word": "held.",
+   "start": 208.396,
+   "end": 208.976
+  },
+  {
+   "word": "99%",
+   "start": 211.136,
+   "end": 211.976
+  },
+  {
+   "word": "is",
+   "start": 211.976,
+   "end": 212.416
+  },
+  {
+   "word": "the",
+   "start": 212.416,
+   "end": 212.556
+  },
+  {
+   "word": "test's",
+   "start": 212.556,
+   "end": 212.916
+  },
+  {
+   "word": "recall,",
+   "start": 212.916,
+   "end": 213.476
+  },
+  {
+   "word": "how",
+   "start": 213.476,
+   "end": 214.056
+  },
+  {
+   "word": "often",
+   "start": 214.056,
+   "end": 214.576
+  },
+  {
+   "word": "the",
+   "start": 214.576,
+   "end": 214.776
+  },
+  {
+   "word": "sick",
+   "start": 214.776,
+   "end": 215.01599
+  },
+  {
+   "word": "test",
+   "start": 215.01599,
+   "end": 215.336
+  },
+  {
+   "word": "positive.",
+   "start": 215.336,
+   "end": 216.136
+  },
+  {
+   "word": "17%",
+   "start": 216.476,
+   "end": 217.436
+  },
+  {
+   "word": "is",
+   "start": 217.436,
+   "end": 217.876
+  },
+  {
+   "word": "its",
+   "start": 217.876,
+   "end": 218.03601
+  },
+  {
+   "word": "precision,",
+   "start": 218.03601,
+   "end": 218.776
+  },
+  {
+   "word": "how",
+   "start": 218.776,
+   "end": 219.376
+  },
+  {
+   "word": "often",
+   "start": 219.376,
+   "end": 219.856
+  },
+  {
+   "word": "the",
+   "start": 219.856,
+   "end": 220.03601
+  },
+  {
+   "word": "positive",
+   "start": 220.03601,
+   "end": 220.476
+  },
+  {
+   "word": "are",
+   "start": 220.476,
+   "end": 220.676
   },
   {
    "word": "sick.",
-   "start": 227.55066,
-   "end": 228.43066
+   "start": 220.676,
+   "end": 221.51599
   }
  ],
  "segments": [
@@ -2435,16 +2300,16 @@
     50518
    ],
    "temperature": 0,
-   "avg_logprob": -0.09349311,
-   "compression_ratio": 1.437751,
+   "avg_logprob": -0.130575,
+   "compression_ratio": 1.4470588,
    "no_speech_prob": 0
   },
   {
    "id": 1,
    "seek": 0,
    "start": 3.06,
-   "end": 6.3799996,
-   "text": " A test catches 99% of cases",
+   "end": 9.28,
+   "text": " A test catches 99% of cases and wrongly flags 1% of the healthy.",
    "tokens": [
     50518,
     316,
@@ -2454,21 +2319,6 @@
     4,
     295,
     3331,
-    50684
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.09349311,
-   "compression_ratio": 1.437751,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 2,
-   "seek": 0,
-   "start": 6.3799996,
-   "end": 9.28,
-   "text": " and wrongly flags 1% of the healthy.",
-   "tokens": [
-    50684,
     293,
     2085,
     356,
@@ -2482,12 +2332,12 @@
     50829
    ],
    "temperature": 0,
-   "avg_logprob": -0.09349311,
-   "compression_ratio": 1.437751,
+   "avg_logprob": -0.130575,
+   "compression_ratio": 1.4470588,
    "no_speech_prob": 0
   },
   {
-   "id": 3,
+   "id": 2,
    "seek": 0,
    "start": 9.28,
    "end": 12.58,
@@ -2510,15 +2360,15 @@
     50994
    ],
    "temperature": 0,
-   "avg_logprob": -0.09349311,
-   "compression_ratio": 1.437751,
+   "avg_logprob": -0.130575,
+   "compression_ratio": 1.4470588,
    "no_speech_prob": 0
   },
   {
-   "id": 4,
+   "id": 3,
    "seek": 0,
    "start": 12.58,
-   "end": 13.599999,
+   "end": 15.48,
    "text": " Pick a number.",
    "tokens": [
     50994,
@@ -2526,138 +2376,145 @@
     257,
     1230,
     13,
-    51045
+    51139
    ],
    "temperature": 0,
-   "avg_logprob": -0.09349311,
-   "compression_ratio": 1.437751,
+   "avg_logprob": -0.130575,
+   "compression_ratio": 1.4470588,
    "no_speech_prob": 0
   },
   {
-   "id": 5,
+   "id": 4,
    "seek": 0,
-   "start": 15.5,
-   "end": 18.92,
-   "text": " Most doctors given a problem like this got it wrong.",
+   "start": 15.48,
+   "end": 19.26,
+   "text": " Most doctors and medical students, given a problem like this,",
    "tokens": [
-    51140,
+    51139,
     4534,
     8778,
+    293,
+    4625,
+    1731,
+    11,
     2212,
     257,
     1154,
     411,
     341,
+    11,
+    51328
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.130575,
+   "compression_ratio": 1.4470588,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 5,
+   "seek": 0,
+   "start": 19.26,
+   "end": 20.38,
+   "text": " got it wrong.",
+   "tokens": [
+    51328,
     658,
     309,
     2085,
     13,
-    51311
+    51384
    ],
    "temperature": 0,
-   "avg_logprob": -0.09349311,
-   "compression_ratio": 1.437751,
+   "avg_logprob": -0.130575,
+   "compression_ratio": 1.4470588,
    "no_speech_prob": 0
   },
   {
    "id": 6,
    "seek": 0,
-   "start": 18.92,
-   "end": 23.439999,
-   "text": " The tempting answer is the test's own hit rate, 99%.",
+   "start": 20.38,
+   "end": 25.84,
+   "text": " Their most common answer was the test's own accuracy, here 99%.",
    "tokens": [
-    51311,
-    440,
-    37900,
+    51384,
+    6710,
+    881,
+    2689,
     1867,
-    307,
+    390,
     264,
     1500,
     311,
     1065,
-    2045,
-    3314,
+    14170,
     11,
+    510,
     11803,
     6856,
-    51537
+    51657
    ],
    "temperature": 0,
-   "avg_logprob": -0.09349311,
-   "compression_ratio": 1.437751,
+   "avg_logprob": -0.130575,
+   "compression_ratio": 1.4470588,
    "no_speech_prob": 0
   },
   {
    "id": 7,
    "seek": 0,
-   "start": 23.439999,
-   "end": 25.22,
+   "start": 25.84,
+   "end": 27.699999,
    "text": " You'd start treatment today.",
    "tokens": [
-    51537,
+    51657,
     509,
     1116,
     722,
     5032,
     965,
     13,
-    51626
+    51750
    ],
    "temperature": 0,
-   "avg_logprob": -0.09349311,
-   "compression_ratio": 1.437751,
+   "avg_logprob": -0.130575,
+   "compression_ratio": 1.4470588,
    "no_speech_prob": 0
   },
   {
    "id": 8,
    "seek": 0,
-   "start": 25.22,
-   "end": 27.14,
+   "start": 27.699999,
+   "end": 29.64,
    "text": " Check that rule by counting.",
    "tokens": [
-    51626,
+    51750,
     6881,
     300,
     4978,
     538,
     13251,
     13,
-    51722
+    51847
    ],
    "temperature": 0,
-   "avg_logprob": -0.09349311,
-   "compression_ratio": 1.437751,
+   "avg_logprob": -0.130575,
+   "compression_ratio": 1.4470588,
    "no_speech_prob": 0
   },
   {
    "id": 9,
-   "seek": 0,
-   "start": 27.14,
-   "end": 29.119999,
-   "text": " Here are 10,000 people",
+   "seek": 2964,
+   "start": 29.64,
+   "end": 33.86,
+   "text": " Here are 10,000 people, and suppose half of them are sick.",
    "tokens": [
-    51722,
+    50365,
     1692,
     366,
     1266,
     11,
     1360,
     561,
-    51821
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.09349311,
-   "compression_ratio": 1.437751,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 10,
-   "seek": 2912,
-   "start": 29.119999,
-   "end": 31.359999,
-   "text": " and suppose half of them are sick.",
-   "tokens": [
-    50365,
+    11,
     293,
     7297,
     1922,
@@ -2666,39 +2523,39 @@
     366,
     4998,
     13,
-    50477
+    50576
    ],
    "temperature": 0,
-   "avg_logprob": -0.09679103,
-   "compression_ratio": 1.5960591,
+   "avg_logprob": -0.1076144,
+   "compression_ratio": 1.580808,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 10,
+   "seek": 2964,
+   "start": 33.86,
+   "end": 35.16,
+   "text": " Test everyone.",
+   "tokens": [
+    50576,
+    9279,
+    1518,
+    13,
+    50641
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1076144,
+   "compression_ratio": 1.580808,
    "no_speech_prob": 0
   },
   {
    "id": 11,
-   "seek": 2912,
-   "start": 31.359999,
-   "end": 32.68,
-   "text": " Test everyone.",
-   "tokens": [
-    50477,
-    9279,
-    1518,
-    13,
-    50543
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.09679103,
-   "compression_ratio": 1.5960591,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 12,
-   "seek": 2912,
-   "start": 32.68,
-   "end": 37.239998,
+   "seek": 2964,
+   "start": 35.16,
+   "end": 39.739998,
    "text": " 99% of the sick light up, and 1% of the healthy.",
    "tokens": [
-    50543,
+    50641,
     11803,
     4,
     295,
@@ -2714,21 +2571,21 @@
     264,
     4627,
     13,
-    50771
+    50870
    ],
    "temperature": 0,
-   "avg_logprob": -0.09679103,
-   "compression_ratio": 1.5960591,
+   "avg_logprob": -0.1076144,
+   "compression_ratio": 1.580808,
    "no_speech_prob": 0
   },
   {
-   "id": 13,
-   "seek": 2912,
-   "start": 37.239998,
-   "end": 41.359997,
+   "id": 12,
+   "seek": 2964,
+   "start": 39.739998,
+   "end": 43.86,
    "text": " Of the 5,000 who lit up, 99% are sick.",
    "tokens": [
-    50771,
+    50870,
     2720,
     264,
     1025,
@@ -2743,42 +2600,42 @@
     366,
     4998,
     13,
-    50977
+    51076
    ],
    "temperature": 0,
-   "avg_logprob": -0.09679103,
-   "compression_ratio": 1.5960591,
+   "avg_logprob": -0.1076144,
+   "compression_ratio": 1.580808,
    "no_speech_prob": 0
   },
   {
-   "id": 14,
-   "seek": 2912,
-   "start": 41.359997,
-   "end": 43.199997,
+   "id": 13,
+   "seek": 2964,
+   "start": 43.86,
+   "end": 45.7,
    "text": " Here, the rule holds.",
    "tokens": [
-    50977,
+    51076,
     1692,
     11,
     264,
     4978,
     9190,
     13,
-    51069
+    51168
    ],
    "temperature": 0,
-   "avg_logprob": -0.09679103,
-   "compression_ratio": 1.5960591,
+   "avg_logprob": -0.1076144,
+   "compression_ratio": 1.580808,
    "no_speech_prob": 0
   },
   {
-   "id": 15,
-   "seek": 2912,
-   "start": 43.199997,
-   "end": 47.399998,
+   "id": 14,
+   "seek": 2964,
+   "start": 45.7,
+   "end": 49.899998,
    "text": " Now make the disease rare, like yours, one in 500.",
    "tokens": [
-    51069,
+    51168,
     823,
     652,
     264,
@@ -2792,62 +2649,62 @@
     294,
     5923,
     13,
-    51279
+    51378
    ],
    "temperature": 0,
-   "avg_logprob": -0.09679103,
-   "compression_ratio": 1.5960591,
+   "avg_logprob": -0.1076144,
+   "compression_ratio": 1.580808,
    "no_speech_prob": 0
   },
   {
-   "id": 16,
-   "seek": 2912,
-   "start": 47.399998,
-   "end": 49.68,
+   "id": 15,
+   "seek": 2964,
+   "start": 49.899998,
+   "end": 52.16,
    "text": " That leaves 20 sick people.",
    "tokens": [
-    51279,
+    51378,
     663,
     5510,
     945,
     4998,
     561,
     13,
-    51393
+    51491
    ],
    "temperature": 0,
-   "avg_logprob": -0.09679103,
-   "compression_ratio": 1.5960591,
+   "avg_logprob": -0.1076144,
+   "compression_ratio": 1.580808,
    "no_speech_prob": 0
   },
   {
-   "id": 17,
-   "seek": 2912,
-   "start": 49.68,
-   "end": 51.219997,
+   "id": 16,
+   "seek": 2964,
+   "start": 52.16,
+   "end": 53.699997,
    "text": " Run the same test.",
    "tokens": [
-    51393,
+    51491,
     8950,
     264,
     912,
     1500,
     13,
-    51470
+    51568
    ],
    "temperature": 0,
-   "avg_logprob": -0.09679103,
-   "compression_ratio": 1.5960591,
+   "avg_logprob": -0.1076144,
+   "compression_ratio": 1.580808,
    "no_speech_prob": 0
   },
   {
-   "id": 18,
-   "seek": 2912,
-   "start": 51.219997,
-   "end": 53.559998,
+   "id": 17,
+   "seek": 2964,
+   "start": 53.699997,
+   "end": 56.059998,
    "text": " About 20 sick people light up,",
    "tokens": [
-    51470,
+    51568,
     7769,
     945,
     4998,
@@ -2855,21 +2712,21 @@
     1442,
     493,
     11,
-    51587
+    51686
    ],
    "temperature": 0,
-   "avg_logprob": -0.09679103,
-   "compression_ratio": 1.5960591,
+   "avg_logprob": -0.1076144,
+   "compression_ratio": 1.580808,
    "no_speech_prob": 0
   },
   {
-   "id": 19,
-   "seek": 2912,
-   "start": 53.559998,
-   "end": 57.879997,
+   "id": 18,
+   "seek": 5606,
+   "start": 56.059998,
+   "end": 60.399998,
    "text": " plus 1% of the 9,980 healthy ones.",
    "tokens": [
-    51587,
+    50365,
     1804,
     502,
     4,
@@ -2882,41 +2739,41 @@
     4627,
     2306,
     13,
-    51803
+    50582
    ],
    "temperature": 0,
-   "avg_logprob": -0.09679103,
-   "compression_ratio": 1.5960591,
+   "avg_logprob": -0.14510268,
+   "compression_ratio": 1.4204545,
    "no_speech_prob": 0
   },
   {
-   "id": 20,
-   "seek": 5788,
-   "start": 57.879997,
-   "end": 59.699997,
+   "id": 19,
+   "seek": 5606,
+   "start": 60.399998,
+   "end": 62.179996,
    "text": " That's about 100.",
    "tokens": [
-    50365,
+    50582,
     663,
     311,
     466,
     2319,
     13,
-    50456
+    50671
    ],
    "temperature": 0,
-   "avg_logprob": -0.122515336,
-   "compression_ratio": 1.453125,
+   "avg_logprob": -0.14510268,
+   "compression_ratio": 1.4204545,
    "no_speech_prob": 0
   },
   {
-   "id": 21,
-   "seek": 5788,
-   "start": 59.699997,
-   "end": 63.679996,
-   "text": " So of 120 positives, only 20 are sick.",
+   "id": 20,
+   "seek": 5606,
+   "start": 62.179996,
+   "end": 67.18,
+   "text": " So of 120 positives, only 20 are sick, 17%.",
    "tokens": [
-    50456,
+    50671,
     407,
     295,
     10411,
@@ -2926,41 +2783,24 @@
     945,
     366,
     4998,
-    13,
-    50655
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.122515336,
-   "compression_ratio": 1.453125,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 22,
-   "seek": 5788,
-   "start": 63.679996,
-   "end": 66.479996,
-   "text": " That's 17%.",
-   "tokens": [
-    50655,
-    663,
-    311,
+    11,
     3282,
     6856,
-    50795
+    50921
    ],
    "temperature": 0,
-   "avg_logprob": -0.122515336,
-   "compression_ratio": 1.453125,
+   "avg_logprob": -0.14510268,
+   "compression_ratio": 1.4204545,
    "no_speech_prob": 0
   },
   {
-   "id": 23,
-   "seek": 5788,
-   "start": 66.479996,
-   "end": 70.979996,
+   "id": 21,
+   "seek": 5606,
+   "start": 68.659996,
+   "end": 72.24,
    "text": " The rule said 99, six times too high.",
    "tokens": [
-    50795,
+    50995,
     440,
     4978,
     848,
@@ -2971,21 +2811,21 @@
     886,
     1090,
     13,
-    51020
+    51174
    ],
    "temperature": 0,
-   "avg_logprob": -0.122515336,
-   "compression_ratio": 1.453125,
+   "avg_logprob": -0.14510268,
+   "compression_ratio": 1.4204545,
    "no_speech_prob": 0
   },
   {
-   "id": 24,
-   "seek": 5788,
-   "start": 70.979996,
-   "end": 75.92,
+   "id": 22,
+   "seek": 5606,
+   "start": 73.159996,
+   "end": 78.1,
    "text": " 1% sounds small, but here it's 1% of nearly everyone.",
    "tokens": [
-    51020,
+    51220,
     502,
     4,
     3263,
@@ -3001,46 +2841,61 @@
     6217,
     1518,
     13,
-    51267
+    51467
    ],
    "temperature": 0,
-   "avg_logprob": -0.122515336,
-   "compression_ratio": 1.453125,
+   "avg_logprob": -0.14510268,
+   "compression_ratio": 1.4204545,
    "no_speech_prob": 0
   },
   {
-   "id": 25,
-   "seek": 5788,
-   "start": 75.92,
-   "end": 81.06,
-   "text": " Your positive result ruled out everyone who tested negative.",
+   "id": 23,
+   "seek": 5606,
+   "start": 78.1,
+   "end": 81.14,
+   "text": " Your positive result ruled out everyone",
    "tokens": [
-    51267,
+    51467,
     2260,
     3353,
     1874,
     20077,
     484,
     1518,
+    51619
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.14510268,
+   "compression_ratio": 1.4204545,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 24,
+   "seek": 5606,
+   "start": 81.14,
+   "end": 83.259995,
+   "text": " who tested negative.",
+   "tokens": [
+    51619,
     567,
     8246,
     3671,
     13,
-    51524
+    51725
    ],
    "temperature": 0,
-   "avg_logprob": -0.122515336,
-   "compression_ratio": 1.453125,
+   "avg_logprob": -0.14510268,
+   "compression_ratio": 1.4204545,
    "no_speech_prob": 0
   },
   {
-   "id": 26,
-   "seek": 5788,
-   "start": 81.06,
-   "end": 86.52,
+   "id": 25,
+   "seek": 8326,
+   "start": 83.259995,
+   "end": 88.259995,
    "text": " What's left is a smaller sample space, these 120 people.",
    "tokens": [
-    51524,
+    50365,
     708,
     311,
     1411,
@@ -3054,21 +2909,21 @@
     10411,
     561,
     13,
-    51797
+    50615
    ],
    "temperature": 0,
-   "avg_logprob": -0.122515336,
-   "compression_ratio": 1.453125,
+   "avg_logprob": -0.10481588,
+   "compression_ratio": 1.4848485,
    "no_speech_prob": 0
   },
   {
-   "id": 27,
-   "seek": 8652,
-   "start": 86.52,
-   "end": 90.2,
-   "text": " Your chance of being sick is the red share of this crowd.",
+   "id": 26,
+   "seek": 8326,
+   "start": 88.71999,
+   "end": 92.399994,
+   "text": " Your chance of being sick is the red share of this crowd,",
    "tokens": [
-    50365,
+    50638,
     2260,
     2931,
     295,
@@ -3081,22 +2936,22 @@
     295,
     341,
     6919,
-    13,
-    50549
+    11,
+    50822
    ],
    "temperature": 0,
-   "avg_logprob": -0.11976347,
-   "compression_ratio": 1.4455446,
+   "avg_logprob": -0.10481588,
+   "compression_ratio": 1.4848485,
    "no_speech_prob": 0
   },
   {
-   "id": 28,
-   "seek": 8652,
-   "start": 90.2,
-   "end": 92.659996,
+   "id": 27,
+   "seek": 8326,
+   "start": 92.399994,
+   "end": 94.85999,
    "text": " 20 out of 20 plus 100.",
    "tokens": [
-    50549,
+    50822,
     945,
     484,
     295,
@@ -3104,202 +2959,192 @@
     1804,
     2319,
     13,
-    50672
+    50945
    ],
    "temperature": 0,
-   "avg_logprob": -0.11976347,
-   "compression_ratio": 1.4455446,
+   "avg_logprob": -0.10481588,
+   "compression_ratio": 1.4848485,
    "no_speech_prob": 0
   },
   {
-   "id": 29,
-   "seek": 8652,
-   "start": 94.17999,
-   "end": 98.85999,
-   "text": " Before rounding, these are 19.8 and 99.8.",
+   "id": 28,
+   "seek": 8326,
+   "start": 96.41999,
+   "end": 101.41999,
+   "text": " Unrounded, the red count is 20 sick people times 99%.",
    "tokens": [
-    50748,
-    4546,
-    48237,
+    51023,
+    1156,
+    50167,
     11,
-    613,
-    366,
-    1294,
-    13,
-    23,
-    293,
-    11803,
-    13,
-    23,
-    13,
-    50982
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.11976347,
-   "compression_ratio": 1.4455446,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 30,
-   "seek": 8652,
-   "start": 98.85999,
-   "end": 102.35999,
-   "text": " That's 20 sick people times 99%",
-   "tokens": [
-    50982,
-    663,
-    311,
+    264,
+    2182,
+    1207,
+    307,
     945,
     4998,
     561,
     1413,
     11803,
-    4,
-    51157
+    6856,
+    51273
    ],
    "temperature": 0,
-   "avg_logprob": -0.11976347,
-   "compression_ratio": 1.4455446,
+   "avg_logprob": -0.10481588,
+   "compression_ratio": 1.4848485,
    "no_speech_prob": 0
   },
   {
-   "id": 31,
-   "seek": 8652,
-   "start": 102.35999,
-   "end": 106.579994,
-   "text": " and 9980 healthy times 1%.",
+   "id": 29,
+   "seek": 106,
+   "start": 101.759995,
+   "end": 119.456,
+   "text": " The blue count is 9 healthy people times 1 Divide top and bottom by the 10 we started with 20 people become 2 in 1 and 9 become 998 in 1",
    "tokens": [
-    51157,
-    293,
-    11803,
+    51290,
+    440,
+    3344,
+    1207,
+    307,
+    1722,
+    11,
+    24,
     4702,
     4627,
+    561,
     1413,
     502,
     6856,
-    51368
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.11976347,
-   "compression_ratio": 1.4455446,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 32,
-   "seek": 8652,
-   "start": 106.579994,
-   "end": 109.2,
-   "text": " Divide top and bottom by 10,000.",
-   "tokens": [
-    51368,
+    51540,
+    51584,
     9886,
     482,
     1192,
     293,
     2767,
     538,
+    264,
     1266,
     11,
     1360,
+    321,
+    1409,
+    365,
     13,
-    51499
+    50615,
+    50615,
+    945,
+    561,
+    1813,
+    568,
+    294,
+    502,
+    11,
+    1360,
+    11,
+    293,
+    1722,
+    11,
+    24,
+    4702,
+    1813,
+    11803,
+    23,
+    294,
+    502,
+    11,
+    1360,
+    13,
+    51015
    ],
    "temperature": 0,
-   "avg_logprob": -0.11976347,
-   "compression_ratio": 1.4455446,
+   "avg_logprob": -0.1536248,
+   "compression_ratio": 1.5450237,
    "no_speech_prob": 0
   },
   {
-   "id": 33,
-   "seek": 109,
-   "start": 109.2,
-   "end": 120.29066,
-   "text": " The share stays the same but each headcount becomes a fraction of everyone two in a thousand and nine hundred ninety eight in a thousand these two say how common each",
+   "id": 30,
+   "seek": 106,
+   "start": 119.456,
+   "end": 121.456,
+   "text": " The share can't change.",
    "tokens": [
-    51499,
+    51015,
     440,
     2073,
-    10834,
-    264,
-    912,
-    11,
-    51594,
-    51594,
-    457,
-    1184,
-    1378,
-    26050,
-    3643,
-    257,
-    14135,
-    295,
-    1518,
+    393,
+    380,
+    1319,
     13,
-    51770,
-    50365,
-    294,
-    50658,
-    50658,
-    293,
-    4949,
-    3262,
-    25063,
-    3180,
-    294,
-    257,
-    4714,
-    613,
-    732,
-    584,
+    51115
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1536248,
+   "compression_ratio": 1.5450237,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 31,
+   "seek": 106,
+   "start": 121.456,
+   "end": 126.456,
+   "text": " These are how common each group is, and these, how often each group tests positive.",
+   "tokens": [
+    51115,
+    1981,
+    366,
     577,
     2689,
     1184,
-    50885
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.1345968,
-   "compression_ratio": 1.7264574,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 34,
-   "seek": 109,
-   "start": 120.29066,
-   "end": 126.09065,
-   "text": " group is these two how often each group tests positive that's Bayes theorem all",
-   "tokens": [
-    50885,
     1594,
     307,
+    11,
+    293,
     613,
-    732,
+    11,
     577,
     2049,
     1184,
     1594,
     6921,
     3353,
-    300,
-    311,
-    7840,
-    279,
-    20904,
-    439,
-    51175
+    13,
+    51365
    ],
    "temperature": 0,
-   "avg_logprob": -0.1345968,
-   "compression_ratio": 1.7264574,
+   "avg_logprob": -0.1536248,
+   "compression_ratio": 1.5450237,
    "no_speech_prob": 0
   },
   {
-   "id": 35,
-   "seek": 109,
-   "start": 126.09065,
-   "end": 131.21066,
-   "text": " it does is shrink the sample space to what the evidence allows then take the",
+   "id": 32,
+   "seek": 106,
+   "start": 126.456,
+   "end": 127.456,
+   "text": " Bayes' theorem.",
    "tokens": [
-    51175,
+    51365,
+    7840,
+    279,
+    6,
+    20904,
+    13,
+    51415
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1536248,
+   "compression_ratio": 1.5450237,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 33,
+   "seek": 106,
+   "start": 127.456,
+   "end": 133.456,
+   "text": " All it does is shrink the sample space to what the evidence allows, then take the share.",
+   "tokens": [
+    51415,
+    1057,
     309,
     775,
     307,
@@ -3312,70 +3157,27 @@
     264,
     4467,
     4045,
+    11,
     550,
     747,
     264,
-    51431
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.1345968,
-   "compression_ratio": 1.7264574,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 36,
-   "seek": 109,
-   "start": 131.21066,
-   "end": 137.31065,
-   "text": " share as for those gynecologists after one session turning percentages into",
-   "tokens": [
-    51431,
     2073,
-    382,
-    337,
-    729,
-    15823,
-    716,
-    66,
-    12256,
-    934,
-    472,
-    5481,
-    6246,
-    42270,
-    666,
-    51736
+    13,
+    51715
    ],
    "temperature": 0,
-   "avg_logprob": -0.1345968,
-   "compression_ratio": 1.7264574,
+   "avg_logprob": -0.1536248,
+   "compression_ratio": 1.5450237,
    "no_speech_prob": 0
   },
   {
-   "id": 37,
-   "seek": 2851,
-   "start": 137.31065,
-   "end": 144.81065,
-   "text": " counts of women, the way we just counted people, 87% got it right. Swap the disease for a police",
+   "id": 34,
+   "seek": 2806,
+   "start": 133.456,
+   "end": 137.656,
+   "text": " Swap the disease for a police watchlist.",
    "tokens": [
     50365,
-    14893,
-    295,
-    2266,
-    11,
-    264,
-    636,
-    321,
-    445,
-    20150,
-    561,
-    11,
-    27990,
-    4,
-    658,
-    309,
-    558,
-    13,
     3926,
     569,
     264,
@@ -3383,24 +3185,24 @@
     337,
     257,
     3804,
-    50740
+    1159,
+    8264,
+    13,
+    50575
    ],
    "temperature": 0,
-   "avg_logprob": -0.07670025,
-   "compression_ratio": 1.4595959,
+   "avg_logprob": -0.13915662,
+   "compression_ratio": 1.5066079,
    "no_speech_prob": 0
   },
   {
-   "id": 38,
-   "seek": 2851,
-   "start": 144.81065,
-   "end": 153.49066,
-   "text": " watch list. At the 2017 Champions League final, about 170,000 people were in Cardiff. The watch",
+   "id": 35,
+   "seek": 2806,
+   "start": 137.656,
+   "end": 144.656,
+   "text": " At the 2017 Champions League final, about 170,000 people were in Cardiff.",
    "tokens": [
-    50740,
-    1159,
-    1329,
-    13,
+    50575,
     1711,
     264,
     6591,
@@ -3418,24 +3220,24 @@
     11877,
     3661,
     13,
-    440,
-    1159,
-    51174
+    50925
    ],
    "temperature": 0,
-   "avg_logprob": -0.07670025,
-   "compression_ratio": 1.4595959,
+   "avg_logprob": -0.13915662,
+   "compression_ratio": 1.5066079,
    "no_speech_prob": 0
   },
   {
-   "id": 39,
-   "seek": 2851,
-   "start": 153.49066,
-   "end": 160.19066,
-   "text": " lists held about 1,200 faces, so even a small error rate per face would swamp the real matches.",
+   "id": 36,
+   "seek": 2806,
+   "start": 144.656,
+   "end": 150.956,
+   "text": " The watchlists held about 1,200 faces, so even a small error rate per face would swamp",
    "tokens": [
-    51174,
-    14511,
+    50925,
+    440,
+    1159,
+    36693,
     5167,
     466,
     502,
@@ -3453,55 +3255,113 @@
     1851,
     576,
     31724,
+    51240
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13915662,
+   "compression_ratio": 1.5066079,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 37,
+   "seek": 2806,
+   "start": 150.956,
+   "end": 152.736,
+   "text": " the real matches.",
+   "tokens": [
+    51240,
     264,
     957,
     10676,
     13,
-    51509
+    51329
    ],
    "temperature": 0,
-   "avg_logprob": -0.07670025,
-   "compression_ratio": 1.4595959,
+   "avg_logprob": -0.13915662,
+   "compression_ratio": 1.5066079,
    "no_speech_prob": 0
   },
   {
-   "id": 40,
-   "seek": 5139,
-   "start": 160.19066,
-   "end": 167.19066,
-   "text": " Face recognition cameras scanned the crowd and raised 2,470 alerts.",
+   "id": 38,
+   "seek": 2806,
+   "start": 152.736,
+   "end": 155.576,
+   "text": " Face recognition cameras scanned the crowd.",
    "tokens": [
-    50365,
+    51329,
     4047,
     11150,
     8622,
     45089,
     264,
     6919,
-    293,
+    13,
+    51471
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13915662,
+   "compression_ratio": 1.5066079,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 39,
+   "seek": 2806,
+   "start": 155.576,
+   "end": 159.616,
+   "text": " They raised 2,400 and 70 alerts.",
+   "tokens": [
+    51471,
+    814,
     6005,
     568,
     11,
-    19,
-    5867,
+    13741,
+    293,
+    5285,
     28061,
     13,
-    50715
+    51673
    ],
    "temperature": 0,
-   "avg_logprob": -0.12344465,
-   "compression_ratio": 1.4487805,
+   "avg_logprob": -0.13915662,
+   "compression_ratio": 1.5066079,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 40,
+   "seek": 2806,
+   "start": 159.616,
+   "end": 162.656,
+   "text": " Shrink to the alerts and take the red share.",
+   "tokens": [
+    51673,
+    1160,
+    81,
+    475,
+    281,
+    264,
+    28061,
+    293,
+    747,
+    264,
+    2182,
+    2073,
+    13,
+    51825
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13915662,
+   "compression_ratio": 1.5066079,
    "no_speech_prob": 0
   },
   {
    "id": 41,
-   "seek": 5139,
-   "start": 167.19066,
-   "end": 172.19066,
-   "text": " Police counted 173 as right, 7%.",
+   "seek": 5726,
+   "start": 162.656,
+   "end": 170.696,
+   "text": " counted 173 as right, 7%. In machine learning, the share of alerts that are right is called",
    "tokens": [
-    50715,
-    11882,
+    50365,
     20150,
     3282,
     18,
@@ -3510,21 +3370,6 @@
     11,
     1614,
     6856,
-    50965
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.12344465,
-   "compression_ratio": 1.4487805,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 42,
-   "seek": 5139,
-   "start": 172.19066,
-   "end": 177.19064,
-   "text": " In machine learning, the share of alerts that are right is called precision.",
-   "tokens": [
-    50965,
     682,
     3479,
     2539,
@@ -3538,78 +3383,86 @@
     558,
     307,
     1219,
-    18356,
-    13,
-    51215
+    50767
    ],
    "temperature": 0,
-   "avg_logprob": -0.12344465,
-   "compression_ratio": 1.4487805,
+   "avg_logprob": -0.15099877,
+   "compression_ratio": 1.4021164,
    "no_speech_prob": 0
   },
   {
-   "id": 43,
-   "seek": 5139,
-   "start": 177.19064,
-   "end": 185.19064,
-   "text": " Later, a new algorithm and better photos cut the false alarms, and 46% of alerts were judged right.",
+   "id": 42,
+   "seek": 5726,
+   "start": 170.696,
+   "end": 177.676,
+   "text": " precision. The university's evaluators counted 3% here. After a new algorithm and better",
    "tokens": [
-    51215,
-    11965,
-    11,
+    50767,
+    18356,
+    13,
+    440,
+    5454,
+    311,
+    6133,
+    3391,
+    20150,
+    805,
+    4,
+    510,
+    13,
+    2381,
     257,
     777,
     9284,
     293,
     1101,
+    51116
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15099877,
+   "compression_ratio": 1.4021164,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 43,
+   "seek": 5726,
+   "start": 177.676,
+   "end": 185.256,
+   "text": " photos cut the false alarms, they counted 46 at the Six Nations. Back to your test.",
+   "tokens": [
+    51116,
     5787,
     1723,
     264,
     7908,
     45039,
     11,
-    293,
+    436,
+    20150,
     17835,
-    4,
-    295,
-    28061,
-    645,
-    27485,
-    558,
+    412,
+    264,
+    11678,
+    16459,
     13,
-    51615
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.12344465,
-   "compression_ratio": 1.4487805,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 44,
-   "seek": 5139,
-   "start": 185.19064,
-   "end": 187.19064,
-   "text": " Back to your test.",
-   "tokens": [
-    51615,
     5833,
     281,
     428,
     1500,
     13,
-    51715
+    51495
    ],
    "temperature": 0,
-   "avg_logprob": -0.12344465,
-   "compression_ratio": 1.4487805,
+   "avg_logprob": -0.15099877,
+   "compression_ratio": 1.4021164,
    "no_speech_prob": 0
   },
   {
-   "id": 45,
-   "seek": 7839,
-   "start": 187.19064,
-   "end": 194.87065,
-   "text": " The title's 99% accuracy is real, but a test that calls Everyone Healthy scores 99.8,",
+   "id": 44,
+   "seek": 7986,
+   "start": 185.256,
+   "end": 188.876,
+   "text": " The title's 99% accuracy is real.",
    "tokens": [
     50365,
     440,
@@ -3620,8 +3473,23 @@
     14170,
     307,
     957,
-    11,
-    457,
+    13,
+    50546
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19242519,
+   "compression_ratio": 1.375,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 45,
+   "seek": 7986,
+   "start": 188.876,
+   "end": 195.596,
+   "text": " But a test that calls Everyone Healthy scores 99.8, more accurate and useless.",
+   "tokens": [
+    50546,
+    583,
     257,
     1500,
     300,
@@ -3633,26 +3501,26 @@
     13,
     23,
     11,
-    50749
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.14130425,
-   "compression_ratio": 1.3988764,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 46,
-   "seek": 7839,
-   "start": 195.43065,
-   "end": 203.75064,
-   "text": " more accurate and useless. Your 17% assumes a random screen. Symptoms raise the 1 in 500,",
-   "tokens": [
-    50777,
     544,
     8559,
     293,
     14115,
     13,
+    50882
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19242519,
+   "compression_ratio": 1.375,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 46,
+   "seek": 7986,
+   "start": 195.596,
+   "end": 199.57599,
+   "text": " Your 17% assumes a random screen.",
+   "tokens": [
+    50882,
     2260,
     3282,
     4,
@@ -3661,6 +3529,21 @@
     4974,
     2568,
     13,
+    51081
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19242519,
+   "compression_ratio": 1.375,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 47,
+   "seek": 7986,
+   "start": 199.57599,
+   "end": 203.596,
+   "text": " Symptoms raise the 1 in 500, and the answer climbs.",
+   "tokens": [
+    51081,
     28877,
     662,
     4785,
@@ -3670,106 +3553,75 @@
     294,
     5923,
     11,
-    51193
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.14130425,
-   "compression_ratio": 1.3988764,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 47,
-   "seek": 7839,
-   "start": 203.75064,
-   "end": 210.95065,
-   "text": " and the answer climbs. 50% at 1 in 100, 99 at 1 in 2 were the rule held.",
-   "tokens": [
-    51193,
     293,
     264,
     1867,
     48439,
     13,
-    2625,
-    4,
-    412,
-    502,
-    294,
-    2319,
-    11,
-    11803,
-    412,
-    502,
-    294,
-    568,
-    645,
-    264,
-    4978,
-    5167,
-    13,
-    51553
+    51282
    ],
    "temperature": 0,
-   "avg_logprob": -0.14130425,
-   "compression_ratio": 1.3988764,
+   "avg_logprob": -0.19242519,
+   "compression_ratio": 1.375,
    "no_speech_prob": 0
   },
   {
    "id": 48,
-   "seek": 10215,
-   "start": 210.95065,
-   "end": 215.95065,
-   "text": " On a random screen, 20 reach this plus along the red,",
+   "seek": 7986,
+   "start": 203.596,
+   "end": 206.116,
+   "text": " At 1 in 100, 50%.",
    "tokens": [
-    50365,
-    1282,
-    257,
-    4974,
-    2568,
+    51282,
+    1711,
+    502,
+    294,
+    2319,
     11,
-    945,
-    2524,
-    341,
-    1804,
-    2051,
-    264,
-    2182,
-    11,
-    50615
+    2625,
+    6856,
+    51408
    ],
    "temperature": 0,
-   "avg_logprob": -0.16111608,
-   "compression_ratio": 1.4538461,
+   "avg_logprob": -0.19242519,
+   "compression_ratio": 1.375,
    "no_speech_prob": 0
   },
   {
    "id": 49,
-   "seek": 10215,
-   "start": 215.95065,
-   "end": 217.95065,
-   "text": " 100 along the blue.",
+   "seek": 7986,
+   "start": 206.116,
+   "end": 210.056,
+   "text": " At 1 in 2, 99, where the rule held.",
    "tokens": [
-    50615,
-    2319,
-    2051,
+    51408,
+    1711,
+    502,
+    294,
+    568,
+    11,
+    11803,
+    11,
+    689,
     264,
-    3344,
+    4978,
+    5167,
     13,
-    50715
+    51605
    ],
    "temperature": 0,
-   "avg_logprob": -0.16111608,
-   "compression_ratio": 1.4538461,
+   "avg_logprob": -0.19242519,
+   "compression_ratio": 1.375,
    "no_speech_prob": 0
   },
   {
    "id": 50,
-   "seek": 10215,
-   "start": 217.95065,
-   "end": 222.95065,
+   "seek": 10466,
+   "start": 210.056,
+   "end": 216.056,
    "text": " 99% is the test's recall, how often the sick test positive.",
    "tokens": [
-    50715,
+    50365,
     11803,
     4,
     307,
@@ -3785,21 +3637,21 @@
     1500,
     3353,
     13,
-    50965
+    50665
    ],
    "temperature": 0,
-   "avg_logprob": -0.16111608,
-   "compression_ratio": 1.4538461,
+   "avg_logprob": -0.19385667,
+   "compression_ratio": 1.3372093,
    "no_speech_prob": 0
   },
   {
    "id": 51,
-   "seek": 10215,
-   "start": 222.95065,
-   "end": 227.95065,
+   "seek": 10466,
+   "start": 216.056,
+   "end": 221.256,
    "text": " 17% is its precision, how often the positive are sick.",
    "tokens": [
-    50965,
+    50665,
     3282,
     4,
     307,
@@ -3813,15 +3665,15 @@
     366,
     4998,
     13,
-    51215
+    50925
    ],
    "temperature": 0,
-   "avg_logprob": -0.16111608,
-   "compression_ratio": 1.4538461,
+   "avg_logprob": -0.19385667,
+   "compression_ratio": 1.3372093,
    "no_speech_prob": 0
   }
  ],
  "x_groq": {
-  "id": "req_01m50sa4hpeyrsh713tkxvcmsv"
+  "id": "req_01m514y9dyedg8w33s7xfdbnty"
  }
 }

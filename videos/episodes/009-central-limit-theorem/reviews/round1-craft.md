@@ -1,91 +1,61 @@
 # Episode 9, review round 1 (craft critic: visual design, motion, A/V sync)
 
-Evidence: `review/` pack (metrics.json 13:18, newer than final.mp4 13:17): report.md, all 11 contact sheets, 14 full-res keyframes (kf_02, 06, 07, 13, 18, 19, 25, 27, 31, 34, 36, 39 among them), plus extra frames extracted with ffmpeg at 0:22.8, 0:41.0, 0:41.5, 0:43.0, 0:44.0, 1:11.0, 1:12.5, 1:31.0, 1:45.0, 2:05.0, 2:06.0, 2:49.5, 2:52.8, 3:01.5. Transcript, transcript_words.tsv, script.md, facts.md and scene.py read. Kohavi et al. 2014 checked against the paper's PDF (exp-platform.com) via web search.
+Evidence: existing `review/` pack (metrics.json 01:09:39 is newer than final.mp4 01:07:36): report.md, metrics.json, narration_diff.txt, all 13 contact sheets, full-res keyframes kf_02, 05, 08, 09, 11, 14, 16, 19, 22, 27, 29, 31, 32, 34, 36, 40. I also pulled extra frames with ffmpeg at 0:02.4, 0:03.0, 0:03.5, 0:05.0, 0:44.3, 1:08.3, 1:08.8, 1:09.3, 1:09.8, 1:10.3, 1:27.6, 1:28.2, 1:28.8, 1:35.2, 1:51.6, 1:52.2, 2:26.8, 2:27.4, 2:48.9, 2:51.2, 2:51.8, 2:52.0, 2:52.4 and 3:40.0. I read the transcript, transcript_words.tsv, script.md and facts.md. I re-simulated the miss rates myself (exponential waits, x-bar ± 1.96·s/√n): n = 30 gives 7.26% / 0.99%, n = 300 gives 3.71% / 1.68%, n = 1,420 gives 2.98% / 2.19%. I recomputed every closed-form number and checked Kohavi et al. 2014 Rule #7 against the exp-platform PDF.
 
 ```
 EPISODE: 009 — "Why Bell Curves Are Everywhere, and When They're Not"
-IDEA: Collecting more lopsided data never makes it bell-shaped; averaging does, because an average's skewness is one piece's skewness over root n, and that only works when no single piece can outweigh the rest (finite variance).
-SCORES: Hook 8.5 · Clarity 8 · Visual 7.5 · Motion 7.5 · Audio 8.5 · Concision 8 · Originality 8.5
-WEIGHTED: 8.0   AFTER CEILING: 8.0  (lowest 7.5 + 2 = 9.5, not binding)
-CAPS: none (the overlaps at 0:41.5 and 2:05 are mid-transition, about 0.5–1 s each, and every settled frame is clean, so I did not apply cap 7; they are fixes 5 and 6)
-FINAL: 8.0   PASS: no
+IDEA: More lopsided data never turns into a bell, but averaging does, because an average's skewness is one piece's over root n. For bus waits that means an A-B test needs about 1,420 per average, not the textbook's 30, and it only works while no single piece can outweigh the rest (finite variance).
+SCORES: Hook 8.5 · Clarity 8 · Visual 7.5 · Motion 8 · Audio 8 · Concision 8 · Originality 8.5
+WEIGHTED: 8.1 (8.05)   AFTER CEILING: 8.1  (lowest 7.5 + 2 = 9.5, not binding)
+CAPS: none. The shore line striking through "textbook" at 2:51.8–2:52.4 lasts about 0.6 s inside a dissolve, and every settled frame passes the layout audit (0 issues in 249 checks), so I did not apply cap 7. It is fix 5.
+FINAL: 8.1   PASS: no
 FACTS:
-- Exponential waits have skewness 2; sample skew 1.90/1.96/2.01/1.98 at 10^2..10^5 | Verified | standard result; sim.py values match the screen
-- Averages of 4/16/64 have skew 0.99/0.50/0.25, and skew(x̄) = skew(x)/√n | Verified | cumulant additivity: n·κ3/(nσ²)^{3/2}; needs a finite 3rd moment
-- Coin p = 0.1: skew 2.67; share of heads in 64 flips: 0.33 | Verified | (1−2p)/√(p(1−p)) = 0.8/0.3; 2.67/8
+- Exponential waits have skewness 2; sample skew 1.90 / 1.96 / 2.00 / 1.98 at 10^2..10^5 | Verified | standard result; matches sim.py values in facts.md
+- Skewness = E[(x−μ)^3]/σ^3; a bell scores 0 | Verified | definition; same form as Kohavi et al. 2014
+- (5.2 + 1.8 + 25.7 + 5.3)/4 = 9.5 | Verified | arithmetic (38.0/4)
+- Averages of 4 / 16 / 64 have skew 0.99 / 0.50 / 0.25; skew(x̄) = skew(x)/√n | Verified | third cumulant adds: n·κ3/(nσ²)^{3/2}
+- Sum of 4: cubed gaps ×4, spread ×2, spread³ ×8, so 4/8 = half; generally n/n^{3/2} | Verified | algebra (cross terms vanish under independence)
+- Coin p = 0.1: skew 2.67; average of 64 flips 0.33 = 2.67/√64 | Verified | 0.8/0.3 = 2.667; /8 = 0.333
+- Excess kurtosis of an average = ex. kurt(x)/n | Verified | fourth cumulant / σ^4 scales as n^{-1}
+- CLT needs independent pieces + finite variance | Verified (simplified: "independent" stands in for i.i.d./Lindeberg) | Lindeberg–Lévy
 - 2/√30 = 0.37 | Verified | 0.365
-- Textbook "n ≥ 30 whatever the shape" | Verified | Montgomery & Runger 2010 as quoted in Kohavi et al. 2014 Rule #7; cited on screen at 1:33
-- Kohavi et al. rule n ≥ 355·s² | Verified | Kohavi, Deng, Longbotham & Xu, KDD 2014, Rule #7 (PDF); cited on screen at 1:43. "Kohavi's team at Microsoft" is loose (Xu was at LinkedIn) but not wrong, and the screen gives all four authors
-- 355·s² ⇔ s/√n ≤ 0.053 | Verified (algebra) | 1/√355 = 0.0531. Narration says "under point oh five", a rounding, so a nitpick only
-- 355·2² = 1,420 ("fourteen hundred") | Verified | arithmetic
-- Bing revenue/user skew "near 18", 114,000 users; capped at $10/user/week gives 5.2 and 9,700 | Verified | paper table (corrected 2015: 17.9 and 114k; 5.2 and 9.7k; the original text said 18.2 and 5.3)
-- Lighthouse: uniform angle gives a Cauchy landing spot; the average of n Cauchy is Cauchy; the median of the max of 1,000 is about 919 mi ("about 900") | Verified | tan(π/2·0.5^{1/1000}) = 918.5; stability of the Cauchy distribution
-- Gull 1988; Sivia & Skilling 2006 (lighthouse problem) | Verified | standard attribution; cited on screen at 2:09–2:17
-- The median homes in (SD π/(2√n) = 0.05 mi at n = 1000) | Verified | asymptotic theory of the median
-MECHANICS: runtime 3:02.1 · wpm 155 (speech) · max silence 1.97 s (planned prediction hold at 1:37.8) · max static 2.87 s · −14.0 LUFS / −1.9 dBTP · lead 0.0 s / trail 1.88 s · WER 3.9% (all diffs are homophones: waits/weights, week/weak)
+- "Textbooks say the average of 30 is safe to treat as a bell" | Verified | Montgomery & Runger 2010, as quoted in Kohavi et al. 2014 Rule #7 ("if n ≥ 30, the normal approximation will be satisfactory regardless of the shape"); cited on screen 0:04–0:16 and 1:53–2:16
+- A 95% interval should miss 2.5% per side | Verified | definition
+- 30 waits: 7% low / 1% high misses | Verified | my sim 7.26% / 0.99%; on screen 7.2% / 1.0%, labelled "simulated"
+- Kohavi et al.: each tail in 2–3%; n ≥ 355·s² | Verified | Kohavi, Deng, Longbotham & Xu, KDD 2014, Rule #7 (PDF); on screen 2:17–2:51
+- 1/√355 ≈ 0.053 | Verified | 0.0531
+- 300 still misses (3.7% / 1.7%); 1,420 reaches the band (3.0% / 2.1%) | Verified | my sim 3.71/1.68 and 2.98/2.19; 355·2² = 1,420
+- Bing revenue/user skew near 18 → 114,000; capped at $10/week → under 10,000 | Verified | paper table (corrected 2015): 17.9 → 113,746; 5.2 → 9,599 (paper's 9.7k comes from unrounded skew); narration hedges correctly
+- "On revenue data, 30 is off by a factor of thousands" | Verified | 114,000/30 ≈ 3,800
+- Lighthouse 1 mi off shore, uniform angle → Cauchy landing spot | Verified | Gull 1988; Sivia & Skilling 2006 (on screen 2:55–3:02)
+- Farthest of 1,000 flashes typically about 900 mi | Verified | median of max|X| = tan(π/2·0.5^{1/1000}) = 919
+- Half of single flashes within 1 mi; the mean of 1,000 Cauchy draws is again standard Cauchy, so still half | Verified | (2/π)·arctan 1 = 0.5; stability of the Cauchy distribution
+- Median homes in | Verified | asymptotic SD π/(2√n) = 0.05 mi at n = 1,000
+MECHANICS: runtime 3:52.8 · wpm 161 (speech; 177 excluding pauses) · max silence 1.74 s (0:12.1, planned prediction hold) · leading 0.00 s / trailing 1.91 s · max static 3.53 s (0:11.4–0:15.0) · −14.0 LUFS / −2.2 dBTP · 0 banned phrases · WER 2.9% (all "waits"→"weights" homophones and number formatting)
+FIXES (highest impact first):
+1. [2:16–2:51][Visual] There is no single focal point in the payoff. At 2:40.9 (kf_27) the frame holds the n/skew readout, the histogram, the miss meter with its "2–3%" band label, three stacked equations (skew(x̄) = skew(x)/√n, n ≥ 355·2² = 1,420, skew(x)/√n ≤ 1/√355 ≈ 0.053), a log axis with three markers and labels, and a citation. By 2:51.2 the axis has five markers and labels ("textbook", "waits", "capped", "Bing revenue", "sample size"). Change: (a) from 2:16 dim the top skew(x̄) = skew(x)/√n to 35%, and on "it's our formula" (2:29.6) flash it to 100% and TransformFromCopy it into the derived inequality; (b) once the inequality is complete (about 2:31), TransformMatchingTex "n ≥ 355·skew(x)²" away into the single surviving line, so at most two equations are ever on screen; (c) on "Bing's" (2:41.0) FadeOut the histogram and meter instead of dimming them to about 30%, and scale the log axis up into the freed upper half so the markers 30 → 1,420 → 9,600 → 114,000 are the only subject.
+2. [1:27.6–1:33.0][Visual/Motion] This is a mixed-state frame (kf_16 at 1:29.3, sheet 1:31). Panel 1 is already the coin (two spikes, skew 2.67). Panel 64 still shows wait averages (6–14 min axis, skew 0.25) until about 1:33. The whole cubes / n·n^{-3/2} derivation still sits bottom-left. That is three ideas in one frame, and the 2.67 sits beside a wait histogram. Change: at 1:27.0 (the end of "n to the one and a half"), collapse the expansion back to skew(x̄) = skew(x)/√n with TransformMatchingTex and FadeOut the cubes, the ×n / ×√n / ×n^{3/2} labels and the "cubed gaps" / "spread³" captions. Then morph panels 1 and 64 together on "coin" (1:28.0), so the readouts 2.67 → 0.33 always describe the same variable. Alternative that also buys about 8 s: cut the coin sentence and show ex. kurt 6 → 1.5 → 0.38 → 0.09 on the existing wait panels (the series stays at 4 panels, and the 2:41–2:53 density relaxes).
+3. [0:08–0:14][Hook/Clarity] "Does it take 30, 300, or over 1,000?" has no criterion. "It" is "safe to treat as a bell", which the viewer cannot judge until 2:16 introduces the 2–3% band. Change the line to "For these waits, how many per average before a test's 95% interval misses only one time in forty per side: thirty, three hundred, or over a thousand?", or keep the line and add a gray "95% interval honest?" tag under the dashed bell at 0:09. Then the 2:03 meter and the 2:39 "reach the band" answer exactly the question that was asked.
+4. [1:58–2:16][Clarity/Motion] The mechanism behind the 7% / 1% split goes by in about 5 s (2:05.1–2:10.4) with no labels: green dashed interval → yellow interval. Change: label the green dashed bar "true spread" and the yellow bar "its own spread" (gray and yellow, Text font 18+, beside the bar ends) for ≥ 2.5 s from 2:09. Add a 0.8 s pause after "its interval stops short" (GAP_AFTER) before "With thirty waits", so the stop-short gap to μ is seen before the meter moves.
+5. [2:51.8–2:52.4][Visual] The lighthouse shore line draws at full brightness straight through the payoff's "textbook" label while the payoff is still at about 50% opacity (frames 2:51.8 and 2:52.0). Change: run FadeOut(payoff, run_time 0.6) to completion before Create(shore), or create the shore at opacity 0 and fade it in after the payoff is below 15%.
+6. [several][Motion/Audio sync] Visuals land about 1–2 s after their words: "halves" at 1:07.0 vs the ÷2 arcs at about 1:08.3; "tails" at 1:58.9 vs tail shading at about 2:00.5; "seven percent low" at 2:13.3 vs meter bars at about 2:14.5; "That's the central limit theorem" ends 1:47.0 vs the title at about 1:46.8; "Here the variance is infinite" at 3:33.5–3:35.0 vs "variance = ∞" turning red at about 3:36.5. Change: key each animation start to the narration.json onset of its word ("halves", "tails", "seven", "central", "infinite"), moving each 0.8–1.5 s earlier.
+7. [1:08.3–1:10.3][Motion] The copies of the header values 4 / 16 / 64 fly diagonally through the histograms, the "average of n waits (minutes)" label and the skew readouts (frame 1:08.8: "16" crosses "(minutes)", "64" crosses the n = 64 bars, and stacked 1.98 copies sit on "skew = 0.99"). At 1:09.8 the four 2/√n collapse while "skew(x̄) =" fades in on top of "2/√4". Change: dim the four panels to 40% for the 1.3 s flight and give each copy a path_arc that stays inside its own column. FadeOut the four 2/√n (or transform them into the single 2/√n) before Write(skew(x̄) =), so the two never overlap.
+8. [0:03.3–0:04.6][Visual/Motion] The "tail" brace and the dimmed 0–20 min bars hold for only about 1.3 s, below the 1.5 s reading minimum, and they are gone by 0:05.0. Change: hold the brace to ≥ 2 s (until 0:05.5), then dim it to 40% and keep it until the chips arrive at 0:10. This also strengthens the landing call-back at 3:47.
+9. [0:44–1:51, 1:53–2:51][Visual] The chart labelling is incomplete. The four panels' y-axis reads "share" with no unit and no ticks. The payoff histogram has no y-axis at all, and "share (exact)" floats over nothing (kf_22, kf_27). Change: relabel the panels "share (%)" and draw a y-axis line with a single tick on the payoff panel, or drop the y label there and put "exact" as a tag beside the n label.
+10. [3:25–3:41][Visual] The "← 12" and "12 →" counts sit at x ≈ 97 px and 1822 px (the safe limits are 96 and 1824), and nothing explains them. Change: move them inside |x| ≤ 6.0 units and make them read "12 more ←" / "→ 12 more" in yellow Text font 18.
+REACHES 9 IF ALL FIXED: yes, but only with fixes 1–4 (focus and density), not with polish alone. Visual needs 1, 2, 5, 9 and 10 to reach 9; Motion needs 2, 6 and 7; Clarity needs 3 and 4. If the producer will not take the coin cut or the payoff decluttering, the episode stalls around 8.5, because the 2:16–2:51 stretch asks one frame to carry four ideas.
+KEEP:
+- The cube proof (1:13–1:27). One blue cube grows out of E[(x−μ)³] and one gray cube out of σ³; four blue against a 2×2×2 gray block; then ×4/×8 becomes ×n / ×n^{3/2} and flies into the formula. Here the animation is the proof.
+- Kohavi's n ≥ 355·s² rewritten into skew(x)/√n ≤ 0.053 (2:21–2:33), so the industry rule turns out to be the episode's own formula. The log axis accumulates 30 → 300 → 1,420 while the miss meter walks into the 2–3% band.
+- The lighthouse (2:53–3:40), where flash 841's 902-mile beam yanks the running average, followed by the landing (3:41–3:52) that rebuilds the cold-open frame, lights "1,000+", relabels the arrow "average of 1,420" and grows the bell under the average.
 ```
 
-## What I saw, beat by beat (flipbook)
+## Notes behind the scores
 
-- **0:00–0:12 cold open.** One blue histogram of 100 waits, labelled "simulated", with full axis labels. On "bell curve" (0:09) the arrow, "100,000 waits" and a dashed green bell with "?" appear, followed by a 2.0 s silent hold (0:10.5–0:12.5). The prediction prompt is clean and lands by 0:12.
-- **0:12–0:29 stakes and naive build.** The A/B error-bar icons (yellow bars with green bells, which matches the palette) appear at 0:17 and then sit small at top-right until 0:29, long after they were mentioned. The counter ticks 100 → 1,000 → 10,000 → 100,000 on the spoken numbers (0:21–0:25). At 0:22.8 the counter morph shows a mid-glyph "1₀,000". The white exponential curve traces on "shape" (0:27–0:29). Sync here is good.
-- **0:29–0:41 fail, measured.** A skewness chart is built, with "bell 0" turning green and four blue bars near 2. The definition E[(x−μ)³]/σ³ arrives as a finished FadeIn (scene.py:278), small and grey (cap height about 25 px), and is never spoken. The bars carry no value labels and the gap to the bell is not marked.
-- **0:41–0:49 the fix.** At 0:41.0–0:41.5 the transition is messy. A stray axis segment floats mid-frame, the shrinking histogram's ghosted tick glyphs ("0", "40" at large size) overlap the incoming "skew = 1.98", and the "1.98" collides with the old tick labels. At 0:42.3–0:45.3 the four chips (5.2, 1.8, 25.7, 5.3) fly out, overlap "skew = 1.98" (0:43.0) and then collapse into a merged pill with garbled digits (0:44.0). The 9.5 average and the dilution of the 25.7 outlier, which is the whole mechanism of the episode, are never readable for more than about 0.9 s, and the narration never says why averaging cuts the lean.
-- **0:47–1:14 readings and formula.** This beat is strong: the panels fill, the readings appear on cue, green bells are traced on "this perfect bell in green" (0:57), and the ×4 / ÷2 arcs sit on "grows four times / halves" (1:03–1:05). The 2/√n fractions are built from the header n values. At 1:11.0 and 1:12.5 the general formula assembles through glyph shatter: the digits of "1.98" morph into the letters of "skew(x)", leaving debris between the fractions. The ÷2 arrows sit about 13–15 px from the neighbouring "skew" labels (kf_13), under the 20 px minimum. Below y ≈ −1 the frame is empty from 0:45 to 1:05.
-- **1:14–1:31 universality.** The coin's two spikes morph out of panel 1 and the n = 64 panel morphs into the exact binomial under the green bell. The dimmed n = 4 and n = 16 panels still show minute ticks (0–20, 5–15) under the shared label "share of heads in n flips" (kf_18), and the fraction row still reads 2/√64 = 0.25 while the coin reading is 0.33.
-- **1:31–2:07 payoff.** The formula persists to the top of the frame, which is good. The board is mostly text: "textbook: n ≥ 30" and "textbook 30" on the axis say the same thing twice (kf_19). "?" holds for 2 s before 0.37 resolves (1:37.8–1:39.8). The log-axis markers are a good idea (30 / 1,420 / 9,700 / 114,000). At 2:05.0 the capped marker spawns exactly on top of the Bing marker, producing a doubled, illegible "Bingrevenue 114,000" for about 1 s. 0.37 is never shown as a picture: no n = 30 histogram that visibly leans.
-- **2:07–2:52 lighthouse.** This is the best visual argument in the film. Beams land live, the red beam goes off-frame at 2:21 with "← 32 mi", flash 841 yanks the yellow running average at 2:29 ("902 mi →"), and the purple median flattens at 0 (kf_36). Two weaknesses. (a) "As scattered as a single flash" (2:35–2:41) is asserted by drawing two identical brackets (a TransformFromCopy of one onto the other); no data shows it. (b) The final frame (kf_36, 2:49–2:52) carries about 19 words of prose labels, two charts, two brackets, a red annotation and four hues. It has no single focal point. The upper chart's y label "landing spot (miles)" is really the running average or median.
-- **2:52–3:02 landing.** It dips to the background for 0.53 s (2:52.8), then rebuilds the cold-open frame exactly. The dashed "?" bell is replaced by the yellow average-of-64 histogram under a solid green bell (kf_39). This is the right ending, and it lands on "It's in the average." The ident card overlays a dimmed final frame at 3:01.5, inside the 2 s limit.
-
-**A/V sync.** Every deictic I checked lands within ±1 s: "this tail" 0:05, "here" 0:44–0:45, "this perfect bell in green" 0:57, "two spikes" 1:19, "Kohavi" with the citation swap at 1:43, "farthest … 900 miles" with "902 mi" at 2:29, "median" at 2:49. There is no drift and nothing is named that is not visible.
-
-**Palette.** Blue = single pieces, yellow = averages, green = bell, red = extreme or infinite variance, purple = median. It holds without exception from 0:00 to 3:02, which is the episode's strongest craft asset.
-
-## FIXES (highest impact first)
-
-1. **[0:41–0:49][Clarity + Motion] The averaging gesture is rushed and its mechanism is never said.** The chips are legible for under 1 s and 9.5 is never readable (0:43.0, 0:44.0). Rebuild it as about 6 s:
-   - Lay the four chips out in a row under panel 1 with ≥0.3 unit gaps, held 1.5 s, with 25.7 tinted RED (an extreme piece, consistent with the palette).
-   - Narrate: "one long wait, twenty-five minutes, gets diluted by three short ones."
-   - Merge them with a visible "÷ 4" into a yellow 9.5 chip, held ≥1.5 s, then drop it into panel 2.
-   - Fund the time by cutting the sentence "Each panel zooms in, because averages crowd toward ten minutes" (0:57–1:02). Keep the dashed 10-minute line and the tick flag silent.
-2. **[2:35–2:41][Clarity + Motion] "As scattered as a single flash" is asserted, not shown.** Replace the two copied brackets with data:
-   - Drop 200 yellow dots (each the average of 1,000 simulated flashes) onto a second shore line directly under 200 blue single-flash dots, same axis.
-   - Grow each "middle half" bracket from its own 25th and 75th percentile dots (TransformFromCopy from those dots), so the viewer sees the equal spread.
-   - Keep the narration as is.
-3. **[1:30–1:43][Clarity + Visual] 0.37 has no picture, and the payoff is a text board.**
-   - Do not FadeOut the panel row at 1:30. Morph panel n = 16 into an n = 30 histogram of simulated averages with its green bell, so the right-lean is visible when "0.37" resolves.
-   - Delete the redundant "textbook: n ≥ 30" text and keep only the axis marker "textbook 30".
-4. **[2:41–2:52][Visual] The final lighthouse frame is cluttered** (kf_36: about 19 prose words, more than the 12 allowed, with split focus).
-   - On "Here the variance is infinite", dim "902 ÷ 1,000 ≈ 0.9 mi", the red jump bracket, the ghost circle and both "middle half" brackets to 30%.
-   - On "The median", dim the yellow average trace to 40% so purple is the only bright line.
-   - Rename the upper y label to "running value (miles)".
-5. **[0:41.0–0:42.0][Motion] The FadeTransform(big, pax[0]) produces ghosted, oversized tick glyphs and a floating axis segment, and "skew = 1.98" overlaps the old tick labels** (frames 0:41.0, 0:41.5).
-   - Fade out the old axes and ticks first (0.4 s).
-   - Then ReplacementTransform the bars only into panel 1's bars (same bin count), so the shrink reads as one object moving.
-   - Bring in the n headers and empty panels, and only then FadeIn reads[0] (use Succession, not concurrent).
-6. **[2:04.5–2:05.5][Motion / overlap] The capped marker copy is born on top of the Bing label, giving doubled text** (frame 2:05.0). Instead:
-   - TransformFromCopy only the dot (mbing[1] → mcap[1]) along an arc to 9,700.
-   - FadeIn the "capped / 9,700" label at its destination after the dot lands.
-7. **[1:11–1:15][Motion] The general formula assembles through glyph shatter** (frames 1:11.0, 1:12.5: digits of 1.98 morph into the letters of skew(x)).
-   - Build the numerator from the four blue "2"s of the fraction row (TransformFromCopy of f[0][0]), then TransformMatchingTex "2" → "skew(x)" in place with a 0.8 s flash.
-   - Build √n from the √1..√64 denominators as now.
-   - Centre the finished formula at x = 0 (it currently sits right of centre, about x 950–1480 px).
-8. **[0:31–0:41][Visual + Motion] The skewness definition E[(x−μ)³]/σ³ is FadeIn'd as a finished equation, about 25 px cap height, never narrated** (kf_06, scene.py:278). Either delete it, or build it term by term with one spoken line ("the average cubed distance from the mean, so long waits dominate") at MathTex ≥ 36. Also:
-   - Put value labels 1.90 / 1.96 / 2.01 / 1.98 above the four bars.
-   - Draw a dashed green line at 0 with a brace "gap ≈ 2" on "two at every sample size".
-9. **[1:04–1:31][Visual] The ÷2 arrows are 13–15 px from the adjacent "skew" labels** (kf_13, under the 20 px minimum). Shorten each arrow by 0.15 units at both ends, or raise the ÷2 arrows 0.2 units above the readings row.
-10. **[1:19–1:31][Visual + Clarity] The coin beat leaves waits artefacts.**
-    - Give the coin panels their own x-labels ("heads = 1" under n = 1, "share of heads" under n = 64) instead of the shared label over the dimmed waits panels.
-    - Add "2.67/√64 = 0.33" under the coin's n = 64 panel, built by TransformFromCopy from the blue 2.67 and the n = 64 header, so the formula is verified on the second example.
-11. **[1:49–1:53][Clarity] The jump from skew/√n ≤ 0.053 to n ≥ 355·skew² is announced, not shown.** Insert one 2 s TransformMatchingTex step: square both sides → n ≥ skew²/0.053² → n ≥ 355·skew², with "1/0.053² ≈ 355" flagged for 1 s.
-12. **[1:42.9][Audio] "Kohavi's" was transcribed as "Cohave's", a likely mispronunciation.** Respell it phonetically in narration_text.py ("Ko-HAH-vee's") and re-synthesize that line.
-13. **[0:17–0:29][Hook] The stakes are thin and the A/B icons idle for 10 s.**
-    - Fade the icons out at "So collect" (0:21).
-    - Sharpen the stakes line with the payoff number: "get this wrong and an A-B test on revenue needs thousands of times more users than the textbook says". This foreshadows 114,000 against 30 and raises tension into the payoff.
-
-REACHES 9 IF ALL FIXED: yes. The structure is right: a misconception prompt, the naive method failing by a measured amount, a fix, a formula from data, a real cited consequence, a counterexample, and a return to the first frame. What holds it at 8 is execution in three beats: the averaging moment (fixes 1 and 5), the two asserted claims that should be shown (fixes 2 and 3), and the cluttered or overlapping frames (fixes 4, 6 and 7). Fixes 1–7 together lift Clarity, Visual and Motion to about 9, which gives a weighted score of about 9.0. Without fixes 1–3 it will not reach 9.
-
-KEEP:
-- The semantic palette, used without exception: blue pieces, yellow averages, green bell, red extreme, purple median.
-- The cold-open frame returning at 2:53 with the dashed "?" bell replaced by the yellow average-of-64 under a solid green bell ("The bell was never in the data. It's in the average.").
-- The live lighthouse simulation, with flash 841's red 902-mile beam visibly yanking the yellow running average while the purple median stays flat.
+- **Hook 8.5.** The concrete object is on screen from frame 1: 100 simulated waits with the 0–10 min bars brightening. A sourced textbook claim follows at 0:04, then three committed answer chips with a planned 1.7 s hold (0:12.1–0:13.8, static 3.5 s). The landing resolves exactly that chip (3:41–3:44). The stakes line at 0:14–0:20 is sharp. It loses half a point because the question has no criterion (fix 3) and the 0:20–0:43 naive beat is slow tension-wise. The viewer already suspects more data won't help.
+- **Clarity 8.** It is concrete first and every step is justified. All 21 claims check out. But in 3:53 the episode runs through skewness, √n, the cube proof, a coin, kurtosis, the CLT, the estimated-spread bias, Kohavi's algebra, Bing, Cauchy and the median. Two transitions need a rewatch: 2:05–2:12 (why a low average gets a short interval) and 2:26–2:33 (three equations stacked in 7 s).
+- **Visual 7.5.** The palette is semantic and kept for the whole runtime: blue pieces, yellow averages, green bell, red extreme, purple median, gray scaffolding. The type is consistent and every settled frame is clean (kf_09, kf_14 and kf_34 are screenshot-worthy). Points come off for the payoff clutter (fix 1), the mixed coin/waits/derivation frame (fix 2), the transient shore-line strike-through (fix 5), the incomplete axes (fix 9) and the edge-hugging, unexplained counts (fix 10). That is more than the "at most 2 minor issues" an 8 allows.
+- **Motion 8.** Objects persist far better than average. The 0:44 histogram becomes panel n = 1, "skew = 1.98" flies from the bar chart, the formula lives from 1:11 to 2:51, the log axis accumulates, and the landing reuses the cold-open frame. Transforms carry correspondence (header n → radicand, formula term → cube). It is not a 9 because several visuals trail their words (fix 6), one flight is noisy (fix 7), the tail brace is under-held (fix 8), and two beat changes are plain crossfades (1:51 coin → n = 30, 2:52 payoff → lighthouse).
+- **Audio 8.** 161 wpm over speech, −14.0 LUFS, −2.2 dBTP, no dead air, beat gaps about 0.9 s. Most deictics land: "drop that one number here" at 0:51–0:53, "this perfect bell in green" at 1:02.5–1:03, "902 ÷ 1,000" at 3:17. The lag pattern in fix 6 and the 177 wpm burst rate in 2:41–3:10 (whisper ran 26 s without a sentence break) keep it at 8.
+- **Concision 8.** Under 10% is removable. The candidates are the coin sentence if kurtosis moves onto the wait panels (about 8 s) and the "divided by a thousand" restatement (the on-screen "902 ÷ 1,000 ≈ 0.9 mi" already says it). There are no recaps and no banned phrases.
+- **Originality 8.5.** Kohavi's rule turning out to be skew/√n ≤ 0.053, the miss meter walking into the band, and the cube proof are non-obvious and memorable. The lighthouse is a known textbook example, but here it earns its place.

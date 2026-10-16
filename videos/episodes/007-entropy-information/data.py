@@ -36,6 +36,9 @@ RECORD_GUESSES = [
 ]
 # Shannon 1951, p. 64: experimental bounds (bits/letter) for N = 100 letters of context
 SHANNON_BOUNDS_N100 = (0.6, 1.3)
+# "The fractions add up": a real run from the record (THERE -> E R E space, after T H),
+# each character priced by the two-letter-context table
+RUN_CONTEXT, RUN_TEXT = "TH", "ERE "
 
 
 def load_brown(d: str) -> str:
@@ -112,6 +115,19 @@ def main(brown_dir: str):
     nQ, pQ = next_dist(text, "Q")
     nTH, pTH = next_dist(text, "TH")
 
+    # the run E R E _ after TH: each character's ideal cost given the two before it
+    run, ctx = [], RUN_CONTEXT
+    for ch in RUN_TEXT:
+        n_c, d_c = next_dist(text, ctx[-2:])
+        run.append({"ch": ch, "context": ctx[-2:], "n": n_c, "p": d_c[ch],
+                    "cost": -math.log2(d_c[ch])})
+        ctx += ch
+    run_total = sum(r["cost"] for r in run)
+
+    # why counting stops at short contexts: possible contexts vs the corpus
+    grams10 = collections.Counter(text[i:i + 10] for i in range(len(text) - 10))
+    once10 = sum(1 for v in grams10.values() if v == 1)
+
     g = sum(RECORD_GUESSES, [])
     s = "".join(RECORD_TEXT)
     assert len(g) == len(s) == 102
@@ -135,6 +151,11 @@ def main(brown_dir: str):
         "record": {"text": RECORD_TEXT, "guesses": RECORD_GUESSES, "first_try": gc[1],
                    "symbols": len(g), "total_guesses": sum(g)},
         "shannon_bounds_N100": SHANNON_BOUNDS_N100,
+        "run_THERE": {"context": RUN_CONTEXT, "run": RUN_TEXT, "letters": run,
+                      "total": run_total, "questions": math.ceil(run_total),
+                      "one_at_a_time": sum(math.ceil(r["cost"]) for r in run)},
+        "contexts": {"possible_2": 27 ** 2, "possible_100_log10": 100 * math.log10(27),
+                     "brown_10grams_distinct": len(grams10), "brown_10grams_seen_once": once10},
     }
     (HERE / "data.json").write_text(json.dumps(out, indent=1))
     print(f"Brown: {n:,} characters, {out['brown']['words']:,} words")
@@ -149,6 +170,10 @@ def main(brown_dir: str):
     print(f"averaged over all contexts: H(X|1 prev) = {out['H_given_1_prev']:.4f}   "
           f"H(X|2 prev) = {out['H_given_2_prev']:.4f}")
     print(f"record: {gc[1]}/{len(g)} first try, {sum(g)} guesses")
+    print("run after TH:", [(r["ch"], r["context"], round(r["p"], 4), round(r["cost"], 3)) for r in run],
+          f"total {run_total:.3f} -> {math.ceil(run_total)} questions")
+    print(f"10-letter strings in Brown: {len(grams10):,} distinct, {once10 / len(grams10):.1%} seen once; "
+          f"27^100 = 10^{100 * math.log10(27):.2f}")
 
 
 if __name__ == "__main__":

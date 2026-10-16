@@ -1,78 +1,122 @@
-# Episode 5, review round 1: substance (science and story editor)
+# Episode 5, round 1 review (substance: science and story editor)
 
-Evidence: `review/` pack (metrics.json 12:28 is newer than final.mp4 12:26, so I reused it). I read report.md, all 12 contact sheets and 14 full-resolution keyframes (kf_01, 04, 05, 12, 14, 19, 22, 25, 28, 31, 34, 38, plus extracted frames at 0:50.0–0:52.4 (tiled), 1:08.5 (cube zoomed), 1:29.6, 2:36.6–2:38.2 (tiled), 2:44.0 and 3:24.0). I also read the transcript, the word timings, script.md, facts.md, narration.txt, sim.py and data.json. I recomputed every number independently (Python) and checked both citations by web search.
+Reviewer: independent substance critic. Evidence: `review/` pack (metrics.json 01:26 is newer than final.mp4 01:25, so the pack is current). I read report.md, all 14 contact sheets and keyframes kf_04, 06, 10, 17, 23, 25, 28, 30, 33, 35, 36, 38, 39. I also pulled extra frames at 2:01.5, 2:45.8, 2:46.5, 2:47.2, 3:16.6, 3:17.2, 3:33.2 and 3:33.8. I re-ran every number from `data.json` with independent code (lattice DP, Monte Carlo, closed forms) and checked the citations by web search.
 
 ```
 EPISODE: 005 — "Why Random Darts Beat Grids in 100 Dimensions"
-IDEA: An even grid of N points in d dimensions gives each axis only N^(1/d) values, so at 20–100 inputs a million-point grid is one point and gets the answer 50 points wrong. Each random dart is a single in/out coin flip, so the darts' error is (1/2)/√N with no d in it.
-SCORES: Hook 8 · Clarity 8 · Visual 8 · Motion 8 · Audio 8.5 · Concision 8 · Originality 8.5
-WEIGHTED: 8.1   AFTER CEILING: 8.1   (lowest 8 + 2 = 10, not binding)
-CAPS: none. Two transient overlaps (0:50.6–0:51.2 digit-glyph swarm over the "input 1" label; 2:36.8–2:37.4 cross-faded formulas on top of each other) each last < 1 s mid-transform. I did not treat them as a held-frame cap 7, but they must be fixed.
-FINAL: 8.1   PASS: no
+IDEA: An even grid of N points in d dimensions gets only N^(1/d) values per axis, so its error explodes with d. Each random dart is an independent coin flip with P(heads) = the answer, in any dimension, so the darts' error is σ/√N with no d in it.
+SCORES: Hook 8.5 · Clarity 8.5 · Visual 8.5 · Motion 8.5 · Audio 8.5 · Concision 8 · Originality 9
+WEIGHTED: 8.5   AFTER CEILING: 8.5 (lowest 8 + 2 = 10, not binding)
+CAPS: none
+FINAL: 8.5   PASS: no
 ```
 
-## FACTS
+## FACTS (recomputed independently)
 
-| Claim | Status | Source / my check |
+| Claim | Verdict | Check / source |
 |---|---|---|
-| 10^6 grid in 100-D → 1 value per input | Verified | 10^(6/100) = 1.148 → floor 1 |
-| Single grid point = centre of the box | Verified | midpoint rule with n = 1 is (½,…,½) |
-| 2 values per input → 2^100 points, 31 digits; on-screen digits 1,267,650,600,228,229,401,496,703,205,376 | Verified | Python: 31 digits, string matches |
-| Quarter disc share of the square = exactly ½ | Verified | r² = 2/π, πr²/4 = ½ |
-| 10×10 grid: 52/100 inside, 0.52, "two points off" | Verified | recomputed midpoint count = 52 |
-| 100 darts: 44 inside, "six points off"; dart #1 = cold-open dart, outside | Verified (simulated, labelled) | data.json; dart drawn at (0.62, 0.90) in 2-D matches the polyline's first two values at 0:33 |
-| "Ball always covers exactly half the box" for d = 2…100 | Verified | r_d² from data.json; my own 400k-point MC gives 0.5002, 0.4997, 0.4993, 0.4996 at d = 6, 10, 20, 100 |
-| Grid values per axis 1000, 100, 10, 3, 1, 1 | Verified | floor(10^(6/d)) (with 1e-9 guard at d = 3) |
-| Grid errors 0.002, 0.001, 0.10, 2.4 points; 50 points at d = 20 and 100 | Verified | exact lattice DP in sim.py; centre's squared distance d/4 = 5 ≤ 6.63 (d = 20) and 25 ≤ 33.3 (d = 100), so estimate = 1.000 |
-| Darts at 10^6: 0.038, 0.013, 0.022, 0.028, 0.025, 0.004 points; "within a twentieth of a point in every dimension"; "every blue dot came in under it" | Verified for the plotted seed, **misleading as a general statement** | 0.05 points is one SD. P(\|err\| < 1 SD) ≈ 0.68, so P(all six under it) ≈ 0.68^6 ≈ 10%. This is a lucky draw, but narration and the dashed line present it as a ceiling (1:31–1:35, 2:38–2:41) |
-| N^(1/d) values per axis; 10^6^(1/20) ≈ 1.995 "fewer than two" | Verified | 10^0.3 = 1.9953 |
-| 100 grid points cast 10 shadows; 100 darts cast 100 | Verified | |
-| Histogram SDs 0.048/0.048 (N = 100) and 0.026/0.024 (N = 400); theory 0.05, 0.025 | Verified (simulated) | data.json hist; matches √(p(1−p)/N) |
-| spread = (½)/√N; with N = 10^6 → 0.0005 = 0.05 points | Verified (for a yes/no answer at p = ½) | Bernoulli SD √(p(1−p)) = ½ at p = ½. The general-function assumption (σ_f/√N) is never stated |
-| Radius-one ball at d = 30: 2 × 10^-14, "two parts in a hundred trillion" | Verified | π^15/15!/2^30 = 2.041e-14 |
-| Curve crosses 1-in-a-million between d = 17 and 18 | Verified | 1.08e-6 (17), 3.1e-7 (18); on-screen crossing ≈ 17.2 |
-| Metropolis & Ulam, 1949, *JASA*, published the Monte Carlo method | Verified | JASA 44(247):335–341, Sept 1949 (JSTOR/T&F, PubMed 18139350) |
-| Bergstra & Bengio, 2012, *JMLR*: random search found neural nets "as good or better within a small fraction of the computation time" | Verified | JMLR 13:281–305, abstract (jmlr.org) |
-| "Nine grid trials test three values of it; nine random trials test nine" | Verified | same paper, Fig. 1 caption; the redraw is labelled "schematic" |
+| 10^6 points on a grid in 100-D give 1 value per axis | Verified | floor(10^(6/100)) = floor(1.148) = 1 |
+| 2^100 = 1,267,650,600,228,229,401,496,703,205,376 (on screen 0:19–0:21) | Verified | exact integer, 31 digits |
+| The single grid point is the centre | Verified | midpoint rule with n = 1 → (½,…,½) |
+| Quarter disc average = exactly ½ | Verified | r² = 2/π, πr²/4 = ½ |
+| 10×10 grid: 52 of 100 inside, 2 points off | Verified | my count of midpoints with x²+y² ≤ 2/π = 52 |
+| 100 darts: 44 inside, 6 points off (simulated, labelled) | Verified | `darts2d` recount = 44 |
+| Half-volume ball in every d | Verified | my 200k-point MC at r_d² from data.json: 0.4996, 0.5006, 0.4995, 0.5007, 0.4991 (d = 3, 6, 10, 20, 100); d = 3 exact r = (3/π)^(1/3) = 0.985 |
+| Values per axis 1000/100/10/3/1/1, points used 10^6/10^6/10^6/59,049/1/1 | Verified | floor(10^(6/d)); 4^10 > 10^6 |
+| Grid errors 0.002, 0.001, 0.10, 2.4 points (d = 2, 3, 6, 10) | Verified | my own lattice DP: 0.50002, 0.499989, 0.501022, 0.524463 |
+| d ≥ 20: centre inside the ball, grid says 1.000, 50 points off | Verified | d/4 = 5 ≤ r_20² = 6.63; 25 ≤ 33.30 |
+| 2 values on 19 axes, 2^19 points, 18 points off | Verified | Σx² = (23+8k)/16 ≤ 6.6345 ⇔ k ≤ 10; P(Bin(19,½) ≤ 10) = 0.6762 → 17.6 |
+| Darts "under a tenth of a point in every dimension" | Verified for the 6 runs shown (wording overgeneralises, fix 5) | errors 0.038, 0.013, 0.022, 0.028, 0.025, 0.004 |
+| Grid's 100 points cast 10 shadows; 100 darts cast 100 | Verified | 10 distinct x-midpoints |
+| Each axis gets N^(1/d) | Verified | n^d = N |
+| 10^6 diagonal points: 57.7% inside, 7.7 ("eight") points off | Verified | 100t² ≤ 33.3015 ⇔ t ≤ 0.57707 |
+| Gauges 1.20 > 0.64 (out), 31.8 < 33.3 (in) | Verified | 1.1957 vs 0.6366; 31.766 vs 33.302 (same cold-open dart; coordinates match) |
+| One 0/1 flip misses its mean ½ by exactly ½ | Verified | definition |
+| 300 runs: ±4.8 / ±4.8 pts (N = 100), ±2.6 / ±2.4 (N = 400) | Verified (simulated) | SDs 4.84, 4.80, 2.61, 2.35; theory 5.0 / 2.5 |
+| 16 darts stray about 4 halves; N darts about √N halves; per dart ½/√N | Verified | SD of a sum of N i.i.d. ±½ = ½√N; divided by N |
+| Any f: σ/√N, no d | Verified | standard MC standard error |
+| Grid error ∝ N^(−2/d) for smooth f (Glasserman 2003 §1.1) | Verified (the law); passage attribution plausible, not reproduced online | product trapezoid/midpoint rule O(h²) = O(N^(−2/d)); course notes give the same rate and the d = 4 crossover; the Glasserman book exists (Springer, Applications of Mathematics 53, 2003/2004) |
+| ½/√10^6 = 0.0005 = 0.05 points | Verified | arithmetic |
+| Two runs in three land closer; all six did | Verified | P(\|Z\|<1) = 0.683; six errors all < 0.05 (0.683^6 = 0.10) |
+| Bergstra & Bengio 2012: random search as good as grid search for neural nets, in a fraction of the time | Verified | JMLR 13:281–305 abstract: "as good or better within a small fraction of the computation time" |
+| 9 grid trials test 3 values; 9 random trials test 9 | Verified | B&B 2012, Fig. 1 caption |
+| Metropolis & Ulam 1949, JASA | Verified | JASA 44(247):335–341 |
+| Option on 100 stocks is a 100-D average (Glasserman 2003) | Verified | pricing = expectation over 100 terminal prices |
+| "Such averages are usually done with random points" | Weakly supported | M&U 1949 (on screen) supports the origin, not current practice; quasi-random points are also standard (fix 3) |
+| Radius-1 ball in 30-D fills 2 parts in 10^14 | Verified | π^15/15!/2^30 = 2.04e−14 |
+| Below 1/N darts "usually report zero" | Verified | crossing at d = 17.06; at the first integer below the line (d = 18), P(0 hits) = e^(−0.31) = 0.73; at d = 30 ≈ 1 |
 
-No Wrong or fabricated claims. One claim is true but presented as more than it is (the SD shown as a ceiling), and one modelling assumption is unstated (the (½)/√N figure holds for a yes/no function; general functions scale as σ_f/√N).
+No wrong or fabricated claims. No cap from the facts.
 
 ## MECHANICS
 
-```
-MECHANICS: runtime 3:25.1 · wpm 156 (speech) · max silence 1.96 s (planned prediction hold at 0:10.7) · max static 3.0 s (0:41–0:44) · −14.0 LUFS / −2.0 dBTP
-```
-Leading silence 0.0 s, trailing 1.74 s, WER 3.4 %, 0 banned phrases, no rhetorical-question chains, no "not just X" patterns. "Darts do have a blind spot: tiny answers" is a mild colon reveal, and the only one. Bengio, Ulam and "d-th" were transcribed correctly, so pronunciation is fine. At 1:16 the ASR heard "a hundred in three" as "103" (the word "in" was deleted per narration_diff), so the TTS is swallowing that word.
+runtime 3:57.1 · wpm 163 (speech) / 156 overall · max silence 1.73 s (prediction hold, 0:11.3) · max static 3.23 s (3:04.3, prediction hold) · −14.0 LUFS / −2.0 dBTP · leading 0.00 s, trailing 1.80 s · WER 2.5% (only spelling and "a"/"one" swaps; "Bengio", "Ulam" and "d-th" heard correctly) · 0 banned phrases. No mechanical caps. Runtime sits 3 s under the 4:00 cap, so any addition must be paid for with a cut.
 
-## Story / structure (BAR §6)
-- **Cold open (0:00–0:12): strong.** The puzzle is concrete and the likely-wrong prediction (most viewers divide and guess 10,000, or guess 10) is committed by 0:12, with the 1.7 s hold. "One." is a real jolt.
-- **Stakes (0:23–0:35): weak.** "Yet such averages are routine" names no real problem. The first real-world anchor is Bergstra & Bengio at 2:43, so for 2½ minutes the viewer has no concrete reason to care about a 100-input average.
-- **Naive build and fail (0:35–1:35): textbook SMH.** The grid *wins* in 2-D (0.02 vs 0.06, boxed at 1:01), then the measured collapse to 50 points off. This is the best part of the episode.
-- **Insight (1:36–2:41).** Shadows → N^(1/d) → one bit per dart → histograms → formula from the brackets → prediction hold → back to the chart. The chain holds together and could be re-derived after one watch.
-- **Payoff and limit (2:41–3:15).** The B&B redraw reuses the shadow device, which is a lovely callback. The limit (3:01–3:15) shows the number but never says *why* it is a blind spot: darts report 0, which is off by 100 % of the answer even though the absolute error is tiny.
-- **Landing (3:15–3:23).** It returns to the cold-open frame, which is good. The last line, however, credits the darts' win to "a million values per axis". That is the shadow story, not the mechanism the episode proved (independent coin flips). A million points on the diagonal also give each axis a million values and would fail.
+## Transcript audit (§4)
+
+- Banned phrases: 0. Rhetorical-question chains: none; each of the three questions stands alone and two get a real hold.
+- "Hold that thought" (0:36) is a stock filler, though not banned.
+- "Darts do have a blind spot: tiny answers" (3:33) and "Darts win another way:" (1:59) are colon set-ups. Neither is a question-and-answer fake reveal, so I do not count them.
+- No "it turns out", no recap ending. The last line, "a million coin flips, in any dimension", reframes the cold-open frame instead of listing lessons.
+- Hook: question at 0:09, a 1.7 s hold, answer at 0:12.7. It lands before 0:15.
+
+## Story and structure
+
+- **Cold open (0:00–0:21): strong.** 100 parallel axes, "how many values does each input get?", then "One." The likely guess (10,000 = 10^6/100) is wrong by four orders of magnitude, so this is a real jolt. Weakness: the first 5 s are 100 grey lines and the abstract phrase "average a function". The concrete stake (an option on 100 stocks) only arrives at 0:21.5.
+- **Open loop (0:34): good.** "How far off would a million of them land?" closes exactly at 3:08–3:11, with the answer flying onto the chart's dashed line.
+- **Build/fail (0:38–1:36): textbook SMH.** The grid honestly wins in 2-D. The fixed-budget climb has an honest "points used" row and a budget-fair 2^19 rescue. Cost: the cold open already revealed that the 100-D grid is one point at the centre, so the climb confirms rather than surprises. Its new information is the size of the miss (50 points), which it shows well.
+- **Insight (1:36–3:16): logically complete.** Shadows give N^(1/d). The diagonal kills the "more shadows" misreading. Gauges reduce one dart to one bit, the bits become coins, and identical 2-D/100-D histograms follow. The random walk derives √N, the ½ flies into the formula, ½ becomes σ, and the grid law stands beside it. Two gaps:
+  1. **The ball's radius changes silently.** It is 0.80 in 2-D and 5.77 in 100-D, larger than the box's side. "The disc becomes a ball that always covers exactly half the box" (1:05) never says so. The 100-D gauge's "33.3" (kf_23, 2:08) appears from nowhere. At 3:36 "a radius-one ball fills 2 parts in 100 trillion" sits next to "the ball always covers half" with no reconciliation, and an attentive viewer will stumble here.
+  2. **The two laws are not cashed in.** N^(−2/d) and N^(−1/2) tie at d = 4, which is exactly where the chart's purple and blue lines cross (between d = 3 and 6, visible 1:17–1:36). The episode puts the law beside the data but never connects them, and that connection is what would let a viewer re-derive the chart.
+- **Payoff (3:16–3:50): strong and honest.** Bergstra & Bengio reuse the shadow device (3 vs 9 shadows). The limit beat shades from the exact crossing.
+- **Landing (3:50–3:55):** returns to the cold-open frame flooded with blue, and the closing line re-sees it.
+
+## Frame audit (§5)
+
+- Settled frames are clean. The palette holds all episode long (PURPLE grid, BLUE darts, YELLOW d, RED miss) with no red/green coding. Inside vs outside uses filled vs hollow dots.
+- Charts carry quantity names. Citations are bottom-left and held (Glasserman 0:23–0:26 and 2:55–2:59, M&U 0:27–0:34, B&B 3:19–3:33).
+- Transitional defects seen in extracted frames:
+  - **3:16.6:** the chart's two curves melt into "grid search"/"random search" through blob shapes, with glyph shards scattered over the d = 3, 6, 10 and 20 dots.
+  - **2:47.2:** the formula slides down through the fading "N halves / if they never cancelled" label (√N over "they never").
+  - **3:33.2:** the B&B squares and the limit chart's title and ticks overlap mid-dissolve.
+- Each defect lasts under 1 s, so none triggers a cap.
+- Terminology drift: "spread" (formula, 2:45–3:13), "typical miss" (chart, 3:15), "off by" (2-D), "error" (grid law, 2:55). Four names for one quantity.
 
 ## FIXES (highest impact first)
-1. **[1:31–1:35 and 2:33–2:41][Clarity] The SD is presented as a ceiling.** "The darts stay within a twentieth of a point in every dimension" and "Every blue dot came in under it" turn a one-SD typical miss (which about 1 in 3 runs exceeds; all six landing under it is a ~10 % draw) into a guarantee. Change B8's last sentence to "The darts stay under a tenth of a point in every dimension." Two SD is a robust claim and true for all six dots (max 0.038). Change B13's last sentence to "That's a typical miss; about two runs in three land inside it. All six of ours did." Keep the dashed line at 0.05 labelled "typical miss (1 SD)".
-2. **[2:29–2:38][Clarity/Visual] The chart is mislabelled.** The header reads "N = 1,000,000 darts" directly above histograms whose brackets read ±0.026/±0.024 (N = 400 data). Read literally, the frame says million-dart estimates spread by 2.6 points. When N = 1,000,000 is substituted, dim both histograms to 30 % and move "N = 400 darts per experiment" onto them as their own label, or shrink them away before the substitution.
-3. **[1:09–1:35][Clarity] Budget fairness is never addressed.** At d = 10 the grid uses 59,049 points, and at d = 20/100 it uses 1 of the million, while the darts use all 10^6. A sharp viewer objects "you threw away 999,999 points". Add a grey row "points used: 10^6 · 10^6 · 10^6 · 59,049 · 1 · 1" under "grid values per axis". Then add one clause to B8: "Even spending half a million points on two values for nineteen of the axes still leaves it eighteen points off." I checked this: 2^19 = 524,288 points at (¼, ¾) on 19 axes plus the centre value on one; P(Bin(19, ½) ≤ 10) = 0.676, so it is 17.6 points off.
-4. **[3:01–3:15][Clarity] The honest limit never says why tiny answers hurt.** After "less than one hit", add: "So they report zero: off by the entire answer, even while the error is far under a twentieth of a point." Optionally add one dim on-screen line, "relative error → 100 %". In the same beat, state the hidden assumption in one clause: "a yes/no answer spreads at most a half per dart; a wilder function spreads more" (on screen: σ/√N with σ ≤ ½ for yes/no).
-5. **[0:23–0:26][Hook] The stakes are abstract.** Replace "Yet such averages are routine." with one concrete, true instance on screen, for example "That's what pricing an option on a hundred stocks, or averaging a Bayesian model over a hundred parameters, asks for." A citation such as "Glasserman, 2003 · Monte Carlo Methods in Financial Engineering" (or similar) must be held ≥ 3 s.
-6. **[0:00–0:12][Clarity/Hook] The parallel-coordinates encoding is never explained.** A viewer has to infer that each vertical line is one input from 0 to 1 and that a point is a zig-zag across them. "100 inputs, side by side" only appears at 2:01. Add a dim label "each line: one input, 0 to 1" from 0:01–0:06. At 0:33 change "a random point" to "one random point = one value per input".
-7. **[3:15–3:23][Clarity/Hook] The closing line credits the wrong mechanism.** Keep the frame, and change the last sentence to "The darts never noticed the axes: a million coin flips, in any dimension." Or keep "a million" per axis and add "and each one is a fair coin flip". The callback should land on the coin-flip insight, not on distinct projections.
-8. **[0:50.6–0:51.2][Motion/Visual] The count animation is a digit swarm.** About 52 copies of "5" and "2" swarm out of the dots and over the "input 1" label (tiled frames 0:50.0–0:52.4). Replace it with: Indicate the 52 filled dots (≤ 1 s), then one TransformFromCopy of the whole filled-dot VGroup into a single "52", or a DecimalNumber ticking 0→52 at the readout.
-9. **[2:36.6–2:37.4][Motion/Visual] The formulas are cross-faded on top of each other.** "spread = 1/2 ⁄ 1000" and "spread = 0.0005 = 0.05 points" are both visible, overlapping, for about 0.6 s. Use TransformMatchingTex with "spread =" kept fixed, and the fraction morphing into "0.0005", then append "= 0.05 points".
-10. **[0:53–1:01 and 2:13–2:38][Clarity] Units switch.** The narration says "two points off" while the screen says "off by 0.02". The histograms read ±0.048 while the chart reads "percentage points". Pick points throughout: "off by 2 points", "off by 6 points", "±4.8 points", "±2.6 points". This also prepares "0.05 points" at 2:37.
-11. **[1:54.7–1:58.7][Concision] The per-axis count is said three times.** "A million points over twenty axes: fewer than two" repeats what the chart row showed at 1:21–1:23 ("1" at d = 20). Cut the sentence and the 1,000,000^(1/20) ≈ 1.995 label, and use the 4 s for fix 4.
-12. **[1:05–1:11][Visual] The 3-D inset reads as a scribble.** The cabinet projection (P = x + 0.42z, y + 0.3z) makes the x–z and y–z arcs bulge outside the cube outline, as visible curls at the front-bottom-right and top-left corners (1:08.5 zoom), and the octant has no fill. Use an orthographic or isometric projection where the arcs stay inside the cube, and fill the octant face at the same 30 % grey as the 2-D disc so it reads as the same object grown.
-13. **[2:13–2:38][Visual] The histograms have no vertical-axis meaning.** Add a dim "runs" label, or a single tick "300 runs", per BAR §5 ("every axis carries a quantity name").
-14. **[1:16][Audio] "a hundred in three" loses "in".** Rewrite it as "a hundred values in three dimensions", or add a 0.15 s pause token after "hundred".
-15. **[2:53–3:00][Visual] The "model score (schematic)" label is ambiguous.** It floats between the two panels and touches neither curve cleanly. Put one label above each curve, or a single label centred above both, with ≥ 0.15 units clearance.
-16. **[1:36–1:38][Motion] There is a near-empty transition.** The chart fades out to an empty frame before the squares return. Keep the chart at 30 % and slide the squares in over it, or transform the d = 2 chart point into the squares, which is what the 2-D comparison is.
 
-REACHES 9 IF ALL FIXED: yes, narrowly. The structure is right (prediction hook, a naive method that first wins and then fails by a measured 50 points, a one-picture insight, a sourced payoff, an honest limit and a callback ending). With fixes 1–7, Clarity and Hook move to 9. Fixes 8–16 move Visual and Motion to about 8.5–9. Reaching 9.0 also needs the concision cut, so that every remaining sentence carries weight.
+1. **[1:04.8–1:08.9, 2:03–2:09, 3:33–3:42][Clarity] Show the radius growing, and turn the limit beat into its consequence.**
+   - B6 narration: "The disc becomes a ball, grown just enough to cover exactly half the box."
+   - Add a GRAY row under "points used" (1:11 onward): "ball radius 0.80 0.98 1.40 1.82 2.58 5.77". It comes back with the chart at 3:15.
+   - In the 100-D gauge write "< 33.3 = 5.77²" (2-D: "> 0.64 = 0.80²").
+   - B19: "Keep the radius at one instead, and by thirty dimensions it fills two parts in a hundred trillion of the box."
+   - This removes the "half vs 2×10⁻¹⁴" collision and ties the honest limit back to the main object.
+2. **[0:00–0:05 and 0:21.5–0:25.3][Hook + Concision] Put the stake in the first sentence and delete the separate stakes sentence.**
+   - Open with: "Your budget: a million evaluations to price an option on a hundred stocks, an average over a hundred inputs."
+   - Show "e.g. an option on 100 stocks" and the Glasserman citation from 0:02, beside "d = 100 inputs".
+   - Delete "Pricing an option on a hundred stocks is this kind of average." The viewer has a reason to care at 0:03 instead of 0:22, and about 3.5 s is freed.
+3. **[2:51–2:59][Clarity] Cash in the two laws against the chart.**
+   - After "has d in its exponent" add: "Set them equal: they tie at four dimensions, right where our two lines crossed."
+   - On screen: "−2/d = −1/2 ⇔ d = 4" under the two laws (YELLOW d). Then, as the chart returns at 3:15, flash a YELLOW tick at d = 4 between the 3 and 6 columns where the purple and blue lines cross.
+   - About 3.5 s, paid for by fix 2.
+4. **[0:36.3–0:38.3, 1:32.5–1:35.6][Concision] Make room for fixes 1 and 3 without exceeding 4:00.**
+   - Cut "Hold that thought." (≈1.3 s with its pause). The "off by ?" label already holds the question.
+   - Shorten B9's second sentence to "The darts stay under a tenth of a point." (≈1 s).
+   - Shorten B8 to "From twenty on, just the centre, which is inside the ball." The cold open already established the centre (≈1 s).
+5. **[1:32.5–1:35.6][Clarity] "under a tenth of a point in every dimension" generalises six simulated runs.** A single run exceeds 0.1 point (2 SD) about 4.6% of the time. Either drop "in every dimension" (fix 4) or say "in all six dimensions we ran".
+6. **[0:25.3–0:34.3][Clarity / sourcing] "Such averages are usually done with random points" is cited only to M&U 1949**, which supports the origin, not current practice.
+   - Rephrase as "Since Metropolis and Ulam's 1949 paper, the standard tool has been random points, like this one."
+   - Keep "Glasserman, 2003" on screen next to M&U through this sentence (two citation lines, bottom-left).
+7. **[3:16.3–3:17.3][Motion] Replace the curve-to-word morph.** At 3:16.6 the curves melt into letter shards. Use `FadeTransform` (or fade out the curves while `TransformFromCopy` takes the chart legend words "grid"/"darts" into "grid search"/"random search"), so no frame shows broken glyphs.
+8. **[2:46.6–2:47.6][Visual] Formula passes through a fading label.** At 2:47.2 √N overlaps "they never cancelled". Fade the walk group out completely (0.4 s) before moving the formula, or move the formula first and fade the walk after.
+9. **[3:32.7–3:34.0][Visual] B&B → limit-chart dissolve overlaps two scenes.** At 3:33.2 the title "share of box inside a radius-1 ball" and the y-ticks sit over "grid search". Either do the script's promised transform (the squares' axes become the log chart's axes) or finish the B&B fade before writing the chart title.
+10. **[2:45–3:15][Clarity] One name for one quantity.** Rename the formula's left side "typical miss" and the grid law's "error" to "grid's miss". Then "typical miss = ½/√N = 0.05 points" flies onto a chart line already labelled "typical miss", and both match the "off by" language of the 2-D beat.
 
-KEEP:
-- The 2-D build where the grid *wins* (0.02 vs 0.06, boxed at 1:01), followed by the measured collapse to "grid says 1.000, 50 points off". This is a real SMH failure beat.
-- The single cold-open dart that persists: polyline (0:27) → 2-D dot (0:37) → ringed "outside → 0" against "inside → 1" in 100-D (2:05) → coin block → first histogram run.
-- The shadow device used twice: grid points casting 10 shadows (1:41) and B&B's 3-vs-9 trials projected onto the score curve (2:55). Also the half-volume ball recalibrated per dimension so that the truth is ½ everywhere.
+**REACHES 9 IF ALL FIXED:** yes, narrowly.
+- My estimate after the fixes: Hook 9 (stake in the first sentence), Clarity 9 (radius visible, d = 4 tie closes the loop between the law and the chart), Visual 9, Motion 9, Audio 8.5, Concision 8.5–9, Originality 9. That gives about 8.9–9.0.
+- Fixes 1–3 carry the gain; without them the episode stays about 8.6.
+- No structural change is needed: the skeleton follows §6, and the one insight picture (gauges → coins → histograms → walk → σ/√N) already exists.
+
+**KEEP:**
+- The 100-axis parallel-coordinates cold open ("grid values per input: ? → 1") and its return at 3:50, flooded with blue coin flips.
+- The fixed-budget dimension climb with the honest "points used" row, the 2^19 rescue and the diagonal counterexample (57.7% inside with a million distinct values per axis).
+- The gauges that collapse one dart's 2 or 100 coordinates into one 0/1 verdict (kf_23), feeding identical 2-D/100-D histograms and the random walk that derives √N (kf_28).

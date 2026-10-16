@@ -272,3 +272,19 @@ against the 4th edition, p. 160).
   payoff (3:34.6–3:37.0: the squeezed ellipse spans exactly ȳ ± s_y).
 - Runtime rose from 3:37.0 to 3:42.3: the cuts (≈ 4.5 s) paid for most of the B9 reason and the
   stakes payoff; the rest is the deliberate beat-boundary gaps and the cov lane.
+
+## Round 1 revisions (second review cycle: craft 8.5, substance 8.3)
+
+Reviews: `reviews/round1-craft.md` (8.5) and `reviews/round1-substance.md` (8.3). No caps, no factual
+errors claimed; both critics recomputed every number and verified all four citations.
+
+### Plan of the climb (written before editing)
+
+| Dimension | BAR "9" anchor | Where it fell short | Upgrade |
+|---|---|---|---|
+| Hook 8.5 / 8 | viewer commits to a likely-wrong prediction by 0:12; ending resolves the opening exactly | the commit was only about the line (which the guess gets right); the narrator supplied the cloud; "how steeply" never answered | B0 "Picture the cloud. Which way does its best-fit line tilt?" (the cloud is now the viewer's own, likely-wrong guess); B1 "You probably pictured a shapeless oval…"; landing resolves both halves ("Your line was exactly right … Your cloud was wrong") and answers the slope with a number built from the readout (−0.06 × 26.93 / 16.76 ≈ −0.10) |
+| Clarity 8 / 8 | viewer could re-derive it after one watch | touch point = regression point asserted with "So"; covariance announced, never defined | B9 draws the best-fit line (dashed, riding the touch dot) and five vertical slices whose midpoints sit on it, then slides the slices to the wall where each collapses onto the touch point; the covariance sentences are cut and Anscombe's slope is read off the run and rise ("follows the same rule"), every term flown from its referent |
+| Visual 8.5 / 8.5 | one focal point, all §5 standards met | red cross in a matching state; 30 % boxes in the hold; final frame layered; "x  med y"; grey text 6.1:1 | cross turns yellow as it slides home; boxes gone in the hold, back on "Stretch"; bar and error bar slide out of the plot at the end; readout block shifted right 0.3; text grey lifted to #A6ADB7 (8.0:1) |
+| Motion 9 / 8.5 | every motion encodes a relation; reading time respected | 1.0 s reveal; glyph smears (16.76 / 26.93, cov); short equation hold; axes-less panel I | 1.8 s reveal + 0.4 s hold before "A dinosaur"; numbers travel intact to their half-arms, box grows on "box"; cov derivation removed; quartet axes crossfade |
+| Audio 8.5 / 8.5 | deictics land, pauses intentional, terms clear | "s x" fused ("when sx cancels") | symbols respelled "ess ex" / "ess why"; box lands on "box" |
+| Concision 8 / 8.5 | cutting any sentence loses something | slack search mechanics; 13 s covariance detour; long roll-call pauses | search in two sentences with the readout flashed on "these"; derivation is one sentence plus "rise over run"; roll-call pauses 1.0 / 0.8 / 1.0 / 0.8 |

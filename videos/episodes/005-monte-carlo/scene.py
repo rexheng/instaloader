@@ -494,14 +494,18 @@ class Episode(NarratedScene):
         sqR_lines = VGroup(sq["frame_R"].bottom, sq["frame_R"].left, sq["frame_R"].rest)
         with self.narrate("Now give each a million points, and add inputs. [pause 0.2] The disc becomes a "
                           "ball that always covers exactly half the box.") as beat:
-            self.play(FadeOut(rest_L, shift=LEFT * 0.4), FadeOut(rest_R), FadeOut(self.sq_extra),
-                      FadeOut(sq["frame_R"]), FadeOut(sq["disc_R"]),
-                      TransformFromCopy(sqR_lines, bi["back_sq"]),
-                      TransformFromCopy(sq["disc_R"][0], bi["disc_fill"]),
-                      TransformFromCopy(sq["disc_R"][1], bi["disc_arc"]),
-                      ReplacementTransform(self.half, truth[1]),
-                      ReplacementTransform(self.truth_t, truth[0]), FadeIn(truth[2]),
-                      run_time=beat.until("add", offset=-0.5, min_time=1.4))
+            # the squares clear out in the first half; the square's frame and disc travel to the cube's back face
+            q = 0.5
+            self.play(AnimationGroup(
+                FadeOut(rest_L, shift=LEFT * 0.4, run_time=q), FadeOut(rest_R, run_time=q),
+                FadeOut(self.sq_extra, run_time=q), FadeOut(sq["frame_R"], run_time=q),
+                FadeOut(sq["disc_R"], run_time=q),
+                TransformFromCopy(sqR_lines, bi["back_sq"], run_time=1.0),
+                TransformFromCopy(sq["disc_R"][0], bi["disc_fill"], run_time=1.0),
+                TransformFromCopy(sq["disc_R"][1], bi["disc_arc"], run_time=1.0),
+                ReplacementTransform(self.half, truth[1], run_time=1.0),
+                ReplacementTransform(self.truth_t, truth[0], run_time=1.0), FadeIn(truth[2], run_time=1.0)),
+                run_time=beat.until("add", offset=-0.5, min_time=1.4))
             self.play(FadeIn(d_in, shift=0.1 * LEFT), run_time=0.5)
             self.wait_beat(beat, "disc", offset=-0.15)
             # "d = 3" arrives with the depth edges; only the outline inflates, then the fill follows
@@ -536,8 +540,9 @@ class Episode(NarratedScene):
             # the ball shrinks to a thumbnail beside the true answer; only then is the chart drawn
             self.play(LaggedStart(
                 AnimationGroup(inset.animate.scale(0.48).move_to(thumb_c).fade(0.6), FadeOut(d_in3, run_time=0.4),
-                               ReplacementTransform(truth, truth_top), FadeIn(row_t, shift=0.15 * UP)),
-                AnimationGroup(Create(ax), FadeIn(xl), FadeIn(yl), FadeIn(y_title), FadeIn(x_title)),
+                               FadeOut(truth, shift=0.1 * DOWN), FadeIn(row_t, shift=0.15 * UP)),
+                AnimationGroup(Create(ax), FadeIn(xl), FadeIn(yl), FadeIn(y_title), FadeIn(x_title),
+                               FadeIn(truth_top, shift=0.1 * DOWN)),
                 lag_ratio=0.5), run_time=beat.until("thousand", offset=-0.75, min_time=1.4))
             self.play(FadeIn(cur), Indicate(row_t[0], color=PURPLE, scale_factor=1.05), run_time=0.45)
             for i, w in enumerate(["thousand", "hundred", "ten", "three"]):
@@ -827,7 +832,7 @@ class Episode(NarratedScene):
         big(ml, ml_t, mean, mean_lab, coin0, coin1, coin0b, miss1, miss0)
         t2, t100 = self.t2, self.t100
         with self.narrate("One flip is zero or one. [pause 0.15] Its average is a half, and every flip misses "
-                          "that by exactly a half.", gap=0.35) as beat:
+                          "that by exactly a half.", gap=0.65) as beat:
             self.play(TransformFromCopy(coinsL[0], coin0), Create(ml), FadeIn(ml_t), FadeIn(cap),
                       VGroup(t2, t100).animate.set_y(TITLE_Y2),
                       run_time=beat.until("or", offset=-0.1, min_time=0.8))
@@ -1032,10 +1037,12 @@ class Episode(NarratedScene):
         g_cite = citation("Glasserman, 2003 · Monte Carlo Methods in Financial Engineering, §1.1")
         walk_all = VGroup(walk, ghost, base, net, net_labN, gN, g_note, coin_line)
         with self.narrate("Any other function swaps that half for its own spread, sigma. [pause 0.6] The root "
-                          "N stays, and there's no d in it. [pause 0.2] A grid's error, even for smooth "
+                          "N remains, and there's no d in it. [pause 0.2] A grid's error, even for smooth "
                           "functions, has d in its exponent.", gap=self.BOUNDARY) as beat:
-            self.play(FadeOut(walk_all), eq.animate.shift(DOWN * (EQ_POS[1] - LAW_Y)),
-                      run_time=beat.until("swaps", offset=-0.1, min_time=0.8))
+            # the walk leaves first, then the formula settles mid-frame (nothing moves through fading labels)
+            self.play(FadeOut(walk_all), run_time=0.45)
+            self.play(eq.animate.shift(DOWN * (EQ_POS[1] - LAW_Y)),
+                      run_time=beat.until("swaps", offset=-0.1, min_time=0.6))
             self.wait_beat(beat, "half", offset=-0.15)
             self.play(flag(eq[2][:-1], color=RED), run_time=0.8)
             self.wait_beat(beat, "sigma", offset=-0.3)
@@ -1250,8 +1257,8 @@ class Episode(NarratedScene):
             self.play(FadeOut(VGroup(fL.rest, fL.xl, fL.yl, fR.rest, fR.xl, fR.yl,
                                      *[m for m in self.bb if m not in (fL, fR)])),
                       ReplacementTransform(VGroup(fL.bottom, fR.bottom), ax.x_axis),
-                      ReplacementTransform(VGroup(fL.left, fR.left), ax.y_axis),
-                      FadeIn(xl), FadeIn(yl), FadeIn(y_t), FadeIn(x_t), run_time=1.0)
+                      ReplacementTransform(VGroup(fL.left, fR.left), ax.y_axis), run_time=0.8)
+            self.play(FadeIn(xl), FadeIn(yl), FadeIn(y_t), FadeIn(x_t), run_time=0.4)
             # the curve of ever tinier answers is drawn from "tiny answers" on
             self.play(Create(curve), LaggedStart(*[GrowFromCenter(d) for d in cdots], lag_ratio=0.05),
                       run_time=beat.until("two", offset=-0.1), rate_func=linear)

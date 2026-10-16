@@ -58,7 +58,7 @@ HIST_SCALE = 3.6                  # bar height per unit share
 RECIPE_COL = [BLUE, GREEN, PURPLE]
 RECIPE_NAME = ["random endpoints", "random radius point", "random midpoint"]
 KEYS = ["endpoints", "radial", "midpoint"]
-N_HAND = [8, 3, 1]                # chords drawn by hand before each rain
+N_HAND = [8, 1, 1]                # chords drawn by hand before each rain
 N_DOTS = 240                      # midpoints shown per panel
 FRAC = 36                         # size of the small theory fractions (and tally-row equations)
 RAIN_DIM = 0.3                    # a settled chord rain steps back to context
@@ -70,7 +70,10 @@ JC_B, JR_B = P3(-2.7, 0.2), 2.0
 JR_S = JR_B * sim.SMALL_R
 JC_S = JC_B + JR_B * P3(*sim.SMALL_C)
 SB_LAB_L, SB_BIG, SB_SYM, SB_SMALL = 1.63, 3.95, 4.65, 5.35   # scoreboard columns (labels left-aligned)
-SB_ROWS = [1.6, 1.0, 0.4, -0.2]
+SB_ROWS = [1.45, 0.85, 0.25, -0.35]
+SB_TITLE_Y, SB_HEAD_Y = 3.12, 2.32            # "gold share", then the two column heads
+N_TEST_SHOWN = 36                             # lines drawn per program rain (all are judged)
+CHART_DX = 3.2                                # the class chart starts centred, slides left later
 
 # class sizes (Feld & Grofman's paradox, toy example)
 SIZES = [10, 10, 100]
@@ -200,6 +203,7 @@ class Rain:
         self.shown = shown
         self.floor = floor
         self.k = ValueTracker(0)
+        self.k_conv = None          # tallies use every line once k reaches this (None: k = shown)
         self.alpha = ValueTracker(1.0)
         self.skill = None
         self.judge = None           # floor rains (straws) are judged only once the answer is known
@@ -214,7 +218,8 @@ class Rain:
 
     def share(self, which, all_lines=False):
         offs = self.eff()
-        m = len(offs) if all_lines else max(60, int(len(offs) * self.k.get_value() / len(self.shown)))
+        kc = self.k_conv or len(self.shown)
+        m = len(offs) if all_lines else max(60, int(len(offs) * min(1.0, self.k.get_value() / kc)))
         p, r = (self.pb, JR_B) if which == "big" else (self.ps, JR_S)
         dist = np.abs(offs[:m] - p[:m])
         hit = dist < r
@@ -257,20 +262,11 @@ class Episode(NarratedScene):
         n_st = np.stack([np.cos(st_th), np.sin(st_th)], 1)
         shown = [i for i in range(400) if clip_to_floor(n_st[i], st_off[i]) is not None][:150]
         self.straws = Rain(st_th, st_off, shown, floor=True)
-        # one straw to follow: it crosses both circles, clearly long on the big one and clearly
-        # short on the small one (same line, two verdicts)
-        db = np.abs(st_off - n_st @ JC_B[:2])
-        ds = np.abs(st_off - n_st @ JC_S[:2])
-        good = [i for i in shown if db[i] < 0.3 * JR_B and 0.62 * JR_S < ds[i] < 0.88 * JR_S]
-        good.sort(key=lambda i: -abs(np.cos(st_th[i])))         # prefer a steep straw
-        self.follow_straw = good[0] if good else shown[0]
-        logging.getLogger("sample_space").info(f"follow straw {self.follow_straw}: big d/R={db[self.follow_straw] / JR_B:.2f} "
-                 f"small d/R={ds[self.follow_straw] / JR_S:.2f} ({len(good)} candidates)")
         # each recipe's chords of the big circle, as lines in scene coordinates (sim.py seeds)
         self.prog = {}
         for k, (th, d) in sim.test_rains().items():
             off = JR_B * d + JC_B[0] * np.cos(th) + JC_B[1] * np.sin(th)
-            self.prog[k] = Rain(th, off, list(range(80)), floor=False)
+            self.prog[k] = Rain(th, off, list(range(N_TEST_SHOWN)), floor=False)
         # one midpoint-program line to show how a program is judged on both circles: short for
         # the big circle, long for the small one (same line, two verdicts)
         Rm = self.prog["midpoint"]
@@ -376,28 +372,39 @@ class Episode(NarratedScene):
             if fix:
                 fix(counter)
 
-    def make_hist(self, key, x):
-        """Share of all 10,000 midpoints in ten distance bands; gold = closer than r/2."""
-        counts, _ = np.histogram(self.res[key]["dist"], bins=10, range=(0, 1))
-        share = counts / counts.sum()
-        x0 = x - HIST_W / 2
-        bw = HIST_W / 10
+    def make_hist(self, key, x, base=HIST_BASE, scale=HIST_SCALE, width=HIST_W, ref_label=True,
+                  share=None):
+        """Share of all 10,000 midpoints in ten distance bands; gold = closer than r/2.  A dashed
+        reference line marks 10 % (the share every band would get under an even spread along the
+        radius), labelled just left of the axis."""
+        if share is None:
+            counts, _ = np.histogram(self.res[key]["dist"], bins=10, range=(0, 1))
+            share = counts / counts.sum()
+        x0 = x - width / 2
+        bw = width / 10
         bars = VGroup(*[
-            Rectangle(width=bw * 0.84, height=max(s * HIST_SCALE, 0.012), stroke_width=0,
+            Rectangle(width=bw * 0.84, height=max(s * scale, 0.012), stroke_width=0,
                       fill_color=YELLOW if i < 5 else GRAY, fill_opacity=0.92)
-            .move_to(P3(x0 + bw * (i + 0.5), HIST_BASE), aligned_edge=DOWN)
+            .move_to(P3(x0 + bw * (i + 0.5), base), aligned_edge=DOWN)
             for i, s in enumerate(share)])
-        axis = Line(P3(x0 - 0.06, HIST_BASE), P3(x0 + HIST_W + 0.06, HIST_BASE), color=GRAY,
+        axis = Line(P3(x0 - 0.06, base), P3(x0 + width + 0.06, base), color=GRAY,
                     stroke_width=2.5)
         ticks = VGroup(*[MathTex(t, font_size=MATH_SMALL - 2, color=GRAY)
-                         .next_to(P3(x0 + HIST_W * f, HIST_BASE), DOWN, buff=0.17)
+                         .next_to(P3(x0 + width * f, base), DOWN, buff=0.17)
                          for t, f in (("0", 0), ("r/2", 0.5), ("r", 1))])
         # one baseline for all three: "0" and "r" sit where the "2" of r/2 sits
-        base = ticks[1][0][2].get_bottom()[1]
+        bl = ticks[1][0][2].get_bottom()[1]
         for t in (ticks[0], ticks[2]):
-            t.shift(UP * (base - t.get_bottom()[1]))
-        g = VGroup(axis, bars, ticks)
-        g.bars, g.axis, g.ticks, g.share = bars, axis, ticks, share
+            t.shift(UP * (bl - t.get_bottom()[1]))
+        y10 = base + 0.1 * scale
+        ref = DashedLine(P3(x0 - 0.06, y10), P3(x0 + width + 0.06, y10), color=INK,
+                         stroke_width=2, dash_length=0.07, stroke_opacity=0.6).set_z_index(1)
+        ref_lbl = MathTex(r"10\%", font_size=MATH_SMALL - 2, color=GRAY)
+        ref_lbl.next_to(P3(x0 - 0.06, y10), LEFT, buff=0.16)
+        parts = [axis, bars, ticks, ref] + ([ref_lbl] if ref_label else [])
+        g = VGroup(*parts)
+        g.bars, g.axis, g.ticks, g.share, g.ref = bars, axis, ticks, share, ref
+        g.ref_lbl = ref_lbl if ref_label else None
         return g
 
     def rain_mob(self, R, big_alpha, small_on, sim_alpha):
@@ -420,8 +427,9 @@ class Episode(NarratedScene):
                     if seg is not None:
                         g.add(Line(P3(*seg[0]), P3(*seg[1]), color=GRAY, stroke_width=1.5,
                                    stroke_opacity=0.42 * a))
-                # the chords judged on the small circle sit at 70 % so its gold rule stays legible
-                for c, r, al, w in ((JC_B, JR_B, ab, 3.0), (JC_S, JR_S, 0.7 * asm, 3.6)):
+                # big-circle chords are faint context; the pieces inside the small circle are drawn
+                # at full strength (the small circle's own gold rule sits above them on a halo)
+                for c, r, al, w in ((JC_B, JR_B, ab, 3.0), (JC_S, JR_S, asm, 3.6)):
                     if al < 0.02:
                         continue
                     dist = d - n @ c[:2]
@@ -464,6 +472,13 @@ class Episode(NarratedScene):
         cite_b = citation("Bertrand, 1889 · Calcul des probabilités")
         atr = text("at random", size=HEADING, slant=ITALIC).move_to(P3(COL_X, 1.25))
         atr_ul = underline(atr, color=GRAY, buff=0.08, stroke_width=3)
+        # the stakes, previewed in the payoff's own numbers: one college, two average class sizes
+        avg_lab = label("average class", size=26, color=GRAY).move_to(P3(COL_X, 0.12))
+        avg40 = MathTex("40", font_size=48, color=INK)
+        avg_or = label("or", size=26, color=GRAY)
+        avg147 = MathTex("147", font_size=48, color=INK)
+        avg_row = VGroup(avg40, avg_or, avg147).arrange(RIGHT, buff=0.35).move_to(P3(COL_X, -0.62))
+        avg_or.set_y(avg40.get_y())
         with self.narrate(LINES["stakes"]) as beat:
             beat.wait_until("puzzle", offset=-0.2)
             self.play(Indicate(q, color=INK, scale_factor=1.06), run_time=0.8)
@@ -473,8 +488,14 @@ class Episode(NarratedScene):
             self.play(Write(atr), run_time=0.9)
             beat.wait_until("at random", offset=-0.1)
             self.play(Create(atr_ul), run_time=0.6)
-            beat.wait_until("decide", offset=-0.2)
-            self.play(Indicate(atr, color=INK, scale_factor=1.08), run_time=0.9)
+            beat.wait_until("vague", offset=-0.2)
+            self.play(Indicate(atr, color=INK, scale_factor=1.08), run_time=0.8)
+            beat.wait_until("average", offset=-0.2)
+            self.play(FadeIn(avg_lab, shift=0.1 * UP), run_time=0.5)
+            beat.wait_until("forty", offset=-0.15)
+            self.play(FadeIn(avg40, shift=0.1 * UP), run_time=0.5)
+            beat.wait_until("hundred", offset=-0.2)
+            self.play(FadeIn(avg_or), FadeIn(avg147, shift=0.1 * UP), run_time=0.6)
 
         # ============================================================ naive build: recipe 1
         r1 = R0["endpoints"]
@@ -483,7 +504,8 @@ class Episode(NarratedScene):
         with self.narrate(LINES["build1"]) as beat:
             self.play(FadeOut(cite_b), FadeOut(chord0), FadeOut(e0), run_time=0.6)
             beat.wait_until("obvious", offset=-0.1)
-            self.play(FadeOut(atr, shift=0.15 * UP), FadeOut(atr_ul, shift=0.15 * UP), run_time=0.45)
+            self.play(FadeOut(atr, shift=0.15 * UP), FadeOut(atr_ul, shift=0.15 * UP),
+                      FadeOut(VGroup(avg_lab, avg_row), shift=0.15 * UP), run_time=0.45)
             self.play(FadeIn(lab1, shift=0.15 * UP), run_time=0.55)
             p, qq = r1["p"][0], r1["q"][0]
             d1 = VGroup(Dot(big.pt(p), radius=0.07, color=INK),
@@ -581,13 +603,14 @@ class Episode(NarratedScene):
         t1_target = tally1.copy().set(font_size=MATH)
         place_row([t1_target, ap1, small_frac], PANEL_X[0], TALLY_Y)
         shared_cap = label("10,000 simulated chords each", size=26, color=GRAY)
-        shared_cap.move_to(P3(0, -1.6))
+        shared_cap.move_to(P3(0, -1.55))
         # the scoreboard: each recipe's tally drops onto one number line as soon as it settles
         nl = NumberLine(x_range=[0.2, 0.55, 0.1], length=9.0, color=GRAY, stroke_width=2.5,
                         include_numbers=True, font_size=MATH_SMALL,
                         decimal_number_config={"num_decimal_places": 1, "color": GRAY},
                         tick_size=0.07)
-        nl.move_to(P3(-0.3, -2.35))          # (centre includes the numbers: the line sits ~0.2 higher)
+        nl.move_to(P3(-0.3, -2.275))          # (centre includes the numbers: the line sits ~0.2 higher;
+        #                                      its tick labels clear the citation by >= 0.3)
         nl_title = label("gold share", size=26, color=GRAY).next_to(nl, RIGHT, buff=0.25)
         nl_title.shift(UP * (nl.n2p(0.3)[1] - nl_title.get_y()))
         finals = [R0[k]["share"][-1] for k in KEYS]
@@ -614,25 +637,23 @@ class Episode(NarratedScene):
             self.add(sw_static, p2dot)
             # the arc and its equation hold through "Case closed" (BAR: >= 3.2 s for 3 terms)
             beat.wait_until("way", offset=-0.35)
-            # 1. the question, the caption and "120/360 =" leave first, so the 1/3 never
-            #    travels through them
+            # 1. the geometry argument is put away in place: the question, the caption,
+            #    "120/360 =", the sweep and the arc fade, and the triangle turns back upright
+            #    (undoing "put a corner on the first point") before anything moves
             self.play(FadeOut(arc_eq[0]), FadeOut(arc_eq[1]), FadeOut(q, shift=0.2 * UP),
-                      FadeOut(cap), run_time=0.35)
-            # 2. one move: the big circle becomes panel 1 (rain dimmed to context, triangle back
-            #    upright, the sweep and arc shrinking with it as they fade), and its label, its
-            #    tally and the exact third travel with it
+                      FadeOut(cap), *[FadeOut(m) for m in (sw_static, p2dot, P1, far)],
+                      Rotate(big.tri, angle=-(a1 - PI / 2), about_point=BIG_C), run_time=0.6)
+            self.remove(sw_static, p2dot, P1, far)
+            # 2. one move: the big circle becomes panel 1 (rain dimmed to context), and its
+            #    label, its tally and the exact third travel with it
             ratio, dest = PANEL_R / BIG_R, P3(PANEL_X[0], PANEL_Y)
             big.group.generate_target()
             big.group.target.scale(ratio).move_to(dest)
             big.group.target.submobjects[2].set_opacity(RAIN_DIM)
-            big.group.target.submobjects[1].rotate(-(a1 - PI / 2), about_point=dest)
-            riders = [m.animate.scale(ratio, about_point=BIG_C).shift(dest - BIG_C).set_opacity(0)
-                      for m in (sw_static, p2dot, P1, far)]
-            self.play(MoveToTarget(big.group), *riders,
+            self.play(MoveToTarget(big.group),
                       ReplacementTransform(lab1, labs[0], path_arc=0.5),        # over the circle
                       ReplacementTransform(tally1, t1_target, path_arc=-0.6),   # under it
                       ReplacementTransform(arc_eq[2], small_frac), run_time=0.95)
-            self.remove(sw_static, p2dot, P1, far)
             tally1 = t1_target
             self.play(FadeIn(ap1), Create(nl), FadeIn(nl_title), FadeIn(shared_cap),
                       Create(p2.circle), Create(p2.tri), FadeIn(labs[1], shift=0.1 * DOWN),
@@ -676,7 +697,7 @@ class Episode(NarratedScene):
             self.play(FadeIn(img2), FadeIn(tally2), hand2.animate.set_stroke(opacity=0),
                       run_time=0.4)
             self.remove(hand2)
-            self.rain(p2, "radial", tally2, None, run_time=max(2.6, beat.remaining() + 0.3))
+            self.rain(p2, "radial", tally2, None, run_time=max(1.9, beat.remaining() + 0.2))
 
         r3 = R0["midpoint"]
         tally3 = DecimalNumber(r3["share"][self.ns[0] - 1], num_decimal_places=3, font_size=MATH,
@@ -701,9 +722,9 @@ class Episode(NarratedScene):
         # ---- the measured failure: error bars and the gap; Bertrand's verdict, both halves
         q1 = text("« Aucune des trois n'est fausse,", size=28, slant=ITALIC, color=INK)
         q2 = text("aucune n'est exacte »", size=28, slant=ITALIC, color=INK)
-        VGroup(q1, q2).arrange(DOWN, buff=0.1).move_to(P3(-0.3, -1.46))
+        VGroup(q1, q2).arrange(DOWN, buff=0.1).move_to(P3(-0.3, -1.36))
         cite_b2 = citation("Bertrand, 1889 · Calcul des probabilités")
-        gap_brace = BraceBetweenPoints(nl.n2p(finals[2]) + UP * 0.2, nl.n2p(finals[1]) + UP * 0.2,
+        gap_brace = BraceBetweenPoints(nl.n2p(finals[2]) + UP * 0.14, nl.n2p(finals[1]) + UP * 0.14,
                                        direction=UP, color=INK)
         gap_lbl = label("25 points", size=28, color=INK).next_to(gap_brace, UP, buff=0.18)
         with self.narrate(LINES["gap"]) as beat:
@@ -793,9 +814,9 @@ class Episode(NarratedScene):
             driver.add_updater(wander_set)
             self.add(driver)
             self.play(FadeOut(seg), FadeOut(r_lab), wander.animate.set_value(0.42),
-                      run_time=beat.until("inside", offset=-0.3), rate_func=linear)
+                      run_time=beat.until("this gold", offset=-0.3), rate_func=linear)
             self.play(inc2.animate.set_fill(YELLOW, 0.14), wander.animate.set_value(1.0),
-                      run_time=beat.until("Each", offset=-0.3), rate_func=linear)
+                      run_time=beat.until("each", offset=-0.3), rate_func=linear)
             driver.clear_updaters()
             self.remove(driver)
             dchord.clear_updaters()
@@ -830,11 +851,13 @@ class Episode(NarratedScene):
             return lines
 
         def grow_hist(h, extra=(), run_time=0.9):
+            more = [FadeIn(h.ref_lbl, rate_func=late)] if h.ref_lbl is not None else []
             self.play(Create(h.axis), FadeIn(h.ticks),
                       LaggedStart(*[GrowFromEdge(b, DOWN) for b in h.bars], lag_ratio=0.08),
-                      *extra, run_time=run_time)
+                      Create(h.ref, rate_func=late), *more, *extra, run_time=run_time)
 
-        hists = [self.make_hist(k, x) for k, x in zip(KEYS, PANEL_X)]
+        # the endpoints histogram carries no "10%" label: its left side holds the stacked column
+        hists = [self.make_hist(k, x, ref_label=(k != "endpoints")) for k, x in zip(KEYS, PANEL_X)]
         # the caption sits over the only histogram until the row fills, then moves to the middle
         cap2 = VGroup(label("share of midpoints,", size=24, color=GRAY),
                       label("by distance from center", size=24, color=GRAY)).arrange(DOWN, buff=0.06)
@@ -987,23 +1010,27 @@ class Episode(NarratedScene):
         shalo = Circle(radius=JR_S / 2, color=BG, stroke_width=13).move_to(JC_S).set_z_index(5)
         cite_j = citation("Jaynes, 1973 · Foundations of Physics")
         sim_alpha = ValueTracker(1.0)       # the whole simulation steps back for the real experiment
-        big_alpha = ValueTracker(1.0)       # big-circle chords (subdued once the small circle judges)
+        big_alpha = ValueTracker(1.0)       # big-circle chords (faint once the small circle judges)
         small_on = ValueTracker(0.0)
         straws = self.straws
-        straws.skill = ValueTracker(0.0)
-        straws.judge = ValueTracker(0.0)
+        straws.judge = ValueTracker(0.0)    # the straws are never tallied: their answer is the "?"
         prog = self.prog
         rains = {"straws": self.rain_mob(straws, big_alpha, small_on, sim_alpha)}
         for k in ("midpoint", "endpoints", "radial"):
             prog[k].alpha.set_value(1.0)
             rains[k] = self.rain_mob(prog[k], big_alpha, small_on, sim_alpha)
 
-        # scoreboard: one row per rain, big circle | small circle
-        sb_title = label("gold share", size=26, color=GRAY).move_to(P3((SB_BIG + SB_SMALL) / 2, 2.85))
-        icon_b = VGroup(Circle(radius=0.22, color=INK, stroke_width=2.5),
-                        Circle(radius=0.11, color=YELLOW, stroke_width=2)).move_to(P3(SB_BIG, 2.3))
-        icon_s = VGroup(Circle(radius=0.12, color=INK, stroke_width=2.5),
-                        Circle(radius=0.06, color=YELLOW, stroke_width=2)).move_to(P3(SB_SMALL, 2.3))
+        # scoreboard: one row per rain; columns headed in words, "big / circle" and "small / circle"
+        sb_title = label("gold share", size=26, color=GRAY).move_to(P3((SB_BIG + SB_SMALL) / 2, SB_TITLE_Y))
+
+        def col_head(word, x):
+            g = VGroup(label(word, size=26, color=GRAY), label("circle", size=26, color=GRAY))
+            g.arrange(DOWN, buff=0.08)
+            g[0].set_x(x)
+            g[1].set_x(x)
+            return g.move_to(P3(x, SB_HEAD_Y))
+        head_b = col_head("big", SB_BIG)
+        head_s = col_head("small", SB_SMALL).align_to(head_b, UP)
 
         def sb_row(i, name, col):
             y = SB_ROWS[i]
@@ -1019,9 +1046,14 @@ class Episode(NarratedScene):
         # row labels are the names the narration uses: midpoint, endpoints, radius
         rows = {"straws": sb_row(0, "straws", INK), "midpoint": sb_row(1, "midpoint", PURPLE),
                 "endpoints": sb_row(2, "endpoints", BLUE), "radial": sb_row(3, "radius", GREEN)}
-        # an empty cell reads "-" until that rain has started (no number before its evidence)
+        # every row is on the board from the first frame, waiting (30 %, "-" cells): a cell gets a
+        # number only when its own rain starts
         dashes = {k: VGroup(dash_at(SB_BIG, SB_ROWS[i]), dash_at(SB_SMALL, SB_ROWS[i]))
                   for i, k in enumerate(rows)}
+        for k in rows:
+            rows[k][0].set_opacity(0.3)
+            dashes[k].set_opacity(0.3)
+        head_s.set_opacity(0.3)
         syms = {k: MathTex("=" if k in ("straws", "radial") else r"\neq", font_size=MATH,
                            color=GRAY).move_to(P3(SB_SYM, SB_ROWS[i]))
                 for i, k in enumerate(rows)}
@@ -1029,9 +1061,7 @@ class Episode(NarratedScene):
         # nobody can aim cannot tell the two circles apart, so it must be the same on both
         qmarks = VGroup(*[MathTex("?", font_size=MATH, color=GRAY).move_to(P3(x, SB_ROWS[0]))
                           for x in (SB_BIG, SB_SMALL)])
-        dash = dashes["straws"][0]
-        rs = rows["straws"]
-        rs[0].set_opacity(0.4)
+        straw_eq = VGroup(qmarks, syms["straws"])
 
         def live(num, R, which):
             num.add_updater(lambda m: m.set_value(R.share(which)))
@@ -1040,56 +1070,53 @@ class Episode(NarratedScene):
             keep = [p2.circle, p2.tri, inc2]
             self.flatten_groups()
             gone = [m for m in self.visible() if m not in keep]
-            self.play(*[FadeOut(m) for m in gone], run_time=0.8)
-            # the scoreboard (title, icon, the straws row and its empty slot) and the citation
-            # are there from the first frame of the payoff
+            self.play(*[FadeOut(m) for m in gone], run_time=0.6)
+            # the one circle moves onto the floor; the whole scoreboard is waiting from the start
             self.play(ReplacementTransform(p2.circle, bcirc), ReplacementTransform(p2.tri, btri),
                       ReplacementTransform(inc2, binc), FadeIn(cite_j, shift=0.1 * UP),
-                      FadeIn(sb_title), FadeIn(icon_b), FadeIn(rs[0]), FadeIn(dash), run_time=1.3)
+                      FadeIn(sb_title), FadeIn(head_b), FadeIn(head_s),
+                      LaggedStart(*[FadeIn(VGroup(rows[k][0], dashes[k])) for k in rows],
+                                  lag_ratio=0.15), run_time=1.1)
             self.purge(p2.circle, p2.tri, inc2)
             self.dedupe()
             beat.wait_until("physical", offset=-0.2)
-            self.play(Create(floor_rect), FadeIn(sim_tag), run_time=1.0)
-            # unaimed straws (simulated): the lines only; their share is the unknown "?"
+            self.play(Create(floor_rect), FadeIn(sim_tag), run_time=0.9)
+            # unaimed straws (simulated): the lines only; their share is the unknown
             beat.wait_until("straws", offset=-0.3)
             self.add(rains["straws"])
             straws.k.set_value(0)
-            self.play(straws.k.animate(rate_func=linear).set_value(6), rs[0].animate.set_opacity(1.0),
-                      ReplacementTransform(dash, qmarks[0]), run_time=0.6)
+            self.play(straws.k.animate(rate_func=linear).set_value(6),
+                      rows["straws"][0].animate.set_opacity(1.0), run_time=0.6)
             self.play(straws.k.animate.set_value(len(straws.shown)),
                       run_time=beat.until("where", offset=-0.25), rate_func=linear)
-            # same floor, a second circle: smaller and somewhere else
+            # same floor, a second circle, smaller and somewhere else; the big circle keeps only
+            # its outline, so the small circle and its gold rule are the one gold pair inside it
             ghost = VGroup(bcirc.copy(), binc.copy())
             halo_in = binc.copy().set_stroke(BG, width=13, opacity=0.0).set_z_index(5)
             self.play(Transform(ghost, VGroup(scirc, sinc)), Transform(halo_in, shalo),
-                      small_on.animate.set_value(1.0),
-                      big_alpha.animate.set_value(0.4), btri.animate.set_stroke(opacity=0.3),
-                      binc.animate.set_stroke(opacity=0.5), FadeIn(icon_s),
+                      small_on.animate.set_value(1.0), big_alpha.animate.set_value(0.15),
+                      btri.animate.set_stroke(opacity=0.0), binc.animate.set_stroke(opacity=0.0),
+                      head_s.animate.set_opacity(1.0),
+                      ReplacementTransform(dashes["straws"], qmarks), FadeIn(syms["straws"]),
                       run_time=max(1.0, beat.until("big", offset=0.1)))
             self.remove(ghost, halo_in)
             self.add(shalo, scirc, sinc)
-            self.play(FadeIn(syms["straws"]), FadeIn(qmarks[1]), run_time=max(0.4, beat.remaining() - 0.1))
 
-        # one straw, followed: it lands on both circles at once
-        fs = self.follow_straw
-        f_n, f_d = straws.n[fs], straws.off[fs]
-        f_seg = clip_to_floor(f_n, f_d)
-        f_line = Line(P3(*f_seg[0]), P3(*f_seg[1]), color=INK, stroke_width=3.5).set_z_index(7)
-
-        def crossings(c, r):
-            dist = f_d - f_n @ c[:2]
-            h = np.sqrt(max(r * r - dist * dist, 0.0))
-            m = c[:2] + f_n * dist
-            t = np.array([-f_n[1], f_n[0]])
-            return VGroup(*[Dot(P3(*(m + sg * h * t)), radius=0.085, color=INK).set_z_index(8)
-                            for sg in (-1, 1)])
-        f_big, f_small = crossings(JC_B, JR_B), crossings(JC_S, JR_S)
-
-        # how a program is judged on both circles: one of its chords of the big circle (judged
-        # there) and the piece of the same line inside the small circle (judged by the small
-        # circle's own rule)
+        # one line of the midpoint program, followed: it lands on both circles at once, and each
+        # circle judges its own piece of it with its own gold circle
         R_m = prog["midpoint"]
         d_n, d_off = R_m.n[self.demo_line], R_m.off[self.demo_line]
+        d_seg = clip_to_floor(d_n, d_off)
+        d_full = Line(P3(*d_seg[0]), P3(*d_seg[1]), color=INK, stroke_width=3.5).set_z_index(7)
+
+        def crossings(c, r):
+            dist = d_off - d_n @ c[:2]
+            h = np.sqrt(max(r * r - dist * dist, 0.0))
+            m = c[:2] + d_n * dist
+            t = np.array([-d_n[1], d_n[0]])
+            return VGroup(*[Dot(P3(*(m + sg * h * t)), radius=0.085, color=INK).set_z_index(9)
+                            for sg in (-1, 1)])
+        d_big_dots, d_small_dots = crossings(JC_B, JR_B), crossings(JC_S, JR_S)
 
         def demo_chord(c, r, width):
             dist = d_off - d_n @ c[:2]
@@ -1099,10 +1126,11 @@ class Episode(NarratedScene):
             return Line(P3(*(m - h * t)), P3(*(m + h * t)), stroke_width=width,
                         color=YELLOW if abs(dist) < r / 2 else GRAY)
         demo_big = demo_chord(JC_B, JR_B, 5).set_z_index(7)
-        demo_small = demo_chord(JC_S, JR_S, 9).set_z_index(8)
+        demo_small = demo_chord(JC_S, JR_S, 7).set_z_index(8)
+        binc_flash = binc.copy().set_stroke(YELLOW, width=4, opacity=1.0).set_z_index(6)
 
-        def start_rain(key):
-            """The row's dashes give way to live numbers as the first lines fall."""
+        def start_rain(key, *extra):
+            """The row lights up and its dashes give way to live numbers as the first lines fall."""
             R, row = prog[key], rows[key]
             R.k.set_value(3)
             row[1].set_value(R.share("big"))
@@ -1110,121 +1138,122 @@ class Episode(NarratedScene):
             R.k.set_value(0)
             self.add(rains[key])
             self.play(R.k.animate(rate_func=linear).set_value(3), FadeOut(dashes[key]), FadeIn(row[1]),
-                      FadeIn(row[2]), run_time=0.45)
+                      FadeIn(row[2]), row[0].animate.set_opacity(1.0), *extra, run_time=0.45)
             live(row[1], R, "big")
             live(row[2], R, "small")
 
-        def rain_to(key, k, rt, *extra):
-            self.play(prog[key].k.animate(rate_func=linear).set_value(k), *extra, run_time=max(0.5, rt))
-
-        def finish_rain(key):
+        def run_rain(beat, key, col, w_big, w_small, sym, extra_end=()):
+            """The rest of a program's rain, timed to its sentence: its lines keep falling until
+            the small-circle number is spoken; the tallies (all 100,000 lines behind the ~36
+            drawn) settle by the time the big-circle number is spoken, then each number flags
+            on its word and the row's relation sign appears with the second one."""
             R, row = prog[key], rows[key]
+            n = len(R.shown)
+            t0 = beat.elapsed()
+            t_big = beat.time_of(*w_big) - 0.12
+            t_end = beat.time_of(*w_small) + 0.35
+            rt1 = max(0.6, t_big - t0)
+            k1 = 3 + (n - 3) * rt1 / max(rt1 + 0.4, t_end - t0)
+            R.k_conv = k1
+            self.play(R.k.animate(rate_func=linear).set_value(k1), run_time=rt1)
             for m in row[1:]:
                 m.clear_updaters()
             row[1].set_value(R.share("big", all_lines=True))
             row[2].set_value(R.share("small", all_lines=True))
+            rt2 = max(0.6, t_end - beat.elapsed())
+            a2 = float(np.clip((beat.time_of(*w_small) - 0.1 - beat.elapsed()) / rt2, 0, 0.9))
+            self.play(R.k.animate(rate_func=linear).set_value(n),
+                      Indicate(row[1], color=col, scale_factor=1.2, rate_func=window(0, 0.6 / rt2)),
+                      Indicate(row[2], color=col, scale_factor=1.2, rate_func=window(a2, a2 + 0.6 / rt2)),
+                      FadeIn(sym, scale=0.6, rate_func=window(a2, a2 + 0.5 / rt2, smooth)),
+                      *extra_end, run_time=rt2)
 
         failed = VGroup(rows["midpoint"], syms["midpoint"], rows["endpoints"], syms["endpoints"])
-        straw_eq = VGroup(qmarks, syms["straws"])
         with self.narrate(LINES["test"]) as beat:
-            # one rain lands on both circles at once: follow a single straw
+            # one rain lands on both circles at once: follow a single line of it
             beat.wait_until("rain", offset=-0.15)
-            self.play(Create(f_line), straws.alpha.animate.set_value(0.35), run_time=0.8)
+            self.play(Create(d_full), straws.alpha.animate.set_value(0.0), run_time=0.8)
             beat.wait_until("both", offset=-0.1)
-            self.play(LaggedStart(GrowFromCenter(f_big[0]), GrowFromCenter(f_big[1]),
-                                  GrowFromCenter(f_small[0]), GrowFromCenter(f_small[1]),
+            self.play(LaggedStart(*[GrowFromCenter(d) for d in (*d_big_dots, *d_small_dots)],
                                   lag_ratio=0.25), run_time=0.8)
-            # every program gets a row; each fills only when its own rain starts
-            beat.wait_until("so", offset=-0.1)
-            self.play(FadeOut(f_line), FadeOut(f_big), FadeOut(f_small),
-                      straws.alpha.animate.set_value(0.0),
-                      LaggedStart(*[FadeIn(VGroup(rows[k][0], dashes[k]))
-                                    for k in ("midpoint", "endpoints", "radial")], lag_ratio=0.25),
-                      run_time=0.55)
-            # one midpoint-program chord, judged on the big circle and then on the small one
-            beat.wait_until("honest", offset=-0.15)
-            self.play(Create(demo_big), run_time=0.6)
-            self.play(Create(demo_small), run_time=0.6)
-            self.hold(0.25)
-            self.play(FadeOut(demo_big), FadeOut(demo_small), run_time=0.3)
-            start_rain("midpoint")
+            # each judges with its own gold circle: the big circle's chord misses the big gold
+            # circle (short, grey); the piece inside the small circle crosses the small gold
+            # circle (long, gold)
+            beat.wait_until("each", offset=-0.1)
+            self.play(FadeIn(binc_flash), d_full.animate.set_stroke(opacity=0.25), Create(demo_big),
+                      run_time=0.6)
+            beat.wait_until("own", offset=-0.15)
+            self.play(FadeOut(binc_flash), demo_big.animate.set_stroke(opacity=0.4), FadeOut(d_big_dots),
+                      Create(demo_small), run_time=0.7)
             # the criterion is the straws' "? = ?": the same on both circles
-            rt = max(0.5, beat.until("quarter", offset=0.2))
-            a = max(0.0, beat.time_of("same") - 0.15 - beat.elapsed()) / rt
-            rain_to("midpoint", len(prog["midpoint"].shown), rt,
-                    btri.animate.set_stroke(opacity=0.0), binc.animate.set_stroke(opacity=0.2),
-                    Indicate(straw_eq, color=INK, scale_factor=1.2, rate_func=window(a, a + 0.8 / rt)))
-            finish_rain("midpoint")
-            self.play(Indicate(rows["midpoint"][1], color=PURPLE, scale_factor=1.25), run_time=0.5)
-            beat.wait_until("point", offset=-0.1)
-            self.play(Indicate(rows["midpoint"][2], color=PURPLE, scale_factor=1.25),
-                      FadeIn(syms["midpoint"], scale=0.6), run_time=0.7)
-            self.play(prog["midpoint"].alpha.animate.set_value(0.0), run_time=0.3)
+            beat.wait_until("same", offset=-0.15)
+            self.play(Indicate(straw_eq, color=INK, scale_factor=1.2), run_time=0.8)
+            # the rains: chords of the big circle faint, the pieces inside the small one in full
+            beat.wait_until("Midpoint", offset=-0.6)
+            start_rain("midpoint", *[FadeOut(m) for m in (d_full, demo_big, demo_small, d_small_dots)])
+            run_rain(beat, "midpoint", PURPLE, ("quarter",), ("point",), syms["midpoint"])
+            self.play(prog["midpoint"].alpha.animate.set_value(0.0), run_time=0.4)
+            beat.wait_until("Endpoints", offset=-0.3)
             start_rain("endpoints")
-            rain_to("endpoints", len(prog["endpoints"].shown), beat.until("third", offset=-0.2))
-            finish_rain("endpoints")
-            self.play(Indicate(rows["endpoints"][1], color=BLUE, scale_factor=1.25), run_time=0.5)
-            beat.wait_until("point", occurrence=2, offset=-0.1)
-            self.play(Indicate(rows["endpoints"][2], color=BLUE, scale_factor=1.25),
-                      FadeIn(syms["endpoints"], scale=0.6), run_time=0.7)
-            self.play(prog["endpoints"].alpha.animate.set_value(0.0), run_time=0.3)
+            run_rain(beat, "endpoints", BLUE, ("third",), ("point", 2), syms["endpoints"])
+            self.play(prog["endpoints"].alpha.animate.set_value(0.0), run_time=0.4)
+            beat.wait_until("Only", offset=-0.3)
             start_rain("radial")
-            rain_to("radial", len(prog["radial"].shown), beat.until("half", offset=-0.2))
-            finish_rain("radial")
-            self.play(FadeIn(syms["radial"], scale=0.6),
-                      Indicate(rows["radial"][1:], color=GREEN, scale_factor=1.15), run_time=0.5)
+            run_rain(beat, "radial", GREEN, ("half",), ("both", 3), syms["radial"])
             # "on both": the failed rows step back and the program's chords clear; the radius
             # row's "=" is the one that answers the straws' "? = ?"
-            beat.wait_until("both", occurrence=3, offset=-0.1)
             self.play(failed.animate.set_opacity(0.3), prog["radial"].alpha.animate.set_value(0.0),
                       Indicate(straw_eq, color=INK, scale_factor=1.15),
                       Indicate(syms["radial"], color=GREEN, scale_factor=1.4), run_time=0.8)
 
-        real = VGroup(label("5-inch circle", size=28, color=INK),
-                      label("128 straws crossed it", size=28, color=INK)).arrange(DOWN, buff=0.16,
-                                                                                  aligned_edge=LEFT)
-        real.move_to(P3(0, -0.6)).align_to(P3(SB_LAB_L, 0), LEFT)
-        skill_tag = label("simulated", size=24, color=GRAY, slant=ITALIC)
-        skill_tag.move_to(P3(SB_SYM, SB_ROWS[0])).align_to(P3(SB_BIG + 0.62, 0), LEFT)
+        # the real experiment: "5-inch circle", "128 straws crossed it", and the radius program's
+        # predicted flat spread (exactly 10 % per band; their own counts were not published)
+        real0 = label("5-inch circle", size=28, color=INK)
+        real1 = label("128 straws crossed it", size=28, color=INK)
+        real = VGroup(real0, real1).arrange(DOWN, buff=0.16, aligned_edge=LEFT)
+        real.move_to(P3(0, -0.02)).align_to(P3(SB_LAB_L, 0), LEFT)
+        T_X = 4.0
+        th = self.make_hist("radial", T_X, base=-2.5, scale=6.0, width=3.6, share=[0.1] * 10)
+        t_title = VGroup(label("radius program", size=26, color=GREEN),
+                         label("predicted", size=26, color=GRAY, slant=ITALIC)).arrange(RIGHT, buff=0.2)
+        t_title[1].align_to(t_title[0], DOWN)
+        t_title.move_to(P3(T_X, -1.5))
+        straw_ans = VGroup(MathTex(r"\approx", font_size=MATH, color=INK),
+                           label("radius", size=28, color=GREEN)).arrange(RIGHT, buff=0.18)
+        straw_ans.move_to(P3(0, SB_ROWS[0])).align_to(P3(SB_BIG - 0.3, 0), LEFT)
+        straw_ans[1].align_to(rows["straws"][0], DOWN)
         with self.narrate(LINES["tyler"]) as beat:
-            # 1. the test is over: its circle, its column and the failed rows leave first
-            self.play(FadeOut(scirc), FadeOut(sinc), FadeOut(shalo), FadeOut(icon_s),
-                      FadeOut(qmarks[1]), FadeOut(syms["straws"]), FadeOut(failed),
+            # 1. the test is over: its circle, its column, the failed rows and the heads leave
+            self.play(FadeOut(scirc), FadeOut(sinc), FadeOut(shalo), FadeOut(head_s), FadeOut(head_b),
+                      FadeOut(sb_title), FadeOut(qmarks[1]), FadeOut(syms["straws"]), FadeOut(failed),
                       FadeOut(rows["radial"][2]), FadeOut(syms["radial"]),
                       small_on.animate.set_value(0.0), run_time=0.6)
-            # 2. then the straws come back on the one circle, and radius moves up under straws
-            self.play(straws.alpha.animate.set_value(1.0), big_alpha.animate.set_value(1.0),
-                      binc.animate.set_stroke(opacity=1.0),
-                      rows["radial"][:2].animate.shift(UP * (SB_ROWS[1] - SB_ROWS[3])), run_time=0.7)
-            # the real experiment answers the straws' "?": the simulation steps back to context
-            beat.wait_until("tossed", offset=-0.2)
-            self.play(sim_alpha.animate.set_value(0.3), floor_rect.animate.set_stroke(opacity=0.3),
-                      sim_tag.animate.set_opacity(0.3), run_time=1.0)
+            # 2. one circle again, with its gold rule; the simulated straws come back only as dim
+            #    context (the real experiment is what answers the "?"), and the radius row moves
+            #    up under the straws row
+            self.play(binc.animate.set_stroke(opacity=1.0), straws.alpha.animate.set_value(1.0),
+                      sim_alpha.animate.set_value(0.3), floor_rect.animate.set_stroke(opacity=0.3),
+                      sim_tag.animate.set_opacity(0.3), big_alpha.animate.set_value(1.0),
+                      rows["radial"][:2].animate.shift(UP * (SB_ROWS[1] - SB_ROWS[3])), run_time=0.8)
             beat.wait_until("five-inch", offset=-0.2)
-            self.play(FadeIn(real[0], shift=0.1 * UP), run_time=0.6)
+            self.play(FadeIn(real0, shift=0.1 * UP), run_time=0.6)
             beat.wait_until("hundred", offset=-0.2)
-            self.play(FadeIn(real[1], shift=0.1 * UP), run_time=0.7)
-            beat.wait_until("radius", offset=-0.3)
-            self.play(Indicate(rows["radial"][:2], color=GREEN, scale_factor=1.2), run_time=0.8)
-
-        with self.narrate(LINES["limit"]) as beat:
-            # a skilled tosser is a different machine: simulated, judged, and set apart from the
-            # real data; the straws' "?" becomes that simulation's live share
-            sn = rows["straws"][1]
-            sn.set_value(straws.share("big"))
-            self.play(sim_alpha.animate.set_value(1.0), floor_rect.animate.set_stroke(opacity=1.0),
-                      sim_tag.animate.set_opacity(1.0), straws.judge.animate.set_value(1.0),
-                      real.animate.set_opacity(0.3), rows["radial"][:2].animate.set_opacity(0.3),
-                      FadeOut(qmarks[0], rate_func=lambda t: smooth(min(1.0, t / 0.45))),
-                      FadeIn(sn, rate_func=lambda t: smooth(max(0.0, (t - 0.5) / 0.5))),
-                      FadeIn(skill_tag), run_time=0.6)
-            live(sn, straws, "big")
-            self.play(straws.skill.animate.set_value(1.0),
-                      run_time=beat.until("other", offset=-0.1), rate_func=smooth)
-            sn.clear_updaters()
+            self.play(FadeIn(real1, shift=0.1 * UP), run_time=0.6)
+            # "matched": the real tosses answer the straws' "?" -- the radius program
+            beat.wait_until("matched", offset=-0.15)
+            self.play(ReplacementTransform(qmarks[0], straw_ans), run_time=0.55)
+            # "the radius program's flat spread": the green row flags and its predicted histogram
+            # grows, 10 % in every band
+            beat.wait_until("radius", offset=-0.1)
+            self.play(Indicate(rows["radial"][:2], color=GREEN, scale_factor=1.15),
+                      FadeIn(t_title, shift=0.1 * UP), Create(th.axis), FadeIn(th.ticks),
+                      LaggedStart(*[GrowFromEdge(b, DOWN) for b in th.bars], lag_ratio=0.06),
+                      Create(th.ref, rate_func=late), FadeIn(th.ref_lbl, rate_func=late), run_time=1.0)
 
         # ============================================================ the same two words in data
         wt = ValueTracker(0.0)          # 0: every class counts once -> 1: every student counts once
+        cx = ValueTracker(CB_X0 + CHART_DX)   # the chart's left edge: centred, then slides left
+        toy_op = ValueTracker(1.0)            # the example's opacity (it steps back for real data)
 
         def widths():
             t = wt.get_value()
@@ -1232,35 +1261,38 @@ class Episode(NarratedScene):
 
         def bar_left(i, w=None):
             w = widths() if w is None else w
-            return CB_X0 + sum(w[:i]) + CB_GAP * i
+            return cx.get_value() + sum(w[:i]) + CB_GAP * i
 
         def bar_rect(i):
             w = widths()
             s = SIZES[i]
+            op = toy_op.get_value()
             return Rectangle(width=w[i], height=s * CB_H, stroke_color=GRAY, stroke_width=2,
-                             fill_color=GRAY, fill_opacity=0.45).move_to(
+                             stroke_opacity=op, fill_color=GRAY, fill_opacity=0.45 * op).move_to(
                 P3(bar_left(i, w) + w[i] / 2, CB_BASE + s * CB_H / 2))
 
         def right_end():
-            return CB_X0 + sum(widths()) + 2 * CB_GAP
+            return cx.get_value() + sum(widths()) + 2 * CB_GAP
 
         def mean_w():
             w = widths()
             return sum(a * s for a, s in zip(w, SIZES)) / sum(w)
 
-        cbase = Line(P3(CB_X0 - 0.15, CB_BASE), P3(right_end() + 0.15, CB_BASE), color=GRAY,
+        cbase = Line(P3(cx.get_value() - 0.15, CB_BASE), P3(right_end() + 0.15, CB_BASE), color=GRAY,
                      stroke_width=2.5)
         ytitle = label("class size (students)", size=24, color=GRAY)
-        ytitle.move_to(P3(0, 2.84)).align_to(P3(CB_X0 - 0.15, 0), LEFT)
+        ytitle.move_to(P3(0, 2.84)).align_to(P3(cx.get_value() - 0.15, 0), LEFT)
         ex_tag = label("example", size=22, color=GRAY, slant=ITALIC)
         ex_tag.next_to(ytitle, UP, buff=0.14).align_to(ytitle, LEFT)
         bars = [bar_rect(i) for i in range(3)]
         sz_lbl = [MathTex(str(s), font_size=MATH_SMALL + 2, color=INK).next_to(b, UP, buff=0.17)
                   for s, b in zip(SIZES, bars)]
-        # one dot per class (equal widths) ... then one dot per student (width = students)
+        # one dot per class (equal widths) ... then one dot per student (width = students);
+        # student positions are kept relative to the chart's left edge so they slide with it
         w0 = [W_EQ] * 3
         w1 = [W_PER * s for s in SIZES]
         mid_row = ST_Y0 - (ST_ROWS - 1) / 2 * ST_DY
+        x00 = cx.get_value()
         cdots = VGroup(*[Dot(P3(bar_left(i, w0) + W_EQ / 2, mid_row), radius=0.06, color=INK)
                          for i in range(3)])
         st_from, st_to = [], []
@@ -1268,24 +1300,38 @@ class Episode(NarratedScene):
             ncol = s // ST_ROWS
             for j in range(s):
                 col, row = j // ST_ROWS, j % ST_ROWS
-                st_from.append(np.array([bar_left(i, w0) + W_EQ / 2, mid_row, 0.0]))
-                st_to.append(np.array([bar_left(i, w1) + (col + 0.5) * w1[i] / ncol,
+                st_from.append(np.array([bar_left(i, w0) - x00 + W_EQ / 2, mid_row, 0.0]))
+                st_to.append(np.array([bar_left(i, w1) - x00 + (col + 0.5) * w1[i] / ncol,
                                        ST_Y0 - row * ST_DY, 0.0]))
-        sdots = VGroup(*[Dot(p, radius=0.06, color=INK) for p in st_from])
+        sdots = VGroup(*[Dot(P3(x00, 0) + p, radius=0.06, color=INK) for p in st_from])
 
         def place_students(m):
             t = wt.get_value()
+            off = P3(cx.get_value(), 0)
             for d, a, b in zip(m, st_from, st_to):
-                d.move_to(a + (b - a) * t)
-        wlab = label("width = students", size=22, color=GRAY)
-        wlab.move_to(P3((CB_X0 + bar_left(2, w1) + w1[2]) / 2, ST_Y0 - (ST_ROWS - 1) * ST_DY - 0.38))
+                d.move_to(off + a + (b - a) * t)
         y40 = CB_BASE + 40 * CB_H
-        line40 = DashedLine(P3(CB_X0 - 0.15, y40), P3(right_end() + 0.15, y40), color=GRAY,
+        line40 = DashedLine(P3(cx.get_value() - 0.15, y40), P3(right_end() + 0.15, y40), color=GRAY,
                             stroke_width=3, dash_length=0.12).set_z_index(3)
         lab40 = VGroup(label("random class", size=24, color=GRAY),
                        MathTex("40", font_size=MATH, color=INK)).arrange(RIGHT, buff=0.15)
         lab40.next_to(line40.get_end(), RIGHT, buff=0.2)
         cite_fg = citation("Feld & Grofman, 1977 · Research in Higher Education")
+        # "at random", made precise: what the pick is spread evenly over (classes, then students),
+        # in the slot under the dots; "at random" itself waits there first
+        chart_mid = x00 + (sum(w1) + 2 * CB_GAP) / 2
+        slot_y = ST_Y0 - (ST_ROWS - 1) * ST_DY - 0.45
+        sp_c = label("spread evenly over: classes", size=26, color=GRAY, t2c={"classes": INK})
+        sp_s = label("spread evenly over: students", size=26, color=GRAY, t2c={"students": INK})
+        sp_s.move_to(P3(chart_mid, slot_y))
+        sp_c.move_to(P3(0, slot_y)).align_to(sp_s, LEFT)
+        sp_s.align_to(sp_c, DOWN)
+        NPRE = len("spreadevenlyover:")             # glyphs before the changing word
+        atr_big = text("at random", size=HEADING, slant=ITALIC).move_to(P3(chart_mid, 0.75))
+        atr_big_ul = underline(atr_big, color=GRAY, buff=0.08, stroke_width=3)
+        atr2 = text("at random", size=28, slant=ITALIC).move_to(P3(chart_mid, slot_y))
+        atr2_ul = underline(atr2, color=GRAY, buff=0.07, stroke_width=2.5)
+        cap_atr = VGroup(atr2, atr2_ul)
         # the real university, in its own framed block (not on the toy chart's scale)
         SBX = 2.3
         sb_rule = Line(P3(SBX - 0.3, 3.05), P3(SBX - 0.3, 0.4), color=GRAY, stroke_width=2.5)
@@ -1305,32 +1351,22 @@ class Episode(NarratedScene):
                                         dash_length=0.1), "random class", GRAY, "40")
         sb_r2 = sb_line(0.7, Line(LEFT * 0.25, RIGHT * 0.25, color=INK, stroke_width=4),
                         "random student", INK, "147")
-        # "the same two words": the stakes beat's italic "at random", back as the chart's caption,
-        # above its title and right-aligned to the chart (it is context, not the subject)
-        chart_right = CB_X0 + sum(w1) + 2 * CB_GAP + 0.15
-        atr2 = text("at random", size=28, slant=ITALIC)
-        atr2.move_to(P3(0, 3.3)).align_to(P3(chart_right + 0.1, 0), RIGHT)
-        atr2_ul = underline(atr2, color=GRAY, buff=0.07, stroke_width=2.5)
-        cap_atr = VGroup(atr2, atr2_ul).set_opacity(0.7)
-        # ... but it first returns at the stakes beat's size, as the frame's one subject
-        atr_big = text("at random", size=HEADING, slant=ITALIC).move_to(P3(-3.8, 0.7))
-        atr_big_ul = underline(atr_big, color=GRAY, buff=0.08, stroke_width=3)
         with self.narrate(LINES["classes"]) as beat:
             rains_all = list(rains.values())
-            for m in rains_all + [rows["straws"][1]]:
+            for m in rains_all:
                 m.clear_updaters()
             self.flatten_groups()
-            # the floor gives way straight to the two words: no empty frame in between
-            self.play(*[FadeOut(m) for m in self.visible()], FadeIn(cite_fg, shift=0.1 * UP),
-                      run_time=0.45)
-            self.play(Write(atr_big), run_time=0.75)
+            # the floor gives way straight to the two words: "at random" starts writing while the
+            # floor is still fading, so no frame is empty
+            self.play(*[FadeOut(m, rate_func=window(0, 0.6, smooth)) for m in self.visible()],
+                      FadeIn(cite_fg, shift=0.1 * UP, rate_func=window(0.55, 1.0, smooth)),
+                      Write(atr_big, rate_func=window(0.14, 0.95, linear)), run_time=1.15)
             self.play(Create(atr_big_ul), run_time=0.35)
-            # the chart builds with its bars (no empty baseline); the words step up to become
-            # its caption
+            # the chart builds with its bars (no empty baseline); the words step down into the
+            # slot under it, where they will be made precise
             beat.wait_until("Take", offset=-0.35)
             self.play(ReplacementTransform(atr_big, atr2), ReplacementTransform(atr_big_ul, atr2_ul),
-                      run_time=0.6)
-            self.play(FadeIn(ytitle), FadeIn(ex_tag), run_time=0.35)
+                      FadeIn(ytitle), FadeIn(ex_tag), run_time=0.6)
             for occ, i in ((1, 0), (2, 1)):
                 beat.wait_until("ten", occurrence=occ, offset=-0.15)
                 extra = [Create(cbase)] if i == 0 else []
@@ -1338,30 +1374,42 @@ class Episode(NarratedScene):
                           run_time=0.5)
             beat.wait_until("hundred", offset=-0.15)
             self.play(GrowFromEdge(bars[2], DOWN), FadeIn(sz_lbl[2], shift=0.1 * UP), run_time=0.7)
-            # a random class: one dot per class, every bar the same width, mean 40; the caption
-            # flags on the spoken "at random"
+            # a random class: one dot per class; "at random" flags on its word, then becomes what
+            # it means here, "spread evenly over: classes"
             beat.wait_until("class", offset=-0.15)
-            rt = 1.0
+            rt = max(0.8, beat.until("and the average", offset=-0.1))
             a = max(0.0, beat.time_of("at random") - 0.1 - beat.elapsed()) / rt
             self.play(LaggedStart(*[GrowFromCenter(d) for d in cdots], lag_ratio=0.3),
                       Indicate(cap_atr, color=INK, scale_factor=1.1, rate_func=window(a, a + 0.6 / rt)),
                       run_time=rt)
+            self.play(LaggedStart(FadeOut(cap_atr, shift=0.15 * UP), FadeIn(sp_c, shift=0.15 * UP),
+                                  lag_ratio=0.6), run_time=0.8)
             self.play(Create(line40), run_time=max(0.6, beat.until("forty", offset=-0.45)))
             self.play(FadeIn(lab40, shift=0.1 * LEFT), run_time=0.5)
             # a random student: each class dot becomes its students, each bar as wide as its
-            # students, and the width-weighted mean rises to 85
+            # students, the width-weighted mean rises to 85, and the label's last word turns
+            # from "classes" to "students" as it is spoken
             beat.wait_until("Pick", occurrence=2, offset=-0.05)
             self.remove(*cdots)
             self.add(sdots)
+            # (every part of the example follows cx and toy_op through its updater, so it can
+            # later slide and dim in one move without any updater being suspended)
             for i, b in enumerate(bars):
                 b.add_updater(lambda m, i=i: m.become(bar_rect(i)))
-                sz_lbl[i].add_updater(lambda m, i=i: m.next_to(bars[i], UP, buff=0.17))
-            cbase.add_updater(lambda m: m.put_start_and_end_on(P3(CB_X0 - 0.15, CB_BASE),
-                                                               P3(right_end() + 0.15, CB_BASE)))
-            sdots.add_updater(place_students)
-            mline = always_redraw(lambda: Line(P3(CB_X0 - 0.15, CB_BASE + mean_w() * CB_H),
+                sz_lbl[i].add_updater(lambda m, i=i: m.next_to(bars[i], UP, buff=0.17).set_opacity(
+                    toy_op.get_value()))
+            cbase.add_updater(lambda m: m.put_start_and_end_on(P3(cx.get_value() - 0.15, CB_BASE),
+                                                               P3(right_end() + 0.15, CB_BASE)
+                                                               ).set_stroke(opacity=toy_op.get_value()))
+
+            def place_students_op(m):
+                place_students(m)
+                m.set_opacity(toy_op.get_value())
+            sdots.add_updater(place_students_op)
+            mline = always_redraw(lambda: Line(P3(cx.get_value() - 0.15, CB_BASE + mean_w() * CB_H),
                                                P3(right_end() + 0.15, CB_BASE + mean_w() * CB_H),
-                                               color=INK, stroke_width=4).set_z_index(4))
+                                               color=INK, stroke_width=4,
+                                               stroke_opacity=toy_op.get_value()).set_z_index(4))
             mval = DecimalNumber(40, num_decimal_places=0, font_size=MATH, color=INK)
             mlab = VGroup(label("random student", size=24, color=INK), mval).arrange(RIGHT, buff=0.15)
             mval.add_updater(lambda m: m.set_value(mean_w()))
@@ -1370,30 +1418,35 @@ class Episode(NarratedScene):
                 m.next_to(P3(right_end() + 0.15, CB_BASE + mean_w() * CB_H), RIGHT, buff=0.2)
                 m.set_opacity(float(np.clip((mean_w() - 57) / 6, 0, 1)))   # clear of the 40 label first
             mlab.add_updater(place_mlab)
-            wlab.add_updater(lambda m: m.set_opacity(float(np.clip((wt.get_value() - 0.35) / 0.3, 0, 1))))
-            line40.add_updater(lambda m: m.put_start_and_end_on(P3(CB_X0 - 0.15, y40),
-                                                                P3(right_end() + 0.15, y40)))
+            line40.add_updater(lambda m: m.put_start_and_end_on(P3(cx.get_value() - 0.15, y40),
+                                                                P3(right_end() + 0.15, y40)
+                                                                ).set_stroke(opacity=toy_op.get_value()))
             lab40.add_updater(lambda m: m.next_to(P3(right_end() + 0.15, y40), RIGHT, buff=0.2))
             mlab.set_opacity(0)
-            wlab.set_opacity(0)
-            self.add(mline, mlab, wlab)
+            self.add(mline, mlab)
             rt = max(1.6, beat.until("eighty-five", offset=0.3))
-            a = max(0.0, beat.time_of("at random", 2) - 0.1 - beat.elapsed()) / rt
+            a = float(np.clip((beat.time_of("over students") + 0.35 - beat.elapsed()) / rt, 0, 0.85))
             self.play(wt.animate.set_value(1.0),
-                      Indicate(cap_atr, color=INK, scale_factor=1.1, rate_func=window(a, a + 0.6 / rt)),
+                      FadeOut(sp_c[NPRE:], shift=0.12 * UP, rate_func=window(a, a + 0.45 / rt, smooth)),
+                      FadeIn(sp_s[NPRE:], shift=0.12 * UP, rate_func=window(a, a + 0.45 / rt, smooth)),
                       run_time=rt)
-            for m in [*bars, *sz_lbl, cbase, sdots, mval, mlab, wlab, line40, lab40, mline]:
-                m.clear_updaters()
+            mval.clear_updaters()
             mval.set_value(85)
+            mlab.clear_updaters()
             mlab.set_opacity(1)
-            wlab.set_opacity(1)
-            # the real university: the example steps back (its lines stay, dimmed; its labels and
-            # numbers leave, so the only bright numbers are Stony Brook's), the cited figures get
-            # their own block
-            beat.wait_until("Stony", offset=-0.2)
-            toy = VGroup(*bars, *sz_lbl, cbase, sdots, line40, mline, ytitle, ex_tag)
-            self.play(toy.animate.set_opacity(0.3), FadeOut(lab40), FadeOut(mlab), FadeOut(wlab),
-                      FadeOut(cap_atr), Create(sb_rule), FadeIn(sb_head, shift=0.1 * DOWN), run_time=0.8)
+            # the real university: the example slides left and steps back (its lines stay, dimmed;
+            # its labels and numbers leave, so the only bright numbers are Stony Brook's), then the
+            # cited figures get their own block
+            beat.wait_until("Stony", offset=-0.25)
+            lab40.clear_updaters()
+            toy_static = VGroup(ytitle, ex_tag)
+            self.play(cx.animate.set_value(CB_X0), toy_op.animate.set_value(0.3),
+                      toy_static.animate.shift(LEFT * CHART_DX).set_opacity(0.3),
+                      FadeOut(lab40), FadeOut(mlab), FadeOut(sp_c[:NPRE]), FadeOut(sp_s[NPRE:]),
+                      run_time=0.8)
+            for m in [*bars, *sz_lbl, cbase, sdots, line40, mline]:
+                m.clear_updaters()
+            self.play(Create(sb_rule), FadeIn(sb_head, shift=0.1 * DOWN), run_time=0.6)
             beat.wait_until("forty", occurrence=2, offset=-0.2)
             self.play(FadeIn(sb_r1, shift=0.15 * LEFT), run_time=0.5)
             beat.wait_until("hundred", occurrence=2, offset=-0.15)
@@ -1430,18 +1483,22 @@ class Episode(NarratedScene):
         big_end = Circle(radius=BIG_R, color=INK, stroke_width=3).move_to(BIG_C).set_z_index(3)
         tri_end = Polygon(*[rim(BIG_C, BIG_R, PI / 2 + k * TAU / 3) for k in range(3)], color=GRAY,
                           stroke_width=2.5).set_z_index(3)
-        # Stony Brook's two right answers keep their own rows, left-aligned with the question and
-        # well below the 0-1 line (never read as values on it)
-        sb_shift = np.array([q_end.get_left()[0] - sb_r1.get_left()[0], -1.6 - sb_r1[0].get_y(), 0.0])
+        # Stony Brook's two right answers become one block under the 0-1 line: labels start at
+        # the line's left end, numbers end at its right end
+        L01, R01 = line01.n2p(0)[0], line01.n2p(1)[0]
+        row_y = (-1.55, -2.25)
+        moves = []
+        for r, y in zip((sb_r1, sb_r2), row_y):
+            gl = VGroup(r[0], r[1])
+            moves.append(gl.animate.shift(P3(L01 - r[0].get_left()[0], y - r[0].get_y())).set_opacity(0.35))
+            moves.append(r[2].animate.shift(P3(R01 - r[2].get_right()[0], y - r[2].get_y())).set_opacity(0.35))
         with self.narrate(LINES["land"]) as beat:
             self.flatten_groups()
             # the block's header and rule clear first; its two rows stay
             self.play(*[FadeOut(m) for m in self.visible() if m not in (sb_r1, sb_r2)], run_time=0.45)
             # the first frame, back again; Stony Brook's rows step down out of its way, dimmed
-            self.play(sb_r1.animate.shift(sb_shift).set_opacity(0.35),
-                      sb_r2.animate.shift(sb_shift).set_opacity(0.35),
-                      FadeIn(big_end), FadeIn(tri_end), FadeIn(chord0b), FadeIn(e0b), FadeIn(q_end),
-                      run_time=0.8)
+            self.play(*moves, FadeIn(big_end), FadeIn(tri_end), FadeIn(chord0b), FadeIn(e0b),
+                      FadeIn(q_end), run_time=0.8)
             # the axis first, then the sweep that finds every answer on it
             self.play(Create(line01), FadeIn(ends_lbl), run_time=0.5)
             self.add(overlay, marker, marks)
@@ -1462,12 +1519,14 @@ class Episode(NarratedScene):
                       Indicate(marks[2], color=GREEN, scale_factor=1.25), run_time=0.6)
             beat.wait_until("only", offset=-0.1)
             self.play(marks[0].animate.set_opacity(0.3), marks[1].animate.set_opacity(0.3), run_time=0.5)
-            # "Forty and a hundred forty-seven are both right, once you say who's picked"
-            beat.wait_until("Forty", offset=-0.25)
-            self.play(sb_r1.animate.set_opacity(1.0), sb_r2.animate.set_opacity(1.0), run_time=0.5)
-            beat.wait_until("both", offset=-0.15)
-            self.play(*[Indicate(r[2], color=INK, scale_factor=1.15) for r in (sb_r1, sb_r2)], run_time=0.6)
+            # "Forty and a hundred forty-seven are both right, once you say who's picked": each
+            # number brightens on its word, then both labels come up to the same ink together
+            beat.wait_until("Forty", offset=-0.2)
+            self.play(sb_r1[2].animate.set_opacity(1.0), run_time=0.4)
+            beat.wait_until("hundred", offset=-0.2)
+            self.play(sb_r2[2].animate.set_opacity(1.0), run_time=0.5)
             beat.wait_until("who's", offset=-0.25)
-            self.play(*[Indicate(r[1], color=INK, scale_factor=1.1) for r in (sb_r1, sb_r2)], run_time=0.7)
+            self.play(sb_r1[0].animate.set_opacity(1.0), sb_r1[1].animate.set_color(INK).set_opacity(1.0),
+                      sb_r2[0].animate.set_opacity(1.0), sb_r2[1].animate.set_opacity(1.0), run_time=0.6)
         overlay.clear_updaters()
         self.hold(1.4)

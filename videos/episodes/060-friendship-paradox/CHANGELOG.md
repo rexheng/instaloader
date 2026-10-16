@@ -276,3 +276,29 @@ kept.
 - Longest silence 2.23 s (the planned "Pick one" hold); longest static stretch 2.50 s.
 - WER 1.5 % (Whisper's "Thank you." insert and "sus four" for "Sue's four" included); 0 banned
   phrases; 0 render warnings; 0 layout-audit issues in 198 checks; no flags.
+
+## Round 1 revisions (second review cycle: craft 8.3, substance 8.5; no caps, no factual errors)
+
+**Plan of the climb (written before editing; BAR §3 "9" anchors vs. where round 1 fell short)**
+- Motion 8.5 → 9 ("every motion encodes a relation"): the token fulcrum faded in at 3. Upgrade: the tokens
+  land layer by layer and the YELLOW fulcrum, copied from the BLUE one, slides with a live read-out
+  2.5 → 2.7 → 2.9 → 3.0 as each layer lands (38/14, 52/18, 60/20), so the motion is the proof. The
+  μ²/μ split moves each term to exactly one target; the new bar and denominator rise in after. The
+  girl read-out holds 2.0 until the real class has settled.
+- Visual 8–8.5 → 9 ("every frame has one focal point; all §5 standards met"): TeX typesets every
+  algebra row (μ on the TeX baseline); the guess box collapses into one dashed tick when the friend
+  bar is drawn (no doubled outline); during the algebra the bar panel goes to 0 and the beam picture
+  is centred at the top with the rows centred under it; the scale tag is 4 words under the squares;
+  ring thumbnail at 0.55× with 32-pt digits; C&F read-outs 0.3 down and 0.4 left; a brace, not
+  schematic dots, for "a few users".
+- Clarity 8.5 → 9 ("could re-derive it after one watch"): the C&F beat now states the link ("named
+  friends have more friends, so they sit closer to everyone else"); the ring callback no longer
+  changes the bars (picture, row and bars dim; the ring and 2 + 0/2 = 2 carry it); "the average count".
+- Hook 8.5 → 9 ("ending resolves the opening exactly"): the landing returns to the cold-open frame
+  with the candidates 2.5 / 3 / 4, names the per-girl statistic ("Seat by seat"), and the last line
+  answers the opening question: "Two and a half counts the girls; three counts the friendships." The
+  friend bar grows to the 3, which gets ringed.
+- Concision 8 → 9: cut "friends average twenty percent more than girls", "Sixty over twenty", and the
+  landing's token re-flight and 4×/1× tally.
+- Audio 8–8.5 → 9: "Split Sue's count, four, into…" (Whisper heard "sus four"); the muddled
+  "friends … than girls" comparison is gone.

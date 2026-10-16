@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/005-monte-carlo/final.mp4",
- "duration_s": 236.067,
+ "duration_s": 237.067,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,12 +8,12 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 14.83,
+ "size_mb": 14.74,
  "integrated_lufs": -14.0,
- "lra_lu": 2.4,
+ "lra_lu": 2.5,
  "true_peak_dbtp": -2.0,
  "leading_silence_s": 0.0,
- "trailing_silence_s": 1.5,
+ "trailing_silence_s": 1.8,
  "longest_internal_silence_s": 1.73,
  "silences_over_1_5s": [
   [
@@ -21,21 +21,21 @@
    13.0
   ],
   [
-   177.19,
-   178.9
+   177.96,
+   179.67
   ],
   [
-   185.22,
-   186.84
+   185.99,
+   187.61
   ]
  ],
- "frames": 7082,
- "longest_static_s": 3.2,
+ "frames": 7112,
+ "longest_static_s": 3.23,
  "static_stretches_over_3s": [
   [
-   183.57,
-   186.77,
-   3.2
+   184.3,
+   187.53,
+   3.23
   ]
  ],
  "black_frame_runs": [],
@@ -43,12 +43,12 @@
  "background_luma": null,
  "transcript_words": 617,
  "first_word_s": 0,
- "last_word_s": 235.23734,
- "wpm_speech": 163.1,
- "wpm_overall": 156.8,
- "wpm_excluding_all_pauses": 183.8,
+ "last_word_s": 235.69867,
+ "wpm_speech": 162.8,
+ "wpm_overall": 156.2,
+ "wpm_excluding_all_pauses": 184.0,
  "narration_file": "videos/episodes/005-monte-carlo/narration.json",
- "wer": 0.0296,
+ "wer": 0.0246,
  "narration_words": 609,
  "banned_phrase_hits": 0,
  "slop_hits": [],
@@ -60,8 +60,8 @@
    "safe-area": 0,
    "caption-zone": 0
   },
-  "allowed": 5,
-  "checks": 218
+  "allowed": 4,
+  "checks": 223
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -101,12 +101,12 @@
    "file": "keyframes/kf_05_00-25.5.png"
   },
   {
-   "t": 34.3,
-   "file": "keyframes/kf_06_00-34.3.png"
+   "t": 34.1,
+   "file": "keyframes/kf_06_00-34.1.png"
   },
   {
-   "t": 38.23,
-   "file": "keyframes/kf_07_00-38.2.png"
+   "t": 37.13,
+   "file": "keyframes/kf_07_00-37.1.png"
   },
   {
    "t": 46.0,
@@ -121,8 +121,8 @@
    "file": "keyframes/kf_10_00-59.4.png"
   },
   {
-   "t": 63.27,
-   "file": "keyframes/kf_11_01-03.3.png"
+   "t": 64.3,
+   "file": "keyframes/kf_11_01-04.3.png"
   },
   {
    "t": 67.47,
@@ -177,68 +177,68 @@
    "file": "keyframes/kf_24_02-16.1.png"
   },
   {
-   "t": 145.7,
-   "file": "keyframes/kf_25_02-25.7.png"
+   "t": 146.2,
+   "file": "keyframes/kf_25_02-26.2.png"
   },
   {
-   "t": 150.5,
-   "file": "keyframes/kf_26_02-30.5.png"
+   "t": 151.07,
+   "file": "keyframes/kf_26_02-31.1.png"
   },
   {
-   "t": 155.07,
-   "file": "keyframes/kf_27_02-35.1.png"
+   "t": 155.63,
+   "file": "keyframes/kf_27_02-35.6.png"
   },
   {
-   "t": 160.63,
-   "file": "keyframes/kf_28_02-40.6.png"
+   "t": 161.2,
+   "file": "keyframes/kf_28_02-41.2.png"
   },
   {
-   "t": 168.6,
-   "file": "keyframes/kf_29_02-48.6.png"
+   "t": 169.3,
+   "file": "keyframes/kf_29_02-49.3.png"
   },
   {
-   "t": 178.47,
-   "file": "keyframes/kf_30_02-58.5.png"
+   "t": 179.23,
+   "file": "keyframes/kf_30_02-59.2.png"
   },
   {
-   "t": 181.57,
-   "file": "keyframes/kf_31_03-01.6.png"
+   "t": 182.4,
+   "file": "keyframes/kf_31_03-02.4.png"
   },
   {
-   "t": 185.97,
-   "file": "keyframes/kf_32_03-06.0.png"
+   "t": 186.7,
+   "file": "keyframes/kf_32_03-06.7.png"
   },
   {
-   "t": 191.0,
-   "file": "keyframes/kf_33_03-11.0.png"
+   "t": 192.5,
+   "file": "keyframes/kf_33_03-12.5.png"
   },
   {
-   "t": 195.2,
-   "file": "keyframes/kf_34_03-15.2.png"
+   "t": 195.9,
+   "file": "keyframes/kf_34_03-15.9.png"
   },
   {
-   "t": 199.43,
-   "file": "keyframes/kf_35_03-19.4.png"
+   "t": 200.17,
+   "file": "keyframes/kf_35_03-20.2.png"
   },
   {
-   "t": 208.93,
-   "file": "keyframes/kf_36_03-28.9.png"
+   "t": 209.67,
+   "file": "keyframes/kf_36_03-29.7.png"
   },
   {
-   "t": 217.87,
-   "file": "keyframes/kf_37_03-37.9.png"
+   "t": 218.57,
+   "file": "keyframes/kf_37_03-38.6.png"
   },
   {
-   "t": 225.17,
-   "file": "keyframes/kf_38_03-45.2.png"
+   "t": 225.83,
+   "file": "keyframes/kf_38_03-45.8.png"
   },
   {
-   "t": 230.83,
-   "file": "keyframes/kf_39_03-50.8.png"
+   "t": 231.53,
+   "file": "keyframes/kf_39_03-51.5.png"
   },
   {
-   "t": 236.03,
-   "file": "keyframes/kf_40_03-56.0.png"
+   "t": 237.03,
+   "file": "keyframes/kf_40_03-57.0.png"
   }
  ],
  "flags": [],

@@ -1,67 +1,167 @@
 # Round 1 review: substance (science and story editor)
 
-Evidence used: `review/` pack (metrics.json 12:20 is newer than final.mp4 12:19), so no new pack was generated. I read report.md, all 11 contact sheets and keyframes kf_06, kf_08, kf_14, kf_25, kf_37 and kf_39 at full resolution. I also pulled 8 extra full-resolution frames (1:01.0, 1:12.8, 1:35.5, 1:41.5, 1:51.0, 2:17.0, 2:29.5, 2:45.0) and two 4 fps tiles (1:11–1:15 and 2:15.5–2:19). I read the transcript, script.md, facts.md, narration.txt and check_numbers.py. Every number was recomputed independently: the 16 sequences by exact enumeration, and the streak gaps by my own Monte Carlo runs (separate code and seeds from check_numbers.py). Citations were checked against the GVT 1985 PDF (colorado.edu copy) and the Miller & Sanjurjo paper (Wharton copy, JSTOR 44955325).
+Evidence: I used the existing `review/` pack. Its metrics.json (00:31) is newer than final.mp4 (00:29), so I did not generate a new one. I read:
+- report.md and all 11 contact sheets;
+- 13 full-resolution keyframes: kf_03, 07, 12, 16, 19, 22, 24, 28, 32, 33, 35, 38 and 40;
+- 7 extra cropped frames I extracted at 1:43.8–1:47.4 (0.6 s apart) to check the formula build;
+- transcript.txt, narration_diff.txt, script.md, narration.txt, facts.md and check_numbers.py.
+
+All the numbers were recomputed with my own code, separate from check_numbers.py:
+- exact enumeration of the 16 sequences;
+- a separate 100k-sequence Monte Carlo (seed 3) for the n = 100, k = 3 gap.
+
+Citations were checked against the arXiv text of Miller & Sanjurjo (1902.01265, Econometrica 86(6):2019–2047). I extracted it with pdftotext and quoted it directly. The GVT bibliographic data was checked by web search.
 
 ```
 EPISODE: 004 — "The Hidden Bias That Hid the Hot Hand"
-IDEA: Averaging the after-heads share sequence by sequence gives each sequence one vote, and heads-after-heads crowd into few sequences, so even a fair coin reads 17/42 instead of 1/2; the 1985 hot-hand test had the same bias, and measured from the right baseline (−8) Cornell's +4 becomes +12.
-SCORES: Hook 8.5 · Clarity 8 · Visual 8 · Motion 8 · Audio 8 · Concision 8 · Originality 8.5
-WEIGHTED: 8.1   AFTER CEILING: 8.1
-CAPS: Factual/mathematical error (cap 6) → on-screen "1,000 shots: −0.75 (simulated)" and ghost marker plotted at −0.75 @ 2:28–2:34; the expected gap is −0.70 (see FACTS)
-FINAL: 6.0   PASS: no
-FACTS:
-- 4 fair flips → 16 equally likely sequences | Verified | 2^4, enumeration
-- HHTH: checked flips 2 (H) and 3 (T) → "one of the two is heads", 1/2 | Verified | enumeration
-- TTTH, TTTT get no score; 14 rows scored | Verified | enumeration
-- HHHT "checks three flips, two are heads" → 2/3 | Verified | enumeration
-- Table h/n labels (16 rows at 0:57.7) and dot stacks: 0×6, ½×4, ⅔×1, 1×3 | Verified (every row checked in kf_14) | enumeration
-- Mean of 14 row scores = 17/42 = 0.40476 ("about 40.5%", "0.405") | Verified | (3 + 2/3 + 2)/14 = 17/42
-- "Reads cold by nine and a half points" (50 − 40.48 = 9.52) | Verified | arithmetic
-- Pooled: 24 checked flips, 12 H / 12 T → exactly ½ | Verified | enumeration (ΣH = 12, Σn = 24)
-- "Twelve heads crowd into eight rows; twelve tails across eleven" | Verified (8 yellow boxes @ 1:41.5, 11 white boxes @ 1:45) | enumeration
-- Heads hold Σhᵢ/nᵢ = 17/3 of 14 votes = 17/42 | Verified | arithmetic
-- GVT 1985, Cognitive Psychology 17(3):295–314; quote "a powerful and widely shared cognitive illusion" | Verified, quote verbatim | GVT 1985 Discussion (colorado.edu PDF)
-- 26 Cornell players (14 men, 12 women), ~100 shots each ("up to 100") | Verified | Miller & Sanjurjo 2018 §3.1
-- Cornell: .49 after 3 hits vs .45 after 3 misses → +4; GVT read it as no hot hand | Verified | M&S 2018 §3.1 ("players on average hit .49 when on a hit streak, versus .45 when on a miss streak")
-- Random shooter, n = 100, p = .5: expected gap ≈ −8 points | Verified | M&S 2018 ("the expected difference (and the strength of the bias) is -8 percentage points"); my sim −7.90 (40k seqs)
-- "Measured from −8, it's 12 points hot" | Verified | M&S 2018 ("+12 percentage points higher than ... a Bernoulli i.i.d. shooter")
-- Miller & Sanjurjo 2018 · Econometrica 86(6):2019–2047 | Verified | JSTOR 44955325, arXiv 1902.01265
-- "Longer records shrink the bias" | Verified | M&S 2018 abstract
-- "1,000 shots: −0.75 (simulated)" | WRONG (small, but on screen and plotted) | Two independent 10⁶-sequence simulations (n = 1000, k = 3, p = .5, both streak types defined): −0.703 ± 0.006 and −0.708 ± 0.006; a 2×10⁵ run gives −0.689 ± 0.014. The true value is ≈ −0.70. facts.md's −0.75 comes from a 40k-rep run (s.e. 0.03), so it is Monte Carlo noise printed to two decimals and about 7 true s.e. from the target.
-- "A 50% shooter who scores one half here is already running hot" | Defensible only as an average over many 4-shot records; read literally about one row (HHTH, which is on screen), it overclaims | see Fix 7
-MECHANICS: runtime 3:06.3 · wpm 153 (speech time; 149 overall) · max silence 2.07 s (planned prediction hold at 0:12.3) · leading 0.00 s / trailing 1.74 s · max static 3.37 s (2:18.5, planned hold) · −14.0 LUFS / −2.1 dBTP · 0 black frames · WER 0.7%
+IDEA: If you average the share of heads-after-heads row by row, a fair coin reads cold (17/42), because each
+      row gets one vote and checked heads crowd into few rows. The 1985 hot-hand test has the same bias
+      (−8 points for a random shooter), so Cornell's "null" +4 is really +12 hot.
+SCORES: Hook 8.5 · Clarity 8.5 · Visual 8 · Motion 8.5 · Audio 8 · Concision 8 · Originality 8.5
+WEIGHTED: 8.3   AFTER CEILING: 8.3  (lowest 8 → ceiling 10)
+CAPS: none (see the note on 1:44.4–1:45.6 below, which comes closest to the cap-6 trigger)
+FINAL: 8.3   PASS: no
 ```
 
-## Transcript and slop scan
+## FACTS
 
-- §4 banned phrases: 0. Patterns: no "not just X", no rhetorical-question chains (the questions at 0:11 and 2:18 each stand alone and are followed by a hold), no fake colon reveals, no empty superlatives. The ending reframes the cold open and is not a recap list. "One half is what a fair coin does. Seventeen out of forty two is what this test sees." restates, but it earns its place by re-seeing the 0:00 frame.
-- Hook: the commit lands at 0:11.3 ("What do you get?") with a "?" over the 0–1 line, a 2.1 s hold, and then the stake (GVT 1985 + quote) at 0:18–0:27. That is on template.
-- Script vs audio: only "nine and a half" heard as "9.5" and "a hundred" heard as "100", which is harmless. Sanjurjo and Cornell are transcribed correctly, so pronunciation is fine.
-- Deictics land: "This row checks three flips" puts a box on HHHT at 0:49. "This row's three heads" boxes HHHH and its first vote segment at 1:35. "this lone tails" boxes HTTT and its segment at 1:39.
+| Claim | Status | Source / check |
+|---|---|---|
+| 4 flips → 16 equally likely sequences | Verified | 2⁴ |
+| HHTH: the flips after a heads are H, T → 1/2 | Verified | enumeration |
+| HHHT "checks three flips, two of them heads" → 2/3 | Verified | enumeration |
+| Two rows (TTTH, TTTT) get no score; 14 are scored | Verified | enumeration |
+| Score distribution 0×6, ½×4, ⅔×1, 1×3 (dots on the line at 0:59) | Verified | enumeration; the dot stacks match on screen |
+| Average of the 14 scores = 17/42 ≈ 40.5% | Verified | (3 + ⅔ + 2)/14 = 17/42 = 0.40476 |
+| "Reads cold by nine and a half points" | Verified | 50 − 40.48 = 9.52 |
+| 24 checked flips, 12 H / 12 T → exactly half | Verified | Σh = 12, Σn = 24 |
+| "12 heads crowd into eight rows; 12 tails spread across eleven" | Verified | rows with a checked H = 8, rows with a checked T = 11; the boxes at 1:35 and 1:38.7 count 8 and 11 |
+| Heads hold 17/3 of 14 votes = 17/42 | Verified | Σ hᵢ/nᵢ = 17/3 |
+| After a tails, the share of heads averages 25/42 | Verified | enumeration; symmetric with 17/42 |
+| Gap 17/42 − 25/42 = −19 points | Verified | −4/21 = −19.05 (difference of averages, which is what is drawn) |
+| Gilovich, Vallone & Tversky 1985, *Cognitive Psychology* 17:295–314; "a powerful and widely shared cognitive illusion" | Verified | M&S fn. 8 quotes GVT pp. 312–313 verbatim; bibliography confirmed via search |
+| Cornell: 26 players, "up to 100 shots", taken from where they'd hit about half | Verified | M&S §3.1: "26 players … (14) and (12) … at a distance from which … around 50 percent"; Table 2 lists 90, 75 and 50 shots for three men, so "up to" is correct |
+| Random shooter: 46% after 3 hits, 54% after 3 misses (n = 100) | Verified | my Monte Carlo gives 0.460 / 0.539; exact DP gives 0.4603 |
+| "Miller and Sanjurjo's 2018 paper puts the gap at about minus eight points" | Verified | M&S §3.2: "the expected difference … is -8 percentage points"; my MC gives −7.87 ± 0.1 |
+| Longer streaks grow the bias, longer records shrink it | Verified | M&S abstract: the bias "decreases as the sequence gets longer, but increases in streak length" |
+| Ghost ticks at −1.0, −3.1, −8 (n = 100, k = 1, 2, 3) and −0.7 (n = 1000, k = 3) | Verified | exact DP in check_numbers.py, cross-checked; positions only |
+| Cornell 49% after 3 hits, 45% after 3 misses; GVT took the +4 as no hot hand | Verified | M&S §3.1: ".49 … versus .45 … statistically indistinguishable from zero" |
+| "Measured from minus eight, it's twelve points hot" | Verified | M&S §3.2: "+12 percentage points higher than … a Bernoulli i.i.d. shooter" |
+| "Evidence for a hot hand in a gym, not proof it survives defenders" | Verified (fair framing) | GVT designed the experiment to eliminate "defensive pressure" (M&S §3.1); M&S fn. 22 |
+| Miller & Sanjurjo 2018, *Econometrica* 86(6):2019–2047 | Verified | arXiv journal-ref |
+| Landing: "A 50% shooter who averages one half on this test is already running hot" | Verified (relative to the 17/42 baseline) | follows from the 17/42 result |
 
-## Dimension notes (evidence)
+The only mathematically false thing on screen is transient. From **1:44.4 to 1:45.6** (frames extracted at 1:44.4 and 1:45.0), the right column shows **Σᵢ hᵢ/nᵢ = 17/42**, a complete equation with its "=", before the 1/14 arrives at about 1:45.6. Σ hᵢ/nᵢ is 17/3, not 17/42.
+- I am not applying cap 6, for three reasons. It is a mid-build state that lasts about 1.2 s. The narration never asserts it. It resolves on "one vote per row".
+- A viewer who pauses there still sees a false equation, and 3b1b would never let that frame exist. Clarity is docked for it, and it is fix #1.
 
-- **Hook 8.5.** The concrete puzzle is on screen in frame 1 and the viewer commits by 0:12. The ending re-sees the opening (3:02, HHTH with 17/42 vs the dashed guess). Deduction: the first 12 s are pure procedure ("After every heads, check the next flip… Average that share over every possible sequence"), which is abstract on first hearing, and the reason to care arrives only at 0:18.
-- **Clarity 8.** The mechanism is canonical and correct: one vote per row, and checked heads come in crowds. The derivation is concrete first: 16 rows, 14 dots, balance point, then the strip and then the formula. The skipped step is the jump from the 4-flip P(H | H) vs ½ demo to the 100-shot "after 3 hits − after 3 misses" gap (2:04–2:28). The viewer is never told that the same crowding pushes the after-misses rate *up* (E ≈ .54) while the after-hits rate drops (E ≈ .46), which is why the gap is −8 and why 100 shots is "not long". They cannot re-derive −8. The closing line is also ambiguous (Fix 7).
-- **Visual 8.** The semantic palette is consistent: yellow is H, blue is the test, red is the bias, purple is Cornell. Each frame has a clear focal point and charts are labelled. Issues: "cold −9.5 points" is readable for only about 1.5 s and ends about 15 px from the blue 0.405 line (1:12.8–1:14.7). The ghost label at 2:29.5 is centred about 2.3 units right of its marker and is low-contrast grey. The axis title renders the subtraction as an em-dash ("after 3 hits — after 3 misses", 2:19–2:51). The HHHH highlight box top sits at y ≈ 47 px, outside title-safe (1:35.5). In "1/14 Σᵢ" (1:53.9) the 1/14 and i use a heavier white weight than hᵢ/nᵢ.
-- **Motion 8.** Objects persist and transform well: ringed coins fly into 24 tiles, the strip regroups into 14 equal votes, and the yellow parts slide onto 0.405 (1:47). The row scores also fly from the table into the formula (1:51). Deduction: the axis change at 2:16.7–2:17.4 is a crossfade, not the scripted re-scale. For about 0.75 s, old and new tick labels and both axis titles are superimposed ("0.75+10", "share of checked flips that are heads" over "after 3 hits…"), and the blue line cuts through "random shooter" (frame 2:17.0).
-- **Audio 8.** Pace is 153 wpm, loudness is on target, silences are intentional, and deictics are in sync. The synthetic cadence is acceptable. With no audible evidence of a defect beyond normal TTS flatness, this stays at 8.
-- **Concision 8.** 17/42 is spoken four times. Two of those come within 4 s of each other: "heads hold seventeen out of forty two" (1:48) and "Averaging the fourteen row scores gives seventeen out of forty two" (1:52). The 1:50–1:57 pair of sentences re-announces results already shown at 1:03 and 1:16. Otherwise it is tight.
-- **Originality 8.5.** The resized-votes strip, where HHHH's three heads are squeezed into one vote and a lone tails is stretched to a whole one, is a non-obvious picture I have not seen in the NYT or Numberphile treatments. The coin-flip frame is intrinsic to the Miller–Sanjurjo result rather than lazy.
+## MECHANICS
 
-```
-FIXES (highest impact first):
-1. [2:28–2:34][Clarity/correctness] "1,000 shots: −0.75 (simulated)" and its ghost marker are wrong; E[gap] at n = 1000, k = 3, p = .5 is −0.70 (two 10⁶-sequence sims: −0.703, −0.708, s.e. 0.006) → relabel "1,000 shots: about −0.7 (simulated)", move the marker to −0.70, raise reps in check_numbers.py to ≥ 10⁶ and update facts.md row 18. Removes cap 6.
-2. [2:18–2:28][Clarity] −8 appears with no mechanism linking it to the coin demo → after the 1.5 s hold, slide two small blue markers: "after 3 hits" from 50 to 46 and "after 3 misses" from 50 to 54 (M&S / own sim: .460 and .539), and say "The same crowding drags the after-hits score down and pushes the after-misses score up, so the gap opens to about minus eight." Then the gap marker lands on −8. Pay for the ~5 s with Fix 4.
-3. [2:16.6–2:17.5][Motion] Crossfade of the 0–1 axis into the −10…+15 axis superimposes both tick sets and both axis titles, and the blue line crosses "random shooter" → first FadeOut the 0–1 ticks, title and "0.405 random shooter" (0.4 s), then ReplacementTransform the dashed ½ line into the dashed 0 line ("the obvious guess" carries over), then Write the new ticks and title. No frame should show two label sets at once.
-4. [1:50–1:57][Concision] "Averaging the fourteen row scores gives seventeen out of forty two. Pooling the counts first gives one half." repeats 1:48 and 1:16 → replace with one line over the two formula builds: "Score rows first, you get seventeen forty-seconds; pool flips first, you get one half." Or build the formulas silently under the existing 1:48 sentence. Saves about 4 s.
-5. [1:12–1:16][Visual] "cold −9.5 points" finishes writing after it is spoken and dims at about 1:14.7 (readable ≈ 1.5 s, below the 2.0 s needed for 4 words), and its last glyph is about 15 px from the blue 0.405 line → start the Write on "reads cold", hold until 1:16.2, and place the label under the red arrow with buff ≥ 0.2.
-6. [2:28–2:34][Visual] Ghost label is centred about 2.3 units right of its marker and drawn in dim grey (below 4.5:1) → put it directly above the −0.7 marker, left of the dashed 0 line, at ≥ 4.5:1 contrast; or drop the marker and keep only the spoken "longer records shrink the bias".
-7. [3:00–3:05][Clarity] "A fifty percent shooter who scores one half here is already running hot" literally calls one 4-shot row (HHTH, on screen) hot → "A fifty percent shooter whose rows average one half here is already running hot." The arrow animation stays as is.
-8. [0:00–0:12][Hook] The cold open is a procedure with no stakes until 0:18 → make line 4 concrete and visible: "Do it for all sixteen possible sequences and average." Flash the 16-row grid ghosted at 15% behind the "?" so "every possible sequence" points at something. Optionally move "the test that 'proved' the hot hand an illusion" into the 0:12–0:14 hold.
-9. [2:19–2:51][Visual] Axis title "after 3 hits — after 3 misses (points)" shows an em-dash where a minus is meant, and "points" is ambiguous → MathTex "after 3 hits − after 3 misses (percentage points)" with a true minus sign.
-10. [1:35–1:38][Visual] The HHHH highlight box (with arcs) reaches y ≈ 47 px, outside 5% title-safe → shift the 16-row table down 0.1 units or reduce the box buff.
-11. [1:53–2:51][Visual] In "1/14 Σᵢ hᵢ/nᵢ" the 1/14 and the i subscript are in a heavier white weight than the rest → render the whole expression in one MathTex with the series math style, with 1/14 in the neutral ink colour.
-REACHES 9 IF ALL FIXED: yes, narrowly. Fix 1 removes the cap, which leaves 8.1 on the dimension scores. Fix 2 (the after-misses half of the mechanism) is the one that lifts Clarity, the 25-weight dimension, to 9. Fixes 3–6 lift Motion and Visual to about 8.5–9, and Fix 4 lifts Concision to 9. The structure (commit, naive test, measured failure, one picture, real payoff, re-seen open) already matches the template, so no structural change is needed.
-KEEP: (1) the one-vote strip, 1:27–1:49: HHHH's three tiles squeezed into one vote, the lone tails stretched to one, and the yellow sliding exactly onto 0.405. (2) The landing back on the HHTH row with 17/42 vs the dashed "obvious guess" (2:53–3:05). (3) The honest payoff: verbatim GVT quote, real +4 measured from −8 with the +12 brace, and "evidence, not proof".
-```
+runtime 3:15.1 · 154 wpm (speech), 180 excluding all pauses · max silence 2.07 s (the planned prediction hold at 0:11.7–0:13.8) · leading 0.00 s / trailing 0.89 s · max static 3.87 s (0:10.0–0:13.8, the planned hold) · −14.0 LUFS / −2.1 dBTP · 0 black frames · layout audit 0 issues · WER 0.6% · banned phrases 0.
+
+No cap is triggered.
+
+## Transcript and slop audit
+
+- **Banned phrases and patterns:** none found. I grepped narration.txt for the whole §4 list.
+  - There is exactly one question ("What do you get?", 0:11), followed by a 2.1 s hold.
+  - There are no "it turns out" signposts and no superlatives.
+  - "That's evidence for X, not proof Y" is a precise scope limit, not the banned "not just X, it's Y" pattern.
+  - The voice is specific and numeric throughout. Nothing reads as AI-generated.
+- **Mispronunciation risk:** at 2:27.9 Whisper heard "Sanjurjo's" as "**Sanjorjo's**". Per §7.4 this is a likely mispronunciation. Kokoro is probably voicing an English "j" where the Spanish name is "san-HOOR-ho".
+  - The two "a" → "one" substitutions (2:14.3 "a hundred", 2:39.0) are a number-normalisation artefact, not an error.
+- **Hook:** the puzzle is on screen from frame 1, and the question lands at 0:10.8, before 0:15. The first 11 s, though, are three procedural instructions in a row:
+  1. "After each heads, check the next flip."
+  2. "Here, one of the two is heads."
+  3. "Do it for all 16 sequences and average the shares."
+
+  The basketball stakes, the reason to care, wait until 0:17–0:26. The hook works, but it asks the viewer to parse a procedure before giving them a reason to.
+- **Narrative tension:** the arc is classic Stuff Made Here, and it works. The structure: the naive test (0:32) is calibrated on a known-random shooter, fails by a measured 9.5 points (1:01–1:07), and the cause is named and pictured (1:07–1:50). It then generalises via the mirror (1:50–2:07) and pays off with real data at 2:07–3:00. The landing at 3:02 re-sees the cold-open frame and answers its question on its own image. That is exactly the §6 template.
+- **Midway sag:** 1:33.9–1:48 runs at about 180 wpm with no pauses and packs in four ideas:
+  1. heads crowd into 8 rows;
+  2. tails spread across 11;
+  3. the line-up gives 17/42;
+  4. the two formulas.
+
+## Contact-sheet flipbook (sync and continuity)
+
+- **Deictics:** every one lands within ±1 s.
+  - "This row checks three flips" puts a box on HHHT at 0:43.
+  - "Two rows never show a heads" boxes TTTH and TTTT at 0:49.
+  - "This row's three heads" boxes HHHH at 1:29.
+  - "This lone tails" boxes HTTT at 1:33.
+  - "eight rows" brings 8 yellow boxes at 1:35, and "eleven" brings 11 white boxes at 1:38.7.
+  - "flips over one half" starts the mirror turn at 1:55.
+  - "46 and 54" moves the cursors at 2:25–2:27.
+  - "plus four" puts the purple marker in place at 2:51, and "twelve points" brings the brace at 2:53.
+- **Continuity:** excellent. The cold-open row shrinks into its slot in the 16-row table (0:39). Scores become dots, the dots drop onto the line, and a live % marker slides from 50% to 40.5% (0:55–0:59). The ringed coins become pooled tiles (1:11). The tiles regroup into one-vote-per-row segments (1:19–1:21), and the heads parts slide left onto the 40.5% marker (1:41). The strip is copied, recoloured and mirrored (1:51–1:59). The lanes become sliders, and the sliders become a difference axis (2:11–2:33). The cold-open frame returns at 3:03. I saw no hard cut except the payoff→landing fade at 3:01–3:03, which falls on a beat boundary.
+- **Sparse stretch:** 2:11–2:19 is about 8 s of two empty grey lanes with "?" values while the header text builds word by word. It has the lowest information density of the episode, and the only new things on screen are header words.
+- **Landing axis:** the axis still reads "checked flips that are heads" while the narration talks about "a 50% shooter … running hot" (3:08–3:14). The episode relabelled this axis to "checked shots that are hits" at 0:27, so the landing undoes its own coin→shooter mapping.
+
+## Keyframes (§5 check)
+
+- **Margins and overlaps:** clean in all 13 frames I read. The layout audit reports 0 issues, and I found none either.
+- **Palette:** consistent all the way through:
+  - yellow = heads/hit;
+  - grey = tails/miss;
+  - blue = what the test reads;
+  - red = the bias;
+  - purple = real Cornell data.
+
+  The fraction colouring (yellow numerator = heads, blue denominator = checked) is a lovely touch (kf_16, kf_24).
+- **Type size:**
+  - The H/T glyphs inside the 16-row table coins are about 20 px cap height in kf_12 / kf_16 / kf_19. That is under the 24 px floor for ticks. The coin colour carries the same meaning, so this is minor, but it is measurable.
+  - Score fractions (about 40 px), axis ticks, and citations (about 28 px, kf_07, kf_32) are all fine.
+- **Word load:** within limits. At 2:55 (kf_35), eight dimmed items stay in the right column at about 25% opacity. The dimming is legal, but it is residue that adds nothing to the +12 frame.
+- **Landing "hot" arrow** (kf_40): about 80 px long, so the final payoff image is the smallest mark in the frame.
+
+## FIXES (highest impact first)
+
+1. **[1:43.7–1:45.6][Clarity] The equation Σᵢ hᵢ/nᵢ = 17/42 sits on screen for about 1.2 s. It is false, because Σ hᵢ/nᵢ = 17/3.**
+   - Change the build order in the `formula` beat of scene.py so no false equality is ever drawn:
+     1. On "That's", fly the 14 numerators and denominators into Σ hᵢ/nᵢ with no "=" and no 17/42 beside it. Leave 17/42 parked where it is, to the right of the vote strip.
+     2. On "vote per row", fly the 14 ink outlines into 1/14 and attach it.
+     3. Only then `TransformMatchingTex` in "= 17/42", with a ≤ 1 s flash on 17/42.
+   - Removes the closest call to cap 6 and lifts Clarity toward 9.
+2. **[1:33.9–1:49.0][Clarity / Concision] The densest 15 s of the episode run at about 180 wpm, and they also repeat earlier lines.**
+   - What repeats:
+     - "That's one vote per row" restates 1:18 "each row gets one vote".
+     - "Count all the flips together first, and you get one half" restates 1:09–1:16 "Gather all 24 checked flips … exactly half".
+   - Replace both sentences with one line: "Average the rows: seventeen forty-seconds. Add up the flips: one half." Keep both formula builds on those two clauses.
+   - Spend the time saved (about 2 s) as a 0.6 s pause after "seventeen out of forty two" (1:43), and hold the lined-up strip ≥ 2 s before the formulas start.
+   - Cuts the one double explanation (Concision → 9) and gives the key image reading time.
+3. **[2:27.9][Audio] "Sanjurjo's" is heard as "Sanjorjo's", a likely mispronunciation (English "j" for a Spanish "j").**
+   - In narration_text.py, respell it for Kokoro as "Miller and San-hoor-ho's".
+   - Re-run the review kit and confirm Whisper no longer returns "Sanjorjo".
+4. **[0:00–0:12][Hook] The commit prompt arrives only after three procedural sentences, and the reason to care comes 6 s after the question.**
+   - Tighten to two sentences: "Flip a coin four times and score the flips that follow a heads: here, one of two. Average that score over all sixteen sequences: above, below, or exactly one half?"
+   - During the 2 s hold, draw three small tick marks on the axis (below / ½ / above, ink, ≥ 26 px) so the viewer commits to an option, not just to a number.
+   - This lands the commitment by about 0:09 and frees 2 s for the stakes line.
+5. **[2:11–2:19][Visual] About 8 s of empty lanes with "?" values while the header builds. "From where they'd hit about half" is said but not shown with data.**
+   - On "twenty six Cornell players" (about 2:12), drop 26 small purple dots (radius 0.06) onto the 40–60% axis at each player's overall hit rate from M&S Table 2, column 3. That column spans .35–.60 with a mean of .47.
+   - Let the dots cluster around the dashed 50% on "about half", then fade them to 30% before the cursors move.
+   - This turns a text-only stretch into real data and makes "about half" visible. Keep the purple meaning: real Cornell data.
+6. **[3:07–3:15][Visual / Clarity] The landing says "a 50% shooter … running hot" over an axis that reads "checked flips that are heads", undoing the 0:27 coin→shooter mapping. The "hot" arrow is only about 80 px.**
+   - On "A fifty percent shooter" (3:08.3), morph the HHTH letters into hit/hit/miss/hit and the axis title into "checked shots that are hits", reusing the 0:26 transform.
+   - Make the arrow from 17/42 to the shooter dot 1.5× thicker, with "hot" at ≥ 36 px. Extend the final hold from about 0.8 s to 1.5 s, which stays within the 2 s trailing limit.
+7. **[0:39–1:50][Visual] The H/T glyphs in the 16-row table are about 20 px cap height, under the 24 px floor.**
+   - Raise the table-coin letter font so the cap height is ≥ 24 px (MathTex ≥ 26 equivalent). The coin radius of 0.185 has room, because the glyph currently fills under 40% of the disc.
+8. **[2:53–3:00][Visual] The right column ("random / Cornell / after 3 hits / 46% 49% / after 3 misses / 54% 45%") stays dimmed through the +12 frame and the honest-limit line.**
+   - Fade it fully out when the brace lands (2:53). It has done its job, and removing it leaves one focal point: the −8 → +4 brace.
+9. **[2:21.5–2:27][Clarity, nit] "The same crowding pulls those to 46 and 54" jumps from k = 1, n = 4 to k = 3, n = 100 by assertion.**
+   - Optional: add 4 words, "three-hit streaks crowd harder". That foreshadows the ghost ticks at 2:34 and makes the −8 feel derived rather than imported.
+
+**REACHES 9 IF ALL FIXED: yes.**
+- With fixes 1–2, Clarity reaches 9 and Concision 9.
+- Fix 3 brings Audio to 9.
+- Fix 4 brings Hook to 9.
+- Fixes 5–8 bring Visual to 9.
+
+Motion and Originality are already 8.5 and would round up with the cleaner build (fix 1) and the data dots (fix 5). Even at 8.5, the other dimensions at 9 give 8.9, and Motion and Originality need to reach 9 for 9.0.
+
+The structure is right and needs no rebuild: the misconception-first hook, the calibrate-and-fail beat with a measured −9.5, the one-picture insight, the cited payoff, and a landing that answers the cold open on its own frame.
+
+## KEEP
+- The vote strip: each row resized to one equal vote. HHHH's three heads squeeze into one vote, HTTT's lone tails stretches to a whole one, and the heads parts slide left and stop exactly on the 40.5% marker (1:19–1:43). This is the memorable, original image of the episode.
+- The calibration-as-failure beat ("test the test on a shooter we know is random") with a live marker sliding from 50% to 40.5% and a red "−9.5 points" (0:32–1:07). It is the cleanest Stuff Made Here-style fail in the series so far.
+- The mirror flip of the strip about 50% into 25/42, and the conversion of the two lanes into the difference axis (−8 → +4 → +12 brace). The number line carries the whole payoff without a single slide.

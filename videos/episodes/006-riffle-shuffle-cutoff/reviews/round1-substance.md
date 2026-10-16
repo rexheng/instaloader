@@ -1,94 +1,131 @@
-# Round 1 review: substance and story (science editor)
+# Round 1 review: substance and story (science editor), independent pass
 
-Evidence: `review/` pack (metrics.json 13:36 is newer than final.mp4 13:34, so the existing pack was used). I read report.md, all 12 contact sheets and 12 full-resolution keyframes (0:12.0, 0:33.0, 1:05.2, 1:13.1, 1:27.9, 1:46.6, 1:51.9, 2:14.3, 2:30.6, 2:52.4, 3:10.9, 3:24.7). I also extracted extra frames: the d counter at 1:51.2–1:55.0 (it settles on 0.61, matching narration), plus 1:19.4, 2:29.4, 3:28.0, 3:29.6 and 3:30.4. I read script.md, narration.txt, facts.md, sim.py, deck_pick.py and the transcript. Every number was recomputed independently: Eulerian numbers from the closed form, the Bayer–Diaconis Theorem 1 pmf, and a 200k-deck forward GSR Monte Carlo of the top card. Citations were checked by web search, including the 1998 Trefethen draft text.
+Evidence: the existing `review/` pack (metrics.json 00:01 is newer than final.mp4 23:59). I read report.md, all 13 contact sheets and 16 full-resolution keyframes (0:06.6, 0:47.9, 1:04.3, 1:12.1, 1:30.3, 1:37.0, 1:48.2, 2:09.6, 2:19.5, 2:35.7, 2:44.0, 2:56.3, 3:15.7, 3:32.6, 3:51.2, plus 2:41.8, 3:23.0, 3:43.6 and 3:44.4, which I extracted with ffmpeg). I also read script.md, narration.txt, the transcript, facts.md, sim.py and deck_pick.py.
+
+I recomputed every number in my own exact-rational scripts:
+- the Eulerian distribution of R for n = 52, and Bayer–Diaconis Theorem 1 for k = 1…10;
+- the TV distances, means, sds and gaps, and the k = 6 decision set;
+- the top-card law after k riffles, in closed form over the binomial packet boundaries.
+
+I checked the citations by web search and read the Bayer–Diaconis text myself (JSTOR scan, Berkeley copy).
 
 ```
 EPISODE: 006 — "Seven Shuffles: When a Deck Suddenly Becomes Random"
-IDEA: A riffled deck's order is governed entirely by its count of rising sequences; each riffle roughly halves that count's gap to a random deck's while the random bell's spread stays fixed, so the deck stays almost perfectly detectable through four riffles and then drops off a cliff near seven, even though the top card looks random after four.
-SCORES: Hook 8.5 · Clarity 8 · Visual 7.5 · Motion 8 · Audio 8.5 · Concision 8 · Originality 8.5
-WEIGHTED: 8.1   AFTER CEILING: 8.1  (lowest 7.5 + 2 = 9.5, not binding)
+IDEA: A riffled deck's chance depends only on its count of rising sequences. Each riffle roughly halves the gap between that count and a random deck's, while the random deck's spread stays about 2. So the deck stays almost perfectly detectable for four riffles, even though its top card already looks random, and the distance falls off a cliff once the gap shrinks to about one spread, near seven riffles.
+SCORES: Hook 8.5 · Clarity 8 · Visual 8 · Motion 8.5 · Audio 8.5 · Concision 7.5 · Originality 9
+WEIGHTED: 8.3   AFTER CEILING: 8.3  (lowest 7.5 + 2 = 9.5, not binding)
 CAPS: none
-FINAL: 8.1   PASS: no
+FINAL: 8.3   PASS: no
 ```
 
 ## FACTS
 
-All numbers were recomputed independently in a scratch script (exact rationals for Eulerian numbers and Theorem 1; Monte Carlo for the top card).
-
 | Claim | Verdict | Source / check |
 |---|---|---|
-| GSR model: binomial cut near the middle, cards drop in proportion to packet size (0:47) | Verified | Bayer & Diaconis 1992 p.294; Gilbert 1955 / Reeds 1981 as credited there |
-| Top card after 4 riffles: old top card "one time in 15" (0:31) | Verified | exact 6.49% = 1 in 15.4; MC 0.0650. Note: 22 other cards also sit fractionally above 1/52 (max 1.985%), but card 1 carries 96% of the excess, so "only" is a fair simplification |
-| Top-card guesser right "52%" (0:36), meter 52.4% | Verified | TV(top card) = 0.0475 → ½+½·0.0475 = 52.4% |
-| One riffle → 2 rising sequences; 4 riffles → at most 16 (0:53–1:03) | Verified | a-shuffle has ≤ a rising sequences; P(R>16 \| 4 riffles) = 0 exactly |
-| "This deck has 14" (1:05) | Verified (simulated) | seeded GSR deck, R = 2,4,8,14; exact mean 14.10. Not labelled "simulated" on screen |
-| Perfect shuffle averages 26.5 (1:07) | Verified | (n+1)/2; sd √(53/12) = 2.10 |
-| ≤16 sequences "once in 2 million decks" (1:11) | Verified | 4.666e-7 = 1 in 2,143,307 |
-| Wrong "about once in 4 million games"; meter 99.99998% (1:17) | Verified | ½·4.666e-7 = 1 in 4.29 M; 99.999977% |
-| Order's chance depends only on rising sequences (1:25) | Verified | B&D 1992 Thm 1: C(2^k+n−r, n)/2^{kn} |
-| Red area = distance; accuracy = ½+½d (1:39–1:49) | Verified (asserted, not shown) | TV of R-distributions equals full TV since the likelihood ratio is a function of r; Bayes accuracy at 50/50 prior = ½(1+TV) |
-| d = 0.92, 0.61, 0.33 after 5, 6, 7; 0.17 after 8 | Verified | recomputed 0.9237, 0.6135, 0.3341, 0.1672; B&D Table 1 |
-| Gap 12, 7, 3.5, under 2 ("about half each time") | Verified | 12.401, 6.895, 3.552, 1.790 (ratios 0.56, 0.52, 0.50). On-screen "÷2" is stated as exact, but it is approximate |
-| Bell spread "near two"; "2.1" | Verified | 2.1016 |
-| Gap ≈ 230/2^k | Verified as large-k limit | gap·2^k = 198, 221, 227, 229, 229.6 → n(n+1)/12 = 229.67. At k=4 the formula gives 14.4 vs the actual 12.4 |
-| 2^k ≈ 110 → "just under seven" | Verified | 229.67/2.10 = 109.3; log2 = 6.77 |
-| Gap ~ n², spread ~ √n → cliff ~ (3/2)log2 n; on screen "k ≈ (3/2)log2 n − 1.8" | Verified | n²/(12·2^k) = √(n/12) → k = 1.5 log2 n − log2 √12 = 1.5 log2 n − 1.79; n=52 → 6.76 |
-| "Bayer and Diaconis proved it in 1992" (2:36) | Verified, attribution incomplete | Ann. Appl. Probab. 2(2):294–313, doi:10.1214/aoap/1177005705 ("(3/2)log2 n + θ shuffles are necessary and sufficient"). Aldous (1983) had already shown the (3/2)log2 n asymptotics, and the Trefethens' own abstract calls it "a celebrated theorem of Aldous, Bayer and Diaconis". The "−1.8" on screen beside the B&D citation is the episode's heuristic, not B&D's constant (theirs puts d = ½ near 1.5 log2 n − 2.2) |
-| 7 is first count with d < ½ (2:40) | Verified | 0.614 → 0.334 |
-| Trefethen & Trefethen measured information, "no cliff", "five or six shuffles doing a reasonable job" | Verified | Proc. R. Soc. Lond. A 456:2561–2568 (2000). 1998 draft text: "there is no cutoff"; "3.52% of the information remains after five shuffles and 0.92% after six"; Science News (Peterson 2003): "five shuffles would do a reasonable job … six would make it practically certain" |
-| Many Markov chains show the same cliff | Verified | Diaconis 1996, PNAS 93(4):1659–1664: chains "often" show a sharp cutoff (and the drunkard's walk does not, which matches "many") |
-| Top-card-only distance 0.71, 0.37, 0.12, 0.05 (3:07 curve) | Verified | exact 0.708, 0.371, 0.124, 0.048 |
-| Landing meter 96.2 → 80.7 → 66.7 → 58.4 → 54.3 → 52.1% | Verified | ½(1+TV_k) |
-| "Right only two times in three" after 7 | Verified | 66.70% |
-| "Fooling someone who counts sequences that well takes ten" | Verified | 52.15% after 10 vs 52.4% top-card after 4 (9 riffles = 54.3%) |
+| GSR model: "cuts near the middle, then drops cards from each half in proportion to its size" (0:47) | Verified | Bayer & Diaconis 1992, p. 294: binomial cut; "cards drop from the left or right heaps with probability proportional to the number of cards in each heap"; model credited to Gilbert and Shannon (Gilbert 1955) and to Reeds (1981) |
+| Top card after 4 riffles: "almost flat", old top card "one time in 15", label "1 in 15" (0:31–0:37) | Verified | exact P(card 1) = 6.49 % = 1 in 15.4. The rest of the histogram matches the plot: card 2 = 0.84 %, cards 51–52 = 0.84 % and 0.24 %, max other 1.985 %. Card 1 carries 96 % of the excess |
+| "Judging by the top card, you'd be right 52 %"; ghost "top card 52.4 %" (0:38) | Verified | TV = 0.0475 → ½ + ½·TV = 52.37 % |
+| One riffle leaves two rising sequences; a riffle at most doubles them; ≤ 2^k; "this deck has 14" (0:53–1:16) | Verified | The argument "the cut crosses each level once" is correct: each sequence is a prefix in one packet plus a suffix in the other. P(R > 16 after 4 riffles) = 0 exactly. The example deck is labelled simulated |
+| Perfect shuffle "averages 26.5"; "16 or fewer once in 2 million"; "≤ 16: 1 in 2.1 million" (1:17) | Verified | (n+1)/2 = 26.5; P_U(R ≤ 16) = 4.666e-7 = 1 in 2,143,307 |
+| "Wrong about once in 4 million games"; meter 99.99998 % (1:24–1:30) | Verified | ½ · 4.666e-7 = 1 in 4.29 M; accuracy 99.999977 % |
+| Same count → equally likely (Bayer & Diaconis); "chance 3.5 × 10⁻⁶⁰", "1.2 × 10⁻⁶⁸" (1:35–1:41) | Verified | Thm 1: C(2^m + n − r, n)/2^{mn} = C(54,52)/2^208 = 3.479e-60; 1/52! = 1.240e-68 |
+| Red area (purple above blue) = distance from random; "right now it's one" (1:48–1:53) | Verified | r is sufficient, so the TV of the r-laws equals the TV of the deck = 1 − 4.7e-7 |
+| d = .92, .61, .33 after 5, 6, 7; .17 after 8 (1:58–2:35) | Verified | exact 0.9237, 0.6135, 0.3341, 0.1672 = B&D Table 1 |
+| k = 6: "catch 78 % … flag 17 %"; accuracy = ½ + ½ × difference; on screen ½(0.78) + ½(1 − 0.17) (2:03–2:16) | Verified | A = {r ≤ 24}: P(A) = 0.7824, U(A) = 0.1688, difference = 0.6135 = d. The spoken apposition is ambiguous (see fix 3) |
+| Gap 12.4 → 6.89 → 3.55 → 1.79, "roughly halved"; spread "about two", "spread 2.1" (2:19–2:26) | Verified | exact gaps 12.401, 6.895, 3.552, 1.790; sd_U = √(53/12) = 2.1016; purple sd 1.08 → 2.08. B&D p. 296 also says d "begins to decrease sharply by factors of 2 each time" |
+| "5.9 spreads", "0.85 spreads"; once the gap is about one spread "the distance halves too" (2:27–2:36) | Verified | gap/sd = 5.90, 3.28, 1.69, 0.852, 0.427; d = 1, .92, .61, .33, .17, .085. A normal mean shift δ gives TV = 2Φ(δ/2) − 1, which is linear in small δ, so d halves as the gap halves |
+| "Gap × 2^k levels off near 230"; row 198 → 220 → 227 → 229 → 230 (2:37) | Verified | exact 198.4, 220.6, 227.3, 229.1 → n(n+1)/12 = 229.67 |
+| "2^k about 110: just under seven"; k ≈ 6.8 (2:43–2:47) | Verified | 229.67/2.1016 = 109.3; log₂ = 6.77 |
+| Gap ∼ n², spread ∼ √n, "cliff near three halves log base two of n"; k ≈ (3/2)log₂n − 1.8 "(gap = spread rule)" (2:49–3:01) | Verified | gap ≈ n(n+1)/(12·2^k), sd = √((n+1)/12) → k ≈ (3/2)log₂n − log₂√12 = (3/2)log₂n − 1.79. This heuristic is the exact mechanism behind B&D Theorem 2: δ/2 = 2^{−c}/(4√3) reproduces their limit 1 − 2Φ(−2^{−c}/(4√3)). The −1.8 is correctly tagged as the episode's own rule |
+| "Aldous, then Bayer and Diaconis, proved it: for 52 cards, seven riffles is the first count that brings the distance below a half" (3:01–3:11) | **Imprecise attribution** | 7 is from B&D's exact Table 1 (0.614 → 0.334). Aldous 1983 (Sém. Probab. XVII, LNM 986, 243–297) proved only an asymptotic result; B&D p. 296: "A partial version of Theorem 2 has been proved by very different arguments in Aldous (1983)". Aldous did not prove the 52-card statement that follows the colon. Not a fabrication, and Aldous does deserve credit for the (3/2)log₂n asymptotics (the Trefethens' abstract says "theorem of Aldous, Bayer and Diaconis"). Fix 4 |
+| Trefethen & Trefethen 2000, Proc. R. Soc. A: "measured information instead: no cliff, and five or six shuffles do a reasonable job" (3:11–3:22) | Verified | 456:2561–2568. Abstract: with an entropy measure "there is no cutoff"; about log₂n (5.7 for n = 52) shuffles bring the information close to 0. Science News (Peterson): "five shuffles would do a reasonable job … six would make it practically certain" |
+| "Many Markov chains share this cliff" — Diaconis 1996 · PNAS (3:22) | Verified | PNAS 93(4):1659–1664. Cutoffs are proven for shuffles and the Ehrenfest urn; the drunkard's walk has none, so "many" is right |
+| Top-card-only distance curve 0.71, 0.37, 0.12, 0.05 … vs whole deck (3:27–3:33) | Verified | exact top-card TV for k = 1…4: 0.708, 0.371, 0.124, 0.048. It is the episode's own computation, but it sits next to the "Diaconis, 1996" citation (fix 8) |
+| Landing: "two times in three" after 7; meter 96.2 → 80.7 → 66.7 → 58.4 → 54.3 → 52.1 %; "fooling someone who counts sequences that well takes ten" (3:40–3:52) | Verified | ½(1 + d_k): 96.19, 80.68, 66.70, 58.36, 54.27, 52.15 %. 52.15 % at k = 10 is the first value ≤ 52.37 % |
 
-No wrong, fabricated or uncited empirical claim found. This is the cleanest fact sheet I have checked in this series.
+No wrong numbers and no fabricated sources. This is unusually clean work.
 
 ## MECHANICS
 
-runtime 3:31.7 · 157 wpm (speech time; 544 words) · max internal silence 1.98 s (0:09.7–0:11.7, the planned prediction hold) · max static 3.27 s (2:54.8) · −14.0 LUFS / −2.1 dBTP · leading 0.00 s / trailing 1.82 s · WER 1.5% · banned phrases 0 · banned patterns 0. Only one question is asked; the signposts are "So everything fits in one chart" and "That's the cliff" (both acceptable).
+runtime 3:53.9 · 155 wpm on speech time (573 words) · max internal silence 1.98 s (0:13.2 planned commit hold; 1:56.9 planned prediction hold) · leading 0.00 s / trailing 1.89 s · max static 3.23 s (2:41.6) · −14.0 LUFS / −1.9 dBTP · 0 black frames · WER 1.4 %. The only transcript mismatches are homophones ("too/two", "blue's/blues") and "Aldous" heard as "all does", which is the correct pronunciation. No mechanical cap triggers, but the runtime is 6 s from the 4:00 cap and 54 s over the §6 template.
 
-No mechanical caps triggered.
+## TRANSCRIPT / SLOP SCAN
 
-## Narrative read (story editor)
+- No §4 banned phrases.
+- No question chains: the only questions are 0:06 (followed by "Pick fifty…", which is an instruction) and 1:54.
+- No "it turns out", no "not just X", no fake-reveal colons.
+- "Four riffles look like plenty" (0:42) is the single dry line, and it works.
+- Hook: two decks are on screen from frame 1, the question comes at 0:06–0:10, and the viewer commits at 0:10–0:15 (the "?" hops 50 → 75 → 100, then a 2.0 s hold). That lands inside the 15 s rule and just misses the 12 s "9" anchor.
 
-- **Hook (0:00–0:11): strong.** The first frame is the sorted deck. Heads/tails is a real decision game, and the viewer commits on a 50–100% meter with a "?" and a 2.0 s hold. The top-card beat then *confirms* the viewer's likely wrong belief: 52%, "Four riffles look like plenty". The reversal to 99.99998% at 1:19 is a Veritasium-grade misconception break.
-- **Stakes (0:11–0:19): the weakest sentence in the script.** "Casinos and simulations both need to know how many riffles it takes" is wrong for simulations: simulations never riffle. The link to Markov chains does not arrive until 2:58, so a first-time viewer hears a non sequitur here.
-- **Sag at 1:56–2:36.** Ten numbers and three scaling laws arrive in 40 s (12, 7, 3.5, 2, 2, 230, 2^k, 110, 7, n², √n, 3/2 log2 n). Each is correct, but the viewer is handed them rather than seeing them. The constant 230 is never shown to come from the gap row (12.4·16 = 198, which is *not* 230). n²/12 and √(n/12) at 2:27–2:33 are announced, not derived.
-- **"accuracy = ½ + ½d" (1:47) is asserted.** It is the single bridge between the opening game and the distance curve, and it gets no picture (guess "riffled" wherever purple > blue: you win ½·P(A) + ½·(1−U(A)) = ½ + ½d).
-- **Honest limit: excellent.** "Seven belongs to this yardstick" plus the Trefethen counterpoint is exactly the BAR §2 "honest limits" move.
-- **Payoff is thin.** The data-science consequence ("one statistic can settle long before the whole chain does") gets a single sentence at 3:06–3:11 over the gray top-card curve, with no concrete MCMC instance such as a trace plot or a single-parameter R-hat. It is correct but abstract.
-- **Landing works.** It returns to the meter, and the final line reframes the cold open, with the 10-riffle needle landing on the 52.4% top-card ghost. But riffles 8–10 run in about 2.5 s (3:27.5–3:30.0), and the needle-on-ghost coincidence is on screen for about 1 s before the end card fades over it (3:30.4 frame).
+## WHAT IS GENUINELY STRONG
 
-## Visual and motion notes (scored, not my main remit)
+The structure is the best part of the episode.
+- The naive detector (the top card) "succeeds" in calling the deck random. That success is the failure, and its size is measured: 52.4 % on a live meter.
+- The level view at 1:02–1:16 turns "rising sequences" from a definition into a picture. Bar height becomes sequence index, the cut line crosses each level once, and the ceiling ≤ 2^k rises with each riffle. A first-time viewer can see why the count at most doubles.
+- The gap-vs-spread mechanism (2:19–2:36, with spread-long hops along the gap) is not hand-waving. It is the actual asymptotic mechanism of Bayer–Diaconis Theorem 2, which I checked.
+- The landing replays the cold-open meter and resolves it exactly: 99.99998 → 66.7 → 52.1 %, against the 52.4 % ghost. The last line, "Four riffles fool someone watching the top card. Fooling someone who counts sequences that well takes ten", reframes the opening.
 
-- **1:05–1:33 and 3:13–3:30: the rising-sequence traces are a tangle.** At 1:13.1 both decks show a mesh of near-horizontal yellow lines, and "14" vs "26" can only be read from the numerals, not from the picture. This is the episode's central object, and it is not readable as a shape.
-- **1:35–2:27: the citation shares a baseline with the axis title.** "Bayer & Diaconis, 1992 · Ann. Appl. Probab." ends about 24 px before "rising sequences" on the same baseline (kf 1:51.9, 2:14.3), so it reads as one line.
-- **Gray text contrast is low.** GRAY #8B939E on BG #14161B is 5.8:1, under the §5 7:1 text minimum. It is used for primary labels ("rising sequences", "card number", "chance", "information yardstick").
-- **2:03 onward: "÷2" over each arrow is stated as exact.** The actual ratios are 0.56, 0.52 and 0.50.
-- **Transient ghost overlaps.** Duplicate gap-row text at 2:19, doubled "spread 2.1" at 2:21 and doubled "2^k ≈ 230/" at 2:29 are visible for under 1 s. Not capped, but they look sloppy at full resolution.
-- **Motion strengths.** The top card flies from the deck into its histogram bar. The 14/26 counters fly to the rising-sequence axis. The purple histogram slides through k while d counts down live. Equation terms come by TransformFromCopy from the gap row and the spread bracket. These are good.
+## WHY IT IS NOT A 9 (evidence)
+
+1. **The insight section is overloaded, and the prediction payoff is interrupted.** From 1:35 to 3:01 (86 s) the viewer gets:
+   - the B–D theorem;
+   - the pile-up into histograms;
+   - TV as the red area;
+   - a prediction;
+   - three d values;
+   - an accuracy derivation (two equation lines);
+   - the halving gap;
+   - the spread;
+   - hops;
+   - a ×2^k row;
+   - `gap ≈ 230/2^k = 2.1` → `2^k ≈ 110` → `k ≈ 6.8`;
+   - `52·53/12 / √(53/12)`, then the n-generalisation, then `(3/2)log₂n − 1.8`.
+
+   The prediction "How many more riffles to bring it below a half?" (1:54) is answered at 1:59 (.92) and 2:02 (.61). Then a 14 s accuracy detour (2:03–2:16) intervenes before the decisive ".33" at 2:17. The tension peak is spent on bookkeeping. The 2:36–3:01 algebra stacks three equation states in about 25 s (2:43, 2:47, 2:51, 2:55, 2:59 per the contact sheets). That breaks §5 "one new equation per 5 s" in spirit, and nobody re-derives (3/2)log₂n after one watch. This drives the Clarity 8 and the Concision 7.5.
+2. **Concision.** At 3:54 the runtime is near the ceiling. About 10 % is compressible without losing the idea: the 230 → 110 → 6.8 → n-scaling chain (2:37–3:01) and the narrated walk-through of the accuracy formula. Each of those beats is correct but carries a second derivation.
+3. **Ambiguous sentence at 2:13:** "Accuracy is a half plus half the difference: the red area." Heard aloud, the appositive can attach to "accuracy". The on-screen line ends at `½ + ½ d`, but the spoken sentence invites the wrong reading.
+4. **Attribution at 3:01** (see FACTS): the colon pins the 52-card "seven" on Aldous.
+5. **Jargon on screen:**
+   - "one simulated deck (GSR model)" (1:17, 1:19–1:31, 3:35–3:53): "GSR" is never expanded or spoken.
+   - "spread" is never said to be the standard deviation. The bracket goes from the centre to 1 sd (kf 2:35.7), so a viewer can easily read "spread 2.1" as the full width.
+6. **Word load at 1:19–1:35** (kf 1:30.3) is about 20 prose words on screen at once, against the §5 limit of 12:
+   - "4 riffles", "14 rising sequences", "perfect shuffle", "26 average 26.5";
+   - "one simulated deck (GSR model)", "≤ 16: 1 in 2.1 million";
+   - "coin flip", "always right", "top card 52.4 %", and the Gilbert/Reeds citation.
+
+   On top of that, the faint yellow traces across the 26-level deck (kf 1:37.0) form a hatch with no focal point.
+7. **Citation crossfade overlap at 3:23.0** (extracted frame): "Diaconis, 1996 · PNAS" fades in over "Trefethen & Trefethen, 2000 · Proc. R. Soc. A" in the same spot, and for a few frames the two read as garbled overlapping text. Transitional, so not capped, but visible.
+8. **Stakes line (0:15–0:24):** "Any simulation that mixes by random steps faces this question" is abstract at second 15. The viewer has no picture of such a simulation until 3:22, and the visual is only a dashed diagonal over the deck (0:23). The stakes are correct but weak next to a 3b1b-style "why you should care".
 
 ## FIXES (highest impact first)
 
-1. **[1:05–1:33, 3:13–3:30][Visual/Clarity] The rising-sequence traces cannot be read as 14 vs 26.** Redraw each rising sequence as its own horizontal row. Keep the bar positions, but lift every card's bar top onto a y-level equal to its sequence index (a "staircase" view), or tint each sequence with alternating light/dark yellow and thicken its line to 4 px. The 4-riffle deck then shows 14 long rows and the perfect deck 26 short ones, and the contrast is visible before the numerals appear. Optionally animate one riffle splitting a row into two (0:59 "can split each sequence in two") so the doubling is seen.
-2. **[1:44–1:49][Clarity] "accuracy = ½ + ½d" is announced.** Before writing it, show the rule. Tint the bins where purple > blue with a bracket "guess: riffled", and the rest "guess: perfect". Show the two win rates as two short red/blue bars, then TransformFromCopy those into ½·P + ½·(1−U) → ½ + ½d. Add about 6 s of narration: "Say 'riffled' wherever purple is higher. You win half of the riffled games plus half of the perfect ones, which comes to a half plus half the red area."
-3. **[2:15–2:36][Clarity] 230, n²/12 and √(n/12) arrive from nowhere.** (a) Show gap×2^k as a live product under the gap row: 198 → 221 → 227 → 229 → 230, so "230" visibly emerges from the data. (b) Give one sentence of why for each scaling: "the spread is a sum of 51 nearly independent up-or-down steps, so it grows like root n", and "230 is 52 times 53 over 12, so it grows like n squared" (write `230 = 52·53/12` on screen). Otherwise the payoff formula is a stated fact, not a derivation.
-4. **[0:11–0:19][Hook/Clarity] The stakes line says simulations need riffles.** Replace it with: "Card rooms need the answer, and so does every simulation that shuffles by random steps: when is 'mixed' actually mixed?" Or cut "and simulations" and set up the Markov-chain payoff with a single word at 2:58 instead.
-5. **[2:58–3:11][Clarity/Hook] The data-science payoff is one abstract sentence.** Make it concrete. Show a tiny MCMC trace for one statistic flattening early while a second statistic is still drifting (labelled "simulated"), or name the practice: "a sampler judged by one parameter's trace plot can look converged long before the joint distribution is". Keep the Diaconis 1996 citation, and add Assaf, Diaconis & Soundararajan 2011 (Ann. Appl. Probab.) if you state that partial statistics mix in about log2 n.
-6. **[2:32–2:46][Clarity/Correctness] Attribution and constant.** Change the on-screen citation at 2:36 to "Aldous 1983; Bayer & Diaconis 1992 · Ann. Appl. Probab." and the narration to "Aldous, then Bayer and Diaconis, proved it". Add a gray "(our heuristic)" tag after "− 1.8", or move the B&D citation to the "(3/2)log₂ n" term only, so the −1.8 is not read as theirs.
-7. **[3:27–3:31][Motion/Hook] The landing payoff is rushed and buried.** Give riffles 8–10 at least 0.8 s each. Hold the needle-on-ghost frame (52.1% under the 52.4% "top card" label) for 1.5 s with the ghost tick flashing once, and only then fade in the end card. Trim 1.5 s elsewhere to keep the runtime (for example "Start again from order." at 0:46, or "So everything fits in one chart." at 1:33).
-8. **[1:49][Hook] The insight beat has no prediction pause.** After "d = 1.00", ask once, "How many more riffles to bring this below a half?", and hold 1.5 s on the empty distance plot before the fifth riffle. This re-commits the viewer to the title's "seven".
-9. **[1:35–2:27][Visual] The citation runs into the axis title.** Move the citation to y = −3.0 at the left edge, below the axis-label row, or move "rising sequences" up 0.3 units under the axis, keeping ≥ 0.3 units between them.
-10. **[2:03–2:27][Visual/Correctness] "÷2" is stated as exact.** Write "≈÷2" (or "×0.56, ×0.52, ×0.50"), matching the narration's "about half each time".
-11. **[1:05][Correctness/§5] The example deck is a simulated draw but is not labelled.** Add a small gray tag "one simulated GSR deck" under the 4-riffle deck at 1:05, and again at 3:13.
-12. **[whole episode][Visual] Gray labels are under the 7:1 text contrast.** Lighten GRAY for text labels to about #A3AAB4, which is ≈ 7.5:1 on #14161B. Keep the current gray for axes and ticks.
-13. **[2:19, 2:21, 2:29][Visual] Ghost duplicates show during the transforms.** Fade the source copies to 0 within the same `play`, or use `ReplacementTransform`, so that no doubled text survives a frame.
-14. **[2:03–2:05][Clarity] "The bell's spread stays near two" is trivially true.** The blue bell never changes. Say instead "and the riffled histogram's width settles to the same two", which is the claim the argument needs (1.08 → 1.77 → 2.01 → 2.08).
+1. **[1:54–2:17][Hook/Clarity] The accuracy detour splits the prediction from its answer.**
+   - Move the accuracy derivation to right after "Right now it's one" (about 1:53), done at k = 4, where it is trivial (P(A) = 1, U(A) ≈ 0 → accuracy ½ + ½·1). Or generalise it once with the zone shading, and tie it to the meter that the viewer already knows.
+   - Then ask "How many more riffles to bring it below a half?", hold 1.5 s, and run 5 → 6 → 7 contiguously (".92 … .61 … .33") with no interruption, so the d = ½ line is crossed at the climax.
+   - This restores the tension arc and removes the need for the second explanation at 2:03–2:16.
+2. **[2:37–3:01][Concision/Clarity] Too many equation states.**
+   - Collapse the 230 → 110 → 6.8 → n-scaling chain into one transform. Keep the row "gap × 2^k ≈ 230" and go straight to the dashed line at k ≈ 6.8 with one sentence: "Halve 230 until it's about 2: that takes just under seven."
+   - Replace the `52·53/12 / √(53/12)` intermediate with a single `TransformMatchingTex` to `2^k ≈ n²/√n = n^{3/2}` → `k ≈ (3/2) log₂ n`, and keep "(gap = spread rule)".
+   - Target: cut 10–12 s, so the runtime is about 3:40 or less, and no more than one new equation per 5 s.
+3. **[2:13][Clarity] Fix the ambiguous apposition.** Change the narration to: "Accuracy is a half, plus half the difference — and the difference is the red area." Flash the red area exactly on "red area" (it currently flashes on "a half plus").
+4. **[3:01–3:11][Clarity/correctness] Fix the attribution.** Change to: "Aldous proved the cliff sits near three halves log n. Bayer and Diaconis computed it exactly: for fifty-two cards, seven riffles is the first count below a half." Show the Aldous citation on the first clause and B&D on the second. The current line credits Aldous with the 52-card table, which B&D themselves call only a "partial version" of their Theorem 2.
+5. **[1:17–1:31, 3:35–3:53][Visual/Clarity] Undefined "GSR" label.** Replace "one simulated deck (GSR model)" with "one simulated deck" and move "Gilbert–Shannon–Reeds model" into the citation line at 0:49 (which also restores Shannon, credited by B&D alongside Gilbert).
+6. **[2:22–2:26][Clarity] "Spread" is undefined.** Label the bracket "spread (1 sd) 2.1", or say "…settled to blue's: one standard deviation, about two".
+7. **[1:19–1:35][Visual] Word load and trace clutter (kf 1:30.3, 1:37.0).**
+   - Drop "average 26.5" once it has been spoken (keep 26).
+   - Dim the citation and the "top card 52.4 %" ghost to 25 % during this beat.
+   - Fade the level traces on the perfect deck to 15 % opacity and keep only the caps, so the "14 vs 26 height" comparison is the single focal point.
+   - Target: no more than 12 prose words on screen.
+8. **[3:22–3:33][Clarity/sourcing] The top-card curve can be misread as Diaconis 1996's data.** Add a grey "computed (GSR model)" tag beside "top card only", so it is not read as coming from the citation next to it.
+9. **[3:22.8–3:23.4][Visual] Crossfading citations overlap.** FadeOut "Trefethen & Trefethen, 2000" fully (0.4 s) before "Diaconis, 1996 · PNAS" fades in, or place the new citation one line higher.
+10. **[0:15–0:24][Hook] Abstract stakes line.** Make it concrete in the same time. For example: "A computer that explores possibilities by random steps (a Monte Carlo sampler) has this problem too: stop too early and its answer still remembers where it started." Over it, show the sorted deck's dashed profile ghosting through the riffled deck, as now.
 
-REACHES 9 IF ALL FIXED: yes, narrowly. There is no structural problem: hook, misconception, measured fail, one-chart insight, honest limit and landing are all present, and every number is correct. The gap to 9 is (a) the central visual (the trace tangle, fix 1) and (b) two asserted bridges (accuracy formula and scaling constants, fixes 2–3). Polish fixes alone (6–14) would not get there.
+**REACHES 9 IF ALL FIXED: yes.**
+- The facts are clean and the narrative skeleton is right (misconception → measured naive success-as-failure → one picture → mechanism → honest limit with Trefethen → MCMC consequence → landing that reframes the opening).
+- What holds it below 9 is pacing and density in the insight section, not structure. Fixes 1–2 are the big ones: they should lift Clarity to 9, Concision to 8.5–9 and Hook to 9. Fixes 3–9 clear the remaining Clarity and Visual nitpicks.
+- Without fixes 1 and 2, polish alone will not get past about 8.6.
 
-KEEP:
-- The heads/tails detection game with the 50–100% accuracy meter and the gray "top card 52.4%" ghost. It turns total-variation distance into a stake the viewer feels, and the 10-riffle needle landing on the ghost is the right closing image.
-- The top-card misconception beat (52%, "Four riffles look like plenty") followed by the 99.99998% reversal at 1:19.
-- "Seven belongs to this yardstick" plus the Trefethen counterpoint. The honest limit is sourced correctly, so keep the citation exactly as is.
+**KEEP**
+1. The top-card "success" as the naive failure, measured on the live meter (52.4 % ghost), and the landing that drives the needle down to 52.1 % against that ghost on "takes ten".
+2. The level view with the cut line crossing each level once and the rising ≤ 2^k ceiling (1:02–1:16), which is the clearest picture of rising sequences I have seen.
+3. The gap-vs-spread hops (5.9 spreads → 0.85 spreads) explaining the cliff, plus the honest Trefethen "this yardstick" caveat.

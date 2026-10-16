@@ -1,64 +1,119 @@
-# Round 1 review: craft critic (visual design, motion, A/V sync)
+# Round 1 review: craft (visual design, motion, A/V sync)
 
-Evidence: `review/` pack (metrics.json 10:13 is newer than final.mp4 10:11, so the existing pack was used). I read report.md, all 11 contact sheets, 12 full-resolution keyframes (kf_02, 04, 07, 09, 13, 16, 20, 25, 31, 35, 36, 40), and 25 extra frames I pulled with ffmpeg at 0:15.0, 0:18.0, 0:46.6, 0:47.0, 1:08.4, 1:08.8, 1:09.2, 1:09.6, 1:50.6, 1:51.0, 1:51.5, 2:06.4, 2:07.0, 2:07.6, 2:08.4, 2:08.8, 2:09.2, 2:17.0, 2:17.8, 2:18.6, 2:20.0, 2:53.6, 3:00.6, 3:01.6, 3:10.6 to 3:11.8. I also re-ran `sim.py`, measured the audio RMS from 2:53.8 to 2:55.2, and checked Jaynes 1973 against the author's PDF (bayes.wustl.edu/etj/articles/well.pdf).
+Evidence: `review/` pack (metrics.json 23:40, newer than final.mp4 23:38). I read report.md, all 13 contact sheets, the transcript, script.md, facts.md and narration.txt. Full-resolution keyframes checked: 0:13.9, 0:36.5, 0:49.3, 1:13.8, 1:15.3, 1:25.1, 1:44.5, 2:04.7, 2:20.2, 2:28.4, 2:43.5, 2:54.0, 3:03.6, 3:15.9, 3:29.0, 3:31.7, 3:42.5, 3:51.3. I also pulled extra frames into /tmp/ep1r1 at 0:00.3, 0:51.0, 1:20.8, 1:57.0, 2:17.0, 2:42.0, 2:47.2, 3:18.0, 3:49.4. I re-ran the invariance test as an independent 2M-line Monte Carlo (/tmp/ep1r1/mc.py).
 
 ```
 EPISODE: 001 — "Three Right Answers to One Probability Question"
-IDEA: "Pick a chord at random" has no answer until you say what is spread evenly; the three classic recipes give 1/3, 1/2 and 1/4 because each one scatters chord midpoints differently around the one small circle (the triangle's incircle) that decides "long".
-SCORES: Hook 8.5 · Clarity 8 · Visual 8 · Motion 8 · Audio 8.5 · Concision 8.5 · Originality 8
-WEIGHTED: 8.2   AFTER CEILING: 8.2   (lowest 8, ceiling 10)
-CAPS: none. Every transient overlap I found lasts ≤ 1 s mid-transform, so the overlap cap doesn't apply, but they are scored under Visual/Motion. Both empirical claims carry on-screen citations. No factual errors.
-FINAL: 8.2   PASS: no
-FACTS:
-  Side of inscribed equilateral triangle = r√3; chord at midpoint distance r/2 equals it | Verified | sim.py: side 1.7320508 = chord at d=1/2
-  Long ⇔ midpoint inside the incircle (radius r/2) | Verified | 2√(r²−d²) > r√3 ⇔ d < r/2; sim.py same_as_long=True for all 3 recipes
-  Endpoints recipe: 120°/360° = 1/3; sim 0.334 | Verified | sim.py 0.3343
-  Radial recipe: (r/2)/r = 1/2; sim 0.498 | Verified | sim.py 0.4976
-  Midpoint recipe: π(r/2)²/πr² = 1/4; sim 0.248 | Verified | sim.py 0.2482
-  "Each tally is good to about one percentage point" | Verified | 95% half-widths 0.92/0.98/0.85 pts
-  "They disagree by twenty-five" / brace "0.25" | Verified (number) but the spoken unit is missing | 0.4976−0.2482 = 0.249
-  Radius recipe crowds midpoints toward the centre (equal counts per equal-width ring, smaller inner area) | Verified | facts.md G7; histogram bands ≈0.10 each
-  Endpoint recipe piles midpoints at the rim | Verified | last band 0.284
-  Bertrand 1889, Calcul des probabilités; « Aucune des trois n'est fausse, aucune n'est exacte » | Verified | Bertrand 1889 ch. I §5 (quoted in facts.md H3)
-  Jaynes 1973, Foundations of Physics, "The Well-Posed Problem"; invariance selects the radius solution | Verified | Found. Phys. 3:477–492; §5
-  Jaynes & Charles E. Tyler, broom straws, 5-inch circle, 128 tosses fit | Verified | well.pdf §6: "128 successful tosses confirmed Eq. (13)" (5-in.-diameter circle)
-  "A skilled tosser could produce other answers" | Verified | Jaynes 1973 §1/§6
-  Spinner picking both ends uniformly gives 1/3 | Verified | same as recipe 1, and correctly not attributed to Jaynes
-  Straw simulation 0.50 for moved/resized circle | Verified | sim.py 0.4999 / 0.4998 / 0.5016 / 0.4940
-MECHANICS: runtime 3:12.5 · wpm 160 (speech) · max silence 1.92 s (0:07.7, planned prediction pause) · max static 2.87 s · −14.0 LUFS / −1.6 dBTP · leading 0.00 s / trailing 1.69 s · WER 0.8 %
-FIXES (highest impact first):
-1. [2:29–2:39][Clarity] "Only the radius program passes that test" is the payoff's central claim, and it is asserted, not shown. The sliding/growing circle (2:33–2:37) only proves the straws are invariant. It never shows the other two recipes failing. → Keep the straw box. At 2:36.5, put the three recipe chord-fields on one big circle and nest a small circle inside it. First shrink the small circle (concentric): the blue endpoints tally drifts off 1/3 while the green holds 0.50. Then shift the small circle off-centre: the purple midpoint tally drifts while the green holds. Add one line to narration: "Shrink the target and the endpoint answer moves; slide it and the midpoint answer moves." Compute the drift values in sim.py and put them in facts.md before rendering. This turns an appeal to authority into a visible test.
-2. [0:16.9–0:20.0 and 3:05.8–3:10.9][Hook/Originality] The stakes ("Every survey and simulation leans on them") and the closing line ("Every random sample has a recipe like these") are generic, and the episode never cashes them out in a data-science or social-science case. For this series that is the missing §6 payoff. → Replace the spinner beat (2:54.6–3:00.4, about 6 s, which restates recipe 1) with one concrete sampling case that is Bertrand in disguise: Feld 1991, "Why your friends have more friends than you do", American Journal of Sociology 96(6):1464–1477. Pick a random person and you get the average friend count; pick a random friend and you get a higher one, because the recipe spreads evenly over people versus over friendships. Show it as two tallies on a tiny drawn network, with the citation bottom-left for ≥ 3 s. Then have the closing line point back to it.
-3. [2:07.6–2:08.4][Motion/Clarity] The (r/2)/r = 1/2 equation is complete for only about 0.8 s before the 1/2 flies up into "0.498 ≈ 1/2". The 2:08.4 frame shows a half-built "r/2 / r =" with the 1/2 already crossing the caption. §5 requires ≥ 2 s + 0.4 s/term, which is about 3.2 s here. → Hold the finished equation until 2:11.0, for example by starting the endpoint collapse (narration "And the endpoint program…", 2:08.3) on the left panel while the equation stays. Move the 1/2 into the tally only on "which gives the third we found" (2:11).
-4. [3:10.9–3:12.5][Hook/Motion] The landing's final image (gold opening chord + incircle + 1/4, 1/3, 1/2 on the number line) holds only about 0.5 s after the last word. Then the end card cross-dissolves over it (3:11.4: "Sample Space / Episode 1 · …" overlaps the circle and number line), and the end card itself is up for about 0.7 s, too short to read 12 words. → Hold the landing frame 1.5 s after "down." with no motion. Then either cut the end card or FadeOut the landing completely before FadeIn of the card and hold the card ≥ 2.5 s (runtime about 3:16, inside the bound).
-5. [2:52.0–2:55.0][Visual] During the simulated "skilled tosser", the tally reads 0.989 → 1.000 (frames 2:53.6, 2:54.2) while "random radial point 1/2" and "5-inch circle / 128 real tosses" are still at full brightness beside it. For about 2 s the frame reads as if the real tosses gave 1.000. → On "A skilled tosser" (2:51.5), dim "5-inch circle / 128 real tosses" and the green "1/2" label to 30 % before the straws start converging, and add a small grey "simulated" tag under the tally while it climbs.
-6. [0:46.2–0:47.2][Motion/Visual] In the shrink-to-panel transition, "gold share of 10,000 simulated chords" morphs into "10,000 simulated chords each" as illegible character soup ("10,0⅓sinu10,000dichords cards" at 0:46.6). The "random endpoints" label sweeps through the fading P(…) equation, an axis tick reads "0" at the 0.3 position, and at 0:47.0 the ≈ sits on the "4" of 0.334. → Use FadeOut of the old caption + FadeIn of the new one (not TransformMatchingShapes) and fade the P(…) out before the label moves. Bring in "≈ 1/3" only after the panel lands, via TransformFromCopy from the 120°/360° = 1/3 equation so the 1/3 has a visible origin.
-7. [1:50.8–1:51.3][Motion] The TransformFromCopy of the two disks into π(r/2)²/πr² produces two filled amorphous blobs (gold + purple) that fly across "0.248" and the histogram caption (frame 1:51.0). → Copy the disk outlines (stroke only, no fill) and path them down the right margin, outside the tally/caption column (path_arc ≈ −0.6). Or shrink each to its term size in place first, then move it.
-8. [1:47.0–2:09.0][Visual] "share of midpoints, by distance from center" is centred at x ≈ 960 under the middle panel, but for 22 s the only histogram is under the right panel (x ≈ 1340–1765), about 120 px lower. The caption floats away from its referent, and the histogram has no y quantity. → Until all three histograms exist, left-align the caption over the purple histogram, or put a short "share" label at its y-axis. Recentre the caption only at 2:11 when the row of three appears.
-9. [1:17.1–1:21.2][Clarity/Audio] "They disagree by twenty-five" has no unit and follows "one percentage point". → Narrate "by twenty-five percentage points" and make the brace label "25 points" (or "0.25") match.
-10. [2:16.5–2:18.6][A/V sync] "Rim, radius, area": rim (blue stroke, 2:17.0) and area (purple fill, 2:17.8) get fresh highlights, but the green radius has been on screen unchanged since 1:57. "radius" lands on nothing new. → On "radius", Indicate the green radius (stroke width ×2 + brief glow-free colour flash to full green) in the middle panel, timed to the word.
-11. [2:54.6][Audio] "Change" (at 2:54.6, RMS onset 174.55 s) was dropped by the ASR while the rest of the transcript is 99 % accurate. It is likely clipped or swallowed by the TTS at the start of the sentence. → Regenerate that sentence with a 0.15 s lead-in, or rephrase it as "Swap in a spinner that picks both ends at random…", then re-run review_kit and confirm the word is transcribed.
-12. [2:21–2:28][Visual] The Jaynes beat opens on an empty straw box with the whole right half of the frame blank for about 6 s (kf_31 2:26.3), until the tally appears at 2:27. → Show the "gold share" tally (as "—") and the citation together at 2:21, so the frame has its two anchors from the start.
-13. [1:01–1:21][Visual] The settled chord-rain textures for endpoints and radial point are near-identical gold clouds (kf_13). They are decorative and do not show why 0.334 ≠ 0.498. → Desaturate the rain to 25 % after each tally settles, or replace it now with the 240-midpoint dot plot used at 1:47, so the difference is visible a beat earlier.
-REACHES 9 IF ALL FIXED: yes, but only if fixes 1 and 2 are done well. Craft fixes 3–13 alone would lift Visual/Motion to about 8.5 and the total to about 8.5. The two beat-level gaps are what hold the score below 9: the invariance claim must be visibly tested (Clarity 8 → 9), and the data-science consequence must be concrete and cited (Hook/Originality 8 → 9). No full restructure is needed. The spine (cold open → naive sim → geometry agrees → two more sims disagree with error bars → incircle insight → Jaynes) is right.
-KEEP:
-- The P(── > ──) = ? equation built from copies of the chord and the side (0:03–0:07), and its return at 3:01 with the marker sweeping 0→1 on "some way of drawing chords makes it right".
-- The disagreement as a measured fact: the tallies drop onto one "gold share" line, get 95 % error bars, and a 0.25 brace (1:13–1:21, kf_13). This is the StuffMadeHere beat done right.
-- The midpoint insight: the chord shrinks as its midpoint slides out, the incircle draws on "half a radius" (kf_16), and every chord collapses to its midpoint in all three panels with gold/grey dots (1:44–2:13). Gold = long holds as a single meaning from 0:28 to 3:11.
+IDEA: "Pick a chord at random" has no answer until you say what is spread evenly. A chord is long exactly when its midpoint falls inside the inscribed circle, so the endpoint, radius and midpoint recipes give 1/3, 1/2 and 1/4 because each scatters midpoints differently. A physical process (Jaynes's straws) fixes the choice, and surveys hide the same choice (a random class vs a random student).
+SCORES: Hook 8.5 · Clarity 8.5 · Visual 8 · Motion 8.5 · Audio 8.5 · Concision 8 · Originality 8.5
+WEIGHTED: 8.4   AFTER CEILING: 8.4   (lowest 8 + 2 = 10, so the ceiling does not bind)
+CAPS: none
+FINAL: 8.4   PASS: no
 ```
 
-## Notes by dimension
+## FACTS
 
-**Hook 8.5.** The first frame is the object, not a title card. The viewer is asked to commit at 0:06.8 ("Pick a number"), followed by a 1.9 s hold. Tension rises through "Geometry agrees… Case closed, until you code it a second way" (0:35–0:48) and the second twist (Jaynes, 2:21). The ending returns to the first frame exactly. Deductions: the generic stakes line (0:17) is never cashed out, and the landing is cut short by the end card (3:11.4).
+| Claim | Status | Source / check |
+|---|---|---|
+| Side of the inscribed equilateral triangle = r√3; chord long ⇔ midpoint distance < r/2 (the incircle) | Verified | 2√(r²−d²) > r√3 ⇔ d < r/2; inradius = R/2 |
+| Endpoints recipe: far arc 120°/360° = 1/3 (0:47, on screen) | Verified | inscribed-angle argument |
+| Radius recipe 1/2 = (r/2)/r (2:13); midpoint recipe 1/4 = π(r/2)²/πr² (1:57) | Verified | exact |
+| Simulated tallies 0.334 / 0.498 / 0.248 at n = 10,000; "good to about one percentage point" (95% half-widths 0.85–0.98 pt) | Verified | 1.96·√(p(1−p)/n) |
+| "Disagree by 25 percentage points" (0.498 − 0.248 = 0.250) | Verified | arithmetic |
+| Endpoints histogram: the gold bars stack to 0.334, and the last band holds about 28% ("piles against the rim") | Verified | (2/π)(asin((i+1)/10) − asin(i/10)) |
+| Invariance test: midpoint 0.25 → 0.41, endpoints 0.33 → 0.47, radius 0.50 → 0.50 | Verified | my own 2M-line MC: 0.250/0.411, 0.334/0.471, 0.500/0.500 |
+| Bertrand 1889, *Calcul des probabilités*; « Aucune des trois n'est fausse, aucune n'est exacte » | Verified | Gauthier-Villars 1889, ch. I §5 (well-known text; matches facts.md H3) |
+| Jaynes 1973, *Foundations of Physics* 3(4); invariance argument; straws with C. E. Tyler, 5-inch circle, 128 successful tosses, fit the uniform-distance law | Verified | "The Well-Posed Problem", §5–6 |
+| "A skilled tosser could produce other answers" | Verified | Jaynes 1973 §1, §6 |
+| Toy classes 10, 10, 100: random class 40, random student 85 | Verified | 120/3 = 40; 10,200/120 = 85 |
+| Feld & Grofman 1977, *Research in Higher Education*: Stony Brook spring 1974, 737 classes, 40 per class, 147 as experienced by students | Verified | 6(3):215–222; consistent with 40.5·(1 + 65.8²/40.5²) ≈ 147 |
 
-**Clarity 8.** It is concrete before abstract and every number checks out. The incircle picture is the canonical way to see this. Deductions: the invariance verdict at 2:36.5 is asserted rather than shown, the 1/2 derivation flashes past in under 1 s (2:07.6–2:08.4), and the "twenty-five" at 1:17 has no unit.
+No wrong, fabricated or uncited empirical claims. Every empirical claim has a bottom-left citation that is held for at least 3 s.
 
-**Visual 8.** Settled frames are clean and well within the safe area. Type is ≥ 26 px cap height in every keyframe I measured, citations about 30 px. The four hues each keep one meaning, and dimming is used instead of deletion (1:23–1:39). Deductions: the detached histogram caption (1:47–2:09), the real/simulated mix-up beside the 1.000 tally (2:53–2:55), the empty right half (2:21–2:27), the decorative rain textures (1:01–1:21), and the end-card dissolve over the landing (3:11.4).
+## MECHANICS
 
-**Motion 8.** Almost everything persists and transforms with meaning. Deductions: the text-soup morph (0:46.6), the blob transform across the tally (1:51.0), the equation hold under 1 s (2:07.6–2:08.4), and the green histogram that is visible at 2:03–2:05, gone at 2:07–2:09, then back at 2:11 (a flicker of an object that should persist).
+runtime 3:51.3 · wpm 161 (speech time; 152 overall) · max silence 1.92 s (0:07.7, the planned prediction pause) · leading 0.00 s / trailing 1.81 s · max static 3.0 s (0:16.7) · −14.0 LUFS / −1.6 dBTP · 0 black frames · WER 2.0% · 0 banned phrases. The layout audit reports 0 issues in 252 frames. No mechanical cap triggered. The runtime is 9 s under the 4:00 limit.
 
-**Audio 8.5.** Mechanically everything is on target: pace, loudness and silences. The deictics land: "this far arc" at 0:42 as the arc draws, "this gold circle" at 1:38, and the "Where will they crowd?" hold of 1.6 s with the collapse at 2:01. Deductions: the swallowed "Change" (2:54.6) and the "radius" word with no new highlight (2:17.5).
+**Transcript and sync check.** Each deictic lands while its referent is visible and highlighted:
+- "this circle" (0:00) and "this triangle" (0:05)
+- "this far arc" (0:43, the arc lights at 0:44)
+- "this gold circle" (1:43)
+- "land here" (1:48, the gold circle copies land in the three panels)
+- "this circle, with a quarter of the area" (1:55)
+- "rim, radius, area" (2:23–2:27, each lights in its own colour)
+- "both circles at once" (2:43–2:45, the crossing dots appear)
 
-**Concision 8.5.** 496 words with almost no slack. The spinner sentence (2:54.6–3:00.4) is the one beat that mostly restates recipe 1, and it is the natural slot for fix 2.
+There are two intentional prediction holds: "Pick a number" is followed by 1.9 s, and "Where will they crowd?" by 1.6 s, with the panel collapse arriving only at 2:07. "chord" heard as "cord" is a homophone, not an error. "Jaynes" heard as "Jane" at 2:30.9 suggests a swallowed final s (see fix 9). There are no §4 phrases or patterns. "Case closed, until you code it a second way" is the one dry line, and it works.
 
-**Originality 8.** Bertrand's paradox is a well-trodden topic (Wikipedia's own figure uses the midpoint/incircle view). Two angles are fresh: the error-bar proof that the disagreement isn't noise, and Jaynes's real straw toss. The episode lacks one memorable data-science image of its own.
+## What the frames show (flipbook notes)
+
+- **0:00–0:24 Cold open and stakes.** The first frame is concrete: circle, triangle and chord. The question is built as math out of the two actual segments, P(— > —) = ?. That is a strong, original hook glyph. "at random" is underlined on its words.
+- **0:24–0:50 Naive build.** One chord turns gold, then 10,000 rain as a texture while a live tally climbs. The triangle rotates so a vertex sits on the first point, the far arc lights, and 120°/360° is built from the arc. Good.
+- **0:50–1:25 Fail.** The panel shrinks left carrying its tally, and two more recipes rain. Dots, error bars and the "25 points" brace make the failure measured, in Stuff Made Here fashion. The French quote is two short lines (8 words), not a slide.
+- **1:25–2:28 Insight.** This is the best stretch of the episode. The midpoint slides, the chord shrinks, r/2 appears and the incircle draws. Each panel collapses chords to midpoints, histograms grow, and the formulas are built from the outlines. The endpoint program's gold bars stack into a 0.334 column. Then rim, radius and area light in recipe colours. Every motion encodes a relation.
+- **2:28–3:16 Payoff 1 (Jaynes).** The idea is right, but this is the weakest-looking stretch (see fixes 1–3). At 2:42–2:48 there are four circle outlines (big, its incircle at about 50% instead of the scripted 20%, small, small incircle) plus a faint big triangle and straws, and the dimmed big incircle cuts through the small circle and its incircle. At 2:49–2:57 the three program rains are spaghetti: you cannot read the per-line judging on the small circle, so the scoreboard numbers carry the whole argument. At 3:00–3:11 the real experiment is just two text lines over a dimmed simulation.
+- **3:16–3:38 Payoff 2 (class size).** The bars widen to "width = students" while the mean line rises continuously from 40 to 85. That motion *is* the weighting argument, and it is excellent. Stony Brook sits in its own framed block, the example dims to 30%, and the citation is on screen.
+- **3:38–3:51 Landing.** The episode returns exactly to the first frame, and the opening chord turns gold with its midpoint inside the incircle. 1/4, 1/3 and 1/2 appear on a 0–1 line, and 1/2 gets a "straws" tag. The frame holds two separate focal groups (the number line and the 40/147 rows), and at 3:51 the "random class" label is grey while "random student" is white.
+
+## Why each score
+
+- **Hook 8.5.** The concrete puzzle is in the first frame and the viewer commits by 0:07 with a held pause. The ending re-sees the first frame. Tension sags in the double payoff (Jaynes 48 s, then a second domain for 22 s), so it misses the 9 anchor ("tension rises through build and fail") by a little.
+- **Clarity 8.5.** The midpoint picture is the canonical way to see this, and every number checks. Three things keep it from a 9:
+  - The invariance test (2:42–3:00) cannot be read from the picture, only from the table.
+  - "Matched the radius program's spread of chord lengths" (3:07) names a distribution that is never drawn. The episode plotted midpoint distances, never chord lengths, so this is a notation jump.
+  - The class-size bridge ("Surveys hide the same two words", 3:16) is asserted rather than drawn as the same "what is spread evenly" picture.
+- **Visual 8.** The palette is semantic and consistent: gold means long, and blue, green and purple are the three recipes. Typography is clean and the safe area is respected. There are more than two minor issues:
+  - 2:42–2:48 overlapping outlines (above).
+  - Scoreboard column headers are bare circle icons, about 60 px and 36 px across (2:31–3:00, kf 2:43.5).
+  - Rain spaghetti at 2:49–2:57.
+  - The landing has two focal groups with inconsistent label brightness (3:51).
+  - The Bertrand citation sits about 27 px under the "0.2" tick label (kf 1:13.8).
+  - The histograms have no y scale (2:09–2:28).
+- **Motion 8.5.** Objects persist and transform, formulas grow from their referents, the bars stack, and the mean line rises continuously. Three things fall short:
+  - The real-experiment beat (3:00–3:11) is text fading in over a dimmed rain.
+  - The invariance rains are closer to texture than to argument.
+  - The panel triangle rotates back to upright in mid-shrink at 0:49–0:52, a rotation that means nothing.
+- **Audio 8.5.** Pace is on target, loudness is exact, deictics land and the pauses are intentional. Holding it back: the likely "Jaynes" → "Jane" swallow at 2:30.9, and long unpunctuated Whisper runs at 1:48.9–2:02.7 and 2:19.7–2:36.7, which hint at some flat stretches I cannot confirm from frames.
+- **Concision 8.** At 3:51 it is near the top of the window. There are two payoffs plus the skilled-tosser coda. "Same circle, same gold rule" (0:58) repeats what the frame already shows. The 2:31–2:41 straws "– → ? → ? = ?" scaffolding takes about 10 s before the test starts. Less than 10% is removable, with one slack beat.
+- **Originality 8.5.** The unification of the three recipes through midpoints is known (it is on Wikipedia). The fresh, shareable parts are the on-screen invariance test (one rain judged on two circles) and the tie to the class-size paradox.
+
+## FIXES (highest impact first)
+
+1. **[2:40–2:59][Visual/Clarity] The invariance test is unreadable clutter.**
+   - At 2:40, when the small circle appears, fade the big triangle and the big gold incircle to 0 (they currently sit near 50% and cut through the small circle at kf 2:43.5 and frame 2:47.2). The small circle and its gold incircle become the only gold-and-white pair inside the big circle.
+   - For each program rain (2:48–2:57), draw the big-circle chords at ≤ 15% opacity. Draw only the segments inside the small circle at full strength (gold or grey under the small circle's rule), and cap each program at about 30 visible lines so individual verdicts can be read.
+   - Hold each finished row for 1 s before the next rain starts.
+   - Expected gain: Visual +0.5, Clarity +0.5.
+2. **[3:00–3:11][Clarity/Motion] The real experiment has no picture, and the straws "?" is never answered by real data.**
+   - On "spread of chord lengths", grow a small 10-bin chord-length curve on the right: the radius program's predicted density, labelled "radius program: predicted chord lengths". Under it, tag "128 real tosses fit this · Jaynes & Tyler" (no fabricated bars, since their data were not published).
+   - On "matched", turn the straws row's "?" into "≈ radius" with the green row flagging. Only after that may the "?" hand over to the "simulated" skilled-tosser share at 3:12.
+   - This removes the current reading that a simulated 0.50 is what answered the question.
+3. **[2:31–3:00][Visual] The scoreboard column heads are tiny icons (about 60 px and 36 px) under a generic "gold share".**
+   - Replace them with text heads "big circle" / "small circle" (Text font_size ≥ 26) centred over the two number columns, or keep the icons at ≥ 0.6 units with those words beneath.
+   - Without readable heads, "0.25 ≠ 0.41" relies on the viewer remembering which column is which.
+4. **[3:16–3:29][Clarity] The class-size beat claims the "same two words" link but never draws it.**
+   - When the dots appear under the bars (3:23, one per class), add a short label "spread evenly over: classes" where the 2:23 "rim / radius / area" words sat.
+   - On "Pick a student at random" (3:26), transform that label to "spread evenly over: students" as the dots split.
+   - This makes the bridge a visible echo of 2:20–2:27 instead of an assertion.
+5. **[3:38–3:51][Visual/Hook] The landing has two focal groups and mismatched label brightness.**
+   - At 3:51 "random class" is grey while "random student" is white. Bring both labels to the same ink on "who's picked" (the numbers already match).
+   - Place the two rows so their numbers right-align under the 0–1 line's right end, giving one tidy block rather than a second centre of mass.
+   - Keep the 1/2 "straws" tag.
+6. **[0:58–1:00 and 2:31–2:41][Concision] Cut about 6 s.**
+   - Delete "Same circle, same gold rule." The frame already shows the same circle and gold chords.
+   - Collapse the straws row's "– → ? → ? = ?" sequence into a single "? = ?" that appears on "where the circle sits or how big it is".
+   - Target runtime ≤ 3:45.
+7. **[2:09–2:28][Visual] The histograms have no y scale.** Add one y tick, "10%", on the radius-program histogram (its bars are 0.095–0.104). "Every ring gets an equal share" then reads as a number, and the chart meets §5's axis rule.
+8. **[1:11–1:25][Visual] The Bertrand citation sits about 27 px below the "0.2" tick label (kf 1:13.8).** Raise the number line by 0.25 units, or shift the citation down to y = −3.05, so the gap is ≥ 0.3 units.
+9. **[2:30.9, 3:00.1, 3:12.4][Audio] "Jaynes" was transcribed as "Jane" once and "Janes" twice.** Respell it in narration_text as "Jaynz" (or add a Kokoro phoneme override) so the final /z/ is voiced consistently, then re-check with Whisper.
+10. **[0:49–0:52][Motion] The left panel's triangle rotates back to upright while the panel shrinks (frame 0:51.0).** Either do the rotation during the 0.5 s fade of the sweep and arc (before the shrink), or let the panel keep the rotated pose. A rotation that carries no meaning should not happen in flight.
+
+## REACHES 9 IF ALL FIXED: yes
+
+The structure is right: a cold-open commit, a measured failure, one insight picture with formulas grown from it, a cited payoff, honest limits, and a return to the first frame. Every remaining deduction is local craft. Fixes 1–4 lift Visual and Clarity to 9, fix 6 lifts Concision to about 8.5–9, and fixes 2 and 10 lift Motion to 9. That puts the weighted score at about 9.0–9.1.
+
+## KEEP
+
+1. 1:25–2:28: midpoint slide → incircle → chords collapsing to midpoints → histograms → outline-to-term formulas → gold bars stacking into 0.334. This is the episode's proof, and it must survive intact.
+2. 1:15–1:25: the measured failure, three dots with 95% error bars and the "25 points" brace.
+3. 3:25–3:29: class bars widening to "width = students" while the mean line rises continuously from 40 to 85, plus the landing's exact return to the opening frame.

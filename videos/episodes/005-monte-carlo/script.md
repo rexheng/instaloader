@@ -132,7 +132,7 @@ over the square root of N. [pause 0.8]
 > "spread =" is written at the top, the coin's ½ (typeset \tfrac{1}{2}, same shape) flies into the numerator,
 > and the walk's "√N" flies into the denominator: spread = ½/√N, held about 2.5 s.
 
-**B16.** Any other function swaps that half for its own spread, sigma. [pause 0.6] The root N stays, and there's
+**B16.** Any other function swaps that half for its own spread, sigma. [pause 0.6] The root N remains, and there's
 no d in it. A grid's error, even for smooth functions, has d in its exponent.
 > The walk leaves and the formula settles mid-frame; its ½ is flagged on "half" and FadeTransforms into σ on the
 > word "sigma" (0.5 s), then is flagged; "σ = one dart's spread". "darts:" appears

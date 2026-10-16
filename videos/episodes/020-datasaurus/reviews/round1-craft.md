@@ -1,71 +1,61 @@
-# Episode 20, review round 1 (craft critic: visual design, motion, A/V sync)
+# Episode 20, round 1: craft review (visual design, motion, A/V sync; all dimensions scored)
 
-Evidence: `review/` pack (metrics.json 10:00 is newer than final.mp4 09:58). I read report.md, all 11 contact sheets, the transcript, script.md, facts.md and narration.txt. Full-resolution frames checked: kf_01 (0:10.7), kf_07 (0:36.1), kf_12 (1:18.0), kf_14 (1:34.7), kf_17 (1:55.8), kf_33 (2:51.4), kf_37 (3:01.5) and kf_40 (3:12.8). I also extracted these with ffmpeg into /tmp/ep20r1: 0:00.1, 0:00.8, 0:26.0, 0:32.6, 0:33.2, 0:44.5, 0:46.0, 0:47.5, 0:48.6, 0:49.0, 1:57.0, 1:59.5, 2:18.5–2:22.3 (6 frames), 2:23.9–2:26.2 (4 frames), 2:29.0, 2:29.8, 2:30.6, 2:34.5, 2:35.5, 2:56.8–2:58.4 (3 frames) and 3:01.0–3:04.2 (4 frames). I measured audio RMS over 2:56.4–2:57.6.
+Evidence: review/ pack (metrics.json 23:13 is newer than final.mp4 23:11, so I reused it). I read report.md, all 13 contact sheets, and 18 full-resolution keyframes (kf_01, 02, 06, 09, 11, 14, 18, 20, 24, 27, 31, 33, 34, 35, 39, 40, plus the sheets). I also pulled extra ffmpeg frames at 19.5–20.7 s (the reveal), 68.6–69.4 s, 78.6–79.2 s, 145.6–154.4 s (the roll call), 166.4–178.0 s and 213.6–217.0 s (the landing). I recomputed the Datasaurus statistics from datasaurus_dozen.tsv and checked Weissgerber 2015 against the PLOS page.
 
 ```
 EPISODE: 020 — "A Dinosaur Hiding in Your Summary Statistics"
-IDEA: Two means, two SDs and a correlation fix exactly one ellipse (a centre, a box, and where the ellipse touches the box walls), so any shape with that ellipse (a star, the Datasaurus Dozen, Anscombe's quartet) shares those five numbers and even the best-fit line, and only a plot shows the shape.
-SCORES: Hook 8.5 · Clarity 8.5 · Visual 8 · Motion 8.5 · Audio 8.5 · Concision 8.5 · Originality 8.5
-WEIGHTED: 8.4   AFTER CEILING: 8.4 (lowest 8 + 2 = 10, not binding)
-CAPS: none. I checked these and they do not trigger:
-  - All three empirical sources are on screen (Cairo 0:20, Matejka & Fitzmaurice 2:02, Anscombe 2:30).
-  - Transient text overlaps at 0:33.2 and 2:29.8 happen mid-transform or mid-crossfade and are not settled layouts, so they are listed as fixes rather than cap 7.
-  - No banned phrases. "Picture the scatterplot" is an instruction, not "picture this".
-FINAL: 8.4   PASS: no
+IDEA: Two means, two SDs and a correlation fix exactly one ellipse (centre, box, touch height), and with it the best-fit line, so any shape with that ellipse (a dinosaur, a star, Anscombe's four) has the same five numbers; only a plot shows the shape.
+SCORES: Hook 8.5 · Clarity 8 · Visual 8.5 · Motion 9 · Audio 8.5 · Concision 8 · Originality 9
+WEIGHTED: 8.5 (8.45)   AFTER CEILING: 8.5 (lowest 8 + 2 = 10, no effect)
+CAPS: none
+FINAL: 8.5   PASS: no
 FACTS:
-  The dinosaur has 142 points | Verified | datasauRus TSV (facts #1)
-  x̄ 54.26, ȳ 47.83, s_x 16.76, s_y 26.93, r −0.06 | Verified (first two decimals truncated, as published) | Matejka & Fitzmaurice 2017; facts #2
-  Datasaurus drawn by Alberto Cairo, 2016, The Functional Art | Verified | thefunctionalart.com, Aug 2016; Autodesk acknowledgements
-  v1 star: centre moves to 50/50, s_x 16.76→20.51, s_y 26.93→20.50 (−23.9 %, "almost a quarter"), r→0.00 | Verified (our construction, numbers recomputed in facts #4 and consistent on screen 0:41–0:57)
-  Means = a point; SDs = a box; r sets the right-wall touch at ȳ + r·s_y; r→1 moves it to the corner | Verified (1-SD covariance ellipse support function)
-  At r = −0.06 the touch point sits just below the middle (46.10 vs 47.83) | Verified
-  The ellipse is everything the five numbers know | Verified (bijection with mean and covariance)
-  Translate / scale / shear each fix their own numbers and leave the others unchanged; after all three the star matches exactly | Verified (affine invariances; counter 0→2→4→5 at 1:37–1:45 agrees)
-  Median y: 46.02 vs 52.16, "misses by six" | Verified (6.14)
-  Matejka & Fitzmaurice 2017, CHI: random nudges biased toward a target, kept only if stats hold to 2 dp; works for any statistic | Verified (CHI 2017 pp. 1290–1294, Autodesk project page)
-  "Twelve shapes", all with the same five numbers | Verified (Datasaurus Dozen = dino + 12)
-  Anscombe 1973, The American Statistician, 11 points per set, r = 0.82, all four share the five numbers | Verified (r 0.816 in all four; means 9 / 7.50; SDs 3.32 / 2.03)
-  OLS line passes through the centre and the right-wall touch point; slope = r·s_y/s_x = 0.82·2.03/3.32 ≈ 0.50 | Verified (0.5001)
-MECHANICS: runtime 3:12.8 · wpm 155 (speech) · max silence 1.96 s (1:33.7, planned prediction hold) · max static 3.77 s (1:31.9–1:35.6, planned) · −14.0 LUFS / −2.1 dBTP · lead 0.00 s / trail 1.84 s · blank background run 0.66 s at 3:02.4–3:03.0
+  Dinosaur n = 142 | Verified | datasaurus_dozen.tsv (142 dino rows)
+  x̄ 54.26, ȳ 47.83, s_x 16.76, s_y 26.93, r −0.06 | Verified | recomputed 54.2633 / 47.8323 / 16.7651 / 26.9354 / −0.0645; the first two decimals are shown, as published
+  Dinosaur drawn by Alberto Cairo, 2016 · The Functional Art | Verified | Matejka & Fitzmaurice project page; Wikipedia "Datasaurus dozen"
+  703 physiology papers, 86% used bar graphs, 13% showed the points | Verified | Weissgerber et al. 2015, PLOS Biol 13(4):e1002128 (n = 703; 85.6%; 13.4% univariate scatterplots)
+  Version-one star: 50.00 / 50.00 / 20.51 / 20.50 / 0.00; "y spread shrank by almost a quarter" | Verified (our construction) | facts.md #4 (−23.9%); the on-screen values match
+  Fixed star matches all five "to every decimal place" | Verified (our construction) | facts.md #10; slide, stretch and shear each preserve the other statistics (derivation checks)
+  Median of y: dinosaur 46.02, star 52.16, "misses by six" | Verified | 46.0256 vs 52.1617
+  Matejka & Fitzmaurice 2017, CHI: perturb a point, bias it toward a target, keep the move only if the stats hold to 2 decimals | Verified | CHI 2017 pp. 1290–1294, project page wording
+  "Twelve shapes", medians 50.11 / 47.38 / 39.87 / 50.47 / 51.29 | Verified | recomputed star, bullseye, x_shape, h_lines, dots
+  "Every one of them has this same ellipse" | Verified (to 2 decimals) | all 13 sets agree on the first two decimals
+  Anscombe 1973, 11 points, r = 0.82, all four share the five numbers | Verified | The American Statistician 27(1):17–21; 0.816 in every set
+  OLS slope = cov/s_x², cov = r s_x s_y, slope = r s_y/s_x = 0.82×2.03/3.32 ≈ 0.50 | Verified | derivation; 0.5001 unrounded
+  "One SD right, on average r SDs up"; the touch point of the 1-SD ellipse sits at ȳ + r s_y | Verified | regression of y on x; the ellipse's vertical tangents lie on that line
+  The guess cloud is labelled "your guess" (simulated) | Verified | facts.md (the cloud is drawn, not real data)
+MECHANICS: runtime 3:42.3 · wpm 160.5 (speech; 185 excluding all pauses) · max silence 1.96 s · leading 0.00 / trailing 1.83 s · max static 2.97 s · −14.0 LUFS / −1.7 dBTP
 FIXES (highest impact first):
-1. [1:13–1:21][Clarity/Visual] The ellipse sweeps to r ≈ 0.85 (kf_12 at 1:18.0 shows a steep diagonal ellipse with the touch dot near the top corner) while both readout columns still say r = −0.06 and the counter says "5/5". The picture and the numbers disagree for about 6 s at the key moment of the insight. Fix: dim the readout r row to 35 % for the sweep. Attach a yellow `r = ` DecimalNumber (font_size 36, buff 0.2 right of the right-wall touch dot) whose updater reads the sweep ValueTracker, so it rides the dot from −0.06 → 0.85 → −0.06. Fade it out on "at minus point oh six" and Indicate the readout r row back to full opacity.
-2. [2:17–2:27][Motion] The Datasaurus Dozen flipbook is too fast to read. The star dataset is on screen for about 0.6 s (fully formed at 2:20.2, already dissolving at 2:20.8), and the bullseye and X for about 1 s each. Viewers cannot register the shapes, or the fact that the ellipse never moves, which is the claim. Fix: change each `[pause 0.4]` in B18 to `[pause 1.0]`, and time every transition to land 0.3 s before its noun ("star" 2:19.8, "bullseye" 2:21.1, "X" 2:22.6, "stripes" 2:23.8, "dots" 2:25.4). Then hold each shape for ≥ 1.2 s with the ellipse visible. Optionally add a 26-pt grey dataset-name tag at the bottom-right of the plot.
-3. [3:01.5–3:03.0][Motion/Sync] The landing passes through 0.66 s of empty background (blank run 182.37–183.03). "The shapeless cloud you pictured" is spoken at 3:02.1–3:02.9 over nothing, and the cloud fades in only around 3:03.3. This is the one place where the episode cuts instead of transforming. Fix: run the quartet FadeOut and the opening-frame FadeIn concurrently (AnimationGroup, lag_ratio 0, 1.0 s), starting at 3:01.6. Better still, carry the yellow ellipse across: ReplacementTransform the panel-I ellipse into the dinosaur-scale ellipse position while the axes cross-fade, so the cloud is visible by 3:02.1.
-4. [0:32.8–0:33.6][Visual/Motion] When the readout splits into "dinosaur / now", the new column's digits morph through each other into illegible glyph soup (frame 0:33.2: "5ᵡ26", "1ⁱ76" and similar beside each value). Fix: create the "now" column as its own DecimalNumbers. TransformFromCopy each whole yellow value mobject (not digit-matched submobjects) along a straight path to its slot, run_time 1.0, lag_ratio 0.1, or FadeIn the column shifted 0.3 left→right. No frame may show two digit strings overlapping.
-5. [2:45–2:51][Visual] The `s_x` brace sits under the bottom edge of the box (kf_33: brace at y ≈ 5.2 data units), about 2 units below the run segment it names (drawn at y = ȳ = 7.5 from centre to the right wall). The rise label `r s_y` sits right next to its segment, so the two labels are inconsistent. Fix: put the brace (or a plain `s_x` label, buff 0.15) directly beneath the horizontal run segment, and draw both segments in the same stroke width as the labels' TransformFromCopy source.
-6. [2:28.8–2:31][Motion] After "Every one of them has this same ellipse", the dots morph back into the full dinosaur (2:29.0) without narration, then 131 of the 142 points disappear into Anscombe's 11 (2:30.6). This is an unexplained round trip. Fix: go straight from `dots` to Anscombe I. Keep the yellow ellipse as the persistent object and morph it to Anscombe's ellipse while the axes rescale, and FadeOut the surplus dots with the old axes.
-7. [2:29.6–2:30.2][Visual] The Matejka and Anscombe citations cross-dissolve in the same spot, so two citation strings overlap (frame 2:29.8, ghost text after "CHI"). Fix: FadeOut the old citation (0.3 s), then FadeIn the new one, in Succession.
-8. [0:48.6–0:49.4, 1:59.5][Visual] The Circumscribe flags leave a stray red stroke beside the value mid-animation ("20.50ˈ" at 0:49.0, "52.16ˈ" at 1:59.5), which reads like a typo or prime mark. Fix: replace Circumscribe with `Indicate(row, scale_factor=1.1, color=RED)`, or a SurroundingRectangle Create→FadeOut in 0.8 s that completes in full.
-9. [1:57–2:00][Visual] The "median y" row is wider than the readout block. Its label starts at x ≈ 930 px, left of the readout's alignment, and hangs over the end of the plot's x-axis about 45 px above the "x" label. Fix: write it as `\tilde y` (or "med y") so its "=" aligns with the five rows above at the same left edge, buff ≥ 0.3 from the axis label.
-10. [2:56.5–2:57.6][Audio] Whisper drops "a trend" (narration diff at 2:57.3). There is speech from 2:57.1, but it is swallowed straight after "...and the line." with no breath. Fix: in B21 write "...so they share the ellipse and the line. [pause 0.3] A trend, a curve, an outlier, and one point doing all the work." Re-TTS, then confirm by ear and by WER.
-11. [0:00–0:03][Hook] The first frame (0:00.1) is effectively empty, with the readout fading in row by row and the axes arriving only at 0:03. Fix: have the axes and "n = 142" present at frame 1 and Write the readout rows on their spoken words, so the puzzle object is on screen in the first frame.
-12. [1:47–1:51][Concision] "The star has the dinosaur's exact numbers, to every decimal place" repeats "All five match now". Fix: merge them into "All five match now, to every decimal place." That saves about 3 s, which can go toward fix 2's longer holds.
-13. [0:25–0:30][Hook] The stakes line ("When a report shows only these five numbers…") is generic. Fix: name a concrete reader decision without any empirical claim, for example "If a dashboard tile showed only these five numbers, how much could it hide?"
-REACHES 9 IF ALL FIXED: yes. The structure is already at bar: misconception (round cloud) → reveal → measured v1 failure (0/5) → one picture (ellipse in box) → three-move fix (2/5 → 4/5 → 5/5) → honest limit (median off by 6.14) → real sources → landing on the opening frame. Fixes 1–4 remove the frames where the picture contradicts the narration or text becomes illegible. That lifts Visual and Motion to 9 and Clarity to 9. Hook and Originality stay near 8.5–9 because the Datasaurus itself is well known; the ellipse-plus-affine-fix angle is what carries it.
+1. [1:16–1:32][Clarity] The step from "one SD right, on average r SDs up" to "so the touch point sits r·s_y above the center" is asserted, not shown. The screen has a run and a rise but no line, so a viewer cannot see why a regression fact places the ellipse's tangent point. That is the one transition that needs a rewatch. Change: while r sweeps 0 → 0.80 → −0.06, grow a thin dashed YELLOW best-fit line through the centre and the touch dot, so the dot visibly rides the line. Narration: "…on average r standard deviations up. That's the best-fit line, and it meets the right wall exactly where the ellipse touches it: r times s y above the center." At 3:05 the Anscombe line then becomes recognition instead of a new claim. Worth +0.5 to +1 on Clarity.
+2. [0:08–0:12][Hook] The viewer commits only to the line, and the "reasonable guess" (nearly flat) is correct (the landing at 3:25 says so). The wrong belief, a shapeless cloud, is never something the viewer predicts. Change the question to "Picture the cloud. Which way does its best-fit line tilt, and how steeply?" and keep the 1.9 s hold. The landing's "your line was right / your cloud was this ellipse" then pays off both halves of the viewer's own commitment.
+3. [2:10–2:22 and 1:35–1:42][Concision] The runtime of 3:42 holds three payoffs (median limit, search, Anscombe and slope), and the middle sags. Compress the search mechanics to one sentence: "Their search nudges one point toward a target and undoes any nudge that breaks the five." Keep the ring-step-undo visual, but run it at 1.5× (saves about 4 s). Cut the [pause 0.15] and "They chose these five" by letting the readout flash on "these" in the previous sentence. Target runtime 3:30 or less.
+4. [2:57–3:04][Motion/Audio] The "slope = r s_x s_y / s_x²" state holds about 1.5 s before the strike-through (BAR: ≥ 2 s + 0.4 s per term, about 3.6 s). The [pause 1.0] comes before the numerator lands instead of after it. Move the pause so that "r s_x s_y over s_x²" sits whole for at least 2.5 s. Also say "so one factor of s x cancels": Whisper heard "So when sx cancels" at 3:01.4, an ambiguous homophone.
+5. [1:00.3–1:02.5][Visual, colour semantics] At kf_11 (1:02.3) the RED mean ± SD cross sits on the restored dinosaur while all five rows read "=" and the counter reads 5/5 GREEN. RED is declared as "drifted", so the colour contradicts the readout for about 2 s. Interpolate the colour RED → YELLOW during the slide back so the cross arrives YELLOW (or FadeOut the red copy as it lands on the yellow one), and finish by 1:00.6.
+6. [1:08.5–1:10.5][Motion + sync] The copies of 16.76 / 26.93 smear into an unreadable glyph squiggle mid-flight (frame at 1:09.0, x ≈ 960 px). The box starts growing about 1.5 s after "box" (no box at 1:09.4, box at 1:11). Move each number intact (`.animate.next_to(half_arm)`, not a Transform into the line), Indicate the half-arm, fade the number, and start `GrowFromCenter(box)` on the word "box" (about 1:08.8).
+7. [1:39–1:47][Visual] During the prediction hold and the slide, both SD boxes sit at 30% opacity (kf_20, 1:44.9). They read as faint stray red and yellow rectangles under the star outline: clutter without information. Either remove them during the hold and Create them on "Stretch", or keep them at 60% with the RED box dashed so the two boxes are distinguishable.
+8. [3:38–3:42][Visual] The last data frame (kf_39, 3:40.6) keeps the dimmed ȳ bar and its error-bar line running vertically through the ellipse and the dinosaur's legs: three overlapping layers in the closing image. On "dinosaur", slide the bar and its error bar out of the plot to x ≈ 108 (right of the axis, still at 40%), so the final image contrasts "two numbers" beside "142 points" without crossing them.
+9. [0:19.7–0:20.7][Motion] The guess → dinosaur morph, the episode's biggest reveal, completes in about 1.0 s and lands while "A dinosaur" is already being said. Give it 1.8 s (smooth) starting on "real", hold 0.4 s, then name it.
+10. [2:01–2:39][Visual] The "med y" label starts about 25 px right of the x-axis label "x" on nearly the same line (kf_24, kf_27), so it reads as "x  med y". Shift the readout block right by 0.3 units, or move the axis "x" label under the arrow tip.
+11. [3:16–3:18][Motion] Panel I's points float with no axes for about 1 s while the zoomed axes fade before the quartet axes arrive (sheet frame 3:17). Crossfade the two sets of axes over the same 0.8 s.
+REACHES 9 IF ALL FIXED: yes. Fixes 1–3 lift Clarity, Hook and Concision to 9; fixes 4–10 clear the remaining Visual, Motion and Audio nitpicks. The structure is right: misconception reveal, build, measured fail, iterate, honest limit, sourced payoff, landing that re-sees the first frame. No structural change is needed.
 KEEP:
-  - The live "dinosaur / now" readout with ≠/= marks and the "matching k/5" counter. It turns v1's failure (0:39–0:57) and the three-move repair (1:35–1:47: 0→2→4→5) into measured, watchable proof.
-  - The ellipse construction from flying copies of the numbers: means → dot (1:01), SDs → half-segments → box (1:05–1:09), r → wall touch point (1:11). Then the red live ellipse drifting off the yellow one on the replay (1:27–1:35).
-  - The landing back on the "a guess" cloud with the ellipse drawn through it, then the dinosaur returning around the same ellipse (3:04–3:11).
+- The slide / stretch / shear fix (1:42–1:53): each move turns exactly its own readout rows to "=" GREEN while the live red ellipse snaps onto the yellow one. That is the animation as proof.
+- The Dozen roll call (2:22–2:39): the yellow ellipse, box and touch dots stay frozen while the shapes change underneath and the median row jumps. Each dataset lands about 0.3 s before its name (verified at 147.5, 149.5, 151.5 and 153.5 s).
+- The landing (3:25–3:41): the opening frame returns, the yellow line lands on "your line", and the ellipse is squeezed into exactly the ±s_y error bar of the ȳ bar before the dinosaur returns. It answers the cold open and the Weissgerber stakes in one picture.
 ```
 
-## Notes by step
+## Notes by dimension
 
-**Script read cold.** The idea fits in one sentence (above). There is one coherent through-line, and the payoff (Anscombe's shared best-fit line) is derived from the same ellipse picture rather than bolted on.
+**Hook (8.5).** The puzzle is on screen in the first frame (kf_01: empty axes, "n = 142", five empty slots). Values are written on their spoken words (0:02–0:07), the question lands by 0:11.5, then a 1.9 s hold under a grey "?". The reveal at 0:20 is strong. One deduction: the commitment is to an answer that turns out correct (fix 2). The 2:01–2:39 stretch sags a little before Anscombe re-raises the line question.
 
-**Transcript.** No banned phrases or patterns. There is one question chain risk: "So what exactly do five numbers pin down?" at 0:53.9 is a single question, so it is fine. "How would you fix the star?" (1:32) is followed by a planned 2.0 s silence on a picture that answers it. The hook ("Picture the scatterplot" at 0:11.2 plus a 1.9 s hold) lands before 0:15.
+**Clarity (8).** Concrete before abstract throughout, and every number checks (see FACTS). The fail is measured: 0/5, with s_y down 24%. Assumptions and limits are stated: "first two decimals, as published" and the median miss. The deduction is the asserted regression-to-touch-point link (fix 1). The ellipse also arrives as "many ellipses touch all four walls" before the viewer knows why an ellipse is the right object. Only the landing's "your cloud was this ellipse" motivates it in hindsight.
 
-**A/V sync spot-checks (word timings vs extracted frames).**
-- "these stripes" (2:23.4–2:25.0): stripes on screen at 2:23.9.
-- "these dots" (2:25.2–2:26.0): dots at 2:25.4.
-- "this bullseye" (2:20.6–2:21.8): bullseye at 2:21.5.
-- "this star" (2:19.6–2:20.4): star at 2:20.2, but gone by 2:20.8 (fix 2).
-- "the touch point climbs toward the corner" (1:13–1:17): sweep visible, but r is unlabelled (fix 1).
-- "slide / stretch / tip" (1:35.6–1:43): the counter reaches 2/5 at 1:39, 4/5 at 1:41 and 5/5 at 1:45, each on its verb.
-- The only miss is the landing gap (fix 3).
+**Visual design (8.5).** One flat background, a declared and consistent palette (YELLOW summary, BLUE data, RED drifted, GREEN matched with "=", GREY guess and citations). Clear left-plot / right-readout hierarchy, citations bottom-left at readable size, held well over 3 s. The layout audit shows 0 issues. Deductions: the RED cross in a matching state (1:01–1:02.5), the near-invisible 30% boxes (1:41–1:46), the cluttered final data frame (3:40), and the crowded "x" / "med y" pair (2:01–2:39). The quartet panels (3:19–3:24) are small but legible, with ticks about 30 px.
 
-**§5 checks at full resolution.**
-- Safe area: the highest text is the y label at about 85 px; citations sit at about 932–946 px, so y ≈ −2.96 to −3.0, above −3.2.
-- Palette: yellow (summary), blue (data), red (drifted summary), green (= marks), plus greys and ink. This stays consistent all episode, and red and green are always paired with ≠ or =.
-- Type: the readout is about 45 px cap height, and citations are about 24–26 px cap height.
-- The prose word load is tiny.
-- Axes are named x and y. The data has no units, which is acceptable here.
+**Motion (9).** Nearly every move encodes a relation: optimal-assignment morphs, the strip squeeze into the bar graph (0:27–0:31), the live-readout star morph (0:46–0:51), the live red ellipse in the replay, the nudge-reject loop (2:11–2:17), staggered one-by-one travel to the circle, and the ellipse squeezed to the error bar. Longest static stretch 2.97 s. Nitpicks: fixes 4, 6, 9 and 11.
+
+**Audio (8.5).** −14.0 LUFS / −1.7 dBTP, 160 wpm speech, no dead air (max 1.96 s, a planned hold). Deictics land: "this star / bullseye / X / stripes / dots" were verified frame by frame, and "the center moved", "x spread grew" and "y spread shrank" each light up within 1 s. Deductions: dense 185-wpm runs inside the derivation (2:50–3:14), the "one s x" / "when sx" ambiguity (3:01), and the box arriving about 1.5 s after "box" (1:09–1:11). I can't confirm the Whisper "those Those" at 3:33.9 (a 0.02 s token, probably a transcription artifact), so I didn't penalize it.
+
+**Concision (8).** Little is pure padding, but three payoffs in 3:42 leave one slack beat: the search mechanics, which re-show the "hold the five" idea the star fix already proved (fix 3).
+
+**Originality (9).** The Datasaurus is a well-known example. The angle here is not: five numbers equal one ellipse, the star repaired by translate / scale / shear, the ellipse squeezed into the bar graph's error bar, and "your line was exactly right". No banned phrases or patterns found.

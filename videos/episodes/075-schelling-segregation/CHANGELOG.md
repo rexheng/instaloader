@@ -162,3 +162,23 @@ Round 3 review: craft 8.7, substance 8.4, no caps, no factual errors. Both criti
 - **Late cues.** The first preview flagged three. "this" in the replay was 0.31 s late: the caption now fades in with the inset. "seven" was 0.38 s late: the unpark is 0.8 s, and the round minimum is 2.6 s. "paper" was 0.77 s late: the citation now arrives with the chart restore.
 - **Clearances.** The audit found the replay caption 0.07 from the inset frame, so the caption is now left-aligned under the formula. The caret was 0.12 from the fraction row, so the row moved 0.06 lower. "60%" and the x title were 0.12 from the flash box around "¼ → 58%", so the ladder is 0.15 narrower. Its counts still clear each other by 0.16.
 - **Morphs.** The dashed-to-solid ¼ outline morphed through stray dash fragments; it now fades and draws instead.
+- **No more garbled digits.** The first master's sheet frame at 1:45 caught "2/7 → 3/8" mid-morph as garbled glyphs. Every digit or relation change in the formulas now uses `swap()`: the old glyph fades out and the new one fades in on the same object, with no point morph. This covers the inset fraction, A's ladder formula, and the meter's "?" ↔ ⅓.
+- **Hold times in the domino.** C's 2/7 < ⅓ was on screen only about 1.1 s before the ring moved on. The fraction now resolves 0.3 s earlier and the pause is 0.9 s, so it holds about 1.7 s. D's 3/8 ≥ ⅓ holds about 1.7 s, helped by a 0.3 s pause before "tips". D's 2/7 < ⅓ holds through a 1.4 s beat gap.
+- **In-motion overlaps found in 4 fps strips of the first master:**
+  - At 2:17 the x-axis line rose through the fading dots while the two x titles cross-faded on top of each other. Now the dot chart fades out first (0.5 s), then the line moves (0.6 s).
+  - At 1:50 the growing board and the fading-in HUD ran over the still-fading inset. The inset now folds away on "Now", before the board grows on "town".
+  - At 3:05 "our jump" and "Schelling's jump" were both half-visible on one row. The old label is now gone in the first 40 % of the move, and the new one appears only in the second half.
+
+## Round 1 revisions (second review cycle)
+
+Review: craft 8.5, substance 8.6, no caps, no factual errors; both said every fix together reaches about 9.0. Root cause of the two "fixed but not fixed" defects (garbled glyphs at 1:45, labels superimposed at 3:05): the reviewed final.mp4 (01:12) predates the last scene.py edit (01:18), so those fixes were never rendered. I confirmed in an isolated test that the `swap()` cross-fade itself never shows two glyph sets; this revision replaces it anyway (see below) and re-renders everything.
+
+### Plan (written before editing)
+
+| Dimension (lowest) | BAR "9" anchor | Where it falls short | Upgrade |
+|---|---|---|---|
+| Visual (8 / 8.5) | "Every frame has one focal point; nothing to remove" | Ladder frame has three focal regions; Schelling frame has ~22 words, a 3-line grey stack and a band drawn over our dots; ladder has no vertical quantity; lower-right empty for 40 s | Thumbnails leave the ladder; A's patch moves to the vacated right column; "households" names the vertical; one merged rules label; hatched band with our dots dimmed to 35 %; HUD lowered with a fourth row |
+| Motion (8.5 / 8.5) | "Every motion encodes a relation; reading time respected" | 0.3 s glyph morph at 1:45; labels superimposed at 3:05; inset flies out after the park | A new household's formula slides out left and the next slides in from the right (a different household); same-household changes cross-fade in place ≥ 0.6 s; label out → bracket slides → label in, sequentially; inset flies out with the corner rewind |
+| Clarity (8.5 / 8.5) | "Viewer could re-derive it after one watch" | 238 vs 200 gap; spoken columns unmarked; subject household unmarked; "map alone" beatable by texture; zone pulses equate the toy rule with HOLC | "the other thirty-eight were content by their turn" + live "moves" HUD row; ¼ and ⅓ fly from the thumbnail labels to their columns, which brighten; white inner outline on the subject household; rule town regenerated to match the Schelling town's texture (no stray tiles); zone pulses removed, towns dimmed under the HOLC sentence |
+| Audio (8.5 / 8.5) | "Each deictic lands as the element highlights" | "this chart" over an empty frame; "this counter" un-highlighted; "other" swallowed | Axes drawn by "point"; counter pulses on "this"; "In one town … In the other, nobody minds …" (whisper-checked) |
+| Concision (8 / 8) | "Cutting any sentence loses something" | 3:50; restatements | Cut "So most households are content", "Round after round, the tipping spreads", "Seventy-six percent, the town we started with", "Thirty towns at each demand…" |
