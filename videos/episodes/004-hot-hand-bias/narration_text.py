@@ -59,7 +59,7 @@ BEATS = {
     "minus8": "For a random shooter, the same crowding pulls after hits down to forty six percent "
               "on average, and after misses up to fifty four. [pause 0.45] Miller and Sanjurjo's "
               "twenty eighteen paper [pause 0.5] puts the gap at about minus eight points. "
-              "[pause 0.9] Longer records shrink it; [pause 0.7] longer streaks grow it. [pause 0.5]",
+              "[pause 0.9] Longer records shrink it; [pause 0.9] longer streaks grow it. [pause 0.5]",
     # "The Cornell players": a beat-initial "Cornell's" was heard as "Daniel's" (round 6 v2)
     # round 8: breaths after the two readings and after "plus four" (substance fix 5)
     "observed": "The Cornell players hit forty nine percent after three hits, and forty five "

@@ -425,7 +425,7 @@ class Episode(NarratedScene):
         self.remove(g)
         self.add(dst)
 
-    def end_card(self, hold: float = 0.6, run_time: float = 0.5):
+    def end_card(self, hold: float = 0.3, run_time: float = 0.5):
         card = end_card(self.EPISODE, self.TITLE)
         card[1].set_color(GRAY)
         self.play(*[FadeOut(m) for m in list(self.mobjects)], FadeIn(card, shift=0.1 * UP),
@@ -658,8 +658,10 @@ class Episode(NarratedScene):
             self.play(Create(insA[0]), FadeIn(citeFK), run_time=0.4)
             self.play(Create(insA[1]), FadeIn(insA[2:4]), FadeIn(insA[5]), run_time=0.5)
             self.play(LaggedStart(*[GrowFromCenter(d) for d in insA.discs], lag_ratio=0.05),
-                      run_time=beat.until("even", offset=-0.15, min_time=0.6))
-            self.play(insA.close.animate.set_fill(RED, 0.4).set_stroke(RED, 2.5), run_time=0.9)
+                      run_time=beat.until("look", offset=-0.1, min_time=0.6))
+            # the crowding discs are red as "that even" is spoken, and stay red into the pause
+            beat.wait_until("that even", offset=-0.3)
+            self.play(insA.close.animate.set_fill(RED, 0.4).set_stroke(RED, 2.5), run_time=0.8)
 
         # ============================================================ 6. one square
         s = P2_SIDE / P1_SIDE
@@ -948,11 +950,12 @@ class Episode(NarratedScene):
             beat.wait_until("over two", offset=-0.1)
             self.play(Create(fr2[7]), Write(fr2[8:10]), flag(hits2, color=INK, run_time=0.7),
                       run_time=0.7)
-            # "since order doesn't matter": the two hits trade places; same pair, counted twice
-            beat.wait_until("order", offset=-0.15)
+            # "since each pair counts twice": the two hits trade places - the same pair, in both
+            # orders, is counted twice
+            beat.wait_until("each pair", offset=-0.15)
             self.play(Swap(hits2[0], hits2[1], path_arc=PI / 2), flag(fr2[8:10]), run_time=0.8)
             # "Each has that same chance": the square's 1/576 is carried in, once per hit
-            beat.wait_until("Each", offset=-0.15)
+            beat.wait_until("Each has", offset=-0.15)
             self.play(Write(P2[5]), run_time=0.5)
             beat.wait_until("same", offset=-0.2)
             self.play(carry(frac_lbl, P2[6]), flag(frac_lbl), run_time=1.0)
@@ -1250,8 +1253,11 @@ class Episode(NarratedScene):
                       UpdateFromAlphaFunc(VGroup(A.dots), lambda m, a: (
                           A.dots.set_opacity(MAP_LOW + (1 - MAP_LOW) * a),
                           A.frame.set_stroke(opacity=MAP_LOW + (1 - MAP_LOW) * a))),
-                      Create(mline), FadeIn(mticks), FadeIn(mnums), FadeIn(mtitle),
-                      Create(myax), FadeIn(mylab), FadeIn(mhead),
+                      # the panel appears once the shrinking map has cleared its place (the
+                      # map never passes over the header or the axis labels)
+                      *[a_(m, rate_func=window(0.55, 0.45)) for a_, m in
+                        ((Create, mline), (FadeIn, mticks), (FadeIn, mnums), (FadeIn, mtitle),
+                         (Create, myax), (FadeIn, mylab), (FadeIn, mhead))],
                       VGroup(E5, pois).animate.set_opacity(0), run_time=0.9)
             self.play(Create(mark), FadeIn(alab),
                       LaggedStart(*[GrowFromEdge(b, DOWN) for b in nbars], lag_ratio=0.04),
@@ -1619,10 +1625,15 @@ class Episode(NarratedScene):
             # the chart leaves first (nothing grows under fading text), then the map grows into
             # the frame and Clarke's label moves to its own row in a column east of the map,
             # where a yellow arrow ties it to the rectangle as the map settles
-            self.play(FadeOut(chart), run_time=0.45)
+            # (Clarke's label fades out with the chart and back in at its new place, so it never
+            # slides across the map)
+            self.play(FadeOut(chart), FadeOut(clbl), FadeOut(recr), run_time=0.45)
+            clbl.move_to(clbl_t)
+            recr.move_to(recr_t)
             self.play(mapgrp.animate.scale(RS, about_point=anchor).shift(lift),
-                      tl.animate.move_to(tl_t), clbl.animate.move_to(clbl_t),
-                      recr.animate.move_to(recr_t),
+                      tl.animate.move_to(tl_t),
+                      FadeIn(clbl, rate_func=window(0.6, 0.4)),
+                      FadeIn(recr, rate_func=window(0.6, 0.4)),
                       GrowArrow(arrC, rate_func=window(0.7, 0.3)), run_time=0.9)
             # "aimed at central London": the aiming point, Tower Bridge
             beat.wait_until("London", offset=-0.15)

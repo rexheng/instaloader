@@ -1888,10 +1888,17 @@ class Episode(NarratedScene):
                                            "in the same frame (a merge, not two labels)")
             tag05 = VGroup(*gap_lab[0][1:])
             x05 = D4[6].get_x()
+            c05_from = c05.get_center().copy()
+            f05 = fly(c05, tag05, [(x05, ROW_M + 0.9), (x05 + 2.8, ROW_M + 1.9),
+                                   (TAG[0] - 0.2, 1.2), (TAG[0] + 0.05, 2.4)], run_time=T,
+                      rate_func=window(0.05, 0.7, T, leave), fade_in=0.0)
+            c05.set_opacity(0)
+
+            def vis05(m, a):
+                d = float(np.linalg.norm(m.get_center() - c05_from))
+                m.set_opacity(float(np.clip((d - 0.45) / 0.3, 0, 1)))
             self.play(FadeOut(VGroup(d_lab, quarter), rate_func=window(0, 0.3, T)),
-                      fly(c05, tag05, [(x05, ROW_M + 0.9), (x05 + 2.8, ROW_M + 1.9),
-                                       (TAG[0] - 0.2, 1.2), (TAG[0] + 0.05, 2.4)], run_time=T,
-                          rate_func=window(0.05, 0.7, T, leave), fade_in=0.0),
+                      f05, UpdateFromAlphaFunc(c05, vis05, run_time=T),
                       FadeOut(qtag, shift=0.12 * UP, rate_func=window(0.55, 0.8, T)), run_time=T)
             self.remove(c05)
             d4 = VGroup(*D4)
@@ -2090,8 +2097,8 @@ class Episode(NarratedScene):
 
             def drop(src, dst, x_col, t0, t1):
                 pts = [src.get_center(), np.array([x_col, y_vis - 0.05, 0]),
-                       np.array([x_col, y_num, 0]),
-                       np.array([x_col + 0.75 * (dst.get_x() - x_col), y_num - 0.75, 0]),
+                       np.array([x_col, y_num, 0]), np.array([x_col, y_num - 0.45, 0]),
+                       np.array([x_col + 0.75 * (dst.get_x() - x_col), y_num - 0.85, 0]),
                        dst.get_center()]
                 path = VMobject().set_points_smoothly(pts)
                 h0, h1 = src.height, dst.height
@@ -2486,7 +2493,7 @@ class Episode(NarratedScene):
                                        time_width=0.5),
                       Indicate(end_gn, color=BLUE, scale_factor=1.25),
                       Indicate(cands2[0], color=BLUE, scale_factor=1.25),
-                      FadeOut(VGroup(q3, ref2, ghosts2, cands2[2]), rate_func=window(0.35, 0.7, T)),
+                      FadeOut(VGroup(q3, ref2, ghosts2, cands2[2]), rate_func=window(0.3, 0.6, T)),
                       run_time=T)
             T = 0.85
             self.play(FadeOut(cands2[0], rate_func=window(0, 0.3, T)),
@@ -2498,7 +2505,7 @@ class Episode(NarratedScene):
                       # fills, as on every other friend bar
                       GrowFromEdge(end_fo, LEFT, rate_func=window(0.0, 0.72, T)),
                       cands2[1].animate(rate_func=window(0.2, 0.75, T)).move_to(three_to),
-                      Create(ring3, rate_func=window(0.6, 0.9, T)), run_time=T)
+                      Create(ring3, rate_func=window(0.55, 0.85, T)), run_time=T)
             # "Most of us are Betty": Betty, and the token that shows her view
             beat.wait_until("Betty", occurrence=2, offset=-0.2)
             self.play(Indicate(circ2["Betty"], color=INK, scale_factor=1.25), pulse(tok_b, 1.3),

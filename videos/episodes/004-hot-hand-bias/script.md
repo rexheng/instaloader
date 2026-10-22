@@ -91,11 +91,10 @@ on "nine".
 ### 6. Insight: one vote per row (1:07–1:50) — *pool*, *votes*, *crowds*, *lineup*, *formula*
 > Yet no flip is biased. Gather all twenty four checked flips: twelve heads, twelve tails. Total
 > heads over total flips: exactly half.
-> The skew comes from scoring row by row: each row gets one vote, however many flips it checked.
+> But each row gets one vote, however many flips it checked.
 > Checked heads come in crowds, since a heads gets the next flip checked too. Here, three heads
 > share a single vote, while this lone tails gets a whole one.
 > Twelve heads crowd into eight rows. Twelve tails spread across eleven.
-> Crowded heads split their votes. *[1.2 s]*
 > Line them up: *[pause 0.8]* the heads hold five and two thirds of the fourteen votes.
 > *[pause 1.0]* That's seventeen out of forty two. *[1.6 s]*
 > So the test takes an average of ratios, one per row, instead of the ratio of totals.
@@ -160,10 +159,10 @@ to the after-heads cursor: "−19 points".
 > hundred shots each, from where they'd hit about half. After three hits, versus after three misses.
 > For a random shooter, the same crowding pulls after hits down to forty six percent on average,
 > and after misses up to fifty four. Miller and Sanjurjo's twenty eighteen paper *[pause 0.5]* puts
-> the gap at about minus eight points. *[pause 0.9]* Longer records shrink it, *[pause 0.5]* but a
-> hundred shots isn't long.
+> the gap at about minus eight points. *[pause 0.9]* Longer records shrink it; *[pause 0.9]* longer
+> streaks grow it.
 > The Cornell players hit forty nine percent after three hits, and forty five after three misses.
-> The study found plus four, too close to zero to count, so no hot hand.
+> *[pause 0.6]* The study found plus four, *[pause 0.4]* too close to zero to count, so no hot hand.
 > Measured from minus eight, it's twelve points hot. *[pause 0.9]* That's evidence for a hot hand
 > in a gym, not proof it survives defenders in a game.
 
@@ -230,6 +229,41 @@ the sixteen runs deals in on "is what a fair coin does" at 75% while the dashed 
 to 25%, is held ≈ 1.8 s, and on "Seventeen" its fourteen rows fly one after another (lag 0.06)
 into (1/14) Σᵢ hᵢ/nᵢ; then the marker draws and "= 17/42" slides out of it; the dashed line comes
 back to full on "A fifty percent shooter".
+
+Round-8 changes (both critics' fixes; see CHANGELOG):
+- **Average (0:52):** the 14 score dots no longer fly diagonally over the table: each runs down
+  the channel beside its card and along the corridor under the table before dropping to its place
+  (the 2/3 dot goes round the right end of "the obvious guess").
+- **Pool (1:06):** each of the 24 checked flips pours as a small disc of its tile's colour that
+  appears in the gap just under its own coin, runs left along that gap to its card's edge, down the
+  channel between cards and along the corridor under the table into its tile; no copy passes over a
+  coin.
+- **Votes (1:14):** "The skew comes from scoring row by row:" is cut; the beat opens "But each row
+  gets one vote, however many flips it checked." The regroup runs on "But each row", the resize to
+  equal votes lands on "vote", and a grey "1 vote per row" names the strip above its left end until
+  "5⅔ votes" takes its place.
+- **Lineup → pack:** "Crowded heads split their votes." is cut. On "Line them up:" HHHH and HHHT
+  come forward while their five third-of-a-vote slices pulse, then the votes pack.
+- **Cornell (2:12):** the lanes ("after 3 hits / after 3 misses") and the axis title ("checked shots
+  that are hits") change in the same move that brings in "1985 design"; the ●●● / ○○○ conditions
+  arrive on "the same comparison".
+- **−8 (2:37):** the cursors never leave 46% and 54%. On "puts the gap" the red gap gets "−8" and
+  slides until its tail sits on the dashed 50% line while the cursors and lanes fade where they
+  stand. On "about" the ×5 zoom: 0%/100% leave at once, 25%/75% fall to 40% while −10…+10 grow in
+  on the same marks (old and new overlap, never on the same spot), "50%" hands over to "0"; the
+  share title drifts right and fades as the gap title "after-hits − after-misses (points)" arrives
+  at the left end of the axis. Then the blue random-shooter marker grows at −8 with "random
+  shooter" and "bias".
+- **Record and streak length:** on "Longer records shrink it" a ghost of the −8 marker slides to
+  −0.71 ("1,000 shots") while "up to 100 shots" in the header answers. On "longer streaks grow it"
+  that ghost leaves and a ghost at the one-hit gap (−1.01) with one yellow dot gains a second dot
+  and slides to −3.14, gains a third and slides to −7.94, under −8 (exact for 100 shots).
+- **Cornell data (2:51):** no purple title; the grey "1985 design" header stays and the right
+  column's head turns from "random" to "Cornell", so "Cornell" is printed once. On "Measured from
+  minus eight" that head itself arcs to tag the +4 marker while the header leaves.
+- **Landing:** the 14 scored rows leave one after another, left-most column first (lag 0.22),
+  each stepping back to 40% and arcing up and over into (1/14) Σᵢ hᵢ/nᵢ; "= 17/42" lands on "this
+  test".
 
 ## Sources (on screen)
 - Gilovich, Vallone & Tversky, 1985 · Cognitive Psychology 17(3):295–314 (shown as "Gilovich et al., 1985 · Cognitive Psychology")

@@ -398,7 +398,8 @@ one-square derivation, and one histogram reused for A, B, the aimed map and Clar
 - Audio (8.5): "pauses intentional". Two problems: the two-hit beat ran as one run, and the
   limits beat went 12 s without a breath. Upgrade: 0.8 s pauses and a 0.6 s pause.
 - Concision (8.5): "cutting any sentence loses something". Upgrade: cut "Both are simulated. The
-  question isn't.", "So look again." and "like the detector".
+  question isn't." and "So look again." (A cut of "like the detector" was tried and reverted: it
+  left "Your eye expects chance to look that even" spoken at 209 wpm.)
 
 **What changed**
 
@@ -461,8 +462,26 @@ one-square derivation, and one histogram reused for A, B, the aimed map and Clar
     3. It opens into A's frame as B slides in.
     4. A's header and the 0:39 red outlines arrive only after that, on "map A".
 - *Audio (craft 2, 9; substance 7).*
-  - 0.8 s after "since order doesn't matter." and an 0.8 s beat gap after "e to the minus lambda
+  - "since order doesn't matter" became "since each pair counts twice": whisper twice heard
+    "doesn matter", and the new clause says what the swap of the two hits shows (537 × 536
+    counts the pair a-then-b and b-then-a).
+  - 0.8 s after "since each pair counts twice." and an 0.8 s beat gap after "e to the minus lambda
     again."
   - 0.6 s after "half as dense.", where the breath lands on the density write.
+  - 0.3 s after "force pile-ups:" (the gaps beat measured 13.5 s without a breath), while the
+    blue outlines draw.
   - 0.9 s after the limits beat for the square-up.
-  - "London's clusters" follows a 0.6 s pause.
+  - "London's clusters" follows a 0.5 s pause.
+  - To pay for these within the 3:35 budget, three pauses were trimmed. The pause after
+    "Backwards." is 0.6 s (was 0.7), the formula hold after "the Poisson distribution." is
+    0.5 s (was 0.8), and the three story-turn gaps are 0.55 s (was 0.65), which is still longer
+    than a full stop. The end card holds 0.3 s.
+- *Also fixed while checking the frames.*
+  - A's crowding zoom discs now turn red on "that even" and stay red into the pause. They used
+    to turn red after the last word, for about 0.5 s.
+  - The 20,000-map panel's header and axes appear only once the shrinking map has cleared their
+    place. At 2:25 the map used to pass over "20,000 chance maps (simulated)" and "maps".
+  - "≈ Clarke's area / re-created" fades out with the chart and back in at its new place. It
+    used to slide across the growing map.
+  - In the λ beat the red 3+ outlines no longer flash back for one frame. A stale dimming
+    function had set them to full opacity at the start of the map's step back.

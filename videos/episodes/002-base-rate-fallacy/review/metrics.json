@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/002-base-rate-fallacy/final.mp4",
- "duration_s": 220.7,
+ "duration_s": 214.733,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,59 +8,65 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 14.66,
+ "size_mb": 14.24,
  "integrated_lufs": -14.0,
- "lra_lu": 2.6,
+ "lra_lu": 2.8,
  "true_peak_dbtp": -2.1,
  "leading_silence_s": 0.0,
- "trailing_silence_s": 1.95,
- "longest_internal_silence_s": 2.16,
+ "trailing_silence_s": 1.62,
+ "longest_internal_silence_s": 2.24,
  "silences_over_1_5s": [
   [
-   12.95,
-   15.0
+   13.49,
+   15.64
   ],
   [
-   95.31,
-   97.0
+   93.72,
+   95.36
   ],
   [
-   190.17,
-   192.31
+   185.8,
+   188.04
   ],
   [
-   205.76,
-   207.93
+   200.15,
+   202.29
   ]
  ],
- "frames": 6621,
- "longest_static_s": 2.73,
+ "frames": 6442,
+ "longest_static_s": 2.8,
  "static_stretches_over_3s": [],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.051267361111112,
- "transcript_words": 522,
- "first_word_s": 0.02,
- "last_word_s": 219.25735,
- "wpm_speech": 150.8,
- "wpm_overall": 141.9,
- "wpm_excluding_all_pauses": 175.2,
+ "background_luma": 22.05984375,
+ "transcript_words": 487,
+ "first_word_s": 0.04,
+ "last_word_s": 213.53067,
+ "wpm_speech": 146.9,
+ "wpm_overall": 136.1,
+ "wpm_excluding_all_pauses": 172.3,
  "narration_file": "videos/episodes/002-base-rate-fallacy/narration.json",
- "wer": 0.0258,
- "narration_words": 503,
+ "wer": 0.0191,
+ "narration_words": 472,
  "banned_phrase_hits": 0,
  "slop_hits": [],
  "narration_craft": {
-  "narration_words": 508,
-  "voice_speeds": [],
-  "sentence_wpm_median": 166.3,
-  "sentences_over_200wpm": 2,
-  "sentence_gap_median_s": 0.4,
-  "sentence_gap_cv": 0.06,
-  "beat_gap_median_s": 0.41,
-  "longest_breathless_run_s": 18.4,
+  "narration_words": 470,
+  "voice_speeds": [
+   0.8,
+   0.84
+  ],
+  "sentence_wpm_median": 157.5,
+  "sentences_over_200wpm": 0,
+  "sentence_gap_median_s": 0.43,
+  "sentence_gap_cv": 0.25,
+  "beat_gap_median_s": 0.64,
+  "longest_breathless_run_s": 12.4,
   "max_distinct_numbers_20s": 7,
-  "repeated_phrases": 4
+  "repeated_phrases": 1,
+  "glyph_morphs": 0,
+  "deictics": 8,
+  "deictics_unlanded": 0
  },
  "layout_audit": {
   "count": 0,
@@ -68,10 +74,12 @@
    "overlap": 0,
    "clearance": 0,
    "safe-area": 0,
-   "caption-zone": 0
+   "caption-zone": 0,
+   "text-size": 0,
+   "small-label": 0
   },
   "allowed": 0,
-  "checks": 208
+  "checks": 214
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -85,175 +93,172 @@
   "sheets/sheet_09.png",
   "sheets/sheet_10.png",
   "sheets/sheet_11.png",
-  "sheets/sheet_12.png",
-  "sheets/sheet_13.png"
+  "sheets/sheet_12.png"
  ],
  "keyframes": [
   {
-   "t": 2.97,
-   "file": "keyframes/kf_01_00-03.0.png"
+   "t": 3.43,
+   "file": "keyframes/kf_01_00-03.4.png"
   },
   {
-   "t": 11.83,
-   "file": "keyframes/kf_02_00-11.8.png"
+   "t": 12.4,
+   "file": "keyframes/kf_02_00-12.4.png"
   },
   {
-   "t": 19.7,
-   "file": "keyframes/kf_03_00-19.7.png"
+   "t": 21.0,
+   "file": "keyframes/kf_03_00-21.0.png"
   },
   {
-   "t": 21.37,
-   "file": "keyframes/kf_04_00-21.4.png"
+   "t": 22.73,
+   "file": "keyframes/kf_04_00-22.7.png"
   },
   {
-   "t": 29.23,
-   "file": "keyframes/kf_05_00-29.2.png"
+   "t": 24.33,
+   "file": "keyframes/kf_05_00-24.3.png"
   },
   {
-   "t": 31.47,
-   "file": "keyframes/kf_06_00-31.5.png"
+   "t": 32.37,
+   "file": "keyframes/kf_06_00-32.4.png"
   },
   {
-   "t": 35.47,
-   "file": "keyframes/kf_07_00-35.5.png"
+   "t": 34.4,
+   "file": "keyframes/kf_07_00-34.4.png"
   },
   {
-   "t": 41.47,
-   "file": "keyframes/kf_08_00-41.5.png"
+   "t": 37.2,
+   "file": "keyframes/kf_08_00-37.2.png"
   },
   {
-   "t": 50.07,
-   "file": "keyframes/kf_09_00-50.1.png"
+   "t": 40.8,
+   "file": "keyframes/kf_09_00-40.8.png"
   },
   {
-   "t": 50.8,
-   "file": "keyframes/kf_10_00-50.8.png"
+   "t": 49.53,
+   "file": "keyframes/kf_10_00-49.5.png"
   },
   {
-   "t": 54.87,
-   "file": "keyframes/kf_11_00-54.9.png"
+   "t": 50.33,
+   "file": "keyframes/kf_11_00-50.3.png"
   },
   {
-   "t": 57.17,
-   "file": "keyframes/kf_12_00-57.2.png"
+   "t": 54.43,
+   "file": "keyframes/kf_12_00-54.4.png"
   },
   {
-   "t": 71.13,
-   "file": "keyframes/kf_13_01-11.1.png"
+   "t": 56.47,
+   "file": "keyframes/kf_13_00-56.5.png"
   },
   {
-   "t": 83.8,
-   "file": "keyframes/kf_14_01-23.8.png"
+   "t": 68.67,
+   "file": "keyframes/kf_14_01-08.7.png"
   },
   {
-   "t": 89.0,
-   "file": "keyframes/kf_15_01-29.0.png"
+   "t": 81.4,
+   "file": "keyframes/kf_15_01-21.4.png"
   },
   {
-   "t": 91.07,
-   "file": "keyframes/kf_16_01-31.1.png"
+   "t": 86.63,
+   "file": "keyframes/kf_16_01-26.6.png"
   },
   {
-   "t": 97.7,
-   "file": "keyframes/kf_17_01-37.7.png"
+   "t": 88.83,
+   "file": "keyframes/kf_17_01-28.8.png"
   },
   {
-   "t": 102.83,
-   "file": "keyframes/kf_18_01-42.8.png"
+   "t": 101.37,
+   "file": "keyframes/kf_18_01-41.4.png"
   },
   {
-   "t": 109.43,
-   "file": "keyframes/kf_19_01-49.4.png"
+   "t": 111.33,
+   "file": "keyframes/kf_19_01-51.3.png"
   },
   {
-   "t": 111.47,
-   "file": "keyframes/kf_20_01-51.5.png"
+   "t": 119.57,
+   "file": "keyframes/kf_20_01-59.6.png"
   },
   {
-   "t": 115.73,
-   "file": "keyframes/kf_21_01-55.7.png"
+   "t": 123.0,
+   "file": "keyframes/kf_21_02-03.0.png"
   },
   {
-   "t": 124.37,
-   "file": "keyframes/kf_22_02-04.4.png"
+   "t": 125.83,
+   "file": "keyframes/kf_22_02-05.8.png"
   },
   {
-   "t": 127.77,
-   "file": "keyframes/kf_23_02-07.8.png"
+   "t": 128.9,
+   "file": "keyframes/kf_23_02-08.9.png"
   },
   {
-   "t": 133.4,
-   "file": "keyframes/kf_24_02-13.4.png"
+   "t": 130.4,
+   "file": "keyframes/kf_24_02-10.4.png"
   },
   {
-   "t": 134.83,
-   "file": "keyframes/kf_25_02-14.8.png"
+   "t": 132.37,
+   "file": "keyframes/kf_25_02-12.4.png"
   },
   {
-   "t": 136.73,
-   "file": "keyframes/kf_26_02-16.7.png"
+   "t": 137.17,
+   "file": "keyframes/kf_26_02-17.2.png"
   },
   {
-   "t": 141.73,
-   "file": "keyframes/kf_27_02-21.7.png"
+   "t": 144.17,
+   "file": "keyframes/kf_27_02-24.2.png"
   },
   {
-   "t": 148.23,
-   "file": "keyframes/kf_28_02-28.2.png"
+   "t": 151.97,
+   "file": "keyframes/kf_28_02-32.0.png"
   },
   {
-   "t": 156.13,
-   "file": "keyframes/kf_29_02-36.1.png"
+   "t": 153.93,
+   "file": "keyframes/kf_29_02-33.9.png"
   },
   {
-   "t": 160.03,
-   "file": "keyframes/kf_30_02-40.0.png"
+   "t": 161.3,
+   "file": "keyframes/kf_30_02-41.3.png"
   },
   {
-   "t": 167.43,
-   "file": "keyframes/kf_31_02-47.4.png"
+   "t": 165.5,
+   "file": "keyframes/kf_31_02-45.5.png"
   },
   {
-   "t": 170.23,
-   "file": "keyframes/kf_32_02-50.2.png"
+   "t": 167.8,
+   "file": "keyframes/kf_32_02-47.8.png"
   },
   {
-   "t": 174.33,
-   "file": "keyframes/kf_33_02-54.3.png"
+   "t": 169.7,
+   "file": "keyframes/kf_33_02-49.7.png"
   },
   {
-   "t": 176.1,
-   "file": "keyframes/kf_34_02-56.1.png"
+   "t": 171.43,
+   "file": "keyframes/kf_34_02-51.4.png"
   },
   {
-   "t": 192.17,
-   "file": "keyframes/kf_35_03-12.2.png"
+   "t": 187.83,
+   "file": "keyframes/kf_35_03-07.8.png"
   },
   {
-   "t": 195.67,
-   "file": "keyframes/kf_36_03-15.7.png"
+   "t": 191.47,
+   "file": "keyframes/kf_36_03-11.5.png"
   },
   {
-   "t": 202.57,
-   "file": "keyframes/kf_37_03-22.6.png"
+   "t": 196.9,
+   "file": "keyframes/kf_37_03-16.9.png"
   },
   {
-   "t": 204.5,
-   "file": "keyframes/kf_38_03-24.5.png"
+   "t": 198.83,
+   "file": "keyframes/kf_38_03-18.8.png"
   },
   {
-   "t": 210.0,
-   "file": "keyframes/kf_39_03-30.0.png"
+   "t": 204.37,
+   "file": "keyframes/kf_39_03-24.4.png"
   },
   {
-   "t": 220.67,
-   "file": "keyframes/kf_40_03-40.7.png"
+   "t": 214.7,
+   "file": "keyframes/kf_40_03-34.7.png"
   }
  ],
  "flags": [
-  "concision budget: 508 words / 3:40.7 (target ≤ 500 words, ≤ 3:35)",
-  "cadence: full stops 0.40 s (variation 0.06), beat turns 0.41 s — metronomic, turns get no more air than full stops",
-  "breathless run: 18 s of speech with no pause ≥ 0.35 s at 1:37.0 (whisper hears one run-on sentence)"
+  "2 scene warning(s) from NarratedScene (timing/layout)"
  ],
  "implied_caps": []
 }

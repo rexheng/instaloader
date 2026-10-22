@@ -262,3 +262,62 @@ While this pass was under way the toolkit gained the §13 targets from 28 critic
 - 3:33: our town returns to full strength while the rule town and the labels fade, so the one town left is the subject of "Look again at the first town".
 
 **Checked before the master** (dry run of the scene with the new toolkit, no frames rendered): 0 warnings (budget, deictic, glyph morph, speed, overlap, text size), layout audit 0 issues in 220 checks, and the review kit's Narration craft section has no flagged line (483 words / 3:33.9; median sentence 167 wpm, 2 over 200; full stops 0.47 s vs beat turns 0.67 s; longest run without a breath 14.7 s; 6 numbers in the busiest 20 s).
+
+## Round 5 revisions (continued, 2)
+
+The previous pass rendered a master at 14:02, rebuilt the review pack (14:05), then edited scene.py (14:09) and was interrupted before rendering those edits. So the 14:02 master still showed two defects that its own report and frames exposed, and that the CHANGELOG above describes as fixed. This pass audited that master frame by frame, rendered the pending edits together with three new fixes, and checked every round-5 item again on the new master.
+
+### Plan (written before editing)
+
+| Dimension | BAR "9" anchor | Where the 14:02 master falls short | Upgrade |
+|---|---|---|---|
+| Motion / Visual | "Every motion encodes a relation"; "nothing to remove" | 1:22.6–1:23.4: the inset caption "before round 1" cross-fades into "after round 1" in place, both legible for about 0.6 s ("bafterre round 1" in a 5 fps strip), the same garble class the critics docked at 1:45 and 3:05 | `recap()` now uses the toolkit `swap()`: old caption out, then new in (already edited at 14:09, never rendered) |
+| Motion | "reading time respected"; static ≤ 4 s | 2:05.2–2:09.7: the finished ladder bars sit static for 4.5 s (report FLAG) | The bars sprout one by one across the whole sentence, from "sort" to "With" (14:09 edit, never rendered) |
+| Visual | "all §5 standards met" | 0:54–0:56: round-1 hops near the edges swing out over the board's frame (17 of 200 moves, up to 0.30 units; one passes next to the "simulated" tag) | Every hop now bends toward the board's centre and is clamped to the board; the dashed plan preview uses the same arc |
+| Visual | "every axis and marker labelled" (§13.1) | 2:41–2:54: the random-mix dashed line returns on the Schelling chart without its label | The line stays out with its label; the chart carries only Schelling's band and the two brackets |
+| Visual | §13.2.8: a saturated hue dims only to 60 % | the 14:02 master still had the stakes-beat rule example and A's ladder patch at 35 % (olive gold) | 60 % (14:09 edit, never rendered) |
+
+### What changed (scene.py)
+- **Inset caption (1:22.6, 1:38.0).** `recap()` uses the toolkit `swap()` (Succession: old out, then new in). A 5 fps strip of the new master shows "before round 1", an empty slot, then "after round 1"; likewise "after round 1" → "after round 2". The two captions are never on screen together.
+- **Ladder entrance (2:03.6–2:07.7).** The dot chart fades (0.3 s), its x-axis rises into the baseline (0.1–0.7 s), the titles fade in (0.35–0.95 s), and the 14 bars sprout left to right, one about every 0.25 s, until "With". The 4.5 s static stretch is gone: the longest static stretch in the episode is now 3.8 s (2:56.4, the two-town reveal).
+- **Hops stay on the board (round 1 at 0:53, rounds 2–7 at 1:42).** New `inward()` picks the arc sign that bends each hop toward the board's centre, and `play_round` clamps every in-flight position to the board's cell range. Checked offline over all 341 moves: before, 17 left the board by up to 0.30 units; now, none does. The dashed plan preview (0:46) is drawn with the same `inward()` arc, so it still traces the exact path the tile flies at 0:53. A 4 fps strip of round 1 shows no tile outside the board.
+- **Schelling chart (2:41–2:54).** The random-mix dashed line is no longer restored with the dots. Its label was already gone, so it would have been an unlabelled marker. A 4 fps strip of the reverse morph and kf 2:53.3 show only the axes, the dots, the bracket, the hatched band and the two thumbnails.
+
+### Checked on the new master (19:55)
+- **Every round-5 fix still lands:**
+  - The 2/7 → 3/8 change slides, with no glyph morph (B → C at 1:33).
+  - Same-household digits fade out and back in (strip 1:37.0–1:39.4).
+  - The jump labels go out, then the bracket slides, then the new label comes in (sheet 2:49–2:51).
+  - Ladder: one focal region (kf 2:23.4; A's patch now at 60 %).
+  - "households (simulated start)" is shown.
+  - Schelling frame: one label and a hatched band, with our columns dimmed (kf 2:53.3).
+  - Subject outline (sheet 1:15–1:41).
+  - "this chart": the axes are drawn first (sheet 1:49–1:51).
+  - Spoken columns are marked (sheet 1:53–1:59).
+  - The counter pulses on "this".
+  - Whisper hears "In the other".
+  - "38 content by their turn".
+  - The rule town's texture matches the Schelling town's (kf 3:01.8).
+  - No zone pulses under the HOLC sentence.
+  - Our town returns at full strength for the landing (sheet 3:25–3:31).
+- **Mechanics:**
+
+  | Measure | Value |
+  |---|---|
+  | Runtime | 3:33.8 |
+  | Narration | 483 words |
+  | Pace | 153 wpm over speech |
+  | Loudness | −14.0 LUFS / −1.8 dBTP |
+  | Longest silence | 2.08 s (the planned hold at 0:09) |
+  | Longest static stretch | 3.80 s |
+  | WER | 0.4 % (only "corner"/"corners") |
+  | Render warnings | 0 |
+  | Layout audit | 0 issues in 222 checks |
+  | Glyph morphs | 0 |
+  | Deictics | 15 of 15 landed |
+  | Review-kit flags | 0 |
+
+- **Facts:** nothing factual changed. The Schelling 1971 wording was re-checked against the paper's PDF text (p.155, "moves to the nearest vacant spot"; "a rapidly rising function of demands in the range from about 35% to 50%").
+- **Left as is, by judgment:**
+  - The right third of the frame is empty during 2:04–2:16, while the ladder builds and before A's patch arrives. It is not a half or a quadrant (§13.1), and it is the column the critics asked the thumbnails to vacate.
+  - Two six-word lines run at 208 and 215 wpm ("That whole town is one point on this chart", "Look again at the first town"). The report only flags four or more.

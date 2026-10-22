@@ -37,13 +37,13 @@ untitled: titles change fade-out-then-fade-in, and the fill is emptied before a 
 > One in five hundred people has this disease. A test catches ninety-nine percent of the sick and
 > wrongly flags one percent of the healthy. If yours says positive, what's the chance you're sick?
 > *[0.3]* Pick a number. *[1.6 s hold]*
-> Most doctors and medical students given a problem like this got it wrong.
+> At one Boston-area hospital, most doctors and medical students given a problem like this got it wrong.
 
 Visual: frame 1 holds red "sick" node with "1 in 500", blue "healthy" node, and the empty meter
 "chance you're sick ?" ghosted at 30 % on the right. The arrows grow to a yellow + as the rates
 are spoken; a ring "you" closes on "yours says positive"; the meter brightens on the question;
 the "?" pulses on "Pick a number" and a hollow grey "your guess" marker slides once along the
-empty scale during the hold. On "Most doctors" it fades and a 10 × 10 waffle builds under the
+empty scale during the hold. On "At one Boston-area hospital" it fades and a 10 × 10 waffle builds under the
 meter (23 green = "23% right", "doctors & students", "1 dot = 1%") with the citation
 *Manrai et al., 2014 · JAMA Intern. Med.*
 
@@ -65,7 +65,8 @@ marker at 99 % ("naive"); the waffle clears. "you" pulses on "treatment".
 Visual: one 1.5 s morph turns the diagram into a counting table (each node + label → row bullet +
 label, each arrow → row arrow with its rate riding along, the + → the positives' column header,
 "1 in 500" → the table's header above the sick row; the meter steps down out of the way). A 100 × 100
-grid ("10,000 people · expected counts"); on "half" the left 50 columns fill with red (a block, no
+grid ("10,000 people · expected counts") appears at the header's own 1 in 500 (20 red specks, the same
+20 the slider will end on); on "half" the left 50 columns fill with red (a block, no
 moiré) and the header's "500" rolls to "2"; a yellow beam sweeps: almost all of the left half stays lit,
 the right half dims but for a sprinkle of 50; counts tick to 4,950 and 50; a grey rule and a live sum
 "5,000" under the positives column on "five thousand"; the meter fills to 99 % on the naive marker.
@@ -73,7 +74,7 @@ the right half dims but for a sprinkle of 50; counts tick to 4,950 and 50; a gre
 ### 4. Fail: the same test, a rarer disease (0:45–1:17)
 > Now keep the same test, and make the disease rarer and rarer, down to yours: one in five hundred.
 > About twenty sick people light up, plus one percent of the healthy ones: about a hundred.
-> So of a hundred and twenty positives, only twenty are sick. **Seventeen percent.** *[1 s]*
+> So of a hundred twenty positives, only twenty are sick. **Seventeen percent.** *[1 s]*
 > **The rule said ninety-nine. Six times too high.** *[1 s]*
 > One percent sounds small, but here it's one percent of nearly everyone.
 
@@ -88,12 +89,12 @@ only the 100 ringed blue squares pulse, on "nearly everyone" the 9,980.
 
 ### 5. Insight: shrink the sample space (1:17–2:10)
 > *(0.80)* Your positive result ruled out everyone who tested negative. *[0.6]*
-> *(0.80)* What's left is a smaller sample space: these hundred and twenty people.
+> *(0.80)* What's left is a smaller sample space: these hundred twenty people.
 > Your chance of being sick is the red share of this crowd. Twenty, out of twenty plus a
 > hundred. *[1.1, the 17 % flies in silently]*
 > Unrounded, the red count is twenty sick people times ninety-nine percent, and the blue, every
 > healthy person times one percent.
-> Divide everything by ten thousand: counts become shares. *[0.4]* The share can't change.
+> Divide everything by ten thousand: counts become shares. *[0.4]* The share stays the same.
 > These are how common each group is, and these, how often each group tests positive. Name them,
 > and you have Bayes' theorem.
 > All it does is shrink the sample space to what the evidence allows, then take the share. *[0.9]*
@@ -112,8 +113,9 @@ columns sit under the 17 % red segment. The formula is built from the picture:
    both rows (20 → 0.002, 19.8 → 0.00198; 9,980 → 0.998, 99.8 → 0.00998) and every count in the
    formula divide in ONE move, so no paused frame shows a false mix of counts and shares (each
    number rolls out and its share rolls in; nothing morphs glyph by glyph). No number in
-   the table is left undivided. The 17 % pulses on "the share can't change".
-4. Grey braces grow on the spoken words: "how common" under 0.002 and 0.998, "how often" under 0.99
+   the table is left undivided. The 17 % pulses on "the share stays the same".
+4. Grey braces (labels MathTex 36; stage 3's products get extra air so the four labels sit ≥ 0.3
+   apart) grow on the spoken words: "how common" under 0.002 and 0.998, "how often" under 0.99
    and 0.01. On "Name them" each number turns into its name in place (0.002 → P(sick), 0.99 →
    P(+∣sick), 0.998 → P(healthy), 0.01 → P(+∣healthy); numerator first; each number's box grows into
    its name's box as one fades into the other, so no glyph is ever half-morphed), the braces stretch with their
@@ -123,21 +125,22 @@ columns sit under the 17 % red segment. The formula is built from the picture:
 
 ### 6. Consequence: precision, Cardiff 2017 (2:10–3:05)
 > Swap the disease for a police watch list.
-> For the twenty seventeen Champions League final, about a hundred and seventy thousand people came
+> For the twenty seventeen Champions League final, about a hundred seventy thousand people came
 > to Cardiff. The watch lists held about twelve hundred photos, so even a small error rate per face
 > would swamp the real matches.
 > Face-recognition cameras scanned the crowds. *[0.3]* Over four days, they raised two thousand four
-> hundred and seventy alerts.
-> Shrink to the alerts. Take the red share. The police counted a hundred and seventy-three as
+> hundred seventy alerts.
+> Shrink to the alerts. Take the red share. The police counted a hundred seventy-three as
 > right: seven percent.
-> In machine learning, the share of alerts that are right is called precision.
+> In machine learning, that share is called precision. *[0.8]*
 > Cardiff University's evaluators counted only alerts the logbooks confirmed: three percent.
 > Months later, a new algorithm, better photos and practised operators thinned out the false
 > alarms, the blue term in Bayes' denominator, and their count rose to forty-six percent.
 
 Visual: the formula and table clear while the meter empties and is retitled in place ("chance an
 alert is right ?", ghosted at 30 % like the cold open's meter until it gets its number); in one move the
-meter goes to the top right while the strip's 120 people spread out into a 100 × 100 crowd that fades
+meter goes across (above the people) and down to the middle of the right column, beside the crowd, so
+the right half is never left empty, while the strip's 120 people spread out into a 100 × 100 crowd that fades
 in around them (the 20 red become listed faces); the legend, docked 0.5 under the meter, starts with
 "■ watch list" on "watch list". The grey dateline "Cardiff · Champions League final week, 2017" on
 "Champions League final" (it fades once read), "≈ 170,000 people" over the crowd, "■ = 17 people ·
@@ -149,8 +152,8 @@ flagged pulse; the legend steps aside and the 145 file, rings on, one by one int
 95 raster of exactly 2,470 alerts (red first, then left to right). "Shrink to the alerts": the crowd
 fades out, the meter + raster move to the centre and the meter comes up to full strength; straight
 red/blue brackets on "red share"; "173 right" / "2,297 wrong"; the meter fills to 7 %, its red segment
-over the red columns. On "precision" the title rolls out and "precision" rolls in, a small ghost of the disease
-meter appears beside it ("your test", 17 %) and the word is copied under it: "precision too". Then the
+over the red columns. On "precision" the title rolls out and "precision" rolls in, a ghost of the disease
+meter (labels at full label size) appears beside it ("your test", 17 %) and the word is copied under it: "precision too". Then the
 ghost leaves, the main bar is tagged "police count / 2,470 alerts", and a second, thin bar below is
 tagged the same way, "evaluators' count / final week · 2,632 alerts"; it fills to 3 % on "three
 percent", its second tag line becomes "Six Nations 2018 · 48 alerts" on "Months later", and on
@@ -161,7 +164,7 @@ percent", its second tag line becomes "Six Nations 2018 · 48 alerts" on "Months
 ### 7. Landing: the opening, re-seen (3:05–3:36)
 > Back to your test. *[1.6, the first frame is re-seen in silence]*
 > Your seventeen percent assumes a random screen. Symptoms raise the one in five hundred: at one in
-> a hundred, fifty percent; at one in two, ninety-nine, where the rule held. *[1.2]*
+> a hundred, fifty percent; at one in two, ninety-nine, where the rule held. *[1.0]*
 > The title's ninety-nine percent is the test's recall: how often the sick test positive. Seventeen
 > percent is its precision: how often the positive are sick.
 

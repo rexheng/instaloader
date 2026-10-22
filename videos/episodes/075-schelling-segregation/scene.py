@@ -29,7 +29,8 @@ N = sim.N
 P = 0.145                 # board pitch (units per square)
 TILE = 0.115              # tile side
 GX, GY = -3.2, 0.3        # board centre (working position)
-UNH_W = 2.8               # unhappy ring: stroke 2.8 -> a 0.028-unit (3.8 px) ring OUTSIDE the tile
+UNH_W = 2.8               # unhappy ring: a 0.028-unit (3.8 px) RED ring OUTSIDE the tile ...
+GAP_FRAC = 0.3            # ... after a background-coloured gap of 0.3 x the ring (1.1 px on the board)
 COL = {1: BLUE, 2: YELLOW}
 
 TL, TR = 1.3, 5.3         # meter track left / right
@@ -70,21 +71,41 @@ def mag_cell(r, c):
     return np.array([x0 + (c - PATCH_C[0]) * MAG_P, y0 - (r - PATCH_R[0]) * MAG_P, 0.0])
 
 
-def set_unhappy(tile, flag, width=UNH_W, base=TILE, color=RED):
-    """Unhappy = a red ring drawn OUTSIDE the tile; the household colour stays at full
-    strength.  The square grows by the stroke width so the stroke's inner edge sits exactly
-    on the tile's edge (Manim strokes are centred on the path; width w = 0.01 w units)."""
+def set_unhappy(tile, flag, width=UNH_W, base=TILE, color=RED, opacity=1.0):
+    """Unhappy = a red ring drawn OUTSIDE the tile, separated from it by a thin gap of
+    background colour (round 6: red right against gold read as an orange outline); the
+    household colour stays at full strength.  Manim strokes are centred on the path
+    (width w = 0.01 w units), so: the path sits g/2 outside the tile's edge; the front stroke
+    (BG, width g) is the gap [edge, edge + g]; the background stroke (drawn behind the fill)
+    reaches out to edge + g + w, and only its outer w shows."""
+    w = width * 0.01
+    g = GAP_FRAC * w
     if flag:
-        tile.set_stroke(color, width=width, opacity=1.0)
-        tile.set_width(base + width * 0.01)
+        tile.set_width(base + g)
+        tile.set_stroke(BG, width=g * 100, opacity=opacity)
+        tile.set_stroke(color, width=(g + 2 * w) * 100, opacity=opacity, background=True)
     else:
-        tile.set_stroke(color, width=0, opacity=0.0)
         tile.set_width(base)
+        tile.set_stroke(BG, width=0, opacity=0.0)
+        tile.set_stroke(color, width=0, opacity=0.0, background=True)
     tile.ss_unhappy = flag
 
 
 def nb8(rc):
     return [(rc[0] + dr, rc[1] + dc) for dr in (-1, 0, 1) for dc in (-1, 0, 1) if (dr, dc) != (0, 0)]
+
+
+def inward(p0, p1, arc, centre):
+    """The sign of `arc` that bends a hop from p0 to p1 toward the board's centre, so a tile
+    never swings out over the board's edge mid-flight (round 5 cont. 2: hops near the edges
+    used to leave the board for a few frames, one of them next to the "simulated" tag)."""
+    p0, p1 = np.asarray(p0, float), np.asarray(p1, float)
+    if np.linalg.norm(p1 - p0) < 1e-6:
+        return arc
+    c = np.array([centre[0], centre[1], 0.0])
+    mp = path_along_arc(arc)(p0, p1, 0.5)
+    mn = path_along_arc(-arc)(p0, p1, 0.5)
+    return arc if np.linalg.norm(mp - c) <= np.linalg.norm(mn - c) else -arc
 
 
 def cross(m, size, color=GRAY, width=3):
@@ -305,8 +326,7 @@ class Episode(NarratedScene):
                     t.set_fill(opacity=o)
                 else:
                     o = t.get_fill_opacity()
-                t.set_stroke(RED, width=UNH_W * ss if ring else 0, opacity=o if ring else 0)
-                t.set_width(TILE * ss + (UNH_W * ss * 0.01 if ring else 0))
+                set_unhappy(t, ring, width=UNH_W * ss, base=TILE * ss, opacity=o)
                 t.move_to(cell(*self.pos[h], centre=cc, s=ss))
             self.frame.scale_to_fit_width((N * P + 0.07) * ss)
             self.frame.move_to([cc[0], cc[1], 0])
@@ -361,10 +381,23 @@ class Episode(NarratedScene):
             if not len(m.points):
                 continue
             if not hasattr(m, "ss_op0"):
-                m.ss_op0 = (m.get_fill_opacity(), m.get_stroke_opacity())
-            f0, s0 = m.ss_op0
-            anims.append(m.animate.set_fill(opacity=f0 * k).set_stroke(opacity=s0 * k))
+                m.ss_op0 = (m.get_fill_opacity(), m.get_stroke_opacity(),
+                            m.get_stroke_opacity(background=True))
+            f0, s0, b0 = m.ss_op0
+            anims.append(m.animate.set_fill(opacity=f0 * k).set_stroke(opacity=s0 * k)
+                         .set_stroke(opacity=b0 * k, background=True))
         return anims
+
+    def fade_fill(self, hids, k):
+        """One animation on the board: the fill of tiles `hids` goes to opacity k
+        (1,200 separate .animate calls would be slow)."""
+        tiles = [self.tiles[h] for h in hids]
+        o0 = [t.get_fill_opacity() for t in tiles]
+
+        def f(_m, a):
+            for t, o in zip(tiles, o0):
+                t.set_fill(opacity=o + (k - o) * a)
+        return UpdateFromAlphaFunc(self.board, f)
 
     def ctx_fade(self, ms, k):
         """Dim (k=0.3) or restore (k=1) context.  Unlike style.dim/undim this keeps the
@@ -424,10 +457,14 @@ class Episode(NarratedScene):
         involved -= skip
         paths = {}
         for (hid, a, b, col) in moves:
-            # start from where the tile is (an early mover is already at b: zero-length flight)
-            paths[hid] = (self.tiles[hid].get_center(), self.bcell(*b),
-                          path_along_arc(arc if (b[1] >= a[1]) else -arc))
+            # start from where the tile is (an early mover is already at b: zero-length flight);
+            # every hop bends toward the board's centre and stays on the board
+            p0, p1 = self.tiles[hid].get_center(), self.bcell(*b)
+            paths[hid] = (p0, p1, path_along_arc(inward(p0, p1, arc, self.bc)))
+        lim = (N - 1) / 2 * P * self.bs
+        bx, by = self.bc
         state = {"j": -1}
+        base_moves = self.moves_base        # the "moves" row is cumulative: 200, then 272 ... 341
 
         def upd(group, alpha):
             t = alpha * run_time
@@ -443,7 +480,10 @@ class Episode(NarratedScene):
                     tile.set_z_index(0)
                 else:
                     tile.set_z_index(5)
-                    tile.move_to(path(p0, p1, smooth(u)))
+                    q = path(p0, p1, smooth(u))
+                    q[0] = min(max(q[0], bx - lim), bx + lim)
+                    q[1] = min(max(q[1], by - lim), by + lim)
+                    tile.move_to(q)
             j = M if done else bisect.bisect_right(lands, t)
             if j != state["j"]:
                 state["j"] = j
@@ -454,8 +494,7 @@ class Episode(NarratedScene):
                         self.bring(self.tiles[h], want)
                 self.match.set_value(trace[j - 1][1] if j > 0 else prev_share)
                 self.unh.set_value(len(cur))
-                self.moves_n.set_value(j)
-        self.moves_n.set_value(0)
+                self.moves_n.set_value(base_moves + j)
         # extra animations keep their own run_times (no play-level run_time)
         self.play(UpdateFromAlphaFunc(self.board, upd, run_time=run_time, rate_func=linear), *extra)
         self.cur_unhappy = trace[-1][0]
@@ -469,7 +508,8 @@ class Episode(NarratedScene):
                 self.bring(tile, want)
         self.match.set_value(trace[-1][1])
         self.unh.set_value(len(self.cur_unhappy))
-        self.moves_n.set_value(M)
+        self.moves_base = base_moves + M
+        self.moves_n.set_value(self.moves_base)
 
     # ------------------------------------------------------------------ scene
     def construct(self):
@@ -480,6 +520,7 @@ class Episode(NarratedScene):
         self.pos = dict(self.final_pos)
         self.cur_unhappy = frozenset()
         self.early = {}                  # hid -> round index it moves in, if shown early (replay)
+        self.moves_base = 0              # moves made in earlier rounds (cumulative HUD row)
         self.bc, self.bs = (GX, GY), 1.0  # where the board sits and its scale
         FS = 56
 
@@ -567,14 +608,21 @@ class Episode(NarratedScene):
         with self.narrate("We read real city maps the same way, guessing motives from "
                           "patterns. So how can a demand of one third build a town of three "
                           "quarters?", speed=0.82, gap=0.45) as beat:
-            # (round 5 cont.) the rule stays, dimmed to 60 %, so the lower right is not left
-            # empty for the whole stakes beat; it comes back to full strength when the question
-            # names it ("a demand of one third") and leaves with the rewind
-            self.play(*self.soft_dim(rule_all, 0.6), FadeOut(ex_box), run_time=0.7)
+            # (round 6) "real city maps": the town is read as a map. The rule inset and the meter
+            # dim to 35 % and the board's frame pulses once; the demand (the motive) and the
+            # match (the pattern) come back as they are named; the rule returns with "a demand
+            # of one third" and leaves with the rewind
+            meter_all = [self.track, self.fill, self.lo, self.hi, self.mline, self.ink_lab,
+                         self.pur_lab]
+            self.play(*self.soft_dim(rule_all, 0.35), *self.ctx_fade(meter_all, 0.35),
+                      FadeOut(ex_box), run_time=beat.until("maps", offset=-0.1, min_time=0.6))
+            self.play(self.frame.animate(rate_func=there_and_back).set_stroke(INK, width=5),
+                      run_time=0.9)
             beat.wait_until("motives", offset=-0.25)
-            self.pulse(self.pur_lab, 1.12, run_time=0.6)
+            self.play(*self.ctx_fade([self.mline, self.pur_lab], 1.0), run_time=0.6)
             beat.wait_until("patterns", offset=-0.2)
-            self.flash_box(self.town, buff=0.05)
+            self.play(*self.ctx_fade([self.track, self.fill, self.lo, self.hi, self.ink_lab], 1.0),
+                      run_time=0.6)
             beat.wait_until("demand", offset=-0.15)
             self.play(*self.soft_dim(rule_all, 1.0),
                       self.pur_lab.animate(rate_func=there_and_back).scale(1.15), run_time=0.9)
@@ -619,7 +667,8 @@ class Episode(NarratedScene):
         # the plan, previewed on its first mover
         m0 = self.rounds[0][PREVIEW_MOVE]          # a real round-1 move, long enough to read
         a0, b0 = cell(*m0[1]), cell(*m0[2])
-        preview = DashedVMobject(ArcBetweenPoints(a0, b0, angle=0.9 if m0[2][1] >= m0[1][1] else -0.9),
+        # (the same arc the tile flies in round one: bent toward the board's centre)
+        preview = DashedVMobject(ArcBetweenPoints(a0, b0, angle=inward(a0, b0, 0.9, self.bc)),
                                  num_dashes=24, color=INK).set_stroke(width=4)
         dest_box = Square(TILE + 0.14, stroke_color=INK, stroke_width=4).move_to(b0)
         src_box = Square(TILE + 0.14, stroke_color=INK, stroke_width=4).move_to(a0)
@@ -1440,8 +1489,9 @@ class Episode(NarratedScene):
             self.play(Transform(x_line, Line(ax.c2p(0, 40), ax.c2p(60, 40), color=AXIS,
                                              stroke_width=2.5)),
                       ax.x_title.animate.set_opacity(1), run_time=0.6)
-            # ("random mix" stays out from here on: fewer words while Schelling's labels show)
-            restore = [m.animate.set_opacity(1) for m in [ours, qpt, base, ax.y_axis,
+            # ("random mix" stays out from here on: fewer words while Schelling's labels show;
+            # round 5 cont. 2: so does its dashed line, which would be an unlabelled marker)
+            restore = [m.animate.set_opacity(1) for m in [ours, qpt, ax.y_axis,
                                                           ax.y_title, ax.x_axis]]
             for c_ in cloud.values():                 # whisker and mean tick solid, dots translucent
                 restore += [c_[0].animate.set_opacity(1), c_[1].animate.set_opacity(0.38),

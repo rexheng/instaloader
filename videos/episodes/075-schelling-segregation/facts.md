@@ -138,3 +138,10 @@ and 20 above record each wording change. No number, simulation result or citatio
 abstract was re-read on aeaweb.org (doi 10.1257/pol.20190414): "The maps led to reduced home
 ownership rates, house values, and rents and increased racial segregation in later decades", as
 claim 20 says.
+
+**Round 5, continued (2).** No narration, number or citation changed. On screen, the random-mix
+dashed line no longer returns on the Schelling chart (it had lost its label there), and round-one
+hops stay on the board. Schelling 1971 was re-checked once more against the paper's PDF text
+(p.155: a dissatisfied household "moves to the nearest vacant spot that surrounds him with a
+neighborhood that meets his demands"; segregation is "a rapidly rising function of demands in the
+range from about 35% to 50%"), as claims 16 and 17 say.

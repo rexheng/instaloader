@@ -2,2883 +2,2779 @@
  "scene": "Episode",
  "episode": 2,
  "title": "When a 99% Accurate Test Says You're Sick",
- "video_duration": 220.7,
+ "video_duration": 214.733,
  "beats": [
   {
    "index": 0,
    "start": 0.0,
-   "duration": 14.63,
-   "end": 14.63,
-   "text": "One in five hundred people has this disease. A test catches ninety-nine percent of the sick and wrongly flags one percent of the healthy. If yours says positive, what's the chance you're sick? Pick a number. [pause 1.6]",
+   "duration": 15.16,
+   "end": 15.16,
+   "text": "One in five hundred people has this disease. A test catches ninety-nine percent of the sick and wrongly flags one percent of the healthy. If yours says positive, what's the chance you're sick? [pause 0.3] Pick a number. [pause 1.6]",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
    "words": [
     {
      "w": "One",
-     "t": 0.04,
-     "end": 0.265
+     "t": 0.045,
+     "end": 0.295
     },
     {
      "w": "in",
-     "t": 0.29,
-     "end": 0.44
+     "t": 0.32,
+     "end": 0.47
     },
     {
      "w": "five",
-     "t": 0.49,
-     "end": 0.752
+     "t": 0.52,
+     "end": 0.807
     },
     {
      "w": "hundred",
-     "t": 0.765,
-     "end": 1.015
+     "t": 0.82,
+     "end": 1.095
     },
     {
      "w": "people",
-     "t": 1.04,
-     "end": 1.415
+     "t": 1.12,
+     "end": 1.545
     },
     {
      "w": "has",
-     "t": 1.44,
-     "end": 1.665
+     "t": 1.57,
+     "end": 1.82
     },
     {
      "w": "this",
-     "t": 1.69,
-     "end": 1.865
+     "t": 1.845,
+     "end": 2.02
     },
     {
      "w": "disease",
-     "t": 1.89,
-     "end": 2.56
+     "t": 2.045,
+     "end": 2.74
     },
     {
      "w": "A",
-     "t": 2.955,
-     "end": 3.042
+     "t": 3.06,
+     "end": 3.16
     },
     {
      "w": "test",
-     "t": 3.08,
-     "end": 3.542
+     "t": 3.21,
+     "end": 3.698
     },
     {
      "w": "catches",
-     "t": 3.58,
-     "end": 4.005
+     "t": 3.735,
+     "end": 4.235
     },
     {
      "w": "ninety-nine",
-     "t": 4.055,
-     "end": 4.655
+     "t": 4.285,
+     "end": 4.96
     },
     {
      "w": "percent",
-     "t": 4.68,
-     "end": 5.018
+     "t": 4.985,
+     "end": 5.348
     },
     {
      "w": "of",
-     "t": 5.03,
-     "end": 5.092
+     "t": 5.36,
+     "end": 5.422
     },
     {
      "w": "the",
-     "t": 5.105,
-     "end": 5.217
+     "t": 5.435,
+     "end": 5.56
     },
     {
      "w": "sick",
-     "t": 5.255,
-     "end": 5.942
+     "t": 5.61,
+     "end": 6.322
     },
     {
      "w": "and",
-     "t": 6.005,
-     "end": 6.142
+     "t": 6.385,
+     "end": 6.522
     },
     {
      "w": "wrongly",
-     "t": 6.18,
-     "end": 6.58
+     "t": 6.56,
+     "end": 7.01
     },
     {
      "w": "flags",
-     "t": 6.63,
-     "end": 7.08
+     "t": 7.06,
+     "end": 7.51
     },
     {
      "w": "one",
-     "t": 7.13,
-     "end": 7.355
+     "t": 7.56,
+     "end": 7.785
     },
     {
      "w": "percent",
-     "t": 7.38,
-     "end": 7.692
+     "t": 7.81,
+     "end": 8.148
     },
     {
      "w": "of",
-     "t": 7.705,
-     "end": 7.768
+     "t": 8.16,
+     "end": 8.222
     },
     {
      "w": "the",
-     "t": 7.78,
-     "end": 7.855
+     "t": 8.235,
+     "end": 8.31
     },
     {
      "w": "healthy",
-     "t": 7.88,
-     "end": 8.47
+     "t": 8.335,
+     "end": 8.93
     },
     {
      "w": "If",
-     "t": 8.85,
-     "end": 9.025
+     "t": 9.245,
+     "end": 9.42
     },
     {
      "w": "yours",
-     "t": 9.05,
-     "end": 9.325
+     "t": 9.445,
+     "end": 9.72
     },
     {
      "w": "says",
-     "t": 9.35,
-     "end": 9.575
+     "t": 9.745,
+     "end": 9.97
     },
     {
      "w": "positive",
-     "t": 9.6,
-     "end": 10.325
+     "t": 9.995,
+     "end": 10.77
     },
     {
      "w": "what's",
-     "t": 10.45,
-     "end": 10.65
+     "t": 10.895,
+     "end": 11.12
     },
     {
      "w": "the",
-     "t": 10.675,
-     "end": 10.75
+     "t": 11.145,
+     "end": 11.232
     },
     {
      "w": "chance",
-     "t": 10.775,
-     "end": 11.062
+     "t": 11.27,
+     "end": 11.608
     },
     {
      "w": "you're",
-     "t": 11.075,
-     "end": 11.225
+     "t": 11.62,
+     "end": 11.77
     },
     {
      "w": "sick",
-     "t": 11.275,
-     "end": 11.74
+     "t": 11.82,
+     "end": 12.29
     },
     {
      "w": "Pick",
-     "t": 12.135,
-     "end": 12.348
+     "t": 12.64,
+     "end": 12.853
     },
     {
      "w": "a",
-     "t": 12.36,
-     "end": 12.41
+     "t": 12.865,
+     "end": 12.915
     },
     {
      "w": "number",
-     "t": 12.435,
-     "end": 13.03
+     "t": 12.94,
+     "end": 13.56
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/0a/0ae4abc8ba6f49da72f733b2.wav"
+   "wav": "/root/.cache/sample_space/tts/9c/9c1e6db40f404a28147e71ea.wav"
   },
   {
    "index": 1,
-   "start": 14.967,
-   "duration": 4.55,
-   "end": 19.517,
-   "text": "Most doctors and medical students given a problem like this got it wrong.",
+   "start": 15.6,
+   "duration": 6.75,
+   "end": 22.35,
+   "text": "At one Boston-area hospital, most doctors and medical students given a problem like this got it wrong.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
    "words": [
     {
-     "w": "Most",
-     "t": 15.032,
-     "end": 15.357
+     "w": "At",
+     "t": 15.6,
+     "end": 15.82
     },
     {
-     "w": "doctors",
-     "t": 15.382,
-     "end": 16.045
+     "w": "one",
+     "t": 15.87,
+     "end": 16.233
     },
     {
-     "w": "and",
-     "t": 16.082,
-     "end": 16.182
+     "w": "Boston-area",
+     "t": 16.27,
+     "end": 17.045
     },
     {
-     "w": "medical",
-     "t": 16.207,
-     "end": 16.607
-    },
-    {
-     "w": "students",
-     "t": 16.632,
-     "end": 17.495
-    },
-    {
-     "w": "given",
-     "t": 17.557,
-     "end": 17.769
-    },
-    {
-     "w": "a",
-     "t": 17.782,
-     "end": 17.832
-    },
-    {
-     "w": "problem",
-     "t": 17.857,
-     "end": 18.269
-    },
-    {
-     "w": "like",
-     "t": 18.282,
-     "end": 18.482
-    },
-    {
-     "w": "this",
-     "t": 18.507,
-     "end": 18.732
-    },
-    {
-     "w": "got",
-     "t": 18.757,
-     "end": 18.919
-    },
-    {
-     "w": "it",
-     "t": 18.932,
-     "end": 19.007
-    },
-    {
-     "w": "wrong",
-     "t": 19.032,
-     "end": 19.517
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/be/be8392ae16f3dcc7a45013db.wav"
-  },
-  {
-   "index": 2,
-   "start": 19.867,
-   "duration": 9.16,
-   "end": 29.027,
-   "text": "Their most common answer was their test's own accuracy: ninety-five percent. For our test, that's ninety-nine: you'd start treatment today.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Their",
-     "t": 19.882,
-     "end": 20.007
+     "w": "hospital",
+     "t": 17.07,
+     "end": 18.02
     },
     {
      "w": "most",
-     "t": 20.032,
-     "end": 20.269
+     "t": 18.22,
+     "end": 18.545
     },
     {
-     "w": "common",
-     "t": 20.307,
-     "end": 20.682
-    },
-    {
-     "w": "answer",
-     "t": 20.707,
-     "end": 21.219
-    },
-    {
-     "w": "was",
-     "t": 21.257,
-     "end": 21.432
-    },
-    {
-     "w": "their",
-     "t": 21.457,
-     "end": 21.619
-    },
-    {
-     "w": "test's",
-     "t": 21.657,
-     "end": 22.057
-    },
-    {
-     "w": "own",
-     "t": 22.082,
-     "end": 22.269
-    },
-    {
-     "w": "accuracy",
-     "t": 22.307,
-     "end": 23.307
-    },
-    {
-     "w": "ninety-five",
-     "t": 23.557,
-     "end": 24.257
-    },
-    {
-     "w": "percent",
-     "t": 24.282,
-     "end": 24.967
-    },
-    {
-     "w": "For",
-     "t": 25.407,
-     "end": 25.519
-    },
-    {
-     "w": "our",
-     "t": 25.532,
-     "end": 25.669
-    },
-    {
-     "w": "test",
-     "t": 25.707,
-     "end": 26.132
-    },
-    {
-     "w": "that's",
-     "t": 26.207,
-     "end": 26.482
-    },
-    {
-     "w": "ninety-nine",
-     "t": 26.507,
-     "end": 27.407
-    },
-    {
-     "w": "you'd",
-     "t": 27.557,
-     "end": 27.732
-    },
-    {
-     "w": "start",
-     "t": 27.757,
-     "end": 28.032
-    },
-    {
-     "w": "treatment",
-     "t": 28.057,
-     "end": 28.457
-    },
-    {
-     "w": "today",
-     "t": 28.482,
-     "end": 29.027
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/ae/aea7e7d77c8f1ced95f8784f.wav"
-  },
-  {
-   "index": 3,
-   "start": 29.367,
-   "duration": 5.76,
-   "end": 35.127,
-   "text": "Check that rule by counting. [pause 0.2] Here are ten thousand people, and suppose half of them are sick.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Check",
-     "t": 29.417,
-     "end": 29.642
-    },
-    {
-     "w": "that",
-     "t": 29.667,
-     "end": 29.867
-    },
-    {
-     "w": "rule",
-     "t": 29.892,
-     "end": 30.167
-    },
-    {
-     "w": "by",
-     "t": 30.192,
-     "end": 30.342
-    },
-    {
-     "w": "counting",
-     "t": 30.367,
-     "end": 31.097
-    },
-    {
-     "w": "Here",
-     "t": 31.357,
-     "end": 31.582
-    },
-    {
-     "w": "are",
-     "t": 31.607,
-     "end": 31.757
-    },
-    {
-     "w": "ten",
-     "t": 31.807,
-     "end": 32.057
-    },
-    {
-     "w": "thousand",
-     "t": 32.082,
-     "end": 32.457
-    },
-    {
-     "w": "people",
-     "t": 32.482,
-     "end": 33.157
+     "w": "doctors",
+     "t": 18.57,
+     "end": 19.232
     },
     {
      "w": "and",
-     "t": 33.307,
-     "end": 33.407
+     "t": 19.27,
+     "end": 19.37
     },
     {
-     "w": "suppose",
-     "t": 33.432,
-     "end": 33.895
+     "w": "medical",
+     "t": 19.395,
+     "end": 19.795
     },
     {
-     "w": "half",
-     "t": 33.932,
-     "end": 34.169
+     "w": "students",
+     "t": 19.82,
+     "end": 20.332
     },
     {
-     "w": "of",
-     "t": 34.182,
-     "end": 34.244
-    },
-    {
-     "w": "them",
-     "t": 34.257,
-     "end": 34.407
-    },
-    {
-     "w": "are",
-     "t": 34.432,
-     "end": 34.582
-    },
-    {
-     "w": "sick",
-     "t": 34.632,
-     "end": 35.127
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/94/9452b6f1328f5cba373062a0.wav"
-  },
-  {
-   "index": 4,
-   "start": 35.467,
-   "duration": 5.56,
-   "end": 41.027,
-   "text": "Test everyone. [pause 0.2] Ninety-nine percent of the sick light up, and one percent of the healthy.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Test",
-     "t": 35.522,
-     "end": 35.822
-    },
-    {
-     "w": "everyone",
-     "t": 35.847,
-     "end": 36.597
-    },
-    {
-     "w": "Ninety-nine",
-     "t": 36.877,
-     "end": 37.527
-    },
-    {
-     "w": "percent",
-     "t": 37.552,
-     "end": 37.915
-    },
-    {
-     "w": "of",
-     "t": 37.927,
-     "end": 37.989
-    },
-    {
-     "w": "the",
-     "t": 38.002,
-     "end": 38.127
-    },
-    {
-     "w": "sick",
-     "t": 38.177,
-     "end": 38.464
-    },
-    {
-     "w": "light",
-     "t": 38.502,
-     "end": 38.727
-    },
-    {
-     "w": "up",
-     "t": 38.752,
-     "end": 39.252
-    },
-    {
-     "w": "and",
-     "t": 39.427,
-     "end": 39.577
-    },
-    {
-     "w": "one",
-     "t": 39.627,
-     "end": 39.852
-    },
-    {
-     "w": "percent",
-     "t": 39.877,
-     "end": 40.215
-    },
-    {
-     "w": "of",
-     "t": 40.227,
-     "end": 40.289
-    },
-    {
-     "w": "the",
-     "t": 40.302,
-     "end": 40.377
-    },
-    {
-     "w": "healthy",
-     "t": 40.402,
-     "end": 41.027
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/f5/f5560a49e144a98f7001455e.wav"
-  },
-  {
-   "index": 5,
-   "start": 41.367,
-   "duration": 5.6,
-   "end": 46.967,
-   "text": "Of the five thousand who lit up, ninety-nine percent are sick. [pause 0.3] Here, the rule holds.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Of",
-     "t": 41.367,
-     "end": 41.459
-    },
-    {
-     "w": "the",
-     "t": 41.472,
-     "end": 41.584
-    },
-    {
-     "w": "five",
-     "t": 41.622,
-     "end": 41.972
-    },
-    {
-     "w": "thousand",
-     "t": 41.997,
-     "end": 42.409
-    },
-    {
-     "w": "who",
-     "t": 42.422,
-     "end": 42.547
-    },
-    {
-     "w": "lit",
-     "t": 42.572,
-     "end": 42.722
-    },
-    {
-     "w": "up",
-     "t": 42.747,
-     "end": 43.197
-    },
-    {
-     "w": "ninety-nine",
-     "t": 43.397,
-     "end": 44.022
-    },
-    {
-     "w": "percent",
-     "t": 44.047,
-     "end": 44.497
-    },
-    {
-     "w": "are",
-     "t": 44.522,
-     "end": 44.647
-    },
-    {
-     "w": "sick",
-     "t": 44.697,
-     "end": 45.187
-    },
-    {
-     "w": "Here",
-     "t": 45.562,
-     "end": 45.887
-    },
-    {
-     "w": "the",
-     "t": 45.962,
-     "end": 46.062
-    },
-    {
-     "w": "rule",
-     "t": 46.087,
-     "end": 46.337
-    },
-    {
-     "w": "holds",
-     "t": 46.362,
-     "end": 46.967
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/96/968718fc0883821f48339cfc.wav"
-  },
-  {
-   "index": 6,
-   "start": 47.333,
-   "duration": 6.93,
-   "end": 54.263,
-   "text": "Now keep the same test, and make the disease rarer and rarer, down to yours: one in five hundred. [pause 0.4]",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Now",
-     "t": 47.388,
-     "end": 47.613
-    },
-    {
-     "w": "keep",
-     "t": 47.638,
-     "end": 47.825
-    },
-    {
-     "w": "the",
-     "t": 47.838,
-     "end": 47.95
-    },
-    {
-     "w": "same",
-     "t": 47.988,
-     "end": 48.301
-    },
-    {
-     "w": "test",
-     "t": 48.338,
-     "end": 48.863
-    },
-    {
-     "w": "and",
-     "t": 48.963,
-     "end": 49.051
-    },
-    {
-     "w": "make",
-     "t": 49.063,
-     "end": 49.263
-    },
-    {
-     "w": "the",
-     "t": 49.288,
-     "end": 49.363
-    },
-    {
-     "w": "disease",
-     "t": 49.388,
-     "end": 49.875
-    },
-    {
-     "w": "rarer",
-     "t": 49.913,
-     "end": 50.338
-    },
-    {
-     "w": "and",
-     "t": 50.363,
-     "end": 50.463
-    },
-    {
-     "w": "rarer",
-     "t": 50.488,
-     "end": 50.963
-    },
-    {
-     "w": "down",
-     "t": 51.088,
-     "end": 51.363
-    },
-    {
-     "w": "to",
-     "t": 51.388,
-     "end": 51.488
-    },
-    {
-     "w": "yours",
-     "t": 51.513,
-     "end": 52.338
-    },
-    {
-     "w": "one",
-     "t": 52.563,
-     "end": 52.788
-    },
-    {
-     "w": "in",
-     "t": 52.813,
-     "end": 52.951
-    },
-    {
-     "w": "five",
-     "t": 52.988,
-     "end": 53.275
-    },
-    {
-     "w": "hundred",
-     "t": 53.288,
-     "end": 53.863
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/2f/2fa16eb72de1ff50b1695d32.wav"
-  },
-  {
-   "index": 7,
-   "start": 54.667,
-   "duration": 7.77,
-   "end": 62.437,
-   "text": "About twenty sick people light up, plus one percent of the nine thousand nine hundred eighty healthy ones: about a hundred.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "About",
-     "t": 54.682,
-     "end": 54.994
-    },
-    {
-     "w": "twenty",
-     "t": 55.032,
-     "end": 55.407
-    },
-    {
-     "w": "sick",
-     "t": 55.457,
-     "end": 55.682
-    },
-    {
-     "w": "people",
-     "t": 55.707,
-     "end": 56.057
-    },
-    {
-     "w": "light",
-     "t": 56.082,
-     "end": 56.307
-    },
-    {
-     "w": "up",
-     "t": 56.332,
-     "end": 56.807
-    },
-    {
-     "w": "plus",
-     "t": 56.982,
-     "end": 57.269
-    },
-    {
-     "w": "one",
-     "t": 57.307,
-     "end": 57.507
-    },
-    {
-     "w": "percent",
-     "t": 57.532,
-     "end": 58.007
-    },
-    {
-     "w": "of",
-     "t": 58.032,
-     "end": 58.094
-    },
-    {
-     "w": "the",
-     "t": 58.107,
-     "end": 58.232
-    },
-    {
-     "w": "nine",
-     "t": 58.282,
-     "end": 58.607
-    },
-    {
-     "w": "thousand",
-     "t": 58.632,
-     "end": 59.007
-    },
-    {
-     "w": "nine",
-     "t": 59.032,
-     "end": 59.282
-    },
-    {
-     "w": "hundred",
-     "t": 59.307,
-     "end": 59.645
-    },
-    {
-     "w": "eighty",
-     "t": 59.682,
-     "end": 60.007
-    },
-    {
-     "w": "healthy",
-     "t": 60.032,
-     "end": 60.432
-    },
-    {
-     "w": "ones",
-     "t": 60.457,
-     "end": 61.232
-    },
-    {
-     "w": "about",
-     "t": 61.457,
-     "end": 61.732
+     "w": "given",
+     "t": 20.37,
+     "end": 20.582
     },
     {
      "w": "a",
-     "t": 61.757,
-     "end": 61.807
+     "t": 20.595,
+     "end": 20.67
     },
     {
-     "w": "hundred",
-     "t": 61.832,
-     "end": 62.437
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/95/95f5c333cd4ef35c2fe72b81.wav"
-  },
-  {
-   "index": 8,
-   "start": 62.8,
-   "duration": 3.75,
-   "end": 66.55,
-   "text": "So of a hundred and twenty positives, only twenty are sick.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "So",
-     "t": 62.86,
-     "end": 63.035
+     "w": "problem",
+     "t": 20.695,
+     "end": 21.12
     },
     {
-     "w": "of",
-     "t": 63.06,
-     "end": 63.123
-    },
-    {
-     "w": "a",
-     "t": 63.135,
-     "end": 63.223
-    },
-    {
-     "w": "hundred",
-     "t": 63.26,
-     "end": 63.685
-    },
-    {
-     "w": "and",
-     "t": 63.71,
-     "end": 63.81
-    },
-    {
-     "w": "twenty",
-     "t": 63.835,
-     "end": 64.11
-    },
-    {
-     "w": "positives",
-     "t": 64.135,
-     "end": 65.01
-    },
-    {
-     "w": "only",
-     "t": 65.16,
-     "end": 65.46
-    },
-    {
-     "w": "twenty",
-     "t": 65.51,
-     "end": 65.86
-    },
-    {
-     "w": "are",
-     "t": 65.885,
-     "end": 66.035
-    },
-    {
-     "w": "sick",
-     "t": 66.085,
-     "end": 66.55
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/d9/d9df96a58f6f60985ac1077c.wav"
-  },
-  {
-   "index": 9,
-   "start": 66.733,
-   "duration": 1.49,
-   "end": 68.223,
-   "text": "Seventeen percent.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Seventeen",
-     "t": 66.828,
-     "end": 67.478
-    },
-    {
-     "w": "percent",
-     "t": 67.503,
-     "end": 68.223
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/f7/f786d39fa3c7ecd684402492.wav"
-  },
-  {
-   "index": 10,
-   "start": 69.233,
-   "duration": 3.51,
-   "end": 72.743,
-   "text": "The rule said ninety-nine. [pause 0.2] Six times too high.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "The",
-     "t": 69.263,
-     "end": 69.4
-    },
-    {
-     "w": "rule",
-     "t": 69.438,
-     "end": 69.775
-    },
-    {
-     "w": "said",
-     "t": 69.813,
-     "end": 70.038
-    },
-    {
-     "w": "ninety-nine",
-     "t": 70.063,
-     "end": 70.963
-    },
-    {
-     "w": "Six",
-     "t": 71.258,
-     "end": 71.508
-    },
-    {
-     "w": "times",
-     "t": 71.533,
-     "end": 71.971
-    },
-    {
-     "w": "too",
-     "t": 72.008,
-     "end": 72.195
-    },
-    {
-     "w": "high",
-     "t": 72.233,
-     "end": 72.743
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/5c/5c4da778c0d7f2c2dc33548d.wav"
-  },
-  {
-   "index": 11,
-   "start": 73.733,
-   "duration": 4.61,
-   "end": 78.343,
-   "text": "One percent sounds small, but here it's one percent of nearly everyone.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "One",
-     "t": 73.778,
-     "end": 74.003
-    },
-    {
-     "w": "percent",
-     "t": 74.028,
-     "end": 74.515
-    },
-    {
-     "w": "sounds",
-     "t": 74.553,
-     "end": 74.865
-    },
-    {
-     "w": "small",
-     "t": 74.903,
-     "end": 75.653
-    },
-    {
-     "w": "but",
-     "t": 75.778,
-     "end": 75.903
-    },
-    {
-     "w": "here",
-     "t": 75.928,
-     "end": 76.153
-    },
-    {
-     "w": "it's",
-     "t": 76.178,
-     "end": 76.365
-    },
-    {
-     "w": "one",
-     "t": 76.403,
-     "end": 76.628
-    },
-    {
-     "w": "percent",
-     "t": 76.653,
-     "end": 77.078
-    },
-    {
-     "w": "of",
-     "t": 77.103,
-     "end": 77.203
-    },
-    {
-     "w": "nearly",
-     "t": 77.228,
-     "end": 77.591
-    },
-    {
-     "w": "everyone",
-     "t": 77.628,
-     "end": 78.343
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/47/47eb5c44d0b27bd142df3326.wav"
-  },
-  {
-   "index": 12,
-   "start": 78.7,
-   "duration": 4.55,
-   "end": 83.25,
-   "text": "Your positive result ruled out everyone who tested negative.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Your",
-     "t": 78.72,
-     "end": 78.895
-    },
-    {
-     "w": "positive",
-     "t": 78.945,
-     "end": 79.545
-    },
-    {
-     "w": "result",
-     "t": 79.57,
-     "end": 80.42
-    },
-    {
-     "w": "ruled",
-     "t": 80.495,
-     "end": 80.845
-    },
-    {
-     "w": "out",
-     "t": 80.87,
-     "end": 81.082
-    },
-    {
-     "w": "everyone",
-     "t": 81.12,
-     "end": 81.695
-    },
-    {
-     "w": "who",
-     "t": 81.72,
-     "end": 81.857
-    },
-    {
-     "w": "tested",
-     "t": 81.895,
-     "end": 82.432
-    },
-    {
-     "w": "negative",
-     "t": 82.47,
-     "end": 83.25
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/73/73ce930e85dfe36d325a2d58.wav"
-  },
-  {
-   "index": 13,
-   "start": 83.867,
-   "duration": 5.11,
-   "end": 88.977,
-   "text": "What's left is a smaller sample space: these hundred and twenty people.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "What's",
-     "t": 83.922,
-     "end": 84.259
-    },
-    {
-     "w": "left",
-     "t": 84.297,
-     "end": 84.684
-    },
-    {
-     "w": "is",
-     "t": 84.722,
-     "end": 84.822
-    },
-    {
-     "w": "a",
-     "t": 84.847,
-     "end": 84.947
-    },
-    {
-     "w": "smaller",
-     "t": 84.997,
-     "end": 85.509
-    },
-    {
-     "w": "sample",
-     "t": 85.547,
-     "end": 85.972
-    },
-    {
-     "w": "space",
-     "t": 85.997,
-     "end": 86.797
-    },
-    {
-     "w": "these",
-     "t": 86.972,
-     "end": 87.235
-    },
-    {
-     "w": "hundred",
-     "t": 87.272,
-     "end": 87.835
-    },
-    {
-     "w": "and",
-     "t": 87.872,
-     "end": 87.985
-    },
-    {
-     "w": "twenty",
-     "t": 88.022,
-     "end": 88.334
-    },
-    {
-     "w": "people",
-     "t": 88.372,
-     "end": 88.977
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/1b/1bf9c9e65b888096f32dd143.wav"
-  },
-  {
-   "index": 14,
-   "start": 89.333,
-   "duration": 7.16,
-   "end": 96.493,
-   "text": "Your chance of being sick is the red share of this crowd. [pause 0.3] Twenty, out of twenty plus a hundred. [pause 1.1]",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Your",
-     "t": 89.363,
-     "end": 89.525
-    },
-    {
-     "w": "chance",
-     "t": 89.563,
-     "end": 89.875
-    },
-    {
-     "w": "of",
-     "t": 89.888,
-     "end": 89.963
-    },
-    {
-     "w": "being",
-     "t": 89.988,
-     "end": 90.275
-    },
-    {
-     "w": "sick",
-     "t": 90.338,
-     "end": 90.901
-    },
-    {
-     "w": "is",
-     "t": 90.963,
-     "end": 91.088
-    },
-    {
-     "w": "the",
-     "t": 91.113,
-     "end": 91.225
-    },
-    {
-     "w": "red",
-     "t": 91.263,
-     "end": 91.538
-    },
-    {
-     "w": "share",
-     "t": 91.588,
-     "end": 91.838
-    },
-    {
-     "w": "of",
-     "t": 91.863,
-     "end": 91.926
+     "w": "like",
+     "t": 21.145,
+     "end": 21.345
     },
     {
      "w": "this",
-     "t": 91.938,
-     "end": 92.113
+     "t": 21.37,
+     "end": 21.57
     },
     {
-     "w": "crowd",
-     "t": 92.138,
-     "end": 92.693
-    },
-    {
-     "w": "Twenty",
-     "t": 93.008,
-     "end": 93.608
-    },
-    {
-     "w": "out",
-     "t": 93.783,
-     "end": 93.945
-    },
-    {
-     "w": "of",
-     "t": 93.958,
-     "end": 94.058
-    },
-    {
-     "w": "twenty",
-     "t": 94.083,
-     "end": 94.458
-    },
-    {
-     "w": "plus",
-     "t": 94.483,
-     "end": 94.695
-    },
-    {
-     "w": "a",
-     "t": 94.708,
-     "end": 94.758
-    },
-    {
-     "w": "hundred",
-     "t": 94.783,
-     "end": 95.393
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/40/40138aa6f20f6380a2a61057.wav"
-  },
-  {
-   "index": 15,
-   "start": 96.967,
-   "duration": 8.69,
-   "end": 105.657,
-   "text": "Unrounded, the red count is twenty sick people times ninety-nine percent, and the blue, every healthy person times one percent.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Unrounded",
-     "t": 96.977,
-     "end": 97.802
-    },
-    {
-     "w": "the",
-     "t": 97.927,
-     "end": 98.039
-    },
-    {
-     "w": "red",
-     "t": 98.077,
-     "end": 98.315
-    },
-    {
-     "w": "count",
-     "t": 98.352,
-     "end": 98.714
-    },
-    {
-     "w": "is",
-     "t": 98.752,
-     "end": 98.902
-    },
-    {
-     "w": "twenty",
-     "t": 98.952,
-     "end": 99.327
-    },
-    {
-     "w": "sick",
-     "t": 99.377,
-     "end": 99.602
-    },
-    {
-     "w": "people",
-     "t": 99.627,
-     "end": 99.977
-    },
-    {
-     "w": "times",
-     "t": 100.002,
-     "end": 100.365
-    },
-    {
-     "w": "ninety-nine",
-     "t": 100.402,
-     "end": 101.027
-    },
-    {
-     "w": "percent",
-     "t": 101.052,
-     "end": 101.977
-    },
-    {
-     "w": "and",
-     "t": 102.152,
-     "end": 102.239
-    },
-    {
-     "w": "the",
-     "t": 102.252,
-     "end": 102.34
-    },
-    {
-     "w": "blue",
-     "t": 102.377,
-     "end": 102.952
-    },
-    {
-     "w": "every",
-     "t": 103.127,
-     "end": 103.427
-    },
-    {
-     "w": "healthy",
-     "t": 103.452,
-     "end": 103.802
-    },
-    {
-     "w": "person",
-     "t": 103.827,
-     "end": 104.377
-    },
-    {
-     "w": "times",
-     "t": 104.402,
-     "end": 104.727
-    },
-    {
-     "w": "one",
-     "t": 104.752,
-     "end": 104.977
-    },
-    {
-     "w": "percent",
-     "t": 105.002,
-     "end": 105.657
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/3b/3b7f479760a6ef0f0eff7696.wav"
-  },
-  {
-   "index": 16,
-   "start": 106.0,
-   "duration": 9.39,
-   "end": 115.39,
-   "text": "Divide everything by the ten thousand. [pause 0.2] Counts become shares: two in a thousand sick, nine hundred ninety-eight healthy. [pause 0.2] The share can't change.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Divide",
-     "t": 106.0,
-     "end": 106.428
-    },
-    {
-     "w": "everything",
-     "t": 106.465,
-     "end": 106.99
-    },
-    {
-     "w": "by",
-     "t": 107.015,
-     "end": 107.152
-    },
-    {
-     "w": "the",
-     "t": 107.165,
-     "end": 107.277
-    },
-    {
-     "w": "ten",
-     "t": 107.315,
-     "end": 107.565
-    },
-    {
-     "w": "thousand",
-     "t": 107.59,
-     "end": 108.3
-    },
-    {
-     "w": "Counts",
-     "t": 108.515,
-     "end": 108.84
-    },
-    {
-     "w": "become",
-     "t": 108.865,
-     "end": 109.24
-    },
-    {
-     "w": "shares",
-     "t": 109.29,
-     "end": 110.04
-    },
-    {
-     "w": "two",
-     "t": 110.24,
-     "end": 110.515
-    },
-    {
-     "w": "in",
-     "t": 110.54,
-     "end": 110.602
-    },
-    {
-     "w": "a",
-     "t": 110.615,
-     "end": 110.715
-    },
-    {
-     "w": "thousand",
-     "t": 110.765,
-     "end": 111.29
-    },
-    {
-     "w": "sick",
-     "t": 111.34,
-     "end": 111.79
-    },
-    {
-     "w": "nine",
-     "t": 111.965,
-     "end": 112.215
-    },
-    {
-     "w": "hundred",
-     "t": 112.24,
-     "end": 112.59
-    },
-    {
-     "w": "ninety-eight",
-     "t": 112.615,
-     "end": 113.14
-    },
-    {
-     "w": "healthy",
-     "t": 113.165,
-     "end": 113.8
-    },
-    {
-     "w": "The",
-     "t": 114.03,
-     "end": 114.142
-    },
-    {
-     "w": "share",
-     "t": 114.18,
-     "end": 114.405
-    },
-    {
-     "w": "can't",
-     "t": 114.43,
-     "end": 114.718
-    },
-    {
-     "w": "change",
-     "t": 114.755,
-     "end": 115.39
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/a1/a1f4a5206033cc30910a0fe7.wav"
-  },
-  {
-   "index": 17,
-   "start": 115.733,
-   "duration": 7.98,
-   "end": 123.713,
-   "text": "These are how common each group is, and these, how often each group tests positive. [pause 0.3] Name them, and you have Bayes' theorem.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "These",
-     "t": 115.783,
-     "end": 116.033
-    },
-    {
-     "w": "are",
-     "t": 116.058,
-     "end": 116.158
-    },
-    {
-     "w": "how",
-     "t": 116.183,
-     "end": 116.345
-    },
-    {
-     "w": "common",
-     "t": 116.383,
-     "end": 116.758
-    },
-    {
-     "w": "each",
-     "t": 116.783,
-     "end": 117.008
-    },
-    {
-     "w": "group",
-     "t": 117.033,
-     "end": 117.321
-    },
-    {
-     "w": "is",
-     "t": 117.358,
-     "end": 117.733
-    },
-    {
-     "w": "and",
-     "t": 117.833,
-     "end": 117.933
-    },
-    {
-     "w": "these",
-     "t": 117.958,
-     "end": 118.633
-    },
-    {
-     "w": "how",
-     "t": 118.808,
-     "end": 119.058
-    },
-    {
-     "w": "often",
-     "t": 119.108,
-     "end": 119.521
-    },
-    {
-     "w": "each",
-     "t": 119.558,
-     "end": 119.783
-    },
-    {
-     "w": "group",
-     "t": 119.808,
-     "end": 120.058
-    },
-    {
-     "w": "tests",
-     "t": 120.083,
-     "end": 120.408
-    },
-    {
-     "w": "positive",
-     "t": 120.433,
-     "end": 121.203
-    },
-    {
-     "w": "Name",
-     "t": 121.583,
-     "end": 121.883
-    },
-    {
-     "w": "them",
-     "t": 121.908,
-     "end": 122.208
-    },
-    {
-     "w": "and",
-     "t": 122.308,
-     "end": 122.395
-    },
-    {
-     "w": "you",
-     "t": 122.408,
-     "end": 122.483
-    },
-    {
-     "w": "have",
-     "t": 122.508,
-     "end": 122.683
-    },
-    {
-     "w": "Bayes'",
-     "t": 122.708,
-     "end": 123.083
-    },
-    {
-     "w": "theorem",
-     "t": 123.108,
-     "end": 123.713
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/c5/c5d47e0267c67333cb5b4cc4.wav"
-  },
-  {
-   "index": 18,
-   "start": 124.067,
-   "duration": 6.09,
-   "end": 130.157,
-   "text": "All it does is shrink the sample space to what the evidence allows, then take the share. [pause 0.8]",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "All",
-     "t": 124.092,
-     "end": 124.255
+     "w": "got",
+     "t": 21.595,
+     "end": 21.758
     },
     {
      "w": "it",
-     "t": 124.267,
-     "end": 124.342
+     "t": 21.77,
+     "end": 21.845
     },
     {
-     "w": "does",
-     "t": 124.367,
-     "end": 124.755
-    },
-    {
-     "w": "is",
-     "t": 124.792,
-     "end": 124.955
-    },
-    {
-     "w": "shrink",
-     "t": 125.017,
-     "end": 125.317
-    },
-    {
-     "w": "the",
-     "t": 125.342,
-     "end": 125.455
-    },
-    {
-     "w": "sample",
-     "t": 125.492,
-     "end": 125.917
-    },
-    {
-     "w": "space",
-     "t": 125.942,
-     "end": 126.367
-    },
-    {
-     "w": "to",
-     "t": 126.392,
-     "end": 126.454
-    },
-    {
-     "w": "what",
-     "t": 126.467,
-     "end": 126.579
-    },
-    {
-     "w": "the",
-     "t": 126.592,
-     "end": 126.717
-    },
-    {
-     "w": "evidence",
-     "t": 126.742,
-     "end": 127.167
-    },
-    {
-     "w": "allows",
-     "t": 127.192,
-     "end": 128.067
-    },
-    {
-     "w": "then",
-     "t": 128.217,
-     "end": 128.417
-    },
-    {
-     "w": "take",
-     "t": 128.442,
-     "end": 128.667
-    },
-    {
-     "w": "the",
-     "t": 128.692,
-     "end": 128.817
-    },
-    {
-     "w": "share",
-     "t": 128.867,
-     "end": 129.357
+     "w": "wrong",
+     "t": 21.87,
+     "end": 22.35
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/f7/f71ca2422ce524a1eadb6d3f.wav"
+   "wav": "/root/.cache/sample_space/tts/3f/3f523374548b9c536f4f3268.wav"
   },
   {
-   "index": 19,
-   "start": 130.5,
-   "duration": 2.48,
-   "end": 132.98,
-   "text": "Swap the disease for a police watch list.",
+   "index": 2,
+   "start": 22.8,
+   "duration": 9.28,
+   "end": 32.08,
+   "text": "Their most common answer was their test's own accuracy: ninety-five percent. For our test, that's ninety-nine: you'd start treatment today.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
    "words": [
     {
-     "w": "Swap",
-     "t": 130.575,
-     "end": 130.9
+     "w": "Their",
+     "t": 22.815,
+     "end": 22.94
     },
     {
-     "w": "the",
-     "t": 130.925,
-     "end": 131.0
+     "w": "most",
+     "t": 22.965,
+     "end": 23.202
     },
     {
-     "w": "disease",
-     "t": 131.025,
-     "end": 131.65
-    },
-    {
-     "w": "for",
-     "t": 131.675,
-     "end": 131.762
-    },
-    {
-     "w": "a",
-     "t": 131.775,
-     "end": 131.825
-    },
-    {
-     "w": "police",
-     "t": 131.85,
-     "end": 132.2
-    },
-    {
-     "w": "watch",
-     "t": 132.225,
-     "end": 132.5
-    },
-    {
-     "w": "list",
-     "t": 132.525,
-     "end": 132.98
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/cb/cb84b14587ca30722011f2cd.wav"
-  },
-  {
-   "index": 20,
-   "start": 133.333,
-   "duration": 14.97,
-   "end": 148.303,
-   "text": "For the twenty seventeen Champions League final, about a hundred and seventy thousand people came to Cardiff. [pause 0.2] The watch lists held about twelve hundred photos, so even a small error rate per face would swamp the real matches.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "For",
-     "t": 133.358,
-     "end": 133.471
-    },
-    {
-     "w": "the",
-     "t": 133.483,
-     "end": 133.558
-    },
-    {
-     "w": "twenty",
-     "t": 133.583,
-     "end": 133.883
-    },
-    {
-     "w": "seventeen",
-     "t": 133.908,
-     "end": 134.933
-    },
-    {
-     "w": "Champions",
-     "t": 135.008,
-     "end": 135.633
-    },
-    {
-     "w": "League",
-     "t": 135.658,
-     "end": 135.858
-    },
-    {
-     "w": "final",
-     "t": 135.883,
-     "end": 136.633
-    },
-    {
-     "w": "about",
-     "t": 136.808,
-     "end": 137.071
-    },
-    {
-     "w": "a",
-     "t": 137.083,
-     "end": 137.183
-    },
-    {
-     "w": "hundred",
-     "t": 137.233,
-     "end": 137.771
-    },
-    {
-     "w": "and",
-     "t": 137.808,
-     "end": 137.971
-    },
-    {
-     "w": "seventy",
-     "t": 138.033,
-     "end": 138.445
-    },
-    {
-     "w": "thousand",
-     "t": 138.483,
-     "end": 138.908
-    },
-    {
-     "w": "people",
-     "t": 138.933,
-     "end": 139.421
-    },
-    {
-     "w": "came",
-     "t": 139.458,
-     "end": 139.708
-    },
-    {
-     "w": "to",
-     "t": 139.733,
-     "end": 139.833
-    },
-    {
-     "w": "Cardiff",
-     "t": 139.858,
-     "end": 140.523
-    },
-    {
-     "w": "The",
-     "t": 140.738,
-     "end": 140.851
-    },
-    {
-     "w": "watch",
-     "t": 140.888,
-     "end": 141.213
-    },
-    {
-     "w": "lists",
-     "t": 141.238,
-     "end": 141.538
-    },
-    {
-     "w": "held",
-     "t": 141.563,
-     "end": 141.775
-    },
-    {
-     "w": "about",
-     "t": 141.788,
-     "end": 142.076
-    },
-    {
-     "w": "twelve",
-     "t": 142.113,
-     "end": 142.401
-    },
-    {
-     "w": "hundred",
-     "t": 142.413,
-     "end": 142.738
-    },
-    {
-     "w": "photos",
-     "t": 142.763,
-     "end": 143.738
-    },
-    {
-     "w": "so",
-     "t": 143.913,
-     "end": 144.101
-    },
-    {
-     "w": "even",
-     "t": 144.138,
-     "end": 144.388
-    },
-    {
-     "w": "a",
-     "t": 144.413,
-     "end": 144.525
-    },
-    {
-     "w": "small",
-     "t": 144.588,
-     "end": 145.063
-    },
-    {
-     "w": "error",
-     "t": 145.113,
-     "end": 145.438
-    },
-    {
-     "w": "rate",
-     "t": 145.463,
-     "end": 145.713
-    },
-    {
-     "w": "per",
-     "t": 145.738,
-     "end": 145.938
-    },
-    {
-     "w": "face",
-     "t": 145.988,
-     "end": 146.551
-    },
-    {
-     "w": "would",
-     "t": 146.588,
-     "end": 146.763
-    },
-    {
-     "w": "swamp",
-     "t": 146.813,
-     "end": 147.188
-    },
-    {
-     "w": "the",
-     "t": 147.213,
-     "end": 147.288
-    },
-    {
-     "w": "real",
-     "t": 147.313,
-     "end": 147.538
-    },
-    {
-     "w": "matches",
-     "t": 147.563,
-     "end": 148.303
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/2d/2d4a321aeebad9e7c5146ddc.wav"
-  },
-  {
-   "index": 21,
-   "start": 148.667,
-   "duration": 7.38,
-   "end": 156.047,
-   "text": "Face-recognition cameras scanned the crowds. [pause 0.3] Over four days, they raised two thousand four hundred and seventy alerts.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Face-recognition",
-     "t": 148.707,
-     "end": 149.595
-    },
-    {
-     "w": "cameras",
-     "t": 149.632,
-     "end": 150.295
-    },
-    {
-     "w": "scanned",
-     "t": 150.357,
-     "end": 150.669
-    },
-    {
-     "w": "the",
-     "t": 150.682,
-     "end": 150.757
-    },
-    {
-     "w": "crowds",
-     "t": 150.782,
-     "end": 151.427
-    },
-    {
-     "w": "Over",
-     "t": 151.727,
-     "end": 151.959
-    },
-    {
-     "w": "four",
-     "t": 151.997,
-     "end": 152.197
-    },
-    {
-     "w": "days",
-     "t": 152.222,
-     "end": 152.847
-    },
-    {
-     "w": "they",
-     "t": 152.972,
-     "end": 153.097
-    },
-    {
-     "w": "raised",
-     "t": 153.122,
-     "end": 153.509
-    },
-    {
-     "w": "two",
-     "t": 153.547,
-     "end": 153.722
-    },
-    {
-     "w": "thousand",
-     "t": 153.747,
-     "end": 154.084
-    },
-    {
-     "w": "four",
-     "t": 154.122,
-     "end": 154.322
-    },
-    {
-     "w": "hundred",
-     "t": 154.347,
-     "end": 154.772
-    },
-    {
-     "w": "and",
-     "t": 154.797,
-     "end": 154.909
-    },
-    {
-     "w": "seventy",
-     "t": 154.947,
-     "end": 155.347
-    },
-    {
-     "w": "alerts",
-     "t": 155.372,
-     "end": 156.047
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/4b/4b07c7450fe9bbf81fd55b16.wav"
-  },
-  {
-   "index": 22,
-   "start": 156.433,
-   "duration": 2.63,
-   "end": 159.063,
-   "text": "Shrink to the alerts, and take the red share.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Shrink",
-     "t": 156.543,
-     "end": 156.793
-    },
-    {
-     "w": "to",
-     "t": 156.818,
-     "end": 156.881
-    },
-    {
-     "w": "the",
-     "t": 156.893,
-     "end": 157.018
-    },
-    {
-     "w": "alerts",
-     "t": 157.043,
-     "end": 157.668
-    },
-    {
-     "w": "and",
-     "t": 157.768,
-     "end": 157.868
-    },
-    {
-     "w": "take",
-     "t": 157.893,
-     "end": 158.118
-    },
-    {
-     "w": "the",
-     "t": 158.143,
-     "end": 158.243
-    },
-    {
-     "w": "red",
-     "t": 158.268,
-     "end": 158.518
-    },
-    {
-     "w": "share",
-     "t": 158.568,
-     "end": 159.063
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/5e/5e1117e146740c479cd4d996.wav"
-  },
-  {
-   "index": 23,
-   "start": 159.3,
-   "duration": 4.71,
-   "end": 164.01,
-   "text": "The police counted a hundred and seventy-three as right: seven percent.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "The",
-     "t": 159.405,
-     "end": 159.48
-    },
-    {
-     "w": "police",
-     "t": 159.505,
-     "end": 159.955
-    },
-    {
-     "w": "counted",
-     "t": 159.98,
-     "end": 160.342
-    },
-    {
-     "w": "a",
-     "t": 160.355,
-     "end": 160.442
-    },
-    {
-     "w": "hundred",
-     "t": 160.48,
-     "end": 160.968
-    },
-    {
-     "w": "and",
-     "t": 161.005,
-     "end": 161.142
-    },
-    {
-     "w": "seventy-three",
-     "t": 161.18,
-     "end": 161.855
-    },
-    {
-     "w": "as",
-     "t": 161.88,
-     "end": 162.005
-    },
-    {
-     "w": "right",
-     "t": 162.03,
-     "end": 162.705
-    },
-    {
-     "w": "seven",
-     "t": 162.98,
-     "end": 163.305
-    },
-    {
-     "w": "percent",
-     "t": 163.33,
-     "end": 164.01
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/8f/8fc0f6e6d00b5cbbd6187cd4.pre80.wav"
-  },
-  {
-   "index": 24,
-   "start": 164.367,
-   "duration": 4.35,
-   "end": 168.717,
-   "text": "In machine learning, the share of alerts that are right is called precision.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "In",
-     "t": 164.402,
-     "end": 164.489
-    },
-    {
-     "w": "machine",
-     "t": 164.502,
-     "end": 164.952
-    },
-    {
-     "w": "learning",
-     "t": 164.977,
-     "end": 165.652
-    },
-    {
-     "w": "the",
-     "t": 165.802,
-     "end": 165.927
-    },
-    {
-     "w": "share",
-     "t": 165.977,
-     "end": 166.215
-    },
-    {
-     "w": "of",
-     "t": 166.227,
-     "end": 166.302
-    },
-    {
-     "w": "alerts",
-     "t": 166.327,
-     "end": 166.777
-    },
-    {
-     "w": "that",
-     "t": 166.802,
-     "end": 166.889
-    },
-    {
-     "w": "are",
-     "t": 166.902,
-     "end": 167.04
-    },
-    {
-     "w": "right",
-     "t": 167.077,
-     "end": 167.489
-    },
-    {
-     "w": "is",
-     "t": 167.527,
-     "end": 167.652
-    },
-    {
-     "w": "called",
-     "t": 167.677,
-     "end": 167.927
-    },
-    {
-     "w": "precision",
-     "t": 167.952,
-     "end": 168.717
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/19/19ce2422759131e8a645db54.wav"
-  },
-  {
-   "index": 25,
-   "start": 169.467,
-   "duration": 19.21,
-   "end": 188.677,
-   "text": "Cardiff University's evaluators counted only alerts the logbooks confirmed: three percent. Months later, a new algorithm, better photos and practised operators thinned out the false alarms, the blue term in Bayes' denominator, and their count rose to forty-six percent.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Cardiff",
-     "t": 169.482,
-     "end": 169.857
-    },
-    {
-     "w": "University's",
-     "t": 169.882,
-     "end": 170.682
-    },
-    {
-     "w": "evaluators",
-     "t": 170.707,
-     "end": 171.445
-    },
-    {
-     "w": "counted",
-     "t": 171.482,
-     "end": 171.982
-    },
-    {
-     "w": "only",
-     "t": 172.032,
-     "end": 172.495
-    },
-    {
-     "w": "alerts",
-     "t": 172.532,
-     "end": 172.907
-    },
-    {
-     "w": "the",
-     "t": 172.932,
-     "end": 173.032
-    },
-    {
-     "w": "logbooks",
-     "t": 173.057,
-     "end": 173.607
-    },
-    {
-     "w": "confirmed",
-     "t": 173.632,
-     "end": 174.682
-    },
-    {
-     "w": "three",
-     "t": 174.957,
-     "end": 175.182
-    },
-    {
-     "w": "percent",
-     "t": 175.207,
-     "end": 175.887
-    },
-    {
-     "w": "Months",
-     "t": 176.322,
-     "end": 176.684
-    },
-    {
-     "w": "later",
-     "t": 176.722,
-     "end": 177.372
-    },
-    {
-     "w": "a",
-     "t": 177.547,
-     "end": 177.647
-    },
-    {
-     "w": "new",
-     "t": 177.697,
-     "end": 178.022
-    },
-    {
-     "w": "algorithm",
-     "t": 178.072,
-     "end": 178.847
-    },
-    {
-     "w": "better",
-     "t": 178.997,
-     "end": 179.335
-    },
-    {
-     "w": "photos",
-     "t": 179.372,
-     "end": 179.972
-    },
-    {
-     "w": "and",
-     "t": 179.997,
-     "end": 180.097
-    },
-    {
-     "w": "practised",
-     "t": 180.122,
-     "end": 180.597
-    },
-    {
-     "w": "operators",
-     "t": 180.622,
-     "end": 181.385
-    },
-    {
-     "w": "thinned",
-     "t": 181.447,
-     "end": 181.659
-    },
-    {
-     "w": "out",
-     "t": 181.672,
-     "end": 181.809
-    },
-    {
-     "w": "the",
-     "t": 181.822,
-     "end": 181.909
-    },
-    {
-     "w": "false",
-     "t": 181.947,
-     "end": 182.272
-    },
-    {
-     "w": "alarms",
-     "t": 182.297,
-     "end": 183.272
-    },
-    {
-     "w": "the",
-     "t": 183.422,
-     "end": 183.534
-    },
-    {
-     "w": "blue",
-     "t": 183.572,
-     "end": 183.859
-    },
-    {
-     "w": "term",
-     "t": 183.897,
-     "end": 184.272
-    },
-    {
-     "w": "in",
-     "t": 184.297,
-     "end": 184.422
-    },
-    {
-     "w": "Bayes'",
-     "t": 184.447,
-     "end": 184.797
-    },
-    {
-     "w": "denominator",
-     "t": 184.822,
-     "end": 185.872
-    },
-    {
-     "w": "and",
-     "t": 186.047,
-     "end": 186.135
-    },
-    {
-     "w": "their",
-     "t": 186.147,
-     "end": 186.322
-    },
-    {
-     "w": "count",
-     "t": 186.372,
-     "end": 186.797
-    },
-    {
-     "w": "rose",
-     "t": 186.847,
-     "end": 187.222
-    },
-    {
-     "w": "to",
-     "t": 187.247,
-     "end": 187.359
-    },
-    {
-     "w": "forty-six",
-     "t": 187.397,
-     "end": 187.997
-    },
-    {
-     "w": "percent",
-     "t": 188.022,
-     "end": 188.677
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/76/76a123014b80442535ea6ddf.wav"
-  },
-  {
-   "index": 26,
-   "start": 189.033,
-   "duration": 2.82,
-   "end": 191.853,
-   "text": "Back to your test. [pause 1.6]",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Back",
-     "t": 189.103,
-     "end": 189.378
-    },
-    {
-     "w": "to",
-     "t": 189.403,
-     "end": 189.465
-    },
-    {
-     "w": "your",
-     "t": 189.478,
-     "end": 189.603
-    },
-    {
-     "w": "test",
-     "t": 189.628,
-     "end": 190.253
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/02/024f337de8b6d9f174fdf7ea.wav"
-  },
-  {
-   "index": 27,
-   "start": 192.2,
-   "duration": 14.85,
-   "end": 207.05,
-   "text": "Your seventeen percent assumes a random screen. [pause 0.3] Symptoms raise the one in five hundred, and the answer climbs: at one in a hundred, fifty percent; at one in two, ninety-nine, where the rule held. [pause 1.2]",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "Your",
-     "t": 192.3,
-     "end": 192.462
-    },
-    {
-     "w": "seventeen",
-     "t": 192.5,
-     "end": 193.075
-    },
-    {
-     "w": "percent",
-     "t": 193.1,
-     "end": 193.837
-    },
-    {
-     "w": "assumes",
-     "t": 193.9,
-     "end": 194.35
-    },
-    {
-     "w": "a",
-     "t": 194.375,
-     "end": 194.462
-    },
-    {
-     "w": "random",
-     "t": 194.5,
-     "end": 194.925
-    },
-    {
-     "w": "screen",
-     "t": 194.95,
-     "end": 195.51
-    },
-    {
-     "w": "Symptoms",
-     "t": 195.895,
-     "end": 196.482
-    },
-    {
-     "w": "raise",
-     "t": 196.52,
-     "end": 196.845
-    },
-    {
-     "w": "the",
-     "t": 196.87,
-     "end": 196.982
-    },
-    {
-     "w": "one",
-     "t": 197.02,
-     "end": 197.22
-    },
-    {
-     "w": "in",
-     "t": 197.245,
-     "end": 197.382
-    },
-    {
-     "w": "five",
-     "t": 197.42,
-     "end": 197.72
-    },
-    {
-     "w": "hundred",
-     "t": 197.745,
-     "end": 198.395
-    },
-    {
-     "w": "and",
-     "t": 198.52,
-     "end": 198.608
-    },
-    {
-     "w": "the",
-     "t": 198.62,
-     "end": 198.732
+     "w": "common",
+     "t": 23.24,
+     "end": 23.615
     },
     {
      "w": "answer",
-     "t": 198.77,
-     "end": 199.17
+     "t": 23.64,
+     "end": 24.152
     },
     {
-     "w": "climbs",
-     "t": 199.195,
-     "end": 200.145
+     "w": "was",
+     "t": 24.19,
+     "end": 24.365
     },
     {
-     "w": "at",
-     "t": 200.345,
-     "end": 200.47
-    },
-    {
-     "w": "one",
-     "t": 200.495,
-     "end": 200.658
-    },
-    {
-     "w": "in",
-     "t": 200.67,
-     "end": 200.732
-    },
-    {
-     "w": "a",
-     "t": 200.745,
-     "end": 200.795
-    },
-    {
-     "w": "hundred",
-     "t": 200.82,
-     "end": 201.32
-    },
-    {
-     "w": "fifty",
-     "t": 201.47,
-     "end": 201.77
-    },
-    {
-     "w": "percent",
-     "t": 201.795,
-     "end": 202.67
-    },
-    {
-     "w": "at",
-     "t": 202.87,
-     "end": 202.995
-    },
-    {
-     "w": "one",
-     "t": 203.02,
-     "end": 203.22
-    },
-    {
-     "w": "in",
-     "t": 203.245,
-     "end": 203.395
-    },
-    {
-     "w": "two",
-     "t": 203.445,
-     "end": 203.82
-    },
-    {
-     "w": "ninety-nine",
-     "t": 203.92,
-     "end": 204.62
-    },
-    {
-     "w": "where",
-     "t": 204.695,
-     "end": 204.82
-    },
-    {
-     "w": "the",
-     "t": 204.845,
-     "end": 204.97
-    },
-    {
-     "w": "rule",
-     "t": 205.02,
-     "end": 205.295
-    },
-    {
-     "w": "held",
-     "t": 205.32,
-     "end": 205.85
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/f6/f68e02e0905978aeb8a6a835.pre80.wav"
-  },
-  {
-   "index": 28,
-   "start": 207.9,
-   "duration": 10.94,
-   "end": 218.84,
-   "text": "The title's ninety-nine percent is the test's recall: how often the sick test positive. [pause 0.3] Seventeen percent is its precision: how often the positive are sick.",
-   "voice": "af_heart",
-   "words": [
-    {
-     "w": "The",
-     "t": 207.925,
-     "end": 208.038
-    },
-    {
-     "w": "title's",
-     "t": 208.075,
-     "end": 208.487
-    },
-    {
-     "w": "ninety-nine",
-     "t": 208.525,
-     "end": 209.125
-    },
-    {
-     "w": "percent",
-     "t": 209.15,
-     "end": 209.75
-    },
-    {
-     "w": "is",
-     "t": 209.8,
-     "end": 209.913
-    },
-    {
-     "w": "the",
-     "t": 209.925,
-     "end": 210.0
+     "w": "their",
+     "t": 24.39,
+     "end": 24.552
     },
     {
      "w": "test's",
-     "t": 210.025,
-     "end": 210.375
+     "t": 24.59,
+     "end": 24.99
     },
     {
-     "w": "recall",
-     "t": 210.4,
-     "end": 211.25
+     "w": "own",
+     "t": 25.015,
+     "end": 25.202
     },
     {
-     "w": "how",
-     "t": 211.45,
-     "end": 211.75
+     "w": "accuracy",
+     "t": 25.24,
+     "end": 26.24
     },
     {
-     "w": "often",
-     "t": 211.8,
-     "end": 212.225
-    },
-    {
-     "w": "the",
-     "t": 212.25,
-     "end": 212.375
-    },
-    {
-     "w": "sick",
-     "t": 212.425,
-     "end": 212.65
-    },
-    {
-     "w": "test",
-     "t": 212.675,
-     "end": 212.925
-    },
-    {
-     "w": "positive",
-     "t": 212.95,
-     "end": 213.72
-    },
-    {
-     "w": "Seventeen",
-     "t": 214.095,
-     "end": 214.745
+     "w": "ninety-five",
+     "t": 26.49,
+     "end": 27.19
     },
     {
      "w": "percent",
-     "t": 214.77,
-     "end": 215.282
+     "t": 27.215,
+     "end": 27.9
     },
     {
-     "w": "is",
-     "t": 215.32,
-     "end": 215.42
+     "w": "For",
+     "t": 28.46,
+     "end": 28.572
     },
     {
-     "w": "its",
-     "t": 215.445,
-     "end": 215.62
+     "w": "our",
+     "t": 28.585,
+     "end": 28.722
     },
     {
-     "w": "precision",
-     "t": 215.645,
-     "end": 216.545
+     "w": "test",
+     "t": 28.76,
+     "end": 29.185
     },
     {
-     "w": "how",
-     "t": 216.745,
-     "end": 217.045
+     "w": "that's",
+     "t": 29.26,
+     "end": 29.535
     },
     {
-     "w": "often",
-     "t": 217.095,
-     "end": 217.508
+     "w": "ninety-nine",
+     "t": 29.56,
+     "end": 30.46
     },
     {
-     "w": "the",
-     "t": 217.52,
-     "end": 217.595
+     "w": "you'd",
+     "t": 30.61,
+     "end": 30.785
     },
     {
-     "w": "positive",
-     "t": 217.62,
-     "end": 218.145
+     "w": "start",
+     "t": 30.81,
+     "end": 31.085
     },
     {
-     "w": "are",
-     "t": 218.17,
-     "end": 218.295
+     "w": "treatment",
+     "t": 31.11,
+     "end": 31.51
+    },
+    {
+     "w": "today",
+     "t": 31.535,
+     "end": 32.08
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/01/013c77894d16211fec137a2e.wav"
+  },
+  {
+   "index": 3,
+   "start": 32.533,
+   "duration": 4.24,
+   "end": 36.773,
+   "text": "Check that rule by counting: ten thousand people, half of them sick.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Check",
+     "t": 32.573,
+     "end": 32.798
+    },
+    {
+     "w": "that",
+     "t": 32.823,
+     "end": 33.048
+    },
+    {
+     "w": "rule",
+     "t": 33.073,
+     "end": 33.323
+    },
+    {
+     "w": "by",
+     "t": 33.348,
+     "end": 33.498
+    },
+    {
+     "w": "counting",
+     "t": 33.523,
+     "end": 34.198
+    },
+    {
+     "w": "ten",
+     "t": 34.373,
+     "end": 34.598
+    },
+    {
+     "w": "thousand",
+     "t": 34.623,
+     "end": 34.998
+    },
+    {
+     "w": "people",
+     "t": 35.023,
+     "end": 35.548
+    },
+    {
+     "w": "half",
+     "t": 35.698,
+     "end": 35.935
+    },
+    {
+     "w": "of",
+     "t": 35.948,
+     "end": 36.011
+    },
+    {
+     "w": "them",
+     "t": 36.023,
+     "end": 36.235
     },
     {
      "w": "sick",
-     "t": 218.345,
-     "end": 218.84
+     "t": 36.298,
+     "end": 36.773
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/5b/5bec6b835cfb0870d20da3bc.wav"
+   "wav": "/root/.cache/sample_space/tts/a6/a6444bc53d9add05137fa6f7.wav"
+  },
+  {
+   "index": 4,
+   "start": 37.233,
+   "duration": 3.02,
+   "end": 40.253,
+   "text": "Test everyone, and watch who lights up. [pause 0.6]",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Test",
+     "t": 37.263,
+     "end": 37.563
+    },
+    {
+     "w": "everyone",
+     "t": 37.588,
+     "end": 38.288
+    },
+    {
+     "w": "and",
+     "t": 38.413,
+     "end": 38.513
+    },
+    {
+     "w": "watch",
+     "t": 38.538,
+     "end": 38.825
+    },
+    {
+     "w": "who",
+     "t": 38.838,
+     "end": 38.938
+    },
+    {
+     "w": "lights",
+     "t": 38.963,
+     "end": 39.213
+    },
+    {
+     "w": "up",
+     "t": 39.238,
+     "end": 39.653
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/2a/2a61c2e7a1eeb55793695845.wav"
+  },
+  {
+   "index": 5,
+   "start": 40.7,
+   "duration": 5.71,
+   "end": 46.41,
+   "text": "Of the five thousand who lit up, ninety-nine percent are sick. [pause 0.3] Here, the rule holds.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Of",
+     "t": 40.7,
+     "end": 40.807
+    },
+    {
+     "w": "the",
+     "t": 40.82,
+     "end": 40.945
+    },
+    {
+     "w": "five",
+     "t": 40.995,
+     "end": 41.37
+    },
+    {
+     "w": "thousand",
+     "t": 41.395,
+     "end": 41.808
+    },
+    {
+     "w": "who",
+     "t": 41.82,
+     "end": 41.945
+    },
+    {
+     "w": "lit",
+     "t": 41.97,
+     "end": 42.12
+    },
+    {
+     "w": "up",
+     "t": 42.145,
+     "end": 42.62
+    },
+    {
+     "w": "ninety-nine",
+     "t": 42.82,
+     "end": 43.47
+    },
+    {
+     "w": "percent",
+     "t": 43.495,
+     "end": 43.945
+    },
+    {
+     "w": "are",
+     "t": 43.97,
+     "end": 44.095
+    },
+    {
+     "w": "sick",
+     "t": 44.145,
+     "end": 44.63
+    },
+    {
+     "w": "Here",
+     "t": 45.005,
+     "end": 45.33
+    },
+    {
+     "w": "the",
+     "t": 45.405,
+     "end": 45.505
+    },
+    {
+     "w": "rule",
+     "t": 45.53,
+     "end": 45.78
+    },
+    {
+     "w": "holds",
+     "t": 45.805,
+     "end": 46.41
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/29/2989a8e985e16e5e3cc8c9c4.wav"
+  },
+  {
+   "index": 6,
+   "start": 46.867,
+   "duration": 6.93,
+   "end": 53.797,
+   "text": "Now keep the same test, and make the disease rarer and rarer, down to yours: one in five hundred. [pause 0.4]",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Now",
+     "t": 46.922,
+     "end": 47.147
+    },
+    {
+     "w": "keep",
+     "t": 47.172,
+     "end": 47.359
+    },
+    {
+     "w": "the",
+     "t": 47.372,
+     "end": 47.484
+    },
+    {
+     "w": "same",
+     "t": 47.522,
+     "end": 47.835
+    },
+    {
+     "w": "test",
+     "t": 47.872,
+     "end": 48.397
+    },
+    {
+     "w": "and",
+     "t": 48.497,
+     "end": 48.585
+    },
+    {
+     "w": "make",
+     "t": 48.597,
+     "end": 48.797
+    },
+    {
+     "w": "the",
+     "t": 48.822,
+     "end": 48.897
+    },
+    {
+     "w": "disease",
+     "t": 48.922,
+     "end": 49.409
+    },
+    {
+     "w": "rarer",
+     "t": 49.447,
+     "end": 49.872
+    },
+    {
+     "w": "and",
+     "t": 49.897,
+     "end": 49.997
+    },
+    {
+     "w": "rarer",
+     "t": 50.022,
+     "end": 50.497
+    },
+    {
+     "w": "down",
+     "t": 50.622,
+     "end": 50.897
+    },
+    {
+     "w": "to",
+     "t": 50.922,
+     "end": 51.022
+    },
+    {
+     "w": "yours",
+     "t": 51.047,
+     "end": 51.872
+    },
+    {
+     "w": "one",
+     "t": 52.097,
+     "end": 52.322
+    },
+    {
+     "w": "in",
+     "t": 52.347,
+     "end": 52.485
+    },
+    {
+     "w": "five",
+     "t": 52.522,
+     "end": 52.809
+    },
+    {
+     "w": "hundred",
+     "t": 52.822,
+     "end": 53.397
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/84/84a3bd37f445550c690dba39.wav"
+  },
+  {
+   "index": 7,
+   "start": 54.233,
+   "duration": 5.69,
+   "end": 59.923,
+   "text": "About twenty sick people light up, plus one percent of everyone else: about a hundred.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "About",
+     "t": 54.263,
+     "end": 54.575
+    },
+    {
+     "w": "twenty",
+     "t": 54.613,
+     "end": 54.988
+    },
+    {
+     "w": "sick",
+     "t": 55.038,
+     "end": 55.263
+    },
+    {
+     "w": "people",
+     "t": 55.288,
+     "end": 55.638
+    },
+    {
+     "w": "light",
+     "t": 55.663,
+     "end": 55.888
+    },
+    {
+     "w": "up",
+     "t": 55.913,
+     "end": 56.263
+    },
+    {
+     "w": "plus",
+     "t": 56.388,
+     "end": 56.701
+    },
+    {
+     "w": "one",
+     "t": 56.738,
+     "end": 56.963
+    },
+    {
+     "w": "percent",
+     "t": 56.988,
+     "end": 57.326
+    },
+    {
+     "w": "of",
+     "t": 57.338,
+     "end": 57.413
+    },
+    {
+     "w": "everyone",
+     "t": 57.438,
+     "end": 57.863
+    },
+    {
+     "w": "else",
+     "t": 57.888,
+     "end": 58.613
+    },
+    {
+     "w": "about",
+     "t": 58.813,
+     "end": 59.075
+    },
+    {
+     "w": "a",
+     "t": 59.088,
+     "end": 59.138
+    },
+    {
+     "w": "hundred",
+     "t": 59.163,
+     "end": 59.773
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/eb/eba6868da382f96af6747896.wav"
+  },
+  {
+   "index": 8,
+   "start": 60.367,
+   "duration": 3.59,
+   "end": 63.957,
+   "text": "So of a hundred twenty positives, only twenty are sick.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "So",
+     "t": 60.442,
+     "end": 60.605
+    },
+    {
+     "w": "of",
+     "t": 60.617,
+     "end": 60.68
+    },
+    {
+     "w": "a",
+     "t": 60.692,
+     "end": 60.742
+    },
+    {
+     "w": "hundred",
+     "t": 60.767,
+     "end": 61.117
+    },
+    {
+     "w": "twenty",
+     "t": 61.142,
+     "end": 61.417
+    },
+    {
+     "w": "positives",
+     "t": 61.442,
+     "end": 62.317
+    },
+    {
+     "w": "only",
+     "t": 62.467,
+     "end": 62.767
+    },
+    {
+     "w": "twenty",
+     "t": 62.817,
+     "end": 63.242
+    },
+    {
+     "w": "are",
+     "t": 63.267,
+     "end": 63.417
+    },
+    {
+     "w": "sick",
+     "t": 63.467,
+     "end": 63.957
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/92/9264a36b6f587705a5874f79.wav"
+  },
+  {
+   "index": 9,
+   "start": 64.167,
+   "duration": 1.64,
+   "end": 65.807,
+   "text": "Seventeen percent.",
+   "voice": "af_heart",
+   "speed": 0.8,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Seventeen",
+     "t": 64.262,
+     "end": 64.912
+    },
+    {
+     "w": "percent",
+     "t": 64.937,
+     "end": 65.657
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/8d/8dc8b0269db6e7b7b8af146e.wav"
+  },
+  {
+   "index": 10,
+   "start": 66.8,
+   "duration": 3.51,
+   "end": 70.31,
+   "text": "The rule said ninety-nine. [pause 0.2] Six times too high.",
+   "voice": "af_heart",
+   "speed": 0.8,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "The",
+     "t": 66.83,
+     "end": 66.967
+    },
+    {
+     "w": "rule",
+     "t": 67.005,
+     "end": 67.342
+    },
+    {
+     "w": "said",
+     "t": 67.38,
+     "end": 67.605
+    },
+    {
+     "w": "ninety-nine",
+     "t": 67.63,
+     "end": 68.53
+    },
+    {
+     "w": "Six",
+     "t": 68.825,
+     "end": 69.075
+    },
+    {
+     "w": "times",
+     "t": 69.1,
+     "end": 69.538
+    },
+    {
+     "w": "too",
+     "t": 69.575,
+     "end": 69.762
+    },
+    {
+     "w": "high",
+     "t": 69.8,
+     "end": 70.31
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/a6/a6bfc32b5b74937c51a78d1f.wav"
+  },
+  {
+   "index": 11,
+   "start": 71.3,
+   "duration": 4.71,
+   "end": 76.01,
+   "text": "One percent sounds small, but here it's one percent of nearly everyone.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "One",
+     "t": 71.345,
+     "end": 71.57
+    },
+    {
+     "w": "percent",
+     "t": 71.595,
+     "end": 72.082
+    },
+    {
+     "w": "sounds",
+     "t": 72.12,
+     "end": 72.432
+    },
+    {
+     "w": "small",
+     "t": 72.47,
+     "end": 73.245
+    },
+    {
+     "w": "but",
+     "t": 73.37,
+     "end": 73.495
+    },
+    {
+     "w": "here",
+     "t": 73.52,
+     "end": 73.745
+    },
+    {
+     "w": "it's",
+     "t": 73.77,
+     "end": 73.97
+    },
+    {
+     "w": "one",
+     "t": 74.02,
+     "end": 74.245
+    },
+    {
+     "w": "percent",
+     "t": 74.27,
+     "end": 74.695
+    },
+    {
+     "w": "of",
+     "t": 74.72,
+     "end": 74.845
+    },
+    {
+     "w": "nearly",
+     "t": 74.87,
+     "end": 75.257
+    },
+    {
+     "w": "everyone",
+     "t": 75.295,
+     "end": 76.01
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/2c/2c3b8b4b9932668ca2fa2652.wav"
+  },
+  {
+   "index": 12,
+   "start": 76.467,
+   "duration": 4.55,
+   "end": 81.017,
+   "text": "Your positive result ruled out everyone who tested negative.",
+   "voice": "af_heart",
+   "speed": 0.8,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Your",
+     "t": 76.487,
+     "end": 76.662
+    },
+    {
+     "w": "positive",
+     "t": 76.712,
+     "end": 77.312
+    },
+    {
+     "w": "result",
+     "t": 77.337,
+     "end": 78.187
+    },
+    {
+     "w": "ruled",
+     "t": 78.262,
+     "end": 78.612
+    },
+    {
+     "w": "out",
+     "t": 78.637,
+     "end": 78.849
+    },
+    {
+     "w": "everyone",
+     "t": 78.887,
+     "end": 79.462
+    },
+    {
+     "w": "who",
+     "t": 79.487,
+     "end": 79.624
+    },
+    {
+     "w": "tested",
+     "t": 79.662,
+     "end": 80.199
+    },
+    {
+     "w": "negative",
+     "t": 80.237,
+     "end": 81.017
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/5a/5ac7782ba56faa9343a537aa.wav"
+  },
+  {
+   "index": 13,
+   "start": 81.633,
+   "duration": 4.8,
+   "end": 86.433,
+   "text": "What's left is a smaller sample space: these hundred twenty people.",
+   "voice": "af_heart",
+   "speed": 0.8,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "What's",
+     "t": 81.698,
+     "end": 82.061
+    },
+    {
+     "w": "left",
+     "t": 82.098,
+     "end": 82.511
+    },
+    {
+     "w": "is",
+     "t": 82.548,
+     "end": 82.648
+    },
+    {
+     "w": "a",
+     "t": 82.673,
+     "end": 82.785
+    },
+    {
+     "w": "smaller",
+     "t": 82.848,
+     "end": 83.361
+    },
+    {
+     "w": "sample",
+     "t": 83.398,
+     "end": 83.823
+    },
+    {
+     "w": "space",
+     "t": 83.848,
+     "end": 84.623
+    },
+    {
+     "w": "these",
+     "t": 84.798,
+     "end": 85.073
+    },
+    {
+     "w": "hundred",
+     "t": 85.098,
+     "end": 85.435
+    },
+    {
+     "w": "twenty",
+     "t": 85.473,
+     "end": 85.786
+    },
+    {
+     "w": "people",
+     "t": 85.823,
+     "end": 86.433
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/26/262ff76be61dad5f47a1e18e.wav"
+  },
+  {
+   "index": 14,
+   "start": 86.9,
+   "duration": 8.01,
+   "end": 94.91,
+   "text": "Your chance of being sick is the red share of this crowd. [pause 0.3] Twenty, out of twenty plus a hundred. [pause 1.1]",
+   "voice": "af_heart",
+   "speed": 0.8,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Your",
+     "t": 86.945,
+     "end": 87.107
+    },
+    {
+     "w": "chance",
+     "t": 87.145,
+     "end": 87.507
+    },
+    {
+     "w": "of",
+     "t": 87.52,
+     "end": 87.595
+    },
+    {
+     "w": "being",
+     "t": 87.62,
+     "end": 87.982
+    },
+    {
+     "w": "sick",
+     "t": 88.045,
+     "end": 88.657
+    },
+    {
+     "w": "is",
+     "t": 88.72,
+     "end": 88.87
+    },
+    {
+     "w": "the",
+     "t": 88.895,
+     "end": 89.02
+    },
+    {
+     "w": "red",
+     "t": 89.07,
+     "end": 89.42
+    },
+    {
+     "w": "share",
+     "t": 89.47,
+     "end": 89.745
+    },
+    {
+     "w": "of",
+     "t": 89.77,
+     "end": 89.845
+    },
+    {
+     "w": "this",
+     "t": 89.87,
+     "end": 90.108
+    },
+    {
+     "w": "crowd",
+     "t": 90.145,
+     "end": 90.74
+    },
+    {
+     "w": "Twenty",
+     "t": 91.07,
+     "end": 91.77
+    },
+    {
+     "w": "out",
+     "t": 91.945,
+     "end": 92.108
+    },
+    {
+     "w": "of",
+     "t": 92.12,
+     "end": 92.232
+    },
+    {
+     "w": "twenty",
+     "t": 92.27,
+     "end": 92.682
+    },
+    {
+     "w": "plus",
+     "t": 92.72,
+     "end": 93.008
+    },
+    {
+     "w": "a",
+     "t": 93.02,
+     "end": 93.082
+    },
+    {
+     "w": "hundred",
+     "t": 93.12,
+     "end": 93.81
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/14/14ac458b6d51b039837a625a.wav"
+  },
+  {
+   "index": 15,
+   "start": 95.333,
+   "duration": 9.06,
+   "end": 104.393,
+   "text": "Unrounded, the red count is twenty sick people times ninety-nine percent, and the blue, every healthy person times one percent.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Unrounded",
+     "t": 95.343,
+     "end": 96.218
+    },
+    {
+     "w": "the",
+     "t": 96.343,
+     "end": 96.455
+    },
+    {
+     "w": "red",
+     "t": 96.493,
+     "end": 96.743
+    },
+    {
+     "w": "count",
+     "t": 96.793,
+     "end": 97.155
+    },
+    {
+     "w": "is",
+     "t": 97.193,
+     "end": 97.343
+    },
+    {
+     "w": "twenty",
+     "t": 97.393,
+     "end": 97.793
+    },
+    {
+     "w": "sick",
+     "t": 97.843,
+     "end": 98.068
+    },
+    {
+     "w": "people",
+     "t": 98.093,
+     "end": 98.468
+    },
+    {
+     "w": "times",
+     "t": 98.493,
+     "end": 98.855
+    },
+    {
+     "w": "ninety-nine",
+     "t": 98.893,
+     "end": 99.543
+    },
+    {
+     "w": "percent",
+     "t": 99.568,
+     "end": 100.518
+    },
+    {
+     "w": "and",
+     "t": 100.693,
+     "end": 100.781
+    },
+    {
+     "w": "the",
+     "t": 100.793,
+     "end": 100.881
+    },
+    {
+     "w": "blue",
+     "t": 100.918,
+     "end": 101.493
+    },
+    {
+     "w": "every",
+     "t": 101.668,
+     "end": 101.968
+    },
+    {
+     "w": "healthy",
+     "t": 101.993,
+     "end": 102.368
+    },
+    {
+     "w": "person",
+     "t": 102.393,
+     "end": 102.956
+    },
+    {
+     "w": "times",
+     "t": 102.993,
+     "end": 103.318
+    },
+    {
+     "w": "one",
+     "t": 103.343,
+     "end": 103.568
+    },
+    {
+     "w": "percent",
+     "t": 103.593,
+     "end": 104.243
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/ef/ef03532a5b0d87c86fe2648b.wav"
+  },
+  {
+   "index": 16,
+   "start": 104.833,
+   "duration": 5.83,
+   "end": 110.663,
+   "text": "Divide everything by ten thousand: counts become shares. [pause 0.4] The share stays the same.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Divide",
+     "t": 104.873,
+     "end": 105.311
+    },
+    {
+     "w": "everything",
+     "t": 105.348,
+     "end": 105.873
+    },
+    {
+     "w": "by",
+     "t": 105.898,
+     "end": 106.085
+    },
+    {
+     "w": "ten",
+     "t": 106.123,
+     "end": 106.348
+    },
+    {
+     "w": "thousand",
+     "t": 106.373,
+     "end": 107.098
+    },
+    {
+     "w": "counts",
+     "t": 107.298,
+     "end": 107.648
+    },
+    {
+     "w": "become",
+     "t": 107.673,
+     "end": 108.048
+    },
+    {
+     "w": "shares",
+     "t": 108.098,
+     "end": 108.733
+    },
+    {
+     "w": "The",
+     "t": 109.158,
+     "end": 109.271
+    },
+    {
+     "w": "share",
+     "t": 109.308,
+     "end": 109.533
+    },
+    {
+     "w": "stays",
+     "t": 109.558,
+     "end": 109.921
+    },
+    {
+     "w": "the",
+     "t": 109.933,
+     "end": 110.045
+    },
+    {
+     "w": "same",
+     "t": 110.083,
+     "end": 110.663
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/cc/cc30f8405689b771821528be.wav"
+  },
+  {
+   "index": 17,
+   "start": 111.1,
+   "duration": 7.74,
+   "end": 118.84,
+   "text": "These are how common each group is, and these are how often each group tests positive. [pause 0.3] Name them, and you have Bayes' theorem.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "These",
+     "t": 111.15,
+     "end": 111.425
+    },
+    {
+     "w": "are",
+     "t": 111.45,
+     "end": 111.55
+    },
+    {
+     "w": "how",
+     "t": 111.575,
+     "end": 111.738
+    },
+    {
+     "w": "common",
+     "t": 111.775,
+     "end": 112.15
+    },
+    {
+     "w": "each",
+     "t": 112.175,
+     "end": 112.4
+    },
+    {
+     "w": "group",
+     "t": 112.425,
+     "end": 112.712
+    },
+    {
+     "w": "is",
+     "t": 112.75,
+     "end": 113.3
+    },
+    {
+     "w": "and",
+     "t": 113.425,
+     "end": 113.525
+    },
+    {
+     "w": "these",
+     "t": 113.55,
+     "end": 113.825
+    },
+    {
+     "w": "are",
+     "t": 113.85,
+     "end": 113.95
+    },
+    {
+     "w": "how",
+     "t": 113.975,
+     "end": 114.2
+    },
+    {
+     "w": "often",
+     "t": 114.25,
+     "end": 114.662
+    },
+    {
+     "w": "each",
+     "t": 114.7,
+     "end": 114.925
+    },
+    {
+     "w": "group",
+     "t": 114.95,
+     "end": 115.2
+    },
+    {
+     "w": "tests",
+     "t": 115.225,
+     "end": 115.55
+    },
+    {
+     "w": "positive",
+     "t": 115.575,
+     "end": 116.33
+    },
+    {
+     "w": "Name",
+     "t": 116.71,
+     "end": 117.01
+    },
+    {
+     "w": "them",
+     "t": 117.035,
+     "end": 117.335
+    },
+    {
+     "w": "and",
+     "t": 117.435,
+     "end": 117.522
+    },
+    {
+     "w": "you",
+     "t": 117.535,
+     "end": 117.61
+    },
+    {
+     "w": "have",
+     "t": 117.635,
+     "end": 117.81
+    },
+    {
+     "w": "Bayes'",
+     "t": 117.835,
+     "end": 118.21
+    },
+    {
+     "w": "theorem",
+     "t": 118.235,
+     "end": 118.84
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/ea/eae5837d8445caf93d6227f0.wav"
+  },
+  {
+   "index": 18,
+   "start": 119.3,
+   "duration": 6.19,
+   "end": 125.49,
+   "text": "All it does is shrink the sample space to what the evidence allows, then take the share. [pause 0.9]",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "All",
+     "t": 119.325,
+     "end": 119.488
+    },
+    {
+     "w": "it",
+     "t": 119.5,
+     "end": 119.575
+    },
+    {
+     "w": "does",
+     "t": 119.6,
+     "end": 119.988
+    },
+    {
+     "w": "is",
+     "t": 120.025,
+     "end": 120.188
+    },
+    {
+     "w": "shrink",
+     "t": 120.25,
+     "end": 120.55
+    },
+    {
+     "w": "the",
+     "t": 120.575,
+     "end": 120.688
+    },
+    {
+     "w": "sample",
+     "t": 120.725,
+     "end": 121.15
+    },
+    {
+     "w": "space",
+     "t": 121.175,
+     "end": 121.6
+    },
+    {
+     "w": "to",
+     "t": 121.625,
+     "end": 121.687
+    },
+    {
+     "w": "what",
+     "t": 121.7,
+     "end": 121.812
+    },
+    {
+     "w": "the",
+     "t": 121.825,
+     "end": 121.95
+    },
+    {
+     "w": "evidence",
+     "t": 121.975,
+     "end": 122.4
+    },
+    {
+     "w": "allows",
+     "t": 122.425,
+     "end": 123.3
+    },
+    {
+     "w": "then",
+     "t": 123.45,
+     "end": 123.65
+    },
+    {
+     "w": "take",
+     "t": 123.675,
+     "end": 123.9
+    },
+    {
+     "w": "the",
+     "t": 123.925,
+     "end": 124.05
+    },
+    {
+     "w": "share",
+     "t": 124.1,
+     "end": 124.59
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/a8/a8aac6ca4b5577df5a96f2d0.wav"
+  },
+  {
+   "index": 19,
+   "start": 125.933,
+   "duration": 2.48,
+   "end": 128.413,
+   "text": "Swap the disease for a police watch list.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Swap",
+     "t": 126.008,
+     "end": 126.333
+    },
+    {
+     "w": "the",
+     "t": 126.358,
+     "end": 126.433
+    },
+    {
+     "w": "disease",
+     "t": 126.458,
+     "end": 127.083
+    },
+    {
+     "w": "for",
+     "t": 127.108,
+     "end": 127.195
+    },
+    {
+     "w": "a",
+     "t": 127.208,
+     "end": 127.258
+    },
+    {
+     "w": "police",
+     "t": 127.283,
+     "end": 127.633
+    },
+    {
+     "w": "watch",
+     "t": 127.658,
+     "end": 127.933
+    },
+    {
+     "w": "list",
+     "t": 127.958,
+     "end": 128.413
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/86/86c8d19bbcf8d25460bb5f79.wav"
+  },
+  {
+   "index": 20,
+   "start": 128.867,
+   "duration": 15.06,
+   "end": 143.927,
+   "text": "For the twenty seventeen Champions League final, about a hundred seventy thousand people came to Cardiff. [pause 0.4] The watch lists held about twelve hundred photos, so even a small error rate per face would swamp the real matches.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "For",
+     "t": 128.892,
+     "end": 129.005
+    },
+    {
+     "w": "the",
+     "t": 129.017,
+     "end": 129.105
+    },
+    {
+     "w": "twenty",
+     "t": 129.142,
+     "end": 129.467
+    },
+    {
+     "w": "seventeen",
+     "t": 129.492,
+     "end": 130.517
+    },
+    {
+     "w": "Champions",
+     "t": 130.592,
+     "end": 131.292
+    },
+    {
+     "w": "League",
+     "t": 131.317,
+     "end": 131.517
+    },
+    {
+     "w": "final",
+     "t": 131.542,
+     "end": 132.292
+    },
+    {
+     "w": "about",
+     "t": 132.467,
+     "end": 132.729
+    },
+    {
+     "w": "a",
+     "t": 132.742,
+     "end": 132.842
+    },
+    {
+     "w": "hundred",
+     "t": 132.892,
+     "end": 133.329
+    },
+    {
+     "w": "seventy",
+     "t": 133.392,
+     "end": 133.855
+    },
+    {
+     "w": "thousand",
+     "t": 133.892,
+     "end": 134.342
+    },
+    {
+     "w": "people",
+     "t": 134.367,
+     "end": 134.855
+    },
+    {
+     "w": "came",
+     "t": 134.892,
+     "end": 135.142
+    },
+    {
+     "w": "to",
+     "t": 135.167,
+     "end": 135.267
+    },
+    {
+     "w": "Cardiff",
+     "t": 135.292,
+     "end": 135.947
+    },
+    {
+     "w": "The",
+     "t": 136.362,
+     "end": 136.475
+    },
+    {
+     "w": "watch",
+     "t": 136.512,
+     "end": 136.837
+    },
+    {
+     "w": "lists",
+     "t": 136.862,
+     "end": 137.162
+    },
+    {
+     "w": "held",
+     "t": 137.187,
+     "end": 137.399
+    },
+    {
+     "w": "about",
+     "t": 137.412,
+     "end": 137.7
+    },
+    {
+     "w": "twelve",
+     "t": 137.737,
+     "end": 138.025
+    },
+    {
+     "w": "hundred",
+     "t": 138.037,
+     "end": 138.362
+    },
+    {
+     "w": "photos",
+     "t": 138.387,
+     "end": 139.362
+    },
+    {
+     "w": "so",
+     "t": 139.537,
+     "end": 139.725
+    },
+    {
+     "w": "even",
+     "t": 139.762,
+     "end": 140.012
+    },
+    {
+     "w": "a",
+     "t": 140.037,
+     "end": 140.149
+    },
+    {
+     "w": "small",
+     "t": 140.212,
+     "end": 140.687
+    },
+    {
+     "w": "error",
+     "t": 140.737,
+     "end": 141.062
+    },
+    {
+     "w": "rate",
+     "t": 141.087,
+     "end": 141.337
+    },
+    {
+     "w": "per",
+     "t": 141.362,
+     "end": 141.562
+    },
+    {
+     "w": "face",
+     "t": 141.612,
+     "end": 142.175
+    },
+    {
+     "w": "would",
+     "t": 142.212,
+     "end": 142.387
+    },
+    {
+     "w": "swamp",
+     "t": 142.437,
+     "end": 142.812
+    },
+    {
+     "w": "the",
+     "t": 142.837,
+     "end": 142.912
+    },
+    {
+     "w": "real",
+     "t": 142.937,
+     "end": 143.162
+    },
+    {
+     "w": "matches",
+     "t": 143.187,
+     "end": 143.927
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/72/72d9b8ee4a72756d213f293b.wav"
+  },
+  {
+   "index": 21,
+   "start": 144.367,
+   "duration": 7.28,
+   "end": 151.647,
+   "text": "Face-recognition cameras scanned the crowds. [pause 0.3] Over four days, they raised two thousand four hundred seventy alerts.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Face-recognition",
+     "t": 144.407,
+     "end": 145.295
+    },
+    {
+     "w": "cameras",
+     "t": 145.332,
+     "end": 145.995
+    },
+    {
+     "w": "scanned",
+     "t": 146.057,
+     "end": 146.369
+    },
+    {
+     "w": "the",
+     "t": 146.382,
+     "end": 146.457
+    },
+    {
+     "w": "crowds",
+     "t": 146.482,
+     "end": 147.127
+    },
+    {
+     "w": "Over",
+     "t": 147.427,
+     "end": 147.714
+    },
+    {
+     "w": "four",
+     "t": 147.752,
+     "end": 147.952
+    },
+    {
+     "w": "days",
+     "t": 147.977,
+     "end": 148.602
+    },
+    {
+     "w": "they",
+     "t": 148.727,
+     "end": 148.852
+    },
+    {
+     "w": "raised",
+     "t": 148.877,
+     "end": 149.277
+    },
+    {
+     "w": "two",
+     "t": 149.327,
+     "end": 149.502
+    },
+    {
+     "w": "thousand",
+     "t": 149.527,
+     "end": 149.927
+    },
+    {
+     "w": "four",
+     "t": 149.977,
+     "end": 150.227
+    },
+    {
+     "w": "hundred",
+     "t": 150.252,
+     "end": 150.577
+    },
+    {
+     "w": "seventy",
+     "t": 150.602,
+     "end": 150.952
+    },
+    {
+     "w": "alerts",
+     "t": 150.977,
+     "end": 151.647
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/bf/bfb107b97882a9265f4eb775.wav"
+  },
+  {
+   "index": 22,
+   "start": 152.033,
+   "duration": 2.94,
+   "end": 154.973,
+   "text": "Shrink to the alerts. Take the red share.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Shrink",
+     "t": 152.133,
+     "end": 152.433
+    },
+    {
+     "w": "to",
+     "t": 152.458,
+     "end": 152.521
+    },
+    {
+     "w": "the",
+     "t": 152.533,
+     "end": 152.658
+    },
+    {
+     "w": "alerts",
+     "t": 152.683,
+     "end": 153.393
+    },
+    {
+     "w": "Take",
+     "t": 153.818,
+     "end": 154.043
+    },
+    {
+     "w": "the",
+     "t": 154.068,
+     "end": 154.143
+    },
+    {
+     "w": "red",
+     "t": 154.168,
+     "end": 154.418
+    },
+    {
+     "w": "share",
+     "t": 154.468,
+     "end": 154.973
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/6b/6b79e1642a1c0611fde60049.wav"
+  },
+  {
+   "index": 23,
+   "start": 155.233,
+   "duration": 4.74,
+   "end": 159.973,
+   "text": "The police counted a hundred seventy-three as right: seven percent.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "The",
+     "t": 155.338,
+     "end": 155.413
+    },
+    {
+     "w": "police",
+     "t": 155.438,
+     "end": 155.9
+    },
+    {
+     "w": "counted",
+     "t": 155.938,
+     "end": 156.313
+    },
+    {
+     "w": "a",
+     "t": 156.338,
+     "end": 156.425
+    },
+    {
+     "w": "hundred",
+     "t": 156.463,
+     "end": 156.901
+    },
+    {
+     "w": "seventy-three",
+     "t": 156.938,
+     "end": 157.651
+    },
+    {
+     "w": "as",
+     "t": 157.688,
+     "end": 157.813
+    },
+    {
+     "w": "right",
+     "t": 157.838,
+     "end": 158.488
+    },
+    {
+     "w": "seven",
+     "t": 158.763,
+     "end": 159.088
+    },
+    {
+     "w": "percent",
+     "t": 159.113,
+     "end": 159.823
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/bc/bc177fefd234c856827d0fb8.pre80.wav"
+  },
+  {
+   "index": 24,
+   "start": 160.433,
+   "duration": 3.86,
+   "end": 164.293,
+   "text": "In machine learning, that share is called precision. [pause 0.8]",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "In",
+     "t": 160.468,
+     "end": 160.555
+    },
+    {
+     "w": "machine",
+     "t": 160.568,
+     "end": 160.968
+    },
+    {
+     "w": "learning",
+     "t": 160.993,
+     "end": 161.568
+    },
+    {
+     "w": "that",
+     "t": 161.718,
+     "end": 162.005
+    },
+    {
+     "w": "share",
+     "t": 162.043,
+     "end": 162.268
+    },
+    {
+     "w": "is",
+     "t": 162.293,
+     "end": 162.418
+    },
+    {
+     "w": "called",
+     "t": 162.443,
+     "end": 162.693
+    },
+    {
+     "w": "precision",
+     "t": 162.718,
+     "end": 163.493
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/86/86715b6bc0db992130326a06.wav"
+  },
+  {
+   "index": 25,
+   "start": 164.733,
+   "duration": 19.48,
+   "end": 184.213,
+   "text": "Cardiff University's evaluators counted only alerts the logbooks confirmed: three percent. Months later, a new algorithm, better photos and practised operators thinned out the false alarms, the blue term in Bayes' denominator, and their count rose to forty-six percent.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Cardiff",
+     "t": 164.748,
+     "end": 165.123
+    },
+    {
+     "w": "University's",
+     "t": 165.148,
+     "end": 165.948
+    },
+    {
+     "w": "evaluators",
+     "t": 165.973,
+     "end": 166.711
+    },
+    {
+     "w": "counted",
+     "t": 166.748,
+     "end": 167.248
+    },
+    {
+     "w": "only",
+     "t": 167.298,
+     "end": 167.761
+    },
+    {
+     "w": "alerts",
+     "t": 167.798,
+     "end": 168.173
+    },
+    {
+     "w": "the",
+     "t": 168.198,
+     "end": 168.298
+    },
+    {
+     "w": "logbooks",
+     "t": 168.323,
+     "end": 168.873
+    },
+    {
+     "w": "confirmed",
+     "t": 168.898,
+     "end": 169.948
+    },
+    {
+     "w": "three",
+     "t": 170.223,
+     "end": 170.448
+    },
+    {
+     "w": "percent",
+     "t": 170.473,
+     "end": 171.153
+    },
+    {
+     "w": "Months",
+     "t": 171.708,
+     "end": 172.07
+    },
+    {
+     "w": "later",
+     "t": 172.108,
+     "end": 172.758
+    },
+    {
+     "w": "a",
+     "t": 172.933,
+     "end": 173.033
+    },
+    {
+     "w": "new",
+     "t": 173.083,
+     "end": 173.408
+    },
+    {
+     "w": "algorithm",
+     "t": 173.458,
+     "end": 174.233
+    },
+    {
+     "w": "better",
+     "t": 174.383,
+     "end": 174.721
+    },
+    {
+     "w": "photos",
+     "t": 174.758,
+     "end": 175.358
+    },
+    {
+     "w": "and",
+     "t": 175.383,
+     "end": 175.483
+    },
+    {
+     "w": "practised",
+     "t": 175.508,
+     "end": 175.983
+    },
+    {
+     "w": "operators",
+     "t": 176.008,
+     "end": 176.771
+    },
+    {
+     "w": "thinned",
+     "t": 176.833,
+     "end": 177.045
+    },
+    {
+     "w": "out",
+     "t": 177.058,
+     "end": 177.195
+    },
+    {
+     "w": "the",
+     "t": 177.208,
+     "end": 177.295
+    },
+    {
+     "w": "false",
+     "t": 177.333,
+     "end": 177.658
+    },
+    {
+     "w": "alarms",
+     "t": 177.683,
+     "end": 178.658
+    },
+    {
+     "w": "the",
+     "t": 178.808,
+     "end": 178.921
+    },
+    {
+     "w": "blue",
+     "t": 178.958,
+     "end": 179.245
+    },
+    {
+     "w": "term",
+     "t": 179.283,
+     "end": 179.658
+    },
+    {
+     "w": "in",
+     "t": 179.683,
+     "end": 179.808
+    },
+    {
+     "w": "Bayes'",
+     "t": 179.833,
+     "end": 180.183
+    },
+    {
+     "w": "denominator",
+     "t": 180.208,
+     "end": 181.258
+    },
+    {
+     "w": "and",
+     "t": 181.433,
+     "end": 181.521
+    },
+    {
+     "w": "their",
+     "t": 181.533,
+     "end": 181.708
+    },
+    {
+     "w": "count",
+     "t": 181.758,
+     "end": 182.183
+    },
+    {
+     "w": "rose",
+     "t": 182.233,
+     "end": 182.608
+    },
+    {
+     "w": "to",
+     "t": 182.633,
+     "end": 182.745
+    },
+    {
+     "w": "forty-six",
+     "t": 182.783,
+     "end": 183.383
+    },
+    {
+     "w": "percent",
+     "t": 183.408,
+     "end": 184.063
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/34/340521628d788a82d0a848fc.wav"
+  },
+  {
+   "index": 26,
+   "start": 184.667,
+   "duration": 2.82,
+   "end": 187.487,
+   "text": "Back to your test. [pause 1.6]",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Back",
+     "t": 184.737,
+     "end": 185.012
+    },
+    {
+     "w": "to",
+     "t": 185.037,
+     "end": 185.099
+    },
+    {
+     "w": "your",
+     "t": 185.112,
+     "end": 185.237
+    },
+    {
+     "w": "test",
+     "t": 185.262,
+     "end": 185.887
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f8/f884900cc4ff2ed61287a71e.wav"
+  },
+  {
+   "index": 27,
+   "start": 187.933,
+   "duration": 13.31,
+   "end": 201.243,
+   "text": "Your seventeen percent assumes a random screen. [pause 0.4] Symptoms raise the one in five hundred: at one in a hundred, fifty percent; at one in two, ninety-nine, where the rule held. [pause 1.0]",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Your",
+     "t": 188.033,
+     "end": 188.195
+    },
+    {
+     "w": "seventeen",
+     "t": 188.233,
+     "end": 188.808
+    },
+    {
+     "w": "percent",
+     "t": 188.833,
+     "end": 189.57
+    },
+    {
+     "w": "assumes",
+     "t": 189.633,
+     "end": 190.083
+    },
+    {
+     "w": "a",
+     "t": 190.108,
+     "end": 190.195
+    },
+    {
+     "w": "random",
+     "t": 190.233,
+     "end": 190.658
+    },
+    {
+     "w": "screen",
+     "t": 190.683,
+     "end": 191.243
+    },
+    {
+     "w": "Symptoms",
+     "t": 191.728,
+     "end": 192.291
+    },
+    {
+     "w": "raise",
+     "t": 192.328,
+     "end": 192.653
+    },
+    {
+     "w": "the",
+     "t": 192.678,
+     "end": 192.791
+    },
+    {
+     "w": "one",
+     "t": 192.828,
+     "end": 193.053
+    },
+    {
+     "w": "in",
+     "t": 193.078,
+     "end": 193.215
+    },
+    {
+     "w": "five",
+     "t": 193.253,
+     "end": 193.541
+    },
+    {
+     "w": "hundred",
+     "t": 193.553,
+     "end": 194.328
+    },
+    {
+     "w": "at",
+     "t": 194.528,
+     "end": 194.665
+    },
+    {
+     "w": "one",
+     "t": 194.703,
+     "end": 194.89
+    },
+    {
+     "w": "in",
+     "t": 194.903,
+     "end": 194.965
+    },
+    {
+     "w": "a",
+     "t": 194.978,
+     "end": 195.028
+    },
+    {
+     "w": "hundred",
+     "t": 195.053,
+     "end": 195.578
+    },
+    {
+     "w": "fifty",
+     "t": 195.728,
+     "end": 196.053
+    },
+    {
+     "w": "percent",
+     "t": 196.078,
+     "end": 197.028
+    },
+    {
+     "w": "at",
+     "t": 197.228,
+     "end": 197.328
+    },
+    {
+     "w": "one",
+     "t": 197.353,
+     "end": 197.553
+    },
+    {
+     "w": "in",
+     "t": 197.578,
+     "end": 197.753
+    },
+    {
+     "w": "two",
+     "t": 197.803,
+     "end": 198.178
+    },
+    {
+     "w": "ninety-nine",
+     "t": 198.278,
+     "end": 199.003
+    },
+    {
+     "w": "where",
+     "t": 199.078,
+     "end": 199.203
+    },
+    {
+     "w": "the",
+     "t": 199.228,
+     "end": 199.353
+    },
+    {
+     "w": "rule",
+     "t": 199.403,
+     "end": 199.678
+    },
+    {
+     "w": "held",
+     "t": 199.703,
+     "end": 200.243
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/65/65cf405339682a7d0b254210.pre80.wav"
+  },
+  {
+   "index": 28,
+   "start": 202.267,
+   "duration": 10.94,
+   "end": 213.207,
+   "text": "The title's ninety-nine percent is the test's recall: how often the sick test positive. [pause 0.3] Seventeen percent is its precision: how often the positive are sick.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "The",
+     "t": 202.292,
+     "end": 202.405
+    },
+    {
+     "w": "title's",
+     "t": 202.442,
+     "end": 202.854
+    },
+    {
+     "w": "ninety-nine",
+     "t": 202.892,
+     "end": 203.492
+    },
+    {
+     "w": "percent",
+     "t": 203.517,
+     "end": 204.117
+    },
+    {
+     "w": "is",
+     "t": 204.167,
+     "end": 204.28
+    },
+    {
+     "w": "the",
+     "t": 204.292,
+     "end": 204.367
+    },
+    {
+     "w": "test's",
+     "t": 204.392,
+     "end": 204.742
+    },
+    {
+     "w": "recall",
+     "t": 204.767,
+     "end": 205.617
+    },
+    {
+     "w": "how",
+     "t": 205.817,
+     "end": 206.117
+    },
+    {
+     "w": "often",
+     "t": 206.167,
+     "end": 206.592
+    },
+    {
+     "w": "the",
+     "t": 206.617,
+     "end": 206.742
+    },
+    {
+     "w": "sick",
+     "t": 206.792,
+     "end": 207.017
+    },
+    {
+     "w": "test",
+     "t": 207.042,
+     "end": 207.292
+    },
+    {
+     "w": "positive",
+     "t": 207.317,
+     "end": 208.087
+    },
+    {
+     "w": "Seventeen",
+     "t": 208.462,
+     "end": 209.112
+    },
+    {
+     "w": "percent",
+     "t": 209.137,
+     "end": 209.649
+    },
+    {
+     "w": "is",
+     "t": 209.687,
+     "end": 209.787
+    },
+    {
+     "w": "its",
+     "t": 209.812,
+     "end": 209.987
+    },
+    {
+     "w": "precision",
+     "t": 210.012,
+     "end": 210.912
+    },
+    {
+     "w": "how",
+     "t": 211.112,
+     "end": 211.412
+    },
+    {
+     "w": "often",
+     "t": 211.462,
+     "end": 211.875
+    },
+    {
+     "w": "the",
+     "t": 211.887,
+     "end": 211.962
+    },
+    {
+     "w": "positive",
+     "t": 211.987,
+     "end": 212.512
+    },
+    {
+     "w": "are",
+     "t": 212.537,
+     "end": 212.662
+    },
+    {
+     "w": "sick",
+     "t": 212.712,
+     "end": 213.207
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/34/34628aaa8abb2453229a9239.wav"
   }
  ],
- "warnings": [],
+ "warnings": [
+  {
+   "t": 160.43,
+   "msg": "beat 24: reached 'precision' 0.38s after it was spoken - shorten the preceding animations"
+  },
+  {
+   "t": 202.27,
+   "msg": "beat 27: animations ran 1.0s past the narration (13.3s) - silence gap"
+  }
+ ],
+ "budget": {
+  "words": 470,
+  "runtime_s": 214.7,
+  "budget_words": 500,
+  "budget_runtime_s": 215.0,
+  "over": false
+ },
+ "glyph_morphs": [],
+ "deictic_sync": {
+  "window": [
+   -0.8,
+   0.4
+  ],
+  "deictics": 8,
+  "unlanded": []
+ },
  "layout_audit": {
   "clearance": 0.15,
-  "checks": 208,
-  "audit_seconds": 1.934,
-  "render_seconds": 661.1,
+  "checks": 214,
+  "audit_seconds": 1.952,
+  "render_seconds": 523.1,
   "errors": 0,
   "count": 0,
   "counts": {
    "overlap": 0,
    "clearance": 0,
    "safe-area": 0,
-   "caption-zone": 0
+   "caption-zone": 0,
+   "text-size": 0,
+   "small-label": 0
   },
   "issues": [],
+  "advisory": [],
   "allowed": [],
   "excluded": []
  }

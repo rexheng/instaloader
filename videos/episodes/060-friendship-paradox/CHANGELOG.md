@@ -656,3 +656,33 @@ YELLOW-outlined friend bar carried to Facebook; the landing on the cold-open can
    re-read in the PLoS text), so the GRAY caption reads "name their friends" (facts.md).
 5. As craft 2. 6. 92.7 % block beside the "average user" row, "their own friends' average".
 7. As craft 6. 8. As craft 5. 9. As craft 7. 10. As craft 4.
+
+**Found and fixed while checking frames (round 7)**
+- The C&F rings first ran in a LaggedStart: its group was re-added on top of the scene and the
+  now-opaque nodes covered their own digits (Betty, Jane, Pam, Tina showed blank). Staggered
+  per-node windows instead.
+- The Facebook segment flash first tinted the BLUE and PURPLE fills white; it is now an INK flash
+  along each segment's bottom edge as its number drops out of it. Each number passes through the
+  tick gap where its value lies (190 between 0 and 200, 445 between 400 and 600, 635 between 600
+  and 800), drops straight down until clear of the tick labels, then arcs above the row into its
+  slot.
+- The result's 0.5 copy first slid right along the row through "= 3.0"; it now leaves straight
+  up and is invisible until it has cleared its source (no doubled 0.5).
+- The hand-off's label move now starts in the second half of the arc move, so no frame shows
+  only axes and two parked labels; the shrunken nodes fade over the last quarter of their path.
+- "Where does the extra half come from?" was read at 221 wpm at speed 0.82; that one beat is
+  spoken at 0.74 (171 wpm). The ring callback now also dims the corner tag with the panel.
+- Two landing windows ended after their play (the ring around the 3 stopped 83 % drawn).
+
+**Verified on the master** (review/report.md, all 12 sheets, keyframes kf_19, 32, 35, 37, 39;
+4–8 fps strips over 1:30–1:37, 1:45–1:53, 2:16–2:24, 2:44.4–2:47, 2:55–3:07, 3:15–3:22, 3:27–3:31)
+- Runtime 3:31.8, 495 words (budget 500 / 3:35); 155 wpm on speech time; 0 sentences above
+  200 wpm; longest run without a breath 11.2 s; -14.0 LUFS / -2.1 dBTP; leading 0.00 s, trailing
+  1.90 s; longest silence 2.22 s (the "Pick one" hold); longest static stretch 3.4 s.
+- 0 render warnings, 0 layout-audit issues in 206 checks, 0 review-kit flags, 0 banned phrases,
+  0 glyph morphs, deictics 2/2 synced, WER 3.0 % (number formatting; "Split Sue's" heard as
+  "splitsus", as in earlier rounds).
+- No dimmed YELLOW anywhere: the panel at 1:16 shows no outline or 3.0; the variance frames
+  hold the full-strength parked row and no 3.0 fulcrum; kf_37's raw steps are full colour.
+- "+0.5 ?" is on screen at full strength from 1:33 to 2:21, filled by the result's 0.5 and
+  returned to the PURPLE segment by 2:23.

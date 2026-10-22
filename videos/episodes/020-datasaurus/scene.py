@@ -66,6 +66,33 @@ def fix(P, T):
     return np.column_stack([T[0] + T[2] * u, T[1] + T[3] * (a * u + b * w)])
 
 
+def sim_cloud(seed, Tt, zones, lo=0.8, hi=99.2, tries=200):
+    """The simulated what-if cloud (B9): 142 points uniform inside the Mahalanobis disc of
+    radius 2 (unit SD per coordinate), given exactly the five numbers Tt by `fix`. A point
+    that lands outside the plot, or under one of the labels that must sit on bare background
+    (`zones`: data-coordinate boxes (cx, cy, half_w, half_h)), is drawn again from the same
+    generator and the five numbers are re-imposed, until none does. Returns the points and
+    how many were redrawn."""
+    g = np.random.default_rng(seed)
+
+    def disc(n):
+        th = g.uniform(0, 2 * np.pi, n)
+        rad = 2 * np.sqrt(g.uniform(0, 1, n))
+        return np.column_stack([rad * np.cos(th), rad * np.sin(th)])
+    raw = disc(N)
+    redrawn = 0
+    for _ in range(tries):
+        P = fix(raw, Tt)
+        bad = (P.min(1) < lo) | (P.max(1) > hi)
+        for cx, cy, hx, hy in zones:
+            bad |= (np.abs(P[:, 0] - cx) < hx) & (np.abs(P[:, 1] - cy) < hy)
+        if not bad.any():
+            return P, redrawn
+        redrawn += int(bad.sum())
+        raw[bad] = disc(int(bad.sum()))
+    raise RuntimeError("sim_cloud: no clean cloud for this seed")
+
+
 def match(A, B):
     """Rows of B reordered so B'[i] is the partner of A[i] (min total squared travel)."""
     C = ((A[:, None, :] - B[None, :, :]) ** 2).sum(-1)
@@ -189,7 +216,7 @@ MED_Y = -1.75
 # shifted 0.3 right of the round-1 block so "med y" never reads as "x  med y" with the axis name
 X_SYM_R, X_EQ, X_TGT_L, X_NOW_L, X_MARK = 1.8, 2.15, 2.5, 4.3, 6.15
 COLD_SHIFT = 1.15                         # table sits further right before the "now" column
-SIM_SEED = 10371                          # the simulated r = 0.80 cloud (B9): fits the plot, slice mean on the line
+SIM_SEED = 13458                          # the simulated r = 0.50 cloud (B9): fits the plot, label spots bare, slice mean on the line
 AN_X = (3, 15)                            # Anscombe axes: zoomed so the slope labels have room
 AN_Y = (3.5, 11.5)
 
@@ -284,13 +311,16 @@ def elbow_path(src, dst, cx, t1=0.28, t2=0.72):
     return pf
 
 
-def dip(*ms, lo=0.2, out=0.05, back=0.75):
+def dip(*ms, lo=0.2, out=0.05, back=0.75, start=0.0):
     """While a copy flies out of a table glyph, the source steps back to `lo` (over the first
     `out` of the move) and returns once the copy is clear (from `back`), so the two never read
-    as one doubled glyph. Use with rate_func=linear."""
+    as one doubled glyph. Use with rate_func=linear. `start`: the copy sets off later in a
+    longer play (alpha units)."""
     def f(m, a):
-        if a < back:
-            v = 1 - (1 - lo) * min(1.0, a / out)
+        if a < start:
+            v = 1.0
+        elif a < back:
+            v = 1 - (1 - lo) * min(1.0, (a - start) / out)
         else:
             v = lo + (1 - lo) * min(1.0, (a - back) / (1 - back))
         for x in ms:
@@ -548,8 +578,16 @@ class Episode(NarratedScene):
         require_safe(pct86, "'86% used bars'")
         x_ctx = VGroup(ax.x_axis.numbers, ax.x_axis.ticks, ax.x_name)
         strip_dots = VGroup(*[Dot(p, radius=0.055) for p in to_screen(ax, strip)])
+        # which error bar this is: most of the reviewed bar graphs drew +- SE (Weissgerber 2015),
+        # ours is +- 1 SD (the squeezed ellipse at the landing has exactly that extent)
+        def sd_tag_for(cap_pt, bar_right):
+            t_ = MathTex(r"\pm 1\ \text{SD}", font_size=36, color=TXT_GRAY)
+            t_.move_to([bar_right + 0.2 + t_.width / 2, cap_pt[1] + 0.06, 0])
+            return t_
+        sd_tag = sd_tag_for(ax.c2p(T[0], T[1] + T[3]), bar_rect.get_right()[0])
         require_clear(pct86, strip_dots, bar_rect, err_bar, what="'86 %'")
         require_clear(pct13, strip_dots, bar_rect, err_bar, what="'13 %'")
+        require_clear(sd_tag, strip_dots, bar_rect, err_bar, pct13, what="'+-1 SD' tag")
         with self.narrate("In a review of seven hundred three physiology papers, eighty-six "
                           "percent used bar graphs: [pause 0.4] an average and an error bar. Only "
                           "thirteen percent showed the points.") as beat:
@@ -565,10 +603,12 @@ class Episode(NarratedScene):
             beat.wait_until("average", offset=-0.1)
             self.play(flag(rows[1]), run_time=0.8)
             beat.wait_until("error", offset=-0.15)
-            self.play(Create(err_bar), flag(rows[3]), run_time=0.8)
+            self.play(Create(err_bar), flag(rows[3]), FadeIn(sd_tag, rate_func=window(0.4, 1.0)),
+                      run_time=0.8)
+            # "Only thirteen percent showed the points": the bar and its error bar leave (they
+            # come back at the landing), so the points alone carry the 13 %
             beat.wait_until("Only", offset=-0.05)
-            self.play(bar_rect.animate.set_fill(opacity=0.06).set_stroke(opacity=0.6),
-                      err_bar.animate.set_stroke(opacity=0.6), pct86.animate.set_opacity(0.4),
+            self.play(FadeOut(VGroup(bar_rect, err_bar, sd_tag, pct86)),
                       self.dots.animate.set_opacity(1.0), Write(pct13),
                       run_time=beat.until("points", offset=0.1))
 
@@ -603,8 +643,7 @@ class Episode(NarratedScene):
                           "demand that all five match the dinosaur's to two decimals.", gap=0.66) as beat:
             # the labels beside the strip are gone before the points spread out over them
             self.go(lambda a: lerp(strip, dino, a), 1.3, smooth,
-                    FadeOut(bar_rect), FadeOut(err_bar), FadeOut(cite_w),
-                    FadeOut(pct86, rate_func=window(0.0, 0.25)),
+                    FadeOut(cite_w),
                     FadeOut(pct13, rate_func=window(0.0, 0.25)),
                     UpdateFromAlphaFunc(ax, lambda m, a: x_ctx.set_opacity(0.25 + 0.75 * a)))
             beat.wait_until("Let's", offset=-0.05)
@@ -733,7 +772,7 @@ class Episode(NarratedScene):
         require_clear(c_sx, harm_y, varm_y, cen_y, seg_x, seg_y, what="s_x by its arm")
         require_clear(c_sy, harm_y, varm_y, cen_y, seg_x, seg_y, what="s_y by its arm")
         require_clear(c_sx, c_sy, what="s_x vs s_y arm labels")
-        with self.narrate("The two standard deviations reach one deviation out on each side, "
+        with self.narrate("The two standard deviations reach out on each side, "
                           "and draw a box.", gap=0.66) as beat:
             beat.wait_until("standard", offset=-0.15)
             self.play(flag(VGroup(tgts[2], tgts[3])),
@@ -758,34 +797,50 @@ class Episode(NarratedScene):
             self.play(FadeOut(VGroup(seg_x, seg_y, harm_y, varm_y)), run_time=0.5)
 
         # The correlation: which of the many ellipses that touch all four walls (B9a). Then a
-        # "what if" at r = 0.80 (B9b), drawn at 60 % so it never reads as the dinosaur's own
-        # summary: a simulated 142-point cloud with these SDs and r = 0.80 appears; one standard
-        # deviation to the right, the points of the vertical slice at the wall average r SDs up
-        # (they converge onto the top of the rise). That is the best-fit line, through the middle
-        # of every vertical slice of the ellipse; at the wall a slice shrinks to the touch point,
-        # so the touch point sits r s_y above the centre. Then r sweeps back to the dinosaur's
-        # -0.06 and everything returns to full strength.
-        r_row = VGroup(syms[4], eqs[4], tgts[4], self.nows[4], self.marks[4])
+        # "what if" at r = 0.50 (B9b), drawn at 60 % so it never reads as the dinosaur's own
+        # summary, while everything that still describes the dinosaur (its "now" column, the =
+        # marks, "matching", its own r) steps back to 25 %, so the yellow "r = 0.50" is the only
+        # live r on screen. A simulated 142-point cloud with these SDs and r = 0.50 appears. One
+        # standard deviation to the right (the run, labelled s_x), the points of the vertical
+        # slice at the wall average r s_y up: their copies merge into a NEW white dot at that
+        # height, which turns yellow and is the touch dot. The rise (r s_y, its label built from
+        # the "r" of "r = 0.50" and the readout's s_y) stands 0.15 right of the wall and the box
+        # steps back to a 40 % grey, so the rise, the band and the touch dot never share one
+        # column. That is the best-fit line, through the middle of every slice of the ellipse; at
+        # the wall a slice shrinks to the touch point. Then r sweeps back to the dinosaur's -0.06:
+        # the run, the rise and its label leave, and only the dashed line, the centre and the two
+        # touch dots stay.
+        now_col = [hdr_n, *self.nows]
         wall_x = T[0] + T[2]
         WOP = 0.6                                            # stroke strength of the what-if
         wop = ValueTracker(1.0)
-        run9 = Line(ax.c2p(T[0], T[1]), ax.c2p(wall_x, T[1]), color=YELLOW,
-                    stroke_width=3.5).set_z_index(2).set_stroke(opacity=WOP)
+        R_WI = 0.5                                           # the what-if correlation
+        U_ = ax.x_axis.unit_size                             # screen units per data unit
+        cen_pt = ax.c2p(T[0], T[1])
+        run9 = Line(cen_pt, ax.c2p(wall_x, T[1]), color=YELLOW,
+                    stroke_width=4).set_z_index(2).set_stroke(opacity=WOP)
+        # under the run's left part: the r = 0.50 ellipse, the centre dot and the dashed line all
+        # keep >= 0.15 clear of it there. No backing plate (it clipped the points round it into
+        # half-moons): the simulated cloud leaves this spot bare instead (facts #36)
         run9_lbl = MathTex("s_x", font_size=36, color=YELLOW).set_z_index(6)
-        # above the run's left part, on an opaque patch over the simulated points; it leaves when
-        # the best-fit line (which would cross it) is drawn
-        run9_lbl.next_to(run9.point_from_proportion(0.3), UP, buff=0.25)
-        run9_patch = BackgroundRectangle(run9_lbl, color=BG, fill_opacity=1.0,
-                                         buff=0.06).set_z_index(5)
+        run9_lbl.move_to(cen_pt + np.array([0.24, -0.34, 0]))
         ghosts = VGroup(*[ell_mob(ax, (T[0], T[1], T[2], T[3], rg), GRAY, 3)
                           for rg in (0.5, -0.5)]).set_stroke(opacity=0.4)
-        R_WI = 0.8                                           # the what-if correlation
-
-        def rise_line(r):
-            r = r if abs(r) > 2e-3 else 2e-3                 # never a zero-length line
-            return Line(ax.c2p(wall_x, T[1]), ax.c2p(wall_x, T[1] + r * T[3]), color=YELLOW,
-                        stroke_width=8).set_z_index(3)
-        rise9 = rise_line(R_WI).set_stroke(opacity=WOP)
+        RISE_DX = 0.15                                       # the rise stands just right of the wall
+        wall_s = ax.c2p(wall_x, T[1])[0]
+        rise_x = wall_s + RISE_DX
+        y_c = ax.c2p(0, T[1])[1]
+        y_t = ax.c2p(0, T[1] + R_WI * T[3])[1]
+        touchR = ax.c2p(wall_x, T[1] + R_WI * T[3])
+        touchL = ax.c2p(T[0] - T[2], T[1] - R_WI * T[3])
+        # a dimension: the rise itself, with thin extension ticks back to the run's end and to
+        # the touch point, so it measures that height without sitting on the wall
+        rise9 = VGroup(Line([rise_x, y_c, 0], [rise_x, y_t, 0], stroke_width=6),
+                       Line([wall_s, y_c, 0], [rise_x + 0.02, y_c, 0], stroke_width=2.5),
+                       Line([wall_s, y_t, 0], [rise_x + 0.02, y_t, 0], stroke_width=2.5))
+        rise9.set_stroke(YELLOW, opacity=WOP).set_z_index(3)
+        rs_lbl = MathTex("r", r"\,s_y", font_size=36, color=YELLOW).set_z_index(6)
+        rs_lbl.move_to([rise_x + 0.22 + rs_lbl.width / 2, ax.c2p(0, T[1] + R_WI * T[3] / 2)[1], 0])
         BFL_EXT = 1.05                                       # just past both touch dots
 
         def bfl_line(r):
@@ -816,28 +871,7 @@ class Episode(NarratedScene):
                 ln.put_start_and_end_on(lo, hi)
                 d.move_to(mid)
 
-        # the simulated cloud (labelled): uniform inside the 2-SD ellipse, then given exactly the
-        # dinosaur's means and SDs and r = 0.80, so this ellipse is its 1-SD ellipse and the
-        # dashed line is its least-squares line (seed chosen so all points fit the 0-100 plot)
-        rng_s = np.random.default_rng(SIM_SEED)
-        th_s = rng_s.uniform(0, 2 * np.pi, N)
-        rad_s = 2 * np.sqrt(rng_s.uniform(0, 1, N))
-        T_wi = np.array([T[0], T[1], T[2], T[3], R_WI])
-        sim = fix(np.column_stack([rad_s * np.cos(th_s), rad_s * np.sin(th_s)]), T_wi)
-        assert np.allclose(stats(sim), T_wi) and sim.min() > 0.5 and sim.max() < 99.5
-        sim_dots = VGroup(*[Dot(p, radius=0.055, color=GRAY) for p in to_screen(ax, sim)])
-        band = np.abs(sim[:, 0] - wall_x) < 0.12 * T[2]      # the vertical slice at the wall
-        band_y = float(sim[band, 1].mean())
-        assert band.sum() >= 8 and abs(band_y - (T[1] + R_WI * T[3])) < 0.1
-        band_dots = VGroup(*[sim_dots[i] for i in np.where(band)[0]])
-        rest_dots = VGroup(*[sim_dots[i] for i in np.where(~band)[0]])
-        band_rect = Rectangle(width=2 * 0.12 * T[2] * ax.x_axis.unit_size,
-                              height=100 * ax.y_axis.unit_size, stroke_width=0,
-                              fill_color=GRAY, fill_opacity=0.14).move_to(ax.c2p(wall_x, 50))
-        band_rect.set_z_index(-1)                            # behind the points it singles out
-        band_avg = ax.c2p(wall_x, band_y)
-        rs_lbl = MathTex("r", r"\,s_y", font_size=36, color=YELLOW).set_z_index(5)
-        # the what-if's own readout, top left of the plot (where the r = 0.80 cloud never goes)
+        # the what-if's own readout, top left of the plot (where the r = 0.50 cloud never goes)
         sim_tag = label("simulated", color=TXT_GRAY).next_to(ax.c2p(3, 100), DR, buff=0.0)
         sim_tag.shift(DOWN * 0.05)
         r_live = VGroup(MathTex(r"r =", font_size=36, color=YELLOW),
@@ -849,25 +883,41 @@ class Episode(NarratedScene):
             m[1].set_value(rt.get_value())
             m[1].next_to(m[0], RIGHT, buff=0.12)
 
-        def rs_left(r):                                      # left-centre point of the r s_y label
-            return ax.c2p(wall_x, T[1] + r * T[3] / 2) + RIGHT * 0.25
-
-        def place_rs(r):
-            rs_lbl.move_to(rs_left(r), aligned_edge=LEFT)
+        # the simulated cloud (labelled): uniform inside the 2-SD ellipse, then given exactly the
+        # dinosaur's means and SDs and r = 0.50, so this ellipse is its 1-SD ellipse and the
+        # dashed line is its least-squares line. The two labels written over it and the what-if
+        # readout sit on bare background: points that would land under them (or outside the
+        # plot) are drawn again (seed chosen so the slice at the wall averages on the line)
+        def zone(m, pad=MIN_GAP + 0.055):                    # label box + clearance + dot radius
+            c = ax.p2c(m.get_center())
+            return (c[0], c[1], (m.width / 2 + pad) / U_, (m.height / 2 + pad) / U_)
+        T_wi = np.array([T[0], T[1], T[2], T[3], R_WI])
+        sim, n_redrawn = sim_cloud(SIM_SEED, T_wi,
+                                   [zone(run9_lbl), zone(rs_lbl), zone(VGroup(sim_tag, r_live))])
+        assert np.allclose(stats(sim), T_wi) and sim.min() > 0.5 and sim.max() < 99.5
+        assert n_redrawn <= 12, n_redrawn
+        sim_dots = VGroup(*[Dot(p, radius=0.055, color=GRAY) for p in to_screen(ax, sim)])
+        band = np.abs(sim[:, 0] - wall_x) < 0.12 * T[2]      # the vertical slice at the wall
+        band_y = float(sim[band, 1].mean())
+        assert band.sum() >= 8 and abs(band_y - (T[1] + R_WI * T[3])) < 0.1
+        band_dots = VGroup(*[sim_dots[i] for i in np.where(band)[0]])
+        rest_dots = VGroup(*[sim_dots[i] for i in np.where(~band)[0]])
+        band_rect = Rectangle(width=2 * 0.12 * T[2] * ax.x_axis.unit_size,
+                              height=100 * ax.y_axis.unit_size, stroke_width=0,
+                              fill_color=GRAY, fill_opacity=0.14).move_to(ax.c2p(wall_x, 50))
+        band_rect.set_z_index(-1)                            # behind the points it singles out
+        band_avg = ax.c2p(wall_x, band_y)
         everything = VGroup(*syms, *eqs, *tgts, *self.nows)
+        touch_dot = Dot(touchR, radius=0.075)
         require_clear(VGroup(sim_tag, r_live), sim_dots, chords, mids, box_mob(ax, T),
                       what="what-if labels vs the simulated cloud")
         require_safe(VGroup(sim_tag, r_live), "what-if labels")
-        # (it leaves as the dashed line grows, so the line is not among its neighbours)
-        require_clear(run9_lbl, ell_mob(ax, T_wi), box_mob(ax, T), cen_y, run9, rise9,
-                      Dot(ax.c2p(wall_x, T[1] + R_WI * T[3]), radius=0.075),
-                      what="B9 s_x label at r=0.80")
-        for r_chk in (R_WI, 0.4, 0.0, float(T[4])):          # "r s_y" follows the sweep back
-            place_rs(r_chk)
+        for lab_, nm_ in ((run9_lbl, "B9 s_x label"), (rs_lbl, "B9 r s_y label")):
+            require_clear(lab_, ell_mob(ax, T_wi), box_mob(ax, T), cen_y, run9, rise9,
+                          bfl_line(R_WI), touch_dot, sim_dots, everything, what=nm_)
+        require_clear(run9_lbl, rs_lbl, what="s_x vs r s_y")
+        for r_chk in (float(T[4]), 0.25, R_WI):              # the what-if readout during the sweep
             s_chk = (T[0], T[1], T[2], T[3], r_chk)
-            require_clear(rs_lbl, ell_mob(ax, s_chk), box_mob(ax, T), bfl_line(r_chk),
-                          Dot(ax.c2p(wall_x, T[1] + r_chk * T[3]), radius=0.075), everything,
-                          what=f"B9 r s_y label at r={r_chk:.2f}")
             require_clear(VGroup(sim_tag, r_live), ell_mob(ax, s_chk), bfl_line(r_chk),
                           what=f"what-if labels at r={r_chk:.2f}")
 
@@ -896,72 +946,116 @@ class Episode(NarratedScene):
                 m.move_to(ax.c2p(T[0] + sign * T[2], T[1] + sign * rt.get_value() * T[3]))
                 m.set_fill(opacity=wop.get_value())
             return f
-        with self.narrate("Say r is point eight. Go one standard deviation right. On average, "
-                          "the cloud rises r times a standard deviation. [pause 0.7] That's the best-fit "
-                          "line, through the middle of every vertical slice. [pause 0.7] At the "
-                          "wall, the slices shrink to the touch point, r times ess why above the "
-                          "center. [pause 0.4] For the dinosaur, it's just below the middle.",
-                          gap=0.66) as beat:
+
+        def dim_dino():
+            """the dinosaur's live column, marks, count and own r step back to 25 % (green and
+            yellow go grey first: dimmed further than 60 % they read as olive / moss)"""
+            return [*[m.animate.set_opacity(0.25) for m in now_col],
+                    *[m.animate.set_color(TXT_GRAY).set_opacity(0.25) for m in self.marks],
+                    self.count[0].animate.set_opacity(0.25), self.count[2].animate.set_opacity(0.25),
+                    self.count.number.animate.set_color(TXT_GRAY).set_opacity(0.25),
+                    syms[4].animate.set_opacity(0.25), eqs[4].animate.set_opacity(0.25),
+                    tgts[4].animate.set_color(TXT_GRAY).set_opacity(0.25)]
+
+        def undim_dino():
+            return [*[m.animate.set_opacity(1.0) for m in now_col],
+                    *[m.animate.set_color(GREEN).set_opacity(1.0) for m in self.marks],
+                    self.count[0].animate.set_opacity(1.0), self.count[2].animate.set_opacity(1.0),
+                    self.count.number.animate.set_color(GREEN).set_opacity(1.0),
+                    syms[4].animate.set_opacity(1.0), eqs[4].animate.set_opacity(1.0),
+                    tgts[4].animate.set_color(YELLOW).set_opacity(1.0)]
+
+        with self.narrate("Say r is point five. Go one standard deviation right. [pause 0.4] On "
+                          "average, the cloud rises r times ess why. [pause 0.7] That's the "
+                          "best-fit line, through the middle of every slice of the ellipse. "
+                          "[pause 0.7] At the wall, the slices shrink to the touch point. "
+                          "[pause 0.4] For the dinosaur, it's just below the middle.",
+                          gap=0.66, speed=0.80) as beat:
             self.ell.add_updater(sweep)
-            tR.add_updater(touch_upd(1))
-            tL.add_updater(touch_upd(-1))
             r_live.add_updater(upd_live)
             beat.wait_until("Say", offset=-0.1)
-            # the what-if: the dinosaur steps aside, its r row dims, the geometry drops to 60 %
-            # (yellow is dimmed only to 60 %: further down it reads olive, a new hue)
-            self.play(self.dots.animate.set_opacity(0), r_row.animate.set_opacity(0.6),
-                      self.count.animate.set_opacity(0.6), FadeIn(r_live), FadeIn(sim_tag),
-                      wop.animate.set_value(WOP), run_time=0.5)
+            # the what-if: the dinosaur steps aside, its live column and its r step back, the box
+            # steps back to a grey 40 %, the touch dots go (the slice will find the right one),
+            # and the geometry drops to 60 % (yellow dimmed further reads olive)
+            self.play(self.dots.animate.set_opacity(0), *dim_dino(),
+                      box_y.animate.set_stroke(GRAY, opacity=0.4),
+                      FadeOut(tR, scale=0.5), FadeOut(tL, scale=0.5),
+                      FadeIn(r_live), FadeIn(sim_tag), wop.animate.set_value(WOP), run_time=0.5)
             self.play(rt.animate.set_value(R_WI),
                       FadeIn(sim_dots, rate_func=window(0.35, 1.0)),
-                      run_time=beat.until_end_of("eight", offset=0.15))
+                      run_time=beat.until_end_of("five", offset=0.15))
+            tR.move_to(touchR).set_fill(opacity=WOP)
+            tL.move_to(touchL).set_fill(opacity=WOP)
             beat.wait_until("one standard", offset=-0.1)
-            self.play(Create(run9), FadeIn(run9_patch), Write(run9_lbl),
-                      run_time=beat.until_end_of("right"))
+            self.play(Create(run9), Write(run9_lbl), run_time=beat.until_end_of("right"))
             # "on average": the slice at the wall, its points singled out in white ...
             beat.wait_until("average", offset=-0.25)
             self.play(FadeIn(band_rect), band_dots.animate.set_color(INK),
-                      rest_dots.animate.set_opacity(0.3), run_time=0.6)
-            # ... and averaged: copies converge on their mean, which is the top of the rise
-            beat.wait_until("rises", offset=-0.2)
+                      rest_dots.animate.set_opacity(0.3), run_time=0.5)
+            # ... and averaged: copies converge on their mean while the rise grows beside the wall
             avg_cp = VGroup(*[d.copy().set_z_index(4) for d in band_dots])
             self.add(avg_cp)
-            self.play(*[c.animate.move_to(band_avg).set_color(YELLOW) for c in avg_cp],
-                      Create(rise9), run_time=beat.until_end_of("deviation", occurrence=2,
-                                                                 offset=0.1))
-            # the best-fit line: from the centre through both touch dots
+            T_c = max(0.9, beat.until_end_of("rises", offset=0.05))
+            t_rise = min(0.5, max(0.0, beat.until("rises", offset=-0.15) / T_c))
+            self.play(*[c.animate.move_to(band_avg).scale(0.075 / 0.055) for c in avg_cp],
+                      Create(rise9, rate_func=window(t_rise, 1.0)), run_time=T_c)
+            merged = Dot(band_avg, radius=0.075, color=INK).set_z_index(4)
+            self.remove(*avg_cp)
+            self.add(merged)
+            # "r times ess why": the rise's label, its r from the what-if's "r = 0.50" and its s_y
+            # from the readout (each source steps back while its copy leaves)
+            beat.wait_until("r times", offset=-0.3)
+            T_l = max(1.2, beat.until_end_of("why", offset=0.1))
+            t_s = min(0.5, max(0.3, beat.until("ess", offset=-0.25) / T_l))
+            r_glyph = r_live[0][0][0]
+            cp_r = MathTex("r", font_size=36, color=YELLOW).move_to(r_glyph)
+            cp_s = MathTex(r"\,s_y", font_size=42).move_to(syms[3])[0]
+            self.play(ReplacementTransform(cp_r, rs_lbl[0], rate_func=window(0.0, t_s + 0.1)),
+                      ReplacementTransform(cp_s, rs_lbl[1], rate_func=window(t_s, 1.0)),
+                      dip(r_glyph, back=t_s + 0.05), dip(syms[3], start=t_s, back=0.9),
+                      run_time=T_l)
+            self.remove(rs_lbl[0], rs_lbl[1])
+            self.add(rs_lbl)
+            # in the pause: the averaged point turns yellow and is the touch dot
+            self.play(merged.animate.set_color(YELLOW).set_opacity(WOP).move_to(touchR),
+                      run_time=0.5)
+            self.remove(merged)
+            self.add(tR)
+            # the best-fit line: from the centre through the touch dot, on to the left one
             beat.wait_until("best-fit", offset=-0.3)
-            self.play(FadeOut(sim_dots), FadeOut(band_rect), FadeOut(avg_cp), FadeOut(sim_tag),
-                      GrowFromCenter(bfl),
-                      FadeOut(VGroup(run9_lbl, run9_patch), rate_func=window(0.0, 0.3)),
+            self.play(FadeOut(sim_dots), FadeOut(band_rect), FadeOut(sim_tag),
+                      GrowFromCenter(bfl), FadeIn(tL, scale=0.4, rate_func=window(0.7, 1.0)),
                       run_time=0.9)
+            # "through the middle of every slice of the ellipse": the s_x label gives way to the
+            # slices (one would cross it); each slice's midpoint lands on the dashed line
             beat.wait_until("middle", offset=-0.3)
-            self.play(LaggedStart(*[Create(c) for c in chords], lag_ratio=0.15), run_time=0.9)
-            beat.wait_until("vertical", offset=-0.1)
-            self.play(LaggedStart(*[FadeIn(d, scale=0.4) for d in mids], lag_ratio=0.15),
-                      run_time=0.8)
-            # at the wall a slice is a single point: every slice slides there and collapses
+            self.play(FadeOut(run9_lbl, rate_func=window(0.0, 0.25)),
+                      LaggedStart(*[AnimationGroup(Create(c), FadeIn(d, scale=0.4,
+                                                                    rate_func=window(0.5, 1.0)))
+                                    for c, d in zip(chords, mids)], lag_ratio=0.2),
+                      run_time=max(1.3, beat.until_end_of("ellipse") - 0.1))
+            # at the wall a slice is a single point: every slice slides there and collapses,
+            # and the box comes back at full strength
             beat.wait_until("the wall", offset=-0.1)
             self.play(qv.animate.set_value(1.0), UpdateFromFunc(chords, upd_chords),
+                      box_y.animate.set_stroke(YELLOW, opacity=1.0),
                       run_time=beat.until("touch point", offset=-0.15), rate_func=smooth)
-            self.play(FadeOut(chords), FadeOut(mids), flag(tR), run_time=0.7)
-            beat.wait_until("times", occurrence=2, offset=-0.3)   # "r times ess why"
-            place_rs(rt.get_value())
-            self.play(Write(rs_lbl), run_time=0.8)
-            rs_lbl.add_updater(lambda m: place_rs(rt.get_value()))
+            self.play(FadeOut(chords), FadeOut(mids), flag(tR), flag(rs_lbl), run_time=0.7)
+            # back to the data: r = -0.06, and the geometry is the dinosaur's again (full
+            # strength); the run, the rise and its label leave (at r = -0.06 the run would lie
+            # along the line and the rise would be 1.7 units tall), so only the dashed line, the
+            # centre and the two touch dots stay
+            beat.wait_until("dinosaur", offset=-0.25)
+            tR.add_updater(touch_upd(1))
+            tL.add_updater(touch_upd(-1))
             bfl.add_updater(lambda m: m.become(bfl_line(rt.get_value())).set_stroke(
                 opacity=wop.get_value()))
-            rise9.add_updater(lambda m: m.become(rise_line(rt.get_value())).set_stroke(
-                opacity=wop.get_value()))
-            # back to the data: r = -0.06, and the geometry is the dinosaur's again (full strength)
-            beat.wait_until("dinosaur", offset=-0.25)
             self.play(rt.animate.set_value(float(T[4])), wop.animate.set_value(1.0),
-                      run9.animate.set_stroke(opacity=1.0), run_time=0.9, rate_func=smooth)
-            for m in (self.ell, tR, tL, rise9, r_live, rs_lbl, bfl):
+                      FadeOut(VGroup(run9, rise9, rs_lbl), rate_func=window(0.0, 0.4)),
+                      run_time=0.9, rate_func=smooth)
+            for m in (self.ell, tR, tL, r_live, bfl):
                 m.clear_updaters()
-            place_rs(float(T[4]))
-            self.play(FadeOut(r_live), r_row.animate.set_opacity(1.0),
-                      self.count.animate.set_opacity(1.0), run_time=0.4)
+            self.play(FadeOut(r_live), *undim_dino(), run_time=0.45)
             # the touch dot and the dinosaur's own r, each value flagged on its own (a group
             # Indicate would push 0.06 into its "=")
             beat.wait_until("middle", occurrence=2, offset=-0.3)
@@ -970,7 +1064,7 @@ class Episode(NarratedScene):
 
         with self.narrate("That ellipse is everything the five numbers know. [pause 1.0]") as beat:
             beat.wait_until("ellipse", offset=-0.15)
-            self.play(FadeOut(VGroup(rise9, rs_lbl, run9, bfl)),
+            self.play(FadeOut(bfl),
                       self.ell.animate(rate_func=there_and_back).set_stroke(width=8),
                       run_time=0.8)
             beat.wait_until("everything", offset=-0.1)
@@ -1140,9 +1234,9 @@ class Episode(NarratedScene):
                           ax2.y_axis.ticks)
         new_nums.set_opacity(0)
 
-        # Anscombe's own readout (ordinary rounding, as his numbers are always quoted). It lands
-        # mid-right with r first, level with the touch point it sets; on "Least squares" it steps
-        # down to the bottom slot to make room for the derivation.
+        # Anscombe's own readout (ordinary rounding, as his numbers are always quoted). It builds
+        # in its final bottom-right slot, r first (round 7: it used to land mid-right and then
+        # jump down to make room for the slope formula, a move that meant nothing)
         an_vals = [f"{xa:.2f}", f"{ya:.2f}", f"{sxa:.2f}", f"{sya:.2f}", f"{ra:.2f}"]
         an = [item(s, v) for s, v in zip((r"\bar{x}", r"\bar{y}", "s_x", "s_y", "r"), an_vals)]
         GAP = 0.45
@@ -1163,9 +1257,9 @@ class Episode(NarratedScene):
             an[i_].shift(UP * (y_ - an[i_][1].get_center()[1]))   # "=" signs on one line
         readout_a = VGroup(*an)
         LOW = DOWN * (RA_MID - RA_Y)
-        readout_low = readout_a.copy().shift(LOW)
-        require_safe(readout_a, "Anscombe readout (mid)")
-        require_safe(readout_low, "Anscombe readout (low)")
+        readout_a.shift(LOW)
+        readout_low = readout_a
+        require_safe(readout_a, "Anscombe readout")
 
         # geometry on Anscombe I: derive the best-fit slope from the box
         slope = ra * sya / sxa
@@ -1188,7 +1282,7 @@ class Episode(NarratedScene):
         require_clear(lbl_run, rise_seg, what="s_x vs rise")
         require_clear(lbl_rise, run_seg, what="r s_y vs run")
         require_clear(readout_a, ell_a, box_a, tch_a, dots_a_final, line_a, ax2,
-                      what="mid readout vs plot")
+                      what="readout vs plot")
 
         FS = 48
         f_lhs = MathTex(r"\text{slope}", "=", font_size=FS)
@@ -1233,30 +1327,57 @@ class Episode(NarratedScene):
         with self.narrate("Francis Anscombe made the same point in 1973, with eleven points. "
                           "[pause 1.2]", gap=0.66) as beat:
             self.add(ax2)                    # same frame, axis lines and names as ax
-            # the dinosaur's values leave with the dinosaur; the empty symbol slots wait for his
-            self.play(FadeOut(VGroup(hdr_t, hdr_n, *self.nows, *self.marks, med_row),
-                              shift=0.15 * RIGHT),
-                      *[FadeOut(tgts[i], shift=0.2 * DOWN) for i in range(5)],
-                      FadeOut(VGroup(*syms, *eqs), shift=0.15 * LEFT), run_time=0.5)
+            # the sixth number leaves first: his readout builds in the slot it sits in
+            self.play(FadeOut(med_row, shift=0.15 * RIGHT), run_time=0.45)
             beat.wait_until("Anscombe", offset=-0.25)
             T_m = beat.until("eleven", offset=-0.05)
-            # the tick numbers hand over early and fast (old out, then new in at once, never on
-            # screen together), so the axes are numbered again well before his readout lands;
+            # the tick numbers cross-fade in place over the same 0.8 s, each new number at its own
+            # tick; where an old and a new number would share a spot (x: 75 and 12) the old one
+            # is out before the new one comes in, so no two numbers ever overprint
+            f_t = min(0.45, 0.8 / T_m)
+            olds = list(ax.x_axis.numbers) + list(ax.y_axis.numbers)
+            news = list(ax2.x_axis.numbers) + list(ax2.y_axis.numbers)
+
+            def clash(m_, others):
+                return any(abs(m_.get_x() - o_.get_x()) < (m_.width + o_.width) / 2 + 0.1 and
+                           abs(m_.get_y() - o_.get_y()) < (m_.height + o_.height) / 2 + 0.1
+                           for o_ in others)
+            seq_ids = {id(m_) for m_ in olds if clash(m_, news)} | \
+                      {id(m_) for m_ in news if clash(m_, olds)}
+            old_ticks = VGroup(ax.x_axis.ticks, ax.y_axis.ticks)
+            new_ticks = VGroup(ax2.x_axis.ticks, ax2.y_axis.ticks)
+
+            def ticks_over(m_, a):
+                fo, h1, h2 = window(0.0, f_t)(a), window(0.0, f_t / 2)(a), window(f_t / 2, f_t)(a)
+                for o_ in olds:
+                    o_.set_opacity(1 - (h1 if id(o_) in seq_ids else fo))
+                for n_ in news:
+                    n_.set_opacity(h2 if id(n_) in seq_ids else fo)
+                old_ticks.set_opacity(1 - fo)
+                new_ticks.set_opacity(fo)
+            # the dinosaur's rows step back (30 %) and drift up while his rows build below them,
+            # then fade: the readout panel is never empty
+            dino_tab = VGroup(hdr_t, hdr_n, *syms, *eqs, *tgts, *self.nows, *self.marks)
+            tab_c = dino_tab.get_center()
+
+            def tab_out(m_, a):
+                d_ = window(0.0, 0.4)(a)
+                m_.move_to(tab_c + UP * 0.25 * d_)
+                m_.set_opacity(1 - 0.7 * d_ - 0.3 * window(0.6, 0.9)(a))
             # his citation comes in only as his points settle, never under the dinosaur's stripes
             self.play(FadeOut(cite_mf, rate_func=window(0.0, 0.12)),
-                      UpdateFromAlphaFunc(ax, lambda m, a: old_nums.set_opacity(
-                          1 - window(0.0, 0.2)(a))),
-                      UpdateFromAlphaFunc(ax2, lambda m, a: new_nums.set_opacity(
-                          window(0.2, 0.42)(a))),
+                      UpdateFromAlphaFunc(ax, ticks_over, rate_func=linear),
+                      UpdateFromAlphaFunc(dino_tab, tab_out, rate_func=linear),
                       UpdateFromAlphaFunc(self.dots, to_anscombe),
                       Transform(self.ell, ell_a), Transform(box_y, box_a), Transform(cen_y, cen_a),
                       Transform(tR, tch_a), Transform(tL, tchL_a),
-                      # his readout arrives whole, entry by entry (r first), once his axes are
-                      # numbered: no "r =" ever waits without its value
+                      # his readout arrives whole, entry by entry (r first): no "r =" ever waits
+                      # without its value
                       LaggedStart(*[FadeIn(an[i], shift=0.1 * UP) for i in (4, 2, 3, 0, 1)],
-                                  lag_ratio=0.15, rate_func=window(0.4, 0.88)),
+                                  lag_ratio=0.15, rate_func=window(0.15, 0.62)),
                       FadeIn(cite_an, rate_func=window(0.86, 1.0)),
                       run_time=T_m)
+            self.remove(*dino_tab)
             self.remove(ax)
             self.remove(self.dots)
             self.add(dots_a)
@@ -1276,37 +1397,33 @@ class Episode(NarratedScene):
         # The labels come from Anscombe's readout; then slope = rise / run is built from them.
         with self.narrate("Same rule: ess ex across, [pause 0.3] r times ess why up. [pause 0.5]",
                           speed=0.82) as beat:
-            # each symbol copy rises out of the readout, crosses above the entries to its left and
-            # drops onto its segment, so no copy passes through another entry; its source steps
-            # back to 40 % while it leaves. Every copy has the same structure and string as its
-            # target, so each glyph maps onto itself
-            over_y = readout_a.get_top()[1] + (RA_MID_TOUCH - RA_MID) + 0.45
-            left_x = an[4].get_left()[0]
+            # each symbol copy rises straight up out of the readout (its bottom-right slot, below
+            # the plot's centre line), so it never passes through another entry, then travels to
+            # its segment; its source steps back while it leaves. Every copy has the same
+            # structure and string as its target, so each glyph maps onto itself
+            def up_then(src_, dst_, rise_=0.9, lead_=0.9):
+                return bez_path(src_, dst_, (src_.get_x(), src_.get_y() + rise_),
+                                (dst_.get_x() + lead_, dst_.get_y()))
             # the 0.82 settles into the touch dot it set
             self.play(FadeOut(d82, target_position=tR.get_center(), scale=0.3), run_time=0.45)
             beat.wait_until("ess ex", offset=-0.35)
             p_sx = MathTex("s_x", font_size=36).move_to(an[2][0])
-            self.play(Create(run_seg), ReplacementTransform(p_sx, lbl_run, path_func=bez_path(
-                p_sx, lbl_run, (p_sx.get_x(), over_y + 0.3), (left_x - 0.6, over_y))),
-                dip(an[2][0]), run_time=0.9)
+            self.play(Create(run_seg), ReplacementTransform(p_sx, lbl_run,
+                                                            path_func=up_then(p_sx, lbl_run)),
+                      dip(an[2][0]), run_time=0.9)
             beat.wait_until("r times", offset=-0.35)
             p_r = MathTex("r", font_size=36).move_to(an[4][0])[0]
             p_sy = MathTex(r"\,s_y", font_size=36).move_to(an[3][0])[0]
             self.play(Create(rise_seg),
-                      ReplacementTransform(p_r, lbl_rise[0], path_func=bez_path(
-                          p_r, lbl_rise[0], (p_r.get_x(), over_y + 0.2),
-                          (lbl_rise[0].get_x() + 0.8, over_y))),
-                      ReplacementTransform(p_sy, lbl_rise[1], path_func=bez_path(
-                          p_sy, lbl_rise[1], (p_sy.get_x(), over_y + 0.35),
-                          (left_x - 0.3, over_y + 0.05))),
+                      ReplacementTransform(p_r, lbl_rise[0], path_func=up_then(p_r, lbl_rise[0])),
+                      ReplacementTransform(p_sy, lbl_rise[1],
+                                           path_func=up_then(p_sy, lbl_rise[1], 1.1, 1.0)),
                       dip(an[4][0], an[3][0]), run_time=0.9)
             self.remove(lbl_rise[0], lbl_rise[1])
             self.add(lbl_rise)                                # one label again, not two parts
-            # on "up" the line grows out of the centre through the touch point, while the
-            # readout steps down to make room for the formula
+            # on "up" the line grows out of the centre through the touch point
             beat.wait_until("up", offset=-0.25)
-            self.play(GrowFromPoint(line_a, cen_y.get_center()), readout_a.animate.shift(LOW),
-                      run_time=0.9)
+            self.play(GrowFromPoint(line_a, cen_y.get_center()), run_time=0.9)
 
         bar = barC
         f1 = VGroup(f_lhs, numC, bar, denC)
@@ -1377,48 +1494,51 @@ class Episode(NarratedScene):
             require_clear(t, *panels, *pdots, what="quartet tag")
             require_safe(t, "quartet tag")
 
-        hl_read = box(readout_low, color=YELLOW, buff=0.15)
+        hl_read = box(readout_q, color=YELLOW, buff=0.15)
 
         def shrink(m, a):
             for d, s0_, d1 in zip(dots_a, start1, dest1):
                 d.move_to(lerp(s0_, d1, a))
                 d.set(width=2 * (0.08 - 0.02 * a))
 
-        with self.narrate("All four of his datasets share these five numbers, so they share the "
-                          "ellipse and line. [pause 0.5] A trend, a curve, an outlier, and one "
-                          "point doing all the work.") as beat:
-            self.play(FadeOut(VGroup(box_y, tR, tL, run_seg, rise_seg, lbl_run, lbl_rise)),
-                      run_time=0.7)
-            beat.wait_until("these five", offset=-0.1)
-            self.play(Create(hl_read), run_time=0.5)
-            # the two sets of axis lines crossfade over the same stretch (the points are never
-            # without axes); the tick numbers hand over in sequence so they never overprint
+        with self.narrate("All four of his datasets share these five numbers. [pause 0.5] A "
+                          "trend, a curve, an outlier, and one point doing all the work.") as beat:
+            # "All four": the plot becomes panel I while the other three arrive. The two sets of
+            # axis lines crossfade over the same stretch (the points are never without axes);
+            # the tick numbers hand over in sequence so they never overprint
             axes_op(panels[0], 0.0, 0.0)
             self.add(panels[0])
             self.bring_to_front(dots_a)
-            self.play(UpdateFromAlphaFunc(ax2, lambda m, a: axes_op(
+            T_q = max(1.3, beat.until("share", offset=-0.1))
+            self.play(FadeOut(VGroup(box_y, tR, tL, run_seg, rise_seg, lbl_run, lbl_rise),
+                              rate_func=window(0.0, 0.3)),
+                      UpdateFromAlphaFunc(ax2, lambda m, a: axes_op(
                           ax2, 1 - window(0.0, 0.55)(a), 1 - window(0.0, 0.3)(a)), rate_func=linear),
                       UpdateFromAlphaFunc(panels[0], lambda m, a: axes_op(
                           panels[0], window(0.0, 0.55)(a), window(0.35, 0.7)(a)), rate_func=linear),
-                      FadeOut(cen_y), FadeOut(hl_read, rate_func=window(0.0, 0.4)),
+                      FadeOut(cen_y),
                       UpdateFromAlphaFunc(dots_a, shrink),
                       Transform(self.ell, pells[0]), Transform(line_a, plines[0]),
                       Transform(f1, top_f1),
                       readout_a.animate.shift(Q_SHIFT),
                       *[FadeIn(VGroup(panels[jj], pdots[jj]),
-                               rate_func=window(0.45 + 0.12 * jj, 0.75 + 0.08 * jj))
+                               rate_func=window(0.4 + 0.12 * jj, 0.7 + 0.08 * jj))
                         for jj in (1, 2, 3)],
                       FadeIn(p_xt, rate_func=window(0.5, 1.0)),
-                      FadeIn(p_yt, rate_func=window(0.5, 1.0)), run_time=1.4)
+                      FadeIn(p_yt, rate_func=window(0.5, 1.0)), run_time=T_q)
             self.remove(ax2)
-            # copies arc over the panel row, farthest panel first, so no two ever overlap
-            beat.wait_until("ellipse", offset=-0.15)
+            # "share": copies of the ellipse and the line arc over the panel row to the other
+            # three, farthest panel first, so no two ever overlap; "these five numbers": the
+            # readout is boxed
+            T_s = 1.75
+            t_th = min(0.6, max(0.0, beat.until("these", offset=-0.1) / T_s))
             self.play(LaggedStart(*[TransformFromCopy(self.ell, pells[jj], path_arc=0.6)
                                     for jj in (3, 2, 1)],
                                   *[TransformFromCopy(line_a, plines[jj], path_arc=0.6)
-                                    for jj in (3, 2, 1)], lag_ratio=0.5), run_time=1.75)
+                                    for jj in (3, 2, 1)], lag_ratio=0.5),
+                      Create(hl_read, rate_func=window(t_th, t_th + 0.3)), run_time=T_s)
             beat.wait_until("trend", offset=-0.15)
-            self.play(FadeIn(tags[0], shift=0.1 * UP), run_time=0.5)
+            self.play(FadeIn(tags[0], shift=0.1 * UP), FadeOut(hl_read), run_time=0.5)
             beat.wait_until("curve", offset=-0.15)
             self.play(FadeIn(tags[1], shift=0.1 * UP), run_time=0.5)
             beat.wait_until("outlier", offset=-0.15)
@@ -1504,12 +1624,19 @@ class Episode(NarratedScene):
                       what="landing slope vs the cloud and its lines")
         assert table_cold.get_bottom()[1] - land_eq.get_top()[1] >= 0.25
         assert l_lhs.get_left()[0] - ax.x_name.get_right()[0] >= 0.75, "landing slope too near 'x'"
-        # the parked bar keeps its tag: "86% used bars" sits over its error bar in the last frame
+        # the parked bar keeps its tag: "86% used bars" sits over its error bar in the last frame,
+        # and "+-1 SD" beside its top cap, on the open side away from the readout
         pct86_out = pct86_l.copy().next_to(bar_out[1], UP, buff=0.3)
         require_safe(pct86_out, "parked '86%'")
-        require_clear(pct86_out, table_cold, bar_out, VGroup(*[Dot(p, radius=0.055)
-                                                               for p in to_screen(ax, dino)]),
-                      cite_w2, what="parked '86%'")
+        dino_scr = VGroup(*[Dot(p, radius=0.055) for p in to_screen(ax, dino)])
+        require_clear(pct86_out, table_cold, bar_out, dino_scr, cite_w2, what="parked '86%'")
+        cap_top = bar_out[1][2]                              # the error bar's top cap
+        sd_out = MathTex(r"\pm 1\ \text{SD}", font_size=36, color=TXT_GRAY)
+        sd_out.next_to(cap_top, LEFT, buff=0.2).shift(DOWN * 0.05)
+        require_safe(sd_out, "parked '+-1 SD'")
+        require_clear(sd_out, pct86_out, table_cold, bar_out, dino_scr, ell_l, line_l,
+                      what="parked '+-1 SD'")
+        rows_three = VGroup(table_cold[0], table_cold[2], table_cold[4])   # x-bar, s_x, r
 
         # one continuous object: panel I's axes grow into the opening's axes around the ellipse
         # (the frame is never an ellipse on an empty field); the rest of the quartet has left
@@ -1521,7 +1648,23 @@ class Episode(NarratedScene):
         dst_y.remove(dst_y.numbers)
         dst_yname = ax.y_name.copy()
         dst_xname = ax.x_name.copy()
-        ax_late = VGroup(dst_nums, dst_xname)               # tick numbers and "x": fade in last
+        ax_late = VGroup(dst_xname)                         # "x": fades in as its axis arrives
+        # each 0-100 tick number rides its own spot on the growing axis (from where it sits on
+        # panel I's axis to where it sits on the opening's), fading in on the way, so the axes
+        # are never without numbers for long and no number floats ahead of its axis
+        ride = []
+        for a_src, a_dst, span in ((src_x, dst_x, 20.0), (src_y, dst_y, 15.0)):
+            for num in a_dst.numbers:
+                v_ = float(num.get_value())
+                off_ = num.get_center() - a_dst.n2p(v_)
+                ride.append((num, a_src.n2p(v_ * span / 100) + off_, num.get_center().copy()))
+        AX_RATE = window(0.05, 0.75)
+
+        def ride_nums(m, a):
+            al_, op_ = AX_RATE(a), window(0.3, 0.75)(a)
+            for num, q0, q1 in ride:
+                num.move_to(q0 + (q1 - q0) * al_)
+                num.set_opacity(op_)
         late_fam = {id(f_) for f_ in VGroup(readout_a, cite_an).get_family()}
 
         def is_late(m_):
@@ -1532,20 +1675,21 @@ class Episode(NarratedScene):
                   # his readout and citation stay a little longer (the right half is never empty
                   # for long); they are gone before the formula reaches their slot
                   FadeOut(Group(*late_out), rate_func=window(0.0, 0.5)),
-                  FadeOut(p0_nums, rate_func=window(0.0, 0.4)),
-                  ReplacementTransform(src_x, dst_x, rate_func=window(0.05, 0.75)),
-                  ReplacementTransform(src_y, dst_y, rate_func=window(0.05, 0.75)),
-                  ReplacementTransform(p_yt, dst_yname, rate_func=window(0.05, 0.75)),
+                  FadeOut(p0_nums, rate_func=window(0.0, 0.28)),
+                  ReplacementTransform(src_x, dst_x, rate_func=AX_RATE),
+                  ReplacementTransform(src_y, dst_y, rate_func=AX_RATE),
+                  ReplacementTransform(p_yt, dst_yname, rate_func=AX_RATE),
+                  UpdateFromAlphaFunc(dst_nums, ride_nums, rate_func=linear),
                   ReplacementTransform(self.ell, ell_l, rate_func=window(0.05, 0.75)),
                   # down the open middle first, then in from the left under the readout, so it
                   # never passes over the readout's r row as that fades in
                   Transform(f1, f_land, rate_func=window(0.3, 0.75),
                             path_func=bez_path(f1, f_land, (0.8, -0.5), (1.0, -1.9))),
-                  FadeIn(ax_late, rate_func=window(0.72, 1.0)),
+                  FadeIn(ax_late, rate_func=window(0.55, 0.85)),
                   FadeIn(table_cold, rate_func=window(0.5, 0.9)),
                   FadeIn(VGroup(self.dots, guess_lbl2, guess_line2, line_lbl2),
                          rate_func=window(0.6, 1.0)), run_time=1.5)
-        self.remove(dst_x, dst_y, ax_late, dst_yname)
+        self.remove(dst_x, dst_y, ax_late, dst_yname, dst_nums)
         self.add(ax)
         with self.narrate("Your line was right: five numbers fix it exactly, slope minus point "
                           "one. Your cloud was wrong: a blur around this ellipse, all that five "
@@ -1617,6 +1761,12 @@ class Episode(NarratedScene):
             self.add(squash)
             self.play(squash.animate.stretch(0.01, 0), GrowFromEdge(bar_l, DOWN), run_time=1.1)
             self.play(FadeIn(err_l), FadeOut(squash), run_time=0.3)
+            # "which draws only two": the three rows a bar cannot draw step back, so the two
+            # bright rows are exactly the two numbers the bar draws (y-bar and s_y)
+            beat.wait_until("only", offset=-0.15)
+            self.play(*[r_[k_].animate.set_opacity(0.3) for r_ in rows_three for k_ in (0, 1)],
+                      *[r_[2].animate.set_color(TXT_GRAY).set_opacity(0.3) for r_ in rows_three],
+                      run_time=0.5)
             beat.wait_until("two", offset=-0.15)
             self.play(flag(rows_two), run_time=0.8)
             beat.wait_until("dinosaur", offset=-0.2)
@@ -1630,6 +1780,7 @@ class Episode(NarratedScene):
                     FadeIn(bar_out, rate_func=window(0.5, 0.75)),
                     FadeOut(pct86_l, rate_func=window(0.0, 0.35)),
                     FadeIn(pct86_out, shift=0.1 * DOWN, rate_func=window(0.65, 1.0)),
+                    FadeIn(sd_out, rate_func=window(0.65, 1.0)),
                     # (60 % and a thinner stroke: yellow dimmed further reads olive, a new hue)
                     line_l.animate.set_stroke(opacity=0.6, width=2.5),
                     ell_l.animate.set_stroke(opacity=0.6, width=2.5),

@@ -16,28 +16,26 @@
 
 [01:03.6] Yet no flip is biased. [pause 0.5] Gather all twenty four checked flips: twelve heads, twelve tails. Total heads over total flips: exactly half.
 
-[01:14.4] The skew comes from scoring row by row: each row gets one vote, however many flips it checked.
+[01:14.4] But each row gets one vote, however many flips it checked.
 
-[01:21.2] Checked heads come in crowds, since a heads gets the next flip checked too. Here, three heads share a single vote, while this lone tails gets a whole one.
+[01:18.4] Checked heads come in crowds, since a heads gets the next flip checked too. Here, three heads share a single vote, while this lone tails gets a whole one.
 
-[01:32.6] Twelve heads crowd into eight rows. [pause 0.3] Twelve tails spread across eleven.
+[01:29.9] Twelve heads crowd into eight rows. [pause 0.3] Twelve tails spread across eleven.
 
-[01:38.2] Crowded heads split their votes.
+[01:35.6] Line them up: [pause 0.8] the heads hold five and two thirds of the fourteen votes. [pause 1.0] That's seventeen out of forty two.
 
-[01:41.0] Line them up: [pause 0.8] the heads hold five and two thirds of the fourteen votes. [pause 1.0] That's seventeen out of forty two.
+[01:45.4] So the test takes an average of ratios, one per row, [pause 0.3] instead of the ratio of totals. [pause 0.5]
 
-[01:50.8] So the test takes an average of ratios, one per row, [pause 0.3] instead of the ratio of totals. [pause 0.5]
+[01:53.1] Now score the flip after each tails. Swap heads and tails, and the strip flips over one half: the test reads high, twenty five out of forty two.
 
-[01:58.5] Now score the flip after each tails. Swap heads and tails, and the strip flips over one half: the test reads high, twenty five out of forty two.
+[02:04.8] Subtract the averages: a gap of minus nineteen points.
 
-[02:10.2] Subtract the averages: a gap of minus nineteen points.
+[02:09.9] The nineteen eighty five study ran the same comparison on twenty six Cornell players: up to a hundred shots each, from where they'd hit about half. After three hits, versus after three misses.
 
-[02:15.3] The nineteen eighty five study ran the same comparison on twenty six Cornell players: up to a hundred shots each, from where they'd hit about half. After three hits, versus after three misses.
+[02:24.2] For a random shooter, the same crowding pulls after hits down to forty six percent on average, and after misses up to fifty four. [pause 0.45] Miller and Sanjurjo's twenty eighteen paper [pause 0.5] puts the gap at about minus eight points. [pause 0.9] Longer records shrink it; [pause 0.9] longer streaks grow it. [pause 0.5]
 
-[02:29.6] For a random shooter, the same crowding pulls after hits down to forty six percent on average, and after misses up to fifty four. [pause 0.45] Miller and Sanjurjo's twenty eighteen paper [pause 0.5] puts the gap at about minus eight points. [pause 0.9] Longer records shrink it, [pause 0.35] but a hundred shots isn't long.
+[02:45.6] The Cornell players hit forty nine percent after three hits, and forty five after three misses. [pause 0.6] The study found plus four, [pause 0.4] too close to zero to count, so no hot hand.
 
-[02:50.3] The Cornell players hit forty nine percent after three hits, and forty five after three misses. The study found plus four, too close to zero to count, so no hot hand.
+[03:00.0] Measured from minus eight, it's twelve points hot. [pause 0.9] That's evidence for a hot hand in a gym, not proof it survives defenders in a game.
 
-[03:04.4] Measured from minus eight, it's twelve points hot. [pause 0.9] That's evidence for a hot hand in a gym, not proof it survives defenders in a game.
-
-[03:15.5] One half [pause 0.15] is what a fair coin does. [pause 0.8] Seventeen out of forty two is what this test sees. A fifty percent shooter [pause 0.3] who averages one half on this test [pause 0.2] is already running hot.
+[03:11.1] One half [pause 0.15] is what a fair coin does. [pause 0.8] Seventeen out of forty two is what this test sees. A fifty percent shooter [pause 0.3] who averages one half on this test [pause 0.2] is already running hot.

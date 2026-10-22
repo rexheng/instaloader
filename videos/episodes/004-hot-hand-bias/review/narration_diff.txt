@@ -1,7 +1,5 @@
-WER 1.0% over 477 script words (numbers spelled out, 'and' ignored)
+WER 0.6% over 463 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/004-hot-hand-bias/narration.json
 
 [1:01.0] replace  script: 'a half'                                 heard: 'point five'
-[1:44.3] insert   script: '∅'                                      heard: 'thirds'
-[2:22.1] replace  script: 'a'                                      heard: 'one'
-[2:48.1] replace  script: 'a'                                      heard: 'one'
+[2:16.7] replace  script: 'a'                                      heard: 'one'

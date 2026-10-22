@@ -1,8 +1,8 @@
 {
  "task": "transcribe",
  "language": "English",
- "duration": 211.050718214,
- "text": " Flip a fair coin four times. After each heads, check the next flip. Here, one of the two is heads. Do this for every four flip run and average, below, at, or above one half. One half feels obvious since a coin has no memory. In 1985, a study ran this kind of check on basketball shots and called the hot hand an illusion. Heads are hits. A hot shooter beats their usual rate. A random one should match it. First, test the test on a shooter we know is random, a fair coin. Four flips can land 16 ways, all equally likely. This row checks three flips, and two are heads. Two rows show no heads before the last flip, so they get no score. Drop the other 14 scores onto the line. Their average is 17 out of 42. On a fair coin, the test reads cold by 9.5 points. Yet no flip is biased. Gather all 24 checked flips, 12 heads, 12 tails, total heads over total flips, exactly half. The skew comes from scoring row by row. Each row gets one vote, however many flips it checked. Checked heads come in crowds, since a heads gets the next flip checked too. Here, three heads share a single vote, while this lone tails gets a whole one. Twelve heads crowd into eight rows. Twelve tails spread across eleven. Crowded heads split their votes Line them up The heads hold five and two thirds of the 14 votes That 17 out of 42 So the test takes an average of ratios, one per row, instead of the ratio of totals. Now score the flip after each tails. Swap heads and tails and the strip flips over one half. The test reads high, 25 out of 42. Subtract the averages, a gap of minus 19 points. The 1985 study ran the same comparison on 26 Cornell players, up to 100 shots each, from where they'd hit about half, after three hits versus after three misses. For a random shooter, the same crowding pulls after hits down to 46% on average, and after misses up to 54. Miller & Sanjurjo's 2018 paper puts the gap at about minus 8 points. Longer records shrink it, but 100 shots isn't long. The Cornell players hit 49% after 3 hits and 45 after 3 misses. The study found plus 4, too close to 0 to count, so no hot hand. Measured from minus eight, it's 12 points hot. That's evidence for a hot hand in a gym, not proof it survives defenders in a game. One half is what a fair coin does. 17 out of 42 is what this test sees. A 50% shooter who averages one half on this test is already running hot.",
+ "duration": 206.613342202,
+ "text": " Flip a fair coin four times. After each heads, check the next flip. Here, one of the two is heads. Do this for every four flip run and average, below, at, or above one half. One half feels obvious since a coin has no memory. In 1985, a study ran this kind of check on basketball shots and called the hot hand an illusion. Heads are hits. A hot shooter beats their usual rate. A random one should match it. First, test the test on a shooter we know is random, a fair coin. Four flips can land 16 ways, all equally likely. This row checks three flips, and two are heads. Two rows show no heads before the last flip, so they get no score. Drop the other 14 scores onto the line. Their average is 17 out of 42. On a fair coin, the test reads cold by 9.5 points. Yet no flip is biased. Gather all 24 checked flips, 12 heads, 12 tails, total heads over total flips, exactly half. But each row gets one vote, however many flips it checked. Checked heads come in crowds, since a heads gets the next flip checked too. Here, three heads share a single vote, while this lone tails gets a whole one. 12 heads crowd into eight rows. 12 tails spread across 11. Line them up. The heads hold five and two thirds of the 14 votes That 17 out of 42 So the test takes an average of ratios one per row instead of the ratio of totals. Now score the flip after each tails. Swap heads and tails, and the strip flips over one half. The test reads high, 25 out of 42. subtract the averages, a gap of minus 19 points. The 1985 study ran the same comparison on 26 Cornell players, up to 100 shots each, from where they'd hit about half, after three hits versus after three misses. For a random shooter, the same crowding pulls after hits down to 46% on average, and after misses up to 54. Miller and Sanjurjo's 2018 paper puts the gap at about minus eight points. Longer records shrink it. Longer streaks grow it. The Cornell players hit 49% after three hits and 45 after three misses. The study found plus four, too close to zero to count, so no hot hand. Measured from minus eight, it's 12 points hot. That's evidence for a hot hand in a gym, not proof it survives defenders in a game. One half is what a fair coin does. 17 out of 42 is what this test sees. A 50% shooter, who averages one half on this test, is already running hot.",
  "words": [
   {
    "word": "Flip",
@@ -36,7 +36,7 @@
   },
   {
    "word": "After",
-   "start": 2.04,
+   "start": 2.02,
    "end": 2.46
   },
   {
@@ -102,7 +102,7 @@
   {
    "word": "heads.",
    "start": 6.12,
-   "end": 6.78
+   "end": 6.8
   },
   {
    "word": "Do",
@@ -117,11 +117,11 @@
   {
    "word": "for",
    "start": 7.56,
-   "end": 7.74
+   "end": 7.72
   },
   {
    "word": "every",
-   "start": 7.74,
+   "start": 7.72,
    "end": 8.04
   },
   {
@@ -187,11 +187,11 @@
   {
    "word": "half",
    "start": 15.06,
-   "end": 15.3
+   "end": 15.32
   },
   {
    "word": "feels",
-   "start": 15.3,
+   "start": 15.32,
    "end": 15.64
   },
   {
@@ -406,7 +406,7 @@
   },
   {
    "word": "First,",
-   "start": 32.64,
+   "start": 32.62,
    "end": 33.28
   },
   {
@@ -542,11 +542,11 @@
   {
    "word": "flips,",
    "start": 42.74,
-   "end": 43.32
+   "end": 43.36
   },
   {
    "word": "and",
-   "start": 43.32,
+   "start": 43.36,
    "end": 43.6
   },
   {
@@ -672,7 +672,7 @@
   {
    "word": "line.",
    "start": 53.34,
-   "end": 53.9
+   "end": 53.88
   },
   {
    "word": "Their",
@@ -692,11 +692,11 @@
   {
    "word": "17",
    "start": 55.32,
-   "end": 55.9
+   "end": 55.88
   },
   {
    "word": "out",
-   "start": 55.9,
+   "start": 55.88,
    "end": 56.32
   },
   {
@@ -727,11 +727,11 @@
   {
    "word": "coin,",
    "start": 58.46,
-   "end": 59.06
+   "end": 59.02
   },
   {
    "word": "the",
-   "start": 59.06,
+   "start": 59.02,
    "end": 59.32
   },
   {
@@ -747,22 +747,22 @@
   {
    "word": "cold",
    "start": 60.02,
-   "end": 60.5
+   "end": 60.52
   },
   {
    "word": "by",
-   "start": 60.5,
+   "start": 60.52,
    "end": 61.04
   },
   {
    "word": "9.5",
    "start": 61.04,
-   "end": 61.68
+   "end": 61.7
   },
   {
    "word": "points.",
-   "start": 61.68,
-   "end": 62.32
+   "start": 61.7,
+   "end": 62.3
   },
   {
    "word": "Yet",
@@ -787,7 +787,7 @@
   {
    "word": "biased.",
    "start": 64.6,
-   "end": 65.12
+   "end": 65.04
   },
   {
    "word": "Gather",
@@ -832,7 +832,7 @@
   {
    "word": "tails,",
    "start": 69.42,
-   "end": 70.44
+   "end": 70.24
   },
   {
    "word": "total",
@@ -842,11 +842,11 @@
   {
    "word": "heads",
    "start": 70.92,
-   "end": 71.18
+   "end": 71.2
   },
   {
    "word": "over",
-   "start": 71.18,
+   "start": 71.2,
    "end": 71.4
   },
   {
@@ -870,1449 +870,1389 @@
    "end": 73.66
   },
   {
-   "word": "The",
+   "word": "But",
    "start": 74.4,
-   "end": 74.54
-  },
-  {
-   "word": "skew",
-   "start": 74.54,
-   "end": 74.86
-  },
-  {
-   "word": "comes",
-   "start": 74.86,
-   "end": 75.16
-  },
-  {
-   "word": "from",
-   "start": 75.16,
-   "end": 75.34
-  },
-  {
-   "word": "scoring",
-   "start": 75.34,
-   "end": 75.74
-  },
-  {
-   "word": "row",
-   "start": 75.74,
-   "end": 76.06
-  },
-  {
-   "word": "by",
-   "start": 76.06,
-   "end": 76.24
-  },
-  {
-   "word": "row.",
-   "start": 76.24,
-   "end": 76.82
-  },
-  {
-   "word": "Each",
-   "start": 77.26,
-   "end": 77.54
-  },
-  {
-   "word": "row",
-   "start": 77.54,
-   "end": 77.84
-  },
-  {
-   "word": "gets",
-   "start": 77.84,
-   "end": 78.14
-  },
-  {
-   "word": "one",
-   "start": 78.14,
-   "end": 78.38
-  },
-  {
-   "word": "vote,",
-   "start": 78.38,
-   "end": 78.9
-  },
-  {
-   "word": "however",
-   "start": 78.9,
-   "end": 79.3
-  },
-  {
-   "word": "many",
-   "start": 79.3,
-   "end": 79.6
-  },
-  {
-   "word": "flips",
-   "start": 79.6,
-   "end": 79.96
-  },
-  {
-   "word": "it",
-   "start": 79.96,
-   "end": 80.12
-  },
-  {
-   "word": "checked.",
-   "start": 80.12,
-   "end": 80.64
-  },
-  {
-   "word": "Checked",
-   "start": 81.24,
-   "end": 81.6
-  },
-  {
-   "word": "heads",
-   "start": 81.6,
-   "end": 81.82
-  },
-  {
-   "word": "come",
-   "start": 81.82,
-   "end": 82.04
-  },
-  {
-   "word": "in",
-   "start": 82.04,
-   "end": 82.18
-  },
-  {
-   "word": "crowds,",
-   "start": 82.18,
-   "end": 82.9
-  },
-  {
-   "word": "since",
-   "start": 83.18,
-   "end": 83.38
-  },
-  {
-   "word": "a",
-   "start": 83.38,
-   "end": 83.5
-  },
-  {
-   "word": "heads",
-   "start": 83.5,
-   "end": 83.76
-  },
-  {
-   "word": "gets",
-   "start": 83.76,
-   "end": 84.02
-  },
-  {
-   "word": "the",
-   "start": 84.02,
-   "end": 84.22
-  },
-  {
-   "word": "next",
-   "start": 84.22,
-   "end": 84.48
-  },
-  {
-   "word": "flip",
-   "start": 84.48,
-   "end": 84.82
-  },
-  {
-   "word": "checked",
-   "start": 84.82,
-   "end": 85.18
-  },
-  {
-   "word": "too.",
-   "start": 85.18,
-   "end": 85.5
-  },
-  {
-   "word": "Here,",
-   "start": 86.38,
-   "end": 87.04
-  },
-  {
-   "word": "three",
-   "start": 87.04,
-   "end": 87.16
-  },
-  {
-   "word": "heads",
-   "start": 87.16,
-   "end": 87.6
-  },
-  {
-   "word": "share",
-   "start": 87.6,
-   "end": 87.9
-  },
-  {
-   "word": "a",
-   "start": 87.9,
-   "end": 88.08
-  },
-  {
-   "word": "single",
-   "start": 88.08,
-   "end": 88.5
-  },
-  {
-   "word": "vote,",
-   "start": 88.5,
-   "end": 89.48
-  },
-  {
-   "word": "while",
-   "start": 89.48,
-   "end": 89.58
-  },
-  {
-   "word": "this",
-   "start": 89.58,
-   "end": 89.82
-  },
-  {
-   "word": "lone",
-   "start": 89.82,
-   "end": 90.14
-  },
-  {
-   "word": "tails",
-   "start": 90.14,
-   "end": 90.66
-  },
-  {
-   "word": "gets",
-   "start": 90.66,
-   "end": 91
-  },
-  {
-   "word": "a",
-   "start": 91,
-   "end": 91.18
-  },
-  {
-   "word": "whole",
-   "start": 91.18,
-   "end": 91.36
-  },
-  {
-   "word": "one.",
-   "start": 91.36,
-   "end": 91.94
-  },
-  {
-   "word": "Twelve",
-   "start": 92.64,
-   "end": 92.88
-  },
-  {
-   "word": "heads",
-   "start": 92.88,
-   "end": 93.34
-  },
-  {
-   "word": "crowd",
-   "start": 93.34,
-   "end": 93.66
-  },
-  {
-   "word": "into",
-   "start": 93.66,
-   "end": 93.92
-  },
-  {
-   "word": "eight",
-   "start": 93.92,
-   "end": 94.16
-  },
-  {
-   "word": "rows.",
-   "start": 94.16,
-   "end": 94.86
-  },
-  {
-   "word": "Twelve",
-   "start": 94.32,
-   "end": 95.5
-  },
-  {
-   "word": "tails",
-   "start": 95.5,
-   "end": 96.08
-  },
-  {
-   "word": "spread",
-   "start": 96.08,
-   "end": 96.46
-  },
-  {
-   "word": "across",
-   "start": 96.46,
-   "end": 96.8
-  },
-  {
-   "word": "eleven.",
-   "start": 96.8,
-   "end": 97.52
-  },
-  {
-   "word": "Crowded",
-   "start": 98.22,
-   "end": 98.64
-  },
-  {
-   "word": "heads",
-   "start": 98.64,
-   "end": 98.94
-  },
-  {
-   "word": "split",
-   "start": 98.94,
-   "end": 99.26
-  },
-  {
-   "word": "their",
-   "start": 99.26,
-   "end": 99.44
-  },
-  {
-   "word": "votes.",
-   "start": 99.44,
-   "end": 100.04
-  },
-  {
-   "word": "Line",
-   "start": 100.94,
-   "end": 101.36
-  },
-  {
-   "word": "them",
-   "start": 101.36,
-   "end": 101.52
-  },
-  {
-   "word": "up.",
-   "start": 101.52,
-   "end": 101.88
-  },
-  {
-   "word": "The",
-   "start": 102.52,
-   "end": 102.94
-  },
-  {
-   "word": "heads",
-   "start": 102.94,
-   "end": 103.2
-  },
-  {
-   "word": "hold",
-   "start": 103.2,
-   "end": 103.5
-  },
-  {
-   "word": "five",
-   "start": 103.5,
-   "end": 103.92
-  },
-  {
-   "word": "and",
-   "start": 103.92,
-   "end": 104.2
-  },
-  {
-   "word": "two-thirds",
-   "start": 104.2,
-   "end": 104.62
-  },
-  {
-   "word": "thirds",
-   "start": 104.345345,
-   "end": 104.62534
-  },
-  {
-   "word": "of",
-   "start": 104.62534,
-   "end": 104.885345
-  },
-  {
-   "word": "the",
-   "start": 104.885345,
-   "end": 104.96535
-  },
-  {
-   "word": "14",
-   "start": 104.96535,
-   "end": 105.28535
-  },
-  {
-   "word": "votes.",
-   "start": 105.28535,
-   "end": 106.10535
-  },
-  {
-   "word": "That's",
-   "start": 106.10535,
-   "end": 107.50535
-  },
-  {
-   "word": "17",
-   "start": 107.50535,
-   "end": 107.94534
-  },
-  {
-   "word": "out",
-   "start": 107.94534,
-   "end": 108.32535
-  },
-  {
-   "word": "of",
-   "start": 108.32535,
-   "end": 108.42535
-  },
-  {
-   "word": "42.",
-   "start": 108.42535,
-   "end": 109.30534
-  },
-  {
-   "word": "So",
-   "start": 110.36534,
-   "end": 111.04535
-  },
-  {
-   "word": "the",
-   "start": 111.04535,
-   "end": 111.18535
-  },
-  {
-   "word": "test",
-   "start": 111.18535,
-   "end": 111.50534
-  },
-  {
-   "word": "takes",
-   "start": 111.50534,
-   "end": 111.78535
-  },
-  {
-   "word": "an",
-   "start": 111.78535,
-   "end": 111.92535
-  },
-  {
-   "word": "average",
-   "start": 111.92535,
-   "end": 112.32535
-  },
-  {
-   "word": "of",
-   "start": 112.32535,
-   "end": 112.485344
-  },
-  {
-   "word": "ratios,",
-   "start": 112.485344,
-   "end": 113.08534
-  },
-  {
-   "word": "one",
-   "start": 113.08534,
-   "end": 113.80534
-  },
-  {
-   "word": "per",
-   "start": 113.80534,
-   "end": 114.065346
-  },
-  {
-   "word": "row,",
-   "start": 114.065346,
-   "end": 114.565346
-  },
-  {
-   "word": "instead",
-   "start": 114.565346,
-   "end": 115.22534
-  },
-  {
-   "word": "of",
-   "start": 115.22534,
-   "end": 115.44534
-  },
-  {
-   "word": "the",
-   "start": 115.44534,
-   "end": 115.525345
-  },
-  {
-   "word": "ratio",
-   "start": 115.525345,
-   "end": 115.94534
-  },
-  {
-   "word": "of",
-   "start": 115.94534,
-   "end": 116.22534
-  },
-  {
-   "word": "totals.",
-   "start": 116.22534,
-   "end": 117.025345
-  },
-  {
-   "word": "Now",
-   "start": 118.40534,
-   "end": 118.745346
-  },
-  {
-   "word": "score",
-   "start": 118.745346,
-   "end": 119.08534
-  },
-  {
-   "word": "the",
-   "start": 119.08534,
-   "end": 119.245346
-  },
-  {
-   "word": "flip",
-   "start": 119.245346,
-   "end": 119.525345
-  },
-  {
-   "word": "after",
-   "start": 119.525345,
-   "end": 119.885345
+   "end": 74.56
   },
   {
    "word": "each",
-   "start": 119.885345,
-   "end": 120.165344
+   "start": 74.56,
+   "end": 74.82
   },
   {
-   "word": "tails.",
-   "start": 120.165344,
-   "end": 120.90534
+   "word": "row",
+   "start": 74.82,
+   "end": 75.12
   },
   {
-   "word": "Swap",
-   "start": 120.90534,
-   "end": 121.68535
+   "word": "gets",
+   "start": 75.12,
+   "end": 75.42
   },
   {
-   "word": "heads",
-   "start": 121.68535,
-   "end": 122.08534
+   "word": "one",
+   "start": 75.42,
+   "end": 75.64
   },
   {
-   "word": "and",
-   "start": 122.08534,
-   "end": 122.28535
+   "word": "vote,",
+   "start": 75.64,
+   "end": 76.18
   },
   {
-   "word": "tails",
-   "start": 122.28535,
-   "end": 122.76534
+   "word": "however",
+   "start": 76.18,
+   "end": 76.64
   },
   {
-   "word": "and",
-   "start": 122.76534,
-   "end": 123.28535
-  },
-  {
-   "word": "the",
-   "start": 123.28535,
-   "end": 123.385345
-  },
-  {
-   "word": "strip",
-   "start": 123.385345,
-   "end": 123.68535
+   "word": "many",
+   "start": 76.64,
+   "end": 76.88
   },
   {
    "word": "flips",
-   "start": 123.68535,
-   "end": 124.08534
-  },
-  {
-   "word": "over",
-   "start": 124.08534,
-   "end": 124.40534
-  },
-  {
-   "word": "one",
-   "start": 124.40534,
-   "end": 124.62534
-  },
-  {
-   "word": "half.",
-   "start": 124.62534,
-   "end": 125.30534
-  },
-  {
-   "word": "The",
-   "start": 125.885345,
-   "end": 126.00534
-  },
-  {
-   "word": "test",
-   "start": 126.00534,
-   "end": 126.44534
-  },
-  {
-   "word": "reads",
-   "start": 126.44534,
-   "end": 126.845345
-  },
-  {
-   "word": "high,",
-   "start": 126.845345,
-   "end": 127.40534
-  },
-  {
-   "word": "25",
-   "start": 127.40534,
-   "end": 128.12535
-  },
-  {
-   "word": "out",
-   "start": 128.12535,
-   "end": 128.58534
-  },
-  {
-   "word": "of",
-   "start": 128.58534,
-   "end": 128.72534
-  },
-  {
-   "word": "42.",
-   "start": 128.72534,
-   "end": 129.56534
-  },
-  {
-   "word": "Subtract",
-   "start": 129.92534,
-   "end": 130.74535
-  },
-  {
-   "word": "the",
-   "start": 130.74535,
-   "end": 130.94534
-  },
-  {
-   "word": "averages,",
-   "start": 130.94534,
-   "end": 131.74535
-  },
-  {
-   "word": "a",
-   "start": 131.74535,
-   "end": 132.24535
-  },
-  {
-   "word": "gap",
-   "start": 132.24535,
-   "end": 132.46535
-  },
-  {
-   "word": "of",
-   "start": 132.46535,
-   "end": 132.64534
-  },
-  {
-   "word": "minus",
-   "start": 132.64534,
-   "end": 133.04535
-  },
-  {
-   "word": "19",
-   "start": 133.04535,
-   "end": 133.56534
-  },
-  {
-   "word": "points.",
-   "start": 133.56534,
-   "end": 134.24535
-  },
-  {
-   "word": "The",
-   "start": 134.64534,
-   "end": 135.42535
-  },
-  {
-   "word": "1985",
-   "start": 135.42535,
-   "end": 136.32535
-  },
-  {
-   "word": "study",
-   "start": 136.32535,
-   "end": 137.18535
-  },
-  {
-   "word": "ran",
-   "start": 137.18535,
-   "end": 137.62534
-  },
-  {
-   "word": "the",
-   "start": 137.62534,
-   "end": 137.76535
-  },
-  {
-   "word": "same",
-   "start": 137.76535,
-   "end": 138.10535
-  },
-  {
-   "word": "comparison",
-   "start": 138.10535,
-   "end": 138.72534
-  },
-  {
-   "word": "on",
-   "start": 138.72534,
-   "end": 139.12534
-  },
-  {
-   "word": "26",
-   "start": 139.12534,
-   "end": 139.78534
-  },
-  {
-   "word": "Cornell",
-   "start": 139.78534,
-   "end": 140.24535
-  },
-  {
-   "word": "players,",
-   "start": 140.24535,
-   "end": 141.28534
-  },
-  {
-   "word": "up",
-   "start": 141.02534,
-   "end": 141.94534
-  },
-  {
-   "word": "to",
-   "start": 141.94534,
-   "end": 142.12534
-  },
-  {
-   "word": "100",
-   "start": 142.12534,
-   "end": 142.42535
-  },
-  {
-   "word": "shots",
-   "start": 142.42535,
-   "end": 142.92535
-  },
-  {
-   "word": "each,",
-   "start": 142.92535,
-   "end": 143.46535
-  },
-  {
-   "word": "from",
-   "start": 143.46535,
-   "end": 143.96535
-  },
-  {
-   "word": "where",
-   "start": 143.96535,
-   "end": 144.12534
-  },
-  {
-   "word": "they'd",
-   "start": 144.12534,
-   "end": 144.40535
-  },
-  {
-   "word": "hit",
-   "start": 144.40535,
-   "end": 144.60535
-  },
-  {
-   "word": "about",
-   "start": 144.60535,
-   "end": 144.84534
-  },
-  {
-   "word": "half,",
-   "start": 144.84534,
-   "end": 145.46535
-  },
-  {
-   "word": "after",
-   "start": 145.72534,
-   "end": 146.36534
-  },
-  {
-   "word": "three",
-   "start": 146.36534,
-   "end": 146.58534
-  },
-  {
-   "word": "hits",
-   "start": 146.58534,
-   "end": 147.06534
-  },
-  {
-   "word": "versus",
-   "start": 147.06534,
-   "end": 147.68535
-  },
-  {
-   "word": "after",
-   "start": 147.68535,
-   "end": 148.18535
-  },
-  {
-   "word": "three",
-   "start": 148.18535,
-   "end": 148.46535
-  },
-  {
-   "word": "misses.",
-   "start": 148.46535,
-   "end": 149.16534
-  },
-  {
-   "word": "For",
-   "start": 148.92535,
-   "end": 149.82535
-  },
-  {
-   "word": "a",
-   "start": 149.82535,
-   "end": 149.94534
-  },
-  {
-   "word": "random",
-   "start": 149.94534,
-   "end": 150.30534
-  },
-  {
-   "word": "shooter,",
-   "start": 150.30534,
-   "end": 150.96535
-  },
-  {
-   "word": "the",
-   "start": 150.96535,
-   "end": 151.40535
-  },
-  {
-   "word": "same",
-   "start": 151.40535,
-   "end": 151.76535
-  },
-  {
-   "word": "crowding",
-   "start": 151.76535,
-   "end": 152.24535
-  },
-  {
-   "word": "pulls",
-   "start": 152.24535,
-   "end": 152.70535
-  },
-  {
-   "word": "after",
-   "start": 152.70535,
-   "end": 153.00534
-  },
-  {
-   "word": "hits",
-   "start": 153.00534,
-   "end": 153.36534
-  },
-  {
-   "word": "down",
-   "start": 153.36534,
-   "end": 153.68535
-  },
-  {
-   "word": "to",
-   "start": 153.68535,
-   "end": 153.88535
-  },
-  {
-   "word": "46%",
-   "start": 153.88535,
-   "end": 154.92535
-  },
-  {
-   "word": "on",
-   "start": 154.92535,
-   "end": 155.20535
-  },
-  {
-   "word": "average,",
-   "start": 155.20535,
-   "end": 156.04535
-  },
-  {
-   "word": "and",
-   "start": 156.04535,
-   "end": 156.56534
-  },
-  {
-   "word": "after",
-   "start": 156.56534,
-   "end": 156.84534
-  },
-  {
-   "word": "misses",
-   "start": 156.84534,
-   "end": 157.18535
-  },
-  {
-   "word": "up",
-   "start": 157.18535,
-   "end": 157.56534
-  },
-  {
-   "word": "to",
-   "start": 157.56534,
-   "end": 157.72534
-  },
-  {
-   "word": "54.",
-   "start": 157.72534,
-   "end": 158.22534
-  },
-  {
-   "word": "Miller &",
-   "start": 159.06534,
-   "end": 159.66534
-  },
-  {
-   "word": "Sanjurjo's",
-   "start": 159.66534,
-   "end": 160.50534
-  },
-  {
-   "word": "2018",
-   "start": 160.50534,
-   "end": 161.24535
-  },
-  {
-   "word": "paper",
-   "start": 161.24535,
-   "end": 161.94534
-  },
-  {
-   "word": "puts",
-   "start": 161.94534,
-   "end": 162.88535
-  },
-  {
-   "word": "the",
-   "start": 162.88535,
-   "end": 163.06534
-  },
-  {
-   "word": "gap",
-   "start": 163.06534,
-   "end": 163.26535
-  },
-  {
-   "word": "at",
-   "start": 163.26535,
-   "end": 163.56534
-  },
-  {
-   "word": "about",
-   "start": 163.56534,
-   "end": 163.74535
-  },
-  {
-   "word": "minus",
-   "start": 163.74535,
-   "end": 164.10535
-  },
-  {
-   "word": "8",
-   "start": 164.10535,
-   "end": 164.44534
-  },
-  {
-   "word": "points.",
-   "start": 164.44534,
-   "end": 165.02534
-  },
-  {
-   "word": "Longer",
-   "start": 165.96535,
-   "end": 166.46535
-  },
-  {
-   "word": "records",
-   "start": 166.46535,
-   "end": 166.88535
-  },
-  {
-   "word": "shrink",
-   "start": 166.88535,
-   "end": 167.16534
-  },
-  {
-   "word": "it,",
-   "start": 167.16534,
-   "end": 167.58534
-  },
-  {
-   "word": "but",
-   "start": 167.58534,
-   "end": 168.10535
-  },
-  {
-   "word": "100",
-   "start": 168.10535,
-   "end": 168.50534
-  },
-  {
-   "word": "shots",
-   "start": 168.50534,
-   "end": 168.98535
-  },
-  {
-   "word": "isn't",
-   "start": 168.98535,
-   "end": 169.24535
-  },
-  {
-   "word": "long.",
-   "start": 169.24535,
-   "end": 169.78534
-  },
-  {
-   "word": "The",
-   "start": 169.86534,
-   "end": 170.50534
-  },
-  {
-   "word": "Cornell",
-   "start": 170.50534,
-   "end": 170.92535
-  },
-  {
-   "word": "players",
-   "start": 170.92535,
-   "end": 171.64536
-  },
-  {
-   "word": "hit",
-   "start": 171.64536,
-   "end": 172.02534
-  },
-  {
-   "word": "49%",
-   "start": 172.02534,
-   "end": 173.24535
-  },
-  {
-   "word": "after",
-   "start": 173.24535,
-   "end": 173.72534
-  },
-  {
-   "word": "3",
-   "start": 173.72534,
-   "end": 174.04535
-  },
-  {
-   "word": "hits",
-   "start": 174.04535,
-   "end": 174.54535
-  },
-  {
-   "word": "and",
-   "start": 174.54535,
-   "end": 175.20535
-  },
-  {
-   "word": "45",
-   "start": 175.20535,
-   "end": 175.82535
-  },
-  {
-   "word": "after",
-   "start": 175.82535,
-   "end": 176.54535
-  },
-  {
-   "word": "3",
-   "start": 176.54535,
-   "end": 176.86534
-  },
-  {
-   "word": "misses.",
-   "start": 176.86534,
-   "end": 177.64536
-  },
-  {
-   "word": "The",
-   "start": 177.52534,
-   "end": 178.18535
-  },
-  {
-   "word": "study",
-   "start": 178.18535,
-   "end": 178.50534
-  },
-  {
-   "word": "found",
-   "start": 178.50534,
-   "end": 178.90533
-  },
-  {
-   "word": "plus",
-   "start": 178.90533,
-   "end": 179.18535
-  },
-  {
-   "word": "4,",
-   "start": 179.18535,
-   "end": 179.80534
-  },
-  {
-   "word": "too",
-   "start": 179.80534,
-   "end": 180.22534
-  },
-  {
-   "word": "close",
-   "start": 180.22534,
-   "end": 180.56534
-  },
-  {
-   "word": "to",
-   "start": 180.56534,
-   "end": 180.78534
-  },
-  {
-   "word": "0",
-   "start": 180.78534,
-   "end": 181.10535
-  },
-  {
-   "word": "to",
-   "start": 181.10535,
-   "end": 181.38535
-  },
-  {
-   "word": "count,",
-   "start": 181.38535,
-   "end": 181.94534
-  },
-  {
-   "word": "so",
-   "start": 181.94534,
-   "end": 182.36534
-  },
-  {
-   "word": "no",
-   "start": 182.36534,
-   "end": 182.62534
-  },
-  {
-   "word": "hot",
-   "start": 182.62534,
-   "end": 182.96535
-  },
-  {
-   "word": "hand.",
-   "start": 182.96535,
-   "end": 183.78534
-  },
-  {
-   "word": "Measured",
-   "start": 184.50534,
-   "end": 184.90533
-  },
-  {
-   "word": "from",
-   "start": 184.90533,
-   "end": 185.08534
-  },
-  {
-   "word": "minus",
-   "start": 185.08534,
-   "end": 185.38535
-  },
-  {
-   "word": "eight,",
-   "start": 185.38535,
-   "end": 185.94534
-  },
-  {
-   "word": "it's",
-   "start": 185.94534,
-   "end": 186.32535
-  },
-  {
-   "word": "12",
-   "start": 186.32535,
-   "end": 186.66534
-  },
-  {
-   "word": "points",
-   "start": 186.66534,
-   "end": 187.00534
-  },
-  {
-   "word": "hot.",
-   "start": 187.00534,
-   "end": 187.64536
-  },
-  {
-   "word": "That's",
-   "start": 188.38535,
-   "end": 188.82535
-  },
-  {
-   "word": "evidence",
-   "start": 188.82535,
-   "end": 189.26535
-  },
-  {
-   "word": "for",
-   "start": 189.26535,
-   "end": 189.46535
-  },
-  {
-   "word": "a",
-   "start": 189.46535,
-   "end": 189.60535
-  },
-  {
-   "word": "hot",
-   "start": 189.60535,
-   "end": 189.84534
-  },
-  {
-   "word": "hand",
-   "start": 189.84534,
-   "end": 190.20535
-  },
-  {
-   "word": "in",
-   "start": 190.20535,
-   "end": 190.34534
-  },
-  {
-   "word": "a",
-   "start": 190.34534,
-   "end": 190.40533
-  },
-  {
-   "word": "gym,",
-   "start": 190.40533,
-   "end": 190.96535
-  },
-  {
-   "word": "not",
-   "start": 190.72534,
-   "end": 191.46535
-  },
-  {
-   "word": "proof",
-   "start": 191.46535,
-   "end": 191.82535
+   "start": 76.88,
+   "end": 77.2
   },
   {
    "word": "it",
-   "start": 191.82535,
-   "end": 191.98535
+   "start": 77.2,
+   "end": 77.38
   },
   {
-   "word": "survives",
-   "start": 191.98535,
-   "end": 192.50534
+   "word": "checked.",
+   "start": 77.38,
+   "end": 77.92
   },
   {
-   "word": "defenders",
-   "start": 192.50534,
-   "end": 193.08534
+   "word": "Checked",
+   "start": 78.52,
+   "end": 78.88
+  },
+  {
+   "word": "heads",
+   "start": 78.88,
+   "end": 79.1
+  },
+  {
+   "word": "come",
+   "start": 79.1,
+   "end": 79.3
   },
   {
    "word": "in",
-   "start": 193.08534,
-   "end": 193.32535
+   "start": 79.3,
+   "end": 79.44
+  },
+  {
+   "word": "crowds,",
+   "start": 79.44,
+   "end": 79.9
+  },
+  {
+   "word": "since",
+   "start": 80.44,
+   "end": 80.66
   },
   {
    "word": "a",
-   "start": 193.32535,
-   "end": 193.40533
+   "start": 80.66,
+   "end": 80.78
   },
   {
-   "word": "game.",
-   "start": 193.40533,
-   "end": 193.98535
+   "word": "heads",
+   "start": 80.78,
+   "end": 81.02
   },
   {
-   "word": "One",
-   "start": 195.54535,
-   "end": 195.82535
+   "word": "gets",
+   "start": 81.02,
+   "end": 81.28
   },
   {
-   "word": "half",
-   "start": 195.82535,
-   "end": 196.24535
+   "word": "the",
+   "start": 81.28,
+   "end": 81.5
   },
   {
-   "word": "is",
-   "start": 196.24535,
-   "end": 196.80534
+   "word": "next",
+   "start": 81.5,
+   "end": 81.74
   },
   {
-   "word": "what",
-   "start": 196.80534,
-   "end": 196.94534
+   "word": "flip",
+   "start": 81.74,
+   "end": 82.08
+  },
+  {
+   "word": "checked",
+   "start": 82.08,
+   "end": 82.44
+  },
+  {
+   "word": "too.",
+   "start": 82.44,
+   "end": 82.76
+  },
+  {
+   "word": "Here,",
+   "start": 83.62,
+   "end": 84.28
+  },
+  {
+   "word": "three",
+   "start": 84.28,
+   "end": 84.44
+  },
+  {
+   "word": "heads",
+   "start": 84.44,
+   "end": 84.88
+  },
+  {
+   "word": "share",
+   "start": 84.88,
+   "end": 85.18
   },
   {
    "word": "a",
-   "start": 196.94534,
-   "end": 197.18535
+   "start": 85.18,
+   "end": 85.36
   },
   {
-   "word": "fair",
-   "start": 197.18535,
-   "end": 197.32535
+   "word": "single",
+   "start": 85.36,
+   "end": 85.74
   },
   {
-   "word": "coin",
-   "start": 197.32535,
-   "end": 197.70535
+   "word": "vote,",
+   "start": 85.74,
+   "end": 86.48
   },
   {
-   "word": "does.",
-   "start": 197.70535,
-   "end": 198.38535
+   "word": "while",
+   "start": 86.72,
+   "end": 86.82
   },
   {
-   "word": "17",
-   "start": 199.08534,
-   "end": 199.70535
+   "word": "this",
+   "start": 86.82,
+   "end": 87.08
   },
   {
-   "word": "out",
-   "start": 199.70535,
-   "end": 200.14536
+   "word": "lone",
+   "start": 87.08,
+   "end": 87.46
+  },
+  {
+   "word": "tails",
+   "start": 87.46,
+   "end": 87.92
+  },
+  {
+   "word": "gets",
+   "start": 87.92,
+   "end": 88.28
+  },
+  {
+   "word": "a",
+   "start": 88.28,
+   "end": 88.46
+  },
+  {
+   "word": "whole",
+   "start": 88.46,
+   "end": 88.68
+  },
+  {
+   "word": "one.",
+   "start": 88.68,
+   "end": 89.34
+  },
+  {
+   "word": "12",
+   "start": 89.8,
+   "end": 90.22
+  },
+  {
+   "word": "heads",
+   "start": 90.22,
+   "end": 90.62
+  },
+  {
+   "word": "crowd",
+   "start": 90.62,
+   "end": 90.94
+  },
+  {
+   "word": "into",
+   "start": 90.94,
+   "end": 91.18
+  },
+  {
+   "word": "eight",
+   "start": 91.18,
+   "end": 91.44
+  },
+  {
+   "word": "rows.",
+   "start": 91.44,
+   "end": 92.16
+  },
+  {
+   "word": "12",
+   "start": 92.06,
+   "end": 92.8
+  },
+  {
+   "word": "tails",
+   "start": 92.8,
+   "end": 93.34
+  },
+  {
+   "word": "spread",
+   "start": 93.34,
+   "end": 93.72
+  },
+  {
+   "word": "across",
+   "start": 93.72,
+   "end": 94.06
+  },
+  {
+   "word": "11.",
+   "start": 94.06,
+   "end": 94.96
+  },
+  {
+   "word": "Line",
+   "start": 95.2,
+   "end": 95.96
+  },
+  {
+   "word": "them",
+   "start": 95.96,
+   "end": 96.1
+  },
+  {
+   "word": "up.",
+   "start": 96.1,
+   "end": 96.88
+  },
+  {
+   "word": "The",
+   "start": 96.94,
+   "end": 97.54
+  },
+  {
+   "word": "heads",
+   "start": 97.54,
+   "end": 97.8
+  },
+  {
+   "word": "hold",
+   "start": 97.8,
+   "end": 98.1
+  },
+  {
+   "word": "five",
+   "start": 98.1,
+   "end": 98.56
+  },
+  {
+   "word": "and",
+   "start": 98.56,
+   "end": 98.82
+  },
+  {
+   "word": "two",
+   "start": 98.82,
+   "end": 98.98
+  },
+  {
+   "word": "thirds",
+   "start": 98.98,
+   "end": 99.2
   },
   {
    "word": "of",
-   "start": 200.14536,
-   "end": 200.24535
+   "start": 99.2,
+   "end": 99.48
   },
   {
-   "word": "42",
-   "start": 200.24535,
-   "end": 200.76535
+   "word": "the",
+   "start": 99.48,
+   "end": 99.58
   },
   {
-   "word": "is",
-   "start": 200.76535,
-   "end": 201.52534
+   "word": "14",
+   "start": 99.58,
+   "end": 99.98
   },
   {
-   "word": "what",
-   "start": 201.52534,
-   "end": 201.70535
+   "word": "votes.",
+   "start": 99.98,
+   "end": 101.14
   },
   {
-   "word": "this",
-   "start": 201.70535,
-   "end": 201.92535
+   "word": "That's",
+   "start": 101.28,
+   "end": 102.1
+  },
+  {
+   "word": "17",
+   "start": 102.1,
+   "end": 102.6
+  },
+  {
+   "word": "out",
+   "start": 102.6,
+   "end": 102.94
+  },
+  {
+   "word": "of",
+   "start": 102.92666,
+   "end": 103.086655
+  },
+  {
+   "word": "42.",
+   "start": 103.086655,
+   "end": 103.92666
+  },
+  {
+   "word": "So",
+   "start": 105.406654,
+   "end": 105.64665
+  },
+  {
+   "word": "the",
+   "start": 105.64665,
+   "end": 105.78666
   },
   {
    "word": "test",
-   "start": 201.92535,
-   "end": 202.32535
+   "start": 105.78666,
+   "end": 106.10666
   },
   {
-   "word": "sees.",
-   "start": 202.32535,
-   "end": 202.98535
+   "word": "takes",
+   "start": 106.10666,
+   "end": 106.406654
   },
   {
-   "word": "A",
-   "start": 202.80534,
-   "end": 203.44534
+   "word": "an",
+   "start": 106.406654,
+   "end": 106.52666
   },
   {
-   "word": "50%",
-   "start": 203.44534,
-   "end": 204.20535
+   "word": "average",
+   "start": 106.52666,
+   "end": 106.906654
   },
   {
-   "word": "shooter",
-   "start": 204.20535,
-   "end": 204.68535
+   "word": "of",
+   "start": 106.906654,
+   "end": 107.086655
   },
   {
-   "word": "who",
-   "start": 204.68535,
-   "end": 205.40533
-  },
-  {
-   "word": "averages",
-   "start": 205.40533,
-   "end": 205.92535
+   "word": "ratios,",
+   "start": 107.086655,
+   "end": 107.906654
   },
   {
    "word": "one",
-   "start": 205.92535,
-   "end": 206.20535
+   "start": 107.906654,
+   "end": 108.42666
   },
   {
-   "word": "half",
-   "start": 206.20535,
-   "end": 206.44534
+   "word": "per",
+   "start": 108.42666,
+   "end": 108.66666
   },
   {
-   "word": "on",
-   "start": 206.44534,
-   "end": 206.64536
+   "word": "row,",
+   "start": 108.66666,
+   "end": 109.36665
   },
   {
-   "word": "this",
-   "start": 206.64536,
-   "end": 206.80534
+   "word": "instead",
+   "start": 109.02666,
+   "end": 109.84666
+  },
+  {
+   "word": "of",
+   "start": 109.84666,
+   "end": 110.06666
+  },
+  {
+   "word": "the",
+   "start": 110.06666,
+   "end": 110.16666
+  },
+  {
+   "word": "ratio",
+   "start": 110.16666,
+   "end": 110.60666
+  },
+  {
+   "word": "of",
+   "start": 110.60666,
+   "end": 110.84666
+  },
+  {
+   "word": "totals.",
+   "start": 110.84666,
+   "end": 112.04665
+  },
+  {
+   "word": "Now",
+   "start": 113.02666,
+   "end": 113.34666
+  },
+  {
+   "word": "score",
+   "start": 113.34666,
+   "end": 113.68665
+  },
+  {
+   "word": "the",
+   "start": 113.68665,
+   "end": 113.82666
+  },
+  {
+   "word": "flip",
+   "start": 113.82666,
+   "end": 114.14665
+  },
+  {
+   "word": "after",
+   "start": 114.14665,
+   "end": 114.48666
+  },
+  {
+   "word": "each",
+   "start": 114.48666,
+   "end": 114.766655
+  },
+  {
+   "word": "tails.",
+   "start": 114.766655,
+   "end": 115.52666
+  },
+  {
+   "word": "Swap",
+   "start": 115.406654,
+   "end": 116.28665
+  },
+  {
+   "word": "heads",
+   "start": 116.28665,
+   "end": 116.68665
+  },
+  {
+   "word": "and",
+   "start": 116.68665,
+   "end": 116.88666
+  },
+  {
+   "word": "tails,",
+   "start": 116.88666,
+   "end": 117.586655
+  },
+  {
+   "word": "and",
+   "start": 117.586655,
+   "end": 117.906654
+  },
+  {
+   "word": "the",
+   "start": 117.906654,
+   "end": 118.00665
+  },
+  {
+   "word": "strip",
+   "start": 118.00665,
+   "end": 118.32666
+  },
+  {
+   "word": "flips",
+   "start": 118.32666,
+   "end": 118.726654
+  },
+  {
+   "word": "over",
+   "start": 118.726654,
+   "end": 119.04665
+  },
+  {
+   "word": "one",
+   "start": 119.04665,
+   "end": 119.306656
+  },
+  {
+   "word": "half.",
+   "start": 119.306656,
+   "end": 120.126656
+  },
+  {
+   "word": "The",
+   "start": 120.00665,
+   "end": 120.60666
   },
   {
    "word": "test",
-   "start": 206.80534,
-   "end": 207.36534
+   "start": 120.60666,
+   "end": 121.04665
   },
   {
-   "word": "is",
-   "start": 207.20535,
-   "end": 207.86534
+   "word": "reads",
+   "start": 121.04665,
+   "end": 121.46666
   },
   {
-   "word": "already",
-   "start": 207.86534,
-   "end": 208.24535
+   "word": "high,",
+   "start": 121.46666,
+   "end": 122.04665
   },
   {
-   "word": "running",
-   "start": 208.24535,
-   "end": 208.62534
+   "word": "25",
+   "start": 122.04665,
+   "end": 122.726654
+  },
+  {
+   "word": "out",
+   "start": 122.726654,
+   "end": 123.18665
+  },
+  {
+   "word": "of",
+   "start": 123.18665,
+   "end": 123.32666
+  },
+  {
+   "word": "42.",
+   "start": 123.32666,
+   "end": 124.28665
+  },
+  {
+   "word": "subtract",
+   "start": 124.88666,
+   "end": 125.28665
+  },
+  {
+   "word": "the",
+   "start": 125.28665,
+   "end": 125.52666
+  },
+  {
+   "word": "averages,",
+   "start": 125.52666,
+   "end": 126.34666
+  },
+  {
+   "word": "a",
+   "start": 126.34666,
+   "end": 126.84666
+  },
+  {
+   "word": "gap",
+   "start": 126.84666,
+   "end": 127.06666
+  },
+  {
+   "word": "of",
+   "start": 127.06666,
+   "end": 127.226654
+  },
+  {
+   "word": "minus",
+   "start": 127.226654,
+   "end": 127.66666
+  },
+  {
+   "word": "19",
+   "start": 127.66666,
+   "end": 128.16666
+  },
+  {
+   "word": "points.",
+   "start": 128.16666,
+   "end": 128.92665
+  },
+  {
+   "word": "The",
+   "start": 129.80666,
+   "end": 130.02666
+  },
+  {
+   "word": "1985",
+   "start": 130.02666,
+   "end": 130.90665
+  },
+  {
+   "word": "study",
+   "start": 130.90665,
+   "end": 131.82666
+  },
+  {
+   "word": "ran",
+   "start": 131.82666,
+   "end": 132.22665
+  },
+  {
+   "word": "the",
+   "start": 132.22665,
+   "end": 132.36665
+  },
+  {
+   "word": "same",
+   "start": 132.36665,
+   "end": 132.70667
+  },
+  {
+   "word": "comparison",
+   "start": 132.70667,
+   "end": 133.32666
+  },
+  {
+   "word": "on",
+   "start": 133.14665,
+   "end": 133.74666
+  },
+  {
+   "word": "26",
+   "start": 133.74666,
+   "end": 134.40665
+  },
+  {
+   "word": "Cornell",
+   "start": 134.40665,
+   "end": 134.88666
+  },
+  {
+   "word": "players,",
+   "start": 134.88666,
+   "end": 136.04666
+  },
+  {
+   "word": "up",
+   "start": 136.04666,
+   "end": 136.54666
+  },
+  {
+   "word": "to",
+   "start": 136.54666,
+   "end": 136.72665
+  },
+  {
+   "word": "100",
+   "start": 136.72665,
+   "end": 137.00665
+  },
+  {
+   "word": "shots",
+   "start": 137.00665,
+   "end": 137.52666
+  },
+  {
+   "word": "each,",
+   "start": 137.52666,
+   "end": 138.18666
+  },
+  {
+   "word": "from",
+   "start": 137.94666,
+   "end": 138.56665
+  },
+  {
+   "word": "where",
+   "start": 138.56665,
+   "end": 138.72665
+  },
+  {
+   "word": "they'd",
+   "start": 138.72665,
+   "end": 139.00665
+  },
+  {
+   "word": "hit",
+   "start": 139.00665,
+   "end": 139.20667
+  },
+  {
+   "word": "about",
+   "start": 139.20667,
+   "end": 139.44666
+  },
+  {
+   "word": "half,",
+   "start": 139.44666,
+   "end": 140.24666
+  },
+  {
+   "word": "after",
+   "start": 140.16666,
+   "end": 140.96666
+  },
+  {
+   "word": "three",
+   "start": 140.96666,
+   "end": 141.18666
+  },
+  {
+   "word": "hits",
+   "start": 141.18666,
+   "end": 141.66666
+  },
+  {
+   "word": "versus",
+   "start": 141.66666,
+   "end": 142.28665
+  },
+  {
+   "word": "after",
+   "start": 142.28665,
+   "end": 142.78665
+  },
+  {
+   "word": "three",
+   "start": 142.78665,
+   "end": 143.08665
+  },
+  {
+   "word": "misses.",
+   "start": 143.08665,
+   "end": 144.06665
+  },
+  {
+   "word": "For",
+   "start": 143.80666,
+   "end": 144.40665
+  },
+  {
+   "word": "a",
+   "start": 144.40665,
+   "end": 144.52666
+  },
+  {
+   "word": "random",
+   "start": 144.52666,
+   "end": 144.92665
+  },
+  {
+   "word": "shooter,",
+   "start": 144.92665,
+   "end": 145.64665
+  },
+  {
+   "word": "the",
+   "start": 145.64665,
+   "end": 146.00665
+  },
+  {
+   "word": "same",
+   "start": 146.00665,
+   "end": 146.36665
+  },
+  {
+   "word": "crowding",
+   "start": 146.36665,
+   "end": 146.84665
+  },
+  {
+   "word": "pulls",
+   "start": 146.84665,
+   "end": 147.30666
+  },
+  {
+   "word": "after",
+   "start": 146.96666,
+   "end": 147.62665
+  },
+  {
+   "word": "hits",
+   "start": 147.62665,
+   "end": 147.96666
+  },
+  {
+   "word": "down",
+   "start": 147.96666,
+   "end": 148.32666
+  },
+  {
+   "word": "to",
+   "start": 148.32666,
+   "end": 148.48666
+  },
+  {
+   "word": "46%",
+   "start": 148.48666,
+   "end": 149.52666
+  },
+  {
+   "word": "on",
+   "start": 149.52666,
+   "end": 149.86665
+  },
+  {
+   "word": "average,",
+   "start": 149.86665,
+   "end": 150.82666
+  },
+  {
+   "word": "and",
+   "start": 150.58665,
+   "end": 151.18666
+  },
+  {
+   "word": "after",
+   "start": 151.18666,
+   "end": 151.48666
+  },
+  {
+   "word": "misses",
+   "start": 151.48666,
+   "end": 151.84665
+  },
+  {
+   "word": "up",
+   "start": 151.84665,
+   "end": 152.16666
+  },
+  {
+   "word": "to",
+   "start": 152.16666,
+   "end": 152.34665
+  },
+  {
+   "word": "54.",
+   "start": 152.34665,
+   "end": 153.22665
+  },
+  {
+   "word": "Miller",
+   "start": 153.76666,
+   "end": 154.04666
+  },
+  {
+   "word": "and",
+   "start": 154.04666,
+   "end": 154.24666
+  },
+  {
+   "word": "Sanjurjo's",
+   "start": 154.24666,
+   "end": 155.10666
+  },
+  {
+   "word": "2018",
+   "start": 155.10666,
+   "end": 155.84665
+  },
+  {
+   "word": "paper",
+   "start": 155.84665,
+   "end": 156.52666
+  },
+  {
+   "word": "puts",
+   "start": 157.22665,
+   "end": 157.50665
+  },
+  {
+   "word": "the",
+   "start": 157.50665,
+   "end": 157.68666
+  },
+  {
+   "word": "gap",
+   "start": 157.68666,
+   "end": 157.94666
+  },
+  {
+   "word": "at",
+   "start": 157.94666,
+   "end": 158.18666
+  },
+  {
+   "word": "about",
+   "start": 158.18666,
+   "end": 158.38666
+  },
+  {
+   "word": "minus",
+   "start": 158.38666,
+   "end": 158.74666
+  },
+  {
+   "word": "eight",
+   "start": 158.74666,
+   "end": 159.02666
+  },
+  {
+   "word": "points.",
+   "start": 159.02666,
+   "end": 159.72665
+  },
+  {
+   "word": "Longer",
+   "start": 160.14665,
+   "end": 161.02666
+  },
+  {
+   "word": "records",
+   "start": 161.02666,
+   "end": 161.46666
+  },
+  {
+   "word": "shrink",
+   "start": 161.46666,
+   "end": 161.76666
+  },
+  {
+   "word": "it.",
+   "start": 161.76666,
+   "end": 162.34665
+  },
+  {
+   "word": "Longer",
+   "start": 163.02666,
+   "end": 163.58665
+  },
+  {
+   "word": "streaks",
+   "start": 163.58665,
+   "end": 163.92667
+  },
+  {
+   "word": "grow",
+   "start": 163.92667,
+   "end": 164.20667
+  },
+  {
+   "word": "it.",
+   "start": 164.20667,
+   "end": 165.04666
+  },
+  {
+   "word": "The",
+   "start": 165.54666,
+   "end": 165.76666
+  },
+  {
+   "word": "Cornell",
+   "start": 165.76666,
+   "end": 166.18665
+  },
+  {
+   "word": "players",
+   "start": 166.18665,
+   "end": 166.92667
+  },
+  {
+   "word": "hit",
+   "start": 166.92667,
+   "end": 167.30666
+  },
+  {
+   "word": "49%",
+   "start": 167.30666,
+   "end": 168.50665
+  },
+  {
+   "word": "after",
+   "start": 168.50665,
+   "end": 168.98666
+  },
+  {
+   "word": "three",
+   "start": 168.98666,
+   "end": 169.34665
+  },
+  {
+   "word": "hits",
+   "start": 169.34665,
+   "end": 169.80666
+  },
+  {
+   "word": "and",
+   "start": 169.88666,
+   "end": 170.48666
+  },
+  {
+   "word": "45",
+   "start": 170.48666,
+   "end": 171.10666
+  },
+  {
+   "word": "after",
+   "start": 171.10666,
+   "end": 171.80666
+  },
+  {
+   "word": "three",
+   "start": 171.80666,
+   "end": 172.16666
+  },
+  {
+   "word": "misses.",
+   "start": 172.16666,
+   "end": 172.92667
+  },
+  {
+   "word": "The",
+   "start": 173.10666,
+   "end": 173.74666
+  },
+  {
+   "word": "study",
+   "start": 173.74666,
+   "end": 174.08665
+  },
+  {
+   "word": "found",
+   "start": 174.08665,
+   "end": 174.48666
+  },
+  {
+   "word": "plus",
+   "start": 174.48666,
+   "end": 174.80666
+  },
+  {
+   "word": "four,",
+   "start": 174.80666,
+   "end": 175.58665
+  },
+  {
+   "word": "too",
+   "start": 175.38666,
+   "end": 176.02666
+  },
+  {
+   "word": "close",
+   "start": 176.02666,
+   "end": 176.36665
+  },
+  {
+   "word": "to",
+   "start": 176.36665,
+   "end": 176.54666
+  },
+  {
+   "word": "zero",
+   "start": 176.54666,
+   "end": 176.80666
+  },
+  {
+   "word": "to",
+   "start": 176.80666,
+   "end": 177.04666
+  },
+  {
+   "word": "count,",
+   "start": 177.04666,
+   "end": 177.88666
+  },
+  {
+   "word": "so",
+   "start": 177.88666,
+   "end": 177.98666
+  },
+  {
+   "word": "no",
+   "start": 177.98666,
+   "end": 178.26666
+  },
+  {
+   "word": "hot",
+   "start": 178.26666,
+   "end": 178.56665
+  },
+  {
+   "word": "hand.",
+   "start": 178.56665,
+   "end": 179.22665
+  },
+  {
+   "word": "Measured",
+   "start": 179.66666,
+   "end": 180.48666
+  },
+  {
+   "word": "from",
+   "start": 180.48666,
+   "end": 180.64665
+  },
+  {
+   "word": "minus",
+   "start": 180.64665,
+   "end": 180.98666
+  },
+  {
+   "word": "eight,",
+   "start": 180.98666,
+   "end": 181.50665
+  },
+  {
+   "word": "it's",
+   "start": 181.50665,
+   "end": 181.90665
+  },
+  {
+   "word": "12",
+   "start": 181.90665,
+   "end": 182.22665
+  },
+  {
+   "word": "points",
+   "start": 182.22665,
+   "end": 182.58665
   },
   {
    "word": "hot.",
-   "start": 208.62534,
-   "end": 209.82535
+   "start": 182.58665,
+   "end": 183.74666
+  },
+  {
+   "word": "That's",
+   "start": 184.08665,
+   "end": 184.38666
+  },
+  {
+   "word": "evidence",
+   "start": 184.38666,
+   "end": 184.76666
+  },
+  {
+   "word": "for",
+   "start": 184.76666,
+   "end": 185.02666
+  },
+  {
+   "word": "a",
+   "start": 185.02666,
+   "end": 185.18665
+  },
+  {
+   "word": "hot",
+   "start": 185.18665,
+   "end": 185.36665
+  },
+  {
+   "word": "hand",
+   "start": 185.36665,
+   "end": 185.74666
+  },
+  {
+   "word": "in",
+   "start": 185.74666,
+   "end": 185.92667
+  },
+  {
+   "word": "a",
+   "start": 185.92667,
+   "end": 186.00665
+  },
+  {
+   "word": "gym,",
+   "start": 186.00665,
+   "end": 186.42667
+  },
+  {
+   "word": "not",
+   "start": 186.42667,
+   "end": 187.00665
+  },
+  {
+   "word": "proof",
+   "start": 187.00665,
+   "end": 187.34665
+  },
+  {
+   "word": "it",
+   "start": 187.34665,
+   "end": 187.54666
+  },
+  {
+   "word": "survives",
+   "start": 187.54666,
+   "end": 188.02666
+  },
+  {
+   "word": "defenders",
+   "start": 188.02666,
+   "end": 188.58665
+  },
+  {
+   "word": "in",
+   "start": 188.58665,
+   "end": 188.90665
+  },
+  {
+   "word": "a",
+   "start": 188.90665,
+   "end": 189.00665
+  },
+  {
+   "word": "game.",
+   "start": 189.00665,
+   "end": 189.32666
+  },
+  {
+   "word": "One",
+   "start": 191.18665,
+   "end": 191.32666
+  },
+  {
+   "word": "half",
+   "start": 191.32666,
+   "end": 191.76666
+  },
+  {
+   "word": "is",
+   "start": 191.76666,
+   "end": 192.34665
+  },
+  {
+   "word": "what",
+   "start": 192.34665,
+   "end": 192.50665
+  },
+  {
+   "word": "a",
+   "start": 192.50665,
+   "end": 192.72665
+  },
+  {
+   "word": "fair",
+   "start": 192.72665,
+   "end": 192.88666
+  },
+  {
+   "word": "coin",
+   "start": 192.88666,
+   "end": 193.24666
+  },
+  {
+   "word": "does.",
+   "start": 193.24666,
+   "end": 193.70667
+  },
+  {
+   "word": "17",
+   "start": 194.78665,
+   "end": 195.18665
+  },
+  {
+   "word": "out",
+   "start": 195.18665,
+   "end": 195.70667
+  },
+  {
+   "word": "of",
+   "start": 195.70667,
+   "end": 195.84665
+  },
+  {
+   "word": "42",
+   "start": 195.84665,
+   "end": 196.12665
+  },
+  {
+   "word": "is",
+   "start": 196.12665,
+   "end": 197.08665
+  },
+  {
+   "word": "what",
+   "start": 197.08665,
+   "end": 197.26666
+  },
+  {
+   "word": "this",
+   "start": 197.26666,
+   "end": 197.46666
+  },
+  {
+   "word": "test",
+   "start": 197.46666,
+   "end": 197.84665
+  },
+  {
+   "word": "sees.",
+   "start": 197.84665,
+   "end": 198.48666
+  },
+  {
+   "word": "A",
+   "start": 197.84665,
+   "end": 198.98666
+  },
+  {
+   "word": "50%",
+   "start": 198.98666,
+   "end": 199.76666
+  },
+  {
+   "word": "shooter,",
+   "start": 199.76666,
+   "end": 200.24666
+  },
+  {
+   "word": "who",
+   "start": 200.24666,
+   "end": 200.98666
+  },
+  {
+   "word": "averages",
+   "start": 200.98666,
+   "end": 201.44666
+  },
+  {
+   "word": "one",
+   "start": 201.44666,
+   "end": 201.74666
+  },
+  {
+   "word": "half",
+   "start": 201.74666,
+   "end": 201.96666
+  },
+  {
+   "word": "on",
+   "start": 201.96666,
+   "end": 202.20667
+  },
+  {
+   "word": "this",
+   "start": 202.20667,
+   "end": 202.34665
+  },
+  {
+   "word": "test,",
+   "start": 202.34665,
+   "end": 202.86665
+  },
+  {
+   "word": "is",
+   "start": 202.86665,
+   "end": 203.42667
+  },
+  {
+   "word": "already",
+   "start": 203.42667,
+   "end": 203.76666
+  },
+  {
+   "word": "running",
+   "start": 203.76666,
+   "end": 204.16666
+  },
+  {
+   "word": "hot.",
+   "start": 204.16666,
+   "end": 205.24666
   }
  ],
  "segments": [
@@ -2334,7 +2274,7 @@
     50469
    ],
    "temperature": 0,
-   "avg_logprob": -0.1367901,
+   "avg_logprob": -0.1349981,
    "compression_ratio": 1.5156951,
    "no_speech_prob": 0
   },
@@ -2358,7 +2298,7 @@
     50604
    ],
    "temperature": 0,
-   "avg_logprob": -0.1367901,
+   "avg_logprob": -0.1349981,
    "compression_ratio": 1.5156951,
    "no_speech_prob": 0
   },
@@ -2382,7 +2322,7 @@
     50718
    ],
    "temperature": 0,
-   "avg_logprob": -0.1367901,
+   "avg_logprob": -0.1349981,
    "compression_ratio": 1.5156951,
    "no_speech_prob": 0
   },
@@ -2407,7 +2347,7 @@
     50894
    ],
    "temperature": 0,
-   "avg_logprob": -0.1367901,
+   "avg_logprob": -0.1349981,
    "compression_ratio": 1.5156951,
    "no_speech_prob": 0
   },
@@ -2431,7 +2371,7 @@
     51007
    ],
    "temperature": 0,
-   "avg_logprob": -0.1367901,
+   "avg_logprob": -0.1349981,
    "compression_ratio": 1.5156951,
    "no_speech_prob": 0
   },
@@ -2457,7 +2397,7 @@
     51293
    ],
    "temperature": 0,
-   "avg_logprob": -0.1367901,
+   "avg_logprob": -0.1349981,
    "compression_ratio": 1.5156951,
    "no_speech_prob": 0
   },
@@ -2485,7 +2425,7 @@
     51543
    ],
    "temperature": 0,
-   "avg_logprob": -0.1367901,
+   "avg_logprob": -0.1349981,
    "compression_ratio": 1.5156951,
    "no_speech_prob": 0
   },
@@ -2508,7 +2448,7 @@
     51699
    ],
    "temperature": 0,
-   "avg_logprob": -0.1367901,
+   "avg_logprob": -0.1349981,
    "compression_ratio": 1.5156951,
    "no_speech_prob": 0
   },
@@ -2528,7 +2468,7 @@
     51761
    ],
    "temperature": 0,
-   "avg_logprob": -0.1367901,
+   "avg_logprob": -0.1349981,
    "compression_ratio": 1.5156951,
    "no_speech_prob": 0
   },
@@ -2551,7 +2491,7 @@
     50497
    ],
    "temperature": 0,
-   "avg_logprob": -0.107553,
+   "avg_logprob": -0.108017236,
    "compression_ratio": 1.5769231,
    "no_speech_prob": 0
   },
@@ -2573,7 +2513,7 @@
     50603
    ],
    "temperature": 0,
-   "avg_logprob": -0.107553,
+   "avg_logprob": -0.108017236,
    "compression_ratio": 1.5769231,
    "no_speech_prob": 0
   },
@@ -2601,7 +2541,7 @@
     50772
    ],
    "temperature": 0,
-   "avg_logprob": -0.107553,
+   "avg_logprob": -0.108017236,
    "compression_ratio": 1.5769231,
    "no_speech_prob": 0
   },
@@ -2620,7 +2560,7 @@
     50829
    ],
    "temperature": 0,
-   "avg_logprob": -0.107553,
+   "avg_logprob": -0.108017236,
    "compression_ratio": 1.5769231,
    "no_speech_prob": 0
   },
@@ -2646,7 +2586,7 @@
     51053
    ],
    "temperature": 0,
-   "avg_logprob": -0.107553,
+   "avg_logprob": -0.108017236,
    "compression_ratio": 1.5769231,
    "no_speech_prob": 0
   },
@@ -2672,7 +2612,7 @@
     51204
    ],
    "temperature": 0,
-   "avg_logprob": -0.107553,
+   "avg_logprob": -0.108017236,
    "compression_ratio": 1.5769231,
    "no_speech_prob": 0
   },
@@ -2697,7 +2637,7 @@
     51428
    ],
    "temperature": 0,
-   "avg_logprob": -0.107553,
+   "avg_logprob": -0.108017236,
    "compression_ratio": 1.5769231,
    "no_speech_prob": 0
   },
@@ -2718,7 +2658,7 @@
     51523
    ],
    "temperature": 0,
-   "avg_logprob": -0.107553,
+   "avg_logprob": -0.108017236,
    "compression_ratio": 1.5769231,
    "no_speech_prob": 0
   },
@@ -2742,7 +2682,7 @@
     51679
    ],
    "temperature": 0,
-   "avg_logprob": -0.107553,
+   "avg_logprob": -0.108017236,
    "compression_ratio": 1.5769231,
    "no_speech_prob": 0
   },
@@ -2765,7 +2705,7 @@
     51840
    ],
    "temperature": 0,
-   "avg_logprob": -0.107553,
+   "avg_logprob": -0.108017236,
    "compression_ratio": 1.5769231,
    "no_speech_prob": 0
   },
@@ -2795,15 +2735,15 @@
     50588
    ],
    "temperature": 0,
-   "avg_logprob": -0.23620091,
-   "compression_ratio": 1.5648148,
+   "avg_logprob": -0.25067732,
+   "compression_ratio": 1.6161138,
    "no_speech_prob": 0
   },
   {
    "id": 20,
    "seek": 5792,
    "start": 63.579998,
-   "end": 65.14,
+   "end": 65.119995,
    "text": " Yet no flip is biased.",
    "tokens": [
     50648,
@@ -2813,18 +2753,18 @@
     307,
     28035,
     13,
-    50726
+    50725
    ],
    "temperature": 0,
-   "avg_logprob": -0.23620091,
-   "compression_ratio": 1.5648148,
+   "avg_logprob": -0.25067732,
+   "compression_ratio": 1.6161138,
    "no_speech_prob": 0
   },
   {
    "id": 21,
    "seek": 5792,
    "start": 65.979996,
-   "end": 70.04,
+   "end": 70.02,
    "text": " Gather all 24 checked flips, 12 heads, 12 tails,",
    "tokens": [
     50768,
@@ -2840,11 +2780,11 @@
     2272,
     28537,
     11,
-    50971
+    50970
    ],
    "temperature": 0,
-   "avg_logprob": -0.23620091,
-   "compression_ratio": 1.5648148,
+   "avg_logprob": -0.25067732,
+   "compression_ratio": 1.6161138,
    "no_speech_prob": 0
   },
   {
@@ -2867,44 +2807,20 @@
     51149
    ],
    "temperature": 0,
-   "avg_logprob": -0.23620091,
-   "compression_ratio": 1.5648148,
+   "avg_logprob": -0.25067732,
+   "compression_ratio": 1.6161138,
    "no_speech_prob": 0
   },
   {
    "id": 23,
    "seek": 5792,
    "start": 74.34,
-   "end": 76.64,
-   "text": " The skew comes from scoring row by row.",
+   "end": 77.759995,
+   "text": " But each row gets one vote, however many flips it checked.",
    "tokens": [
     51186,
-    440,
-    8756,
-    86,
-    1487,
-    490,
-    22358,
-    5386,
-    538,
-    5386,
-    13,
-    51301
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.23620091,
-   "compression_ratio": 1.5648148,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 24,
-   "seek": 5792,
-   "start": 77.28,
-   "end": 80.5,
-   "text": " Each row gets one vote, however many flips it checked.",
-   "tokens": [
-    51333,
-    6947,
+    583,
+    1184,
     5386,
     2170,
     472,
@@ -2916,21 +2832,21 @@
     309,
     10033,
     13,
-    51494
+    51357
    ],
    "temperature": 0,
-   "avg_logprob": -0.23620091,
-   "compression_ratio": 1.5648148,
+   "avg_logprob": -0.25067732,
+   "compression_ratio": 1.6161138,
    "no_speech_prob": 0
   },
   {
-   "id": 25,
+   "id": 24,
    "seek": 5792,
-   "start": 80.96,
-   "end": 82.64,
+   "start": 78.22,
+   "end": 79.92,
    "text": " Checked heads come in crowds,",
    "tokens": [
-    51517,
+    51380,
     6881,
     292,
     8050,
@@ -2938,21 +2854,21 @@
     294,
     26070,
     11,
-    51601
+    51465
    ],
    "temperature": 0,
-   "avg_logprob": -0.23620091,
-   "compression_ratio": 1.5648148,
+   "avg_logprob": -0.25067732,
+   "compression_ratio": 1.6161138,
    "no_speech_prob": 0
   },
   {
-   "id": 26,
+   "id": 25,
    "seek": 5792,
-   "start": 83.2,
-   "end": 85.579994,
+   "start": 80.46,
+   "end": 82.86,
    "text": " since a heads gets the next flip checked too.",
    "tokens": [
-    51629,
+    51492,
     1670,
     257,
     8050,
@@ -2963,21 +2879,21 @@
     10033,
     886,
     13,
-    51748
+    51612
    ],
    "temperature": 0,
-   "avg_logprob": -0.23620091,
-   "compression_ratio": 1.5648148,
+   "avg_logprob": -0.25067732,
+   "compression_ratio": 1.6161138,
    "no_speech_prob": 0
   },
   {
-   "id": 27,
-   "seek": 8558,
-   "start": 85.58,
-   "end": 91.82,
-   "text": " Here, three heads share a single vote, while this lone tails gets a whole one.",
+   "id": 26,
+   "seek": 5792,
+   "start": 83.619995,
+   "end": 86.24,
+   "text": " Here, three heads share a single vote,",
    "tokens": [
-    50365,
+    51650,
     1692,
     11,
     1045,
@@ -2987,6 +2903,21 @@
     2167,
     4740,
     11,
+    51781
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.25067732,
+   "compression_ratio": 1.6161138,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 27,
+   "seek": 8624,
+   "start": 86.24,
+   "end": 90,
+   "text": " while this lone tails gets a whole one.",
+   "tokens": [
+    50365,
     1339,
     341,
     35314,
@@ -2996,94 +2927,97 @@
     1379,
     472,
     13,
-    50677
+    50553
    ],
    "temperature": 0,
-   "avg_logprob": -0.23542532,
-   "compression_ratio": 1.576087,
+   "avg_logprob": -0.25118917,
+   "compression_ratio": 1.4303797,
    "no_speech_prob": 0
   },
   {
    "id": 28,
-   "seek": 8558,
-   "start": 91.82,
-   "end": 94.82,
-   "text": " Twelve heads crowd into eight rows.",
+   "seek": 8624,
+   "start": 90,
+   "end": 92.56,
+   "text": " 12 heads crowd into eight rows.",
    "tokens": [
-    50677,
-    48063,
+    50553,
+    2272,
     8050,
     6919,
     666,
     3180,
     13241,
     13,
-    50827
+    50681
    ],
    "temperature": 0,
-   "avg_logprob": -0.23542532,
-   "compression_ratio": 1.576087,
+   "avg_logprob": -0.25118917,
+   "compression_ratio": 1.4303797,
    "no_speech_prob": 0
   },
   {
    "id": 29,
-   "seek": 8558,
-   "start": 94.82,
-   "end": 97.58,
-   "text": " Twelve tails spread across eleven.",
+   "seek": 8624,
+   "start": 92.56,
+   "end": 95.7,
+   "text": " 12 tails spread across 11.",
    "tokens": [
-    50827,
-    48063,
+    50681,
+    2272,
     28537,
     3974,
     2108,
-    21090,
+    2975,
     13,
-    50965
+    50838
    ],
    "temperature": 0,
-   "avg_logprob": -0.23542532,
-   "compression_ratio": 1.576087,
+   "avg_logprob": -0.25118917,
+   "compression_ratio": 1.4303797,
    "no_speech_prob": 0
   },
   {
    "id": 30,
-   "seek": 100,
-   "start": 97.58,
-   "end": 110.525345,
-   "text": " Crowded heads split their votes Line them up The heads hold five and two thirds of the 14 votes That 17 out of 42",
+   "seek": 8624,
+   "start": 95.7,
+   "end": 97.439995,
+   "text": " Line them up.",
    "tokens": [
-    50965,
-    27072,
-    9207,
-    8050,
-    7472,
-    641,
-    12068,
-    13,
-    51115,
-    51115,
+    50838,
     14670,
     552,
     493,
     13,
-    51215,
-    51215,
+    50925
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.25118917,
+   "compression_ratio": 1.4303797,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 31,
+   "seek": 98,
+   "start": 97.439995,
+   "end": 109.52666,
+   "text": " The heads hold five and two thirds of the 14 votes That 17 out of 42 So the test takes an average of ratios one per row",
+   "tokens": [
+    50925,
     440,
     8050,
     1797,
     1732,
     293,
     732,
-    12,
-    38507,
-    295,
-    264,
+    34552,
     295,
     264,
     3499,
     12068,
     13,
+    51142,
+    51142,
     663,
     311,
     3282,
@@ -3091,21 +3025,8 @@
     295,
     14034,
     13,
-    50865
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.15132555,
-   "compression_ratio": 1.5028902,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 31,
-   "seek": 100,
-   "start": 110.525345,
-   "end": 117.525345,
-   "text": " So the test takes an average of ratios, one per row, instead of the ratio of totals.",
-   "tokens": [
-    50865,
+    50655,
+    50724,
     407,
     264,
     1500,
@@ -3119,6 +3040,21 @@
     680,
     5386,
     11,
+    50926
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19497582,
+   "compression_ratio": 1.5344827,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 32,
+   "seek": 98,
+   "start": 109.52666,
+   "end": 111.726654,
+   "text": " instead of the ratio of totals.",
+   "tokens": [
+    50926,
     2602,
     295,
     264,
@@ -3127,21 +3063,21 @@
     1993,
     1124,
     13,
-    51215
+    51036
    ],
    "temperature": 0,
-   "avg_logprob": -0.15132555,
-   "compression_ratio": 1.5028902,
+   "avg_logprob": -0.19497582,
+   "compression_ratio": 1.5344827,
    "no_speech_prob": 0
   },
   {
-   "id": 32,
-   "seek": 100,
-   "start": 117.525345,
-   "end": 125.525345,
-   "text": " Now score the flip after each tails. Swap heads and tails and the strip flips over one half.",
+   "id": 33,
+   "seek": 98,
+   "start": 113.126656,
+   "end": 115.906654,
+   "text": " Now score the flip after each tails.",
    "tokens": [
-    51215,
+    51106,
     823,
     6175,
     264,
@@ -3150,11 +3086,27 @@
     1184,
     28537,
     13,
+    51245
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19497582,
+   "compression_ratio": 1.5344827,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 34,
+   "seek": 98,
+   "start": 115.906654,
+   "end": 120.50665,
+   "text": " Swap heads and tails, and the strip flips over one half.",
+   "tokens": [
+    51245,
     3926,
     569,
     8050,
     293,
     28537,
+    11,
     293,
     264,
     12828,
@@ -3163,21 +3115,21 @@
     472,
     1922,
     13,
-    51615
+    51475
    ],
    "temperature": 0,
-   "avg_logprob": -0.15132555,
-   "compression_ratio": 1.5028902,
+   "avg_logprob": -0.19497582,
+   "compression_ratio": 1.5344827,
    "no_speech_prob": 0
   },
   {
-   "id": 33,
-   "seek": 2600,
-   "start": 125.525345,
-   "end": 129.92534,
+   "id": 35,
+   "seek": 98,
+   "start": 120.50665,
+   "end": 124.88666,
    "text": " The test reads high, 25 out of 42.",
    "tokens": [
-    50365,
+    51475,
     440,
     1500,
     15700,
@@ -3188,24 +3140,22 @@
     295,
     14034,
     13,
-    50585
+    51694
    ],
    "temperature": 0,
-   "avg_logprob": -0.20365186,
-   "compression_ratio": 1.4651163,
+   "avg_logprob": -0.19497582,
+   "compression_ratio": 1.5344827,
    "no_speech_prob": 0
   },
   {
-   "id": 34,
-   "seek": 2600,
-   "start": 129.92534,
-   "end": 134.92535,
-   "text": " Subtract the averages, a gap of minus 19 points.",
+   "id": 36,
+   "seek": 2756,
+   "start": 124.88666,
+   "end": 129.04666,
+   "text": " subtract the averages, a gap of minus 19 points.",
    "tokens": [
-    50585,
-    8511,
-    83,
-    1897,
+    50365,
+    16390,
     264,
     42257,
     11,
@@ -3216,21 +3166,21 @@
     1294,
     2793,
     13,
-    50835
+    50573
    ],
    "temperature": 0,
-   "avg_logprob": -0.20365186,
-   "compression_ratio": 1.4651163,
+   "avg_logprob": -0.1007582,
+   "compression_ratio": 1.504717,
    "no_speech_prob": 0
   },
   {
-   "id": 35,
-   "seek": 2600,
-   "start": 134.92535,
-   "end": 141.52534,
-   "text": " The 1985 study ran the same comparison on 26 Cornell players,",
+   "id": 37,
+   "seek": 2756,
+   "start": 129.92665,
+   "end": 133.64665,
+   "text": " The 1985 study ran the same comparison",
    "tokens": [
-    50835,
+    50617,
     440,
     28962,
     2979,
@@ -3238,32 +3188,47 @@
     264,
     912,
     9660,
+    50803
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1007582,
+   "compression_ratio": 1.504717,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 38,
+   "seek": 2756,
+   "start": 133.64665,
+   "end": 138.44666,
+   "text": " on 26 Cornell players, up to 100 shots each,",
+   "tokens": [
+    50803,
     322,
     7551,
     43257,
     4150,
     11,
-    51165
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.20365186,
-   "compression_ratio": 1.4651163,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 36,
-   "seek": 2600,
-   "start": 141.52534,
-   "end": 145.72534,
-   "text": " up to 100 shots each, from where they'd hit about half,",
-   "tokens": [
-    51165,
     493,
     281,
     2319,
     8305,
     1184,
     11,
+    51043
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1007582,
+   "compression_ratio": 1.504717,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 39,
+   "seek": 2756,
+   "start": 138.44666,
+   "end": 140.66666,
+   "text": " from where they'd hit about half,",
+   "tokens": [
+    51043,
     490,
     689,
     436,
@@ -3272,21 +3237,21 @@
     466,
     1922,
     11,
-    51375
+    51154
    ],
    "temperature": 0,
-   "avg_logprob": -0.20365186,
-   "compression_ratio": 1.4651163,
+   "avg_logprob": -0.1007582,
+   "compression_ratio": 1.504717,
    "no_speech_prob": 0
   },
   {
-   "id": 37,
-   "seek": 2600,
-   "start": 145.72534,
-   "end": 149.42534,
+   "id": 40,
+   "seek": 2756,
+   "start": 140.66666,
+   "end": 144.30666,
    "text": " after three hits versus after three misses.",
    "tokens": [
-    51375,
+    51154,
     934,
     1045,
     8664,
@@ -3295,21 +3260,21 @@
     1045,
     29394,
     13,
-    51560
+    51336
    ],
    "temperature": 0,
-   "avg_logprob": -0.20365186,
-   "compression_ratio": 1.4651163,
+   "avg_logprob": -0.1007582,
+   "compression_ratio": 1.504717,
    "no_speech_prob": 0
   },
   {
-   "id": 38,
-   "seek": 2600,
-   "start": 149.42534,
-   "end": 154.92534,
-   "text": " For a random shooter, the same crowding pulls after hits down to 46%",
+   "id": 41,
+   "seek": 2756,
+   "start": 144.30666,
+   "end": 147.46666,
+   "text": " For a random shooter, the same crowding pulls",
    "tokens": [
-    51560,
+    51336,
     1171,
     257,
     4974,
@@ -3320,30 +3285,45 @@
     6401,
     3584,
     16982,
+    51494
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1007582,
+   "compression_ratio": 1.504717,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 42,
+   "seek": 2756,
+   "start": 147.46666,
+   "end": 151.08665,
+   "text": " after hits down to 46% on average,",
+   "tokens": [
+    51494,
     934,
     8664,
     760,
     281,
     17835,
     4,
-    51835
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.20365186,
-   "compression_ratio": 1.4651163,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 39,
-   "seek": 5540,
-   "start": 154.92534,
-   "end": 159.12534,
-   "text": " on average, and after misses up to 54.",
-   "tokens": [
-    50365,
     322,
     4274,
     11,
+    51675
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1007582,
+   "compression_ratio": 1.504717,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 43,
+   "seek": 2756,
+   "start": 151.08665,
+   "end": 153.76666,
+   "text": " and after misses up to 54.",
+   "tokens": [
+    51675,
     293,
     934,
     29394,
@@ -3351,23 +3331,23 @@
     281,
     20793,
     13,
-    50575
+    51809
    ],
    "temperature": 0,
-   "avg_logprob": -0.21025322,
-   "compression_ratio": 1.4097561,
+   "avg_logprob": -0.1007582,
+   "compression_ratio": 1.504717,
    "no_speech_prob": 0
   },
   {
-   "id": 40,
-   "seek": 5540,
-   "start": 159.12534,
-   "end": 166.02534,
-   "text": " Miller & Sanjurjo's 2018 paper puts the gap at about minus 8 points.",
+   "id": 44,
+   "seek": 5644,
+   "start": 153.76666,
+   "end": 157.32666,
+   "text": " Miller and Sanjurjo's 2018 paper",
    "tokens": [
-    50575,
+    50365,
     16932,
-    3693,
+    293,
     5271,
     73,
     374,
@@ -3375,58 +3355,88 @@
     311,
     6096,
     3035,
+    50543
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.124836944,
+   "compression_ratio": 1.485849,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 45,
+   "seek": 5644,
+   "start": 157.32666,
+   "end": 160.62665,
+   "text": " puts the gap at about minus eight points.",
+   "tokens": [
+    50543,
     8137,
     264,
     7417,
     412,
     466,
     3175,
-    1649,
+    3180,
     2793,
     13,
-    50920
+    50708
    ],
    "temperature": 0,
-   "avg_logprob": -0.21025322,
-   "compression_ratio": 1.4097561,
+   "avg_logprob": -0.124836944,
+   "compression_ratio": 1.485849,
    "no_speech_prob": 0
   },
   {
-   "id": 41,
-   "seek": 5540,
-   "start": 166.02534,
-   "end": 170.36534,
-   "text": " Longer records shrink it, but 100 shots isn't long.",
+   "id": 46,
+   "seek": 5644,
+   "start": 160.62665,
+   "end": 162.30666,
+   "text": " Longer records shrink it.",
    "tokens": [
-    50920,
+    50708,
     8282,
     260,
     7724,
     23060,
     309,
-    11,
-    457,
-    2319,
-    8305,
-    1943,
-    380,
-    938,
     13,
-    51137
+    50792
    ],
    "temperature": 0,
-   "avg_logprob": -0.21025322,
-   "compression_ratio": 1.4097561,
+   "avg_logprob": -0.124836944,
+   "compression_ratio": 1.485849,
    "no_speech_prob": 0
   },
   {
-   "id": 42,
-   "seek": 5540,
-   "start": 170.36534,
-   "end": 178.02534,
-   "text": " The Cornell players hit 49% after 3 hits and 45 after 3 misses.",
+   "id": 47,
+   "seek": 5644,
+   "start": 163.16666,
+   "end": 164.76666,
+   "text": " Longer streaks grow it.",
    "tokens": [
-    51137,
+    50835,
+    8282,
+    260,
+    2242,
+    5461,
+    1852,
+    309,
+    13,
+    50915
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.124836944,
+   "compression_ratio": 1.485849,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 48,
+   "seek": 5644,
+   "start": 165.66666,
+   "end": 170.38666,
+   "text": " The Cornell players hit 49% after three hits",
+   "tokens": [
+    50960,
     440,
     43257,
     4150,
@@ -3434,39 +3444,69 @@
     16513,
     4,
     934,
-    805,
+    1045,
     8664,
-    293,
-    6905,
-    934,
-    805,
-    29394,
-    13,
-    51520
+    51196
    ],
    "temperature": 0,
-   "avg_logprob": -0.21025322,
-   "compression_ratio": 1.4097561,
+   "avg_logprob": -0.124836944,
+   "compression_ratio": 1.485849,
    "no_speech_prob": 0
   },
   {
-   "id": 43,
-   "seek": 5540,
-   "start": 178.02534,
-   "end": 184.46533,
-   "text": " The study found plus 4, too close to 0 to count, so no hot hand.",
+   "id": 49,
+   "seek": 5644,
+   "start": 170.38666,
+   "end": 173.60666,
+   "text": " and 45 after three misses.",
    "tokens": [
-    51520,
+    51196,
+    293,
+    6905,
+    934,
+    1045,
+    29394,
+    13,
+    51357
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.124836944,
+   "compression_ratio": 1.485849,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 50,
+   "seek": 5644,
+   "start": 173.60666,
+   "end": 175.88666,
+   "text": " The study found plus four,",
+   "tokens": [
+    51357,
     440,
     2979,
     1352,
     1804,
-    1017,
+    1451,
     11,
+    51471
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.124836944,
+   "compression_ratio": 1.485849,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 51,
+   "seek": 5644,
+   "start": 175.88666,
+   "end": 180.06665,
+   "text": " too close to zero to count, so no hot hand.",
+   "tokens": [
+    51471,
     886,
     1998,
     281,
-    1958,
+    4018,
     281,
     1207,
     11,
@@ -3475,21 +3515,21 @@
     2368,
     1011,
     13,
-    51842
+    51680
    ],
    "temperature": 0,
-   "avg_logprob": -0.21025322,
-   "compression_ratio": 1.4097561,
+   "avg_logprob": -0.124836944,
+   "compression_ratio": 1.485849,
    "no_speech_prob": 0
   },
   {
-   "id": 44,
-   "seek": 8494,
-   "start": 184.46533,
-   "end": 188.48534,
+   "id": 52,
+   "seek": 5644,
+   "start": 180.06665,
+   "end": 183.26666,
    "text": " Measured from minus eight, it's 12 points hot.",
    "tokens": [
-    50365,
+    51680,
     41436,
     67,
     490,
@@ -3502,21 +3542,21 @@
     2793,
     2368,
     13,
-    50566
+    51840
    ],
    "temperature": 0,
-   "avg_logprob": -0.110898376,
-   "compression_ratio": 1.4603175,
+   "avg_logprob": -0.124836944,
+   "compression_ratio": 1.485849,
    "no_speech_prob": 0
   },
   {
-   "id": 45,
-   "seek": 8494,
-   "start": 188.48534,
-   "end": 191.22534,
-   "text": " That's evidence for a hot hand in a gym,",
+   "id": 53,
+   "seek": 8644,
+   "start": 183.76666,
+   "end": 189.32666,
+   "text": " That's evidence for a hot hand in a gym, not proof it survives defenders in a game.",
    "tokens": [
-    50566,
+    50365,
     663,
     311,
     4467,
@@ -3528,21 +3568,6 @@
     257,
     9222,
     11,
-    50703
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.110898376,
-   "compression_ratio": 1.4603175,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 46,
-   "seek": 8494,
-   "start": 191.22534,
-   "end": 194.00534,
-   "text": " not proof it survives defenders in a game.",
-   "tokens": [
-    50703,
     406,
     8177,
     309,
@@ -3552,21 +3577,21 @@
     257,
     1216,
     13,
-    50842
+    50643
    ],
    "temperature": 0,
-   "avg_logprob": -0.110898376,
-   "compression_ratio": 1.4603175,
+   "avg_logprob": -0.1667531,
+   "compression_ratio": 1.425926,
    "no_speech_prob": 0
   },
   {
-   "id": 47,
-   "seek": 8494,
-   "start": 195.54535,
-   "end": 199.16534,
+   "id": 54,
+   "seek": 8644,
+   "start": 191.08665,
+   "end": 193.70667,
    "text": " One half is what a fair coin does.",
    "tokens": [
-    50919,
+    50731,
     1485,
     1922,
     307,
@@ -3576,21 +3601,21 @@
     11464,
     775,
     13,
-    51100
+    50862
    ],
    "temperature": 0,
-   "avg_logprob": -0.110898376,
-   "compression_ratio": 1.4603175,
+   "avg_logprob": -0.1667531,
+   "compression_ratio": 1.425926,
    "no_speech_prob": 0
   },
   {
-   "id": 48,
-   "seek": 8494,
-   "start": 199.16534,
-   "end": 203.30533,
+   "id": 55,
+   "seek": 8644,
+   "start": 194.72665,
+   "end": 198.34665,
    "text": " 17 out of 42 is what this test sees.",
    "tokens": [
-    51100,
+    50913,
     3282,
     484,
     295,
@@ -3601,25 +3626,26 @@
     1500,
     8194,
     13,
-    51307
+    51094
    ],
    "temperature": 0,
-   "avg_logprob": -0.110898376,
-   "compression_ratio": 1.4603175,
+   "avg_logprob": -0.1667531,
+   "compression_ratio": 1.425926,
    "no_speech_prob": 0
   },
   {
-   "id": 49,
-   "seek": 8494,
-   "start": 203.30533,
-   "end": 207.70534,
-   "text": " A 50% shooter who averages one half on this test",
+   "id": 56,
+   "seek": 8644,
+   "start": 198.34665,
+   "end": 204.76666,
+   "text": " A 50% shooter, who averages one half on this test, is already running hot.",
    "tokens": [
-    51307,
+    51094,
     316,
     2625,
     4,
     24680,
+    11,
     567,
     42257,
     472,
@@ -3627,35 +3653,21 @@
     322,
     341,
     1500,
-    51527
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.110898376,
-   "compression_ratio": 1.4603175,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 50,
-   "seek": 8494,
-   "start": 207.70534,
-   "end": 209.48534,
-   "text": " is already running hot.",
-   "tokens": [
-    51527,
+    11,
     307,
     1217,
     2614,
     2368,
     13,
-    51616
+    51415
    ],
    "temperature": 0,
-   "avg_logprob": -0.110898376,
-   "compression_ratio": 1.4603175,
+   "avg_logprob": -0.1667531,
+   "compression_ratio": 1.425926,
    "no_speech_prob": 0
   }
  ],
  "x_groq": {
-  "id": "req_01m5jer69nexptj0kdzxcxz6z9"
+  "id": "req_01m5jjjw9sefn8eht4cyggrk4k"
  }
 }

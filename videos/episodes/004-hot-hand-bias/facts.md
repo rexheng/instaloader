@@ -130,3 +130,22 @@ citations). Every value below is recomputed by `check_numbers.py`; the one new e
 | 46 | "Longer records shrink it, but a hundred shots isn't long." One ghost of the −8 marker slides to its 1,000-shot place (−0.71), labelled "1,000 shots", and back. | As row 18 (exact DP: −7.935 at n = 100, −0.708 at n = 1,000, k = 3). | M&S 2018 abstract; `check_numbers.py` §2 |
 | — | **Removed:** "Score every row the same way." (the scoring cascade runs silently) and "Longer streaks grow the bias." with the 1- and 2-hit ghost ticks and their "hits in a row" legend. | Concision (round-7 craft fix 6). The streak-length claim (row 18, first half) is no longer made. | — |
 | — | The +4 marker's tag is now the header itself, "Cornell, 1985" (it travels down from the top), so "Cornell" is printed once. | Same facts as row 15. | — |
+
+## Round-8 revision: new, reworded or removed claims
+
+No claim was found wrong in round 8 (both critics recomputed every number; substance re-derived
+46% / 54% and −7.94 by exact DP and re-checked both citations). The one substantive change
+answers substance fix 2: the old line "Longer records shrink it, but a hundred shots isn't long"
+was true for k = 3 but left the viewer with the wrong cause for −8 (the one-heads version they
+built is only −1.0 at n = 100). `check_numbers.py` was re-run this round; the values below are its
+output.
+
+| # | Claim (as spoken / shown) | Verification | Source |
+|---|---|---|---|
+| 47 | "Longer records shrink it; longer streaks grow it." | Miller & Sanjurjo 2018 abstract (re-checked this round on arXiv 1902.01265 and IDEAS/RePEc): "The magnitude of this streak selection bias generally decreases as the sequence gets longer, but increases in streak length, and remains substantial for a range of sequence lengths often used in empirical work." | M&S 2018 abstract |
+| 48 | On "Longer records shrink it": a ghost of the −8 marker slides to −0.71, labelled "1,000 shots" (no number printed). | Exact DP, n = 1,000, k = 3: difference of averages −0.71 pts (`check_numbers.py` §2); simulated per-record difference −0.71 (10⁶ sequences, seed 7, s.e. 0.006). Same as rows 18 and 46. | `check_numbers.py` §2–3 |
+| 49 | On "longer streaks grow it": a ghost at −1.01 tagged with one yellow dot (one hit in a row) gains a dot and slides to −3.14, gains a third and slides to −7.94, under the −8 marker. No numbers printed; positions only. | Exact DP, n = 100, p = .5: difference of averages after k hits − after k misses = −1.01 (k = 1), −3.14 (k = 2), −7.94 (k = 3) pts. The dots use the lanes' code (●●● = after 3 hits, 2:17). | `check_numbers.py` §2; M&S 2018 Fig. 1 |
+| 50 | On "puts the gap": the red gap between the 46% and 54% cursors gets "−8" and slides until its tail is on the dashed 50% line (tip at 42%), while the cursors fade where they stand; then the ×5 zoom. | 46 − 54 = −8 points; on the share axis 8 points = 0.72 units, so the slid arrow spans exactly 50% → 42%: a difference measured from the dashed line, not a reading. The cursors are never drawn anywhere but 46% and 54% (round-8 fix for the 42%-on-a-% axis frame both critics flagged). After the ×5 zoom the arrow is 3.6 units = 8 × 0.45, its tip on −8 (row 45). | arithmetic; `scene.py` asserts |
+| 51 | On screen from "But each row gets one vote": "1 vote per row" above the vote strip's left end, until "5⅔ votes" replaces it. | Same claim as row 11. | M&S 2018 p. 3 |
+| — | **Removed:** "Crowded heads split their votes." (restated 1:25–1:32), "The skew comes from scoring row by row:" (the formula line names the cause), "but a hundred shots isn't long" (replaced by row 47). | Concision (craft fix 2, substance fixes 2–3). | — |
+| — | During Cornell's numbers the header stays the grey "1985 design · 26 players · up to 100 shots" (no purple "Cornell, 1985" title); the column head "Cornell" later tags the +4 marker. | Design facts as row 15; "Cornell" is printed once (craft fix 4). | M&S 2018 §3.1 |

@@ -72,7 +72,8 @@ WAFFLE_OPEN = np.array([1.5, -1.72, 0])    # the surveyed doctors, under the col
 ALERTS, ALERTS_RIGHT = 2470, 173            # 2,297 wrong, 173 counted right (7.0 %)
 AL_ROWS, AL_COLS, AL_CELL = 26, 95, 8       # 26 x 95 = 2,470 cells of 8 px
 K_CARDIFF = AL_COLS * AL_CELL / (METER_W * 135)   # bar width = raster width (760 px)
-CARDIFF_BAR = np.array([snap(3.05), snap(2.45), 0])
+CARDIFF_BAR = np.array([snap(3.05), snap(0.5), 0])   # mid right column, beside the crowd
+CARDIFF_TOP_Y = 1.75                        # the meter's height once the alerts take the centre
 CROWD_N, CROWD_CELL, CROWD_SQ = 100, 7, 5   # 100 x 100 squares, 1 square = 17 of 170,000 people
 CROWD_G = CROWD_N * CROWD_CELL * PX         # 700 px = 5.19 units, an integer pixel pitch
 CROWD_C = np.array([snap(-3.61), snap(-0.03), 0])   # bottom edge 0.2 above the citation line
@@ -360,7 +361,9 @@ class Population:
 
     def sick_now(self) -> np.ndarray:
         if not self.draining:
-            return self.rank_in < self.flip_in.get_value()
+            # before the flip the grid is the header's own 1 in 500: the 20 rare sick (all inside
+            # the left block, so the half-sick flood keeps them and the slider ends on them)
+            return (self.rank_in < self.flip_in.get_value()) | self.rare
         return self.sick_rank < N_SIDE * N_SIDE / self.n_int()
 
     def positives(self, sick=None) -> np.ndarray:
@@ -626,9 +629,12 @@ def build_stage(k: str):
         den[2].set_color(BLUE)
     elif k in ("2", "2b", "3"):
         a, b = {"2": ("20", "9{,}980"), "2b": ("0.002", "9{,}980"), "3": ("0.002", "0.998")}[k]
-        num = MathTex(a, r"\;\times\;", "0.99", font_size=fs)
+        # stage 3 carries the braces: its products get extra air so the four labels ("how
+        # common" / "how often", MathTex 36) sit side by side >= 0.3 apart
+        X, P = (r"\;\;\;\times\;\;\;", r"\;\;\;+\;\;\;") if k == "3" else (r"\;\times\;", r"\;+\;")
+        num = MathTex(a, X, "0.99", font_size=fs)
         num[0].set_color(RED)
-        den = MathTex(a, r"\;\times\;", "0.99", r"\;+\;", b, r"\;\times\;", "0.01", font_size=fs)
+        den = MathTex(a, X, "0.99", P, b, X, "0.01", font_size=fs)
         den[0].set_color(RED)
         den[4].set_color(BLUE)
     else:
@@ -647,12 +653,14 @@ def build_stage(k: str):
     return lhs, eq, num, f[1], den, tail
 
 
-def term_brace(term: Mobject, text: str, side: int = 1) -> VGroup:
-    """A grey under-brace with a small label: what kind of number the term is."""
+def term_brace(term: Mobject, text: str, dx: float = 0.0) -> VGroup:
+    """A grey under-brace with its label (MathTex 36: the narration points at it): what kind
+    of number the term is.  `dx` nudges a label sideways when its term is narrower than it."""
     br = Brace(term, DOWN, buff=0.16, color=GRAY, sharpness=1.5)
     br.stretch_to_fit_height(0.16)
     br.next_to(term, DOWN, buff=0.16)
-    lbl = MathTex(r"\text{" + text + "}", font_size=28, color=GRAY).next_to(br, DOWN, buff=0.16)
+    lbl = MathTex(r"\text{" + text + "}", font_size=MATH_LABEL, color=GRAY)
+    lbl.next_to(br, DOWN, buff=0.14).shift(dx * RIGHT)
     return VGroup(br, lbl)
 
 
@@ -822,8 +830,8 @@ class Episode(NarratedScene):
             guess.clear_updaters()
 
         # the baseline arrives only after the viewer has committed
-        with self.narrate("Most doctors and medical students given a problem like this got it "
-                          "wrong.") as beat:
+        with self.narrate("At one Boston-area hospital, most doctors and medical students given "
+                          "a problem like this got it wrong.") as beat:
             self.play(FadeOut(guess, rate_func=early),
                       LaggedStart(*[FadeIn(d, scale=0.5) for d in ghost], lag_ratio=0.012),
                       FadeIn(cite_g, shift=0.1 * UP),
@@ -1111,7 +1119,7 @@ class Episode(NarratedScene):
                          GRAY, stroke_width=3)
         gap_lbl = MathTex(r"99 \div 17 \approx 6\times", font_size=36, color=INK)
         gap_lbl.next_to(gap_br, DOWN, buff=0.18)
-        with self.narrate("So of a hundred and twenty positives, only twenty are sick.",
+        with self.narrate("So of a hundred twenty positives, only twenty are sick.",
                           gap=0.2) as beat:
             beat.wait_until("hundred twenty", offset=-0.1)
             self.play(emph(sum_num, scale=1.25), emph(res_s), emph(res_h), run_time=0.9)
@@ -1177,7 +1185,7 @@ class Episode(NarratedScene):
         strip_lbl.next_to(outline, DOWN, buff=0.2)
         outline.shift(low)
         strip_lbl.shift(low)
-        with self.narrate("What's left is a smaller sample space: these hundred and twenty "
+        with self.narrate("What's left is a smaller sample space: these hundred twenty "
                           "people.", speed=0.80) as beat:
             self.play(LaggedStart(*[s.animate.move_to(p + low) for s, p in zip(survivors, slots)],
                                   lag_ratio=0.006),
@@ -1350,7 +1358,7 @@ class Episode(NarratedScene):
         num_l = [num2[0], num2[1], num2[2]]           # the live glyphs, updated as they change
         den_l = [den2[i] for i in range(7)]
         with self.narrate("Divide everything by ten thousand: counts become shares. [pause 0.4] "
-                          "The share can't change.") as beat:
+                          "The share stays the same.") as beat:
             beat.wait_until("Divide", offset=-0.1)
             self.play(*swap(head_people, div_tag, shift=0.12 * UP),
                       FadeOut(VGroup(tbl_prev[0], tbl_prev[1], prev_num), shift=0.12 * UP,
@@ -1375,7 +1383,7 @@ class Episode(NarratedScene):
                       *[den_l[i].animate.move_to(den3[i]) for i in range(7) if i not in (0, 4)],
                       run_time=max(1.2, beat.until("shares", end=True, offset=0.1)))
             num_l[0], den_l[0], den_l[4] = new_n0, new_d0, new_d4
-            beat.wait_until("share can't", offset=-0.2)
+            beat.wait_until("share stays", offset=-0.2)
             self.play(emph(tail, scale=1.15), run_time=0.8)
         num3 = VGroup(*num_l)
         den3 = VGroup(*den_l)
@@ -1389,7 +1397,9 @@ class Episode(NarratedScene):
         br_c2 = term_brace(den3[4], "how common")
         br_o1 = term_brace(den3[2], "how often")
         br_o2 = term_brace(den3[6], "how often")
-        br_c1n, br_c2n = term_brace(den4[0], "how common"), term_brace(den4[3], "how common")
+        # P(sick) is narrower than its label: that label leans left, into the free space under
+        # the left end of the bar, so it clears "how often" under P(+ | sick)
+        br_c1n, br_c2n = term_brace(den4[0], "how common", dx=-0.33), term_brace(den4[3], "how common")
         br_o1n, br_o2n = term_brace(den4[1], "how often"), term_brace(den4[4], "how often")
 
         def term_box(m, col):
@@ -1515,9 +1525,24 @@ class Episode(NarratedScene):
             ta0, ta1 = title_alert.get_center(), np.array(alert_title_at)
             title_alert.set_opacity(0)
 
+            mv = window(0.3, 0.85)
+
+            def l_path(p0, p1, p):
+                # an L-shaped trip: across first (above the people, who stay below the strip's
+                # top row), then down the empty right column, so the meter crosses nothing
+                px = smooth(min(1.0, p / 0.6))
+                py = smooth(max(0.0, (p - 0.45) / 0.55))
+                return np.array([p0[0] + (p1[0] - p0[0]) * px, p0[1] + (p1[1] - p0[1]) * py, 0])
+
             def ta_upd(m, a):                     # the new title fades in (ghosted), rides along
-                m.move_to(ta0 + (ta1 - ta0) * window(0.3, 0.85)(a))
+                m.move_to(l_path(ta0, ta1, mv(a)))
                 m.set_opacity(GHOST * window(0.1, 0.3)(a))
+            tr_base, tr_p0 = meter.track.copy(), meter.track.get_center()
+
+            def tr_upd(m, a):
+                p = mv(a)
+                m.become(tr_base.copy().scale(1 + (K - 1) * p).move_to(l_path(tr_p0, cb, p)))
+                m.set_stroke(opacity=1 + (GHOST - 1) * p)
             self.play(*[FadeOut(m, rate_func=window(0.0, 0.3)) for m in
                         (formula_grp, table, outline, VGroup(br_r, br_b, n20, n100))],
                       meter.fill.animate(rate_func=window(0.0, 0.3)).set_value(0.0),
@@ -1526,8 +1551,7 @@ class Episode(NarratedScene):
                                           lambda m, a: m.set_opacity(GHOST * window(0.15, 0.3)(a))),
                       FadeOut(meter.title, shift=0.12 * UP, rate_func=window(0.0, 0.15)),
                       UpdateFromAlphaFunc(title_alert, ta_upd, rate_func=linear),
-                      meter.track.animate(rate_func=window(0.3, 0.85)).scale(K).move_to(cb)
-                      .set_stroke(opacity=GHOST),
+                      UpdateFromAlphaFunc(meter.track, tr_upd, rate_func=linear),
                       LaggedStart(*[ReplacementTransform(d, t, rate_func=window(0.3, 1.0))
                                     for d, t in zip(people, arrive_red + arrive_blue)],
                                   lag_ratio=0.0015),
@@ -1536,7 +1560,7 @@ class Episode(NarratedScene):
             self.remove(*arrive_blue)              # the raster now draws those faces
             self.play(FadeIn(leg_list, shift=0.1 * LEFT), run_time=0.6)
 
-        with self.narrate("For the twenty seventeen Champions League final, about a hundred and "
+        with self.narrate("For the twenty seventeen Champions League final, about a hundred "
                           "seventy thousand people came to Cardiff. [pause 0.4] The watch lists "
                           "held about twelve hundred photos, so even a small error rate per face "
                           "would swamp the real matches.") as beat:
@@ -1603,7 +1627,7 @@ class Episode(NarratedScene):
         unflagged_red = VGroup(*[s for i, s in zip(crowd.red_idx, crowd.red_sq)
                                  if int(i) not in crowd.lit_red])
         with self.narrate("Face-recognition cameras scanned the crowds. [pause 0.3] Over four days, "
-                          "they raised two thousand four hundred and seventy alerts.", gap=0.4) as beat:
+                          "they raised two thousand four hundred seventy alerts.", gap=0.4) as beat:
             crowd.start_overlays()
             self.add(*[c for i, c in zip(crowd.lit_idx, crowd.cores) if i not in crowd.lit_red],
                      crowd.rings, c_beam)
@@ -1637,7 +1661,7 @@ class Episode(NarratedScene):
 
         # "shrink to the alerts": the crowd leaves, the alerts + meter take the centre, and the
         # meter (ghosted while it waited) comes up to full strength: now it gets its number
-        shift_v = np.array([-cb[0], snap(-0.3), 0])
+        shift_v = np.array([-cb[0], snap(CARDIFF_TOP_Y - cb[1]), 0])
         cb2 = cb + shift_v
         ob2 = al_out.get_bottom()[1] + shift_v[1]
         al_left2 = al_left + shift_v[0]
@@ -1663,7 +1687,7 @@ class Episode(NarratedScene):
             beat.wait_until("red share", offset=-0.15)
             self.play(Create(br_r2), Create(br_b2), FadeOut(al_lbl, rate_func=early),
                       run_time=0.8)
-        with self.narrate("The police counted a hundred and seventy-three as right: seven "
+        with self.narrate("The police counted a hundred seventy-three as right: seven "
                           "percent.", pre_roll=0.08) as beat:
             beat.wait_until("hundred seventy-three", offset=-0.2)
             meter.share.set_value(ALERTS_RIGHT / ALERTS)
@@ -1679,27 +1703,31 @@ class Episode(NarratedScene):
         tr = meter.track
         title_prec = label("precision", size=LABEL)
         title_prec.move_to(meter.title_at(cb2, STRIP_TITLE_BUFF, K, title=title_prec))
-        gh_track = Rectangle(width=2.0, height=0.16, stroke_color=GRAY, stroke_width=2,
+        # (sized to be read: the two meters sharing one word is the beat's point)
+        GH_W = 2.0
+        gh_track = Rectangle(width=GH_W, height=0.22, stroke_color=GRAY, stroke_width=2,
                              fill_opacity=0)
-        gh_track.move_to([tr.get_right()[0] + 1.15 + 1.0, cb2[1], 0])
+        gh_val = MathTex(r"17\%", font_size=MATH_LABEL)
+        gh_track.move_to([tr.get_right()[0] + 0.35 + gh_val.width + 0.18 + GH_W / 2, cb2[1], 0])
         gh_x0, gh_x1 = gh_track.get_left()[0], gh_track.get_right()[0]
-        gh_xr = gh_x0 + 2.0 * N_RARE / N_POS
+        gh_xr = gh_x0 + GH_W * N_RARE / N_POS
         gy0, gy1 = gh_track.get_bottom()[1], gh_track.get_top()[1]
         gh_red = Polygon([gh_x0, gy0, 0], [gh_xr, gy0, 0], [gh_xr, gy1, 0], [gh_x0, gy1, 0],
                          fill_color=RED, fill_opacity=1, stroke_width=0)
         gh_blue = Polygon([gh_xr, gy0, 0], [gh_x1, gy0, 0], [gh_x1, gy1, 0], [gh_xr, gy1, 0],
                           fill_color=BLUE, fill_opacity=1, stroke_width=0)
-        gh_val = MathTex(r"17\%", font_size=30).next_to(gh_track, LEFT, buff=0.18)
-        gh_tag = label("precision too", size=24, color=INK).next_to(gh_track, UP, buff=0.2)
+        gh_val.next_to(gh_track, LEFT, buff=0.18)
+        gh_tag = label("precision too", size=LABEL, color=INK).next_to(gh_track, UP, buff=0.22)
         gh_tag.align_to(gh_track, LEFT)
-        gh_title = label("your test", size=24, color=GRAY).next_to(gh_track, DOWN, buff=0.18)
+        gh_title = label("your test", size=26, color=GRAY).next_to(gh_track, DOWN, buff=0.2)
         gh_title.align_to(gh_track, LEFT)
         ghost = VGroup(gh_red, gh_blue, gh_track, gh_val, gh_title, gh_tag)
-        with self.narrate("In machine learning, the share of alerts that are right is called "
-                          "precision.") as beat:
-            beat.wait_until("share", offset=-0.15)
+        with self.narrate("In machine learning, that share is called precision. [pause 0.8]") as beat:
+            # "that share": the red share pulses, short enough that the title can roll over on
+            # "precision" itself
+            beat.wait_until("share", offset=-0.25)
             self.play(emph(VGroup(br_r2, right_lbl), scale=1.15), emph(meter.value, scale=1.2),
-                      run_time=0.9)
+                      run_time=max(0.5, min(0.8, beat.until("precision", offset=-0.35))))
             beat.wait_until("precision", offset=-0.3)
             self.play(*swap(title_alert, title_prec, shift=0.14 * UP, t_out=(0.0, 0.4),
                             t_in=(0.35, 0.8)),
@@ -1760,11 +1788,15 @@ class Episode(NarratedScene):
                           "confirmed: three percent. Months later, a new algorithm, better photos "
                           "and practised operators thinned out the false alarms, the blue term in "
                           "Bayes' denominator, and their count rose to forty-six percent.") as beat:
+            # the evaluators' bar arrives first, below; the "precision too" ghost stays readable
+            # until "logbooks", then hands its place to the police bar's tag
             beat.wait_until("evaluators", offset=-0.2)
+            self.play(Create(ev_track), FadeIn(ev_tag, shift=0.08 * UP, rate_func=window(0.3, 1.0)),
+                      run_time=1.0)
+            beat.wait_until("logbooks", offset=-0.2)
             self.play(FadeOut(ghost, shift=0.1 * UP, rate_func=window(0.0, 0.5)),
                       FadeIn(police_tag, shift=0.08 * UP, rate_func=window(0.4, 1.0)),
-                      Create(ev_track), FadeIn(ev_tag, shift=0.08 * UP, rate_func=window(0.3, 1.0)),
-                      run_time=1.0)
+                      run_time=0.9)
             beat.wait_until("three percent", offset=-0.3)
             self.add(ev_red, ev_blue, ev_track)
             self.play(ev_fill.animate.set_value(1.0), FadeIn(ev_val, rate_func=late), run_time=1.0)
@@ -1932,7 +1964,7 @@ class Episode(NarratedScene):
         naive2.next_to(marker2, UP, buff=0.1).align_to(meter.track, RIGHT)
         with self.narrate("Your seventeen percent assumes a random screen. [pause 0.4] Symptoms "
                           "raise the one in five hundred: at one in a hundred, fifty percent; at one "
-                          "in two, ninety-nine, where the rule held. [pause 1.2]",
+                          "in two, ninety-nine, where the rule held. [pause 1.0]",
                           pre_roll=0.08) as beat:
             # your test again: the 17 % grows back on its own words
             beat.wait_until("seventeen", offset=-0.25)
@@ -1961,11 +1993,12 @@ class Episode(NarratedScene):
                       rate_func=SMOOTH)
             beat.wait_until("rule", offset=-0.3)
             self.play(emph(naive2, scale=1.2), emph(meter.value, scale=1.2), run_time=0.75)
-            # back to a random screen, in silence
+            # back to a random screen, inside the planned pause after the result (so the pause is
+            # the 1.0 s it is written as, not a silence gap)
             self.play(u.animate(rate_func=SMOOTH).set_value(0.0),
                       FadeOut(marker2, rate_func=early), FadeOut(naive2, rate_func=early),
-                      run_time=2.0)
-            self.hold(0.4)
+                      run_time=max(1.2, beat.remaining() - 0.05))
+            self.hold(0.15)
 
         recall_lbl = label("recall", size=34, color=INK).next_to(L2["r99"], RIGHT, buff=0.22)
         prec_lbl = label("precision", size=34, color=INK)
@@ -1990,4 +2023,4 @@ class Episode(NarratedScene):
         for m in (num, driver, cnt_r, cnt_b):
             m.clear_updaters()
         self.hold(0.3)                              # the finished two-tag frame, a little longer
-        self.end_card(hold=0.5)
+        self.end_card(hold=0.35)

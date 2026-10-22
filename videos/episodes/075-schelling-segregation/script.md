@@ -55,7 +55,7 @@ rings on the 2 gold neighbors, "2 of 6 match".
 the meter docks during "half … above"; the RED "unhappy" counter arrives on "these" and counts
 to 238 as RED rings draw round those tiles. The HUD sits beside the board's middle (first row
 y = 0.45), four rows: unhappy, plan predicts, round, moves. One real
-round-1 move is previewed as a dashed arc. The HUD under the meter is a two-column table:
+round-1 move is previewed as a dashed arc (the same arc it flies in round one; every hop bends toward the board's centre, so no tile ever swings out over the board's edge). The HUD under the meter is a two-column table:
 labels ("unhappy", "plan predicts", "round") right-aligned on one edge, numbers right-aligned
 on the meter's 100 % end, so "plan predicts 0" has its 0 directly under the count.
 
@@ -66,7 +66,7 @@ on the meter's 100 % end, so "plan predicts 0" has its 0 directly under the coun
 > content. Then everyone is content, and the town stays mixed.
 
 ### 5 · Run + measured failure (0:58–1:17)
-*Screen:* round 1: 200 tiles hop while the GRAY "moves" row counts live to 200; the meter
+*Screen:* round 1: 200 tiles hop (each arc bent toward the board's centre and kept on the board) while the GRAY "moves" row counts live to 200; the meter
 climbs to 64 %; the counter stops at 74, above "plan predicts 0". On "thirty-eight" the GRAY note
 "38 content by their turn" appears. The counter pulses on "this counter". On "sixty-seven": every
 content tile dims, the 7 outlined tiles that were already unhappy at the start turn grey, 67 RED
@@ -189,7 +189,7 @@ the dashed outline turns solid, and A's formula flips to 2/7 ≥ ¼.
 *Screen:* the 2:12 morph in reverse: the bars sink into the baseline and the ladder labels
 fade while the two thumbnails return to their column (0.5 s); the baseline shrinks back into the
 x-axis while the x title returns to PURPLE "demanded (% of neighbors)" (0.6 s); only then do the
-dots, y-axis and random-mix line return (0.7 s). Citation "Schelling, 1971 · Journal of Mathematical Sociology" appears on "paper",
+dots and y-axis return (0.7 s; the random-mix line and its label stay out, so the chart carries no unlabelled marker). Citation "Schelling, 1971 · Journal of Mathematical Sociology" appears on "paper",
 and a box flashes the two towns on "model". A GRAY "our jump" bracket over ¼–⅓ appears on
 "His households", its label on the bracket's own row to its left. On "nearest" the citation is underlined: his rules come from his paper (round 5, continued:
 the rules label "nearest move · 25–30% empty" was cut; at the new Text-27 label floor it did not

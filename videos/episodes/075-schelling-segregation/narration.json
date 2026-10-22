@@ -2752,8 +2752,8 @@
  "layout_audit": {
   "clearance": 0.15,
   "checks": 222,
-  "audit_seconds": 8.378,
-  "render_seconds": 1249.8,
+  "audit_seconds": 6.225,
+  "render_seconds": 1062.1,
   "errors": 0,
   "count": 0,
   "counts": {

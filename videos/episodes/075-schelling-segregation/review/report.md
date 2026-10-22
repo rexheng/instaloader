@@ -1,20 +1,20 @@
 # Review kit — `final.mp4`
 
-Generated 2026-10-22 14:05 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
+Generated 2026-10-22 19:57 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
 
 ## Mechanics (BAR §3 caps / §5 standards)
 
 | metric | value | bar | status |
 |---|---|---|---|
 | runtime | 3:33.8 (213.8s) | 2:30–4:00 | ok |
-| video | 1920x1080 @ 30 fps, h264/yuv420p, 17.36 MB | 1920x1080 @ 30 | ok |
+| video | 1920x1080 @ 30 fps, h264/yuv420p, 17.35 MB | 1920x1080 @ 30 | ok |
 | pace | 153 wpm (speech time) · 139 overall · 177 excl. all pauses; 496 words | 140–165 (cap <120/>180) | ok |
 | loudness | -14.0 LUFS, LRA 2.8 LU | −14 ±1 | ok |
 | true peak | -1.8 dBTP | ≤ −1.5 | ok |
 | leading silence | 0.00s | ≤ 1 s | ok |
 | trailing silence | 1.65s | ≤ 2 s | ok |
 | longest internal silence | 2.08s | ≤ 2.5 s | ok |
-| longest fully static stretch | 4.50s | ≤ 4 s (cap ≥ 8 s) | **FLAG** |
+| longest fully static stretch | 3.80s | ≤ 4 s (cap ≥ 8 s) | ok |
 | black frames | 0 run(s) | none | ok |
 | background-only stretches > 1 s | 0 | none | ok |
 | transcript vs script | WER 0.4% (487 words) | ≲ 8 % | ok |
@@ -22,7 +22,7 @@ Generated 2026-10-22 14:05 by videos/toolkit/review_kit.sh. Frames are evidence;
 
 ## Flags
 
-- static frame: 4.5s fully static (limit 4 s, cap at 8 s)
+- none
 
 ### Silences ≥ 0.3 s
 
@@ -30,7 +30,7 @@ Generated 2026-10-22 14:05 by videos/toolkit/review_kit.sh. Frames are evidence;
 
 ### Static stretches ≥ 3 s
 
-0:03.9–0:07.6 (3.6s), 2:05.2–2:09.7 (4.5s), 2:45.8–2:49.4 (3.6s), 2:56.4–3:00.2 (3.8s), 3:11.1–3:14.4 (3.3s)
+0:03.9–0:07.6 (3.6s), 2:45.8–2:49.5 (3.6s), 2:56.4–3:00.2 (3.8s), 3:11.1–3:14.4 (3.3s)
 
 ## Narration craft (PRODUCTION_GUIDE §13: the systemic 9-blockers)
 
@@ -96,10 +96,10 @@ Measured from narration.json (Kokoro's own word timings). Each line names the de
 - `keyframes/kf_27_02-38.9.png` — 2:38.9
 - `keyframes/kf_28_02-42.2.png` — 2:42.2
 - `keyframes/kf_29_02-48.5.png` — 2:48.5
-- `keyframes/kf_30_02-51.0.png` — 2:51.0
-- `keyframes/kf_31_02-53.2.png` — 2:53.2
-- `keyframes/kf_32_02-55.5.png` — 2:55.5
-- `keyframes/kf_33_02-59.2.png` — 2:59.2
+- `keyframes/kf_30_02-53.3.png` — 2:53.3
+- `keyframes/kf_31_02-55.5.png` — 2:55.5
+- `keyframes/kf_32_02-59.2.png` — 2:59.2
+- `keyframes/kf_33_03-01.8.png` — 3:01.8
 - `keyframes/kf_34_03-13.6.png` — 3:13.6
 - `keyframes/kf_35_03-15.9.png` — 3:15.9
 - `keyframes/kf_36_03-21.9.png` — 3:21.9
@@ -172,4 +172,4 @@ Differences (numbers spelled out, 'and' ignored). A technical term heard wrong u
 [2:18.6] replace  script: "corner's"                               heard: 'corners'
 ```
 
-_review kit ran in 168s_
+_review kit ran in 105s_

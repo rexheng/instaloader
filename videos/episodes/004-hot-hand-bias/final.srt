@@ -75,126 +75,126 @@ Gather all twenty four checked flips: twelve heads, twelve tails.
 Total heads over total flips: exactly half.
 
 20
-00:01:14,366 --> 00:01:20,706
-The skew comes from scoring row by row: each row gets one vote, however many flips it checked.
+00:01:14,366 --> 00:01:17,976
+But each row gets one vote, however many flips it checked.
 
 21
-00:01:21,166 --> 00:01:25,806
+00:01:18,433 --> 00:01:23,073
 Checked heads come in crowds, since a heads gets the next flip checked too.
 
 22
-00:01:26,306 --> 00:01:31,886
+00:01:23,573 --> 00:01:29,153
 Here, three heads share a single vote, while this lone tails gets a whole one.
 
 23
-00:01:32,633 --> 00:01:34,903
+00:01:29,900 --> 00:01:32,170
 Twelve heads crowd into eight rows.
 
 24
-00:01:35,203 --> 00:01:37,573
+00:01:32,470 --> 00:01:34,840
 Twelve tails spread across eleven.
 
 25
-00:01:38,233 --> 00:01:40,093
-Crowded heads split their votes.
-
-26
-00:01:41,000 --> 00:01:41,950
+00:01:35,600 --> 00:01:36,550
 Line them up:
 
-27
-00:01:42,750 --> 00:01:46,090
+26
+00:01:37,350 --> 00:01:40,690
 the heads hold five and two thirds of the fourteen votes.
 
-28
-00:01:47,090 --> 00:01:49,380
+27
+00:01:41,690 --> 00:01:43,980
 That's seventeen out of forty two.
 
-29
-00:01:50,833 --> 00:01:54,573
+28
+00:01:45,433 --> 00:01:49,173
 So the test takes an average of ratios, one per row,
 
-30
-00:01:54,873 --> 00:01:56,963
+29
+00:01:49,473 --> 00:01:51,563
 instead of the ratio of totals.
 
-31
-00:01:58,466 --> 00:02:00,946
+30
+00:01:53,066 --> 00:01:55,546
 Now score the flip after each tails.
 
-32
-00:02:01,246 --> 00:02:09,646
+31
+00:01:55,846 --> 00:02:04,246
 Swap heads and tails, and the strip flips over one half: the test reads high, twenty five out of forty two.
 
-33
-00:02:10,233 --> 00:02:14,313
+32
+00:02:04,833 --> 00:02:08,913
 Subtract the averages: a gap of minus nineteen points.
 
-34
-00:02:15,266 --> 00:02:25,496
+33
+00:02:09,866 --> 00:02:20,096
 The nineteen eighty five study ran the same comparison on twenty six Cornell players: up to a hundred shots each, from where they'd hit about half.
 
-35
-00:02:25,996 --> 00:02:29,186
+34
+00:02:20,596 --> 00:02:23,786
 After three hits, versus after three misses.
 
-36
-00:02:29,633 --> 00:02:38,643
+35
+00:02:24,233 --> 00:02:33,243
 For a random shooter, the same crowding pulls after hits down to forty six percent on average, and after misses up to fifty four.
 
-37
-00:02:39,093 --> 00:02:42,183
+36
+00:02:33,693 --> 00:02:36,783
 Miller and Sanjurjo's twenty eighteen paper
 
-38
-00:02:42,683 --> 00:02:45,073
+37
+00:02:37,283 --> 00:02:39,673
 puts the gap at about minus eight points.
 
+38
+00:02:40,573 --> 00:02:42,193
+Longer records shrink it;
+
 39
-00:02:45,973 --> 00:02:47,593
-Longer records shrink it,
+00:02:43,093 --> 00:02:44,653
+longer streaks grow it.
 
 40
-00:02:47,943 --> 00:02:49,893
-but a hundred shots isn't long.
-
-41
-00:02:50,333 --> 00:02:57,683
+00:02:45,600 --> 00:02:52,950
 The Cornell players hit forty nine percent after three hits, and forty five after three misses.
 
+41
+00:02:53,550 --> 00:02:55,450
+The study found plus four,
+
 42
-00:02:57,983 --> 00:03:03,643
-The study found plus four, too close to zero to count, so no hot hand.
+00:02:55,850 --> 00:02:59,200
+too close to zero to count, so no hot hand.
 
 43
-00:03:04,433 --> 00:03:07,563
+00:03:00,000 --> 00:03:03,130
 Measured from minus eight, it's twelve points hot.
 
 44
-00:03:08,463 --> 00:03:13,913
+00:03:04,030 --> 00:03:09,480
 That's evidence for a hot hand in a gym, not proof it survives defenders in a game.
 
 45
-00:03:15,500 --> 00:03:16,460
+00:03:11,066 --> 00:03:12,026
 One half
 
 46
-00:03:16,610 --> 00:03:18,310
+00:03:12,176 --> 00:03:13,876
 is what a fair coin does.
 
 47
-00:03:19,110 --> 00:03:22,960
+00:03:14,676 --> 00:03:18,526
 Seventeen out of forty two is what this test sees.
 
 48
-00:03:23,260 --> 00:03:24,940
+00:03:18,826 --> 00:03:20,506
 A fifty percent shooter
 
 49
-00:03:25,240 --> 00:03:27,490
+00:03:20,806 --> 00:03:23,056
 who averages one half on this test
 
 50
-00:03:27,690 --> 00:03:29,380
+00:03:23,256 --> 00:03:24,946
 is already running hot.
 

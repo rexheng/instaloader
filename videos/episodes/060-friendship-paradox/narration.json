@@ -2773,8 +2773,8 @@
  "layout_audit": {
   "clearance": 0.15,
   "checks": 206,
-  "audit_seconds": 3.886,
-  "render_seconds": 345.0,
+  "audit_seconds": 4.784,
+  "render_seconds": 413.2,
   "errors": 0,
   "count": 0,
   "counts": {

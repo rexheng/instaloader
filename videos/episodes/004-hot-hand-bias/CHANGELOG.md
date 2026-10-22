@@ -605,3 +605,95 @@ silences carry every stop: 1:40.0–1:41.0 (1.0 s), 1:41.9–1:42.8 (0.9 s), 1:4
 **Kept:** the one-vote strip packing onto the 40.5% marker (the same animation, now with a breath before it); "test the
 test" → live 50% → 40.5% → "cold −9.5 points"; the half-turn mirror into −19; and the landing on
 the cold-open frame, with the ghost flying into (1/14) Σᵢ hᵢ/nᵢ = 17/42 and the blue "hot" arrow.
+
+## Round 8 revisions
+
+Craft scored 8.9 (Motion 8.5, Concision 8.5, the rest 9) and substance 8.8 (Clarity, Motion and
+Concision 8.5), with no caps and no factual errors; both said the listed fixes reach 9 with no
+structural change. The plan per dimension below 9:
+- **Motion / Clarity (both critics' fix 1):** the frame at 2:41–2:44 drew the after-hits cursor at
+  42% on an axis still labelled in %, beside a "46%" readout. The 9 anchor ("every frame true if
+  paused", "every motion encodes a relation") needs a gap that is re-anchored, not cursors that
+  are moved, and an axis that is labelled at every instant of the zoom.
+- **Clarity (substance fix 2):** "but a hundred shots isn't long" gave the wrong cause for −8. The
+  viewer's own one-heads version is −1.0 at 100 shots; the streak length is what keeps it at −8.
+- **Concision:** two restatements ("The skew comes from scoring row by row", "Crowded heads split
+  their votes").
+
+**Fixes, by critic item** (r8c = craft, r8s = substance)
+- r8c 1 / r8s 1 (cursors at 42% / 50% on a % axis, 2:41–2:44): the pair no longer slides. The
+  cursors stay on 46% and 54% until they fade where they stand. On "puts the gap" the red gap
+  between them gets "−8" and slides 4 points left until its tail sits on the dashed 50% line (a
+  difference measured from the line, with no cursor at its tip). On "at about minus eight points"
+  the ×5 zoom about the dashed line stretches that arrow to −8. Only after the zoom does the blue
+  random-shooter marker grow, at the arrow's tip, with "random shooter" and "bias". No frame shows
+  a cursor at a share its label contradicts (facts row 50).
+- r8c 5 / r8s 8 (axis unlabelled mid-zoom): the zoom is one rig, drawn once, so no label is
+  double-drawn at partial opacity. 0% and 100% leave in the first 0.2 s. 25% and 75% fall to 40%
+  and stay there while −10, −5, +5 and +10 grow in on their own marks (never on the same spot).
+  "50%" hands over to "0" while the outer labels carry the axis. The share title drifts right and
+  fades while the gap title "after-hits − after-misses (points)" arrives at the axis's left end, so
+  the two titles cross-fade in time without sharing a place (a cross-fade in place reads as garbled
+  text, §13.2.5). Every frame of the zoom has tick labels and a title.
+- r8s 2 (wrong cause for −8): "Longer records shrink it, but a hundred shots isn't long" is now
+  "Longer records shrink it; longer streaks grow it." (M&S abstract, re-checked). On "records" the
+  ghost of the −8 marker slides to −0.71 ("1,000 shots") while the header's "up to 100 shots"
+  answers. On "longer streaks" that ghost leaves, and a ghost at the one-hit gap (−1.01) with one
+  yellow dot gains a dot and slides to −3.14, then gains a third and lands under −8 (−7.94), exact
+  DP for 100 shots (facts rows 47–49). Round 7 had cut this clause with its three ghost ticks and
+  legend; it returns as one ghost and seven words.
+- r8c 2 (concision): cut "Crowded heads split their votes." and its 0.9 s gap. On "Line them up:"
+  HHHH and HHHT come forward while their five third-of-a-vote slices pulse, then the votes pack.
+- r8s 3 (concision): cut "The skew comes from scoring row by row:"; the beat is now "But each row
+  gets one vote, however many flips it checked." The regroup runs on "But each row", the resize to
+  equal votes lands on "vote".
+- r8s 4 (vote strip never named): grey "1 vote per row" (Text 26) above the strip's left end, 0.27
+  clear of the 40.5% readout, from "one vote" until the pack, when the readout returns beside it.
+- r8s 5 (six numbers in 14 s): [pause 0.6] after "forty five after three misses" (49 − 45 is
+  written in it) and [pause 0.4] after "plus four" (the purple marker and "= +4" land in it).
+- r8s 6 (copies over other rows at 1:06): each checked flip now pours as a small disc of its
+  tile's colour. It appears in the gap just under its own coin, runs left along that gap to its
+  card's edge, down the channel between cards, and along the corridor under the table into its
+  tile (rounded-corner routes, `route()`). No copy passes over a coin.
+- r8s 7 (header vs lanes at 2:15): the lanes ("after 3 hits / after 3 misses") and the axis title
+  ("checked shots that are hits") change in the same 1.2 s move that brings in "1985 design"; the
+  ●●● / ○○○ conditions arrive on "the same comparison".
+- r8c 4 ("Cornell" printed twice, 2:51–3:04): no purple "Cornell, 1985" title. The grey "1985
+  design" header stays, the column head turns from "random" to "Cornell", and on "Measured from
+  minus eight" that head itself arcs up and over to tag the +4 marker while the header leaves.
+- r8c 3 (landing rows bunched): the rows themselves leave one after another, left-most column
+  first (lag 0.22, about four in flight and spread along the arc), each stepping back to 40% as it
+  lifts and arcing up and over into (1/14) Σᵢ hᵢ/nᵢ. "= 17/42" now lands on "this test", so the
+  separate pulse after it is gone.
+
+**Found by stepping frames (not in the reviews)**
+- The 14 score dots at 0:52 flew diagonally over the table rows, the same defect as r8s 6. They
+  now run down the channel beside their card and along a corridor under the table before
+  dropping to the line; the one 2/3 dot goes round the right end of "the obvious guess".
+- On the preview "1 vote per row" and the returning "40.5%" read as one phrase for 0.7 s
+  during the pack ("1 vote per row 40.5%"). The tag now leaves as the readout comes back.
+- The landing rows at scale 0.3 were too small to read as rows in flight; they now shrink to 0.4.
+
+**Self-review loop.** One preview and three 1080p masters (the third only re-routes the 0:52 dots;
+the 50% dots no longer detour round "the obvious guess"). After each one I stepped frames at
+2.4–5 fps across every changed transition: 0:52–0:54, 1:05.4–1:08.4, 1:14.4–1:18.4,
+1:35.5–1:37.9, 2:09.8–2:11.4, 2:37.4–2:45.4, 2:45.6–2:46.8, 3:00–3:01.6 and 3:14.7–3:17.9. I
+also read all 12 contact sheets and the keyframes at 1:18.9, 1:37.6, 2:42.5, 2:47.2, 3:05.1 and
+3:26.6.
+
+**Mechanics (final master):**
+- Runtime 3:26.6 (was 3:31.0). 473 words (was 487), 149 wpm over speech time. Voice 0.82, with 0.80
+  for six beats. 0 sentences above 200 wpm.
+- −14.0 LUFS / −2.1 dBTP. Leading silence 0.00 s, trailing 1.74 s. Longest silence 2.17 s (the
+  prediction hold). Longest static stretch 3.4 s (the held 5⅔/14 = 17/42).
+- Longest stretch without a breath 11.2 s (was 13.3 s).
+- 0 render warnings, 0 layout-audit issues in 220 checks, 0 glyph morphs, 7/7 deictics landed,
+  0 review flags, WER 0.7%, no banned phrases.
+
+`check_numbers.py` was re-run; every value on screen is unchanged, and the three streak-ghost
+positions (−1.01, −3.14, −7.94) and the 1,000-shot position (−0.71) are its exact DP output.
+
+**Kept:** the yellow vote slices packing exactly onto the 40.5% marker into 5⅔/14 = 17/42; the
+half-turn mirror of the vote strip into −19; the landing that answers the cold-open question on
+the cold-open image with (1/14) Σᵢ hᵢ/nᵢ = 17/42 and the blue "hot" arrow; the payoff chain
+−8 → 49 − 45 = +4 → +12 with "vs 0: p = .49", "no defenders" and both citations at full strength.
