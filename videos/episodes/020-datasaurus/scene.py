@@ -589,9 +589,10 @@ class Episode(NarratedScene):
         require_clear(pct13, strip_dots, bar_rect, err_bar, what="'13 %'")
         require_clear(sd_tag, strip_dots, bar_rect, err_bar, pct13, what="'+-1 SD' tag")
         # (round 8: a breath after "papers" and speed 0.80, so 703 and 86 % each get their own beat)
-        with self.narrate("In a review of seven hundred three physiology papers, [pause 0.3] "
+        with self.narrate("In a review of seven hundred three physiology papers, [pause 0.4] "
                           "eighty-six percent used bar graphs: [pause 0.4] an average and an error "
-                          "bar. Only thirteen percent showed the points.", speed=0.80) as beat:
+                          "bar. [pause 0.6] Only thirteen percent showed the points.", speed=0.80,
+                          gap=0.75) as beat:
             self.play(Succession(FadeOut(cite_cairo, run_time=0.3), FadeIn(cite_w, run_time=0.3)),
                       run_time=0.6)
             beat.wait_until("papers", offset=-0.2)
@@ -741,7 +742,8 @@ class Episode(NarratedScene):
                                        buff=0.06).set_z_index(6)
         require_clear(xy_lbl, harm_y, varm_y, cen_y, what="(x-bar, y-bar) label")
         require_safe(xy_lbl, "(x-bar, y-bar) label")
-        with self.narrate("The two averages mark a single point: the cloud's balance point.") as beat:
+        with self.narrate("The two averages mark a single point: the cloud's balance point.",
+                          gap=0.75) as beat:
             self.play(self.dots.animate.set_opacity(0.28), run_time=0.45)
             beat.wait_until("averages", offset=-0.1)
             self.play(flag(VGroup(tgts[0], tgts[1])), run_time=0.8)
@@ -1020,8 +1022,8 @@ class Episode(NarratedScene):
             return [self.count[0].animate.set_opacity(1.0), self.count[2].animate.set_opacity(1.0),
                     self.count.number.animate.set_color(GREEN).set_opacity(1.0)]
 
-        LANE_X = 0.7                                         # the flights' lane, between plot and table
-        with self.narrate("This one barely tilts. Say r is point five. Go one standard deviation "
+        LANE_X = 0.85                                        # the flights' lane, between plot and table
+        with self.narrate("This one barely tilts. [pause 0.4] Say r is point five. Go one standard deviation "
                           "right. [pause 0.4] On average, the cloud rises r times ess why. "
                           "[pause 0.7] That's the best-fit line, [pause 1.1] through the middle of "
                           "every slice of the ellipse. [pause 0.7] At the wall, the slices shrink to "
@@ -1104,7 +1106,9 @@ class Episode(NarratedScene):
                                            path_func=elbow_path(cp_rs, num1, LANE_X)),
                       dip(rs_lbl, lo=0.0, out=0.02, start=0.5, back=0.78),
                       Create(bar1, rate_func=window(0.74, 0.92)),
-                      Write(lhs1, rate_func=window(0.8, 1.0)),
+                      # (Write applies its rate per glyph after its lag, so a window would start
+                      # the first letters early: wait explicitly instead)
+                      Succession(Wait(run_time=0.8), Write(lhs1, run_time=0.2)),
                       run_time=T_f)
             self.remove(lhs1, num1, bar1, den1)
             self.add(f1)
@@ -1163,7 +1167,7 @@ class Episode(NarratedScene):
         self.box_r = box_mob(ax, T, RED).set_z_index(1)
         self.ell_r = ell_mob(ax, T, RED, 4).set_z_index(1)
         red = VGroup(self.cen_r, self.box_r, self.ell_r)
-        with self.narrate("Now replay the first version, and watch the ellipse.") as beat:
+        with self.narrate("Now replay the first version, and watch the ellipse.", gap=0.75) as beat:
             self.add(red)
             self.red_on = True
             beat.wait_until("replay", offset=-0.1)
@@ -1220,7 +1224,7 @@ class Episode(NarratedScene):
             self.med_now, self.med_mark)
         require_clear(F2, med_row, what="parked slope vs the median row")
         with self.narrate("But add a sixth number: the median of y. Our star misses it by "
-                          "six.") as beat:
+                          "six.", gap=0.75) as beat:
             beat.wait_until("sixth", offset=-0.15)
             self.play(FadeOut(self.count), run_time=0.5)       # in place: the parked slope is below
             self.play(LaggedStart(*[FadeIn(m, shift=0.2 * UP) for m in med_row], lag_ratio=0.12),
@@ -1270,7 +1274,7 @@ class Episode(NarratedScene):
         names = ["circle"] + order
         with self.narrate("From the dinosaur they grew twelve shapes: this circle, [pause 0.8] "
                           "this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Each "
-                          "one has this same ellipse, and a different median.", gap=0.6) as beat:
+                          "one has this same ellipse, and a different median.", gap=0.72) as beat:
             beat.on("this circle", FadeOut(circ_line), Indicate(self.dots, color=BLUE,
                                                                 scale_factor=1.04), lead=0.3,
                     run_time=0.8)
@@ -1377,9 +1381,8 @@ class Episode(NarratedScene):
             # change together, on one smooth rate function, while the parked slope moves up to
             # the top right (still grey) through the now empty right half. Where an old and a new
             # number would share a spot (x: 75 and 12) the old one is out before the new one comes
-            # in, so no two numbers ever overprint
-            beat.wait_until("Francis", offset=-0.1)
-            T_m = min(1.4, max(1.0, beat.until("with", offset=-0.05)))
+            # in, so no two numbers ever overprint. It follows step 1 at once (on "1973")
+            T_m = 1.2
             olds = list(ax.x_axis.numbers) + list(ax.y_axis.numbers)
             news = list(ax2.x_axis.numbers) + list(ax2.y_axis.numbers)
 
@@ -1562,9 +1565,11 @@ class Episode(NarratedScene):
             def launch(k, dur=1.25):
                 s0, dd = 0.15 * k / T_s, dur / T_s
                 return lambda t: 1 - (1 - min(1.0, max(0.0, (t - s0) / dd))) ** 3
+            # (ReplacementTransform of an explicit copy: TransformFromCopy runs its rate
+            # function on 1 - alpha, which would turn the ease-out into a delayed ease-in)
             pair = VGroup(self.ell, line_a)
-            self.play(*[TransformFromCopy(pair, VGroup(pells[jj], plines[jj]), path_arc=0.6,
-                                          rate_func=launch(k))
+            self.play(*[ReplacementTransform(pair.copy(), VGroup(pells[jj], plines[jj]),
+                                             path_arc=0.6, rate_func=launch(k))
                         for k, jj in enumerate((3, 2, 1))],
                       Create(hl_read, rate_func=window(t_th, t_th + 0.3)), run_time=T_s)
             beat.wait_until("trend", offset=-0.15)

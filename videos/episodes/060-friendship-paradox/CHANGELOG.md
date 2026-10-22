@@ -825,3 +825,58 @@ silent landing.
 - *Clarity* (substance 4): the C&F "random students" were a low draw (mean 1.75). Upgrade: the
   draw {Betty, Dale, Carol} (counts 1, 3, 2, mean 2.0), whose six tokens 4, 4, 4, 2, 3, 1
   average exactly 3.0.
+
+**Applied (craft numbering)**
+1. Squares: side, then area. The round-8 squares grew from dots (GrowFromEdge scales from the
+   edge's midpoint) and their sides dropped afterwards, because `TransformFromCopy` interpolates
+   1 − alpha, so its windowed rate function ran mirrored in time. Now each distance copy drops
+   onto its square's top edge at 1/4 scale (0.5 s, left to right, 0.05 s apart; a
+   `ReplacementTransform` of a copy), the square then stretches down from that full-width side
+   (`grow_down`, 0.8 s), then its area is written (0.4 s): 2.05 s in all, started on "square",
+   areas read ~0.9 s before they fly. (`TFC_same` in the result row had the same mirroring and
+   now runs forward too.)
+2. Distances in two lanes: the GRAY ruler moved down 0.22 (everything under it with it, the
+   split rows 0.13 down, the algebra row 0.1 down); each distance is its own PURPLE segment from
+   the BLUE 2.5 mark (which now rises through both lanes) with an end cap, the 1.5s in the lower
+   lane (+0.10) and the 0.5s in the upper one (+0.24). Each label sits over its own segment, the
+   1.5s over the stretch only they cover (counts 1-2, 3-4); every label clears the lanes, the
+   caps, the mark and the 2.5 label by >= 0.157 (checked numerically). The lanes are swapped
+   from the critic's sketch so no label sits over another distance's line. The signed copies
+   ride down onto their own segments, along them into the balance point and through the ruler
+   into a PURPLE 0 under it (between counts 2 and 3; there is no room between −0.5 and +0.5).
+3. Divide step in place: `pinch()` shrinks each old term to 45 % at full colour, hands over in
+   a 0.13 s cross at that size and grows the new term from the same centre; the four "÷ 8"s
+   flash BLUE first. No frame lacks a numerator (checked at 7.5 fps).
+4. Facebook -> Harvard: the BLUE "average user" bar splits into eight overlapping pieces that
+   become the class's eight BLUE nodes; the YELLOW 635s and outline shrink out at full colour;
+   friendships, counts and names come in round the nodes. No empty frame (checked at 6-8 fps).
+5. "4 × 4 = 16": the label's own 16 flies (over Alice's stack, down the gap left of the panel)
+   into the numerator and shrinks into it as "sum of counts" pinches into Σk²; "4 × 4 =" then
+   shrinks away (1:18-1:20). Nothing YELLOW competes with the algebra after that.
+6. Cold open: breaths 0.6 s and 0.8 s after the first two sentences (longest run without a
+   breath is now 8.5 s, was 10.7). "A girl with k friends adds k squared on top ..." (199 wpm at
+   0.82) is its own beat at 0.78 after a 0.6 s breath following "sixteen"; the divide beat is
+   at 0.78 with a 0.7 s hold after "eight girls". ("Sue holds four tokens ..." was already
+   130 wpm, so it stays at 0.82.)
+7. C&F tokens park at 45 % of the edge from the receiver, moved out only as far as needed for
+   >= 0.15 from both rings (exact box-to-circle gap, rings now 0.06 thick); asserted by
+   `python scene.py`.
+8. End card holds 0.4 s once in; trailing silence ~1.8 s.
+
+**Applied (substance numbering)**
+1. Two divide states: the "÷ 8" row holds ~3 s (through the pause), then numerators and
+   denominators change in one move on "The average", flagged on "seven" and "average count".
+2. As craft 6.
+3. "Measure each girl's distance from the balance point, two and a half, and square it."
+4. Random draw {Betty, Dale, Carol} (counts 1, 3, 2, mean 2.0); tokens 4, 4, 4, 2, 3, 1 average
+   exactly 3.0. Hand-off reordered: random students into the BLUE origin first, then the five
+   named friends (Carol's arc kept low past Pam; simulated: no two rings closer than 0.146 edge
+   to edge); `into_origin` now runs in real seconds (the default ease on top stalled it).
+5. The squares leave with their "sides at 1/4 scale" tag when the picture moves back.
+6. Each logistic fit starts at its group's first case (day 3.5 friends, 3.8 random).
+
+**Also:** to stay inside 3:35, the "Pick one" hold is 1.8 s (measured 2.0 s of silence), "same"
+is cut from "one of these eight girls", and the holds after "mu squared plus sigma squared"
+(1.4), the Facebook question (1.45) and "days ahead" (0.7) are 0.15-0.2 s shorter. The ring's
+"2 + 0/2 = 2" now stays whole until the Facebook beat (the shorter closing pause had cut it to
+0.5 s on screen in the first master); the self-reported arrow starts shrinking on "lead".

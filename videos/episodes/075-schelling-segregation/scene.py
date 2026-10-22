@@ -708,20 +708,21 @@ class Episode(NarratedScene):
         b1 = sim.round1_breakdown()
         note38 = self.note(f"{b1['content_before_turn']} content by their turn")
         movers1 = {m[0] for m in self.rounds[0]}
+        # (a number that changes digits cannot fade in while it counts: rows first, in the
+        # breath between the beats, so the round starts on "Round")
+        self.play(FadeOut(preview), FadeOut(src_box), FadeOut(dest_box),
+                  FadeIn(self.round_lab), FadeIn(self.moves_lab),
+                  self.fade_fill(content0, 1.0), run_time=0.4)
         with self.narrate("Round one: two hundred moves. The unhappy count stalls at "
                           "seventy-four. [pause 1.2] Sixty-seven of these were content before "
                           "round one. [pause 0.15] They never moved. Their neighbors did.",
                           gap=0.45) as beat:
-            # (a number that changes digits cannot fade in while it counts: rows first)
-            self.play(FadeOut(preview), FadeOut(src_box), FadeOut(dest_box),
-                      FadeIn(self.round_lab), FadeIn(self.moves_lab),
-                      self.fade_fill(content0, 1.0), run_time=0.4)
             # the bulk of the round runs under "Round one: two hundred moves"; the last twelve
             # hops land one by one under "The unhappy count", and the count freezes at 74 on
             # "stalls" (the moves row reaches 200 at the same moment)
             t_round = beat.until("stalls", offset=0.0, min_time=2.6)
             t_tail = t_round - beat.until("unhappy", offset=-0.25)
-            self.play_round(0, run_time=t_round, flight=0.8, tail=(12, max(1.0, t_tail)))
+            self.play_round(0, run_time=t_round, flight=0.7, tail=(12, max(1.0, t_tail)))
             others = [self.tiles[h] for h in self.tiles if h not in self.cur_unhappy]
             was_unh = [self.tiles[h] for h in sorted(self.cur_unhappy) if h in self.unh0]
             n_content0 = sum(h not in self.unh0 for h in self.cur_unhappy)
@@ -1023,6 +1024,9 @@ class Episode(NarratedScene):
         tag_home = [GX - fw1 / 2 + sim_tag.width / 2, GY - fw1 / 2 - 0.22 - sim_tag.height / 2, 0]
         self.moves_n.set_value(self.moves_base)
         assert self.moves_base == len(self.rounds[0]) == 200
+        # (round 7) "round" and "moves" were dimmed for the stall; they return at full strength
+        self.round_lab.set_opacity(1.0)
+        self.moves_lab.set_opacity(1.0)
         # the inset fades first (0.35 s); the board starts growing 0.15 s in and reaches the
         # inset's left edge only after the inset has gone
         self.play(FadeOut(mag_all, run_time=0.35), FadeOut(src, run_time=0.35),
@@ -1066,22 +1070,29 @@ class Episode(NarratedScene):
         TOP = np.array([5.3, 2.15, 0])
         BOT = np.array([5.3, -2.0, 0])
         s_thumb = TS / (N * P + 0.07)
-        rng = np.random.default_rng(7)
-        cloud, means = {}, {}
-        # (round 6: dots at 60 % with +/-0.3 pp jitter; at 38 % and +/-0.6 they read as smudges)
-        DOT_OP = 0.6
+        cloud = {}
+        # (round 7) each column is a swarm of 30 solid dots, one per simulated town: full
+        # opacity, a thin background-coloured rim so overlapping dots stay separate, spread
+        # +/- 1 pp sideways (golden-ratio steps over the dots' rank, so neighbours in height sit
+        # apart). No mean tick or whisker (at 60 % with a white mean tick they read as glowing
+        # crosses). Dimming changes the colour, never the opacity, so overlaps never pile up
+        # into a brighter smudge.
+        def dot_col(k):
+            return interpolate_color(ManimColor(BG), ManimColor(INK), k)
         for tval, vals in sorted(self.sweep.items()):
-            xs = 100 * tval + rng.uniform(-0.3, 0.3, len(vals))
-            dots_ = VGroup(*[Dot(ax.c2p(x, 100 * v), radius=0.05, color=INK, fill_opacity=DOT_OP)
-                             for x, v in zip(xs, vals)])
-            x = 100 * tval
-            whisk = Line(ax.c2p(x, 100 * min(vals)), ax.c2p(x, 100 * max(vals)), color=GRAY,
-                         stroke_width=2)
-            mtick = Line(ax.c2p(x, 100 * np.mean(vals)) + LEFT * 0.17,
-                         ax.c2p(x, 100 * np.mean(vals)) + RIGHT * 0.17, color=INK, stroke_width=5)
-            cloud[tval] = VGroup(whisk, dots_, mtick)
-            means[tval] = mtick
-        ours = Dot(ax.c2p(100 / 3, 100 * self.shareF), radius=0.08, color=INK)
+            rank = np.argsort(np.argsort(vals))
+            xs = 100 * tval + 2.0 * (((rank * 0.6180339887) % 1.0) - 0.5)
+            cloud[tval] = VGroup(*[Dot(ax.c2p(x, 100 * v), radius=0.05, color=INK)
+                                   .set_stroke(BG, width=1.6) for x, v in zip(xs, vals)])
+
+        def town_marker(share_x, share_y):
+            """Our own town's point: a solid INK dot in a ring, on a background disc that masks
+            the swarm under it, so it stays visible inside its column."""
+            c = ax.c2p(share_x, share_y)
+            return VGroup(Dot(c, radius=0.15, color=BG),
+                          Circle(radius=0.13, color=INK, stroke_width=3).move_to(c),
+                          Dot(c, radius=0.07, color=INK)).set_z_index(3)
+        ours = town_marker(100 / 3, 100 * self.shareF)
         dot_note = text("each dot: one simulated town", size=TEXT_LABEL_MIN, color=GRAY)
         dot_note.next_to(ax.c2p(0, 100), RIGHT, buff=0.25).shift(DOWN * 0.12)
 
@@ -1137,7 +1148,7 @@ class Episode(NarratedScene):
             return BOT + (cell(r, c) - np.array([GX, GY, 0])) * s_thumb
         q_end = {h: qcell(*self.q_pos[h]) for h in qtiles}
         q_moving = [h for h in qtiles if self.q_pos[h] != self.start_pos[h]]
-        qpt = Dot(ax.c2p(25, 100 * self.q_share), radius=0.08, color=INK)
+        qpt = town_marker(25, 100 * self.q_share)
 
         # the two spoken columns: as each demand is named, its thumbnail label pulses and its
         # column brightens while the others dim to 40 % (round 6: the small PURPLE 1/4 and 1/3
@@ -1147,14 +1158,9 @@ class Episode(NarratedScene):
         k_t = min(cloud, key=lambda t: abs(t - 1 / 3))
 
         def col_state(bright):
-            """Columns in `bright` at full strength (dots 0.8), the rest at 40 %."""
-            anims = []
-            for t, c_ in cloud.items():
-                on = t in bright
-                anims += [c_[0].animate.set_stroke(opacity=1.0 if on else 0.4),
-                          c_[1].animate.set_fill(opacity=0.8 if on else 0.22),
-                          c_[2].animate.set_stroke(opacity=1.0 if on else 0.4)]
-            return anims
+            """Columns in `bright` at full strength, the rest at 40 % (by colour)."""
+            return [c_.animate.set_fill(dot_col(1.0 if t in bright else 0.4))
+                    for t, c_ in cloud.items()]
 
         with self.narrate("Demand a quarter, and the same starting town barely sorts: "
                           "fifty-eight percent. Demand a third, and it jumps to seventy-six. "
@@ -1177,7 +1183,7 @@ class Episode(NarratedScene):
             self.play(top_lab[0].animate(rate_func=there_and_back).scale(1.2),
                       *col_state({k_q, k_t}), run_time=0.7)
             beat.wait_until("jumps", offset=-0.1)
-            self.play(Indicate(ours, color=INK, scale_factor=1.8), run_time=0.8)
+            self.play(ours.animate(rate_func=there_and_back).scale(1.35), run_time=0.8)
 
         # why the jump: the share ladder of the random start ---------------------------------
         # Its own chart, larger and higher than the dot chart (whose x-axis line becomes its
@@ -1208,12 +1214,14 @@ class Episode(NarratedScene):
         b14, b27, b38 = bars[F14], bars[F27], bars[F38]
         assert (self.ladder[F14], self.ladder[F27], self.ladder[F38]) == (76, 67, 125)
         # the vertical's quantity name, where a y-axis title sits (top of the left end)
-        bars_note = text("households (simulated start)", size=TEXT_LABEL_MIN, color=INK)
+        # (round 7: "households (simulated start)" -> "households": the board has been tagged
+        # "simulated" since frame 1, and the frame carried 13 words of prose at 2:34)
+        bars_note = text("households", size=TEXT_LABEL_MIN, color=INK)
         bars_note.move_to([lx(0) - 0.08 + bars_note.width / 2, BL + HMAX + 0.45, 0])
         assert bars_note.get_bottom()[1] > max(b.get_top()[1] for b in bars.values()
                                                if b.get_center()[0] < bars_note.get_right()[0] + 0.2) + 0.5
-        chart_ctx = [*cloud.values(), ours, qpt, base, base_lab, dot_note,
-                     ax.y_axis, ax.y_title, ax.x_axis]
+        chart_ctx = [*cloud.values(), base, base_lab, dot_note, ax.y_axis, ax.y_title, ax.x_axis]
+        markers = VGroup(ours, qpt)               # hollow rings: faded with soft_dim, not set_opacity
         # the two thumbnails and their labels leave the ladder (one focal region); they come
         # back with the dot chart
         thumbs = [self.town, top_lab, qtown, bot_lab]
@@ -1223,6 +1231,10 @@ class Episode(NarratedScene):
             return MathTex(str(self.ladder[f]), font_size=32, color=GRAY).next_to(
                 bars[f], UP, buff=0.22)
         c14, c27, c38 = count_lab(F14), count_lab(F27), count_lab(F38)
+        # (round 7) one vertical anchor for the heights: the tallest bar (1/2) carries its count
+        F12 = Fraction(1, 2)
+        assert self.ladder[F12] == max(self.ladder[f] for f in rungs) == 256
+        c12 = count_lab(F12)
         assert c27.get_left()[0] - c14.get_right()[0] >= 0.15, (c14.get_right(), c27.get_left())
 
         # under-baseline row: rung fractions (INK), the demand's fraction (PURPLE), the ends
@@ -1294,7 +1306,7 @@ class Episode(NarratedScene):
         # (round 6) the ladder is built centred (the right third used to sit empty for 12 s);
         # it slides left to make room for household A's patch on "including"
         LSH = 2.1
-        early = [lbase, bar_grp, xt_share, bars_note, end0, end60, caret, out13, dlab, unh_lab]
+        early = [lbase, bar_grp, xt_share, bars_note, end0, end60, caret, out13, dlab, unh_lab, c12]
         for m in early:
             m.shift(RIGHT * LSH)
         assert xt_share.get_right()[0] <= 6.35 and bars_note.get_left()[0] >= -6.35
@@ -1346,6 +1358,7 @@ class Episode(NarratedScene):
                     h = max(hfull[f] * v, 1e-3)
                     bars[f].stretch_to_fit_height(h).move_to([bar_x[f], y + h / 2, 0])
             self.play(*[m.animate(run_time=0.3).set_opacity(0) for m in chart_ctx],
+                      AnimationGroup(*self.soft_dim(markers, 0.0), run_time=0.3),
                       ax.x_title.animate(run_time=0.3).set_opacity(0),
                       *[FadeOut(m, run_time=0.3) for m in thumbs],
                       UpdateFromAlphaFunc(x_line, rise, run_time=T_ALL, rate_func=linear),
@@ -1361,6 +1374,9 @@ class Episode(NarratedScene):
                 Succession(Wait(run_time=0.5), AnimationGroup(
                     FadeIn(end0, shift=0.1 * UP), FadeIn(end60, shift=0.1 * UP), run_time=0.6)),
                 run_time=1.3)
+            # (round 7) the height scale: the tallest bar (1/2) carries its count, once the
+            # highlight has passed it (the 1.18x stretch would reach into the label)
+            self.play(FadeIn(c12, shift=0.08 * DOWN), run_time=0.45)
 
         # the household that started our block's chain (A), at the random start
         WP, WT, WFS = 0.42, 0.36, 56
@@ -1418,7 +1434,7 @@ class Episode(NarratedScene):
             lbase.shift(LEFT * LSH)
             self.play(*[m.animate(run_time=0.8, rate_func=SMOOTH).shift(LEFT * LSH)
                         for m in (x_line, bar_grp, xt_share, bars_note, end0, end60, caret, out13,
-                                  dlab, unh_lab)],
+                                  dlab, unh_lab, c12)],
                       Succession(Wait(run_time=0.45), FadeIn(w_patch, scale=0.6, run_time=0.5)))
             self.fly_into([(w_gold, w_num), (w_all, w_den)], extra=[Create(w_bar)], run_time=1.0)
             # its demand comes from the town that demanded a third (top right), a short clear path
@@ -1431,13 +1447,20 @@ class Episode(NarratedScene):
             self.play(FadeIn(l27, shift=0.1 * UP), FadeIn(c27, shift=0.1 * DOWN), run_time=0.5)
             self.flash_box(VGroup(b27, c27), w_frac, color=INK, buff=0.06, run_time=1.0)
 
-        with self.narrate("Every household at three eighths is one lost match away from two "
-                          "sevenths.", gap=0.45) as beat:
-            beat.wait_until("three", offset=-0.2)
+        # (round 7) the 125 is used: the tallest bar at risk is the reason the cascade is big at 1/3
+        with self.narrate("All one hundred twenty-five households at three eighths are one lost "
+                          "match from two sevenths.", gap=0.45) as beat:
             # one focal point: the bars. A's patch (the last sentence's subject) dims to 60 % until
             # the slide brings it back for "that chain never starts"
-            self.play(FadeIn(l38, shift=0.1 * UP), FadeIn(c38, shift=0.1 * DOWN),
-                      *self.soft_dim(why, 0.6), run_time=0.6)
+            self.play(*self.soft_dim(why, 0.6),
+                      run_time=beat.until("hundred", offset=-0.35, min_time=0.3))
+            # the count arrives and pulses on "one hundred twenty-five", its rung on "three eighths"
+            self.play(FadeIn(c38, shift=0.1 * DOWN), run_time=0.45)
+            self.play(c38.animate(rate_func=there_and_back).scale(1.25),
+                      b38.animate(rate_func=there_and_back).set_fill(INK), run_time=0.7)
+            beat.wait_until("three", offset=-0.25)
+            self.play(FadeIn(l38, shift=0.1 * UP), run_time=0.45)
+            self.play(l38.animate(rate_func=there_and_back).scale(1.2), run_time=0.6)
             beat.wait_until("lost", offset=-0.3)
             self.play(Create(drop), FadeIn(drop_lab, shift=0.05 * DOWN),
                       run_time=beat.until("sevenths", offset=0.1, min_time=0.9))
@@ -1533,35 +1556,55 @@ class Episode(NarratedScene):
             p0, p1 = ax.c2p(x0, y), ax.c2p(x1, y)
             return VGroup(Line(p0, p1), Line(p0 + DOWN * 0.1, p0 + UP * 0.1),
                           Line(p1 + DOWN * 0.1, p1 + UP * 0.1)).set_stroke(GRAY, 3)
-        # each bracket's label sits on the bracket's own row, to its left, inside the plot
-        ours_br = bracket(25, 100 / 3)
+        # each bracket's label sits on the bracket's own row, to its left, inside the plot.
+        # (round 7) "our jump" sits just above our 1/3 column (82 %), its ends over the 1/4 and
+        # 1/3 columns, and a dotted drop runs from its left end down to the 1/4 column, so it
+        # visibly joins our two towns; it rises to the top row as it becomes his band
+        OUR_Y = 82
+        ours_br = bracket(25, 100 / 3, y=OUR_Y)
+        q_top = ax.c2p(25, 100 * max(self.sweep[k_q]))[1] + 0.05
+        t_top = ax.c2p(100 / 3, 100 * max(self.sweep[k_t]))[1] + 0.05
+        assert ax.c2p(0, OUR_Y)[1] - 0.1 - t_top >= 0.12, (ax.c2p(0, OUR_Y), t_top)
+        ours_drop = DashedLine(ax.c2p(25, OUR_Y) + DOWN * 0.12, [ax.c2p(25, 0)[0], q_top + 0.15, 0],
+                               dash_length=0.06, dashed_ratio=0.5).set_stroke(GRAY, 2)
         ours_br_lab = text("our jump", size=TEXT_LABEL_MIN, color=GRAY).next_to(ours_br, LEFT, buff=0.2)
         his_br = bracket(35, 50)
         band_lab = text("Schelling: 35–50%", size=TEXT_LABEL_MIN, color=GRAY)
         band_lab.next_to(his_br, LEFT, buff=0.2)
-        # (round 5 cont.: the rules label "nearest move · 25–30% empty" is gone. At the new label
-        # floor (Text 27) it no longer fits left of his band, and it only repeated the narration)
+        # (round 7) his two rules, each on its spoken word, under his band's label: they first
+        # use the label's row and the one below; when his label arrives they step down a row
+        ROW = 0.52
+        rule1 = text("nearest move", size=TEXT_LABEL_MIN, color=GRAY)
+        rule2 = text("25–30% empty", size=TEXT_LABEL_MIN, color=GRAY)
+        xl = band_lab.get_left()[0]
+        for i, m in enumerate((rule1, rule2)):
+            m.move_to([xl + m.width / 2, band_lab.get_y() - i * ROW, 0])
+        assert rule2.get_bottom()[1] - ours_br_lab.get_top()[1] >= 0.15, (rule2.get_bottom(), ours_br_lab.get_top())
+        assert rule1.get_bottom()[1] - rule2.get_top()[1] >= 0.15
+        # after the step down: clear of our 1/3 column (dots and our ring)
+        assert rule2.get_right()[0] <= ax.c2p(100 / 3 - 1, 0)[0] - 0.05 - 0.15 - 0.15
         assert band_lab.get_left()[0] >= ax.c2p(0, 40)[0] + 0.2, band_lab.get_left()
         assert band_lab.get_top()[1] <= ax.y_title.get_bottom()[1] - 0.2
         assert band_lab.get_right()[0] <= bx0 - 0.15 and ours_br_lab.get_left()[0] >= ax.c2p(0, 40)[0] + 0.2
+        assert ours_br_lab.get_right()[0] <= ax.c2p(25, 0)[0] - 0.15
         cite1 = citation("Schelling, 1971 · Journal of Mathematical Sociology")
-        cite1_ul = underline(cite1, color=GRAY, buff=0.05, stroke_width=3)
-        assert cite1_ul.get_bottom()[1] >= -3.2
         ladder_lab = VGroup(bars_note, caret, out14, q_lab, l27, l38, c14, c27, c38, unh_lab, why,
                             end0, end60, drop, drop_lab, still_lab)
         # (round 6: kept as "In his 1971 paper": "In 1971, ... ran" would misdate the runs, which
-        # were first issued as a 1969 RAND memo)
-        with self.narrate("In his 1971 paper, Thomas Schelling ran this model. His households "
-                          "moved to the nearest suitable square, on emptier boards, and there the "
-                          "jump came later, between about a third and a half.", gap=0.25) as beat:
+        # were first issued as a 1969 RAND memo.  Round 7: one 14.7 s sentence became three, with
+        # pauses; each of his two rules gets a label on its word, and "our jump" is drawn on our
+        # own two columns before it slides to his band)
+        with self.narrate("In his 1971 paper, Thomas Schelling ran this model. [pause 0.4] His "
+                          "households moved to the nearest square that suited them, on far "
+                          "emptier boards. [pause 0.5] There the jump came later, between about a "
+                          "third and a half.", speed=0.82, gap=0.25) as beat:
             # the 2:19 morph in reverse: bars sink into the baseline, the baseline becomes the
             # x-axis again, and only then does the dot chart come back (never both at once)
             # (the ladder's x title leaves with the bars, before the chart's title returns: the
-            # two titles never overlap; the thumbnails return as the baseline moves)
-            # (the two thumbnails return while the bars sink: their column is clear of the
-            # ladder, and the frame is never a lone line)
+            # two titles never overlap; the thumbnails return while the bars sink: their column
+            # is clear of the ladder, and the frame is never a lone line)
             self.play(*[b.animate.stretch_to_fit_height(0.01).move_to([b.get_x(), BL, 0])
-                        for b in bar_grp], FadeOut(ladder_lab), FadeOut(xt_share),
+                        for b in bar_grp], FadeOut(ladder_lab), FadeOut(xt_share), FadeOut(c12),
                       *[FadeIn(m) for m in thumbs], run_time=0.5)
             self.remove(bar_grp)
             self.play(Transform(x_line, Line(ax.c2p(0, 40), ax.c2p(60, 40), color=AXIS,
@@ -1569,27 +1612,31 @@ class Episode(NarratedScene):
                       ax.x_title.animate.set_opacity(1), run_time=0.6)
             # ("random mix" stays out from here on: fewer words while Schelling's labels show;
             # round 5 cont. 2: so does its dashed line, which would be an unlabelled marker)
-            restore = [m.animate.set_opacity(1) for m in [ours, qpt, ax.y_axis,
-                                                          ax.y_title, ax.x_axis]]
-            for c_ in cloud.values():                 # whisker and mean tick solid, dots translucent
-                restore += [c_[0].animate.set_opacity(1), c_[1].animate.set_opacity(DOT_OP),
-                            c_[2].animate.set_opacity(1)]
+            restore = [m.animate.set_opacity(1) for m in [ax.y_axis, ax.y_title, ax.x_axis]]
+            restore += [c_.animate.set_opacity(1).set_stroke(BG, width=1.6).set_fill(INK)
+                        for c_ in cloud.values()]
             # the source arrives with the chart it belongs to (just after "paper"); the two
             # towns come back to their slots
-            self.play(*restore, FadeIn(cite1, shift=0.1 * UP), run_time=0.7)
+            self.play(*restore, *self.soft_dim(markers, 1.0), FadeIn(cite1, shift=0.1 * UP),
+                      run_time=0.7)
             self.remove(x_line)
             beat.wait_until("model", offset=-0.2)
-            self.flash_box(self.town, qtown, buff=0.05, run_time=1.0)
-            beat.wait_until("His", occurrence=2, offset=-0.1)
-            self.play(Create(ours_br), FadeIn(ours_br_lab), run_time=0.8)
-            # his rules come from his paper: its citation is underlined as they are spoken
+            self.flash_box(self.town, qtown, buff=0.05, run_time=0.8)
+            # our jump, on our own two towns' columns (in the pause before his rules)
+            self.play(Create(ours_br), Create(ours_drop), FadeIn(ours_br_lab), run_time=0.7)
+            # his rules, each on its word
             beat.wait_until("nearest", offset=-0.2)
-            self.play(Create(cite1_ul), run_time=0.8)
-            # one thing at a time on the label row: our label leaves, the bracket slides to his
-            # range, and only when it has stopped does his label arrive
-            beat.wait_until("jump", offset=-0.15)
-            self.play(FadeOut(ours_br_lab), run_time=0.3)
-            self.play(ReplacementTransform(ours_br, his_br), run_time=0.6)
+            self.play(FadeIn(rule1, shift=0.1 * LEFT), run_time=0.5)
+            beat.wait_until("emptier", offset=-0.2)
+            self.play(FadeIn(rule2, shift=0.1 * LEFT), run_time=0.5)
+            # one thing at a time: our label and its drop leave, the bracket rises and slides to
+            # his range, his rules step down a row, and only then does his label arrive
+            beat.wait_until("There", offset=-0.15)
+            self.play(FadeOut(ours_br_lab), FadeOut(ours_drop), run_time=0.3)
+            # (the path bends right, away from his rules' text on the upper left)
+            self.play(ReplacementTransform(ours_br, his_br, path_arc=-0.7), run_time=0.6)
+            self.play(rule1.animate.shift(DOWN * ROW), rule2.animate.shift(DOWN * ROW),
+                      run_time=0.45)
             self.play(FadeIn(band_lab, shift=0.1 * LEFT), run_time=0.4)
             beat.wait_until("between", offset=-0.1)
             band.stretch_to_fit_width(0.01).move_to(band_l, aligned_edge=LEFT)
@@ -1597,13 +1644,9 @@ class Episode(NarratedScene):
 
             def grow(m, a):
                 m.stretch_to_fit_width(max(0.01, band_w * a)).move_to(band_l, aligned_edge=LEFT)
-            ours_dim = []
-            for c_ in cloud.values():
-                ours_dim += [c_[0].animate.set_stroke(opacity=0.3),
-                             c_[1].animate.set_fill(opacity=0.08),
-                             c_[2].animate.set_stroke(opacity=0.3)]
-            # our two towns' dots (1/4 -> 58 %, 1/3 -> 76 %) stay at full strength: they are the
-            # ends of "our jump", left of his band, and they are tied to the two thumbnails
+            # our 30-town swarms dim to 30 % by colour (same spread, no smudge); our two towns'
+            # markers (1/4 -> 58 %, 1/3 -> 76 %) stay at full strength, tied to the thumbnails
+            ours_dim = [c_.animate.set_fill(dot_col(0.3)) for c_ in cloud.values()]
             self.play(UpdateFromAlphaFunc(band, grow),
                       LaggedStart(*[Create(l) for l in hatch], lag_ratio=0.15), *ours_dim,
                       run_time=beat.until("half", end=True, offset=0.05, min_time=1.5),
@@ -1688,23 +1731,28 @@ class Episode(NarratedScene):
                 m.move_to(p0 + (p1 - p0) * min(u / d1, 1) if u <= d1 else
                           p1 + (p2 - p1) * (u - d1) / d2)
             return UpdateFromAlphaFunc(chip, f, run_time=run_time)
-        chart = VGroup(ax, base, base_lab, *cloud.values(), ours, qpt, band, hatch, band_lab, his_br, cite1_ul,
-                       top_lab, bot_lab, qtown, cite1)
+        chart = VGroup(ax, base, base_lab, *cloud.values(), ours, qpt, band, hatch, band_lab, his_br,
+                       rule1, rule2, top_lab, bot_lab, qtown, cite1)
 
-        # cross-fade (beat boundary): nothing tells the viewer which town is which
-        self.play(FadeOut(chart), FadeOut(self.town), run_time=0.7)
+        # cut at the beat boundary (sequential: nothing tells the viewer which town is which)
+        self.play(FadeOut(chart), FadeOut(self.town), run_time=0.6)
         # (round 6) a blind test: our town is turned a quarter turn, so it cannot be recognised
         # from the 90 s the viewer has watched it (the share of matching neighbours and the
         # texture do not change under rotation: 76 % exactly); it turns back in the landing
         self.town.scale(ZS / s_thumb).move_to(RPOS).rotate(PI / 2)
         bottom_town = max(ztown.get_top()[1], self.town.get_top()[1])
         assert LANE_Y - o_dem.height / 2 - bottom_town >= 0.15, (LANE_Y, bottom_town)
-        with self.narrate("Two simulated towns, both seventy-six percent. In one town, households "
-                          "demand a third. In the other, nobody minds their neighbors. Which "
-                          "one wanted a third? [pause 1.5]") as beat:
-            self.play(FadeIn(ztown), FadeIn(self.town), FadeIn(tt_tag), run_time=0.9)
-            beat.wait_until("both", offset=-0.2)
-            self.play(FadeIn(zmatch, shift=0.1 * UP), FadeIn(omatch, shift=0.1 * UP), run_time=0.7)
+        # (round 7) both towns and their "76% match" labels are fully in before "Two" is spoken
+        # (the frame was near-empty under "Two simulated towns"); "both seventy-six percent" is
+        # no longer read aloud: the two labels pulse together in the silence after "towns"
+        self.play(FadeIn(ztown), FadeIn(self.town), FadeIn(tt_tag), FadeIn(zmatch),
+                  FadeIn(omatch), run_time=0.6)
+        with self.narrate("Two simulated towns. [pause 0.6] In one town, households demand a "
+                          "third. In the other, nobody minds their neighbors. Which one wanted a "
+                          "third? [pause 1.5]") as beat:
+            self.hold(max(0.0, beat.time_of("towns", end=True) - 0.05 - beat.elapsed()))
+            self.play(*[m.animate(rate_func=there_and_back).scale(1.15) for m in (zmatch, omatch)],
+                      run_time=0.6)
             beat.wait_until("third", offset=-0.25)
             self.play(FadeIn(chipA, shift=0.1 * DOWN), run_time=0.6)
             beat.wait_until("nobody", offset=-0.2)
@@ -1718,10 +1766,13 @@ class Episode(NarratedScene):
         # second "at all" is cut.  Round 6: "Real segregation also has causes besides
         # preference." links the rule-made town to the study without equating the toy rule
         # with the 1930s maps)
+        # (round 7) "Real cities have rules too" follows from the rule-made town (its header
+        # pulses, not its zone lines: the toy rule is not a model of the 1930s maps), and the
+        # mechanism is attributed as the paper does ("suggest"): "its authors point to"
         with self.narrate("This one. [pause 0.2] The other was placed by a rule, with no "
-                          "preferences. Real segregation has other causes. One study finds that "
-                          "1930s federal lending maps increased racial segregation for decades, "
-                          "through reduced credit.",
+                          "preferences. Real cities have rules too. One study finds that 1930s "
+                          "federal lending maps raised racial segregation for decades. Its authors "
+                          "point to reduced credit.",
                           speed=0.84, gap=0.35) as beat:
             box_o = SurroundingRectangle(self.town, color=INK, buff=0.02, stroke_width=3)
             self.play(Create(box_o), via_gap(chipA, o_dem, 1.0), FadeOut(qmark), run_time=1.0)
@@ -1735,22 +1786,24 @@ class Episode(NarratedScene):
             # the suffix arrives only once "0 demanded" has landed: one phrase
             self.play(FadeIn(z_rule, shift=0.1 * LEFT), run_time=0.6)
             # real cities are not the toy towns: both towns dim slowly as the sentence leaves them
-            # ("Real segregation has other causes"; the toy rule is not a model of the
-            # 1930s maps); the citation and the two "76% match" labels (the segregation
+            # (the toy rule is not a model of the 1930s maps; only the rule town's header pulses
+            # on "rules too"); the citation and the two "76% match" labels (the segregation
             # measure) stay in focus, and the labels pulse on the study's "segregation"
-            # (two stages, so the frame is never static for 4 s: to 55 % on "Real segregation has
-            # other causes", to 30 % across "1930s federal lending maps")
+            # (two stages, so the frame is never static for 4 s: to 55 % on "Real cities have
+            # rules too", to 30 % across "1930s federal lending maps")
             beat.wait_until("Real", offset=-0.2)
             self.play(ztiles.animate.set_fill(opacity=0.55), zlines.animate.set_stroke(opacity=0.55),
                       self.board.animate.set_fill(opacity=0.55),
-                      run_time=beat.until("causes", end=True, offset=0.1, min_time=0.8))
+                      run_time=beat.until("rules", offset=-0.2, min_time=0.6))
+            self.play(z_rule.animate(rate_func=there_and_back).scale(1.12, about_edge=LEFT),
+                      run_time=0.6)
             beat.wait_until("study", offset=-0.3)
             self.play(FadeIn(cite2, shift=0.1 * UP), run_time=0.7)
             beat.wait_until("1930s", offset=-0.2)
             self.play(ztiles.animate.set_fill(opacity=0.3), zlines.animate.set_stroke(opacity=0.3),
                       self.board.animate.set_fill(opacity=0.3),
                       run_time=beat.until("maps", end=True, offset=0.1, min_time=0.8))
-            beat.wait_until("segregation", occurrence=2, offset=-0.25)
+            beat.wait_until("segregation", offset=-0.25)
             self.play(*[m.animate(rate_func=there_and_back).scale(1.1) for m in (zmatch, omatch)],
                       run_time=0.9)
             beat.wait_until("credit", offset=-0.2)

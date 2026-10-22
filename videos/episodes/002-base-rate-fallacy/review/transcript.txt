@@ -1,46 +1,51 @@
-[0:00.0–0:03.1] One in 500 people has this disease.
-[0:03.1–0:09.2] A test catches 99% of the sick and wrongly flags 1% of the healthy.
-[0:09.2–0:12.6] If yours says positive, what's the chance you're sick?
-[0:12.6–0:15.6] Pick a number.
-[0:15.6–0:21.5] At one Boston-area hospital, most doctors and medical students given a problem like this
-[0:21.5–0:23.0] got it wrong.
-[0:23.0–0:28.6] Their most common answer was their test's own accuracy, 95%.
-[0:28.6–0:32.8] For our test, that's 99, you'd start treatment today.
-[0:32.8–0:37.6] Check that rule by counting, 10,000 people, half of them sick.
-[0:37.6–0:40.8] Test everyone, and watch who lights up.
-[0:40.8–0:45.3] Of the 5,000 who lit up, 99% are sick.
-[0:45.3–0:47.0] Here the rule holds.
-[0:47.0–0:52.3] Now keep the same test, and make the disease rarer and rarer, down to yours.
-[0:52.3–0:54.6] One in 500.
-[0:54.6–1:00.6] About 20 sick people light up plus 1% of everyone else, about 100.
-[1:00.6–1:06.9] So of 120 positives, only 20 are sick, 17%.
-[1:06.9–1:11.6] The rule said 99, six times too high.
-[1:11.6–1:16.6] 1% sounds small, but here it's 1% of nearly everyone.
-[1:16.6–1:21.9] Your positive result ruled out everyone who tested negative.
-[1:21.9–1:27.1] What's left is a smaller sample space, these 120 people.
-[1:27.1–1:35.5] Your chance of being sick is the red share of this crowd, 20 out of 20 plus 100.
-[1:35.5–1:57.0] Unrounded the red count is 20 sick people times 99 and the blue every healthy person times 1 Divide everything by 10 counts become shares The share stays the same These are how common each group is and these are how often each group tests positive
-[1:57.0–1:59.5] Name them and you have Bayes' theorem.
-[1:59.5–2:06.1] All it does is shrink the sample space to what the evidence allows, then take the share.
-[2:06.1–2:09.0] Swap the disease for a police watchlist.
-[2:09.0–2:16.4] For the 2017 Champions League final, about 170,000 people came to Cardiff.
-[2:16.4–2:22.8] The watch lists held about 1,200 photos, so even a small error rate per face would swamp
-[2:22.8–2:24.6] the real matches.
-[2:24.6–2:27.7] Face recognition cameras scanned the crowds.
-[2:27.7–2:32.4] Over four days, they raised 2,470 alerts.
-[2:32.4–2:34.0] Shrink to the alerts.
-[2:34.0–2:35.4] Take the red share.
-[2:35.4–2:40.6] The police counted 173 as right, 7%.
-[2:40.6–2:44.8] In machine learning, that share is called precision.
-[2:44.8–2:51.7] Cardiff University's evaluators counted only alerts the logbooks confirmed, 3%.
-[2:51.7–2:57.6] Months later, a new algorithm, better photos and practiced operators thinned out the false
-[2:57.6–3:05.0] alarms, the blue term in Bayes Denominator, and their count rose to 46%.
-[3:05.0–3:08.2] Back to your test.
-[3:08.2–3:12.2] Your 17% assumes a random screen.
-[3:12.2–3:14.6] Symptoms raise the 1 in 500.
-[3:14.6–3:17.3] At 1 in 100, 50%.
-[3:17.3–3:21.8] At 1 in 2, 99 where the rule held.
-[3:21.8–3:25.4] The title's 99% is the test's recall.
-[3:25.4–3:28.0] How often the sick test positive.
-[3:28.0–3:30.7] 17% is its precision.
-[3:30.7–3:32.6] How often the positive are sick.
+[0:00.0–0:07.0] In 2017, police cameras in Cardiff raised 2,470 watch list alerts.
+[0:07.5–0:09.7] How many were right? Pick a number.
+[0:11.6–0:14.4] Each alert is a positive test result.
+[0:15.0–0:17.5] One in 500 people has this disease.
+[0:18.0–0:23.7] A test catches 99% of the sick and wrongly flags 1% of the healthy.
+[0:24.3–0:27.2] If yours says positive, what's the chance you're sick?
+[0:27.2–0:36.4] At one Boston-area hospital, doctors and students given a problem like this most often answered with their test's own accuracy.
+[0:37.2–0:38.5] 95 percent.
+[0:39.1–0:40.8] For our test, that's 99.
+[0:41.3–0:42.6] You'd start treatment today.
+[0:43.3–0:44.7] Check that rule by counting.
+[0:45.1–0:47.4] 10,000 people, half of them sick.
+[0:48.0–0:50.3] Test everyone, and watch who lights up.
+[0:51.1–0:55.2] Of the 5,000 who lit up, 99 percent are sick.
+[0:55.4–0:57.0] Here, the rule holds.
+[0:57.2–1:03.8] Now keep the same test and make the disease rarer and rarer, down to yours, 1 in 500.
+[1:05.0–1:10.3] About 20 sick people light up, plus 1% of everyone else, about 100.
+[1:11.2–1:16.4] So of 120 positives, only 20 are sick, 17%.
+[1:16.4–1:21.0] The rule said 99, 6 times too high.
+[1:21.7–1:26.6] 1% sounds small, but here it's 1% of nearly everyone.
+[1:27.2–1:32.2] Your positive result ruled out everyone who tested negative.
+[1:32.2–1:37.2] What's left is a smaller sample space, these 120 people.
+[1:37.2–1:56.1] Your chance of being sick is the red share of this crowd 20 out of 20 plus 100 Unrounded the red count is 20 sick people times 99 and the blue every healthy person times 1
+[1:56.1–2:00.1] Divide everything by 10,000, counts become shares.
+[2:00.1–2:02.8] The share stays the same.
+[2:02.8–2:08.4] These are how common each group is, and these are how often each group tests positive.
+[2:08.4–2:10.9] Name them and you have Bayes' theorem.
+[2:10.9–2:17.8] All it does is shrink the sample space to what the evidence allows, then take the share.
+[2:17.8–2:20.6] Swap the disease for a police watchlist.
+[2:20.6–2:27.0] About 170,000 people came, and the watchlists held about 1,200 photos.
+[2:27.0–2:31.1] Even a small error rate per face would swamp the real matches.
+[2:31.1–2:35.2] For four days, face recognition cameras scanned the crowds.
+[2:35.2–2:38.2] Every face they flagged joined the alerts.
+[2:38.2–2:39.8] Shrink to the alerts.
+[2:39.8–2:41.2] Take the red share.
+[2:41.2–2:47.2] The police counted 173 as right, 7%.
+[2:47.2–2:51.2] In machine learning, that share is called precision.
+[2:51.2–2:58.4] Cardiff University's evaluators counted only alerts the log books confirmed, 3%.
+[2:58.4–3:03.8] Months later, a new algorithm and better photos thinned out the false alarms.
+[3:03.8–3:06.4] That's the blue term in Bayes' denominator.
+[3:06.4–3:09.7] Their count rose to 46%.
+[3:09.7–3:11.0] Back to your test.
+[3:13.1–3:15.9] Symptoms raise the one in 500.
+[3:15.9–3:18.6] At one in 100, 50%.
+[3:18.6–3:21.7] At one in two, 99, where the rule held.
+[3:23.0–3:26.1] That 99% describes the test.
+[3:26.1–3:29.8] It's recall, how often the sick test positive.
+[3:29.8–3:34.4] 17% describes your result, it's precision.
+[3:34.4–3:36.8] Your test didn't say you're sick.
+[3:36.8–3:39.0] It said you're in this crowd.
+[3:39.7–4:09.7] Thank you.

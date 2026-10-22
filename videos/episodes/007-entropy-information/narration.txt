@@ -8,44 +8,44 @@
 
 [00:33.8] So where do four of every five questions go? Z costs as much as E, yet E turns up a hundred thirty times as often.
 
-[00:42.9] Instead, split the probability, not the alphabet: is it a space, E, T, A or O? That's nearly half.
+[00:42.9] Split the probability, not the alphabet: is it a space, E, T, A or O? That's nearly half.
 
-[00:51.5] E starts near a tenth. Each ideal answer keeps half the probability, so E's share doubles. Three point three doublings fill the bar.
+[00:51.0] E starts near a tenth. Each ideal answer keeps half the probability, so E doubles its share. Three point three doublings fill the bar.
 
-[01:01.0] Z, one in twelve hundred sixty, needs ten point three.
+[01:00.4] Z, one in every twelve hundred sixty, needs ten point three.
 
-[01:05.4] A character with probability p needs k questions, where p times two to the k equals one. [pause 1.5] So two to the k equals one over p, and k equals log base two of one over p.
+[01:05.2] A character with probability p needs k questions, where p times two to the k equals one. [pause 1.5] So two to the k equals one over p, and k equals log base two of one over p.
 
-[01:20.0] Now make each character's cost its height.
+[01:19.9] Make each character's cost its height.
 
-[01:22.8] The widths add to one, [pause 0.25] so the area is the average cost. [pause 0.5] Pour the skyline flat, and its height is that average.
+[01:22.5] The widths add to one, [pause 0.25] so the area is the average cost. [pause 0.5] Pour the skyline flat, and its height is that average.
 
-[01:31.6] Shannon called it entropy, in bits: one bit per yes-or-no answer. For English letters: four point one one. [pause 0.8]
+[01:31.2] Shannon called it entropy, in bits: one bit per yes-or-no answer. For English letters: four point one one. [pause 0.8]
 
-[01:40.1] That beats four point seven five, but it's four times Shannon's estimate: it ignores what came before.
+[01:39.7] That beats four point seven five, but it's four times Shannon's estimate: it ignores what came before.
 
-[01:47.9] What comes after a Q? [pause 1.3]
+[01:47.5] What comes after a Q? [pause 1.1]
 
-[01:51.1] It's U, ninety-eight percent of the time. U swallows the bar, and the average falls to point one six bits. [pause 0.6]
+[01:50.5] It's U, ninety-eight percent of the time. U swallows the bar, and the average falls to point one six bits. [pause 0.4]
 
-[01:59.5] After TH, E takes two thirds of the bar, and costs about half a question.
+[01:58.7] After TH, E takes two thirds of the bar, and costs about half a question.
 
-[02:04.8] Half a question sounds impossible, but a compressor asks about runs of letters. Their probabilities multiply, so their costs add: [pause 0.6] five questions for these three, not six. After TH, it averages one point seven.
+[02:04.0] Half a question sounds impossible, but a compressor asks about runs of letters. Their probabilities multiply, so their costs add: [pause 0.6] five questions for these three, not six. [pause 0.8] After TH, it averages one point seven.
 
-[02:21.1] But averaged over every two-letter context, it's still two point eight.
+[02:20.6] But averaged over every two-letter context, it's still two point eight.
 
-[02:26.7] Hundred-letter contexts need more text than any corpus holds, so Shannon asked a person who knows English.
+[02:26.2] Hundred-letter contexts need more text than any corpus holds, so Shannon asked a person who knows English.
 
-[02:34.1] His subject read a passage, guessing each next letter until right: seventy-nine of a hundred two on the first guess. [pause 0.6]
+[02:33.7] His subject read a passage, guessing each next letter until right: seventy-nine of a hundred two on the first guess. [pause 0.6]
 
-[02:43.0] A twin guessing the same way could rebuild the passage from these counts. Treat each count as a symbol: [pause 1.2] the same skyline pours flat at about one point four bits.
+[02:42.5] A twin guessing the same way could rebuild the passage from these counts. Treat each count as a symbol: [pause 1.0] the same skyline, [pause 0.7] poured flat, sits at about one point four bits.
 
-[02:54.9] That caps the text; more context or a better guesser could only lower it.
+[02:55.4] That caps the text; more context or a better guesser could only lower it.
 
-[03:00.6] Shannon's tests, with a hundred letters of context, put English between point six and one point three bits.
+[03:01.0] Shannon's tests, with a hundred letters of context, put English between point six and one point three bits.
 
-[03:08.3] A language model compressed part of a book [pause 0.3] posted to Project Gutenberg after the model was trained. [pause 0.4] It needed point eight four bits, inside that range.
+[03:08.8] A language model compressed part of a book [pause 0.3] posted to Project Gutenberg after the model was trained. [pause 0.4] It needed point eight four bits, inside that range.
 
-[03:19.3] The hidden character from the start [pause 0.4] is the Y in the other day.
+[03:19.4] The hidden character from the start [pause 0.4] is the Y in the other day.
 
-[03:24.1] Shannon's subject needed one guess: [pause 0.3] is it Y? Splitting the alphabet took five. In English, almost no letter arrives without a past.
+[03:24.3] Shannon's subject needed one guess: [pause 0.3] is it Y? Splitting the alphabet took five. In English, almost no letter arrives without a past.

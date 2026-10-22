@@ -871,3 +871,94 @@ re-reads "If yours says positive": "Your test didn't say you're sick. It said yo
 | Motion 8.5 / 9 | "every motion encodes a relation" | strip sprays into the crowd | the 24 × 5 strip shrinks as one block into the crowd's centre |
 | Audio 8.5 / 8.5 | "pauses intentional" | 12.4 s breathless lever sentence | four short sentences with 0.6 / 0.4 / 0.3 / 0.8 s breaths |
 | Concision 8.5 / 9 | "cutting any sentence loses something" | the new cold open adds ~12 s | Manrai in one beat, shorter Cardiff set-up, the landing's "random screen" sentence and the second definition cut; target ≤ 3:37 |
+
+### What changed
+
+**Structure (substance fix 8, craft's Originality ceiling).** The episode opens on Cardiff: frame 1 is
+the yellow-outlined 26 × 95 raster of 2,470 alerts in grey (nobody has checked them yet), piling up
+column by column under the ghosted "chance an alert is right ?" meter, with the dateline and the BBC
+citation; "How many were right? Pick a number" lands at 0:09 with a "your guess" marker sliding along
+the empty meter. "Each alert is a positive test result" collapses the raster into the + badge (the
+outline stays one convex shape), the meter becomes "chance you're sick", and the disease diagram forms
+around the +. The payoff files the flagged squares into the same raster and answers the opening
+question on it (173 right: 7 %). The old disease commit hold is gone (one commit per episode).
+
+**Craft fixes.** (1) No end card: the closing frame holds 0.7 s and fades in 0.6 s (trailing silence
+1.58 s). (2) The lever is four sentences with 0.5 / 0.4 / 0.3 / 0.6 s breaths (longest breathless run
+in the episode now 10.7 s); the 3 % sentence stays, because the 46 % is only comparable with the
+evaluators' own 3 % (the police 7 % is a different count); see substance below. (3) On "false alarms" a
+ghost of the boxed Bayes denominator (MathTex ≈ 27 px, 6 units wide) fades into its own band; on "blue
+term" its P(healthy)P(+∣healthy) pulses and rises into "P(+ ∣ not listed) ↓" under the bar's blue
+segment, 0.72 units clear of the tag column (kf_36). (4) "That ninety-nine percent describes the test:
+its recall…" points at the arrow's 99 %, not at the title's "accurate". (5) Closing line "Your test
+didn't say you're sick. It said: you're in this crowd." over the "you" ring and both flows (speed 0.78,
+so neither sentence is above 200 wpm). (6) At "Back to your test" every Cardiff tag, bar and citation is
+gone within 0.5 s, before any diagram node appears; only the raster → + collapse crosses the gap.
+(7) The "precision too" ghost meter is cut. (8) The 24 × 5 strip shrinks as one block into the 24 × 5
+squares at the crowd's centre while the crowd fades in around it; the 20 sick turn blue as they land
+(red then means "on a list", and all 71 listed squares arrive scattered on "twelve hundred photos").
+(9) "The share stays the same. [0.6]": the fraction bar, its "≈ 17 %" and the meter's 17 % pulse
+together and the frame holds.
+
+**Substance fixes.** (1) Closing lines as above; the waffle tag is "their test: 5% false alarms", what
+Manrai's respondents read. (2) Lever rewritten as proposed ("practised operators" cut for breath).
+(3) "7 of 22 later proved false" (Davies et al.: 7 of the 22 were stopped and turned out to be false
+positives; re-found in the Cardiff University PDF) joins the Six Nations tags as the bar reaches 46 %
+and is on screen ≈ 3 s. (4) Every unflagged square dims to the same 35 %, listed or not. (5) The ghosted
+meter title and "?" fade to 12 % while the flagged squares fly to the raster, and return. (6) When the
+slider stops at 1 in 500 the 20 sick, left inside the old block, cross-fade in place with 20 healthy
+cells (5 per quadrant, seed 13, ≥ 9 cells apart, ≥ 5 from every false alarm); counts and meter
+unchanged. (7) Ghost meter cut; the evaluators' bar takes the row of the 173 / 2,297 labels, which leave
+with the police raster dimmed to 35 %.
+
+**Narration.** 479 words (was 470): the Manrai beat is one sentence ("…doctors and students given a
+problem like this most often answered with their test's own accuracy…"); "For our test" (whisper heard
+"For ours" as "For hours"); "About a hundred seventy thousand people came" (the dateline names the
+final week); "For four days, face-recognition cameras scanned the crowds. Every face they flagged joined
+the alerts."; the landing's "random screen" sentence is cut (the sweep itself shows it); a 0.4 s breath
+before "If yours says positive" (a 12.2 s run in the first master).
+
+script.md (beats, palette, sources), facts.md ("Round 7" table: every new or reworded claim with its
+source) are updated.
+
+### Self-check (review kit on the final 1080p master)
+
+- render.sh: one note only (the 3:35 budget); layout audit 0 issues in 216 checks; 0 glyph morphs;
+  deictic sync 9 / 9.
+- Runtime 3:40.3 (over the guide's 3:35 by the ≈ 12 s Cardiff cold open; under every cap), 479
+  narration words, 148 wpm on speech time, median sentence 163 wpm, 0 sentences above 200 wpm;
+  −14.0 LUFS / −1.8 dBTP; leading 0.0 s, trailing 1.58 s; longest silence 2.25 s (the planned "Pick a
+  number" hold); longest static 2.9 s; WER 3.5 %: number formats ("a" → "one"), "watchlist",
+  "log books", "its" → "it's", and a whisper hallucination "Thank you." in the trailing silence
+  (timestamped 3:39.7–4:09.7, past the end of the 3:40.3 file; nothing is spoken there, see
+  narration.json).
+- Read all 13 contact sheets and keyframes kf_02 (cold open), kf_04 (Manrai tag), kf_35 (ghost
+  denominator), kf_36 (label clearance), plus extracted frames through the bridge collapse
+  (0:12.4–0:13.6), the scatter (1:03–1:07), the strip → crowd block (2:17–2:19), the filing (2:36),
+  the landing hand-over (3:09–3:12) and the closing pulse and fade (3:36–3:40).
+
+**Kept:** the live prevalence slider and its reversal in the landing; the strip under the meter with its
+red columns under the red segment, and the formula built from the table and brackets; the Cardiff squares
+(■ = 17 people) filing into the 2,470-alert raster under the same meter; the evaluators' same-method
+3 % → 46 % tied to P(+ ∣ not listed).
+
+## Round 8 revisions
+
+Reviews: `reviews/round8-craft.md` (8.5, "reaches 9: true") and `reviews/round8-substance.md` (8.5,
+"reaches 9: yes, narrowly"). No caps applied and no factual errors, but both flagged the same
+borderline cap 6: the evaluators' single bar kept its final-week 3 % for about 8 s under the tag
+"Six Nations 2018 · 48 alerts".
+
+### Climb plan (written before editing)
+
+| Dimension (craft / substance) | BAR "9" anchor | Where round 8 fell short | Upgrade |
+|---|---|---|---|
+| Clarity 8.5 / 8.5 | "all numbers check out" | 3 % under the Six Nations tag for 8 s; unnarrated "7 of 22" for 1.7 s; ghost denominator still in disease words; 99 % called "accuracy" then "recall" with no bridge | one bar per event (final week dims, Six Nations drawn empty with "?", fills on "rose"); "7 of 22" cut; ghost re-read sick → listed, healthy → not listed before its blue term rises; "That ninety-nine percent, the test's accuracy, is its recall here" |
+| Hook 8.5 / 8.5 | "commits by 0:12; ending resolves the opening exactly"; 10: "re-sees the first frame" | a count asked against a share meter with no scale; the real prediction gets no hold; "this crowd" lands on a diagram | "What percent were right?" with 0 % / 100 % under the meter; 1.5 s hold and the same guess marker after "what's the chance you're sick?"; on "this crowd" the 120 positives stream out of the + into the yellow-outlined strip under the 17 % meter (the cold open's shape, answered) |
+| Visual 8.5 / 8.5 | "one focal point; all §5 standards met" | waffle legend a 4-line, 13-word block; police raster's full-strength yellow outline between the bars; "■ watch list" before any red square; blue scale swatch | per-row tags ("23% right", "44% said 95%"), "their test: 5% false alarms" its own block under the waffle, "1 dot = 1%" in the citation; the raster folds up into the police bar it measures, so the bars share one clean column; legend line arrives with the 71 red squares; hollow grey swatch |
+| Motion 8.5 / 8.5 | "every motion encodes a relation" | tag swap 8 s ahead of the value change | each bar fills on its own word; the raster → bar fold says "these alerts are this bar" |
+| Audio 8.5 / 8.5 | "pauses intentional" | 10.7 s run-on into the 95 % reveal; "is" held 0.55 s | Manrai beat split with 0.4 / 0.3 s breaths before the reveal; "…each group is, [0.3] and these…" |
+| Concision 8.5 / 8 | "cutting any sentence loses something" | 3:40 > 3:35; red share explained twice; pre-announcing "error rate per face" sentence | "Your chance is the red share of this crowd." (the fraction builds from the brackets); error-rate sentence cut; lever trimmed |
+| Originality 8.5 / 8.5 | "an image viewers would remember" | ending image not memorable on its own | the closing crowd streaming out of the + |
+
+### What changed

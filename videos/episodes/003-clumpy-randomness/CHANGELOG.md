@@ -578,8 +578,49 @@ pass, while their densities differ 2:1. The aim shows only in λ.
   18–21: 14 of 16 discs crowd), the same rule as B's.
 - *e^−λ (S3).* A (1 − λ/n)^n plot (log n: 1, 2, 5, 20, 537) draws on "small slice". Its dots
   climb to the purple dashed e^−λ line on "raised to a big power".
-- *Why divide (S4).* "…because short bars wobble less. So a miss on a short bar counts more."
+- *Why divide (S4).* "…because short bars wobble less: a miss on a short bar counts more."
   INK whiskers ±12 (bar 0) and ±2.7 (bar 4) show binomial s.d.s of 11.7 and 2.65.
 - *Concision (S9, S10).* "To judge London, chance must predict every bar" is cut, with its
   preview chart: drawing it would have cut the reading time of the 183 line. The spoken 354 is
   cut. On screen: 537 − (576 − 222) = 183 extra hits, each number carried from its source.
+
+**Mechanics** (final master, review kit: 0 flags, 0 render warnings)
+
+| Metric | Value |
+|---|---|
+| Runtime | 3:34.6 |
+| Words | 494 |
+| Pace | 159 wpm on speech time (152 overall) |
+| Sentences above 200 wpm | 0. An intermediate master had one, "So a miss on a short bar counts more." at 238 wpm; it is now joined with a colon and spoken at 149 wpm |
+| Full stops vs beat turns | 0.34 s vs 0.63 s median |
+| Longest run without a ≥ 0.35 s breath | 11.1 s |
+| Loudness / true peak | −14.0 LUFS / −1.9 dBTP |
+| Longest silence | 1.76 s (the planned prediction hold) |
+| Longest static stretch | 2.6 s |
+| WER | 3.1 % |
+| Banned phrases | 0 |
+| Glyph morphs | 0 |
+| Deictics on an animation | 6/6 |
+| Layout audit | 0 issues in 240 checks |
+
+**Frames checked:**
+- All 12 contact sheets.
+- Keyframes at 0:56, 1:08, 2:14, 3:16, 3:18 and 3:19.
+- Frame strips at:
+  - the 1/576 knockout (0:52–0:57);
+  - the guess hold and the 227 swap (1:01–1:05; 227 complete at 1:04.6, "twenty-seven" at 1:04.74);
+  - Map A's yellow-only frame (1:07–1:09);
+  - the 183 line (1:11–1:15);
+  - the λ build and convergence plot (1:18–1:27);
+  - the two-hit sequence (1:28–1:31);
+  - the running sum (2:18–2:20);
+  - the null thumbnails (2:21–2:24);
+  - the aimed map's grey frame (2:44);
+  - the limits (3:10–3:24);
+  - the end card (3:34).
+
+**Fixed while checking:**
+- The "?" before the readout was frozen into the static background and showed through the running sum. It is now animated with the readout.
+- The rows' e^−λ crossed the surviving 1/576. It now climbs on an arc after the rows fade.
+- The map's shrink-back left Clarke's rectangle at the enlarged size, because a second animation on the same object overrode it. One MoveToTarget now carries the dimmed rectangle.
+- The null thumbnails are slowed so each score can be read (0.3 s in, 0.3 s hold, 0.4 s drop), with 0.6 s after "two point oh".

@@ -73,8 +73,8 @@ box.
 > The cube shrinks to a thumbnail; the log-log chart ("miss (percentage points)" vs "dimensions") and its rows
 > "values per axis / points used / ball radius" are drawn; each spoken number lands with its column.
 
-**B8.** From twenty dimensions on, just the centre, inside the ball. So the grid says that the ball fills the box:
-fifty points off. [pause 0.8]
+**B8.** From twenty dimensions on, just the centre, inside the ball. So the grid's estimate is the whole box.
+Fifty points off. [pause 0.8]
 > Rows "1", "1"; the thumbnail's centre dot lights, "centre is / inside the ball"; copies of it fly onto the chart
 > as the d = 20 and d = 100 grid points ("grid says 1.000", RED "50 points off").
 
@@ -91,12 +91,13 @@ million values, and still miss by eight points: their coordinates move in lockst
 > PURPLE line, "one point: (t, t, …, t)", then 25 more; every axis flashes; the dashed "ball's edge"; lines above
 > it turn dashed: "57.7% inside: 7.7 points off"; on "lockstep" the one flat line slides up and back as a whole.
 
-**B13.** A dart's coordinates are drawn independently, so it lands inside with a chance equal to the answer, in
-any dimension: each dart is a coin flip.
+**B13.** A dart's coordinates are drawn independently and uniformly, so it lands inside with a chance equal to
+the answer, in any dimension: each dart is a coin flip. [pause 0.6]
 > The cold-open dart is ringed in 2-D and its jagged 100-D polyline drawn alone against the diagonal's flat line
 > (30 %). Gauges: "x1² + x2² = 1.20 > 0.64 = 0.80²" -> "outside -> 0"; "x1² + … + x100² = 31.8 < 33.3 = 5.77²" ->
-> "inside -> 1". On "coin flip" each verdict and its dart become that dart's coin; then the other 99 of each run
-> become coins (the 100-D ones fading in from faint polylines): "44/100" and "48/100".
+> "inside -> 1". On "coin flip" each verdict and its dart become that dart's coin (the 100-D polyline shrinks
+> rigidly into its coin as the coin grows); then the other 99 of each run become coins (each faint 100-D polyline
+> shrinks into its own coin): "44/100" and "48/100".
 
 **B14.** One flip is either zero or one. Its average is a half, so every flip misses by exactly a half.
 > One coin on a 0–1 line, flips 0 -> 1; dashed ½; a RED "½" bracket that swaps side with the coin.
@@ -132,15 +133,18 @@ random trials test nine. [pause 0.3]
 > The chart fades first, then its PURPLE grid dots become the nine grid-search trials and its BLUE dots the nine
 > random trials (after their Figure 1, "model score (schematic)"); 3 vs 9 distinct shadows on the score curve.
 
-**B19.** Darts do have a blind spot: tiny answers. A radius-one ball fills two parts in a hundred trillion of a
-thirty-dimensional box. Below this line, a million darts expect under one hit, so they usually report zero.
+**B19.** Darts do have a blind spot: tiny answers. Keep the ball's radius at one, and in thirty dimensions it
+fills two parts in a hundred trillion of the box. Below this line, a million darts expect under one hit, so they
+usually report zero.
 > The panel fades out completely; the log chart "share of box inside a radius-1 ball"; its curve (d = 2..30) is
-> drawn on "tiny answers" and "2 × 10^-14" lands on "thirty-dimensional box"; dashed BLUE 1/N drawn on "this line"; RED zone from the crossing (d = 17.06): "under 1 hit expected" ->
+> drawn from "tiny answers" to "radius", the title flashes on "radius at one", the d = 30 dot on "thirty", and
+> "2 × 10^-14" lands on "two parts in a hundred trillion"; dashed BLUE 1/N drawn on "this line"; RED zone from the crossing (d = 17.06): "under 1 hit expected" ->
 > "darts report 0: / off by the whole answer".
 
 ### Landing (3:22–3:30)
 **B20.** The darts never noticed the axes: a million coin flips, in any dimension.
-> The limit chart clears; its 1/N line rises into the cold-open header "N = 1,000,000 points" and its x-axis
+> The limit chart clears; its dashed 1/N line rises and shrinks into a rule under the cold-open header, which
+> settles on it ("N = 1,000,000 points"), and its x-axis
 > becomes the floor the 100 axes grow from; the PURPLE centre line ("1 value per axis"); BLUE polylines flood
 > every axis, "1,000,000 coin flips"; "d = 100" flashes. End card.
 

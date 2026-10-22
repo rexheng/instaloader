@@ -369,3 +369,18 @@ Runtime 3:34.5, 479 words. Pace is 152 wpm over speech time, with no sentence ab
 ### Left as is, by judgment
 - During the ring draw (0:41–0:52), the content households dim to 55 %, so the dimmed gold reads darker. They are context for 10 s, and every household returns to full colour on "Round one".
 - The ladder still has no numbered vertical axis. The counts 67, 125 and 76 sit on the bars the narration names, and a tick column would add three labels to the busiest frame of the episode.
+
+## Round 7 revisions
+
+Round 7 failed at 8.9 (craft) and 8.7 (substance). Neither critic found a factual error or a cap, and both said their fixes would reach 9. This pass applies every fix from both reviews (one in a different form, explained below) and keeps all the "keep" items: the "? demanded" marker sliding 76 % → ⅓ and coming back on the restored first frame, "plan predicts 0" against the live 74 and the dim-all-but-the-67 frame, the real-tile domino, the town flying into its dot, the x-axis becoming the ladder's baseline, the caret crossing exactly two bars, and the blind two-town test.
+
+### Plan (written before editing)
+
+| Dimension (round-7 scores) | BAR "9" anchor | Where the round-7 master fell short | Upgrade |
+|---|---|---|---|
+| Visual (8.5 / 8.5) | "Every frame has one focal point; all §5 standards met" | 13 prose words at 2:34.5; the ladder had no height scale; the test boards were at 5 % when "Two simulated towns" began; "our jump" floated 1.5 units above the dots it joins; the 30-town clouds read as glowing crosses, then smudges; five HUD rows under a beat about one number | "households" as the ladder's y title (11 words at most); a GRAY "256" over the tallest bar; both towns and labels fully in before "Two"; "our jump" at 82 % over our two columns with a dotted drop; solid-dot swarms with a background rim and no mean cross, dimmed by colour; "round" and "moves" dim to 35 % at the stall |
+| Clarity (9 / 8.5) | "Viewer could re-derive it after one watch" | the 14.7 s Schelling sentence carried three qualifiers, two with no picture; the 125 was drawn but never used; "finds … through reduced credit" overstated the paper's "suggest" | three sentences with pauses, with "nearest move" and "25–30% empty" labels on their words; "All one hundred twenty-five households at three eighths…" with the 125 and its bar pulsing; "Its authors point to reduced credit" |
+| Audio (9 / 8.5) | "pauses are intentional" | the Schelling sentence had no pause over 0.31 s for 26 words | [pause 0.4] and [pause 0.5] between its three sentences, spoken at 0.82 |
+| Concision (9 / 8.5) | "Cutting any sentence loses something" | "If the plan had worked, this counter would read zero" restated the HUD row; "the other thirty-eight were content by their turn" restated the note; "both seventy-six percent" read the labels aloud | all three cut; the stall is shown live instead |
+| Hook (9 / 9) | "tension rises through build and fail" | the 74 sat on screen 6 s before it was spoken | the count stalls on screen as "The unhappy count stalls at seventy-four" is spoken, then "plan predicts 0" pulses in the silence |
+| Originality (9 / 8.5) | "a non-obvious angle viewers would remember" | the real-world sentence read as an appended disclaimer ("Real segregation has other causes") | "Real cities have rules too", with the rule town's "· placed by a rule" header pulsing: the study follows from the two-town test |

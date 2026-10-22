@@ -5,7 +5,7 @@
 that ellipse (a dinosaur, a star, Anscombe's four datasets) has the same five numbers and even the
 same best-fit line. Only a plot shows the shape.
 
-Runtime ≈ 3:20 · ≈ 443 words (budget ≤ 500, PRODUCTION_GUIDE §13) · narrator af_heart @ 0.84,
+Runtime ≈ 3:22 · 442 words (budget ≤ 500, PRODUCTION_GUIDE §13) · narrator af_heart @ 0.84,
 `CADENCE = "shaped"` (B2 and B9b at 0.80: B2 carries 703 and 86 %, B9b is the densest beat).
 Round 7: B9b's what-if is r = 0.50 (was 0.80; facts #36). Round 8: slope = r s_y / s_x is built in
 B9b from the run's and the rise's labels; Anscombe's old B20 + B21 re-derivation is now "Same rule,
@@ -45,9 +45,9 @@ shape is the cloud, and which way does its best-fit line tilt? [pause 1.8]
 > then "A dinosaur". Citation on "drawn by".
 
 ### Stakes (0:25–0:37)
-**B2.** In a review of seven hundred three physiology papers, [pause 0.3] eighty-six percent used
-bar graphs: [pause 0.4] an average and an error bar. Only thirteen percent showed the points.
-(Speed 0.80, round 8: the two numbers get a breath each.)
+**B2.** In a review of seven hundred three physiology papers, [pause 0.4] eighty-six percent used
+bar graphs: [pause 0.4] an average and an error bar. [pause 0.6] Only thirteen percent showed the
+points. (Speed 0.80, round 8: the two numbers get a breath each, and the contrast gets a beat.)
 > Weissgerber citation; the dinosaur squeezes into a strip of its y-values (x ticks dimmed); a
 > YELLOW bar to ȳ (fill 12 %) with "86% / used bars" while the strip dims to 30 %; the ±s_y error
 > bar (stroke 5) is drawn over the strip on "error bar", with a grey "± 1 SD" tag beside its top
@@ -87,7 +87,7 @@ grew, and the y spread shrank by almost a quarter.
 > Grey ghost ellipses on "Many"; the box flagged on "walls"; r flagged; the YELLOW ellipse drawn
 > on "picks one", each touch dot appearing as the stroke reaches its wall.
 
-**B9b.** This one barely tilts. Say r is point five. Go one standard deviation right. [pause 0.4]
+**B9b.** This one barely tilts. [pause 0.4] Say r is point five. Go one standard deviation right. [pause 0.4]
 On average, the cloud rises r times ess why. [pause 0.7] That's the best-fit line, [pause 1.1]
 through the middle of every slice of the ellipse. [pause 0.7] At the wall, the slices shrink to the
 touch point. [pause 0.4] For the dinosaur, it's just below the middle.
@@ -101,12 +101,12 @@ touch point. [pause 0.4] For the dinosaur, it's just below the middle.
 > geometry drops to 60 % while r sweeps −0.06 → 0.50 and a grey simulated 142-point cloud with the
 > dinosaur's means and SDs and r = 0.50 fades in (facts #36). "one standard deviation right": the
 > run, labelled s_x under its left third (no backing plate; the cloud leaves that spot bare).
-> "On average": a faint vertical band at the wall singles out the 14 simulated points within
-> ±0.12 s_x of it (white; the rest dim to 30 %); "the cloud rises": copies of those 14 converge
-> into one new white dot at their average (61.27 vs the touch height 61.30), while the rise grows
+> "On average": a faint vertical band at the wall singles out the 12 simulated points within
+> ±0.12 s_x of it (white; the rest dim to 30 %); "the cloud rises": copies of those 12 converge
+> into one new white dot at their average (61.30 vs the touch height 61.30; seed 19530 since round 8), while the rise grows
 > 0.15 right of the wall as a dimension (stroke 6, thin ticks back to the wall). "r times ess
 > why": the label "r s_y" is built beside the rise, its r flown from "r = 0.50" and its s_y from
-> the readout. In the pause the white dot turns yellow: it is the touch dot; the 14 points it
+> the readout. In the pause the white dot turns yellow: it is the touch dot; the 12 points it
 > averages step back to 40 % (round 8), and no simulated point sits between the wall and the rise
 > (the cloud is redrawn there, facts #36). "best-fit line": the
 > cloud, band and tag leave and a dashed line grows out of the centre through the touch dot to the

@@ -4,21 +4,23 @@
 sample space to everyone who tested positive, and when the condition is rare that crowd is
 mostly false alarms, which is all Bayes' theorem (and a model's *precision*) says.
 
-Runtime target ≤ 3:37 · ≈ 485 words · voice af_heart, speed 0.84, `CADENCE = "shaped"` (gaps follow
+Runtime ≈ 3:33 · ≈ 460 words · voice af_heart, speed 0.84, `CADENCE = "shaped"` (gaps follow
 the sense); the reveal sentences and the two insight sentences 0.80; 1.0 s after "Seventeen percent",
 "Six times too high" and the Cardiff answer "seven percent", 0.9 s after the thesis (PRODUCTION_GUIDE §13).
 
 Structure (round 7): the episode **opens on a real case** (Cardiff 2017: 2,470 face-recognition alerts,
-"How many were right? Pick a number"), turns each alert into a positive test result (the raster
+"What percent were right? Pick a number", on a meter with a 0–100 % scale), turns each alert into a positive test result (the raster
 collapses into the + badge), builds and breaks the naive rule on a test the viewer can count, derives
 Bayes from the picture, then answers the opening question on the same raster (173 right: 7 %, precision)
-and ends on the test: "Your test didn't say you're sick. It said you're in this crowd."
+and ends on the test: "Your test didn't say you're sick. It said you're in this crowd.", where the
+crowd (the 120 positives, 20 red and 100 blue) streams out of the + into a yellow-outlined strip under
+the 17 % meter: the cold open's shape (a yellow-outlined block of positives under a share meter), answered.
 
 Premise of the countable case: **1 in 500** sick, the test catches **99 %** and wrongly flags **1 %** of
 the healthy → per 10,000 people, 20 sick → 19.8 positive, 9,980 healthy → 99.8 positive →
 P(sick∣+) = 16.6 % (**17 %**, "six times too high"). Accuracy is 99 % (9,900 of 10,000 right), and so
-are recall (sensitivity) and specificity: the landing calls the arrow's 99 % "recall" (it is
-P(+ ∣ sick)), and says it "describes the test".
+are recall (sensitivity) and specificity: the landing bridges the two names ("That ninety-nine
+percent, the test's accuracy, is its recall here"; it is P(+ ∣ sick)).
 
 ## Palette (one meaning each, whole episode)
 
@@ -28,9 +30,9 @@ P(+ ∣ sick)), and says it "describes the test".
 | BLUE | does not have it: healthy, not on a list (same roles; the Cardiff crowd is blue like the 10,000 people; "P(+ ∣ not listed) ↓", the false alarms' term) |
 | YELLOW | a positive result, the evidence: the + badge, the test beam, the same ring on every person who tests positive and on every square the camera flags, the outline of the positive crowd / the alerts, the + in P(·∣+), the box around the denominator (and its ghost) |
 | GREEN | the correct answer (doctors and students who chose it: 23 %, Manrai et al. 2014) |
-| GRAY | the naive rule: its 99 % marker, the 44 % who answered with their test's own accuracy, "your guess"; also the cold open's unchecked alerts (grey cells: nobody knows yet which are right), secondary labels, column sums, brackets that measure (6×), citations, other wrong answers, bar tags, braces, "7 of 22 later proved false" |
+| GRAY | the naive rule: its 99 % marker, the 44 % who answered with their test's own accuracy, "your guess"; also the cold open's unchecked alerts (grey cells: nobody knows yet which are right), secondary labels, the meter's 0 % / 100 % ticks, column sums, brackets that measure (6×), citations, other wrong answers, bar tags, braces, the hollow "■ = 17 people" scale swatch |
 | INK | text, and the "precision" / "recall" tags |
-| low opacity | ruled out (tested negative, or passed by the camera) / a meter still waiting for its number (30 %) / context (the police raster at 35 % while the evaluators' bar is read) |
+| low opacity | ruled out (tested negative, or passed by the camera) / a meter still waiting for its number (30 %) / context (the evaluators' final-week bar at 35 % once the Six Nations bar is drawn) |
 
 Emphasis is a colour-preserving scale pulse (never the yellow flash), because yellow already
 means "tested positive". The meter title always sits above its bar, and the meter is never
@@ -40,31 +42,35 @@ untitled: titles change fade-out-then-fade-in, and the fill is emptied before a 
 
 ### 1. Cold open: Cardiff, commit (0:00–0:12)
 > In twenty seventeen, police cameras in Cardiff raised two thousand four hundred seventy watch-list
-> alerts. How many were right? *[0.3]* Pick a number. *[1.6 s hold]*
+> alerts. What percent were right? *[0.3]* Pick a number. *[1.2 s hold]*
 
 Visual: frame 1 holds the yellow-outlined 26 × 95 raster (its first columns of grey, unchecked cells)
-under the empty meter "chance an alert is right ?" ghosted at 30 %; the cells pile up column by column
+under the empty meter "chance an alert is right ?" (with "0%" and "100%" under its ends) ghosted at 30 %; the cells pile up column by column
 to 2,470 as the sentence runs; the dateline "Cardiff · Champions League final week, 2017" and the BBC
-citation fade in; "2,470 alerts" lands under the raster. The meter brightens on "How many"; the "?"
-pulses on "Pick a number" and a hollow grey "your guess" marker slides once along the empty scale.
+citation fade in; "2,470 alerts" lands under the raster. The meter and its scale brighten on "What percent"; the "?"
+pulses on "Pick a number" and a hollow grey "your guess" marker slides once along the 0–100 % scale.
 
 ### 2. The same question, countable (0:12–0:27)
 > Each alert is a positive test result. *[0.4]* One in five hundred people has this disease. A test
-> catches ninety-nine percent of the sick and wrongly flags one percent of the healthy. If yours says
-> positive, what's the chance you're sick?
+> catches ninety-nine percent of the sick and wrongly flags one percent of the healthy. *[0.4]* If yours
+> says positive, what's the chance you're sick? *[1.5]*
 
 Visual: on "positive" the raster collapses into the + badge (the outline stays one convex shape and
 becomes the disk; the cells shrink into it), the meter is retitled "chance you're sick" and slides to
-the right; then the disease diagram forms around the +: the sick / healthy nodes and "1 in 500" on
-"One in five hundred", the arrows and their rates on their words, the ring "you" on "yours".
+the right with its 0 % / 100 % scale; then the disease diagram forms around the +: the sick / healthy
+nodes and "1 in 500" on "One in five hundred", the arrows and their rates on their words, the ring "you"
+on "yours". In the 1.5 s hold after the question the same "your guess" marker slides along the empty
+"chance you're sick" meter (the episode's real prediction gets the hold; round-8 substance fix 2).
 
 ### 3. The tempting answer (0:27–0:42)
-> At one Boston-area hospital, doctors and students given a problem like this most often answered with
-> their test's own accuracy: ninety-five percent. For ours, that's ninety-nine: you'd start treatment today.
+> At one Boston-area hospital, doctors and students got a problem like this. *[0.4]* Their most common
+> answer was the test's own accuracy: *[0.3]* ninety-five percent. For our test, that's ninety-nine: you'd
+> start treatment today.
 
-Visual: a 10 × 10 waffle under the meter (23 green "23% right", "doctors & students", "1 dot = 1%",
-*Manrai et al., 2014 · JAMA Intern. Med.*); the 44 grey dots that said 95 % brighten, "44% said 95%",
-and under it what the respondents were told: "their test: 5% false alarms"; on "ninety-nine" the "95%"
+Visual: the guess and the scale leave; a 10 × 10 waffle under the meter (*Manrai et al., 2014 · JAMA
+Intern. Med. · 1 dot = 1%*); "23% right" (green) beside the green rows; the 44 grey dots that said 95 %
+brighten, "44% said 95%" beside them; under the waffle, its own block, what the respondents were told:
+"their test: 5% false alarms"; on "ninety-nine" the "95%"
 turns into "99%" as it travels round the meter onto a dashed grey "naive 99%" marker.
 
 ### 4. Naive build: it works when half are sick (0:42–0:57)
@@ -88,56 +94,75 @@ the 20 sick left inside the old block each cross-fade, in place, with a healthy 
 the rare sick sit anywhere in the grid (counts and meter unchanged). Then the 20 and the 100 are ringed
 on their words, "99 ÷ 17 ≈ 6×", and the 100 false alarms pulse on "one percent of nearly everyone".
 
-### 6. Insight: shrink the sample space (1:29–2:21)
-Unchanged narration, except "The share stays the same. *[0.6]*": on those words the formula's fraction
-bar, its "≈ 17 %" and the meter's 17 % pulse together and the frame holds, so the unchanged ratio is on
-screen while every count around it has just become a share.
+### 6. Insight: shrink the sample space (1:29–2:15)
+> Your positive result ruled out everyone who tested negative.
+> What's left is a smaller sample space: these hundred twenty people.
+> Your chance is the red share of this crowd. *[1.2]*
+> Unrounded, the red count is twenty sick people times ninety-nine percent, and the blue, every healthy
+> person times one percent.
+> Divide everything by ten thousand: counts become shares. *[0.4]* The share stays the same. *[0.6]*
+> These are how common each group is, *[0.3]* and these are how often each group tests positive. *[0.3]*
+> Name them, and you have Bayes' theorem.
+> All it does is shrink the sample space to what the evidence allows, then take the share. *[0.9]*
+
+Round 8: the share is counted aloud once ("of a hundred twenty positives, only twenty are sick"); at
+"Your chance is the red share of this crowd" the red and blue brackets (20, 100) land on "red" and
+"this", and the fraction 20 / (20 + 100) ≈ 17 % is built from them in one move in the pause. On "The
+share stays the same" the formula's fraction bar, its "≈ 17 %" and the meter's 17 % pulse together.
+"…each group is, [0.3] and these…": the held "is" (0.55 s) is now a pause.
 
 ### 7. Payoff: back to Cardiff, precision (2:21–3:13)
 > Swap the disease for a police watch list.
-> About a hundred seventy thousand people came for the final, and the watch lists held about twelve
-> hundred photos. *[0.3]* Even a small error rate per face would swamp the real matches.
+> About a hundred seventy thousand people came, and the watch lists held about twelve hundred photos. *[0.5]*
 > For four days, face-recognition cameras scanned the crowds. *[0.3]* Every face they flagged joined the alerts.
 > Shrink to the alerts. Take the red share.
 > The police counted a hundred seventy-three as right: seven percent. *[1.0]*
 > In machine learning, that share is called precision. *[0.6]*
-> Cardiff University's evaluators counted only alerts the logbooks confirmed: three percent. *[0.6]*
-> Months later, a new algorithm and better photos thinned out the false alarms. *[0.4]*
-> That's the blue term in Bayes' denominator. *[0.3]* Their count rose to forty-six percent. *[0.8]*
+> Cardiff University's evaluators counted only alerts the logbooks confirmed: three percent. *[0.5]*
+> Months later, a new algorithm and better photos cut the false alarms. *[0.6]*
+> That's the blue term in Bayes' denominator. *[0.3]* Their count rose to forty-six percent. *[0.6]*
 
 Visual: the formula and table clear; the 24 × 5 strip shrinks, as one block, into the 24 × 5 squares at
 the centre of a 100 × 100 crowd (■ = 17 people, illustration) that fades in around it, the 20 sick
 turning blue as they land (red now means "listed"); the meter travels to the right column, ghosted and
-retitled "chance an alert is right ?". "≈ 170,000 people", the scale legend, the dateline; the 71
-listed squares appear scattered on "twelve hundred photos" with "· ≤ 1 in 140" and Davies et al.'s
-citation; the crowd brightens on "error rate per face", the 71 pulse on "swamp". The beam flags 145
-squares (10 red), every square it passes without flagging dims to the same 35 %, listed or not; the
-ghosted meter title fades further while the 145 file into the 26 × 95 raster of 2,470 alerts (the
-cold open's raster, now coloured). "Shrink to the alerts": the crowd leaves, meter + raster take the
-centre, brackets, "173 right / 2,297 wrong", the meter fills to 7 %, the opening question answered.
-"precision" rolls in as the title. The lever: the raster dims to 35 %, its labels leave, the police bar
-is tagged "police count / 2,470 alerts" and the evaluators' bar takes the labels' row ("evaluators' count
-/ final week · 2,632 alerts"), filling to 3 %; "Six Nations 2018 · 48 alerts" on "Months later"; a ghost
-of the boxed Bayes denominator fades into its own band on "false alarms"; on "blue term" its blue
-P(healthy)P(+∣healthy) pulses and rises into "P(+ ∣ not listed) ↓" under the bar's blue segment (≥ 0.6
-clear of the tag column), the rest of the ghost fading; on "rose" the blue share shrinks and the red
-grows to 46 %, and "7 of 22 later proved false" joins the tags.
+retitled "chance an alert is right ?". "≈ 170,000 people", the scale legend (a hollow grey square:
+"= 17 people · illustration"), the dateline; the 71 listed squares appear scattered on "twelve hundred
+photos" with the legend line "■ watch list · ≤ 1 in 140" (it arrives with them, not before) and Davies et
+al.'s citation. The beam flags 145 squares (10 red), every square it passes without flagging dims to the
+same 35 %, listed or not; the ghosted meter title fades further while the 145 file into the 26 × 95
+raster of 2,470 alerts (the cold open's raster, now coloured). "Shrink to the alerts": the crowd leaves,
+meter + raster take the centre, brackets, "173 right / 2,297 wrong", the meter fills to 7 %, the opening
+question answered. "precision" rolls in as the title.
+
+The lever (round 8): on "evaluators" the labels leave and the raster, with its yellow outline, folds up
+into the police bar it measures (same width, same red 7 %), tagged "police count / 2,470 alerts". A
+thin bar 0.6 under it, "evaluators' count / final week · 2,632 alerts", fills to 3 %. On "Months later"
+that bar dims to 35 % and a second, empty bar ("?") is drawn under it, tagged "Six Nations 2018 / 48
+alerts". On "false alarms" a ghost of the boxed Bayes denominator fades into its own band in the
+disease's words, then is re-read in Cardiff's (sick → listed, healthy → not listed; only those four words
+roll over); on "blue term" its blue P(not listed)P(+∣not listed) pulses and rises into "P(+ ∣ not listed) ↓"
+under the second bar's right half; on "rose" the second bar fills, red to 46 %. No frame shows a number
+under the wrong event's tag; the "7 of 22 later proved false" tag is cut (facts.md keeps the caveat).
 
 ### 8. Landing: your test (3:13–3:36)
 > Back to your test. *[1.6]*
 > Symptoms raise the one in five hundred: at one in a hundred, fifty percent; at one in two,
-> ninety-nine, where the rule held. *[1.0]*
-> That ninety-nine percent describes the test: its recall, how often the sick test positive. *[0.3]*
+> ninety-nine, where the rule held. *[0.9]*
+> That ninety-nine percent, the test's accuracy, is its recall here: how often the sick test positive. *[0.3]*
 > Seventeen percent describes your result: its precision. *[0.4]*
-> Your test didn't say you're sick. *[0.3]* It said you're in this crowd.
+> Your test didn't say you're sick. *[0.4]* It said: you're in this crowd. *(speed 0.78: the punch line is
+> not hurried)*
 
-Visual: in the first 0.5 s every Cardiff tag, bar and citation fades out; only the raster → + badge
-collapse runs across the gap, and the diagram's nodes fade in after it. Each arrow swells into a flow as
-wide as the people it carries (20 / 100 "per 10,000 people") and the meter grows its 17 % again. The
-prevalence slider runs backwards (1 in 100 · 50 %, 1 in 2 · 99 % on the naive marker, back to 1 in 500).
-"recall" is written beside the arrow's 99 % as the red flow pulses, "precision" under the meter. On
-"you're sick" the "you" ring pulses; on "this crowd" both flows into the + swell once. The frame holds
-0.8 s and fades out (no end card): the last frame is the opening question, answered.
+Visual: in the first 0.5 s every Cardiff tag, bar and citation fades out while the police bar travels
+back, emptied and retitled "chance you're sick"; a yellow ring is drawn where the + returns and the
+diagram's nodes fade in round it. Each arrow swells into a flow as wide as the people it carries (20 /
+100 "per 10,000 people") and the meter grows its 17 % again. The prevalence slider runs backwards (1 in
+100 · 50 %, 1 in 2 · 99 % on the naive marker, back to 1 in 500). "recall" is written beside the arrow's
+99 % as the red flow pulses, "precision" under the meter. On "you're sick" the "you" ring pulses; on
+"this crowd" the 120 people (20 red, 100 blue) stream out of the + disk into the 24 × 5 strip under the
+meter, red columns under its red 17 %, and the yellow outline closes round them (round 8: the deictic
+now points at a crowd, and the last image has the cold open's shape). The frame holds 0.7 s and fades
+out over 0.6 s (no end card).
 
 ## Sources
 - Manrai, A. K., Bhatia, G., Strymish, J., Kohane, I. S., & Jain, S. H. (2014). Medicine's
@@ -157,7 +182,7 @@ prevalence slider runs backwards (1 in 100 · 50 %, 1 in 2 · 99 % on the naive 
   Champions League final → 46 % at the 2018 Six Nations, with the new algorithm; high-standard custody
   images only after the final); Champions League section ("Operator logs were then used to clarify whether
   or not these matches were accurate … 3% (N=78) were 'true positives' (confirmed by the operators)").
-  Both on screen on the evaluators' own bar. Six Nations section: "Of the initial 22 'true positives' …
-  32% (n=7) were stopped but turned out to be false positives according to Intervention Teams" (on screen:
-  "7 of 22 later proved false").
+  Each on its own evaluators' bar. Six Nations section: "Of the initial 22 'true positives' …
+  32% (n=7) were stopped but turned out to be false positives according to Intervention Teams" (round 8:
+  no longer on screen; see facts.md).
 - All other numbers are computed from the stated premises; see facts.md and check.py.

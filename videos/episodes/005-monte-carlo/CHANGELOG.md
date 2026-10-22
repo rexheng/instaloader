@@ -278,3 +278,72 @@ keyframes, and 4-8 fps strips across every transition), plans the remaining clim
   0.42 -> 0.40 wide (gap ~1.1 units).
 - Clarity: "Their estimate is a share of heads" had an ambiguous antecedent (coordinates or darts). -> "So each dart
   is a coin flip; the estimate is the share of heads in N flips", with the first coins appearing on "coin flip".
+
+### Round 5 revisions, pass 3 (audit of the 14:47 restructured master)
+
+The second interrupted pass restructured the cut to 483 words / 3:30.5 (shaped cadence, speed 0.83: the
+shadows-on-one-axis formula, the quadrupled-dart histograms and the grid's N^(-2/d) law with its d = 4 tie were cut
+to meet the guide's 500-word / 3:35 budget) and rendered it at 14:47 without reviewing it. This pass ran review_kit
+on that master, read all 12 sheets and the keyframes, and pulled 4-5 fps strips across every transition.
+
+**Plan (BAR §3 "9" anchors vs the 14:47 master), written before editing.**
+- Visual / Motion ("every frame has one focal point; every motion encodes a relation; nothing reads as an
+  artefact"): (a) 1:54.2-1:55.3, the bold 100-D polyline morphs into a blob and the 99 faint polylines
+  FadeTransform into their coins through one giant filled blue ellipse (a render artefact, cap 5 territory);
+  (b) 0:44.3-44.9, the square's copy doubles its labels ("iinput 2") while "true answer 1/2" slides through the
+  moving square; (c) 0:56.6-57.8, the truth row crosses the fading squares and two squares are visible as the
+  disc square travels to the cube's back face; (d) 2:47.4, the "0.05 points" copy starts on top of the original
+  (double exposure); (e) 2:55-2:57.6, "grid search" is written stroke-first for 2.5 s (white glyph outlines);
+  (f) 3:22.8, the cold-open header flashes over the limit chart's title and the 1/N line then FadeTransforms into
+  the header through a stretched ghost; (g) 3:07.0-3:07.5 and 2:10.6-2:11.3, near-empty frames between beats.
+  -> (a) each polyline shrinks rigidly into its coin as the coin grows (no FadeTransform between unlike shapes);
+  (b, c) sequenced moves: the truth steps aside before squares move, the copy carries only lines and disc,
+  originals leave the frame before their copies travel; (d) the copy fades in as it flies; (e) titles fade up in
+  0.6 s; (f) the chart clears first, then the dashed 1/N line rises and shrinks into a rule under the header
+  position and the header fades in on it; (g) the next picture starts while the old one fades.
+- Audio / sync ("each deictic lands as the element highlights"): the "1" lands 0.9 s after "One" (0:14.3-15.2);
+  "eighteen" is reached 0.48 s late (render warning); "100 values on one axis" is legible for only ~0.8 s
+  (1:33.4-34.2); one sentence at 201 wpm ("So the grid says that the ball fills the box: fifty points off").
+  -> the "?" -> "1" swap takes 0.6 s from the word; the rescue dot drops during "axes is"; the shadow drop starts
+  on "Maybe" so the label holds ~2 s; the sentence is split ("...fills the box. Fifty points off.").
+- Clarity ("assumptions stated; all numbers check out"): "A dart's coordinates are drawn independently, so it
+  lands inside with a chance equal to the answer" omits that they are uniform (independence alone does not give
+  P(inside) = volume) -> "drawn independently and uniformly"; the limit beat's "A radius-one ball" sits beside
+  a ball whose radius grew to 5.77 -> "Keep the ball's radius at one, and in thirty dimensions it fills two parts
+  in a hundred trillion of the box."
+- Visual focal point during the rescue (1:21-1:30: chart, three table rows, two annotation stacks): the "points
+  used" and "ball radius" rows dim to 35 % while the rescue dot is the subject.
+
+**What changed in pass 3 (scene.py, script.md, facts.md).**
+- Coin collapse (1:54-1:57): the bold 100-D dart's polyline now shrinks rigidly (same shape, 4 % size) onto its
+  coin while the coin grows; each of the 99 faint polylines does the same into its own coin (LaggedStart). No
+  FadeTransform between a polyline and a dot, so no blob and no filled ellipse. The verdict texts fade toward their
+  coins; a [pause 0.6] lets both blocks settle before "One flip".
+- 2-D build (0:44): "true answer 1/2" fades up and out, the square slides right while a copy of only its lines and
+  disc slides left, then labels, the grid title and the true answer fade in with the grid dots (no doubled labels,
+  nothing crossing a moving square).
+- Square -> cube (0:56): contents fade first (0.4 s), then the true-answer row assembles below, then the disc
+  square leaves the frame as its copy travels to the cube's back face (one square on screen at a time).
+- Cold open: the "?" -> "1" swap takes 0.55 s from "One" (the 1 is legible at 0:14.8, was 0:15.3).
+- Rescue (1:21): the dot appears by "nineteen" and drops during "axes is" (fixes the 0.48 s "eighteen" warning);
+  the "points used" and "ball radius" rows dim to 35 % so the rescue dot is the focal point; table rows re-spaced
+  (0.46 apart) to clear the 0.15 audit.
+- Misconception picture (1:31): rail on "darts", shadows drop by "by", "100 values on one axis" is fully legible
+  ~1.6 s and then dims to 25 % with its square (context) instead of vanishing.
+- Answer (2:48): the flag grows "0.05 points" rightward only (no longer touches "="); the copy that labels the
+  dashed line starts transparent and becomes opaque in flight (no double exposure).
+- Bergstra & Bengio titles fade up in 0.6 s (no stroke-first Write); the limit chart's axes start as the panel's
+  last 15 % fades (no empty frame, no mixed frame).
+- Landing: the limit chart clears, its dashed 1/N line rises and shrinks rigidly into a rule under the header's
+  place, and "N = 1,000,000 points" settles on it (no FadeTransform ghost, no header flash over the chart title);
+  transition 1.05 s, longest internal silence 2.06 s (was 2.34 s in the first pass-3 render).
+- Narration (490 words, 3:33.6): "drawn independently and uniformly" (facts #16); "So the grid's estimate is the
+  whole box. Fifty points off." (the 201-229 wpm sentence is gone: 0 sentences above 200 wpm); "Keep the ball's
+  radius at one, and in thirty dimensions it fills two parts in a hundred trillion of the box." (facts #23; the
+  fixed radius contrasts with the half-volume ball's 0.80 -> 5.77), with the chart title flashing on "radius at
+  one", the d = 30 dot on "thirty" and "2 x 10^-14" on "two parts in a hundred trillion".
+
+**Verification (final master).** review_kit: 3:33.6, 149 wpm over speech, -14.0 LUFS / -2.0 dBTP, longest silence
+2.06 s, longest static 2.97 s, WER 2.5 %, 0 banned phrases, 0 glyph morphs, 5/5 deictics landed, layout audit 0
+issues (6 producer-allowed LaTeX-internal spacings). Frames were checked at 4-6 fps across every transition listed
+in the plan above (0:14, 0:44, 0:56, 1:21, 1:31, 1:54-1:58, 2:10, 2:47-2:50, 2:54-2:58, 3:08, 3:24-3:28).

@@ -5,7 +5,7 @@ so the average friend has avg(k²)/μ = μ + σ²/μ friends (the cross terms va
 distances from the balance point sum to zero), which is more than the average person whenever friend
 counts vary, and epidemiologists can use this to see an outbreak coming.
 
-Runtime 3:33.3 · 497 words (round 8; 3:31.8 · 495 in round 7) · voice af_heart, speed 0.82, the one question at 0.74 (round 7; 155 wpm on speech time), sentence gaps 0.26 s inside a beat and
+Runtime ~3:34.5 · 495 words (round 9; 3:33.3 · 497 in round 8) · voice af_heart, speed 0.82, the one question at 0.74 (round 7; 155 wpm on speech time), sentence gaps 0.26 s inside a beat and
 0.7 s at section boundaries; 0.6 s holds after each new equation row in the algebra (round 3).
 Pronunciation override: Christakis → /kɹɪstˈɑkɪs/.
 
@@ -44,7 +44,7 @@ Citation: Feld, 1991 · Am. J. Sociology · data: Coleman, 1961.
 Visual: a BLUE ring "random" on Jane; a YELLOW arrow along her friendship to Alice, "named friend".
 
 ### 3. Naive build: the guess works on an easy case (0:22–0:44)
-> The natural guess is two and a half again: every friend is one of these same eight girls.
+> The natural guess is two and a half again: every friend is one of these eight girls.
 > Check that on a rewired class where every girl has two friends. Send a token both ways along every
 > friendship.
 > Each token reads the friend count where it lands: always two. Both averages are two: the guess

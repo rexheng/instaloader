@@ -1,19 +1,15 @@
-WER 4.3% over 515 script words (numbers spelled out, 'and' ignored)
+WER 3.1% over 514 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/003-clumpy-randomness/narration.json
 
 [1:10.2] replace  script: 'pile ups a'                             heard: 'pileups one'
 [1:28.9] replace  script: 'this'                                   heard: 'the'
 [1:30.6] insert   script: '∅'                                      heard: 'hundred'
 [1:32.5] insert   script: '∅'                                      heard: 'hundred'
-[1:43.1] insert   script: '∅'                                      heard: 'hundred'
+[1:43.0] insert   script: '∅'                                      heard: 'hundred'
 [1:45.2] insert   script: '∅'                                      heard: 'hundred'
 [1:56.7] insert   script: '∅'                                      heard: 'hundred'
-[2:10.4] insert   script: '∅'                                      heard: 'bars gap'
-[2:19.9] replace  script: 'oh'                                     heard: 'zero'
-[2:26.6] insert   script: '∅'                                      heard: 'zero'
-[2:36.6] replace  script: 'a pattern'                              heard: 'they patterned'
-[2:37.9] replace  script: 'is'                                     heard: 'as'
-[2:45.0] replace  script: 'pile ups'                               heard: 'pileups'
-[2:52.1] insert   script: '∅'                                      heard: 'hundred'
-[2:53.6] insert   script: '∅'                                      heard: 'hundred'
-[3:05.4] replace  script: "london's"                               heard: "the land's"
+[2:10.3] insert   script: '∅'                                      heard: 'bars gap'
+[2:19.7] replace  script: 'oh'                                     heard: 'zero'
+[2:44.9] replace  script: 'pile ups'                               heard: 'pileups'
+[2:51.4] insert   script: '∅'                                      heard: 'hundred'
+[2:53.5] insert   script: '∅'                                      heard: 'hundred'

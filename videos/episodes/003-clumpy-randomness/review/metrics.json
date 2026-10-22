@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/003-clumpy-randomness/final.mp4",
- "duration_s": 214.767,
+ "duration_s": 214.633,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,10 +8,10 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 17.55,
+ "size_mb": 17.52,
  "integrated_lufs": -14.0,
  "lra_lu": 2.2,
- "true_peak_dbtp": -1.8,
+ "true_peak_dbtp": -1.9,
  "leading_silence_s": 0.0,
  "trailing_silence_s": 1.6,
  "longest_internal_silence_s": 1.76,
@@ -25,33 +25,33 @@
    63.85
   ]
  ],
- "frames": 6443,
+ "frames": 6439,
  "longest_static_s": 2.57,
  "static_stretches_over_3s": [],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
  "background_luma": 22.010355902777775,
- "transcript_words": 546,
+ "transcript_words": 543,
  "first_word_s": 0,
- "last_word_s": 213.612,
- "wpm_speech": 159.3,
- "wpm_overall": 152.5,
- "wpm_excluding_all_pauses": 187.8,
+ "last_word_s": 213.39734,
+ "wpm_speech": 158.6,
+ "wpm_overall": 151.8,
+ "wpm_excluding_all_pauses": 186.6,
  "narration_file": "videos/episodes/003-clumpy-randomness/narration.json",
- "wer": 0.0427,
- "narration_words": 515,
+ "wer": 0.0311,
+ "narration_words": 514,
  "banned_phrase_hits": 0,
  "slop_hits": [],
  "narration_craft": {
-  "narration_words": 495,
+  "narration_words": 494,
   "voice_speeds": [
    0.82,
    0.84
   ],
-  "sentence_wpm_median": 165.8,
-  "sentences_over_200wpm": 1,
-  "sentence_gap_median_s": 0.35,
-  "sentence_gap_cv": 0.24,
+  "sentence_wpm_median": 165.3,
+  "sentences_over_200wpm": 0,
+  "sentence_gap_median_s": 0.34,
+  "sentence_gap_cv": 0.23,
   "beat_gap_median_s": 0.63,
   "longest_breathless_run_s": 11.1,
   "max_distinct_numbers_20s": 5,
@@ -177,76 +177,76 @@
    "file": "keyframes/kf_22_02-10.4.png"
   },
   {
-   "t": 134.37,
-   "file": "keyframes/kf_23_02-14.4.png"
+   "t": 134.07,
+   "file": "keyframes/kf_23_02-14.1.png"
   },
   {
-   "t": 144.23,
-   "file": "keyframes/kf_24_02-24.2.png"
+   "t": 141.57,
+   "file": "keyframes/kf_24_02-21.6.png"
   },
   {
-   "t": 148.37,
-   "file": "keyframes/kf_25_02-28.4.png"
+   "t": 145.4,
+   "file": "keyframes/kf_25_02-25.4.png"
   },
   {
-   "t": 152.07,
-   "file": "keyframes/kf_26_02-32.1.png"
+   "t": 151.9,
+   "file": "keyframes/kf_26_02-31.9.png"
   },
   {
-   "t": 160.13,
-   "file": "keyframes/kf_27_02-40.1.png"
+   "t": 159.87,
+   "file": "keyframes/kf_27_02-39.9.png"
   },
   {
-   "t": 164.57,
-   "file": "keyframes/kf_28_02-44.6.png"
+   "t": 165.97,
+   "file": "keyframes/kf_28_02-46.0.png"
   },
   {
-   "t": 166.13,
-   "file": "keyframes/kf_29_02-46.1.png"
+   "t": 173.17,
+   "file": "keyframes/kf_29_02-53.2.png"
   },
   {
-   "t": 173.3,
-   "file": "keyframes/kf_30_02-53.3.png"
-  },
-  {
-   "t": 175.77,
-   "file": "keyframes/kf_31_02-55.8.png"
+   "t": 175.63,
+   "file": "keyframes/kf_30_02-55.6.png"
   },
   {
    "t": 179.17,
-   "file": "keyframes/kf_32_02-59.2.png"
+   "file": "keyframes/kf_31_02-59.2.png"
   },
   {
-   "t": 188.13,
-   "file": "keyframes/kf_33_03-08.1.png"
+   "t": 188.3,
+   "file": "keyframes/kf_32_03-08.3.png"
   },
   {
-   "t": 191.63,
-   "file": "keyframes/kf_34_03-11.6.png"
+   "t": 191.5,
+   "file": "keyframes/kf_33_03-11.5.png"
   },
   {
-   "t": 194.63,
-   "file": "keyframes/kf_35_03-14.6.png"
+   "t": 194.4,
+   "file": "keyframes/kf_34_03-14.4.png"
   },
   {
-   "t": 196.4,
-   "file": "keyframes/kf_36_03-16.4.png"
+   "t": 196.23,
+   "file": "keyframes/kf_35_03-16.2.png"
   },
   {
-   "t": 197.93,
-   "file": "keyframes/kf_37_03-17.9.png"
+   "t": 197.8,
+   "file": "keyframes/kf_36_03-17.8.png"
   },
   {
-   "t": 199.4,
-   "file": "keyframes/kf_38_03-19.4.png"
+   "t": 199.27,
+   "file": "keyframes/kf_37_03-19.3.png"
   },
   {
-   "t": 208.07,
-   "file": "keyframes/kf_39_03-28.1.png"
+   "t": 207.93,
+   "file": "keyframes/kf_38_03-27.9.png"
   },
   {
-   "t": 214.73,
-   "file": "keyframes/kf_40_03-34.7.png"
+   "t": 213.47,
+   "file": "keyframes/kf_39_03-33.5.png"
+  },
+  {
+   "t": 214.6,
+   "file": "keyframes/kf_40_03-34.6.png"
   }
  ],
  "flags": [],

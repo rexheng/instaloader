@@ -14,24 +14,24 @@
 
 [01:04.4] The grid's million points give each axis a thousand values in two dimensions, then a hundred, ten, three.
 
-[01:12.6] From twenty dimensions on, just the centre, inside the ball. [pause 0.15] So the grid says that the ball fills the box: fifty points off. [pause 0.8]
+[01:12.6] From twenty dimensions on, just the centre, inside the ball. [pause 0.15] So the grid's estimate is the whole box. Fifty points off. [pause 0.8]
 
-[01:21.7] Even two values on nineteen axes is eighteen points off, while the darts stay under a tenth of a point.
+[01:21.9] Even two values on nineteen axes is eighteen points off, while the darts stay under a tenth of a point.
 
-[01:30.6] Maybe darts win by giving every axis more values. [pause 0.3] A million points on the diagonal give every axis a million values, and still miss by eight points: their coordinates move in lockstep. [pause 0.3]
+[01:30.8] Maybe darts win by giving every axis more values. [pause 0.3] A million points on the diagonal give every axis a million values, and still miss by eight points: their coordinates move in lockstep. [pause 0.3]
 
-[01:45.0] A dart's coordinates are drawn independently, so it lands inside with a chance equal to the answer, in any dimension: each dart is a coin flip.
+[01:45.1] A dart's coordinates are drawn independently and uniformly, so it lands inside with a chance equal to the answer, in any dimension: each dart is a coin flip. [pause 0.6]
 
-[01:56.2] One flip is either zero or one. [pause 0.15] Its average is a half, so every flip misses by exactly a half.
+[01:57.9] One flip is either zero or one. [pause 0.15] Its average is a half, so every flip misses by exactly a half.
 
-[02:03.9] Repeat the hundred-dart experiment three hundred times. [pause 0.2] In both, the estimates spread this wide.
+[02:05.6] Repeat the hundred-dart experiment three hundred times. [pause 0.2] In both, the estimates spread this wide.
 
-[02:10.4] Those misses fall up or down at random, so they partly cancel: sixteen darts stray about four halves, not sixteen. [pause 0.4] N darts stray about root N halves. [pause 0.2] Divide by N, and the typical miss is a half over root N. [pause 0.8] For a hundred darts: five points. We measured four point eight. [pause 0.3] Any other function swaps the half for its own spread, sigma; there's still no d.
+[02:12.1] Those misses fall up or down at random, so they partly cancel: sixteen darts stray about four halves, not sixteen. [pause 0.4] N darts stray about root N halves. [pause 0.2] Divide by N, and the typical miss is a half over root N. [pause 0.8] For a hundred darts: five points. We measured four point eight. [pause 0.3] Any other function swaps the half for its own spread, sigma; there's still no d.
 
-[02:36.5] So, back to our ball: a million darts, any dimension. [pause 0.2] How far off is a typical estimate? [pause 1.5] One half over a thousand: five hundredths of a point. [pause 1.0]
+[02:38.2] So, back to our ball: a million darts, any dimension. [pause 0.2] How far off is a typical estimate? [pause 1.5] One half over a thousand: five hundredths of a point. [pause 1.0]
 
-[02:49.2] In 2012, Bergstra and Bengio found random search tuned neural networks as well as grid search, in a fraction of the time. [pause 0.45] If one setting matters most, nine grid trials test three values of it; nine random trials test nine. [pause 0.3]
+[02:50.9] In 2012, Bergstra and Bengio found random search tuned neural networks as well as grid search, in a fraction of the time. [pause 0.45] If one setting matters most, nine grid trials test three values of it; nine random trials test nine. [pause 0.3]
 
-[03:06.6] Darts do have a blind spot: tiny answers. [pause 0.2] A radius-one ball fills two parts in a hundred trillion of a thirty-dimensional box. [pause 0.4] Below this line, a million darts expect under one hit, so they usually report zero.
+[03:08.2] Darts do have a blind spot: tiny answers. [pause 0.2] Keep the ball's radius at one, and in thirty dimensions it fills two parts in a hundred trillion of the box. [pause 0.4] Below this line, a million darts expect under one hit, so they usually report zero.
 
-[03:23.8] The darts never noticed the axes: [pause 0.4] a million coin flips, in any dimension.
+[03:26.9] The darts never noticed the axes: [pause 0.4] a million coin flips, in any dimension.

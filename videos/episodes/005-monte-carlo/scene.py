@@ -324,9 +324,10 @@ class Episode(NarratedScene):
         fit(big, width=12.4)
         with self.narrate("One. [pause 0.2] The whole grid is one point: the centre. [pause 0.2] "
                           "Two values per input would take two to the hundredth points. [pause 0.6]") as beat:
-            self.play(swap(q_mark, one, run_time=1.3),
-                      LaggedStart(*[GrowFromCenter(d) for d in centre], lag_ratio=0.03),
-                      run_time=1.3)
+            # the "1" lands on the word "One" (the swap is quick; the centre dots keep growing after it)
+            self.play(AnimationGroup(swap(q_mark, one, run_time=0.55),
+                                     LaggedStart(*[GrowFromCenter(d) for d in centre], lag_ratio=0.03,
+                                                 run_time=1.3)))
             self.play(Create(centre_line), run_time=beat.until("centre"))
             self.play(FadeIn(c_lab, shift=0.1 * LEFT), run_time=0.6)
             self.play(LaggedStart(*[FadeIn(g, scale=0.5) for g in ghosts], lag_ratio=0.005),
@@ -419,12 +420,21 @@ class Episode(NarratedScene):
         g_read = formula(str(g2["count"]), r"/100", size=40, color=PURPLE).move_to(L_C + DOWN * 2.76)
         g_err = text("off by 2 points", size=28, color=RED).move_to(L_C + DOWN * 3.3)
         with self.narrate("A grid of a hundred points puts fifty-two inside: two points off.") as beat:
-            self.play(VGroup(frame_R, disc_R, dart1).animate.shift(R_C - C0), FadeOut(f1), FadeOut(f0),
-                      VGroup(truth_t, half).animate.shift(LEFT * 3.1),
-                      TransformFromCopy(VGroup(frame_R, disc_R), VGroup(frame_L, disc_L)),
-                      FadeIn(g_title), run_time=1.1)
-            self.play(LaggedStart(*[GrowFromCenter(d) for d in gdots], lag_ratio=0.01),
-                      run_time=beat.until("fifty", offset=-0.1))
+            # the true answer steps out of the way first (it never crosses a moving square); then the square
+            # slides right while a copy of its lines and disc slides left for the grid (labels fade in after,
+            # so no label is ever doubled)
+            self.play(FadeOut(VGroup(truth_t, half), shift=0.15 * UP), FadeOut(f1), FadeOut(f0), run_time=0.25)
+            frame_L_lines = VGroup(frame_L.bottom, frame_L.left, frame_L.rest)
+            frame_R_lines = VGroup(frame_R.bottom, frame_R.left, frame_R.rest)
+            self.play(VGroup(frame_R, disc_R, dart1).animate.shift(R_C - C0),
+                      TransformFromCopy(VGroup(frame_R_lines, disc_R), VGroup(frame_L_lines, disc_L)),
+                      run_time=0.6)
+            truth_t.move_to([0, 1.15, 0])
+            half.move_to([0, 0.3, 0])
+            self.play(FadeIn(VGroup(frame_L.ticks, frame_L.xl, frame_L.yl)), FadeIn(g_title),
+                      FadeIn(truth_t), FadeIn(half),
+                      LaggedStart(*[GrowFromCenter(d) for d in gdots], lag_ratio=0.01),
+                      run_time=beat.until("fifty", offset=-0.1, min_time=0.6))
             g_num = self.count_up(g_in, PURPLE, g2["count"], g_read[0], beat.until("inside", end=True, offset=-0.3))
             self.play(FadeIn(g_read[1], shift=0.1 * LEFT), run_time=beat.until("two", offset=-0.1, min_time=0.4))
             self.play(FadeIn(g_err, shift=0.1 * UP), run_time=0.6)
@@ -485,7 +495,7 @@ class Episode(NarratedScene):
             return ax, xl, yl, y_title, x_title
         x_title.move_to([ax.get_center()[0], xl.get_bottom()[1] - 0.28, 0])
         col = [ax.c2p(x, 0)[0] for x in xs]
-        ROW_Y = (-2.2, -2.62, -3.04)
+        ROW_Y = (-2.12, -2.58, -3.04)
         rows1 = VGroup(*[MathTex(str(D["grid"][str(d)]["per_axis"]), font_size=MATH_SMALL, color=PURPLE)
                          .move_to([cx, ROW_Y[0], 0]) for d, cx in zip(DIMS, col)])
         used = {10 ** 6: r"10^6"}
@@ -539,14 +549,16 @@ class Episode(NarratedScene):
             back_edges = VGroup(Line(P(0, 0, 1), P(1, 0, 1)), Line(P(0, 0, 1), P(0, 1, 1)),
                                 VGroup(Line(P(0, 1, 1), P(1, 1, 1)), Line(P(1, 0, 1), P(1, 1, 1))))
             back_edges.set_stroke(AXIS, 2)
+            # the squares' contents clear first; only then does the true answer travel (over empty space)
             self.play(FadeOut(rest_L, shift=LEFT * 0.4), FadeOut(rest_R), FadeOut(self.sq_extra),
-                      FadeOut(VGroup(sq["frame_R"].ticks, sq["frame_R"].xl, sq["frame_R"].yl)),
-                      ReplacementTransform(self.half, truth[1]), ReplacementTransform(self.truth_t, truth[0]),
-                      FadeIn(truth[2]), run_time=0.6)
-            self.play(FadeOut(VGroup(sqR_lines, sq["disc_R"])),
-                      TransformFromCopy(sqR_lines, back_edges), TransformFromCopy(sq["disc_R"][0], bi["disc_fill"]),
+                      FadeOut(VGroup(sq["frame_R"].ticks, sq["frame_R"].xl, sq["frame_R"].yl)), run_time=0.4)
+            self.play(ReplacementTransform(self.half, truth[1]), ReplacementTransform(self.truth_t, truth[0]),
+                      FadeIn(truth[2]), run_time=0.5)
+            # one square travels: the original leaves the frame as its copy starts moving (never two squares)
+            self.remove(*sqR_lines.get_family(), *sq["disc_R"].get_family())
+            self.play(TransformFromCopy(sqR_lines, back_edges), TransformFromCopy(sq["disc_R"][0], bi["disc_fill"]),
                       TransformFromCopy(sq["disc_R"][1], bi["disc_arc"]),
-                      run_time=beat.until("add", offset=-0.5, min_time=0.9))
+                      run_time=beat.until("add", offset=-0.5, min_time=0.8))
             self.remove(*back_edges.get_family())
             self.add(bi["back_sq"])
             self.play(FadeIn(d_in, shift=0.1 * LEFT), FadeIn(rad_lab, shift=0.1 * LEFT), run_time=0.5)
@@ -602,7 +614,7 @@ class Episode(NarratedScene):
         c_note.arrange(DOWN, buff=0.1, aligned_edge=RIGHT)
         c_note.next_to(inset, LEFT, buff=0.3).set_y(centre.get_y())
         with self.narrate("From twenty dimensions on, just the centre, inside the ball. "
-                          "[pause 0.15] So the grid says that the ball fills the box: fifty points off. [pause 0.8]") as beat:
+                          "[pause 0.15] So the grid's estimate is the whole box. Fifty points off. [pause 0.8]") as beat:
             self.play(cur.animate.move_to(ax.c2p(xs[4], 2.5)), xl[4].animate.set_color(YELLOW),
                       xl[3].animate.set_color(GRAY), FadeIn(rows1[4], shift=0.15 * UP),
                       FadeIn(rows2[4], shift=0.15 * UP), FadeIn(rows3[4], shift=0.15 * UP),
@@ -618,7 +630,7 @@ class Episode(NarratedScene):
             self.play(Indicate(centre, color=PURPLE, scale_factor=1.8),
                       run_time=beat.until("So", offset=-0.1, min_time=0.8))
             self.play(FadeOut(c_note, shift=0.1 * UP), run_time=0.4)
-            self.wait_beat(beat, "fills", offset=-0.45)
+            self.wait_beat(beat, "estimate", offset=-0.35)
             # the centre is the grid's whole estimate: the dot itself flies onto the chart
             self.play(TransformFromCopy(centre, gdots[4]), TransformFromCopy(centre, gdots[5]),
                       Create(gseg[3]), Create(gseg[4]), FadeIn(g_says, shift=0.1 * DOWN), run_time=0.9)
@@ -641,8 +653,10 @@ class Episode(NarratedScene):
         d_lab.arrange(DOWN, buff=0.08).next_to(ddots[5], RIGHT, buff=0.25)
         with self.narrate("Even two values on nineteen axes is eighteen points off, while the darts stay under "
                           "a tenth of a point.") as beat:
-            self.play(GrowFromCenter(r_dot), FadeIn(r_how, shift=0.1 * LEFT),
-                      run_time=beat.until("axes", end=True, min_time=0.8))
+            # the rescue dot is the subject: the table's cost and radius rows step back to 35 %
+            side_rows = VGroup(row_t[1], row_t[2], rows2, rows3)
+            self.play(GrowFromCenter(r_dot), FadeIn(r_how, shift=0.1 * LEFT), side_rows.animate.set_opacity(0.35),
+                      run_time=beat.until("nineteen", offset=-0.1, min_time=0.8))
             self.play(r_dot.animate.move_to(rp), Create(trail), FadeIn(r_lab[0], shift=0.1 * LEFT),
                       run_time=beat.until("eighteen", offset=-0.15, min_time=0.6))
             self.play(FadeIn(r_lab[1], shift=0.1 * LEFT), run_time=0.6)
@@ -714,14 +728,20 @@ class Episode(NarratedScene):
         with self.narrate("Maybe darts win by giving every axis more values. [pause 0.3] A million points on the "
                           "diagonal give every axis a million values, and still miss by eight points: their "
                           "coordinates move in lockstep. [pause 0.3]") as beat:
-            self.play(Create(rail), run_time=beat.until("giving", offset=-0.1, min_time=0.5))
+            # the misconception gets its picture at once: the darts' shadows drop on "darts win", and the
+            # count "100 values on one axis" is legible for about two seconds before the diagonal starts
+            self.play(Create(rail), run_time=beat.until("darts", offset=-0.1, min_time=0.35))
             self.play(TransformFromCopy(sq["ddots"], d_ticks), under.animate.set_opacity(0.2),
-                      run_time=beat.until("more", offset=-0.1, min_time=0.7))
+                      run_time=beat.until("by", offset=-0.1, min_time=0.7))
             self.play(FadeIn(d_vals, shift=0.1 * UP), under.animate.set_opacity(1), run_time=0.6)
-            # the 100-axis panel: a million points on the diagonal
-            self.play(FadeOut(VGroup(rail, d_ticks, d_vals)), Transform(dart_sq, sq_dim), t2.animate.set_opacity(0.25),
+            # the label holds through "giving every axis more values" (about 2 s) before anything changes
+            self.wait_beat(beat, "values", offset=0.35)
+            # the 100-axis panel: a million points on the diagonal; the misconception's picture stays as dimmed
+            # context with its square
+            mis = VGroup(rail, d_ticks, d_vals)
+            self.play(mis.animate.set_opacity(0.25), Transform(dart_sq, sq_dim), t2.animate.set_opacity(0.25),
                       t100.animate.set_opacity(1), m_axes.animate.set_stroke(opacity=0.8), FadeIn(m_lab),
-                      run_time=beat.until("million", offset=-0.1, min_time=0.9))
+                      run_time=beat.until("million", offset=-0.1, min_time=0.8))
             # one point of the diagonal, alone, for over a second: a flat line on the 100 axes
             self.play(FadeIn(diag_lab, shift=0.1 * UP), Create(flat[k1]), FadeIn(one_pt, shift=0.1 * RIGHT),
                       run_time=beat.until("give", offset=-0.1, min_time=0.8))
@@ -747,7 +767,7 @@ class Episode(NarratedScene):
         flat = VGroup(*[l for i, (l, t) in enumerate(zip(flat, ts)) if t <= dg["t_max"] and i != k1], *dashed)
         self.t2, self.t100, self.sq_target = t2, t100, sq_target
         self.panel = VGroup(m_axes, m_lab)
-        self.diag_stuff = VGroup(flat, level, diag_lab, res, one_pt, edge_lab)
+        self.diag_stuff = VGroup(flat, level, diag_lab, res, one_pt, edge_lab, mis)
 
     # ================================================================== 2:13 one bit per dart
     def bits(self):
@@ -761,8 +781,8 @@ class Episode(NarratedScene):
         gR = Gauge(MCX, r"x_1^2+\dots+x_{100}^2", D["dart100"]["sum_sq"], D["r2"]["100"], 40.0, 1, inside=True)
         disc_fill = sq["disc_R"][0]
         diag_line = self.diag_line
-        with self.narrate("A dart's coordinates are drawn independently, so it lands inside with a chance equal "
-                          "to the answer, in any dimension: each dart is a coin flip.") as beat:
+        with self.narrate("A dart's coordinates are drawn independently and uniformly, so it lands inside with a "
+                          "chance equal to the answer, in any dimension: each dart is a coin flip. [pause 0.6]") as beat:
             self.play(FadeOut(self.diag_stuff), Transform(dart_sq, self.sq_target), Create(ring), Create(hero),
                       diag_line.animate.set_stroke(opacity=0.3), self.t2.animate.set_opacity(1),
                       run_time=beat.until("drawn", offset=-0.1, min_time=1.0))
@@ -811,16 +831,24 @@ class Episode(NarratedScene):
             self.play(FadeOut(VGroup(frame.ticks, frame.xl, frame.yl, sq["disc_R"], ring)),
                       frame_lines.animate.set_stroke(opacity=0.3),
                       *[FadeOut(VGroup(g.track, g.tick, g.bar, g.readout)) for g in (gL, gR)], run_time=0.4)
-            cL0, cR0 = coinsL[0].copy(), coinsR[0].copy()
-            self.play(FadeTransform(gL.result, cL0), ReplacementTransform(dart1, coinsL[0]),
-                      FadeTransform(gR.result, cR0), ReplacementTransform(hero, coinsR[0]), FadeIn(others),
-                      run_time=beat.until("coin", offset=0.1, min_time=0.6))
-            self.remove(gL.result, gR.result, cL0, cR0)
-            # each faint 100-D dart fades into its own coin as it shrinks (no bright blob)
+            # each verdict becomes its dart's coin: the 2-D dart dot moves to its slot; the 100-D dart's
+            # polyline shrinks rigidly (same shape, smaller) onto its slot while the coin grows there.
+            # No FadeTransform between unlike shapes (a polyline stretched into a dot reads as a blob).
+            def shrink_into(line, coin):
+                return AnimationGroup(line.animate.scale(0.04).move_to(coin.get_center()).set_stroke(opacity=0),
+                                      GrowFromCenter(coin))
+            self.play(FadeOut(gL.result, shift=(coinsL[0].get_center() - gL.result.get_center()) * 0.5, scale=0.4),
+                      FadeOut(gR.result, shift=(coinsR[0].get_center() - gR.result.get_center()) * 0.5, scale=0.4),
+                      ReplacementTransform(dart1, coinsL[0]), shrink_into(hero, coinsR[0]), FadeIn(others),
+                      run_time=beat.until("coin", offset=0.1, min_time=0.7))
+            self.remove(hero)
+            # then the other 99 darts of each run follow: 2-D dots slide into the block, each faint 100-D
+            # polyline shrinks into its own coin
             self.play(*[ReplacementTransform(d, c) for d, c in zip(sq["ddots"][1:], coinsL[1:])],
-                      *[FadeTransform(o, c) for o, c in zip(others, coinsR[1:])],
+                      LaggedStart(*[shrink_into(o, c) for o, c in zip(others, coinsR[1:])], lag_ratio=0.01),
                       Transform(frame_lines, box), FadeOut(self.panel),
-                      run_time=beat.remaining(min_time=0.8))
+                      run_time=beat.remaining(min_time=1.0))
+            self.remove(*others)
             self.play(FadeIn(kL, shift=0.1 * UP), FadeIn(kR, shift=0.1 * UP), run_time=0.6)
         # ---- one coin, close up: always exactly a half from its average
         ml = Line([-0.85, ML_Y, 0], [0.85, ML_Y, 0], color=AXIS, stroke_width=2.5)
@@ -1022,9 +1050,9 @@ class Episode(NarratedScene):
                           "the half for its own spread, sigma; there's still no d.") as beat:
             # the histograms have made their point; once they are gone the coin line comes back, full size,
             # beside the walk (it never crosses a fading histogram)
-            self.play(LaggedStart(FadeOut(hist_all, run_time=0.4),
-                                  AnimationGroup(Transform(coin_line, corner_full), Create(base), run_time=0.6),
-                                  lag_ratio=0.75), run_time=0.9)
+            self.play(LaggedStart(FadeOut(hist_all, run_time=0.35),
+                                  AnimationGroup(Transform(coin_line, corner_full), Create(base), run_time=0.5),
+                                  lag_ratio=0.5), run_time=0.68)
             # each step is a copy of the coin's half-miss: up for a dart inside, down for one outside
             self.play(LaggedStart(*[TransformFromCopy(miss[0], a) for a in walk], lag_ratio=0.15),
                       run_time=beat.until("random", end=True, min_time=1.6))
@@ -1166,12 +1194,15 @@ class Episode(NarratedScene):
             self.swap(eq_k, eq_v[0], eq_v[1], eq_v[2], eq_v[3], eq_v[4])
             self.remove(*eq_v)
             self.add(eq_v)
-            self.play(flag(eq_v[4], color=RED), run_time=0.6)
+            # flag the answer by growing it rightward only (a centred Indicate pushes it into the "=")
+            self.play(eq_v[4].animate(rate_func=there_and_back).scale(1.1, about_edge=LEFT), run_time=0.6)
             # the answer stays; a rigid copy (same glyphs, scaled and moved) labels the darts' new dashed
             # line, and all six runs sit under it
-            tag = eq_v[4].copy()
-            self.play(Create(pred), tag.animate.scale(pred_lab[1].height / eq_v[4].height).move_to(pred_lab[1]),
-                      run_time=0.8)
+            # (the copy starts invisible and becomes opaque as it leaves, so it never double-exposes the answer)
+            tag = eq_v[4].copy().set_opacity(0)
+            self.add(tag)
+            self.play(Create(pred), tag.animate.scale(pred_lab[1].height / eq_v[4].height).move_to(pred_lab[1])
+                      .set_opacity(1), run_time=0.9)
             self.remove(tag)
             self.add(pred_lab[1])
             self.play(FadeIn(pred_lab[0], shift=0.1 * RIGHT),
@@ -1232,10 +1263,13 @@ class Episode(NarratedScene):
             self.play(Create(fL[:3]), Create(fR[:3]), FadeIn(fL[3:]), FadeIn(fR[3:]), FadeIn(cite, shift=0.1 * UP),
                       run_time=beat.until("Bergstra", end=True, min_time=0.6))
             self.wait_beat(beat, "random", offset=-0.2)
-            self.play(Write(tR), Indicate(rd, color=BLUE, scale_factor=1.2), run_time=0.8)
+            # method names fade up on their words (no stroke-first Write: its outlines read as broken glyphs)
+            self.play(FadeIn(tR, shift=0.12 * DOWN, run_time=0.6), Indicate(rd, color=BLUE, scale_factor=1.2,
+                                                                         run_time=0.8))
             self.wait_beat(beat, "grid", offset=-0.2)
-            self.play(Write(tL), Indicate(gd, color=PURPLE, scale_factor=1.2),
-                      run_time=beat.until("If", offset=-0.3, min_time=0.8))
+            self.play(FadeIn(tL, shift=0.12 * DOWN, run_time=0.6), Indicate(gd, color=PURPLE, scale_factor=1.2,
+                                                                         run_time=0.8))
+            self.wait_beat(beat, "If", offset=-0.3)
             self.play(Create(cvL), Create(cvR), FadeIn(score), Indicate(fL.xl, color=INK, scale_factor=1.08),
                       Indicate(fR.xl, color=INK, scale_factor=1.08), run_time=beat.until("nine", offset=-0.1))
             self.play(Create(shL), TransformFromCopy(gd, onL), run_time=beat.until("three", offset=-0.1))
@@ -1282,18 +1316,21 @@ class Episode(NarratedScene):
         zone_lab2.move_to([zx0 + 0.1, c2p(1, LO)[1] + 0.18, 0], aligned_edge=DL)
         zone_lab.move_to(zone_lab2[1], aligned_edge=LEFT)
         # the Bergstra & Bengio panel leaves completely before the new chart is drawn (no mixed frame)
-        with self.narrate("Darts do have a blind spot: tiny answers. [pause 0.2] A radius-one ball fills two parts "
-                          "in a hundred trillion of a thirty-dimensional box. [pause 0.4] Below this line, a million "
-                          "darts expect under one hit, so they usually report zero.") as beat:
-            self.play(FadeOut(self.bb), run_time=0.5)
-            self.play(Create(ax), FadeIn(xl), FadeIn(yl), FadeIn(y_t), FadeIn(x_t),
-                      run_time=beat.until("tiny", offset=-0.15, min_time=0.8))
+        with self.narrate("Darts do have a blind spot: tiny answers. [pause 0.2] Keep the ball's radius at one, and "
+                          "in thirty dimensions it fills two parts in a hundred trillion of the box. [pause 0.4] Below "
+                          "this line, a million darts expect under one hit, so they usually report zero.") as beat:
+            # the new axes start drawing as the panel's last 15 % fades (no empty frame, no mixed frame)
+            self.play(LaggedStart(FadeOut(self.bb, run_time=0.45),
+                                  AnimationGroup(Create(ax), FadeIn(xl), FadeIn(yl), FadeIn(y_t), FadeIn(x_t)),
+                                  lag_ratio=0.85),
+                      run_time=beat.until("tiny", offset=-0.15, min_time=1.2))
             # "tiny answers": the curve of ever tinier answers, d = 2 .. 30, drawn as the words land
             self.play(Create(curve), LaggedStart(*[GrowFromCenter(d) for d in cdots], lag_ratio=0.05),
-                      run_time=beat.until("ball", end=True, min_time=1.2), rate_func=linear)
-            self.play(Indicate(y_t, color=INK, scale_factor=1.05), run_time=beat.until("two", offset=-0.1, min_time=0.6))
-            self.play(Indicate(cdots[-1], color=INK, scale_factor=1.8), FadeIn(end_lab, shift=0.1 * UP),
-                      run_time=beat.until("box", end=True, min_time=1.0))
+                      run_time=beat.until("radius", offset=-0.1, min_time=1.2), rate_func=linear)
+            # "radius at one": the chart's own title says it; "thirty dimensions": the last dot
+            self.play(Indicate(y_t, color=INK, scale_factor=1.05), run_time=beat.until("thirty", offset=-0.1, min_time=0.6))
+            self.play(Indicate(cdots[-1], color=INK, scale_factor=1.8), run_time=beat.until("two", offset=-0.1, min_time=0.6))
+            self.play(FadeIn(end_lab, shift=0.1 * UP), run_time=beat.until("box", end=True, min_time=0.8))
             self.wait_beat(beat, "line", offset=-0.4)
             self.play(Create(line), FadeIn(line_lab), run_time=0.8)
             self.play(FadeIn(zone), FadeIn(zone_lab), run_time=beat.until("hit", offset=-0.1, min_time=0.6))
@@ -1324,10 +1361,13 @@ class Episode(NarratedScene):
         # in the breath after the limit: its 1/N line becomes the cold-open header (same N), and its
         # x-axis becomes the floor the 100 input axes grow up from
         # (the chart clears first; the line then rises into the header as one shape, no glyph soup)
-        self.play(LaggedStart(FadeOut(L["rest"], run_time=0.4),
-                              AnimationGroup(ReplacementTransform(L["x_axis"], base),
-                                             FadeTransform(VGroup(L["line"], L["line_lab"]), n_lab), run_time=0.8),
-                              lag_ratio=0.5), run_time=0.9)
+        # (the chart clears completely first; then the dashed 1/N line rises and shrinks, as one rigid shape, into
+        # a rule under the header's place, and the header N = 1,000,000 points settles on it: no ghost text)
+        line = L["line"]
+        self.play(FadeOut(L["rest"]), FadeOut(L["line_lab"]), run_time=0.3)
+        self.play(ReplacementTransform(L["x_axis"], base),
+                  line.animate.scale(n_lab.width / line.width).next_to(n_lab, DOWN, buff=0.12), run_time=0.45)
+        self.play(FadeIn(n_lab, shift=0.1 * DOWN), FadeOut(line), run_time=0.3)
         with self.narrate("The darts never noticed the axes: [pause 0.4] a million coin flips, in any "
                           "dimension.") as beat:
             self.play(LaggedStart(*[GrowFromEdge(a, DOWN) for a in axes_pc], lag_ratio=0.01),

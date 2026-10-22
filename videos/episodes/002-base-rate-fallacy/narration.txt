@@ -1,57 +1,59 @@
-[00:00.0] One in five hundred people has this disease. A test catches ninety-nine percent of the sick and wrongly flags one percent of the healthy. If yours says positive, what's the chance you're sick? [pause 0.3] Pick a number. [pause 1.6]
+[00:00.0] In twenty seventeen, police cameras in Cardiff raised two thousand four hundred seventy watch-list alerts. How many were right? [pause 0.3] Pick a number. [pause 1.6]
 
-[00:15.6] At one Boston-area hospital, most doctors and medical students given a problem like this got it wrong.
+[00:12.0] Each alert is a positive test result. [pause 0.4] One in five hundred people has this disease. A test catches ninety-nine percent of the sick and wrongly flags one percent of the healthy. [pause 0.4] If yours says positive, what's the chance you're sick?
 
-[00:22.8] Their most common answer was their test's own accuracy: ninety-five percent. For our test, that's ninety-nine: you'd start treatment today.
+[00:28.0] At one Boston-area hospital, doctors and students given a problem like this most often answered with their test's own accuracy: ninety-five percent. For our test, that's ninety-nine: you'd start treatment today.
 
-[00:32.5] Check that rule by counting: ten thousand people, half of them sick.
+[00:43.3] Check that rule by counting: ten thousand people, half of them sick.
 
-[00:37.2] Test everyone, and watch who lights up. [pause 0.6]
+[00:48.0] Test everyone, and watch who lights up. [pause 0.6]
 
-[00:40.7] Of the five thousand who lit up, ninety-nine percent are sick. [pause 0.3] Here, the rule holds.
+[00:51.5] Of the five thousand who lit up, ninety-nine percent are sick. [pause 0.3] Here, the rule holds.
 
-[00:46.9] Now keep the same test, and make the disease rarer and rarer, down to yours: one in five hundred. [pause 0.4]
+[00:57.6] Now keep the same test, and make the disease rarer and rarer, down to yours: one in five hundred. [pause 0.4]
 
-[00:54.2] About twenty sick people light up, plus one percent of everyone else: about a hundred.
+[01:05.1] About twenty sick people light up, plus one percent of everyone else: about a hundred.
 
-[01:00.4] So of a hundred twenty positives, only twenty are sick.
+[01:11.2] So of a hundred twenty positives, only twenty are sick.
 
-[01:04.2] Seventeen percent.
+[01:15.0] Seventeen percent.
 
-[01:06.8] The rule said ninety-nine. [pause 0.2] Six times too high.
+[01:17.6] The rule said ninety-nine. [pause 0.2] Six times too high.
 
-[01:11.3] One percent sounds small, but here it's one percent of nearly everyone.
+[01:22.1] One percent sounds small, but here it's one percent of nearly everyone.
 
-[01:16.5] Your positive result ruled out everyone who tested negative.
+[01:27.3] Your positive result ruled out everyone who tested negative.
 
-[01:21.6] What's left is a smaller sample space: these hundred twenty people.
+[01:32.5] What's left is a smaller sample space: these hundred twenty people.
 
-[01:26.9] Your chance of being sick is the red share of this crowd. [pause 0.3] Twenty, out of twenty plus a hundred. [pause 1.1]
+[01:37.7] Your chance of being sick is the red share of this crowd. [pause 0.3] Twenty, out of twenty plus a hundred. [pause 1.1]
 
-[01:35.3] Unrounded, the red count is twenty sick people times ninety-nine percent, and the blue, every healthy person times one percent.
+[01:46.2] Unrounded, the red count is twenty sick people times ninety-nine percent, and the blue, every healthy person times one percent.
 
-[01:44.8] Divide everything by ten thousand: counts become shares. [pause 0.4] The share stays the same.
+[01:55.7] Divide everything by ten thousand: counts become shares. [pause 0.4] The share stays the same. [pause 0.6]
 
-[01:51.1] These are how common each group is, and these are how often each group tests positive. [pause 0.3] Name them, and you have Bayes' theorem.
+[02:02.5] These are how common each group is, and these are how often each group tests positive. [pause 0.3] Name them, and you have Bayes' theorem.
 
-[01:59.3] All it does is shrink the sample space to what the evidence allows, then take the share. [pause 0.9]
+[02:10.7] All it does is shrink the sample space to what the evidence allows, then take the share. [pause 0.9]
 
-[02:05.9] Swap the disease for a police watch list.
+[02:17.4] Swap the disease for a police watch list.
 
-[02:08.9] For the twenty seventeen Champions League final, about a hundred seventy thousand people came to Cardiff. [pause 0.4] The watch lists held about twelve hundred photos, so even a small error rate per face would swamp the real matches.
+[02:20.3] About a hundred seventy thousand people came, and the watch lists held about twelve hundred photos. Even a small error rate per face would swamp the real matches.
 
-[02:24.4] Face-recognition cameras scanned the crowds. [pause 0.3] Over four days, they raised two thousand four hundred seventy alerts.
+[02:30.9] For four days, face-recognition cameras scanned the crowds. [pause 0.3] Every face they flagged joined the alerts.
 
-[02:32.0] Shrink to the alerts. Take the red share.
+[02:37.8] Shrink to the alerts. Take the red share.
 
-[02:35.2] The police counted a hundred seventy-three as right: seven percent.
+[02:41.0] The police counted a hundred seventy-three as right: seven percent. [pause 1.0]
 
-[02:40.4] In machine learning, that share is called precision. [pause 0.8]
+[02:47.0] In machine learning, that share is called precision. [pause 0.6]
 
-[02:44.7] Cardiff University's evaluators counted only alerts the logbooks confirmed: three percent. Months later, a new algorithm, better photos and practised operators thinned out the false alarms, the blue term in Bayes' denominator, and their count rose to forty-six percent.
+[02:51.1] Cardiff University's evaluators counted only alerts the logbooks confirmed: three percent. [pause 0.5] Months later, a new algorithm and better photos thinned out the false alarms. [pause 0.4] That's the blue term in Bayes' denominator. [pause 0.3] Their count rose to forty-six percent. [pause 0.6]
 
-[03:04.7] Back to your test. [pause 1.6]
+[03:09.7] Back to your test. [pause 1.6]
 
-[03:07.9] Your seventeen percent assumes a random screen. [pause 0.4] Symptoms raise the one in five hundred: at one in a hundred, fifty percent; at one in two, ninety-nine, where the rule held. [pause 1.0]
+[03:12.9] Symptoms raise the one in five hundred: at one in a hundred, fifty percent; at one in two, ninety-nine, where the rule held. [pause 0.9]
 
-[03:21.7] The title's ninety-nine percent is the test's recall: how often the sick test positive. [pause 0.3] Seventeen percent is its precision: how often the positive are sick.
+[03:23.0] That ninety-nine percent describes the test: its recall, how often the sick test positive. [pause 0.3] Seventeen percent describes your result: its precision. [pause 0.4]
+
+[03:34.3] Your test didn't say you're sick. [pause 0.4] It said: you're in this crowd.

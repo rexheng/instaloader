@@ -2,46 +2,44 @@
 
 [00:12.6] You probably pictured a shapeless oval, with a nearly flat line. Here are the real points. [pause 1.1] A dinosaur, drawn by Alberto Cairo, with these same five numbers.
 
-[00:25.0] In a review of seven hundred three physiology papers, eighty-six percent used bar graphs: [pause 0.4] an average and an error bar. Only thirteen percent showed the points.
+[00:25.0] In a review of seven hundred three physiology papers, [pause 0.4] eighty-six percent used bar graphs: [pause 0.4] an average and an error bar. [pause 0.6] Only thirteen percent showed the points.
 
-[00:37.0] How much can five numbers hide? Let's hide a star in them, and demand that all five match the dinosaur's to two decimals.
+[00:38.3] How much can five numbers hide? Let's hide a star in them, and demand that all five match the dinosaur's to two decimals.
 
-[00:45.9] The first version slides every point onto its own spot on a star.
+[00:47.2] The first version slides every point onto its own spot on a star.
 
-[00:50.8] We got the star, and lost all five numbers. [pause 0.9] The center moved, the x spread grew, and the y spread shrank by almost a quarter.
+[00:52.1] We got the star, and lost all five numbers. [pause 0.9] The center moved, the x spread grew, and the y spread shrank by almost a quarter.
 
-[01:00.8] So what exactly do five numbers pin down?
+[01:02.1] So what exactly do five numbers pin down?
 
-[01:04.1] The two averages mark a single point: the cloud's balance point.
+[01:05.4] The two averages mark a single point: the cloud's balance point.
 
-[01:08.9] The two standard deviations reach out on each side, and draw a box.
+[01:10.5] The two standard deviations reach out on each side, and draw a box.
 
-[01:14.2] Many ellipses touch all four walls. [pause 0.2] The correlation, r, picks one. [pause 0.6]
+[01:15.8] Many ellipses touch all four walls. [pause 0.2] The correlation, r, picks one. [pause 0.6]
 
-[01:20.1] Say r is point five. Go one standard deviation right. [pause 0.4] On average, the cloud rises r times ess why. [pause 0.7] That's the best-fit line, through the middle of every slice of the ellipse. [pause 0.7] At the wall, the slices shrink to the touch point. [pause 0.4] For the dinosaur, it's just below the middle.
+[01:21.7] This one barely tilts. [pause 0.4] Say r is point five. Go one standard deviation right. [pause 0.4] On average, the cloud rises r times ess why. [pause 0.7] That's the best-fit line, [pause 1.1] through the middle of every slice of the ellipse. [pause 0.7] At the wall, the slices shrink to the touch point. [pause 0.4] For the dinosaur, it's just below the middle.
 
-[01:41.7] That ellipse is everything the five numbers know. [pause 1.0]
+[01:46.4] That ellipse is everything the five numbers know. [pause 1.0]
 
-[01:46.0] Now replay the first version, and watch the ellipse.
+[01:50.7] Now replay the first version, and watch the ellipse.
 
-[01:49.7] How would you fix it? [pause 1.5]
+[01:54.7] How would you fix it? [pause 1.5]
 
-[01:53.0] Slide it until the centers meet. Stretch it until the boxes match. Then tip it, keeping the box, [pause 0.2] until it touches the walls at the same height.
+[01:58.0] Slide it until the centers meet. Stretch it until the boxes match. Then tip it, keeping the box, [pause 0.2] until it touches the walls at the same height.
 
-[02:03.1] All five match now, to every decimal place. [pause 0.6]
+[02:08.1] All five match now, to every decimal place. [pause 0.6]
 
-[02:07.4] But add a sixth number: the median of y. Our star misses it by six.
+[02:12.4] But add a sixth number: the median of y. Our star misses it by six.
 
-[02:12.9] In 2017, Justin Matejka and George Fitzmaurice built a search. [pause 0.4] It keeps these five numbers fixed while it nudges points toward a target.
+[02:18.2] In 2017, Justin Matejka and George Fitzmaurice built a search. [pause 0.4] It keeps these five numbers fixed while it nudges points toward a target.
 
-[02:23.2] From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this star, [pause 0.8] this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Each one has this same ellipse, and a different median.
+[02:28.5] From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Each one has this same ellipse, and a different median.
 
-[02:37.9] Francis Anscombe made the same point in 1973, with eleven points. [pause 1.2]
+[02:41.7] In 1973, Francis Anscombe did it with just eleven points. [pause 1.2]
 
-[02:45.0] Same rule: ess ex across, [pause 0.3] r times ess why up. [pause 0.5]
+[02:48.5] Same rule, [pause 0.3] same line. [pause 0.8]
 
-[02:49.9] So the slope is the rise [pause 0.3] over the run. [pause 1.0]
+[02:51.9] All four of his datasets share these five numbers. [pause 0.5] A trend, a curve, an outlier, and one point doing all the work.
 
-[02:54.3] All four of his datasets share these five numbers. [pause 0.5] A trend, a curve, an outlier, and one point doing all the work.
-
-[03:04.1] Your line was right: five numbers fix it exactly, slope minus point one. [pause 0.8] Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.
+[03:01.7] Your line was right: five numbers fix it exactly, slope minus point one. [pause 0.8] Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.

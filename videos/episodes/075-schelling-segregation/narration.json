@@ -2,7 +2,7 @@
  "scene": "Episode",
  "episode": 75,
  "title": "Mild Preferences, Segregated Towns",
- "video_duration": 214.5,
+ "video_duration": 209.567,
  "beats": [
   {
    "index": 0,
@@ -709,240 +709,147 @@
   },
   {
    "index": 6,
-   "start": 51.233,
-   "duration": 5.31,
-   "end": 56.543,
-   "text": "Round one takes two hundred moves; the other thirty-eight were content by their turn.",
+   "start": 51.633,
+   "duration": 12.54,
+   "end": 64.173,
+   "text": "Round one: two hundred moves. The unhappy count stalls at seventy-four. [pause 1.2] Sixty-seven of these were content before round one. [pause 0.15] They never moved. Their neighbors did.",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
      "w": "Round",
-     "t": 51.278,
-     "end": 51.615
+     "t": 51.698,
+     "end": 52.023
     },
     {
      "w": "one",
-     "t": 51.653,
-     "end": 51.878
-    },
-    {
-     "w": "takes",
-     "t": 51.903,
-     "end": 52.278
+     "t": 52.048,
+     "end": 52.423
     },
     {
      "w": "two",
-     "t": 52.328,
-     "end": 52.503
+     "t": 52.573,
+     "end": 52.748
     },
     {
      "w": "hundred",
-     "t": 52.528,
-     "end": 52.878
+     "t": 52.773,
+     "end": 53.098
     },
     {
      "w": "moves",
-     "t": 52.903,
-     "end": 53.678
+     "t": 53.123,
+     "end": 53.723
     },
     {
-     "w": "the",
-     "t": 53.828,
-     "end": 53.953
+     "w": "The",
+     "t": 54.038,
+     "end": 54.163
     },
     {
-     "w": "other",
-     "t": 53.978,
-     "end": 54.253
+     "w": "unhappy",
+     "t": 54.188,
+     "end": 54.688
     },
     {
-     "w": "thirty-eight",
-     "t": 54.278,
-     "end": 54.828
+     "w": "count",
+     "t": 54.713,
+     "end": 55.188
     },
     {
-     "w": "were",
-     "t": 54.853,
-     "end": 54.978
+     "w": "stalls",
+     "t": 55.238,
+     "end": 55.613
     },
     {
-     "w": "content",
-     "t": 55.003,
-     "end": 55.603
-    },
-    {
-     "w": "by",
-     "t": 55.628,
-     "end": 55.778
-    },
-    {
-     "w": "their",
-     "t": 55.803,
-     "end": 55.991
-    },
-    {
-     "w": "turn",
-     "t": 56.028,
-     "end": 56.543
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/0b/0bcfb85ccd188dad0bddbbc9.wav"
-  },
-  {
-   "index": 7,
-   "start": 57.0,
-   "duration": 12.46,
-   "end": 69.46,
-   "text": "If the plan had worked, this counter would read zero. It reads seventy-four. [pause 0.9] Sixty-seven of these were content before round one. [pause 0.15] They never moved. Their neighbors did.",
-   "voice": "af_heart",
-   "speed": 0.84,
-   "cadence": "shaped",
-   "words": [
-    {
-     "w": "If",
-     "t": 57.025,
-     "end": 57.2
-    },
-    {
-     "w": "the",
-     "t": 57.225,
-     "end": 57.3
-    },
-    {
-     "w": "plan",
-     "t": 57.325,
-     "end": 57.65
-    },
-    {
-     "w": "had",
-     "t": 57.675,
-     "end": 57.825
-    },
-    {
-     "w": "worked",
-     "t": 57.85,
-     "end": 58.35
-    },
-    {
-     "w": "this",
-     "t": 58.475,
-     "end": 58.65
-    },
-    {
-     "w": "counter",
-     "t": 58.675,
-     "end": 59.075
-    },
-    {
-     "w": "would",
-     "t": 59.1,
-     "end": 59.25
-    },
-    {
-     "w": "read",
-     "t": 59.275,
-     "end": 59.525
-    },
-    {
-     "w": "zero",
-     "t": 59.55,
-     "end": 60.11
-    },
-    {
-     "w": "It",
-     "t": 60.615,
-     "end": 60.79
-    },
-    {
-     "w": "reads",
-     "t": 60.815,
-     "end": 61.215
+     "w": "at",
+     "t": 55.638,
+     "end": 55.713
     },
     {
      "w": "seventy-four",
-     "t": 61.265,
-     "end": 62.22
+     "t": 55.738,
+     "end": 56.633
     },
     {
      "w": "Sixty-seven",
-     "t": 63.195,
-     "end": 63.92
+     "t": 57.908,
+     "end": 58.633
     },
     {
      "w": "of",
-     "t": 63.945,
-     "end": 64.02
+     "t": 58.658,
+     "end": 58.733
     },
     {
      "w": "these",
-     "t": 64.045,
-     "end": 64.37
+     "t": 58.758,
+     "end": 59.083
     },
     {
      "w": "were",
-     "t": 64.395,
-     "end": 64.52
+     "t": 59.108,
+     "end": 59.233
     },
     {
      "w": "content",
-     "t": 64.545,
-     "end": 65.258
+     "t": 59.258,
+     "end": 59.971
     },
     {
      "w": "before",
-     "t": 65.295,
-     "end": 65.67
+     "t": 60.008,
+     "end": 60.383
     },
     {
      "w": "round",
-     "t": 65.695,
-     "end": 65.97
+     "t": 60.408,
+     "end": 60.683
     },
     {
      "w": "one",
-     "t": 65.995,
-     "end": 66.48
+     "t": 60.708,
+     "end": 61.193
     },
     {
      "w": "They",
-     "t": 66.665,
-     "end": 66.828
+     "t": 61.378,
+     "end": 61.541
     },
     {
      "w": "never",
-     "t": 66.865,
-     "end": 67.19
+     "t": 61.578,
+     "end": 61.903
     },
     {
      "w": "moved",
-     "t": 67.215,
-     "end": 67.83
+     "t": 61.928,
+     "end": 62.543
     },
     {
      "w": "Their",
-     "t": 68.265,
-     "end": 68.465
+     "t": 62.978,
+     "end": 63.178
     },
     {
      "w": "neighbors",
-     "t": 68.49,
-     "end": 68.94
+     "t": 63.203,
+     "end": 63.653
     },
     {
      "w": "did",
-     "t": 68.965,
-     "end": 69.46
+     "t": 63.678,
+     "end": 64.173
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/26/265bfa7ff0683d0af4f564d7.wav"
+   "wav": "/root/.cache/sample_space/tts/e8/e8fb76f35ecf66b8f08f32f7.wav"
   },
   {
-   "index": 8,
-   "start": 69.9,
+   "index": 7,
+   "start": 64.633,
    "duration": 9.31,
-   "end": 79.21,
+   "end": 73.943,
    "text": "Replay one block. [pause 0.3] At the start, this gold household had three gold neighbors out of eight. Three eighths beats a third, so it stayed.",
    "voice": "af_heart",
    "speed": 0.82,
@@ -950,132 +857,132 @@
    "words": [
     {
      "w": "Replay",
-     "t": 69.975,
-     "end": 70.4
+     "t": 64.708,
+     "end": 65.133
     },
     {
      "w": "one",
-     "t": 70.425,
-     "end": 70.625
+     "t": 65.158,
+     "end": 65.358
     },
     {
      "w": "block",
-     "t": 70.65,
-     "end": 71.26
+     "t": 65.383,
+     "end": 65.993
     },
     {
      "w": "At",
-     "t": 71.56,
-     "end": 71.668
+     "t": 66.293,
+     "end": 66.401
     },
     {
      "w": "the",
-     "t": 71.68,
-     "end": 71.768
+     "t": 66.413,
+     "end": 66.501
     },
     {
      "w": "start",
-     "t": 71.805,
-     "end": 72.43
+     "t": 66.538,
+     "end": 67.163
     },
     {
      "w": "this",
-     "t": 72.555,
-     "end": 72.755
+     "t": 67.288,
+     "end": 67.488
     },
     {
      "w": "gold",
-     "t": 72.78,
-     "end": 73.03
+     "t": 67.513,
+     "end": 67.763
     },
     {
      "w": "household",
-     "t": 73.055,
-     "end": 73.73
+     "t": 67.788,
+     "end": 68.463
     },
     {
      "w": "had",
-     "t": 73.755,
-     "end": 73.98
+     "t": 68.488,
+     "end": 68.713
     },
     {
      "w": "three",
-     "t": 74.03,
-     "end": 74.305
+     "t": 68.763,
+     "end": 69.038
     },
     {
      "w": "gold",
-     "t": 74.33,
-     "end": 74.655
+     "t": 69.063,
+     "end": 69.388
     },
     {
      "w": "neighbors",
-     "t": 74.68,
-     "end": 75.218
+     "t": 69.413,
+     "end": 69.951
     },
     {
      "w": "out",
-     "t": 75.255,
-     "end": 75.418
+     "t": 69.988,
+     "end": 70.151
     },
     {
      "w": "of",
-     "t": 75.43,
-     "end": 75.505
+     "t": 70.163,
+     "end": 70.238
     },
     {
      "w": "eight",
-     "t": 75.53,
-     "end": 76.0
+     "t": 70.263,
+     "end": 70.733
     },
     {
      "w": "Three",
-     "t": 76.6,
-     "end": 76.888
+     "t": 71.333,
+     "end": 71.621
     },
     {
      "w": "eighths",
-     "t": 76.925,
-     "end": 77.3
+     "t": 71.658,
+     "end": 72.033
     },
     {
      "w": "beats",
-     "t": 77.325,
-     "end": 77.538
+     "t": 72.058,
+     "end": 72.271
     },
     {
      "w": "a",
-     "t": 77.55,
-     "end": 77.638
+     "t": 72.283,
+     "end": 72.371
     },
     {
      "w": "third",
-     "t": 77.675,
-     "end": 78.15
+     "t": 72.408,
+     "end": 72.883
     },
     {
      "w": "so",
-     "t": 78.3,
-     "end": 78.438
+     "t": 73.033,
+     "end": 73.171
     },
     {
      "w": "it",
-     "t": 78.45,
-     "end": 78.575
+     "t": 73.183,
+     "end": 73.308
     },
     {
      "w": "stayed",
-     "t": 78.6,
-     "end": 79.21
+     "t": 73.333,
+     "end": 73.943
     }
    ],
    "wav": "/root/.cache/sample_space/tts/83/838afd152b066552eca62efd.wav"
   },
   {
-   "index": 9,
-   "start": 79.667,
+   "index": 8,
+   "start": 74.4,
    "duration": 4.47,
-   "end": 84.137,
+   "end": 78.87,
    "text": "Then this neighbor moved away. Is it still content? [pause 1.0]",
    "voice": "af_heart",
    "speed": 0.84,
@@ -1083,57 +990,57 @@
    "words": [
     {
      "w": "Then",
-     "t": 79.707,
-     "end": 79.932
+     "t": 74.44,
+     "end": 74.665
     },
     {
      "w": "this",
-     "t": 79.957,
-     "end": 80.169
+     "t": 74.69,
+     "end": 74.902
     },
     {
      "w": "neighbor",
-     "t": 80.207,
-     "end": 80.557
+     "t": 74.94,
+     "end": 75.29
     },
     {
      "w": "moved",
-     "t": 80.582,
-     "end": 80.832
+     "t": 75.315,
+     "end": 75.565
     },
     {
      "w": "away",
-     "t": 80.857,
-     "end": 81.377
+     "t": 75.59,
+     "end": 76.11
     },
     {
      "w": "Is",
-     "t": 81.702,
-     "end": 81.877
+     "t": 76.435,
+     "end": 76.61
     },
     {
      "w": "it",
-     "t": 81.902,
-     "end": 82.027
+     "t": 76.635,
+     "end": 76.76
     },
     {
      "w": "still",
-     "t": 82.052,
-     "end": 82.327
+     "t": 76.785,
+     "end": 77.06
     },
     {
      "w": "content",
-     "t": 82.352,
-     "end": 83.137
+     "t": 77.085,
+     "end": 77.87
     }
    ],
    "wav": "/root/.cache/sample_space/tts/7f/7f4cb807777763817efe0a9f.wav"
   },
   {
-   "index": 10,
-   "start": 84.6,
+   "index": 9,
+   "start": 79.333,
    "duration": 4.49,
-   "end": 89.09,
+   "end": 83.823,
    "text": "Two gold out of seven, less than a third, so now it wants out.",
    "voice": "af_heart",
    "speed": 0.8,
@@ -1141,82 +1048,82 @@
    "words": [
     {
      "w": "Two",
-     "t": 84.625,
-     "end": 84.888
+     "t": 79.358,
+     "end": 79.621
     },
     {
      "w": "gold",
-     "t": 84.925,
-     "end": 85.3
+     "t": 79.658,
+     "end": 80.033
     },
     {
      "w": "out",
-     "t": 85.325,
-     "end": 85.488
+     "t": 80.058,
+     "end": 80.221
     },
     {
      "w": "of",
-     "t": 85.5,
-     "end": 85.613
+     "t": 80.233,
+     "end": 80.346
     },
     {
      "w": "seven",
-     "t": 85.65,
-     "end": 86.3
+     "t": 80.383,
+     "end": 81.033
     },
     {
      "w": "less",
-     "t": 86.475,
-     "end": 86.775
+     "t": 81.208,
+     "end": 81.508
     },
     {
      "w": "than",
-     "t": 86.8,
-     "end": 86.9
+     "t": 81.533,
+     "end": 81.633
     },
     {
      "w": "a",
-     "t": 86.925,
-     "end": 87.025
+     "t": 81.658,
+     "end": 81.758
     },
     {
      "w": "third",
-     "t": 87.075,
-     "end": 87.625
+     "t": 81.808,
+     "end": 82.358
     },
     {
      "w": "so",
-     "t": 87.775,
-     "end": 87.962
+     "t": 82.508,
+     "end": 82.695
     },
     {
      "w": "now",
-     "t": 88.0,
-     "end": 88.188
+     "t": 82.733,
+     "end": 82.921
     },
     {
      "w": "it",
-     "t": 88.2,
-     "end": 88.275
+     "t": 82.933,
+     "end": 83.008
     },
     {
      "w": "wants",
-     "t": 88.3,
-     "end": 88.588
+     "t": 83.033,
+     "end": 83.321
     },
     {
      "w": "out",
-     "t": 88.625,
-     "end": 89.09
+     "t": 83.358,
+     "end": 83.823
     }
    ],
    "wav": "/root/.cache/sample_space/tts/29/295b5221edc18843b48a4318.wav"
   },
   {
-   "index": 11,
-   "start": 89.533,
+   "index": 10,
+   "start": 84.267,
    "duration": 7.34,
-   "end": 96.873,
+   "end": 91.607,
    "text": "Its neighbor here also has three eighths. In round two, our household leaves, and this one drops to two sevenths.",
    "voice": "af_heart",
    "speed": 0.83,
@@ -1224,112 +1131,112 @@
    "words": [
     {
      "w": "Its",
-     "t": 89.533,
-     "end": 89.753
+     "t": 84.267,
+     "end": 84.487
     },
     {
      "w": "neighbor",
-     "t": 89.778,
-     "end": 90.128
+     "t": 84.512,
+     "end": 84.862
     },
     {
      "w": "here",
-     "t": 90.153,
-     "end": 90.528
+     "t": 84.887,
+     "end": 85.262
     },
     {
      "w": "also",
-     "t": 90.578,
-     "end": 90.953
+     "t": 85.312,
+     "end": 85.687
     },
     {
      "w": "has",
-     "t": 90.978,
-     "end": 91.165
+     "t": 85.712,
+     "end": 85.899
     },
     {
      "w": "three",
-     "t": 91.203,
-     "end": 91.428
+     "t": 85.937,
+     "end": 86.162
     },
     {
      "w": "eighths",
-     "t": 91.453,
-     "end": 91.993
+     "t": 86.187,
+     "end": 86.727
     },
     {
      "w": "In",
-     "t": 92.338,
-     "end": 92.438
+     "t": 87.072,
+     "end": 87.172
     },
     {
      "w": "round",
-     "t": 92.463,
-     "end": 92.763
+     "t": 87.197,
+     "end": 87.497
     },
     {
      "w": "two",
-     "t": 92.813,
-     "end": 93.213
+     "t": 87.547,
+     "end": 87.947
     },
     {
      "w": "our",
-     "t": 93.338,
-     "end": 93.463
+     "t": 88.072,
+     "end": 88.197
     },
     {
      "w": "household",
-     "t": 93.488,
-     "end": 94.063
+     "t": 88.222,
+     "end": 88.797
     },
     {
      "w": "leaves",
-     "t": 94.088,
-     "end": 94.813
+     "t": 88.822,
+     "end": 89.547
     },
     {
      "w": "and",
-     "t": 94.988,
-     "end": 95.075
+     "t": 89.722,
+     "end": 89.809
     },
     {
      "w": "this",
-     "t": 95.088,
-     "end": 95.263
+     "t": 89.822,
+     "end": 89.997
     },
     {
      "w": "one",
-     "t": 95.288,
-     "end": 95.488
+     "t": 90.022,
+     "end": 90.222
     },
     {
      "w": "drops",
-     "t": 95.513,
-     "end": 95.838
+     "t": 90.247,
+     "end": 90.572
     },
     {
      "w": "to",
-     "t": 95.863,
-     "end": 95.963
+     "t": 90.597,
+     "end": 90.697
     },
     {
      "w": "two",
-     "t": 95.988,
-     "end": 96.175
+     "t": 90.722,
+     "end": 90.909
     },
     {
      "w": "sevenths",
-     "t": 96.213,
-     "end": 96.873
+     "t": 90.947,
+     "end": 91.607
     }
    ],
    "wav": "/root/.cache/sample_space/tts/dc/dc769ea1e835db2c94972c31.wav"
   },
   {
-   "index": 12,
-   "start": 98.133,
+   "index": 11,
+   "start": 92.867,
    "duration": 6.06,
-   "end": 104.193,
+   "end": 98.927,
    "text": "Now run the whole town. [pause 1.9] After round seven, nobody wants to move.",
    "voice": "af_heart",
    "speed": 0.84,
@@ -1337,72 +1244,72 @@
    "words": [
     {
      "w": "Now",
-     "t": 98.213,
-     "end": 98.438
+     "t": 92.947,
+     "end": 93.172
     },
     {
      "w": "run",
-     "t": 98.463,
-     "end": 98.651
+     "t": 93.197,
+     "end": 93.385
     },
     {
      "w": "the",
-     "t": 98.663,
-     "end": 98.738
+     "t": 93.397,
+     "end": 93.472
     },
     {
      "w": "whole",
-     "t": 98.763,
-     "end": 98.975
+     "t": 93.497,
+     "end": 93.709
     },
     {
      "w": "town",
-     "t": 99.013,
-     "end": 99.603
+     "t": 93.747,
+     "end": 94.337
     },
     {
      "w": "After",
-     "t": 101.523,
-     "end": 101.823
+     "t": 96.257,
+     "end": 96.557
     },
     {
      "w": "round",
-     "t": 101.848,
-     "end": 102.136
+     "t": 96.582,
+     "end": 96.87
     },
     {
      "w": "seven",
-     "t": 102.173,
-     "end": 102.723
+     "t": 96.907,
+     "end": 97.457
     },
     {
      "w": "nobody",
-     "t": 102.898,
-     "end": 103.248
+     "t": 97.632,
+     "end": 97.982
     },
     {
      "w": "wants",
-     "t": 103.273,
-     "end": 103.498
+     "t": 98.007,
+     "end": 98.232
     },
     {
      "w": "to",
-     "t": 103.523,
-     "end": 103.598
+     "t": 98.257,
+     "end": 98.332
     },
     {
      "w": "move",
-     "t": 103.623,
-     "end": 104.193
+     "t": 98.357,
+     "end": 98.927
     }
    ],
    "wav": "/root/.cache/sample_space/tts/9f/9f164f626cd96cfe0ebcbfe6.wav"
   },
   {
-   "index": 13,
-   "start": 105.6,
+   "index": 12,
+   "start": 100.333,
    "duration": 3.0,
-   "end": 108.6,
+   "end": 103.333,
    "text": "That whole town is one point on this chart.",
    "voice": "af_heart",
    "speed": 0.78,
@@ -1410,57 +1317,57 @@
    "words": [
     {
      "w": "That",
-     "t": 105.645,
-     "end": 105.858
+     "t": 100.378,
+     "end": 100.591
     },
     {
      "w": "whole",
-     "t": 105.895,
-     "end": 106.182
+     "t": 100.628,
+     "end": 100.915
     },
     {
      "w": "town",
-     "t": 106.22,
-     "end": 106.732
+     "t": 100.953,
+     "end": 101.465
     },
     {
      "w": "is",
-     "t": 106.77,
-     "end": 106.97
+     "t": 101.503,
+     "end": 101.703
     },
     {
      "w": "one",
-     "t": 107.02,
-     "end": 107.332
+     "t": 101.753,
+     "end": 102.065
     },
     {
      "w": "point",
-     "t": 107.37,
-     "end": 107.682
+     "t": 102.103,
+     "end": 102.415
     },
     {
      "w": "on",
-     "t": 107.695,
-     "end": 107.782
+     "t": 102.428,
+     "end": 102.515
     },
     {
      "w": "this",
-     "t": 107.795,
-     "end": 108.007
+     "t": 102.528,
+     "end": 102.74
     },
     {
      "w": "chart",
-     "t": 108.045,
-     "end": 108.6
+     "t": 102.778,
+     "end": 103.333
     }
    ],
    "wav": "/root/.cache/sample_space/tts/9f/9f6f854fba16cc7c39d61f3a.wav"
   },
   {
-   "index": 14,
-   "start": 109.5,
+   "index": 13,
+   "start": 104.233,
    "duration": 9.69,
-   "end": 119.19,
+   "end": 113.923,
    "text": "Demand a quarter, and the same starting town barely sorts: fifty-eight percent. Demand a third, and it jumps to seventy-six. [pause 0.9]",
    "voice": "af_heart",
    "speed": 0.84,
@@ -1468,112 +1375,112 @@
    "words": [
     {
      "w": "Demand",
-     "t": 109.55,
-     "end": 109.938
+     "t": 104.283,
+     "end": 104.671
     },
     {
      "w": "a",
-     "t": 109.95,
-     "end": 110.0
+     "t": 104.683,
+     "end": 104.733
     },
     {
      "w": "quarter",
-     "t": 110.025,
-     "end": 110.55
+     "t": 104.758,
+     "end": 105.283
     },
     {
      "w": "and",
-     "t": 110.675,
-     "end": 110.762
+     "t": 105.408,
+     "end": 105.495
     },
     {
      "w": "the",
-     "t": 110.775,
-     "end": 110.875
+     "t": 105.508,
+     "end": 105.608
     },
     {
      "w": "same",
-     "t": 110.925,
-     "end": 111.225
+     "t": 105.658,
+     "end": 105.958
     },
     {
      "w": "starting",
-     "t": 111.25,
-     "end": 111.65
+     "t": 105.983,
+     "end": 106.383
     },
     {
      "w": "town",
-     "t": 111.675,
-     "end": 112.062
+     "t": 106.408,
+     "end": 106.795
     },
     {
      "w": "barely",
-     "t": 112.1,
-     "end": 112.488
+     "t": 106.833,
+     "end": 107.221
     },
     {
      "w": "sorts",
-     "t": 112.525,
-     "end": 113.275
+     "t": 107.258,
+     "end": 108.008
     },
     {
      "w": "fifty-eight",
-     "t": 113.5,
-     "end": 114.025
+     "t": 108.233,
+     "end": 108.758
     },
     {
      "w": "percent",
-     "t": 114.05,
-     "end": 114.73
+     "t": 108.783,
+     "end": 109.463
     },
     {
      "w": "Demand",
-     "t": 115.28,
-     "end": 115.693
+     "t": 110.013,
+     "end": 110.426
     },
     {
      "w": "a",
-     "t": 115.705,
-     "end": 115.805
+     "t": 110.438,
+     "end": 110.538
     },
     {
      "w": "third",
-     "t": 115.855,
-     "end": 116.455
+     "t": 110.588,
+     "end": 111.188
     },
     {
      "w": "and",
-     "t": 116.58,
-     "end": 116.668
+     "t": 111.313,
+     "end": 111.401
     },
     {
      "w": "it",
-     "t": 116.68,
-     "end": 116.768
+     "t": 111.413,
+     "end": 111.501
     },
     {
      "w": "jumps",
-     "t": 116.805,
-     "end": 117.13
+     "t": 111.538,
+     "end": 111.863
     },
     {
      "w": "to",
-     "t": 117.155,
-     "end": 117.255
+     "t": 111.888,
+     "end": 111.988
     },
     {
      "w": "seventy-six",
-     "t": 117.28,
-     "end": 118.29
+     "t": 112.013,
+     "end": 113.023
     }
    ],
    "wav": "/root/.cache/sample_space/tts/be/becdda761f1322d50c210aca.wav"
   },
   {
-   "index": 15,
-   "start": 119.333,
+   "index": 14,
+   "start": 114.067,
    "duration": 7.86,
-   "end": 127.193,
+   "end": 121.927,
    "text": "To see why, sort the random start by each household's share of matching neighbors. With at most eight neighbors, shares come in steps.",
    "voice": "af_heart",
    "speed": 0.84,
@@ -1581,127 +1488,127 @@
    "words": [
     {
      "w": "To",
-     "t": 119.343,
-     "end": 119.443
+     "t": 114.077,
+     "end": 114.177
     },
     {
      "w": "see",
-     "t": 119.468,
-     "end": 119.643
+     "t": 114.202,
+     "end": 114.377
     },
     {
      "w": "why",
-     "t": 119.668,
-     "end": 120.118
+     "t": 114.402,
+     "end": 114.852
     },
     {
      "w": "sort",
-     "t": 120.318,
-     "end": 120.481
+     "t": 115.052,
+     "end": 115.215
     },
     {
      "w": "the",
-     "t": 120.493,
-     "end": 120.568
+     "t": 115.227,
+     "end": 115.302
     },
     {
      "w": "random",
-     "t": 120.593,
-     "end": 121.018
+     "t": 115.327,
+     "end": 115.752
     },
     {
      "w": "start",
-     "t": 121.043,
-     "end": 121.343
+     "t": 115.777,
+     "end": 116.077
     },
     {
      "w": "by",
-     "t": 121.368,
-     "end": 121.555
+     "t": 116.102,
+     "end": 116.289
     },
     {
      "w": "each",
-     "t": 121.593,
-     "end": 121.818
+     "t": 116.327,
+     "end": 116.552
     },
     {
      "w": "household's",
-     "t": 121.843,
-     "end": 122.455
+     "t": 116.577,
+     "end": 117.189
     },
     {
      "w": "share",
-     "t": 122.493,
-     "end": 122.743
+     "t": 117.227,
+     "end": 117.477
     },
     {
      "w": "of",
-     "t": 122.768,
-     "end": 122.868
+     "t": 117.502,
+     "end": 117.602
     },
     {
      "w": "matching",
-     "t": 122.893,
-     "end": 123.343
+     "t": 117.627,
+     "end": 118.077
     },
     {
      "w": "neighbors",
-     "t": 123.368,
-     "end": 124.033
+     "t": 118.102,
+     "end": 118.767
     },
     {
      "w": "With",
-     "t": 124.358,
-     "end": 124.496
+     "t": 119.092,
+     "end": 119.23
     },
     {
      "w": "at",
-     "t": 124.508,
-     "end": 124.583
+     "t": 119.242,
+     "end": 119.317
     },
     {
      "w": "most",
-     "t": 124.608,
-     "end": 124.833
+     "t": 119.342,
+     "end": 119.567
     },
     {
      "w": "eight",
-     "t": 124.858,
-     "end": 125.033
+     "t": 119.592,
+     "end": 119.767
     },
     {
      "w": "neighbors",
-     "t": 125.058,
-     "end": 125.683
+     "t": 119.792,
+     "end": 120.417
     },
     {
      "w": "shares",
-     "t": 125.883,
-     "end": 126.233
+     "t": 120.617,
+     "end": 120.967
     },
     {
      "w": "come",
-     "t": 126.258,
-     "end": 126.421
+     "t": 120.992,
+     "end": 121.155
     },
     {
      "w": "in",
-     "t": 126.433,
-     "end": 126.558
+     "t": 121.167,
+     "end": 121.292
     },
     {
      "w": "steps",
-     "t": 126.583,
-     "end": 127.193
+     "t": 121.317,
+     "end": 121.927
     }
    ],
    "wav": "/root/.cache/sample_space/tts/e3/e316f692c87f59644368ba0f.wav"
   },
   {
-   "index": 16,
-   "start": 127.633,
+   "index": 15,
+   "start": 122.367,
    "duration": 7.44,
-   "end": 135.073,
+   "end": 129.807,
    "text": "At a third, everyone left of it is unhappy, including the neighbor that started our block's chain, at two sevenths.",
    "voice": "af_heart",
    "speed": 0.84,
@@ -1709,190 +1616,200 @@
    "words": [
     {
      "w": "At",
-     "t": 127.633,
-     "end": 127.765
+     "t": 122.367,
+     "end": 122.499
     },
     {
      "w": "a",
-     "t": 127.778,
-     "end": 127.878
+     "t": 122.512,
+     "end": 122.612
     },
     {
      "w": "third",
-     "t": 127.928,
-     "end": 128.428
+     "t": 122.662,
+     "end": 123.162
     },
     {
      "w": "everyone",
-     "t": 128.578,
-     "end": 129.053
+     "t": 123.312,
+     "end": 123.787
     },
     {
      "w": "left",
-     "t": 129.078,
-     "end": 129.291
+     "t": 123.812,
+     "end": 124.025
     },
     {
      "w": "of",
-     "t": 129.303,
-     "end": 129.403
+     "t": 124.037,
+     "end": 124.137
     },
     {
      "w": "it",
-     "t": 129.428,
-     "end": 129.565
+     "t": 124.162,
+     "end": 124.299
     },
     {
      "w": "is",
-     "t": 129.603,
-     "end": 129.728
+     "t": 124.337,
+     "end": 124.462
     },
     {
      "w": "unhappy",
-     "t": 129.753,
-     "end": 130.753
+     "t": 124.487,
+     "end": 125.487
     },
     {
      "w": "including",
-     "t": 130.953,
-     "end": 131.453
+     "t": 125.687,
+     "end": 126.187
     },
     {
      "w": "the",
-     "t": 131.478,
-     "end": 131.578
+     "t": 126.212,
+     "end": 126.312
     },
     {
      "w": "neighbor",
-     "t": 131.603,
-     "end": 132.028
+     "t": 126.337,
+     "end": 126.762
     },
     {
      "w": "that",
-     "t": 132.053,
-     "end": 132.241
+     "t": 126.787,
+     "end": 126.975
     },
     {
      "w": "started",
-     "t": 132.278,
-     "end": 132.665
+     "t": 127.012,
+     "end": 127.399
     },
     {
      "w": "our",
-     "t": 132.678,
-     "end": 132.803
+     "t": 127.412,
+     "end": 127.537
     },
     {
      "w": "block's",
-     "t": 132.828,
-     "end": 133.241
+     "t": 127.562,
+     "end": 127.975
     },
     {
      "w": "chain",
-     "t": 133.278,
-     "end": 133.853
+     "t": 128.012,
+     "end": 128.587
     },
     {
      "w": "at",
-     "t": 134.028,
-     "end": 134.141
+     "t": 128.762,
+     "end": 128.875
     },
     {
      "w": "two",
-     "t": 134.178,
-     "end": 134.365
+     "t": 128.912,
+     "end": 129.099
     },
     {
      "w": "sevenths",
-     "t": 134.403,
-     "end": 135.073
+     "t": 129.137,
+     "end": 129.807
     }
    ],
    "wav": "/root/.cache/sample_space/tts/3a/3a2388728801b4a02eba6844.wav"
   },
   {
-   "index": 17,
-   "start": 135.533,
-   "duration": 4.83,
-   "end": 140.363,
-   "text": "Every household at three eighths is one lost match away from two sevenths.",
+   "index": 16,
+   "start": 130.267,
+   "duration": 5.8,
+   "end": 136.067,
+   "text": "All one hundred twenty-five households at three eighths are one lost match from two sevenths.",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
-     "w": "Every",
-     "t": 135.543,
-     "end": 135.843
-    },
-    {
-     "w": "household",
-     "t": 135.868,
-     "end": 136.468
-    },
-    {
-     "w": "at",
-     "t": 136.493,
-     "end": 136.605
-    },
-    {
-     "w": "three",
-     "t": 136.643,
-     "end": 136.905
-    },
-    {
-     "w": "eighths",
-     "t": 136.943,
-     "end": 137.781
-    },
-    {
-     "w": "is",
-     "t": 137.843,
-     "end": 137.981
+     "w": "All",
+     "t": 130.292,
+     "end": 130.542
     },
     {
      "w": "one",
-     "t": 138.018,
-     "end": 138.243
+     "t": 130.567,
+     "end": 130.692
+    },
+    {
+     "w": "hundred",
+     "t": 130.717,
+     "end": 131.042
+    },
+    {
+     "w": "twenty-five",
+     "t": 131.067,
+     "end": 131.642
+    },
+    {
+     "w": "households",
+     "t": 131.667,
+     "end": 132.267
+    },
+    {
+     "w": "at",
+     "t": 132.292,
+     "end": 132.404
+    },
+    {
+     "w": "three",
+     "t": 132.442,
+     "end": 132.705
+    },
+    {
+     "w": "eighths",
+     "t": 132.742,
+     "end": 133.605
+    },
+    {
+     "w": "are",
+     "t": 133.667,
+     "end": 133.817
+    },
+    {
+     "w": "one",
+     "t": 133.867,
+     "end": 134.092
     },
     {
      "w": "lost",
-     "t": 138.268,
-     "end": 138.631
+     "t": 134.117,
+     "end": 134.492
     },
     {
      "w": "match",
-     "t": 138.668,
-     "end": 138.943
-    },
-    {
-     "w": "away",
-     "t": 138.968,
-     "end": 139.318
+     "t": 134.517,
+     "end": 134.93
     },
     {
      "w": "from",
-     "t": 139.343,
-     "end": 139.493
+     "t": 134.967,
+     "end": 135.155
     },
     {
      "w": "two",
-     "t": 139.518,
-     "end": 139.693
+     "t": 135.192,
+     "end": 135.38
     },
     {
      "w": "sevenths",
-     "t": 139.718,
-     "end": 140.363
+     "t": 135.417,
+     "end": 136.067
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/7a/7a26a919fbda6b7ede03f537.wav"
+   "wav": "/root/.cache/sample_space/tts/43/4348bd3a96e0050192fe5d6f.wav"
   },
   {
-   "index": 18,
-   "start": 140.8,
+   "index": 17,
+   "start": 136.533,
    "duration": 4.15,
-   "end": 144.95,
+   "end": 140.683,
    "text": "At a quarter, how many would start unhappy? [pause 1.5]",
    "voice": "af_heart",
    "speed": 0.84,
@@ -1900,52 +1817,52 @@
    "words": [
     {
      "w": "At",
-     "t": 140.825,
-     "end": 140.938
+     "t": 136.558,
+     "end": 136.671
     },
     {
      "w": "a",
-     "t": 140.95,
-     "end": 141.0
+     "t": 136.683,
+     "end": 136.733
     },
     {
      "w": "quarter",
-     "t": 141.025,
-     "end": 141.6
+     "t": 136.758,
+     "end": 137.333
     },
     {
      "w": "how",
-     "t": 141.775,
-     "end": 141.95
+     "t": 137.508,
+     "end": 137.683
     },
     {
      "w": "many",
-     "t": 141.975,
-     "end": 142.162
+     "t": 137.708,
+     "end": 137.895
     },
     {
      "w": "would",
-     "t": 142.175,
-     "end": 142.3
+     "t": 137.908,
+     "end": 138.033
     },
     {
      "w": "start",
-     "t": 142.325,
-     "end": 142.612
+     "t": 138.058,
+     "end": 138.345
     },
     {
      "w": "unhappy",
-     "t": 142.625,
-     "end": 143.45
+     "t": 138.358,
+     "end": 139.183
     }
    ],
    "wav": "/root/.cache/sample_space/tts/9f/9f3bcccec68f357cdd04e91f.wav"
   },
   {
-   "index": 19,
-   "start": 145.2,
+   "index": 18,
+   "start": 140.933,
    "duration": 11.47,
-   "end": 156.67,
+   "end": 152.403,
    "text": "Only these two bars change sides: just ninety-five start unhappy. Now a household at three eighths can lose a match and stay, so that chain never starts. [pause 0.9]",
    "voice": "af_heart",
    "speed": 0.84,
@@ -1953,641 +1870,651 @@
    "words": [
     {
      "w": "Only",
-     "t": 145.2,
-     "end": 145.495
+     "t": 140.933,
+     "end": 141.228
     },
     {
      "w": "these",
-     "t": 145.52,
-     "end": 145.758
+     "t": 141.253,
+     "end": 141.491
     },
     {
      "w": "two",
-     "t": 145.795,
-     "end": 145.97
+     "t": 141.528,
+     "end": 141.703
     },
     {
      "w": "bars",
-     "t": 145.995,
-     "end": 146.408
+     "t": 141.728,
+     "end": 142.141
     },
     {
      "w": "change",
-     "t": 146.445,
-     "end": 146.795
+     "t": 142.178,
+     "end": 142.528
     },
     {
      "w": "sides",
-     "t": 146.82,
-     "end": 147.545
+     "t": 142.553,
+     "end": 143.278
     },
     {
      "w": "just",
-     "t": 147.72,
-     "end": 147.92
+     "t": 143.453,
+     "end": 143.653
     },
     {
      "w": "ninety-five",
-     "t": 147.945,
-     "end": 148.645
+     "t": 143.678,
+     "end": 144.378
     },
     {
      "w": "start",
-     "t": 148.67,
-     "end": 148.92
+     "t": 144.403,
+     "end": 144.653
     },
     {
      "w": "unhappy",
-     "t": 148.945,
-     "end": 149.73
+     "t": 144.678,
+     "end": 145.463
     },
     {
      "w": "Now",
-     "t": 150.3,
-     "end": 150.525
+     "t": 146.033,
+     "end": 146.258
     },
     {
      "w": "a",
-     "t": 150.55,
-     "end": 150.625
+     "t": 146.283,
+     "end": 146.358
     },
     {
      "w": "household",
-     "t": 150.65,
-     "end": 151.2
+     "t": 146.383,
+     "end": 146.933
     },
     {
      "w": "at",
-     "t": 151.225,
-     "end": 151.313
+     "t": 146.958,
+     "end": 147.046
     },
     {
      "w": "three",
-     "t": 151.35,
-     "end": 151.612
+     "t": 147.083,
+     "end": 147.345
     },
     {
      "w": "eighths",
-     "t": 151.65,
-     "end": 152.063
+     "t": 147.383,
+     "end": 147.796
     },
     {
      "w": "can",
-     "t": 152.1,
-     "end": 152.275
+     "t": 147.833,
+     "end": 148.008
     },
     {
      "w": "lose",
-     "t": 152.3,
-     "end": 152.512
+     "t": 148.033,
+     "end": 148.245
     },
     {
      "w": "a",
-     "t": 152.525,
-     "end": 152.6
+     "t": 148.258,
+     "end": 148.333
     },
     {
      "w": "match",
-     "t": 152.625,
-     "end": 152.975
+     "t": 148.358,
+     "end": 148.708
     },
     {
      "w": "and",
-     "t": 153.0,
-     "end": 153.138
+     "t": 148.733,
+     "end": 148.871
     },
     {
      "w": "stay",
-     "t": 153.175,
-     "end": 153.825
+     "t": 148.908,
+     "end": 149.558
     },
     {
      "w": "so",
-     "t": 154.05,
-     "end": 154.2
+     "t": 149.783,
+     "end": 149.933
     },
     {
      "w": "that",
-     "t": 154.225,
-     "end": 154.45
+     "t": 149.958,
+     "end": 150.183
     },
     {
      "w": "chain",
-     "t": 154.5,
-     "end": 154.8
+     "t": 150.233,
+     "end": 150.533
     },
     {
      "w": "never",
-     "t": 154.825,
-     "end": 155.1
+     "t": 150.558,
+     "end": 150.833
     },
     {
      "w": "starts",
-     "t": 155.125,
-     "end": 155.77
+     "t": 150.858,
+     "end": 151.503
     }
    ],
    "wav": "/root/.cache/sample_space/tts/e9/e91b6314f2f52adb88a7787d.wav"
   },
   {
-   "index": 20,
-   "start": 157.133,
-   "duration": 13.78,
-   "end": 170.913,
-   "text": "In his 1971 paper, Thomas Schelling ran this model. His households moved to the nearest suitable square, on emptier boards, and there the jump came later, between about a third and a half.",
+   "index": 19,
+   "start": 152.867,
+   "duration": 14.44,
+   "end": 167.307,
+   "text": "In his 1971 paper, Thomas Schelling ran this model. [pause 0.4] His households moved to the nearest square that suited them, on far emptier boards. [pause 0.5] There the jump came later, between about a third and a half.",
    "voice": "af_heart",
-   "speed": 0.84,
+   "speed": 0.82,
    "cadence": "shaped",
    "words": [
     {
      "w": "In",
-     "t": 157.168,
-     "end": 157.268
+     "t": 152.902,
+     "end": 153.002
     },
     {
      "w": "his",
-     "t": 157.293,
-     "end": 157.468
+     "t": 153.027,
+     "end": 153.202
     },
     {
      "w": "1971",
-     "t": 157.493,
-     "end": 158.568
+     "t": 153.227,
+     "end": 154.327
     },
     {
      "w": "paper",
-     "t": 158.593,
-     "end": 159.268
+     "t": 154.352,
+     "end": 155.052
     },
     {
      "w": "Thomas",
-     "t": 159.443,
-     "end": 159.843
+     "t": 155.252,
+     "end": 155.677
     },
     {
      "w": "Schelling",
-     "t": 159.893,
-     "end": 160.293
+     "t": 155.727,
+     "end": 156.139
     },
     {
      "w": "ran",
-     "t": 160.318,
-     "end": 160.556
+     "t": 156.177,
+     "end": 156.415
     },
     {
      "w": "this",
-     "t": 160.568,
-     "end": 160.718
+     "t": 156.427,
+     "end": 156.577
     },
     {
      "w": "model",
-     "t": 160.743,
-     "end": 161.253
+     "t": 156.602,
+     "end": 157.137
     },
     {
      "w": "His",
-     "t": 161.558,
-     "end": 161.733
+     "t": 157.542,
+     "end": 157.717
     },
     {
      "w": "households",
-     "t": 161.758,
-     "end": 162.52
+     "t": 157.742,
+     "end": 158.467
     },
     {
      "w": "moved",
-     "t": 162.558,
-     "end": 162.933
+     "t": 158.517,
+     "end": 158.892
     },
     {
      "w": "to",
-     "t": 162.958,
-     "end": 163.033
+     "t": 158.917,
+     "end": 158.992
     },
     {
      "w": "the",
-     "t": 163.058,
-     "end": 163.183
+     "t": 159.017,
+     "end": 159.142
     },
     {
      "w": "nearest",
-     "t": 163.233,
-     "end": 163.733
-    },
-    {
-     "w": "suitable",
-     "t": 163.783,
-     "end": 164.22
+     "t": 159.192,
+     "end": 159.567
     },
     {
      "w": "square",
-     "t": 164.258,
-     "end": 164.908
+     "t": 159.592,
+     "end": 160.017
+    },
+    {
+     "w": "that",
+     "t": 160.042,
+     "end": 160.242
+    },
+    {
+     "w": "suited",
+     "t": 160.292,
+     "end": 160.617
+    },
+    {
+     "w": "them",
+     "t": 160.642,
+     "end": 161.167
     },
     {
      "w": "on",
-     "t": 165.033,
-     "end": 165.22
+     "t": 161.317,
+     "end": 161.517
+    },
+    {
+     "w": "far",
+     "t": 161.567,
+     "end": 161.855
     },
     {
      "w": "emptier",
-     "t": 165.258,
-     "end": 165.708
+     "t": 161.892,
+     "end": 162.367
     },
     {
      "w": "boards",
-     "t": 165.733,
-     "end": 166.708
+     "t": 162.392,
+     "end": 163.047
     },
     {
-     "w": "and",
-     "t": 166.883,
-     "end": 166.983
-    },
-    {
-     "w": "there",
-     "t": 167.008,
-     "end": 167.345
+     "w": "There",
+     "t": 163.597,
+     "end": 163.797
     },
     {
      "w": "the",
-     "t": 167.383,
-     "end": 167.508
+     "t": 163.822,
+     "end": 163.947
     },
     {
      "w": "jump",
-     "t": 167.558,
-     "end": 167.833
+     "t": 163.997,
+     "end": 164.309
     },
     {
      "w": "came",
-     "t": 167.858,
-     "end": 168.108
+     "t": 164.347,
+     "end": 164.597
     },
     {
      "w": "later",
-     "t": 168.133,
-     "end": 168.758
+     "t": 164.622,
+     "end": 165.222
     },
     {
      "w": "between",
-     "t": 168.908,
-     "end": 169.283
+     "t": 165.372,
+     "end": 165.709
     },
     {
      "w": "about",
-     "t": 169.308,
-     "end": 169.571
+     "t": 165.722,
+     "end": 165.959
     },
     {
      "w": "a",
-     "t": 169.583,
-     "end": 169.695
+     "t": 165.972,
+     "end": 166.072
     },
     {
      "w": "third",
-     "t": 169.758,
-     "end": 169.995
+     "t": 166.122,
+     "end": 166.384
     },
     {
      "w": "and",
-     "t": 170.008,
-     "end": 170.095
+     "t": 166.397,
+     "end": 166.485
     },
     {
      "w": "a",
-     "t": 170.108,
-     "end": 170.158
+     "t": 166.497,
+     "end": 166.547
     },
     {
      "w": "half",
-     "t": 170.183,
-     "end": 170.763
+     "t": 166.572,
+     "end": 167.157
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/03/0334a19b9a8d18a12cdcf48a.wav"
+   "wav": "/root/.cache/sample_space/tts/a0/a0300430a7385090a96cf4c7.wav"
   },
   {
-   "index": 21,
-   "start": 171.867,
-   "duration": 13.49,
-   "end": 185.357,
-   "text": "Two simulated towns, both seventy-six percent. In one town, households demand a third. In the other, nobody minds their neighbors. Which one wanted a third? [pause 1.5]",
+   "index": 20,
+   "start": 168.767,
+   "duration": 11.6,
+   "end": 180.367,
+   "text": "Two simulated towns. [pause 0.6] In one town, households demand a third. In the other, nobody minds their neighbors. Which one wanted a third? [pause 1.5]",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
      "w": "Two",
-     "t": 171.897,
-     "end": 172.172
+     "t": 168.787,
+     "end": 169.037
     },
     {
      "w": "simulated",
-     "t": 172.222,
-     "end": 172.772
+     "t": 169.087,
+     "end": 169.637
     },
     {
      "w": "towns",
-     "t": 172.797,
-     "end": 173.497
-    },
-    {
-     "w": "both",
-     "t": 173.647,
-     "end": 173.985
-    },
-    {
-     "w": "seventy-six",
-     "t": 174.022,
-     "end": 174.747
-    },
-    {
-     "w": "percent",
-     "t": 174.772,
-     "end": 175.447
+     "t": 169.662,
+     "end": 170.357
     },
     {
      "w": "In",
-     "t": 175.992,
-     "end": 176.117
+     "t": 171.002,
+     "end": 171.127
     },
     {
      "w": "one",
-     "t": 176.142,
-     "end": 176.367
+     "t": 171.152,
+     "end": 171.377
     },
     {
      "w": "town",
-     "t": 176.392,
-     "end": 176.917
+     "t": 171.402,
+     "end": 171.927
     },
     {
      "w": "households",
-     "t": 177.067,
-     "end": 177.642
+     "t": 172.077,
+     "end": 172.652
     },
     {
      "w": "demand",
-     "t": 177.667,
-     "end": 178.055
+     "t": 172.677,
+     "end": 173.064
     },
     {
      "w": "a",
-     "t": 178.067,
-     "end": 178.167
+     "t": 173.077,
+     "end": 173.177
     },
     {
      "w": "third",
-     "t": 178.217,
-     "end": 178.767
+     "t": 173.227,
+     "end": 173.777
     },
     {
      "w": "In",
-     "t": 179.287,
-     "end": 179.375
+     "t": 174.297,
+     "end": 174.385
     },
     {
      "w": "the",
-     "t": 179.387,
-     "end": 179.512
+     "t": 174.397,
+     "end": 174.522
     },
     {
      "w": "other",
-     "t": 179.537,
-     "end": 179.962
+     "t": 174.547,
+     "end": 174.972
     },
     {
      "w": "nobody",
-     "t": 180.137,
-     "end": 180.487
+     "t": 175.147,
+     "end": 175.497
     },
     {
      "w": "minds",
-     "t": 180.512,
-     "end": 180.825
+     "t": 175.522,
+     "end": 175.835
     },
     {
      "w": "their",
-     "t": 180.837,
-     "end": 180.987
+     "t": 175.847,
+     "end": 175.997
     },
     {
      "w": "neighbors",
-     "t": 181.012,
-     "end": 181.727
+     "t": 176.022,
+     "end": 176.737
     },
     {
      "w": "Which",
-     "t": 182.277,
-     "end": 182.552
+     "t": 177.287,
+     "end": 177.562
     },
     {
      "w": "one",
-     "t": 182.577,
-     "end": 182.777
+     "t": 177.587,
+     "end": 177.787
     },
     {
      "w": "wanted",
-     "t": 182.802,
-     "end": 183.114
+     "t": 177.812,
+     "end": 178.124
     },
     {
      "w": "a",
-     "t": 183.127,
-     "end": 183.227
+     "t": 178.137,
+     "end": 178.237
     },
     {
      "w": "third",
-     "t": 183.277,
-     "end": 183.857
+     "t": 178.287,
+     "end": 178.867
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/2f/2f5dac43f64a9c55a332f6da.wav"
+   "wav": "/root/.cache/sample_space/tts/5b/5b649d214b5fa400fe3192cc.wav"
   },
   {
-   "index": 22,
-   "start": 185.8,
-   "duration": 16.42,
-   "end": 202.22,
-   "text": "This one. [pause 0.2] The other was placed by a rule, with no preferences. Real segregation has other causes. One study finds that 1930s federal lending maps increased racial segregation for decades, through reduced credit.",
+   "index": 21,
+   "start": 180.833,
+   "duration": 16.46,
+   "end": 197.293,
+   "text": "This one. [pause 0.2] The other was placed by a rule, with no preferences. Real cities have rules too. One study finds that 1930s federal lending maps raised racial segregation for decades. Its authors point to reduced credit.",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
      "w": "This",
-     "t": 185.88,
-     "end": 186.155
+     "t": 180.913,
+     "end": 181.188
     },
     {
      "w": "one",
-     "t": 186.18,
-     "end": 186.64
+     "t": 181.213,
+     "end": 181.673
     },
     {
      "w": "The",
-     "t": 186.855,
-     "end": 186.98
+     "t": 181.888,
+     "end": 182.013
     },
     {
      "w": "other",
-     "t": 187.005,
-     "end": 187.28
+     "t": 182.038,
+     "end": 182.313
     },
     {
      "w": "was",
-     "t": 187.305,
-     "end": 187.455
+     "t": 182.338,
+     "end": 182.488
     },
     {
      "w": "placed",
-     "t": 187.48,
-     "end": 187.83
+     "t": 182.513,
+     "end": 182.863
     },
     {
      "w": "by",
-     "t": 187.855,
-     "end": 188.005
+     "t": 182.888,
+     "end": 183.038
     },
     {
      "w": "a",
-     "t": 188.03,
-     "end": 188.118
+     "t": 183.063,
+     "end": 183.151
     },
     {
      "w": "rule",
-     "t": 188.155,
-     "end": 188.705
+     "t": 183.188,
+     "end": 183.738
     },
     {
      "w": "with",
-     "t": 188.83,
-     "end": 189.005
+     "t": 183.863,
+     "end": 184.038
     },
     {
      "w": "no",
-     "t": 189.03,
-     "end": 189.23
+     "t": 184.063,
+     "end": 184.263
     },
     {
      "w": "preferences",
-     "t": 189.255,
-     "end": 190.17
+     "t": 184.288,
+     "end": 185.203
     },
     {
      "w": "Real",
-     "t": 190.525,
-     "end": 190.8
+     "t": 185.558,
+     "end": 185.845
     },
     {
-     "w": "segregation",
-     "t": 190.825,
-     "end": 191.812
+     "w": "cities",
+     "t": 185.883,
+     "end": 186.283
     },
     {
-     "w": "has",
-     "t": 191.85,
-     "end": 192.025
+     "w": "have",
+     "t": 186.308,
+     "end": 186.483
     },
     {
-     "w": "other",
-     "t": 192.05,
-     "end": 192.3
+     "w": "rules",
+     "t": 186.508,
+     "end": 186.845
     },
     {
-     "w": "causes",
-     "t": 192.325,
-     "end": 193.05
+     "w": "too",
+     "t": 186.883,
+     "end": 187.323
     },
     {
      "w": "One",
-     "t": 193.385,
-     "end": 193.61
+     "t": 187.658,
+     "end": 187.883
     },
     {
      "w": "study",
-     "t": 193.635,
-     "end": 194.035
+     "t": 187.908,
+     "end": 188.333
     },
     {
      "w": "finds",
-     "t": 194.085,
-     "end": 194.485
+     "t": 188.383,
+     "end": 188.758
     },
     {
      "w": "that",
-     "t": 194.51,
-     "end": 194.71
+     "t": 188.783,
+     "end": 188.983
     },
     {
      "w": "1930s",
-     "t": 194.76,
-     "end": 196.06
+     "t": 189.033,
+     "end": 190.308
     },
     {
      "w": "federal",
-     "t": 196.11,
-     "end": 196.535
+     "t": 190.358,
+     "end": 190.783
     },
     {
      "w": "lending",
-     "t": 196.56,
-     "end": 196.91
+     "t": 190.808,
+     "end": 191.158
     },
     {
      "w": "maps",
-     "t": 196.935,
-     "end": 197.485
+     "t": 191.183,
+     "end": 191.983
     },
     {
-     "w": "increased",
-     "t": 197.535,
-     "end": 198.21
+     "w": "raised",
+     "t": 192.058,
+     "end": 192.483
     },
     {
      "w": "racial",
-     "t": 198.26,
-     "end": 198.71
+     "t": 192.533,
+     "end": 192.983
     },
     {
      "w": "segregation",
-     "t": 198.735,
-     "end": 199.435
+     "t": 193.008,
+     "end": 193.821
     },
     {
      "w": "for",
-     "t": 199.46,
-     "end": 199.56
+     "t": 193.858,
+     "end": 193.958
     },
     {
      "w": "decades",
-     "t": 199.585,
-     "end": 200.61
+     "t": 193.983,
+     "end": 194.793
     },
     {
-     "w": "through",
-     "t": 200.81,
-     "end": 201.06
+     "w": "Its",
+     "t": 195.108,
+     "end": 195.346
+    },
+    {
+     "w": "authors",
+     "t": 195.383,
+     "end": 195.771
+    },
+    {
+     "w": "point",
+     "t": 195.808,
+     "end": 196.083
+    },
+    {
+     "w": "to",
+     "t": 196.108,
+     "end": 196.183
     },
     {
      "w": "reduced",
-     "t": 201.085,
-     "end": 201.61
+     "t": 196.208,
+     "end": 196.658
     },
     {
      "w": "credit",
-     "t": 201.635,
-     "end": 202.22
+     "t": 196.683,
+     "end": 197.293
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/6a/6aef61b622a89bbe38913671.wav"
+   "wav": "/root/.cache/sample_space/tts/b7/b7287b289d40aec47be0aee9.wav"
   },
   {
-   "index": 23,
-   "start": 203.033,
+   "index": 22,
+   "start": 198.1,
    "duration": 9.78,
-   "end": 212.813,
+   "end": 207.88,
    "text": "Look again at the first town. [pause 1.2] As Schelling argued, whatever you guessed its people demanded, [pause 0.3] the map alone could not have told you.",
    "voice": "af_heart",
    "speed": 0.8,
@@ -2595,118 +2522,118 @@
    "words": [
     {
      "w": "Look",
-     "t": 203.113,
-     "end": 203.313
+     "t": 198.18,
+     "end": 198.38
     },
     {
      "w": "again",
-     "t": 203.338,
-     "end": 203.738
+     "t": 198.405,
+     "end": 198.805
     },
     {
      "w": "at",
-     "t": 203.763,
-     "end": 203.825
+     "t": 198.83,
+     "end": 198.892
     },
     {
      "w": "the",
-     "t": 203.838,
-     "end": 203.925
+     "t": 198.905,
+     "end": 198.992
     },
     {
      "w": "first",
-     "t": 203.963,
-     "end": 204.288
+     "t": 199.03,
+     "end": 199.355
     },
     {
      "w": "town",
-     "t": 204.313,
-     "end": 204.923
+     "t": 199.38,
+     "end": 199.99
     },
     {
      "w": "As",
-     "t": 206.153,
-     "end": 206.403
+     "t": 201.22,
+     "end": 201.47
     },
     {
      "w": "Schelling",
-     "t": 206.453,
-     "end": 206.916
+     "t": 201.52,
+     "end": 201.983
     },
     {
      "w": "argued",
-     "t": 206.953,
-     "end": 207.778
+     "t": 202.02,
+     "end": 202.845
     },
     {
      "w": "whatever",
-     "t": 207.928,
-     "end": 208.278
+     "t": 202.995,
+     "end": 203.345
     },
     {
      "w": "you",
-     "t": 208.303,
-     "end": 208.441
+     "t": 203.37,
+     "end": 203.508
     },
     {
      "w": "guessed",
-     "t": 208.478,
-     "end": 208.791
+     "t": 203.545,
+     "end": 203.858
     },
     {
      "w": "its",
-     "t": 208.803,
-     "end": 208.978
+     "t": 203.87,
+     "end": 204.045
     },
     {
      "w": "people",
-     "t": 209.003,
-     "end": 209.378
+     "t": 204.07,
+     "end": 204.445
     },
     {
      "w": "demanded",
-     "t": 209.403,
-     "end": 210.153
+     "t": 204.47,
+     "end": 205.22
     },
     {
      "w": "the",
-     "t": 210.483,
-     "end": 210.583
+     "t": 205.55,
+     "end": 205.65
     },
     {
      "w": "map",
-     "t": 210.608,
-     "end": 210.908
+     "t": 205.675,
+     "end": 205.975
     },
     {
      "w": "alone",
-     "t": 210.933,
-     "end": 211.471
+     "t": 206.0,
+     "end": 206.538
     },
     {
      "w": "could",
-     "t": 211.508,
-     "end": 211.658
+     "t": 206.575,
+     "end": 206.725
     },
     {
      "w": "not",
-     "t": 211.683,
-     "end": 211.871
+     "t": 206.75,
+     "end": 206.938
     },
     {
      "w": "have",
-     "t": 211.883,
-     "end": 212.045
+     "t": 206.95,
+     "end": 207.112
     },
     {
      "w": "told",
-     "t": 212.083,
-     "end": 212.433
+     "t": 207.15,
+     "end": 207.5
     },
     {
      "w": "you",
-     "t": 212.458,
-     "end": 212.813
+     "t": 207.525,
+     "end": 207.88
     }
    ],
    "wav": "/root/.cache/sample_space/tts/8b/8b5db44331ca07d8afb7c4df.wav"
@@ -2714,8 +2641,8 @@
  ],
  "warnings": [],
  "budget": {
-  "words": 479,
-  "runtime_s": 214.5,
+  "words": 467,
+  "runtime_s": 209.6,
   "budget_words": 500,
   "budget_runtime_s": 215.0,
   "over": false
@@ -2726,14 +2653,14 @@
    -0.8,
    0.4
   ],
-  "deictics": 14,
+  "deictics": 13,
   "unlanded": []
  },
  "layout_audit": {
   "clearance": 0.15,
-  "checks": 229,
-  "audit_seconds": 7.123,
-  "render_seconds": 1116.0,
+  "checks": 233,
+  "audit_seconds": 7.686,
+  "render_seconds": 1323.4,
   "errors": 0,
   "count": 0,
   "counts": {

@@ -10,38 +10,36 @@
 
 [00:43.2] The obvious plan is to move each one to a random empty square where it would be content, so the town stays mixed.
 
-[00:51.2] Round one takes two hundred moves; the other thirty-eight were content by their turn.
+[00:51.6] Round one: two hundred moves. The unhappy count stalls at seventy-four. [pause 1.2] Sixty-seven of these were content before round one. [pause 0.15] They never moved. Their neighbors did.
 
-[00:57.0] If the plan had worked, this counter would read zero. It reads seventy-four. [pause 0.9] Sixty-seven of these were content before round one. [pause 0.15] They never moved. Their neighbors did.
+[01:04.6] Replay one block. [pause 0.3] At the start, this gold household had three gold neighbors out of eight. Three eighths beats a third, so it stayed.
 
-[01:09.9] Replay one block. [pause 0.3] At the start, this gold household had three gold neighbors out of eight. Three eighths beats a third, so it stayed.
+[01:14.4] Then this neighbor moved away. Is it still content? [pause 1.0]
 
-[01:19.7] Then this neighbor moved away. Is it still content? [pause 1.0]
+[01:19.3] Two gold out of seven, less than a third, so now it wants out.
 
-[01:24.6] Two gold out of seven, less than a third, so now it wants out.
+[01:24.3] Its neighbor here also has three eighths. In round two, our household leaves, and this one drops to two sevenths.
 
-[01:29.5] Its neighbor here also has three eighths. In round two, our household leaves, and this one drops to two sevenths.
+[01:32.9] Now run the whole town. [pause 1.9] After round seven, nobody wants to move.
 
-[01:38.1] Now run the whole town. [pause 1.9] After round seven, nobody wants to move.
+[01:40.3] That whole town is one point on this chart.
 
-[01:45.6] That whole town is one point on this chart.
+[01:44.2] Demand a quarter, and the same starting town barely sorts: fifty-eight percent. Demand a third, and it jumps to seventy-six. [pause 0.9]
 
-[01:49.5] Demand a quarter, and the same starting town barely sorts: fifty-eight percent. Demand a third, and it jumps to seventy-six. [pause 0.9]
+[01:54.1] To see why, sort the random start by each household's share of matching neighbors. With at most eight neighbors, shares come in steps.
 
-[01:59.3] To see why, sort the random start by each household's share of matching neighbors. With at most eight neighbors, shares come in steps.
+[02:02.4] At a third, everyone left of it is unhappy, including the neighbor that started our block's chain, at two sevenths.
 
-[02:07.6] At a third, everyone left of it is unhappy, including the neighbor that started our block's chain, at two sevenths.
+[02:10.3] All one hundred twenty-five households at three eighths are one lost match from two sevenths.
 
-[02:15.5] Every household at three eighths is one lost match away from two sevenths.
+[02:16.5] At a quarter, how many would start unhappy? [pause 1.5]
 
-[02:20.8] At a quarter, how many would start unhappy? [pause 1.5]
+[02:20.9] Only these two bars change sides: just ninety-five start unhappy. Now a household at three eighths can lose a match and stay, so that chain never starts. [pause 0.9]
 
-[02:25.2] Only these two bars change sides: just ninety-five start unhappy. Now a household at three eighths can lose a match and stay, so that chain never starts. [pause 0.9]
+[02:32.9] In his 1971 paper, Thomas Schelling ran this model. [pause 0.4] His households moved to the nearest square that suited them, on far emptier boards. [pause 0.5] There the jump came later, between about a third and a half.
 
-[02:37.1] In his 1971 paper, Thomas Schelling ran this model. His households moved to the nearest suitable square, on emptier boards, and there the jump came later, between about a third and a half.
+[02:48.8] Two simulated towns. [pause 0.6] In one town, households demand a third. In the other, nobody minds their neighbors. Which one wanted a third? [pause 1.5]
 
-[02:51.9] Two simulated towns, both seventy-six percent. In one town, households demand a third. In the other, nobody minds their neighbors. Which one wanted a third? [pause 1.5]
+[03:00.8] This one. [pause 0.2] The other was placed by a rule, with no preferences. Real cities have rules too. One study finds that 1930s federal lending maps raised racial segregation for decades. Its authors point to reduced credit.
 
-[03:05.8] This one. [pause 0.2] The other was placed by a rule, with no preferences. Real segregation has other causes. One study finds that 1930s federal lending maps increased racial segregation for decades, through reduced credit.
-
-[03:23.0] Look again at the first town. [pause 1.2] As Schelling argued, whatever you guessed its people demanded, [pause 0.3] the map alone could not have told you.
+[03:18.1] Look again at the first town. [pause 1.2] As Schelling argued, whatever you guessed its people demanded, [pause 0.3] the map alone could not have told you.

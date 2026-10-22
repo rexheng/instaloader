@@ -1382,7 +1382,7 @@ class Episode(NarratedScene):
             beat.wait_until("wobble", offset=-0.25)
             self.play(Create(wk0), Create(wk4), FadeIn(wl0), FadeIn(wl4), FadeOut(p227),
                       run_time=0.7)
-            # "So a miss on a short bar counts more" - the 4-hit bar's miss of 1.9 nearly fills
+            # "...: a miss on a short bar counts more" - the 4-hit bar's miss of 1.9 nearly fills
             # its +-2.7 and costs 0.49; the 0-hit bar's bigger miss of 4.7 sits well inside its
             # +-12 and costs 0.10
             beat.wait_until("short", occurrence=2, offset=-0.15)

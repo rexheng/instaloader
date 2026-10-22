@@ -31,162 +31,166 @@ So where do four of every five questions go?
 Z costs as much as E, yet E turns up a hundred thirty times as often.
 
 9
-00:00:42,933 --> 00:00:48,913
-Instead, split the probability, not the alphabet: is it a space, E, T, A or O?
+00:00:42,933 --> 00:00:48,363
+Split the probability, not the alphabet: is it a space, E, T, A or O?
 
 10
-00:00:49,713 --> 00:00:50,993
+00:00:49,163 --> 00:00:50,443
 That's nearly half.
 
 11
-00:00:51,533 --> 00:00:53,123
+00:00:50,966 --> 00:00:52,556
 E starts near a tenth.
 
 12
-00:00:53,423 --> 00:00:58,023
-Each ideal answer keeps half the probability, so E's share doubles.
+00:00:52,856 --> 00:00:57,446
+Each ideal answer keeps half the probability, so E doubles its share.
 
 13
-00:00:58,323 --> 00:01:00,603
+00:00:57,746 --> 00:01:00,026
 Three point three doublings fill the bar.
 
 14
-00:01:00,966 --> 00:01:04,836
-Z, one in twelve hundred sixty, needs ten point three.
+00:01:00,400 --> 00:01:04,720
+Z, one in every twelve hundred sixty, needs ten point three.
 
 15
-00:01:05,366 --> 00:01:11,676
+00:01:05,233 --> 00:01:11,543
 A character with probability p needs k questions, where p times two to the k equals one.
 
 16
-00:01:13,176 --> 00:01:19,606
+00:01:13,043 --> 00:01:19,473
 So two to the k equals one over p, and k equals log base two of one over p.
 
 17
-00:01:20,000 --> 00:01:22,460
-Now make each character's cost its height.
+00:01:19,866 --> 00:01:21,956
+Make each character's cost its height.
 
 18
-00:01:22,833 --> 00:01:24,413
+00:01:22,466 --> 00:01:24,046
 The widths add to one,
 
 19
-00:01:24,663 --> 00:01:27,063
+00:01:24,296 --> 00:01:26,696
 so the area is the average cost.
 
 20
-00:01:27,563 --> 00:01:31,203
+00:01:27,196 --> 00:01:30,836
 Pour the skyline flat, and its height is that average.
 
 21
-00:01:31,600 --> 00:01:35,970
+00:01:31,233 --> 00:01:35,603
 Shannon called it entropy, in bits: one bit per yes-or-no answer.
 
 22
-00:01:36,270 --> 00:01:38,890
+00:01:35,903 --> 00:01:38,523
 For English letters: four point one one.
 
 23
-00:01:40,066 --> 00:01:47,076
+00:01:39,700 --> 00:01:46,710
 That beats four point seven five, but it's four times Shannon's estimate: it ignores what came before.
 
 24
-00:01:47,866 --> 00:01:49,376
+00:01:47,500 --> 00:01:49,010
 What comes after a Q?
 
 25
-00:01:51,066 --> 00:01:53,706
+00:01:50,500 --> 00:01:53,140
 It's U, ninety-eight percent of the time.
 
 26
-00:01:54,006 --> 00:01:58,476
+00:01:53,440 --> 00:01:57,910
 U swallows the bar, and the average falls to point one six bits.
 
 27
-00:01:59,466 --> 00:02:04,386
+00:01:58,700 --> 00:02:03,620
 After TH, E takes two thirds of the bar, and costs about half a question.
 
 28
-00:02:04,766 --> 00:02:10,216
+00:02:04,000 --> 00:02:09,450
 Half a question sounds impossible, but a compressor asks about runs of letters.
 
 29
-00:02:10,516 --> 00:02:13,756
+00:02:09,750 --> 00:02:12,990
 Their probabilities multiply, so their costs add:
 
 30
-00:02:14,356 --> 00:02:17,056
+00:02:13,590 --> 00:02:16,290
 five questions for these three, not six.
 
 31
-00:02:17,556 --> 00:02:20,566
+00:02:17,090 --> 00:02:20,100
 After TH, it averages one point seven.
 
 32
-00:02:21,100 --> 00:02:25,750
+00:02:20,633 --> 00:02:25,283
 But averaged over every two-letter context, it's still two point eight.
 
 33
-00:02:26,700 --> 00:02:33,760
+00:02:26,233 --> 00:02:33,293
 Hundred-letter contexts need more text than any corpus holds, so Shannon asked a person who knows English.
 
 34
-00:02:34,133 --> 00:02:42,033
+00:02:33,666 --> 00:02:41,566
 His subject read a passage, guessing each next letter until right: seventy-nine of a hundred two on the first guess.
 
 35
-00:02:43,000 --> 00:02:47,260
+00:02:42,533 --> 00:02:46,793
 A twin guessing the same way could rebuild the passage from these counts.
 
 36
-00:02:47,560 --> 00:02:49,350
+00:02:47,093 --> 00:02:48,883
 Treat each count as a symbol:
 
 37
-00:02:50,550 --> 00:02:54,290
-the same skyline pours flat at about one point four bits.
+00:02:49,883 --> 00:02:51,193
+the same skyline,
 
 38
-00:02:54,900 --> 00:02:59,770
-That caps the text; more context or a better guesser could only lower it.
+00:02:51,893 --> 00:02:54,833
+poured flat, sits at about one point four bits.
 
 39
-00:03:00,566 --> 00:03:07,756
-Shannon's tests, with a hundred letters of context, put English between point six and one point three bits.
+00:02:55,366 --> 00:03:00,236
+That caps the text; more context or a better guesser could only lower it.
 
 40
-00:03:08,300 --> 00:03:10,750
-A language model compressed part of a book
+00:03:01,033 --> 00:03:08,223
+Shannon's tests, with a hundred letters of context, put English between point six and one point three bits.
 
 41
-00:03:11,050 --> 00:03:14,820
-posted to Project Gutenberg after the model was trained.
+00:03:08,766 --> 00:03:11,216
+A language model compressed part of a book
 
 42
-00:03:15,220 --> 00:03:18,480
-It needed point eight four bits, inside that range.
+00:03:11,516 --> 00:03:15,286
+posted to Project Gutenberg after the model was trained.
 
 43
-00:03:19,266 --> 00:03:21,486
-The hidden character from the start
+00:03:15,686 --> 00:03:18,946
+It needed point eight four bits, inside that range.
 
 44
-00:03:21,886 --> 00:03:23,726
-is the Y in the other day.
+00:03:19,433 --> 00:03:21,653
+The hidden character from the start
 
 45
-00:03:24,100 --> 00:03:26,270
-Shannon's subject needed one guess:
+00:03:22,053 --> 00:03:23,893
+is the Y in the other day.
 
 46
-00:03:26,570 --> 00:03:27,480
-is it Y?
+00:03:24,266 --> 00:03:26,436
+Shannon's subject needed one guess:
 
 47
-00:03:28,180 --> 00:03:30,120
-Splitting the alphabet took five.
+00:03:26,736 --> 00:03:27,646
+is it Y?
 
 48
-00:03:30,620 --> 00:03:34,160
+00:03:28,346 --> 00:03:30,286
+Splitting the alphabet took five.
+
+49
+00:03:30,786 --> 00:03:34,326
 In English, almost no letter arrives without a past.
 

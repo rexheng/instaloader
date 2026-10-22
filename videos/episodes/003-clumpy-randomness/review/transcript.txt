@@ -23,34 +23,22 @@
 [1:16.3–1:19.3] Let's call the average hits per square lambda.
 [1:19.3–1:23.0] One minus a small slice raised to a big power
 [1:23.0–1:26.2] is e to the minus lambda, almost exactly,
-[1:26.2–1:35.4] Call that p of 0. For two hits in the square, pick two bombs. 537 times 536 ways, over 2,
-[1:35.4–1:41.9] since each pair counts twice. Each has that same chance, and the rest miss. E to the minus
-[1:41.9–1:53.4] lambda again 536 is almost 537 For three hits each two becomes a 3 For any k a k The powers merge into lambda to the k
-[1:53.4–1:56.4] the Poisson distribution.
-[1:56.4–2:00.4] Times 576 squares, it predicts these purple bars.
-[2:00.4–2:04.4] The honest detector compares whole histograms.
-[2:04.4–2:07.4] 39 targets, and chance predicts 39.
-[2:07.4–2:10.4] The chi-squared misfit squares each bar's gap
-[2:10.4–2:16.2] bars gap and divides by chance's bar, because short bars wobble less.
-[2:16.2–2:18.8] So a miss on a short bar counts more.
-[2:18.8–2:21.8] Map A scores, 2.0.
-[2:21.8–2:25.3] Three out of four simulated chance maps score worse.
-[2:25.3–2:29.0] That share P is 0.74.
-[2:29.0–2:34.3] Now map B, half the expected empty squares, a tower of single hits,
-[2:34.3–2:36.6] misfit 272.
-[2:36.6–2:41.1] They patterned this even as the fingerprint of a spacing rule.
-[2:41.1–2:43.6] Aimed bombs would miss the other way.
-[2:43.6–2:46.3] Extra empty squares, extra pileups.
-[2:46.3–2:48.4] In 1946, R.D.
-[2:48.4–2:52.3] Clarke published the same test on London's real hits.
-[2:52.3–2:56.4] 537 in 576 squares.
-[2:56.4–3:00.1] Chance predicted 227 empty squares.
-[3:00.1–3:02.8] Clarke counted 229.
-[3:02.8–3:05.4] Overall, P equals .88.
-[3:05.4–3:08.8] The land's clusters were no sign of precise aim.
-[3:08.8–3:14.6] The bombs were aimed at central London, but tended to fall short, so farther north, hits
-[3:14.6–3:17.0] were about half as dense.
-[3:17.0–3:21.7] Score the north alone and it fits chance too, p equals .45.
-[3:21.7–3:26.0] The aim hides in lambda, which the test holds fixed.
-[3:26.0–3:30.3] The clumps in map A are what no aim at all looks like.
-[3:30.3–3:33.3] If you chose map B, you chose the rule.
+[1:26.2–1:35.5] Call that p of 0. For two hits in the square, pick two bombs. 537 times 536 ways, over 2,
+[1:35.5–1:41.9] since each pair counts twice. Each has that same chance, and the rest miss. E to the minus
+[1:41.9–1:53.3] lambda again 536 is almost 537 For three hits each two becomes a 3 For any k a k The powers merge into lambda to the k
+[1:53.3–1:56.3] the Poisson distribution.
+[1:56.3–2:00.3] Times 576 squares, it predicts these purple bars.
+[2:00.3–2:04.3] The honest detector compares whole histograms.
+[2:04.3–2:07.3] 39 targets, and chance predicts 39.
+[2:07.3–2:10.3] The chi-squared misfit squares each bar's gap
+[2:10.3–2:17.3] bars gap and divides by chance's bar because short bars wobble less. A miss on a short
+[2:17.3–2:25.4] bar counts more. Map A scores. 2.0. Three out of four simulated chance maps score worse.
+[2:25.4–2:34.6] That share P is .74. Now map B. Half the expected empty squares, a tower of single hits, misfit
+[2:34.6–2:41.9] 272. A pattern this even is the fingerprint of a spacing rule. Aimed bombs would miss the
+[2:41.9–2:50.1] other way. Extra empty squares, extra pileups. In 1946, R. D. Clarke published the same test
+[2:50.1–2:60.0] on London's real hits. 537 in 576 squares. Chance predicted 227 empty squares. Clarke
+[2:60.0–3:09.1] counted 229. Overall, p equals .88. London's clusters were no sign of precise aim. The bombs
+[3:09.1–3:14.8] were aimed at central London, but tended to fall short, so farther north, hits were about
+[3:14.8–3:21.9] half as dense. Score the north alone and it fits chance too, p equals .45. The aim
+[3:21.9–3:28.9] hides in lambda, which the test holds fixed. The clumps in map A are what no aim at all
+[3:28.9–3:33.1] looks like if you chose map B. You chose the rule.

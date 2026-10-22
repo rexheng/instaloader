@@ -1,41 +1,43 @@
 [00:00.0] Eight girls at an Illinois high school, and every friendship between them.
 
-[00:04.7] On average, each girl has two and a half friends.
+[00:04.9] On average, each girl has two and a half friends.
 
-[00:08.1] How many friends does the average friend have? Pick one. [pause 2.0]
+[00:08.8] How many friends does the average friend have? Pick one. [pause 1.8]
 
-[00:14.3] The answer tells flu researchers whom to watch: random students, or the friends they name.
+[00:14.8] The answer tells flu researchers whom to watch: random students, or the friends they name.
 
-[00:20.7] The natural guess is two and a half again: every friend is one of these same eight girls.
+[00:21.3] The natural guess is two and a half again: every friend is one of these eight girls.
 
-[00:27.0] Check that on a rewired class where every girl has two friends. Send a token both ways along every friendship.
+[00:27.1] Check that on a rewired class where every girl has two friends. Send a token both ways along every friendship.
 
-[00:35.1] Each token reads the friend count where it lands: always two. Both averages are two: the guess holds.
+[00:35.3] Each token reads the friend count where it lands: always two. Both averages are two: the guess holds.
 
-[00:42.8] Now restore the real friendships and send the tokens again. They read one, two, three, or four, and average three.
+[00:42.9] Now restore the real friendships and send the tokens again. They read one, two, three, or four, and average three.
 
-[00:51.0] The guess fell short by half a friend, because the tokens piled up unevenly: four on Sue, four on Alice, one on Betty.
+[00:51.1] The guess fell short by half a friend, because the tokens piled up unevenly: four on Sue, four on Alice, one on Betty.
 
-[01:00.2] Line the girls up by friend count, two at each count: they balance at two and a half.
+[01:00.4] Line the girls up by friend count, two at each count: they balance at two and a half.
 
-[01:06.4] The tokens stack higher on the right, one per friend, so they balance at three.
+[01:06.5] The tokens stack higher on the right, one per friend, so they balance at three.
 
-[01:12.0] Sue holds four tokens, each worth four: sixteen. A girl with k friends adds k squared on top, and k on the bottom.
+[01:12.2] Sue holds four tokens, each worth four: sixteen.
 
-[01:21.2] Now divide top and bottom by the eight girls: the average of k squared, seven and a half, over the average count, two and a half.
+[01:16.5] A girl with k friends adds k squared on top, and k on the bottom.
 
-[01:30.9] Where does the extra half come from?
+[01:22.3] Now divide top and bottom by the eight girls. [pause 0.7] The average of k squared, seven and a half, over the average count, two and a half.
 
-[01:34.0] Measure each girl's distance from the girls' balance point, two and a half, and square it. [pause 1.5] The squares average one and a quarter, the variance, sigma squared. [pause]
+[01:32.8] Where does the extra half come from?
 
-[01:46.2] Take Sue, and split her four, [pause 0.5] into the balance point, two and a half, [pause 0.4] plus her distance, one and a half. Squaring gives two and a half squared, her distance squared, and a cross term. [pause] Every girl splits this way. Because the beam balances, the distances add to zero, and the cross terms cancel. [pause]
+[01:36.0] Measure each girl's distance from the balance point, two and a half, and square it. [pause 1.6] The squares average one and a quarter, the variance, sigma squared. [pause]
 
-[02:08.1] So the average of k squared is mu squared plus sigma squared. [pause 1.6] And friends average mu, plus sigma squared over mu. [pause 1.2] Here that's two and a half, [pause 0.3] plus a half: exactly the extra half friend we measured. [pause 0.9] With no spread, the ring had no gap. [pause 1.0]
+[01:47.8] Take Sue, and split her four, [pause 0.5] into the balance point, two and a half, [pause 0.4] plus her distance, one and a half. Squaring gives two and a half squared, her distance squared, and a cross term. [pause] Every girl splits this way. Because the beam balances, the distances add to zero, and the cross terms cancel. [pause]
 
-[02:28.8] In twenty eleven, Facebook users averaged about a hundred ninety friends, and a few had thousands. [pause 0.4] If every friendship sent tokens, what would the tokens average? [pause 1.6]
+[02:09.7] So the average of k squared is mu squared plus sigma squared. [pause 1.4] And friends average mu, plus sigma squared over mu. [pause 1.2] Here that's two and a half, [pause 0.3] plus a half: exactly the extra half friend we measured. [pause 0.9] With no spread, the ring had no gap. [pause 0.85]
 
-[02:42.5] About six hundred thirty five: the spread term is more than twice the mean. [pause 0.9] And ninety three percent of users had fewer friends than their friends averaged. Odds are, that includes you.
+[02:30.1] In twenty eleven, Facebook users averaged about a hundred ninety friends, and a few had thousands. [pause 0.4] If every friendship sent tokens, what would the tokens average? [pause 1.45]
 
-[02:56.4] Christakis and Fowler put this to work at Harvard. Named friends have more friends, so they sit closer to everyone else, and should catch flu first. [pause 0.5] They tracked flu diagnoses in random students, and in the friends the students named. [pause 0.5] The friends' curve rose first. [pause 0.4] Fitted curves put them thirteen point nine days ahead. [pause 0.9] With self-reported symptoms, the lead shrank to about three.
+[02:43.6] About six hundred thirty five: the spread term is more than twice the mean. [pause 0.9] And ninety three percent of users had fewer friends than their friends averaged. Odds are, that includes you.
 
-[03:24.6] Betty looks at her one friend, [pause 0.3] Sue, and sees four. [pause 2.1] Most of us are Betty.
+[02:57.5] Christakis and Fowler put this to work at Harvard. Named friends have more friends, so they sit closer to everyone else, and should catch flu first. [pause 0.5] They tracked flu diagnoses in random students, and in the friends the students named. [pause 0.5] The friends' curve rose first. [pause 0.4] Fitted curves put them thirteen point nine days ahead. [pause 0.7] With self-reported symptoms, the lead shrank to about three.
+
+[03:25.5] Betty looks at her one friend, [pause 0.3] Sue, and sees four. [pause 2.1] Most of us are Betty.

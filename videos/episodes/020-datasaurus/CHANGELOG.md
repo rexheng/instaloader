@@ -817,3 +817,89 @@ Concision 8.5). No caps, no factual errors. Both said the fixes would reach 9.
 - **Audio / Clarity nits (substance).** A 6.3 s breathless run carrying 703 and 86 %; the what-if
   r = 0.50 had no stated reason. Upgrade: [pause 0.3] after "papers," and B2 at 0.80; open B9b
   with "This one barely tilts."
+
+### What changed (craft = C, substance = S)
+1. *Anscombe's entry: no axis number ever labels the wrong data (C1, S1).* B18 is now three
+   steps. (1) On "In", the median row, the dinosaur's readout, the CHI citation and the 131 points
+   that will not travel fade out (0.5 s); the 11 that will, and the dinosaur's ellipse and box, sit
+   on their own 0–100 axes. (2) At once, one smooth 1.2 s play: the tick numbers cross-fade (75 and
+   12 still hand over in sequence), the 11 points travel, and the ellipse, box, centre and touch
+   dots morph to Anscombe's, all on the same rate function; the parked slope formula moves up the
+   empty right half to the top right. (3) His readout builds in its bottom-right slot and his
+   citation fades in.
+2. *Sweep back (C2).* The run, the rise and "r s_y" fade out (0.4 s) before r starts to move, so
+   the rise never measures an r the ellipse no longer shows.
+3. *Hand-off to the landing (C3).* The formula reaches its band by half-time; the readout fades in
+   from 0.3 and the guess cloud, "your guess" and the dashed "your line" from 0.4 of the 1.5 s
+   transform (they started at 0.5–0.6). His readout and citation are out by 0.3.
+4. *Shared ellipse and line (C4).* The copies to panels IV, III, II are one ellipse+line pair
+   each, launched already moving (ease-out) 0.15 s apart. Found on the preview: TransformFromCopy
+   runs its rate function on 1 − α, which turned the ease-out into a delayed ease-in (the copies
+   crawled off panel I together); the copies are now ReplacementTransforms of explicit copies.
+5. *Quartet formation (S2).* Anscombe I's axis lines and ticks are transformed into panel I's on the
+   points' rate function; each old tick number rides to its value on the new axis while it fades,
+   each new one rides in from its value on the old axis and fades in late; his "y" travels to the
+   panel's "y". No second set of axes, no point outside its panel mid-move.
+6. *The slope formula is built in the insight (S3, S4, C9).* On "That's the best-fit line, [pause
+   1.1]" the run's s_x label itself drops into a denominator and a copy of the rise's r s_y into
+   the numerator (the rise's label hidden while its copy leaves, so nothing reads doubled), each
+   down a lane between plot and readout and in under the readout's last row; then the bar and
+   "slope =" (in the band where "matching" sat; it steps out for the what-if). The slices then
+   draw on an unlabelled run. On "everything" (B10) the formula steps back small and grey under
+   that band and "matching: 5/5" returns. In B18 it moves up to the top right (grey, so the upper
+   right is no longer empty, C9), and "Same rule, [pause 0.3] same line." lights it while the run
+   and rise are drawn on Anscombe I and the line grows through the touch point the 0.82 set. B20 +
+   B21 ("Same rule: ess ex across, r times ess why up. So the slope is the rise over the run.") are
+   gone, and with them the doubled "r s_y" at 2:51.
+7. *Concision (C5, C6).* "this star" cut from the roll call (circle → bullseye → X → stripes).
+   B18: "In 1973, Francis Anscombe did it with just eleven points." Not "by hand": it is not known
+   how he made the sets (Wikipedia, facts #39).
+8. *Stakes (C7, S5, S6).* The bar, error bar, "± 1 SD" and "86%" fade out in 0.4 s from "Only";
+   "13% / showed points" is written from "showed". B2 at speed 0.80 with [pause 0.4] after
+   "papers," and [pause 0.6] before "Only thirteen percent".
+9. *Slice band (C8).* The band points (12 with the new seed) step back to 40 % as the averaged dot turns yellow.
+   The simulated cloud is also redrawn away from the rise's rectangle (wall to 0.1 past the rise,
+   ȳ − 0.1 to the touch height + 0.1): seed 19530, 12 of 142 redrawn, five numbers exact, 12 band
+   points averaging 61.298 vs the touch point's 61.300, nearest band point 0.21 from the averaged
+   dot (asserted; facts #36).
+10. *Clarity (S7).* B9b opens "This one barely tilts. [pause 0.4]", with the dinosaur's ellipse
+    pulsed and its nearly level touch dots flagged, so the r = 0.50 what-if has its reason.
+11. *Cadence (found by the kit on the preview).* With B20/B21 gone the beat turns measured 0.69 s
+    against 0.55 s full stops and the sentence-gap variation 0.147, both just under the kit's
+    floors. B2, B7, B11 and B15 now end with a 0.75 s gap and B17 with 0.72 s (all real turns),
+    and the two new pauses above take the shortest natural gaps out of the full-stop set.
+
+**Not changed, with reasons.**
+- Substance fix 8 (retitle) is optional, and the title is fixed in curriculum.json.
+- The tick numbers still cross-fade in place (no number rides a tick in the big plot): old and
+  new scales are different datasets, so there is no continuous map between them; what the
+  critics asked for is that they change with the data, which they now do.
+
+### Verification (final master, 3:22.3)
+- render.sh: 0 scene warnings; layout audit 0 issues in 216 checks. review_kit: 0 flags.
+- 442 words; 150 wpm over speech time; median sentence 173 wpm, none above 200. Full stops
+  0.55 s (variation 0.17), beat turns 0.89 s; longest stretch without a breath 5.9 s (B0; B2's
+  run is split by the [pause 0.4] after "papers"). −14.1 LUFS, −1.6 dBTP; leading 0.00 s,
+  trailing 1.94 s; longest internal silence 2.37 s (the commit hold); longest static stretch
+  2.30 s. WER 1.4 %. 12/12 deictics synced, 0 glyph morphs.
+- I looked at all 12 contact sheets and at keyframes kf_17 (1:36.2, the formula in its band
+  under the dimmed readout), kf_20 (1:50.3, parked grey under "matching 5/5"), kf_31 (2:48.4,
+  the grey formula top right in Anscombe's frame). Frame tiles and crops of the master:
+  - 0:35.2 / 0:36.0 (full-res crop): the bar, error bar and "± 1 SD" fading with no 13 % yet;
+    then the strip alone; "13% / showed points" writes from 0:36.4.
+  - 1:31.6 / 1:32.8 (full-res crop): the averaged white dot on bare wall, nothing between the
+    wall and the rise; then the dot yellow and the band points at 40 %.
+  - 1:33.4–1:36.0 every 0.4 s: cloud out and dashed line in, s_x drops into the denominator,
+    the r s_y copy runs the lane (the rise's label hidden meanwhile), then the bar and "slope =".
+  - 1:42.4: run, rise and label fading out at r = 0.50, before the sweep.
+  - 2:41.8–2:47.2: the dinosaur's readout, median row, citation and 131 points out first; then
+    ticks, points, ellipse and box change together (2:42.3–2:43.5); the formula moves up grey;
+    his readout builds.
+  - 2:48.7–2:52.0: formula lights, run and rise drawn, line grows through the touch point.
+  - 2:52.4–2:52.8: Anscombe I's axes shrink into panel I with the points inside; one set of axes.
+  - 2:53.45–2:55.2 every 0.1–0.2 s: each ellipse+line copy leaves panel I already moving, 0.15 s
+    apart; a second stroke shows on panel I for about one 0.1 s sample only.
+  - 3:00.0–3:01.8: by 3:00.9 the readout and the guess cloud are fading in with the growing axes.
+- Known residue: during the 1.2 s data change at 2:42.3 the old and new tick numbers are both
+  half visible at mid-move (they never overprint, and they change exactly with the data). While
+  the 0.82 waits beside the touch dot (2:47–2:49) the readout shows r = 0.82 too, as before.

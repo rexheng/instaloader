@@ -21,8 +21,8 @@ baseline is strong, not extreme, and Schelling himself called his one-third resu
 | YELLOW `#F5C451` | gold households (and the count of gold neighbors in every fraction) |
 | RED `#EF6F61` | unhappy: a ring drawn *outside* an unhappy household's tile, after a 1 px gap of background colour (the tile keeps its colour; round 6: red right against gold read as orange), the "unhappy" counts, the share-ladder bars of unhappy households |
 | PURPLE `#B394E8` | the demand: the share of matching neighbors a household insists on (marker, ⅓ / ¼, the demand line on the ladder, chart x-axis, "demanded" labels) |
-| INK (off-white) | the measured outcome (average share of neighbors that match: meter, chart dots and mean ticks); focus boxes; fractions; the zone lines of the rule-made town |
-| GRAY / DIM | axes, captions, "plan predicts 0", "round", notes, ladder bars of content households, the random-mix baseline, Schelling's band, citations; the end-card Ω is INK (not BLUE) |
+| INK (off-white) | the measured outcome (average share of neighbors that match: meter, chart dots, our two towns' ringed markers); focus boxes; fractions; the zone lines of the rule-made town |
+| GRAY / DIM | axes, captions, "plan predicts 0", "round", notes, ladder bars of content households and their counts (67, 76, 125, 256), the random-mix baseline, the "our jump" bracket, Schelling's band and rules, citations |
 
 Blue vs gold is colour-blind safe; RED never contrasts with GREEN (GREEN is unused); RED is
 always a ring or a count, never a household colour.
@@ -74,20 +74,26 @@ on the meter's 100 % end, so "plan predicts 0" has its 0 directly under the coun
 
 ("plan predicts 0" arrives on "content". Round 6 merged "Then everyone is content" into the plan.)
 
-### 5 · Run + measured failure (0:58–1:17)
-*Screen:* round 1: 200 tiles hop (each arc bent toward the board's centre and kept on the board) while the GRAY "moves" row counts live to 200; the meter
-climbs to 64 %; the counter stops at 74, above "plan predicts 0". On "thirty-eight" the GRAY note
-"38 content by their turn" appears. The counter pulses on "this counter". On "sixty-seven": every
-content tile dims, the 7 outlined tiles that were already unhappy at the start turn grey, 67 RED
-rings remain, and the 38 note gives its slot to "67 content at the start" (out, then in).
+### 5 · Run + measured failure (0:51–1:06)
+*Screen (round 7):* the "round" and "moves" rows fade in in the breath before the beat, so round 1
+starts on "Round": 188 tiles hop under "Round one: two hundred moves" (each arc bent toward the
+board's centre and kept on the board) while the GRAY "moves" row counts live and the meter climbs
+to 64 %; the last twelve hops land one by one under "The unhappy count", so the RED count visibly
+stalls (82 → 81, 80, 78, 76, 75, 76, 75, 75, 74, 74, 74, 74) and freezes at 74 on "stalls", as "moves"
+reaches 200. Then "round" and "moves" dim to 35 % (one number is the subject), the GRAY note
+"38 content by their turn" arrives (why 200 moves for 238 unhappy; held ≈ 2.5 s), the count pulses
+on "seventy-four", and "plan predicts 0" pulses in the 1.2 s silence after it. On "sixty-seven":
+every content tile dims, the 7 outlined tiles that were already unhappy at the start turn grey,
+67 RED rings remain, and the 38 note gives its slot to "67 content at the start" (out, then in).
 
-> Round one takes two hundred moves; the other thirty-eight were content by their turn.
+> Round one: two hundred moves. The unhappy count stalls at seventy-four. [pause 1.2]
+> Sixty-seven of these were content before round one. They never moved. Their neighbors did.
 
 (Round 5 cut "The matching share jumps to sixty-four percent": the meter climbs to 64 % live
-during the round, so the sentence only read the screen aloud.)
->
-> If the plan had worked, this counter would read zero. It reads seventy-four. [pause 0.9]
-> Sixty-seven of these were content before round one. They never moved. Their neighbors did.
+during the round. Round 7 cut "the other thirty-eight were content by their turn" (the GRAY note
+says it) and "If the plan had worked, this counter would read zero. It reads seventy-four." (the
+"plan predicts 0" row says it, and the 74 sat on screen 6 s before it was spoken): the failure
+now happens live, on the word.)
 
 ### 6 · Insight: the domino (1:16–1:51)
 *Screen:* "Replay one block" (round 6: "corner" was wrong, the patch sits mid-top): the board parks at the left edge at 0.7 scale and dims to 30 %
@@ -200,7 +206,12 @@ starts" A's 2/7 ≥ ¼ flashes.
 > At a third, everyone left of it is unhappy, including the neighbor that started our
 > block's chain, at two sevenths.
 >
-> Every household at three eighths is one lost match away from two sevenths.
+> All one hundred twenty-five households at three eighths are one lost match from two sevenths.
+
+(Round 7: the 125 count fades in and pulses with its bar on "one hundred twenty-five", the 3/8 rung
+on "three eighths", the arrow draws on "lost match": the tallest bar at risk is the reason the
+cascade is big at ⅓. The ladder's y title is now just "households" (11 prose words at most), and
+the tallest bar, ½, carries its count "256" from the moment it has grown, as the height scale.)
 >
 > At a quarter, how many would start unhappy? [pause 1.5]
 >
@@ -211,7 +222,16 @@ starts" A's 2/7 ≥ ¼ flashes.
 The new sentence names the mechanism: 2/7 ≥ ¼, so the 3/8 → 2/7 step that drove A → B → C no
 longer tips anyone. "and they're tall" was cut; the count falling 238 → 95 shows it.)
 
-### 10 · Payoff + honest limits (2:45–3:01)
+### 10 · Payoff + honest limits (2:31–2:48)
+*Screen (round 7):* the 30-town columns are swarms of solid dots (r 0.05, 100 %, a 1.6 px
+background rim, ±1 pp spread; no mean tick or whisker); dims change colour, not opacity. Our two
+towns are ringed markers on a background disc, so they stay visible inside their columns. On
+"model" (after the box on the two towns) a GRAY bracket "our jump" is drawn at 82 % with its ends
+over the ¼ and ⅓ columns and a dotted drop from its left end to the ¼ column. On "nearest" GRAY
+"nearest move" and on "emptier" "25–30% empty" appear in the top-left of the plot. On "There":
+"our jump" and the drop fade, the bracket rises and slides to 35–50 %, the rules step down a row,
+then "Schelling: 35–50%" fades in above them (one thing at a time). The band sweeps on "between …
+half" while our swarms dim to 30 %. (Below: the round-6 screen notes, kept for the record.)
 *Screen:* the 2:12 morph in reverse: the bars sink into the baseline and the ladder labels
 fade while the two thumbnails return to their column (0.5 s); the baseline shrinks back into the
 x-axis while the x title returns to PURPLE "demanded (% of neighbors)" (0.6 s); only then do the
@@ -227,9 +247,13 @@ while our 30-town dots and mean ticks dim to about 30 %, so it reads as his mode
 two towns' dots (¼ → 58 %, ⅓ → 76 %) stay at full strength: they are the ends of "our jump", left
 of his band, and the two thumbnails they belong to are still on screen.
 
-> In his 1971 paper, Thomas Schelling ran this model. His households moved to the nearest
-> suitable square, on emptier boards, and there the jump came later, between about a third
-> and a half.
+> In his 1971 paper, Thomas Schelling ran this model. [pause 0.4] His households moved to the
+> nearest square that suited them, on far emptier boards. [pause 0.5] There the jump came later,
+> between about a third and a half. (speed 0.82)
+
+(Round 7: one 14.7 s sentence with three qualifiers became three sentences with pauses, and each
+of his two rules has a label on its word. "a quarter empty" (a critic's wording) was not used:
+"a quarter" is a demand level in this episode.)
 
 (Round 3 cut the quote sentence "He wrote that inferences about individual motives can usually
 not be drawn from aggregate patterns": the thesis was stated three times in 45 s. Its source
@@ -253,12 +277,19 @@ their boards, with "demanded" on one baseline 0.25 above the boards. Citation "A
 pulse on the study's "segregation"; the citation is underlined on "credit". No stretch of this beat is static for more than about 2.2 s. The rule town's grain matches a
 Schelling town's texture (no stray tiles), so the picture cannot give the answer away.
 
-> Two simulated towns, both seventy-six percent. In one town, households demand a third. In the
-> other, nobody minds their neighbors. Which one wanted a third? [pause 1.5]
+> Two simulated towns. [pause 0.6] In one town, households demand a third. In the other,
+> nobody minds their neighbors. Which one wanted a third? [pause 1.5]
 >
-> This one. The other was placed by a rule, with no preferences. Real segregation has other
-> causes. One study finds that 1930s federal lending maps increased racial segregation for
-> decades, through reduced credit.
+> This one. The other was placed by a rule, with no preferences. Real cities have rules too.
+> One study finds that 1930s federal lending maps raised racial segregation for decades. Its
+> authors point to reduced credit.
+
+(Round 7: both towns and both "76% match" labels are fully in before "Two" (the frame was
+near-empty under it); "both seventy-six percent" is no longer read aloud, the two labels pulse
+together in the 0.6 s silence after "towns". "Real segregation has other causes" was an abrupt
+pivot: "Real cities have rules too" follows from the rule-made town, whose header "· placed by a
+rule" pulses on "rules too" (not its zone lines, so the toy rule is not equated with the maps).
+"finds … through reduced credit" upgraded the abstract's "suggest": "its authors point to".)
 
 (Round 6: the link sentence ties the rule-made town to the study, and splits a 14.7 s run with
 no breath. About 0.95 s of silence follows "credit.")
