@@ -993,11 +993,22 @@ class Episode(NarratedScene):
             # half of them: the left half fills with red, and the label reads 1 in 2.  The head
             # counts arrive only once the label says 1 in 2, so no paused frame shows "1 in 500"
             # over 0 sick
+            # (the counters tick while they fade in, so their glyph count changes: FadeIn needs a
+            # fixed family, so their opacity is an updater that runs right after the value one)
+            cnt_op = ValueTracker(0.0)
+
+            def cnt_fade(m):
+                m.set_opacity(cnt_op.get_value())
+            for c in (cnt_s, cnt_h):
+                c.add_updater(cnt_fade)
+                c.update()
+                self.add(c)
             self.play(pop.flip_in.animate(rate_func=EASE).set_value(1.0),
                       *swap_num(tbl_prev[2], prev_num, t_out=(0.0, 0.3), t_in=(0.2, 0.5)),
-                      FadeIn(cnt_s, rate_func=window(0.45, 0.7)),
-                      FadeIn(cnt_h, rate_func=window(0.45, 0.7)),
+                      cnt_op.animate(rate_func=window(0.45, 0.7)).set_value(1.0),
                       run_time=beat.remaining() + 0.2)
+            for c in (cnt_s, cnt_h):
+                c.remove_updater(cnt_fade)
         prev_num.add_updater(lambda m: place_prev(m.set_value(pop.n_int())))
 
         # ---------------------------------------------------------- test everyone
@@ -1120,8 +1131,9 @@ class Episode(NarratedScene):
         with self.narrate("One percent sounds small, but here it's one percent of nearly "
                           "everyone.") as beat:
             self.play(emph(rate_h, scale=1.3), emph(arr_h), run_time=0.9)
-            # "one percent" (of everyone healthy): exactly the 100 ringed blue squares pulse
-            beat.wait_until("one percent", occurrence=2, offset=-0.15)
+            # "here it's one percent" (of everyone healthy): exactly the 100 ringed blue squares
+            # pulse, starting on "here"
+            beat.wait_until("here", offset=-0.15)
             self.play(LaggedStart(*[emph(g, scale=1.35, run_time=0.7) for g in fp_marked],
                                   lag_ratio=0.006), run_time=1.1)
             beat.wait_until("nearly", offset=-0.1)
@@ -1978,4 +1990,4 @@ class Episode(NarratedScene):
         for m in (num, driver, cnt_r, cnt_b):
             m.clear_updaters()
         self.hold(0.3)                              # the finished two-tag frame, a little longer
-        self.end_card()
+        self.end_card(hold=0.5)

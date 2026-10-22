@@ -39,130 +39,130 @@ Start with two inputs.
 Our function is one inside this quarter disc, zero outside: its average is exactly one half.
 
 11
-00:00:44,200 --> 00:00:49,700
-A ten by ten grid puts fifty-two of its hundred points inside: two points off.
+00:00:44,200 --> 00:00:48,610
+A grid of a hundred points puts fifty-two inside: two points off.
 
 12
-00:00:50,166 --> 00:00:54,566
+00:00:49,066 --> 00:00:53,466
 A hundred random darts put forty-four inside: six points off.
 
 13
-00:00:54,816 --> 00:00:57,096
+00:00:53,716 --> 00:00:55,996
 In two dimensions, the grid wins.
 
 14
-00:00:57,533 --> 00:01:00,663
+00:00:56,433 --> 00:00:59,563
 Now give each a million points, and add inputs.
 
 15
-00:01:00,863 --> 00:01:05,043
+00:00:59,763 --> 00:01:03,943
 The disc becomes a ball, grown to cover exactly half the box.
 
 16
-00:01:05,500 --> 00:01:13,070
+00:01:04,400 --> 00:01:11,970
 The grid's million points give each axis a thousand values in two dimensions, then a hundred, ten, three.
 
 17
-00:01:13,666 --> 00:01:17,446
+00:01:12,566 --> 00:01:16,346
 From twenty dimensions on, just the centre, inside the ball.
 
 18
-00:01:17,596 --> 00:01:21,236
-So the grid says the ball fills the box: fifty points off.
+00:01:16,496 --> 00:01:20,436
+So the grid says that the ball fills the box: fifty points off.
 
 19
-00:01:22,500 --> 00:01:29,720
+00:01:21,700 --> 00:01:28,920
 Even two values on nineteen axes is eighteen points off, while the darts stay under a tenth of a point.
 
 20
-00:01:31,400 --> 00:01:35,100
+00:01:30,600 --> 00:01:34,300
 Maybe darts win by giving every axis more values.
 
 21
-00:01:35,400 --> 00:01:45,020
+00:01:34,600 --> 00:01:44,220
 A million points on the diagonal give every axis a million values, and still miss by eight points: their coordinates move in lockstep.
 
 22
-00:01:45,766 --> 00:01:56,376
+00:01:44,966 --> 00:01:55,576
 A dart's coordinates are drawn independently, so it lands inside with a chance equal to the answer, in any dimension: each dart is a coin flip.
 
 23
-00:01:57,033 --> 00:01:59,313
+00:01:56,233 --> 00:01:58,513
 One flip is either zero or one.
 
 24
-00:01:59,463 --> 00:02:04,083
+00:01:58,663 --> 00:02:03,283
 Its average is a half, so every flip misses by exactly a half.
 
 25
-00:02:04,700 --> 00:02:08,190
+00:02:03,900 --> 00:02:07,390
 Repeat the hundred-dart experiment three hundred times.
 
 26
-00:02:08,390 --> 00:02:10,780
+00:02:07,590 --> 00:02:09,980
 In both, the estimates spread this wide.
 
 27
-00:02:11,233 --> 00:02:19,353
+00:02:10,433 --> 00:02:18,553
 Those misses fall up or down at random, so they partly cancel: sixteen darts stray about four halves, not sixteen.
 
 28
-00:02:19,753 --> 00:02:22,013
+00:02:18,953 --> 00:02:21,213
 N darts stray about root N halves.
 
 29
-00:02:22,213 --> 00:02:26,233
+00:02:21,413 --> 00:02:25,433
 Divide by N, and the typical miss is a half over root N.
 
 30
-00:02:27,033 --> 00:02:29,523
+00:02:26,233 --> 00:02:28,723
 For a hundred darts: five points.
 
 31
-00:02:30,023 --> 00:02:31,623
+00:02:29,223 --> 00:02:30,823
 We measured four point eight.
 
 32
-00:02:31,923 --> 00:02:36,893
+00:02:31,123 --> 00:02:36,093
 Any other function swaps the half for its own spread, sigma; there's still no d.
 
 33
-00:02:37,333 --> 00:02:40,953
+00:02:36,533 --> 00:02:40,153
 So, back to our ball: a million darts, any dimension.
 
 34
-00:02:41,153 --> 00:02:43,493
+00:02:40,353 --> 00:02:42,693
 How far off is a typical estimate?
 
 35
-00:02:44,993 --> 00:02:48,583
+00:02:44,193 --> 00:02:47,783
 One half over a thousand: five hundredths of a point.
 
 36
-00:02:50,033 --> 00:02:58,613
+00:02:49,233 --> 00:02:57,813
 In 2012, Bergstra and Bengio found random search tuned neural networks as well as grid search, in a fraction of the time.
 
 37
-00:02:59,063 --> 00:03:06,603
+00:02:58,263 --> 00:03:05,803
 If one setting matters most, nine grid trials test three values of it; nine random trials test nine.
 
 38
-00:03:07,366 --> 00:03:10,486
+00:03:06,566 --> 00:03:09,686
 Darts do have a blind spot: tiny answers.
 
 39
-00:03:10,686 --> 00:03:16,596
+00:03:09,886 --> 00:03:15,796
 A radius-one ball fills two parts in a hundred trillion of a thirty-dimensional box.
 
 40
-00:03:16,996 --> 00:03:22,876
+00:03:16,196 --> 00:03:22,076
 Below this line, a million darts expect under one hit, so they usually report zero.
 
 41
-00:03:24,566 --> 00:03:26,706
+00:03:23,766 --> 00:03:25,906
 The darts never noticed the axes:
 
 42
-00:03:27,106 --> 00:03:29,786
+00:03:26,306 --> 00:03:28,986
 a million coin flips, in any dimension.
 

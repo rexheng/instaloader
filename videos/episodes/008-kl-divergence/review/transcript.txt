@@ -1,53 +1,55 @@
 [0:00.0–0:01.9] Old faithful's eruptions.
-[0:01.9–0:04.9] Data first, the closest bell is this one.
-[0:04.9–0:06.4] Swap the order.
-[0:06.4–0:09.4] If closeness is a distance, order can't matter.
-[0:09.4–0:11.0] It stays at one.
-[0:11.0–0:13.1] Or does it move to two or three?
-[0:14.8–0:19.0] The D is KL divergence, named for callback and lie blur.
-[0:19.0–0:23.2] Every maximum likelihood fit shrinks it with the data first.
-[0:23.2–0:25.5] And much of Bayesian machine learning
-[0:25.5–0:27.4] shrinks it with the order flipped.
-[0:27.4–0:29.5] It's often called a distance.
-[0:29.5–0:30.7] So treat it as one.
-[0:31.3–0:34.4] Data first, this bell is 0.76 bits away.
-[0:34.9–0:39.0] Shift it or stretch it, and that number only grows, so this is bell A.
-[0:39.6–0:42.4] Three and a half minutes, give or take 1.1.
-[0:43.4–0:46.0] But a distance reads the same both ways.
-[0:46.4–0:52.5] Put the bell first, and the same two curves are 1.7 bits apart, more than twice as far.
-[0:53.2–0:57.4] Only the order changed, so the order must be built into the formula.
-[0:57.4–1:02.4] To see why, open it up at one real eruption, two minutes long.
-[1:02.4–1:05.4] The data's curve gives that length a height, p.
-[1:05.4–1:08.4] The bell gives it q, about a quarter as much.
-[1:08.4–1:14.4] Double q twice and you reach p, so log base 2 of p over q is about 2.
-[1:14.4–1:16.4] Two doublings or two bits.
-[1:16.4–1:18.4] Do that at every length.
-[1:18.4–1:25.4] Then weight each one by how often eruptions last that long, which is p, and add it all up.
-[1:25.4–1:30.0] Where the bell rises above the data, the gray dips pay a little back.
-[1:30.0–1:33.8] That's the divergence, 0.76 bits.
-[1:33.8–1:39.1] Try a bell that ignores the short eruptions and sits on the long hump.
-[1:39.1–1:54.9] At two minutes it falls short by 18 and a half doublings More than a third of all eruptions are short ones like this so the bill comes to 5 bits Now keep that bill and swap the order for a second
-[1:54.9–2:01.6] one. Every P trades places with Q. The bell supplies the lengths and the data judges them.
-[2:01.6–2:09.4] Which bell wins now? Take bell B first. It almost never imagines a short eruption, so
-[2:09.4–2:11.5] So ignoring them costs it nothing.
-[2:11.5–2:13.9] It pays .62.
-[2:13.9–2:18.1] Bell A imagines eruptions in the gap and out in the tails.
-[2:18.1–2:20.6] Lengths the data almost never shows.
-[2:20.6–2:23.5] That costs 1.7 bits.
-[2:23.5–2:28.3] Now start from A and let the bell slide downhill on the bell-first bill.
-[2:28.3–2:33.4] As that bill drains, the other one swells and the bell settles on the long hump less
-[2:33.4–2:35.2] than half as wide.
-[2:35.2–2:38.1] Flip the order and the closest bell moves to 3.
-[2:39.4–2:45.5] Maximum likelihood puts the data first, so a one-bell fit stretches over every hump.
-[2:45.5–2:51.1] Variational inference approximates a Bayesian posterior with the model first,
-[2:51.1–2:53.6] so it tends to settle on one hump.
-[2:53.6–2:57.9] Bly and colleagues note that variational inference, generally,
-[2:57.9–3:00.7] underestimates posterior variance.
-[3:00.7–3:06.6] In a real adconversion model, its average for one effect matched MCMC,
-[3:06.6–3:09.6] but its spread was only a fifth as wide.
-[3:10.7–3:13.8] Against raw points, every bell first score is infinite,
-[3:14.4–3:16.2] so the data must be smoothed.
-[3:16.6–3:19.0] Smooth it more heavily, the gap partly fills,
-[3:19.6–3:23.2] and the best bell first fit spreads wide, almost back to A.
-[3:24.2–3:27.0] Bell A never misses an eruption that happens.
-[3:27.5–3:30.4] Bell B almost never imagines one that doesn't.
+[0:01.9–0:05.0] Data first, the closest bell is this one.
+[0:05.0–0:06.5] Swap the order.
+[0:06.5–0:09.6] If closeness is a distance, order can't matter.
+[0:09.6–0:11.3] It stays at one.
+[0:11.3–0:13.1] Or does it move to two?
+[0:13.1–0:14.2] Or to three?
+[0:16.1–0:20.4] The D is KL divergence, named for cullback and lie blur.
+[0:20.4–0:22.4] Every maximum likelihood fit
+[0:22.4–0:24.3] shrinks it with the data first.
+[0:24.3–0:26.5] Much of Bayesian machine learning
+[0:26.5–0:28.5] shrinks it with the order flipped.
+[0:28.5–0:32.7] It's often called a distance, so treat it as one.
+[0:32.7–0:36.6] Data first, this bell is 0.76 bits away.
+[0:36.6–0:39.8] Shift it or stretch it, and that number only grows,
+[0:39.8–0:42.6] so bell A is the closest.
+[0:42.6–0:45.5] But a distance reads the same both ways.
+[0:45.5–0:48.4] Put the bell first, and the same two curves
+[0:48.4–0:52.2] are 1.7 bits apart, more than twice as far.
+[0:53.1–0:57.5] Only the order changed, so the formula must care about order.
+[0:57.5–1:00.8] To see why, take one eruption two minutes long.
+[1:00.8–1:04.3] The data's curve stands this high there, call it P.
+[1:04.3–1:07.8] The bell gives it Q, about a quarter as much.
+[1:07.8–1:10.2] Double Q twice and you reach P.
+[1:10.2–1:13.7] So log base two of P over Q is about two,
+[1:13.7–1:15.6] two doublings or two bits.
+[1:17.3–1:19.8] Do that at every length.
+[1:19.8–1:21.7] Then weight each one by P,
+[1:21.7–1:25.6] how often eruptions last that long, and add it all up.
+[1:25.6–1:28.2] where the bell rises above the data.
+[1:28.2–1:30.5] The gray dips pay a little back.
+[1:30.5–1:33.8] That's the divergence, the same 0.76.
+[1:34.8–1:37.8] Try a bell that skips the short eruptions.
+[1:37.8–1:55.8] At two minutes it falls short by 18 and a half doublings More than a third of all eruptions are short so the bill comes to 5 bits Now keep that bill For a second bill swap the order Every P trades places
+[1:55.8–2:04.2] with Q. The bell supplies the lengths, and the data judges them. Which bell wins now?
+[2:04.2–2:05.6] Take Bell B first.
+[2:05.6–2:10.9] It almost never imagines a short eruption, so ignoring them costs it nothing.
+[2:10.9–2:13.6] It pays .62.
+[2:13.6–2:19.3] Bell A imagines eruptions in the gap and the tails, where the data has almost none.
+[2:19.3–2:22.2] That's its 1.7.
+[2:22.2–2:25.7] Now let Bell A slide downhill on the Bell First bill.
+[2:25.7–2:31.1] As that bill drains, the other swells and the bell settles into B, less than half as
+[2:31.1–2:32.1] wide.
+[2:32.1–2:36.9] Flip the order and the closest bell moves to three.
+[2:36.9–2:44.0] Maximum likelihood puts the data first, so a one bell fit stretches over every hump.
+[2:44.0–2:49.5] Variational inference approximates a Bayesian posterior with the model first, so it tends
+[2:49.5–2:51.6] to settle on one hump.
+[2:51.6–2:58.9] Bly and colleagues note that variational inference, generally, underestimates posterior variance.
+[2:58.9–3:05.8] In a real ad conversion model, its average for one effect matched MCMC, but its spread
+[3:05.8–3:09.1] was only a fifth as wide.
+[3:09.1–3:15.1] Against raw points, every BELFIRST score is infinite, so the data must be smoothed.
+[3:15.1–3:18.1] Smooth it more heavily, and the gap partly fills.
+[3:18.1–3:23.2] The best BELFIRST fit spreads almost back to A.
+[3:23.2–3:26.4] BEL A never misses an eruption that happens.
+[3:26.4–3:29.2] be almost never imagines one that doesn't.

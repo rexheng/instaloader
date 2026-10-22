@@ -1131,7 +1131,8 @@ class Episode(NarratedScene):
             self.play(Write(c39), run_time=0.7)
             beat.wait_until("chi", offset=-0.15)
             # the map steps back: the yellow gap slivers will be the only full-strength yellow
-            self.play(Write(rd), FadeIn(rnum),
+            # (the Poisson formula steps back too: the misfit readout is the equation in focus)
+            self.play(Write(rd), FadeIn(rnum), VGroup(E5, pois).animate.set_opacity(0.55),
                       A.level_anim(1, MAP_LOW, 0, 0, extra=dim_all, rate_func=window(0, 0.67)),
                       run_time=0.9)
             beat.wait_until("square", offset=-0.2)
@@ -1349,7 +1350,7 @@ class Episode(NarratedScene):
                 d.set_opacity(float(np.clip(n - i, 0, 1)))
 
         with self.say_beat("clarke") as beat:
-            self.play(FadeOut(p227), FadeOut(rgrp),
+            self.play(FadeOut(p227), FadeOut(rgrp), VGroup(E5, pois).animate.set_opacity(1),
                       Transform(bA, flat), Transform(ibA, iflat),
                       FadeOut(left_panel, shift=0.4 * LEFT), inset_anim(1, MAP_DIM),
                       run_time=0.6)
@@ -1523,17 +1524,21 @@ class Episode(NarratedScene):
         with self.say_beat("landing") as beat:
             # everything else leaves and London's hits fade while the area squares up; groups
             # that hold real dots (e.g. the dimmed "outside" set) fade through their dots
-            self.play(*[FadeOut(m) for m in list(self.mobjects)
-                        if not any(id(x) in keep for x in m.get_family())],
+            # (map A's hits fade in, at their true geometry, as the area finishes squaring up)
+            outgoing = [m for m in list(self.mobjects)
+                        if not any(id(x) in keep for x in m.get_family())]
+            self.add(adots0)
+            a_in = window(0.5, 0.5)
+            self.play(*[FadeOut(m) for m in outgoing],
                       UpdateFromAlphaFunc(rdots, lambda m, a: [
                           d.set_opacity(b * (1 - smooth(a))) for d, b in zip(rdots, base_op)]),
-                      Transform(cbox, csq), run_time=0.8)
+                      Transform(cbox, csq),
+                      UpdateFromAlphaFunc(adots0, lambda m, a: m.set_opacity(a_in(a))),
+                      run_time=0.9)
             self.remove(rdots)
-            self.add(adots0)
-            self.play(adots0.animate.set_opacity(1), run_time=0.5)
             self.play(ReplacementTransform(cbox, A2.frame), ReplacementTransform(adots0, A2.dots),
                       FadeIn(A2.top, shift=0.1 * DOWN), b2grp.animate.shift(8 * LEFT),
-                      run_time=1.1)
+                      run_time=1.0)
             beat.wait_until("clumps", offset=-0.25)
             self.play(LaggedStart(*[Create(c) for c in circles2], lag_ratio=0.25),
                       FadeIn(tagA3, shift=0.1 * UP), run_time=1.1)

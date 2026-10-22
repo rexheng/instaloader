@@ -639,8 +639,7 @@ class Episode(NarratedScene):
         self.add(self.ax, bars)
         with self.narrate("Old Faithful's eruptions. [pause 0.12] Data first, the closest bell is "
                           "this one. [pause 0.2] Swap the order. If closeness is a distance, order "
-                          "can't matter: it stays at one. Or does it move to two, [pause 0.25] or to "
-                          "three? [pause 1.5]") as beat:
+                          "can't matter: it stays at one.", gap=0.35) as beat:
             # the order the bet is about is on screen from the first second
             self.play(self.bar_op.animate.set_value(0.42), Create(static_p), Write(n1),
                       FadeIn(n_lab, shift=0.1 * DOWN), FadeIn(cite_data),
@@ -659,6 +658,9 @@ class Episode(NarratedScene):
                       TransformFromCopy(n1[3], n2[1], path_arc=-1.6), run_time=1.3)
             beat.wait_until("one", occurrence=2, offset=-0.2)
             self.play(FadeIn(mk1, shift=0.15 * DOWN), run_time=0.6)
+        # the bet itself, one question, a touch slower (Kokoro rushes questions: 230 wpm at 0.83)
+        with self.narrate("Or does the closest bell move to two, or to three? [pause 1.5]",
+                          speed=0.77) as beat:
             beat.wait_until("two", offset=-0.15)
             self.play(Create(ghost2), FadeIn(mk2, shift=0.15 * DOWN), run_time=0.6)
             beat.wait_until("three", offset=-0.15)
@@ -808,8 +810,8 @@ class Episode(NarratedScene):
         hq = big_q.height
 
         with self.narrate("To see why, take one eruption two minutes long. The data's curve stands "
-                          "this high there: call it p. [pause 0.2] The bell gives it q, [pause 0.3] "
-                          "about a quarter as much. Double q twice and you reach p. [pause 0.2] So log "
+                          "this high there: call it p. [pause 0.45] The bell gives it q, [pause 0.3] "
+                          "about a quarter as much. Double q twice and you reach p. [pause 0.45] So log "
                           "base two of p over q is about two: two doublings, or two bits.") as beat:
             # numbers leave first, then the chart shrinks (nothing slides over a label)
             self.play(FadeOut(VGroup(kl_lab, dist_lab2, strike, n2, r2, times, a_lab, leader,
@@ -901,7 +903,7 @@ class Episode(NarratedScene):
                   self.bar_op.animate.set_value(0.25), self.scan.animate.set_value(0.3),
                   self.ro_op.animate.set_value(0.3), lr_lab.animate.set_opacity(0.3),
                   run_time=0.8, rate_func=SMOOTH)
-        with self.narrate("Do that at every length. [pause 0.9] Then weight each one by p, how often "
+        with self.narrate("Do that at every length. [pause 0.9] Then weight each by p, how often "
                           "eruptions last that long, and add it all up. [pause 0.3] Where the bell "
                           "rises above the data, [pause 0.45] the grey dips pay a little back. "
                           "[pause 0.5] That's the divergence: the same point seven six.", gap=0.9) as beat:
@@ -1083,7 +1085,7 @@ class Episode(NarratedScene):
             [TWO[0] + TWO[2] * x, B2_THREE[0] + 0.12, 0]) for x in (0.6, 6.5)])
         tot2_num = tot2.num
         with self.narrate("Take bell B first. [pause 0.15] It almost never imagines a short eruption, "
-                          "so ignoring them costs it nothing. [pause 0.12] It pays point six two. "
+                          "so ignoring them costs nothing. [pause 0.12] It pays point six two. "
                           "[pause 0.9] Bell A imagines eruptions in the gap and the tails, where the "
                           "data has almost none. [pause 0.2] That's its one point seven.",
                           gap=0.5) as beat:
@@ -1339,10 +1341,10 @@ class Episode(NarratedScene):
                           "be smoothed. [pause 0.3] Smooth it more heavily and the gap partly fills: "
                           "the best bell-first fit spreads almost back to A.", gap=0.5) as beat:
             # the measured case leaves as the raw eruptions come in
-            self.play(FadeOut(VGroup(cite_g, panel, tag_post)),
+            self.play(FadeOut(VGroup(cite_g, panel)), swap(tag_post, raw_tag),   # tags never overlap
                       self.bell_fill.animate.set_value(0.0),
                       self.ax.x_title.animate.set_opacity(1.0), self.ax.y_title.animate.set_opacity(1.0),
-                      Create(rug), FadeIn(raw_tag, shift=0.1 * RIGHT), self.p_op.animate.set_value(0.15),
+                      Create(rug), self.p_op.animate.set_value(0.15),
                       self.bar_op.animate.set_value(0.06), run_time=0.9)
             beat.wait_until("infinite", offset=-0.25)
             self.play(Write(inf_line), run_time=0.8)

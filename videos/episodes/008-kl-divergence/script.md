@@ -44,8 +44,9 @@ are always italic math letters.
 
 ### 1. Cold open: the bet (0:00–0:14)
 > Old Faithful's eruptions. Data first, the closest bell is this one. Swap the order. If closeness
-> is a distance, order can't matter: it stays at one. Or does it move to two, *[0.25 s]* or to
-> three? *[pause 1.5]*
+> is a distance, order can't matter: it stays at one. Or does the closest bell move to two, or to
+> three? *[pause 1.5]* (the question is its own beat at speed 0.77: Kokoro rushes questions, and
+> an inline pause made whisper hear two questions)
 
 First frame: axes and the 272 eruption bars (faint), which brighten as the smoothed curve
 draws while `D(data ‖ bell)` writes top right (data blue in the first slot, bell purple in the
@@ -88,8 +89,8 @@ D-lines are boxed (unfilled boxes, 0.12 clear of every glyph).
 
 ### 5. Insight: one length (0:55–1:13)
 > To see why, take one eruption two minutes long. The data's curve stands this high there: call it
-> p. The bell gives it q, *[0.3 s]* about a quarter as much. Double q twice and you reach p. So
-> log base two of p over q is about two: two doublings, or two bits.
+> p. *[0.45 s]* The bell gives it q, *[0.3 s]* about a quarter as much. Double q twice and you
+> reach p. *[0.45 s]* So log base two of p over q is about two: two doublings, or two bits.
 
 The numbers fade first, then the chart shrinks left and `D(data ‖ bell)` heads the right column.
 The axis number 2 flags; scanner at 2.0 min. The blue bar `p` grows and is pulled out, same
@@ -99,7 +100,7 @@ line at p's top. `log₂(p/q) = 1.98` is assembled: the p swings up from the pul
 around the outside, the q drops in from its readout.
 
 ### 6. Every length, weighted (1:13–1:30)
-> *(silent turn: the chart rises)* Do that at every length. *[0.9 s]* Then weight each one by p,
+> *(silent turn: the chart rises)* Do that at every length. *[0.9 s]* Then weight each by p,
 > how often eruptions last that long, and add it all up. Where the bell rises above the data,
 > *[0.45 s]* the grey dips pay a little back. That's the divergence: the same point seven six.
 
@@ -143,7 +144,7 @@ fill); "judges": the data curve pulses. On "Which" the bell-first panel fades in
 Prediction hold.
 
 ### 9. Bell first, scored (1:59–2:17)
-> Take bell B first. It almost never imagines a short eruption, so ignoring them costs it nothing.
+> Take bell B first. It almost never imagines a short eruption, so ignoring them costs nothing.
 > It pays point six two. *[0.9 s]* Bell A imagines eruptions in the gap and the tails, where the
 > data has almost none. That's its one point seven.
 
@@ -194,7 +195,7 @@ MCMC spread. Citation *Giordano, Broderick & Jordan, 2018 · JMLR, Tables 2–3*
 > Against raw points, every bell-first score is infinite, so the data must be smoothed. Smooth it
 > more heavily and the gap partly fills: the best bell-first fit spreads almost back to A.
 
-The panel, brackets and tag leave. On "raw points" the curve and bars dim and the 272 eruptions
+The panel and brackets leave; the posterior tag swaps (out, then in) for "272 raw points". On "raw points" the curve and bars dim and the 272 eruptions
 appear as blue ticks on the length axis ("272 raw points"); on "infinite" `D(bell ‖ data) = ∞`
 writes in its cold-open place. On "smoothed" the ticks leave and the curve returns. On "Smooth it
 more heavily" the curve morphs into R's default kernel smoothing (tag "heavier smoothing": no

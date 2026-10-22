@@ -6,32 +6,32 @@
 
 [00:34.8] Start with two inputs. [pause 0.2] Our function is one inside this quarter disc, zero outside: its average is exactly one half.
 
-[00:44.2] A ten by ten grid puts fifty-two of its hundred points inside: two points off.
+[00:44.2] A grid of a hundred points puts fifty-two inside: two points off.
 
-[00:50.2] A hundred random darts put forty-four inside: six points off. [pause 0.25] In two dimensions, the grid wins.
+[00:49.1] A hundred random darts put forty-four inside: six points off. [pause 0.25] In two dimensions, the grid wins.
 
-[00:57.5] Now give each a million points, and add inputs. [pause 0.2] The disc becomes a ball, grown to cover exactly half the box.
+[00:56.4] Now give each a million points, and add inputs. [pause 0.2] The disc becomes a ball, grown to cover exactly half the box.
 
-[01:05.5] The grid's million points give each axis a thousand values in two dimensions, then a hundred, ten, three.
+[01:04.4] The grid's million points give each axis a thousand values in two dimensions, then a hundred, ten, three.
 
-[01:13.7] From twenty dimensions on, just the centre, inside the ball. [pause 0.15] So the grid says the ball fills the box: fifty points off. [pause 0.8]
+[01:12.6] From twenty dimensions on, just the centre, inside the ball. [pause 0.15] So the grid says that the ball fills the box: fifty points off. [pause 0.8]
 
-[01:22.5] Even two values on nineteen axes is eighteen points off, while the darts stay under a tenth of a point.
+[01:21.7] Even two values on nineteen axes is eighteen points off, while the darts stay under a tenth of a point.
 
-[01:31.4] Maybe darts win by giving every axis more values. [pause 0.3] A million points on the diagonal give every axis a million values, and still miss by eight points: their coordinates move in lockstep. [pause 0.3]
+[01:30.6] Maybe darts win by giving every axis more values. [pause 0.3] A million points on the diagonal give every axis a million values, and still miss by eight points: their coordinates move in lockstep. [pause 0.3]
 
-[01:45.8] A dart's coordinates are drawn independently, so it lands inside with a chance equal to the answer, in any dimension: each dart is a coin flip.
+[01:45.0] A dart's coordinates are drawn independently, so it lands inside with a chance equal to the answer, in any dimension: each dart is a coin flip.
 
-[01:57.0] One flip is either zero or one. [pause 0.15] Its average is a half, so every flip misses by exactly a half.
+[01:56.2] One flip is either zero or one. [pause 0.15] Its average is a half, so every flip misses by exactly a half.
 
-[02:04.7] Repeat the hundred-dart experiment three hundred times. [pause 0.2] In both, the estimates spread this wide.
+[02:03.9] Repeat the hundred-dart experiment three hundred times. [pause 0.2] In both, the estimates spread this wide.
 
-[02:11.2] Those misses fall up or down at random, so they partly cancel: sixteen darts stray about four halves, not sixteen. [pause 0.4] N darts stray about root N halves. [pause 0.2] Divide by N, and the typical miss is a half over root N. [pause 0.8] For a hundred darts: five points. We measured four point eight. [pause 0.3] Any other function swaps the half for its own spread, sigma; there's still no d.
+[02:10.4] Those misses fall up or down at random, so they partly cancel: sixteen darts stray about four halves, not sixteen. [pause 0.4] N darts stray about root N halves. [pause 0.2] Divide by N, and the typical miss is a half over root N. [pause 0.8] For a hundred darts: five points. We measured four point eight. [pause 0.3] Any other function swaps the half for its own spread, sigma; there's still no d.
 
-[02:37.3] So, back to our ball: a million darts, any dimension. [pause 0.2] How far off is a typical estimate? [pause 1.5] One half over a thousand: five hundredths of a point. [pause 1.0]
+[02:36.5] So, back to our ball: a million darts, any dimension. [pause 0.2] How far off is a typical estimate? [pause 1.5] One half over a thousand: five hundredths of a point. [pause 1.0]
 
-[02:50.0] In 2012, Bergstra and Bengio found random search tuned neural networks as well as grid search, in a fraction of the time. [pause 0.45] If one setting matters most, nine grid trials test three values of it; nine random trials test nine. [pause 0.3]
+[02:49.2] In 2012, Bergstra and Bengio found random search tuned neural networks as well as grid search, in a fraction of the time. [pause 0.45] If one setting matters most, nine grid trials test three values of it; nine random trials test nine. [pause 0.3]
 
-[03:07.4] Darts do have a blind spot: tiny answers. [pause 0.2] A radius-one ball fills two parts in a hundred trillion of a thirty-dimensional box. [pause 0.4] Below this line, a million darts expect under one hit, so they usually report zero.
+[03:06.6] Darts do have a blind spot: tiny answers. [pause 0.2] A radius-one ball fills two parts in a hundred trillion of a thirty-dimensional box. [pause 0.4] Below this line, a million darts expect under one hit, so they usually report zero.
 
-[03:24.6] The darts never noticed the axes: [pause 0.4] a million coin flips, in any dimension.
+[03:23.8] The darts never noticed the axes: [pause 0.4] a million coin flips, in any dimension.

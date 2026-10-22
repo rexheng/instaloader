@@ -2,17 +2,17 @@
  "scene": "Episode",
  "episode": 6,
  "title": "Seven Shuffles",
- "video_duration": 227.067,
+ "video_duration": 212.8,
  "beats": [
   {
    "index": 0,
    "start": 0.0,
-   "duration": 14.78,
-   "end": 14.78,
+   "duration": 15.08,
+   "end": 15.08,
    "text": "Heads, I riffle shuffle a sorted deck four times. Tails, a computer shuffles it perfectly. From the deck alone, how often could you tell which? Pick fifty, seventy five, or a hundred percent. [pause 1.5]",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "Heads",
@@ -61,3071 +61,2734 @@
     },
     {
      "w": "Tails",
-     "t": 3.63,
-     "end": 4.255
+     "t": 3.75,
+     "end": 4.375
     },
     {
      "w": "a",
-     "t": 4.355,
-     "end": 4.43
+     "t": 4.475,
+     "end": 4.55
     },
     {
      "w": "computer",
-     "t": 4.455,
-     "end": 5.005
+     "t": 4.575,
+     "end": 5.125
     },
     {
      "w": "shuffles",
-     "t": 5.055,
-     "end": 5.43
+     "t": 5.175,
+     "end": 5.55
     },
     {
      "w": "it",
-     "t": 5.455,
-     "end": 5.555
+     "t": 5.575,
+     "end": 5.675
     },
     {
      "w": "perfectly",
-     "t": 5.58,
-     "end": 6.34
+     "t": 5.7,
+     "end": 6.46
     },
     {
      "w": "From",
-     "t": 6.77,
-     "end": 6.908
+     "t": 6.81,
+     "end": 6.948
     },
     {
      "w": "the",
-     "t": 6.92,
-     "end": 6.995
+     "t": 6.96,
+     "end": 7.035
     },
     {
      "w": "deck",
-     "t": 7.02,
-     "end": 7.245
+     "t": 7.06,
+     "end": 7.285
     },
     {
      "w": "alone",
-     "t": 7.27,
-     "end": 7.895
+     "t": 7.31,
+     "end": 7.935
     },
     {
      "w": "how",
-     "t": 8.07,
-     "end": 8.32
+     "t": 8.11,
+     "end": 8.36
     },
     {
      "w": "often",
-     "t": 8.37,
-     "end": 8.745
+     "t": 8.41,
+     "end": 8.785
     },
     {
      "w": "could",
-     "t": 8.77,
-     "end": 8.87
+     "t": 8.81,
+     "end": 8.91
     },
     {
      "w": "you",
-     "t": 8.895,
-     "end": 8.995
+     "t": 8.935,
+     "end": 9.035
     },
     {
      "w": "tell",
-     "t": 9.02,
-     "end": 9.245
+     "t": 9.06,
+     "end": 9.285
     },
     {
      "w": "which",
-     "t": 9.27,
-     "end": 9.78
+     "t": 9.31,
+     "end": 9.82
     },
     {
      "w": "Pick",
-     "t": 10.165,
-     "end": 10.39
+     "t": 10.425,
+     "end": 10.65
     },
     {
      "w": "fifty",
-     "t": 10.415,
-     "end": 10.965
+     "t": 10.675,
+     "end": 11.225
     },
     {
      "w": "seventy",
-     "t": 11.14,
-     "end": 11.465
+     "t": 11.4,
+     "end": 11.75
     },
     {
      "w": "five",
-     "t": 11.49,
-     "end": 11.94
+     "t": 11.775,
+     "end": 12.225
     },
     {
      "w": "or",
-     "t": 12.04,
-     "end": 12.128
+     "t": 12.325,
+     "end": 12.412
     },
     {
      "w": "a",
-     "t": 12.14,
-     "end": 12.19
+     "t": 12.425,
+     "end": 12.475
     },
     {
      "w": "hundred",
-     "t": 12.215,
-     "end": 12.565
+     "t": 12.5,
+     "end": 12.875
     },
     {
      "w": "percent",
-     "t": 12.59,
-     "end": 13.28
+     "t": 12.9,
+     "end": 13.58
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/f5/f594c09ee1e62139fe860fef.wav"
+   "wav": "/root/.cache/sample_space/tts/49/4956bd9fe3008d1578b6e549.wav"
   },
   {
    "index": 1,
-   "start": 15.133,
-   "duration": 8.36,
-   "end": 23.493,
-   "text": "Monte Carlo samplers move by random steps, like these riffles. Stop them too early, and they still remember where they started.",
+   "start": 15.467,
+   "duration": 7.77,
+   "end": 23.237,
+   "text": "Monte Carlo samplers move by random steps, like these riffles. Stopped too early, they still remember where they started.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "Monte",
-     "t": 15.178,
-     "end": 15.553
+     "t": 15.512,
+     "end": 15.887
     },
     {
      "w": "Carlo",
-     "t": 15.578,
-     "end": 15.94
+     "t": 15.912,
+     "end": 16.274
     },
     {
      "w": "samplers",
-     "t": 15.978,
-     "end": 16.541
+     "t": 16.312,
+     "end": 16.875
     },
     {
      "w": "move",
-     "t": 16.578,
-     "end": 16.853
+     "t": 16.912,
+     "end": 17.187
     },
     {
      "w": "by",
-     "t": 16.878,
-     "end": 17.053
+     "t": 17.212,
+     "end": 17.387
     },
     {
      "w": "random",
-     "t": 17.078,
-     "end": 17.503
+     "t": 17.412,
+     "end": 17.837
     },
     {
      "w": "steps",
-     "t": 17.528,
-     "end": 18.178
+     "t": 17.862,
+     "end": 18.512
     },
     {
      "w": "like",
-     "t": 18.328,
-     "end": 18.528
+     "t": 18.662,
+     "end": 18.862
     },
     {
      "w": "these",
-     "t": 18.553,
-     "end": 18.778
+     "t": 18.887,
+     "end": 19.112
     },
     {
      "w": "riffles",
-     "t": 18.803,
-     "end": 19.493
+     "t": 19.137,
+     "end": 19.827
     },
     {
-     "w": "Stop",
-     "t": 19.943,
-     "end": 20.231
-    },
-    {
-     "w": "them",
-     "t": 20.243,
-     "end": 20.405
+     "w": "Stopped",
+     "t": 20.182,
+     "end": 20.507
     },
     {
      "w": "too",
-     "t": 20.443,
-     "end": 20.618
+     "t": 20.532,
+     "end": 20.707
     },
     {
      "w": "early",
-     "t": 20.643,
-     "end": 21.268
-    },
-    {
-     "w": "and",
-     "t": 21.418,
-     "end": 21.506
+     "t": 20.732,
+     "end": 21.307
     },
     {
      "w": "they",
-     "t": 21.518,
-     "end": 21.655
+     "t": 21.457,
+     "end": 21.595
     },
     {
      "w": "still",
-     "t": 21.693,
-     "end": 21.968
+     "t": 21.632,
+     "end": 21.882
     },
     {
      "w": "remember",
-     "t": 21.993,
-     "end": 22.493
+     "t": 21.907,
+     "end": 22.295
     },
     {
      "w": "where",
-     "t": 22.518,
-     "end": 22.643
+     "t": 22.307,
+     "end": 22.42
     },
     {
      "w": "they",
-     "t": 22.668,
-     "end": 22.805
+     "t": 22.432,
+     "end": 22.57
     },
     {
      "w": "started",
-     "t": 22.843,
-     "end": 23.493
+     "t": 22.607,
+     "end": 23.237
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/d1/d113e1df598fec120be75918.wav"
+   "wav": "/root/.cache/sample_space/tts/e1/e103729566676350e02d0313.wav"
   },
   {
    "index": 2,
-   "start": 23.833,
-   "duration": 7.67,
-   "end": 31.503,
-   "text": "The obvious check is the top card, the one you'd be dealt. Here's how often each card ends up there after four riffles.",
+   "start": 23.633,
+   "duration": 6.24,
+   "end": 29.873,
+   "text": "The obvious check is the top card: here's how often each card lands there after four riffles.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "The",
-     "t": 23.858,
-     "end": 24.008
+     "t": 23.648,
+     "end": 23.798
     },
     {
      "w": "obvious",
-     "t": 24.058,
-     "end": 24.545
+     "t": 23.848,
+     "end": 24.398
     },
     {
      "w": "check",
-     "t": 24.583,
-     "end": 24.858
+     "t": 24.448,
+     "end": 24.748
     },
     {
      "w": "is",
-     "t": 24.883,
-     "end": 24.995
+     "t": 24.773,
+     "end": 24.885
     },
     {
      "w": "the",
-     "t": 25.008,
-     "end": 25.083
+     "t": 24.898,
+     "end": 24.973
     },
     {
      "w": "top",
-     "t": 25.108,
-     "end": 25.383
+     "t": 24.998,
+     "end": 25.273
     },
     {
      "w": "card",
-     "t": 25.408,
-     "end": 25.983
+     "t": 25.298,
+     "end": 26.048
     },
     {
-     "w": "the",
-     "t": 26.133,
-     "end": 26.208
-    },
-    {
-     "w": "one",
-     "t": 26.233,
-     "end": 26.408
-    },
-    {
-     "w": "you'd",
-     "t": 26.433,
-     "end": 26.571
-    },
-    {
-     "w": "be",
-     "t": 26.583,
-     "end": 26.721
-    },
-    {
-     "w": "dealt",
-     "t": 26.758,
-     "end": 27.303
-    },
-    {
-     "w": "Here's",
-     "t": 27.708,
-     "end": 27.983
+     "w": "here's",
+     "t": 26.248,
+     "end": 26.523
     },
     {
      "w": "how",
-     "t": 28.008,
-     "end": 28.233
+     "t": 26.548,
+     "end": 26.773
     },
     {
      "w": "often",
-     "t": 28.283,
-     "end": 28.696
+     "t": 26.823,
+     "end": 27.235
     },
     {
      "w": "each",
-     "t": 28.733,
-     "end": 28.958
+     "t": 27.273,
+     "end": 27.498
     },
     {
      "w": "card",
-     "t": 28.983,
-     "end": 29.295
+     "t": 27.523,
+     "end": 27.798
     },
     {
-     "w": "ends",
-     "t": 29.333,
-     "end": 29.571
-    },
-    {
-     "w": "up",
-     "t": 29.583,
-     "end": 29.758
+     "w": "lands",
+     "t": 27.823,
+     "end": 28.173
     },
     {
      "w": "there",
-     "t": 29.783,
-     "end": 30.171
+     "t": 28.198,
+     "end": 28.511
     },
     {
      "w": "after",
-     "t": 30.208,
-     "end": 30.508
+     "t": 28.548,
+     "end": 28.873
     },
     {
      "w": "four",
-     "t": 30.558,
-     "end": 30.808
+     "t": 28.923,
+     "end": 29.173
     },
     {
      "w": "riffles",
-     "t": 30.833,
-     "end": 31.503
+     "t": 29.198,
+     "end": 29.873
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/26/26a8d8f67333bbc3d30b019f.wav"
+   "wav": "/root/.cache/sample_space/tts/15/15eb9c44bfeed73f908acaa5.wav"
   },
   {
    "index": 3,
-   "start": 31.867,
-   "duration": 12.18,
-   "end": 44.047,
-   "text": "Almost flat. Only the old top card stands out: one time in fifteen. Judging by the top card, you'd be right fifty two percent of the time. Four riffles look like plenty.",
+   "start": 30.267,
+   "duration": 11.12,
+   "end": 41.387,
+   "text": "Only the old top card stands out: one time in fifteen. Judge by it, and you're right [pause 0.3] fifty two percent of the time. [pause 0.9] Four riffles look like plenty.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
-     "w": "Almost",
-     "t": 31.922,
-     "end": 32.372
-    },
-    {
-     "w": "flat",
-     "t": 32.397,
-     "end": 32.977
-    },
-    {
      "w": "Only",
-     "t": 33.357,
-     "end": 33.657
+     "t": 30.267,
+     "end": 30.567
     },
     {
      "w": "the",
-     "t": 33.682,
-     "end": 33.807
+     "t": 30.592,
+     "end": 30.717
     },
     {
      "w": "old",
-     "t": 33.832,
-     "end": 34.032
+     "t": 30.742,
+     "end": 30.942
     },
     {
      "w": "top",
-     "t": 34.057,
-     "end": 34.332
+     "t": 30.967,
+     "end": 31.242
     },
     {
      "w": "card",
-     "t": 34.357,
-     "end": 34.632
+     "t": 31.267,
+     "end": 31.542
     },
     {
      "w": "stands",
-     "t": 34.657,
-     "end": 35.032
+     "t": 31.567,
+     "end": 31.942
     },
     {
      "w": "out",
-     "t": 35.057,
-     "end": 35.557
+     "t": 31.967,
+     "end": 32.467
     },
     {
      "w": "one",
-     "t": 35.757,
-     "end": 35.982
+     "t": 32.667,
+     "end": 32.892
     },
     {
      "w": "time",
-     "t": 36.007,
-     "end": 36.307
+     "t": 32.917,
+     "end": 33.217
     },
     {
      "w": "in",
-     "t": 36.332,
-     "end": 36.457
+     "t": 33.242,
+     "end": 33.367
     },
     {
      "w": "fifteen",
-     "t": 36.482,
-     "end": 37.217
+     "t": 33.392,
+     "end": 34.127
     },
     {
-     "w": "Judging",
-     "t": 37.672,
-     "end": 38.022
+     "w": "Judge",
+     "t": 34.702,
+     "end": 34.952
     },
     {
      "w": "by",
-     "t": 38.047,
-     "end": 38.197
+     "t": 34.977,
+     "end": 35.177
     },
     {
-     "w": "the",
-     "t": 38.222,
-     "end": 38.297
+     "w": "it",
+     "t": 35.202,
+     "end": 35.327
     },
     {
-     "w": "top",
-     "t": 38.322,
-     "end": 38.647
+     "w": "and",
+     "t": 35.402,
+     "end": 35.489
     },
     {
-     "w": "card",
-     "t": 38.672,
-     "end": 39.347
-    },
-    {
-     "w": "you'd",
-     "t": 39.497,
-     "end": 39.609
-    },
-    {
-     "w": "be",
-     "t": 39.622,
-     "end": 39.747
+     "w": "you're",
+     "t": 35.502,
+     "end": 35.627
     },
     {
      "w": "right",
-     "t": 39.772,
-     "end": 40.035
+     "t": 35.652,
+     "end": 36.227
     },
     {
      "w": "fifty",
-     "t": 40.072,
-     "end": 40.359
+     "t": 36.587,
+     "end": 36.962
     },
     {
      "w": "two",
-     "t": 40.397,
-     "end": 40.572
+     "t": 37.012,
+     "end": 37.299
     },
     {
      "w": "percent",
-     "t": 40.597,
-     "end": 40.934
+     "t": 37.337,
+     "end": 37.749
     },
     {
      "w": "of",
-     "t": 40.947,
-     "end": 41.009
+     "t": 37.762,
+     "end": 37.824
     },
     {
      "w": "the",
-     "t": 41.022,
-     "end": 41.097
+     "t": 37.837,
+     "end": 37.912
     },
     {
      "w": "time",
-     "t": 41.122,
-     "end": 41.707
+     "t": 37.937,
+     "end": 38.527
     },
     {
      "w": "Four",
-     "t": 42.182,
-     "end": 42.457
+     "t": 39.522,
+     "end": 39.797
     },
     {
      "w": "riffles",
-     "t": 42.482,
-     "end": 42.957
+     "t": 39.822,
+     "end": 40.297
     },
     {
      "w": "look",
-     "t": 42.982,
-     "end": 43.145
+     "t": 40.322,
+     "end": 40.485
     },
     {
      "w": "like",
-     "t": 43.157,
-     "end": 43.357
+     "t": 40.497,
+     "end": 40.697
     },
     {
      "w": "plenty",
-     "t": 43.382,
-     "end": 44.047
+     "t": 40.722,
+     "end": 41.387
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/e6/e6fe4d7900555605c0258701.wav"
+   "wav": "/root/.cache/sample_space/tts/2b/2bf7a343dedbffc340d453f2.wav"
   },
   {
    "index": 4,
-   "start": 44.4,
-   "duration": 8.65,
-   "end": 53.05,
-   "text": "A guesser who sees the whole deck does far better. The model cuts near the middle, then drops cards from each half in proportion to its size.",
+   "start": 41.8,
+   "duration": 5.39,
+   "end": 47.19,
+   "text": "The model cuts near the middle, then drops cards from each half in proportion to its size.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
-     "w": "A",
-     "t": 44.415,
-     "end": 44.49
+     "w": "The",
+     "t": 41.815,
+     "end": 41.915
     },
     {
-     "w": "guesser",
-     "t": 44.515,
-     "end": 44.99
+     "w": "model",
+     "t": 41.94,
+     "end": 42.328
     },
     {
-     "w": "who",
-     "t": 45.015,
-     "end": 45.14
+     "w": "cuts",
+     "t": 42.365,
+     "end": 42.64
     },
     {
-     "w": "sees",
-     "t": 45.165,
-     "end": 45.465
+     "w": "near",
+     "t": 42.665,
+     "end": 42.865
     },
     {
      "w": "the",
+     "t": 42.89,
+     "end": 42.965
+    },
+    {
+     "w": "middle",
+     "t": 42.99,
+     "end": 43.59
+    },
+    {
+     "w": "then",
+     "t": 43.74,
+     "end": 43.94
+    },
+    {
+     "w": "drops",
+     "t": 43.965,
+     "end": 44.34
+    },
+    {
+     "w": "cards",
+     "t": 44.365,
+     "end": 44.74
+    },
+    {
+     "w": "from",
+     "t": 44.765,
+     "end": 44.89
+    },
+    {
+     "w": "each",
+     "t": 44.915,
+     "end": 45.115
+    },
+    {
+     "w": "half",
+     "t": 45.14,
+     "end": 45.465
+    },
+    {
+     "w": "in",
      "t": 45.49,
      "end": 45.59
     },
     {
-     "w": "whole",
-     "t": 45.615,
-     "end": 45.84
-    },
-    {
-     "w": "deck",
-     "t": 45.865,
-     "end": 46.228
-    },
-    {
-     "w": "does",
-     "t": 46.265,
-     "end": 46.49
-    },
-    {
-     "w": "far",
-     "t": 46.515,
-     "end": 46.765
-    },
-    {
-     "w": "better",
-     "t": 46.79,
-     "end": 47.28
-    },
-    {
-     "w": "The",
-     "t": 47.675,
-     "end": 47.775
-    },
-    {
-     "w": "model",
-     "t": 47.8,
-     "end": 48.187
-    },
-    {
-     "w": "cuts",
-     "t": 48.225,
-     "end": 48.5
-    },
-    {
-     "w": "near",
-     "t": 48.525,
-     "end": 48.725
-    },
-    {
-     "w": "the",
-     "t": 48.75,
-     "end": 48.825
-    },
-    {
-     "w": "middle",
-     "t": 48.85,
-     "end": 49.45
-    },
-    {
-     "w": "then",
-     "t": 49.6,
-     "end": 49.8
-    },
-    {
-     "w": "drops",
-     "t": 49.825,
-     "end": 50.2
-    },
-    {
-     "w": "cards",
-     "t": 50.225,
-     "end": 50.6
-    },
-    {
-     "w": "from",
-     "t": 50.625,
-     "end": 50.75
-    },
-    {
-     "w": "each",
-     "t": 50.775,
-     "end": 50.975
-    },
-    {
-     "w": "half",
-     "t": 51.0,
-     "end": 51.325
-    },
-    {
-     "w": "in",
-     "t": 51.35,
-     "end": 51.45
-    },
-    {
      "w": "proportion",
-     "t": 51.475,
-     "end": 52.075
+     "t": 45.615,
+     "end": 46.215
     },
     {
      "w": "to",
-     "t": 52.1,
-     "end": 52.225
+     "t": 46.24,
+     "end": 46.365
     },
     {
      "w": "its",
-     "t": 52.25,
-     "end": 52.4
+     "t": 46.39,
+     "end": 46.54
     },
     {
      "w": "size",
-     "t": 52.425,
-     "end": 53.05
+     "t": 46.565,
+     "end": 47.19
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/36/3652ee5d9e3011649bdd3926.wav"
+   "wav": "/root/.cache/sample_space/tts/78/781fc29867a6637eb6e48f7f.wav"
   },
   {
    "index": 5,
-   "start": 53.4,
-   "duration": 8.46,
-   "end": 61.86,
-   "text": "Each half stays in order, so one riffle leaves two rising sequences: runs of consecutive cards, reading left to right.",
+   "start": 47.6,
+   "duration": 7.02,
+   "end": 54.62,
+   "text": "Each half stays in order, so one riffle leaves two rising sequences: runs of consecutive cards.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "Each",
-     "t": 53.41,
-     "end": 53.66
+     "t": 47.61,
+     "end": 47.86
     },
     {
      "w": "half",
-     "t": 53.685,
-     "end": 53.935
+     "t": 47.885,
+     "end": 48.135
     },
     {
      "w": "stays",
-     "t": 53.96,
-     "end": 54.335
+     "t": 48.16,
+     "end": 48.535
     },
     {
      "w": "in",
-     "t": 54.36,
-     "end": 54.46
+     "t": 48.56,
+     "end": 48.685
     },
     {
      "w": "order",
-     "t": 54.485,
-     "end": 55.01
+     "t": 48.71,
+     "end": 49.26
     },
     {
      "w": "so",
-     "t": 55.185,
-     "end": 55.348
+     "t": 49.435,
+     "end": 49.597
     },
     {
      "w": "one",
-     "t": 55.385,
-     "end": 55.61
+     "t": 49.635,
+     "end": 49.86
     },
     {
      "w": "riffle",
-     "t": 55.635,
-     "end": 55.91
+     "t": 49.885,
+     "end": 50.16
     },
     {
      "w": "leaves",
-     "t": 55.935,
-     "end": 56.285
+     "t": 50.185,
+     "end": 50.535
     },
     {
      "w": "two",
-     "t": 56.335,
-     "end": 56.598
+     "t": 50.585,
+     "end": 50.848
     },
     {
      "w": "rising",
-     "t": 56.635,
-     "end": 57.085
+     "t": 50.885,
+     "end": 51.335
     },
     {
      "w": "sequences",
-     "t": 57.11,
-     "end": 58.31
+     "t": 51.36,
+     "end": 52.51
     },
     {
      "w": "runs",
-     "t": 58.535,
-     "end": 58.96
+     "t": 52.735,
+     "end": 53.16
     },
     {
      "w": "of",
-     "t": 58.985,
-     "end": 59.085
+     "t": 53.185,
+     "end": 53.285
     },
     {
      "w": "consecutive",
-     "t": 59.11,
-     "end": 59.735
+     "t": 53.31,
+     "end": 53.935
     },
     {
      "w": "cards",
-     "t": 59.76,
-     "end": 60.435
-    },
-    {
-     "w": "reading",
-     "t": 60.61,
-     "end": 60.935
-    },
-    {
-     "w": "left",
-     "t": 60.96,
-     "end": 61.185
-    },
-    {
-     "w": "to",
-     "t": 61.21,
-     "end": 61.31
-    },
-    {
-     "w": "right",
-     "t": 61.335,
-     "end": 61.86
+     "t": 53.96,
+     "end": 54.62
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/d5/d5bf1337fbdc22560322083a.wav"
+   "wav": "/root/.cache/sample_space/tts/c1/c13e148ed64e7caf53de819a.wav"
   },
   {
    "index": 6,
-   "start": 62.2,
-   "duration": 6.82,
-   "end": 69.02,
-   "text": "Give each sequence its own level. The cut crosses each level once, so a riffle can at most split it in two.",
+   "start": 55.033,
+   "duration": 7.51,
+   "end": 62.543,
+   "text": "Give each sequence its own level. The cut crosses each level once, so a riffle can at most split each level in two.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "Give",
-     "t": 62.25,
-     "end": 62.475
+     "t": 55.083,
+     "end": 55.308
     },
     {
      "w": "each",
-     "t": 62.5,
-     "end": 62.738
+     "t": 55.333,
+     "end": 55.571
     },
     {
      "w": "sequence",
-     "t": 62.775,
-     "end": 63.2
+     "t": 55.608,
+     "end": 56.033
     },
     {
      "w": "its",
-     "t": 63.225,
-     "end": 63.4
+     "t": 56.058,
+     "end": 56.233
     },
     {
      "w": "own",
-     "t": 63.425,
-     "end": 63.625
+     "t": 56.258,
+     "end": 56.458
     },
     {
      "w": "level",
-     "t": 63.65,
-     "end": 64.12
+     "t": 56.483,
+     "end": 56.953
     },
     {
      "w": "The",
-     "t": 64.525,
-     "end": 64.625
+     "t": 57.278,
+     "end": 57.391
     },
     {
      "w": "cut",
-     "t": 64.65,
-     "end": 64.9
+     "t": 57.428,
+     "end": 57.678
     },
     {
      "w": "crosses",
-     "t": 64.925,
-     "end": 65.462
+     "t": 57.703,
+     "end": 58.24
     },
     {
      "w": "each",
-     "t": 65.5,
-     "end": 65.725
+     "t": 58.278,
+     "end": 58.503
     },
     {
      "w": "level",
-     "t": 65.75,
-     "end": 66.05
+     "t": 58.528,
+     "end": 58.828
     },
     {
      "w": "once",
-     "t": 66.075,
-     "end": 66.7
+     "t": 58.853,
+     "end": 59.503
     },
     {
      "w": "so",
-     "t": 66.875,
-     "end": 66.975
+     "t": 59.678,
+     "end": 59.803
     },
     {
      "w": "a",
-     "t": 67.0,
-     "end": 67.075
+     "t": 59.828,
+     "end": 59.903
     },
     {
      "w": "riffle",
-     "t": 67.1,
-     "end": 67.4
+     "t": 59.928,
+     "end": 60.228
     },
     {
      "w": "can",
-     "t": 67.425,
-     "end": 67.537
+     "t": 60.253,
+     "end": 60.365
     },
     {
      "w": "at",
-     "t": 67.55,
-     "end": 67.625
+     "t": 60.378,
+     "end": 60.453
     },
     {
      "w": "most",
-     "t": 67.65,
-     "end": 67.9
+     "t": 60.478,
+     "end": 60.728
     },
     {
      "w": "split",
-     "t": 67.95,
-     "end": 68.212
+     "t": 60.778,
+     "end": 61.128
     },
     {
-     "w": "it",
-     "t": 68.225,
-     "end": 68.325
+     "w": "each",
+     "t": 61.153,
+     "end": 61.378
+    },
+    {
+     "w": "level",
+     "t": 61.403,
+     "end": 61.703
     },
     {
      "w": "in",
-     "t": 68.35,
-     "end": 68.5
+     "t": 61.728,
+     "end": 61.878
     },
     {
      "w": "two",
-     "t": 68.55,
-     "end": 69.02
+     "t": 61.928,
+     "end": 62.393
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/0e/0eb488a43ff64f9246279879.wav"
+   "wav": "/root/.cache/sample_space/tts/2b/2b142607a0480d347caa3036.wav"
   },
   {
    "index": 7,
-   "start": 69.367,
-   "duration": 7.38,
-   "end": 76.747,
+   "start": 62.933,
+   "duration": 7.75,
+   "end": 70.683,
    "text": "Three riffles, [pause 0.8] eight. Four riffles, [pause 0.6] at most sixteen; this deck has fourteen.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "Three",
-     "t": 69.447,
-     "end": 69.697
+     "t": 63.013,
+     "end": 63.263
     },
     {
      "w": "riffles",
-     "t": 69.722,
-     "end": 70.457
+     "t": 63.288,
+     "end": 64.023
     },
     {
      "w": "eight",
-     "t": 71.352,
-     "end": 71.907
+     "t": 64.918,
+     "end": 65.473
     },
     {
      "w": "Four",
-     "t": 72.367,
-     "end": 72.592
+     "t": 66.153,
+     "end": 66.378
     },
     {
      "w": "riffles",
-     "t": 72.617,
-     "end": 73.357
+     "t": 66.403,
+     "end": 67.143
     },
     {
      "w": "at",
-     "t": 73.997,
-     "end": 74.085
+     "t": 67.783,
+     "end": 67.871
     },
     {
      "w": "most",
-     "t": 74.097,
-     "end": 74.297
+     "t": 67.883,
+     "end": 68.083
     },
     {
      "w": "sixteen",
-     "t": 74.322,
-     "end": 75.122
+     "t": 68.108,
+     "end": 68.908
     },
     {
      "w": "this",
-     "t": 75.272,
-     "end": 75.447
+     "t": 69.058,
+     "end": 69.233
     },
     {
      "w": "deck",
-     "t": 75.472,
-     "end": 75.697
+     "t": 69.258,
+     "end": 69.483
     },
     {
      "w": "has",
-     "t": 75.722,
-     "end": 75.897
+     "t": 69.508,
+     "end": 69.683
     },
     {
      "w": "fourteen",
-     "t": 75.922,
-     "end": 76.747
+     "t": 69.708,
+     "end": 70.533
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/aa/aa83a30ba42763c6910fffee.wav"
+   "wav": "/root/.cache/sample_space/tts/22/22bc97ed1b2c2fa03a02fee8.wav"
   },
   {
    "index": 8,
-   "start": 77.1,
-   "duration": 6.68,
-   "end": 83.78,
-   "text": "A perfect shuffle averages twenty six and a half, and gives sixteen or fewer once in two million decks.",
+   "start": 71.067,
+   "duration": 4.45,
+   "end": 75.517,
+   "text": "A perfect shuffle gives sixteen or fewer once in two million decks.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "A",
-     "t": 77.115,
-     "end": 77.202
+     "t": 71.082,
+     "end": 71.157
     },
     {
      "w": "perfect",
-     "t": 77.24,
-     "end": 77.715
+     "t": 71.182,
+     "end": 71.644
     },
     {
      "w": "shuffle",
-     "t": 77.765,
-     "end": 78.202
-    },
-    {
-     "w": "averages",
-     "t": 78.24,
-     "end": 78.715
-    },
-    {
-     "w": "twenty",
-     "t": 78.74,
-     "end": 79.015
-    },
-    {
-     "w": "six",
-     "t": 79.04,
-     "end": 79.228
-    },
-    {
-     "w": "and",
-     "t": 79.24,
-     "end": 79.328
-    },
-    {
-     "w": "a",
-     "t": 79.34,
-     "end": 79.39
-    },
-    {
-     "w": "half",
-     "t": 79.415,
-     "end": 80.19
-    },
-    {
-     "w": "and",
-     "t": 80.315,
-     "end": 80.415
+     "t": 71.682,
+     "end": 72.319
     },
     {
      "w": "gives",
-     "t": 80.44,
-     "end": 80.665
+     "t": 72.357,
+     "end": 72.594
     },
     {
      "w": "sixteen",
-     "t": 80.715,
-     "end": 81.428
+     "t": 72.632,
+     "end": 73.244
     },
     {
      "w": "or",
-     "t": 81.465,
-     "end": 81.615
+     "t": 73.282,
+     "end": 73.432
     },
     {
      "w": "fewer",
-     "t": 81.665,
-     "end": 81.978
+     "t": 73.482,
+     "end": 73.782
     },
     {
      "w": "once",
-     "t": 82.015,
-     "end": 82.39
+     "t": 73.807,
+     "end": 74.082
     },
     {
      "w": "in",
-     "t": 82.415,
-     "end": 82.565
+     "t": 74.107,
+     "end": 74.257
     },
     {
      "w": "two",
-     "t": 82.615,
-     "end": 82.815
+     "t": 74.307,
+     "end": 74.507
     },
     {
      "w": "million",
-     "t": 82.84,
-     "end": 83.19
+     "t": 74.532,
+     "end": 74.882
     },
     {
      "w": "decks",
-     "t": 83.215,
-     "end": 83.78
+     "t": 74.907,
+     "end": 75.517
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/e8/e8a5b1e928c47583d51f2b1d.wav"
+   "wav": "/root/.cache/sample_space/tts/bf/bfd18440581e8016af626cbb.wav"
   },
   {
    "index": 9,
-   "start": 84.133,
-   "duration": 9.74,
-   "end": 93.873,
-   "text": "Call sixteen or fewer riffled, and you'd be wrong about once in four million games. The top card can't see this; it lives in the order between cards.",
+   "start": 75.9,
+   "duration": 9.97,
+   "end": 85.87,
+   "text": "Call sixteen or fewer riffled, and you'd be wrong once in four million games. [pause 0.9] The top card can't see this: it lives in the order between cards.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "Call",
-     "t": 84.138,
-     "end": 84.388
+     "t": 75.91,
+     "end": 76.16
     },
     {
      "w": "sixteen",
-     "t": 84.438,
-     "end": 85.15
+     "t": 76.21,
+     "end": 76.922
     },
     {
      "w": "or",
-     "t": 85.188,
-     "end": 85.338
+     "t": 76.96,
+     "end": 77.11
     },
     {
      "w": "fewer",
-     "t": 85.388,
-     "end": 85.688
+     "t": 77.16,
+     "end": 77.46
     },
     {
      "w": "riffled",
-     "t": 85.713,
-     "end": 86.538
+     "t": 77.485,
+     "end": 78.31
     },
     {
      "w": "and",
-     "t": 86.688,
-     "end": 86.775
+     "t": 78.46,
+     "end": 78.548
     },
     {
      "w": "you'd",
-     "t": 86.788,
-     "end": 86.875
+     "t": 78.56,
+     "end": 78.648
     },
     {
      "w": "be",
-     "t": 86.888,
-     "end": 87.025
+     "t": 78.66,
+     "end": 78.798
     },
     {
      "w": "wrong",
-     "t": 87.063,
-     "end": 87.301
-    },
-    {
-     "w": "about",
-     "t": 87.313,
-     "end": 87.613
+     "t": 78.835,
+     "end": 79.135
     },
     {
      "w": "once",
-     "t": 87.638,
-     "end": 87.913
+     "t": 79.16,
+     "end": 79.435
     },
     {
      "w": "in",
-     "t": 87.938,
-     "end": 88.113
+     "t": 79.46,
+     "end": 79.622
     },
     {
      "w": "four",
-     "t": 88.188,
-     "end": 88.488
+     "t": 79.685,
+     "end": 79.985
     },
     {
      "w": "million",
-     "t": 88.513,
-     "end": 88.863
+     "t": 80.01,
+     "end": 80.36
     },
     {
      "w": "games",
-     "t": 88.888,
-     "end": 89.553
+     "t": 80.385,
+     "end": 81.05
     },
     {
      "w": "The",
-     "t": 89.968,
-     "end": 90.068
+     "t": 81.985,
+     "end": 82.085
     },
     {
      "w": "top",
-     "t": 90.093,
-     "end": 90.393
+     "t": 82.11,
+     "end": 82.41
     },
     {
      "w": "card",
-     "t": 90.418,
-     "end": 90.705
+     "t": 82.435,
+     "end": 82.723
     },
     {
      "w": "can't",
-     "t": 90.743,
-     "end": 90.993
+     "t": 82.76,
+     "end": 83.01
     },
     {
      "w": "see",
-     "t": 91.018,
-     "end": 91.193
+     "t": 83.035,
+     "end": 83.21
     },
     {
      "w": "this",
-     "t": 91.218,
-     "end": 91.743
+     "t": 83.235,
+     "end": 83.76
     },
     {
      "w": "it",
-     "t": 91.918,
-     "end": 92.018
+     "t": 83.935,
+     "end": 84.035
     },
     {
      "w": "lives",
-     "t": 92.043,
-     "end": 92.305
+     "t": 84.06,
+     "end": 84.298
     },
     {
      "w": "in",
-     "t": 92.318,
-     "end": 92.38
+     "t": 84.31,
+     "end": 84.372
     },
     {
      "w": "the",
-     "t": 92.393,
-     "end": 92.493
+     "t": 84.385,
+     "end": 84.485
     },
     {
      "w": "order",
-     "t": 92.518,
-     "end": 92.818
+     "t": 84.51,
+     "end": 84.81
     },
     {
      "w": "between",
-     "t": 92.843,
-     "end": 93.193
+     "t": 84.835,
+     "end": 85.185
     },
     {
      "w": "cards",
-     "t": 93.218,
-     "end": 93.873
+     "t": 85.21,
+     "end": 85.87
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/db/dbe0b3fce5a38ecbb0cd8b57.wav"
+   "wav": "/root/.cache/sample_space/tts/80/806f3df34031c747330fa801.wav"
   },
   {
    "index": 10,
-   "start": 94.233,
+   "start": 86.267,
    "duration": 6.59,
-   "end": 100.823,
+   "end": 92.857,
    "text": "Bayer and Diaconis proved that in this model, decks with the same count are equally likely. [pause 0.7]",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "Bayer",
-     "t": 94.283,
-     "end": 94.658
+     "t": 86.317,
+     "end": 86.692
     },
     {
      "w": "and",
-     "t": 94.683,
-     "end": 94.783
+     "t": 86.717,
+     "end": 86.817
     },
     {
      "w": "Diaconis",
-     "t": 94.808,
-     "end": 95.608
+     "t": 86.842,
+     "end": 87.642
     },
     {
      "w": "proved",
-     "t": 95.658,
-     "end": 96.058
+     "t": 87.692,
+     "end": 88.092
     },
     {
      "w": "that",
-     "t": 96.083,
-     "end": 96.208
+     "t": 88.117,
+     "end": 88.242
     },
     {
      "w": "in",
-     "t": 96.233,
-     "end": 96.333
+     "t": 88.267,
+     "end": 88.367
     },
     {
      "w": "this",
-     "t": 96.358,
-     "end": 96.533
+     "t": 88.392,
+     "end": 88.567
     },
     {
      "w": "model",
-     "t": 96.558,
-     "end": 97.258
+     "t": 88.592,
+     "end": 89.292
     },
     {
      "w": "decks",
-     "t": 97.483,
-     "end": 97.833
+     "t": 89.517,
+     "end": 89.867
     },
     {
      "w": "with",
-     "t": 97.858,
-     "end": 97.971
+     "t": 89.892,
+     "end": 90.005
     },
     {
      "w": "the",
-     "t": 97.983,
-     "end": 98.095
+     "t": 90.017,
+     "end": 90.129
     },
     {
      "w": "same",
-     "t": 98.133,
-     "end": 98.445
+     "t": 90.167,
+     "end": 90.479
     },
     {
      "w": "count",
-     "t": 98.483,
-     "end": 98.871
+     "t": 90.517,
+     "end": 90.905
     },
     {
      "w": "are",
-     "t": 98.908,
-     "end": 99.045
+     "t": 90.942,
+     "end": 91.079
     },
     {
      "w": "equally",
-     "t": 99.083,
-     "end": 99.483
+     "t": 91.117,
+     "end": 91.517
     },
     {
      "w": "likely",
-     "t": 99.508,
-     "end": 100.123
+     "t": 91.542,
+     "end": 92.157
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/ab/ab0fba0a082516a2a860792e.wav"
+   "wav": "/root/.cache/sample_space/tts/3c/3c0b1847a356bedc3348bf75.wav"
   },
   {
    "index": 11,
-   "start": 101.2,
+   "start": 93.233,
    "duration": 5.7,
-   "end": 106.9,
+   "end": 98.933,
    "text": "So pile decks onto their counts, [pause 0.6] then every possible deck, weighted by its chance.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "So",
-     "t": 101.25,
-     "end": 101.412
+     "t": 93.283,
+     "end": 93.445
     },
     {
      "w": "pile",
-     "t": 101.45,
-     "end": 101.8
+     "t": 93.483,
+     "end": 93.833
     },
     {
      "w": "decks",
-     "t": 101.825,
-     "end": 102.1
+     "t": 93.858,
+     "end": 94.133
     },
     {
      "w": "onto",
-     "t": 102.125,
-     "end": 102.338
+     "t": 94.158,
+     "end": 94.371
     },
     {
      "w": "their",
-     "t": 102.35,
-     "end": 102.5
+     "t": 94.383,
+     "end": 94.533
     },
     {
      "w": "counts",
-     "t": 102.525,
-     "end": 103.12
+     "t": 94.558,
+     "end": 95.153
     },
     {
      "w": "then",
-     "t": 103.76,
-     "end": 104.022
+     "t": 95.793,
+     "end": 96.055
     },
     {
      "w": "every",
-     "t": 104.06,
-     "end": 104.36
+     "t": 96.093,
+     "end": 96.393
     },
     {
      "w": "possible",
-     "t": 104.385,
-     "end": 104.885
+     "t": 96.418,
+     "end": 96.918
     },
     {
      "w": "deck",
-     "t": 104.91,
-     "end": 105.36
+     "t": 96.943,
+     "end": 97.393
     },
     {
      "w": "weighted",
-     "t": 105.535,
-     "end": 105.885
+     "t": 97.568,
+     "end": 97.918
     },
     {
      "w": "by",
-     "t": 105.91,
-     "end": 106.06
+     "t": 97.943,
+     "end": 98.093
     },
     {
      "w": "its",
-     "t": 106.085,
-     "end": 106.26
+     "t": 98.118,
+     "end": 98.293
     },
     {
      "w": "chance",
-     "t": 106.285,
-     "end": 106.9
+     "t": 98.318,
+     "end": 98.933
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/43/43e522b5020779a5daaffc92.wav"
+   "wav": "/root/.cache/sample_space/tts/b2/b298a5c8a0d6bfc64ae35588.wav"
   },
   {
    "index": 12,
-   "start": 107.267,
-   "duration": 5.68,
-   "end": 112.947,
-   "text": "The red area, purple above blue, is the distance from random. Right now it's one.",
+   "start": 99.333,
+   "duration": 4.07,
+   "end": 103.403,
+   "text": "The red area, purple above blue, is the distance from random.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "The",
-     "t": 107.282,
-     "end": 107.42
+     "t": 99.348,
+     "end": 99.486
     },
     {
      "w": "red",
-     "t": 107.457,
-     "end": 107.682
+     "t": 99.523,
+     "end": 99.748
     },
     {
      "w": "area",
-     "t": 107.707,
-     "end": 108.182
+     "t": 99.773,
+     "end": 100.248
     },
     {
      "w": "purple",
-     "t": 108.332,
-     "end": 108.707
+     "t": 100.398,
+     "end": 100.773
     },
     {
      "w": "above",
-     "t": 108.732,
-     "end": 109.007
+     "t": 100.798,
+     "end": 101.073
     },
     {
      "w": "blue",
-     "t": 109.032,
-     "end": 109.557
+     "t": 101.098,
+     "end": 101.623
     },
     {
      "w": "is",
-     "t": 109.757,
-     "end": 109.882
+     "t": 101.823,
+     "end": 101.948
     },
     {
      "w": "the",
-     "t": 109.907,
-     "end": 109.982
+     "t": 101.973,
+     "end": 102.048
     },
     {
      "w": "distance",
-     "t": 110.007,
-     "end": 110.482
+     "t": 102.073,
+     "end": 102.548
     },
     {
      "w": "from",
-     "t": 110.507,
-     "end": 110.682
+     "t": 102.573,
+     "end": 102.748
     },
     {
      "w": "random",
-     "t": 110.707,
-     "end": 111.337
-    },
-    {
-     "w": "Right",
-     "t": 111.792,
-     "end": 112.017
-    },
-    {
-     "w": "now",
-     "t": 112.042,
-     "end": 112.267
-    },
-    {
-     "w": "it's",
-     "t": 112.292,
-     "end": 112.467
-    },
-    {
-     "w": "one",
-     "t": 112.492,
-     "end": 112.947
+     "t": 102.773,
+     "end": 103.403
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/11/1167a49c90d6016eda096f95.wav"
+   "wav": "/root/.cache/sample_space/tts/4b/4b090a9fa0da71515f140237.wav"
   },
   {
    "index": 13,
-   "start": 113.3,
-   "duration": 3.97,
-   "end": 117.27,
-   "text": "How many more riffles to bring it below a half? [pause 1.5]",
+   "start": 103.8,
+   "duration": 4.46,
+   "end": 108.26,
+   "text": "How many more riffles until it's below a half? [pause 1.5]",
    "voice": "af_heart",
-   "speed": 0.84,
-   "cadence": "flat",
+   "speed": 0.8,
+   "cadence": "shaped",
    "words": [
     {
      "w": "How",
-     "t": 113.33,
-     "end": 113.517
+     "t": 103.845,
+     "end": 104.045
     },
     {
      "w": "many",
-     "t": 113.53,
-     "end": 113.73
+     "t": 104.07,
+     "end": 104.27
     },
     {
      "w": "more",
-     "t": 113.755,
-     "end": 113.992
+     "t": 104.295,
+     "end": 104.508
     },
     {
      "w": "riffles",
-     "t": 114.03,
-     "end": 114.355
+     "t": 104.545,
+     "end": 105.17
     },
     {
-     "w": "to",
-     "t": 114.38,
-     "end": 114.48
+     "w": "until",
+     "t": 105.195,
+     "end": 105.508
     },
     {
-     "w": "bring",
-     "t": 114.505,
-     "end": 114.668
-    },
-    {
-     "w": "it",
-     "t": 114.68,
-     "end": 114.755
+     "w": "it's",
+     "t": 105.52,
+     "end": 105.695
     },
     {
      "w": "below",
-     "t": 114.78,
-     "end": 115.105
+     "t": 105.72,
+     "end": 106.07
     },
     {
      "w": "a",
-     "t": 115.13,
-     "end": 115.18
+     "t": 106.095,
+     "end": 106.158
     },
     {
      "w": "half",
-     "t": 115.205,
-     "end": 115.77
+     "t": 106.195,
+     "end": 106.76
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/88/88430209850515d62eecc18e.wav"
+   "wav": "/root/.cache/sample_space/tts/0f/0fae61e246ce03195b091fa2.wav"
   },
   {
    "index": 14,
-   "start": 117.633,
-   "duration": 6.57,
-   "end": 124.203,
-   "text": "A fifth riffle: point nine two. A sixth: point six one. A seventh: point three three.",
+   "start": 108.667,
+   "duration": 7.75,
+   "end": 116.417,
+   "text": "A fifth riffle: point nine two. A sixth: point six one. A seventh: point three three. [pause 0.9]",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "A",
-     "t": 117.658,
-     "end": 117.758
+     "t": 108.717,
+     "end": 108.817
     },
     {
      "w": "fifth",
-     "t": 117.808,
-     "end": 118.108
+     "t": 108.867,
+     "end": 109.167
     },
     {
      "w": "riffle",
-     "t": 118.133,
-     "end": 118.658
+     "t": 109.192,
+     "end": 109.717
     },
     {
      "w": "point",
-     "t": 118.783,
-     "end": 119.008
+     "t": 109.842,
+     "end": 110.067
     },
     {
      "w": "nine",
-     "t": 119.033,
-     "end": 119.295
+     "t": 110.092,
+     "end": 110.38
     },
     {
      "w": "two",
-     "t": 119.333,
-     "end": 119.793
+     "t": 110.417,
+     "end": 110.867
     },
     {
      "w": "A",
-     "t": 120.243,
-     "end": 120.343
+     "t": 111.437,
+     "end": 111.537
     },
     {
      "w": "sixth",
-     "t": 120.393,
-     "end": 120.818
+     "t": 111.587,
+     "end": 112.012
     },
     {
      "w": "point",
-     "t": 120.918,
-     "end": 121.168
+     "t": 112.112,
+     "end": 112.362
     },
     {
      "w": "six",
-     "t": 121.193,
-     "end": 121.443
+     "t": 112.387,
+     "end": 112.637
     },
     {
      "w": "one",
-     "t": 121.468,
-     "end": 122.003
+     "t": 112.662,
+     "end": 113.197
     },
     {
      "w": "A",
-     "t": 122.453,
-     "end": 122.553
+     "t": 113.767,
+     "end": 113.867
     },
     {
      "w": "seventh",
-     "t": 122.603,
-     "end": 123.078
+     "t": 113.917,
+     "end": 114.392
     },
     {
      "w": "point",
-     "t": 123.178,
-     "end": 123.428
+     "t": 114.492,
+     "end": 114.742
     },
     {
      "w": "three",
-     "t": 123.453,
-     "end": 123.665
+     "t": 114.767,
+     "end": 114.979
     },
     {
      "w": "three",
-     "t": 123.703,
-     "end": 124.203
+     "t": 115.017,
+     "end": 115.517
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/b4/b4356c0aa7114b9dbfb8278e.wav"
+   "wav": "/root/.cache/sample_space/tts/89/892fbe032f3b9e3ceb0ca402.wav"
   },
   {
    "index": 15,
-   "start": 124.567,
-   "duration": 13.94,
-   "end": 138.507,
-   "text": "Guess riffled where purple is higher: you catch sixty five percent of riffled decks, and flag thirty two percent of perfect ones. Accuracy is a half, plus half the difference, and the difference is the red area.",
+   "start": 116.833,
+   "duration": 14.43,
+   "end": 131.263,
+   "text": "Guess riffled where purple is higher: you catch sixty five percent of riffled decks. You also flag thirty two percent of perfect ones. Accuracy is a half, plus half the difference, and the difference is the red area.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "Guess",
-     "t": 124.627,
-     "end": 124.99
+     "t": 116.893,
+     "end": 117.231
     },
     {
      "w": "riffled",
-     "t": 125.027,
-     "end": 125.452
+     "t": 117.268,
+     "end": 117.693
     },
     {
      "w": "where",
-     "t": 125.477,
-     "end": 125.627
+     "t": 117.718,
+     "end": 117.868
     },
     {
      "w": "purple",
-     "t": 125.652,
-     "end": 126.002
+     "t": 117.893,
+     "end": 118.218
     },
     {
      "w": "is",
-     "t": 126.027,
-     "end": 126.152
+     "t": 118.243,
+     "end": 118.343
     },
     {
      "w": "higher",
-     "t": 126.177,
-     "end": 127.027
+     "t": 118.368,
+     "end": 119.143
     },
     {
      "w": "you",
-     "t": 127.227,
-     "end": 127.365
+     "t": 119.343,
+     "end": 119.481
     },
     {
      "w": "catch",
-     "t": 127.402,
-     "end": 127.852
+     "t": 119.518,
+     "end": 119.968
     },
     {
      "w": "sixty",
-     "t": 127.927,
-     "end": 128.277
+     "t": 120.043,
+     "end": 120.393
     },
     {
      "w": "five",
-     "t": 128.302,
-     "end": 128.627
+     "t": 120.418,
+     "end": 120.743
     },
     {
      "w": "percent",
-     "t": 128.652,
-     "end": 129.127
+     "t": 120.768,
+     "end": 121.268
     },
     {
      "w": "of",
-     "t": 129.152,
-     "end": 129.252
+     "t": 121.293,
+     "end": 121.418
     },
     {
      "w": "riffled",
-     "t": 129.277,
-     "end": 129.602
+     "t": 121.443,
+     "end": 121.768
     },
     {
      "w": "decks",
-     "t": 129.627,
-     "end": 130.302
+     "t": 121.793,
+     "end": 122.373
     },
     {
-     "w": "and",
-     "t": 130.427,
-     "end": 130.552
+     "w": "You",
+     "t": 122.703,
+     "end": 122.828
+    },
+    {
+     "w": "also",
+     "t": 122.853,
+     "end": 123.241
     },
     {
      "w": "flag",
-     "t": 130.602,
-     "end": 131.027
+     "t": 123.278,
+     "end": 123.903
     },
     {
      "w": "thirty",
-     "t": 131.077,
-     "end": 131.452
+     "t": 123.978,
+     "end": 124.353
     },
     {
      "w": "two",
-     "t": 131.502,
-     "end": 131.677
+     "t": 124.403,
+     "end": 124.578
     },
     {
      "w": "percent",
-     "t": 131.702,
-     "end": 132.065
+     "t": 124.603,
+     "end": 124.941
     },
     {
      "w": "of",
-     "t": 132.077,
-     "end": 132.152
+     "t": 124.953,
+     "end": 125.028
     },
     {
      "w": "perfect",
-     "t": 132.177,
-     "end": 132.577
+     "t": 125.053,
+     "end": 125.415
     },
     {
      "w": "ones",
-     "t": 132.602,
-     "end": 133.087
+     "t": 125.428,
+     "end": 125.923
     },
     {
      "w": "Accuracy",
-     "t": 133.492,
-     "end": 134.092
+     "t": 126.248,
+     "end": 126.848
     },
     {
      "w": "is",
-     "t": 134.117,
-     "end": 134.217
+     "t": 126.873,
+     "end": 126.973
     },
     {
      "w": "a",
-     "t": 134.242,
-     "end": 134.33
+     "t": 126.998,
+     "end": 127.086
     },
     {
      "w": "half",
-     "t": 134.367,
-     "end": 134.792
+     "t": 127.123,
+     "end": 127.548
     },
     {
      "w": "plus",
-     "t": 134.892,
-     "end": 135.142
+     "t": 127.648,
+     "end": 127.898
     },
     {
      "w": "half",
-     "t": 135.167,
-     "end": 135.417
+     "t": 127.923,
+     "end": 128.173
     },
     {
      "w": "the",
-     "t": 135.442,
-     "end": 135.517
+     "t": 128.198,
+     "end": 128.273
     },
     {
      "w": "difference",
-     "t": 135.542,
-     "end": 136.367
+     "t": 128.298,
+     "end": 129.123
     },
     {
      "w": "and",
-     "t": 136.542,
-     "end": 136.629
+     "t": 129.298,
+     "end": 129.386
     },
     {
      "w": "the",
-     "t": 136.642,
-     "end": 136.717
+     "t": 129.398,
+     "end": 129.473
     },
     {
      "w": "difference",
-     "t": 136.742,
-     "end": 137.292
+     "t": 129.498,
+     "end": 130.048
     },
     {
      "w": "is",
-     "t": 137.342,
-     "end": 137.492
+     "t": 130.098,
+     "end": 130.248
     },
     {
      "w": "the",
-     "t": 137.517,
-     "end": 137.642
+     "t": 130.273,
+     "end": 130.398
     },
     {
      "w": "red",
-     "t": 137.692,
-     "end": 137.917
+     "t": 130.448,
+     "end": 130.673
     },
     {
      "w": "area",
-     "t": 137.942,
-     "end": 138.507
+     "t": 130.698,
+     "end": 131.263
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/50/50d737010a2f0d67def87c89.wav"
+   "wav": "/root/.cache/sample_space/tts/82/82e9d0c4a6c2788c3a63a6ca.wav"
   },
   {
    "index": 16,
-   "start": 139.367,
-   "duration": 14.72,
-   "end": 154.087,
-   "text": "Each riffle roughly halved the gap, but blue's spread, its standard deviation, stayed about two. While the gap spans several spreads, the distance stays near one. Within about one spread, it halves every riffle: that's the cliff.",
+   "start": 132.1,
+   "duration": 14.41,
+   "end": 146.51,
+   "text": "Each riffle roughly halved the gap; blue's spread, its standard deviation, stayed about two. While the gap spans several spreads, the distance stays near one. Within one spread, it halves every riffle: that's the cliff.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "Each",
-     "t": 139.377,
-     "end": 139.664
+     "t": 132.11,
+     "end": 132.397
     },
     {
      "w": "riffle",
-     "t": 139.702,
-     "end": 140.077
+     "t": 132.435,
+     "end": 132.785
     },
     {
      "w": "roughly",
-     "t": 140.102,
-     "end": 140.452
+     "t": 132.81,
+     "end": 133.16
     },
     {
      "w": "halved",
-     "t": 140.477,
-     "end": 140.739
+     "t": 133.185,
+     "end": 133.422
     },
     {
      "w": "the",
-     "t": 140.752,
-     "end": 140.827
+     "t": 133.435,
+     "end": 133.51
     },
     {
      "w": "gap",
-     "t": 140.852,
-     "end": 141.277
-    },
-    {
-     "w": "but",
-     "t": 141.377,
-     "end": 141.502
+     "t": 133.535,
+     "end": 134.01
     },
     {
      "w": "blue's",
-     "t": 141.527,
-     "end": 141.827
+     "t": 134.185,
+     "end": 134.535
     },
     {
      "w": "spread",
-     "t": 141.852,
-     "end": 142.427
+     "t": 134.56,
+     "end": 135.185
     },
     {
      "w": "its",
-     "t": 142.577,
-     "end": 142.727
+     "t": 135.335,
+     "end": 135.485
     },
     {
      "w": "standard",
-     "t": 142.752,
-     "end": 143.202
+     "t": 135.51,
+     "end": 135.935
     },
     {
      "w": "deviation",
-     "t": 143.227,
-     "end": 144.052
+     "t": 135.96,
+     "end": 136.76
     },
     {
      "w": "stayed",
-     "t": 144.202,
-     "end": 144.49
+     "t": 136.885,
+     "end": 137.172
     },
     {
      "w": "about",
-     "t": 144.502,
-     "end": 144.827
+     "t": 137.185,
+     "end": 137.51
     },
     {
      "w": "two",
-     "t": 144.877,
-     "end": 145.327
+     "t": 137.56,
+     "end": 138.01
     },
     {
      "w": "While",
-     "t": 145.712,
-     "end": 145.849
+     "t": 138.515,
+     "end": 138.652
     },
     {
      "w": "the",
-     "t": 145.862,
-     "end": 145.937
+     "t": 138.665,
+     "end": 138.74
     },
     {
      "w": "gap",
-     "t": 145.962,
-     "end": 146.237
+     "t": 138.765,
+     "end": 139.04
     },
     {
      "w": "spans",
-     "t": 146.262,
-     "end": 146.624
+     "t": 139.065,
+     "end": 139.428
     },
     {
      "w": "several",
-     "t": 146.662,
-     "end": 146.987
+     "t": 139.465,
+     "end": 139.79
     },
     {
      "w": "spreads",
-     "t": 147.012,
-     "end": 147.737
+     "t": 139.815,
+     "end": 140.54
     },
     {
      "w": "the",
-     "t": 147.887,
-     "end": 147.987
+     "t": 140.69,
+     "end": 140.79
     },
     {
      "w": "distance",
-     "t": 148.012,
-     "end": 148.462
+     "t": 140.815,
+     "end": 141.265
     },
     {
      "w": "stays",
-     "t": 148.487,
-     "end": 148.862
+     "t": 141.29,
+     "end": 141.665
     },
     {
      "w": "near",
-     "t": 148.887,
-     "end": 149.087
+     "t": 141.69,
+     "end": 141.89
     },
     {
      "w": "one",
-     "t": 149.112,
-     "end": 149.587
+     "t": 141.915,
+     "end": 142.39
     },
     {
      "w": "Within",
-     "t": 150.007,
-     "end": 150.332
-    },
-    {
-     "w": "about",
-     "t": 150.357,
-     "end": 150.632
+     "t": 142.905,
+     "end": 143.205
     },
     {
      "w": "one",
-     "t": 150.657,
-     "end": 150.857
+     "t": 143.23,
+     "end": 143.43
     },
     {
      "w": "spread",
-     "t": 150.882,
-     "end": 151.382
+     "t": 143.455,
+     "end": 143.905
     },
     {
      "w": "it",
-     "t": 151.507,
-     "end": 151.582
+     "t": 144.005,
+     "end": 144.08
     },
     {
      "w": "halves",
-     "t": 151.607,
-     "end": 151.895
+     "t": 144.105,
+     "end": 144.392
     },
     {
      "w": "every",
-     "t": 151.932,
-     "end": 152.232
+     "t": 144.43,
+     "end": 144.73
     },
     {
      "w": "riffle",
-     "t": 152.257,
-     "end": 152.907
+     "t": 144.755,
+     "end": 145.355
     },
     {
      "w": "that's",
-     "t": 153.082,
-     "end": 153.382
+     "t": 145.505,
+     "end": 145.805
     },
     {
      "w": "the",
-     "t": 153.407,
-     "end": 153.482
+     "t": 145.83,
+     "end": 145.905
     },
     {
      "w": "cliff",
-     "t": 153.507,
-     "end": 154.087
+     "t": 145.93,
+     "end": 146.51
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/d5/d5ba12a99d606f7b2622161e.wav"
+   "wav": "/root/.cache/sample_space/tts/ce/ce66965f270c33ea70bf70b8.wav"
   },
   {
    "index": 17,
-   "start": 154.433,
-   "duration": 11.42,
-   "end": 165.853,
-   "text": "Multiply each gap by two to the k, and it settles near two hundred thirty. [pause 1.2] Divide that by two each riffle, and it reaches one spread after just under seven.",
+   "start": 146.9,
+   "duration": 10.97,
+   "end": 157.87,
+   "text": "Multiply each gap by two to the k, and it settles near two hundred thirty. [pause 1.6] Set the gap equal to one spread, and k is just under seven.",
    "voice": "af_heart",
    "speed": 0.84,
-   "cadence": "flat",
+   "cadence": "shaped",
    "words": [
     {
      "w": "Multiply",
-     "t": 154.508,
-     "end": 155.22
+     "t": 147.0,
+     "end": 147.712
     },
     {
      "w": "each",
-     "t": 155.258,
-     "end": 155.533
+     "t": 147.75,
+     "end": 148.025
     },
     {
      "w": "gap",
-     "t": 155.558,
-     "end": 155.833
+     "t": 148.05,
+     "end": 148.325
     },
     {
      "w": "by",
-     "t": 155.858,
-     "end": 156.058
+     "t": 148.35,
+     "end": 148.575
     },
     {
      "w": "two",
-     "t": 156.108,
-     "end": 156.283
+     "t": 148.625,
+     "end": 148.8
     },
     {
      "w": "to",
-     "t": 156.308,
-     "end": 156.37
+     "t": 148.825,
+     "end": 148.888
     },
     {
      "w": "the",
-     "t": 156.383,
-     "end": 156.471
+     "t": 148.9,
+     "end": 148.988
     },
     {
      "w": "k",
-     "t": 156.508,
-     "end": 157.183
+     "t": 149.025,
+     "end": 149.7
     },
     {
      "w": "and",
-     "t": 157.383,
-     "end": 157.471
+     "t": 149.9,
+     "end": 149.988
     },
     {
      "w": "it",
-     "t": 157.483,
-     "end": 157.595
+     "t": 150.0,
+     "end": 150.15
     },
     {
      "w": "settles",
-     "t": 157.633,
-     "end": 158.033
+     "t": 150.2,
+     "end": 150.6
     },
     {
      "w": "near",
-     "t": 158.058,
-     "end": 158.283
+     "t": 150.625,
+     "end": 150.85
     },
     {
      "w": "two",
-     "t": 158.333,
-     "end": 158.508
+     "t": 150.9,
+     "end": 151.075
     },
     {
      "w": "hundred",
-     "t": 158.533,
-     "end": 158.833
+     "t": 151.1,
+     "end": 151.4
     },
     {
      "w": "thirty",
-     "t": 158.858,
-     "end": 159.383
+     "t": 151.425,
+     "end": 151.95
     },
     {
-     "w": "Divide",
-     "t": 160.623,
-     "end": 161.098
-    },
-    {
-     "w": "that",
-     "t": 161.123,
-     "end": 161.348
-    },
-    {
-     "w": "by",
-     "t": 161.373,
-     "end": 161.611
-    },
-    {
-     "w": "two",
-     "t": 161.673,
-     "end": 161.898
-    },
-    {
-     "w": "each",
-     "t": 161.923,
-     "end": 162.148
-    },
-    {
-     "w": "riffle",
-     "t": 162.173,
-     "end": 162.923
-    },
-    {
-     "w": "and",
-     "t": 163.073,
-     "end": 163.161
-    },
-    {
-     "w": "it",
-     "t": 163.173,
-     "end": 163.248
-    },
-    {
-     "w": "reaches",
-     "t": 163.273,
-     "end": 163.648
-    },
-    {
-     "w": "one",
-     "t": 163.673,
-     "end": 163.885
-    },
-    {
-     "w": "spread",
-     "t": 163.923,
-     "end": 164.361
-    },
-    {
-     "w": "after",
-     "t": 164.398,
-     "end": 164.761
-    },
-    {
-     "w": "just",
-     "t": 164.798,
-     "end": 165.048
-    },
-    {
-     "w": "under",
-     "t": 165.073,
-     "end": 165.311
-    },
-    {
-     "w": "seven",
-     "t": 165.348,
-     "end": 165.853
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/45/45416876986f3319b25e6c3b.wav"
-  },
-  {
-   "index": 18,
-   "start": 166.2,
-   "duration": 10.08,
-   "end": 176.28,
-   "text": "For n cards, two hundred thirty grows like n squared, but the spread only like root n, so the cliff sits near three halves log base two of n.",
-   "voice": "af_heart",
-   "speed": 0.84,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "For",
-     "t": 166.235,
-     "end": 166.385
-    },
-    {
-     "w": "n",
-     "t": 166.41,
-     "end": 166.598
-    },
-    {
-     "w": "cards",
-     "t": 166.635,
-     "end": 167.31
-    },
-    {
-     "w": "two",
-     "t": 167.485,
-     "end": 167.66
-    },
-    {
-     "w": "hundred",
-     "t": 167.685,
-     "end": 168.022
-    },
-    {
-     "w": "thirty",
-     "t": 168.06,
-     "end": 168.36
-    },
-    {
-     "w": "grows",
-     "t": 168.385,
-     "end": 168.785
-    },
-    {
-     "w": "like",
-     "t": 168.81,
-     "end": 169.022
-    },
-    {
-     "w": "n",
-     "t": 169.06,
-     "end": 169.235
-    },
-    {
-     "w": "squared",
-     "t": 169.26,
-     "end": 170.16
-    },
-    {
-     "w": "but",
-     "t": 170.31,
-     "end": 170.422
+     "w": "Set",
+     "t": 153.61,
+     "end": 153.773
     },
     {
      "w": "the",
-     "t": 170.435,
-     "end": 170.522
+     "t": 153.785,
+     "end": 153.86
     },
     {
-     "w": "spread",
-     "t": 170.56,
-     "end": 170.948
+     "w": "gap",
+     "t": 153.885,
+     "end": 154.16
     },
     {
-     "w": "only",
-     "t": 170.985,
-     "end": 171.31
-    },
-    {
-     "w": "like",
-     "t": 171.335,
-     "end": 171.56
-    },
-    {
-     "w": "root",
-     "t": 171.61,
-     "end": 171.848
-    },
-    {
-     "w": "n",
-     "t": 171.885,
-     "end": 172.535
-    },
-    {
-     "w": "so",
-     "t": 172.735,
-     "end": 172.885
-    },
-    {
-     "w": "the",
-     "t": 172.91,
-     "end": 173.022
-    },
-    {
-     "w": "cliff",
-     "t": 173.06,
-     "end": 173.36
-    },
-    {
-     "w": "sits",
-     "t": 173.385,
-     "end": 173.635
-    },
-    {
-     "w": "near",
-     "t": 173.66,
-     "end": 173.91
-    },
-    {
-     "w": "three",
-     "t": 173.96,
-     "end": 174.373
-    },
-    {
-     "w": "halves",
-     "t": 174.41,
-     "end": 174.71
-    },
-    {
-     "w": "log",
-     "t": 174.76,
-     "end": 175.11
-    },
-    {
-     "w": "base",
-     "t": 175.135,
-     "end": 175.472
-    },
-    {
-     "w": "two",
-     "t": 175.51,
-     "end": 175.685
-    },
-    {
-     "w": "of",
-     "t": 175.71,
-     "end": 175.81
-    },
-    {
-     "w": "n.",
-     "t": 175.835,
-     "end": 176.28
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/ff/ff4ecb0752198fabd7295caf.wav"
-  },
-  {
-   "index": 19,
-   "start": 176.633,
-   "duration": 10.13,
-   "end": 186.763,
-   "text": "Aldous proved that law. [pause 0.4] Bayer and Diaconis computed the exact curve: for fifty two cards, seven riffles is the first count below a half.",
-   "voice": "af_heart",
-   "speed": 0.84,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Aldous",
-     "t": 176.643,
-     "end": 177.068
-    },
-    {
-     "w": "proved",
-     "t": 177.093,
-     "end": 177.418
-    },
-    {
-     "w": "that",
-     "t": 177.443,
-     "end": 177.618
-    },
-    {
-     "w": "law",
-     "t": 177.643,
-     "end": 178.143
-    },
-    {
-     "w": "Bayer",
-     "t": 178.618,
-     "end": 179.093
-    },
-    {
-     "w": "and",
-     "t": 179.118,
-     "end": 179.218
-    },
-    {
-     "w": "Diaconis",
-     "t": 179.243,
-     "end": 180.043
-    },
-    {
-     "w": "computed",
-     "t": 180.068,
-     "end": 180.556
-    },
-    {
-     "w": "the",
-     "t": 180.568,
-     "end": 180.693
-    },
-    {
-     "w": "exact",
-     "t": 180.718,
-     "end": 181.193
-    },
-    {
-     "w": "curve",
-     "t": 181.218,
-     "end": 182.043
-    },
-    {
-     "w": "for",
-     "t": 182.243,
-     "end": 182.381
-    },
-    {
-     "w": "fifty",
-     "t": 182.418,
-     "end": 182.731
-    },
-    {
-     "w": "two",
-     "t": 182.768,
-     "end": 182.943
-    },
-    {
-     "w": "cards",
-     "t": 182.968,
-     "end": 183.693
-    },
-    {
-     "w": "seven",
-     "t": 183.893,
-     "end": 184.218
-    },
-    {
-     "w": "riffles",
-     "t": 184.243,
-     "end": 184.743
-    },
-    {
-     "w": "is",
-     "t": 184.768,
-     "end": 184.893
-    },
-    {
-     "w": "the",
-     "t": 184.918,
-     "end": 185.043
-    },
-    {
-     "w": "first",
-     "t": 185.093,
-     "end": 185.393
-    },
-    {
-     "w": "count",
-     "t": 185.418,
-     "end": 185.743
-    },
-    {
-     "w": "below",
-     "t": 185.768,
-     "end": 186.118
-    },
-    {
-     "w": "a",
-     "t": 186.143,
-     "end": 186.193
-    },
-    {
-     "w": "half",
-     "t": 186.218,
-     "end": 186.763
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/66/661fefa493e8f012d5c63139.wav"
-  },
-  {
-   "index": 20,
-   "start": 187.1,
-   "duration": 8.1,
-   "end": 195.2,
-   "text": "Trefethen and Trefethen measured information instead: no cliff, and five or six shuffles do a reasonable job.",
-   "voice": "af_heart",
-   "speed": 0.84,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Trefethen",
-     "t": 187.105,
-     "end": 187.867
-    },
-    {
-     "w": "and",
-     "t": 187.905,
-     "end": 188.005
-    },
-    {
-     "w": "Trefethen",
-     "t": 188.03,
-     "end": 188.755
-    },
-    {
-     "w": "measured",
-     "t": 188.805,
-     "end": 189.142
-    },
-    {
-     "w": "information",
-     "t": 189.155,
-     "end": 189.83
-    },
-    {
-     "w": "instead",
-     "t": 189.855,
-     "end": 190.83
-    },
-    {
-     "w": "no",
-     "t": 191.08,
-     "end": 191.355
-    },
-    {
-     "w": "cliff",
-     "t": 191.405,
-     "end": 192.08
-    },
-    {
-     "w": "and",
-     "t": 192.205,
-     "end": 192.33
-    },
-    {
-     "w": "five",
-     "t": 192.38,
-     "end": 192.668
-    },
-    {
-     "w": "or",
-     "t": 192.68,
-     "end": 192.755
-    },
-    {
-     "w": "six",
-     "t": 192.78,
-     "end": 193.055
-    },
-    {
-     "w": "shuffles",
-     "t": 193.105,
-     "end": 193.63
-    },
-    {
-     "w": "do",
-     "t": 193.655,
-     "end": 193.805
-    },
-    {
-     "w": "a",
-     "t": 193.83,
-     "end": 193.93
-    },
-    {
-     "w": "reasonable",
-     "t": 193.98,
-     "end": 194.618
-    },
-    {
-     "w": "job",
-     "t": 194.655,
-     "end": 195.2
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/03/03427b60e69e1fe22d58c444.wav"
-  },
-  {
-   "index": 21,
-   "start": 195.533,
-   "duration": 9.85,
-   "end": 205.383,
-   "text": "Many Markov chains share this cliff, and samplers share the trap: one statistic can settle, like the top card, long before the whole chain has.",
-   "voice": "af_heart",
-   "speed": 0.84,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Many",
-     "t": 195.598,
-     "end": 195.898
-    },
-    {
-     "w": "Markov",
-     "t": 195.923,
-     "end": 196.435
-    },
-    {
-     "w": "chains",
-     "t": 196.473,
-     "end": 196.998
-    },
-    {
-     "w": "share",
-     "t": 197.048,
-     "end": 197.273
-    },
-    {
-     "w": "this",
-     "t": 197.298,
-     "end": 197.473
-    },
-    {
-     "w": "cliff",
-     "t": 197.498,
-     "end": 198.048
-    },
-    {
-     "w": "and",
-     "t": 198.173,
-     "end": 198.298
-    },
-    {
-     "w": "samplers",
-     "t": 198.348,
-     "end": 198.948
-    },
-    {
-     "w": "share",
-     "t": 198.998,
-     "end": 199.223
-    },
-    {
-     "w": "the",
-     "t": 199.248,
-     "end": 199.335
-    },
-    {
-     "w": "trap",
-     "t": 199.373,
-     "end": 200.223
-    },
-    {
-     "w": "one",
-     "t": 200.473,
-     "end": 200.698
-    },
-    {
-     "w": "statistic",
-     "t": 200.723,
-     "end": 201.348
-    },
-    {
-     "w": "can",
-     "t": 201.373,
-     "end": 201.573
-    },
-    {
-     "w": "settle",
-     "t": 201.623,
-     "end": 201.948
-    },
-    {
-     "w": "like",
-     "t": 201.998,
-     "end": 202.135
-    },
-    {
-     "w": "the",
-     "t": 202.148,
-     "end": 202.223
-    },
-    {
-     "w": "top",
-     "t": 202.248,
-     "end": 202.548
-    },
-    {
-     "w": "card",
-     "t": 202.573,
-     "end": 203.198
-    },
-    {
-     "w": "long",
-     "t": 203.423,
-     "end": 203.773
-    },
-    {
-     "w": "before",
-     "t": 203.798,
-     "end": 204.085
-    },
-    {
-     "w": "the",
-     "t": 204.098,
-     "end": 204.173
-    },
-    {
-     "w": "whole",
-     "t": 204.198,
-     "end": 204.435
-    },
-    {
-     "w": "chain",
-     "t": 204.473,
-     "end": 204.773
-    },
-    {
-     "w": "has",
-     "t": 204.798,
-     "end": 205.383
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/2b/2bfa0495773ec838badb392e.wav"
-  },
-  {
-   "index": 22,
-   "start": 205.733,
-   "duration": 6.96,
-   "end": 212.693,
-   "text": "Back to the coin flip. After four riffles you'd almost never be wrong, same as with an unshuffled deck.",
-   "voice": "af_heart",
-   "speed": 0.84,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Back",
-     "t": 205.793,
-     "end": 206.068
+     "w": "equal",
+     "t": 154.185,
+     "end": 154.51
     },
     {
      "w": "to",
-     "t": 206.093,
-     "end": 206.156
+     "t": 154.535,
+     "end": 154.635
     },
     {
-     "w": "the",
-     "t": 206.168,
-     "end": 206.243
+     "w": "one",
+     "t": 154.66,
+     "end": 154.86
     },
     {
-     "w": "coin",
-     "t": 206.268,
-     "end": 206.605
-    },
-    {
-     "w": "flip",
-     "t": 206.643,
-     "end": 207.153
-    },
-    {
-     "w": "After",
-     "t": 207.553,
-     "end": 207.928
-    },
-    {
-     "w": "four",
-     "t": 207.978,
-     "end": 208.228
-    },
-    {
-     "w": "riffles",
-     "t": 208.253,
-     "end": 208.778
-    },
-    {
-     "w": "you'd",
-     "t": 208.803,
-     "end": 208.903
-    },
-    {
-     "w": "almost",
-     "t": 208.928,
-     "end": 209.365
-    },
-    {
-     "w": "never",
-     "t": 209.403,
-     "end": 209.628
-    },
-    {
-     "w": "be",
-     "t": 209.653,
-     "end": 209.778
-    },
-    {
-     "w": "wrong",
-     "t": 209.803,
-     "end": 210.478
-    },
-    {
-     "w": "same",
-     "t": 210.703,
-     "end": 211.003
-    },
-    {
-     "w": "as",
-     "t": 211.028,
-     "end": 211.153
-    },
-    {
-     "w": "with",
-     "t": 211.178,
-     "end": 211.291
-    },
-    {
-     "w": "an",
-     "t": 211.303,
-     "end": 211.441
-    },
-    {
-     "w": "unshuffled",
-     "t": 211.503,
-     "end": 212.153
-    },
-    {
-     "w": "deck",
-     "t": 212.178,
-     "end": 212.693
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/c1/c1e170a6c21ce709350c56eb.wav"
-  },
-  {
-   "index": 23,
-   "start": 213.033,
-   "duration": 4.98,
-   "end": 218.013,
-   "text": "Three more riffles, [pause 1.2] and you'd be right only two times out of three.",
-   "voice": "af_heart",
-   "speed": 0.84,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Three",
-     "t": 213.108,
-     "end": 213.358
-    },
-    {
-     "w": "more",
-     "t": 213.383,
-     "end": 213.583
-    },
-    {
-     "w": "riffles",
-     "t": 213.608,
-     "end": 214.343
+     "w": "spread",
+     "t": 154.885,
+     "end": 155.585
     },
     {
      "w": "and",
-     "t": 215.563,
-     "end": 215.663
+     "t": 155.76,
+     "end": 155.91
     },
     {
-     "w": "you'd",
-     "t": 215.688,
-     "end": 215.775
+     "w": "k",
+     "t": 155.96,
+     "end": 156.398
     },
     {
-     "w": "be",
-     "t": 215.788,
-     "end": 215.913
+     "w": "is",
+     "t": 156.435,
+     "end": 156.56
     },
     {
-     "w": "right",
-     "t": 215.938,
-     "end": 216.188
+     "w": "just",
+     "t": 156.585,
+     "end": 156.81
     },
     {
-     "w": "only",
-     "t": 216.213,
-     "end": 216.513
+     "w": "under",
+     "t": 156.835,
+     "end": 157.135
+    },
+    {
+     "w": "seven",
+     "t": 157.185,
+     "end": 157.72
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/6e/6e17be3e1ec93c082addd7e9.wav"
+  },
+  {
+   "index": 18,
+   "start": 158.267,
+   "duration": 9.73,
+   "end": 167.997,
+   "text": "For n cards, two hundred thirty grows like n squared, but the spread like root n, so the cliff sits near three halves log base two of n.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "For",
+     "t": 158.302,
+     "end": 158.465
+    },
+    {
+     "w": "n",
+     "t": 158.502,
+     "end": 158.69
+    },
+    {
+     "w": "cards",
+     "t": 158.727,
+     "end": 159.402
     },
     {
      "w": "two",
-     "t": 216.563,
-     "end": 216.751
+     "t": 159.577,
+     "end": 159.752
     },
     {
-     "w": "times",
-     "t": 216.788,
-     "end": 217.238
+     "w": "hundred",
+     "t": 159.777,
+     "end": 160.115
     },
     {
-     "w": "out",
-     "t": 217.263,
-     "end": 217.375
+     "w": "thirty",
+     "t": 160.152,
+     "end": 160.452
     },
     {
-     "w": "of",
-     "t": 217.388,
-     "end": 217.5
+     "w": "grows",
+     "t": 160.477,
+     "end": 160.877
     },
     {
-     "w": "three",
-     "t": 217.538,
-     "end": 218.013
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/d2/d2fb4d42df2a0c01e7ba8145.wav"
-  },
-  {
-   "index": 24,
-   "start": 218.367,
-   "duration": 6.9,
-   "end": 225.267,
-   "text": "Four riffles fool someone watching the top card. Fooling someone who counts sequences that well takes ten.",
-   "voice": "af_heart",
-   "speed": 0.84,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Four",
-     "t": 218.442,
-     "end": 218.692
+     "w": "like",
+     "t": 160.902,
+     "end": 161.115
     },
     {
-     "w": "riffles",
-     "t": 218.717,
-     "end": 219.292
+     "w": "n",
+     "t": 161.152,
+     "end": 161.327
     },
     {
-     "w": "fool",
-     "t": 219.342,
-     "end": 219.617
+     "w": "squared",
+     "t": 161.352,
+     "end": 162.227
     },
     {
-     "w": "someone",
-     "t": 219.642,
-     "end": 219.892
-    },
-    {
-     "w": "watching",
-     "t": 219.917,
-     "end": 220.33
+     "w": "but",
+     "t": 162.352,
+     "end": 162.465
     },
     {
      "w": "the",
-     "t": 220.342,
-     "end": 220.417
+     "t": 162.477,
+     "end": 162.577
     },
     {
-     "w": "top",
-     "t": 220.442,
-     "end": 220.717
+     "w": "spread",
+     "t": 162.627,
+     "end": 162.977
     },
     {
-     "w": "card",
-     "t": 220.742,
-     "end": 221.277
+     "w": "like",
+     "t": 163.002,
+     "end": 163.227
     },
     {
-     "w": "Fooling",
-     "t": 221.717,
-     "end": 222.129
+     "w": "root",
+     "t": 163.277,
+     "end": 163.515
     },
     {
-     "w": "someone",
-     "t": 222.167,
-     "end": 222.542
+     "w": "n",
+     "t": 163.552,
+     "end": 164.202
     },
     {
-     "w": "who",
-     "t": 222.567,
-     "end": 222.692
+     "w": "so",
+     "t": 164.427,
+     "end": 164.577
     },
     {
-     "w": "counts",
-     "t": 222.717,
-     "end": 222.992
+     "w": "the",
+     "t": 164.602,
+     "end": 164.715
     },
     {
-     "w": "sequences",
-     "t": 223.017,
-     "end": 223.979
+     "w": "cliff",
+     "t": 164.752,
+     "end": 165.065
+    },
+    {
+     "w": "sits",
+     "t": 165.102,
+     "end": 165.352
+    },
+    {
+     "w": "near",
+     "t": 165.377,
+     "end": 165.627
+    },
+    {
+     "w": "three",
+     "t": 165.677,
+     "end": 166.039
+    },
+    {
+     "w": "halves",
+     "t": 166.077,
+     "end": 166.377
+    },
+    {
+     "w": "log",
+     "t": 166.427,
+     "end": 166.777
+    },
+    {
+     "w": "base",
+     "t": 166.802,
+     "end": 167.165
+    },
+    {
+     "w": "two",
+     "t": 167.202,
+     "end": 167.402
+    },
+    {
+     "w": "of",
+     "t": 167.427,
+     "end": 167.527
+    },
+    {
+     "w": "n.",
+     "t": 167.552,
+     "end": 167.997
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/5f/5f1c1fca94c4be2ac4a31e0d.wav"
+  },
+  {
+   "index": 19,
+   "start": 168.4,
+   "duration": 10.92,
+   "end": 179.32,
+   "text": "Aldous proved that law. [pause 0.4] Bayer and Diaconis computed the exact curve: for fifty two cards, seven riffles is the first below a half. [pause 0.9]",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Aldous",
+     "t": 168.41,
+     "end": 168.835
+    },
+    {
+     "w": "proved",
+     "t": 168.86,
+     "end": 169.185
     },
     {
      "w": "that",
-     "t": 224.017,
-     "end": 224.167
+     "t": 169.21,
+     "end": 169.385
     },
     {
-     "w": "well",
-     "t": 224.192,
-     "end": 224.392
+     "w": "law",
+     "t": 169.41,
+     "end": 169.91
+    },
+    {
+     "w": "Bayer",
+     "t": 170.385,
+     "end": 170.86
+    },
+    {
+     "w": "and",
+     "t": 170.885,
+     "end": 170.985
+    },
+    {
+     "w": "Diaconis",
+     "t": 171.01,
+     "end": 171.86
+    },
+    {
+     "w": "computed",
+     "t": 171.885,
+     "end": 172.372
+    },
+    {
+     "w": "the",
+     "t": 172.385,
+     "end": 172.51
+    },
+    {
+     "w": "exact",
+     "t": 172.535,
+     "end": 173.01
+    },
+    {
+     "w": "curve",
+     "t": 173.035,
+     "end": 173.86
+    },
+    {
+     "w": "for",
+     "t": 174.06,
+     "end": 174.198
+    },
+    {
+     "w": "fifty",
+     "t": 174.235,
+     "end": 174.598
+    },
+    {
+     "w": "two",
+     "t": 174.635,
+     "end": 174.81
+    },
+    {
+     "w": "cards",
+     "t": 174.835,
+     "end": 175.56
+    },
+    {
+     "w": "seven",
+     "t": 175.76,
+     "end": 176.085
+    },
+    {
+     "w": "riffles",
+     "t": 176.11,
+     "end": 176.648
+    },
+    {
+     "w": "is",
+     "t": 176.685,
+     "end": 176.81
+    },
+    {
+     "w": "the",
+     "t": 176.835,
+     "end": 176.96
+    },
+    {
+     "w": "first",
+     "t": 177.01,
+     "end": 177.36
+    },
+    {
+     "w": "below",
+     "t": 177.385,
+     "end": 177.735
+    },
+    {
+     "w": "a",
+     "t": 177.76,
+     "end": 177.81
+    },
+    {
+     "w": "half",
+     "t": 177.835,
+     "end": 178.42
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/95/95b7bcc929f97821d44ba127.wav"
+  },
+  {
+   "index": 20,
+   "start": 179.733,
+   "duration": 8.13,
+   "end": 187.863,
+   "text": "Trefethen and Trefethen measured information instead: no cliff; five or six shuffles do a reasonable job.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Trefethen",
+     "t": 179.738,
+     "end": 180.475
+    },
+    {
+     "w": "and",
+     "t": 180.513,
+     "end": 180.613
+    },
+    {
+     "w": "Trefethen",
+     "t": 180.638,
+     "end": 181.325
+    },
+    {
+     "w": "measured",
+     "t": 181.363,
+     "end": 181.701
+    },
+    {
+     "w": "information",
+     "t": 181.713,
+     "end": 182.413
+    },
+    {
+     "w": "instead",
+     "t": 182.438,
+     "end": 183.363
+    },
+    {
+     "w": "no",
+     "t": 183.638,
+     "end": 183.938
+    },
+    {
+     "w": "cliff",
+     "t": 183.988,
+     "end": 184.738
+    },
+    {
+     "w": "five",
+     "t": 184.938,
+     "end": 185.275
+    },
+    {
+     "w": "or",
+     "t": 185.288,
+     "end": 185.4
+    },
+    {
+     "w": "six",
+     "t": 185.438,
+     "end": 185.738
+    },
+    {
+     "w": "shuffles",
+     "t": 185.788,
+     "end": 186.288
+    },
+    {
+     "w": "do",
+     "t": 186.313,
+     "end": 186.463
+    },
+    {
+     "w": "a",
+     "t": 186.488,
+     "end": 186.588
+    },
+    {
+     "w": "reasonable",
+     "t": 186.638,
+     "end": 187.275
+    },
+    {
+     "w": "job",
+     "t": 187.313,
+     "end": 187.863
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/5a/5a9fbadc7b5553d193206ea0.wav"
+  },
+  {
+   "index": 21,
+   "start": 188.267,
+   "duration": 9.39,
+   "end": 197.657,
+   "text": "Many Markov chains share this cliff, and samplers share the trap: one statistic, like the top card, settles long before the whole chain.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Many",
+     "t": 188.332,
+     "end": 188.607
+    },
+    {
+     "w": "Markov",
+     "t": 188.632,
+     "end": 189.119
+    },
+    {
+     "w": "chains",
+     "t": 189.157,
+     "end": 189.657
+    },
+    {
+     "w": "share",
+     "t": 189.707,
+     "end": 189.932
+    },
+    {
+     "w": "this",
+     "t": 189.957,
+     "end": 190.132
+    },
+    {
+     "w": "cliff",
+     "t": 190.157,
+     "end": 190.707
+    },
+    {
+     "w": "and",
+     "t": 190.832,
+     "end": 190.957
+    },
+    {
+     "w": "samplers",
+     "t": 191.007,
+     "end": 191.582
+    },
+    {
+     "w": "share",
+     "t": 191.632,
+     "end": 191.857
+    },
+    {
+     "w": "the",
+     "t": 191.882,
+     "end": 191.969
+    },
+    {
+     "w": "trap",
+     "t": 192.007,
+     "end": 192.832
+    },
+    {
+     "w": "one",
+     "t": 193.082,
+     "end": 193.307
+    },
+    {
+     "w": "statistic",
+     "t": 193.332,
+     "end": 194.082
+    },
+    {
+     "w": "like",
+     "t": 194.157,
+     "end": 194.319
+    },
+    {
+     "w": "the",
+     "t": 194.332,
+     "end": 194.407
+    },
+    {
+     "w": "top",
+     "t": 194.432,
+     "end": 194.732
+    },
+    {
+     "w": "card",
+     "t": 194.757,
+     "end": 195.357
+    },
+    {
+     "w": "settles",
+     "t": 195.557,
+     "end": 195.945
+    },
+    {
+     "w": "long",
+     "t": 195.982,
+     "end": 196.332
+    },
+    {
+     "w": "before",
+     "t": 196.357,
+     "end": 196.707
+    },
+    {
+     "w": "the",
+     "t": 196.732,
+     "end": 196.807
+    },
+    {
+     "w": "whole",
+     "t": 196.832,
+     "end": 197.069
+    },
+    {
+     "w": "chain",
+     "t": 197.107,
+     "end": 197.657
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/1b/1b25f42e0dd7c8b2c2be76a5.wav"
+  },
+  {
+   "index": 22,
+   "start": 198.067,
+   "duration": 6.68,
+   "end": 204.747,
+   "text": "Back to the coin flip. Three more riffles, [pause 1.2] and you'd be right only two times in three.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Back",
+     "t": 198.127,
+     "end": 198.402
+    },
+    {
+     "w": "to",
+     "t": 198.427,
+     "end": 198.49
+    },
+    {
+     "w": "the",
+     "t": 198.502,
+     "end": 198.577
+    },
+    {
+     "w": "coin",
+     "t": 198.602,
+     "end": 198.939
+    },
+    {
+     "w": "flip",
+     "t": 198.977,
+     "end": 199.487
+    },
+    {
+     "w": "Three",
+     "t": 199.862,
+     "end": 200.112
+    },
+    {
+     "w": "more",
+     "t": 200.137,
+     "end": 200.337
+    },
+    {
+     "w": "riffles",
+     "t": 200.362,
+     "end": 201.097
+    },
+    {
+     "w": "and",
+     "t": 202.317,
+     "end": 202.417
+    },
+    {
+     "w": "you'd",
+     "t": 202.442,
+     "end": 202.529
+    },
+    {
+     "w": "be",
+     "t": 202.542,
+     "end": 202.667
+    },
+    {
+     "w": "right",
+     "t": 202.692,
+     "end": 202.942
+    },
+    {
+     "w": "only",
+     "t": 202.967,
+     "end": 203.267
+    },
+    {
+     "w": "two",
+     "t": 203.317,
+     "end": 203.492
+    },
+    {
+     "w": "times",
+     "t": 203.517,
+     "end": 203.917
+    },
+    {
+     "w": "in",
+     "t": 203.942,
+     "end": 204.079
+    },
+    {
+     "w": "three",
+     "t": 204.117,
+     "end": 204.597
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/0f/0fe01ced25e0a90a3cf1b20a.wav"
+  },
+  {
+   "index": 23,
+   "start": 205.133,
+   "duration": 6.11,
+   "end": 211.243,
+   "text": "Four riffles fool someone watching the top card. Fooling someone who counts sequences takes ten.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Four",
+     "t": 205.208,
+     "end": 205.458
+    },
+    {
+     "w": "riffles",
+     "t": 205.483,
+     "end": 206.058
+    },
+    {
+     "w": "fool",
+     "t": 206.108,
+     "end": 206.383
+    },
+    {
+     "w": "someone",
+     "t": 206.408,
+     "end": 206.658
+    },
+    {
+     "w": "watching",
+     "t": 206.683,
+     "end": 207.096
+    },
+    {
+     "w": "the",
+     "t": 207.108,
+     "end": 207.183
+    },
+    {
+     "w": "top",
+     "t": 207.208,
+     "end": 207.483
+    },
+    {
+     "w": "card",
+     "t": 207.508,
+     "end": 208.043
+    },
+    {
+     "w": "Fooling",
+     "t": 208.393,
+     "end": 208.768
+    },
+    {
+     "w": "someone",
+     "t": 208.793,
+     "end": 209.143
+    },
+    {
+     "w": "who",
+     "t": 209.168,
+     "end": 209.293
+    },
+    {
+     "w": "counts",
+     "t": 209.318,
+     "end": 209.618
+    },
+    {
+     "w": "sequences",
+     "t": 209.643,
+     "end": 210.281
     },
     {
      "w": "takes",
-     "t": 224.417,
-     "end": 224.729
+     "t": 210.318,
+     "end": 210.593
     },
     {
      "w": "ten",
-     "t": 224.767,
-     "end": 225.267
+     "t": 210.618,
+     "end": 211.093
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/0c/0cf707f90acfd53ac277ad3a.wav"
+   "wav": "/root/.cache/sample_space/tts/77/77c6722e043cd3b318202875.wav"
   }
  ],
- "warnings": [
-  {
-   "t": 227.07,
-   "msg": "concision budget: 556 words, 3:47.1. Critics docked Concision for runtime in 16 of 28 round-5/6 reviews (9 of 10 episodes >= 3:41); budget <= 500 words and <= 3:35 (PRODUCTION_GUIDE §13)"
-  },
-  {
-   "t": 227.07,
-   "msg": "deictic sync: 1 of 5 deictic words have no animation starting within -0.8..+0.4 s ('this it' 1:31.2). Use beat.on(word, anim) so the highlight lands on the word"
-  }
- ],
+ "warnings": [],
  "budget": {
-  "words": 556,
-  "runtime_s": 227.1,
+  "words": 493,
+  "runtime_s": 212.8,
   "budget_words": 500,
   "budget_runtime_s": 215.0,
-  "over": true
+  "over": false
  },
  "glyph_morphs": [],
  "deictic_sync": {
@@ -3134,19 +2797,13 @@
    0.4
   ],
   "deictics": 5,
-  "unlanded": [
-   {
-    "t": 91.22,
-    "phrase": "this it",
-    "nearest_animation_start": 1.11
-   }
-  ]
+  "unlanded": []
  },
  "layout_audit": {
   "clearance": 0.15,
-  "checks": 276,
-  "audit_seconds": 4.065,
-  "render_seconds": 631.8,
+  "checks": 266,
+  "audit_seconds": 4.747,
+  "render_seconds": 709.9,
   "errors": 0,
   "count": 0,
   "counts": {
@@ -3155,37 +2812,10 @@
    "safe-area": 0,
    "caption-zone": 0,
    "text-size": 0,
-   "small-label": 2
+   "small-label": 0
   },
   "issues": [],
-  "advisory": [
-   {
-    "kind": "small-label",
-    "start": 48.93,
-    "end": 77.1,
-    "held": 28.17,
-    "text": "Text 'Gilbert, 1955 · Bell Labs; …'",
-    "text_pos": [
-     -4.11,
-     -3.0
-    ],
-    "detail": "cap height ≈ 26 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 0:48.9-1:17.1 (held 28.2s) Text 'Gilbert, 1955 · Bell Labs; …' @(-4.11, -3.00) cap height ≈ 26 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 48.93,
-    "end": 77.1,
-    "held": 28.17,
-    "text": "Text 'Gilbert–Shannon–Reeds model'",
-    "text_pos": [
-     -4.54,
-     -2.67
-    ],
-    "detail": "cap height ≈ 26 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 0:48.9-1:17.1 (held 28.2s) Text 'Gilbert–Shannon–Reeds model' @(-4.54, -2.67) cap height ≈ 26 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   }
-  ],
+  "advisory": [],
   "allowed": [],
   "excluded": []
  }

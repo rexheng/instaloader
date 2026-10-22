@@ -1495,9 +1495,12 @@ class Episode(NarratedScene):
                       Indicate(cap_atr, color=INK, scale_factor=1.1, rate_func=window(a, a + 0.6 / rt)),
                       FadeOut(sk_blk, shift=0.12 * UP, rate_func=window(0, 0.35 / rt, smooth)),
                       run_time=rt)
-            self.play(LaggedStart(FadeOut(cap_atr, shift=0.15 * UP), FadeIn(sp_c, shift=0.15 * UP),
-                                  lag_ratio=0.6), run_time=0.8)
-            self.play(Create(line40), run_time=max(0.6, beat.until("forty", offset=-0.45)))
+            # (swap: "at random" leaves before "spread evenly over: classes" arrives in its place, so
+            # the two are never superimposed; the random-class line draws meanwhile and lands on
+            # "forty")
+            rt_sw = max(0.8, beat.until("forty", offset=-0.15))
+            self.play(swap(cap_atr, sp_c, run_time=rt_sw),
+                      Create(line40, rate_func=window(0.3, 1.0, smooth)), run_time=rt_sw)
             self.play(FadeIn(lab40, shift=0.1 * LEFT), run_time=0.5)
             # a random student: each class dot becomes its students, each bar as wide as its
             # students, the width-weighted mean rises to 85, and the label's last word turns

@@ -1,49 +1,47 @@
 [00:00.0] Heads, I riffle shuffle a sorted deck four times. Tails, a computer shuffles it perfectly. From the deck alone, how often could you tell which? Pick fifty, seventy five, or a hundred percent. [pause 1.5]
 
-[00:15.1] Monte Carlo samplers move by random steps, like these riffles. Stop them too early, and they still remember where they started.
+[00:15.5] Monte Carlo samplers move by random steps, like these riffles. Stopped too early, they still remember where they started.
 
-[00:23.8] The obvious check is the top card, the one you'd be dealt. Here's how often each card ends up there after four riffles.
+[00:23.6] The obvious check is the top card: here's how often each card lands there after four riffles.
 
-[00:31.9] Almost flat. Only the old top card stands out: one time in fifteen. Judging by the top card, you'd be right fifty two percent of the time. Four riffles look like plenty.
+[00:30.3] Only the old top card stands out: one time in fifteen. Judge by it, and you're right [pause 0.3] fifty two percent of the time. [pause 0.9] Four riffles look like plenty.
 
-[00:44.4] A guesser who sees the whole deck does far better. The model cuts near the middle, then drops cards from each half in proportion to its size.
+[00:41.8] The model cuts near the middle, then drops cards from each half in proportion to its size.
 
-[00:53.4] Each half stays in order, so one riffle leaves two rising sequences: runs of consecutive cards, reading left to right.
+[00:47.6] Each half stays in order, so one riffle leaves two rising sequences: runs of consecutive cards.
 
-[01:02.2] Give each sequence its own level. The cut crosses each level once, so a riffle can at most split it in two.
+[00:55.0] Give each sequence its own level. The cut crosses each level once, so a riffle can at most split each level in two.
 
-[01:09.4] Three riffles, [pause 0.8] eight. Four riffles, [pause 0.6] at most sixteen; this deck has fourteen.
+[01:02.9] Three riffles, [pause 0.8] eight. Four riffles, [pause 0.6] at most sixteen; this deck has fourteen.
 
-[01:17.1] A perfect shuffle averages twenty six and a half, and gives sixteen or fewer once in two million decks.
+[01:11.1] A perfect shuffle gives sixteen or fewer once in two million decks.
 
-[01:24.1] Call sixteen or fewer riffled, and you'd be wrong about once in four million games. The top card can't see this; it lives in the order between cards.
+[01:15.9] Call sixteen or fewer riffled, and you'd be wrong once in four million games. [pause 0.9] The top card can't see this: it lives in the order between cards.
 
-[01:34.2] Bayer and Diaconis proved that in this model, decks with the same count are equally likely. [pause 0.7]
+[01:26.3] Bayer and Diaconis proved that in this model, decks with the same count are equally likely. [pause 0.7]
 
-[01:41.2] So pile decks onto their counts, [pause 0.6] then every possible deck, weighted by its chance.
+[01:33.2] So pile decks onto their counts, [pause 0.6] then every possible deck, weighted by its chance.
 
-[01:47.3] The red area, purple above blue, is the distance from random. Right now it's one.
+[01:39.3] The red area, purple above blue, is the distance from random.
 
-[01:53.3] How many more riffles to bring it below a half? [pause 1.5]
+[01:43.8] How many more riffles until it's below a half? [pause 1.5]
 
-[01:57.6] A fifth riffle: point nine two. A sixth: point six one. A seventh: point three three.
+[01:48.7] A fifth riffle: point nine two. A sixth: point six one. A seventh: point three three. [pause 0.9]
 
-[02:04.6] Guess riffled where purple is higher: you catch sixty five percent of riffled decks, and flag thirty two percent of perfect ones. Accuracy is a half, plus half the difference, and the difference is the red area.
+[01:56.8] Guess riffled where purple is higher: you catch sixty five percent of riffled decks. You also flag thirty two percent of perfect ones. Accuracy is a half, plus half the difference, and the difference is the red area.
 
-[02:19.4] Each riffle roughly halved the gap, but blue's spread, its standard deviation, stayed about two. While the gap spans several spreads, the distance stays near one. Within about one spread, it halves every riffle: that's the cliff.
+[02:12.1] Each riffle roughly halved the gap; blue's spread, its standard deviation, stayed about two. While the gap spans several spreads, the distance stays near one. Within one spread, it halves every riffle: that's the cliff.
 
-[02:34.4] Multiply each gap by two to the k, and it settles near two hundred thirty. [pause 1.2] Divide that by two each riffle, and it reaches one spread after just under seven.
+[02:26.9] Multiply each gap by two to the k, and it settles near two hundred thirty. [pause 1.6] Set the gap equal to one spread, and k is just under seven.
 
-[02:46.2] For n cards, two hundred thirty grows like n squared, but the spread only like root n, so the cliff sits near three halves log base two of n.
+[02:38.3] For n cards, two hundred thirty grows like n squared, but the spread like root n, so the cliff sits near three halves log base two of n.
 
-[02:56.6] Aldous proved that law. [pause 0.4] Bayer and Diaconis computed the exact curve: for fifty two cards, seven riffles is the first count below a half.
+[02:48.4] Aldous proved that law. [pause 0.4] Bayer and Diaconis computed the exact curve: for fifty two cards, seven riffles is the first below a half. [pause 0.9]
 
-[03:07.1] Trefethen and Trefethen measured information instead: no cliff, and five or six shuffles do a reasonable job.
+[02:59.7] Trefethen and Trefethen measured information instead: no cliff; five or six shuffles do a reasonable job.
 
-[03:15.5] Many Markov chains share this cliff, and samplers share the trap: one statistic can settle, like the top card, long before the whole chain has.
+[03:08.3] Many Markov chains share this cliff, and samplers share the trap: one statistic, like the top card, settles long before the whole chain.
 
-[03:25.7] Back to the coin flip. After four riffles you'd almost never be wrong, same as with an unshuffled deck.
+[03:18.1] Back to the coin flip. Three more riffles, [pause 1.2] and you'd be right only two times in three.
 
-[03:33.0] Three more riffles, [pause 1.2] and you'd be right only two times out of three.
-
-[03:38.4] Four riffles fool someone watching the top card. Fooling someone who counts sequences that well takes ten.
+[03:25.1] Four riffles fool someone watching the top card. Fooling someone who counts sequences takes ten.

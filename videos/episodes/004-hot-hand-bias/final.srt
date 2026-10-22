@@ -139,62 +139,62 @@ After three hits, versus after three misses.
 For a random shooter, the same crowding pulls after hits down to forty six percent on average, and after misses up to fifty four.
 
 36
-00:02:38,296 --> 00:02:44,396
+00:02:38,626 --> 00:02:44,726
 Miller and Sanjurjo's twenty eighteen paper puts the gap at about minus eight points.
 
 37
-00:02:45,296 --> 00:02:47,176
+00:02:45,626 --> 00:02:47,506
 Longer streaks grow the bias.
 
 38
-00:02:48,076 --> 00:02:49,696
+00:02:48,406 --> 00:02:50,026
 Longer records shrink it,
 
 39
-00:02:50,196 --> 00:02:52,146
+00:02:50,526 --> 00:02:52,476
 but a hundred shots isn't long.
 
 40
-00:02:52,600 --> 00:02:59,950
+00:02:52,933 --> 00:03:00,283
 The Cornell players hit forty nine percent after three hits, and forty five after three misses.
 
 41
-00:03:00,250 --> 00:03:02,300
+00:03:00,583 --> 00:03:02,633
 The study took that plus four
 
 42
-00:03:02,600 --> 00:03:04,210
+00:03:02,933 --> 00:03:04,543
 to mean no hot hand.
 
 43
-00:03:05,100 --> 00:03:08,230
+00:03:05,433 --> 00:03:08,563
 Measured from minus eight, it's twelve points hot.
 
 44
-00:03:09,130 --> 00:03:14,580
+00:03:09,463 --> 00:03:14,913
 That's evidence for a hot hand in a gym, not proof it survives defenders in a game.
 
 45
-00:03:16,366 --> 00:03:17,326
+00:03:16,700 --> 00:03:17,660
 One half
 
 46
-00:03:17,476 --> 00:03:19,176
+00:03:17,810 --> 00:03:19,510
 is what a fair coin does.
 
 47
-00:03:19,676 --> 00:03:23,526
+00:03:20,010 --> 00:03:23,860
 Seventeen out of forty two is what this test sees.
 
 48
-00:03:23,826 --> 00:03:25,506
+00:03:24,160 --> 00:03:25,840
 A fifty percent shooter
 
 49
-00:03:25,806 --> 00:03:28,056
+00:03:26,140 --> 00:03:28,390
 who averages one half on this test
 
 50
-00:03:28,256 --> 00:03:29,946
+00:03:28,590 --> 00:03:30,280
 is already running hot.
 

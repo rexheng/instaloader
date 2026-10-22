@@ -742,21 +742,22 @@ follows §13.7.
 
 **§13 budget and voice (Concision, Audio).** `CADENCE = "shaped"` (sense-following gaps; "hundred and
 twenty" read "hundred twenty"), the cold open at 0.84 instead of 0.88, a 0.3 s breath after the hook
-question, 0.9 s after the thesis, and 37 fewer words by the mute test:
+question, 0.9 s after the thesis, and 38 fewer words (508 → 470) by the mute test:
 - "Check that rule by counting: ten thousand people, half of them sick." (was 18 words, now 12);
 - "Test everyone, and watch who lights up." (the beam and the ticking counts show the 99 % / 1 %; the
   spoken rates repeated the cold open word for word);
 - "…plus one percent of everyone else: about a hundred." (the 9,980 is on the table; no longer
   spoken, and no repeat of "percent of the healthy");
 - "Divide everything by ten thousand: counts become shares. The share can't change." (was 22 words;
-  §13.4 cites this very step as narrated for 14 s);
+  §13.4's example of a ÷ 10,000 step narrated for 14 s);
 - "Symptoms raise the one in five hundred: at one in a hundred…" (the label rises on those words).
 "Shrink to the alerts. Take the red share." is two short sentences (it ran at 214 wpm); "and these
 are how often…" no longer holds "these" for 0.67 s; the "red share" sentence is at 0.80.
 
 **Deictics.** "this disease" pulses the sick node, "a problem like this" pulses the problem's three
 numbers, "Here, the rule holds" lands on the meter at the naive marker, and the second "these" grows
-its braces (the render's deictic check had listed all four).
+its braces, and "here it's one percent" starts the pulse of the 100 false alarms (the render's
+deictic check had listed all five).
 
 **Kept:** everything in the round-6 keep lists (strip under the meter, the unbroken object chain, the
 half-sick control and the 6× bracket, the live slider and sweep, the recall/precision tags).
