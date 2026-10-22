@@ -5,9 +5,11 @@
 that ellipse (a dinosaur, a star, Anscombe's four datasets) has the same five numbers and even the
 same best-fit line. Only a plot shows the shape.
 
-Runtime ≈ 3:25 · 456 words (budget ≤ 500, PRODUCTION_GUIDE §13) · narrator af_heart @ 0.84,
-`CADENCE = "shaped"` (B9b at 0.80, the densest beat; B20 and B21 at 0.82, so the letter names are
-not rushed). Round 7: B9b's what-if is r = 0.50 (was 0.80; facts #36).
+Runtime ≈ 3:20 · ≈ 443 words (budget ≤ 500, PRODUCTION_GUIDE §13) · narrator af_heart @ 0.84,
+`CADENCE = "shaped"` (B2 and B9b at 0.80: B2 carries 703 and 86 %, B9b is the densest beat).
+Round 7: B9b's what-if is r = 0.50 (was 0.80; facts #36). Round 8: slope = r s_y / s_x is built in
+B9b from the run's and the rise's labels; Anscombe's old B20 + B21 re-derivation is now "Same rule,
+same line."; "this star" is cut from the roll call (facts #39).
 
 ## Palette (colour → one meaning, whole episode)
 
@@ -17,7 +19,7 @@ not rushed). Round 7: B9b's what-if is r = 0.50 (was 0.80; facts #36).
 | BLUE | actual data points (whatever dataset is on screen) |
 | RED | a summary that has drifted away from the dinosaur's (live values that no longer match, the star's own drifting centre/error bars/box/ellipse, the missed median); the drifted cross turns yellow as it slides back onto the dinosaur's, so it is never red over a matching readout |
 | GREEN | "matches" marks (always paired with the = glyph; RED always paired with ≠) |
-| GRAY | axes and ticks, the cold-open "?" and the three candidate lines, the viewer's guess cloud and its dashed line, the simulated r = 0.50 cloud and its slice band (B9, tagged "simulated"), the SD box while it steps back (40 %) during the B9 slice, the two ghost ellipses, the target star and circle outlines. Grey TEXT (tick numbers, axis names, "your guess", "your line", headers, citations, the sourced percentages, the "± 1 SD" tags, the decimals note, dimmed readout values) uses a lighter grey, #A6ADB7 (8.0 : 1 on the background) |
+| GRAY | axes and ticks, the cold-open "?" and the three candidate lines, the viewer's guess cloud and its dashed line, the simulated r = 0.50 cloud and its slice band (B9, tagged "simulated"), the SD box while it steps back (40 %) during the B9 slice, the two ghost ellipses, the target star and circle outlines. Grey TEXT (tick numbers, axis names, "your guess", "your line", headers, citations, the sourced percentages, the "± 1 SD" tags, the decimals note, dimmed readout values, and the slope formula while it is parked as context from B10 to B20, at 50 %) uses a lighter grey, #A6ADB7 (8.0 : 1 on the background) |
 | INK | live "now" values while they still match, words, the white that singles out points (the simulated slice's points in B9 and their merged average, before it turns yellow; the rings round Anscombe's outlier and lever point) |
 
 Never red vs green alone: every RED/GREEN mark is also a ≠ / = glyph.
@@ -43,14 +45,16 @@ shape is the cloud, and which way does its best-fit line tilt? [pause 1.8]
 > then "A dinosaur". Citation on "drawn by".
 
 ### Stakes (0:25–0:37)
-**B2.** In a review of seven hundred three physiology papers, eighty-six percent used bar
-graphs: [pause 0.4] an average and an error bar. Only thirteen percent showed the points.
+**B2.** In a review of seven hundred three physiology papers, [pause 0.3] eighty-six percent used
+bar graphs: [pause 0.4] an average and an error bar. Only thirteen percent showed the points.
+(Speed 0.80, round 8: the two numbers get a breath each.)
 > Weissgerber citation; the dinosaur squeezes into a strip of its y-values (x ticks dimmed); a
 > YELLOW bar to ȳ (fill 12 %) with "86% / used bars" while the strip dims to 30 %; the ±s_y error
 > bar (stroke 5) is drawn over the strip on "error bar", with a grey "± 1 SD" tag beside its top
 > cap (most of the reviewed bar graphs drew ± SE; round 7). "Only thirteen percent": the bar, the
-> error bar, the tag and "86%" leave (they return at the landing) and the points alone, back at
-> full strength, carry "13% / showed points" (round 7: they used to cover the dimmed bar).
+> error bar, the tag and "86%" fade out in 0.4 s (they return at the landing) while the points come
+> back to full strength; only then, on "showed", is "13% / showed points" written (round 8: it used
+> to be written over the fading labels).
 
 **B3.** How much can five numbers hide? Let's hide a star in them, and demand that all five
 match the dinosaur's to two decimals.
@@ -83,13 +87,16 @@ grew, and the y spread shrank by almost a quarter.
 > Grey ghost ellipses on "Many"; the box flagged on "walls"; r flagged; the YELLOW ellipse drawn
 > on "picks one", each touch dot appearing as the stroke reaches its wall.
 
-**B9b.** Say r is point five. Go one standard deviation right. [pause 0.4] On average, the cloud
-rises r times ess why. [pause 0.7] That's the best-fit line, through the middle of every slice of
-the ellipse. [pause 0.7] At the wall, the slices shrink to the touch point. [pause 0.4] For the
-dinosaur, it's just below the middle.
-> Spoken at 0.80 (round 7: the beat had a 6.7 s stretch without a breath). "Say r is point five":
-> the "what if". The dinosaur steps aside; its "now" column, the = marks, "matching" and its own r
-> row step back to a 25 % grey, so the yellow "r = 0.50" (under a grey "simulated" tag, top left)
+**B9b.** This one barely tilts. Say r is point five. Go one standard deviation right. [pause 0.4]
+On average, the cloud rises r times ess why. [pause 0.7] That's the best-fit line, [pause 1.1]
+through the middle of every slice of the ellipse. [pause 0.7] At the wall, the slices shrink to the
+touch point. [pause 0.4] For the dinosaur, it's just below the middle.
+> Spoken at 0.80 (round 7: the beat had a 6.7 s stretch without a breath). "This one barely
+> tilts" (round 8): the dinosaur's ellipse pulses and its touch dots, nearly level with the centre,
+> flag, so the what-if has its reason. "Say r is point five":
+> the "what if". The dinosaur steps aside; its "now" column, the = marks and its own r
+> row step back to a 25 % grey and "matching" steps out (its band is where the slope will be
+> built), so the yellow "r = 0.50" (under a grey "simulated" tag, top left)
 > is the only live r on screen; the SD box steps back to a 40 % grey and both touch dots go; the
 > geometry drops to 60 % while r sweeps −0.06 → 0.50 and a grey simulated 142-point cloud with the
 > dinosaur's means and SDs and r = 0.50 fades in (facts #36). "one standard deviation right": the
@@ -99,19 +106,28 @@ dinosaur, it's just below the middle.
 > into one new white dot at their average (61.27 vs the touch height 61.30), while the rise grows
 > 0.15 right of the wall as a dimension (stroke 6, thin ticks back to the wall). "r times ess
 > why": the label "r s_y" is built beside the rise, its r flown from "r = 0.50" and its s_y from
-> the readout. In the pause the white dot turns yellow: it is the touch dot. "best-fit line": the
+> the readout. In the pause the white dot turns yellow: it is the touch dot; the 14 points it
+> averages step back to 40 % (round 8), and no simulated point sits between the wall and the rise
+> (the cloud is redrawn there, facts #36). "best-fit line": the
 > cloud, band and tag leave and a dashed line grows out of the centre through the touch dot to the
-> left touch dot, which appears as the line reaches it. "middle … slice of the ellipse": the s_x
-> label gives way, and five vertical slices of the ellipse are drawn with their midpoints, all on
-> the dashed line. "At the wall": the box returns to full strength and the slices slide right and
+> left touch dot, which appears as the line reaches it. In the [pause 1.1] the slope is assembled
+> from the picture (round 8, §6: the formula emerges in the insight): the run's s_x label itself
+> drops into a denominator, a copy of the rise's r s_y (its source hidden while the copy leaves)
+> into the numerator, each down the lane between plot and readout and in under the readout's last
+> row; then the bar and "slope =": slope = r s_y / s_x, in the band where "matching" sat.
+> "middle … slice of the ellipse": five vertical slices of the ellipse are drawn with their
+> midpoints, all on the dashed line (the run is unlabelled now, so no slice crosses a label). "At the wall": the box returns to full strength and the slices slide right and
 > shrink until each collapses onto the touch dot; "touch point": the touch dot and "r s_y" flag.
-> "dinosaur": r sweeps back to −0.06, the run, rise and label leave (at r = −0.06 the run would lie
-> along the line and the rise would be 1.7 units tall), the geometry returns to full strength and
+> Then the run, rise and label fade out (0.4 s) before anything moves (round 8: the rise used to
+> keep the r = 0.50 height while the touch dot slid down); "dinosaur": r sweeps back to −0.06, the
+> geometry returns to full strength and
 > the readout comes back; only the dashed line, the centre and the two touch dots remain. On
 > "middle" the touch dot and the dinosaur's r values flag.
 
 **B10.** That ellipse is everything the five numbers know. [pause 1.0]
-> The dashed line fades; ellipse pulsed; the dinosaur returns around it.
+> The dashed line fades; ellipse pulsed; the dinosaur returns around it while the slope formula
+> steps back, small and grey (65 %, 50 % opacity), under the band; on "five" the values flag and
+> "matching: 5/5" returns above the parked formula, which stays there as context until Anscombe.
 
 **B11.** Now replay the first version, and watch the ellipse.
 > A RED centre/box/ellipse, computed live, drifts off the YELLOW one.
@@ -138,38 +154,38 @@ five numbers fixed while it nudges points toward a target.
 > one into the real `circle` set. (Round 6: split into two sentences, so no stretch runs 9.9 s
 > without a breath.)
 
-**B17.** From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this star, [pause 0.8]
-this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Each one has this same ellipse,
-and a different median.
+**B17.** From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this bullseye,
+[pause 0.8] this X, [pause 0.8] and these stripes. Each one has this same ellipse, and a different
+median.
+> Round 8: "this star" cut (the episode had just spent 1:30 on a star); circle → bullseye → X →
+> stripes.
 
-**B18.** Francis Anscombe made the same point in 1973, with eleven points. [pause 1.2]
-> The median row leaves first. 11 of the points travel to Anscombe's dataset I. The tick numbers
-> cross-fade in place over the same 0.8 s, each new number at its own tick (where "75" and "12"
-> share a spot, the 75 is out before the 12 comes in). The dinosaur's rows step back to 30 % and
-> drift up while his readout builds, entry by entry, in its final bottom-right slot (round 7: it
-> used to land mid-right and jump down at 2:53); then they fade. His citation fades in only as his
-> points settle (round 6: it used to appear under the dinosaur's stripes).
-> His points flag on "points"; in the pause his 0.82 rises out of its row and travels, intact, to
-> the touch dot it sets, which flags. (Round 6: the narrated "His correlation is point eight two,
-> so the ellipse touches the right wall high up" was cut; the flight shows it.)
+**B18.** In 1973, Francis Anscombe did it with just eleven points. [pause 1.2]
+> Round 8 (craft fix 6): no "made the same point" (it flagged the repeat); not "by hand" either,
+> since it is not known how he constructed the sets (facts #39). Three steps, so no axis number ever
+> labels data it does not describe: (1) on "In", the median row, the dinosaur's readout, the CHI
+> citation and the 131 points that will not travel fade out (0.5 s), leaving 11 points and the
+> dinosaur's ellipse and box on their own 0–100 axes; (2) from "Francis", one smooth play: the tick
+> numbers cross-fade in place (75 and 12 share a spot, so the 75 is out before the 12 comes in), the
+> 11 points travel to Anscombe's dataset I, the ellipse, box, centre and touch dots morph to his,
+> and the parked grey formula moves up the empty right half to the top right; (3) his readout builds
+> entry by entry in its bottom-right slot and his citation fades in. His points flag on "points";
+> in the pause his 0.82 rises out of its row and travels, intact, to the touch dot it sets.
 
-**B20.** Same rule: ess ex across, [pause 0.3] r times ess why up. [pause 0.5]
-> Spoken at 0.82. The 0.82 settles into the dot. On "ess ex" an s_x copy rises out of his readout
-> (source at 20 %) and drops onto the run as it is drawn; on "r times" r and s_y copies label the
-> rise as it grows (each copy rises straight up out of the readout first); on "up" the best-fit
-> line grows out of the centre through the touch point. The readout no longer moves. (Round 6: one sentence instead of B9's rule taught again, and no
-> "one" before "ess ex", which the transcriber fused into "1sx".)
-
-**B21.** So the slope is the rise [pause 0.3] over the run. [pause 1.0]
-> "slope =" on "slope"; the r s_y label climbs to the numerator on "rise", the s_x label arcs into
-> the denominator on "run" (slope = r s_y / s_x, every term from its segment; each source at
-> 20 % while its copy leaves). (Round 6: was "rise, over run", heard as "overrun".)
+**B20.** Same rule, [pause 0.3] same line. [pause 0.8]
+> Round 8 (substance fix 3): replaces "Same rule: ess ex across, r times ess why up. So the slope
+> is the rise over the run." The 0.82 settles into the touch dot; on "Same rule" the formula built
+> in B9b lights up (grey → yellow and white) while the run and the rise it names are drawn on
+> Anscombe I; on "line" the best-fit line grows out of the centre through the touch point.
 
 **B22.** All four of his datasets share these five numbers. [pause 0.5] A trend, a curve, an
 outlier, and one point doing all the work.
-> Round 7: "so they share the ellipse and line" cut (the copies show it). "All four": panel I forms
-> from the zoomed axes while panels II–IV fade in and the readout steps under III–IV; "share":
-> copies of the ellipse, then of the line, arc to panels IV, III, II; "these five numbers": box
+> Round 7: "so they share the ellipse and line" cut (the copies show it). "All four": Anscombe I's
+> axis lines and ticks transform into panel I's on the same smooth rate as his points, ellipse and
+> line (round 8: the two sets of axes used to cross-fade and ghost); old tick numbers ride to their
+> values on the new axis and fade, new ones ride in and fade in late; panels II–IV fade in and the
+> readout steps under III–IV; "share": copies of the ellipse with its line arc to panels IV, III,
+> II, each launched already moving (ease-out), 0.15 s apart (round 8: no doubled ellipse on I); "these five numbers": box
 > round the readout; tags; outlier and lever point ringed.
 
 ### Landing (3:07–3:28)
@@ -181,8 +197,10 @@ leave out.
 > axes while its ellipse grows back to the dinosaur's and its "y" travels to the big plot's "y";
 > the other panels, tags, readout and citation leave first; the 0–100 tick numbers ride their
 > ticks along the growing axes and fade in on the way (round 7: they used to arrive after the
-> transform, leaving a tickless frame); the readout and the grey guess cloud with "your guess" and
-> the dashed "your line" fade in last. "slope = r s_y / s_x"
+> transform, leaving a tickless frame); the formula is in its band by half-time and the readout
+> (from 0.3 of the move) and the grey guess cloud with "your guess" and the dashed "your line"
+> (from 0.4) fade in during the transform (round 8: they used to start at 0.5–0.6, leaving a lone
+> ellipse and a floating formula for about a second). "slope = r s_y / s_x"
 > moves down the open middle and in from the left to the band under the readout. "line": the dashed line is Indicated. "five numbers": the
 > symbols give way to −0.06, 26.93 and 16.76, each flown down from its readout row. "exactly": the
 > YELLOW best-fit line grows onto the dashed one. "minus point one": "≈ −0.10". "cloud": "your

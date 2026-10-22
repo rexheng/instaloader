@@ -53,7 +53,7 @@ B = dict(
     fix="The honest detector compares whole histograms. [pause 0.4] Thirty-nine targets, and "
         "chance predicts thirty-nine. [pause 0.4] The chi-squared misfit squares each bar's gap "
         "and divides by chance's bar, because short bars wobble less. So a miss on a short bar "
-        "counts more. Map A scores [pause 0.2] two point oh. [pause 0.3] Three out of four "
+        "counts more. Map A scores [pause 0.2] two point oh. [pause 0.6] Three out of four "
         "simulated chance maps score worse. That share, p, is point seven four. [pause 0.7]",
     fixb="Now map B: half the expected empty squares, a tower of single hits, misfit two hundred "
          "seventy-two. [pause 0.3] A pattern this even is the fingerprint of a spacing rule.",

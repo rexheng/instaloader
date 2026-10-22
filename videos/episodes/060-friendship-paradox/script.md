@@ -5,7 +5,7 @@ so the average friend has avg(k²)/μ = μ + σ²/μ friends (the cross terms va
 distances from the balance point sum to zero), which is more than the average person whenever friend
 counts vary, and epidemiologists can use this to see an outbreak coming.
 
-Runtime 3:31.8 · 495 words (round 7) · voice af_heart, speed 0.82, the one question at 0.74 (round 7; 155 wpm on speech time), sentence gaps 0.26 s inside a beat and
+Runtime 3:33.3 · 497 words (round 8; 3:31.8 · 495 in round 7) · voice af_heart, speed 0.82, the one question at 0.74 (round 7; 155 wpm on speech time), sentence gaps 0.26 s inside a beat and
 0.7 s at section boundaries; 0.6 s holds after each new equation row in the algebra (round 3).
 Pronunciation override: Christakis → /kɹɪstˈɑkɪs/.
 
@@ -25,8 +25,8 @@ beyond it (σ²/μ), so every bar segment has the colour of its term in μ + σ�
 ## Beats
 
 ### 1. Cold open (0:00–0:13)
-> Eight girls at an Illinois high school, and every friendship between them.
-> On average, each girl has two and a half friends.
+> Eight girls at an Illinois high school, and every friendship between them. *[breath 0.55 s]*
+> On average, each girl has two and a half friends. *[breath 0.8 s]*
 > How many friends does the average friend have? Pick one. *[pause 2.0]*
 
 Visual: frame 0 already poses the question (round 6): the eight girls (Feld 1991, Fig. 1) at
@@ -76,11 +76,12 @@ Sue's, Alice's and Betty's tokens pulse as named. Sue's name label now sits up-l
 > The tokens stack higher on the right, one per friend, so they balance at three.
 > Sue holds four tokens, each worth four: sixteen. A girl with k friends adds k squared on top, and k
 > on the bottom.
-> Now divide top and bottom by the eight girls: the average of k squared, seven and a half, over the
-> average count, two and a half.
+> Now divide top and bottom by the eight girls. *[pause 0.8]* The average of k squared, seven and a
+> half, over the average count, two and a half. *(round 9: this beat and the k-squared sentence
+> before it at speed 0.78)*
 > Where does the extra half come from?
-> Measure each girl's distance from the girls' balance point, two and a half, and square it.
-> *[pause 1.5]* The squares average one and a quarter, the variance, sigma squared. *[pause]*
+> Measure each girl's distance from the balance point, two and a half, and square it.
+> *[pause 1.6]* The squares average one and a quarter, the variance, sigma squared. *[pause]*
 > Take Sue, and split her four, *[pause 0.5]* into the balance point, two and a half, *[pause 0.4]*
 > plus her distance, one and a half.
 > Squaring gives two and a half squared, her distance squared, and a cross term. *[pause]* Every
@@ -288,3 +289,33 @@ candidates: 4 is what Betty sees, 2.5 counts the girls, 3 counts the tokens.)
   the friend bar grows to 3 at one smooth rate and the 3 steps to its end; (c) the 3 is ringed as
   the 4 leaves. "Most of us are Betty" has only Betty and her token pulsing. The scene fades out
   completely before the end card fades in.
+
+## Round 9 changes (visual plan)
+
+- **Cold open:** breaths of 0.55 s and 0.8 s after the first two sentences (the count flight and
+  the drop lines follow the beats, so they move with them).
+- **Sue's 16:** "4 × 4 = 16" is written on "sixteen"; after a breath, on "k squared" its 16 flies
+  (over Alice's stack and down the gap left of the bar panel) into the numerator slot, where
+  "sum of counts" has just left, and shrinks into it as Σk² grows out of the same point; the
+  label then shrinks away. Nothing YELLOW competes with the equation after 1:18.
+- **Divide, two states:** on "divide" the ÷ 8s join every term and the row holds through a
+  0.8 s pause; on "The average" the four ÷ 8s flash BLUE (each girl counted once) and every term
+  pinches into its own slot while avg(k²), μ, 7.5 and 2.5 grow out of the same points, in one
+  0.8 s move; avg(k²) and 7.5 flash on "seven", μ and 2.5 (and the BLUE fulcrum) on "average count".
+- **Distances in lanes:** the GRAY ruler moved down 0.22; each distance is its own PURPLE
+  segment from the BLUE 2.5 mark (which rises through both lanes) to its count, the 1.5s in the
+  lower lane, the 0.5s in the upper one, with end caps; each label sits over its own segment (a
+  1.5 over the stretch from 1 to 2 or 3 to 4 that only it covers). The signed distances slide
+  down onto their own segments, along them into the balance point and through the ruler into a
+  PURPLE 0 under it, between the count labels 2 and 3.
+- **Squares:** on "square" each distance drops (0.5 s, 0.05 s apart) onto its square's top edge
+  at 1/4 scale; then each square grows down from that side (0.8 s); then its area (0.4 s). They
+  leave, with their "sides at 1/4 scale" tag, when the picture moves back.
+- **Facebook -> Harvard:** the BLUE "average user" bar splits into eight pieces that become the
+  class's eight BLUE nodes; the YELLOW 635s and outline shrink away; friendships, counts and
+  names come in round the nodes. No frame is empty.
+- **C&F draw:** random students Betty, Dale, Carol (BLUE rings, counts 1, 3, 2); they name Sue;
+  Sue, Alice, Jane; Pam, Tina (YELLOW rings); tokens 4, 4, 4, 2, 3, 1 (mean 3.0) park mid-edge,
+  ≥ 0.15 from both rings (stroke 0.06). Hand-off: the random students into the BLUE origin
+  first, then the named friends into the YELLOW one (simulated: rings never closer than 0.146).
+- **Fits** start at each group's first case. **End card** holds 0.4 s once it is in.

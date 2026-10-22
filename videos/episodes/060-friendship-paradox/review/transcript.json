@@ -1,8 +1,8 @@
 {
  "task": "transcribe",
  "language": "English",
- "duration": 213.375999488,
- "text": " eight girls at an Illinois high school, and every friendship between them. On average, each girl has two and a half friends. How many friends does the average friend have? Pick one. The answer tells flu researchers whom to watch, random students or the friends they name. The natural guess is two and a half again. Every friend is one of these same eight girls. Check that on a rewired class where every girl has two friends. Send a token both ways along every friendship. Each token reads the friend count where it lands, always two. Both averages are two, the guess holds. Now restore the real friendships and send the tokens again. They read one, two, three, or four and averaged three. The guess fell short by half a friend because the tokens piled up unevenly. Four on Sue, four on Alice, one on Betty. Line the girls up by friend count, two at each count. They balance at two and a half. The tokens stack higher on the right, one per friend, so they balance at three. Sue holds four tokens, each worth four, 16. A girl with K friends adds K squared on top and K on the bottom. Now divide top and bottom by the eight girls. the average of k squared, 7 1\u20442, over the average count, 2 1\u20442. Where does the extra 1\u20442 come from? Measure each girl's distance from the girl's balance point, 2 1\u20442, and square it. The squares average 1 1 the variance sigma squared Take Sue 4 and split it into the balance point two and a half plus her distance one and a half Squaring gives two and a half squared, her distance squared, and a cross term. Every girl splits this way. Because the beam balances, the distances add to zero, and the cross terms cancel. So the average of k squared is mu squared plus sigma squared. And friends average mu plus sigma squared over mu. Here that's two and a half, plus a half, exactly the extra half friend we measured. With no spread, the ring had no gap. In 2011, Facebook users averaged about 190 friends, and a few had thousands. If every friendship sent tokens, what would the tokens average? About 635. The spread term is more than twice the mean. And 93% of users had fewer friends than their friends averaged. Odds are that includes you. Christakis and Fowler put this to work at Harvard. Named friends have more friends, so they sit closer to everyone else everyone else and should catch flu first. They tracked flu diagnoses in random students and in the friends the students named. The friends curve rose first. Fitted curves put them 13.9 days ahead. With self-reported symptoms, the lead shrank to about three. Betty looks at her one friend, Sue and sees four. Most of us are Betty. Thank you.",
+ "duration": 213.33334015399998,
+ "text": " eight girls at an Illinois high school, and every friendship between them. On average, each girl has two and a half friends. How many friends does the average friend have? Pick one. The answer tells flu researchers whom to watch, random students or the friends they name. The natural guess is two and a half again. Every friend is one of these same eight girls. Check that on a rewired class where every girl has two friends. Send a token both ways along every friendship. Each token reads the friend count where it lands, always two. Both averages are two, the guess holds. Now restore the real friendships and send the tokens again. They read one, two, three, or four and averaged three. The guess fell short by half a friend because the tokens piled up unevenly. 4 on Sue, 4 on Alice, 1 on Betty. Line the girls up by friend count, 2 at each count. They balance at 2 and a half. The tokens stack higher on the right, 1 per friend, so they balance at 3. Sue holds 4 tokens, each worth 4, 16. A girl with k friends adds k squared on top, and k on the bottom. Now divide top and bottom by the 8 girls. the average of k squared seven and a half over the average count two and a half where does the extra half come from measure each girl's distance from the girl balance point two and a half and square it the squares average one and a quarter the variance Sigma squared take Sue and split her four into the balance point two and a half plus her distance one and a half Squaring gives two and a half squared, her distance squared, and a cross term. Every girl splits this way. Because the beam balances, the distances add to zero, and the cross terms cancel. So the average of k squared is mu squared plus sigma squared. And friends average mu plus sigma squared over mu. Here that's two and a half, plus a half, exactly the extra half friend we measured. With no spread, the ring had no gap. In 2011, Facebook users averaged about 190 friends, and a few had thousands. If every friendship sent tokens, what would the tokens average? About 635. The spread term is more than twice the mean. And 93% of users had fewer friends than their friends averaged. Odds are that includes you. Christakis and Fowler put this to work at Harvard. Named friends have more friends, so they sit closer to everyone else and should catch flu first. They tracked flu diagnoses in random students and in the friends the students named. The friends curve rose first. Fitted curves put them 13.9 days ahead. With self-reported symptoms, the lead shrank to about three. Betty looks at her one friend. Sue and sees four. Most of us are Betty.",
  "words": [
   {
    "word": "eight",
@@ -112,7 +112,7 @@
   {
    "word": "friends.",
    "start": 7.12,
-   "end": 7.86
+   "end": 7.84
   },
   {
    "word": "How",
@@ -156,27 +156,27 @@
   },
   {
    "word": "Pick",
-   "start": 11.26,
-   "end": 11.54
+   "start": 10.94,
+   "end": 11.56
   },
   {
    "word": "one.",
-   "start": 11.54,
+   "start": 11.56,
    "end": 12.12
   },
   {
    "word": "The",
-   "start": 13.76,
+   "start": 13.74,
    "end": 14.42
   },
   {
    "word": "answer",
    "start": 14.42,
-   "end": 14.8
+   "end": 14.78
   },
   {
    "word": "tells",
-   "start": 14.8,
+   "start": 14.78,
    "end": 15.18
   },
   {
@@ -206,7 +206,7 @@
   },
   {
    "word": "random",
-   "start": 17.02,
+   "start": 17,
    "end": 17.94
   },
   {
@@ -241,7 +241,7 @@
   },
   {
    "word": "The",
-   "start": 20.24,
+   "start": 20.32,
    "end": 20.9
   },
   {
@@ -257,11 +257,11 @@
   {
    "word": "is",
    "start": 21.76,
-   "end": 22
+   "end": 22.02
   },
   {
    "word": "two",
-   "start": 22,
+   "start": 22.02,
    "end": 22.26
   },
   {
@@ -286,7 +286,7 @@
   },
   {
    "word": "Every",
-   "start": 23.16,
+   "start": 23.14,
    "end": 23.96
   },
   {
@@ -312,11 +312,11 @@
   {
    "word": "these",
    "start": 24.92,
-   "end": 25.08
+   "end": 25.1
   },
   {
    "word": "same",
-   "start": 25.08,
+   "start": 25.1,
    "end": 25.6
   },
   {
@@ -331,7 +331,7 @@
   },
   {
    "word": "Check",
-   "start": 27,
+   "start": 26.98,
    "end": 27.22
   },
   {
@@ -387,11 +387,11 @@
   {
    "word": "friends.",
    "start": 30.24,
-   "end": 30.98
+   "end": 30.72
   },
   {
    "word": "Send",
-   "start": 31.26,
+   "start": 31.24,
    "end": 31.6
   },
   {
@@ -407,11 +407,11 @@
   {
    "word": "both",
    "start": 32.12,
-   "end": 32.7
+   "end": 32.72
   },
   {
    "word": "ways",
-   "start": 32.7,
+   "start": 32.72,
    "end": 33.1
   },
   {
@@ -437,11 +437,11 @@
   {
    "word": "token",
    "start": 35.38,
-   "end": 35.76
+   "end": 35.78
   },
   {
    "word": "reads",
-   "start": 35.76,
+   "start": 35.78,
    "end": 36.12
   },
   {
@@ -462,31 +462,31 @@
   {
    "word": "where",
    "start": 36.78,
-   "end": 36.96
+   "end": 36.94
   },
   {
    "word": "it",
-   "start": 36.96,
+   "start": 36.94,
    "end": 37.08
   },
   {
    "word": "lands,",
    "start": 37.08,
-   "end": 37.76
+   "end": 37.72
   },
   {
    "word": "always",
-   "start": 37.76,
+   "start": 37.72,
    "end": 38.3
   },
   {
    "word": "two.",
    "start": 38.3,
-   "end": 38.98
+   "end": 38.86
   },
   {
    "word": "Both",
-   "start": 38.86,
+   "start": 38.96,
    "end": 39.74
   },
   {
@@ -517,11 +517,11 @@
   {
    "word": "holds.",
    "start": 41.42,
-   "end": 42.2
+   "end": 42.18
   },
   {
    "word": "Now",
-   "start": 42.26,
+   "start": 42.24,
    "end": 43.1
   },
   {
@@ -571,7 +571,7 @@
   },
   {
    "word": "They",
-   "start": 46.4,
+   "start": 46.38,
    "end": 47.12
   },
   {
@@ -602,11 +602,11 @@
   {
    "word": "four",
    "start": 48.72,
-   "end": 49.08
+   "end": 49.06
   },
   {
    "word": "and",
-   "start": 49.08,
+   "start": 49.06,
    "end": 49.34
   },
   {
@@ -617,11 +617,11 @@
   {
    "word": "three.",
    "start": 49.78,
-   "end": 50.36
+   "end": 50.34
   },
   {
    "word": "The",
-   "start": 50.46,
+   "start": 50.44,
    "end": 51.14
   },
   {
@@ -687,52 +687,52 @@
   {
    "word": "unevenly.",
    "start": 54.88,
-   "end": 55.84
+   "end": 55.8
   },
   {
-   "word": "Four",
-   "start": 56.4,
-   "end": 56.64
+   "word": "4",
+   "start": 56.38,
+   "end": 56.62
   },
   {
    "word": "on",
-   "start": 56.64,
-   "end": 56.96
+   "start": 56.62,
+   "end": 56.86
   },
   {
    "word": "Sue,",
-   "start": 56.96,
+   "start": 56.86,
    "end": 57.64
   },
   {
-   "word": "four",
+   "word": "4",
    "start": 57.64,
-   "end": 57.76
+   "end": 57.72
   },
   {
    "word": "on",
-   "start": 57.76,
+   "start": 57.72,
    "end": 57.96
   },
   {
    "word": "Alice,",
    "start": 57.96,
-   "end": 58.64
+   "end": 58.72
   },
   {
-   "word": "one",
-   "start": 58.64,
-   "end": 58.8
+   "word": "1",
+   "start": 58.72,
+   "end": 58.78
   },
   {
    "word": "on",
-   "start": 58.8,
+   "start": 58.78,
    "end": 59.04
   },
   {
    "word": "Betty.",
    "start": 59.04,
-   "end": 59.56
+   "end": 59.62
   },
   {
    "word": "Line",
@@ -747,11 +747,11 @@
   {
    "word": "girls",
    "start": 60.76,
-   "end": 61.04
+   "end": 61.02
   },
   {
    "word": "up",
-   "start": 61.04,
+   "start": 61.02,
    "end": 61.28
   },
   {
@@ -767,16 +767,16 @@
   {
    "word": "count,",
    "start": 61.72,
-   "end": 62.2
+   "end": 62.1
   },
   {
-   "word": "two",
-   "start": 62.2,
-   "end": 62.6
+   "word": "2",
+   "start": 62.1,
+   "end": 62.58
   },
   {
    "word": "at",
-   "start": 62.6,
+   "start": 62.58,
    "end": 62.84
   },
   {
@@ -787,25 +787,25 @@
   {
    "word": "count.",
    "start": 63.02,
-   "end": 63.4
+   "end": 63.62
   },
   {
    "word": "They",
    "start": 64,
-   "end": 64.16
+   "end": 64.18
   },
   {
    "word": "balance",
-   "start": 64.16,
-   "end": 64.58
+   "start": 64.18,
+   "end": 64.56
   },
   {
    "word": "at",
-   "start": 64.58,
+   "start": 64.56,
    "end": 64.8
   },
   {
-   "word": "two",
+   "word": "2",
    "start": 64.8,
    "end": 65
   },
@@ -826,7 +826,7 @@
   },
   {
    "word": "The",
-   "start": 66.36,
+   "start": 66.38,
    "end": 66.52
   },
   {
@@ -860,23 +860,23 @@
    "end": 68.3
   },
   {
-   "word": "one",
+   "word": "1",
    "start": 68.3,
-   "end": 68.76
+   "end": 68.72
   },
   {
    "word": "per",
-   "start": 68.76,
-   "end": 69
+   "start": 68.72,
+   "end": 68.96
   },
   {
    "word": "friend,",
-   "start": 69,
-   "end": 69.54
+   "start": 68.96,
+   "end": 69.28
   },
   {
    "word": "so",
-   "start": 69.54,
+   "start": 69.28,
    "end": 69.96
   },
   {
@@ -895,9 +895,9 @@
    "end": 70.76
   },
   {
-   "word": "three.",
+   "word": "3.",
    "start": 70.76,
-   "end": 71.06
+   "end": 71.04
   },
   {
    "word": "Sue",
@@ -910,13 +910,13 @@
    "end": 72.62
   },
   {
-   "word": "four",
+   "word": "4",
    "start": 72.62,
-   "end": 72.82
+   "end": 72.8
   },
   {
    "word": "tokens,",
-   "start": 72.82,
+   "start": 72.8,
    "end": 73.66
   },
   {
@@ -930,23 +930,23 @@
    "end": 74.1
   },
   {
-   "word": "four,",
+   "word": "4,",
    "start": 74.1,
-   "end": 74.82
+   "end": 74.56
   },
   {
    "word": "16.",
-   "start": 74.82,
-   "end": 75.2
+   "start": 74.56,
+   "end": 75.22
   },
   {
    "word": "A",
-   "start": 76.22,
-   "end": 76.36
+   "start": 76.24,
+   "end": 76.34
   },
   {
    "word": "girl",
-   "start": 76.36,
+   "start": 76.34,
    "end": 76.6
   },
   {
@@ -955,22 +955,22 @@
    "end": 76.84
   },
   {
-   "word": "K",
+   "word": "k",
    "start": 76.84,
    "end": 77.02
   },
   {
    "word": "friends",
    "start": 77.02,
-   "end": 77.36
+   "end": 77.34
   },
   {
    "word": "adds",
-   "start": 77.36,
+   "start": 77.34,
    "end": 77.92
   },
   {
-   "word": "K",
+   "word": "k",
    "start": 77.92,
    "end": 78.18
   },
@@ -985,18 +985,18 @@
    "end": 78.74
   },
   {
-   "word": "top",
+   "word": "top,",
    "start": 78.74,
-   "end": 79.04
+   "end": 79.24
   },
   {
    "word": "and",
-   "start": 79.04,
-   "end": 79.62
+   "start": 79.24,
+   "end": 79.66
   },
   {
-   "word": "K",
-   "start": 79.62,
+   "word": "k",
+   "start": 79.66,
    "end": 79.86
   },
   {
@@ -1016,12 +1016,12 @@
   },
   {
    "word": "Now",
-   "start": 81.24,
-   "end": 81.46
+   "start": 81.28,
+   "end": 81.48
   },
   {
    "word": "divide",
-   "start": 81.46,
+   "start": 81.48,
    "end": 81.92
   },
   {
@@ -1047,17 +1047,17 @@
   {
    "word": "the",
    "start": 83.08,
-   "end": 83.24
+   "end": 83.26
   },
   {
-   "word": "eight",
-   "start": 83.24,
-   "end": 83.44
+   "word": "8",
+   "start": 83.26,
+   "end": 83.4
   },
   {
    "word": "girls.",
-   "start": 83.44,
-   "end": 84.26
+   "start": 83.4,
+   "end": 83.76
   },
   {
    "word": "the",
@@ -1067,121 +1067,141 @@
   {
    "word": "average",
    "start": 84.72,
-   "end": 85.12
+   "end": 85.18
   },
   {
    "word": "of",
-   "start": 85.12,
-   "end": 85.38
+   "start": 85.18,
+   "end": 85.4
   },
   {
    "word": "k",
-   "start": 85.38,
-   "end": 85.64
+   "start": 85.4,
+   "end": 85.62
   },
   {
-   "word": "squared,",
-   "start": 85.64,
-   "end": 86.8
+   "word": "squared",
+   "start": 85.62,
+   "end": 86.24
   },
   {
-   "word": "7",
-   "start": 86.8,
-   "end": 86.96
+   "word": "seven",
+   "start": 86.24,
+   "end": 86.92
   },
   {
-   "word": "1\u20442,",
-   "start": 86.96,
-   "end": 87.38
+   "word": "and",
+   "start": 86.92,
+   "end": 87.1
+  },
+  {
+   "word": "a",
+   "start": 87.1,
+   "end": 87.22
+  },
+  {
+   "word": "half",
+   "start": 87.22,
+   "end": 87.32
   },
   {
    "word": "over",
-   "start": 86.4,
-   "end": 87.88
+   "start": 87.32,
+   "end": 87.86
   },
   {
    "word": "the",
-   "start": 87.88,
-   "end": 88.02
+   "start": 87.86,
+   "end": 88
   },
   {
    "word": "average",
-   "start": 88.02,
-   "end": 88.46
+   "start": 88,
+   "end": 88.42
   },
   {
-   "word": "count,",
-   "start": 88.46,
-   "end": 89
+   "word": "count",
+   "start": 88.42,
+   "end": 88.84
   },
   {
-   "word": "2",
-   "start": 89,
-   "end": 89.46
+   "word": "two",
+   "start": 88.84,
+   "end": 89.38
   },
   {
-   "word": "1\u20442.",
-   "start": 89.46,
-   "end": 90.24
+   "word": "and",
+   "start": 89.38,
+   "end": 89.6
   },
   {
-   "word": "Where",
-   "start": 90.82,
-   "end": 91.1
+   "word": "a",
+   "start": 89.6,
+   "end": 89.76
+  },
+  {
+   "word": "half",
+   "start": 89.76,
+   "end": 89.86
+  },
+  {
+   "word": "where",
+   "start": 89.58,
+   "end": 91.08
   },
   {
    "word": "does",
-   "start": 91.1,
+   "start": 91.08,
    "end": 91.32
   },
   {
    "word": "the",
    "start": 91.32,
-   "end": 91.5
+   "end": 91.48
   },
   {
    "word": "extra",
-   "start": 91.5,
-   "end": 92.08
+   "start": 91.48,
+   "end": 92.06
   },
   {
-   "word": "1\u20442",
-   "start": 92.08,
-   "end": 92.5
+   "word": "half",
+   "start": 92.06,
+   "end": 92.46
   },
   {
    "word": "come",
-   "start": 92.5,
-   "end": 92.82
+   "start": 92.46,
+   "end": 92.8
   },
   {
-   "word": "from?",
-   "start": 92.82,
-   "end": 93.38
+   "word": "from",
+   "start": 92.8,
+   "end": 93.14
   },
   {
-   "word": "Measure",
-   "start": 94.02,
+   "word": "measure",
+   "start": 93.14,
    "end": 94.44
   },
   {
    "word": "each",
    "start": 94.44,
-   "end": 94.74
+   "end": 94.72
   },
   {
    "word": "girl's",
-   "start": 94.74,
-   "end": 95.18
+   "start": 94.72,
+   "end": 95.22
   },
   {
    "word": "distance",
-   "start": 95.18,
-   "end": 95.54
+   "start": 95.22,
+   "end": 95.58
   },
   {
    "word": "from",
-   "start": 95.54,
+   "start": 95.58,
    "end": 95.82
   },
   {
@@ -1191,47 +1211,57 @@
   },
   {
    "word": "girl's",
-   "start": 95.94,
-   "end": 96.28
+   "start": 95.48,
+   "end": 96.3
   },
   {
    "word": "balance",
-   "start": 96.28,
-   "end": 96.6
+   "start": 96.3,
+   "end": 96.66
   },
   {
-   "word": "point,",
-   "start": 96.6,
-   "end": 97.16
+   "word": "point",
+   "start": 96.66,
+   "end": 97.02
   },
   {
-   "word": "2",
-   "start": 96.92,
+   "word": "two",
+   "start": 97.02,
    "end": 97.62
   },
   {
-   "word": "1\u20442,",
+   "word": "and",
    "start": 97.62,
-   "end": 98.28
+   "end": 97.8
+  },
+  {
+   "word": "a",
+   "start": 97.8,
+   "end": 97.92
+  },
+  {
+   "word": "half",
+   "start": 97.92,
+   "end": 98.08
   },
   {
    "word": "and",
-   "start": 98.28,
-   "end": 98.6
+   "start": 98.08,
+   "end": 98.62
   },
   {
    "word": "square",
-   "start": 98.6,
-   "end": 98.92
+   "start": 98.62,
+   "end": 98.96
   },
   {
-   "word": "it.",
-   "start": 98.92,
-   "end": 99.28
+   "word": "it",
+   "start": 98.96,
+   "end": 99.2
   },
   {
-   "word": "The",
-   "start": 100.82,
+   "word": "the",
+   "start": 99.2,
    "end": 101.02
   },
   {
@@ -1245,1179 +1275,1169 @@
    "end": 101.84
   },
   {
-   "word": "1",
+   "word": "one",
    "start": 101.84,
-   "end": 102.22
+   "end": 102.18
   },
   {
-   "word": "1\u20444,",
-   "start": 102.22,
-   "end": 102.92
+   "word": "and",
+   "start": 102.18,
+   "end": 102.34
+  },
+  {
+   "word": "a",
+   "start": 102.34,
+   "end": 102.46
+  },
+  {
+   "word": "quarter",
+   "start": 101.92,
+   "end": 102.7
   },
   {
    "word": "the",
-   "start": 102.92,
-   "end": 103.28
+   "start": 102.7,
+   "end": 103.32
   },
   {
-   "word": "variance,",
-   "start": 103.28,
-   "end": 104.28
+   "word": "variance",
+   "start": 103.32,
+   "end": 103.9
   },
   {
-   "word": "sigma",
-   "start": 104.28,
+   "word": "Sigma",
+   "start": 103.9,
    "end": 104.44
   },
   {
-   "word": "squared.",
+   "word": "squared",
    "start": 104.44,
-   "end": 105.12
+   "end": 104.9
   },
   {
-   "word": "Take",
-   "start": 106.16,
-   "end": 106.52
-  },
-  {
-   "word": "Sue's",
-   "start": 106.52,
-   "end": 106.84
-  },
-  {
-   "word": "4",
-   "start": 106.84,
-   "end": 107.08
-  },
-  {
-   "word": "and",
-   "start": 107.08,
-   "end": 107.76
-  },
-  {
-   "word": "split",
-   "start": 107.76,
-   "end": 108.14
-  },
-  {
-   "word": "it",
-   "start": 108.128006,
-   "end": 108.268005
-  },
-  {
-   "word": "into",
-   "start": 108.268005,
-   "end": 108.388
-  },
-  {
-   "word": "the",
-   "start": 108.388,
-   "end": 108.508
-  },
-  {
-   "word": "balance",
-   "start": 108.508,
-   "end": 108.868004
-  },
-  {
-   "word": "point,",
-   "start": 108.868004,
-   "end": 109.66801
-  },
-  {
-   "word": "two",
-   "start": 109.16801,
-   "end": 109.788
-  },
-  {
-   "word": "and",
-   "start": 109.788,
-   "end": 109.948006
-  },
-  {
-   "word": "a",
-   "start": 109.948006,
-   "end": 110.008
-  },
-  {
-   "word": "half,",
-   "start": 110.008,
-   "end": 110.528
-  },
-  {
-   "word": "plus",
-   "start": 110.528,
-   "end": 111.228004
-  },
-  {
-   "word": "her",
-   "start": 111.228004,
-   "end": 111.368004
-  },
-  {
-   "word": "distance,",
-   "start": 111.368004,
-   "end": 112.228004
-  },
-  {
-   "word": "one",
-   "start": 112.228004,
-   "end": 112.34801
-  },
-  {
-   "word": "and",
-   "start": 112.34801,
-   "end": 112.48801
-  },
-  {
-   "word": "a",
-   "start": 112.48801,
-   "end": 112.568
-  },
-  {
-   "word": "half.",
-   "start": 112.568,
-   "end": 113.148
-  },
-  {
-   "word": "Squaring",
-   "start": 113.568,
-   "end": 114.088005
-  },
-  {
-   "word": "gives",
-   "start": 114.088005,
-   "end": 114.408005
-  },
-  {
-   "word": "two",
-   "start": 114.408005,
-   "end": 114.648
-  },
-  {
-   "word": "and",
-   "start": 114.648,
-   "end": 114.788
-  },
-  {
-   "word": "a",
-   "start": 114.788,
-   "end": 114.84801
-  },
-  {
-   "word": "half",
-   "start": 114.84801,
-   "end": 115.028
-  },
-  {
-   "word": "squared,",
-   "start": 115.028,
-   "end": 115.84801
-  },
-  {
-   "word": "her",
-   "start": 115.468,
-   "end": 116.068
-  },
-  {
-   "word": "distance",
-   "start": 116.068,
-   "end": 116.428
-  },
-  {
-   "word": "squared,",
-   "start": 116.428,
-   "end": 117.048004
-  },
-  {
-   "word": "and",
-   "start": 117.048004,
-   "end": 117.368004
-  },
-  {
-   "word": "a",
-   "start": 117.368004,
-   "end": 117.48801
-  },
-  {
-   "word": "cross",
-   "start": 117.48801,
-   "end": 117.668
-  },
-  {
-   "word": "term.",
-   "start": 117.668,
-   "end": 118.34801
-  },
-  {
-   "word": "Every",
-   "start": 118.608,
-   "end": 119.268005
-  },
-  {
-   "word": "girl",
-   "start": 119.268005,
-   "end": 119.548004
-  },
-  {
-   "word": "splits",
-   "start": 119.548004,
-   "end": 119.968
-  },
-  {
-   "word": "this",
-   "start": 119.968,
-   "end": 120.20801
-  },
-  {
-   "word": "way.",
-   "start": 120.20801,
-   "end": 120.70801
-  },
-  {
-   "word": "Because",
-   "start": 120.568,
-   "end": 121.34801
-  },
-  {
-   "word": "the",
-   "start": 121.34801,
-   "end": 121.528
-  },
-  {
-   "word": "beam",
-   "start": 121.528,
-   "end": 121.80801
-  },
-  {
-   "word": "balances,",
-   "start": 121.80801,
-   "end": 122.908005
-  },
-  {
-   "word": "the",
-   "start": 122.908005,
-   "end": 123.128006
-  },
-  {
-   "word": "distances",
-   "start": 123.128006,
-   "end": 123.628006
-  },
-  {
-   "word": "add",
-   "start": 123.628006,
-   "end": 124.088005
-  },
-  {
-   "word": "to",
-   "start": 124.088005,
-   "end": 124.268005
-  },
-  {
-   "word": "zero,",
-   "start": 124.268005,
-   "end": 124.828
-  },
-  {
-   "word": "and",
-   "start": 124.648,
-   "end": 125.228004
-  },
-  {
-   "word": "the",
-   "start": 125.228004,
-   "end": 125.368004
-  },
-  {
-   "word": "cross",
-   "start": 125.368004,
-   "end": 125.648
-  },
-  {
-   "word": "terms",
-   "start": 125.648,
-   "end": 126.008
-  },
-  {
-   "word": "cancel.",
-   "start": 126.008,
-   "end": 127.228004
-  },
-  {
-   "word": "So",
-   "start": 127.828,
-   "end": 127.928
-  },
-  {
-   "word": "the",
-   "start": 127.928,
-   "end": 128.048
-  },
-  {
-   "word": "average",
-   "start": 128.048,
-   "end": 128.508
-  },
-  {
-   "word": "of",
-   "start": 128.508,
-   "end": 128.70801
-  },
-  {
-   "word": "k",
-   "start": 128.70801,
-   "end": 128.908
-  },
-  {
-   "word": "squared",
-   "start": 128.908,
-   "end": 129.388
-  },
-  {
-   "word": "is",
-   "start": 129.388,
-   "end": 129.728
-  },
-  {
-   "word": "mu",
-   "start": 129.728,
-   "end": 129.908
-  },
-  {
-   "word": "squared",
-   "start": 129.908,
-   "end": 130.348
-  },
-  {
-   "word": "plus",
-   "start": 130.348,
-   "end": 130.728
-  },
-  {
-   "word": "sigma",
-   "start": 130.728,
-   "end": 130.988
-  },
-  {
-   "word": "squared.",
-   "start": 130.988,
-   "end": 131.388
-  },
-  {
-   "word": "And",
-   "start": 133.328,
-   "end": 133.508
-  },
-  {
-   "word": "friends",
-   "start": 133.508,
-   "end": 133.808
-  },
-  {
-   "word": "average",
-   "start": 133.808,
-   "end": 134.288
-  },
-  {
-   "word": "mu",
-   "start": 134.288,
-   "end": 134.58801
-  },
-  {
-   "word": "plus",
-   "start": 134.58801,
-   "end": 135.20801
-  },
-  {
-   "word": "sigma",
-   "start": 135.20801,
-   "end": 135.58801
-  },
-  {
-   "word": "squared",
-   "start": 135.58801,
-   "end": 136.048
-  },
-  {
-   "word": "over",
-   "start": 136.048,
-   "end": 136.328
-  },
-  {
-   "word": "mu.",
-   "start": 136.328,
-   "end": 136.828
-  },
-  {
-   "word": "Here",
-   "start": 138.048,
-   "end": 138.308
-  },
-  {
-   "word": "that's",
-   "start": 138.308,
-   "end": 138.628
-  },
-  {
-   "word": "two",
-   "start": 138.628,
-   "end": 138.788
-  },
-  {
-   "word": "and",
-   "start": 138.788,
-   "end": 138.948
-  },
-  {
-   "word": "a",
-   "start": 138.948,
-   "end": 139.028
-  },
-  {
-   "word": "half,",
-   "start": 139.028,
-   "end": 139.508
-  },
-  {
-   "word": "plus",
-   "start": 139.508,
-   "end": 140.048
-  },
-  {
-   "word": "a",
-   "start": 140.048,
-   "end": 140.268
-  },
-  {
-   "word": "half,",
-   "start": 140.268,
-   "end": 140.748
-  },
-  {
-   "word": "exactly",
-   "start": 140.748,
-   "end": 141.308
-  },
-  {
-   "word": "the",
-   "start": 141.308,
-   "end": 141.768
-  },
-  {
-   "word": "extra",
-   "start": 141.768,
-   "end": 142.128
-  },
-  {
-   "word": "half",
-   "start": 142.128,
-   "end": 142.448
-  },
-  {
-   "word": "friend",
-   "start": 142.448,
-   "end": 142.668
-  },
-  {
-   "word": "we",
-   "start": 142.668,
-   "end": 142.848
-  },
-  {
-   "word": "measured.",
-   "start": 142.848,
-   "end": 143.168
-  },
-  {
-   "word": "With",
-   "start": 144.388,
-   "end": 144.56801
-  },
-  {
-   "word": "no",
-   "start": 144.56801,
-   "end": 144.788
-  },
-  {
-   "word": "spread,",
-   "start": 144.788,
-   "end": 145.228
-  },
-  {
-   "word": "the",
-   "start": 145.228,
-   "end": 145.668
-  },
-  {
-   "word": "ring",
-   "start": 145.668,
-   "end": 145.848
-  },
-  {
-   "word": "had",
-   "start": 145.848,
-   "end": 146.048
-  },
-  {
-   "word": "no",
-   "start": 146.048,
-   "end": 146.268
-  },
-  {
-   "word": "gap.",
-   "start": 146.268,
-   "end": 146.768
-  },
-  {
-   "word": "In",
-   "start": 148.528,
-   "end": 148.728
-  },
-  {
-   "word": "2011,",
-   "start": 148.728,
-   "end": 149.20801
-  },
-  {
-   "word": "Facebook",
-   "start": 149.20801,
-   "end": 150.42801
-  },
-  {
-   "word": "users",
-   "start": 150.42801,
-   "end": 150.908
-  },
-  {
-   "word": "averaged",
-   "start": 150.908,
-   "end": 151.628
-  },
-  {
-   "word": "about",
-   "start": 151.628,
-   "end": 151.92801
-  },
-  {
-   "word": "190",
-   "start": 151.92801,
-   "end": 152.448
-  },
-  {
-   "word": "friends,",
-   "start": 152.448,
-   "end": 153.628
-  },
-  {
-   "word": "and",
-   "start": 153.628,
-   "end": 154.108
-  },
-  {
-   "word": "a",
-   "start": 154.108,
-   "end": 154.248
-  },
-  {
-   "word": "few",
-   "start": 154.248,
-   "end": 154.408
-  },
-  {
-   "word": "had",
-   "start": 154.408,
-   "end": 154.688
-  },
-  {
-   "word": "thousands.",
-   "start": 154.688,
-   "end": 155.128
-  },
-  {
-   "word": "If",
-   "start": 156.028,
-   "end": 156.108
-  },
-  {
-   "word": "every",
-   "start": 156.108,
-   "end": 156.508
-  },
-  {
-   "word": "friendship",
-   "start": 156.508,
-   "end": 156.968
-  },
-  {
-   "word": "sent",
-   "start": 156.968,
-   "end": 157.288
-  },
-  {
-   "word": "tokens,",
-   "start": 157.288,
-   "end": 158.06801
-  },
-  {
-   "word": "what",
-   "start": 158.06801,
-   "end": 158.56801
-  },
-  {
-   "word": "would",
-   "start": 158.56801,
-   "end": 158.70801
-  },
-  {
-   "word": "the",
-   "start": 158.70801,
-   "end": 158.828
-  },
-  {
-   "word": "tokens",
-   "start": 158.828,
-   "end": 159.288
-  },
-  {
-   "word": "average?",
-   "start": 159.288,
-   "end": 160.14801
-  },
-  {
-   "word": "About",
-   "start": 162.248,
-   "end": 162.56801
-  },
-  {
-   "word": "635.",
-   "start": 162.56801,
-   "end": 164.248
-  },
-  {
-   "word": "The",
-   "start": 163.688,
-   "end": 164.728
-  },
-  {
-   "word": "spread",
-   "start": 164.728,
-   "end": 165.048
-  },
-  {
-   "word": "term",
-   "start": 165.048,
-   "end": 165.408
-  },
-  {
-   "word": "is",
-   "start": 165.408,
-   "end": 165.64801
-  },
-  {
-   "word": "more",
-   "start": 165.64801,
-   "end": 165.848
-  },
-  {
-   "word": "than",
-   "start": 165.848,
-   "end": 166.028
-  },
-  {
-   "word": "twice",
-   "start": 166.028,
-   "end": 166.388
-  },
-  {
-   "word": "the",
-   "start": 166.388,
-   "end": 166.668
-  },
-  {
-   "word": "mean.",
-   "start": 166.668,
-   "end": 167.168
-  },
-  {
-   "word": "And",
-   "start": 168.048,
-   "end": 168.30801
-  },
-  {
-   "word": "93%",
-   "start": 168.30801,
-   "end": 169.488
-  },
-  {
-   "word": "of",
-   "start": 169.488,
-   "end": 169.70801
-  },
-  {
-   "word": "users",
-   "start": 169.70801,
-   "end": 170.028
-  },
-  {
-   "word": "had",
-   "start": 170.028,
-   "end": 170.628
-  },
-  {
-   "word": "fewer",
-   "start": 170.628,
-   "end": 170.92801
-  },
-  {
-   "word": "friends",
-   "start": 170.92801,
-   "end": 171.448
-  },
-  {
-   "word": "than",
-   "start": 171.448,
-   "end": 171.968
-  },
-  {
-   "word": "their",
-   "start": 171.968,
-   "end": 172.108
-  },
-  {
-   "word": "friends",
-   "start": 172.108,
-   "end": 172.36801
-  },
-  {
-   "word": "averaged.",
-   "start": 172.36801,
-   "end": 173.188
-  },
-  {
-   "word": "Odds",
-   "start": 173.528,
-   "end": 173.988
-  },
-  {
-   "word": "are",
-   "start": 173.988,
-   "end": 174.188
-  },
-  {
-   "word": "that",
-   "start": 174.188,
-   "end": 174.548
-  },
-  {
-   "word": "includes",
-   "start": 174.548,
-   "end": 174.948
-  },
-  {
-   "word": "you.",
-   "start": 174.948,
-   "end": 175.488
-  },
-  {
-   "word": "Christakis",
-   "start": 176.168,
-   "end": 176.768
-  },
-  {
-   "word": "and",
-   "start": 176.768,
-   "end": 177.20801
-  },
-  {
-   "word": "Fowler",
-   "start": 177.20801,
-   "end": 177.628
-  },
-  {
-   "word": "put",
-   "start": 177.628,
-   "end": 178.008
-  },
-  {
-   "word": "this",
-   "start": 178.008,
-   "end": 178.20801
-  },
-  {
-   "word": "to",
-   "start": 178.20801,
-   "end": 178.36801
-  },
-  {
-   "word": "work",
-   "start": 178.36801,
-   "end": 178.568
-  },
-  {
-   "word": "at",
-   "start": 178.568,
-   "end": 178.70801
-  },
-  {
-   "word": "Harvard.",
-   "start": 178.70801,
-   "end": 179.20801
-  },
-  {
-   "word": "Named",
-   "start": 179.568,
-   "end": 180.008
-  },
-  {
-   "word": "friends",
-   "start": 180.008,
-   "end": 180.388
-  },
-  {
-   "word": "have",
-   "start": 180.388,
-   "end": 180.668
-  },
-  {
-   "word": "more",
-   "start": 180.668,
-   "end": 180.86801
-  },
-  {
-   "word": "friends,",
-   "start": 180.86801,
-   "end": 181.58801
-  },
-  {
-   "word": "so",
-   "start": 181.58801,
-   "end": 182.028
-  },
-  {
-   "word": "they",
-   "start": 182.028,
-   "end": 182.168
-  },
-  {
-   "word": "sit",
-   "start": 182.168,
-   "end": 182.448
-  },
-  {
-   "word": "closer",
-   "start": 182.448,
-   "end": 182.788
-  },
-  {
-   "word": "to",
-   "start": 182.788,
-   "end": 183.068
-  },
-  {
-   "word": "everyone",
-   "start": 183.068,
-   "end": 183.388
-  },
-  {
-   "word": "else",
-   "start": 183.388,
-   "end": 183.668
-  },
-  {
-   "word": "everyone",
-   "start": 183.188,
-   "end": 183.42801
-  },
-  {
-   "word": "else",
-   "start": 183.42801,
-   "end": 183.888
-  },
-  {
-   "word": "and",
-   "start": 183.888,
-   "end": 184.388
-  },
-  {
-   "word": "should",
-   "start": 184.388,
-   "end": 184.548
-  },
-  {
-   "word": "catch",
-   "start": 184.548,
-   "end": 184.908
-  },
-  {
-   "word": "flu",
-   "start": 184.908,
-   "end": 185.168
-  },
-  {
-   "word": "first.",
-   "start": 185.168,
-   "end": 185.86801
-  },
-  {
-   "word": "They",
-   "start": 185.908,
-   "end": 186.528
-  },
-  {
-   "word": "tracked",
-   "start": 186.528,
-   "end": 186.92801
-  },
-  {
-   "word": "flu",
-   "start": 186.92801,
-   "end": 187.20801
-  },
-  {
-   "word": "diagnoses",
-   "start": 187.20801,
-   "end": 188.128
-  },
-  {
-   "word": "in",
-   "start": 188.128,
-   "end": 188.36801
-  },
-  {
-   "word": "random",
-   "start": 188.36801,
-   "end": 188.748
-  },
-  {
-   "word": "students",
-   "start": 188.748,
-   "end": 189.288
-  },
-  {
-   "word": "and",
-   "start": 189.388,
-   "end": 189.968
-  },
-  {
-   "word": "in",
-   "start": 189.968,
-   "end": 190.108
-  },
-  {
-   "word": "the",
-   "start": 190.108,
-   "end": 190.20801
-  },
-  {
-   "word": "friends",
-   "start": 190.20801,
-   "end": 190.508
-  },
-  {
-   "word": "the",
-   "start": 190.508,
-   "end": 190.748
-  },
-  {
-   "word": "students",
-   "start": 190.748,
-   "end": 191.068
-  },
-  {
-   "word": "named.",
-   "start": 191.068,
-   "end": 191.768
-  },
-  {
-   "word": "The",
-   "start": 191.828,
-   "end": 192.42801
-  },
-  {
-   "word": "friends",
-   "start": 192.42801,
-   "end": 192.728
-  },
-  {
-   "word": "curve",
-   "start": 192.728,
-   "end": 193.14801
-  },
-  {
-   "word": "rose",
-   "start": 193.14801,
-   "end": 193.468
-  },
-  {
-   "word": "first.",
-   "start": 193.468,
-   "end": 194.128
-  },
-  {
-   "word": "Fitted",
-   "start": 194.108,
-   "end": 194.828
-  },
-  {
-   "word": "curves",
-   "start": 194.828,
-   "end": 195.348
-  },
-  {
-   "word": "put",
-   "start": 195.348,
-   "end": 195.608
-  },
-  {
-   "word": "them",
-   "start": 195.608,
-   "end": 195.768
-  },
-  {
-   "word": "13.9",
-   "start": 195.768,
-   "end": 196.888
-  },
-  {
-   "word": "days",
-   "start": 196.888,
-   "end": 197.188
-  },
-  {
-   "word": "ahead.",
-   "start": 197.188,
-   "end": 197.86801
-  },
-  {
-   "word": "With",
-   "start": 198.36801,
-   "end": 198.888
-  },
-  {
-   "word": "self-reported",
-   "start": 198.888,
-   "end": 199.688
-  },
-  {
-   "word": "symptoms,",
-   "start": 199.688,
-   "end": 200.408
-  },
-  {
-   "word": "the",
-   "start": 200.408,
-   "end": 200.788
-  },
-  {
-   "word": "lead",
-   "start": 200.788,
-   "end": 201.068
-  },
-  {
-   "word": "shrank",
-   "start": 201.068,
-   "end": 201.42801
-  },
-  {
-   "word": "to",
-   "start": 201.42801,
-   "end": 201.608
-  },
-  {
-   "word": "about",
-   "start": 201.608,
-   "end": 201.888
-  },
-  {
-   "word": "three.",
-   "start": 201.888,
-   "end": 202.508
-  },
-  {
-   "word": "Betty",
-   "start": 204.328,
-   "end": 204.58801
-  },
-  {
-   "word": "looks",
-   "start": 204.58801,
-   "end": 204.948
-  },
-  {
-   "word": "at",
-   "start": 204.948,
-   "end": 205.08801
-  },
-  {
-   "word": "her",
-   "start": 205.08801,
-   "end": 205.20801
-  },
-  {
-   "word": "one",
-   "start": 205.20801,
-   "end": 205.408
-  },
-  {
-   "word": "friend,",
-   "start": 205.408,
-   "end": 206.408
+   "word": "take",
+   "start": 104.9,
+   "end": 106.46
   },
   {
    "word": "Sue",
-   "start": 206.408,
-   "end": 206.70801
+   "start": 106.46,
+   "end": 106.7
   },
   {
    "word": "and",
-   "start": 206.70801,
-   "end": 206.888
+   "start": 106.7,
+   "end": 107.04
   },
   {
-   "word": "sees",
-   "start": 206.888,
-   "end": 207.108
+   "word": "split",
+   "start": 107.04,
+   "end": 107.34
   },
   {
-   "word": "four.",
-   "start": 207.108,
-   "end": 208.348
+   "word": "her",
+   "start": 107.32666,
+   "end": 107.46666
   },
   {
-   "word": "Most",
-   "start": 209.80801,
-   "end": 210.248
+   "word": "four",
+   "start": 107.46666,
+   "end": 107.82666
+  },
+  {
+   "word": "into",
+   "start": 107.82666,
+   "end": 108.766655
+  },
+  {
+   "word": "the",
+   "start": 108.766655,
+   "end": 108.946655
+  },
+  {
+   "word": "balance",
+   "start": 108.946655,
+   "end": 109.306656
+  },
+  {
+   "word": "point",
+   "start": 109.306656,
+   "end": 109.70666
+  },
+  {
+   "word": "two",
+   "start": 109.16666,
+   "end": 110.10666
+  },
+  {
+   "word": "and",
+   "start": 110.10666,
+   "end": 110.266655
+  },
+  {
+   "word": "a",
+   "start": 110.266655,
+   "end": 110.34666
+  },
+  {
+   "word": "half",
+   "start": 110.34666,
+   "end": 110.64665
+  },
+  {
+   "word": "plus",
+   "start": 110.64665,
+   "end": 111.48666
+  },
+  {
+   "word": "her",
+   "start": 111.48666,
+   "end": 111.64665
+  },
+  {
+   "word": "distance",
+   "start": 111.64665,
+   "end": 112.16666
+  },
+  {
+   "word": "one",
+   "start": 112.16666,
+   "end": 112.60666
+  },
+  {
+   "word": "and",
+   "start": 112.60666,
+   "end": 112.766655
+  },
+  {
+   "word": "a",
+   "start": 112.766655,
+   "end": 112.82666
+  },
+  {
+   "word": "half.",
+   "start": 112.82666,
+   "end": 113.42666
+  },
+  {
+   "word": "Squaring",
+   "start": 113.86665,
+   "end": 114.32666
+  },
+  {
+   "word": "gives",
+   "start": 114.32666,
+   "end": 114.68666
+  },
+  {
+   "word": "two",
+   "start": 114.68666,
+   "end": 114.906654
+  },
+  {
+   "word": "and",
+   "start": 114.906654,
+   "end": 115.06666
+  },
+  {
+   "word": "a",
+   "start": 115.06666,
+   "end": 115.126656
+  },
+  {
+   "word": "half",
+   "start": 115.126656,
+   "end": 115.28666
+  },
+  {
+   "word": "squared,",
+   "start": 115.28666,
+   "end": 116.226654
+  },
+  {
+   "word": "her",
+   "start": 116.226654,
+   "end": 116.32666
+  },
+  {
+   "word": "distance",
+   "start": 116.32666,
+   "end": 116.66666
+  },
+  {
+   "word": "squared,",
+   "start": 116.66666,
+   "end": 117.32666
+  },
+  {
+   "word": "and",
+   "start": 117.32666,
+   "end": 117.626656
+  },
+  {
+   "word": "a",
+   "start": 117.626656,
+   "end": 117.74666
+  },
+  {
+   "word": "cross",
+   "start": 117.16666,
+   "end": 117.946655
+  },
+  {
+   "word": "term.",
+   "start": 117.946655,
+   "end": 118.74666
+  },
+  {
+   "word": "Every",
+   "start": 118.74666,
+   "end": 119.52666
+  },
+  {
+   "word": "girl",
+   "start": 119.52666,
+   "end": 119.82666
+  },
+  {
+   "word": "splits",
+   "start": 119.82666,
+   "end": 120.24666
+  },
+  {
+   "word": "this",
+   "start": 120.24666,
+   "end": 120.48666
+  },
+  {
+   "word": "way.",
+   "start": 120.48666,
+   "end": 120.98666
+  },
+  {
+   "word": "Because",
+   "start": 120.98666,
+   "end": 121.54665
+  },
+  {
+   "word": "the",
+   "start": 121.54665,
+   "end": 121.766655
+  },
+  {
+   "word": "beam",
+   "start": 121.32666,
+   "end": 122.10666
+  },
+  {
+   "word": "balances,",
+   "start": 122.10666,
+   "end": 123.28666
+  },
+  {
+   "word": "the",
+   "start": 123.28666,
+   "end": 123.42666
+  },
+  {
+   "word": "distances",
+   "start": 123.42666,
+   "end": 123.92666
+  },
+  {
+   "word": "add",
+   "start": 123.92666,
+   "end": 124.34666
+  },
+  {
+   "word": "to",
+   "start": 124.34666,
+   "end": 124.54665
+  },
+  {
+   "word": "zero,",
+   "start": 124.54665,
+   "end": 125.10666
+  },
+  {
+   "word": "and",
+   "start": 125.10666,
+   "end": 125.48666
+  },
+  {
+   "word": "the",
+   "start": 125.48666,
+   "end": 125.586655
+  },
+  {
+   "word": "cross",
+   "start": 125.586655,
+   "end": 125.88666
+  },
+  {
+   "word": "terms",
+   "start": 125.36665,
+   "end": 126.266655
+  },
+  {
+   "word": "cancel.",
+   "start": 126.266655,
+   "end": 127.06666
+  },
+  {
+   "word": "So",
+   "start": 127.06666,
+   "end": 128.22665
+  },
+  {
+   "word": "the",
+   "start": 128.22665,
+   "end": 128.34665
+  },
+  {
+   "word": "average",
+   "start": 128.34665,
+   "end": 128.76666
   },
   {
    "word": "of",
-   "start": 210.248,
-   "end": 210.42801
+   "start": 128.76666,
+   "end": 128.98666
   },
   {
-   "word": "us",
-   "start": 210.42801,
-   "end": 210.58801
+   "word": "k",
+   "start": 128.98666,
+   "end": 129.20667
+  },
+  {
+   "word": "squared",
+   "start": 129.20667,
+   "end": 129.60666
+  },
+  {
+   "word": "is",
+   "start": 129.90666,
+   "end": 130.00665
+  },
+  {
+   "word": "mu",
+   "start": 130.00665,
+   "end": 130.18666
+  },
+  {
+   "word": "squared",
+   "start": 130.18666,
+   "end": 130.54666
+  },
+  {
+   "word": "plus",
+   "start": 130.54666,
+   "end": 131.02666
+  },
+  {
+   "word": "sigma",
+   "start": 131.02666,
+   "end": 131.26666
+  },
+  {
+   "word": "squared.",
+   "start": 131.26666,
+   "end": 131.96666
+  },
+  {
+   "word": "And",
+   "start": 133.60666,
+   "end": 133.80666
+  },
+  {
+   "word": "friends",
+   "start": 133.80666,
+   "end": 134.10666
+  },
+  {
+   "word": "average",
+   "start": 134.10666,
+   "end": 134.52666
+  },
+  {
+   "word": "mu",
+   "start": 134.52666,
+   "end": 134.86665
+  },
+  {
+   "word": "plus",
+   "start": 134.86665,
+   "end": 135.48666
+  },
+  {
+   "word": "sigma",
+   "start": 135.48666,
+   "end": 135.86665
+  },
+  {
+   "word": "squared",
+   "start": 135.86665,
+   "end": 136.30666
+  },
+  {
+   "word": "over",
+   "start": 136.30666,
+   "end": 136.62665
+  },
+  {
+   "word": "mu.",
+   "start": 136.62665,
+   "end": 137.42665
+  },
+  {
+   "word": "Here",
+   "start": 138.38666,
+   "end": 138.60666
+  },
+  {
+   "word": "that's",
+   "start": 138.60666,
+   "end": 138.92665
+  },
+  {
+   "word": "two",
+   "start": 138.92665,
+   "end": 139.08665
+  },
+  {
+   "word": "and",
+   "start": 139.08665,
+   "end": 139.24666
+  },
+  {
+   "word": "a",
+   "start": 139.24666,
+   "end": 139.32666
+  },
+  {
+   "word": "half,",
+   "start": 139.32666,
+   "end": 139.80666
+  },
+  {
+   "word": "plus",
+   "start": 139.80666,
+   "end": 140.34665
+  },
+  {
+   "word": "a",
+   "start": 140.34665,
+   "end": 140.56665
+  },
+  {
+   "word": "half,",
+   "start": 140.56665,
+   "end": 141.04666
+  },
+  {
+   "word": "exactly",
+   "start": 141.30666,
+   "end": 141.80666
+  },
+  {
+   "word": "the",
+   "start": 141.80666,
+   "end": 142.06665
+  },
+  {
+   "word": "extra",
+   "start": 142.06665,
+   "end": 142.44666
+  },
+  {
+   "word": "half",
+   "start": 142.44666,
+   "end": 142.76666
+  },
+  {
+   "word": "friend",
+   "start": 142.76666,
+   "end": 142.98666
+  },
+  {
+   "word": "we",
+   "start": 142.98666,
+   "end": 143.16666
+  },
+  {
+   "word": "measured.",
+   "start": 143.16666,
+   "end": 143.46666
+  },
+  {
+   "word": "With",
+   "start": 144.68666,
+   "end": 144.88666
+  },
+  {
+   "word": "no",
+   "start": 144.88666,
+   "end": 145.08665
+  },
+  {
+   "word": "spread,",
+   "start": 145.08665,
+   "end": 145.48666
+  },
+  {
+   "word": "the",
+   "start": 145.48666,
+   "end": 145.96666
+  },
+  {
+   "word": "ring",
+   "start": 145.96666,
+   "end": 146.14665
+  },
+  {
+   "word": "had",
+   "start": 146.14665,
+   "end": 146.34665
+  },
+  {
+   "word": "no",
+   "start": 146.34665,
+   "end": 146.56665
+  },
+  {
+   "word": "gap.",
+   "start": 146.56665,
+   "end": 147.00665
+  },
+  {
+   "word": "In",
+   "start": 148.80666,
+   "end": 149.04666
+  },
+  {
+   "word": "2011,",
+   "start": 149.04666,
+   "end": 149.50665
+  },
+  {
+   "word": "Facebook",
+   "start": 149.50665,
+   "end": 150.74666
+  },
+  {
+   "word": "users",
+   "start": 150.74666,
+   "end": 151.18666
+  },
+  {
+   "word": "averaged",
+   "start": 151.18666,
+   "end": 151.92665
+  },
+  {
+   "word": "about",
+   "start": 151.92665,
+   "end": 152.22665
+  },
+  {
+   "word": "190",
+   "start": 152.22665,
+   "end": 152.86665
+  },
+  {
+   "word": "friends,",
+   "start": 152.86665,
+   "end": 153.94666
+  },
+  {
+   "word": "and",
+   "start": 154.24666,
+   "end": 154.42665
+  },
+  {
+   "word": "a",
+   "start": 154.42665,
+   "end": 154.54666
+  },
+  {
+   "word": "few",
+   "start": 154.54666,
+   "end": 154.74666
+  },
+  {
+   "word": "had",
+   "start": 154.74666,
+   "end": 155.00665
+  },
+  {
+   "word": "thousands.",
+   "start": 155.00665,
+   "end": 155.42665
+  },
+  {
+   "word": "If",
+   "start": 156.26666,
+   "end": 156.46666
+  },
+  {
+   "word": "every",
+   "start": 156.46666,
+   "end": 156.82666
+  },
+  {
+   "word": "friendship",
+   "start": 156.82666,
+   "end": 157.26666
+  },
+  {
+   "word": "sent",
+   "start": 157.26666,
+   "end": 157.58665
+  },
+  {
+   "word": "tokens,",
+   "start": 157.58665,
+   "end": 158.00665
+  },
+  {
+   "word": "what",
+   "start": 158.72665,
+   "end": 158.80666
+  },
+  {
+   "word": "would",
+   "start": 158.80666,
+   "end": 159.02666
+  },
+  {
+   "word": "the",
+   "start": 159.02666,
+   "end": 159.12665
+  },
+  {
+   "word": "tokens",
+   "start": 159.12665,
+   "end": 159.60666
+  },
+  {
+   "word": "average?",
+   "start": 159.60666,
+   "end": 160.42665
+  },
+  {
+   "word": "About",
+   "start": 162.56665,
+   "end": 162.86665
+  },
+  {
+   "word": "635.",
+   "start": 162.86665,
+   "end": 164.56665
+  },
+  {
+   "word": "The",
+   "start": 164.88666,
+   "end": 165.00665
+  },
+  {
+   "word": "spread",
+   "start": 165.00665,
+   "end": 165.34665
+  },
+  {
+   "word": "term",
+   "start": 165.34665,
+   "end": 165.70667
+  },
+  {
+   "word": "is",
+   "start": 165.70667,
+   "end": 165.94666
+  },
+  {
+   "word": "more",
+   "start": 165.94666,
+   "end": 166.14667
+  },
+  {
+   "word": "than",
+   "start": 166.14667,
+   "end": 166.30666
+  },
+  {
+   "word": "twice",
+   "start": 166.30666,
+   "end": 166.62665
+  },
+  {
+   "word": "the",
+   "start": 166.62665,
+   "end": 166.94666
+  },
+  {
+   "word": "mean.",
+   "start": 166.94666,
+   "end": 167.44666
+  },
+  {
+   "word": "And",
+   "start": 168.34665,
+   "end": 168.58665
+  },
+  {
+   "word": "93%",
+   "start": 168.58665,
+   "end": 169.78665
+  },
+  {
+   "word": "of",
+   "start": 169.78665,
+   "end": 170.00665
+  },
+  {
+   "word": "users",
+   "start": 170.00665,
+   "end": 170.28665
+  },
+  {
+   "word": "had",
+   "start": 170.28665,
+   "end": 170.92667
+  },
+  {
+   "word": "fewer",
+   "start": 170.92667,
+   "end": 171.22665
+  },
+  {
+   "word": "friends",
+   "start": 171.22665,
+   "end": 171.66666
+  },
+  {
+   "word": "than",
+   "start": 171.66666,
+   "end": 172.24666
+  },
+  {
+   "word": "their",
+   "start": 172.24666,
+   "end": 172.40665
+  },
+  {
+   "word": "friends",
+   "start": 172.40665,
+   "end": 172.66666
+  },
+  {
+   "word": "averaged.",
+   "start": 172.66666,
+   "end": 173.48666
+  },
+  {
+   "word": "Odds",
+   "start": 173.86665,
+   "end": 174.28665
   },
   {
    "word": "are",
-   "start": 210.58801,
-   "end": 210.80801
+   "start": 174.28665,
+   "end": 174.48666
   },
   {
-   "word": "Betty.",
-   "start": 210.80801,
-   "end": 211.70801
+   "word": "that",
+   "start": 174.48666,
+   "end": 174.84665
   },
   {
-   "word": "Thank",
-   "start": 213.188,
-   "end": 213.548
+   "word": "includes",
+   "start": 174.84665,
+   "end": 175.24666
   },
   {
    "word": "you.",
-   "start": 213.548,
-   "end": 213.86801
+   "start": 175.24666,
+   "end": 175.56665
+  },
+  {
+   "word": "Christakis",
+   "start": 176.44666,
+   "end": 177.06665
+  },
+  {
+   "word": "and",
+   "start": 177.06665,
+   "end": 177.50665
+  },
+  {
+   "word": "Fowler",
+   "start": 177.50665,
+   "end": 177.92667
+  },
+  {
+   "word": "put",
+   "start": 177.92667,
+   "end": 178.32666
+  },
+  {
+   "word": "this",
+   "start": 178.32666,
+   "end": 178.50665
+  },
+  {
+   "word": "to",
+   "start": 178.50665,
+   "end": 178.66666
+  },
+  {
+   "word": "work",
+   "start": 178.66666,
+   "end": 178.86665
+  },
+  {
+   "word": "at",
+   "start": 178.86665,
+   "end": 179.00665
+  },
+  {
+   "word": "Harvard.",
+   "start": 179.00665,
+   "end": 179.56665
+  },
+  {
+   "word": "Named",
+   "start": 179.88666,
+   "end": 180.30666
+  },
+  {
+   "word": "friends",
+   "start": 180.30666,
+   "end": 180.68665
+  },
+  {
+   "word": "have",
+   "start": 180.68665,
+   "end": 180.96666
+  },
+  {
+   "word": "more",
+   "start": 180.96666,
+   "end": 181.18665
+  },
+  {
+   "word": "friends,",
+   "start": 181.18665,
+   "end": 181.56665
+  },
+  {
+   "word": "so",
+   "start": 180.58665,
+   "end": 182.34665
+  },
+  {
+   "word": "they",
+   "start": 182.34665,
+   "end": 182.50665
+  },
+  {
+   "word": "sit",
+   "start": 182.50665,
+   "end": 182.74666
+  },
+  {
+   "word": "closer",
+   "start": 182.74666,
+   "end": 183.16666
+  },
+  {
+   "word": "to",
+   "start": 183.16666,
+   "end": 183.38666
+  },
+  {
+   "word": "everyone",
+   "start": 183.38666,
+   "end": 183.70667
+  },
+  {
+   "word": "else",
+   "start": 183.70667,
+   "end": 184.16666
+  },
+  {
+   "word": "and",
+   "start": 184.16666,
+   "end": 184.66666
+  },
+  {
+   "word": "should",
+   "start": 184.66666,
+   "end": 184.84665
+  },
+  {
+   "word": "catch",
+   "start": 184.84665,
+   "end": 185.20667
+  },
+  {
+   "word": "flu",
+   "start": 185.20667,
+   "end": 185.46666
+  },
+  {
+   "word": "first.",
+   "start": 185.46666,
+   "end": 186.10666
+  },
+  {
+   "word": "They",
+   "start": 186.68665,
+   "end": 186.80666
+  },
+  {
+   "word": "tracked",
+   "start": 186.80666,
+   "end": 187.20667
+  },
+  {
+   "word": "flu",
+   "start": 187.20667,
+   "end": 187.48666
+  },
+  {
+   "word": "diagnoses",
+   "start": 187.48666,
+   "end": 188.40665
+  },
+  {
+   "word": "in",
+   "start": 188.40665,
+   "end": 188.66666
+  },
+  {
+   "word": "random",
+   "start": 188.66666,
+   "end": 189.04666
+  },
+  {
+   "word": "students",
+   "start": 189.04666,
+   "end": 189.54666
+  },
+  {
+   "word": "and",
+   "start": 189.54666,
+   "end": 190.24666
+  },
+  {
+   "word": "in",
+   "start": 190.24666,
+   "end": 190.38666
+  },
+  {
+   "word": "the",
+   "start": 190.38666,
+   "end": 190.46666
+  },
+  {
+   "word": "friends",
+   "start": 190.46666,
+   "end": 190.78665
+  },
+  {
+   "word": "the",
+   "start": 190.78665,
+   "end": 191.04666
+  },
+  {
+   "word": "students",
+   "start": 191.04666,
+   "end": 191.32666
+  },
+  {
+   "word": "named.",
+   "start": 191.32666,
+   "end": 192.00665
+  },
+  {
+   "word": "The",
+   "start": 192.52666,
+   "end": 192.74666
+  },
+  {
+   "word": "friends",
+   "start": 192.74666,
+   "end": 193.02666
+  },
+  {
+   "word": "curve",
+   "start": 193.02666,
+   "end": 193.44666
+  },
+  {
+   "word": "rose",
+   "start": 193.44666,
+   "end": 193.76666
+  },
+  {
+   "word": "first.",
+   "start": 193.76666,
+   "end": 194.36665
+  },
+  {
+   "word": "Fitted",
+   "start": 194.82666,
+   "end": 195.12665
+  },
+  {
+   "word": "curves",
+   "start": 195.12665,
+   "end": 195.64667
+  },
+  {
+   "word": "put",
+   "start": 195.64667,
+   "end": 195.90665
+  },
+  {
+   "word": "them",
+   "start": 195.90665,
+   "end": 196.06665
+  },
+  {
+   "word": "13.9",
+   "start": 196.06665,
+   "end": 197.20667
+  },
+  {
+   "word": "days",
+   "start": 197.20667,
+   "end": 197.46666
+  },
+  {
+   "word": "ahead.",
+   "start": 197.46666,
+   "end": 198.04666
+  },
+  {
+   "word": "With",
+   "start": 198.96666,
+   "end": 199.18665
+  },
+  {
+   "word": "self-reported",
+   "start": 199.18665,
+   "end": 199.98666
+  },
+  {
+   "word": "symptoms,",
+   "start": 199.98666,
+   "end": 200.72665
+  },
+  {
+   "word": "the",
+   "start": 200.72665,
+   "end": 201.08665
+  },
+  {
+   "word": "lead",
+   "start": 201.08665,
+   "end": 201.36665
+  },
+  {
+   "word": "shrank",
+   "start": 201.36665,
+   "end": 201.70667
+  },
+  {
+   "word": "to",
+   "start": 201.70667,
+   "end": 201.90665
+  },
+  {
+   "word": "about",
+   "start": 201.90665,
+   "end": 202.14667
+  },
+  {
+   "word": "three.",
+   "start": 202.14667,
+   "end": 202.66666
+  },
+  {
+   "word": "Betty",
+   "start": 204.64667,
+   "end": 204.84665
+  },
+  {
+   "word": "looks",
+   "start": 204.84665,
+   "end": 205.22665
+  },
+  {
+   "word": "at",
+   "start": 205.22665,
+   "end": 205.38666
+  },
+  {
+   "word": "her",
+   "start": 205.38666,
+   "end": 205.52666
+  },
+  {
+   "word": "one",
+   "start": 205.52666,
+   "end": 205.70667
+  },
+  {
+   "word": "friend.",
+   "start": 205.70667,
+   "end": 206.32666
+  },
+  {
+   "word": "Sue",
+   "start": 206.66666,
+   "end": 207.02666
+  },
+  {
+   "word": "and",
+   "start": 207.02666,
+   "end": 207.18665
+  },
+  {
+   "word": "sees",
+   "start": 207.18665,
+   "end": 207.40665
+  },
+  {
+   "word": "four.",
+   "start": 207.40665,
+   "end": 207.94666
+  },
+  {
+   "word": "Most",
+   "start": 210.08665,
+   "end": 210.52666
+  },
+  {
+   "word": "of",
+   "start": 210.52666,
+   "end": 210.72665
+  },
+  {
+   "word": "us",
+   "start": 210.72665,
+   "end": 210.88666
+  },
+  {
+   "word": "are",
+   "start": 210.88666,
+   "end": 211.12665
+  },
+  {
+   "word": "Betty.",
+   "start": 211.12665,
+   "end": 212.12665
   }
  ],
  "segments": [
@@ -2446,7 +2466,7 @@
     50599
    ],
    "temperature": 0,
-   "avg_logprob": -0.16874062,
+   "avg_logprob": -0.16784433,
    "compression_ratio": 1.683721,
    "no_speech_prob": 0
   },
@@ -2473,7 +2493,7 @@
     50767
    ],
    "temperature": 0,
-   "avg_logprob": -0.16874062,
+   "avg_logprob": -0.16784433,
    "compression_ratio": 1.683721,
    "no_speech_prob": 0
   },
@@ -2481,7 +2501,7 @@
    "id": 2,
    "seek": 0,
    "start": 8.04,
-   "end": 11.32,
+   "end": 11.3,
    "text": " How many friends does the average friend have?",
    "tokens": [
     50767,
@@ -2494,39 +2514,39 @@
     1277,
     362,
     30,
-    50931
+    50930
    ],
    "temperature": 0,
-   "avg_logprob": -0.16874062,
+   "avg_logprob": -0.16784433,
    "compression_ratio": 1.683721,
    "no_speech_prob": 0
   },
   {
    "id": 3,
    "seek": 0,
-   "start": 11.32,
-   "end": 14.259999,
+   "start": 11.3,
+   "end": 14.24,
    "text": " Pick one.",
    "tokens": [
-    50931,
+    50930,
     14129,
     472,
     13,
-    51078
+    51077
    ],
    "temperature": 0,
-   "avg_logprob": -0.16874062,
+   "avg_logprob": -0.16784433,
    "compression_ratio": 1.683721,
    "no_speech_prob": 0
   },
   {
    "id": 4,
    "seek": 0,
-   "start": 14.259999,
-   "end": 17.52,
+   "start": 14.24,
+   "end": 17.5,
    "text": " The answer tells flu researchers whom to watch,",
    "tokens": [
-    51078,
+    51077,
     440,
     1867,
     5112,
@@ -2536,21 +2556,21 @@
     281,
     1159,
     11,
-    51241
+    51240
    ],
    "temperature": 0,
-   "avg_logprob": -0.16874062,
+   "avg_logprob": -0.16784433,
    "compression_ratio": 1.683721,
    "no_speech_prob": 0
   },
   {
    "id": 5,
    "seek": 0,
-   "start": 17.52,
-   "end": 20.72,
+   "start": 17.5,
+   "end": 20.699999,
    "text": " random students or the friends they name.",
    "tokens": [
-    51241,
+    51240,
     4974,
     1731,
     420,
@@ -2559,21 +2579,21 @@
     436,
     1315,
     13,
-    51401
+    51400
    ],
    "temperature": 0,
-   "avg_logprob": -0.16874062,
+   "avg_logprob": -0.16784433,
    "compression_ratio": 1.683721,
    "no_speech_prob": 0
   },
   {
    "id": 6,
    "seek": 0,
-   "start": 20.72,
-   "end": 23.66,
+   "start": 20.699999,
+   "end": 23.64,
    "text": " The natural guess is two and a half again.",
    "tokens": [
-    51401,
+    51400,
     440,
     3303,
     2041,
@@ -2584,21 +2604,21 @@
     1922,
     797,
     13,
-    51548
+    51547
    ],
    "temperature": 0,
-   "avg_logprob": -0.16874062,
+   "avg_logprob": -0.16784433,
    "compression_ratio": 1.683721,
    "no_speech_prob": 0
   },
   {
    "id": 7,
    "seek": 0,
-   "start": 23.66,
-   "end": 26.98,
+   "start": 23.64,
+   "end": 26.96,
    "text": " Every friend is one of these same eight girls.",
    "tokens": [
-    51548,
+    51547,
     2048,
     1277,
     307,
@@ -2609,18 +2629,18 @@
     3180,
     4519,
     13,
-    51714
+    51713
    ],
    "temperature": 0,
-   "avg_logprob": -0.16874062,
+   "avg_logprob": -0.16784433,
    "compression_ratio": 1.683721,
    "no_speech_prob": 0
   },
   {
    "id": 8,
-   "seek": 2698,
-   "start": 26.98,
-   "end": 31.3,
+   "seek": 2696,
+   "start": 26.96,
+   "end": 31.279999,
    "text": " Check that on a rewired class where every girl has two friends.",
    "tokens": [
     50365,
@@ -2642,15 +2662,15 @@
     50581
    ],
    "temperature": 0,
-   "avg_logprob": -0.10513168,
+   "avg_logprob": -0.12592235,
    "compression_ratio": 1.7339056,
    "no_speech_prob": 0
   },
   {
    "id": 9,
-   "seek": 2698,
-   "start": 31.3,
-   "end": 35.14,
+   "seek": 2696,
+   "start": 31.279999,
+   "end": 35.12,
    "text": " Send a token both ways along every friendship.",
    "tokens": [
     50581,
@@ -2666,14 +2686,14 @@
     50773
    ],
    "temperature": 0,
-   "avg_logprob": -0.10513168,
+   "avg_logprob": -0.12592235,
    "compression_ratio": 1.7339056,
    "no_speech_prob": 0
   },
   {
    "id": 10,
-   "seek": 2698,
-   "start": 35.14,
+   "seek": 2696,
+   "start": 35.12,
    "end": 39.36,
    "text": " Each token reads the friend count where it lands, always two.",
    "tokens": [
@@ -2691,21 +2711,21 @@
     1009,
     732,
     13,
-    50984
+    50985
    ],
    "temperature": 0,
-   "avg_logprob": -0.10513168,
+   "avg_logprob": -0.12592235,
    "compression_ratio": 1.7339056,
    "no_speech_prob": 0
   },
   {
    "id": 11,
-   "seek": 2698,
+   "seek": 2696,
    "start": 39.36,
-   "end": 42.76,
+   "end": 42.739998,
    "text": " Both averages are two, the guess holds.",
    "tokens": [
-    50984,
+    50985,
     6767,
     42257,
     366,
@@ -2718,15 +2738,15 @@
     51154
    ],
    "temperature": 0,
-   "avg_logprob": -0.10513168,
+   "avg_logprob": -0.12592235,
    "compression_ratio": 1.7339056,
    "no_speech_prob": 0
   },
   {
    "id": 12,
-   "seek": 2698,
-   "start": 42.76,
-   "end": 46.899998,
+   "seek": 2696,
+   "start": 42.739998,
+   "end": 46.879997,
    "text": " Now restore the real friendships and send the tokens again.",
    "tokens": [
     51154,
@@ -2744,15 +2764,15 @@
     51361
    ],
    "temperature": 0,
-   "avg_logprob": -0.10513168,
+   "avg_logprob": -0.12592235,
    "compression_ratio": 1.7339056,
    "no_speech_prob": 0
   },
   {
    "id": 13,
-   "seek": 2698,
-   "start": 46.899998,
-   "end": 50.96,
+   "seek": 2696,
+   "start": 46.879997,
+   "end": 50.94,
    "text": " They read one, two, three, or four and averaged three.",
    "tokens": [
     51361,
@@ -2774,14 +2794,14 @@
     51564
    ],
    "temperature": 0,
-   "avg_logprob": -0.10513168,
+   "avg_logprob": -0.12592235,
    "compression_ratio": 1.7339056,
    "no_speech_prob": 0
   },
   {
    "id": 14,
-   "seek": 2698,
-   "start": 50.96,
+   "seek": 2696,
+   "start": 50.94,
    "end": 53.239998,
    "text": " The guess fell short by half a friend",
    "tokens": [
@@ -2794,21 +2814,21 @@
     1922,
     257,
     1277,
-    51678
+    51679
    ],
    "temperature": 0,
-   "avg_logprob": -0.10513168,
+   "avg_logprob": -0.12592235,
    "compression_ratio": 1.7339056,
    "no_speech_prob": 0
   },
   {
    "id": 15,
-   "seek": 2698,
+   "seek": 2696,
    "start": 53.239998,
-   "end": 56.3,
+   "end": 56.28,
    "text": " because the tokens piled up unevenly.",
    "tokens": [
-    51678,
+    51679,
     570,
     264,
     22667,
@@ -2821,43 +2841,43 @@
     51831
    ],
    "temperature": 0,
-   "avg_logprob": -0.10513168,
+   "avg_logprob": -0.12592235,
    "compression_ratio": 1.7339056,
    "no_speech_prob": 0
   },
   {
    "id": 16,
-   "seek": 5630,
-   "start": 56.3,
-   "end": 59.3,
-   "text": " Four on Sue, four on Alice, one on Betty.",
+   "seek": 5628,
+   "start": 56.28,
+   "end": 59.28,
+   "text": " 4 on Sue, 4 on Alice, 1 on Betty.",
    "tokens": [
     50365,
-    7451,
+    1017,
     322,
     25332,
     11,
-    1451,
+    1017,
     322,
     16004,
     11,
-    472,
+    502,
     322,
     30270,
     13,
     50515
    ],
    "temperature": 0,
-   "avg_logprob": -0.21438262,
-   "compression_ratio": 1.672811,
+   "avg_logprob": -0.2086626,
+   "compression_ratio": 1.5849056,
    "no_speech_prob": 0
   },
   {
    "id": 17,
-   "seek": 5630,
-   "start": 60.26,
+   "seek": 5628,
+   "start": 60.239998,
    "end": 63.48,
-   "text": " Line the girls up by friend count, two at each count.",
+   "text": " Line the girls up by friend count, 2 at each count.",
    "tokens": [
     50563,
     14670,
@@ -2868,49 +2888,49 @@
     1277,
     1207,
     11,
-    732,
+    568,
     412,
     1184,
     1207,
     13,
-    50724
+    50725
    ],
    "temperature": 0,
-   "avg_logprob": -0.21438262,
-   "compression_ratio": 1.672811,
+   "avg_logprob": -0.2086626,
+   "compression_ratio": 1.5849056,
    "no_speech_prob": 0
   },
   {
    "id": 18,
-   "seek": 5630,
+   "seek": 5628,
    "start": 63.98,
    "end": 65.56,
-   "text": " They balance at two and a half.",
+   "text": " They balance at 2 and a half.",
    "tokens": [
-    50749,
+    50750,
     814,
     4772,
     412,
-    732,
+    568,
     293,
     257,
     1922,
     13,
-    50828
+    50829
    ],
    "temperature": 0,
-   "avg_logprob": -0.21438262,
-   "compression_ratio": 1.672811,
+   "avg_logprob": -0.2086626,
+   "compression_ratio": 1.5849056,
    "no_speech_prob": 0
   },
   {
    "id": 19,
-   "seek": 5630,
+   "seek": 5628,
    "start": 66.32,
    "end": 71.14,
-   "text": " The tokens stack higher on the right, one per friend, so they balance at three.",
+   "text": " The tokens stack higher on the right, 1 per friend, so they balance at 3.",
    "tokens": [
-    50866,
+    50867,
     440,
     22667,
     8630,
@@ -2919,7 +2939,7 @@
     264,
     558,
     11,
-    472,
+    502,
     680,
     1277,
     11,
@@ -2927,80 +2947,81 @@
     436,
     4772,
     412,
-    1045,
+    805,
     13,
-    51107
+    51108
    ],
    "temperature": 0,
-   "avg_logprob": -0.21438262,
-   "compression_ratio": 1.672811,
+   "avg_logprob": -0.2086626,
+   "compression_ratio": 1.5849056,
    "no_speech_prob": 0
   },
   {
    "id": 20,
-   "seek": 5630,
-   "start": 72.119995,
+   "seek": 5628,
+   "start": 72.04,
    "end": 75.28,
-   "text": " Sue holds four tokens, each worth four, 16.",
+   "text": " Sue holds 4 tokens, each worth 4, 16.",
    "tokens": [
-    51156,
+    51153,
     25332,
     9190,
-    1451,
+    1017,
     22667,
     11,
     1184,
     3163,
-    1451,
+    1017,
     11,
     3165,
     13,
-    51314
+    51315
    ],
    "temperature": 0,
-   "avg_logprob": -0.21438262,
-   "compression_ratio": 1.672811,
+   "avg_logprob": -0.2086626,
+   "compression_ratio": 1.5849056,
    "no_speech_prob": 0
   },
   {
    "id": 21,
-   "seek": 5630,
-   "start": 76.18,
+   "seek": 5628,
+   "start": 75.74,
    "end": 80.52,
-   "text": " A girl with K friends adds K squared on top and K on the bottom.",
+   "text": " A girl with k friends adds k squared on top, and k on the bottom.",
    "tokens": [
-    51359,
+    51338,
     316,
     2013,
     365,
-    591,
+    350,
     1855,
     10860,
-    591,
+    350,
     8889,
     322,
     1192,
+    11,
     293,
-    591,
+    350,
     322,
     264,
     2767,
     13,
-    51576
+    51577
    ],
    "temperature": 0,
-   "avg_logprob": -0.21438262,
-   "compression_ratio": 1.672811,
+   "avg_logprob": -0.2086626,
+   "compression_ratio": 1.5849056,
    "no_speech_prob": 0
   },
   {
    "id": 22,
-   "seek": 5630,
-   "start": 80.84,
-   "end": 83.9,
-   "text": " Now divide top and bottom by the eight girls.",
+   "seek": 5628,
+   "start": 81.18,
+   "end": 83.88,
+   "text": " Now divide top and bottom by the 8 girls.",
    "tokens": [
-    51592,
+    51610,
     823,
     9845,
     1192,
@@ -3008,22 +3029,22 @@
     2767,
     538,
     264,
-    3180,
+    1649,
     4519,
     13,
     51745
    ],
    "temperature": 0,
-   "avg_logprob": -0.21438262,
-   "compression_ratio": 1.672811,
+   "avg_logprob": -0.2086626,
+   "compression_ratio": 1.5849056,
    "no_speech_prob": 0
   },
   {
    "id": 23,
-   "seek": 8390,
-   "start": 83.9,
-   "end": 86.9,
-   "text": " the average of k squared, 7 1\u20442,",
+   "seek": 8388,
+   "start": 83.88,
+   "end": 90.079994,
+   "text": " the average of k squared seven and a half over the average count two and a half",
    "tokens": [
     50365,
     264,
@@ -3031,172 +3052,105 @@
     295,
     350,
     8889,
-    11,
-    1614,
-    502,
-    43516,
-    226,
-    17,
-    11,
-    50515
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.20061481,
-   "compression_ratio": 1.8541666,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 24,
-   "seek": 8390,
-   "start": 86.9,
-   "end": 89.9,
-   "text": " over the average count, 2 1\u20442.",
-   "tokens": [
-    50515,
+    3407,
+    293,
+    257,
+    1922,
     670,
     264,
     4274,
     1207,
-    11,
-    568,
-    502,
-    43516,
-    226,
-    17,
-    13,
-    50665
+    732,
+    293,
+    257,
+    1922,
+    50675
    ],
    "temperature": 0,
-   "avg_logprob": -0.20061481,
-   "compression_ratio": 1.8541666,
+   "avg_logprob": -0.169766,
+   "compression_ratio": 2.0235295,
    "no_speech_prob": 0
   },
   {
-   "id": 25,
-   "seek": 8390,
-   "start": 89.9,
-   "end": 92.9,
-   "text": " Where does the extra 1\u20442 come from?",
+   "id": 24,
+   "seek": 8388,
+   "start": 90.079994,
+   "end": 95.979996,
+   "text": " where does the extra half come from measure each girl's distance from the",
    "tokens": [
-    50665,
-    2305,
+    50675,
+    689,
     775,
     264,
     2857,
-    502,
-    43516,
-    226,
-    17,
+    1922,
     808,
     490,
-    30,
-    50815
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.20061481,
-   "compression_ratio": 1.8541666,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 26,
-   "seek": 8390,
-   "start": 92.9,
-   "end": 96.9,
-   "text": " Measure each girl's distance from the girl's balance point,",
-   "tokens": [
-    50815,
-    41436,
+    3481,
     1184,
     2013,
     311,
     4560,
     490,
     264,
+    50970
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.169766,
+   "compression_ratio": 2.0235295,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 25,
+   "seek": 101,
+   "start": 95.979996,
+   "end": 113.66666,
+   "text": " girl balance point two and a half and square it the squares average one and a quarter the variance Sigma squared take Sue and split her four into the balance point two and a half plus her distance one and a half",
+   "tokens": [
+    50970,
     2013,
     311,
     4772,
     935,
-    11,
-    51015
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.20061481,
-   "compression_ratio": 1.8541666,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 27,
-   "seek": 8390,
-   "start": 96.9,
-   "end": 99.9,
-   "text": " 2 1\u20442, and square it.",
-   "tokens": [
-    51015,
-    568,
-    502,
-    43516,
-    226,
-    17,
-    11,
-    293,
-    3732,
-    309,
-    13,
-    51165
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.20061481,
-   "compression_ratio": 1.8541666,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 28,
-   "seek": 101,
-   "start": 99.9,
-   "end": 113.688,
-   "text": " The squares average 1 1 the variance sigma squared Take Sue 4 and split it into the balance point two and a half plus her distance one and a half",
-   "tokens": [
-    51165,
-    440,
-    19368,
-    4274,
-    502,
-    502,
-    43516,
-    226,
-    19,
-    11,
-    264,
-    21977,
-    11,
-    12771,
-    8889,
-    13,
-    51415,
-    51415,
-    3664,
-    25332,
-    311,
-    1017,
-    293,
-    7472,
-    309,
-    666,
-    264,
-    4772,
-    935,
-    11,
-    50764,
-    50764,
     732,
     293,
     257,
     1922,
-    11,
+    293,
+    3732,
+    309,
+    264,
+    19368,
+    4274,
+    472,
+    293,
+    257,
+    51292,
+    51292,
+    6555,
+    264,
+    21977,
+    36595,
+    8889,
+    747,
+    25332,
+    293,
+    7472,
+    720,
+    1451,
+    666,
+    264,
+    4772,
+    935,
+    50765,
+    50765,
+    732,
+    293,
+    257,
+    1922,
     1804,
     720,
     4560,
-    11,
     472,
     293,
     257,
@@ -3205,16 +3159,16 @@
     50965
    ],
    "temperature": 0,
-   "avg_logprob": -0.25524715,
-   "compression_ratio": 1.8031088,
+   "avg_logprob": -0.15140335,
+   "compression_ratio": 1.8477157,
    "no_speech_prob": 0
   },
   {
-   "id": 29,
+   "id": 26,
    "seek": 101,
-   "start": 113.688,
-   "end": 115.968,
-   "text": " Squaring gives two and a half squared,",
+   "start": 113.66666,
+   "end": 117.66666,
+   "text": " Squaring gives two and a half squared, her distance squared, and a",
    "tokens": [
     50965,
     8683,
@@ -3226,68 +3180,53 @@
     1922,
     8889,
     11,
-    51079
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.25524715,
-   "compression_ratio": 1.8031088,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 30,
-   "seek": 101,
-   "start": 115.968,
-   "end": 119.008,
-   "text": " her distance squared, and a cross term.",
-   "tokens": [
-    51079,
     720,
     4560,
     8889,
     11,
     293,
     257,
-    3278,
-    1433,
-    13,
-    51231
+    51165
    ],
    "temperature": 0,
-   "avg_logprob": -0.25524715,
-   "compression_ratio": 1.8031088,
+   "avg_logprob": -0.15140335,
+   "compression_ratio": 1.8477157,
    "no_speech_prob": 0
   },
   {
-   "id": 31,
+   "id": 27,
    "seek": 101,
-   "start": 119.008,
-   "end": 121.068,
-   "text": " Every girl splits this way.",
+   "start": 117.66666,
+   "end": 121.66666,
+   "text": " cross term. Every girl splits this way. Because the",
    "tokens": [
-    51231,
+    51165,
+    3278,
+    1433,
+    13,
     2048,
     2013,
     37741,
     341,
     636,
     13,
-    51334
+    1436,
+    264,
+    51365
    ],
    "temperature": 0,
-   "avg_logprob": -0.25524715,
-   "compression_ratio": 1.8031088,
+   "avg_logprob": -0.15140335,
+   "compression_ratio": 1.8477157,
    "no_speech_prob": 0
   },
   {
-   "id": 32,
+   "id": 28,
    "seek": 101,
-   "start": 121.068,
-   "end": 125.148,
-   "text": " Because the beam balances, the distances add to zero,",
+   "start": 121.66666,
+   "end": 125.66666,
+   "text": " beam balances, the distances add to zero, and the cross",
    "tokens": [
-    51334,
-    1436,
-    264,
+    51365,
     14269,
     33993,
     11,
@@ -3297,48 +3236,48 @@
     281,
     4018,
     11,
-    51538
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.25524715,
-   "compression_ratio": 1.8031088,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 33,
-   "seek": 101,
-   "start": 125.148,
-   "end": 127.828,
-   "text": " and the cross terms cancel.",
-   "tokens": [
-    51538,
     293,
     264,
     3278,
-    2115,
-    10373,
-    13,
-    51672
+    51565
    ],
    "temperature": 0,
-   "avg_logprob": -0.25524715,
-   "compression_ratio": 1.8031088,
+   "avg_logprob": -0.15140335,
+   "compression_ratio": 1.8477157,
    "no_speech_prob": 0
   },
   {
-   "id": 34,
-   "seek": 2715,
-   "start": 127.828,
-   "end": 131.508,
-   "text": " So the average of k squared is mu squared plus sigma squared.",
+   "id": 29,
+   "seek": 101,
+   "start": 125.66666,
+   "end": 129.66666,
+   "text": " terms cancel. So the average of k squared",
    "tokens": [
-    50365,
+    51565,
+    2115,
+    10373,
+    13,
     407,
     264,
     4274,
     295,
     350,
     8889,
+    51765
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15140335,
+   "compression_ratio": 1.8477157,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 30,
+   "seek": 2901,
+   "start": 129.66666,
+   "end": 131.80666,
+   "text": " is mu squared plus sigma squared.",
+   "tokens": [
+    50365,
     307,
     2992,
     8889,
@@ -3346,21 +3285,21 @@
     12771,
     8889,
     13,
-    50549
+    50472
    ],
    "temperature": 0,
-   "avg_logprob": -0.22022352,
-   "compression_ratio": 1.6542553,
+   "avg_logprob": -0.26346165,
+   "compression_ratio": 1.6122448,
    "no_speech_prob": 0
   },
   {
-   "id": 35,
-   "seek": 2715,
-   "start": 132.868,
-   "end": 136.64801,
+   "id": 31,
+   "seek": 2901,
+   "start": 133.10666,
+   "end": 136.94666,
    "text": " And friends average mu plus sigma squared over mu.",
    "tokens": [
-    50617,
+    50537,
     400,
     1855,
     4274,
@@ -3371,21 +3310,21 @@
     670,
     2992,
     13,
-    50806
+    50729
    ],
    "temperature": 0,
-   "avg_logprob": -0.22022352,
-   "compression_ratio": 1.6542553,
+   "avg_logprob": -0.26346165,
+   "compression_ratio": 1.6122448,
    "no_speech_prob": 0
   },
   {
-   "id": 36,
-   "seek": 2715,
-   "start": 138.008,
-   "end": 143.248,
-   "text": " Here that's two and a half, plus a half, exactly the extra half friend we measured.",
+   "id": 32,
+   "seek": 2901,
+   "start": 138.28665,
+   "end": 140.92665,
+   "text": " Here that's two and a half, plus a half,",
    "tokens": [
-    50874,
+    50796,
     1692,
     300,
     311,
@@ -3398,6 +3337,21 @@
     257,
     1922,
     11,
+    50928
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.26346165,
+   "compression_ratio": 1.6122448,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 33,
+   "seek": 2901,
+   "start": 141.32666,
+   "end": 143.54666,
+   "text": " exactly the extra half friend we measured.",
+   "tokens": [
+    50948,
     2293,
     264,
     2857,
@@ -3406,21 +3360,21 @@
     321,
     12690,
     13,
-    51136
+    51059
    ],
    "temperature": 0,
-   "avg_logprob": -0.22022352,
-   "compression_ratio": 1.6542553,
+   "avg_logprob": -0.26346165,
+   "compression_ratio": 1.6122448,
    "no_speech_prob": 0
   },
   {
-   "id": 37,
-   "seek": 2715,
-   "start": 144.328,
-   "end": 146.668,
+   "id": 34,
+   "seek": 2901,
+   "start": 144.62665,
+   "end": 146.96666,
    "text": " With no spread, the ring had no gap.",
    "tokens": [
-    51190,
+    51113,
     2022,
     572,
     3974,
@@ -3431,21 +3385,21 @@
     572,
     7417,
     13,
-    51307
+    51230
    ],
    "temperature": 0,
-   "avg_logprob": -0.22022352,
-   "compression_ratio": 1.6542553,
+   "avg_logprob": -0.26346165,
+   "compression_ratio": 1.6122448,
    "no_speech_prob": 0
   },
   {
-   "id": 38,
-   "seek": 2715,
-   "start": 148.008,
-   "end": 155.188,
-   "text": " In 2011, Facebook users averaged about 190 friends, and a few had thousands.",
+   "id": 35,
+   "seek": 2901,
+   "start": 148.78665,
+   "end": 153.62665,
+   "text": " In 2011, Facebook users averaged about 190 friends,",
    "tokens": [
-    51374,
+    51321,
     682,
     10154,
     11,
@@ -3457,73 +3411,103 @@
     37609,
     1855,
     11,
+    51563
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.26346165,
+   "compression_ratio": 1.6122448,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 36,
+   "seek": 2901,
+   "start": 154.12665,
+   "end": 155.48666,
+   "text": " and a few had thousands.",
+   "tokens": [
+    51588,
     293,
     257,
     1326,
     632,
     5383,
     13,
-    51733
+    51656
    ],
    "temperature": 0,
-   "avg_logprob": -0.22022352,
-   "compression_ratio": 1.6542553,
+   "avg_logprob": -0.26346165,
+   "compression_ratio": 1.6122448,
    "no_speech_prob": 0
   },
   {
-   "id": 39,
-   "seek": 5451,
-   "start": 155.188,
-   "end": 160.188,
-   "text": " If every friendship sent tokens, what would the tokens average?",
+   "id": 37,
+   "seek": 2901,
+   "start": 156.22665,
+   "end": 158.08665,
+   "text": " If every friendship sent tokens,",
    "tokens": [
-    50365,
+    51693,
     759,
     633,
     13216,
     2279,
     22667,
     11,
+    51786
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.26346165,
+   "compression_ratio": 1.6122448,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 38,
+   "seek": 5743,
+   "start": 158.08665,
+   "end": 160.08665,
+   "text": " what would the tokens average?",
+   "tokens": [
+    50365,
     437,
     576,
     264,
     22667,
     4274,
     30,
-    50615
+    50465
    ],
    "temperature": 0,
-   "avg_logprob": -0.11919671,
-   "compression_ratio": 1.5229357,
+   "avg_logprob": -0.13325228,
+   "compression_ratio": 1.4931507,
    "no_speech_prob": 0
   },
   {
-   "id": 40,
-   "seek": 5451,
-   "start": 160.188,
-   "end": 164.188,
+   "id": 39,
+   "seek": 5743,
+   "start": 162.08665,
+   "end": 164.08665,
    "text": " About 635.",
    "tokens": [
-    50615,
+    50565,
     7769,
     1386,
     8794,
     13,
-    50815
+    50665
    ],
    "temperature": 0,
-   "avg_logprob": -0.11919671,
-   "compression_ratio": 1.5229357,
+   "avg_logprob": -0.13325228,
+   "compression_ratio": 1.4931507,
    "no_speech_prob": 0
   },
   {
-   "id": 41,
-   "seek": 5451,
-   "start": 164.188,
-   "end": 167.188,
+   "id": 40,
+   "seek": 5743,
+   "start": 164.08665,
+   "end": 167.08665,
    "text": " The spread term is more than twice the mean.",
    "tokens": [
-    50815,
+    50665,
     440,
     3974,
     1433,
@@ -3534,21 +3518,21 @@
     264,
     914,
     13,
-    50965
+    50815
    ],
    "temperature": 0,
-   "avg_logprob": -0.11919671,
-   "compression_ratio": 1.5229357,
+   "avg_logprob": -0.13325228,
+   "compression_ratio": 1.4931507,
    "no_speech_prob": 0
   },
   {
-   "id": 42,
-   "seek": 5451,
-   "start": 167.188,
-   "end": 173.188,
+   "id": 41,
+   "seek": 5743,
+   "start": 167.08665,
+   "end": 173.08665,
    "text": " And 93% of users had fewer friends than their friends averaged.",
    "tokens": [
-    50965,
+    50815,
     400,
     28876,
     4,
@@ -3563,21 +3547,21 @@
     18247,
     2980,
     13,
-    51265
+    51115
    ],
    "temperature": 0,
-   "avg_logprob": -0.11919671,
-   "compression_ratio": 1.5229357,
+   "avg_logprob": -0.13325228,
+   "compression_ratio": 1.4931507,
    "no_speech_prob": 0
   },
   {
-   "id": 43,
-   "seek": 5451,
-   "start": 173.188,
-   "end": 175.188,
+   "id": 42,
+   "seek": 5743,
+   "start": 173.08665,
+   "end": 175.08665,
    "text": " Odds are that includes you.",
    "tokens": [
-    51265,
+    51115,
     12210,
     16063,
     366,
@@ -3585,21 +3569,21 @@
     5974,
     291,
     13,
-    51365
+    51215
    ],
    "temperature": 0,
-   "avg_logprob": -0.11919671,
-   "compression_ratio": 1.5229357,
+   "avg_logprob": -0.13325228,
+   "compression_ratio": 1.4931507,
    "no_speech_prob": 0
   },
   {
-   "id": 44,
-   "seek": 5451,
-   "start": 175.188,
-   "end": 179.188,
+   "id": 43,
+   "seek": 5743,
+   "start": 175.08665,
+   "end": 179.08665,
    "text": " Christakis and Fowler put this to work at Harvard.",
    "tokens": [
-    51365,
+    51215,
     2040,
     39128,
     293,
@@ -3613,21 +3597,21 @@
     412,
     13378,
     13,
-    51565
+    51415
    ],
    "temperature": 0,
-   "avg_logprob": -0.11919671,
-   "compression_ratio": 1.5229357,
+   "avg_logprob": -0.13325228,
+   "compression_ratio": 1.4931507,
    "no_speech_prob": 0
   },
   {
-   "id": 45,
-   "seek": 5451,
-   "start": 179.188,
-   "end": 183.188,
-   "text": " Named friends have more friends, so they sit closer to everyone else",
+   "id": 44,
+   "seek": 5743,
+   "start": 179.08665,
+   "end": 181.08665,
+   "text": " Named friends have more friends,",
    "tokens": [
-    51565,
+    51415,
     426,
     3475,
     1855,
@@ -3635,28 +3619,26 @@
     544,
     1855,
     11,
+    51515
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13325228,
+   "compression_ratio": 1.4931507,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 45,
+   "seek": 5743,
+   "start": 181.08665,
+   "end": 186.08665,
+   "text": " so they sit closer to everyone else and should catch flu first.",
+   "tokens": [
+    51515,
     370,
     436,
     1394,
     4966,
     281,
-    1518,
-    1646,
-    51765
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.11919671,
-   "compression_ratio": 1.5229357,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 46,
-   "seek": 8251,
-   "start": 183.188,
-   "end": 186.408,
-   "text": " everyone else and should catch flu first.",
-   "tokens": [
-    50365,
     1518,
     1646,
     293,
@@ -3665,21 +3647,21 @@
     5029,
     700,
     13,
-    50526
+    51765
    ],
    "temperature": 0,
-   "avg_logprob": -0.15375306,
-   "compression_ratio": 1.5566038,
+   "avg_logprob": -0.13325228,
+   "compression_ratio": 1.4931507,
    "no_speech_prob": 0
   },
   {
-   "id": 47,
-   "seek": 8251,
-   "start": 186.408,
-   "end": 189.888,
-   "text": " They tracked flu diagnoses in random students",
+   "id": 46,
+   "seek": 8543,
+   "start": 186.08665,
+   "end": 192.08665,
+   "text": " They tracked flu diagnoses in random students and in the friends the students named.",
    "tokens": [
-    50526,
+    50365,
     814,
     31703,
     5029,
@@ -3688,21 +3670,6 @@
     294,
     4974,
     1731,
-    50700
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.15375306,
-   "compression_ratio": 1.5566038,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 48,
-   "seek": 8251,
-   "start": 189.888,
-   "end": 192.328,
-   "text": " and in the friends the students named.",
-   "tokens": [
-    50700,
     293,
     294,
     264,
@@ -3711,42 +3678,42 @@
     1731,
     4926,
     13,
-    50822
+    50665
    ],
    "temperature": 0,
-   "avg_logprob": -0.15375306,
-   "compression_ratio": 1.5566038,
+   "avg_logprob": -0.20051251,
+   "compression_ratio": 1.492228,
    "no_speech_prob": 0
   },
   {
-   "id": 49,
-   "seek": 8251,
-   "start": 192.328,
-   "end": 194.608,
+   "id": 47,
+   "seek": 8543,
+   "start": 192.08665,
+   "end": 194.48666,
    "text": " The friends curve rose first.",
    "tokens": [
-    50822,
+    50665,
     440,
     1855,
     7605,
     10895,
     700,
     13,
-    50936
+    50785
    ],
    "temperature": 0,
-   "avg_logprob": -0.15375306,
-   "compression_ratio": 1.5566038,
+   "avg_logprob": -0.20051251,
+   "compression_ratio": 1.492228,
    "no_speech_prob": 0
   },
   {
-   "id": 50,
-   "seek": 8251,
-   "start": 194.608,
-   "end": 198.748,
+   "id": 48,
+   "seek": 8543,
+   "start": 194.48666,
+   "end": 198.08665,
    "text": " Fitted curves put them 13.9 days ahead.",
    "tokens": [
-    50936,
+    50785,
     479,
     3944,
     19490,
@@ -3758,21 +3725,21 @@
     1708,
     2286,
     13,
-    51143
+    50965
    ],
    "temperature": 0,
-   "avg_logprob": -0.15375306,
-   "compression_ratio": 1.5566038,
+   "avg_logprob": -0.20051251,
+   "compression_ratio": 1.492228,
    "no_speech_prob": 0
   },
   {
-   "id": 51,
-   "seek": 8251,
-   "start": 198.748,
-   "end": 202.64801,
+   "id": 49,
+   "seek": 8543,
+   "start": 198.08665,
+   "end": 203.08665,
    "text": " With self-reported symptoms, the lead shrank to about three.",
    "tokens": [
-    51143,
+    50965,
     2022,
     2698,
     12,
@@ -3789,81 +3756,78 @@
     466,
     1045,
     13,
-    51338
+    51215
    ],
    "temperature": 0,
-   "avg_logprob": -0.15375306,
-   "compression_ratio": 1.5566038,
+   "avg_logprob": -0.20051251,
+   "compression_ratio": 1.492228,
    "no_speech_prob": 0
   },
   {
-   "id": 52,
-   "seek": 8251,
-   "start": 204.36801,
-   "end": 207.86801,
-   "text": " Betty looks at her one friend, Sue and sees four.",
+   "id": 50,
+   "seek": 8543,
+   "start": 203.08665,
+   "end": 206.08665,
+   "text": " Betty looks at her one friend.",
    "tokens": [
-    51424,
+    51215,
     30270,
     1542,
     412,
     720,
     472,
     1277,
-    11,
+    13,
+    51365
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.20051251,
+   "compression_ratio": 1.492228,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 51,
+   "seek": 8543,
+   "start": 206.08665,
+   "end": 209.08665,
+   "text": " Sue and sees four.",
+   "tokens": [
+    51365,
     25332,
     293,
     8194,
     1451,
     13,
-    51599
+    51515
    ],
    "temperature": 0,
-   "avg_logprob": -0.15375306,
-   "compression_ratio": 1.5566038,
+   "avg_logprob": -0.20051251,
+   "compression_ratio": 1.492228,
    "no_speech_prob": 0
   },
   {
-   "id": 53,
-   "seek": 8251,
-   "start": 209.888,
-   "end": 211.568,
+   "id": 52,
+   "seek": 8543,
+   "start": 209.08665,
+   "end": 212.08665,
    "text": " Most of us are Betty.",
    "tokens": [
-    51700,
+    51515,
     4534,
     295,
     505,
     366,
     30270,
     13,
-    51784
+    51665
    ],
    "temperature": 0,
-   "avg_logprob": -0.15375306,
-   "compression_ratio": 1.5566038,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 54,
-   "seek": 11251,
-   "start": 213.188,
-   "end": 243.168,
-   "text": " Thank you.",
-   "tokens": [
-    50365,
-    1044,
-    291,
-    13,
-    51864
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.21543466,
-   "compression_ratio": 0.57894737,
+   "avg_logprob": -0.20051251,
+   "compression_ratio": 1.492228,
    "no_speech_prob": 0
   }
  ],
  "x_groq": {
-  "id": "req_01m5jqrggpenera2j4es9xf0p2"
+  "id": "req_01m5jrs3y1ep6tmt1rc1rtccxn"
  }
 }

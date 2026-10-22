@@ -1,8 +1,8 @@
 {
  "task": "transcribe",
  "language": "English",
- "duration": 211.541348346,
- "text": " a million evaluations to price an option on 100 stocks, an average over 100 inputs. Spread them as a grid, that feels thorough. How many values does each input get? One, the whole grid is one point, the center, two values per input would take two to the hundredth points. Since Metropolis and Ulam's 1949 paper, The standard tool has been random points, like this one. How far off would a million random points land? Start with two inputs. Our function is one inside this quarter disk, zero outside. Its average is exactly one-half. A 10 by 10 grid puts 52 of its 100 points inside, two points off. 100 random darts put 44 inside, six points off. In two dimensions, the grid wins. Now give each a million points and add inputs. The disk becomes a ball, grown to cover exactly half the box. The grid's million points give each axis a thousand values in two dimensions, then a hundred, ten, three. From 20 dimensions on, just the center inside the ball. So the grid says the ball fills the box, 50 points off. Even two values on 19 axes is 18 points off, while the darts stay under a tenth of a point. Maybe darts win by giving every axis more values. A million points on the diagonal give every axis a million values and still miss by eight points Their coordinates move in lockstep A dart coordinates are drawn independently so it lands inside with a chance equal to the answer in any dimension Each dart is a coin flip. One flip is either zero or one. Its average is a half, so every flip misses by exactly a half. Repeat the 100 dart experiment 300 times. In both, the estimates spread this wide. Those misses fall up or down at random, so they partly cancel. 16 darts stray about 4 halves, not 16. N darts stray about root n halves. Divide by n, and the typical miss is a half over root n. For 100 darts, 5 points. We measured 4.8. Any other function swaps the half for its own spread, sigma, there's still no d. So back to our ball, a million darts any dimension. How far off is a typical estimate? One half over a thousand, five hundredths of a point. In 2012, Bergstra and Bengio found random search tuned neural networks as well as grid search, in a fraction of the time. If one setting matters most, Nine grid trials test three values of it. Nine random trials test nine. Darts do have a blind spot, tiny answers. A radius one ball fills two parts in 100 trillion of a 30-dimensional box. Below this line, a million darts expect under one hit, so they usually report zero. The darts never notice the axes. A million coin flips in any dimension. Thank you.",
+ "duration": 210.53872640600002,
+ "text": " a million evaluations to price an option on 100 stocks, an average over 100 inputs. Spread them as a grid, that feels thorough. How many values does each input get? One, the whole grid is one point, the center, two values per input would take two to the hundredth points. Since Metropolis and Ulam's 1949 paper, The standard tool has been random points, like this one. How far off would a million random points land? Start with two inputs. Our function is one inside this quarter disk, zero outside. Its average is exactly one half. A grid of 100 points puts 52 inside, two points off. 100 random darts put 44 inside, six points off. In two dimensions, the grid wins. Now give each a million points and add inputs. The disk becomes a ball, grown to cover exactly half the box. The grid's million points give each axis a thousand values in two dimensions, then a hundred, ten, three. From twenty dimensions on, just the center inside the ball. So the grid says that the ball fills the box, fifty points off. Even two values on 19 axes is 18 points off, while the darts stay under a tenth of a point. Maybe darts win by giving every axis more values. A million points on the diagonal give every axis a million values and still miss by 8 points Their coordinates move in lockstep A dart coordinates are drawn independently so it lands inside with a chance equal to the answer in any dimension Each dart is a coin flip. One flip is either zero or one. Its average is a half, so every flip misses by exactly a half. Repeat the 100 dart experiment 300 times. In both, the estimates spread this wide. Those misses fall up or down at random, so they partly cancel. 16 darts stray about 4 halves, not 16. N darts stray about root n halves. Divide by n, and the typical miss is a half over root n. For 100 darts, 5 points. We measured 4.8. Any other function swaps the half for its own spread, sigma. There's still no d. So back to our ball, a million darts any dimension, how far off is a typical estimate? One half over a thousand, five hundredths of a point. In 2012, Bergstra and Bengio found random search tuned neural networks as well as grid search, in a fraction of the time. If one setting matters most, nine grid trials test three values of it, nine random trials test nine. Darts do have a blind spot, tiny answers. A radius one ball fills two parts in a hundred trillion of a 30-dimensional box. Below this line, a million darts expect under one hit, so they usually report zero. The darts never notice the axes. A million coin flips in any dimension.",
  "words": [
   {
    "word": "a",
@@ -381,7 +381,7 @@
   },
   {
    "word": "Start",
-   "start": 34.78,
+   "start": 34.82,
    "end": 35.1
   },
   {
@@ -452,16 +452,16 @@
   {
    "word": "Its",
    "start": 41.22,
-   "end": 41.38
+   "end": 41.4
   },
   {
    "word": "average",
-   "start": 41.38,
-   "end": 41.82
+   "start": 41.4,
+   "end": 41.8
   },
   {
    "word": "is",
-   "start": 41.82,
+   "start": 41.8,
    "end": 42.18
   },
   {
@@ -470,1934 +470,1919 @@
    "end": 42.72
   },
   {
-   "word": "one-half.",
+   "word": "one",
    "start": 42.72,
-   "end": 43.46
+   "end": 43.02
+  },
+  {
+   "word": "half.",
+   "start": 43.02,
+   "end": 43.5
   },
   {
    "word": "A",
-   "start": 44.16,
-   "end": 44.38
-  },
-  {
-   "word": "10",
-   "start": 44.38,
-   "end": 44.7
-  },
-  {
-   "word": "by",
-   "start": 44.7,
-   "end": 44.78
-  },
-  {
-   "word": "10",
-   "start": 44.78,
-   "end": 45.16
+   "start": 44.18,
+   "end": 44.34
   },
   {
    "word": "grid",
-   "start": 45.16,
-   "end": 45.44
-  },
-  {
-   "word": "puts",
-   "start": 45.44,
-   "end": 45.78
-  },
-  {
-   "word": "52",
-   "start": 45.78,
-   "end": 46.18
+   "start": 44.34,
+   "end": 44.6
   },
   {
    "word": "of",
-   "start": 46.18,
-   "end": 46.5
-  },
-  {
-   "word": "its",
-   "start": 46.5,
-   "end": 46.62
+   "start": 44.6,
+   "end": 44.78
   },
   {
    "word": "100",
-   "start": 46.62,
-   "end": 46.92
+   "start": 44.78,
+   "end": 45.08
   },
   {
    "word": "points",
-   "start": 46.92,
-   "end": 47.38
+   "start": 45.08,
+   "end": 45.58
+  },
+  {
+   "word": "puts",
+   "start": 45.58,
+   "end": 45.9
+  },
+  {
+   "word": "52",
+   "start": 45.9,
+   "end": 46.34
   },
   {
    "word": "inside,",
-   "start": 47.38,
-   "end": 48.4
+   "start": 46.34,
+   "end": 47.44
   },
   {
    "word": "two",
-   "start": 48.4,
-   "end": 48.8
+   "start": 47.44,
+   "end": 47.74
   },
   {
    "word": "points",
-   "start": 48.8,
-   "end": 49.14
+   "start": 47.74,
+   "end": 48.08
   },
   {
    "word": "off.",
-   "start": 49.14,
-   "end": 49.86
+   "start": 48.08,
+   "end": 48.44
   },
   {
    "word": "100",
-   "start": 50.2,
-   "end": 50.62
+   "start": 49.14,
+   "end": 49.52
   },
   {
    "word": "random",
-   "start": 50.62,
-   "end": 51.16
+   "start": 49.52,
+   "end": 50.06
   },
   {
    "word": "darts",
-   "start": 51.16,
-   "end": 51.48
+   "start": 50.06,
+   "end": 50.38
   },
   {
    "word": "put",
-   "start": 51.48,
-   "end": 51.74
+   "start": 50.38,
+   "end": 50.64
   },
   {
    "word": "44",
-   "start": 51.74,
-   "end": 52.2
+   "start": 50.64,
+   "end": 51.1
   },
   {
    "word": "inside,",
-   "start": 52.2,
-   "end": 53.32
+   "start": 51.1,
+   "end": 52.28
   },
   {
    "word": "six",
-   "start": 53.32,
-   "end": 53.62
+   "start": 52.28,
+   "end": 52.52
   },
   {
    "word": "points",
-   "start": 53.62,
-   "end": 53.98
+   "start": 52.52,
+   "end": 52.88
   },
   {
    "word": "off.",
-   "start": 53.98,
-   "end": 54.44
+   "start": 52.88,
+   "end": 53.42
   },
   {
    "word": "In",
-   "start": 54.84,
-   "end": 55
+   "start": 53.74,
+   "end": 53.9
   },
   {
    "word": "two",
-   "start": 55,
-   "end": 55.2
+   "start": 53.9,
+   "end": 54.1
   },
   {
    "word": "dimensions,",
-   "start": 55.2,
-   "end": 55.64
+   "start": 54.1,
+   "end": 54.56
   },
   {
    "word": "the",
-   "start": 55.64,
-   "end": 56.22
+   "start": 54.56,
+   "end": 55.14
   },
   {
    "word": "grid",
-   "start": 56.22,
-   "end": 56.42
+   "start": 55.14,
+   "end": 55.32
   },
   {
    "word": "wins.",
-   "start": 56.42,
-   "end": 57.08
+   "start": 55.32,
+   "end": 55.66
   },
   {
    "word": "Now",
-   "start": 57.6,
-   "end": 57.74
+   "start": 56.52,
+   "end": 56.62
   },
   {
    "word": "give",
-   "start": 57.74,
-   "end": 58.02
+   "start": 56.62,
+   "end": 56.92
   },
   {
    "word": "each",
-   "start": 58.02,
-   "end": 58.2
+   "start": 56.92,
+   "end": 57.1
   },
   {
    "word": "a",
-   "start": 58.2,
-   "end": 58.32
+   "start": 57.1,
+   "end": 57.22
   },
   {
    "word": "million",
-   "start": 58.32,
-   "end": 58.58
+   "start": 57.22,
+   "end": 57.48
   },
   {
    "word": "points",
-   "start": 58.58,
-   "end": 59.1
+   "start": 57.48,
+   "end": 57.98
   },
   {
    "word": "and",
-   "start": 59.1,
-   "end": 59.56
+   "start": 57.98,
+   "end": 58.46
   },
   {
    "word": "add",
-   "start": 59.56,
-   "end": 59.86
+   "start": 58.46,
+   "end": 58.74
   },
   {
    "word": "inputs.",
-   "start": 59.86,
-   "end": 60.34
+   "start": 58.74,
+   "end": 59.52
   },
   {
    "word": "The",
-   "start": 60.88,
-   "end": 61.02
+   "start": 59.3,
+   "end": 59.94
   },
   {
    "word": "disk",
-   "start": 61.02,
-   "end": 61.32
+   "start": 59.94,
+   "end": 60.24
   },
   {
    "word": "becomes",
-   "start": 61.32,
-   "end": 61.7
+   "start": 60.24,
+   "end": 60.64
   },
   {
    "word": "a",
-   "start": 61.7,
-   "end": 61.88
+   "start": 60.64,
+   "end": 60.78
   },
   {
    "word": "ball,",
-   "start": 61.88,
-   "end": 62.36
+   "start": 60.78,
+   "end": 61.28
   },
   {
    "word": "grown",
-   "start": 62.36,
-   "end": 62.88
+   "start": 61.28,
+   "end": 61.82
   },
   {
    "word": "to",
-   "start": 62.88,
-   "end": 63.12
+   "start": 61.82,
+   "end": 62.02
   },
   {
    "word": "cover",
-   "start": 63.12,
-   "end": 63.38
+   "start": 62.02,
+   "end": 62.28
   },
   {
    "word": "exactly",
-   "start": 63.38,
-   "end": 63.86
+   "start": 62.28,
+   "end": 62.82
   },
   {
    "word": "half",
-   "start": 63.86,
-   "end": 64.22
+   "start": 62.82,
+   "end": 63.14
   },
   {
    "word": "the",
-   "start": 64.22,
-   "end": 64.42
+   "start": 63.14,
+   "end": 63.34
   },
   {
    "word": "box.",
-   "start": 64.42,
-   "end": 64.82
+   "start": 63.34,
+   "end": 63.86
   },
   {
    "word": "The",
-   "start": 65.5,
-   "end": 65.66
+   "start": 64.34,
+   "end": 64.56
   },
   {
    "word": "grid's",
-   "start": 65.66,
-   "end": 65.94
+   "start": 64.56,
+   "end": 64.84
   },
   {
    "word": "million",
-   "start": 65.94,
-   "end": 66.38
+   "start": 64.84,
+   "end": 65.3
   },
   {
    "word": "points",
-   "start": 66.38,
-   "end": 66.78
+   "start": 65.3,
+   "end": 65.78
   },
   {
    "word": "give",
-   "start": 66.78,
-   "end": 67.16
+   "start": 65.78,
+   "end": 66.08
   },
   {
    "word": "each",
-   "start": 67.16,
-   "end": 67.42
+   "start": 66.08,
+   "end": 66.32
   },
   {
    "word": "axis",
-   "start": 67.42,
-   "end": 67.86
+   "start": 66.32,
+   "end": 66.8
   },
   {
    "word": "a",
-   "start": 67.86,
-   "end": 68.16
+   "start": 66.8,
+   "end": 67.06
   },
   {
    "word": "thousand",
-   "start": 68.16,
-   "end": 68.48
+   "start": 67.06,
+   "end": 67.42
   },
   {
    "word": "values",
-   "start": 68.48,
-   "end": 69.04
+   "start": 67.42,
+   "end": 68.04
   },
   {
    "word": "in",
-   "start": 69.04,
-   "end": 69.38
+   "start": 68.04,
+   "end": 68.28
   },
   {
    "word": "two",
-   "start": 69.38,
-   "end": 69.58
+   "start": 68.28,
+   "end": 68.48
   },
   {
    "word": "dimensions,",
-   "start": 69.58,
-   "end": 70.58
+   "start": 68.48,
+   "end": 69.38
   },
   {
    "word": "then",
-   "start": 70.9,
-   "end": 71.04
+   "start": 69.38,
+   "end": 69.92
   },
   {
    "word": "a",
-   "start": 71.04,
-   "end": 71.18
+   "start": 69.92,
+   "end": 70.08
   },
   {
    "word": "hundred,",
-   "start": 71.18,
-   "end": 71.96
+   "start": 70.08,
+   "end": 70.94
   },
   {
    "word": "ten,",
-   "start": 71.96,
-   "end": 72.64
+   "start": 70.94,
+   "end": 71.54
   },
   {
    "word": "three.",
-   "start": 72.64,
-   "end": 72.78
+   "start": 71.54,
+   "end": 71.92
   },
   {
    "word": "From",
-   "start": 73.7,
-   "end": 73.88
+   "start": 72.52,
+   "end": 72.76
   },
   {
-   "word": "20",
-   "start": 73.88,
-   "end": 74.14
+   "word": "twenty",
+   "start": 72.76,
+   "end": 73.02
   },
   {
    "word": "dimensions",
-   "start": 74.14,
-   "end": 74.62
+   "start": 73.02,
+   "end": 73.54
   },
   {
    "word": "on,",
-   "start": 74.62,
-   "end": 75.16
+   "start": 73.54,
+   "end": 74.06
   },
   {
    "word": "just",
-   "start": 75.16,
+   "start": 74.06,
+   "end": 74.54
+  },
+  {
+   "word": "the",
+   "start": 74.54,
+   "end": 74.68
+  },
+  {
+   "word": "center",
+   "start": 74.68,
+   "end": 75.06
+  },
+  {
+   "word": "inside",
+   "start": 75.06,
    "end": 75.62
   },
   {
    "word": "the",
    "start": 75.62,
-   "end": 75.8
-  },
-  {
-   "word": "center",
-   "start": 75.8,
-   "end": 76.14
-  },
-  {
-   "word": "inside",
-   "start": 76.14,
-   "end": 76.7
-  },
-  {
-   "word": "the",
-   "start": 76.7,
-   "end": 76.98
+   "end": 75.86
   },
   {
    "word": "ball.",
-   "start": 76.98,
-   "end": 77.38
+   "start": 75.86,
+   "end": 76.28
   },
   {
    "word": "So",
-   "start": 77.62,
-   "end": 77.76
+   "start": 75.38,
+   "end": 76.68
   },
   {
    "word": "the",
-   "start": 77.76,
-   "end": 77.88
+   "start": 76.68,
+   "end": 76.82
   },
   {
    "word": "grid",
-   "start": 77.88,
-   "end": 78.04
+   "start": 76.82,
+   "end": 77.04
   },
   {
    "word": "says",
-   "start": 78.04,
-   "end": 78.28
+   "start": 77.04,
+   "end": 77.3
+  },
+  {
+   "word": "that",
+   "start": 77.3,
+   "end": 77.5
   },
   {
    "word": "the",
-   "start": 78.28,
-   "end": 78.5
+   "start": 77.5,
+   "end": 77.62
   },
   {
    "word": "ball",
-   "start": 78.5,
-   "end": 78.72
+   "start": 77.62,
+   "end": 77.86
   },
   {
    "word": "fills",
-   "start": 78.72,
-   "end": 79.06
+   "start": 77.86,
+   "end": 78.22
   },
   {
    "word": "the",
-   "start": 79.06,
-   "end": 79.26
+   "start": 78.22,
+   "end": 78.4
   },
   {
    "word": "box,",
-   "start": 79.26,
-   "end": 79.66
+   "start": 78.4,
+   "end": 79.38
   },
   {
-   "word": "50",
-   "start": 79.66,
-   "end": 80.3
+   "word": "fifty",
+   "start": 79.38,
+   "end": 79.48
   },
   {
    "word": "points",
-   "start": 80.3,
-   "end": 80.7
+   "start": 79.48,
+   "end": 79.9
   },
   {
    "word": "off.",
-   "start": 80.7,
-   "end": 81.14
+   "start": 79.9,
+   "end": 80.38
   },
   {
    "word": "Even",
-   "start": 82.5,
-   "end": 82.82
+   "start": 81.8,
+   "end": 81.98
   },
   {
    "word": "two",
-   "start": 82.82,
-   "end": 83.08
+   "start": 81.98,
+   "end": 82.28
   },
   {
    "word": "values",
-   "start": 83.08,
-   "end": 83.66
+   "start": 82.28,
+   "end": 82.86
   },
   {
    "word": "on",
-   "start": 83.66,
-   "end": 83.94
+   "start": 82.86,
+   "end": 83.12
   },
   {
    "word": "19",
-   "start": 83.94,
-   "end": 84.3
+   "start": 83.12,
+   "end": 83.5
   },
   {
    "word": "axes",
-   "start": 84.3,
-   "end": 84.8
+   "start": 83.5,
+   "end": 84.04
   },
   {
    "word": "is",
-   "start": 84.8,
-   "end": 85.36
+   "start": 84.04,
+   "end": 84.56
   },
   {
    "word": "18",
-   "start": 85.36,
-   "end": 85.76
+   "start": 84.56,
+   "end": 85.02
   },
   {
    "word": "points",
-   "start": 85.76,
-   "end": 86.32
+   "start": 85.02,
+   "end": 85.52
   },
   {
    "word": "off,",
-   "start": 86.32,
-   "end": 86.98
+   "start": 85.52,
+   "end": 86.58
   },
   {
    "word": "while",
-   "start": 87.2,
-   "end": 87.4
+   "start": 86.58,
+   "end": 86.62
   },
   {
    "word": "the",
-   "start": 87.4,
-   "end": 87.58
+   "start": 86.62,
+   "end": 86.76
   },
   {
    "word": "darts",
-   "start": 87.58,
-   "end": 87.82
+   "start": 86.76,
+   "end": 87
   },
   {
    "word": "stay",
-   "start": 87.82,
-   "end": 88.24
+   "start": 87,
+   "end": 87.4
   },
   {
    "word": "under",
-   "start": 88.24,
-   "end": 88.56
+   "start": 87.4,
+   "end": 87.74
   },
   {
    "word": "a",
-   "start": 88.56,
-   "end": 88.74
+   "start": 87.74,
+   "end": 87.94
   },
   {
    "word": "tenth",
-   "start": 88.74,
-   "end": 88.92
+   "start": 87.94,
+   "end": 88.1
   },
   {
    "word": "of",
-   "start": 88.92,
-   "end": 89.12
+   "start": 88.1,
+   "end": 88.28
   },
   {
    "word": "a",
-   "start": 89.12,
-   "end": 89.2
+   "start": 88.28,
+   "end": 88.4
   },
   {
    "word": "point.",
-   "start": 89.2,
-   "end": 89.68
+   "start": 88.4,
+   "end": 89.6
   },
   {
    "word": "Maybe",
-   "start": 91.22,
-   "end": 91.72
+   "start": 90.58,
+   "end": 90.94
   },
   {
    "word": "darts",
-   "start": 91.72,
-   "end": 92.02
+   "start": 90.94,
+   "end": 91.22
   },
   {
    "word": "win",
-   "start": 92.02,
-   "end": 92.4
+   "start": 91.22,
+   "end": 91.58
   },
   {
    "word": "by",
-   "start": 92.4,
-   "end": 92.88
+   "start": 91.58,
+   "end": 92.08
   },
   {
    "word": "giving",
-   "start": 92.88,
-   "end": 93.14
+   "start": 92.08,
+   "end": 92.32
   },
   {
    "word": "every",
-   "start": 93.14,
-   "end": 93.52
+   "start": 92.32,
+   "end": 92.7
   },
   {
    "word": "axis",
-   "start": 93.52,
-   "end": 93.96
+   "start": 92.7,
+   "end": 93.18
   },
   {
    "word": "more",
-   "start": 93.96,
-   "end": 94.28
+   "start": 93.18,
+   "end": 93.46
   },
   {
    "word": "values.",
-   "start": 94.28,
-   "end": 95.1
+   "start": 93.46,
+   "end": 94.26
   },
   {
    "word": "A",
-   "start": 94.76,
-   "end": 95.56
+   "start": 94.26,
+   "end": 94.76
   },
   {
    "word": "million",
-   "start": 95.56,
-   "end": 95.94
+   "start": 94.76,
+   "end": 95.08
   },
   {
    "word": "points",
-   "start": 95.94,
-   "end": 96.36
+   "start": 95.08,
+   "end": 95.54
   },
   {
    "word": "on",
-   "start": 96.36,
-   "end": 96.52
+   "start": 95.54,
+   "end": 95.7
   },
   {
    "word": "the",
-   "start": 96.52,
-   "end": 96.62
+   "start": 95.7,
+   "end": 95.8
   },
   {
    "word": "diagonal",
-   "start": 96.62,
-   "end": 97.2
+   "start": 95.8,
+   "end": 96.32
   },
   {
    "word": "give",
-   "start": 97.2,
-   "end": 97.56
+   "start": 96.32,
+   "end": 96.74
   },
   {
    "word": "every",
-   "start": 97.56,
-   "end": 97.9
+   "start": 96.34,
+   "end": 97.12
   },
   {
    "word": "axis",
-   "start": 97.9,
-   "end": 98.48
+   "start": 97.12,
+   "end": 97.7
   },
   {
    "word": "a",
-   "start": 98.48,
-   "end": 98.76
+   "start": 97.7,
+   "end": 97.94
   },
   {
    "word": "million",
-   "start": 98.76,
-   "end": 99.08
+   "start": 97.94,
+   "end": 98.28
   },
   {
    "word": "values",
-   "start": 99.08,
-   "end": 99.78
+   "start": 98.28,
+   "end": 98.98
   },
   {
    "word": "and",
-   "start": 99.64,
-   "end": 100.46
+   "start": 98.98,
+   "end": 99.64
   },
   {
    "word": "still",
-   "start": 100.46,
-   "end": 100.7
+   "start": 99.64,
+   "end": 99.88
   },
   {
    "word": "miss",
-   "start": 100.7,
-   "end": 101.06
+   "start": 99.88,
+   "end": 100.24
   },
   {
    "word": "by",
-   "start": 101.06,
-   "end": 101.32
+   "start": 100.24,
+   "end": 100.5
   },
   {
-   "word": "eight",
-   "start": 101.32,
-   "end": 101.62
+   "word": "8",
+   "start": 100.5,
+   "end": 100.8
   },
   {
    "word": "points.",
-   "start": 101.62,
-   "end": 102.3
+   "start": 100.8,
+   "end": 101.46
   },
   {
    "word": "Their",
-   "start": 102.6,
-   "end": 103
+   "start": 101.46,
+   "end": 102.18
   },
   {
    "word": "coordinates",
-   "start": 103,
-   "end": 103.6
+   "start": 102.18,
+   "end": 102.78
   },
   {
    "word": "move",
-   "start": 103.6,
-   "end": 104.02
+   "start": 102.78,
+   "end": 103.16
   },
   {
    "word": "in",
-   "start": 104.02,
-   "end": 104.2
+   "start": 103.16,
+   "end": 103.38
   },
   {
    "word": "lockstep.",
-   "start": 104.2,
-   "end": 105.04
+   "start": 103.38,
+   "end": 104.52
   },
   {
    "word": "A",
-   "start": 105.6,
-   "end": 105.92
+   "start": 104.9,
+   "end": 105.1
   },
   {
    "word": "dart's",
-   "start": 105.92,
-   "end": 106.26
+   "start": 105.1,
+   "end": 105.4
   },
   {
    "word": "coordinates",
-   "start": 106.19065,
-   "end": 106.710655
+   "start": 105.40934,
+   "end": 105.92934
   },
   {
    "word": "are",
-   "start": 106.710655,
-   "end": 107.030655
+   "start": 105.92934,
+   "end": 106.249344
   },
   {
    "word": "drawn",
-   "start": 107.030655,
-   "end": 107.37065
+   "start": 106.249344,
+   "end": 106.56934
   },
   {
    "word": "independently,",
-   "start": 106.95065,
-   "end": 108.47065
+   "start": 106.14934,
+   "end": 107.62934
   },
   {
    "word": "so",
-   "start": 108.47065,
-   "end": 109.01065
+   "start": 107.62934,
+   "end": 108.20934
   },
   {
    "word": "it",
-   "start": 109.01065,
-   "end": 109.19065
+   "start": 108.20934,
+   "end": 108.40934
   },
   {
    "word": "lands",
-   "start": 109.19065,
-   "end": 109.65065
+   "start": 108.40934,
+   "end": 108.84934
   },
   {
    "word": "inside",
-   "start": 109.65065,
-   "end": 110.170654
+   "start": 108.84934,
+   "end": 109.36934
   },
   {
    "word": "with",
-   "start": 110.170654,
-   "end": 110.55065
+   "start": 109.36934,
+   "end": 109.749344
   },
   {
    "word": "a",
-   "start": 110.55065,
-   "end": 110.65065
+   "start": 109.749344,
+   "end": 109.84934
   },
   {
    "word": "chance",
-   "start": 110.65065,
-   "end": 111.030655
+   "start": 109.84934,
+   "end": 110.22934
   },
   {
    "word": "equal",
-   "start": 111.030655,
-   "end": 111.390656
+   "start": 110.22934,
+   "end": 110.58934
   },
   {
    "word": "to",
-   "start": 111.390656,
-   "end": 111.63065
+   "start": 110.58934,
+   "end": 110.82934
   },
   {
    "word": "the",
-   "start": 111.63065,
-   "end": 111.750656
+   "start": 110.82934,
+   "end": 110.94934
   },
   {
    "word": "answer,",
-   "start": 111.750656,
-   "end": 112.37065
+   "start": 110.94934,
+   "end": 111.92934
   },
   {
    "word": "in",
-   "start": 112.37065,
-   "end": 112.83065
+   "start": 111.92934,
+   "end": 112.02934
   },
   {
    "word": "any",
-   "start": 112.83065,
-   "end": 113.070656
+   "start": 112.02934,
+   "end": 112.26934
   },
   {
    "word": "dimension.",
-   "start": 113.070656,
-   "end": 114.210655
+   "start": 112.26934,
+   "end": 113.04934
   },
   {
    "word": "Each",
-   "start": 114.210655,
-   "end": 114.670654
+   "start": 113.04934,
+   "end": 113.86934
   },
   {
    "word": "dart",
-   "start": 114.41065,
-   "end": 115.09065
+   "start": 113.54934,
+   "end": 114.28934
   },
   {
    "word": "is",
-   "start": 115.09065,
-   "end": 115.390656
+   "start": 114.28934,
+   "end": 114.58934
   },
   {
    "word": "a",
-   "start": 115.390656,
-   "end": 115.490654
+   "start": 114.58934,
+   "end": 114.68934
   },
   {
    "word": "coin",
-   "start": 115.490654,
-   "end": 115.83065
+   "start": 114.68934,
+   "end": 115.02934
   },
   {
    "word": "flip.",
-   "start": 115.83065,
-   "end": 116.33065
+   "start": 115.02934,
+   "end": 115.52934
   },
   {
    "word": "One",
-   "start": 116.33065,
-   "end": 117.31065
+   "start": 115.52934,
+   "end": 116.50934
   },
   {
    "word": "flip",
-   "start": 117.31065,
-   "end": 117.55065
+   "start": 116.50934,
+   "end": 116.749344
   },
   {
    "word": "is",
-   "start": 117.55065,
-   "end": 117.77065
+   "start": 116.749344,
+   "end": 116.969345
   },
   {
    "word": "either",
-   "start": 117.77065,
-   "end": 118.030655
+   "start": 116.969345,
+   "end": 117.22934
   },
   {
    "word": "zero",
-   "start": 118.030655,
-   "end": 118.33065
+   "start": 117.22934,
+   "end": 117.52934
   },
   {
    "word": "or",
-   "start": 118.33065,
-   "end": 118.79065
+   "start": 117.52934,
+   "end": 117.969345
   },
   {
    "word": "one.",
-   "start": 118.79065,
-   "end": 119.250656
+   "start": 117.969345,
+   "end": 118.469345
   },
   {
    "word": "Its",
-   "start": 119.250656,
-   "end": 119.65065
+   "start": 118.469345,
+   "end": 118.84934
   },
   {
    "word": "average",
-   "start": 119.65065,
-   "end": 120.09065
+   "start": 118.84934,
+   "end": 119.28934
   },
   {
    "word": "is",
-   "start": 120.09065,
-   "end": 120.47066
+   "start": 119.28934,
+   "end": 119.66934
   },
   {
    "word": "a",
-   "start": 120.47066,
-   "end": 120.57065
+   "start": 119.66934,
+   "end": 119.82934
   },
   {
    "word": "half,",
-   "start": 120.57065,
-   "end": 121.13065
+   "start": 119.82934,
+   "end": 120.32934
   },
   {
    "word": "so",
-   "start": 121.13065,
-   "end": 121.57065
+   "start": 120.32934,
+   "end": 120.76934
   },
   {
    "word": "every",
-   "start": 121.57065,
-   "end": 121.890656
+   "start": 120.76934,
+   "end": 121.109344
   },
   {
    "word": "flip",
-   "start": 121.890656,
-   "end": 122.210655
+   "start": 121.109344,
+   "end": 121.38934
   },
   {
    "word": "misses",
-   "start": 121.750656,
-   "end": 122.57065
+   "start": 120.94934,
+   "end": 121.76934
   },
   {
    "word": "by",
-   "start": 122.57065,
-   "end": 122.83065
+   "start": 121.76934,
+   "end": 122.04934
   },
   {
    "word": "exactly",
-   "start": 122.83065,
-   "end": 123.390656
+   "start": 122.04934,
+   "end": 122.58934
   },
   {
    "word": "a",
-   "start": 123.390656,
-   "end": 123.61066
+   "start": 122.58934,
+   "end": 122.80934
   },
   {
    "word": "half.",
-   "start": 123.61066,
-   "end": 124.07065
+   "start": 122.80934,
+   "end": 123.40934
   },
   {
    "word": "Repeat",
-   "start": 124.07065,
-   "end": 125.09065
+   "start": 123.40934,
+   "end": 124.28934
   },
   {
    "word": "the",
-   "start": 125.09065,
-   "end": 125.350655
+   "start": 124.28934,
+   "end": 124.54934
   },
   {
    "word": "100",
-   "start": 125.350655,
-   "end": 125.63065
+   "start": 124.54934,
+   "end": 124.82934
   },
   {
    "word": "dart",
-   "start": 125.63065,
-   "end": 125.850655
+   "start": 124.82934,
+   "end": 125.04934
   },
   {
    "word": "experiment",
-   "start": 125.850655,
-   "end": 126.51065
+   "start": 125.04934,
+   "end": 125.70934
   },
   {
    "word": "300",
-   "start": 126.51065,
-   "end": 127.11066
+   "start": 125.70934,
+   "end": 126.30934
   },
   {
    "word": "times.",
-   "start": 127.11066,
-   "end": 128.15065
+   "start": 126.30934,
+   "end": 127.34934
   },
   {
    "word": "In",
-   "start": 128.15065,
-   "end": 128.55066
+   "start": 127.34934,
+   "end": 127.749344
   },
   {
    "word": "both,",
-   "start": 128.55066,
-   "end": 128.95065
+   "start": 127.749344,
+   "end": 128.20934
   },
   {
    "word": "the",
-   "start": 128.95065,
-   "end": 129.23065
+   "start": 128.20934,
+   "end": 128.42934
   },
   {
    "word": "estimates",
-   "start": 129.23065,
-   "end": 129.69066
+   "start": 128.42934,
+   "end": 128.88934
   },
   {
    "word": "spread",
-   "start": 129.77066,
-   "end": 129.97066
+   "start": 128.96935,
+   "end": 129.16934
   },
   {
    "word": "this",
-   "start": 129.97066,
-   "end": 130.23065
+   "start": 129.16934,
+   "end": 129.42934
   },
   {
    "word": "wide.",
-   "start": 130.23065,
-   "end": 130.81065
+   "start": 129.42934,
+   "end": 130.00934
   },
   {
    "word": "Those",
-   "start": 130.81065,
-   "end": 131.57065
+   "start": 130.00934,
+   "end": 130.78934
   },
   {
    "word": "misses",
-   "start": 131.57065,
-   "end": 131.85065
+   "start": 130.78934,
+   "end": 131.06934
   },
   {
    "word": "fall",
-   "start": 131.85065,
-   "end": 132.25066
+   "start": 131.06934,
+   "end": 131.42934
   },
   {
    "word": "up",
-   "start": 132.25066,
-   "end": 132.47066
+   "start": 131.42934,
+   "end": 131.66934
   },
   {
    "word": "or",
-   "start": 132.47066,
-   "end": 132.63065
+   "start": 131.66934,
+   "end": 131.82935
   },
   {
    "word": "down",
-   "start": 132.63065,
-   "end": 132.87065
+   "start": 131.82935,
+   "end": 132.06934
   },
   {
    "word": "at",
-   "start": 132.87065,
-   "end": 133.03065
+   "start": 132.06934,
+   "end": 132.22934
   },
   {
    "word": "random,",
-   "start": 133.03065,
-   "end": 133.87065
+   "start": 132.22934,
+   "end": 133.08934
   },
   {
    "word": "so",
-   "start": 133.87065,
-   "end": 133.95065
+   "start": 133.08934,
+   "end": 133.16934
   },
   {
    "word": "they",
-   "start": 133.95065,
-   "end": 134.13065
+   "start": 133.16934,
+   "end": 133.32935
   },
   {
    "word": "partly",
-   "start": 134.13065,
-   "end": 134.47066
+   "start": 133.32935,
+   "end": 133.68933
   },
   {
    "word": "cancel.",
-   "start": 134.47066,
-   "end": 135.53065
+   "start": 133.68933,
+   "end": 134.72934
   },
   {
    "word": "16",
-   "start": 135.53065,
-   "end": 136.17065
+   "start": 134.72934,
+   "end": 135.36934
   },
   {
    "word": "darts",
-   "start": 136.17065,
-   "end": 136.51065
+   "start": 135.04935,
+   "end": 135.74934
   },
   {
    "word": "stray",
-   "start": 136.51065,
-   "end": 136.83066
+   "start": 135.74934,
+   "end": 136.06934
   },
   {
    "word": "about",
-   "start": 136.39066,
-   "end": 137.19064
+   "start": 136.06934,
+   "end": 136.40933
   },
   {
    "word": "4",
-   "start": 137.19064,
-   "end": 137.49066
+   "start": 136.40933,
+   "end": 136.68933
   },
   {
    "word": "halves,",
-   "start": 137.49066,
-   "end": 138.15065
+   "start": 136.68933,
+   "end": 137.34933
   },
   {
    "word": "not",
-   "start": 138.15065,
-   "end": 138.53065
+   "start": 137.34933,
+   "end": 137.72934
   },
   {
    "word": "16.",
-   "start": 138.53065,
-   "end": 139.61066
+   "start": 137.72934,
+   "end": 138.54935
   },
   {
    "word": "N",
-   "start": 139.61066,
-   "end": 139.95065
+   "start": 138.54935,
+   "end": 139.14934
   },
   {
    "word": "darts",
-   "start": 139.95065,
-   "end": 140.23065
+   "start": 139.14934,
+   "end": 139.42934
   },
   {
    "word": "stray",
-   "start": 140.23065,
-   "end": 140.57065
+   "start": 139.42934,
+   "end": 139.76935
   },
   {
    "word": "about",
-   "start": 140.57065,
-   "end": 140.93065
+   "start": 139.76935,
+   "end": 140.10934
   },
   {
    "word": "root",
-   "start": 140.93065,
-   "end": 141.19064
+   "start": 140.10934,
+   "end": 140.38934
   },
   {
    "word": "n",
-   "start": 141.19064,
-   "end": 141.41064
+   "start": 140.38934,
+   "end": 140.60934
   },
   {
    "word": "halves.",
-   "start": 141.41064,
-   "end": 142.43065
+   "start": 140.60934,
+   "end": 141.16934
   },
   {
    "word": "Divide",
-   "start": 142.43065,
-   "end": 142.65065
+   "start": 141.16934,
+   "end": 141.82935
   },
   {
    "word": "by",
-   "start": 142.65065,
-   "end": 142.85065
+   "start": 141.82935,
+   "end": 142.02934
   },
   {
    "word": "n,",
-   "start": 142.85065,
-   "end": 143.43065
+   "start": 142.02934,
+   "end": 142.60934
   },
   {
    "word": "and",
-   "start": 143.43065,
-   "end": 143.81065
+   "start": 142.60934,
+   "end": 143.00934
   },
   {
    "word": "the",
-   "start": 143.81065,
-   "end": 143.91064
+   "start": 142.52934,
+   "end": 143.14934
   },
   {
    "word": "typical",
-   "start": 143.91064,
-   "end": 144.15065
+   "start": 143.14934,
+   "end": 143.42934
   },
   {
    "word": "miss",
-   "start": 144.15065,
-   "end": 144.61066
+   "start": 143.42934,
+   "end": 143.80934
   },
   {
    "word": "is",
-   "start": 144.61066,
-   "end": 144.85065
+   "start": 143.80934,
+   "end": 144.06934
   },
   {
    "word": "a",
-   "start": 144.85065,
-   "end": 145.01065
+   "start": 144.06934,
+   "end": 144.22934
   },
   {
    "word": "half",
-   "start": 144.51065,
-   "end": 145.19064
+   "start": 144.22934,
+   "end": 144.38934
   },
   {
    "word": "over",
-   "start": 145.19064,
-   "end": 145.51065
+   "start": 144.38934,
+   "end": 144.68933
   },
   {
    "word": "root",
-   "start": 145.51065,
-   "end": 145.69064
+   "start": 144.68933,
+   "end": 144.88934
   },
   {
    "word": "n.",
-   "start": 145.69064,
-   "end": 146.21065
+   "start": 144.88934,
+   "end": 145.40933
   },
   {
    "word": "For",
-   "start": 146.21065,
-   "end": 147.23065
+   "start": 145.40933,
+   "end": 146.42934
   },
   {
    "word": "100",
-   "start": 147.23065,
-   "end": 147.59065
+   "start": 146.42934,
+   "end": 146.78934
   },
   {
    "word": "darts,",
-   "start": 147.59065,
-   "end": 148.45065
+   "start": 146.78934,
+   "end": 147.48935
   },
   {
    "word": "5",
-   "start": 148.45065,
-   "end": 148.75066
+   "start": 147.48935,
+   "end": 147.94934
   },
   {
    "word": "points.",
-   "start": 148.75066,
-   "end": 149.47066
+   "start": 147.94934,
+   "end": 148.66934
   },
   {
    "word": "We",
-   "start": 149.47066,
-   "end": 150.17065
+   "start": 148.66934,
+   "end": 149.38934
   },
   {
    "word": "measured",
-   "start": 150.17065,
-   "end": 150.49066
+   "start": 149.38934,
+   "end": 149.68933
   },
   {
    "word": "4.8.",
-   "start": 150.49066,
-   "end": 151.69064
+   "start": 149.68933,
+   "end": 150.82935
   },
   {
    "word": "Any",
-   "start": 151.69064,
-   "end": 152.13065
+   "start": 150.82935,
+   "end": 151.30934
   },
   {
    "word": "other",
-   "start": 152.13065,
-   "end": 152.35065
+   "start": 151.30934,
+   "end": 151.54935
   },
   {
    "word": "function",
-   "start": 152.35065,
-   "end": 152.79065
+   "start": 151.08934,
+   "end": 151.98935
   },
   {
    "word": "swaps",
-   "start": 152.79065,
-   "end": 153.31065
+   "start": 151.98935,
+   "end": 152.52934
   },
   {
    "word": "the",
-   "start": 153.31065,
-   "end": 153.49066
+   "start": 152.52934,
+   "end": 152.72934
   },
   {
    "word": "half",
-   "start": 153.49066,
-   "end": 153.69064
+   "start": 152.72934,
+   "end": 152.88934
   },
   {
    "word": "for",
-   "start": 153.75066,
-   "end": 153.89066
+   "start": 152.88934,
+   "end": 153.12933
   },
   {
    "word": "its",
-   "start": 153.89066,
-   "end": 154.05066
+   "start": 153.12933,
+   "end": 153.22934
   },
   {
    "word": "own",
-   "start": 154.05066,
-   "end": 154.27066
+   "start": 153.22934,
+   "end": 153.46935
   },
   {
    "word": "spread,",
-   "start": 154.27066,
-   "end": 155.01065
+   "start": 153.46935,
+   "end": 154.02934
   },
   {
-   "word": "sigma,",
-   "start": 155.01065,
-   "end": 155.53065
+   "word": "sigma.",
+   "start": 154.02934,
+   "end": 154.66934
   },
   {
-   "word": "there's",
-   "start": 155.53065,
-   "end": 155.99066
+   "word": "There's",
+   "start": 154.66934,
+   "end": 155.16934
   },
   {
    "word": "still",
-   "start": 155.99066,
-   "end": 156.25066
+   "start": 155.16934,
+   "end": 155.42934
   },
   {
    "word": "no",
-   "start": 156.25066,
-   "end": 156.53065
+   "start": 155.42934,
+   "end": 155.70934
   },
   {
    "word": "d.",
-   "start": 156.53065,
-   "end": 156.81065
+   "start": 155.70934,
+   "end": 156.08934
   },
   {
    "word": "So",
-   "start": 157.27066,
-   "end": 157.55066
+   "start": 156.08934,
+   "end": 156.72934
   },
   {
    "word": "back",
-   "start": 157.55066,
-   "end": 157.83066
+   "start": 156.72934,
+   "end": 156.98935
   },
   {
    "word": "to",
-   "start": 157.83066,
-   "end": 158.01065
+   "start": 156.98935,
+   "end": 157.18933
   },
   {
    "word": "our",
-   "start": 158.01065,
-   "end": 158.15065
+   "start": 157.18933,
+   "end": 157.30934
   },
   {
    "word": "ball,",
-   "start": 158.15065,
-   "end": 158.93065
+   "start": 157.34933,
+   "end": 157.84933
   },
   {
    "word": "a",
-   "start": 158.93065,
-   "end": 159.05066
+   "start": 157.84933,
+   "end": 158.24934
   },
   {
    "word": "million",
-   "start": 159.05066,
-   "end": 159.43065
+   "start": 158.24934,
+   "end": 158.62933
   },
   {
    "word": "darts",
-   "start": 159.43065,
-   "end": 159.87065
+   "start": 158.62933,
+   "end": 159.06934
   },
   {
    "word": "any",
-   "start": 159.87065,
-   "end": 160.15065
+   "start": 159.06934,
+   "end": 159.34933
   },
   {
-   "word": "dimension.",
-   "start": 160.15065,
-   "end": 160.95065
+   "word": "dimension,",
+   "start": 159.34933,
+   "end": 160.10934
   },
   {
-   "word": "How",
-   "start": 160.67065,
-   "end": 161.39066
+   "word": "how",
+   "start": 160.10934,
+   "end": 160.52934
   },
   {
    "word": "far",
-   "start": 161.39066,
-   "end": 161.67065
+   "start": 160.52934,
+   "end": 160.82935
   },
   {
    "word": "off",
-   "start": 161.67065,
-   "end": 161.99066
+   "start": 160.82935,
+   "end": 161.16934
   },
   {
    "word": "is",
-   "start": 161.99066,
-   "end": 162.21065
+   "start": 161.16934,
+   "end": 161.40933
   },
   {
    "word": "a",
-   "start": 162.21065,
-   "end": 162.33066
+   "start": 161.40933,
+   "end": 161.50934
   },
   {
    "word": "typical",
-   "start": 162.33066,
-   "end": 162.65065
+   "start": 161.50934,
+   "end": 161.80934
   },
   {
    "word": "estimate?",
-   "start": 162.65065,
-   "end": 163.51065
+   "start": 161.80934,
+   "end": 162.70934
   },
   {
    "word": "One",
-   "start": 165.03065,
-   "end": 165.31065
+   "start": 164.18933,
+   "end": 164.50934
   },
   {
    "word": "half",
-   "start": 165.31065,
-   "end": 165.53065
+   "start": 164.50934,
+   "end": 164.72934
   },
   {
    "word": "over",
-   "start": 165.53065,
-   "end": 165.83066
+   "start": 164.72934,
+   "end": 165.02934
   },
   {
    "word": "a",
-   "start": 165.83066,
-   "end": 165.99066
+   "start": 165.02934,
+   "end": 165.18933
   },
   {
    "word": "thousand,",
-   "start": 165.99066,
-   "end": 166.65065
+   "start": 165.18933,
+   "end": 166.30934
   },
   {
    "word": "five",
-   "start": 166.65065,
-   "end": 167.37065
+   "start": 166.30934,
+   "end": 166.56934
   },
   {
    "word": "hundredths",
-   "start": 167.37065,
-   "end": 167.79065
+   "start": 166.56934,
+   "end": 166.98935
   },
   {
    "word": "of",
-   "start": 167.79065,
-   "end": 167.93066
+   "start": 166.98935,
+   "end": 167.12933
   },
   {
    "word": "a",
-   "start": 167.93066,
-   "end": 168.01065
+   "start": 167.12933,
+   "end": 167.20935
   },
   {
    "word": "point.",
-   "start": 168.01065,
-   "end": 168.65065
+   "start": 167.20935,
+   "end": 167.78934
   },
   {
    "word": "In",
-   "start": 169.99066,
-   "end": 170.21066
+   "start": 168.88934,
+   "end": 169.42935
   },
   {
    "word": "2012,",
-   "start": 170.21066,
-   "end": 171.45065
+   "start": 169.42935,
+   "end": 170.68933
   },
   {
    "word": "Bergstra",
-   "start": 171.45065,
-   "end": 171.77066
+   "start": 170.68933,
+   "end": 170.96933
   },
   {
    "word": "and",
-   "start": 171.77066,
-   "end": 171.99066
+   "start": 170.96933,
+   "end": 171.18933
   },
   {
    "word": "Bengio",
-   "start": 171.99066,
-   "end": 172.49066
+   "start": 171.18933,
+   "end": 171.70935
   },
   {
    "word": "found",
-   "start": 172.49066,
-   "end": 173.09065
+   "start": 171.70935,
+   "end": 172.28934
   },
   {
    "word": "random",
-   "start": 173.09065,
-   "end": 173.53065
+   "start": 172.28934,
+   "end": 172.72934
   },
   {
    "word": "search",
-   "start": 173.53065,
-   "end": 173.89066
+   "start": 172.72934,
+   "end": 173.06934
   },
   {
    "word": "tuned",
-   "start": 173.89066,
-   "end": 174.35065
+   "start": 173.06934,
+   "end": 173.52934
   },
   {
    "word": "neural",
-   "start": 173.95065,
-   "end": 174.73065
+   "start": 173.52934,
+   "end": 173.90933
   },
   {
    "word": "networks",
-   "start": 174.73065,
-   "end": 175.23065
+   "start": 173.90933,
+   "end": 174.40933
   },
   {
    "word": "as",
-   "start": 175.23065,
-   "end": 175.49066
+   "start": 174.40933,
+   "end": 174.68933
   },
   {
    "word": "well",
-   "start": 175.49066,
-   "end": 175.65065
+   "start": 174.68933,
+   "end": 174.84933
   },
   {
    "word": "as",
-   "start": 175.65065,
-   "end": 175.87065
+   "start": 174.84933,
+   "end": 175.04935
   },
   {
    "word": "grid",
-   "start": 175.87065,
-   "end": 176.15065
+   "start": 175.04935,
+   "end": 175.30934
   },
   {
    "word": "search,",
-   "start": 176.15065,
-   "end": 176.81065
+   "start": 174.84933,
+   "end": 175.90933
   },
   {
    "word": "in",
-   "start": 176.59065,
-   "end": 177.23065
+   "start": 175.90933,
+   "end": 176.42935
   },
   {
    "word": "a",
-   "start": 177.23065,
-   "end": 177.29065
+   "start": 176.42935,
+   "end": 176.48935
   },
   {
    "word": "fraction",
-   "start": 177.29065,
-   "end": 177.73065
+   "start": 176.48935,
+   "end": 176.92935
   },
   {
    "word": "of",
-   "start": 177.73065,
-   "end": 177.95065
+   "start": 176.92935,
+   "end": 177.14934
   },
   {
    "word": "the",
-   "start": 177.95065,
-   "end": 178.07065
+   "start": 177.14934,
+   "end": 177.26935
   },
   {
    "word": "time.",
-   "start": 178.07065,
-   "end": 178.63065
+   "start": 177.26935,
+   "end": 177.88934
   },
   {
    "word": "If",
-   "start": 178.57065,
-   "end": 179.25066
+   "start": 177.92935,
+   "end": 178.44934
   },
   {
    "word": "one",
-   "start": 179.25066,
-   "end": 179.45065
+   "start": 178.44934,
+   "end": 178.64934
   },
   {
    "word": "setting",
-   "start": 179.45065,
-   "end": 179.75066
+   "start": 178.64934,
+   "end": 178.94934
   },
   {
    "word": "matters",
-   "start": 179.75066,
-   "end": 180.21066
+   "start": 178.94934,
+   "end": 179.38934
   },
   {
    "word": "most,",
-   "start": 180.21066,
-   "end": 180.95065
+   "start": 179.38934,
+   "end": 180.52934
   },
   {
-   "word": "Nine",
-   "start": 181.21066,
-   "end": 181.53065
+   "word": "nine",
+   "start": 180.52934,
+   "end": 180.70935
   },
   {
    "word": "grid",
-   "start": 181.53065,
-   "end": 181.79065
+   "start": 180.70935,
+   "end": 180.98935
   },
   {
    "word": "trials",
-   "start": 181.79065,
-   "end": 182.23065
+   "start": 180.98935,
+   "end": 181.40933
   },
   {
    "word": "test",
-   "start": 182.23065,
-   "end": 182.63065
+   "start": 181.40933,
+   "end": 181.80934
   },
   {
    "word": "three",
-   "start": 182.63065,
-   "end": 182.95065
+   "start": 181.80934,
+   "end": 182.14934
   },
   {
    "word": "values",
-   "start": 182.95065,
-   "end": 183.45065
+   "start": 182.14934,
+   "end": 182.60934
   },
   {
    "word": "of",
-   "start": 183.45065,
-   "end": 183.65065
+   "start": 182.60934,
+   "end": 182.84933
   },
   {
-   "word": "it.",
-   "start": 183.65065,
-   "end": 184.01065
+   "word": "it,",
+   "start": 182.84933,
+   "end": 183.50934
   },
   {
-   "word": "Nine",
-   "start": 184.29065,
-   "end": 184.75066
+   "word": "nine",
+   "start": 183.50934,
+   "end": 183.92935
   },
   {
    "word": "random",
-   "start": 184.75066,
-   "end": 185.17065
+   "start": 183.92935,
+   "end": 184.34933
   },
   {
    "word": "trials",
-   "start": 185.17065,
-   "end": 185.65065
+   "start": 184.34933,
+   "end": 184.80934
   },
   {
    "word": "test",
-   "start": 185.65065,
-   "end": 186.03065
+   "start": 184.36934,
+   "end": 185.18933
   },
   {
    "word": "nine.",
-   "start": 186.03065,
-   "end": 186.81065
+   "start": 185.18933,
+   "end": 186.08934
   },
   {
    "word": "Darts",
-   "start": 187.35065,
-   "end": 187.73065
+   "start": 186.96933,
+   "end": 186.98935
   },
   {
    "word": "do",
-   "start": 187.73065,
-   "end": 187.93066
+   "start": 186.98935,
+   "end": 187.06934
   },
   {
    "word": "have",
-   "start": 187.93066,
-   "end": 188.13065
+   "start": 187.06934,
+   "end": 187.30934
   },
   {
    "word": "a",
-   "start": 188.13065,
-   "end": 188.19064
+   "start": 187.30934,
+   "end": 187.38934
   },
   {
    "word": "blind",
-   "start": 188.19064,
-   "end": 188.51065
+   "start": 187.38934,
+   "end": 187.68933
   },
   {
    "word": "spot,",
-   "start": 188.51065,
-   "end": 189.09065
+   "start": 187.68933,
+   "end": 188.28934
   },
   {
    "word": "tiny",
-   "start": 189.09065,
-   "end": 189.65065
+   "start": 188.28934,
+   "end": 188.84933
   },
   {
    "word": "answers.",
-   "start": 189.65065,
-   "end": 190.47064
+   "start": 188.84933,
+   "end": 189.62933
   },
   {
    "word": "A",
-   "start": 190.23065,
-   "end": 190.87065
+   "start": 189.40933,
+   "end": 190.08934
   },
   {
    "word": "radius",
-   "start": 190.87065,
-   "end": 191.31065
+   "start": 190.08934,
+   "end": 190.48935
   },
   {
    "word": "one",
-   "start": 191.31065,
-   "end": 191.57065
+   "start": 190.48935,
+   "end": 190.76935
   },
   {
    "word": "ball",
-   "start": 191.57065,
-   "end": 191.93066
+   "start": 190.76935,
+   "end": 191.12933
   },
   {
    "word": "fills",
-   "start": 191.93066,
-   "end": 192.41064
+   "start": 191.12933,
+   "end": 191.60934
   },
   {
    "word": "two",
-   "start": 192.41064,
-   "end": 192.69064
+   "start": 191.60934,
+   "end": 191.86934
   },
   {
    "word": "parts",
-   "start": 192.69064,
-   "end": 193.15065
+   "start": 191.86934,
+   "end": 192.32935
   },
   {
    "word": "in",
-   "start": 193.15065,
-   "end": 193.33066
+   "start": 192.32935,
+   "end": 192.52934
   },
   {
-   "word": "100",
-   "start": 193.33066,
-   "end": 193.73065
+   "word": "a",
+   "start": 192.52934,
+   "end": 192.64934
+  },
+  {
+   "word": "hundred",
+   "start": 192.64934,
+   "end": 192.92935
   },
   {
    "word": "trillion",
-   "start": 193.73065,
-   "end": 194.19064
+   "start": 192.92935,
+   "end": 193.46933
   },
   {
    "word": "of",
-   "start": 194.35065,
-   "end": 194.95065
+   "start": 193.46933,
+   "end": 194.12933
   },
   {
    "word": "a",
-   "start": 194.95065,
-   "end": 195.15065
+   "start": 194.12933,
+   "end": 194.20935
   },
   {
    "word": "30-dimensional",
-   "start": 195.15065,
-   "end": 195.81065
+   "start": 194.20935,
+   "end": 194.98935
   },
   {
    "word": "box.",
-   "start": 195.81065,
-   "end": 196.57065
+   "start": 194.98935,
+   "end": 195.72934
   },
   {
    "word": "Below",
-   "start": 196.53065,
-   "end": 197.29065
+   "start": 196.14934,
+   "end": 196.48935
   },
   {
    "word": "this",
-   "start": 197.29065,
-   "end": 197.57065
+   "start": 196.48935,
+   "end": 196.74934
   },
   {
    "word": "line,",
-   "start": 197.57065,
-   "end": 198.03065
+   "start": 196.74934,
+   "end": 197.26935
   },
   {
    "word": "a",
-   "start": 198.03065,
-   "end": 198.41064
+   "start": 197.26935,
+   "end": 197.62933
   },
   {
    "word": "million",
-   "start": 198.41064,
-   "end": 198.83066
+   "start": 197.62933,
+   "end": 198.00934
   },
   {
    "word": "darts",
-   "start": 198.83066,
-   "end": 199.21066
+   "start": 198.00934,
+   "end": 198.40933
   },
   {
    "word": "expect",
-   "start": 199.21066,
-   "end": 199.71066
+   "start": 198.40933,
+   "end": 198.88934
   },
   {
    "word": "under",
-   "start": 199.71066,
-   "end": 199.91064
+   "start": 198.88934,
+   "end": 199.10934
   },
   {
    "word": "one",
-   "start": 199.91064,
-   "end": 200.15065
+   "start": 199.10934,
+   "end": 199.34933
   },
   {
    "word": "hit,",
-   "start": 200.15065,
-   "end": 200.65065
+   "start": 199.34933,
+   "end": 199.84933
   },
   {
    "word": "so",
-   "start": 200.45065,
-   "end": 201.13065
+   "start": 199.84933,
+   "end": 200.32935
   },
   {
    "word": "they",
-   "start": 201.13065,
-   "end": 201.31065
+   "start": 200.32935,
+   "end": 200.48935
   },
   {
    "word": "usually",
-   "start": 201.31065,
-   "end": 201.75066
+   "start": 200.48935,
+   "end": 200.92935
   },
   {
    "word": "report",
-   "start": 201.75066,
-   "end": 202.25066
+   "start": 200.92935,
+   "end": 201.42935
   },
   {
    "word": "zero.",
-   "start": 202.25066,
-   "end": 202.93066
+   "start": 201.42935,
+   "end": 202.06934
   },
   {
    "word": "The",
-   "start": 204.53065,
-   "end": 204.71066
+   "start": 203.36934,
+   "end": 203.92935
   },
   {
    "word": "darts",
-   "start": 204.71066,
-   "end": 204.99066
+   "start": 203.92935,
+   "end": 204.18933
   },
   {
    "word": "never",
-   "start": 204.99066,
-   "end": 205.33066
+   "start": 204.18933,
+   "end": 204.50934
   },
   {
    "word": "notice",
-   "start": 205.33066,
-   "end": 205.67065
+   "start": 204.50934,
+   "end": 204.86934
   },
   {
    "word": "the",
-   "start": 205.67065,
-   "end": 205.87065
+   "start": 204.86934,
+   "end": 205.06934
   },
   {
    "word": "axes.",
-   "start": 205.87065,
-   "end": 206.77066
+   "start": 205.06934,
+   "end": 205.92935
   },
   {
    "word": "A",
-   "start": 206.65065,
-   "end": 207.25066
+   "start": 205.82935,
+   "end": 206.46933
   },
   {
    "word": "million",
-   "start": 207.25066,
-   "end": 207.63065
+   "start": 206.46933,
+   "end": 206.82935
   },
   {
    "word": "coin",
-   "start": 207.63065,
-   "end": 207.99066
+   "start": 206.82935,
+   "end": 207.16934
   },
   {
    "word": "flips",
-   "start": 207.99066,
-   "end": 208.39066
+   "start": 207.16934,
+   "end": 207.60934
   },
   {
    "word": "in",
-   "start": 208.39066,
-   "end": 208.77066
+   "start": 207.60934,
+   "end": 207.94934
   },
   {
    "word": "any",
-   "start": 208.77066,
-   "end": 208.99066
+   "start": 207.94934,
+   "end": 208.20935
   },
   {
    "word": "dimension.",
-   "start": 208.99066,
-   "end": 210.33066
-  },
-  {
-   "word": "Thank",
-   "start": 211.17065,
-   "end": 211.53065
-  },
-  {
-   "word": "you.",
-   "start": 211.53065,
-   "end": 211.85065
+   "start": 208.20935,
+   "end": 209.46933
   }
  ],
  "segments": [
@@ -2599,8 +2584,8 @@
     50542
    ],
    "temperature": 0,
-   "avg_logprob": -0.2104766,
-   "compression_ratio": 1.6043478,
+   "avg_logprob": -0.21298635,
+   "compression_ratio": 1.6181818,
    "no_speech_prob": 0
   },
   {
@@ -2624,18 +2609,18 @@
     50708
    ],
    "temperature": 0,
-   "avg_logprob": -0.2104766,
-   "compression_ratio": 1.6043478,
+   "avg_logprob": -0.21298635,
+   "compression_ratio": 1.6181818,
    "no_speech_prob": 0
   },
   {
    "id": 9,
    "seek": 2710,
-   "start": 34.76,
+   "start": 34.78,
    "end": 36.019997,
    "text": " Start with two inputs.",
    "tokens": [
-    50748,
+    50749,
     6481,
     365,
     732,
@@ -2644,8 +2629,8 @@
     50811
    ],
    "temperature": 0,
-   "avg_logprob": -0.2104766,
-   "compression_ratio": 1.6043478,
+   "avg_logprob": -0.21298635,
+   "compression_ratio": 1.6181818,
    "no_speech_prob": 0
   },
   {
@@ -2671,8 +2656,8 @@
     51027
    ],
    "temperature": 0,
-   "avg_logprob": -0.2104766,
-   "compression_ratio": 1.6043478,
+   "avg_logprob": -0.21298635,
+   "compression_ratio": 1.6181818,
    "no_speech_prob": 0
   },
   {
@@ -2680,7 +2665,7 @@
    "seek": 2710,
    "start": 41.179996,
    "end": 43.42,
-   "text": " Its average is exactly one-half.",
+   "text": " Its average is exactly one half.",
    "tokens": [
     51069,
     6953,
@@ -2688,56 +2673,51 @@
     307,
     2293,
     472,
-    12,
-    25461,
+    1922,
     13,
     51181
    ],
    "temperature": 0,
-   "avg_logprob": -0.2104766,
-   "compression_ratio": 1.6043478,
+   "avg_logprob": -0.21298635,
+   "compression_ratio": 1.6181818,
    "no_speech_prob": 0
   },
   {
    "id": 12,
    "seek": 2710,
    "start": 44.16,
-   "end": 49.539997,
-   "text": " A 10 by 10 grid puts 52 of its 100 points inside, two points off.",
+   "end": 48.44,
+   "text": " A grid of 100 points puts 52 inside, two points off.",
    "tokens": [
     51218,
     316,
-    1266,
-    538,
-    1266,
     10748,
-    8137,
-    18079,
     295,
-    1080,
     2319,
     2793,
+    8137,
+    18079,
     1854,
     11,
     732,
     2793,
     766,
     13,
-    51487
+    51432
    ],
    "temperature": 0,
-   "avg_logprob": -0.2104766,
-   "compression_ratio": 1.6043478,
+   "avg_logprob": -0.21298635,
+   "compression_ratio": 1.6181818,
    "no_speech_prob": 0
   },
   {
    "id": 13,
    "seek": 2710,
-   "start": 49.879997,
-   "end": 54.399998,
+   "start": 48.8,
+   "end": 53.3,
    "text": " 100 random darts put 44 inside, six points off.",
    "tokens": [
-    51504,
+    51450,
     2319,
     4974,
     274,
@@ -2750,21 +2730,21 @@
     2793,
     766,
     13,
-    51730
+    51675
    ],
    "temperature": 0,
-   "avg_logprob": -0.2104766,
-   "compression_ratio": 1.6043478,
+   "avg_logprob": -0.21298635,
+   "compression_ratio": 1.6181818,
    "no_speech_prob": 0
   },
   {
    "id": 14,
    "seek": 2710,
-   "start": 54.839996,
-   "end": 56.899998,
+   "start": 53.719997,
+   "end": 55.8,
    "text": " In two dimensions, the grid wins.",
    "tokens": [
-    51752,
+    51696,
     682,
     732,
     12819,
@@ -2773,18 +2753,18 @@
     10748,
     10641,
     13,
-    51855
+    51800
    ],
    "temperature": 0,
-   "avg_logprob": -0.2104766,
-   "compression_ratio": 1.6043478,
+   "avg_logprob": -0.21298635,
+   "compression_ratio": 1.6181818,
    "no_speech_prob": 0
   },
   {
    "id": 15,
-   "seek": 5710,
-   "start": 57.1,
-   "end": 60.42,
+   "seek": 5580,
+   "start": 55.8,
+   "end": 59.8,
    "text": " Now give each a million points and add inputs.",
    "tokens": [
     50365,
@@ -2798,21 +2778,21 @@
     909,
     15743,
     13,
-    50531
+    50565
    ],
    "temperature": 0,
-   "avg_logprob": -0.1731993,
-   "compression_ratio": 1.6460177,
+   "avg_logprob": -0.1371406,
+   "compression_ratio": 1.6617647,
    "no_speech_prob": 0
   },
   {
    "id": 16,
-   "seek": 5710,
-   "start": 60.92,
-   "end": 64.82,
+   "seek": 5580,
+   "start": 59.8,
+   "end": 63.8,
    "text": " The disk becomes a ball, grown to cover exactly half the box.",
    "tokens": [
-    50556,
+    50565,
     440,
     12355,
     3643,
@@ -2827,21 +2807,21 @@
     264,
     2424,
     13,
-    50751
+    50765
    ],
    "temperature": 0,
-   "avg_logprob": -0.1731993,
-   "compression_ratio": 1.6460177,
+   "avg_logprob": -0.1371406,
+   "compression_ratio": 1.6617647,
    "no_speech_prob": 0
   },
   {
    "id": 17,
-   "seek": 5710,
-   "start": 65.54,
-   "end": 70.119995,
-   "text": " The grid's million points give each axis a thousand values in two dimensions,",
+   "seek": 5580,
+   "start": 63.8,
+   "end": 71.799995,
+   "text": " The grid's million points give each axis a thousand values in two dimensions, then a hundred, ten, three.",
    "tokens": [
-    50787,
+    50765,
     440,
     10748,
     311,
@@ -2857,21 +2837,6 @@
     732,
     12819,
     11,
-    51016
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.1731993,
-   "compression_ratio": 1.6460177,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 18,
-   "seek": 5710,
-   "start": 70.7,
-   "end": 72.88,
-   "text": " then a hundred, ten, three.",
-   "tokens": [
-    51045,
     550,
     257,
     3262,
@@ -2880,23 +2845,23 @@
     11,
     1045,
     13,
-    51154
+    51165
    ],
    "temperature": 0,
-   "avg_logprob": -0.1731993,
-   "compression_ratio": 1.6460177,
+   "avg_logprob": -0.1371406,
+   "compression_ratio": 1.6617647,
    "no_speech_prob": 0
   },
   {
-   "id": 19,
-   "seek": 5710,
-   "start": 73.64,
-   "end": 77.28,
-   "text": " From 20 dimensions on, just the center inside the ball.",
+   "id": 18,
+   "seek": 5580,
+   "start": 71.799995,
+   "end": 75.799995,
+   "text": " From twenty dimensions on, just the center inside the ball.",
    "tokens": [
-    51192,
+    51165,
     3358,
-    945,
+    7699,
     12819,
     322,
     11,
@@ -2907,50 +2872,51 @@
     264,
     2594,
     13,
-    51374
+    51365
    ],
    "temperature": 0,
-   "avg_logprob": -0.1731993,
-   "compression_ratio": 1.6460177,
+   "avg_logprob": -0.1371406,
+   "compression_ratio": 1.6617647,
    "no_speech_prob": 0
   },
   {
-   "id": 20,
-   "seek": 5710,
-   "start": 77.6,
-   "end": 81.079994,
-   "text": " So the grid says the ball fills the box, 50 points off.",
+   "id": 19,
+   "seek": 5580,
+   "start": 75.799995,
+   "end": 80.799995,
+   "text": " So the grid says that the ball fills the box, fifty points off.",
    "tokens": [
-    51390,
+    51365,
     407,
     264,
     10748,
     1619,
+    300,
     264,
     2594,
     22498,
     264,
     2424,
     11,
-    2625,
+    13442,
     2793,
     766,
     13,
-    51564
+    51615
    ],
    "temperature": 0,
-   "avg_logprob": -0.1731993,
-   "compression_ratio": 1.6460177,
+   "avg_logprob": -0.1371406,
+   "compression_ratio": 1.6617647,
    "no_speech_prob": 0
   },
   {
-   "id": 21,
-   "seek": 5710,
-   "start": 82.1,
-   "end": 86.72,
-   "text": " Even two values on 19 axes is 18 points off,",
+   "id": 20,
+   "seek": 8080,
+   "start": 80.799995,
+   "end": 90.92,
+   "text": " Even two values on 19 axes is 18 points off, while the darts stay under a tenth of a point.",
    "tokens": [
-    51615,
+    50365,
     2754,
     732,
     4190,
@@ -2962,21 +2928,6 @@
     2793,
     766,
     11,
-    51846
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.1731993,
-   "compression_ratio": 1.6460177,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 22,
-   "seek": 8710,
-   "start": 87.1,
-   "end": 91.26,
-   "text": " while the darts stay under a tenth of a point.",
-   "tokens": [
-    50365,
     1339,
     264,
     274,
@@ -2989,21 +2940,21 @@
     257,
     935,
     13,
-    50573
+    50871
    ],
    "temperature": 0,
-   "avg_logprob": -0.21611445,
-   "compression_ratio": 1.5927835,
+   "avg_logprob": -0.1364351,
+   "compression_ratio": 1.6175115,
    "no_speech_prob": 0
   },
   {
-   "id": 23,
-   "seek": 8710,
-   "start": 91.26,
-   "end": 95.259995,
-   "text": " Maybe darts win by giving every axis more values.",
+   "id": 21,
+   "seek": 8080,
+   "start": 90.92,
+   "end": 96.84,
+   "text": " Maybe darts win by giving every axis more values. A million points on the diagonal give",
    "tokens": [
-    50573,
+    50871,
     2704,
     274,
     11814,
@@ -3015,21 +2966,6 @@
     544,
     4190,
     13,
-    50773
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.21611445,
-   "compression_ratio": 1.5927835,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 24,
-   "seek": 8710,
-   "start": 95.259995,
-   "end": 100.14,
-   "text": " A million points on the diagonal give every axis a million values",
-   "tokens": [
-    50773,
     316,
     2459,
     2793,
@@ -3037,35 +2973,33 @@
     264,
     21539,
     976,
+    51167
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1364351,
+   "compression_ratio": 1.6175115,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 22,
+   "seek": 100,
+   "start": 96.84,
+   "end": 113.82934,
+   "text": " every axis a million values and still miss by 8 points Their coordinates move in lockstep A dart coordinates are drawn independently so it lands inside with a chance equal to the answer in any dimension Each",
+   "tokens": [
+    51167,
     633,
     10298,
     257,
     2459,
     4190,
-    51017
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.21611445,
-   "compression_ratio": 1.5927835,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 25,
-   "seek": 100,
-   "start": 100.14,
-   "end": 114.63065,
-   "text": " and still miss by eight points Their coordinates move in lockstep A dart coordinates are drawn independently so it lands inside with a chance equal to the answer in any dimension Each",
-   "tokens": [
-    51017,
     293,
     920,
     1713,
     538,
-    3180,
+    1649,
     2793,
     13,
-    51142,
-    51142,
     6710,
     21056,
     1286,
@@ -3073,14 +3007,14 @@
     4017,
     16792,
     13,
-    51290,
-    51290,
-    311,
+    51574,
+    51574,
+    316,
     21056,
     366,
     10117,
-    50699,
-    50699,
+    50684,
+    50684,
     21761,
     11,
     370,
@@ -3100,21 +3034,21 @@
     10139,
     13,
     6947,
-    51058
+    51043
    ],
    "temperature": 0,
-   "avg_logprob": -0.115494035,
-   "compression_ratio": 1.5404255,
+   "avg_logprob": -0.10802544,
+   "compression_ratio": 1.5256411,
    "no_speech_prob": 0
   },
   {
-   "id": 26,
+   "id": 23,
    "seek": 100,
-   "start": 114.63065,
-   "end": 122.250656,
+   "start": 113.82934,
+   "end": 121.44934,
    "text": " dart is a coin flip. One flip is either zero or one. Its average is a half, so every flip",
    "tokens": [
-    51058,
+    51043,
     39010,
     307,
     257,
@@ -3138,21 +3072,21 @@
     370,
     633,
     7929,
-    51439
+    51424
    ],
    "temperature": 0,
-   "avg_logprob": -0.115494035,
-   "compression_ratio": 1.5404255,
+   "avg_logprob": -0.10802544,
+   "compression_ratio": 1.5256411,
    "no_speech_prob": 0
   },
   {
-   "id": 27,
+   "id": 24,
    "seek": 100,
-   "start": 122.250656,
-   "end": 129.75066,
+   "start": 121.44934,
+   "end": 128.94934,
    "text": " misses by exactly a half. Repeat the 100 dart experiment 300 times. In both, the estimates",
    "tokens": [
-    51439,
+    51424,
     29394,
     538,
     2293,
@@ -3172,19 +3106,19 @@
     11,
     264,
     20561,
-    51814
+    51799
    ],
    "temperature": 0,
-   "avg_logprob": -0.115494035,
-   "compression_ratio": 1.5404255,
+   "avg_logprob": -0.10802544,
+   "compression_ratio": 1.5256411,
    "no_speech_prob": 0
   },
   {
-   "id": 28,
-   "seek": 2998,
-   "start": 129.75066,
-   "end": 136.89066,
-   "text": " spread this wide. Those misses fall up or down at random, so they partly cancel. 16 darts stray",
+   "id": 25,
+   "seek": 2968,
+   "start": 128.94934,
+   "end": 135.44934,
+   "text": " spread this wide. Those misses fall up or down at random, so they partly cancel. 16",
    "tokens": [
     50365,
     3974,
@@ -3206,24 +3140,24 @@
     10373,
     13,
     3165,
-    274,
-    11814,
-    36219,
-    50722
+    50690
    ],
    "temperature": 0,
-   "avg_logprob": -0.06032896,
-   "compression_ratio": 1.4769231,
+   "avg_logprob": -0.07517554,
+   "compression_ratio": 1.5151515,
    "no_speech_prob": 0
   },
   {
-   "id": 29,
-   "seek": 2998,
-   "start": 136.89066,
-   "end": 145.01065,
-   "text": " about 4 halves, not 16. N darts stray about root n halves. Divide by n, and the typical miss is a",
+   "id": 26,
+   "seek": 2968,
+   "start": 135.44934,
+   "end": 143.02934,
+   "text": " darts stray about 4 halves, not 16. N darts stray about root n halves. Divide by n, and",
    "tokens": [
-    50722,
+    50690,
+    274,
+    11814,
+    36219,
     466,
     1017,
     38490,
@@ -3246,26 +3180,26 @@
     297,
     11,
     293,
+    51069
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07517554,
+   "compression_ratio": 1.5151515,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 27,
+   "seek": 2968,
+   "start": 143.02934,
+   "end": 151.58934,
+   "text": " the typical miss is a half over root n. For 100 darts, 5 points. We measured 4.8. Any other",
+   "tokens": [
+    51069,
     264,
     7476,
     1713,
     307,
     257,
-    51128
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.06032896,
-   "compression_ratio": 1.4769231,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 30,
-   "seek": 2998,
-   "start": 145.01065,
-   "end": 153.75066,
-   "text": " half over root n. For 100 darts, 5 points. We measured 4.8. Any other function swaps the half",
-   "tokens": [
-    51128,
     1922,
     670,
     5593,
@@ -3287,58 +3221,58 @@
     13,
     2639,
     661,
+    51497
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07517554,
+   "compression_ratio": 1.5151515,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 28,
+   "seek": 2968,
+   "start": 151.58934,
+   "end": 157.34933,
+   "text": " function swaps the half for its own spread, sigma. There's still no d. So back to our",
+   "tokens": [
+    51497,
     2445,
     1693,
     2382,
     264,
     1922,
-    51565
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.06032896,
-   "compression_ratio": 1.4769231,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 31,
-   "seek": 5398,
-   "start": 153.75066,
-   "end": 157.35065,
-   "text": " for its own spread, sigma, there's still no d.",
-   "tokens": [
-    50365,
     337,
     1080,
     1065,
     3974,
     11,
     12771,
-    11,
-    456,
+    13,
+    821,
     311,
     920,
     572,
     274,
     13,
-    50545
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.1721061,
-   "compression_ratio": 1.4549357,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 32,
-   "seek": 5398,
-   "start": 157.35065,
-   "end": 161.17065,
-   "text": " So back to our ball, a million darts any dimension.",
-   "tokens": [
-    50545,
     407,
     646,
     281,
     527,
+    51785
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.07517554,
+   "compression_ratio": 1.5151515,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 29,
+   "seek": 5808,
+   "start": 157.34933,
+   "end": 164.48935,
+   "text": " ball, a million darts any dimension, how far off is a typical estimate?",
+   "tokens": [
+    50365,
     2594,
     11,
     257,
@@ -3347,23 +3281,8 @@
     11814,
     604,
     10139,
-    13,
-    50736
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.1721061,
-   "compression_ratio": 1.4549357,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 33,
-   "seek": 5398,
-   "start": 161.17065,
-   "end": 163.59065,
-   "text": " How far off is a typical estimate?",
-   "tokens": [
-    50736,
-    1012,
+    11,
+    577,
     1400,
     766,
     307,
@@ -3371,21 +3290,21 @@
     7476,
     12539,
     30,
-    50857
+    50722
    ],
    "temperature": 0,
-   "avg_logprob": -0.1721061,
-   "compression_ratio": 1.4549357,
+   "avg_logprob": -0.15925351,
+   "compression_ratio": 1.5580357,
    "no_speech_prob": 0
   },
   {
-   "id": 34,
-   "seek": 5398,
-   "start": 165.01065,
-   "end": 168.69064,
+   "id": 30,
+   "seek": 5808,
+   "start": 164.48935,
+   "end": 169.38934,
    "text": " One half over a thousand, five hundredths of a point.",
    "tokens": [
-    50928,
+    50722,
     1485,
     1922,
     670,
@@ -3399,21 +3318,21 @@
     257,
     935,
     13,
-    51112
+    50967
    ],
    "temperature": 0,
-   "avg_logprob": -0.1721061,
-   "compression_ratio": 1.4549357,
+   "avg_logprob": -0.15925351,
+   "compression_ratio": 1.5580357,
    "no_speech_prob": 0
   },
   {
-   "id": 35,
-   "seek": 5398,
-   "start": 170.05066,
-   "end": 174.45065,
-   "text": " In 2012, Bergstra and Bengio found random search tuned",
+   "id": 31,
+   "seek": 5808,
+   "start": 169.38934,
+   "end": 175.34933,
+   "text": " In 2012, Bergstra and Bengio found random search tuned neural networks as well as grid",
    "tokens": [
-    51180,
+    50967,
     682,
     9125,
     11,
@@ -3426,44 +3345,29 @@
     4974,
     3164,
     10870,
-    51400
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.1721061,
-   "compression_ratio": 1.4549357,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 36,
-   "seek": 5398,
-   "start": 174.45065,
-   "end": 177.09065,
-   "text": " neural networks as well as grid search,",
-   "tokens": [
-    51400,
     18161,
     9590,
     382,
     731,
     382,
     10748,
-    3164,
-    11,
-    51532
+    51265
    ],
    "temperature": 0,
-   "avg_logprob": -0.1721061,
-   "compression_ratio": 1.4549357,
+   "avg_logprob": -0.15925351,
+   "compression_ratio": 1.5580357,
    "no_speech_prob": 0
   },
   {
-   "id": 37,
-   "seek": 5398,
-   "start": 177.09065,
-   "end": 179.07065,
-   "text": " in a fraction of the time.",
+   "id": 32,
+   "seek": 5808,
+   "start": 175.34933,
+   "end": 178.40933,
+   "text": " search, in a fraction of the time.",
    "tokens": [
-    51532,
+    51265,
+    3164,
+    11,
     294,
     257,
     14135,
@@ -3471,43 +3375,28 @@
     264,
     565,
     13,
-    51631
+    51418
    ],
    "temperature": 0,
-   "avg_logprob": -0.1721061,
-   "compression_ratio": 1.4549357,
+   "avg_logprob": -0.15925351,
+   "compression_ratio": 1.5580357,
    "no_speech_prob": 0
   },
   {
-   "id": 38,
-   "seek": 5398,
-   "start": 179.07065,
-   "end": 181.17065,
-   "text": " If one setting matters most,",
+   "id": 33,
+   "seek": 5808,
+   "start": 178.40933,
+   "end": 184.86934,
+   "text": " If one setting matters most, nine grid trials test three values of it, nine random trials",
    "tokens": [
-    51631,
+    51418,
     759,
     472,
     3287,
     7001,
     881,
     11,
-    51736
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.1721061,
-   "compression_ratio": 1.4549357,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 39,
-   "seek": 8140,
-   "start": 181.17065,
-   "end": 184.41064,
-   "text": " Nine grid trials test three values of it.",
-   "tokens": [
-    50365,
-    18939,
+    4949,
     10748,
     12450,
     1500,
@@ -3515,43 +3404,43 @@
     4190,
     295,
     309,
-    13,
-    50527
+    11,
+    4949,
+    4974,
+    12450,
+    51741
    ],
    "temperature": 0,
-   "avg_logprob": -0.11900423,
-   "compression_ratio": 1.5753424,
+   "avg_logprob": -0.15925351,
+   "compression_ratio": 1.5580357,
    "no_speech_prob": 0
   },
   {
-   "id": 40,
-   "seek": 8140,
-   "start": 184.41064,
-   "end": 187.41064,
-   "text": " Nine random trials test nine.",
+   "id": 34,
+   "seek": 5808,
+   "start": 184.86934,
+   "end": 186.96933,
+   "text": " test nine.",
    "tokens": [
-    50527,
-    18939,
-    4974,
-    12450,
+    51741,
     1500,
     4949,
     13,
-    50677
+    51846
    ],
    "temperature": 0,
-   "avg_logprob": -0.11900423,
-   "compression_ratio": 1.5753424,
+   "avg_logprob": -0.15925351,
+   "compression_ratio": 1.5580357,
    "no_speech_prob": 0
   },
   {
-   "id": 41,
-   "seek": 8140,
-   "start": 187.41064,
-   "end": 190.73065,
+   "id": 35,
+   "seek": 8770,
+   "start": 186.96933,
+   "end": 189.90933,
    "text": " Darts do have a blind spot, tiny answers.",
    "tokens": [
-    50677,
+    50365,
     413,
     11814,
     360,
@@ -3563,21 +3452,21 @@
     5870,
     6338,
     13,
-    50843
+    50512
    ],
    "temperature": 0,
-   "avg_logprob": -0.11900423,
-   "compression_ratio": 1.5753424,
+   "avg_logprob": -0.16739659,
+   "compression_ratio": 1.5,
    "no_speech_prob": 0
   },
   {
-   "id": 42,
-   "seek": 8140,
-   "start": 190.73065,
-   "end": 194.85065,
-   "text": " A radius one ball fills two parts in 100 trillion",
+   "id": 36,
+   "seek": 8770,
+   "start": 189.90933,
+   "end": 196.32935,
+   "text": " A radius one ball fills two parts in a hundred trillion of a 30-dimensional box.",
    "tokens": [
-    50843,
+    50512,
     316,
     15845,
     472,
@@ -3586,23 +3475,9 @@
     732,
     3166,
     294,
-    2319,
+    257,
+    3262,
     18723,
-    51049
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.11900423,
-   "compression_ratio": 1.5753424,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 43,
-   "seek": 8140,
-   "start": 194.85065,
-   "end": 197.03065,
-   "text": " of a 30-dimensional box.",
-   "tokens": [
-    51049,
     295,
     257,
     2217,
@@ -3610,21 +3485,21 @@
     18759,
     2424,
     13,
-    51158
+    50833
    ],
    "temperature": 0,
-   "avg_logprob": -0.11900423,
-   "compression_ratio": 1.5753424,
+   "avg_logprob": -0.16739659,
+   "compression_ratio": 1.5,
    "no_speech_prob": 0
   },
   {
-   "id": 44,
-   "seek": 8140,
-   "start": 197.03065,
-   "end": 200.95065,
-   "text": " Below this line, a million darts expect under one hit,",
+   "id": 37,
+   "seek": 8770,
+   "start": 196.32935,
+   "end": 203.86934,
+   "text": " Below this line, a million darts expect under one hit, so they usually report zero.",
    "tokens": [
-    51158,
+    50833,
     36261,
     341,
     1622,
@@ -3638,42 +3513,27 @@
     472,
     2045,
     11,
-    51354
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.11900423,
-   "compression_ratio": 1.5753424,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 45,
-   "seek": 8140,
-   "start": 200.95065,
-   "end": 202.99066,
-   "text": " so they usually report zero.",
-   "tokens": [
-    51354,
     370,
     436,
     2673,
     2275,
     4018,
     13,
-    51456
+    51210
    ],
    "temperature": 0,
-   "avg_logprob": -0.11900423,
-   "compression_ratio": 1.5753424,
+   "avg_logprob": -0.16739659,
+   "compression_ratio": 1.5,
    "no_speech_prob": 0
   },
   {
-   "id": 46,
-   "seek": 8140,
-   "start": 204.59065,
-   "end": 207.15065,
+   "id": 38,
+   "seek": 8770,
+   "start": 203.86934,
+   "end": 206.32935,
    "text": " The darts never notice the axes.",
    "tokens": [
-    51536,
+    51210,
     440,
     274,
     11814,
@@ -3682,21 +3542,21 @@
     264,
     35387,
     13,
-    51664
+    51333
    ],
    "temperature": 0,
-   "avg_logprob": -0.11900423,
-   "compression_ratio": 1.5753424,
+   "avg_logprob": -0.16739659,
+   "compression_ratio": 1.5,
    "no_speech_prob": 0
   },
   {
-   "id": 47,
-   "seek": 8140,
-   "start": 207.15065,
-   "end": 209.89066,
+   "id": 39,
+   "seek": 8770,
+   "start": 206.32935,
+   "end": 208.98933,
    "text": " A million coin flips in any dimension.",
    "tokens": [
-    51664,
+    51333,
     316,
     2459,
     11464,
@@ -3705,33 +3565,15 @@
     604,
     10139,
     13,
-    51801
+    51466
    ],
    "temperature": 0,
-   "avg_logprob": -0.11900423,
-   "compression_ratio": 1.5753424,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 48,
-   "seek": 11140,
-   "start": 211.17065,
-   "end": 241.15063,
-   "text": " Thank you.",
-   "tokens": [
-    50365,
-    1044,
-    291,
-    13,
-    51864
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.21149778,
-   "compression_ratio": 0.57894737,
+   "avg_logprob": -0.16739659,
+   "compression_ratio": 1.5,
    "no_speech_prob": 0
   }
  ],
  "x_groq": {
-  "id": "req_01m5hzt8kjev999n1d2zhjnq74"
+  "id": "req_01m5jvebwdevp8w9he4jqcyxps"
  }
 }

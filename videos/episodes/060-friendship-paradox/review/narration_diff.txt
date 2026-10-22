@@ -1,13 +1,6 @@
-WER 3.6% over 471 script words (numbers spelled out, 'and' ignored)
+WER 0.6% over 471 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/060-friendship-paradox/narration.json
 
 [0:49.3] replace  script: 'average'                                heard: 'averaged'
-[1:27.0] replace  script: 'a half'                                 heard: 'one two'
-[1:29.5] replace  script: 'a half'                                 heard: 'one two'
-[1:32.1] replace  script: 'half'                                   heard: 'one two'
-[1:35.9] replace  script: 'girls'                                  heard: "girl's"
-[1:37.6] replace  script: 'a half'                                 heard: 'one two'
-[1:42.2] replace  script: 'a quarter'                              heard: 'one four'
-[2:31.9] replace  script: 'a'                                      heard: 'one'
-[3:03.2] insert   script: '∅'                                      heard: 'everyone else'
-[3:33.2] insert   script: '∅'                                      heard: 'thank you'
+[1:35.5] replace  script: 'girls'                                  heard: "girl's"
+[2:32.2] replace  script: 'a'                                      heard: 'one'

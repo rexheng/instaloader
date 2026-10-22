@@ -722,7 +722,7 @@ class Episode(NarratedScene):
         # hits), then carried into its slot in P(empty) on "To stay empty"
         frac_home = e_frac.get_center().copy()
         e_frac.next_to(ysq, RIGHT, buff=0.3).set_z_index(6)
-        frac_bg = BackgroundRectangle(e_frac, color=BG, fill_opacity=1, buff=0.1).set_z_index(5)
+        frac_bg = BackgroundRectangle(e_frac, color=BG, fill_opacity=1, buff=0.07).set_z_index(5)
         with self.say_beat("square") as beat:
             # B and the zooms clear out before A grows over the zooms' place; the one square is
             # outlined as "Each bomb" is spoken
@@ -740,7 +740,7 @@ class Episode(NarratedScene):
                                "of the same typeset equation (TeX spacing)")
             self.allow_overlap(EL[2][1], EL[3], reason="fraction bar and the closing \\Big) "
                                "of the same typeset equation (TeX spacing)")
-            self.play(FadeIn(frac_bg, rate_func=window(0, 0.3)),
+            self.play(FadeIn(frac_bg, rate_func=window(0.15, 0.35)),
                       TransformFromCopy(ysq, e_frac[0]), Create(e_frac[1]),
                       FadeIn(e_frac[2:], shift=0.4 * RIGHT),
                       A.grid.animate(rate_func=there_and_back).set_stroke(YELLOW, 2, 0.9),
@@ -862,7 +862,7 @@ class Episode(NarratedScene):
                       TransformFromCopy(e_frac[2:5], L3[3], rate_func=window(0.3, 0.7)),
                       carry(cntE[0], L3[5], rate_func=window(0.35, 0.65)),
                       Write(VGroup(L3[1], L3[2], L3[4], L3[6]), rate_func=window(0.3, 0.7)),
-                      run_time=1.1)
+                      run_time=0.85)
             beat.wait_until("eighty-three", offset=-0.1)
             self.play(Write(L3[7:]), run_time=0.7)
             self.play(flag(VGroup(L3[8], L3[9]), color=INK), run_time=0.6)
@@ -990,14 +990,21 @@ class Episode(NarratedScene):
         with self.say_beat("two") as beat:
             # one move per phrase.  "For two hits": the two empty-chance rows (and the limit
             # plot) collapse to P(0) = e^-lambda, and lambda moves aside; only 1/576 survives
-            self.play(FadeOut(VGroup(e_eq, e_open, e_pow, e_val, *EL[0:4], EL[6], cvgrp)),
-                      ReplacementTransform(P0n[0], P0[0]), ReplacementTransform(P0n[1], P0[1]),
-                      ReplacementTransform(P0n[2], P0[2]), ReplacementTransform(EL[4], P0[3]),
-                      ReplacementTransform(EL[5], P0[4]), Transform(LAMB, LAMB_T), run_time=0.65)
+            # (the rows fade first; then "= e^-lambda" climbs on an arc that keeps clear of
+            # the surviving 1/576)
+            mv = window(0.3, 0.7)
+            self.play(FadeOut(VGroup(e_eq, e_open, e_pow, e_val, *EL[0:4], EL[6], cvgrp),
+                              rate_func=window(0, 0.35)),
+                      ReplacementTransform(P0n[0], P0[0], rate_func=mv),
+                      ReplacementTransform(P0n[1], P0[1], rate_func=mv),
+                      ReplacementTransform(P0n[2], P0[2], rate_func=mv),
+                      ReplacementTransform(EL[4], P0[3], path_arc=PI / 3, rate_func=mv),
+                      ReplacementTransform(EL[5], P0[4], path_arc=PI / 3, rate_func=mv),
+                      Transform(LAMB, LAMB_T, rate_func=mv), run_time=0.7)
             self.settle(P0)
             # "...in this square": the square is enlarged, its 1/576 settling beside it
             beat.on("this square", TransformFromCopy(ysq, bigsq),
-                    ReplacementTransform(e_frac, frac_lbl), run_time=0.8)
+                    ReplacementTransform(e_frac, frac_lbl), run_time=0.65)
             # "pick two bombs": map A's 537 hits line up as a block of 537 bombs, then two of
             # them turn yellow and drop into the square
             beat.wait_until("pick", offset=-0.15)
@@ -1275,10 +1282,11 @@ class Episode(NarratedScene):
 
         def drop(i):
             g, tag, tok = s_thumbs[i], s_tags[i], s_tokens[i]
-            return Succession(FadeIn(VGroup(g, tag), run_time=0.25),
+            # appear with its score, hold long enough to read it, then drop into its bin
+            return Succession(FadeIn(VGroup(g, tag), run_time=0.3), Wait(0.3),
                               AnimationGroup(g.animate.scale(0.12).move_to(tok).set_opacity(0),
                                              FadeOut(tag), FadeIn(tok, rate_func=window(0.6, 0.4)),
-                                             run_time=0.45))
+                                             run_time=0.4))
         # why divide by chance's bar: "short bars wobble less" - each chance bar's spread from
         # map to map (binomial s.d. of 576 squares: 11.7 for bar 0, 2.65 for bar 4), drawn as
         # INK whiskers on chance's bars 0 (main chart) and 4 (the x5 inset)
@@ -1385,13 +1393,13 @@ class Episode(NarratedScene):
             self.add(rnum)
             rnum.set_opacity(0)
             self.play(LaggedStart(*[flag(t, color=INK) for t in terms], lag_ratio=LAG),
-                      UpdateFromAlphaFunc(rnum, sum_step, rate_func=linear),
+                      UpdateFromAlphaFunc(VGroup(rnum, qA), sum_step, rate_func=linear),
                       FadeOut(whisk, rate_func=window(0, 0.3)), run_time=T_SUM)
             self.remove(qA)
             rnum.set_value(SUMS[-1]).set_opacity(1)
             # map A (hits and frame) comes back to full strength as it shrinks into one score
             # among many
-            beat.wait_until("oh", offset=0.15)
+            beat.wait_until("oh", offset=-0.3)
             self.play(FadeOut(VGroup(terms, pluses, slA)),
                       FadeOut(VGroup(A.top, tagA2, boxes, A.grid, A.cells)),
                       thumb.animate.scale_to_fit_width(TH).move_to(thumb_c),
@@ -1408,12 +1416,11 @@ class Episode(NarratedScene):
                       FadeIn(alab, rate_func=window(0.6, 0.4)), run_time=0.9)
             # "Three out of four simulated chance maps": three of them, scored, drop into
             # their bins; then the other 19,997 grow the bins
-            beat.wait_until("out", offset=-0.2)
-            self.play(LaggedStart(*[drop(i) for i in range(3)], lag_ratio=0.75), run_time=1.6)
+            self.play(LaggedStart(*[drop(i) for i in range(3)], lag_ratio=0.6), run_time=2.2)
             self.remove(*s_thumbs)
             self.play(LaggedStart(*[GrowFromEdge(b, DOWN) for b in nbars], lag_ratio=0.04),
                       FadeOut(VGroup(*s_tokens), rate_func=window(0.3, 0.4)),
-                      run_time=beat.until("worse", offset=-0.4, min_time=0.8))
+                      run_time=beat.until("worse", offset=-0.4, min_time=0.6))
             self.play(worse.animate.set_fill(opacity=0.95),
                       VGroup(*nbars[:2]).animate.set_fill(opacity=0.25), run_time=0.7)
             beat.wait_until("share", offset=0.2)
@@ -1702,7 +1709,8 @@ class Episode(NarratedScene):
         # for the north's own test.
         m_top = rm(RM_E0, REAL[:, 1].max())[1]
         anchor = np.array([RM_X0, m_top, 0.0])
-        lift = np.array([0.0, 2.9 - m_top, 0.0])
+        # grown and moved right, so the map and the labels beside its boxes fill the frame
+        lift = np.array([1.1, 2.9 - m_top, 0.0])
 
         def T(p):
             return anchor + (np.asarray(p, dtype=float) - anchor) * RS + lift
@@ -1753,7 +1761,7 @@ class Episode(NarratedScene):
         avoid = [(bgN.get_corner(DL), bgN.get_corner(UR)), (bgC.get_corner(DL), bgC.get_corner(UR)),
                  (n0, n1), (cb0, cb1)]
         bestT = None
-        for cx in np.arange(-3.5, 2.5, 0.02):
+        for cx in np.arange(-2.5, 3.8, 0.02):
             for cy in np.arange(-0.6, 2.4, 0.02):
                 if rect_gap(cx, cy, qT).min() - RDOT * RS < 0.2:
                     continue
@@ -1854,11 +1862,14 @@ class Episode(NarratedScene):
             # "Score the north alone": the map shrinks back beside the chart, the labels leave
             # ("north" travels to tag the bars), and the chart's axes return
             beat.wait_until("Score", offset=-0.1)
-            self.play(VGroup(mapgrp, marks).animate.shift(-lift).scale(1 / RS, about_point=anchor),
-                      tl.animate.move_to(tl_home),
+            back = VGroup(mapgrp, marks)
+            back.generate_target()
+            back.target.shift(-lift).scale(1 / RS, about_point=anchor)
+            back.target[0][2].set_stroke(opacity=0.6)          # Clarke's area steps back
+            back.target[0][3].set_stroke(opacity=0.3)
+            self.play(MoveToTarget(back), tl.animate.move_to(tl_home),
                       FadeOut(VGroup(bgN, lblN[1], bgC, clbl, recr, dc_val, arrC)),
                       lblN[0].animate.move_to(tagN_pos).set_color(BLUE),
-                      cbox.animate.set_stroke(opacity=0.6), cgrid.animate.set_stroke(opacity=0.3),
                       FadeIn(VGroup(ax, ins), rate_func=window(0.4, 0.6)), run_time=1.0)
             # "...and it fits chance too": its own chance bars, then its counts grow into them
             beat.wait_until("fits", offset=-0.2)

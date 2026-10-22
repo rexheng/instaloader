@@ -22,34 +22,30 @@
 [1:16.8–1:19.9] Three eighths beats a third, so it stayed.
 [1:19.9–1:21.9] Then this neighbor moved away.
 [1:21.9–1:23.1] Is it still content?
-[1:23.9–1:28.9] Two gold out of seven, less than a third, so now it wants out.
-[1:28.9–1:31.9] Its neighbor here also has three eighths.
-[1:31.9–1:36.9] In round two, our household leaves, and this one drops to two sevenths.
-[1:36.9–1:40.9] Now run the whole town.
-[1:40.9–1:52.0] After round seven nobody wants to move That whole town is one point on this chart Demand a quarter and the same starting town barely sorts
-[1:52.0–1:54.0] 58%.
-[1:54.0–1:58.0] Demand a third, and it jumps to 76.
-[1:58.0–2:03.0] To see why, sort the random start by each household's share of matching neighbors.
-[2:03.0–2:06.0] With at most eight neighbors, shares come in steps.
-[2:06.0–2:10.0] At a third, everyone left of it is unhappy,
-[2:10.0–2:14.6] including the neighbor that started our blocks chain at 2 7ths.
-[2:14.6–2:19.9] Every household at 3 8ths is one lost match away from 2 7ths.
-[2:19.9–2:24.2] At a quarter, how many would start unhappy?
-[2:24.2–2:26.9] Only these two bars change sides.
-[2:26.9–2:29.4] Just 95 start unhappy.
-[2:29.4–2:33.2] Now a household at 3 8ths can lose a match and stay,
-[2:33.2–2:36.2] so that chain never starts.
-[2:36.2–2:40.7] In his 1971 paper, Thomas Schelling ran this model.
-[2:40.7–2:45.9] His households moved to the nearest suitable square on emptier boards,
-[2:45.9–2:51.0] and there the jump came later, between about a third and a half.
-[2:51.0–2:55.0] Two simulated towns, both 76%.
-[2:55.0–2:58.4] In one town, households demand a third.
-[2:58.4–3:01.4] In the other, nobody minds their neighbors.
-[3:01.4–3:05.0] Which one wanted a third?
-[3:05.0–3:09.7] This one, the other was placed by a rule with no preferences.
-[3:09.7–3:12.6] Real segregation has other causes.
-[3:12.6–3:16.8] One study finds that 1930s federal lending maps
-[3:16.8–3:22.2] increased racial segregation for decades through reduced credit.
-[3:22.2–3:25.3] Look again at the first town.
-[3:25.3–3:29.7] As Schelling argued, whatever you guessed its people demanded,
-[3:29.7–3:32.7] the map alone could not have told you.
+[1:23.9–1:27.4] Two gold out of seven, less than a third,
+[1:27.4–1:29.3] so now it wants out.
+[1:29.3–1:32.0] Its neighbor here also has three eighths.
+[1:32.0–1:34.6] In round two, our household leaves,
+[1:34.6–1:37.8] and this one drops to two sevenths.
+[1:37.8–1:41.1] Now run the whole town.
+[1:41.1–1:57.8] After round seven nobody wants to move That whole town is one point on this chart Demand a quarter and the same starting town barely sorts 58 Demand a third and it jumps to 76 To see
+[1:59.8–2:04.9] why, sort the random start by each household's share of matching neighbors. With at most
+[2:04.9–2:11.4] eight neighbors, shares come in steps. At a third, everyone left of it is unhappy, including
+[2:11.4–2:17.8] the neighbor that started our blocks chain at two-sevenths. Every household at three-eighths
+[2:17.8–2:25.5] is one lost match away from two-sevenths. At a quarter, how many would start unhappy?
+[2:25.5–2:32.0] Only these two bars change sides. Just 95 start unhappy. Now a household at three-eighths
+[2:32.0–2:37.3] can lose a match and stay, so that chain never starts.
+[2:37.3–2:41.7] In his 1971 paper, Thomas Schelling ran this model.
+[2:41.7–2:47.8] His households moved to the nearest suitable square, on emptier boards, and there the jump
+[2:47.8–2:52.0] came later, between about a third and a half.
+[2:52.0–2:56.1] Two simulated towns, both 76%.
+[2:56.1–2:59.4] In one town, households demand a third.
+[2:59.4–3:02.5] In the other, nobody minds their neighbors.
+[3:02.5–3:06.1] Which one wanted a third?
+[3:06.1–3:10.8] This one, the other was placed by a rule, with no preferences.
+[3:10.8–3:13.6] Real segregation has other causes.
+[3:13.6–3:20.9] One study finds that 1930s federal lending maps increased racial segregation for decades,
+[3:20.9–3:23.3] through reduced credit.
+[3:23.3–3:26.4] Look again at the first town.
+[3:26.4–3:31.9] As Schelling argued, whatever you guessed its people demanded, the map alone could not
+[3:31.9–3:32.8] have told you.

@@ -44,4 +44,4 @@
 
 [02:54.3] All four of his datasets share these five numbers. [pause 0.5] A trend, a curve, an outlier, and one point doing all the work.
 
-[03:04.1] Your line was right: five numbers fix it exactly, slope minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.
+[03:04.1] Your line was right: five numbers fix it exactly, slope minus point one. [pause 0.8] Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.

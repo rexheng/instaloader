@@ -6,6 +6,6 @@ script: videos/episodes/020-datasaurus/narration.json
 [0:43.4] replace  script: "dinosaur's"                             heard: 'dinosaurs'
 [1:20.9] insert   script: '∅'                                      heard: 'zero'
 [1:27.8] replace  script: 'ess why'                                heard: 's y'
-[2:25.9] insert   script: '∅'                                      heard: 'this'
+[2:34.9] replace  script: 'this'                                   heard: 'the'
 [2:46.1] replace  script: 'ess ex'                                 heard: 'sx'
-[2:47.9] replace  script: 'ess why'                                heard: 's y'
+[2:47.9] replace  script: 'ess why'                                heard: 'sy'

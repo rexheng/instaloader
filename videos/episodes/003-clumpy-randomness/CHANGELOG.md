@@ -511,3 +511,75 @@ one-square derivation, and one histogram reused for A, B, the aimed map and Clar
   - All 12 contact sheets.
   - Keyframes at 1:13, 3:22 and 3:33.
   - Frame strips across the re-rain (0:35–0:39), the gaps beat (1:08–1:20), the λ / P(0) / two-hit build (1:29–1:48), map B (2:32–2:42), the aimed header, the stakes answer (3:09–3:11) and the landing (3:19–3:28).
+
+## Round 7 revisions
+
+**Plan (both critics 8.6; every dimension below 9 except Hook, and craft's Concision).**
+- Clarity 8.5 → 9 ("could re-derive it after one watch"): the e^−λ limit, the χ² weighting and
+  one entry of the null were announced, not shown, and the A/B zoom was unfair. Upgrade: a
+  convergence plot, chance's own whiskers, three simulated maps dropping into their bins, the
+  same 16-hit rule for both zooms, and a measured limit.
+- Visual 8.5 → 9 ("one focal point per frame"): limits labels far from their boxes, a
+  four-layer map at 1:06, the yellow aimed frame, a dense Clarke frame, 1/576 far from its
+  square. Upgrade: labels beside their referents, one coloured layer per sentence, dimmed
+  context.
+- Motion 8.5 → 9 ("every motion encodes a relation"): glyph soup at 2:23, five moves at once
+  at 1:35, an end-card double exposure. Upgrade: in-place sum, one move per phrase, sequential
+  end fade.
+- Audio 8.5 → 9: the 227 reveal landed ~1 s after it was spoken. Upgrade: the method is built
+  in the guess hold; only the "?" changes on "two hundred".
+- Concision 8.5 (substance): cut the forward signpost and the spoken 354.
+- Originality 8.5: the limit becomes a measured surprise (the test passes the north too, yet the
+  bombs were aimed: the aim hides in λ).
+
+**Facts.** Neither critic found an error. Substance fix 1's suggested line ("Pool the two, and
+chance at two densities fakes the aim fingerprint: p equals point oh four") was checked and
+**not** used. The pooled numbers are right (χ² = 10.0, p = 0.04), but the cause is not:
+- the two-density mixture sits only 0.7 of misfit away from one-λ Poisson;
+- pure chance simulated at the two densities gives a median pooled χ² of 4.0, and χ² ≥ 10 in
+  9.5 % of 20,000 runs;
+- against the mixture itself, the real pooled histogram still misfits by 8.5, mostly from the
+  rectangle's own shortfall of single hits.
+
+The limit is now measured another way (facts.md, "Round 7 additions"). The north box scored
+alone fits chance: 115/46/17/2/0/0 against its own Poisson, p = 0.45 by 200,000 simulated maps
+(χ²₄ gives 0.59 with expected counts of 0.24 and 0.03; merging to 3+ gives 0.27). So both areas
+pass, while their densities differ 2:1. The aim shows only in λ.
+
+**What changed (craft fixes C1–C10, substance fixes S1–S11)**
+- *Limits (C1, S1, S8).* The map grows ×1.35 and moves right 1.1. "north · 1.9 hits/km²"
+  sits beside the north box (buff 0.25, on a knockout). "≈ Clarke's area re-created" and
+  "3.7 hits/km²" sit beside the rectangle, joined by a 0.26-unit leader. The long white arrow is
+  gone. The title and Thames label stay at 35 %. New narration: "Score the north alone, and it
+  fits chance too: p equals point four five. The aim hides in lambda, which the test holds
+  fixed." The map shrinks back, "north" travels to tag the bars, the north's own Poisson bars
+  and counts grow in the same chart, and "p = 0.45" writes where p = 0.88 sat.
+- *Map A at "Map A has 222" (C2).* The blue shading and the dimmed red outlines go to 0 and
+  the hits drop to 60 %, so the yellow empties are the only coloured layer. Blue returns on
+  "pile-ups".
+- *227 (C3, S5).* "≈ 0.3933" and "0.3933 × 576 ≈ ?" are built in the guess hold, with 0.3933
+  and 576 carried from P(empty). On "two hundred" only the "?" swaps to 227.
+- *χ² sum (C4, S6).* No copies fly. Each term flags in place (LaggedStart, lag 0.25, 1.4 s)
+  while the readout steps 0.10, 0.74, 1.17, 1.39, 1.88, 2.00. The "?" is now animated with the
+  readout: it used to be frozen into the static background and showed through the digits.
+- *Two-hit beat (C5, S11).* One move per phrase: the rows collapse on "For two hits" (the
+  e^−λ climbs on an arc clear of the surviving 1/576), the square enlarges with its 1/576 on
+  "this square", and the dots stream into the block on "pick", before the two picks drop.
+- *Null (C6).* The null run's first three maps (scores 3.7, 2.1, 2.8, equal to `NULL[:3]`)
+  each appear with their score, hold 0.3 s and drop into their bin. Then the 20,000-map bins
+  grow. The pause after "two point oh" is 0.6 s (was 0.3).
+- *End card (C7, S7).* The A/B frame fades out fully (0.35 s) before the card fades in.
+- *Aimed map (C8).* Empty-region outlines skip the map border, so the GRAY frame stays grey (map
+  A too).
+- *Clarke frame (C9).* The title and "Thames" dim to 35 % as the table builds.
+- *1/576 (C10).* The fraction is written beside the square on "one in" and flies into its slot
+  on "To stay empty".
+- *Zoom fairness (S2).* A's zoom is now its edge block closest to the 16-hit average (rows
+  18–21: 14 of 16 discs crowd), the same rule as B's.
+- *e^−λ (S3).* A (1 − λ/n)^n plot (log n: 1, 2, 5, 20, 537) draws on "small slice". Its dots
+  climb to the purple dashed e^−λ line on "raised to a big power".
+- *Why divide (S4).* "…because short bars wobble less. So a miss on a short bar counts more."
+  INK whiskers ±12 (bar 0) and ±2.7 (bar 4) show binomial s.d.s of 11.7 and 2.65.
+- *Concision (S9, S10).* "To judge London, chance must predict every bar" is cut, with its
+  preview chart: drawing it would have cut the reading time of the 183 line. The spoken 354 is
+  cut. On screen: 537 − (576 − 222) = 183 extra hits, each number carried from its source.

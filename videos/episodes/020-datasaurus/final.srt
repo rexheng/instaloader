@@ -199,14 +199,14 @@ A trend, a curve, an outlier, and one point doing all the work.
 Your line was right: five numbers fix it exactly, slope minus point one.
 
 51
-00:03:09,743 --> 00:03:14,703
+00:03:10,043 --> 00:03:15,003
 Your cloud was wrong: a blur around this ellipse, all that five numbers can draw.
 
 52
-00:03:15,303 --> 00:03:19,243
+00:03:15,603 --> 00:03:19,543
 Most of those papers used a bar graph, which draws only two.
 
 53
-00:03:19,843 --> 00:03:22,543
+00:03:20,143 --> 00:03:22,843
 The dinosaur lived in everything they leave out.
 

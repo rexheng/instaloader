@@ -750,7 +750,8 @@ with no structural change. The plan per dimension below 9:
   their marks are ≥ 1 unit apart, riding with them; the gap title arrives after the share title
   has left, so two titles never share the frame.
 - r9s 5 (near-empty dip at 3:10.3): the number line, ticks and dashed line stay at full and drop
-  into place by 0.8 s; the payoff fades over 0.4 s while the cold open fades in from 0.26 s.
+  into place by 0.8 s; the payoff fades over 0.4 s while the cold open fades in from 0.2 s
+  (the two overlap only while both are under 15%).
 - r9s 6: landing tag "its 4-shot rows average 1/2".
 - r9s 7: "Miller and Sanjurjo [pause 0.4] put the gap at about minus eight points"; the year
   stays in the citation.
@@ -772,3 +773,27 @@ with no structural change. The plan per dimension below 9:
   the "a whole one" beat (right after its pulse) and hold 1 s; the tails boxes hold through "Line
   them up:" and the pack starts as "up:" ends.
 - The landing's two pictures now overlap only while both are under 15%, with no empty frame.
+
+**Self-review loop.** One preview and two 1080p masters. After each I stepped frames at 1–10 fps
+across every changed transition: 1:05.8–1:09.0 (pour and sort), 1:14.9–1:18.5 (readout move),
+1:28.4–1:34.4 (silent lineup and pack), 1:52.6–1:57.6 (mirror cue), 2:07.4–2:23.4 (cursors out,
+dashed pulse, cursors back), 2:33.4–2:35.6 (zoom), 2:35.8–2:42.2 (ghosts), 2:42.3–2:48.7
+(Cornell "?"), 3:06.3–3:07.6 (landing). I read all 12 contact sheets of the first master and the
+lineup strip, keyframes kf_22, kf_32, kf_33 and kf_40 of the final one.
+
+**Mechanics (final master):**
+- Runtime 3:23.1 (was 3:26.6). 462 words (was 473), 151 wpm over speech time. Voice 0.82, with
+  0.80 for six beats. 0 sentences above 200 wpm.
+- −14.1 LUFS / −2.1 dBTP. Leading silence 0.00 s, trailing 1.74 s. Longest silence 2.17 s (the
+  prediction hold); the silent lineup is 1.9 s of moving picture. Longest static stretch 3.5 s
+  (the +12 frame).
+- 0 render warnings, 0 layout-audit issues in 218 checks, 0 glyph morphs, 7/7 deictics landed,
+  0 review flags, WER 0.7%, no banned phrases.
+
+`check_numbers.py` was re-run; every value on screen is unchanged.
+
+**Kept:** the yellow vote slices packing exactly onto the 40.5% marker into 5⅔/14 = 17/42 and
+(1/14) Σᵢ hᵢ/nᵢ built from the strip; the half-turn mirror of the vote strip about the dashed 50%
+line into 25/42 and −19; the payoff chain 46/54 → −8 → 49 − 45 = +4 → +12 with "vs 0: p = .49",
+"no defenders" and both citations; the landing that answers the cold-open question on the
+cold-open row and axis with (1/14) Σᵢ hᵢ/nᵢ = 17/42 and the blue "hot" arrow.

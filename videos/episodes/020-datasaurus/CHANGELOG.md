@@ -727,6 +727,14 @@ reach 9.
    beside its top cap.
 8. *Sync.* "Here are the real points": the reveal now starts 0.25 s before "real" (the deictic
    check had it at +0.46 s).
+9. *Found in the first master (not in the reviews).* During the sweep back the live tag froze at
+   "r = 0.50" while the ellipse was already at −0.06 (frame 1:39). Cause: `dip()` on the tag's r
+   glyph made Manim add a wrapper group to the scene, which broke `r_live` apart, so its own
+   updater stopped running. The sweep-back play now drives it with `UpdateFromFunc` (1:39 reads
+   r = −0.05 mid-sweep).
+10. *Landing cadence.* "…slope minus point one. [pause 0.8] Your cloud was wrong": the first key
+   result of the landing gets its own breath (it had 0.5 s). This also clears the kit's
+   "metronomic" flag (sentence-gap variation 0.148 against a 0.15 floor in the first master).
 
 **Not changed, with reasons.**
 - Substance fix 9 (retitle) was marked optional; the title is fixed in curriculum.json, and the
@@ -744,3 +752,68 @@ cloud (seed, redraw rule, exact five numbers, least-squares line through the tou
 61.300, slice average 61.27, and the label-clearance search that ruled out 0.80); #26 gains the
 r = 0.50 slice numbers; #38 records the wording changes and the ± SE / ± SD figures (77.6 % /
 15.3 %) behind the new tag.
+
+### Verification (final master, 3:24.7)
+- render.sh: 0 scene warnings (two cue warnings in the dry run, "r times" 0.32 s late and "Here"
+  unsynced, were fixed before the masters). Layout audit: 0 issues in 222 checks. review_kit:
+  0 flags.
+- 456 words. Pace is 150 wpm over speech time, the median sentence runs 173 wpm and none is above
+  200. Full stops 0.55 s (variation 0.16), beat turns 0.71 s. The longest stretch without a breath
+  is 6.3 s (B2); B9b's 6.7 s run is gone.
+- Loudness −14.1 LUFS, −1.7 dBTP. Leading silence 0.00 s, trailing 1.94 s, longest internal
+  silence 2.37 s (the planned commit hold), longest static stretch 2.73 s.
+- WER 2.4 %. Heard as "Say R is 0.5", "the cloud rises R times S-Y", "of every slice of the
+  ellipse", "At the wall the slices shrink to the touch point", "All four of his datasets share
+  these five numbers", "slope minus point one. Your cloud was wrong". 12/12 deictics synced. The
+  kit lists "r times ess why" at 1:27.2 and 2:47.4; the second is the "Same rule" callback.
+- I looked at all 12 contact sheets and at keyframes kf_17 (1:29.5), kf_20 (1:39.9), kf_32
+  (2:42.3), kf_39 (3:23.1) and kf_40. I also checked:
+  - full-resolution crops at 1:24.4 and 1:28.8: the s_x and r s_y labels sit on bare background
+    with no plate and no clipped dots, the rise stands clear of the grey box wall, and the merged
+    white dot lands on an empty wall;
+  - 1 s tiles of 1:20.5–1:41, 0:31–0:37, 2:37.6–2:43.6, 2:45.5–2:57.5, 3:02.3–3:04.5 and
+    3:15.5–3:24.5 (preview and master).
+
+  What they show:
+  - the now column at 25 % through the what-if;
+  - "± 1 SD" on the error bar, then the strip alone under "13% showed points";
+  - tick numbers cross-fading (75 and 12 in sequence) while the dinosaur's rows step back and his
+    readout builds in its final slot;
+  - the formula built with no readout jump;
+  - the quartet forming on "All four";
+  - the 0–100 numbers riding the hand-off;
+  - the last frame: blue dinosaur, two bright rows, the parked bar with "86% used bars" and
+    "± 1 SD".
+- Known residue: from about 2:41 to 2:50 the upper right holds nothing (see "Not changed").
+  During the 0.8 s tick cross-fade, old and new tick numbers show together at half strength, but
+  no two numbers overprint.
+
+## Round 8 revisions
+
+Round 8 scored 8.9 from both critics (craft: Motion 8.5, Concision 8.5; substance: Visual 8.5,
+Concision 8.5). No caps, no factual errors. Both said the fixes would reach 9.
+
+### Plan of the climb (written before editing)
+- **Motion (craft 8.5).** Anchor: "every motion encodes a relation". Short: five 0.4–1.2 s
+  choreography slips: Anscombe's ticks relabel the dinosaur's stripes before the data moves
+  (2:39); the rise keeps the r = 0.50 height while r sweeps back (1:38.6); a lone ellipse and a
+  floating formula at the hand-off (3:03.4); a doubled ellipse on panel I as the copies peel off
+  (2:56); "13%" written over the fading error bar (0:35). Upgrade: the dinosaur's own things leave
+  first, then ticks, points and geometry change in one smooth play; the run, rise and label leave
+  before the sweep; the hand-off fades the cloud and readout in from 0.3–0.4 of the move; each copy
+  launches already moving, 0.15 s apart; the bar's labels are gone before "13%" is written.
+- **Visual (substance 8.5).** Anchor: "every frame has one focal point". Short: the same 2:39 and
+  0:35 frames, plus Anscombe's 4–12 axes ghosting under panel I's 0–20 axes with a point outside
+  the new panel (2:55), and a 20 % duplicate of "r s_y" under its climbing copy (2:51). Upgrade:
+  panel I's axes are transformed from Anscombe I's on the data's rate function; no source glyph
+  stays visible under its copy; the 14 slice points dim after the merge and no simulated point
+  sits between the wall and the rise.
+- **Concision (8.5/8.5).** Anchor: "cutting any sentence loses something". Short: "this star"
+  re-shows the episode's own star; "made the same point" flags Anscombe as a repeat; B20 + B21
+  re-teach B9b's rule to derive the slope formula, which belongs in the insight beat (§6).
+  Upgrade: cut "this star"; "In 1973, Francis Anscombe did it with just eleven points."; build
+  slope = r s_y / s_x in B9b from the run's and the rise's labels, and replace B20 + B21 with
+  "Same rule, same line."
+- **Audio / Clarity nits (substance).** A 6.3 s breathless run carrying 703 and 86 %; the what-if
+  r = 0.50 had no stated reason. Upgrade: [pause 0.3] after "papers," and B2 at 0.80; open B9b
+  with "This one barely tilts."

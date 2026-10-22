@@ -1,8 +1,8 @@
 {
  "task": "transcribe",
  "language": "English",
- "duration": 213.909346298,
- "text": " In this simulated town, on average, three-quarters of a household's neighbors match its color. How much matching do these households demand? Just a third. Each household counts the occupied squares around it. If fewer than a third match, it moves, so it is happy to be outnumbered two to one. We read Real City maps the same way, guessing motives from patterns. So how can a demand of one-third build a town of three-quarters? Rewind to the start, a random mix. Here on average, half the neighbors match well above a third. Still, these 238 are unhappy. The obvious plan is to move each one to a random empty square where it would be content, so the town stays mixed. Round one takes 200 moves. The other 38 were content by their turn. If the plan had worked, this counter would read zero. It reads 74. 67 of these were content before round one. They never moved. Their neighbors did. Replay one block. At the start, this gold household had three gold neighbors out of eight. Three eighths beats a third, so it stayed. Then this neighbor moved away. Is it still content? Two gold out of seven, less than a third, so now it wants out. Its neighbor here also has three eighths. In round two, our household leaves, and this one drops to two sevenths. Now run the whole town. After round seven nobody wants to move That whole town is one point on this chart Demand a quarter and the same starting town barely sorts 58%. Demand a third, and it jumps to 76. To see why, sort the random start by each household's share of matching neighbors. With at most eight neighbors, shares come in steps. At a third, everyone left of it is unhappy, including the neighbor that started our blocks chain at 2 7ths. Every household at 3 8ths is one lost match away from 2 7ths. At a quarter, how many would start unhappy? Only these two bars change sides. Just 95 start unhappy. Now a household at 3 8ths can lose a match and stay, so that chain never starts. In his 1971 paper, Thomas Schelling ran this model. His households moved to the nearest suitable square on emptier boards, and there the jump came later, between about a third and a half. Two simulated towns, both 76%. In one town, households demand a third. In the other, nobody minds their neighbors. Which one wanted a third? This one, the other was placed by a rule with no preferences. Real segregation has other causes. One study finds that 1930s federal lending maps increased racial segregation for decades through reduced credit. Look again at the first town. As Schelling argued, whatever you guessed its people demanded, the map alone could not have told you.",
+ "duration": 214.506714118,
+ "text": " In this simulated town, on average, three-quarters of a household's neighbors match its color. How much matching do these households demand? Just a third. Each household counts the occupied squares around it. If fewer than a third match, it moves, so it is happy to be outnumbered two to one. We read Real City maps the same way, guessing motives from patterns. So how can a demand of one-third build a town of three-quarters? Rewind to the start, a random mix. Here on average, half the neighbors match well above a third. Still, these 238 are unhappy. The obvious plan is to move each one to a random empty square where it would be content, so the town stays mixed. Round one takes 200 moves. The other 38 were content by their turn. If the plan had worked, this counter would read zero. It reads 74. 67 of these were content before round one. They never moved. Their neighbors did. Replay one block. At the start, this gold household had three gold neighbors out of eight. Three eighths beats a third, so it stayed. Then this neighbor moved away. Is it still content? Two gold out of seven, less than a third, so now it wants out. Its neighbor here also has three eighths. In round two, our household leaves, and this one drops to two sevenths. Now run the whole town. After round seven nobody wants to move That whole town is one point on this chart Demand a quarter and the same starting town barely sorts 58 Demand a third and it jumps to 76 To see why, sort the random start by each household's share of matching neighbors. With at most eight neighbors, shares come in steps. At a third, everyone left of it is unhappy, including the neighbor that started our blocks chain at two-sevenths. Every household at three-eighths is one lost match away from two-sevenths. At a quarter, how many would start unhappy? Only these two bars change sides. Just 95 start unhappy. Now a household at three-eighths can lose a match and stay, so that chain never starts. In his 1971 paper, Thomas Schelling ran this model. His households moved to the nearest suitable square, on emptier boards, and there the jump came later, between about a third and a half. Two simulated towns, both 76%. In one town, households demand a third. In the other, nobody minds their neighbors. Which one wanted a third? This one, the other was placed by a rule, with no preferences. Real segregation has other causes. One study finds that 1930s federal lending maps increased racial segregation for decades, through reduced credit. Look again at the first town. As Schelling argued, whatever you guessed its people demanded, the map alone could not have told you.",
  "words": [
   {
    "word": "In",
@@ -972,1392 +972,1372 @@
   {
    "word": "Two",
    "start": 84.62,
-   "end": 84.78
+   "end": 84.8
   },
   {
    "word": "gold",
-   "start": 84.78,
-   "end": 85.16
+   "start": 84.8,
+   "end": 85.22
   },
   {
    "word": "out",
-   "start": 85.16,
-   "end": 85.4
+   "start": 85.22,
+   "end": 85.48
   },
   {
    "word": "of",
-   "start": 85.4,
-   "end": 85.52
+   "start": 85.48,
+   "end": 85.58
   },
   {
    "word": "seven,",
-   "start": 85.52,
-   "end": 86.08
+   "start": 85.58,
+   "end": 86.28
   },
   {
    "word": "less",
-   "start": 86.08,
-   "end": 86.5
-  },
-  {
-   "word": "than",
-   "start": 86.5,
+   "start": 86.28,
    "end": 86.7
   },
   {
-   "word": "a",
+   "word": "than",
    "start": 86.7,
-   "end": 86.8
+   "end": 86.94
+  },
+  {
+   "word": "a",
+   "start": 86.94,
+   "end": 87.08
   },
   {
    "word": "third,",
-   "start": 86.8,
-   "end": 87.34
+   "start": 87.08,
+   "end": 87.6
   },
   {
    "word": "so",
-   "start": 87.34,
-   "end": 87.64
+   "start": 86.94,
+   "end": 87.92
   },
   {
    "word": "now",
-   "start": 87.64,
-   "end": 87.84
+   "start": 87.92,
+   "end": 88.16
   },
   {
    "word": "it",
-   "start": 87.84,
-   "end": 88.02
+   "start": 88.16,
+   "end": 88.32
   },
   {
    "word": "wants",
-   "start": 88.02,
-   "end": 88.2
+   "start": 88.32,
+   "end": 88.54
   },
   {
    "word": "out.",
-   "start": 88.2,
-   "end": 88.7
+   "start": 88.54,
+   "end": 89.06
   },
   {
    "word": "Its",
-   "start": 89.14,
-   "end": 89.42
+   "start": 88.78,
+   "end": 89.76
   },
   {
    "word": "neighbor",
-   "start": 89.42,
-   "end": 89.68
-  },
-  {
-   "word": "here",
-   "start": 89.68,
+   "start": 89.76,
    "end": 90.04
   },
   {
-   "word": "also",
+   "word": "here",
    "start": 90.04,
-   "end": 90.52
+   "end": 90.38
+  },
+  {
+   "word": "also",
+   "start": 90.38,
+   "end": 90.84
   },
   {
    "word": "has",
-   "start": 90.52,
-   "end": 90.82
+   "start": 90.84,
+   "end": 91.16
   },
   {
    "word": "three",
-   "start": 90.82,
-   "end": 91.04
+   "start": 91.16,
+   "end": 91.4
   },
   {
    "word": "eighths.",
-   "start": 91.04,
-   "end": 91.64
+   "start": 91.4,
+   "end": 91.98
   },
   {
    "word": "In",
-   "start": 91.44,
-   "end": 92.14
+   "start": 91.54,
+   "end": 92.48
   },
   {
    "word": "round",
-   "start": 92.14,
-   "end": 92.4
+   "start": 92.48,
+   "end": 92.72
   },
   {
    "word": "two,",
-   "start": 92.4,
-   "end": 92.88
+   "start": 92.72,
+   "end": 93.36
   },
   {
    "word": "our",
-   "start": 92.88,
-   "end": 93.14
+   "start": 93.36,
+   "end": 93.48
   },
   {
    "word": "household",
-   "start": 93.14,
-   "end": 93.66
+   "start": 93.48,
+   "end": 93.98
   },
   {
    "word": "leaves,",
-   "start": 93.66,
-   "end": 94.32
+   "start": 93.98,
+   "end": 94.66
   },
   {
    "word": "and",
-   "start": 94.32,
-   "end": 94.78
+   "start": 94.08,
+   "end": 95.12
   },
   {
    "word": "this",
-   "start": 94.78,
-   "end": 94.94
+   "start": 95.12,
+   "end": 95.3
   },
   {
    "word": "one",
-   "start": 94.94,
-   "end": 95.08
-  },
-  {
-   "word": "drops",
-   "start": 95.08,
+   "start": 95.3,
    "end": 95.44
   },
   {
-   "word": "to",
+   "word": "drops",
    "start": 95.44,
-   "end": 95.66
+   "end": 95.78
+  },
+  {
+   "word": "to",
+   "start": 95.78,
+   "end": 96.02
   },
   {
    "word": "two",
-   "start": 95.66,
-   "end": 95.82
+   "start": 96.02,
+   "end": 96.18
   },
   {
    "word": "sevenths.",
-   "start": 95.82,
-   "end": 96.5
+   "start": 96.18,
+   "end": 96.84
   },
   {
    "word": "Now",
-   "start": 97.74,
-   "end": 98.08
+   "start": 97.66,
+   "end": 98.42
   },
   {
    "word": "run",
-   "start": 98.08,
-   "end": 98.32
+   "start": 98.42,
+   "end": 98.64
   },
   {
    "word": "the",
-   "start": 98.32,
-   "end": 98.44
+   "start": 98.64,
+   "end": 98.78
   },
   {
    "word": "whole",
-   "start": 98.44,
-   "end": 98.6
+   "start": 98.78,
+   "end": 98.94
   },
   {
    "word": "town.",
-   "start": 98.6,
-   "end": 99.22
+   "start": 98.94,
+   "end": 99.56
   },
   {
    "word": "After",
-   "start": 100.9,
-   "end": 101.5
+   "start": 101.08,
+   "end": 101.82
   },
   {
    "word": "round",
-   "start": 101.5,
-   "end": 101.78
+   "start": 101.82,
+   "end": 102.12
   },
   {
    "word": "seven,",
-   "start": 101.78,
-   "end": 102.4
+   "start": 102.12,
+   "end": 102.76
   },
   {
    "word": "nobody",
-   "start": 102.4,
-   "end": 102.84
+   "start": 102.76,
+   "end": 103.16
   },
   {
    "word": "wants",
-   "start": 102.84,
-   "end": 103.12
+   "start": 103.16,
+   "end": 103.46
   },
   {
    "word": "to",
-   "start": 103.12,
-   "end": 103.3
+   "start": 103.46,
+   "end": 103.62
   },
   {
    "word": "move.",
-   "start": 103.3,
-   "end": 103.84
+   "start": 103.62,
+   "end": 104.18
   },
   {
    "word": "That",
-   "start": 104.74,
-   "end": 105.52
+   "start": 104.98,
+   "end": 105.88
   },
   {
    "word": "whole",
-   "start": 105.52,
-   "end": 105.74
+   "start": 105.88,
+   "end": 106.14
   },
   {
    "word": "town",
-   "start": 105.74,
-   "end": 106.16
+   "start": 106.14,
+   "end": 106.56
   },
   {
    "word": "is",
-   "start": 106.16,
-   "end": 106.48
+   "start": 106.56,
+   "end": 106.92
   },
   {
    "word": "one",
-   "start": 106.48,
-   "end": 106.76
-  },
-  {
-   "word": "point",
-   "start": 106.76,
-   "end": 107.12
-  },
-  {
-   "word": "on",
-   "start": 107.12,
+   "start": 106.92,
    "end": 107.26
   },
   {
-   "word": "this",
-   "start": 107.25466,
-   "end": 107.39466
-  },
-  {
-   "word": "chart.",
-   "start": 107.39466,
-   "end": 108.014656
-  },
-  {
-   "word": "Demand",
-   "start": 108.91466,
-   "end": 109.37466
-  },
-  {
-   "word": "a",
-   "start": 109.37466,
-   "end": 109.474655
-  },
-  {
-   "word": "quarter,",
-   "start": 109.474655,
-   "end": 109.93466
-  },
-  {
-   "word": "and",
-   "start": 109.93466,
-   "end": 110.19466
-  },
-  {
-   "word": "the",
-   "start": 110.19466,
-   "end": 110.31466
-  },
-  {
-   "word": "same",
-   "start": 110.31466,
-   "end": 110.57466
-  },
-  {
-   "word": "starting",
-   "start": 110.57466,
-   "end": 110.95466
-  },
-  {
-   "word": "town",
-   "start": 110.95466,
-   "end": 111.35466
-  },
-  {
-   "word": "barely",
-   "start": 111.35466,
-   "end": 111.77466
-  },
-  {
-   "word": "sorts.",
-   "start": 111.77466,
-   "end": 112.43466
-  },
-  {
-   "word": "58%.",
-   "start": 111.45466,
-   "end": 113.93466
-  },
-  {
-   "word": "Demand",
-   "start": 113.514656,
-   "end": 115.114655
-  },
-  {
-   "word": "a",
-   "start": 115.114655,
-   "end": 115.27466
-  },
-  {
-   "word": "third,",
-   "start": 115.27466,
-   "end": 115.71466
-  },
-  {
-   "word": "and",
-   "start": 115.71466,
-   "end": 116.114655
-  },
-  {
-   "word": "it",
-   "start": 116.114655,
-   "end": 116.19466
-  },
-  {
-   "word": "jumps",
-   "start": 116.19466,
-   "end": 116.49466
-  },
-  {
-   "word": "to",
-   "start": 116.49466,
-   "end": 116.67466
-  },
-  {
-   "word": "76.",
-   "start": 116.67466,
-   "end": 117.57466
-  },
-  {
-   "word": "To",
-   "start": 118.67466,
-   "end": 118.87466
-  },
-  {
-   "word": "see",
-   "start": 118.87466,
-   "end": 119.05466
-  },
-  {
-   "word": "why,",
-   "start": 119.05466,
-   "end": 119.45466
-  },
-  {
-   "word": "sort",
-   "start": 119.45466,
-   "end": 119.87466
-  },
-  {
-   "word": "the",
-   "start": 119.87466,
-   "end": 120.014656
-  },
-  {
-   "word": "random",
-   "start": 120.014656,
-   "end": 120.37466
-  },
-  {
-   "word": "start",
-   "start": 120.37466,
-   "end": 120.67466
-  },
-  {
-   "word": "by",
-   "start": 120.67466,
-   "end": 120.89466
-  },
-  {
-   "word": "each",
-   "start": 120.89466,
-   "end": 121.17466
-  },
-  {
-   "word": "household's",
-   "start": 121.17466,
-   "end": 121.91466
-  },
-  {
-   "word": "share",
-   "start": 121.91466,
-   "end": 122.07466
-  },
-  {
-   "word": "of",
-   "start": 122.07466,
-   "end": 122.27466
-  },
-  {
-   "word": "matching",
-   "start": 122.27466,
-   "end": 122.67466
-  },
-  {
-   "word": "neighbors.",
-   "start": 122.67466,
-   "end": 123.41466
-  },
-  {
-   "word": "With",
-   "start": 123.65466,
-   "end": 123.93466
-  },
-  {
-   "word": "at",
-   "start": 123.93466,
-   "end": 124.03466
-  },
-  {
-   "word": "most",
-   "start": 124.03466,
-   "end": 124.21466
-  },
-  {
-   "word": "eight",
-   "start": 124.21466,
-   "end": 124.39466
-  },
-  {
-   "word": "neighbors,",
-   "start": 124.39466,
-   "end": 125.03466
-  },
-  {
-   "word": "shares",
-   "start": 125.03466,
-   "end": 125.55466
-  },
-  {
-   "word": "come",
-   "start": 125.55466,
-   "end": 125.834656
-  },
-  {
-   "word": "in",
-   "start": 125.834656,
-   "end": 125.95466
-  },
-  {
-   "word": "steps.",
-   "start": 125.95466,
-   "end": 126.43466
-  },
-  {
-   "word": "At",
-   "start": 126.99466,
-   "end": 127.21466
-  },
-  {
-   "word": "a",
-   "start": 127.21466,
-   "end": 127.41466
-  },
-  {
-   "word": "third,",
-   "start": 127.41466,
-   "end": 128.09467
-  },
-  {
-   "word": "everyone",
-   "start": 128.09467,
-   "end": 128.37466
-  },
-  {
-   "word": "left",
-   "start": 128.37466,
-   "end": 128.65466
-  },
-  {
-   "word": "of",
-   "start": 128.65466,
-   "end": 128.83466
-  },
-  {
-   "word": "it",
-   "start": 128.83466,
-   "end": 128.93466
-  },
-  {
-   "word": "is",
-   "start": 128.93466,
-   "end": 129.11465
-  },
-  {
-   "word": "unhappy,",
-   "start": 129.11465,
-   "end": 130.01466
-  },
-  {
-   "word": "including",
-   "start": 130.43466,
-   "end": 130.69466
-  },
-  {
-   "word": "the",
-   "start": 130.69466,
-   "end": 130.99466
-  },
-  {
-   "word": "neighbor",
-   "start": 130.99466,
-   "end": 131.31467
-  },
-  {
-   "word": "that",
-   "start": 131.31467,
-   "end": 131.59467
-  },
-  {
-   "word": "started",
-   "start": 131.59467,
-   "end": 132.03465
-  },
-  {
-   "word": "our",
-   "start": 132.03465,
-   "end": 132.21466
-  },
-  {
-   "word": "blocks",
-   "start": 132.21466,
-   "end": 132.57466
-  },
-  {
-   "word": "chain",
-   "start": 132.57466,
-   "end": 133.05466
-  },
-  {
-   "word": "at",
-   "start": 133.05466,
-   "end": 133.53465
-  },
-  {
-   "word": "2",
-   "start": 133.53465,
-   "end": 133.77466
-  },
-  {
-   "word": "7ths.",
-   "start": 133.77466,
-   "end": 134.45465
-  },
-  {
-   "word": "Every",
-   "start": 134.89465,
-   "end": 135.23465
-  },
-  {
-   "word": "household",
-   "start": 135.23465,
-   "end": 135.79466
-  },
-  {
-   "word": "at",
-   "start": 135.79466,
-   "end": 136.01466
-  },
-  {
-   "word": "3",
-   "start": 136.01466,
-   "end": 136.21466
-  },
-  {
-   "word": "8ths",
-   "start": 136.21466,
-   "end": 136.79466
-  },
-  {
-   "word": "is",
-   "start": 136.79466,
-   "end": 137.35466
-  },
-  {
-   "word": "one",
-   "start": 137.35466,
-   "end": 137.61465
-  },
-  {
-   "word": "lost",
-   "start": 137.61465,
-   "end": 137.97466
-  },
-  {
-   "word": "match",
-   "start": 137.97466,
-   "end": 138.29466
-  },
-  {
-   "word": "away",
-   "start": 138.29466,
-   "end": 138.61465
-  },
-  {
-   "word": "from",
-   "start": 138.61465,
-   "end": 138.87466
-  },
-  {
-   "word": "2",
-   "start": 138.87466,
-   "end": 139.07466
-  },
-  {
-   "word": "7ths.",
-   "start": 139.07466,
-   "end": 139.69466
-  },
-  {
-   "word": "At",
-   "start": 139.79466,
-   "end": 140.39465
-  },
-  {
-   "word": "a",
-   "start": 140.39465,
-   "end": 140.47466
-  },
-  {
-   "word": "quarter,",
-   "start": 140.47466,
-   "end": 140.99466
-  },
-  {
-   "word": "how",
-   "start": 140.99466,
-   "end": 141.35466
-  },
-  {
-   "word": "many",
-   "start": 141.35466,
-   "end": 141.53467
-  },
-  {
-   "word": "would",
-   "start": 141.53467,
-   "end": 141.69466
-  },
-  {
-   "word": "start",
-   "start": 141.69466,
-   "end": 142.01466
-  },
-  {
-   "word": "unhappy?",
-   "start": 142.01466,
-   "end": 142.81467
-  },
-  {
-   "word": "Only",
-   "start": 144.55466,
-   "end": 144.87466
-  },
-  {
-   "word": "these",
-   "start": 144.87466,
-   "end": 145.13466
-  },
-  {
-   "word": "two",
-   "start": 145.13466,
-   "end": 145.35466
-  },
-  {
-   "word": "bars",
-   "start": 145.35466,
-   "end": 145.77466
-  },
-  {
-   "word": "change",
-   "start": 145.77466,
-   "end": 146.17465
-  },
-  {
-   "word": "sides.",
-   "start": 146.17465,
-   "end": 146.75465
-  },
-  {
-   "word": "Just",
-   "start": 146.35466,
-   "end": 147.31467
-  },
-  {
-   "word": "95",
-   "start": 147.31467,
-   "end": 147.77466
-  },
-  {
-   "word": "start",
-   "start": 147.77466,
-   "end": 148.31467
-  },
-  {
-   "word": "unhappy.",
-   "start": 148.31467,
-   "end": 149.13466
-  },
-  {
-   "word": "Now",
-   "start": 148.85466,
-   "end": 149.89465
-  },
-  {
-   "word": "a",
-   "start": 149.89465,
-   "end": 150.05466
-  },
-  {
-   "word": "household",
-   "start": 150.05466,
-   "end": 150.53467
-  },
-  {
-   "word": "at",
-   "start": 150.53467,
-   "end": 150.73465
-  },
-  {
-   "word": "3",
-   "start": 150.73465,
-   "end": 150.91466
-  },
-  {
-   "word": "8ths",
-   "start": 150.91466,
-   "end": 151.43466
-  },
-  {
-   "word": "can",
-   "start": 151.43466,
-   "end": 151.63466
-  },
-  {
-   "word": "lose",
-   "start": 151.63466,
-   "end": 151.85466
-  },
-  {
-   "word": "a",
-   "start": 151.85466,
-   "end": 152.05466
-  },
-  {
-   "word": "match",
-   "start": 152.05466,
-   "end": 152.35466
-  },
-  {
-   "word": "and",
-   "start": 152.35466,
-   "end": 152.53467
-  },
-  {
-   "word": "stay,",
-   "start": 152.53467,
-   "end": 153.13466
-  },
-  {
-   "word": "so",
-   "start": 152.65466,
-   "end": 153.59467
-  },
-  {
-   "word": "that",
-   "start": 153.59467,
-   "end": 153.79466
-  },
-  {
-   "word": "chain",
-   "start": 153.79466,
-   "end": 154.15466
-  },
-  {
-   "word": "never",
-   "start": 154.15466,
-   "end": 154.43466
-  },
-  {
-   "word": "starts.",
-   "start": 154.43466,
-   "end": 155.17465
-  },
-  {
-   "word": "In",
-   "start": 156.55466,
-   "end": 156.69466
-  },
-  {
-   "word": "his",
-   "start": 156.69466,
-   "end": 156.85466
-  },
-  {
-   "word": "1971",
-   "start": 156.85466,
-   "end": 157.59467
-  },
-  {
-   "word": "paper,",
-   "start": 157.59467,
-   "end": 158.49466
-  },
-  {
-   "word": "Thomas",
-   "start": 158.49466,
-   "end": 159.17465
-  },
-  {
-   "word": "Schelling",
-   "start": 159.17465,
-   "end": 159.57466
-  },
-  {
-   "word": "ran",
-   "start": 159.57466,
-   "end": 159.91466
-  },
-  {
-   "word": "this",
-   "start": 159.91466,
-   "end": 160.13466
-  },
-  {
-   "word": "model.",
-   "start": 160.13466,
-   "end": 160.61465
-  },
-  {
-   "word": "His",
-   "start": 160.25465,
-   "end": 161.13466
-  },
-  {
-   "word": "households",
-   "start": 161.13466,
-   "end": 161.81467
-  },
-  {
-   "word": "moved",
-   "start": 161.81467,
-   "end": 162.29466
-  },
-  {
-   "word": "to",
-   "start": 162.29466,
-   "end": 162.45465
-  },
-  {
-   "word": "the",
-   "start": 162.45465,
-   "end": 162.57466
-  },
-  {
-   "word": "nearest",
-   "start": 162.57466,
-   "end": 162.97466
-  },
-  {
-   "word": "suitable",
-   "start": 162.97466,
-   "end": 163.45465
-  },
-  {
-   "word": "square",
-   "start": 163.45465,
-   "end": 164.05466
+   "word": "point",
+   "start": 107.26,
+   "end": 107.66
   },
   {
    "word": "on",
-   "start": 164.05466,
-   "end": 164.57466
+   "start": 107.63334,
+   "end": 107.81334
   },
   {
-   "word": "emptier",
-   "start": 164.57466,
-   "end": 165.07466
+   "word": "this",
+   "start": 107.81334,
+   "end": 107.95334
   },
   {
-   "word": "boards,",
-   "start": 165.07466,
-   "end": 165.85466
+   "word": "chart.",
+   "start": 107.95334,
+   "end": 108.63334
+  },
+  {
+   "word": "Demand",
+   "start": 108.63334,
+   "end": 109.733345
+  },
+  {
+   "word": "a",
+   "start": 109.733345,
+   "end": 109.75334
+  },
+  {
+   "word": "quarter,",
+   "start": 109.75334,
+   "end": 109.77334
   },
   {
    "word": "and",
-   "start": 165.35466,
-   "end": 166.41466
-  },
-  {
-   "word": "there",
-   "start": 166.41466,
-   "end": 166.67465
+   "start": 110.45334,
+   "end": 110.83334
   },
   {
    "word": "the",
-   "start": 166.67465,
-   "end": 166.91466
+   "start": 110.83334,
+   "end": 110.913345
   },
   {
-   "word": "jump",
-   "start": 166.91466,
-   "end": 167.19466
+   "word": "same",
+   "start": 110.913345,
+   "end": 111.17334
   },
   {
-   "word": "came",
-   "start": 167.19466,
-   "end": 167.49466
+   "word": "starting",
+   "start": 111.17334,
+   "end": 111.553345
   },
   {
-   "word": "later,",
-   "start": 167.49466,
-   "end": 168.03467
+   "word": "town",
+   "start": 111.553345,
+   "end": 111.97334
   },
   {
-   "word": "between",
-   "start": 168.03467,
-   "end": 168.63466
+   "word": "barely",
+   "start": 111.97334,
+   "end": 112.39334
   },
   {
-   "word": "about",
-   "start": 168.63466,
-   "end": 168.97466
+   "word": "sorts,",
+   "start": 112.39334,
+   "end": 113.07334
+  },
+  {
+   "word": "58%.",
+   "start": 113.07334,
+   "end": 114.63334
+  },
+  {
+   "word": "Demand",
+   "start": 114.63334,
+   "end": 115.67334
   },
   {
    "word": "a",
-   "start": 168.97466,
-   "end": 169.09467
+   "start": 115.67334,
+   "end": 115.81334
   },
   {
-   "word": "third",
-   "start": 169.09467,
-   "end": 169.31467
+   "word": "third,",
+   "start": 115.81334,
+   "end": 116.33334
   },
   {
    "word": "and",
-   "start": 169.31467,
-   "end": 169.55466
+   "start": 116.33334,
+   "end": 116.693344
   },
   {
-   "word": "a",
-   "start": 169.55466,
-   "end": 169.63466
+   "word": "it",
+   "start": 116.693344,
+   "end": 116.79334
   },
   {
-   "word": "half.",
-   "start": 169.63466,
-   "end": 170.03467
+   "word": "jumps",
+   "start": 116.79334,
+   "end": 117.053345
   },
   {
-   "word": "Two",
-   "start": 170.93466,
-   "end": 171.49466
+   "word": "to",
+   "start": 117.053345,
+   "end": 117.273346
   },
   {
-   "word": "simulated",
-   "start": 171.49466,
-   "end": 172.09467
+   "word": "76.",
+   "start": 117.273346,
+   "end": 118.273346
   },
   {
-   "word": "towns,",
-   "start": 172.09467,
-   "end": 172.83466
+   "word": "To",
+   "start": 118.273346,
+   "end": 118.29334
   },
   {
-   "word": "both",
-   "start": 172.83466,
-   "end": 173.33466
+   "word": "see",
+   "start": 118.29334,
+   "end": 118.31334
   },
   {
-   "word": "76%.",
-   "start": 173.33466,
-   "end": 174.45465
+   "word": "why,",
+   "start": 119.25334,
+   "end": 120.053345
   },
   {
-   "word": "In",
-   "start": 174.45465,
-   "end": 175.53467
-  },
-  {
-   "word": "one",
-   "start": 175.53467,
-   "end": 175.77466
-  },
-  {
-   "word": "town,",
-   "start": 175.77466,
-   "end": 176.27466
-  },
-  {
-   "word": "households",
-   "start": 176.27466,
-   "end": 176.99466
-  },
-  {
-   "word": "demand",
-   "start": 176.99466,
-   "end": 177.43466
-  },
-  {
-   "word": "a",
-   "start": 177.43466,
-   "end": 177.57466
-  },
-  {
-   "word": "third.",
-   "start": 177.57466,
-   "end": 178.15466
-  },
-  {
-   "word": "In",
-   "start": 177.85466,
-   "end": 178.81467
+   "word": "sort",
+   "start": 120.053345,
+   "end": 120.47334
   },
   {
    "word": "the",
-   "start": 178.81467,
-   "end": 178.93466
+   "start": 120.47334,
+   "end": 120.61334
   },
   {
-   "word": "other,",
-   "start": 178.93466,
-   "end": 179.33466
+   "word": "random",
+   "start": 120.61334,
+   "end": 120.97334
   },
   {
-   "word": "nobody",
-   "start": 179.33466,
-   "end": 179.85466
-  },
-  {
-   "word": "minds",
-   "start": 179.85466,
-   "end": 180.21466
-  },
-  {
-   "word": "their",
-   "start": 180.21466,
-   "end": 180.39465
-  },
-  {
-   "word": "neighbors.",
-   "start": 180.39465,
-   "end": 181.05466
-  },
-  {
-   "word": "Which",
-   "start": 181.17465,
-   "end": 181.91466
-  },
-  {
-   "word": "one",
-   "start": 181.91466,
-   "end": 182.11465
-  },
-  {
-   "word": "wanted",
-   "start": 182.11465,
-   "end": 182.49466
-  },
-  {
-   "word": "a",
-   "start": 182.49466,
-   "end": 182.65466
-  },
-  {
-   "word": "third?",
-   "start": 182.65466,
-   "end": 183.17465
-  },
-  {
-   "word": "This",
-   "start": 185.25467,
-   "end": 185.51465
-  },
-  {
-   "word": "one,",
-   "start": 185.51465,
-   "end": 185.97466
-  },
-  {
-   "word": "the",
-   "start": 185.97466,
-   "end": 186.39465
-  },
-  {
-   "word": "other",
-   "start": 186.39465,
-   "end": 186.61465
-  },
-  {
-   "word": "was",
-   "start": 186.61465,
-   "end": 186.83466
-  },
-  {
-   "word": "placed",
-   "start": 186.83466,
-   "end": 187.15466
+   "word": "start",
+   "start": 120.97334,
+   "end": 121.273346
   },
   {
    "word": "by",
-   "start": 187.15466,
-   "end": 187.39465
+   "start": 121.273346,
+   "end": 121.49334
   },
   {
-   "word": "a",
-   "start": 187.39465,
-   "end": 187.53467
+   "word": "each",
+   "start": 121.49334,
+   "end": 121.773346
   },
   {
-   "word": "rule",
-   "start": 187.53467,
-   "end": 187.85466
+   "word": "household's",
+   "start": 121.773346,
+   "end": 122.51334
   },
   {
-   "word": "with",
-   "start": 187.85466,
-   "end": 188.35466
+   "word": "share",
+   "start": 122.51334,
+   "end": 122.693344
   },
   {
-   "word": "no",
-   "start": 188.35466,
-   "end": 188.59467
+   "word": "of",
+   "start": 122.693344,
+   "end": 122.873344
   },
   {
-   "word": "preferences.",
-   "start": 188.59467,
-   "end": 189.57466
+   "word": "matching",
+   "start": 122.873344,
+   "end": 123.273346
   },
   {
-   "word": "Real",
-   "start": 189.15466,
-   "end": 190.17465
+   "word": "neighbors.",
+   "start": 123.273346,
+   "end": 123.99334
   },
   {
-   "word": "segregation",
-   "start": 190.17465,
-   "end": 190.83466
-  },
-  {
-   "word": "has",
-   "start": 190.83466,
-   "end": 191.39465
-  },
-  {
-   "word": "other",
-   "start": 191.39465,
-   "end": 191.61465
-  },
-  {
-   "word": "causes.",
-   "start": 191.61465,
-   "end": 192.43466
-  },
-  {
-   "word": "One",
-   "start": 192.05466,
-   "end": 193.01465
-  },
-  {
-   "word": "study",
-   "start": 193.01465,
-   "end": 193.31467
-  },
-  {
-   "word": "finds",
-   "start": 193.31467,
-   "end": 193.81467
-  },
-  {
-   "word": "that",
-   "start": 193.81467,
-   "end": 194.05466
-  },
-  {
-   "word": "1930s",
-   "start": 194.05466,
-   "end": 195.41466
-  },
-  {
-   "word": "federal",
-   "start": 195.41466,
-   "end": 195.79465
-  },
-  {
-   "word": "lending",
-   "start": 195.79465,
-   "end": 196.21466
-  },
-  {
-   "word": "maps",
-   "start": 196.21466,
-   "end": 196.67465
-  },
-  {
-   "word": "increased",
-   "start": 196.33466,
-   "end": 197.49466
-  },
-  {
-   "word": "racial",
-   "start": 197.49466,
-   "end": 198.05466
-  },
-  {
-   "word": "segregation",
-   "start": 198.05466,
-   "end": 198.63466
-  },
-  {
-   "word": "for",
-   "start": 198.63466,
-   "end": 198.95465
-  },
-  {
-   "word": "decades",
-   "start": 198.95465,
-   "end": 199.59467
-  },
-  {
-   "word": "through",
-   "start": 199.59467,
-   "end": 200.39465
-  },
-  {
-   "word": "reduced",
-   "start": 200.39465,
-   "end": 200.91466
-  },
-  {
-   "word": "credit.",
-   "start": 200.91466,
-   "end": 201.63466
-  },
-  {
-   "word": "Look",
-   "start": 202.07466,
-   "end": 202.69466
-  },
-  {
-   "word": "again",
-   "start": 202.69466,
-   "end": 203.05466
+   "word": "With",
+   "start": 123.99334,
+   "end": 124.51334
   },
   {
    "word": "at",
-   "start": 203.05466,
-   "end": 203.31467
+   "start": 124.51334,
+   "end": 124.61334
+  },
+  {
+   "word": "most",
+   "start": 124.61334,
+   "end": 124.773346
+  },
+  {
+   "word": "eight",
+   "start": 124.57334,
+   "end": 125.01334
+  },
+  {
+   "word": "neighbors,",
+   "start": 125.01334,
+   "end": 125.63334
+  },
+  {
+   "word": "shares",
+   "start": 125.63334,
+   "end": 126.17334
+  },
+  {
+   "word": "come",
+   "start": 126.17334,
+   "end": 126.413345
+  },
+  {
+   "word": "in",
+   "start": 126.413345,
+   "end": 126.53334
+  },
+  {
+   "word": "steps.",
+   "start": 126.53334,
+   "end": 127.23334
+  },
+  {
+   "word": "At",
+   "start": 127.23334,
+   "end": 127.79334
+  },
+  {
+   "word": "a",
+   "start": 127.79334,
+   "end": 128.03334
+  },
+  {
+   "word": "third,",
+   "start": 128.03334,
+   "end": 128.69334
+  },
+  {
+   "word": "everyone",
+   "start": 128.69334,
+   "end": 128.95334
+  },
+  {
+   "word": "left",
+   "start": 128.95334,
+   "end": 129.23334
+  },
+  {
+   "word": "of",
+   "start": 129.23334,
+   "end": 129.41335
+  },
+  {
+   "word": "it",
+   "start": 129.41335,
+   "end": 129.51334
+  },
+  {
+   "word": "is",
+   "start": 129.51334,
+   "end": 129.69334
+  },
+  {
+   "word": "unhappy,",
+   "start": 129.69334,
+   "end": 130.61334
+  },
+  {
+   "word": "including",
+   "start": 130.61334,
+   "end": 131.41335
   },
   {
    "word": "the",
-   "start": 203.31467,
-   "end": 203.39465
+   "start": 131.43335,
+   "end": 131.59334
   },
   {
-   "word": "first",
-   "start": 203.39465,
-   "end": 203.65466
+   "word": "neighbor",
+   "start": 131.59334,
+   "end": 131.93335
   },
   {
-   "word": "town.",
-   "start": 203.65466,
-   "end": 204.29465
+   "word": "that",
+   "start": 131.93335,
+   "end": 132.19334
   },
   {
-   "word": "As",
-   "start": 205.21466,
-   "end": 205.81467
+   "word": "started",
+   "start": 132.19334,
+   "end": 132.61334
+  },
+  {
+   "word": "our",
+   "start": 132.61334,
+   "end": 132.81334
+  },
+  {
+   "word": "blocks",
+   "start": 132.81334,
+   "end": 133.15334
+  },
+  {
+   "word": "chain",
+   "start": 133.15334,
+   "end": 133.61334
+  },
+  {
+   "word": "at",
+   "start": 133.61334,
+   "end": 134.13335
+  },
+  {
+   "word": "two-sevenths.",
+   "start": 134.13335,
+   "end": 135.17334
+  },
+  {
+   "word": "Every",
+   "start": 135.17334,
+   "end": 135.79333
+  },
+  {
+   "word": "household",
+   "start": 135.79333,
+   "end": 136.35333
+  },
+  {
+   "word": "at",
+   "start": 136.35333,
+   "end": 136.59334
+  },
+  {
+   "word": "three-eighths",
+   "start": 136.59334,
+   "end": 137.37334
+  },
+  {
+   "word": "is",
+   "start": 137.33334,
+   "end": 137.99335
+  },
+  {
+   "word": "one",
+   "start": 137.99335,
+   "end": 138.19334
+  },
+  {
+   "word": "lost",
+   "start": 138.19334,
+   "end": 138.59334
+  },
+  {
+   "word": "match",
+   "start": 138.59334,
+   "end": 138.89334
+  },
+  {
+   "word": "away",
+   "start": 138.89334,
+   "end": 139.23334
+  },
+  {
+   "word": "from",
+   "start": 139.23334,
+   "end": 139.47334
+  },
+  {
+   "word": "two-sevenths.",
+   "start": 139.47334,
+   "end": 140.39334
+  },
+  {
+   "word": "At",
+   "start": 140.39334,
+   "end": 140.97334
+  },
+  {
+   "word": "a",
+   "start": 140.97334,
+   "end": 141.07333
+  },
+  {
+   "word": "quarter,",
+   "start": 141.07333,
+   "end": 141.79333
+  },
+  {
+   "word": "how",
+   "start": 141.79333,
+   "end": 141.95334
+  },
+  {
+   "word": "many",
+   "start": 141.95334,
+   "end": 142.11334
+  },
+  {
+   "word": "would",
+   "start": 142.11334,
+   "end": 142.27335
+  },
+  {
+   "word": "start",
+   "start": 142.27335,
+   "end": 142.57333
+  },
+  {
+   "word": "unhappy?",
+   "start": 142.57333,
+   "end": 143.47334
+  },
+  {
+   "word": "Only",
+   "start": 145.13335,
+   "end": 145.51334
+  },
+  {
+   "word": "these",
+   "start": 145.51334,
+   "end": 145.71335
+  },
+  {
+   "word": "two",
+   "start": 145.71335,
+   "end": 145.93335
+  },
+  {
+   "word": "bars",
+   "start": 145.93335,
+   "end": 146.33334
+  },
+  {
+   "word": "change",
+   "start": 146.33334,
+   "end": 146.75334
+  },
+  {
+   "word": "sides.",
+   "start": 146.75334,
+   "end": 147.37334
+  },
+  {
+   "word": "Just",
+   "start": 147.37334,
+   "end": 147.91335
+  },
+  {
+   "word": "95",
+   "start": 147.91335,
+   "end": 148.35333
+  },
+  {
+   "word": "start",
+   "start": 148.35333,
+   "end": 148.89334
+  },
+  {
+   "word": "unhappy.",
+   "start": 148.89334,
+   "end": 149.81334
+  },
+  {
+   "word": "Now",
+   "start": 149.81334,
+   "end": 150.47334
+  },
+  {
+   "word": "a",
+   "start": 150.47334,
+   "end": 150.63335
+  },
+  {
+   "word": "household",
+   "start": 150.63335,
+   "end": 151.11334
+  },
+  {
+   "word": "at",
+   "start": 151.11334,
+   "end": 151.31334
+  },
+  {
+   "word": "three-eighths",
+   "start": 151.31334,
+   "end": 152.03334
+  },
+  {
+   "word": "can",
+   "start": 151.51334,
+   "end": 152.23334
+  },
+  {
+   "word": "lose",
+   "start": 152.23334,
+   "end": 152.45334
+  },
+  {
+   "word": "a",
+   "start": 152.45334,
+   "end": 152.65335
+  },
+  {
+   "word": "match",
+   "start": 152.65335,
+   "end": 152.95334
+  },
+  {
+   "word": "and",
+   "start": 152.95334,
+   "end": 153.13335
+  },
+  {
+   "word": "stay,",
+   "start": 153.13335,
+   "end": 153.65335
+  },
+  {
+   "word": "so",
+   "start": 153.65335,
+   "end": 154.19334
+  },
+  {
+   "word": "that",
+   "start": 154.19334,
+   "end": 154.39334
+  },
+  {
+   "word": "chain",
+   "start": 154.39334,
+   "end": 154.71335
+  },
+  {
+   "word": "never",
+   "start": 154.71335,
+   "end": 155.03334
+  },
+  {
+   "word": "starts.",
+   "start": 155.03334,
+   "end": 155.77335
+  },
+  {
+   "word": "In",
+   "start": 157.27335,
+   "end": 157.29333
+  },
+  {
+   "word": "his",
+   "start": 157.29333,
+   "end": 157.45334
+  },
+  {
+   "word": "1971",
+   "start": 157.45334,
+   "end": 158.21335
+  },
+  {
+   "word": "paper,",
+   "start": 158.21335,
+   "end": 159.13335
+  },
+  {
+   "word": "Thomas",
+   "start": 159.13335,
+   "end": 159.77335
   },
   {
    "word": "Schelling",
-   "start": 205.81467,
-   "end": 206.21466
+   "start": 159.77335,
+   "end": 160.19334
   },
   {
-   "word": "argued,",
-   "start": 206.21466,
-   "end": 207.11465
+   "word": "ran",
+   "start": 160.19334,
+   "end": 160.51334
   },
   {
-   "word": "whatever",
-   "start": 207.11465,
-   "end": 207.61465
+   "word": "this",
+   "start": 160.51334,
+   "end": 160.71335
   },
   {
-   "word": "you",
-   "start": 207.61465,
-   "end": 207.87466
+   "word": "model.",
+   "start": 160.71335,
+   "end": 161.23334
   },
   {
-   "word": "guessed",
-   "start": 207.87466,
-   "end": 208.13466
+   "word": "His",
+   "start": 161.49335,
+   "end": 161.77335
   },
   {
-   "word": "its",
-   "start": 208.13466,
-   "end": 208.37466
+   "word": "households",
+   "start": 161.77335,
+   "end": 162.41335
   },
   {
-   "word": "people",
-   "start": 208.37466,
-   "end": 208.67465
+   "word": "moved",
+   "start": 162.41335,
+   "end": 162.89334
   },
   {
-   "word": "demanded,",
-   "start": 208.67465,
-   "end": 209.59467
+   "word": "to",
+   "start": 162.89334,
+   "end": 163.05334
   },
   {
    "word": "the",
-   "start": 209.15466,
-   "end": 210.01465
+   "start": 163.05334,
+   "end": 163.17334
+  },
+  {
+   "word": "nearest",
+   "start": 163.17334,
+   "end": 163.57333
+  },
+  {
+   "word": "suitable",
+   "start": 163.57333,
+   "end": 164.07333
+  },
+  {
+   "word": "square,",
+   "start": 164.07333,
+   "end": 165.07333
+  },
+  {
+   "word": "on",
+   "start": 165.07333,
+   "end": 165.19334
+  },
+  {
+   "word": "emptier",
+   "start": 165.19334,
+   "end": 165.67334
+  },
+  {
+   "word": "boards,",
+   "start": 165.67334,
+   "end": 166.39334
+  },
+  {
+   "word": "and",
+   "start": 166.39334,
+   "end": 167.01334
+  },
+  {
+   "word": "there",
+   "start": 167.01334,
+   "end": 167.23334
+  },
+  {
+   "word": "the",
+   "start": 167.23334,
+   "end": 167.47334
+  },
+  {
+   "word": "jump",
+   "start": 167.47334,
+   "end": 167.79333
+  },
+  {
+   "word": "came",
+   "start": 167.31334,
+   "end": 168.07333
+  },
+  {
+   "word": "later,",
+   "start": 168.07333,
+   "end": 168.65335
+  },
+  {
+   "word": "between",
+   "start": 168.65335,
+   "end": 169.23334
+  },
+  {
+   "word": "about",
+   "start": 169.23334,
+   "end": 169.57333
+  },
+  {
+   "word": "a",
+   "start": 169.57333,
+   "end": 169.69334
+  },
+  {
+   "word": "third",
+   "start": 169.69334,
+   "end": 169.91335
+  },
+  {
+   "word": "and",
+   "start": 169.91335,
+   "end": 170.15335
+  },
+  {
+   "word": "a",
+   "start": 170.15335,
+   "end": 170.27335
+  },
+  {
+   "word": "half.",
+   "start": 170.27335,
+   "end": 170.71335
+  },
+  {
+   "word": "Two",
+   "start": 171.79333,
+   "end": 172.11334
+  },
+  {
+   "word": "simulated",
+   "start": 172.11334,
+   "end": 172.69334
+  },
+  {
+   "word": "towns,",
+   "start": 172.69334,
+   "end": 173.41335
+  },
+  {
+   "word": "both",
+   "start": 173.41335,
+   "end": 173.97334
+  },
+  {
+   "word": "76%.",
+   "start": 173.97334,
+   "end": 175.27335
+  },
+  {
+   "word": "In",
+   "start": 175.85333,
+   "end": 176.15335
+  },
+  {
+   "word": "one",
+   "start": 176.15335,
+   "end": 176.37335
+  },
+  {
+   "word": "town,",
+   "start": 176.37335,
+   "end": 176.85333
+  },
+  {
+   "word": "households",
+   "start": 176.85333,
+   "end": 177.59334
+  },
+  {
+   "word": "demand",
+   "start": 177.59334,
+   "end": 178.03334
+  },
+  {
+   "word": "a",
+   "start": 178.03334,
+   "end": 178.17334
+  },
+  {
+   "word": "third.",
+   "start": 178.17334,
+   "end": 178.89334
+  },
+  {
+   "word": "In",
+   "start": 178.89334,
+   "end": 179.45334
+  },
+  {
+   "word": "the",
+   "start": 179.45334,
+   "end": 179.53334
+  },
+  {
+   "word": "other,",
+   "start": 179.53334,
+   "end": 180.01334
+  },
+  {
+   "word": "nobody",
+   "start": 180.01334,
+   "end": 180.47334
+  },
+  {
+   "word": "minds",
+   "start": 180.47334,
+   "end": 180.79333
+  },
+  {
+   "word": "their",
+   "start": 180.79333,
+   "end": 180.99335
+  },
+  {
+   "word": "neighbors.",
+   "start": 180.99335,
+   "end": 181.81334
+  },
+  {
+   "word": "Which",
+   "start": 181.97334,
+   "end": 182.53334
+  },
+  {
+   "word": "one",
+   "start": 182.53334,
+   "end": 182.71335
+  },
+  {
+   "word": "wanted",
+   "start": 182.71335,
+   "end": 183.09334
+  },
+  {
+   "word": "a",
+   "start": 183.09334,
+   "end": 183.23334
+  },
+  {
+   "word": "third?",
+   "start": 183.23334,
+   "end": 183.79333
+  },
+  {
+   "word": "This",
+   "start": 186.07333,
+   "end": 186.09334
+  },
+  {
+   "word": "one,",
+   "start": 186.09334,
+   "end": 186.57333
+  },
+  {
+   "word": "the",
+   "start": 186.57333,
+   "end": 186.99335
+  },
+  {
+   "word": "other",
+   "start": 186.99335,
+   "end": 187.21335
+  },
+  {
+   "word": "was",
+   "start": 187.21335,
+   "end": 187.43335
+  },
+  {
+   "word": "placed",
+   "start": 187.43335,
+   "end": 187.75334
+  },
+  {
+   "word": "by",
+   "start": 187.75334,
+   "end": 187.99335
+  },
+  {
+   "word": "a",
+   "start": 187.99335,
+   "end": 188.13333
+  },
+  {
+   "word": "rule,",
+   "start": 188.13333,
+   "end": 188.63333
+  },
+  {
+   "word": "with",
+   "start": 188.63333,
+   "end": 188.99335
+  },
+  {
+   "word": "no",
+   "start": 188.99335,
+   "end": 189.17334
+  },
+  {
+   "word": "preferences.",
+   "start": 189.17334,
+   "end": 190.21335
+  },
+  {
+   "word": "Real",
+   "start": 190.41335,
+   "end": 190.79333
+  },
+  {
+   "word": "segregation",
+   "start": 190.79333,
+   "end": 191.47334
+  },
+  {
+   "word": "has",
+   "start": 191.47334,
+   "end": 192.01334
+  },
+  {
+   "word": "other",
+   "start": 192.01334,
+   "end": 192.23334
+  },
+  {
+   "word": "causes.",
+   "start": 192.23334,
+   "end": 193.09334
+  },
+  {
+   "word": "One",
+   "start": 193.07333,
+   "end": 193.63333
+  },
+  {
+   "word": "study",
+   "start": 193.63333,
+   "end": 193.91335
+  },
+  {
+   "word": "finds",
+   "start": 193.91335,
+   "end": 194.41335
+  },
+  {
+   "word": "that",
+   "start": 194.41335,
+   "end": 194.65335
+  },
+  {
+   "word": "1930s",
+   "start": 194.65335,
+   "end": 195.97334
+  },
+  {
+   "word": "federal",
+   "start": 195.97334,
+   "end": 196.43335
+  },
+  {
+   "word": "lending",
+   "start": 196.43335,
+   "end": 196.83334
+  },
+  {
+   "word": "maps",
+   "start": 196.83334,
+   "end": 197.29333
+  },
+  {
+   "word": "increased",
+   "start": 197.29333,
+   "end": 198.09334
+  },
+  {
+   "word": "racial",
+   "start": 198.09334,
+   "end": 198.59334
+  },
+  {
+   "word": "segregation",
+   "start": 198.59334,
+   "end": 199.21335
+  },
+  {
+   "word": "for",
+   "start": 199.21335,
+   "end": 199.55334
+  },
+  {
+   "word": "decades,",
+   "start": 199.55334,
+   "end": 200.79333
+  },
+  {
+   "word": "through",
+   "start": 200.39334,
+   "end": 201.01334
+  },
+  {
+   "word": "reduced",
+   "start": 201.01334,
+   "end": 201.55334
+  },
+  {
+   "word": "credit.",
+   "start": 201.55334,
+   "end": 202.23334
+  },
+  {
+   "word": "Look",
+   "start": 202.95334,
+   "end": 203.31334
+  },
+  {
+   "word": "again",
+   "start": 203.31334,
+   "end": 203.65335
+  },
+  {
+   "word": "at",
+   "start": 203.65335,
+   "end": 203.89334
+  },
+  {
+   "word": "the",
+   "start": 203.89334,
+   "end": 203.99335
+  },
+  {
+   "word": "first",
+   "start": 203.99335,
+   "end": 204.27335
+  },
+  {
+   "word": "town.",
+   "start": 204.27335,
+   "end": 204.87335
+  },
+  {
+   "word": "As",
+   "start": 206.05334,
+   "end": 206.41335
+  },
+  {
+   "word": "Schelling",
+   "start": 206.41335,
+   "end": 206.81334
+  },
+  {
+   "word": "argued,",
+   "start": 206.81334,
+   "end": 207.85333
+  },
+  {
+   "word": "whatever",
+   "start": 207.85333,
+   "end": 208.21335
+  },
+  {
+   "word": "you",
+   "start": 208.21335,
+   "end": 208.43335
+  },
+  {
+   "word": "guessed",
+   "start": 208.43335,
+   "end": 208.69334
+  },
+  {
+   "word": "its",
+   "start": 208.69334,
+   "end": 208.95334
+  },
+  {
+   "word": "people",
+   "start": 208.95334,
+   "end": 209.27335
+  },
+  {
+   "word": "demanded,",
+   "start": 209.27335,
+   "end": 210.21335
+  },
+  {
+   "word": "the",
+   "start": 210.21335,
+   "end": 210.61334
   },
   {
    "word": "map",
-   "start": 210.01465,
-   "end": 210.29465
+   "start": 210.61334,
+   "end": 210.85333
   },
   {
    "word": "alone",
-   "start": 210.29465,
-   "end": 210.73465
+   "start": 210.85333,
+   "end": 211.29333
   },
   {
    "word": "could",
-   "start": 210.73465,
-   "end": 211.07466
+   "start": 211.29333,
+   "end": 211.67334
   },
   {
    "word": "not",
-   "start": 211.07466,
-   "end": 211.27466
+   "start": 211.67334,
+   "end": 211.81334
   },
   {
    "word": "have",
-   "start": 211.27466,
-   "end": 211.43466
+   "start": 211.37335,
+   "end": 212.01334
   },
   {
    "word": "told",
-   "start": 211.43466,
-   "end": 211.75467
+   "start": 212.01334,
+   "end": 212.31334
   },
   {
    "word": "you.",
-   "start": 211.75467,
-   "end": 212.77466
+   "start": 212.31334,
+   "end": 213.29333
   }
  ],
  "segments": [
@@ -2967,8 +2947,8 @@
    "id": 24,
    "seek": 8394,
    "start": 83.939995,
-   "end": 88.939995,
-   "text": " Two gold out of seven, less than a third, so now it wants out.",
+   "end": 87.439995,
+   "text": " Two gold out of seven, less than a third,",
    "tokens": [
     50365,
     4453,
@@ -2982,27 +2962,42 @@
     257,
     2636,
     11,
+    50540
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.27099216,
+   "compression_ratio": 1.5990338,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 25,
+   "seek": 8394,
+   "start": 87.439995,
+   "end": 89.27999,
+   "text": " so now it wants out.",
+   "tokens": [
+    50540,
     370,
     586,
     309,
     2738,
     484,
     13,
-    50615
+    50632
    ],
    "temperature": 0,
-   "avg_logprob": -0.14845617,
-   "compression_ratio": 1.6320754,
+   "avg_logprob": -0.27099216,
+   "compression_ratio": 1.5990338,
    "no_speech_prob": 0
   },
   {
-   "id": 25,
+   "id": 26,
    "seek": 8394,
-   "start": 88.939995,
-   "end": 91.939995,
+   "start": 89.27999,
+   "end": 92.03999,
    "text": " Its neighbor here also has three eighths.",
    "tokens": [
-    50615,
+    50632,
     6953,
     5987,
     510,
@@ -3012,21 +3007,21 @@
     19495,
     82,
     13,
-    50765
+    50770
    ],
    "temperature": 0,
-   "avg_logprob": -0.14845617,
-   "compression_ratio": 1.6320754,
+   "avg_logprob": -0.27099216,
+   "compression_ratio": 1.5990338,
    "no_speech_prob": 0
   },
   {
-   "id": 26,
+   "id": 27,
    "seek": 8394,
-   "start": 91.939995,
-   "end": 96.939995,
-   "text": " In round two, our household leaves, and this one drops to two sevenths.",
+   "start": 92.03999,
+   "end": 94.579994,
+   "text": " In round two, our household leaves,",
    "tokens": [
-    50765,
+    50770,
     682,
     3098,
     732,
@@ -3035,6 +3030,21 @@
     9888,
     5510,
     11,
+    50897
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.27099216,
+   "compression_ratio": 1.5990338,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 28,
+   "seek": 8394,
+   "start": 94.579994,
+   "end": 97.77999,
+   "text": " and this one drops to two sevenths.",
+   "tokens": [
+    50897,
     293,
     341,
     472,
@@ -3044,42 +3054,42 @@
     17875,
     82,
     13,
-    51015
+    51057
    ],
    "temperature": 0,
-   "avg_logprob": -0.14845617,
-   "compression_ratio": 1.6320754,
+   "avg_logprob": -0.27099216,
+   "compression_ratio": 1.5990338,
    "no_speech_prob": 0
   },
   {
-   "id": 27,
+   "id": 29,
    "seek": 8394,
-   "start": 96.939995,
-   "end": 100.939995,
+   "start": 97.77999,
+   "end": 101.119995,
    "text": " Now run the whole town.",
    "tokens": [
-    51015,
+    51057,
     823,
     1190,
     264,
     1379,
     3954,
     13,
-    51215
+    51224
    ],
    "temperature": 0,
-   "avg_logprob": -0.14845617,
-   "compression_ratio": 1.6320754,
+   "avg_logprob": -0.27099216,
+   "compression_ratio": 1.5990338,
    "no_speech_prob": 0
   },
   {
-   "id": 28,
-   "seek": 101,
-   "start": 100.939995,
-   "end": 111.95466,
-   "text": " After round seven nobody wants to move That whole town is one point on this chart Demand a quarter and the same starting town barely sorts",
+   "id": 30,
+   "seek": 102,
+   "start": 101.119995,
+   "end": 117.79334,
+   "text": " After round seven nobody wants to move That whole town is one point on this chart Demand a quarter and the same starting town barely sorts 58 Demand a third and it jumps to 76 To see",
    "tokens": [
-    51215,
+    51224,
     2381,
     3098,
     3407,
@@ -3089,8 +3099,8 @@
     281,
     1286,
     13,
-    51415,
-    51415,
+    51429,
+    51429,
     663,
     1379,
     3954,
@@ -3101,13 +3111,13 @@
     341,
     6927,
     13,
-    50665,
-    50665,
     4686,
     474,
     257,
     6555,
     11,
+    50715,
+    50792,
     293,
     264,
     912,
@@ -3115,39 +3125,9 @@
     3954,
     10268,
     7527,
-    13,
-    50865
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.15741168,
-   "compression_ratio": 1.554054,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 29,
-   "seek": 101,
-   "start": 111.95466,
-   "end": 113.95466,
-   "text": " 58%.",
-   "tokens": [
-    50865,
+    11,
     21786,
     6856,
-    50965
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.15741168,
-   "compression_ratio": 1.554054,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 30,
-   "seek": 101,
-   "start": 113.95466,
-   "end": 117.95466,
-   "text": " Demand a third, and it jumps to 76.",
-   "tokens": [
-    50965,
     4686,
     474,
     257,
@@ -3159,23 +3139,23 @@
     281,
     24733,
     13,
-    51165
+    1407,
+    536,
+    51142
    ],
    "temperature": 0,
-   "avg_logprob": -0.15741168,
-   "compression_ratio": 1.554054,
+   "avg_logprob": -0.16790037,
+   "compression_ratio": 1.5670996,
    "no_speech_prob": 0
   },
   {
    "id": 31,
-   "seek": 101,
-   "start": 117.95466,
-   "end": 122.95466,
-   "text": " To see why, sort the random start by each household's share of matching neighbors.",
+   "seek": 102,
+   "start": 119.75334,
+   "end": 124.85334,
+   "text": " why, sort the random start by each household's share of matching neighbors. With at most",
    "tokens": [
-    51165,
-    1407,
-    536,
+    51240,
     983,
     11,
     1333,
@@ -3191,24 +3171,24 @@
     14324,
     12512,
     13,
-    51415
+    2022,
+    412,
+    881,
+    51495
    ],
    "temperature": 0,
-   "avg_logprob": -0.15741168,
-   "compression_ratio": 1.554054,
+   "avg_logprob": -0.16790037,
+   "compression_ratio": 1.5670996,
    "no_speech_prob": 0
   },
   {
    "id": 32,
-   "seek": 101,
-   "start": 122.95466,
-   "end": 125.95466,
-   "text": " With at most eight neighbors, shares come in steps.",
+   "seek": 102,
+   "start": 124.85334,
+   "end": 131.43333,
+   "text": " eight neighbors, shares come in steps. At a third, everyone left of it is unhappy, including",
    "tokens": [
-    51415,
-    2022,
-    412,
-    881,
+    51495,
     3180,
     12512,
     11,
@@ -3217,21 +3197,6 @@
     294,
     4439,
     13,
-    51565
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.15741168,
-   "compression_ratio": 1.554054,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 33,
-   "seek": 101,
-   "start": 125.95466,
-   "end": 129.95465,
-   "text": " At a third, everyone left of it is unhappy,",
-   "tokens": [
-    51565,
     1711,
     257,
     2636,
@@ -3243,22 +3208,22 @@
     307,
     22172,
     11,
-    51765
+    3009,
+    51824
    ],
    "temperature": 0,
-   "avg_logprob": -0.15741168,
-   "compression_ratio": 1.554054,
+   "avg_logprob": -0.16790037,
+   "compression_ratio": 1.5670996,
    "no_speech_prob": 0
   },
   {
-   "id": 34,
-   "seek": 2901,
-   "start": 129.95465,
-   "end": 134.55466,
-   "text": " including the neighbor that started our blocks chain at 2 7ths.",
+   "id": 33,
+   "seek": 3020,
+   "start": 131.43333,
+   "end": 137.83334,
+   "text": " the neighbor that started our blocks chain at two-sevenths. Every household at three-eighths",
    "tokens": [
     50365,
-    3009,
     264,
     5987,
     300,
@@ -3267,56 +3232,47 @@
     8474,
     5021,
     412,
-    568,
-    1614,
-    32184,
+    732,
+    12,
+    405,
+    37439,
+    82,
     13,
-    50595
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.23275195,
-   "compression_ratio": 1.5555556,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 35,
-   "seek": 2901,
-   "start": 134.55466,
-   "end": 139.85466,
-   "text": " Every household at 3 8ths is one lost match away from 2 7ths.",
-   "tokens": [
-    50595,
     2048,
     9888,
     412,
-    805,
-    1649,
-    32184,
+    1045,
+    12,
+    36309,
+    71,
+    82,
+    50685
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.09145119,
+   "compression_ratio": 1.6701031,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 34,
+   "seek": 3020,
+   "start": 137.83334,
+   "end": 145.47334,
+   "text": " is one lost match away from two-sevenths. At a quarter, how many would start unhappy?",
+   "tokens": [
+    50685,
     307,
     472,
     2731,
     2995,
     1314,
     490,
-    568,
-    1614,
-    32184,
+    732,
+    12,
+    405,
+    37439,
+    82,
     13,
-    50860
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.23275195,
-   "compression_ratio": 1.5555556,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 36,
-   "seek": 2901,
-   "start": 139.85466,
-   "end": 144.15466,
-   "text": " At a quarter, how many would start unhappy?",
-   "tokens": [
-    50860,
     1711,
     257,
     6555,
@@ -3327,21 +3283,21 @@
     722,
     22172,
     30,
-    51075
+    51067
    ],
    "temperature": 0,
-   "avg_logprob": -0.23275195,
-   "compression_ratio": 1.5555556,
+   "avg_logprob": -0.09145119,
+   "compression_ratio": 1.6701031,
    "no_speech_prob": 0
   },
   {
-   "id": 37,
-   "seek": 2901,
-   "start": 144.15466,
-   "end": 146.85466,
-   "text": " Only these two bars change sides.",
+   "id": 35,
+   "seek": 3020,
+   "start": 145.47334,
+   "end": 152.01334,
+   "text": " Only these two bars change sides. Just 95 start unhappy. Now a household at three-eighths",
    "tokens": [
-    51075,
+    51067,
     5686,
     613,
     732,
@@ -3349,48 +3305,35 @@
     1319,
     4881,
     13,
-    51210
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.23275195,
-   "compression_ratio": 1.5555556,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 38,
-   "seek": 2901,
-   "start": 146.85466,
-   "end": 149.35466,
-   "text": " Just 95 start unhappy.",
-   "tokens": [
-    51210,
     1449,
     13420,
     722,
     22172,
     13,
-    51335
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.23275195,
-   "compression_ratio": 1.5555556,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 39,
-   "seek": 2901,
-   "start": 149.35466,
-   "end": 153.15466,
-   "text": " Now a household at 3 8ths can lose a match and stay,",
-   "tokens": [
-    51335,
     823,
     257,
     9888,
     412,
-    805,
-    1649,
-    32184,
+    1045,
+    12,
+    36309,
+    71,
+    82,
+    51394
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.09145119,
+   "compression_ratio": 1.6701031,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 36,
+   "seek": 3020,
+   "start": 152.01334,
+   "end": 157.27335,
+   "text": " can lose a match and stay, so that chain never starts.",
+   "tokens": [
+    51394,
     393,
     3624,
     257,
@@ -3398,39 +3341,24 @@
     293,
     1754,
     11,
-    51525
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.23275195,
-   "compression_ratio": 1.5555556,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 40,
-   "seek": 2901,
-   "start": 153.15466,
-   "end": 156.15466,
-   "text": " so that chain never starts.",
-   "tokens": [
-    51525,
     370,
     300,
     5021,
     1128,
     3719,
     13,
-    51675
+    51657
    ],
    "temperature": 0,
-   "avg_logprob": -0.23275195,
-   "compression_ratio": 1.5555556,
+   "avg_logprob": -0.09145119,
+   "compression_ratio": 1.6701031,
    "no_speech_prob": 0
   },
   {
-   "id": 41,
-   "seek": 5521,
-   "start": 156.15466,
-   "end": 160.65466,
+   "id": 37,
+   "seek": 5604,
+   "start": 157.27335,
+   "end": 161.71335,
    "text": " In his 1971 paper, Thomas Schelling ran this model.",
    "tokens": [
     50365,
@@ -3446,21 +3374,21 @@
     341,
     2316,
     13,
-    50590
+    50587
    ],
    "temperature": 0,
-   "avg_logprob": -0.18632452,
-   "compression_ratio": 1.516129,
+   "avg_logprob": -0.10454316,
+   "compression_ratio": 1.5207373,
    "no_speech_prob": 0
   },
   {
-   "id": 42,
-   "seek": 5521,
-   "start": 160.65466,
-   "end": 165.85466,
-   "text": " His households moved to the nearest suitable square on emptier boards,",
+   "id": 38,
+   "seek": 5604,
+   "start": 161.71335,
+   "end": 167.81334,
+   "text": " His households moved to the nearest suitable square, on emptier boards, and there the jump",
    "tokens": [
-    50590,
+    50587,
     2812,
     22850,
     4259,
@@ -3469,30 +3397,31 @@
     23831,
     12873,
     3732,
+    11,
     322,
     6113,
     811,
     13293,
     11,
-    50850
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.18632452,
-   "compression_ratio": 1.516129,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 43,
-   "seek": 5521,
-   "start": 165.85466,
-   "end": 170.95465,
-   "text": " and there the jump came later, between about a third and a half.",
-   "tokens": [
-    50850,
     293,
     456,
     264,
     3012,
+    50892
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.10454316,
+   "compression_ratio": 1.5207373,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 39,
+   "seek": 5604,
+   "start": 167.81334,
+   "end": 171.99335,
+   "text": " came later, between about a third and a half.",
+   "tokens": [
+    50892,
     1361,
     1780,
     11,
@@ -3504,21 +3433,21 @@
     257,
     1922,
     13,
-    51105
+    51101
    ],
    "temperature": 0,
-   "avg_logprob": -0.18632452,
-   "compression_ratio": 1.516129,
+   "avg_logprob": -0.10454316,
+   "compression_ratio": 1.5207373,
    "no_speech_prob": 0
   },
   {
-   "id": 44,
-   "seek": 5521,
-   "start": 170.95465,
-   "end": 174.95465,
+   "id": 40,
+   "seek": 5604,
+   "start": 171.99335,
+   "end": 176.09334,
    "text": " Two simulated towns, both 76%.",
    "tokens": [
-    51105,
+    51101,
     4453,
     41713,
     18104,
@@ -3526,21 +3455,21 @@
     1293,
     24733,
     6856,
-    51305
+    51306
    ],
    "temperature": 0,
-   "avg_logprob": -0.18632452,
-   "compression_ratio": 1.516129,
+   "avg_logprob": -0.10454316,
+   "compression_ratio": 1.5207373,
    "no_speech_prob": 0
   },
   {
-   "id": 45,
-   "seek": 5521,
-   "start": 174.95465,
-   "end": 178.35464,
+   "id": 41,
+   "seek": 5604,
+   "start": 176.09334,
+   "end": 179.39334,
    "text": " In one town, households demand a third.",
    "tokens": [
-    51305,
+    51306,
     682,
     472,
     3954,
@@ -3550,21 +3479,21 @@
     257,
     2636,
     13,
-    51475
+    51471
    ],
    "temperature": 0,
-   "avg_logprob": -0.18632452,
-   "compression_ratio": 1.516129,
+   "avg_logprob": -0.10454316,
+   "compression_ratio": 1.5207373,
    "no_speech_prob": 0
   },
   {
-   "id": 46,
-   "seek": 5521,
-   "start": 178.35464,
-   "end": 181.35464,
+   "id": 42,
+   "seek": 5604,
+   "start": 179.39334,
+   "end": 182.47334,
    "text": " In the other, nobody minds their neighbors.",
    "tokens": [
-    51475,
+    51471,
     682,
     264,
     661,
@@ -3577,15 +3506,15 @@
     51625
    ],
    "temperature": 0,
-   "avg_logprob": -0.18632452,
-   "compression_ratio": 1.516129,
+   "avg_logprob": -0.10454316,
+   "compression_ratio": 1.5207373,
    "no_speech_prob": 0
   },
   {
-   "id": 47,
-   "seek": 5521,
-   "start": 181.35464,
-   "end": 184.95465,
+   "id": 43,
+   "seek": 5604,
+   "start": 182.47334,
+   "end": 186.07333,
    "text": " Which one wanted a third?",
    "tokens": [
     51625,
@@ -3598,16 +3527,16 @@
     51805
    ],
    "temperature": 0,
-   "avg_logprob": -0.18632452,
-   "compression_ratio": 1.516129,
+   "avg_logprob": -0.10454316,
+   "compression_ratio": 1.5207373,
    "no_speech_prob": 0
   },
   {
-   "id": 48,
-   "seek": 8401,
-   "start": 184.95465,
-   "end": 189.65466,
-   "text": " This one, the other was placed by a rule with no preferences.",
+   "id": 44,
+   "seek": 8484,
+   "start": 186.07333,
+   "end": 190.75334,
+   "text": " This one, the other was placed by a rule, with no preferences.",
    "tokens": [
     50365,
     639,
@@ -3620,46 +3549,47 @@
     538,
     257,
     4978,
+    11,
     365,
     572,
     21910,
     13,
-    50600
+    50599
    ],
    "temperature": 0,
-   "avg_logprob": -0.19184776,
-   "compression_ratio": 1.4934498,
+   "avg_logprob": -0.11738861,
+   "compression_ratio": 1.5021834,
    "no_speech_prob": 0
   },
   {
-   "id": 49,
-   "seek": 8401,
-   "start": 189.65466,
-   "end": 192.55466,
+   "id": 45,
+   "seek": 8484,
+   "start": 190.75334,
+   "end": 193.57333,
    "text": " Real segregation has other causes.",
    "tokens": [
-    50600,
+    50599,
     8467,
     34317,
     575,
     661,
     7700,
     13,
-    50745
+    50740
    ],
    "temperature": 0,
-   "avg_logprob": -0.19184776,
-   "compression_ratio": 1.4934498,
+   "avg_logprob": -0.11738861,
+   "compression_ratio": 1.5021834,
    "no_speech_prob": 0
   },
   {
-   "id": 50,
-   "seek": 8401,
-   "start": 192.55466,
-   "end": 196.75467,
-   "text": " One study finds that 1930s federal lending maps",
+   "id": 46,
+   "seek": 8484,
+   "start": 193.57333,
+   "end": 200.89334,
+   "text": " One study finds that 1930s federal lending maps increased racial segregation for decades,",
    "tokens": [
-    50745,
+    50740,
     1485,
     2979,
     10704,
@@ -3669,26 +3599,27 @@
     6019,
     29823,
     11317,
-    50955
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.19184776,
-   "compression_ratio": 1.4934498,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 51,
-   "seek": 8401,
-   "start": 196.75467,
-   "end": 202.15466,
-   "text": " increased racial segregation for decades through reduced credit.",
-   "tokens": [
-    50955,
     6505,
     12131,
     34317,
     337,
     7878,
+    11,
+    51106
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.11738861,
+   "compression_ratio": 1.5021834,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 47,
+   "seek": 8484,
+   "start": 200.89334,
+   "end": 203.27335,
+   "text": " through reduced credit.",
+   "tokens": [
+    51106,
     807,
     9212,
     5397,
@@ -3696,15 +3627,15 @@
     51225
    ],
    "temperature": 0,
-   "avg_logprob": -0.19184776,
-   "compression_ratio": 1.4934498,
+   "avg_logprob": -0.11738861,
+   "compression_ratio": 1.5021834,
    "no_speech_prob": 0
   },
   {
-   "id": 52,
-   "seek": 8401,
-   "start": 202.15466,
-   "end": 205.25467,
+   "id": 48,
+   "seek": 8484,
+   "start": 203.27335,
+   "end": 206.35333,
    "text": " Look again at the first town.",
    "tokens": [
     51225,
@@ -3715,21 +3646,21 @@
     700,
     3954,
     13,
-    51380
+    51379
    ],
    "temperature": 0,
-   "avg_logprob": -0.19184776,
-   "compression_ratio": 1.4934498,
+   "avg_logprob": -0.11738861,
+   "compression_ratio": 1.5021834,
    "no_speech_prob": 0
   },
   {
-   "id": 53,
-   "seek": 8401,
-   "start": 205.25467,
-   "end": 209.65466,
-   "text": " As Schelling argued, whatever you guessed its people demanded,",
+   "id": 49,
+   "seek": 8484,
+   "start": 206.35333,
+   "end": 211.87335,
+   "text": " As Schelling argued, whatever you guessed its people demanded, the map alone could not",
    "tokens": [
-    51380,
+    51379,
     1018,
     2065,
     11073,
@@ -3742,39 +3673,39 @@
     561,
     28276,
     11,
-    51600
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.19184776,
-   "compression_ratio": 1.4934498,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 54,
-   "seek": 8401,
-   "start": 209.65466,
-   "end": 212.65466,
-   "text": " the map alone could not have told you.",
-   "tokens": [
-    51600,
     264,
     4471,
     3312,
     727,
     406,
+    51655
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.11738861,
+   "compression_ratio": 1.5021834,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 50,
+   "seek": 8484,
+   "start": 211.87335,
+   "end": 212.81334,
+   "text": " have told you.",
+   "tokens": [
+    51655,
     362,
     1907,
     291,
     13,
-    51750
+    51702
    ],
    "temperature": 0,
-   "avg_logprob": -0.19184776,
-   "compression_ratio": 1.4934498,
+   "avg_logprob": -0.11738861,
+   "compression_ratio": 1.5021834,
    "no_speech_prob": 0
   }
  ],
  "x_groq": {
-  "id": "req_01m5jqnh8tea5s1g8d5jn98zx3"
+  "id": "req_01m5jssz9gekpskz3kvc8yw22n"
  }
 }

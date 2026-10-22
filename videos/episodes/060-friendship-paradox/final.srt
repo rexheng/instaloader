@@ -83,102 +83,102 @@ Measure each girl's distance from the girls' balance point, two and a half, and 
 The squares average one and a quarter, the variance, sigma squared.
 
 22
-00:01:46,200 --> 00:01:47,320
-Take Sue's four,
+00:01:46,200 --> 00:01:48,040
+Take Sue, and split her four,
 
 23
-00:01:47,620 --> 00:01:50,570
-and split it into the balance point, two and a half,
+00:01:48,540 --> 00:01:50,850
+into the balance point, two and a half,
 
 24
-00:01:50,970 --> 00:01:53,110
+00:01:51,250 --> 00:01:53,390
 plus her distance, one and a half.
 
 25
-00:01:53,610 --> 00:01:58,300
+00:01:53,890 --> 00:01:58,580
 Squaring gives two and a half squared, her distance squared, and a cross term.
 
 26
-00:01:58,900 --> 00:02:00,720
+00:01:59,180 --> 00:02:01,000
 Every girl splits this way.
 
 27
-00:02:01,020 --> 00:02:06,730
+00:02:01,300 --> 00:02:07,010
 Because the beam balances, the distances add to zero, and the cross terms cancel.
 
 28
-00:02:07,766 --> 00:02:11,706
+00:02:08,066 --> 00:02:12,006
 So the average of k squared is mu squared plus sigma squared.
 
 29
-00:02:13,306 --> 00:02:16,826
+00:02:13,606 --> 00:02:17,126
 And friends average mu, plus sigma squared over mu.
 
 30
-00:02:18,026 --> 00:02:19,546
+00:02:18,326 --> 00:02:19,846
 Here that's two and a half,
 
 31
-00:02:19,846 --> 00:02:23,476
+00:02:20,146 --> 00:02:23,776
 plus a half: exactly the extra half friend we measured.
 
 32
-00:02:24,376 --> 00:02:26,826
+00:02:24,676 --> 00:02:27,126
 With no spread, the ring had no gap.
 
 33
-00:02:28,533 --> 00:02:35,573
+00:02:28,833 --> 00:02:35,873
 In twenty eleven, Facebook users averaged about a hundred ninety friends, and a few had thousands.
 
 34
-00:02:35,973 --> 00:02:40,173
+00:02:36,273 --> 00:02:40,473
 If every friendship sent tokens, what would the tokens average?
 
 35
-00:02:42,233 --> 00:02:47,153
+00:02:42,533 --> 00:02:47,453
 About six hundred thirty five: the spread term is more than twice the mean.
 
 36
-00:02:48,053 --> 00:02:53,223
+00:02:48,353 --> 00:02:53,523
 And ninety three percent of users had fewer friends than their friends averaged.
 
 37
-00:02:53,523 --> 00:02:55,433
+00:02:53,823 --> 00:02:55,733
 Odds are, that includes you.
 
 38
-00:02:56,133 --> 00:02:59,293
+00:02:56,433 --> 00:02:59,593
 Christakis and Fowler put this to work at Harvard.
 
 39
-00:02:59,593 --> 00:03:05,843
+00:02:59,893 --> 00:03:06,143
 Named friends have more friends, so they sit closer to everyone else, and should catch flu first.
 
 40
-00:03:06,343 --> 00:03:11,763
+00:03:06,643 --> 00:03:12,063
 They tracked flu diagnoses in random students, and in the friends the students named.
 
 41
-00:03:12,263 --> 00:03:14,143
+00:03:12,563 --> 00:03:14,443
 The friends' curve rose first.
 
 42
-00:03:14,543 --> 00:03:17,803
+00:03:14,843 --> 00:03:18,103
 Fitted curves put them thirteen point nine days ahead.
 
 43
-00:03:18,703 --> 00:03:22,513
+00:03:19,003 --> 00:03:22,813
 With self-reported symptoms, the lead shrank to about three.
 
 44
-00:03:24,300 --> 00:03:26,080
+00:03:24,600 --> 00:03:26,380
 Betty looks at her one friend,
 
 45
-00:03:26,380 --> 00:03:27,720
+00:03:26,680 --> 00:03:28,020
 Sue, and sees four.
 
 46
-00:03:29,820 --> 00:03:31,410
+00:03:30,120 --> 00:03:31,710
 Most of us are Betty.
 

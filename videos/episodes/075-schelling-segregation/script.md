@@ -4,9 +4,11 @@
 match still build a town where three quarters match, because each departure tips a neighbor
 that was content; so a segregated map cannot tell you what its people wanted.
 
-Runtime ≈ 3:34 · 483 words (budget ≤ 500, 3:15–3:35) · narrator af_heart @ 0.84 (0.82–0.84 per
-beat) with CADENCE = "shaped": full stops ≈ 0.47 s, beat turns ≈ 0.67 s, a 0.9 s hold after each of
-the three key results (74, 76 %, 95), prediction holds 1.5 s.
+Runtime 3:34.5 · 479 words (budget ≤ 500, 3:15–3:35) · narrator af_heart @ 0.84 (0.78–0.84 per
+beat: the two short lines that ran over 200 wpm, "That whole town is one point on this chart" and
+"Two gold out of seven…", are at 0.78 and 0.80, the landing at 0.80) with CADENCE = "shaped": full
+stops ≈ 0.47 s, beat turns ≈ 0.73 s, a 0.9 s hold after each of the three key results (74, 76 %,
+the ¼ mechanism), prediction holds 1.5 s, 1.2 s of silence before the last sentence.
 
 (Round 1 title "Mild Preferences, Extreme Segregation" overclaimed: 76 % against a 50 % random
 baseline is strong, not extreme, and Schelling himself called his one-third result "slight".)

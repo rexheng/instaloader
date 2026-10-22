@@ -436,14 +436,23 @@ class Episode(NarratedScene):
         self.hold(hold)
 
     # ------------------------------------------------------------------ moves
-    def play_round(self, k, run_time, flight=0.9, arc=0.9, extra=()):
-        """Animate round k (0-based): tiles hop, outlines, meter and counter follow the sim."""
+    def play_round(self, k, run_time, flight=0.9, arc=0.9, extra=(), tail=None):
+        """Animate round k (0-based): tiles hop, outlines, meter and counter follow the sim.
+        tail=(K, T): the last K moves land one by one over the last T seconds (round 7: the
+        unhappy count visibly stalls at 74 while the last hops still land)."""
         moves = self.rounds[k]
         trace = self.trace[k]
         M = len(moves)
         flight = min(flight, run_time * 0.6)
         span = max(run_time - flight, 1e-3)
-        starts = [i * span / max(M - 1, 1) for i in range(M)]
+        if tail:
+            K, T = tail
+            s1 = span - T                           # the bulk lands over [flight, flight + s1]
+            assert s1 > 0.5, (span, T)
+            starts = [i * s1 / (M - K - 1) if i < M - K else s1 + (i - (M - K - 1)) * T / K
+                      for i in range(M)]
+        else:
+            starts = [i * span / max(M - 1, 1) for i in range(M)]
         lands = [s + flight for s in starts]
         prev_set = self.cur_unhappy
         prev_share = self.match.get_value()
@@ -690,38 +699,45 @@ class Episode(NarratedScene):
             self.pulse(self.ink_lab, 1.1)
 
         # 5 - run round one, and the measured failure -----------------------------------
-        # (round 5: "The matching share jumps to sixty-four percent" was cut: the meter shows it)
-        with self.narrate("Round one takes two hundred moves; the other thirty-eight were "
-                          "content by their turn.") as beat:
+        # (round 5: "The matching share jumps to sixty-four percent" was cut: the meter shows it.
+        # Round 7: "the other thirty-eight were content by their turn" is no longer spoken (the
+        # GRAY note says it), and "If the plan had worked, this counter would read zero" is cut
+        # (the "plan predicts 0" row says it): the failure now happens live. The last twelve
+        # hops land one by one, so the count visibly stalls at 74 on "stalls", and only then
+        # does "plan predicts 0" pulse beside it)
+        b1 = sim.round1_breakdown()
+        note38 = self.note(f"{b1['content_before_turn']} content by their turn")
+        movers1 = {m[0] for m in self.rounds[0]}
+        with self.narrate("Round one: two hundred moves. The unhappy count stalls at "
+                          "seventy-four. [pause 1.2] Sixty-seven of these were content before "
+                          "round one. [pause 0.15] They never moved. Their neighbors did.",
+                          gap=0.45) as beat:
             # (a number that changes digits cannot fade in while it counts: rows first)
             self.play(FadeOut(preview), FadeOut(src_box), FadeOut(dest_box),
                       FadeIn(self.round_lab), FadeIn(self.moves_lab),
                       self.fade_fill(content0, 1.0), run_time=0.4)
-            # the live "moves" count reaches 200 as the round ends; the unhappy count is live too
-            self.play_round(0, run_time=beat.until("other", offset=-0.05, min_time=2.2))
-            b1 = sim.round1_breakdown()
-            note38 = self.note(f"{b1['content_before_turn']} content by their turn")
-            beat.wait_until("thirty", offset=-0.2)
-            self.play(FadeIn(note38, shift=0.1 * UP), run_time=0.6)
-            # (the meter climbs 50 % -> 64 % live during the round; no spoken number)
-
-        movers1 = {m[0] for m in self.rounds[0]}
-        others = [self.tiles[h] for h in self.tiles if h not in self.cur_unhappy]
-        was_unh = [self.tiles[h] for h in sorted(self.cur_unhappy) if h in self.unh0]
-        n_content0 = sum(h not in self.unh0 for h in self.cur_unhappy)
-        assert (len(self.cur_unhappy), n_content0, len(was_unh)) == (74, 67, 7)
-        assert all(h not in movers1 for h in self.cur_unhappy if h not in self.unh0)
-        note67 = self.note(f"{n_content0} content at the start")
-        with self.narrate("If the plan had worked, this counter would read zero. It reads "
-                          "seventy-four. [pause 0.9] Sixty-seven of these were content before "
-                          "round one. [pause 0.15] They never moved. Their neighbors did.",
-                          gap=0.45) as beat:
-            beat.wait_until("this", offset=-0.3)
-            self.pulse(self.counter, 1.15, run_time=0.8)
-            beat.wait_until("zero", offset=-0.25)
-            self.pulse(self.plan, 1.15)
-            beat.wait_until("seventy", offset=-0.25)
-            self.pulse(self.counter, 1.1)
+            # the bulk of the round runs under "Round one: two hundred moves"; the last twelve
+            # hops land one by one under "The unhappy count", and the count freezes at 74 on
+            # "stalls" (the moves row reaches 200 at the same moment)
+            t_round = beat.until("stalls", offset=0.0, min_time=2.6)
+            t_tail = t_round - beat.until("unhappy", offset=-0.25)
+            self.play_round(0, run_time=t_round, flight=0.8, tail=(12, max(1.0, t_tail)))
+            others = [self.tiles[h] for h in self.tiles if h not in self.cur_unhappy]
+            was_unh = [self.tiles[h] for h in sorted(self.cur_unhappy) if h in self.unh0]
+            n_content0 = sum(h not in self.unh0 for h in self.cur_unhappy)
+            assert (len(self.cur_unhappy), n_content0, len(was_unh)) == (74, 67, 7)
+            assert all(h not in movers1 for h in self.cur_unhappy if h not in self.unh0)
+            note67 = self.note(f"{n_content0} content at the start")
+            # one number is the subject: "round" and "moves" dim to 35 %; the note (why 200
+            # moves for 238 unhappy) arrives as the moves row reaches 200
+            self.play(self.round_lab.animate.set_opacity(0.35),
+                      self.moves_lab.animate.set_opacity(0.35),
+                      FadeIn(note38, shift=0.1 * UP), run_time=0.5)
+            beat.wait_until("seventy", offset=-0.2)
+            self.pulse(self.counter, 1.1, run_time=0.8)
+            # the plan's prediction pulses in the silence after the failure number
+            beat.wait_until("seventy", offset=1.0)
+            self.pulse(self.plan, 1.15, run_time=0.8)
             beat.wait_until("sixty", offset=-0.2)
             # keep red rings on the 67 that were content at the start; the other 7 go grey
             # the 38 note leaves before the 67 note arrives in its slot (never superimposed)

@@ -28,14 +28,14 @@
 
 [01:34.0] Measure each girl's distance from the girls' balance point, two and a half, and square it. [pause 1.5] The squares average one and a quarter, the variance, sigma squared. [pause]
 
-[01:46.2] Take Sue's four, [pause 0.3] and split it into the balance point, two and a half, [pause 0.4] plus her distance, one and a half. Squaring gives two and a half squared, her distance squared, and a cross term. [pause] Every girl splits this way. Because the beam balances, the distances add to zero, and the cross terms cancel. [pause]
+[01:46.2] Take Sue, and split her four, [pause 0.5] into the balance point, two and a half, [pause 0.4] plus her distance, one and a half. Squaring gives two and a half squared, her distance squared, and a cross term. [pause] Every girl splits this way. Because the beam balances, the distances add to zero, and the cross terms cancel. [pause]
 
-[02:07.8] So the average of k squared is mu squared plus sigma squared. [pause 1.6] And friends average mu, plus sigma squared over mu. [pause 1.2] Here that's two and a half, [pause 0.3] plus a half: exactly the extra half friend we measured. [pause 0.9] With no spread, the ring had no gap. [pause 1.0]
+[02:08.1] So the average of k squared is mu squared plus sigma squared. [pause 1.6] And friends average mu, plus sigma squared over mu. [pause 1.2] Here that's two and a half, [pause 0.3] plus a half: exactly the extra half friend we measured. [pause 0.9] With no spread, the ring had no gap. [pause 1.0]
 
-[02:28.5] In twenty eleven, Facebook users averaged about a hundred ninety friends, and a few had thousands. [pause 0.4] If every friendship sent tokens, what would the tokens average? [pause 1.6]
+[02:28.8] In twenty eleven, Facebook users averaged about a hundred ninety friends, and a few had thousands. [pause 0.4] If every friendship sent tokens, what would the tokens average? [pause 1.6]
 
-[02:42.2] About six hundred thirty five: the spread term is more than twice the mean. [pause 0.9] And ninety three percent of users had fewer friends than their friends averaged. Odds are, that includes you.
+[02:42.5] About six hundred thirty five: the spread term is more than twice the mean. [pause 0.9] And ninety three percent of users had fewer friends than their friends averaged. Odds are, that includes you.
 
-[02:56.1] Christakis and Fowler put this to work at Harvard. Named friends have more friends, so they sit closer to everyone else, and should catch flu first. [pause 0.5] They tracked flu diagnoses in random students, and in the friends the students named. [pause 0.5] The friends' curve rose first. [pause 0.4] Fitted curves put them thirteen point nine days ahead. [pause 0.9] With self-reported symptoms, the lead shrank to about three.
+[02:56.4] Christakis and Fowler put this to work at Harvard. Named friends have more friends, so they sit closer to everyone else, and should catch flu first. [pause 0.5] They tracked flu diagnoses in random students, and in the friends the students named. [pause 0.5] The friends' curve rose first. [pause 0.4] Fitted curves put them thirteen point nine days ahead. [pause 0.9] With self-reported symptoms, the lead shrank to about three.
 
-[03:24.3] Betty looks at her one friend, [pause 0.3] Sue, and sees four. [pause 2.1] Most of us are Betty.
+[03:24.6] Betty looks at her one friend, [pause 0.3] Sue, and sees four. [pause 2.1] Most of us are Betty.

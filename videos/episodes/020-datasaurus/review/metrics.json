@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/020-datasaurus/final.mp4",
- "duration_s": 204.4,
+ "duration_s": 204.7,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,9 +8,9 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 10.12,
+ "size_mb": 10.13,
  "integrated_lufs": -14.1,
- "lra_lu": 2.9,
+ "lra_lu": 3.0,
  "true_peak_dbtp": -1.7,
  "leading_silence_s": 0.0,
  "trailing_silence_s": 1.94,
@@ -41,18 +41,18 @@
    184.16
   ]
  ],
- "frames": 6132,
+ "frames": 6141,
  "longest_static_s": 2.73,
  "static_stretches_over_3s": [],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.039045138888888,
- "transcript_words": 465,
+ "background_luma": 22.03862847222222,
+ "transcript_words": 463,
  "first_word_s": 0,
- "last_word_s": 202.828,
- "wpm_speech": 150.7,
- "wpm_overall": 136.5,
- "wpm_excluding_all_pauses": 183.6,
+ "last_word_s": 202.83734,
+ "wpm_speech": 150.0,
+ "wpm_overall": 135.7,
+ "wpm_excluding_all_pauses": 183.1,
  "narration_file": "videos/episodes/020-datasaurus/narration.json",
  "wer": 0.0244,
  "narration_words": 450,
@@ -67,8 +67,8 @@
   ],
   "sentence_wpm_median": 173.3,
   "sentences_over_200wpm": 0,
-  "sentence_gap_median_s": 0.54,
-  "sentence_gap_cv": 0.15,
+  "sentence_gap_median_s": 0.55,
+  "sentence_gap_cv": 0.16,
   "beat_gap_median_s": 0.71,
   "longest_breathless_run_s": 6.3,
   "max_distinct_numbers_20s": 5,
@@ -246,28 +246,26 @@
    "file": "keyframes/kf_35_03-07.8.png"
   },
   {
-   "t": 194.97,
-   "file": "keyframes/kf_36_03-15.0.png"
+   "t": 195.27,
+   "file": "keyframes/kf_36_03-15.3.png"
   },
   {
-   "t": 196.43,
-   "file": "keyframes/kf_37_03-16.4.png"
+   "t": 196.73,
+   "file": "keyframes/kf_37_03-16.7.png"
   },
   {
-   "t": 198.27,
-   "file": "keyframes/kf_38_03-18.3.png"
+   "t": 198.57,
+   "file": "keyframes/kf_38_03-18.6.png"
   },
   {
-   "t": 202.63,
-   "file": "keyframes/kf_39_03-22.6.png"
+   "t": 203.07,
+   "file": "keyframes/kf_39_03-23.1.png"
   },
   {
-   "t": 204.37,
-   "file": "keyframes/kf_40_03-24.4.png"
+   "t": 204.67,
+   "file": "keyframes/kf_40_03-24.7.png"
   }
  ],
- "flags": [
-  "cadence: full stops 0.54 s (variation 0.15), beat turns 0.71 s — metronomic, turns get no more air than full stops"
- ],
+ "flags": [],
  "implied_caps": []
 }

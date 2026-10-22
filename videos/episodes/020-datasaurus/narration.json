@@ -2,7 +2,7 @@
  "scene": "Episode",
  "episode": 20,
  "title": "A Dinosaur Hiding in Your Summary Statistics",
- "video_duration": 204.4,
+ "video_duration": 204.7,
  "beats": [
   {
    "index": 0,
@@ -2346,9 +2346,9 @@
   {
    "index": 23,
    "start": 184.133,
-   "duration": 18.41,
-   "end": 202.543,
-   "text": "Your line was right: five numbers fix it exactly, slope minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.",
+   "duration": 18.71,
+   "end": 202.843,
+   "text": "Your line was right: five numbers fix it exactly, slope minus point one. [pause 0.8] Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
@@ -2420,187 +2420,187 @@
     },
     {
      "w": "Your",
-     "t": 189.758,
-     "end": 189.908
+     "t": 190.058,
+     "end": 190.208
     },
     {
      "w": "cloud",
-     "t": 189.933,
-     "end": 190.246
+     "t": 190.233,
+     "end": 190.546
     },
     {
      "w": "was",
-     "t": 190.258,
-     "end": 190.408
+     "t": 190.558,
+     "end": 190.708
     },
     {
      "w": "wrong",
-     "t": 190.433,
-     "end": 191.083
+     "t": 190.733,
+     "end": 191.383
     },
     {
      "w": "a",
-     "t": 191.258,
-     "end": 191.345
+     "t": 191.558,
+     "end": 191.646
     },
     {
      "w": "blur",
-     "t": 191.383,
-     "end": 191.708
+     "t": 191.683,
+     "end": 192.008
     },
     {
      "w": "around",
-     "t": 191.733,
-     "end": 191.996
+     "t": 192.033,
+     "end": 192.296
     },
     {
      "w": "this",
-     "t": 192.008,
-     "end": 192.158
+     "t": 192.308,
+     "end": 192.458
     },
     {
      "w": "ellipse",
-     "t": 192.183,
-     "end": 192.683
+     "t": 192.483,
+     "end": 192.983
     },
     {
      "w": "all",
-     "t": 192.783,
-     "end": 192.945
+     "t": 193.083,
+     "end": 193.245
     },
     {
      "w": "that",
-     "t": 192.958,
-     "end": 193.183
+     "t": 193.258,
+     "end": 193.483
     },
     {
      "w": "five",
-     "t": 193.233,
-     "end": 193.608
+     "t": 193.533,
+     "end": 193.908
     },
     {
      "w": "numbers",
-     "t": 193.633,
-     "end": 193.958
+     "t": 193.933,
+     "end": 194.258
     },
     {
      "w": "can",
-     "t": 193.983,
-     "end": 194.158
+     "t": 194.283,
+     "end": 194.458
     },
     {
      "w": "draw",
-     "t": 194.183,
-     "end": 194.703
+     "t": 194.483,
+     "end": 195.003
     },
     {
      "w": "Most",
-     "t": 195.358,
-     "end": 195.645
+     "t": 195.658,
+     "end": 195.945
     },
     {
      "w": "of",
-     "t": 195.658,
-     "end": 195.733
+     "t": 195.958,
+     "end": 196.033
     },
     {
      "w": "those",
-     "t": 195.758,
-     "end": 195.983
+     "t": 196.058,
+     "end": 196.283
     },
     {
      "w": "papers",
-     "t": 196.008,
-     "end": 196.458
-    },
-    {
-     "w": "used",
-     "t": 196.483,
-     "end": 196.695
-    },
-    {
-     "w": "a",
-     "t": 196.708,
+     "t": 196.308,
      "end": 196.758
     },
     {
-     "w": "bar",
+     "w": "used",
      "t": 196.783,
-     "end": 197.033
+     "end": 196.995
+    },
+    {
+     "w": "a",
+     "t": 197.008,
+     "end": 197.058
+    },
+    {
+     "w": "bar",
+     "t": 197.083,
+     "end": 197.333
     },
     {
      "w": "graph",
-     "t": 197.058,
-     "end": 197.683
-    },
-    {
-     "w": "which",
-     "t": 197.808,
+     "t": 197.358,
      "end": 197.983
     },
     {
+     "w": "which",
+     "t": 198.108,
+     "end": 198.283
+    },
+    {
      "w": "draws",
-     "t": 198.008,
-     "end": 198.383
+     "t": 198.308,
+     "end": 198.683
     },
     {
      "w": "only",
-     "t": 198.408,
-     "end": 198.733
+     "t": 198.708,
+     "end": 199.033
     },
     {
      "w": "two",
-     "t": 198.783,
-     "end": 199.243
+     "t": 199.083,
+     "end": 199.543
     },
     {
      "w": "The",
-     "t": 199.843,
-     "end": 199.938
+     "t": 200.143,
+     "end": 200.238
     },
     {
      "w": "dinosaur",
-     "t": 199.963,
-     "end": 200.613
+     "t": 200.263,
+     "end": 200.913
     },
     {
      "w": "lived",
-     "t": 200.663,
-     "end": 200.938
+     "t": 200.963,
+     "end": 201.238
     },
     {
      "w": "in",
-     "t": 200.963,
-     "end": 201.1
+     "t": 201.263,
+     "end": 201.401
     },
     {
      "w": "everything",
-     "t": 201.138,
-     "end": 201.663
+     "t": 201.438,
+     "end": 201.963
     },
     {
      "w": "they",
-     "t": 201.688,
-     "end": 201.813
+     "t": 201.988,
+     "end": 202.113
     },
     {
      "w": "leave",
-     "t": 201.838,
-     "end": 202.088
+     "t": 202.138,
+     "end": 202.388
     },
     {
      "w": "out",
-     "t": 202.113,
-     "end": 202.543
+     "t": 202.413,
+     "end": 202.843
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/46/461f20a7c9d6d9c4eecd0177.wav"
+   "wav": "/root/.cache/sample_space/tts/9b/9b7af88e12d5328ba3624d8a.wav"
   }
  ],
  "warnings": [],
  "budget": {
   "words": 456,
-  "runtime_s": 204.4,
+  "runtime_s": 204.7,
   "budget_words": 500,
   "budget_runtime_s": 215.0,
   "over": false
@@ -2617,8 +2617,8 @@
  "layout_audit": {
   "clearance": 0.15,
   "checks": 222,
-  "audit_seconds": 2.772,
-  "render_seconds": 720.1,
+  "audit_seconds": 3.112,
+  "render_seconds": 762.6,
   "errors": 0,
   "count": 0,
   "counts": {

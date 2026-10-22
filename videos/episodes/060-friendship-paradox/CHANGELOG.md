@@ -758,3 +758,70 @@ that kills the cross term; the "+0.5 ?" target; the YELLOW-outlined friend bar c
 3. "[pause 0.5]" after "the students named." and "[pause 0.4]" after "rose first."; the flash
    along the friends' curve lands on "rose first".
 4. As craft 6. 5. The re-opened guess box settles before "guess" is written. 6. As craft 5.
+7. Cleanup found while checking frames: `Scene.remove` does not reach into a group that is not
+   itself in the scene, so the shrunken stack tokens, "4 × 4 = 16" and the C&F tokens stayed in
+   the scene at zero size (the layout audit reported them as touching labels until 3:32); every
+   shrink is now a remover, and the stack tokens are removed one by one. The end-card fade
+   builds its group with `Group` (a `VGroup` refused a Group child).
+
+**Verified on the master** (review/report.md, all 12 sheets, keyframes kf_12, 18, 19, 28, 33,
+34, 39, 40; 2.5–30 fps strips over 0:19–0:23, 0:42.6–0:46.6, 1:00.2–1:03.8, 1:06–1:11,
+1:34–1:35.6, 1:39.5–1:43.5, 1:46.2–1:49.4, 2:21–2:29, 2:43–2:51, 3:04.3–3:08.3, 3:26.4–3:33.3
+and every frame of the final fade 3:32.15–3:32.85)
+- Runtime 3:33.3, 497 words (budget 500 / 3:35); 156 wpm on speech time; 0 sentences above
+  200 wpm; longest run without a breath 10.7 s (the cold open; the payoff run is now split by
+  0.6 s and 0.5 s breaths); -14.0 LUFS / -2.1 dBTP; leading 0.00 s, trailing 1.70 s; longest
+  silence 2.22 s (the "Pick one" hold; the landing pause measures 2.2 s); longest static
+  stretch 2.67 s.
+- 0 render warnings, 0 layout-audit issues in 214 checks, 0 review-kit flags, 0 banned
+  phrases, 0 glyph morphs, deictics 2/2 synced, WER 0.6 % (the only differences: "averaged",
+  "girl's", "one" for "a"). Whisper now hears "take Sue and split her four" and "Betty looks at
+  her one friend. Sue and sees four." The first master's transcript ended on a hallucinated
+  "Thank you." over 2.03 s of trailing silence; at 1.70 s it is gone.
+- Sort: frames at 1:00.6–1:01.2 show the row forming in left-to-right order, 1:01.6–1:02.2 the
+  nested arcs (left-movers over, right-movers under), no two nodes touching and no names in
+  flight; names return at 1:02.8.
+- YELLOW: candidates, stack tokens, the 3.0 fulcrum, "4 × 4 = 16", C&F tokens and rings, and
+  the landing's "?" and 4 grow or shrink at full colour; every YELLOW opacity ramp seen in the
+  strips lasts ≤ 6 frames.
+- Ring callback: the row is absent from 2:24.6 and back whole at 2:27.6; "2 + 0/2 = 2" leaves
+  whole; at the Facebook cut "= 2.5 + 0.5 = 3.0" leaves in one move (2:28.6).
+- 1:40.6 (kf_18): the area labels zigzag, 0.12 vertical and 0.17 horizontal clearance;
+  "sides at 1/4 scale" at MathTex 36. 2:50–2:56: 11 prose words. 2:45: 190 / 445 / 635 appear
+  only below the tick labels.
+- C&F: 3:04.5–3:05.1 the contracted class sits wholly above the coming x-axis; the named friends
+  then leave one after another as rings (no filled disks), the random students follow while
+  the legend entries glide (YELLOW first; they never cross); no frame is empty.
+- Landing: 3:27.9 the 2.5 rises into the girl bar's 2.5; 3:28.7–3:29.7 the bar grows smoothly to
+  3; 3:29.9 the 3 is ringed as the 4 shrinks; 3:30.1 "Most of us are Betty" with only Betty and
+  her token pulsing; 3:32.4–3:32.8 the scene fades out, then the card (3:33.1). No frame holds
+  both.
+
+## Round 9 revisions
+
+Round-9 critics: craft 8.8, substance 8.9 (no caps, no factual errors; both: every fix
+together reaches 9.0, no structural change). Kept: the token-weighted beam and the 0 that kills
+the cross term; the "+0.5 ?" target; the YELLOW-outlined friend bar carried to Facebook and the
+silent landing.
+
+**Plan against BAR's 9 anchors**
+- *Motion 8.5* (9: "every motion encodes a relation; reading time respected"). Short of it: the
+  variance squares pop in (0.3 s) before their sides drop; the divide chain shows four states in
+  8 s and passes through a blank numerator; the Facebook -> C&F change dips through an empty
+  frame. Upgrade: side first, then the square grows down from it, then its area; two divide
+  states (the second held for ~9 s) with in-slot pinch swaps and the "÷ 8" flashing BLUE as it is
+  absorbed; the BLUE "average user" bar splits into the class's eight BLUE nodes.
+- *Visual 8.5-9* (9: "one focal point; all §5 standards met"). Short of it: four distances drawn
+  on top of each other; "4 × 4 = 16" lingering 18 s; C&F tokens 10-15 px from rings; the squares
+  outliving their scale tag; fits above 0 before the first case; the card still fading at the
+  end. Upgrade: one segment per distance in two lanes, labels over their own segments; the 16
+  flies into Σk² and the label leaves; tokens parked mid-edge, >= 0.15 from both rings (exact
+  box-to-circle check); squares leave with their tag; fits start at each group's first case;
+  card held.
+- *Audio 8.5* (9: "pauses intentional"). Short of it: a 10.7 s breathless cold open; the 199 wpm
+  "A girl with k friends ..." sentence; "girl's ... girls'". Upgrade: breaths after the first two
+  cold-open sentences, the k-squared sentence at 0.78 after a breath, the divide sentence at 0.78
+  with a 0.8 s hold, "from the balance point".
+- *Clarity* (substance 4): the C&F "random students" were a low draw (mean 1.75). Upgrade: the
+  draw {Betty, Dale, Carol} (counts 1, 3, 2, mean 2.0), whose six tokens 4, 4, 4, 2, 3, 1
+  average exactly 3.0.

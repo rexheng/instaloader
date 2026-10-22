@@ -648,10 +648,11 @@ class Episode(NarratedScene):
             #    height, clear of where any column will stand.  In the same move the baseline
             #    grows outward from under the tile row and all 27 candidates come back to full
             #    strength (each will be priced), so the handover never leaves an empty frame
-            grow = lambda t: smooth(float(np.clip((t - 0.2) / 0.8, 0, 1)))
-            self.play(FadeOut(self.chain), FadeOut(self.cuts), FadeOut(self.qlabel),
-                      FadeOut(self.tile_lab),
-                      FadeOut(VGroup(self.logf[0], self.logf[1], self.logf[2])),
+            grow = lambda t: smooth(float(np.clip((t - 0.3) / 0.7, 0, 1)))
+            out = lambda t: smooth(min(1.0, t / 0.45))      # gone before the baseline passes
+            self.play(FadeOut(self.chain, rate_func=out), FadeOut(self.cuts, rate_func=out),
+                      FadeOut(self.qlabel, rate_func=out), FadeOut(self.tile_lab, rate_func=out),
+                      FadeOut(VGroup(self.logf[0], self.logf[1], self.logf[2]), rate_func=out),
                       self.read_lab.animate.shift(UP * (ROW_Y_TOP - ROW_Y_OPEN)).set_opacity(0),
                       self.row.animate.shift(UP * (ROW_Y_TOP - ROW_Y_OPEN)),
                       self.logf[3].animate.move_to([COL_A + 0.2, self.logf[3].get_y(), 0]),
@@ -687,7 +688,7 @@ class Episode(NarratedScene):
             # no compressor beats it: a ghost of the price line is pushed down and stops at
             # the true figure, ~1 (the floor), as the band flashes
             beat.wait_until("compressor", offset=-0.25)
-            floor = self.avg_line.copy().set_stroke(opacity=0.6)
+            floor = self.avg_line.copy().set_stroke(opacity=0.8)
             floor_lab = text("floor", size=28, color=GRAY)
             floor_lab.move_to([COL_A, cy(1.0), 0])
             self.add(floor)
@@ -1778,7 +1779,7 @@ class Episode(NarratedScene):
             # box steps back to 30 % in the row), so no cost is ever read against the axes that
             # come back; then the chart returns (the 4.11 reference waits for the next beat)
             # and the TH skyline pours, its columns fading in as they flow
-            beat.wait_until("After", offset=-0.2)
+            beat.wait_until("After", offset=-0.1)
             self.play(FadeOut(led["all"]), self.qbox.animate.set_stroke(opacity=0.3),
                       *glyph_fade(run_letters, 0.3), run_time=0.45)
             back_parts = [self.x_axis.animate.set_stroke(opacity=1.0),
@@ -1798,7 +1799,7 @@ class Episode(NarratedScene):
             tgt = poured(ORDER, P_TH, th_cost)
             tgt["T"].set_fill(opacity=0.0).set_stroke(opacity=0.0)
             self.play(LaggedStart(*[geo_morph(self.cols[s], tgt[s]) for s in ORDER], lag_ratio=0.06),
-                      *back_parts, run_time=beat.until("average", offset=-0.25, min_time=1.2))
+                      *back_parts, run_time=beat.until("average", offset=-0.25, min_time=0.9))
             line, num = self.level_marks(H_TH)
             # the newborn level is the focus
             self.play(Create(line), FadeIn(num, shift=0.1 * LEFT), run_time=0.5)
@@ -2377,7 +2378,9 @@ class Episode(NarratedScene):
         self.add(parked)
 
         def drop(g, dy=0.3):
-            return [FadeIn(m, shift=dy * DOWN) for m in g]
+            # triangles and values drop from above; the tags under the line only settle
+            # (0.08), so none ever passes through the tick numbers
+            return [FadeIn(m, shift=(dy if m.get_y() > nl_y else 0.08) * DOWN) for m in g]
         with self.narrate("Shannon's tests, with a hundred letters of context, put English between "
                           "point six and one point three bits.") as beat:
             # the three estimates drop in, in story order, each with its value and its tag
@@ -2416,13 +2419,13 @@ class Episode(NarratedScene):
         # triangle at 40 %, so nothing in the frame says LLM = 1.42.  On 'needed' it drops
         # straight down onto 0.84 (the '?' leaves as it starts; 0.84 lands with it)
         RISE = 0.9
-        s_tri = mllm[0].copy().shift(UP * RISE).set_fill(opacity=0.4).set_stroke(opacity=0.4)
+        s_tri = mllm[0].copy().shift(UP * RISE).set_fill(opacity=0.4).set_stroke(opacity=0.0)
         s_q = MathTex("?", font_size=40, color=GRAY).move_to(llm_val).shift(UP * RISE)
         s_name = llm_name.copy().shift(UP * RISE)
         s_note = llm_note.copy().shift(UP * RISE)
         a0, b0 = m142[0].get_center(), s_tri.get_center()
         # left first (under the 1.42 label, above the band), then up to its waiting place
-        p_llm = route([(a0[0], a0[1]), (a0[0] - 0.45, a0[1] + 0.1), (b0[0] + 0.3, b0[1] - 0.5),
+        p_llm = route([(a0[0], a0[1]), (a0[0] - 0.7, a0[1] + 0.08), (b0[0] + 0.3, b0[1] - 0.55),
                        (b0[0], b0[1])])
         born = m142[0].copy()
         born_from = m142[0].copy()
@@ -2430,8 +2433,11 @@ class Episode(NarratedScene):
         def birth(m, a):
             m.become(born_from)
             m.move_to(p_llm.point_from_proportion(smooth(a)))
-            o = 1.0 - 0.6 * smooth(min(1.0, a / 0.8))
-            m.set_fill(opacity=o).set_stroke(opacity=o)
+            o = 1.0 - 0.6 * smooth(min(1.0, a / 0.8))    # fill only while it waits: a 40 %
+            # stroke over a 40 % fill reads as two tones; and it turns from the person's
+            # yellow to the model's ink as it leaves (a dimmed yellow would read olive)
+            c = ManimColor(YELLOW).interpolate(ManimColor(INK), smooth(min(1.0, a / 0.6)))
+            m.set_fill(c, opacity=o).set_stroke(c, opacity=1.0 - smooth(min(1.0, a / 0.5)))
         # context the LLM's story does not need steps back (30 %) while its note is read;
         # the person, its 102 letters, Shannon's 0.6-1.3 and the axis title stay bright
         quiet = [m475[2], m411[2], m281[2]]

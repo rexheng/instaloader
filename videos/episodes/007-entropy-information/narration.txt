@@ -34,18 +34,18 @@
 
 [02:21.1] But averaged over every two-letter context, it's still two point eight.
 
-[02:26.7] Hundred-letter contexts need more text than any corpus holds, so Shannon asked a person, a predictor that knows English.
+[02:26.7] Hundred-letter contexts need more text than any corpus holds, so Shannon asked a person who knows English.
 
-[02:35.3] His subject read a passage, guessing each next letter until right: seventy-nine of a hundred two on the first guess. [pause 0.6]
+[02:34.1] His subject read a passage, guessing each next letter until right: seventy-nine of a hundred two on the first guess. [pause 0.6]
 
-[02:44.1] A twin guessing the same way could rebuild the passage from these counts. Treat each count as a symbol: [pause 1.2] the same skyline pours flat at about one point four bits.
+[02:43.0] A twin guessing the same way could rebuild the passage from these counts. Treat each count as a symbol: [pause 1.2] the same skyline pours flat at about one point four bits.
 
-[02:56.0] A better guesser could only lower it.
+[02:54.9] That caps the text; more context or a better guesser could only lower it.
 
-[02:59.1] Shannon's tests, with a hundred letters of context, put English between point six and one point three bits.
+[03:00.6] Shannon's tests, with a hundred letters of context, put English between point six and one point three bits.
 
-[03:06.9] In twenty twenty-three, a language model compressed part of a book [pause 0.3] posted to Project Gutenberg after the model was trained. [pause 0.4] It needed point eight four bits, inside that range.
+[03:08.3] A language model compressed part of a book [pause 0.3] posted to Project Gutenberg after the model was trained. [pause 0.4] It needed point eight four bits, inside that range.
 
-[03:19.4] The hidden character from the start [pause 0.4] is the Y in the other day.
+[03:19.3] The hidden character from the start [pause 0.4] is the Y in the other day.
 
-[03:24.2] Shannon's subject needed one guess: [pause 0.3] is it Y? Splitting the alphabet took five. In English, almost no letter arrives without a past.
+[03:24.1] Shannon's subject needed one guess: [pause 0.3] is it Y? Splitting the alphabet took five. In English, almost no letter arrives without a past.

@@ -842,3 +842,32 @@ both are re-verified below.
 diagram → table → grid → strip → crowd → raster → + badge → the diagram with flows); the half-sick
 control, the live prevalence slider and the bracketed 6×; the landing's live sweep and the
 recall / precision tags on the opening frame's 99 % and 17 %.
+
+## Round 7 revisions
+
+Reviews: `reviews/round7-craft.md` (8.4, "reaches 9: false"; Originality 8 caps the ceiling at 8.9
+unless the landing lands harder) and `reviews/round7-substance.md` (8.6, "reaches 9: no, narrowly"; the
+cold open is the canonical rare-disease puzzle, so Hook and Originality stay at 8.5; the structural fix
+is to open on Cardiff). No caps, no factual errors.
+
+### Climb plan (written before editing)
+
+Structure. Round 6 rejected a Cardiff cold open; round 7's substance critic names it again as the only
+way past 8.9, and the craft critic's ceiling argument (Originality) points the same way. So the episode
+now **opens on Cardiff** and keeps every keep item: the 2,470-alert raster under a ghosted "chance an
+alert is right ?" meter is the first frame and the commit ("How many were right? Pick a number"); "Each
+alert is a positive test result" collapses the raster into the + badge, and the disease diagram forms
+around it, so the medical test arrives as the countable version of the same question. The build, the
+fail slider, the strip and Bayes are unchanged; the payoff returns to Cardiff and answers the opening
+question on the same raster (173 right: 7 %); the landing returns to "your test" and ends on a line that
+re-reads "If yours says positive": "Your test didn't say you're sick. It said you're in this crowd."
+
+| Dimension (craft / substance) | BAR "9" anchor | Where round 7 fell short | Upgrade |
+|---|---|---|---|
+| Hook 8.5 / 8.5 | "commits to a likely-wrong prediction by 0:12; ending resolves the opening exactly" | the textbook puzzle first; savvy viewers are not wrong | Cardiff raster + "How many were right? Pick a number" by 0:10; the payoff answers it on the same raster |
+| Originality 8 / 8.5 | "a non-obvious angle or image viewers would remember" | canonical example first; definitional ending | real case first, test as its model; raster → + badge (each alert is a positive); closing line "…It said you're in this crowd" |
+| Clarity 8.5 / 8.5 | "re-derive after one watch; assumptions stated; sources correct" | "blue term" named with no formula; "the title's 99 % is recall"; waffle tag not what Manrai's respondents read; 46 % without its caveat; implied recall from dimmed listed squares; ÷10,000 rewrites 8 numbers | ghost of the boxed denominator flies in, its blue term becomes "P(+ ∣ not listed) ↓"; "That ninety-nine percent describes the test: its recall…"; "their test: 5% false alarms"; "7 of 22 later proved false"; uniform dim; fraction bar + 17 % pulse and hold on "the share stays the same" |
+| Visual 8.5 / 8.5 | "one focal point; all §5 standards met" | ghost meter beside the 7 %; label crowding the tag column; squares crossing the ghost title; 20 sick bunched left; 3:05 overprint; 0.6 s end card | ghost meter cut; lever re-laid (bar under the raster, ghost denominator in its own band, label ≥ 0.6 from the tags); title fades during the flight; the 20 sick are cross-faded to scattered cells; Cardiff layer gone before the diagram returns; no end card |
+| Motion 8.5 / 9 | "every motion encodes a relation" | strip sprays into the crowd | the 24 × 5 strip shrinks as one block into the crowd's centre |
+| Audio 8.5 / 8.5 | "pauses intentional" | 12.4 s breathless lever sentence | four short sentences with 0.6 / 0.4 / 0.3 / 0.8 s breaths |
+| Concision 8.5 / 9 | "cutting any sentence loses something" | the new cold open adds ~12 s | Manrai in one beat, shorter Cardiff set-up, the landing's "random screen" sentence and the second definition cut; target ≤ 3:37 |

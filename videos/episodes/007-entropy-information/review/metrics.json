@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/007-entropy-information/final.mp4",
- "duration_s": 214.733,
+ "duration_s": 214.633,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,9 +8,9 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 9.67,
- "integrated_lufs": -14.0,
- "lra_lu": 2.2,
+ "size_mb": 9.75,
+ "integrated_lufs": -14.1,
+ "lra_lu": 2.3,
  "true_peak_dbtp": -1.7,
  "leading_silence_s": 0.0,
  "trailing_silence_s": 0.56,
@@ -29,31 +29,31 @@
    111.1
   ]
  ],
- "frames": 6442,
+ "frames": 6439,
  "longest_static_s": 3.03,
  "static_stretches_over_3s": [
   [
-   211.7,
-   214.73,
+   211.6,
+   214.63,
    3.03
   ]
  ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.044956597222225,
- "transcript_words": 513,
+ "background_luma": 22.037734375,
+ "transcript_words": 512,
  "first_word_s": 0.02,
- "last_word_s": 214.25066,
- "wpm_speech": 151.7,
- "wpm_overall": 143.3,
- "wpm_excluding_all_pauses": 180.0,
+ "last_word_s": 214.19734,
+ "wpm_speech": 151.4,
+ "wpm_overall": 143.1,
+ "wpm_excluding_all_pauses": 179.3,
  "narration_file": "videos/episodes/007-entropy-information/narration.json",
- "wer": 0.0179,
- "narration_words": 503,
+ "wer": 0.0119,
+ "narration_words": 504,
  "banned_phrase_hits": 0,
  "slop_hits": [],
  "narration_craft": {
-  "narration_words": 497,
+  "narration_words": 499,
   "voice_speeds": [
    0.8,
    0.83
@@ -62,7 +62,7 @@
   "sentences_over_200wpm": 0,
   "sentence_gap_median_s": 0.38,
   "sentence_gap_cv": 0.36,
-  "beat_gap_median_s": 0.58,
+  "beat_gap_median_s": 0.57,
   "longest_breathless_run_s": 9.0,
   "max_distinct_numbers_20s": 5,
   "repeated_phrases": 3,
@@ -81,7 +81,7 @@
    "small-label": 0
   },
   "allowed": 0,
-  "checks": 224
+  "checks": 225
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -115,127 +115,127 @@
    "file": "keyframes/kf_04_00-21.9.png"
   },
   {
-   "t": 25.73,
+   "t": 25.67,
    "file": "keyframes/kf_05_00-25.7.png"
   },
   {
+   "t": 33.57,
+   "file": "keyframes/kf_06_00-33.6.png"
+  },
+  {
    "t": 36.63,
-   "file": "keyframes/kf_06_00-36.6.png"
+   "file": "keyframes/kf_07_00-36.6.png"
   },
   {
    "t": 42.7,
-   "file": "keyframes/kf_07_00-42.7.png"
+   "file": "keyframes/kf_08_00-42.7.png"
   },
   {
    "t": 46.07,
-   "file": "keyframes/kf_08_00-46.1.png"
+   "file": "keyframes/kf_09_00-46.1.png"
   },
   {
    "t": 55.03,
-   "file": "keyframes/kf_09_00-55.0.png"
+   "file": "keyframes/kf_10_00-55.0.png"
   },
   {
    "t": 56.93,
-   "file": "keyframes/kf_10_00-56.9.png"
+   "file": "keyframes/kf_11_00-56.9.png"
   },
   {
    "t": 60.77,
-   "file": "keyframes/kf_11_01-00.8.png"
+   "file": "keyframes/kf_12_01-00.8.png"
   },
   {
    "t": 65.17,
-   "file": "keyframes/kf_12_01-05.2.png"
+   "file": "keyframes/kf_13_01-05.2.png"
   },
   {
    "t": 69.13,
-   "file": "keyframes/kf_13_01-09.1.png"
+   "file": "keyframes/kf_14_01-09.1.png"
   },
   {
    "t": 79.93,
-   "file": "keyframes/kf_14_01-19.9.png"
+   "file": "keyframes/kf_15_01-19.9.png"
   },
   {
    "t": 87.0,
-   "file": "keyframes/kf_15_01-27.0.png"
+   "file": "keyframes/kf_16_01-27.0.png"
   },
   {
    "t": 92.0,
-   "file": "keyframes/kf_16_01-32.0.png"
+   "file": "keyframes/kf_17_01-32.0.png"
   },
   {
    "t": 96.6,
-   "file": "keyframes/kf_17_01-36.6.png"
+   "file": "keyframes/kf_18_01-36.6.png"
   },
   {
    "t": 104.77,
-   "file": "keyframes/kf_18_01-44.8.png"
+   "file": "keyframes/kf_19_01-44.8.png"
   },
   {
    "t": 107.63,
-   "file": "keyframes/kf_19_01-47.6.png"
+   "file": "keyframes/kf_20_01-47.6.png"
   },
   {
    "t": 110.53,
-   "file": "keyframes/kf_20_01-50.5.png"
+   "file": "keyframes/kf_21_01-50.5.png"
   },
   {
    "t": 119.1,
-   "file": "keyframes/kf_21_01-59.1.png"
+   "file": "keyframes/kf_22_01-59.1.png"
   },
   {
    "t": 127.3,
-   "file": "keyframes/kf_22_02-07.3.png"
+   "file": "keyframes/kf_23_02-07.3.png"
   },
   {
    "t": 133.77,
-   "file": "keyframes/kf_23_02-13.8.png"
+   "file": "keyframes/kf_24_02-13.8.png"
   },
   {
-   "t": 137.3,
-   "file": "keyframes/kf_24_02-17.3.png"
+   "t": 137.43,
+   "file": "keyframes/kf_25_02-17.4.png"
   },
   {
    "t": 141.0,
-   "file": "keyframes/kf_25_02-21.0.png"
+   "file": "keyframes/kf_26_02-21.0.png"
   },
   {
-   "t": 147.57,
-   "file": "keyframes/kf_26_02-27.6.png"
+   "t": 147.6,
+   "file": "keyframes/kf_27_02-27.6.png"
   },
   {
-   "t": 153.47,
-   "file": "keyframes/kf_27_02-33.5.png"
+   "t": 153.97,
+   "file": "keyframes/kf_28_02-34.0.png"
   },
   {
-   "t": 155.07,
-   "file": "keyframes/kf_28_02-35.1.png"
+   "t": 162.77,
+   "file": "keyframes/kf_29_02-42.8.png"
   },
   {
-   "t": 163.9,
-   "file": "keyframes/kf_29_02-43.9.png"
+   "t": 164.87,
+   "file": "keyframes/kf_30_02-44.9.png"
   },
   {
-   "t": 166.0,
-   "file": "keyframes/kf_30_02-46.0.png"
+   "t": 171.8,
+   "file": "keyframes/kf_31_02-51.8.png"
   },
   {
-   "t": 172.93,
-   "file": "keyframes/kf_31_02-52.9.png"
+   "t": 175.1,
+   "file": "keyframes/kf_32_02-55.1.png"
   },
   {
-   "t": 176.27,
-   "file": "keyframes/kf_32_02-56.3.png"
+   "t": 178.57,
+   "file": "keyframes/kf_33_02-58.6.png"
   },
   {
-   "t": 178.13,
-   "file": "keyframes/kf_33_02-58.1.png"
+   "t": 184.87,
+   "file": "keyframes/kf_34_03-04.9.png"
   },
   {
-   "t": 183.43,
-   "file": "keyframes/kf_34_03-03.4.png"
-  },
-  {
-   "t": 190.03,
+   "t": 190.0,
    "file": "keyframes/kf_35_03-10.0.png"
   },
   {
@@ -243,20 +243,20 @@
    "file": "keyframes/kf_36_03-11.9.png"
   },
   {
-   "t": 199.03,
-   "file": "keyframes/kf_37_03-19.0.png"
+   "t": 198.93,
+   "file": "keyframes/kf_37_03-18.9.png"
   },
   {
-   "t": 204.93,
-   "file": "keyframes/kf_38_03-24.9.png"
+   "t": 204.83,
+   "file": "keyframes/kf_38_03-24.8.png"
   },
   {
-   "t": 210.6,
-   "file": "keyframes/kf_39_03-30.6.png"
+   "t": 210.5,
+   "file": "keyframes/kf_39_03-30.5.png"
   },
   {
-   "t": 214.7,
-   "file": "keyframes/kf_40_03-34.7.png"
+   "t": 214.6,
+   "file": "keyframes/kf_40_03-34.6.png"
   }
  ],
  "flags": [],

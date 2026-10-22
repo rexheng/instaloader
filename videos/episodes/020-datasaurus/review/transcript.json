@@ -1,8 +1,8 @@
 {
  "task": "transcribe",
  "language": "English",
- "duration": 204.415999488,
- "text": " two averages, two standard deviations, and a correlation of minus 0.06. What shape is the cloud, and which way does its best fit line tilt? You probably pictured a shapeless oval with a nearly flat line. Here are the real points. A dinosaur, drawn by Alberto Cairo, with these same five numbers. In a review of 703 physiology papers, 86% used bar graphs, an average and an error bar. Only 13% showed the points. How much can five numbers hide? Let's hide a star in them and demand that all five match the dinosaurs to two decimals. The first version slides every point onto its own spot on a star. We got the star and lost all five numbers. The center moved, the X spread grew, and the Y spread shrank by almost a quarter. So what exactly do five numbers pin down? The two averages mark a single point, the cloud's balance point. The two standard deviations reach out on each side and draw a box. Many ellipses touch all four walls. The correlation, R, picks one. Say R is 0.5. Go one standard deviation right. On average, the cloud rises R times S-Y. That's the best fit line, through the middle of every slice of the ellipse. At the wall the slices shrink to the touch point For the dinosaur it just below the middle That ellipse is everything the five numbers know Now replay the first version and watch the ellipse How would you fix it Slide it until the centers meet. Stretch it until the boxes match. Then tip it, keeping the box, until it touches the walls at the same height. All five match now, to every decimal place. But add a sixth number, the median of Y. Our star misses it by six. In 2017, Justin Matejka and George Fitzmaurice built a search. It keeps these five numbers fixed while it nudges points toward a target. From the dinosaur, they grew 12 shapes. This This circle, this star, this bullseye, this x, and these stripes. Each one has this same ellipse and a different median. Francis Anscombe made the same point in 1973 with 11 points. Same rule, sx across, r times s y up. So the slope is the rise, over the run. All four of his datasets share these five numbers. A trend, a curve, an outlier, and one point doing all the work. Your line was right. Five numbers fix it exactly, slope minus point one. Your cloud was wrong. A blur around this ellipse, all that five numbers can draw. Most of those papers used a bar graph, which draws only two. The dinosaur lived in everything they leave out.",
+ "duration": 204.71471616600002,
+ "text": " two averages, two standard deviations, and a correlation of minus 0.06. What shape is the cloud, and which way does its best fit line tilt? You probably pictured a shapeless oval with a nearly flat line. Here are the real points. A dinosaur, drawn by Alberto Cairo, with these same five numbers. In a review of 703 physiology papers, 86% used bar graphs, an average and an error bar. Only 13% showed the points. How much can five numbers hide? Let's hide a star in them and demand that all five match the dinosaurs to two decimals. The first version slides every point onto its own spot on a star. We got the star and lost all five numbers. The center moved, the X spread grew, and the Y spread shrank by almost a quarter. So what exactly do five numbers pin down? The two averages mark a single point, the cloud's balance point. The two standard deviations reach out on each side and draw a box. Many ellipses touch all four walls. The correlation, R, picks one. Say R is 0.5. Go one standard deviation right. On average, the cloud rises R times S-Y. That's the best fit line, through the middle of every slice of the ellipse. At the wall the slices shrink to the touch point For the dinosaur it just below the middle That ellipse is everything the five numbers know Now replay the first version and watch the ellipse How would you fix it? Slide it until the centers meet. Stretch it until the boxes match. Then tip it, keeping the box, until it touches the walls at the same height. All five match now to every decimal place. But add a sixth number, the median of Y. Our star misses it by six. In 2017, Justin Matejka and George Fitzmaurice built a search. It keeps these five numbers fixed while it nudges points toward a target. From the dinosaur, they grew 12 shapes. This circle. This star. This bullseye. This X. And these stripes. Each one has the same ellipse and a different median. Francis Anscombe made the same point in 1973 with 11 points. Same rule, SX across, R times SY up. So the slope is the rise, over the run. All four of his datasets share these five numbers. A trend, a curve, an outlier, and one point doing all the work. Your line was right. Five numbers fix it exactly. Slope minus point one. Your cloud was wrong. A blur around this ellipse, all that five numbers can draw. Most of those papers used a bar graph, which draws only two. The dinosaur lived in everything they leave out.",
  "words": [
   {
    "word": "two",
@@ -947,11 +947,11 @@
   {
    "word": "average,",
    "start": 85.2,
-   "end": 86.16
+   "end": 85.96
   },
   {
    "word": "the",
-   "start": 86.16,
+   "start": 85.96,
    "end": 86.24
   },
   {
@@ -967,31 +967,31 @@
   {
    "word": "R",
    "start": 87.1,
-   "end": 87.38
+   "end": 87.42
   },
   {
    "word": "times",
-   "start": 87.38,
-   "end": 87.8
+   "start": 87.42,
+   "end": 87.82
   },
   {
    "word": "S-Y.",
-   "start": 87.8,
-   "end": 88.76
+   "start": 87.82,
+   "end": 88.64
   },
   {
    "word": "That's",
-   "start": 89.22,
+   "start": 89.24,
    "end": 89.72
   },
   {
    "word": "the",
    "start": 89.72,
-   "end": 89.84
+   "end": 89.86
   },
   {
    "word": "best",
-   "start": 89.84,
+   "start": 89.86,
    "end": 90.18
   },
   {
@@ -1006,37 +1006,37 @@
   },
   {
    "word": "through",
-   "start": 91.42,
+   "start": 90.82,
    "end": 91.48
   },
   {
    "word": "the",
    "start": 91.48,
-   "end": 91.64
+   "end": 91.66
   },
   {
    "word": "middle",
-   "start": 91.64,
+   "start": 91.66,
    "end": 91.88
   },
   {
    "word": "of",
-   "start": 91.54,
+   "start": 91.88,
    "end": 92.12
   },
   {
    "word": "every",
    "start": 92.12,
-   "end": 92.48
+   "end": 92.46
   },
   {
    "word": "slice",
-   "start": 92.48,
-   "end": 92.94
+   "start": 92.46,
+   "end": 92.92
   },
   {
    "word": "of",
-   "start": 92.94,
+   "start": 92.92,
    "end": 93.16
   },
   {
@@ -1057,16 +1057,16 @@
   {
    "word": "the",
    "start": 94.8,
-   "end": 94.92
+   "end": 94.94
   },
   {
    "word": "wall,",
-   "start": 94.92,
-   "end": 95.56
+   "start": 94.94,
+   "end": 95.58
   },
   {
    "word": "the",
-   "start": 95.56,
+   "start": 95.58,
    "end": 95.66
   },
   {
@@ -1092,21 +1092,21 @@
   {
    "word": "touch",
    "start": 96.8,
-   "end": 97.1
+   "end": 97.08
   },
   {
    "word": "point.",
-   "start": 97.1,
+   "start": 97.08,
    "end": 97.82
   },
   {
    "word": "For",
    "start": 97.7,
-   "end": 98.34
+   "end": 98.36
   },
   {
    "word": "the",
-   "start": 98.34,
+   "start": 98.36,
    "end": 98.48
   },
   {
@@ -1127,17 +1127,17 @@
   {
    "word": "below",
    "start": 99.96,
-   "end": 100.3
+   "end": 100.28
   },
   {
    "word": "the",
-   "start": 100.3,
+   "start": 100.28,
    "end": 100.52
   },
   {
    "word": "middle.",
    "start": 100.52,
-   "end": 101.24
+   "end": 101.12
   },
   {
    "word": "That",
@@ -1146,1113 +1146,1103 @@
   },
   {
    "word": "ellipse",
-   "start": 101.908,
-   "end": 102.288
+   "start": 101.94,
+   "end": 102.32
   },
   {
    "word": "is",
-   "start": 102.288,
-   "end": 102.548004
+   "start": 102.29735,
+   "end": 102.57735
   },
   {
    "word": "everything",
-   "start": 102.548004,
-   "end": 102.988
+   "start": 102.57735,
+   "end": 103.037346
   },
   {
    "word": "the",
-   "start": 102.988,
-   "end": 103.268
+   "start": 103.037346,
+   "end": 103.29735
   },
   {
    "word": "five",
-   "start": 102.768,
-   "end": 103.588
+   "start": 103.29735,
+   "end": 103.59734
   },
   {
    "word": "numbers",
-   "start": 103.588,
-   "end": 104.008
+   "start": 103.59734,
+   "end": 103.997345
   },
   {
    "word": "know.",
-   "start": 104.008,
-   "end": 105.088
+   "start": 103.997345,
+   "end": 104.57735
   },
   {
    "word": "Now",
-   "start": 105.088,
-   "end": 106.288
+   "start": 105.97735,
+   "end": 106.29735
   },
   {
    "word": "replay",
-   "start": 106.288,
-   "end": 106.628
+   "start": 106.29735,
+   "end": 106.65735
   },
   {
    "word": "the",
-   "start": 106.628,
-   "end": 106.848
+   "start": 106.65735,
+   "end": 106.87735
   },
   {
    "word": "first",
-   "start": 106.848,
-   "end": 107.108
+   "start": 106.87735,
+   "end": 107.11735
   },
   {
    "word": "version",
-   "start": 107.108,
-   "end": 107.568
+   "start": 107.11735,
+   "end": 107.537346
   },
   {
    "word": "and",
-   "start": 107.568,
-   "end": 108.068
+   "start": 107.537346,
+   "end": 108.05734
   },
   {
    "word": "watch",
-   "start": 108.068,
-   "end": 108.368
+   "start": 108.05734,
+   "end": 108.39735
   },
   {
    "word": "the",
-   "start": 108.368,
-   "end": 108.608
+   "start": 108.39735,
+   "end": 108.59734
   },
   {
    "word": "ellipse.",
-   "start": 108.608,
-   "end": 109.368
+   "start": 108.59734,
+   "end": 109.23734
   },
   {
    "word": "How",
-   "start": 109.368,
-   "end": 109.908
+   "start": 109.33734,
+   "end": 109.93735
   },
   {
    "word": "would",
-   "start": 109.908,
-   "end": 110.108
+   "start": 109.93735,
+   "end": 110.137344
   },
   {
    "word": "you",
-   "start": 110.108,
-   "end": 110.228
+   "start": 110.137344,
+   "end": 110.25735
   },
   {
    "word": "fix",
-   "start": 110.228,
-   "end": 110.528
+   "start": 110.25735,
+   "end": 110.55734
   },
   {
    "word": "it?",
-   "start": 110.528,
-   "end": 111.028
+   "start": 110.55734,
+   "end": 110.97735
   },
   {
    "word": "Slide",
-   "start": 112.968,
-   "end": 113.428
+   "start": 112.957344,
+   "end": 113.37735
   },
   {
    "word": "it",
-   "start": 113.428,
-   "end": 113.568
+   "start": 113.37735,
+   "end": 113.57735
   },
   {
    "word": "until",
-   "start": 113.568,
-   "end": 113.828
+   "start": 113.57735,
+   "end": 113.817345
   },
   {
    "word": "the",
-   "start": 113.828,
-   "end": 113.988
+   "start": 113.817345,
+   "end": 113.997345
   },
   {
    "word": "centers",
-   "start": 113.988,
-   "end": 114.348
+   "start": 113.997345,
+   "end": 114.33734
   },
   {
    "word": "meet.",
-   "start": 114.348,
-   "end": 114.888
+   "start": 114.33734,
+   "end": 114.89735
   },
   {
    "word": "Stretch",
-   "start": 114.888,
-   "end": 115.608
+   "start": 114.89735,
+   "end": 115.55734
   },
   {
    "word": "it",
-   "start": 115.608,
-   "end": 115.828
+   "start": 115.55734,
+   "end": 115.817345
   },
   {
    "word": "until",
-   "start": 115.828,
-   "end": 116.088
+   "start": 115.817345,
+   "end": 116.07735
   },
   {
    "word": "the",
-   "start": 116.088,
-   "end": 116.248
+   "start": 116.07735,
+   "end": 116.25735
   },
   {
    "word": "boxes",
-   "start": 116.248,
-   "end": 116.628
+   "start": 116.25735,
+   "end": 116.61735
   },
   {
    "word": "match.",
-   "start": 116.628,
-   "end": 117.408005
+   "start": 116.61735,
+   "end": 117.29735
   },
   {
    "word": "Then",
-   "start": 117.408005,
-   "end": 118.088
+   "start": 116.857346,
+   "end": 118.09734
   },
   {
    "word": "tip",
-   "start": 118.088,
-   "end": 118.348
+   "start": 118.09734,
+   "end": 118.357346
   },
   {
    "word": "it,",
-   "start": 118.348,
-   "end": 118.648
+   "start": 118.357346,
+   "end": 118.61735
   },
   {
    "word": "keeping",
-   "start": 118.648,
-   "end": 118.988
+   "start": 118.61735,
+   "end": 118.997345
   },
   {
    "word": "the",
-   "start": 118.548004,
-   "end": 119.188
+   "start": 118.997345,
+   "end": 119.15735
   },
   {
    "word": "box,",
-   "start": 119.188,
-   "end": 119.748
+   "start": 119.15735,
+   "end": 119.73734
   },
   {
    "word": "until",
-   "start": 119.748,
-   "end": 120.268
+   "start": 119.73734,
+   "end": 120.25735
   },
   {
    "word": "it",
-   "start": 120.268,
-   "end": 120.448
+   "start": 120.25735,
+   "end": 120.457344
   },
   {
    "word": "touches",
-   "start": 120.448,
-   "end": 120.748
+   "start": 120.457344,
+   "end": 120.73734
   },
   {
    "word": "the",
-   "start": 120.748,
-   "end": 120.968
+   "start": 120.73734,
+   "end": 120.97735
   },
   {
    "word": "walls",
-   "start": 120.968,
-   "end": 121.328
+   "start": 120.97735,
+   "end": 121.317345
   },
   {
    "word": "at",
-   "start": 121.328,
-   "end": 121.507996
+   "start": 121.317345,
+   "end": 121.51735
   },
   {
    "word": "the",
-   "start": 121.507996,
-   "end": 121.628
+   "start": 121.51735,
+   "end": 121.637344
   },
   {
    "word": "same",
-   "start": 121.628,
-   "end": 121.828
+   "start": 121.637344,
+   "end": 121.817345
   },
   {
    "word": "height.",
-   "start": 121.828,
-   "end": 122.588
+   "start": 121.817345,
+   "end": 122.39735
   },
   {
    "word": "All",
-   "start": 122.588,
-   "end": 123.308
+   "start": 123.037346,
+   "end": 123.317345
   },
   {
    "word": "five",
-   "start": 123.308,
-   "end": 123.608
+   "start": 123.317345,
+   "end": 123.677345
   },
   {
    "word": "match",
-   "start": 123.608,
-   "end": 123.948
+   "start": 123.677345,
+   "end": 123.997345
   },
   {
-   "word": "now,",
-   "start": 123.948,
-   "end": 124.408005
+   "word": "now",
+   "start": 123.997345,
+   "end": 124.29735
   },
   {
    "word": "to",
-   "start": 124.408005,
-   "end": 124.728
+   "start": 124.29735,
+   "end": 124.73734
   },
   {
    "word": "every",
-   "start": 124.728,
-   "end": 125.007996
+   "start": 124.73734,
+   "end": 125.01735
   },
   {
    "word": "decimal",
-   "start": 125.048004,
-   "end": 125.428
+   "start": 125.01735,
+   "end": 125.47735
   },
   {
    "word": "place.",
-   "start": 125.428,
-   "end": 126.228
+   "start": 125.47735,
+   "end": 126.43735
   },
   {
    "word": "But",
-   "start": 126.228,
-   "end": 127.507996
+   "start": 127.37735,
+   "end": 127.537346
   },
   {
    "word": "add",
-   "start": 127.507996,
-   "end": 127.728
+   "start": 127.537346,
+   "end": 127.73734
   },
   {
    "word": "a",
-   "start": 127.728,
-   "end": 127.868
+   "start": 127.73734,
+   "end": 127.89735
   },
   {
    "word": "sixth",
-   "start": 127.868,
-   "end": 128.148
+   "start": 127.89735,
+   "end": 128.15735
   },
   {
    "word": "number,",
-   "start": 128.148,
-   "end": 128.70801
+   "start": 128.15735,
+   "end": 128.73735
   },
   {
    "word": "the",
-   "start": 128.70801,
-   "end": 129.088
+   "start": 128.73735,
+   "end": 129.07735
   },
   {
    "word": "median",
-   "start": 129.088,
-   "end": 129.368
+   "start": 129.07735,
+   "end": 129.33734
   },
   {
    "word": "of",
-   "start": 129.368,
-   "end": 129.648
+   "start": 129.33734,
+   "end": 129.65735
   },
   {
    "word": "Y.",
-   "start": 129.648,
-   "end": 130.20801
+   "start": 129.65735,
+   "end": 129.87735
   },
   {
    "word": "Our",
-   "start": 130.20801,
-   "end": 130.62799
+   "start": 130.45734,
+   "end": 130.63734
   },
   {
    "word": "star",
-   "start": 130.62799,
-   "end": 130.908
+   "start": 130.63734,
+   "end": 130.93735
   },
   {
    "word": "misses",
-   "start": 130.908,
-   "end": 131.20801
+   "start": 130.93735,
+   "end": 131.21735
   },
   {
    "word": "it",
-   "start": 131.20801,
-   "end": 131.448
+   "start": 131.21735,
+   "end": 131.43735
   },
   {
    "word": "by",
-   "start": 131.448,
-   "end": 131.588
+   "start": 131.43735,
+   "end": 131.59735
   },
   {
    "word": "six.",
-   "start": 131.588,
-   "end": 132.288
+   "start": 131.59735,
+   "end": 132.19734
   },
   {
    "word": "In",
-   "start": 132.288,
-   "end": 133.008
+   "start": 132.87735,
+   "end": 133.01735
   },
   {
    "word": "2017,",
-   "start": 132.84799,
-   "end": 134.608
+   "start": 133.01735,
+   "end": 134.19734
   },
   {
    "word": "Justin",
-   "start": 134.608,
-   "end": 134.968
+   "start": 134.19734,
+   "end": 134.91734
   },
   {
    "word": "Matejka",
-   "start": 134.968,
-   "end": 135.548
+   "start": 134.91734,
+   "end": 135.53735
   },
   {
    "word": "and",
-   "start": 135.548,
-   "end": 135.808
+   "start": 135.53735,
+   "end": 135.79735
   },
   {
    "word": "George",
-   "start": 135.808,
-   "end": 136.148
+   "start": 135.79735,
+   "end": 136.13734
   },
   {
    "word": "Fitzmaurice",
-   "start": 136.148,
-   "end": 136.808
+   "start": 136.13734,
+   "end": 136.79735
   },
   {
    "word": "built",
-   "start": 136.808,
-   "end": 137.108
+   "start": 136.79735,
+   "end": 137.09735
   },
   {
    "word": "a",
-   "start": 137.108,
-   "end": 137.288
+   "start": 137.09735,
+   "end": 137.29735
   },
   {
    "word": "search.",
-   "start": 137.288,
-   "end": 137.868
+   "start": 137.29735,
+   "end": 137.77734
   },
   {
    "word": "It",
-   "start": 137.868,
-   "end": 138.388
+   "start": 138.23735,
+   "end": 138.41734
   },
   {
    "word": "keeps",
-   "start": 138.388,
-   "end": 138.608
+   "start": 138.41734,
+   "end": 138.65735
   },
   {
    "word": "these",
-   "start": 138.608,
-   "end": 138.84799
+   "start": 138.65735,
+   "end": 138.91734
   },
   {
    "word": "five",
-   "start": 138.84799,
-   "end": 139.248
+   "start": 138.91734,
+   "end": 139.33734
   },
   {
    "word": "numbers",
-   "start": 139.248,
-   "end": 139.648
+   "start": 139.33734,
+   "end": 139.67734
   },
   {
    "word": "fixed",
-   "start": 139.20801,
-   "end": 140.228
+   "start": 139.67734,
+   "end": 140.13734
   },
   {
    "word": "while",
-   "start": 140.228,
-   "end": 140.748
+   "start": 140.13734,
+   "end": 140.71735
   },
   {
    "word": "it",
-   "start": 140.748,
-   "end": 140.84799
+   "start": 140.71735,
+   "end": 140.85735
   },
   {
    "word": "nudges",
-   "start": 140.84799,
-   "end": 141.148
+   "start": 140.85735,
+   "end": 141.11734
   },
   {
    "word": "points",
-   "start": 141.148,
-   "end": 141.508
+   "start": 141.11734,
+   "end": 141.45734
   },
   {
    "word": "toward",
-   "start": 141.508,
-   "end": 141.788
+   "start": 141.45734,
+   "end": 141.79735
   },
   {
    "word": "a",
-   "start": 141.788,
-   "end": 141.92801
+   "start": 141.79735,
+   "end": 141.93735
   },
   {
    "word": "target.",
-   "start": 141.92801,
-   "end": 142.808
+   "start": 141.93735,
+   "end": 142.31735
   },
   {
    "word": "From",
-   "start": 142.808,
-   "end": 143.388
+   "start": 143.23735,
+   "end": 143.39734
   },
   {
    "word": "the",
-   "start": 143.388,
-   "end": 143.488
+   "start": 143.39734,
+   "end": 143.49734
   },
   {
    "word": "dinosaur,",
-   "start": 143.488,
-   "end": 143.92801
+   "start": 143.49734,
+   "end": 143.89734
   },
   {
    "word": "they",
-   "start": 143.92801,
-   "end": 144.248
+   "start": 143.89734,
+   "end": 144.25735
   },
   {
    "word": "grew",
-   "start": 144.248,
-   "end": 144.448
+   "start": 144.25735,
+   "end": 144.45734
   },
   {
    "word": "12",
-   "start": 144.448,
-   "end": 144.688
+   "start": 144.45734,
+   "end": 144.69734
   },
   {
    "word": "shapes.",
-   "start": 144.688,
-   "end": 145.408
+   "start": 144.69734,
+   "end": 145.21735
   },
   {
    "word": "This",
-   "start": 145.408,
-   "end": 145.888
+   "start": 144.73735,
+   "end": 145.87735
+  },
+  {
+   "word": "circle.",
+   "start": 145.87735,
+   "end": 146.85735
   },
   {
    "word": "This",
-   "start": 145.92801,
-   "end": 145.988
+   "start": 147.35735,
+   "end": 147.63734
   },
   {
-   "word": "circle,",
-   "start": 145.988,
-   "end": 146.828
+   "word": "star.",
+   "start": 147.63734,
+   "end": 148.51735
   },
   {
-   "word": "this",
-   "start": 146.828,
-   "end": 147.608
+   "word": "This",
+   "start": 149.07735,
+   "end": 149.31735
   },
   {
-   "word": "star,",
-   "start": 147.608,
-   "end": 148.308
+   "word": "bullseye.",
+   "start": 149.31735,
+   "end": 150.41734
   },
   {
-   "word": "this",
-   "start": 148.308,
-   "end": 149.288
+   "word": "This",
+   "start": 150.91734,
+   "end": 151.19734
   },
   {
-   "word": "bullseye,",
-   "start": 149.288,
-   "end": 150.42801
+   "word": "X.",
+   "start": 151.19734,
+   "end": 152.07735
   },
   {
-   "word": "this",
-   "start": 150.42801,
-   "end": 151.168
-  },
-  {
-   "word": "x,",
-   "start": 151.168,
-   "end": 152.108
-  },
-  {
-   "word": "and",
-   "start": 152.108,
-   "end": 152.788
+   "word": "And",
+   "start": 152.57735,
+   "end": 152.77734
   },
   {
    "word": "these",
-   "start": 152.788,
-   "end": 152.988
+   "start": 152.77734,
+   "end": 153.03735
   },
   {
    "word": "stripes.",
-   "start": 152.988,
-   "end": 153.788
+   "start": 153.03735,
+   "end": 153.47734
   },
   {
    "word": "Each",
-   "start": 154.12799,
-   "end": 154.468
+   "start": 154.19734,
+   "end": 154.39734
   },
   {
    "word": "one",
-   "start": 154.468,
-   "end": 154.62799
+   "start": 154.39734,
+   "end": 154.61734
   },
   {
    "word": "has",
-   "start": 154.62799,
-   "end": 154.868
+   "start": 154.61734,
+   "end": 154.87735
   },
   {
-   "word": "this",
-   "start": 154.868,
-   "end": 155.068
+   "word": "the",
+   "start": 154.87735,
+   "end": 155.05734
   },
   {
    "word": "same",
-   "start": 155.068,
-   "end": 155.34799
+   "start": 155.05734,
+   "end": 155.31735
   },
   {
    "word": "ellipse",
-   "start": 155.34799,
-   "end": 155.808
+   "start": 155.31735,
+   "end": 155.75735
   },
   {
    "word": "and",
-   "start": 155.808,
-   "end": 156.268
+   "start": 155.75735,
+   "end": 156.25735
   },
   {
    "word": "a",
-   "start": 156.268,
-   "end": 156.328
+   "start": 156.25735,
+   "end": 156.33734
   },
   {
    "word": "different",
-   "start": 156.328,
-   "end": 156.568
+   "start": 156.33734,
+   "end": 156.57735
   },
   {
    "word": "median.",
-   "start": 156.568,
-   "end": 157.248
+   "start": 156.57735,
+   "end": 157.29735
   },
   {
    "word": "Francis",
-   "start": 157.84799,
-   "end": 158.42801
+   "start": 157.99734,
+   "end": 158.33734
   },
   {
    "word": "Anscombe",
-   "start": 158.42801,
-   "end": 159.088
+   "start": 158.33734,
+   "end": 159.13734
   },
   {
    "word": "made",
-   "start": 159.088,
-   "end": 159.328
+   "start": 159.13734,
+   "end": 159.33734
   },
   {
    "word": "the",
-   "start": 159.328,
-   "end": 159.488
+   "start": 159.33734,
+   "end": 159.45734
   },
   {
    "word": "same",
-   "start": 159.488,
-   "end": 159.688
+   "start": 159.45734,
+   "end": 159.69734
   },
   {
    "word": "point",
-   "start": 159.688,
-   "end": 160.068
+   "start": 159.69734,
+   "end": 160.07735
   },
   {
    "word": "in",
-   "start": 160.068,
-   "end": 160.288
+   "start": 160.07735,
+   "end": 160.29735
   },
   {
    "word": "1973",
-   "start": 160.288,
-   "end": 161.248
+   "start": 160.29735,
+   "end": 161.03735
   },
   {
    "word": "with",
-   "start": 161.248,
-   "end": 162.068
+   "start": 161.03735,
+   "end": 162.07735
   },
   {
    "word": "11",
-   "start": 162.068,
-   "end": 162.40799
+   "start": 162.07735,
+   "end": 162.39734
   },
   {
    "word": "points.",
-   "start": 162.40799,
-   "end": 163.188
+   "start": 162.39734,
+   "end": 163.15735
   },
   {
    "word": "Same",
-   "start": 164.948,
-   "end": 165.388
+   "start": 164.99734,
+   "end": 165.35735
   },
   {
    "word": "rule,",
-   "start": 165.388,
-   "end": 166.068
+   "start": 165.35735,
+   "end": 166.05734
   },
   {
-   "word": "sx",
-   "start": 166.068,
-   "end": 166.36801
+   "word": "SX",
+   "start": 166.05734,
+   "end": 166.37735
   },
   {
    "word": "across,",
-   "start": 166.36801,
-   "end": 167.088
+   "start": 166.37735,
+   "end": 167.09735
   },
   {
-   "word": "r",
-   "start": 167.088,
-   "end": 167.688
+   "word": "R",
+   "start": 167.09735,
+   "end": 167.69734
   },
   {
    "word": "times",
-   "start": 167.688,
-   "end": 167.948
+   "start": 167.69734,
+   "end": 167.93735
   },
   {
-   "word": "s",
-   "start": 167.948,
-   "end": 168.188
-  },
-  {
-   "word": "y",
-   "start": 168.188,
-   "end": 168.468
+   "word": "SY",
+   "start": 167.93735,
+   "end": 168.39734
   },
   {
    "word": "up.",
-   "start": 168.468,
-   "end": 169.088
+   "start": 168.39734,
+   "end": 168.97736
   },
   {
    "word": "So",
-   "start": 169.62799,
-   "end": 170.188
+   "start": 169.87735,
+   "end": 170.17734
   },
   {
    "word": "the",
-   "start": 170.188,
-   "end": 170.308
+   "start": 170.17734,
+   "end": 170.29735
   },
   {
    "word": "slope",
-   "start": 170.308,
-   "end": 170.588
+   "start": 170.29735,
+   "end": 170.63734
   },
   {
    "word": "is",
-   "start": 170.588,
-   "end": 170.808
+   "start": 170.63734,
+   "end": 170.81735
   },
   {
    "word": "the",
-   "start": 170.808,
-   "end": 170.92801
+   "start": 170.81735,
+   "end": 170.93735
   },
   {
    "word": "rise,",
-   "start": 170.92801,
-   "end": 171.508
+   "start": 170.93735,
+   "end": 171.51735
   },
   {
    "word": "over",
-   "start": 171.508,
-   "end": 172.168
+   "start": 171.51735,
+   "end": 172.15735
   },
   {
    "word": "the",
-   "start": 172.168,
-   "end": 172.308
+   "start": 172.15735,
+   "end": 172.31735
   },
   {
    "word": "run.",
-   "start": 172.308,
-   "end": 172.90799
+   "start": 172.31735,
+   "end": 172.85735
   },
   {
    "word": "All",
-   "start": 174.568,
-   "end": 174.588
+   "start": 174.25735,
+   "end": 174.55734
   },
   {
    "word": "four",
-   "start": 174.588,
-   "end": 174.788
+   "start": 174.55734,
+   "end": 174.77734
   },
   {
    "word": "of",
-   "start": 174.788,
-   "end": 174.92801
+   "start": 174.77734,
+   "end": 174.93735
   },
   {
    "word": "his",
-   "start": 174.92801,
-   "end": 175.068
+   "start": 174.93735,
+   "end": 175.07735
   },
   {
    "word": "datasets",
-   "start": 175.068,
-   "end": 175.488
+   "start": 175.07735,
+   "end": 175.49734
   },
   {
    "word": "share",
-   "start": 175.488,
-   "end": 176.228
+   "start": 175.49734,
+   "end": 176.25735
   },
   {
    "word": "these",
-   "start": 176.228,
-   "end": 176.448
+   "start": 176.25735,
+   "end": 176.45734
   },
   {
    "word": "five",
-   "start": 176.448,
-   "end": 176.808
+   "start": 176.45734,
+   "end": 176.81735
   },
   {
    "word": "numbers.",
-   "start": 176.808,
-   "end": 177.488
+   "start": 176.81735,
+   "end": 177.53735
   },
   {
    "word": "A",
-   "start": 177.968,
-   "end": 178.228
+   "start": 177.05734,
+   "end": 178.19734
   },
   {
    "word": "trend,",
-   "start": 178.228,
-   "end": 178.808
+   "start": 178.19734,
+   "end": 178.83734
   },
   {
    "word": "a",
-   "start": 178.808,
-   "end": 178.968
+   "start": 178.83734,
+   "end": 178.97736
   },
   {
    "word": "curve,",
-   "start": 178.968,
-   "end": 179.508
+   "start": 178.97736,
+   "end": 179.51735
   },
   {
    "word": "an",
-   "start": 179.508,
-   "end": 179.748
+   "start": 179.51735,
+   "end": 179.77734
   },
   {
    "word": "outlier,",
-   "start": 179.748,
-   "end": 180.468
+   "start": 179.77734,
+   "end": 180.51735
   },
   {
    "word": "and",
-   "start": 180.468,
-   "end": 180.608
+   "start": 180.51735,
+   "end": 180.59735
   },
   {
    "word": "one",
-   "start": 180.608,
-   "end": 180.788
+   "start": 180.59735,
+   "end": 180.79735
   },
   {
    "word": "point",
-   "start": 180.788,
-   "end": 181.12799
+   "start": 180.79735,
+   "end": 181.13734
   },
   {
    "word": "doing",
-   "start": 181.12799,
-   "end": 181.388
+   "start": 181.13734,
+   "end": 181.37735
   },
   {
    "word": "all",
-   "start": 181.388,
-   "end": 181.608
+   "start": 181.37735,
+   "end": 181.59735
   },
   {
    "word": "the",
-   "start": 181.608,
-   "end": 181.70801
+   "start": 181.59735,
+   "end": 181.73734
   },
   {
    "word": "work.",
-   "start": 181.70801,
-   "end": 182.188
+   "start": 181.73734,
+   "end": 182.19734
   },
   {
    "word": "Your",
-   "start": 184.068,
-   "end": 184.328
+   "start": 184.15735,
+   "end": 184.29735
   },
   {
    "word": "line",
-   "start": 184.328,
-   "end": 184.62799
+   "start": 184.29735,
+   "end": 184.57735
   },
   {
    "word": "was",
-   "start": 184.62799,
-   "end": 184.808
+   "start": 184.57735,
+   "end": 184.79735
   },
   {
    "word": "right.",
-   "start": 184.808,
-   "end": 185.288
+   "start": 184.79735,
+   "end": 185.27734
   },
   {
    "word": "Five",
-   "start": 185.568,
-   "end": 186.028
+   "start": 185.27734,
+   "end": 185.95734
   },
   {
    "word": "numbers",
-   "start": 186.028,
-   "end": 186.328
+   "start": 185.95734,
+   "end": 186.31735
   },
   {
    "word": "fix",
-   "start": 186.328,
-   "end": 186.608
+   "start": 186.31735,
+   "end": 186.59735
   },
   {
    "word": "it",
-   "start": 186.608,
-   "end": 186.728
+   "start": 186.59735,
+   "end": 186.73734
   },
   {
-   "word": "exactly,",
-   "start": 186.728,
-   "end": 187.488
+   "word": "exactly.",
+   "start": 186.73734,
+   "end": 187.49734
   },
   {
-   "word": "slope",
-   "start": 187.488,
-   "end": 188.048
+   "word": "Slope",
+   "start": 187.49734,
+   "end": 188.07735
   },
   {
    "word": "minus",
-   "start": 188.048,
-   "end": 188.388
+   "start": 188.07735,
+   "end": 188.37735
   },
   {
    "word": "point",
-   "start": 188.388,
-   "end": 188.64801
+   "start": 188.37735,
+   "end": 188.63734
   },
   {
    "word": "one.",
-   "start": 188.64801,
-   "end": 189.228
+   "start": 188.63734,
+   "end": 189.21735
   },
   {
    "word": "Your",
-   "start": 189.608,
-   "end": 189.948
+   "start": 189.99734,
+   "end": 190.21735
   },
   {
    "word": "cloud",
-   "start": 189.948,
-   "end": 190.20801
+   "start": 190.21735,
+   "end": 190.53735
   },
   {
    "word": "was",
-   "start": 190.20801,
-   "end": 190.40799
+   "start": 190.53735,
+   "end": 190.71735
   },
   {
    "word": "wrong.",
-   "start": 190.40799,
-   "end": 190.92801
+   "start": 190.71735,
+   "end": 191.23734
   },
   {
    "word": "A",
-   "start": 190.768,
-   "end": 191.40799
+   "start": 191.23734,
+   "end": 191.67734
   },
   {
    "word": "blur",
-   "start": 191.40799,
-   "end": 191.588
+   "start": 191.67734,
+   "end": 191.89734
   },
   {
    "word": "around",
-   "start": 191.588,
-   "end": 191.988
+   "start": 191.89734,
+   "end": 192.27734
   },
   {
    "word": "this",
-   "start": 191.988,
-   "end": 192.168
+   "start": 192.27734,
+   "end": 192.47736
   },
   {
    "word": "ellipse,",
-   "start": 192.168,
-   "end": 192.828
+   "start": 192.47736,
+   "end": 192.95734
   },
   {
    "word": "all",
-   "start": 192.828,
-   "end": 192.968
+   "start": 192.95734,
+   "end": 193.23734
   },
   {
    "word": "that",
-   "start": 192.968,
-   "end": 193.12799
+   "start": 193.23734,
+   "end": 193.41734
   },
   {
    "word": "five",
-   "start": 193.12799,
-   "end": 193.528
+   "start": 193.41734,
+   "end": 193.81735
   },
   {
    "word": "numbers",
-   "start": 193.528,
-   "end": 193.888
+   "start": 193.81735,
+   "end": 194.19734
   },
   {
    "word": "can",
-   "start": 193.888,
-   "end": 194.12799
+   "start": 194.19734,
+   "end": 194.41734
   },
   {
    "word": "draw.",
-   "start": 194.12799,
-   "end": 194.70801
+   "start": 194.41734,
+   "end": 194.97736
   },
   {
    "word": "Most",
-   "start": 195.228,
-   "end": 195.688
+   "start": 195.55734,
+   "end": 195.95734
   },
   {
    "word": "of",
-   "start": 195.688,
-   "end": 195.788
+   "start": 195.95734,
+   "end": 196.07735
   },
   {
    "word": "those",
-   "start": 195.788,
-   "end": 195.948
+   "start": 196.07735,
+   "end": 196.27734
   },
   {
    "word": "papers",
-   "start": 195.948,
-   "end": 196.388
+   "start": 196.27734,
+   "end": 196.67734
   },
   {
    "word": "used",
-   "start": 196.388,
-   "end": 196.688
+   "start": 196.67734,
+   "end": 196.99734
   },
   {
    "word": "a",
-   "start": 196.688,
-   "end": 196.828
+   "start": 196.99734,
+   "end": 197.11734
   },
   {
    "word": "bar",
-   "start": 196.828,
-   "end": 196.968
+   "start": 197.11734,
+   "end": 197.29735
   },
   {
    "word": "graph,",
-   "start": 196.968,
-   "end": 197.608
+   "start": 197.29735,
+   "end": 197.89734
   },
   {
    "word": "which",
-   "start": 197.608,
-   "end": 197.988
+   "start": 197.89734,
+   "end": 198.27734
   },
   {
    "word": "draws",
-   "start": 197.988,
-   "end": 198.288
+   "start": 198.27734,
+   "end": 198.59735
   },
   {
    "word": "only",
-   "start": 198.288,
-   "end": 198.64801
+   "start": 198.59735,
+   "end": 198.93735
   },
   {
    "word": "two.",
-   "start": 198.64801,
-   "end": 199.248
+   "start": 198.93735,
+   "end": 199.53735
   },
   {
    "word": "The",
-   "start": 199.448,
-   "end": 199.988
+   "start": 200.05734,
+   "end": 200.27734
   },
   {
    "word": "dinosaur",
-   "start": 199.988,
-   "end": 200.508
+   "start": 200.27734,
+   "end": 200.81735
   },
   {
    "word": "lived",
-   "start": 200.508,
-   "end": 200.90799
+   "start": 200.81735,
+   "end": 201.19734
   },
   {
    "word": "in",
-   "start": 200.90799,
-   "end": 201.088
+   "start": 201.19734,
+   "end": 201.39734
   },
   {
    "word": "everything",
-   "start": 201.088,
-   "end": 201.508
+   "start": 201.39734,
+   "end": 201.75735
   },
   {
    "word": "they",
-   "start": 201.508,
-   "end": 201.808
+   "start": 201.75735,
+   "end": 202.11734
   },
   {
    "word": "leave",
-   "start": 201.808,
-   "end": 202.028
+   "start": 202.11734,
+   "end": 202.35735
   },
   {
    "word": "out.",
-   "start": 202.028,
-   "end": 202.828
+   "start": 202.35735,
+   "end": 202.83734
   }
  ],
  "segments": [
@@ -2950,16 +2940,16 @@
     50580
    ],
    "temperature": 0,
-   "avg_logprob": -0.121735014,
-   "compression_ratio": 1.532258,
+   "avg_logprob": -0.114325844,
+   "compression_ratio": 1.5473684,
    "no_speech_prob": 0
   },
   {
    "id": 30,
    "seek": 8502,
    "start": 89.32,
-   "end": 92.03999,
-   "text": " That's the best fit line, through the middle",
+   "end": 91.32,
+   "text": " That's the best fit line,",
    "tokens": [
     50580,
     663,
@@ -2969,24 +2959,24 @@
     3318,
     1622,
     11,
-    807,
-    264,
-    2808,
-    50716
+    50680
    ],
    "temperature": 0,
-   "avg_logprob": -0.121735014,
-   "compression_ratio": 1.532258,
+   "avg_logprob": -0.114325844,
+   "compression_ratio": 1.5473684,
    "no_speech_prob": 0
   },
   {
    "id": 31,
    "seek": 8502,
-   "start": 92.03999,
+   "start": 91.32,
    "end": 94.659996,
-   "text": " of every slice of the ellipse.",
+   "text": " through the middle of every slice of the ellipse.",
    "tokens": [
-    50716,
+    50680,
+    807,
+    264,
+    2808,
     295,
     633,
     13153,
@@ -2998,16 +2988,16 @@
     50847
    ],
    "temperature": 0,
-   "avg_logprob": -0.121735014,
-   "compression_ratio": 1.532258,
+   "avg_logprob": -0.114325844,
+   "compression_ratio": 1.5473684,
    "no_speech_prob": 0
   },
   {
    "id": 32,
    "seek": 97,
    "start": 94.659996,
-   "end": 113.408,
-   "text": " At the wall the slices shrink to the touch point For the dinosaur it just below the middle That ellipse is everything the five numbers know Now replay the first version and watch the ellipse How would you fix it",
+   "end": 109.357346,
+   "text": " At the wall the slices shrink to the touch point For the dinosaur it just below the middle That ellipse is everything the five numbers know Now replay the first version and watch the ellipse",
    "tokens": [
     50847,
     1711,
@@ -3037,16 +3027,18 @@
     13,
     51199,
     51199,
+    663,
+    8284,
     48041,
     307,
     1203,
     264,
-    50668,
-    50668,
     1732,
     3547,
     458,
     13,
+    50765,
+    50765,
     823,
     23836,
     264,
@@ -3058,27 +3050,42 @@
     8284,
     48041,
     13,
+    50965
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.0720325,
+   "compression_ratio": 1.579646,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 33,
+   "seek": 97,
+   "start": 109.357346,
+   "end": 112.357346,
+   "text": " How would you fix it?",
+   "tokens": [
+    50965,
     1012,
     576,
     291,
     3191,
     309,
     30,
-    51175
+    51115
    ],
    "temperature": 0,
-   "avg_logprob": -0.12525906,
-   "compression_ratio": 1.5765766,
+   "avg_logprob": -0.0720325,
+   "compression_ratio": 1.579646,
    "no_speech_prob": 0
   },
   {
-   "id": 33,
+   "id": 34,
    "seek": 97,
-   "start": 113.408,
-   "end": 119.048004,
-   "text": " Slide it until the centers meet. Stretch it until the boxes match. Then tip it, keeping",
+   "start": 112.357346,
+   "end": 117.357346,
+   "text": " Slide it until the centers meet. Stretch it until the boxes match.",
    "tokens": [
-    51175,
+    51115,
     26405,
     309,
     1826,
@@ -3093,26 +3100,26 @@
     9002,
     2995,
     13,
+    51365
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.0720325,
+   "compression_ratio": 1.579646,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 35,
+   "seek": 97,
+   "start": 117.357346,
+   "end": 122.357346,
+   "text": " Then tip it, keeping the box, until it touches the walls at the same height.",
+   "tokens": [
+    51365,
     1396,
     4125,
     309,
     11,
     5145,
-    51457
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.12525906,
-   "compression_ratio": 1.5765766,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 34,
-   "seek": 97,
-   "start": 119.048004,
-   "end": 125.048004,
-   "text": " the box, until it touches the walls at the same height. All five match now, to every",
-   "tokens": [
-    51457,
     264,
     2424,
     11,
@@ -3126,31 +3133,45 @@
     912,
     6681,
     13,
+    51615
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.0720325,
+   "compression_ratio": 1.579646,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 36,
+   "seek": 97,
+   "start": 122.357346,
+   "end": 126.357346,
+   "text": " All five match now to every decimal place.",
+   "tokens": [
+    51615,
     1057,
     1732,
     2995,
     586,
-    11,
     281,
     633,
-    51757
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.12525906,
-   "compression_ratio": 1.5765766,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 35,
-   "seek": 2881,
-   "start": 125.048004,
-   "end": 133.028,
-   "text": " decimal place. But add a sixth number, the median of Y. Our star misses it by six. In",
-   "tokens": [
-    50365,
     26601,
     1081,
     13,
+    51815
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.0720325,
+   "compression_ratio": 1.579646,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 37,
+   "seek": 3097,
+   "start": 127.357346,
+   "end": 129.95734,
+   "text": " But add a sixth number, the median of Y.",
+   "tokens": [
+    50365,
     583,
     909,
     257,
@@ -3162,6 +3183,21 @@
     295,
     398,
     13,
+    50495
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.26263556,
+   "compression_ratio": 1.4897959,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 38,
+   "seek": 3097,
+   "start": 130.41734,
+   "end": 132.07735,
+   "text": " Our star misses it by six.",
+   "tokens": [
+    50518,
     2621,
     3543,
     29394,
@@ -3169,22 +3205,22 @@
     538,
     2309,
     13,
-    682,
-    50764
+    50601
    ],
    "temperature": 0,
-   "avg_logprob": -0.19815198,
-   "compression_ratio": 1.3451777,
+   "avg_logprob": -0.26263556,
+   "compression_ratio": 1.4897959,
    "no_speech_prob": 0
   },
   {
-   "id": 36,
-   "seek": 2881,
-   "start": 133.028,
-   "end": 139.70801,
-   "text": " 2017, Justin Matejka and George Fitzmaurice built a search. It keeps these five numbers",
+   "id": 39,
+   "seek": 3097,
+   "start": 132.87735,
+   "end": 137.65735,
+   "text": " In 2017, Justin Matejka and George Fitzmaurice built a search.",
    "tokens": [
-    50764,
+    50641,
+    682,
     6591,
     11,
     11320,
@@ -3201,26 +3237,26 @@
     257,
     3164,
     13,
+    50880
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.26263556,
+   "compression_ratio": 1.4897959,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 40,
+   "seek": 3097,
+   "start": 138.19734,
+   "end": 142.23735,
+   "text": " It keeps these five numbers fixed while it nudges points toward a target.",
+   "tokens": [
+    50907,
     467,
     5965,
     613,
     1732,
     3547,
-    51098
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.19815198,
-   "compression_ratio": 1.3451777,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 37,
-   "seek": 2881,
-   "start": 139.70801,
-   "end": 145.908,
-   "text": " fixed while it nudges points toward a target. From the dinosaur, they grew 12 shapes. This",
-   "tokens": [
-    51098,
     6806,
     1339,
     309,
@@ -3231,6 +3267,21 @@
     257,
     3779,
     13,
+    51109
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.26263556,
+   "compression_ratio": 1.4897959,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 41,
+   "seek": 3097,
+   "start": 143.17734,
+   "end": 145.23735,
+   "text": " From the dinosaur, they grew 12 shapes.",
+   "tokens": [
+    51156,
     3358,
     264,
     23627,
@@ -3240,59 +3291,118 @@
     2272,
     10854,
     13,
-    639,
-    51408
+    51259
    ],
    "temperature": 0,
-   "avg_logprob": -0.19815198,
-   "compression_ratio": 1.3451777,
+   "avg_logprob": -0.26263556,
+   "compression_ratio": 1.4897959,
    "no_speech_prob": 0
   },
   {
-   "id": 38,
-   "seek": 4967,
-   "start": 145.908,
-   "end": 154.388,
-   "text": " This circle, this star, this bullseye, this x, and these stripes.",
+   "id": 42,
+   "seek": 3097,
+   "start": 145.23735,
+   "end": 146.39734,
+   "text": " This circle.",
    "tokens": [
-    50365,
+    51259,
     639,
     6329,
-    11,
-    341,
+    13,
+    51317
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.26263556,
+   "compression_ratio": 1.4897959,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 43,
+   "seek": 3097,
+   "start": 147.35735,
+   "end": 148.03735,
+   "text": " This star.",
+   "tokens": [
+    51365,
+    639,
     3543,
-    11,
-    341,
+    13,
+    51399
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.26263556,
+   "compression_ratio": 1.4897959,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 44,
+   "seek": 3097,
+   "start": 149.01735,
+   "end": 149.93735,
+   "text": " This bullseye.",
+   "tokens": [
+    51448,
+    639,
     4693,
     405,
     1200,
-    11,
-    341,
-    2031,
-    11,
-    293,
-    613,
-    27308,
     13,
-    50789
+    51494
    ],
    "temperature": 0,
-   "avg_logprob": -0.19883476,
-   "compression_ratio": 1.4942529,
+   "avg_logprob": -0.26263556,
+   "compression_ratio": 1.4897959,
    "no_speech_prob": 0
   },
   {
-   "id": 39,
-   "seek": 4967,
-   "start": 154.388,
-   "end": 158.028,
-   "text": " Each one has this same ellipse and a different median.",
+   "id": 45,
+   "seek": 3097,
+   "start": 150.85735,
+   "end": 151.59735,
+   "text": " This X.",
    "tokens": [
-    50789,
+    51540,
+    639,
+    1783,
+    13,
+    51577
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.26263556,
+   "compression_ratio": 1.4897959,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 46,
+   "seek": 3097,
+   "start": 152.53735,
+   "end": 153.51735,
+   "text": " And these stripes.",
+   "tokens": [
+    51624,
+    400,
+    613,
+    27308,
+    13,
+    51673
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.26263556,
+   "compression_ratio": 1.4897959,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 47,
+   "seek": 3097,
+   "start": 154.19734,
+   "end": 156.97734,
+   "text": " Each one has the same ellipse and a different median.",
+   "tokens": [
+    51707,
     6947,
     472,
     575,
-    341,
+    264,
     912,
     8284,
     48041,
@@ -3301,21 +3411,21 @@
     819,
     26779,
     13,
-    50971
+    51846
    ],
    "temperature": 0,
-   "avg_logprob": -0.19883476,
-   "compression_ratio": 1.4942529,
+   "avg_logprob": -0.26263556,
+   "compression_ratio": 1.4897959,
    "no_speech_prob": 0
   },
   {
-   "id": 40,
-   "seek": 4967,
-   "start": 158.028,
-   "end": 165.34799,
+   "id": 48,
+   "seek": 6097,
+   "start": 157.35735,
+   "end": 164.35735,
    "text": " Francis Anscombe made the same point in 1973 with 11 points.",
    "tokens": [
-    50971,
+    50365,
     19648,
     14590,
     1112,
@@ -3330,49 +3440,48 @@
     2975,
     2793,
     13,
-    51337
+    50715
    ],
    "temperature": 0,
-   "avg_logprob": -0.19883476,
-   "compression_ratio": 1.4942529,
+   "avg_logprob": -0.15769902,
+   "compression_ratio": 1.3977901,
    "no_speech_prob": 0
   },
   {
-   "id": 41,
-   "seek": 4967,
-   "start": 165.34799,
-   "end": 170.12799,
-   "text": " Same rule, sx across, r times s y up.",
+   "id": 49,
+   "seek": 6097,
+   "start": 164.35735,
+   "end": 169.35735,
+   "text": " Same rule, SX across, R times SY up.",
    "tokens": [
-    51337,
+    50715,
     10635,
     4978,
     11,
-    262,
-    87,
+    318,
+    55,
     2108,
     11,
-    367,
+    497,
     1413,
-    262,
-    288,
+    32624,
     493,
     13,
-    51576
+    50965
    ],
    "temperature": 0,
-   "avg_logprob": -0.19883476,
-   "compression_ratio": 1.4942529,
+   "avg_logprob": -0.15769902,
+   "compression_ratio": 1.3977901,
    "no_speech_prob": 0
   },
   {
-   "id": 42,
-   "seek": 4967,
-   "start": 170.12799,
-   "end": 174.548,
+   "id": 50,
+   "seek": 6097,
+   "start": 169.35735,
+   "end": 173.35735,
    "text": " So the slope is the rise, over the run.",
    "tokens": [
-    51576,
+    50965,
     407,
     264,
     13525,
@@ -3384,21 +3493,21 @@
     264,
     1190,
     13,
-    51797
+    51165
    ],
    "temperature": 0,
-   "avg_logprob": -0.19883476,
-   "compression_ratio": 1.4942529,
+   "avg_logprob": -0.15769902,
+   "compression_ratio": 1.3977901,
    "no_speech_prob": 0
   },
   {
-   "id": 43,
-   "seek": 7831,
-   "start": 174.548,
-   "end": 178.088,
+   "id": 51,
+   "seek": 6097,
+   "start": 173.35735,
+   "end": 177.35735,
    "text": " All four of his datasets share these five numbers.",
    "tokens": [
-    50365,
+    51165,
     1057,
     1451,
     295,
@@ -3409,21 +3518,21 @@
     1732,
     3547,
     13,
-    50542
+    51365
    ],
    "temperature": 0,
-   "avg_logprob": -0.14890511,
-   "compression_ratio": 1.5702479,
+   "avg_logprob": -0.15769902,
+   "compression_ratio": 1.3977901,
    "no_speech_prob": 0
   },
   {
-   "id": 44,
-   "seek": 7831,
-   "start": 178.088,
-   "end": 184.308,
+   "id": 52,
+   "seek": 6097,
+   "start": 177.35735,
+   "end": 183.35735,
    "text": " A trend, a curve, an outlier, and one point doing all the work.",
    "tokens": [
-    50542,
+    51365,
     316,
     6028,
     11,
@@ -3442,87 +3551,58 @@
     264,
     589,
     13,
-    50853
+    51665
    ],
    "temperature": 0,
-   "avg_logprob": -0.14890511,
-   "compression_ratio": 1.5702479,
+   "avg_logprob": -0.15769902,
+   "compression_ratio": 1.3977901,
    "no_speech_prob": 0
   },
   {
-   "id": 45,
-   "seek": 7831,
-   "start": 184.308,
-   "end": 185.988,
-   "text": " Your line was right.",
+   "id": 53,
+   "seek": 8697,
+   "start": 183.35735,
+   "end": 189.35735,
+   "text": " Your line was right. Five numbers fix it exactly. Slope minus point one.",
    "tokens": [
-    50853,
+    50365,
     2260,
     1622,
     390,
     558,
     13,
-    50937
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.14890511,
-   "compression_ratio": 1.5702479,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 46,
-   "seek": 7831,
-   "start": 185.988,
-   "end": 189.90799,
-   "text": " Five numbers fix it exactly, slope minus point one.",
-   "tokens": [
-    50937,
     9436,
     3547,
     3191,
     309,
     2293,
-    11,
-    13525,
+    13,
+    6187,
+    1114,
     3175,
     935,
     472,
     13,
-    51133
+    50665
    ],
    "temperature": 0,
-   "avg_logprob": -0.14890511,
-   "compression_ratio": 1.5702479,
+   "avg_logprob": -0.1331098,
+   "compression_ratio": 1.4324324,
    "no_speech_prob": 0
   },
   {
-   "id": 47,
-   "seek": 7831,
-   "start": 189.90799,
-   "end": 191.268,
-   "text": " Your cloud was wrong.",
+   "id": 54,
+   "seek": 8697,
+   "start": 189.35735,
+   "end": 195.35735,
+   "text": " Your cloud was wrong. A blur around this ellipse, all that five numbers can draw.",
    "tokens": [
-    51133,
+    50665,
     2260,
     4588,
     390,
     2085,
     13,
-    51201
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.14890511,
-   "compression_ratio": 1.5702479,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 48,
-   "seek": 7831,
-   "start": 191.268,
-   "end": 195.668,
-   "text": " A blur around this ellipse, all that five numbers can draw.",
-   "tokens": [
-    51201,
     316,
     14257,
     926,
@@ -3537,21 +3617,21 @@
     393,
     2642,
     13,
-    51421
+    50965
    ],
    "temperature": 0,
-   "avg_logprob": -0.14890511,
-   "compression_ratio": 1.5702479,
+   "avg_logprob": -0.1331098,
+   "compression_ratio": 1.4324324,
    "no_speech_prob": 0
   },
   {
-   "id": 49,
-   "seek": 7831,
-   "start": 195.668,
-   "end": 199.948,
+   "id": 55,
+   "seek": 8697,
+   "start": 195.35735,
+   "end": 199.35735,
    "text": " Most of those papers used a bar graph, which draws only two.",
    "tokens": [
-    51421,
+    50965,
     4534,
     295,
     729,
@@ -3566,21 +3646,21 @@
     787,
     732,
     13,
-    51635
+    51165
    ],
    "temperature": 0,
-   "avg_logprob": -0.14890511,
-   "compression_ratio": 1.5702479,
+   "avg_logprob": -0.1331098,
+   "compression_ratio": 1.4324324,
    "no_speech_prob": 0
   },
   {
-   "id": 50,
-   "seek": 7831,
-   "start": 199.948,
-   "end": 203.108,
+   "id": 56,
+   "seek": 8697,
+   "start": 199.35735,
+   "end": 203.35735,
    "text": " The dinosaur lived in everything they leave out.",
    "tokens": [
-    51635,
+    51165,
     440,
     23627,
     5152,
@@ -3590,15 +3670,15 @@
     1856,
     484,
     13,
-    51793
+    51365
    ],
    "temperature": 0,
-   "avg_logprob": -0.14890511,
-   "compression_ratio": 1.5702479,
+   "avg_logprob": -0.1331098,
+   "compression_ratio": 1.4324324,
    "no_speech_prob": 0
   }
  ],
  "x_groq": {
-  "id": "req_01m5jq2f4fepsrrhqkqeam5tya"
+  "id": "req_01m5jrh5taewmvn1t5rn2r23tk"
  }
 }

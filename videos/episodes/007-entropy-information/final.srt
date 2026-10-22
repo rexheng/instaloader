@@ -127,66 +127,66 @@ After TH, it averages one point seven.
 But averaged over every two-letter context, it's still two point eight.
 
 33
-00:02:26,700 --> 00:02:34,870
-Hundred-letter contexts need more text than any corpus holds, so Shannon asked a person, a predictor that knows English.
+00:02:26,700 --> 00:02:33,760
+Hundred-letter contexts need more text than any corpus holds, so Shannon asked a person who knows English.
 
 34
-00:02:35,266 --> 00:02:43,166
+00:02:34,133 --> 00:02:42,033
 His subject read a passage, guessing each next letter until right: seventy-nine of a hundred two on the first guess.
 
 35
-00:02:44,133 --> 00:02:48,393
+00:02:43,000 --> 00:02:47,260
 A twin guessing the same way could rebuild the passage from these counts.
 
 36
-00:02:48,693 --> 00:02:50,483
+00:02:47,560 --> 00:02:49,350
 Treat each count as a symbol:
 
 37
-00:02:51,683 --> 00:02:55,423
+00:02:50,550 --> 00:02:54,290
 the same skyline pours flat at about one point four bits.
 
 38
-00:02:56,033 --> 00:02:58,333
-A better guesser could only lower it.
+00:02:54,900 --> 00:02:59,770
+That caps the text; more context or a better guesser could only lower it.
 
 39
-00:02:59,133 --> 00:03:06,323
+00:03:00,566 --> 00:03:07,756
 Shannon's tests, with a hundred letters of context, put English between point six and one point three bits.
 
 40
-00:03:06,866 --> 00:03:10,826
-In twenty twenty-three, a language model compressed part of a book
+00:03:08,300 --> 00:03:10,750
+A language model compressed part of a book
 
 41
-00:03:11,126 --> 00:03:14,896
+00:03:11,050 --> 00:03:14,820
 posted to Project Gutenberg after the model was trained.
 
 42
-00:03:15,296 --> 00:03:18,556
+00:03:15,220 --> 00:03:18,480
 It needed point eight four bits, inside that range.
 
 43
-00:03:19,366 --> 00:03:21,586
+00:03:19,266 --> 00:03:21,486
 The hidden character from the start
 
 44
-00:03:21,986 --> 00:03:23,826
+00:03:21,886 --> 00:03:23,726
 is the Y in the other day.
 
 45
-00:03:24,200 --> 00:03:26,370
+00:03:24,100 --> 00:03:26,270
 Shannon's subject needed one guess:
 
 46
-00:03:26,670 --> 00:03:27,580
+00:03:26,570 --> 00:03:27,480
 is it Y?
 
 47
-00:03:28,280 --> 00:03:30,220
+00:03:28,180 --> 00:03:30,120
 Splitting the alphabet took five.
 
 48
-00:03:30,720 --> 00:03:34,260
+00:03:30,620 --> 00:03:34,160
 In English, almost no letter arrives without a past.
 
