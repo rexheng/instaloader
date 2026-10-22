@@ -14,6 +14,13 @@ Features
     * per-sentence synthesis (Kokoro's context is 510 phonemes) with a natural
       pause between sentences; very long sentences are split at clause boundaries;
     * inline pauses:  "... and then [pause] the answer"  or  "[pause 1.2]";
+    * cadence="shaped" (opt-in; NarratedScene.CADENCE): sentence gaps that follow the
+      sense instead of a flat 0.38 s - longer after a question, after a sentence that lands
+      a number, before a turn ("But", "So", "Now"...), after a short punch line, and a
+      shorter ordinary full stop; number-dense sentences 2 % slower; "hundred and twenty" ->
+      "hundred twenty".  Roughly length-neutral (+2-4 % at the same speed).  Critics called the
+      flat gaps "metronomic" and "beat turns get the same breath as commas" (PRODUCTION_GUIDE
+      §13);
     * pronunciation overrides (PRONUNCIATIONS below, or per call) given either as a
       plain-English respelling ("R squared") or as IPA between slashes ("/kˈAmˌinz/");
     * loudness normalised to -16 LUFS integrated with a -2 dBFS peak ceiling;
@@ -55,6 +62,19 @@ TARGET_LUFS = -16.0
 PEAK_CEILING_DB = -2.0
 SENTENCE_PAUSE = 0.38                  # seconds of silence between sentences
 CLAUSE_PAUSE = 0.12                    # between pieces of an over-long sentence
+# cadence="shaped" (see shape_segments): the gap after a sentence follows its role
+# Tuned to be nearly length-neutral at a given speed (a flat 0.38 s everywhere -> a shorter
+# ordinary full stop and longer turns), measured on episode 075: see PRODUCTION_GUIDE §13.3.
+SHAPED = dict(base=0.30, question=0.30, result=0.20, turn=0.20, punch=0.10, cap=0.9,
+              clause=0.15, tail_question=0.20, tail_result=0.15, dense_speed=0.98)
+TURN_WORDS = {"but", "so", "now", "yet", "instead", "back", "meanwhile", "still", "then",
+              "next", "here", "that's", "which", "only", "except", "unless"}
+NUMBER_WORDS = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+                "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+                "seventeen", "eighteen", "nineteen", "twenty", "thirty", "forty", "fifty",
+                "sixty", "seventy", "eighty", "ninety", "hundred", "thousand", "million",
+                "billion", "point", "percent", "half", "halves", "third", "thirds", "quarter",
+                "quarters", "fifth", "fifths", "times", "oh"}
 DEFAULT_INLINE_PAUSE = 0.6             # "[pause]" without a number
 MAX_PHONEMES = 500                     # Kokoro limit is 510 incl. padding
 PIPELINE_VERSION = "ss-tts-1"          # bump to invalidate every cached clip
@@ -97,6 +117,22 @@ PRONUNCIATIONS: dict[str, str] = {
     "σ": "sigma",
     "μ": "mu",
     "Kokoro": "/kəkˈɔɹO/",
+    # Researchers misaki gets audibly wrong (checked phoneme by phoneme; critics flagged
+    # "Sanjurjo" read with an English j).  A per-episode PRONUNCIATIONS entry still wins.
+    "Sanjurjo": "/sænhˈʊɹhO/",
+    "Gilovich": "/ɡˈɪləvɪʧ/",
+    "Tversky": "/tvˈɛɹski/",
+    "Matejka": "/mətˈAkə/",
+    "Weissgerber": "/wˈIsɡɜɹbəɹ/",
+    "Gelman": "/ɡˈɛlmən/",
+    "Ginsberg": "/ɡˈɪnzbɜɹɡ/",
+    "Krueger": "/kɹˈuɡəɹ/",
+    "Hochberg": "/hˈOkbɜɹɡ/",
+    "Ioannidis": "/jˌOənˈidɪs/",
+    "Pfungst": "/pfˈʊŋst/",
+    "Diaconis": "/dˌIəkˈOnɪs/",
+    "Trefethen": "/tɹəfˈɛθən/",
+    "LLaMA": "/lˈɑmə/",
 }
 
 _ABBREVIATIONS = {"e.g.", "i.e.", "etc.", "vs.", "dr.", "mr.", "mrs.", "ms.", "prof.",
@@ -140,6 +176,12 @@ class Speech:
                 seen += 1
                 if seen == occurrence:
                     return Word(phrase, self.words[i].start, self.words[i + len(target) - 1].end)
+        # "hundred and twenty" cue against a shaped narration that says "hundred twenty"
+        if "and" in target and len(target) > 2:
+            w = self.find(" ".join(t for t in phrase.split() if _norm(t) != "and"),
+                          occurrence, after)
+            if w is not None:
+                return Word(phrase, w.start, w.end)
         # fallback: prefix match on single words ("flip" matches "flipped")
         if len(target) == 1:
             seen = 0
@@ -274,8 +316,11 @@ def split_sentences(text: str) -> list[str]:
     sents, start = [], 0
     for m in re.finditer(r"[.!?…]+['\")”’\]]*\s+", text):
         before = text[start:m.end()].strip()
-        last_word = before.split()[-1].lower() if before.split() else ""
-        if last_word in _ABBREVIATIONS or re.fullmatch(r"[a-z]\.", last_word):
+        orig_last = before.split()[-1] if before.split() else ""
+        last_word = orig_last.lower()
+        # "E. Jaynes" is an initial; "each two becomes a k. The" ends a sentence on a
+        # variable (lower case), which used to be merged with the next one (no pause)
+        if last_word in _ABBREVIATIONS or re.fullmatch(r"[A-Z]\.", orig_last):
             continue
         nxt = text[m.end():m.end() + 1]
         if nxt and nxt.islower():
@@ -286,6 +331,75 @@ def split_sentences(text: str) -> list[str]:
     if tail:
         sents.append(tail)
     return sents
+
+
+def _tokens(s: str) -> list[str]:
+    return re.findall(r"[\w'’%.-]+", _PAUSE_RE.sub(" ", s))
+
+
+def _is_number(tok: str) -> bool:
+    t = tok.lower().strip(".,;:!?'’").replace("’", "'")
+    if re.fullmatch(r"[\d.,%]*\d[\d.,%]*", t):
+        return True
+    return bool(t) and all(p in NUMBER_WORDS for p in t.split("-") if p)
+
+
+def count_numbers(sentence: str) -> int:
+    """Number of spoken numbers (a run of number words counts once: "nine thousand nine
+    hundred eighty" is one number)."""
+    n, prev = 0, False
+    for tok in _tokens(sentence):
+        isn = _is_number(tok) and tok.lower() not in ("one", "times", "half", "point", "oh")
+        isn = isn or (prev and _is_number(tok))
+        if isn and not prev:
+            n += 1
+        prev = isn
+    return n
+
+
+def _ends_on_result(sentence: str) -> bool:
+    toks = _tokens(sentence)
+    return bool(toks) and (_is_number(toks[-1]) or toks[-1].lower().strip(".") in
+                           ("percent", "bits", "points", "times", "half", "third", "quarter"))
+
+
+def drop_number_and(s: str) -> str:
+    """'five hundred and seventy-six' -> 'five hundred seventy-six' (US reading: Kokoro can
+    stretch the 'and', and whisper then hears two numbers)."""
+    return re.sub(r"\b(hundred|thousand|million|billion) and (?=(one|two|three|four|five|six|"
+                  r"seven|eight|nine|ten|eleven|twelve|\w+teen|twenty|thirty|forty|fifty|sixty|"
+                  r"seventy|eighty|ninety|a)\b)", r"\1 ", s, flags=re.I)
+
+
+def shape_segments(segments: list[tuple[str, float]]) -> list[tuple[str, float, float]]:
+    """cadence="shaped": [(sentence, pause_after, speed_factor)].  Explicit [pause x] markers
+    are kept exactly; only the default sentence gap is replaced by one that follows the
+    sentence's role.  Speed factor 0.98 for sentences that carry two or more numbers."""
+    S = SHAPED
+    out = []
+    for i, (sent, pause) in enumerate(segments):
+        nxt = segments[i + 1][0] if i + 1 < len(segments) else ""
+        last = i == len(segments) - 1
+        sent2 = drop_number_and(sent)
+        words = _tokens(sent2)
+        if not last and abs(pause - SENTENCE_PAUSE) < 1e-6:
+            g = S["base"]
+            if sent2.rstrip().endswith("?"):
+                g += S["question"]
+            elif _ends_on_result(sent2):
+                g += S["result"]
+            first_next = (_tokens(nxt) or [""])[0].lower().replace("’", "'")
+            if first_next in TURN_WORDS:
+                g += S["turn"]
+            if len(words) <= 4:
+                g += S["punch"]
+            pause = min(S["cap"], g)
+        elif last and pause == 0.0:
+            pause = (S["tail_question"] if sent2.rstrip().endswith("?") else
+                     S["tail_result"] if _ends_on_result(sent2) else 0.0)
+        sf = S["dense_speed"] if count_numbers(sent2) >= 2 else 1.0
+        out.append((sent2, round(pause, 3), sf))
+    return out
 
 
 # --------------------------------------------------------------------------- audio
@@ -397,11 +511,14 @@ def _split_long(engine: _Engine, sentence: str, overrides) -> list[str]:
     return out
 
 
-def _cache_key(segments, voice, speed, overrides) -> str:
-    payload = json.dumps({
-        "v": PIPELINE_VERSION, "model": MODEL_FILE, "voice": voice, "speed": round(speed, 4),
-        "lufs": TARGET_LUFS, "segs": [(_override_signature(s, overrides), round(p, 3)) for s, p in segments],
-    }, ensure_ascii=False, sort_keys=True)
+def _cache_key(segments, voice, speed, overrides, cadence: str = "flat") -> str:
+    d = {"v": PIPELINE_VERSION, "model": MODEL_FILE, "voice": voice, "speed": round(speed, 4),
+         "lufs": TARGET_LUFS,
+         "segs": [(_override_signature(seg[0], overrides), round(seg[1], 3)) +
+                  ((round(seg[2], 3),) if len(seg) > 2 else ()) for seg in segments]}
+    if cadence != "flat":                    # flat keys stay byte-identical (cache reuse)
+        d["cadence"] = cadence
+    payload = json.dumps(d, ensure_ascii=False, sort_keys=True)
     return hashlib.sha256(payload.encode()).hexdigest()[:24]
 
 
@@ -417,17 +534,25 @@ def _file_lock(path: Path):
 
 
 def synthesize(text: str, voice: str | None = None, speed: float | None = None,
-               overrides: dict[str, str] | None = None, cache: bool = True) -> Speech:
-    """Synthesize narration text -> Speech (cached).  See module docstring."""
+               overrides: dict[str, str] | None = None, cache: bool = True,
+               cadence: str | None = None) -> Speech:
+    """Synthesize narration text -> Speech (cached).  See module docstring.
+    cadence: None/"flat" (a 0.38 s gap after every sentence, the legacy default) or
+    "shaped" (gaps follow the sense; see shape_segments)."""
     voice = voice or DEFAULT_VOICE
     speed = float(speed or DEFAULT_SPEED)
+    cadence = (cadence or "flat").lower()
+    if cadence not in ("flat", "shaped"):
+        raise ValueError(f"cadence must be 'flat' or 'shaped', not {cadence!r}")
     ov = dict(PRONUNCIATIONS)
     if overrides:
         ov.update(overrides)
     segments = split_segments(text)
     if not segments:
         raise ValueError("empty narration text")
-    key = _cache_key(segments, voice, speed, ov)
+    if cadence == "shaped":
+        segments = shape_segments(segments)
+    key = _cache_key(segments, voice, speed, ov, cadence)
     wav_path = CACHE_DIR / key[:2] / f"{key}.wav"
     meta_path = wav_path.with_suffix(".json")
 
@@ -442,28 +567,32 @@ def synthesize(text: str, voice: str | None = None, speed: float | None = None,
     with _file_lock(wav_path.with_suffix(".lock")):
         if cache and wav_path.exists() and meta_path.exists():
             return load()
-        speech = _render(text, segments, voice, speed, ov, wav_path)
+        speech = _render(text, segments, voice, speed, ov, wav_path,
+                         SHAPED["clause"] if cadence == "shaped" else CLAUSE_PAUSE)
         tmp = meta_path.with_suffix(".json.tmp")
         tmp.write_text(json.dumps(speech.to_json(), ensure_ascii=False, indent=1))
         os.replace(tmp, meta_path)
         return speech
 
 
-def _render(text, segments, voice, speed, ov, wav_path: Path) -> Speech:
+def _render(text, segments, voice, speed, ov, wav_path: Path,
+            clause_pause: float = CLAUSE_PAUSE) -> Speech:
     import soundfile as sf
     eng = _Engine.get()
     pieces: list[np.ndarray] = []
     words: list[Word] = []
     sentences = []
     t = 0.0
-    for sent, pause in segments:
+    for seg in segments:
+        sent, pause = seg[0], seg[1]
+        seg_speed = speed * (seg[2] if len(seg) > 2 else 1.0)
         subs = _split_long(eng, sent, ov)
         for k, sub in enumerate(subs):
             tokens = eng.phonemize(sub, ov)
             ids, wtimes = _word_times(tokens, eng.vocab, np.zeros(0))
             if not ids:
                 continue
-            audio, frames = eng.infer(ids, voice, speed)
+            audio, frames = eng.infer(ids, voice, seg_speed)
             _, wtimes = _word_times(tokens, eng.vocab, frames)
             audio, cut = _trim(audio)
             off = t - cut / SAMPLE_RATE
@@ -474,7 +603,7 @@ def _render(text, segments, voice, speed, ov, wav_path: Path) -> Speech:
             sentences.append({"text": sub, "start": round(t, 3), "end": round(t + dur, 3)})
             pieces.append(audio)
             t += dur
-            gap = pause if k == len(subs) - 1 else CLAUSE_PAUSE
+            gap = pause if k == len(subs) - 1 else clause_pause
             if gap > 0:
                 pieces.append(np.zeros(int(gap * SAMPLE_RATE), dtype=np.float32))
                 t += gap
@@ -512,13 +641,14 @@ def _main(argv=None):
     ap.add_argument("--out", help="copy the resulting wav here")
     ap.add_argument("--voice", default=None)
     ap.add_argument("--speed", type=float, default=None)
+    ap.add_argument("--cadence", choices=["flat", "shaped"], default=None)
     ap.add_argument("--json", action="store_true", help="print full JSON (words, sentences)")
     a = ap.parse_args(argv)
     text = Path(a.file).read_text() if a.file else a.text
     if not text:
         ap.error("give text or --file")
     logging.basicConfig(level=logging.INFO, format="%(message)s")
-    s = synthesize(text, voice=a.voice, speed=a.speed)
+    s = synthesize(text, voice=a.voice, speed=a.speed, cadence=a.cadence)
     if a.out:
         shutil.copyfile(s.wav_path, a.out)
     if a.json:

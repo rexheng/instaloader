@@ -4,7 +4,9 @@
                                  [--no-whisper] [--interval 2] [--max-keyframes 40]
 
 Writes into <outdir>:
-    report.md            summary: BAR mechanics with flags, sheets, keyframes, transcript, diffs
+    report.md            summary: BAR mechanics with flags, the narration-craft metrics that
+                         critics dock (budget, cadence, pace spikes, deictic sync, glyph morphs,
+                         repeated phrases; PRODUCTION_GUIDE §13), sheets, keyframes, transcript
     metrics.json         every number in machine-readable form
     sheets/sheet_NN.png  contact sheets: one frame every 2 s, 3x3 tiles of 640x360, each stamped
                          with its time and the words spoken within +-1 s of it
@@ -45,6 +47,19 @@ MAX_TRAILING_SILENCE = 2.0
 STATIC_FLAG, STATIC_CAP = 4.0, 8.0
 LUFS_TARGET, LUFS_TOL, LUFS_CAP_TOL = -14.0, 1.0, 3.0
 TP_MAX, TP_CAP = -1.5, -1.0
+# Narration craft (PRODUCTION_GUIDE §13; thresholds from 28 round-5/6 critic reviews)
+BUDGET_WORDS, BUDGET_SECONDS = 500, 215.0   # 9 of 10 episodes >= 3:41 were told to cut
+SPEED_MAX = 0.84                            # Audio 9s were all at 0.82-0.84 (160-164 wpm)
+SENT_RATE_MED = 170.0                       # median per-sentence wpm, info only: 165-178 in both
+                                            # the episodes critics called hurried and the rest
+SENT_RATE_SPIKE = 200.0                     # a sentence faster than this reads as rushed
+BREATH_GAP, BREATHLESS = 0.35, 15.0         # longest stretch with no gap >= 0.35 s
+METRONOME_CV = 0.15                         # sentence gaps all alike (episodes measured 0.05-0.08)
+TURN_EXTRA = 0.15                           # beat turns should get >= this much more than full stops
+NUM_DISTINCT_20S = 9                        # distinct spoken numbers in any 20 s window
+_STOP = set("a an and the of to in on at is it that this these those for as by or but so then "
+            "than with from be are was were its it's one you your they their there here what "
+            "which who how if not no we our i".split())
 
 FALLBACK_BANNED = [
     "in today's video", "let's dive in", "dive into", "delve", "it's important to note",
@@ -398,7 +413,7 @@ def load_layout_audit(path: Path | None) -> dict | None:
         return None
 
 
-AUDIT_ORDER = {"overlap": 0, "safe-area": 1, "caption-zone": 2, "clearance": 3}
+AUDIT_ORDER = {"overlap": 0, "safe-area": 1, "caption-zone": 2, "text-size": 3, "clearance": 4}
 
 
 def audit_section(audit: dict, top: int = 10) -> list[str]:
@@ -409,9 +424,16 @@ def audit_section(audit: dict, top: int = 10) -> list[str]:
     R = ["## Layout audit (automatic overlap check, BAR §5)\n"]
     R.append(f"{audit.get('count', len(issues))} issue(s): {c.get('overlap', 0)} overlapping/touching, "
              f"{c.get('clearance', 0)} closer than {audit.get('clearance', 0.15):g}, "
-             f"{c.get('safe-area', 0)} outside the safe area, {c.get('caption-zone', 0)} in the caption zone; "
+             f"{c.get('safe-area', 0)} outside the safe area, {c.get('caption-zone', 0)} in the caption zone, "
+             f"{c.get('text-size', 0)} text(s) under the 24 px cap-height floor; "
              f"{len(allowed)} allowed by the producer. {audit.get('checks', 0)} frames checked "
              f"(after every animation and hold).\n")
+    adv = audit.get("advisory", [])
+    if adv:
+        R.append(f"Small labels (24–26 px cap height; a label the viewer must read needs 34 px — critics "
+                 f"docked 20–26 px labels in 8 of 12 episodes): " + "; ".join(
+                     f"{d['text']} {fmt_t(d['start'])}" for d in sorted(adv, key=lambda d: -d.get('held', 0))[:8])
+                 + ".\n")
     if issues:
         R.append("`overlap`, `safe-area` and `caption-zone` are cap-7 defects (text overlapping another "
                  "element or leaving the frame); `clearance` is cramped spacing under BAR's 0.15 (Visual "
@@ -444,6 +466,200 @@ def audit_section(audit: dict, top: int = 10) -> list[str]:
                  f"“{d.get('allowed')}”" for d in allowed[:top])
     R.append("")
     return R
+
+
+def _align_beat(beat: dict) -> list[tuple]:
+    """[(word, t, end, punct_after, pause_marker_after)] for one narration.json beat."""
+    txt, low, pos, out = beat["text"], beat["text"].lower(), 0, []
+    for w in beat.get("words", []):
+        key = w["w"].lower()
+        i = low.find(key, pos)
+        if i < 0:
+            out.append((w["w"], w["t"], w["end"], "", False))
+            continue
+        pos = i + len(key)
+        rest = txt[pos:pos + 40]
+        m = re.match(r"[\"'’”)\]]*\s*([.!?…:;,—–]?)", rest)
+        pause = bool(re.match(r"[\"'’”)\]]*[.!?,;:]?\s*\[pause", rest, re.I))
+        out.append((w["w"], w["t"], w["end"], m.group(1) if m else "", pause))
+    return out
+
+
+def narration_craft(path: Path | None) -> tuple[dict, list[str], list[str]]:
+    """Metrics for the systemic Audio/Concision/Clarity defects (PRODUCTION_GUIDE §13), from
+    narration.json (Kokoro word timings, beats, glyph_morphs, deictic_sync, budget).
+    Returns (metrics, report lines, flags)."""
+    if not path or path.suffix != ".json" or not path.exists():
+        return {}, [], []
+    try:
+        J = json.loads(path.read_text())
+    except (OSError, ValueError):
+        return {}, [], []
+    beats = [b for b in J.get("beats", []) if b.get("words")]
+    if not beats:
+        return {}, [], []
+    from .voice import _is_number          # same number logic as the voice pipeline
+    M, R, F = {}, ["## Narration craft (PRODUCTION_GUIDE §13: the systemic 9-blockers)\n"], []
+    R.append("Measured from narration.json (Kokoro's own word timings). Each line names the defect "
+             "critics docked and the target that scored 9.\n")
+
+    # ---- budget (Concision)
+    n_words = sum(len(b["words"]) for b in beats)
+    dur = float(J.get("video_duration") or beats[-1]["end"])
+    M["narration_words"] = n_words
+    over = n_words > BUDGET_WORDS or dur > BUDGET_SECONDS
+    R.append(f"- **Budget:** {n_words} words in {fmt_t(dur)}. Target ≤ {BUDGET_WORDS} words, "
+             f"3:15–3:35. {'**Over.** ' if over else ''}16 of 28 round-5/6 reviews docked Concision "
+             f"for length; 9 of the 10 episodes at ≥ 3:41 were told to cut, none at ≤ 3:37 was.")
+    if over:
+        F.append(f"concision budget: {n_words} words / {fmt_t(dur)} (target ≤ {BUDGET_WORDS} words, ≤ 3:35)")
+
+    # ---- voice speed and per-sentence pace (Audio)
+    speeds = sorted({b.get("speed") for b in beats if b.get("speed")})
+    M["voice_speeds"] = speeds
+    rates, sg, allw, stretched = [], [], [], []
+    for b in beats:
+        A = _align_beat(b)
+        cur = []
+        for k, (w, t, e, p, pz) in enumerate(A):
+            allw.append((t, e, w))
+            cur.append((w, t, e))
+            tok = w.lower().strip(".,;:!?")
+            if tok in _STOP and e - t >= 0.5:
+                stretched.append((t, w, e - t))
+            end = p in (".", "!", "?", "…")
+            if end and k + 1 < len(A) and not pz:
+                sg.append(A[k + 1][1] - e)
+            if end or k == len(A) - 1:
+                if len(cur) >= 6 and cur[-1][2] > cur[0][1]:
+                    rates.append((60 * len(cur) / (cur[-1][2] - cur[0][1]), cur[0][1],
+                                  " ".join(x[0] for x in cur[:7])))
+                cur = []
+    med_rate = float(np.median([r for r, _, _ in rates])) if rates else None
+    spikes = sorted([r for r in rates if r[0] > SENT_RATE_SPIKE], key=lambda r: -r[0])
+    M.update({"sentence_wpm_median": None if med_rate is None else round(med_rate, 1),
+              "sentences_over_200wpm": len(spikes)})
+    sp = f"voice speed {', '.join(f'{x:g}' for x in speeds)}; " if speeds else ""
+    R.append(f"- **Pace between pauses:** {sp}median sentence "
+             f"{med_rate or 0:.0f} wpm (episodes 165–178; number-dense sentences run faster), "
+             f"{len(spikes)} sentence(s) above {SENT_RATE_SPIKE:.0f} wpm. 9 of 28 reviews called the delivery "
+             f"hurried; the Audio 9s were at the same 160–164 wpm, with planned pauses and no run-ons.")
+    for r, t, head in spikes[:5]:
+        R.append(f"  - {fmt_t(t)} {r:.0f} wpm: “{head}…”")
+    if any(x > SPEED_MAX for x in speeds) or len(spikes) >= 4:
+        F.append(f"pace: median sentence {med_rate or 0:.0f} wpm, {len(spikes)} sentence(s) > "
+                 f"{SENT_RATE_SPIKE:.0f} wpm{', speed ' + ', '.join(f'{x:g}' for x in speeds) if speeds else ''}"
+                 f" (critics: 'hurried'; keep speed ≤ 0.84, break the fast sentences, add pauses at turns)")
+
+    # ---- cadence: full stops vs beat turns, breathless runs (Audio)
+    bg = [nb["words"][0]["t"] - b["words"][-1]["end"] for b, nb in zip(beats, beats[1:])]
+    sg_med = float(np.median(sg)) if sg else None
+    sg_cv = float(np.std(sg) / np.mean(sg)) if len(sg) >= 5 and np.mean(sg) > 0 else None
+    bg_med = float(np.median(bg)) if bg else None
+    allw.sort()
+    runs, s0 = [], allw[0][0]
+    for (t0, e0, _), (t1, _, _) in zip(allw, allw[1:]):
+        if t1 - e0 >= BREATH_GAP:
+            runs.append((e0 - s0, s0))
+            s0 = t1
+    runs.append((allw[-1][1] - s0, s0))
+    runs.sort(reverse=True)
+    M.update({"sentence_gap_median_s": None if sg_med is None else round(sg_med, 2),
+              "sentence_gap_cv": None if sg_cv is None else round(sg_cv, 2),
+              "beat_gap_median_s": None if bg_med is None else round(bg_med, 2),
+              "longest_breathless_run_s": round(runs[0][0], 1)})
+    metronome = (sg_cv is not None and sg_cv < METRONOME_CV) or \
+        (sg_med is not None and bg_med is not None and bg_med < sg_med + TURN_EXTRA)
+    stops = ("n/a (one sentence per beat)" if sg_med is None else
+             f"{sg_med:.2f} s median (variation {sg_cv:.2f})" if sg_cv is not None else f"{sg_med:.2f} s median")
+    R.append(f"- **Cadence:** full stops {stops}, beat "
+             f"turns {bg_med or 0:.2f} s; longest stretch without a ≥ {BREATH_GAP:g} s breath "
+             f"{runs[0][0]:.1f} s at {fmt_t(runs[0][1])}. Audio 9 went to episodes with 0.9–1.4 s after "
+             f"key results and every turn audibly longer than a full stop; flat 0.4 s gaps were "
+             f"called 'metronomic' (use CADENCE = \"shaped\" and [pause 1.0] after results).")
+    if metronome:
+        F.append(f"cadence: full stops {sg_med or 0:.2f} s (variation {sg_cv or 0:.2f}), beat turns "
+                 f"{bg_med or 0:.2f} s — metronomic, turns get no more air than full stops")
+    if runs[0][0] > BREATHLESS:
+        F.append(f"breathless run: {runs[0][0]:.0f} s of speech with no pause ≥ {BREATH_GAP:g} s at "
+                 f"{fmt_t(runs[0][1])} (whisper hears one run-on sentence)")
+    if stretched:
+        R.append("- **Held function words** (≥ 0.5 s; can sound like odd emphasis): " +
+                 ", ".join(f"“{w}” {d:.2f}s @{fmt_t(t)}" for t, w, d in stretched[:6]))
+
+    # ---- number density (Clarity)
+    nums = []
+    for t, e, w in allw:
+        if _is_number(w) and w.lower() not in ("one", "a", "times", "half", "point", "oh"):
+            if nums and t - nums[-1][2] < 0.6:
+                nums[-1] = (nums[-1][0], nums[-1][1] + " " + w, e)
+            else:
+                nums.append((t, w, e))
+    best = (0, 0.0, [])
+    for i, (t, _, _) in enumerate(nums):
+        win = {x[1].lower() for x in nums if t <= x[0] < t + 20}
+        if len(win) > best[0]:
+            best = (len(win), t, sorted(win))
+    M["max_distinct_numbers_20s"] = best[0]
+    R.append(f"- **Number load:** {len(nums)} spoken numbers; busiest 20 s from {fmt_t(best[1])} has "
+             f"{best[0]} different ones. Critics docked Clarity where 3+ new figures arrived inside "
+             f"~20 s without a picture for each.")
+    if best[0] >= NUM_DISTINCT_20S:
+        F.append(f"number load: {best[0]} different numbers spoken in 20 s from {fmt_t(best[1])}")
+
+    # ---- repeated phrases (Concision)
+    T = [(re.sub(r"[^\w'-]", "", w.lower()), t) for t, _, w in allw]
+    T = [x for x in T if x[0]]
+    grams: dict = {}
+    for i in range(len(T) - 3):
+        g = tuple(x[0] for x in T[i:i + 4])
+        if sum(1 for x in g if x not in _STOP) >= 2:
+            grams.setdefault(g, []).append((i, T[i][1]))
+    reps, seen = [], set()
+    for g, occ in sorted(grams.items(), key=lambda kv: (-len(kv[1]), kv[1][0][1])):
+        kept, last = [], -99
+        for i, t in occ:
+            if i - last >= 4:
+                kept.append(t)
+                last = i
+        key = tuple(round(t) for t in kept)
+        if len(kept) >= 2 and key not in seen:
+            seen.add(key)
+            reps.append((" ".join(g), kept))
+    M["repeated_phrases"] = len(reps)
+    if reps:
+        R.append("- **Repeated phrases** (each repeat must be a deliberate callback; restating what "
+                 "the screen or an earlier line already said was the most common Concision deduction, "
+                 "24 of 28 reviews): " + "; ".join(f"“{g}” " + ", ".join(fmt_t(t) for t in ts)
+                                                   for g, ts in reps[:8]))
+    # ---- 'and' inside numbers (Audio)
+    script = " ".join(b["text"] for b in beats)
+    ands = re.findall(r"\b(?:hundred|thousand|million) and \w+", script, re.I)
+    if ands:
+        R.append(f"- **'and' inside numbers:** {len(ands)} (e.g. “{ands[0]}”). Write US style "
+                 f"(“five hundred seventy-six”) or use CADENCE = \"shaped\", which drops it.")
+
+    # ---- glyph morphs (Motion/Visual) and deictic sync (Audio), from NarratedScene
+    morphs = J.get("glyph_morphs")
+    if morphs is not None:
+        M["glyph_morphs"] = len(morphs)
+        R.append(f"- **Glyph morphs:** {len(morphs)} Transform(s) between different strings "
+                 f"(render as glyph soup; 13 of 28 reviews docked one). Use swap() / carry() / "
+                 f"live_number() / TransformMatchingTex." + ("" if not morphs else " " + "; ".join(
+                     f"{fmt_t(d['t'])} {d['animation']} “{d['from']}” → “{d['to']}”" for d in morphs[:6])))
+        if morphs:
+            F.append(f"glyph morphs: {len(morphs)} Transform(s) between different strings")
+    ds = J.get("deictic_sync")
+    if ds is not None:
+        un = ds.get("unlanded", [])
+        M["deictics"], M["deictics_unlanded"] = ds.get("deictics", 0), len(un)
+        R.append(f"- **Deictic sync:** {ds.get('deictics', 0)} deictic words; {len(un)} with no animation "
+                 f"starting within −0.8…+0.4 s (Audio 9 required every one to land within ~0.6 s)." +
+                 ("" if not un else " " + "; ".join(f"“{d['phrase']}” {fmt_t(d['t'])}" for d in un[:8])))
+        if un:
+            F.append(f"deictic sync: {len(un)} 'this/these/here' with nothing landing on the word")
+    R.append("")
+    return M, R, F
 
 
 def diff_narration(script: str, words: list[dict]) -> tuple[float, list[str], int]:
@@ -674,6 +890,10 @@ def main(argv=None):
                         f"WER {m['wer']:.0%} — dropped/garbled words or mispronunciations (see diff)")
     if scene_warnings:
         flags.append(f"{len(scene_warnings)} scene warning(s) from NarratedScene (timing/layout)")
+    craft_m, craft_R, craft_F = narration_craft(narration_path)
+    if craft_m:
+        m["narration_craft"] = craft_m
+        flags.extend(craft_F)
     layout = load_layout_audit(narration_path)
     if layout is not None:
         lc = layout.get("counts", {})
@@ -683,7 +903,7 @@ def main(argv=None):
             flags.append(f"layout audit: {layout['count']} issue(s) — {lc.get('overlap', 0)} overlapping, "
                          f"{lc.get('clearance', 0)} < {layout.get('clearance', 0.15):g} apart, "
                          f"{lc.get('safe-area', 0)} outside the safe area, {lc.get('caption-zone', 0)} in "
-                         f"the caption zone (see 'Layout audit')")
+                         f"the caption zone, {lc.get('text-size', 0)} under 24 px (see 'Layout audit')")
             if any(d["kind"] in ("overlap", "safe-area") and d.get("held", 0) >= 0.5
                    for d in layout.get("issues", [])):
                 caps.append("cap 7 (text overlapping/overflowing, layout audit)")
@@ -741,6 +961,7 @@ def main(argv=None):
         for src, rule, txt, tt, _b in slop:
             R.append(f"- [{src}{' @ ' + fmt_t(tt) if tt is not None else ''}] {rule}: “{txt}”")
         R.append("")
+    R.extend(craft_R)
     if scene_warnings:
         R.append("## Scene warnings (NarratedScene timing / layout self-check)\n")
         R.append("\n".join(f"- [{fmt_t(w['t'])}] {w['msg']}" for w in scene_warnings) + "\n")

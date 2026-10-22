@@ -20,6 +20,11 @@ MathTex/Tex, SingleStringMathTex, DecimalNumber/Integer) it measures:
   * the safe area x in [-6.4, 6.4], y in [-3.6, 3.6], and the caption zone below y = -3.2.
 Kinds: "overlap" (gap < 0.02: touching or crossing, a critic's cap 7), "clearance"
 (closer than 0.15 - 0.02 tolerance), "safe-area", "caption-zone".
+With sizes=True (NarratedScene passes it) it also measures every readable text's cap height
+in 1080p pixels (style.cap_height_px, x camera zoom): "text-size" = under BAR's 24 px floor
+for any text (ticks and citations included); "small-label" (advisory) = 24-26 px text that
+is not an axis number or a citation (BAR: labels >= 34 px).  Critics measured and docked
+20-26 px labels in 8 of the 12 episodes in review rounds 5-6.
 
 Held only to "must not touch" (instead of 0.15), to keep false positives near zero:
   * a closed shape that fully contains the text (a label in its box, a digit in its token,
@@ -64,6 +69,10 @@ LOCAL_PAD = 1.0                  # an "own group" must fit in the text box grown
 SAFE_TOL = 0.02
 TOL = 0.02                       # measurement tolerance: buff=0.15 minus half a stroke is fine
 CURVE_STEPS = 8                  # chords per curved Bezier segment (error < 0.5 % of radius)
+TEXT_FLOOR_PX = 24.0             # BAR §5: ticks and citations >= 24 px cap height
+SMALL_LABEL_PX = 26.0            # labels the critics flagged were 20-26 px (BAR: >= 34 px)
+READABLE = 0.5                   # size checks apply to text at least this opaque
+SIZE_KINDS = ("text-size", "small-label")
 
 TEXT_TYPES = (Text, MarkupText, Paragraph, SingleStringMathTex, DecimalNumber) + \
     ((MathTexPart,) if MathTexPart is not None else ())
@@ -85,7 +94,8 @@ def mark_decoration(deco, target):
 # ---------------------------------------------------------------------------- issues
 @dataclass
 class Issue:
-    kind: str                 # "overlap" | "clearance" | "safe-area" | "caption-zone"
+    kind: str                 # "overlap" | "clearance" | "safe-area" | "caption-zone" |
+                              # "text-size" | "small-label" (gap = cap height in px)
     a: str                    # the text
     b: str                    # the other object ("" for safe-area / caption-zone)
     gap: float                # units; negative = overlapping by that much
@@ -98,11 +108,11 @@ class Issue:
     @property
     def key(self) -> tuple:
         """Identity used to merge the same finding across consecutive checks."""
-        return (self.kind if self.kind in ("safe-area", "caption-zone") else "pair",
+        return (self.kind if self.kind in ("safe-area", "caption-zone") + SIZE_KINDS else "pair",
                 self.a, self.b)
 
     def describe(self) -> str:
-        if self.kind in ("safe-area", "caption-zone"):
+        if self.kind in ("safe-area", "caption-zone") + SIZE_KINDS:
             return f"{self.a} @{_fmt_pos(self.a_pos)} {self.detail}"
         rel = (f"overlapping by {-self.gap:.2f}" if self.gap < -0.005 else
                "touching" if self.gap < TOUCH else f"gap {self.gap:.2f}")
@@ -378,6 +388,7 @@ class _Scan:
 
     def __init__(self, mobjects, tf):
         self.tf = tf
+        self.zoom = 1.0 if tf is None else float(tf[3])
         self.fw, self.fh = config.frame_width / 2, config.frame_height / 2
         self.t_root, self.t_part, self.t_idx, self.t_anc, self.t_box, self.t_rank = [], [], [], [], [], []
         self.t_bg, self.t_alpha, self.t_glyphs = [], [], []
@@ -493,11 +504,12 @@ def _camera_transform(camera):
 def audit(mobjects, camera=None, allowed_pairs=(), clearance: float = CLEARANCE,
           safe_x: float = style.SAFE_X, safe_top: float = style.SAFE_TOP,
           safe_bottom: float = style.SAFE_BOTTOM,
-          content_bottom: float = style.CONTENT_BOTTOM) -> list[Issue]:
+          content_bottom: float = style.CONTENT_BOTTOM, sizes: bool = False) -> list[Issue]:
     """Check the given top-level mobjects (e.g. scene.mobjects) as they are now.
 
     allowed_pairs: iterable of (mob_a, mob_b, reason); issues between a's family and b's
-    family are still returned, with .allowed set to the reason."""
+    family are still returned, with .allowed set to the reason.
+    sizes: also report "text-size" / "small-label" (cap height in px, see module doc)."""
     S = _Scan(mobjects, _camera_transform(camera) if camera is not None else None)
     nT, nS = len(S.t_box), len(S.s_mob)
     if not nT:
@@ -524,6 +536,10 @@ def audit(mobjects, camera=None, allowed_pairs=(), clearance: float = CLEARANCE,
         return None
 
     issues: list[Issue] = []
+
+    # ---------------------------------------------------------------- text size
+    if sizes:
+        issues.extend(_size_issues(S, names, centre))
 
     # ---------------------------------------------------------------- safe area
     for i, (x0, y0, x1, y1) in enumerate(S.t_box):
@@ -847,6 +863,38 @@ def audit(mobjects, camera=None, allowed_pairs=(), clearance: float = CLEARANCE,
     return _dedupe(issues)
 
 
+def _size_issues(S: "_Scan", names: list[str], centre) -> list[Issue]:
+    """Cap height of each readable text (BAR §5 floors), measured from its font size."""
+    out: list[Issue] = []
+    px_cache: dict[int, float | None] = {}
+    for i, root in enumerate(S.t_root):
+        if S.t_alpha[i] < READABLE:
+            continue
+        k = id(root)
+        if k not in px_cache:
+            px = style.cap_height_px(root)
+            px_cache[k] = None if px is None else px * S.zoom
+        px = px_cache[k]
+        if px is None or px >= SMALL_LABEL_PX:
+            continue
+        anc = (S.t_part[i], root, *S.t_anc[i])
+        role = next((getattr(x, "ss_role", None) for x in anc if getattr(x, "ss_role", None)), None)
+        tick = role in ("tick", "citation") or any(isinstance(x, NumberLine) for x in anc)
+        if px < TEXT_FLOOR_PX - 0.05:
+            out.append(Issue("text-size", names[i], "", round(px, 1), TEXT_FLOOR_PX,
+                             centre(S.t_box[i]),
+                             detail=f"cap height ≈ {px:.0f} px < {TEXT_FLOOR_PX:.0f} px (BAR floor for "
+                                    f"ticks/citations; labels need 34 px: Text >= "
+                                    f"{style.TEXT_LABEL_MIN}, MathTex >= {style.MATH_LABEL})"))
+        elif not tick:
+            out.append(Issue("small-label", names[i], "", round(px, 1), SMALL_LABEL_PX,
+                             centre(S.t_box[i]),
+                             detail=f"cap height ≈ {px:.0f} px: reads as a footnote; a label the "
+                                    f"viewer must read needs 34 px (Text >= {style.TEXT_LABEL_MIN}, "
+                                    f"MathTex >= {style.MATH_LABEL})"))
+    return out
+
+
 def _dedupe(issues: list[Issue]) -> list[Issue]:
     """One issue per key (same text, same other object): keep the worst gap."""
     best: dict[tuple, Issue] = {}
@@ -923,7 +971,8 @@ def finding_line(f: Finding) -> str:
     return f"{span} {f.issue.describe()}"
 
 
-SEVERITY = {"overlap": 0, "safe-area": 1, "caption-zone": 2, "clearance": 3}
+SEVERITY = {"overlap": 0, "safe-area": 1, "caption-zone": 2, "text-size": 3, "clearance": 4,
+            "small-label": 5}
 
 
 def rank_findings(findings: list[Finding]) -> list[Finding]:

@@ -1,4 +1,7 @@
 """Toolkit demo (~30 s): NarratedScene + style + MathTex + axes plot + word triggers.
+Models the round-6 conventions (PRODUCTION_GUIDE §13): CADENCE = "shaped", default voice
+speed, numbers written without "and", carry() for a value flying into a different symbol,
+beat.on() for a deictic, and a render with zero warnings.
 
     videos/toolkit/render.sh videos/toolkit/demo/demo_scene.py Demo videos/toolkit/demo/demo.mp4
 """
@@ -21,6 +24,7 @@ def coin(face: str) -> VGroup:
 class Demo(NarratedScene):
     EPISODE = 0
     TITLE = "Toolkit demo"
+    CADENCE = "shaped"            # gaps follow the sense (PRODUCTION_GUIDE §4, §13.3)
 
     def construct(self):
         coins = VGroup(*[coin(f) for f in FLIPS]).arrange(RIGHT, buff=0.24).move_to(UP * 2.5)
@@ -39,17 +43,23 @@ class Demo(NarratedScene):
 
         # 2 - both counts emerge from the coins they count
         total = formula(r"2^{10}", "=", r"1024", size=EQ).move_to(LEFT * 3.2 + DOWN * 0.5)
-        ways = formula(r"\binom{10}{7}", "=", r"120", size=EQ).move_to(RIGHT * 3.2 + DOWN * 0.5)
-        ways[0].set_color(YELLOW)
-        ways[2].set_color(YELLOW)
-        with self.narrate("Ten flips give one thousand and twenty four equally likely "
-                          "sequences. One hundred and twenty of them have seven heads.") as beat:
+        ways = MathTex(r"\binom{10}{7}", "=", r"120", font_size=EQ,
+                       substrings_to_isolate=["10", "7"]).move_to(RIGHT * 3.2 + DOWN * 0.5)
+        w10, w7 = ways.get_part_by_tex("10"), ways.get_part_by_tex("7")   # glyph groups
+        w_eq, w120 = ways[1], ways[2]
+        w_paren = VGroup(*[g for g in ways[0] if g not in w10 and g not in w7])
+        VGroup(w10, w7, w_paren, w120).set_color(YELLOW)
+        with self.narrate("Ten flips give one thousand twenty-four equally likely "
+                          "sequences. One hundred twenty of them have seven heads.") as beat:
             beat.wait_until("thousand", offset=-0.2)
-            self.play(TransformFromCopy(count[2], total[0]), run_time=1.2)
+            # "10" -> "2^10": different glyphs, so carry() (a cross-fade flight), not a morph
+            self.play(carry(count[2], total[0], path_arc=0.4), run_time=1.2)
             self.play(Write(total[1:]), run_time=0.8)
             beat.wait_until("hundred", offset=-0.2)
-            self.play(TransformFromCopy(VGroup(count[2], count[0]), ways[0]), run_time=1.2)
-            self.play(Write(ways[1:]), run_time=0.8)
+            # each number flies into its own slot of the binomial (isolated parts)
+            self.play(carry(count[2], w10, path_arc=-0.4), carry(count[0], w7, path_arc=-0.4),
+                      run_time=1.2)
+            self.play(FadeIn(w_paren), Write(VGroup(w_eq, w120)), run_time=0.8)
 
         # 3 - the probability is built from those two numbers
         prob = MathTex(r"P(7)", "=", r"\frac{120}{1024}", r"\approx", r"0.117", font_size=EQ,
@@ -61,7 +71,7 @@ class Demo(NarratedScene):
         with self.narrate("So the chance is one hundred twenty out of one thousand twenty "
                           "four, about twelve percent.") as beat:
             self.play(Write(prob[0:2]), run_time=0.8)
-            self.play(TransformFromCopy(ways[2], num), run_time=beat.until("out of"))
+            self.play(TransformFromCopy(w120, num), run_time=beat.until("out of"))
             self.play(TransformFromCopy(total[2], den), Create(frac_bar), run_time=1.0)
             beat.wait_until("about")
             self.play(Write(prob[3:]), run_time=0.9)
@@ -82,7 +92,9 @@ class Demo(NarratedScene):
                       Transform(prob, small), run_time=1.0)
             self.play(Create(ax), run_time=beat.until("chances"))
             self.play(LaggedStart(*[GrowFromEdge(b, DOWN) for b in bars], lag_ratio=0.08),
-                      run_time=beat.until("Seven", offset=-0.1))
+                      run_time=beat.until("this", offset=-0.15))
+            beat.on("this", flag(bars), run_time=0.8)        # the deictic lands on its picture
+            beat.wait_until("Seven", offset=-0.1)
             tag = MathTex(r"0.117", font_size=MATH_SMALL, color=YELLOW).next_to(bars[7], UP, buff=0.15)
             self.play(bars[7].animate.set_fill(YELLOW),
                       TransformFromCopy(prob[4], tag), run_time=1.2)

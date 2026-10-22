@@ -242,5 +242,27 @@ for _ in range(50):
     audit(small)
 print(f"[info] audit of a typical frame: {1000 * (time.perf_counter() - t0) / 50:.1f} ms")
 
+# ---- text size (sizes=True; NarratedScene passes it): BAR cap-height floors in 1080p px
+def check_sizes(name, mobs, expect_kinds):
+    kinds = sorted(i.kind for i in audit(mobs, sizes=True) if i.kind in ("text-size", "small-label"))
+    ok = kinds == sorted(expect_kinds)
+    print(f"[{'ok ' if ok else 'FAIL'}] size: {name}: {kinds or 'clean'}")
+    if not ok:
+        FAILS.append("size: " + name)
+
+
+check_sizes("Text 18 note (23 px)", [text("note", size=18)], ["text-size"])
+check_sizes("Text 19 footnote (24 px) is a small label", [text("note", size=19)], ["small-label"])
+_tick = text("10", size=19)
+_tick.ss_role = "tick"
+check_sizes("Text 19 hand-made tick and a citation", [_tick.shift(UP), citation("A et al., 2020 · V")], [])
+check_sizes("MathTex 26 label (25 px) is a small label", [formula("x=1", size=26)], ["small-label"])
+check_sizes("MathTex 26 axis numbers are ticks", [axes((0, 10), (0, 1), x_length=4, y_length=2)], [])
+check_sizes("LABEL text in a group scaled 0.42x (15 px)",
+            [VGroup(text("Sue", size=LABEL), formula("4")).arrange(RIGHT).scale(0.42)], ["text-size", "text-size"])
+check_sizes("dimmed 30 % context is not measured", [text("ghost", size=14).set_opacity(0.3)], [])
+if audit([text("note", size=18)]):
+    FAILS.append("size issues must stay off by default (sizes=False)")
+
 print("FAILS:", FAILS or "none")
 sys.exit(1 if FAILS else 0)

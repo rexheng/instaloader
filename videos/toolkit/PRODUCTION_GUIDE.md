@@ -35,7 +35,7 @@ class Episode(NarratedScene):
     EPISODE = 12
     TITLE = "Why five heads is rare"
     PRONUNCIATIONS = {"Bernoulli": "ber new lee"}   # extra, per episode
-    # SPEED = 0.78                                   # tune 0.74-0.84 to land at 150-160 wpm
+    CADENCE = "shaped"                               # gaps follow the sense; voice speed 0.83 (§4, §13.3)
 
     def construct(self):
         coins = VGroup(*[Circle(0.4, color=YELLOW) for _ in range(10)]).arrange(RIGHT)
@@ -43,7 +43,7 @@ class Episode(NarratedScene):
             self.play(LaggedStart(*map(Create, coins)), run_time=beat.until_end_of("times"))
             beat.wait_until("five", offset=-0.1)      # next animation lands on "five"
             self.play(flag(coins[4]))
-        # leaving the block waits for the audio to finish, then BEAT_GAP (0.35 s)
+        # leaving the block waits for the audio to finish, then BEAT_GAP (0.35 s; shaped 0.45 s)
         self.say("Most people guess about half the time. [pause 1.5]")   # narrate over a still frame
         self.narrate_play("The real answer is closer to a quarter.", coins.animate.shift(UP))
         self.end_card()                                # <= 1.3 s, keeps trailing silence < 2 s
@@ -56,6 +56,7 @@ class Episode(NarratedScene):
 | `beat.until("word", occurrence=1, offset=0)` | seconds from now until the word starts. Use it as the `run_time` of the animation *before* the word, so the next one starts on it |
 | `beat.until_end_of("word")` | same, but until the word ends |
 | `beat.wait_until("word", offset=-0.1)` | hold the frame until the word. A negative offset lands a highlight just before it |
+| `beat.on("this", anim, ..., lead=0.15, run_time=...)` | deictic sync in one line: hold until 0.15 s before the word, then play. Use it for every "this / these / here" (§13.3) |
 | `beat.remaining()` | seconds of audio left in this beat |
 | `beat.time_of("word")`, `beat.duration`, `beat.words`, `beat.elapsed()` | raw timings |
 
@@ -66,24 +67,28 @@ The scene logs **warnings**, which render.sh prints and stores in `narration.jso
 - an animation reached a cue word more than 0.3 s late (sync);
 - the scene waits on a static frame for more than 4 s;
 - the first beat starts after 1 s;
-- the **overlap audit** finds text closer than 0.15 to anything, or outside the safe area (after every animation and hold; see §6, "Automatic overlap audit").
+- the **overlap audit** finds text closer than 0.15 to anything, or outside the safe area (after every animation and hold; see §6, "Automatic overlap audit"), or text under the 24 px cap-height floor (`text-size`; 24–26 px labels are listed as `small-label`);
+- a **glyph morph**: a `Transform`, `ReplacementTransform` or `TransformFromCopy` between *different* strings, or `number.animate.set_value(...)`, which renders as glyph soup (use `swap()`, `carry()`, `live_number()` or `TransformMatchingTex`; exempt a deliberate one with `allow_morph(anim)`);
+- a **deictic** ("this X", "these", "those", "here") with no animation starting within −0.8…+0.4 s of the word;
+- the voice speed is above 0.84, or the narration is over the concision budget (500 words, 3:35). See §13.
 
 Call `self.check_layout()` to audit the frame at any point. Every warning is something a critic will also see, so fix them all.
 
 Other members:
 - `NarratedMovingCameraScene` adds camera moves (`self.camera.frame.animate...`).
 - `self.fade_out_all(*keep)` is a deliberate hard reset (BAR allows ≤ 1 hard cut per 30 s).
-- `narrate(..., gap=0)` chains two beats with no breathing room. `voice=`, `speed=` and `overrides=` apply per beat.
+- `narrate(..., gap=0)` chains two beats with no breathing room. `voice=`, `speed=`, `overrides=` and `cadence=` apply per beat.
+- `CADENCE = "shaped"` (class attribute) makes sentence and beat gaps follow the sense (§4, §13.3). Recommended for every revision.
 
 ## 3. Style (`sample_space.style`, BAR §5)
 
 | | |
 |---|---|
 | Background | `BG #14161B`, one flat dark slate. Set automatically |
-| Colours | `BLUE` = primary quantity · `YELLOW` = focus / changing term · `GREEN` = positive / correct · `RED` = negative / error · `PURPLE` = spare second series · `INK` = text · `GRAY` = axes and secondary · `DIM` = grid and context. Each hue keeps **one meaning per episode**, declared in script.md. Never contrast red and green by colour alone. All text colours are ≥ 4.5:1 on BG, and INK is 14.9:1 |
+| Colours | `BLUE` = primary quantity · `YELLOW` = focus / changing term · `GREEN` = positive / correct · `RED` = negative / error · `PURPLE` = spare second series · `INK` = text · `GRAY` = secondary text (ticks, axis titles, citations, notes) · `AXIS` = axis lines and tick marks · `DIM` = grid and context, never text. Each hue keeps **one meaning per episode**, declared in script.md. Never contrast red and green by colour alone. INK is 14.9:1 on BG and GRAY 7.7:1 (BAR: text ≥ 7:1; GRAY was 5.8:1 before round 6). Coloured labels are ≥ 4.5:1 |
 | Fonts | `SERIF` = CMU Serif, which matches LaTeX, for all prose and labels. `SANS` = Inter, for tables only |
-| `Text` sizes | `TITLE 46 · HEADING 38 · BODY 32 · LABEL 28 · SMALL 22`. Minimums are 26 for labels and 18 for ticks and citations |
-| `MathTex` sizes | `EQ 52` for the main equation · `MATH 40` · `MATH_SMALL 30` for ticks. Minimums are 36 and 26 |
+| `Text` sizes | `TITLE 46 · HEADING 38 · BODY 32 · LABEL 28 · SMALL 22`. Measured cap height is 1.28 × font_size, so the minimums are **27** for labels (34 px) and **19** for ticks and citations (24 px): Text 18 and 26 come out at 23 and 33 px, just under the floors critics measure |
+| `MathTex` sizes | `EQ 52` for the main equation · `MATH 40` · `MATH_LABEL 36` for labels · `MATH_SMALL 30` for ticks only (29 px is under the 34 px label floor). Cap height is 0.96 × font_size: minimums 36 for labels, 26 for ticks. `cap_height_px(m)` measures any text after scaling |
 | Layout | `SAFE_X 6.4`, `SAFE_TOP 3.6`, `CONTENT_BOTTOM -3.2`, `MIN_GAP 0.15` |
 | Motion | `QUICK 0.5 · MOVE 0.8 · TRANSFORM 1.5 · SLOW 2.2`. `SMOOTH`/`EASE` rate functions; `LINEAR` only for time-like processes. `reading_time(text)` and `equation_hold(n_terms)` give BAR hold times |
 
@@ -96,9 +101,11 @@ Helpers:
 | `wrap(s, max_width)` | Greedy wrap, at most 7 words per line, never wider than the frame |
 | `fit(m)`, `keep_in_safe(m)` | Scale or shift a mobject into the safe area |
 | `title(s)`, `caption(s)` | Top line, or a bottom line above y = -3.2. Use sparingly: no title + bullets |
-| `citation("Muller et al., 2008 · JCAL")` or `citation(author=, year=, venue=)` | Bottom-left source. Hold ≥ 3 s |
+| `citation("Muller et al., 2008 · JCAL")` or `citation(author=, year=, venue=)` | Bottom-left source. Hold ≥ 3 s. Change one citation into the next with `swap(old, new)` |
+| `swap(old, new, run_time=0.7)` | Replace a label, citation or counter **in place**: old fades up and out, then new fades up and in. The two are never on screen together and no glyph morphs |
+| `carry(source, target, path_arc=...)` | A value flies into its symbol or slot ("0.99" → "P(+∣sick)", a bar's "3.3" → "2ᵏ") as a cross-fade, never as glyph soup. Use instead of `TransformFromCopy` whenever the strings differ |
 | `live_number(tracker, decimals, prefix=r"\text{error}=")` | DecimalNumber that follows a ValueTracker, as a measured metric |
-| `axes((lo, hi), (lo, hi), x_label="height (cm)", y_label=..., x_ticks=[...])` | ≤ 6 ticks chosen automatically. Grey axes and MathTex ticks. `.x_title`, `.y_title` |
+| `axes((lo, hi), (lo, hi), x_label="height (cm)", y_label=..., x_ticks=[...])` | ≤ 6 ticks chosen automatically. `AXIS` lines, `GRAY` MathTex ticks and titles. `.x_title`, `.y_title` |
 | `dots(ax, xs, ys, color)` | Scatter, radius 0.06 |
 | `underline(m)`, `box(m)` | Mobjects; animate them with `Create` |
 | `flag(m)` | ≤ 1 s indicate for a changed term |
@@ -109,11 +116,12 @@ For bar charts, pad the x range so the edge bars stay inside the axes, as in `ax
 
 ## 4. Voice (Kokoro-82M, local)
 
-- **Narrator and pace:** the narrator is `af_heart` at speed 0.78, about 150–160 wpm for prose (BAR asks for 140–165). Kokoro is a fast talker at speed 1.0 (≈ 200 wpm), so do not raise the speed.
-- **Text handling:** the text is split into sentences with a 0.38 s pause between them. `[pause]` inserts 0.6 s and `[pause 1.5]` inserts 1.5 s. Use a pause for prediction holds.
+- **Narrator and pace:** the narrator is `af_heart`. The flat default speed is 0.78 (about 144 wpm over speech time in the demo; BAR asks for 140–165); with `CADENCE = "shaped"` and no `SPEED` set, NarratedScene uses 0.83. Kokoro is a fast talker at speed 1.0 (≈ 200 wpm), and its speed is not linear: 0.84 → 0.82 adds 2 % of runtime, 0.82 → 0.80 another 7 %. Use 0.82–0.84; the render warns above 0.84. All 12 episodes in round 5 ran 0.81–0.87, and the ones that were docked as hurried were docked for run-ons and flat gaps: every Audio 9 in rounds 3–4 was spoken at 160–164 wpm, which is 0.82–0.84 (§13.3). Below 0.80 with shaped cadence the pace falls under BAR's 140 wpm. Fit the budget by cutting words, not by speeding up.
+- **Text handling:** the text is split into sentences with a 0.38 s pause between them. `[pause]` inserts 0.6 s and `[pause 1.5]` inserts 1.5 s. Use a pause for prediction holds and 0.9–1.4 s after each key result. A sentence that ends on a one-letter variable ("…becomes a k.") is now split correctly; it used to run into the next one.
+- **Cadence (`CADENCE = "shaped"`, opt-in):** instead of a flat 0.38 s after every sentence, the gap follows the sentence's role: 0.30 s base (shorter than the flat 0.38), +0.30 after a question, +0.20 after a sentence that lands a number, +0.20 before a turn ("But", "So", "Now", "Then", "Back", "Here"…), +0.10 after a punch line of ≤ 4 words (capped at 0.9 s). A question or a result at the end of a beat gets 0.15–0.20 s of tail, beats are separated by 0.45 s instead of 0.35 s, number-dense sentences (two or more numbers) are spoken 2 % slower, and "hundred and twenty" is read "hundred twenty". Explicit `[pause x]` markers are kept exactly. Unless the scene sets `SPEED`, shaped cadence speaks at 0.83. Measured on episode 075's narration at speed 0.84, it adds 3 % of runtime and keeps the pace at 150 wpm. (A first version with longer gaps added 9 % and pulled the pace to 143 wpm, and at 0.80 to 132 wpm.) The long holds after key results stay explicit `[pause 0.9–1.4]`. Flat stays the default, so existing scenes are unchanged.
 - **Loudness and timestamps:** each clip is normalized to -16 LUFS (mono, peak ≤ -2 dBFS), and render.sh masters the mix to -14 LUFS. Word timestamps come from Kokoro's own duration predictor. They agree with whisper to within about 0.1 s.
-- **Writing for the voice:** write narration the way it should be spoken. Spell symbols out: "x bar", "p less than point oh five", "one thousand and twenty four". misaki reads plain digits well ("0.87" becomes "zero point eight seven", "2024" becomes "twenty twenty four"), but spelled-out words give you control.
-- **Pronunciation overrides:** `voice.PRONUNCIATIONS` holds the series defaults, for example PCA, k-means, R², p-value, LaTeX, NumPy, i.i.d., t-SNE, e.g. and i.e. Add per-episode entries with the `PRONUNCIATIONS` class attribute. A value is either a respelling (`"ber new lee"`) or IPA in misaki's alphabet between slashes (`"/kˈAmˌinz/"`). The written key stays the token, so `beat.until("R²")` still works.
+- **Writing for the voice:** write narration the way it should be spoken. Spell symbols out: "x bar", "p less than point oh five", "one thousand twenty-four" (US style with no "and": Kokoro can stretch the "and", and whisper then hears two numbers). misaki reads plain digits well ("0.87" becomes "zero point eight seven", "2024" becomes "twenty twenty four"), but spelled-out words give you control.
+- **Pronunciation overrides:** `voice.PRONUNCIATIONS` holds the series defaults, for example PCA, k-means, R², p-value, LaTeX, NumPy, i.i.d., t-SNE, e.g. and i.e., plus researchers misaki gets audibly wrong (Sanjurjo, Gilovich, Tversky, Matejka, Weissgerber, Gelman, Ginsberg, Krueger, Hochberg, Ioannidis, Pfungst, Diaconis, Trefethen, LLaMA). Check any new name with `python3 -c "from sample_space.voice import _Engine; print(_Engine.get().g2p('Name')[0])"`; a soft "g", an English "j" in a Spanish name, or a stress on the wrong syllable needs an entry. Add per-episode entries with the `PRONUNCIATIONS` class attribute. A value is either a respelling (`"ber new lee"`) or IPA in misaki's alphabet between slashes (`"/kˈAmˌinz/"`). The written key stays the token, so `beat.until("R²")` still works.
 - **Hearing a line:** `python -m sample_space "text" --out /tmp/a.wav --json` prints the word timings. `estimate_duration(text)` gives a rough length without running TTS.
 - **Cache:** clips are cached in `~/.cache/sample_space/tts`, keyed by text, voice, speed and the overrides used. Editing one beat re-synthesizes only that beat, at about 0.5 s of CPU per second of speech.
 - **Quirks:**
@@ -154,7 +162,8 @@ For bar charts, pad the x range so the edge bars stay inside the axes, as in `ax
    - leading silence (≤ 1 s), trailing silence (≤ 2 s) and the longest internal silence (≤ 2.5 s);
    - the longest fully static stretch (≤ 4 s; 8 s is a cap);
    - LUFS and true peak, black and empty frames, the BAR §4 banned-phrase and pattern scan (on both the transcript and the script);
-   - WER of the whisper transcript against `narration.json`. A mis-heard technical term means a mispronunciation, so add an override.
+   - WER of the whisper transcript against `narration.json`. A mis-heard technical term means a mispronunciation, so add an override;
+   - **Narration craft** (§13): word and runtime budget, voice speed and per-sentence pace, cadence (full stops vs beat turns, the longest stretch without a breath), number load per 20 s, repeated phrases, "and" inside numbers, glyph morphs and deictic sync. Each flagged line is a defect critics docked in round 5–6.
 3. **Look at the pictures** with the Read tool:
    - `review/sheets/sheet_NN.png`: a frame every 2 s with the words spoken at that moment underneath. Check that what is said is visible.
    - `review/keyframes/*.png`: full-resolution frames where each layout settles. Check margins, overlaps, clipping, LaTeX glyphs, label sizes, at most 12 words of prose on screen, and the palette.
@@ -294,3 +303,239 @@ Polish alone plateaus around 8.4–8.5: critics' dimension scores cluster at 8�
    - **Visual:** one focal point per frame; enlarge the subject; dim context rather than adding it; keep ≥ 0.15 units of clearance everywhere.
    - **Motion:** every move encodes a relation (origin, change, correspondence). Replace fades with transforms that carry meaning.
    - **Audio:** deictic words land on their highlight (`beat.until`); planned pauses at the prediction and at the reveal.
+
+## 13. The systemic 9-blockers (from 28 critic reviews)
+
+**Evidence.** These are the 28 most recent reviews: round 1 of the restarted cycle (filed as `round5-*`) for 12 episodes, plus round 6 for 002 and 007. Four dimensions never reached 9:
+
+| Dimension | Mean | Reviews at 9 or above |
+|---|---|---|
+| Visual | 8.16 | 0 of 28. No surviving review (rounds 2–6) has scored Visual 9 |
+| Audio | 8.34 | 0 of 28 |
+| Concision | 8.04 | 0 of 28 |
+| Clarity | 8.30 | 1 of 28 |
+
+The 36 reviews from rounds 3–4 show the same defects. Below, "(n/28)" counts the round 5–6 reviews that docked a defect, and "(k/12)" counts episodes.
+
+**The common cause.** Every episode carries 487–609 words of narration. To fit that under 4:00, producers raised the voice speed and shrank the gaps:
+- `SPEED` is 0.81–0.87 in all 12 episodes; the toolkit default is 0.78.
+- `BEAT_GAP` was cut to as low as 0.1 s.
+
+Critics then docked:
+- **Concision** for the length (16/28).
+- **Audio** for a hurried, metronomic delivery (9/28, plus 10 reviews in rounds 3–4).
+- **Visual** for frames that carry too much at once (20/28).
+- **Clarity** for steps that are said instead of shown (19/28).
+
+The cure is fewer words and fewer things per frame, not a faster voice. Episodes at 3:15–3:37 were never asked to get shorter. 9 of the 10 episodes at 3:41 or longer were told to cut runtime, and the tenth (009, 3:53) was handed about 8 s of cuts.
+
+### 13.1 Targets
+
+Check these before every hand-off. Each one comes from what critics penalised or rewarded. The render warnings and the "Narration craft" section of `review/report.md` measure most of them for you.
+
+**Length and voice**
+
+| Target | Value | Evidence |
+|---|---|---|
+| Runtime | **3:15–3:35**, never over 3:37 | 16/28 docked 3:41–3:58 and named 3:30 (four times), 3:35, 3:40 or 3:45 as the goal. None at 3:15–3:37 was told to cut |
+| Narration words | **≤ 500** (aim for 470–500) | Episodes ran 487–609. A finished episode runs about 0.42 s of video per narration word (075: 526 words, 3:43), so 500 words ≈ 3:30 |
+| Voice speed | **0.82–0.84**: never above 0.84, never below 0.80 | All 12 ran 0.81–0.87 and 9/28 called the delivery hurried. But every Audio 9 (rounds 3–4) was at 160–164 wpm, i.e. these speeds, with planned pauses. Below 0.80 the shaped pace falls under BAR's 140 wpm |
+| Speech pace | **145–160 wpm** over speech time | BAR asks 140–165. Rewarded episodes ran 160–164; 075 at 0.84 with shaped cadence measures 150 |
+| Pace inside sentences | **no sentence above 200 wpm** (report flags 4 or more) | Medians were 165–178 wpm whether or not critics called the episode hurried. The 2–8 sentences per episode above 200 wpm are long, number-dense ones, and that is where "hurried" and "rushed key number" were heard |
+| Cadence | `CADENCE = "shaped"`. Beat turns at least **0.15 s longer** than full stops. **0.9–1.4 s** after each of the 2–4 key results. Prediction holds of **1.5–2 s** | Every Audio 9 given (rounds 3–4) cited planned 0.9–1.4 s pauses after results and pauses at beat turns |
+| Breath | no stretch longer than **15 s** without a pause of at least 0.35 s | Found in 7/12 episodes, up to 35 s. 009's critic heard "26 s without a sentence break" |
+
+**Sync, density and the frame**
+
+| Target | Value | Evidence |
+|---|---|---|
+| Deictics | every "this / these / those / here" lands on an animation that starts **−0.8 to +0.4 s** from the word (`beat.on`) | 11/28 docked misses of 1–2 s. Audio 9 required every one within about 0.6 s |
+| Numbers | at most **one new number per sentence**, and **≤ 8 different numbers** in any 20 s | 10/28 docked runs such as "355, 0.053, 1,420, 18, 114,000, $10, 10,000 in 35 s" |
+| Ideas | one new idea per beat; every step of the key derivation drawn | 19/28 docked a key step that was said, not shown |
+| Focal point | one object at full strength, the rest at ≤ 30 % (`dim()`) or gone. **≤ 2 equations** and **≤ 12 words of prose** on screen | 20/28 docked frames with no single focal point. Prose loads of 20–22 words were measured in 4 reviews |
+| Composition | no half or quadrant of the frame empty for more than 4 s while narration runs (planned holds excepted) | 12/28 docked half-empty frames held 6–40 s |
+| Labels | Text ≥ 27 / MathTex ≥ 36 for anything the narration refers to. Text ≥ 19 / MathTex ≥ 26 for ticks and citations, **after any scaling** | 10/28 measured labels at 20–26 px |
+| Charts | every axis has a name, a unit and at least 2 numbered ticks. Every marker on a summary line has a tag of ≤ 3 words | 10/28 docked unlabelled axes or bare numbers |
+| Glyph morphs | **0** | 13/28 docked a Transform between different strings |
+| Landing and payoff | landing ≤ 15 s, one move. Payoff: one real result (≤ 30 s) plus one honest limit (≤ 15 s, no new terms) | 10/28 docked a second payoff, a three-idea landing (38–44 s) or a late tangent |
+
+### 13.2 Visual (mean 8.16)
+
+1. **No single focal point (20/28, 12/12).** The worst frames were the payoff frames.
+   - 009 at 2:40 held a readout, a histogram, a miss meter, three stacked equations, a log axis and a citation.
+   - 075's ladder held 14 bars, counts, fractions, a 3×3 patch and two thumbnails.
+   - 008's middle third held three panels and a six-line equation stack.
+
+   *Fix:* name the one object the current sentence is about. Dim everything else to 30 % or remove it. When a derivation ends, collapse it to its one-line result before the next beat. Keep at most two equations and 12 words of prose on screen.
+2. **Empty or lopsided frames (12/28, 10/12).**
+   - The right half was empty for 15 s (002).
+   - The lower-left quadrant was empty for 33 s (060).
+   - The cold open used the top 55 % of the frame (006).
+   - A reveal floated alone on an empty frame (007).
+   - Narration ran over a near-empty bridge frame (002, 004).
+
+   *Fix:* scale the subject up into free space and centre it. Turn the outgoing object into the incoming one so no frame goes empty. A layout that will hold for 10 s should fill at least half the frame width.
+3. **Unlabelled axes and anonymous markers (10/28).**
+   - Histograms with no y scale (001, 003, 009).
+   - A ladder with no vertical quantity (075).
+   - Four bare numbers on the payoff line (007).
+   - Empty "?" lanes (004).
+
+   *Fix:* give every axis a quantity, a unit and at least two numbered ticks. Give every marker a short tag: "halving", "letter odds", "LLM".
+4. **Text below the size floors (10/28, 8/12).** Measured sizes included:
+   - "your guess" at 25 px;
+   - citations at 22–23 px (Text 18);
+   - ghost digits at 22 px (`MATH_SMALL - 4`);
+   - "×28 wide" and "peak ≈ 11" at 24 px;
+   - run costs at 30 px;
+   - thumbnail digits at 20 px (a group scaled to 0.42×).
+
+   *Fix:* use the measured minimums in §3. Never scale a group that holds text without resizing the text. The audit reports `text-size` for anything under 24 px and lists 24–26 px labels as `small-label`. Axis numbers and `citation()` are held only to the 24 px floor; mark a hand-made tick label with `m.ss_role = "tick"` to do the same.
+5. **Cross-fades in place, and copies flying through text (9/28).**
+   - Citations swapped by simultaneous FadeOut and FadeIn read as garbled text (006, 007).
+   - "our jump" sat superimposed on "Schelling's jump" (075).
+   - A "?" overlapped a counter (008).
+   - A formula slid through a fading label (005).
+
+   *Fix:* `swap(old, new)`. Route flights around text, and dim the record before 102 numbers fly through it.
+6. **Glyph soup (13/28).** Examples: "2/7 <" morphing into "3/8 ≥" (075); counters showing "¿ riffles" and "9▒%" (006); "3.3" becoming "2ᵏ" (007); 16.76 smeared mid-flight (020); doubled "μ μ" (060). *Fix:* use `swap()` for a changed label, `carry()` for a value flying into a symbol, `live_number()` for counters, and `TransformMatchingTex` with identical tokens for algebra. The render warns on each one.
+7. **Grey text under 7:1.** Two critics measured 6.1–6.5:1. The old GRAY was 5.8:1 in every episode. *Fix:* GRAY is now 7.7:1, and axis lines use `AXIS`. Never use DIM or AXIS for text.
+8. **Palette slips (6/28).**
+   - Yellow dimmed to 30 % turned olive (002).
+   - Yellow carried five jobs in one episode (003).
+   - Purple meant "Cornell data" while no data was on screen (004).
+   - A red "drifted" cross was still shown after the drift was fixed (020).
+
+   *Fix:* fade a saturated hue only to 60 %, or recolour it GRAY. A hue appears only while its quantity is on screen.
+
+### 13.3 Audio (mean 8.34)
+
+1. **Hurried, metronomic delivery (9/28 and 7/12, plus 10 reviews in rounds 3–4).**
+
+   Measured in narration.json:
+   - Every full stop gets 0.40–0.42 s, with a variation of 0.05–0.08.
+   - In 8/12 episodes the beat turns are no longer (medians 0.35–0.44 s).
+   - Sentences run 165–178 wpm at the median.
+   - 7/12 episodes have a stretch longer than 15 s with no pause of at least 0.35 s.
+
+   Critics heard this as "the cadence is the TTS default", "metronomic", "beat boundaries get the same breath as mid-thought commas" and "the thesis gets no air".
+
+   *Fix:*
+   - Keep `SPEED` at 0.82–0.84; never 0.85–0.87 to squeeze words in, and never below 0.80, where the pace drops under 140 wpm.
+   - Set `CADENCE = "shaped"`.
+   - Split every sentence the report lists above 200 wpm; they are usually long sentences full of numbers.
+   - Add `[pause 0.9]` to `[pause 1.4]` after the 2–4 sentences that land a result.
+   - Never chain a beat turn with `gap=0`, and never set `BEAT_GAP` below 0.35.
+2. **Deictics that miss (11/28, 7/12).** The failures came in three kinds:
+   - The visual arrives 1–2 s after the word: "halves", "tails", "seven percent", "infinite" (009); "box" (020).
+   - The word comes before its referent exists: "this chart" (075), "data first" (008), "police watch list" over an empty frame (002).
+   - The word names something no longer on screen: "three point three doublings" (007).
+
+   *Fix:* `beat.on("this", anim)`. Never point back at an object that has left: bring back a ghost at 40 %, or cut the phrase. The render lists every deictic word with no animation landing on it.
+3. **Word-level TTS artefacts (10/28).**
+   - "Edwin" was held for 1.2 s.
+   - "That" lasted 1.04 s right after a rushed "four point one one" (0.74 s).
+   - "In the other" was crushed to 0.57 s, and "other" vanished.
+   - The "-ed" of "picked" and the "in" of "three in four" were swallowed.
+   - The "and" in "five hundred and seventy-six" was stretched.
+   - "Nine thousand nine hundred eighty" was spoken three times in the same flat tone.
+
+   *Fix:*
+   - Write numbers without "and"; shaped cadence drops it for you.
+   - Round long numbers in speech ("about ten thousand") and let the screen carry the exact value.
+   - End a sentence on its key number.
+   - Keep contrast words ("other", "second") away from clause edges.
+   - Re-synthesize a doubtful beat with `python -m sample_space "…" --json`. A function word held 0.5 s or longer is a defect, and so is a key number shorter than 0.25 s per word.
+4. **Names and symbols (7/28).**
+   - "Jaynes" was heard as "Jane".
+   - "Sanjurjo" was read with an English "j".
+   - "Sue's" was heard as "sus".
+   - "s x" fused into "sx".
+
+   *Fix:* the global dictionary now covers the names misaki gets wrong (§4). Rephrase possessives of short names ("Sue's count, four"). Spell symbols ("ess ex") and keep them out of fast clauses.
+5. **Garden paths and homophones (4/28).** "Two to the k levels off" (where "levels" was a noun earlier in the episode), "halves too" heard as "halves two", and waits/weights in a sentence about cubes. *Fix:* read every sentence aloud once, looking for a second parse.
+
+### 13.4 Concision (mean 8.04)
+
+1. **The narration says what the frame shows, or says it twice (24/28, 12/12).** Examples:
+   - "Same circle, same gold rule" over the same circle.
+   - "Sixty over twenty" while 60/20 sits on screen.
+   - A ÷10,000 step narrated for 14 s.
+   - Landings that re-explain the token pile-up.
+   - "That's one vote per row" 25 s after "each row gets one vote".
+
+   *Fix:* apply the mute test to every sentence. If muting it loses nothing the frame does not already show, cut it. `report.md` lists every repeated four-word phrase; each repeat must be a deliberate callback.
+2. **Too long (16/28, 9/12).** See the budget in 13.1. Cut in this order:
+   1. Restatements.
+   2. The landing's extra moves.
+   3. The second payoff.
+   4. Spoken arithmetic the picture already shows.
+3. **Second payoffs, multi-move landings and late tangents (10/28).**
+   - A landing with three ideas in 38–44 s, where §6 budgets 15 s (002).
+   - An honest-limit beat that introduces kernel bandwidth, "R's default" and cross-validation in 18 s (008).
+   - A 48 s lighthouse appendix after the question was already answered (009).
+   - Three payoffs in 3:42 (020).
+
+   *Fix:* one payoff, one limit that uses only words already defined, and one closing move.
+
+Concision 9 was given only when the critic wrote "I could not find a sentence whose removal costs nothing."
+
+### 13.5 Clarity (mean 8.30)
+
+1. **The key step is asserted, not shown (19/28, 11/12).**
+   - "The fractions add up" with no sum and no comparison on screen (007).
+   - The ÷N step between √N halves and ½/√N, missing (005).
+   - The tangent point placed at r·s_y "so…" with no picture of why (020).
+   - "12 heads in 8 rows" never visibly producing 17/42 (004).
+   - Why a low average gets a short interval, covered in 5 s (009).
+
+   *Fix:* find the one step a viewer could not redo on paper. Give it its own picture and at least 4 s. The critics' 9 reads "I could re-derive it after one watch."
+2. **The screen contradicts the narration for a moment (11/28).**
+   - A false equation held for 1–1.5 s mid-build: Σhᵢ/nᵢ = 17/42 (004), and D(bell‖data) = … = 5.77 (008).
+   - Stale counts left under a new header (002).
+   - 2.0 and 2.5 shown in the same frame (060).
+   - A column that balloons before it shrinks (007).
+
+   *Fix:* every frame must be true if paused. Write "= ?" before swapping a result. Change dependent numbers in the same animation. Animate width and height together.
+3. **One word with two meanings, undefined terms, and pronouns with no antecedent (10/28, 9/12).**
+   - "gap" used three ways (003).
+   - "hot" reused for after-tails (004).
+   - Four names for one quantity (005).
+   - GSR, "spread", covariance, "R's default" and cross-validation left undefined.
+   - "it" used 2.5 min after flu was last mentioned (060).
+
+   *Fix:* keep a glossary in script.md with one name per quantity. Never say a term that is not defined on screen. Never let a pronoun reach across a beat.
+4. **Too much in 20 s (10/28).** Examples: four ideas in 15 s at 180 wpm (004); three equations in 7 s (009); four equation states in 20 s (006); three precision figures in 18 s (002). *Fix:* keep to the number and equation limits in 13.1. `report.md` shows the busiest 20 s as "Number load".
+
+### 13.6 What the toolkit now does, and what it cannot do
+
+| Change | Targets |
+|---|---|
+| `GRAY` 7.7:1 for text; `AXIS` (the old grey) for axis lines and ticks | Grey text under 7:1 |
+| Measured size constants (`TEXT_LABEL_MIN 27`, `TEXT_TICK_MIN 19`, `MATH_LABEL 36`, `MATH_TICK_MIN 26`, `cap_height_px`); the `text-size` / `small-label` audit in every render | Labels at 20–26 px |
+| `swap()`, `carry()`, and the glyph-morph warning (`allow_morph(anim)` to exempt one) | Cross-fade garble and glyph soup. Six episodes had written their own `swap` |
+| `CADENCE = "shaped"`; sentences ending in a one-letter variable now split; dictionary entries for misread names | Metronomic gaps, run-ons, name errors |
+| `beat.on(word, anim)` and the deictic-sync warning | Deictic misses |
+| Warnings for speed above 0.84 and for the 500-word / 3:35 budget | Hurried voice, length |
+| `review_kit` "Narration craft" section: budget, pace, cadence, breathless runs, number load, repeated phrases, "and" in numbers, glyph morphs, deictic sync, small labels | Makes each defect visible before the critics see it |
+
+What the toolkit cannot decide is what the frame is *about*. Focal point, empty halves, asserted steps, contradictory frames and terminology are still craft. They account for most of the Visual and Clarity points.
+
+### 13.7 Revision order that clears all four
+
+1. **Cut to budget first** (≤ 500 words, 3:15–3:35):
+   1. Apply the mute test.
+   2. Reduce the landing to one move.
+   3. Drop the second payoff.
+   4. Shorten spoken arithmetic.
+2. **Set the voice.** Set `SPEED` to 0.82–0.84 and `CADENCE = "shaped"`. Add `[pause 0.9–1.4]` after the key results, and leave the prediction hold at 1.5–2 s. Split the sentences listed above 200 wpm.
+3. **Render a preview** and fix every warning: glyph-morph, deictic sync, text-size, overlap, budget.
+4. **Frame pass**, one keyframe at a time:
+   - Name the focal object, then dim or remove the rest.
+   - Label every axis and marker.
+   - Fill any half of the frame that stays empty for more than 4 s.
+5. **Clarity pass.**
+   - Give the one hard step a picture.
+   - Pause in the middle of every transform and check that what is on screen is still true.
+   - Keep one name per quantity.
+6. **Run `review_kit`.** The "Narration craft" section should have no flagged line. If one remains, its text names the fix.

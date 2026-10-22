@@ -1,8 +1,8 @@
-[0:00.0–0:02.7] Flip a fair coin 10 times.
-[0:02.7–0:07.1] How likely is it that exactly seven of them land heads?
-[0:07.1–0:12.1] 10 flips give 1,024 equally likely sequences.
-[0:13.0–0:16.9] 100 and 20 of them have seven heads.
-[0:16.9–0:21.9] So the chance is 120 out of 1,024, about 12%.
-[0:23.6–0:26.4] Do that count for every number of heads
-[0:26.4–0:29.0] and the chances form this hump.
-[0:29.0–0:31.3] S7 sits on its right shoulder.
+[0:00.0–0:02.4] Flip a fair coin 10 times.
+[0:02.4–0:06.6] How likely is it that exactly 7 of them land heads?
+[0:06.6–0:11.5] 10 flips give 1,024 equally likely sequences.
+[0:11.5–0:14.6] 120 of them have 7 heads.
+[0:14.6–0:19.6] So the chance is 120 out of 1,024, about 12%.
+[0:21.1–0:23.5] Do that count for every number of heads
+[0:23.5–0:25.7] and the chances form this hump.
+[0:25.7–0:27.8] 7 sits on its right shoulder.

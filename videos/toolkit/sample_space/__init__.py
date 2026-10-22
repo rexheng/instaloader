@@ -9,10 +9,10 @@ from .style import *                     # noqa: F401,F403  (sets the series bac
 from .style import __all__ as _style_all
 from .voice import synth, synthesize, estimate_duration, PRONUNCIATIONS  # noqa: F401
 from .narrated import (NarratedScene, NarratedMovingCameraScene, NarrationMixin,  # noqa: F401
-                       Beat, layout_issues, allow_overlap)
+                       Beat, layout_issues, allow_overlap, allow_morph)
 
 __all__ = list(_style_all) + [
     "synth", "synthesize", "estimate_duration", "PRONUNCIATIONS",
     "NarratedScene", "NarratedMovingCameraScene", "NarrationMixin", "Beat",
-    "layout_issues", "allow_overlap",
+    "layout_issues", "allow_overlap", "allow_morph",
 ]

@@ -9,7 +9,8 @@ Colour = meaning.  Use the semantic names, never raw hex:
     GREEN   positive / correct / signal       (never alone vs RED: add a label/shape)
     RED     negative / error / noise
     PURPLE  a second data series, only if needed
-    INK     text;  GRAY  axes, secondary text;  DIM  grid lines, de-emphasised context
+    INK     text;  GRAY  secondary text (7.7:1);  AXIS  axis lines/ticks;
+    DIM     grid lines, de-emphasised context (never text)
 """
 from __future__ import annotations
 
@@ -19,15 +20,18 @@ import re
 
 import numpy as np
 from manim import (DOWN, LEFT, ORIGIN, RIGHT, UP, UL, Axes, Create, DecimalNumber, FadeIn,
-                   FadeOut, Indicate, Line, MathTex, SurroundingRectangle, Tex, Text,
-                   AnimationGroup, VGroup, VMobject, config, rate_functions)
+                   FadeOut, FadeTransform, Indicate, Line, MathTex, Succession,
+                   SurroundingRectangle, Tex, Text, AnimationGroup, VGroup, VMobject, config,
+                   rate_functions)
 
 log = logging.getLogger("sample_space.style")
 
 # --------------------------------------------------------------------------- colour
 BG = "#14161B"          # one flat, very dark slate for the whole series (not pure black)
 INK = "#ECE9E2"         # warm off-white text, 14.9:1 on BG
-GRAY = "#8B939E"        # axes, secondary labels, 5.8:1
+GRAY = "#A2AAB5"        # secondary text: ticks, axis titles, citations, notes. 7.7:1 (BAR: text
+                        # >= 7:1). Was #8B939E (5.8:1); two critics measured grey text at 6.1-6.5:1
+AXIS = "#8B939E"        # axis lines and tick marks only (the old GRAY): not for text
 DIM = "#4A5059"         # grid lines, dimmed context (not for text)
 BLUE = "#5AA9E6"        # primary                       7.1:1
 YELLOW = "#F5C451"      # accent / focus               11.1:1
@@ -35,23 +39,35 @@ GREEN = "#6CC58B"       # positive                      8.6:1
 RED = "#EF6F61"         # negative                      6.1:1
 PURPLE = "#B394E8"      # spare second series           7.2:1
 PALETTE = {"BLUE": BLUE, "YELLOW": YELLOW, "GREEN": GREEN, "RED": RED, "PURPLE": PURPLE,
-           "INK": INK, "GRAY": GRAY, "DIM": DIM}
+           "INK": INK, "GRAY": GRAY, "AXIS": AXIS, "DIM": DIM}
 DIM_OPACITY = 0.3       # BAR: de-emphasised context at 25-40 % opacity, not deleted
 
 # --------------------------------------------------------------------------- type
 SERIF = "CMU Serif"     # matches LaTeX Computer Modern: all prose, titles, labels
 SANS = "Inter"          # optional: tables / code-ish UI labels only. Don't mix casually.
 
-# Text (Pango) font sizes. BAR §5 minimums: primary >= 26, ticks/citations >= 18.
+# Measured cap height at 1080p (CMU Serif / Computer Modern, Manim CE 0.22):
+#   Text:            cap_px = 1.28 x font_size  (18 -> 23 px, 22 -> 28, 26 -> 33, 28 -> 36)
+#   MathTex/Decimal: cap_px = 0.96 x font_size  (26 -> 25 px, 30 -> 29, 36 -> 34, 40 -> 38)
+# BAR §5 floors are cap heights: labels / anything read while it is spoken >= 34 px, ticks and
+# citations >= 24 px.  So Text 18 (23 px) and Text 26 (33 px) are *just under* the floors the
+# critics measure; use the minimums below.  The overlap audit reports text under 24 px.
+TEXT_CAP_PX = 1.28
+MATH_CAP_PX = 0.957
+# Text (Pango) font sizes.
 TITLE = 46
 HEADING = 38
 BODY = 32
-LABEL = 28
-SMALL = 22              # tick labels, citations, footnotes (never below 18)
-# MathTex font sizes. BAR §5: main equation 40-60, primary >= 36, ticks >= 26.
+LABEL = 28              # labels: 36 px cap (minimum for a label is 27)
+SMALL = 22              # tick labels, citations, footnotes: 28 px (minimum 19 = 24 px)
+TEXT_LABEL_MIN = 27     # 34.6 px
+TEXT_TICK_MIN = 19      # 24.3 px
+# MathTex font sizes. BAR §5: main equation 40-60, labels >= 36, ticks >= 26.
 EQ = 52
 MATH = 40
-MATH_SMALL = 30
+MATH_LABEL = 36         # a MathTex label read while it is spoken (34 px)
+MATH_SMALL = 30         # ticks only: 29 px is under the 34 px label floor
+MATH_TICK_MIN = 26      # 25 px
 
 # --------------------------------------------------------------------------- layout
 FRAME_W, FRAME_H = 14.222, 8.0
@@ -81,6 +97,24 @@ def reading_time(text: str) -> float:
 def equation_hold(n_terms: int) -> float:
     """BAR hold time for an equation before it changes: 2 s + 0.4 s/term."""
     return 2.0 + 0.4 * n_terms
+
+
+def cap_height_px(m) -> float | None:
+    """Approximate cap height in 1080p pixels of a Text / MathTex / DecimalNumber as it is
+    now (after any scale), which is what critics measure against BAR §5 (labels >= 34 px,
+    ticks/citations >= 24 px).  None for anything else."""
+    try:
+        from manim import MarkupText, SingleStringMathTex
+        if isinstance(m, (Text, MarkupText)):
+            k = TEXT_CAP_PX
+        elif isinstance(m, (SingleStringMathTex, DecimalNumber)):
+            k = MATH_CAP_PX
+        else:
+            return None
+        fs = float(m.font_size)
+        return fs * k if math.isfinite(fs) and fs > 0 else None
+    except Exception:
+        return None
 
 
 # --------------------------------------------------------------------------- defaults
@@ -173,7 +207,44 @@ def citation(s: str | None = None, *, author: str | None = None, year: int | str
         s = f"{author}, {year}" + (f" · {venue}" if venue else "")
     m = Text(s, font=SERIF, font_size=size, color=color)
     fit(m, width=SAFE_WIDTH * 0.75)
+    m.ss_role = "citation"                     # the size audit holds it to the 24 px floor
     return m.move_to([-SAFE_X + m.width / 2, CONTENT_BOTTOM + 0.08 + m.height / 2, 0])
+
+
+def swap(old: VMobject, new: VMobject, run_time: float = 0.7, shift: float = 0.12):
+    """Replace one label/citation/counter by another IN PLACE without the two ever being
+    on screen together and without a glyph morph:  old fades up and out, then new fades up
+    and in.  (Critics docked every cross-fade where "Shannon, 1951" and "Valmeekam, 2023"
+    or "our jump" and "Schelling's jump" were superimposed for a few frames, and every
+    Transform between different strings: "¿ riffles", "9▒%".)
+        self.play(swap(cite_a, cite_b))        # citations
+        self.play(swap(count, new_count))      # a counter or label whose text changes"""
+    a = run_time * 0.45
+    return Succession(FadeOut(old, shift=UP * shift, run_time=a),
+                      FadeIn(new, shift=UP * shift, run_time=run_time - a))
+
+
+def carry(source: VMobject, target: VMobject, run_time: float = 1.0, path_arc: float = 0.0,
+          **kw):
+    """Fly a copy of `source` (a number, a bar label, a term) into `target` (its symbol, its
+    place in an equation) with a cross-fade instead of a glyph-by-glyph morph: the shape
+    never passes through unreadable blobs, and the source stays where it was.  The
+    TransformFromCopy replacement for UNLIKE strings ("0.99" -> "P(+|sick)", "3.3" -> "2^k");
+    keep TransformFromCopy / TransformMatchingTex for identical glyphs.
+        self.play(carry(table_cell, formula_term, path_arc=-0.5))
+    When the copy would have to be rescaled a lot (a spread-out group such as "7 ... 10"
+    flying into a small binomial), it travels at its own size and fades out while the target
+    fades in along the same path, so nothing balloons across the frame.  Better still,
+    carry each piece into its own isolated part (substrings_to_isolate)."""
+    sw, sh = max(source.width, 1e-6), max(source.height, 1e-6)
+    tw, th = max(target.width, 1e-6), max(target.height, 1e-6)
+    k = th / sh                                   # FadeTransform(stretch=False) scales by this
+    if 0.6 <= k <= 1.7 and sw * k <= 2.5 * tw + 0.5:
+        kw.setdefault("stretch", False)
+        return FadeTransform(source.copy(), target, path_arc=path_arc, run_time=run_time, **kw)
+    d = target.get_center() - source.get_center()
+    return AnimationGroup(FadeOut(source.copy(), shift=d, path_arc=path_arc),
+                          FadeIn(target, shift=d, path_arc=path_arc), run_time=run_time, **kw)
 
 
 # --------------------------------------------------------------------------- numbers
@@ -245,7 +316,7 @@ def axes(x_range=(0, 10), y_range=(0, 1), x_length: float = 9.0, y_length: float
             return d
         step = r[2] if t is None else (min(np.diff(sorted(t))) if len(t) > 1 else 1.0)
         return max(0, -int(math.floor(math.log10(abs(step)) + 1e-9)))
-    common = dict(color=GRAY, stroke_width=2.5, include_tip=tips, tick_size=0.06,
+    common = dict(color=AXIS, stroke_width=2.5, include_tip=tips, tick_size=0.06,
                   font_size=MATH_SMALL, line_to_number_buff=0.18)
     ax = Axes(x_range=xr, y_range=yr, x_length=x_length, y_length=y_length,
               axis_config=common,
@@ -356,10 +427,12 @@ def end_card(episode: int | None = None, title_text: str | None = None) -> VGrou
 
 __all__ = [
     # colours
-    "BG", "INK", "GRAY", "DIM", "BLUE", "YELLOW", "GREEN", "RED", "PURPLE", "PALETTE",
+    "BG", "INK", "GRAY", "AXIS", "DIM", "BLUE", "YELLOW", "GREEN", "RED", "PURPLE", "PALETTE",
     "DIM_OPACITY",
     # type
     "SERIF", "SANS", "TITLE", "HEADING", "BODY", "LABEL", "SMALL", "EQ", "MATH", "MATH_SMALL",
+    "MATH_LABEL", "TEXT_LABEL_MIN", "TEXT_TICK_MIN", "MATH_TICK_MIN", "TEXT_CAP_PX",
+    "MATH_CAP_PX", "cap_height_px",
     # layout
     "FRAME_W", "FRAME_H", "SAFE_X", "SAFE_TOP", "SAFE_BOTTOM", "CONTENT_BOTTOM", "SAFE_WIDTH",
     "CONTENT_HEIGHT", "MIN_GAP",
@@ -368,6 +441,6 @@ __all__ = [
     "equation_hold",
     # helpers
     "apply_defaults", "text", "label", "formula", "wrap", "fit", "keep_in_safe", "title",
-    "caption", "citation", "live_number", "nice_ticks", "axes", "dots", "underline", "box",
-    "flag", "dim", "undim", "wordmark", "end_card",
+    "caption", "citation", "swap", "carry", "live_number", "nice_ticks", "axes", "dots",
+    "underline", "box", "flag", "dim", "undim", "wordmark", "end_card",
 ]
