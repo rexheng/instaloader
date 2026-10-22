@@ -284,7 +284,7 @@ def elbow_path(src, dst, cx, t1=0.28, t2=0.72):
     return pf
 
 
-def dip(*ms, lo=0.4, out=0.12, back=0.75):
+def dip(*ms, lo=0.2, out=0.05, back=0.75):
     """While a copy flies out of a table glyph, the source steps back to `lo` (over the first
     `out` of the move) and returns once the copy is clear (from `back`), so the two never read
     as one doubled glyph. Use with rate_func=linear."""
@@ -897,7 +897,7 @@ class Episode(NarratedScene):
                 m.set_fill(opacity=wop.get_value())
             return f
         with self.narrate("Say r is point eight. Go one standard deviation right. On average, "
-                          "the cloud rises r standard deviations. [pause 0.7] That's the best-fit "
+                          "the cloud rises r times a standard deviation. [pause 0.7] That's the best-fit "
                           "line, through the middle of every vertical slice. [pause 0.7] At the "
                           "wall, the slices shrink to the touch point, r times ess why above the "
                           "center. [pause 0.4] For the dinosaur, it's just below the middle.",
@@ -927,7 +927,8 @@ class Episode(NarratedScene):
             avg_cp = VGroup(*[d.copy().set_z_index(4) for d in band_dots])
             self.add(avg_cp)
             self.play(*[c.animate.move_to(band_avg).set_color(YELLOW) for c in avg_cp],
-                      Create(rise9), run_time=beat.until_end_of("deviations", offset=0.1))
+                      Create(rise9), run_time=beat.until_end_of("deviation", occurrence=2,
+                                                                 offset=0.1))
             # the best-fit line: from the centre through both touch dots
             beat.wait_until("best-fit", offset=-0.3)
             self.play(FadeOut(sim_dots), FadeOut(band_rect), FadeOut(avg_cp), FadeOut(sim_tag),
@@ -944,7 +945,7 @@ class Episode(NarratedScene):
             self.play(qv.animate.set_value(1.0), UpdateFromFunc(chords, upd_chords),
                       run_time=beat.until("touch point", offset=-0.15), rate_func=smooth)
             self.play(FadeOut(chords), FadeOut(mids), flag(tR), run_time=0.7)
-            beat.wait_until("times", offset=-0.3)
+            beat.wait_until("times", occurrence=2, offset=-0.3)   # "r times ess why"
             place_rs(rt.get_value())
             self.play(Write(rs_lbl), run_time=0.8)
             rs_lbl.add_updater(lambda m: place_rs(rt.get_value()))
@@ -1001,7 +1002,7 @@ class Episode(NarratedScene):
                       run_time=0.6)
 
         with self.narrate("Slide it until the centers meet. Stretch it until the boxes match. "
-                          "Then tip it, keeping the box, until it touches the walls at the same "
+                          "Then tip it, keeping the box, [pause 0.2] until it touches the walls at the same "
                           "height.", gap=0.66) as beat:
             self.go(lambda a: lerp(star0, slid, a), beat.until("centers", offset=0.5),
                     op_from=0.4, op_to=1.0)
@@ -1088,7 +1089,7 @@ class Episode(NarratedScene):
         names = ["circle"] + order
         with self.narrate("From the dinosaur they grew twelve shapes: this circle, [pause 0.8] "
                           "this star, [pause 0.8] this bullseye, [pause 0.8] this X, [pause 0.8] "
-                          "and these stripes. Every one has this same ellipse, and a different "
+                          "and these stripes. Each one has this same ellipse, and a different "
                           "median.", gap=0.6) as beat:
             beat.on("this circle", FadeOut(circ_line), Indicate(self.dots, color=BLUE,
                                                                 scale_factor=1.04), lead=0.3,
@@ -1097,7 +1098,7 @@ class Episode(NarratedScene):
                                          ["star", "bullseye", "X", "stripes"]):
                 beat.wait_until(word, offset=-0.7)          # lands 0.2 s before its noun
                 self.go(self.path_fixed(seq[prev], seq[nxt]), 0.5)
-            beat.wait_until("Every", offset=-0.1)
+            beat.wait_until("Each", offset=-0.1)
             self.play(self.ell.animate.set_stroke(width=9), run_time=0.5)
             self.play(self.ell.animate.set_stroke(width=4.5), run_time=0.4)
             beat.wait_until("different", offset=-0.1)
@@ -1521,15 +1522,28 @@ class Episode(NarratedScene):
         dst_yname = ax.y_name.copy()
         dst_xname = ax.x_name.copy()
         ax_late = VGroup(dst_nums, dst_xname)               # tick numbers and "x": fade in last
+        late_fam = {id(f_) for f_ in VGroup(readout_a, cite_an).get_family()}
+
+        def is_late(m_):
+            return all(id(f_) in late_fam for f_ in m_.get_family())
+        late_out = [m_ for m_ in quartet if is_late(m_)]
+        quartet = [m_ for m_ in quartet if not is_late(m_)]
         self.play(FadeOut(Group(*quartet), rate_func=window(0.0, 0.3)),
-                  FadeOut(p0_nums, rate_func=window(0.0, 0.3)),
+                  # his readout and citation stay a little longer (the right half is never empty
+                  # for long); they are gone before the formula reaches their slot
+                  FadeOut(Group(*late_out), rate_func=window(0.0, 0.5)),
+                  FadeOut(p0_nums, rate_func=window(0.0, 0.4)),
                   ReplacementTransform(src_x, dst_x, rate_func=window(0.05, 0.75)),
                   ReplacementTransform(src_y, dst_y, rate_func=window(0.05, 0.75)),
                   ReplacementTransform(p_yt, dst_yname, rate_func=window(0.05, 0.75)),
                   ReplacementTransform(self.ell, ell_l, rate_func=window(0.05, 0.75)),
-                  Transform(f1, f_land, rate_func=window(0.3, 0.75)),
+                  # down the open middle first, then in from the left under the readout, so it
+                  # never passes over the readout's r row as that fades in
+                  Transform(f1, f_land, rate_func=window(0.3, 0.75),
+                            path_func=bez_path(f1, f_land, (0.8, -0.5), (1.0, -1.9))),
                   FadeIn(ax_late, rate_func=window(0.72, 1.0)),
-                  FadeIn(VGroup(table_cold, self.dots, guess_lbl2, guess_line2, line_lbl2),
+                  FadeIn(table_cold, rate_func=window(0.5, 0.9)),
+                  FadeIn(VGroup(self.dots, guess_lbl2, guess_line2, line_lbl2),
                          rate_func=window(0.6, 1.0)), run_time=1.5)
         self.remove(dst_x, dst_y, ax_late, dst_yname)
         self.add(ax)
@@ -1607,7 +1621,7 @@ class Episode(NarratedScene):
             self.play(flag(rows_two), run_time=0.8)
             beat.wait_until("dinosaur", offset=-0.2)
             # the points return at full strength and are the one focal point: the ellipse and
-            # the line (what the five numbers know) step back to 40 %; the bar and its error bar
+            # the line (what the five numbers know) step back to 60 % and a thin stroke; the bar and its error bar
             # leave the plot in place and reappear beside it (never sliding across the cloud or
             # the axis name), and their tag moves with them (out at the top left, back in over
             # the parked bar, so it never crosses the returning points)
@@ -1616,7 +1630,9 @@ class Episode(NarratedScene):
                     FadeIn(bar_out, rate_func=window(0.5, 0.75)),
                     FadeOut(pct86_l, rate_func=window(0.0, 0.35)),
                     FadeIn(pct86_out, shift=0.1 * DOWN, rate_func=window(0.65, 1.0)),
-                    line_l.animate.set_stroke(opacity=0.4), ell_l.animate.set_stroke(opacity=0.4),
+                    # (60 % and a thinner stroke: yellow dimmed further reads olive, a new hue)
+                    line_l.animate.set_stroke(opacity=0.6, width=2.5),
+                    ell_l.animate.set_stroke(opacity=0.6, width=2.5),
                     color_from=GRAY, color_to=BLUE, op_from=0.15, op_to=1.0)
 
         # clean exit: the plot leaves first, so the card never sits on top of the data

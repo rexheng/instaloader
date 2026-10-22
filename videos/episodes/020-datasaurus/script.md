@@ -5,7 +5,7 @@
 that ellipse (a dinosaur, a star, Anscombe's four datasets) has the same five numbers and even the
 same best-fit line. Only a plot shows the shape.
 
-Runtime RUNTIME · WORDS words (budget ≤ 500, PRODUCTION_GUIDE §13) · narrator af_heart @ 0.84,
+Runtime 3:29.1 · 471 words (budget ≤ 500, PRODUCTION_GUIDE §13) · narrator af_heart @ 0.84,
 `CADENCE = "shaped"` (B20 and B21 at 0.82, so the letter names are not rushed).
 
 ## Palette (colour → one meaning, whole episode)
@@ -70,10 +70,10 @@ grew, and the y spread shrank by almost a quarter.
 
 **B7.** The two averages mark a single point: the cloud's balance point.
 > Copies of the x̄ and ȳ symbols fly out of the table and label the YELLOW dot "(x̄, ȳ)"; the
-> source symbols step back to 40 % while the copies leave, so no glyph ever reads doubled.
+> source symbols step back to 20 % while the copies leave, so no glyph ever reads doubled.
 
 **B8.** The two standard deviations reach one deviation out on each side, and draw a box.
-> s_x and s_y copies fly (one after the other, each source at 40 % while its copy leaves) to the
+> s_x and s_y copies fly (one after the other, each source at 20 % while its copy leaves) to the
 > half-arms they measure; the arms light up; the walls grow out of the arm tips on "box".
 
 **B9a.** Many ellipses touch all four walls. [pause 0.2] The correlation, r, picks one. [pause 0.6]
@@ -81,7 +81,7 @@ grew, and the y spread shrank by almost a quarter.
 > on "picks one", each touch dot appearing as the stroke reaches its wall.
 
 **B9b.** Say r is point eight. Go one standard deviation right. On average, the cloud rises r
-standard deviations. [pause 0.7] That's the best-fit line, through the middle of every vertical
+times a standard deviation. [pause 0.7] That's the best-fit line, through the middle of every vertical
 slice. [pause 0.7] At the wall, the slices shrink to the touch point, r times ess why above the
 center. [pause 0.4] For the dinosaur, it's just below the middle.
 > "Say r is point eight": the "what if". The dinosaur steps aside, its r row dims, and the
@@ -109,7 +109,7 @@ center. [pause 0.4] For the dinosaur, it's just below the middle.
 > prediction hold.
 
 **B13.** Slide it until the centers meet. Stretch it until the boxes match. Then tip it, keeping
-the box, until it touches the walls at the same height.
+the box, [pause 0.2] until it touches the walls at the same height.
 > Translate (x̄, ȳ go green), scale about the centre (the boxes come back on "Stretch"; s_x, s_y go
 > green), tip (r goes green). Round 6: "a slight shear" became "keeping the box": the tip is a
 > shear plus a 0.2 % vertical rescale that keeps both SDs (facts #9).
@@ -127,7 +127,7 @@ five numbers fixed while it nudges points toward a target.
 > without a breath.)
 
 **B17.** From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this star, [pause 0.8]
-this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Every one has this same ellipse,
+this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Each one has this same ellipse,
 and a different median.
 
 **B18.** Francis Anscombe made the same point in 1973, with eleven points. [pause 1.2]
@@ -140,7 +140,7 @@ and a different median.
 
 **B20.** Same rule: ess ex across, [pause 0.3] r times ess why up. [pause 0.5]
 > Spoken at 0.82. The 0.82 settles into the dot. On "ess ex" an s_x copy rises out of his readout
-> (source at 40 %) and drops onto the run as it is drawn; on "r times" r and s_y copies label the
+> (source at 20 %) and drops onto the run as it is drawn; on "r times" r and s_y copies label the
 > rise as it grows; on "up" the best-fit line grows out of the centre through the touch point
 > while the readout steps down. (Round 6: one sentence instead of B9's rule taught again, and no
 > "one" before "ess ex", which the transcriber fused into "1sx".)
@@ -148,7 +148,7 @@ and a different median.
 **B21.** So the slope is the rise [pause 0.3] over the run. [pause 1.0]
 > "slope =" on "slope"; the r s_y label climbs to the numerator on "rise", the s_x label arcs into
 > the denominator on "run" (slope = r s_y / s_x, every term from its segment; each source at
-> 40 % while its copy leaves). (Round 6: was "rise, over run", heard as "overrun".)
+> 20 % while its copy leaves). (Round 6: was "rise, over run", heard as "overrun".)
 
 **B22.** All four of his datasets share these five numbers, so they share the ellipse and line.
 [pause 0.5] A trend, a curve, an outlier, and one point doing all the work.
@@ -165,7 +165,7 @@ leave out.
 > axes while its ellipse grows back to the dinosaur's and its "y" travels to the big plot's "y";
 > the other panels, tags, readout and citation leave first; the tick numbers, the readout and the
 > grey guess cloud with "your guess" and the dashed "your line" fade in last. "slope = r s_y / s_x"
-> moves to the band under the readout. "line": the dashed line is Indicated. "five numbers": the
+> moves down the open middle and in from the left to the band under the readout. "line": the dashed line is Indicated. "five numbers": the
 > symbols give way to −0.06, 26.93 and 16.76, each flown down from its readout row. "exactly": the
 > YELLOW best-fit line grows onto the dashed one. "minus point one": "≈ −0.10". "cloud": "your
 > guess" flagged; "this ellipse": pulsed while the cloud dims; "all that": the guess labels go.
@@ -173,7 +173,8 @@ leave out.
 > leaves, the line and the ellipse step back to 60 %; "bar graph": a copy of the ellipse is
 > squeezed to its vertical extent, exactly the ±s_y error bar, as the ȳ bar grows; "two": the ȳ
 > and s_y rows flag. "dinosaur": the points return to the dinosaur at full strength, the one focal
-> point; the ellipse and the line step back to 40 %; the bar and error bar fade out in place and
+> point; the ellipse and the line step back to 60 % with a thin stroke (any dimmer and the
+> yellow reads olive); the bar and error bar fade out in place and
 > fade in parked beside the plot (60 %), never sliding across the cloud or the axis name "x",
 > with "86% used bars" over them. End card.
 

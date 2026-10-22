@@ -369,3 +369,100 @@ issues in 227 checks (two declared fraction-bar/parenthesis pairs). Checked: all
 sheets, keyframes at 0:57, 1:18, 2:34, 3:01 and 3:23, and 4 fps strips across the axes draw
 (1:20), the P(k) copy into the axis title (2:04), the A → B readout swap (2:32) and the landing
 transform (3:24).
+
+## Round 6 revisions
+
+Round 6 scored craft 8.4 and substance 8.5 (both FAIL, no caps, no factual errors). Both critics
+said every listed fix would reach 9, and neither asked for a restructure. So this pass keeps the
+structure and the keep items: the A/B cold open that returns as the closing frame, the
+one-square derivation, and one histogram reused for A, B, the aimed map and Clarke.
+
+**Plan (BAR §3 "9" anchor → what fell short → upgrade)**
+
+- Hook (8.5): "ending resolves the opening exactly". The stakes ("precise aim would put factories
+  at risk") were never answered, and the landing re-told the reveal without the measurement.
+  Upgrade: answer the stakes in words after p = 0.88, and write each map's misfit under it on
+  the closing frame.
+- Clarity (8.5): "re-derive after one watch; all numbers check". Four gaps: "force the clumps"
+  over-claimed; P(empty) became P(0) silently; e^−λ was asserted; the two-hit step was
+  number-dense. Upgrade: 183 extra hits shown as 537 − 354; "Call that P of zero" renamed in the
+  same line; 0.3933 and 0.3937 lit together; "that same chance" carries the visible 1/576.
+- Visual (8 / 8.5): "every frame has one focal point". Five problems: triple overlays at
+  1:13–1:20, a yellow fill used both for focus and for gap on B's bars, the 109 label inside
+  chance's outline, "north" far from its box, and a crowded 2:25–2:45 frame. Upgrade: one blue
+  layer, INK rings, no 109 label, labels with arrows, and the Poisson line and the 227 label
+  hidden.
+- Motion (8.5): "every motion encodes a relation". Two problems: the re-rain contradicted the
+  shading, and the landing cross-fade garbled the header. Upgrade: the shading rebuilds per cell,
+  and the outgoing elements fade before the square-up.
+- Audio (8.5): "pauses intentional". Two problems: the two-hit beat ran as one run, and the
+  limits beat went 12 s without a breath. Upgrade: 0.8 s pauses and a 0.6 s pause.
+- Concision (8.5): "cutting any sentence loses something". Upgrade: cut "Both are simulated. The
+  question isn't.", "So look again." and "like the detector".
+
+**What changed**
+
+- *Facts.* Neither critic found an error. The new line "London's clusters were no sign of
+  precise aim" was checked against Clarke 1946 ("lends no support to the clustering hypothesis")
+  and Shaw & Shaw 2019, read again today in the Wiley full text. Shaw & Shaw frame Clarke's
+  question as "random chance, or … precision guidance?" and name munitions factories as the
+  stake. facts.md has a new "Round 6 additions" table covering 183 = Σ(count − 1), the 0.3933 vs
+  0.3937 check, P(0), (1/576)², the landing readouts and the retitle.
+- *Hook (substance 2, 9; craft 8).*
+  - The stakes are answered after "Overall, p equals point eight eight": "London's clusters were
+    no sign of precise aim." While it plays, Clarke's 3+ columns (35, 7, 1 over 30.6, 7.1, 1.6)
+    and the ×5 tail inset are ringed, and p = 0.88 flags.
+  - The landing writes "pure chance · misfit 2.0" under A and "spacing rule · misfit 271.7" under
+    B, so the opening frame is shown through the episode's own test. The yellow circles are gone.
+  - Craft asked for "misfit 2.0 · p = 0.74" under A. That does not fit beside the tag above the
+    caption zone, so both maps carry the same metric.
+  - "Both are simulated. The question isn't." is cut. The "simulated" tags stay on screen from
+    the first frame.
+- *Clarity (substance 1, 3, 6, 8).*
+  - Gaps beat:
+    - New line: "Those empty squares force pile-ups: the other three hundred fifty-four share
+      all the hits, so a hundred eighty-three must land where another already did."
+    - On "pile-ups" the blue 2+ outlines draw; the red 3+ outlines stay off.
+    - On "three hundred fifty-four" the hits counter's 537 is carried into "537 − 354", and
+      "= 183 extra hits" is written in blue.
+  - "One minus a small slice, raised to a big power, is e to the minus lambda, almost exactly."
+    The value 0.3937 is written first, then 0.3933 and 0.3937 light up together in yellow on
+    "almost exactly".
+  - "Call that P of zero." The word "empty" gives way to a 0 inside the same P(…) line.
+  - In the two-hit beat, the rows collapse and only their 1/576 survives, beside the big square.
+    "Each has that same chance" carries it into (1/576)²; "the rest miss" dims the other 535
+    bombs. The figure "one in five seventy-six" is no longer spoken twice.
+  - End card: "Which Map Is Pure Chance?", because B is random too (substance 10).
+- *Visual (craft 3–6, 10; substance 4, 5).*
+  - 1:07–1:21: one blue layer (shading at 40 % plus the 2+ outlines). The empty-region outline
+    and "222 empty" turn grey on "the other". The live 131 counter is gone, so this stretch holds
+    one fewer number.
+  - Map B:
+    - On "half", bar 0 is ringed in INK and chance's outline flashes INK (stroke only).
+    - On "tower", bar 1 is ringed in INK and a full-strength blue "397" appears above it. No
+      fill changes, so yellow in the chart means only gap.
+    - The 109 label is dropped: the half-height bar reads against the y axis.
+  - 2:26–2:44: the dim Poisson line fades to 0 (it returns at the aimed map), the purple "227"
+    leaves when B's bars arrive, and the header reads "20,000 chance maps (simulated)" on one
+    line.
+  - Limits: "north" sits in the density column level with its box's top, off the Thames label's
+    baseline, with a white arrow to the box. "≈ Clarke's area" gets a yellow arrow to the
+    rectangle. 1.9 and 3.7 hits/km² sit in one column.
+  - The aimed counter is laid out at "537 hits" and right-aligned to its frame (the number's
+    left edge stays put as it counts).
+- *Motion (craft 1, 7).*
+  - The re-rain is true at every frame. Shading and red outlines clear with the hits. Each cell
+    then re-shades by the hits landed in it, and its red outline returns when it reaches 3.
+    Counters recount 0 → 537 hits and 0 → 39 targets ("1 target" singular).
+  - Landing, in order:
+    1. On "where it held steady", everything but Clarke's area and its hits fades at once
+       (title, Thames, boxes, labels, arrows, marks, citations, formula).
+    2. The area squares up while London's hits hand over to A's.
+    3. It opens into A's frame as B slides in.
+    4. A's header and the 0:39 red outlines arrive only after that, on "map A".
+- *Audio (craft 2, 9; substance 7).*
+  - 0.8 s after "since order doesn't matter." and an 0.8 s beat gap after "e to the minus lambda
+    again."
+  - 0.6 s after "half as dense.", where the breath lands on the density write.
+  - 0.9 s after the limits beat for the square-up.
+  - "London's clusters" follows a 0.6 s pause.

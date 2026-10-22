@@ -35,13 +35,13 @@ BEATS = {
     # insight
     "pool": "Yet no flip is biased. [pause 0.5] Gather all twenty four checked flips: twelve heads, twelve "
             "tails. Total heads over total flips: exactly half.",
-    "votes": "The skew comes from scoring row by row: each row gets one vote, however many "
-             "flips it checked.",
+    # round 8: "The skew comes from scoring row by row:" cut (the formula line names the cause)
+    "votes": "But each row gets one vote, however many flips it checked.",
     "crowds": "Checked heads come in crowds, since a heads gets the next flip checked too. "
               "Here, three heads share a single vote, while this lone tails gets a whole one.",
-    # round 6: three clips (craft 9: the densest run was heard as one run-on sentence)
+    # round 6: three clips (craft 9: the densest run was heard as one run-on sentence);
+    # round 8: "Crowded heads split their votes." cut (it restated "three heads share a single vote")
     "lineup": "Twelve heads crowd into eight rows. [pause 0.3] Twelve tails spread across eleven.",
-    "split": "Crowded heads split their votes.",
     # round 7: breaths after "Line them up:" and after the vote count (both critics)
     "pack": "Line them up: [pause 0.8] the heads hold five and two thirds of the fourteen "
             "votes. [pause 1.0] That's seventeen out of forty two.",
@@ -59,11 +59,12 @@ BEATS = {
     "minus8": "For a random shooter, the same crowding pulls after hits down to forty six percent "
               "on average, and after misses up to fifty four. [pause 0.45] Miller and Sanjurjo's "
               "twenty eighteen paper [pause 0.5] puts the gap at about minus eight points. "
-              "[pause 0.9] Longer records shrink it, [pause 0.35] but a hundred shots isn't long.",
+              "[pause 0.9] Longer records shrink it; [pause 0.7] longer streaks grow it. [pause 0.5]",
     # "The Cornell players": a beat-initial "Cornell's" was heard as "Daniel's" (round 6 v2)
+    # round 8: breaths after the two readings and after "plus four" (substance fix 5)
     "observed": "The Cornell players hit forty nine percent after three hits, and forty five "
-                "after three misses. The study found plus four, too close to zero to count, so no "
-                "hot hand.",
+                "after three misses. [pause 0.6] The study found plus four, [pause 0.4] too close "
+                "to zero to count, so no hot hand.",
     "hot": "Measured from minus eight, it's twelve points hot. [pause 0.9] That's evidence for a "
            "hot hand in a gym, not proof it survives defenders in a game.",
     # landing
@@ -80,5 +81,5 @@ SPEEDS = {"undefined": 0.80, "cold": 0.80, "crowds": 0.80, "mirror": 0.80, "obse
 # breathing room after a beat (s); default NarratedScene.BEAT_GAP = 0.35
 # (round 6: CADENCE = "shaped", whose default beat gap is 0.45 s; 0.9-1.0 s after the key results)
 # round 7: "split" 0.9 (a breath after "split their votes"), "pack" 1.3 (17/42 held >= 3.2 s)
-GAPS = {"stakes": 0.6, "cold": 0.9, "crowds": 0.6, "lineup": 0.5, "split": 0.9, "pack": 1.3,
+GAPS = {"stakes": 0.6, "cold": 0.9, "crowds": 0.6, "lineup": 0.6, "pack": 1.3,
         "formula": 1.0, "gap": 0.8, "observed": 0.8, "hot": 0.3}

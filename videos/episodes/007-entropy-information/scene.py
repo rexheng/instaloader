@@ -62,7 +62,7 @@ XTITLE_Y = -2.98                   # x-axis title, on the citation's row (right 
 COL_A = X1 + 0.62                  # right gutter: level values
 LEDGER_X0 = -4.6                   # the run's bill (letters, context tags, costs, whole
 LEDGER_Y = (1.5, 1.06, 0.52, -0.04)  # questions), laid over the emptied after-TH chart
-LEDGER_DX = 1.45                   # one column per letter of the run
+LEDGER_DX = 1.35                   # one column per letter of the run
 
 # doubling strips sit ABOVE the (short) axis; the formula is then built centre stage
 SX0, SX1 = -3.3, 1.5
@@ -431,7 +431,7 @@ class Episode(NarratedScene):
     TITLE = "How Much Information Is in a Letter?"
     SPEED = 0.83                       # PRODUCTION_GUIDE §13: 0.82-0.84, never faster
     CADENCE = "shaped"                 # sentence and beat gaps follow the sense
-    BEAT_GAP = 0.51                    # beat turns audibly longer than full stops (~0.53 s)
+    BEAT_GAP = 0.44                    # beat turns audibly longer than full stops (~0.4 s)
     PRONUNCIATIONS = {"TH": "tee aitch"}
 
     # ============================================================== construct
@@ -1244,7 +1244,7 @@ class Episode(NarratedScene):
                           "estimate: it ignores what came before.") as beat:
             # the failure metric from the fail beat, measured again: the gap to Shannon's ~1
             # stands at 4.75 (3.75 extra), then shrinks to the new level (3.11 extra)
-            top, garrow, glab = self.gap_meter()
+            top, garrow, glab = self.gap_meter(clear=lambda: cy(H1))
             beat.wait_until("beats", offset=-0.1)
             # the meter grows from Shannon's ~1 up to the ghost 4.75, its reading counting up
             # with the arrow (0 -> 3.75 extra)
@@ -1258,9 +1258,10 @@ class Episode(NarratedScene):
             beat.wait_until("five", offset=-0.05)
             self.play(top.animate.set_value(H1), FadeOut(self.ghost), FadeOut(self.ghost_lab),
                       run_time=beat.until("four times", offset=-0.15, min_time=0.8))
+            glab.clear_updaters()            # the reading is settled (3.11): flag its text only
             self.play(Indicate(self.band_edges, color=GREEN, scale_factor=1.0),
-                      flag(self.band_lab, color=GREEN), flag(glab), flag(self.level_num),
-                      run_time=0.9)
+                      flag(self.band_lab, color=GREEN), flag(VGroup(glab[1], glab[2])),
+                      flag(self.level_num), run_time=0.9)
             # it ignores what came before: the stack rises back into the skyline, each
             # character priced on its own, and the context row flashes on "came before"
             beat.wait_until("ignores", offset=-0.2)
@@ -1279,12 +1280,14 @@ class Episode(NarratedScene):
         return [m for m in [self.lead, *self.hidden, *self.th, self.qbox, self.qmark,
                             *getattr(self, "live_row", [])] if id(m) in on]
 
-    def gap_meter(self, x: float = 0.0, ymap=None, base: float = 1.0):
+    def gap_meter(self, x: float = 0.0, ymap=None, base: float = 1.0, clear=None):
         """The fail beat's yellow double arrow, back as a live meter: from Shannon's ~1 up to
         the current level, with 'N extra' riding on its top.  It starts at zero length (the
         reading is 0.00 and both are invisible): animate the tracker up to the level and the
         arrow grows while the reading counts up with it, so the number never leads the arrow.
-        `ymap` maps bits to scene y (the main chart's cy by default).
+        `ymap` maps bits to scene y (the main chart's cy by default).  With `clear` (a function
+        giving a y), the reading stays hidden until it has risen clear of that height (the top
+        of the filled stack it grows through), so its backing never shows over the bars.
         Returns (tracker, arrow, label); add arrow and label to the scene, then animate."""
         ymap = ymap or cy
         top = ValueTracker(base)
@@ -1314,6 +1317,8 @@ class Episode(NarratedScene):
             bg.move_to(VGroup(num, word))
             m.move_to([x, ymap(v) + 0.36, 0])
             o = float(np.clip((ymap(v) - ymap(base) - 0.04) / 0.22, 0, 1))
+            if clear is not None:
+                o = min(o, float(np.clip((m.get_bottom()[1] - clear()) / 0.12, 0, 1)))
             num.set_opacity(o)
             word.set_opacity(o)
             bg.set_fill(opacity=o)
@@ -1485,18 +1490,17 @@ class Episode(NarratedScene):
 
     def ctx_tag(self, ctx: str) -> VGroup:
         """'after TH': grey 'after', the context letters in purple (the open box for a space)."""
-        word = text("after", size=26, color=GRAY)
+        word = text("after", size=22, color=GRAY)
         parts = [word]
         for ch in ctx:
             if ch == " ":
-                parts.append(space_glyph(0.15, 0.065, PURPLE, 2.4))
+                parts.append(space_glyph(0.13, 0.055, PURPLE, 2.2))
             else:
-                parts.append(text(ch, size=26, color=PURPLE))
+                parts.append(text(ch, size=22, color=PURPLE))
         g = VGroup(*parts)
         g.arrange(RIGHT, buff=0.05, aligned_edge=DOWN)
-        parts[1].shift(RIGHT * 0.09)                  # a word space after 'after'
-        for p in parts[2:]:
-            p.shift(RIGHT * 0.09)
+        for p in parts[1:]:                           # a word space after 'after'
+            p.shift(RIGHT * 0.08)
         for p in parts[1:]:
             if not isinstance(p, Text):               # the space box sits on the baseline
                 p.align_to(word, DOWN)
@@ -1508,7 +1512,7 @@ class Episode(NarratedScene):
         # the no-context answer stays as a dimmed (30 %) reference at its level
         ref_line, ref_num = self.level_line, self.level_num
         ref = (ref_line, ref_num, H1)
-        with self.narrate("What comes after a Q? [pause 1.6]") as beat:
+        with self.narrate("What comes after a Q? [pause 1.5]") as beat:
             # only the question changes: the slot before ? becomes a Q, the value becomes ?,
             # and the frame holds still for the prediction
             self.play(FadeOut(self.hidden[-1]), FadeIn(qb, scale=1.2),
@@ -1644,7 +1648,10 @@ class Episode(NarratedScene):
                       Indicate(A[Q], color=YELLOW, scale_factor=1.3), run_time=0.8)
             # after TH: the chart comes back and the TH skyline pours (the bill stays readable)
             beat.wait_until("After", offset=-0.2)
-            self.play(*[self.cols[x].animate.set_fill(opacity=0.85).set_stroke(opacity=1.0) for x in ALPHA],
+            # (T after TH is a 0.01 % sliver, 0.13 px wide: it stays at 0, so no invisible
+            #  hairline is drawn through the bill's last row)
+            self.play(*[self.cols[x].animate.set_fill(opacity=0.85).set_stroke(opacity=1.0) for x in ALPHA
+                        if x != "T"],
                       self.band_fill.animate.set_fill(opacity=0.28),
                       self.band_edges.animate.set_stroke(opacity=1.0), run_time=0.4)
             self.pour(P_TH, th_cost, run_time=beat.until("average", offset=-0.25, min_time=1.0))
@@ -1663,7 +1670,7 @@ class Episode(NarratedScene):
         # honest limits: Q and TH are the best cases; the average over every two-letter
         # context (Brown, recomputed) is 2.81 -- between them and the no-context 4.11
         c2_lab = text("all two-letter contexts", size=26, color=YELLOW)
-        top, garrow, glab = self.gap_meter()
+        top, garrow, glab = self.gap_meter(clear=lambda: cy(H_TH))
         with self.narrate("But averaged over every two-letter context, it's still two point "
                           "eight.") as beat:
             # TH was one easy context: the run closes back into the one hidden slot, the bill
@@ -1690,10 +1697,12 @@ class Episode(NarratedScene):
             # the gap meter is measured again from ~1: it grows to the no-context 4.11 (its
             # reading counting up to 3.11 with the arrow) ...
             self.add(garrow, glab)
+            self.play(top.animate.set_value(H1), ref_line.animate.set_stroke(opacity=0.6),
+                      ref_num.animate.set_opacity(0.6), run_time=0.7)
+            # ... then the average over every two-letter context is drawn
             self.play(Create(c2_line), FadeIn(c2_lab, shift=0.1 * UP),
-                      top.animate.set_value(H1), FadeIn(c2_num, shift=0.1 * LEFT),
-                      ref_line.animate.set_stroke(opacity=0.6), ref_num.animate.set_opacity(0.6),
-                      run_time=beat.until("context", end=True, min_time=0.9))
+                      FadeIn(c2_num, shift=0.1 * LEFT),
+                      run_time=beat.until("context", end=True, min_time=0.8))
             # the gap to Shannon's ~1 shrinks again (3.11 -> 1.81), and the equation takes
             # the measured average: the copy leaves the gutter to the right and rises past the
             # 4.11 label on the outside, so it never crosses a level or its number
@@ -1862,7 +1871,7 @@ class Episode(NarratedScene):
 
         with self.narrate("His subject read a passage letter by letter, guessing each next one "
                           "until right: seventy-nine of a hundred two on the first guess. "
-                          "[pause 0.9]") as beat:
+                          "[pause 0.7]") as beat:
             self.play(FadeIn(tally), run_time=beat.until("read", offset=-0.1, min_time=0.5))
             # the cursor reads at a steady pace; the unread text steps back (40 % -> 15 %)
             # so the line being read is the focus
@@ -1886,7 +1895,7 @@ class Episode(NarratedScene):
         # The chart is centred and full size; the record's letters leave (they return for the
         # landing) and its three rows of counts close up at the top of the frame.
         X2, W2, Y2, U2 = -4.6, 8.0, -1.55, 0.4
-        U2Z = 1.2                            # after the pour the axis zooms in (0..2.1 bits)
+        U2Z = 1.8                            # after the pour the axis zooms in (0..2.1 bits)
         keys = sorted(GUESS)
         lefts, acc = {}, 0
         for k in keys:
@@ -1930,7 +1939,7 @@ class Episode(NarratedScene):
         lq[2].set_color(YELLOW)
         c2_top = final[2].get_top()
         lq.move_to([c2_top[0] - 2.35, c2_top[1] + 0.75, 0])
-        lq_lead = Line(lq.get_right() + RIGHT * 0.12 + DOWN * 0.08, c2_top + UP * 0.1 + LEFT * 0.05,
+        lq_lead = Line(lq.get_right() + RIGHT * 0.22 + DOWN * 0.1, c2_top + UP * 0.1 + LEFT * 0.05,
                        color=GRAY, stroke_width=2)
         mstack, squat, yb, ys = {}, {}, Y2, Y2
         for k in keys:                       # the poured stack, unzoomed and zoomed
@@ -2056,6 +2065,7 @@ class Episode(NarratedScene):
             # the titles, labels and the formula come only once every count has landed
             self.play(FadeIn(my_title), FadeIn(mx_title), FadeIn(mlabs), Write(lq[0]), Write(lq[1]),
                       run_time=0.5)
+            self.check_layout("guess chart labels")   # 1st / 2nd / 3rd+ vs 'share of guesses'
             # the heights are the same formula again, with q = share of guesses: the value is
             # written on a leader to the 2nd-guess column, which flashes (white edge, bright blue)
             self.play(Write(lq[2]), Create(lq_lead), outline_flash([mcols[2]]), run_time=0.8)
@@ -2071,13 +2081,14 @@ class Episode(NarratedScene):
                       FadeOut(my_ticks, rate_func=lambda t: smooth(min(1.0, t / 0.3))),
                       FadeIn(new_ticks, rate_func=lambda t: smooth(max(0.0, (t - 0.65) / 0.35))),
                       my_title.animate.next_to(zoom_axis.get_top(), UP, buff=0.15).align_to(my_ticks, LEFT),
-                      FadeIn(m_band), FadeIn(m_edges), FadeIn(m_band_lab), run_time=0.8)
+                      FadeIn(VGroup(m_band, m_edges, m_band_lab),
+                             rate_func=lambda t: smooth(max(0.0, (t - 0.6) / 0.4))), run_time=0.8)
             # the level, and why this passage sits where it does (one passage, short contexts)
             self.play(Create(mline), FadeIn(mnum, shift=0.1 * LEFT), run_time=0.6)
             self.play(FadeIn(why, shift=0.1 * UP), run_time=0.6)
 
         # the gap to Shannon's ~1, measured as before (it grows from ~1, counting 0 -> 0.42)
-        m_top, m_gap, m_gap_lab = self.gap_meter(x=X2 + W2 / 2, ymap=mmap)
+        m_top, m_gap, m_gap_lab = self.gap_meter(x=X2 + W2 / 2, ymap=mmap, clear=lambda: lvl_y)
         with self.narrate("A better guesser could only lower it.", speed=0.8) as beat:
             beat.wait_until("better", offset=-0.2)
             self.add(m_gap, m_gap_lab)
@@ -2169,7 +2180,7 @@ class Episode(NarratedScene):
             p142 = route([(a[0], a[1]), (a[0] + 0.15, a[1] + 0.9), (a[0] - 0.6, 1.7),
                           (b[0] + 0.6, 1.7), (b[0], b[1])])
             self.play(FadeOut(self.mini, rate_func=early),
-                      fly(mnum[1], m142[1], p142, rate=lambda t: smooth(max(0.0, (t - 0.15) / 0.85))),
+                      fly(mnum[1], m142[1], p142, rate=lambda t: smooth(max(0.0, (t - 0.35) / 0.65))),
                       FadeIn(m142[0], rate_func=late),
                       FadeIn(m142[2], rate_func=late), FadeIn(m142[3], rate_func=late),
                       Create(nline, rate_func=late), FadeIn(nt, rate_func=late),
@@ -2206,7 +2217,7 @@ class Episode(NarratedScene):
         with self.narrate("In twenty twenty-three, a language model compressed part of a book "
                           "[pause 0.3] posted to Project Gutenberg after the model was trained. "
                           "[pause 0.4] It needed point eight four bits, inside that range. "
-                          "[pause 0.5]") as beat:
+                          "[pause 0.3]") as beat:
             beat.wait_until("language", offset=-0.2)
             self.play(Succession(FadeOut(self.cite, run_time=0.3), FadeIn(cite_llm, run_time=0.3)),
                       TransformFromCopy(m142[0], s_tri), FadeIn(s_name, shift=0.1 * UP),
@@ -2231,6 +2242,7 @@ class Episode(NarratedScene):
                       run_time=0.9)
         self.meter = VGroup(nline, nt, ntitle, nband, nband_lab, m475, m411, m281, m142, mllm,
                             llm_note, cite_llm)
+        self.m142 = m142
 
     # ============================================================== 8 landing
     def landing(self):
@@ -2267,22 +2279,25 @@ class Episode(NarratedScene):
         dim_boxes = [b[0].copy().set_stroke(opacity=0.3).set_fill(opacity=0.05) for b in ctx_boxes]
         dim_q = qbox.copy().set_stroke(opacity=0.3)
         dim_lead = lead.copy().set_opacity(0.18)
-        with self.narrate("The hidden character from the start is the Y in the other day. "
-                          "Shannon's subject needed one guess: is it Y? Splitting the alphabet took "
-                          "five. In "
-                          "English, almost no letter arrives without a past.") as beat:
-            # 0. the summary line goes and Shannon's record comes back (faint), with THE OTHER
-            #    DAY at full strength: the hidden character was in it all along
-            out_first = lambda t: smooth(min(1.0, t / 0.4))
-            # (overlapping, so the frame is never empty: the phrase is already bright as the
-            #  line finishes leaving)
-            in_after = lambda t: smooth(min(1.0, max(0.0, (t - 0.15) / 0.55)))
+        # the person's marker (and its tags) lingers after the rest of the line has gone,
+        # and fades last as that person's record comes back
+        person_ids = {id(f) for f in self.m142.get_family()}
+        person = [m for m in rest if any(id(f) in person_ids for f in m.get_family())]
+        others = [m for m in rest if all(m is not q for q in person)]
+        with self.narrate("The hidden character from the start [pause 0.4] is the Y in the other "
+                          "day.", speed=0.8) as beat:
+            # 0. the summary line fades (0.65 s), the person's 1.42 last, and Shannon's record
+            #    comes back (faint) with THE OTHER DAY at full strength once the marker is gone
+            out_first = lambda t: smooth(min(1.0, t / 0.5))
+            out_last = lambda t: smooth(float(np.clip((t - 0.3) / 0.38, 0, 1)))
+            in_after = lambda t: smooth(float(np.clip((t - 0.62) / 0.38, 0, 1)))
             back_in = []
             for c in self.cells:
                 o = 1.0 if any(c is k for k in keep_cells) else 0.22
                 back_in.append(c.animate(rate_func=in_after).set_opacity(o) if isinstance(c, Text)
                                else c.animate(rate_func=in_after).set_stroke(opacity=o))
-            self.play(*[FadeOut(m, rate_func=out_first) for m in rest], *back_in, run_time=0.6)
+            self.play(*[FadeOut(m, rate_func=out_first) for m in others],
+                      *[FadeOut(m, rate_func=out_last) for m in person], *back_in, run_time=1.3)
             rest = []
             # 1. the record goes; the cold-open row comes back faint, in its old place, and
             #    THE OTHER DAY comes back to full strength, each letter stepping under the box
@@ -2295,18 +2310,19 @@ class Episode(NarratedScene):
                     staged.append(c.animate.set_opacity(1.0).move_to([x, stage_y, 0]))
                 else:                               # the open-box space: stroke only
                     staged.append(c.animate.set_stroke(opacity=1.0).move_to([x, stage_y - 0.07, 0]))
-            # the record's letters are gone before the boxes come up where its last row was
+            # the record's letters are gone before the boxes come up between its rows
             gone = lambda t: smooth(min(1.0, t / 0.45))
             after = lambda t: smooth(max(0.0, (t - 0.4) / 0.6))
             self.play(*[FadeOut(c, rate_func=gone) for c in drop_cells],
                       *staged, *[FadeIn(b, rate_func=after) for b in dim_boxes],
-                      FadeIn(dim_q, rate_func=after), FadeIn(dim_lead, rate_func=after), run_time=0.7)
+                      FadeIn(dim_q, rate_func=after), FadeIn(dim_lead, rate_func=after),
+                      run_time=beat.until("is", offset=-0.35, min_time=0.6))
             # 2. the phrase rises straight into its boxes, and the Y into the ? box as it
             #    is named
             self.play(LaggedStart(*[ReplacementTransform(self.cells[idx_ctx[i]], ctx_boxes[i][1])
                                     for i in range(12)], lag_ratio=0.04),
                       ReplacementTransform(self.cells[idx_y], ybox_letter),
-                      run_time=beat.until("Y", offset=0.05, min_time=0.9))
+                      run_time=beat.until("Y", offset=0.05, min_time=0.7))
             # 3. the boxes come to full strength, the 27 candidates return: frame one, re-seen
             # (the halving chain and its 5 come back faint under them, as at 0:17)
             chain.set_opacity(0.35)
@@ -2315,6 +2331,9 @@ class Episode(NarratedScene):
                       ReplacementTransform(dim_lead, lead), ReplacementTransform(dim_q, qbox),
                       flag(ybox_letter, color=YELLOW), FadeIn(tiles, shift=0.1 * UP),
                       FadeIn(chain, shift=0.1 * UP), FadeIn(five, shift=0.1 * UP), run_time=0.9)
+        with self.narrate("Shannon's subject needed one guess: [pause 0.3] is it Y? Splitting "
+                          "the alphabet took five. In English, almost no letter arrives without "
+                          "a past.") as beat:
             beat.wait_until("one guess", offset=-0.2)
             self.play(FadeIn(one, shift=0.1 * UP), run_time=0.6)
             # ... about this one letter: is it Y?

@@ -14,7 +14,7 @@ Pronunciation override: Christakis → /kɹɪstˈɑkɪs/.
 | Colour | Meaning |
 |---|---|
 | BLUE | a person counted once: the girls, the girl average μ, Facebook's average user, the random-student group |
-| YELLOW | reached by following a friendship: tokens, the friend average, avg(k²), named friends, the friends' flu curve |
+| YELLOW | reached by following a friendship: tokens, the friend average, avg(k²), named friends, the friends' flu curve. Round 7: never dimmed by opacity (at 30–60 % it reads brown); when context steps back, YELLOW goes to 0 and returns at full strength |
 | PURPLE | the spread: distances from the balance point, their squares, σ², σ²/μ (+0.5 for the girls, +445 on Facebook) |
 | GRAY | the naive guess (dashed), edges, axes; lines in the series AXIS grey #8B939E; text-grade grey #A2AAB5 (7.7:1, round 6b) for names, ticks, citations |
 | INK | numbers, neutral symbols, emphasis outlines (boxes, the closing outlines) |
@@ -78,14 +78,16 @@ Sue's, Alice's and Betty's tokens pulse as named. Sue's name label now sits up-l
 > on the bottom.
 > Now divide top and bottom by the eight girls: the average of k squared, seven and a half, over the
 > average count, two and a half.
+> Where does the extra half come from?
 > Measure each girl's distance from the girls' balance point, two and a half, and square it.
 > *[pause 1.5]* The squares average one and a quarter, the variance, sigma squared. *[pause]*
-> Split Sue's count, four, into the balance point, two and a half, plus her distance, one and a half.
+> Split Sue's count, four, *[pause 0.4]* into the balance point, two and a half, *[pause 0.4]* plus her
+> distance, one and a half.
 > Squaring gives two and a half squared, her distance squared, and a cross term. *[pause]* Every
 > girl splits this way. Because the beam balances, the distances add to zero, and the cross terms
 > cancel. *[pause]*
 > So the average of k squared is mu squared plus sigma squared. *[pause 1.6]* And friends average mu,
-> plus sigma squared over mu. *[pause 1.2]* Here that's two and a half, plus a half: exactly the
+> plus sigma squared over mu. *[pause 1.2]* Here that's two and a half, *[pause 0.3]* plus a half: exactly the
 > extra half friend we measured. *[pause 0.9]* With no spread, the ring had no gap. *[pause 1.3]*
 
 Visual (the one picture): the girls slide onto a beam (0.8 apart), each name riding along to sit
@@ -136,7 +138,7 @@ row and the bars brighten; the beam picture and the ring stay at 30 % and clear 
 
 ### 6. General case + prediction (2:24–2:46)
 > In twenty eleven, Facebook users averaged about a hundred ninety friends, and a few had
-> thousands. If every friendship sent tokens, what would the tokens average? *[pause 1.6]*
+> thousands. *[pause 0.4]* If every friendship sent tokens, what would the tokens average? *[pause 1.6]*
 > About six hundred thirty five: the spread term is more than twice the mean. *[pause 0.9]* And
 > ninety three percent of users had fewer friends than their friends averaged. Odds are, that
 > includes you.
@@ -187,8 +189,7 @@ length, ending at "3.2 days".
 Citation: Christakis & Fowler, 2010 · PLoS ONE · Fig. 3 redrawn, logistic refit.
 
 ### 8. Landing (one move, round 6b)
-> Betty looks at her one friend, Sue, and sees four. Two and a half counts the girls; three counts
-> the tokens.
+> Betty looks at her one friend, Sue, and sees four. *[pause 0.8]* Most of us are Betty.
 
 Visual: the chart fades out, then the cold-open frame itself fades back in (round 5: no
 cross-dissolve): the network, "average girl 2.5", and "average friend ?" with the drop lines and
@@ -210,3 +211,48 @@ candidates: 4 is what Betty sees, 2.5 counts the girls, 3 counts the tokens.)
   graph. arXiv:1111.4503.
 - Christakis, N. A., & Fowler, J. H. (2010). Social network sensors for early detection of contagious
   outbreaks. *PLoS ONE* 5(9), e12948. Figure 3 redrawn under CC BY 4.0.
+
+## Round 7 changes (visual plan)
+
+- **Open target (1:31–2:17).** On "Where does the extra half come from?" the measured PURPLE "+0.5"
+  lifts out of the bar panel (at 35 %) into the top-right corner as "+0.5 ?" at full strength and
+  stays there through the derivation. On "exactly the extra half friend we measured" the result's
+  0.5 flies into it, the "?" drops, and the tag returns to the PURPLE bar segment as the panel
+  comes back.
+- **YELLOW never dims.** At 1:16 the panel steps back to 35 % but its YELLOW outline and 3.0 go to
+  0; the YELLOW 3.0 fulcrum leaves for the variance step and returns with the result; the parked
+  avg(k²)/μ row stays at 100 %, scaled 0.8 on the bottom edge; in the ring callback the YELLOW
+  parts go to 0; C&F's raw steps keep full colour at stroke 1.5 under stroke-4 dashed fits; the
+  landing's 4 leaves instead of dimming; the cold open's "?" is full YELLOW from frame 0.
+- "sides at ¼ scale" stays at full strength (7.7:1) while the squares are on screen.
+- **Split sentence:** each number flies on its own word (Sue's 4 on "four", the 2.5 on "two and a
+  half", her 1.5 on "one and a half", d = k − μ on "her distance") and lands in the 0.4 s breath.
+- **Collapse in two steps, on the baseline:** "two and a half": the boxes, exponents, bars and
+  denominators fade in place, μ and 2.5 drop straight onto TeX's baseline, the row closes up
+  (μ + σ²/μ = 2.5 + 1.25/2.5 = 3.0, typeset first); "plus a half": 1.25/2.5 fades in place, the row
+  closes up, 0.5 rises into the settled slot.
+- **Facebook:** the axis name moves left of the axis (at its height) on "Facebook"; the tick labels
+  and names step back to 30 % with the bar fill, before anything flies; 190 drops out of the bottom
+  of the BLUE segment, 445 out of the PURPLE segment and 635 from under its label, each invisible
+  until it is 0.3 below the friend bar, threading the gaps 0|200, 400|600 and 600|800. The 92.7 %
+  block sits beside the "average user" row only: "92.7% / had fewer friends than / their own
+  friends' average".
+- **C&F, the sampling design:** the class returns (opaque nodes); on "work at Harvard" four girls
+  who are not friends of one another (Betty, Jane, Pam, Tina) are ringed BLUE, legend "random
+  students / name their friends"; on "Named friends" only they send tokens, one along each of their
+  friendships, the girls they name (Sue, Alice, Dale, Carol) are ringed YELLOW, legend "named
+  friends"; tokens pulse on "more friends" (4, 4, 4, 4, 3, 2, 2).
+- **C&F hand-off:** on "and should catch flu first" the axes draw first (0.6 s, at 30 %, behind the
+  opaque nodes) while edges, names and the GRAY caption leave and the two origin dots appear; then,
+  in one 1.2 s move, the random students arc into the BLUE origin and the named friends with their
+  tokens into the YELLOW origin, each count riding in its node; the axes go to full; then the
+  legend entries move to the curve-label spots and the axis numbers and titles fade in. Frames
+  always hold at least the axes and both labels.
+- **C&F read-out:** y title on two lines ("diagnosed with flu / (% of group)") and the friends' label
+  on two lines ("425 friends / they named"), so the column above the in-chart arrow holds no text;
+  the arrow's copy rises straight up into "←— C&F fitted lead: 13.9 days" (tips aligned at the
+  arrow's x), with "self-reported: 3.2 days" under it.
+- **Landing:** on "one friend" Betty is outlined; her token lands on Sue reading 4 on "sees four";
+  in the breath that follows, silently, the girl bar and the 2.5 candidate flash BLUE, every
+  friendship flashes, the friend bar grows to the ringed 3 and the 4 leaves; on "Most of us are
+  Betty" Betty and her token pulse. End card.

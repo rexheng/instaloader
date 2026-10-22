@@ -309,7 +309,7 @@ class Episode(NarratedScene):
             else:
                 k = mid * max(0.0, 1.0 - (alpha - b) / (c - b))
             mob.become(base)
-            mob.scale(1.0 + (scale_to - 1.0) * t)
+            mob.scale(1.0 + (scale_to - 1.0) * min(1.0, t / 0.4))   # small before it travels
             mob.move_to(curve(t))
             mob.fade(1.0 - k)
 
@@ -996,16 +996,17 @@ class Episode(NarratedScene):
             if self.time - t_frac57 < 3.25:
                 self.hold(3.25 - (self.time - t_frac57))
             self.play(FadeOut(frac57), FadeOut(fb[3]), FadeOut(vh_lbl), FadeOut(vt_lbl),
-                      run_time=0.45)
+                      run_time=0.4)
             # "an average": the 14 equal vote outlines themselves (no copies, so nothing is seen
             # doubled) lift off the strip at 40%, run right between the two strips, and become
-            # the 1/14 and the sum (the 1/14 lands on "average")
+            # the 1/14 and the sum (the 1/14 lands on "average"); the right-most leaves first,
+            # so no outline in flight crosses one still waiting on the strip
             e0 = fb[0].get_center()
-            self.play(LaggedStart(*[self.depart(o, e0, [(o.get_x(), -0.3, 0), (e0[0] - 0.4, -0.3, 0)],
+            self.play(LaggedStart(*[self.depart(o, e0, [(o.get_x(), -0.1, 0), (e0[0] - 0.6, -0.1, 0)],
                                                 scale_to=0.3, mid=0.4)
-                                    for o in vote_boxes], lag_ratio=0.05),
+                                    for o in reversed(vote_boxes)], lag_ratio=0.08),
                       FadeIn(fb[0], rate_func=delayed(0.6)), FadeIn(fb[1], rate_func=delayed(0.65)),
-                      run_time=0.9)
+                      run_time=1.0)
             self.remove(vote_boxes, *vote_boxes)
             # "of ratios": every row's own ratio answers in the table (in place, at full
             # strength, one after another) while h_i / n_i is written in the sum (round 7: the
@@ -1364,7 +1365,7 @@ class Episode(NarratedScene):
         eq4.move_to([gx(4) + 0.2 + eq4.width / 2, G_ARR, 0])
         # what the 1985 test measured +4 against: zero, and found it non-significant
         # (M&S 2018 §3.1 replicate GVT's paired t-test: p = .49)
-        p_lbl = MathTex(r"\text{vs }0\text{: }p = .49", font_size=30, color=TGRAY)
+        p_lbl = MathTex(r"\text{vs }0\text{: }p = .49", font_size=32, color=TGRAY)
         p_lbl.next_to(eq4, DOWN, buff=0.22, aligned_edge=LEFT)
         with self.beat("observed") as beat:
             # the ghost leaves (it sits under -8); Cornell's data arrives: purple title, GVT's
@@ -1416,8 +1417,8 @@ class Episode(NarratedScene):
             # then down, clear of the marker) to tag the +4 marker
             self.play(FadeOut(VGroup(lab_H3, lab_T3, p49, p45, head_C), rate_func=early(0.45)),
                       FadeOut(p_lbl, shift=RIGHT * SH2, rate_func=early(0.45)),
-                      ReplacementTransform(title_C, tag_C, rate_func=delayed(0.15),
-                                           path_func=via((3.4, 3.0, 0))),
+                      title_C.animate(rate_func=delayed(0.15), path_arc=-1.2)
+                      .move_to(tag_C.get_center()),
                       FadeOut(obv, shift=RIGHT * SH2, rate_func=early(0.5)),
                       chart.animate.shift(RIGHT * SH2), run_time=1.1)
             self.play(GrowFromCenter(brace), run_time=beat.until("twelve", offset=-0.35))
@@ -1511,7 +1512,7 @@ class Episode(NarratedScene):
             row2 = VGroup(big2, rings2, arcs2, score2)
             row2.save_state()
             self.play(LaggedStart(*[FadeIn(g, shift=0.06 * DOWN) for g in mini2], lag_ratio=0.05),
-                      row2.animate.fade(0.6), FadeOut(guess2),
+                      row2.animate.fade(0.6), FadeOut(guess2, rate_func=early(0.3)),
                       dashed2.animate.set_stroke(opacity=0.25), run_time=0.8)
             # held >= 1.5 s, then "Seventeen out of forty two": they average, one row after
             # another, into the test's formula, which lands beside its marker at 17/42

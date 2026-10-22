@@ -2,176 +2,156 @@
  "scene": "Episode",
  "episode": 20,
  "title": "A Dinosaur Hiding in Your Summary Statistics",
- "video_duration": 214.467,
+ "video_duration": 209.133,
  "beats": [
   {
    "index": 0,
    "start": 0.0,
-   "duration": 14.44,
-   "end": 14.44,
-   "text": "A hundred forty-two points with two averages, two standard deviations, and a correlation of minus point oh six. Picture the cloud, and its best-fit line. Which way does it tilt? [pause 1.5]",
+   "duration": 12.19,
+   "end": 12.19,
+   "text": "Two averages, two standard deviations, and a correlation of minus point oh six. What shape is the cloud, and which way does its best-fit line tilt? [pause 1.8]",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
-     "w": "A",
+     "w": "Two",
      "t": 0.02,
-     "end": 0.095
-    },
-    {
-     "w": "hundred",
-     "t": 0.12,
-     "end": 0.532
-    },
-    {
-     "w": "forty-two",
-     "t": 0.57,
-     "end": 1.232
-    },
-    {
-     "w": "points",
-     "t": 1.27,
-     "end": 1.645
-    },
-    {
-     "w": "with",
-     "t": 1.67,
-     "end": 1.845
-    },
-    {
-     "w": "two",
-     "t": 1.895,
-     "end": 2.082
+     "end": 0.258
     },
     {
      "w": "averages",
-     "t": 2.12,
-     "end": 3.095
+     "t": 0.295,
+     "end": 1.17
     },
     {
      "w": "two",
-     "t": 3.27,
-     "end": 3.495
+     "t": 1.345,
+     "end": 1.57
     },
     {
      "w": "standard",
-     "t": 3.52,
-     "end": 3.945
+     "t": 1.595,
+     "end": 1.995
     },
     {
      "w": "deviations",
-     "t": 3.97,
-     "end": 5.195
+     "t": 2.02,
+     "end": 3.22
     },
     {
      "w": "and",
-     "t": 5.32,
-     "end": 5.408
+     "t": 3.345,
+     "end": 3.432
     },
     {
      "w": "a",
-     "t": 5.42,
-     "end": 5.482
+     "t": 3.445,
+     "end": 3.495
     },
     {
      "w": "correlation",
-     "t": 5.52,
-     "end": 6.22
+     "t": 3.52,
+     "end": 4.22
     },
     {
      "w": "of",
-     "t": 6.245,
-     "end": 6.395
+     "t": 4.245,
+     "end": 4.382
     },
     {
      "w": "minus",
-     "t": 6.445,
-     "end": 6.82
+     "t": 4.42,
+     "end": 4.795
     },
     {
      "w": "point",
-     "t": 6.845,
-     "end": 7.12
+     "t": 4.82,
+     "end": 5.082
     },
     {
      "w": "oh",
-     "t": 7.145,
-     "end": 7.345
+     "t": 5.095,
+     "end": 5.245
     },
     {
      "w": "six",
-     "t": 7.395,
-     "end": 8.0
+     "t": 5.295,
+     "end": 5.89
     },
     {
-     "w": "Picture",
-     "t": 8.505,
-     "end": 8.817
+     "w": "What",
+     "t": 6.44,
+     "end": 6.69
+    },
+    {
+     "w": "shape",
+     "t": 6.74,
+     "end": 7.065
+    },
+    {
+     "w": "is",
+     "t": 7.09,
+     "end": 7.215
     },
     {
      "w": "the",
-     "t": 8.83,
-     "end": 8.905
+     "t": 7.24,
+     "end": 7.315
     },
     {
      "w": "cloud",
-     "t": 8.93,
-     "end": 9.505
+     "t": 7.34,
+     "end": 8.09
     },
     {
      "w": "and",
-     "t": 9.63,
-     "end": 9.718
+     "t": 8.215,
+     "end": 8.302
     },
     {
-     "w": "its",
-     "t": 9.73,
-     "end": 9.88
-    },
-    {
-     "w": "best-fit",
-     "t": 9.905,
-     "end": 10.305
-    },
-    {
-     "w": "line",
-     "t": 10.33,
-     "end": 10.91
-    },
-    {
-     "w": "Which",
-     "t": 11.46,
-     "end": 11.76
+     "w": "which",
+     "t": 8.315,
+     "end": 8.515
     },
     {
      "w": "way",
-     "t": 11.785,
-     "end": 11.997
+     "t": 8.54,
+     "end": 8.752
     },
     {
      "w": "does",
-     "t": 12.01,
-     "end": 12.185
+     "t": 8.765,
+     "end": 8.902
     },
     {
-     "w": "it",
-     "t": 12.21,
-     "end": 12.31
+     "w": "its",
+     "t": 8.915,
+     "end": 9.09
+    },
+    {
+     "w": "best-fit",
+     "t": 9.115,
+     "end": 9.515
+    },
+    {
+     "w": "line",
+     "t": 9.54,
+     "end": 9.84
     },
     {
      "w": "tilt",
-     "t": 12.335,
-     "end": 12.94
+     "t": 9.865,
+     "end": 10.39
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/65/65224e9758409d836b13a671.wav"
+   "wav": "/root/.cache/sample_space/tts/b8/b890b9dbd676e486656f35b3.wav"
   },
   {
    "index": 1,
-   "start": 14.9,
+   "start": 12.633,
    "duration": 11.75,
-   "end": 26.65,
+   "end": 24.383,
    "text": "You probably pictured a shapeless oval, with a nearly flat line. Here are the real points. [pause 1.1] A dinosaur, drawn by Alberto Cairo, with these same five numbers.",
    "voice": "af_heart",
    "speed": 0.84,
@@ -179,290 +159,290 @@
    "words": [
     {
      "w": "You",
-     "t": 14.93,
-     "end": 15.055
+     "t": 12.663,
+     "end": 12.788
     },
     {
      "w": "probably",
-     "t": 15.08,
-     "end": 15.53
+     "t": 12.813,
+     "end": 13.263
     },
     {
      "w": "pictured",
-     "t": 15.555,
-     "end": 15.968
+     "t": 13.288,
+     "end": 13.701
     },
     {
      "w": "a",
-     "t": 15.98,
-     "end": 16.08
+     "t": 13.713,
+     "end": 13.813
     },
     {
      "w": "shapeless",
-     "t": 16.13,
-     "end": 16.58
+     "t": 13.863,
+     "end": 14.313
     },
     {
      "w": "oval",
-     "t": 16.605,
-     "end": 17.23
+     "t": 14.338,
+     "end": 14.963
     },
     {
      "w": "with",
-     "t": 17.355,
-     "end": 17.493
+     "t": 15.088,
+     "end": 15.226
     },
     {
      "w": "a",
-     "t": 17.505,
-     "end": 17.58
+     "t": 15.238,
+     "end": 15.313
     },
     {
      "w": "nearly",
-     "t": 17.605,
-     "end": 18.005
+     "t": 15.338,
+     "end": 15.738
     },
     {
      "w": "flat",
-     "t": 18.055,
-     "end": 18.38
+     "t": 15.788,
+     "end": 16.113
     },
     {
      "w": "line",
-     "t": 18.405,
-     "end": 18.95
+     "t": 16.138,
+     "end": 16.683
     },
     {
      "w": "Here",
-     "t": 19.51,
-     "end": 19.76
+     "t": 17.243,
+     "end": 17.493
     },
     {
      "w": "are",
-     "t": 19.785,
-     "end": 19.848
+     "t": 17.518,
+     "end": 17.581
     },
     {
      "w": "the",
-     "t": 19.86,
-     "end": 19.96
+     "t": 17.593,
+     "end": 17.693
     },
     {
      "w": "real",
-     "t": 19.985,
-     "end": 20.26
+     "t": 17.718,
+     "end": 17.993
     },
     {
      "w": "points",
-     "t": 20.285,
-     "end": 20.93
+     "t": 18.018,
+     "end": 18.663
     },
     {
      "w": "A",
-     "t": 22.05,
-     "end": 22.125
+     "t": 19.783,
+     "end": 19.858
     },
     {
      "w": "dinosaur",
-     "t": 22.15,
-     "end": 22.9
+     "t": 19.883,
+     "end": 20.633
     },
     {
      "w": "drawn",
-     "t": 23.025,
-     "end": 23.325
+     "t": 20.758,
+     "end": 21.058
     },
     {
      "w": "by",
-     "t": 23.35,
-     "end": 23.5
+     "t": 21.083,
+     "end": 21.233
     },
     {
      "w": "Alberto",
-     "t": 23.525,
-     "end": 24.012
+     "t": 21.258,
+     "end": 21.745
     },
     {
      "w": "Cairo",
-     "t": 24.05,
-     "end": 24.7
+     "t": 21.783,
+     "end": 22.433
     },
     {
      "w": "with",
-     "t": 24.85,
-     "end": 24.975
+     "t": 22.583,
+     "end": 22.708
     },
     {
      "w": "these",
-     "t": 25.0,
-     "end": 25.237
+     "t": 22.733,
+     "end": 22.97
     },
     {
      "w": "same",
-     "t": 25.275,
-     "end": 25.588
+     "t": 23.008,
+     "end": 23.321
     },
     {
      "w": "five",
-     "t": 25.625,
-     "end": 25.95
+     "t": 23.358,
+     "end": 23.683
     },
     {
      "w": "numbers",
-     "t": 25.975,
-     "end": 26.65
+     "t": 23.708,
+     "end": 24.383
     }
    ],
    "wav": "/root/.cache/sample_space/tts/2c/2c6459c24d9df12733b0c89b.wav"
   },
   {
    "index": 2,
-   "start": 27.3,
-   "duration": 11.53,
-   "end": 38.83,
-   "text": "In a review of seven hundred three physiology papers, eighty-six percent used bar graphs: an average and an error bar. Only thirteen percent showed the points.",
+   "start": 25.033,
+   "duration": 11.56,
+   "end": 36.593,
+   "text": "In a review of seven hundred three physiology papers, eighty-six percent used bar graphs: [pause 0.4] an average and an error bar. Only thirteen percent showed the points.",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
      "w": "In",
-     "t": 27.325,
-     "end": 27.425
+     "t": 25.058,
+     "end": 25.158
     },
     {
      "w": "a",
-     "t": 27.45,
-     "end": 27.5
+     "t": 25.183,
+     "end": 25.258
     },
     {
      "w": "review",
-     "t": 27.525,
-     "end": 28.025
+     "t": 25.283,
+     "end": 25.758
     },
     {
      "w": "of",
-     "t": 28.05,
-     "end": 28.2
+     "t": 25.783,
+     "end": 25.933
     },
     {
      "w": "seven",
-     "t": 28.25,
-     "end": 28.55
+     "t": 25.983,
+     "end": 26.283
     },
     {
      "w": "hundred",
-     "t": 28.575,
-     "end": 28.938
+     "t": 26.308,
+     "end": 26.658
     },
     {
      "w": "three",
-     "t": 28.975,
-     "end": 29.25
+     "t": 26.683,
+     "end": 26.958
     },
     {
      "w": "physiology",
-     "t": 29.3,
-     "end": 29.95
+     "t": 27.008,
+     "end": 27.658
     },
     {
      "w": "papers",
-     "t": 29.975,
-     "end": 30.825
+     "t": 27.683,
+     "end": 28.583
     },
     {
      "w": "eighty-six",
-     "t": 31.0,
-     "end": 31.675
+     "t": 28.783,
+     "end": 29.483
     },
     {
      "w": "percent",
-     "t": 31.7,
-     "end": 32.225
+     "t": 29.508,
+     "end": 30.058
     },
     {
      "w": "used",
-     "t": 32.275,
-     "end": 32.575
+     "t": 30.108,
+     "end": 30.408
     },
     {
      "w": "bar",
-     "t": 32.6,
-     "end": 32.85
+     "t": 30.433,
+     "end": 30.683
     },
     {
      "w": "graphs",
-     "t": 32.875,
-     "end": 33.775
+     "t": 30.708,
+     "end": 31.383
     },
     {
      "w": "an",
-     "t": 33.95,
-     "end": 34.1
+     "t": 31.803,
+     "end": 31.953
     },
     {
      "w": "average",
-     "t": 34.15,
-     "end": 34.8
+     "t": 32.003,
+     "end": 32.615
     },
     {
      "w": "and",
-     "t": 34.85,
-     "end": 34.938
+     "t": 32.653,
+     "end": 32.741
     },
     {
      "w": "an",
-     "t": 34.95,
-     "end": 35.075
+     "t": 32.753,
+     "end": 32.865
     },
     {
      "w": "error",
-     "t": 35.125,
-     "end": 35.425
+     "t": 32.903,
+     "end": 33.178
     },
     {
      "w": "bar",
-     "t": 35.45,
-     "end": 35.92
+     "t": 33.203,
+     "end": 33.683
     },
     {
      "w": "Only",
-     "t": 36.43,
-     "end": 36.73
+     "t": 34.193,
+     "end": 34.493
     },
     {
      "w": "thirteen",
-     "t": 36.755,
-     "end": 37.18
+     "t": 34.518,
+     "end": 34.943
     },
     {
      "w": "percent",
-     "t": 37.205,
-     "end": 37.73
+     "t": 34.968,
+     "end": 35.493
     },
     {
      "w": "showed",
-     "t": 37.78,
-     "end": 37.992
+     "t": 35.543,
+     "end": 35.755
     },
     {
      "w": "the",
-     "t": 38.005,
-     "end": 38.08
+     "t": 35.768,
+     "end": 35.843
     },
     {
      "w": "points",
-     "t": 38.105,
-     "end": 38.68
+     "t": 35.868,
+     "end": 36.443
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/34/345b2b7c9c218f449d9ac820.wav"
+   "wav": "/root/.cache/sample_space/tts/c7/c7c318e7180fbd823199ca7b.wav"
   },
   {
    "index": 3,
-   "start": 39.267,
+   "start": 37.033,
    "duration": 8.21,
-   "end": 47.477,
+   "end": 45.243,
    "text": "How much can five numbers hide? Let's hide a star in them, and demand that all five match the dinosaur's to two decimals.",
    "voice": "af_heart",
    "speed": 0.84,
@@ -470,200 +450,205 @@
    "words": [
     {
      "w": "How",
-     "t": 39.307,
-     "end": 39.482
+     "t": 37.073,
+     "end": 37.248
     },
     {
      "w": "much",
-     "t": 39.507,
-     "end": 39.732
+     "t": 37.273,
+     "end": 37.498
     },
     {
      "w": "can",
-     "t": 39.757,
-     "end": 39.957
+     "t": 37.523,
+     "end": 37.723
     },
     {
      "w": "five",
-     "t": 40.007,
-     "end": 40.319
+     "t": 37.773,
+     "end": 38.085
     },
     {
      "w": "numbers",
-     "t": 40.332,
-     "end": 40.682
+     "t": 38.098,
+     "end": 38.448
     },
     {
      "w": "hide",
-     "t": 40.707,
-     "end": 41.247
+     "t": 38.473,
+     "end": 39.013
     },
     {
      "w": "Let's",
-     "t": 41.892,
-     "end": 42.142
+     "t": 39.658,
+     "end": 39.908
     },
     {
      "w": "hide",
-     "t": 42.167,
-     "end": 42.355
+     "t": 39.933,
+     "end": 40.121
     },
     {
      "w": "a",
-     "t": 42.367,
-     "end": 42.429
+     "t": 40.133,
+     "end": 40.195
     },
     {
      "w": "star",
-     "t": 42.467,
-     "end": 42.779
+     "t": 40.233,
+     "end": 40.545
     },
     {
      "w": "in",
-     "t": 42.792,
-     "end": 42.879
+     "t": 40.558,
+     "end": 40.645
     },
     {
      "w": "them",
-     "t": 42.892,
-     "end": 43.442
+     "t": 40.658,
+     "end": 41.208
     },
     {
      "w": "and",
-     "t": 43.617,
-     "end": 43.705
+     "t": 41.383,
+     "end": 41.471
     },
     {
      "w": "demand",
-     "t": 43.717,
-     "end": 44.117
+     "t": 41.483,
+     "end": 41.883
     },
     {
      "w": "that",
-     "t": 44.142,
-     "end": 44.317
+     "t": 41.908,
+     "end": 42.083
     },
     {
      "w": "all",
-     "t": 44.367,
-     "end": 44.692
+     "t": 42.133,
+     "end": 42.458
     },
     {
      "w": "five",
-     "t": 44.742,
-     "end": 45.129
+     "t": 42.508,
+     "end": 42.895
     },
     {
      "w": "match",
-     "t": 45.167,
-     "end": 45.492
+     "t": 42.933,
+     "end": 43.258
     },
     {
      "w": "the",
-     "t": 45.517,
-     "end": 45.592
+     "t": 43.283,
+     "end": 43.358
     },
     {
      "w": "dinosaur's",
-     "t": 45.617,
-     "end": 46.342
+     "t": 43.383,
+     "end": 44.108
     },
     {
      "w": "to",
-     "t": 46.367,
-     "end": 46.479
+     "t": 44.133,
+     "end": 44.245
     },
     {
      "w": "two",
-     "t": 46.517,
-     "end": 46.692
+     "t": 44.283,
+     "end": 44.458
     },
     {
      "w": "decimals",
-     "t": 46.717,
-     "end": 47.477
+     "t": 44.483,
+     "end": 45.243
     }
    ],
    "wav": "/root/.cache/sample_space/tts/6c/6c5bec7e573f388e98adf863.wav"
   },
   {
    "index": 4,
-   "start": 48.133,
-   "duration": 4.12,
-   "end": 52.253,
-   "text": "Version one slides every point onto its own spot on a star.",
+   "start": 45.9,
+   "duration": 4.27,
+   "end": 50.17,
+   "text": "The first version slides every point onto its own spot on a star.",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
-     "w": "Version",
-     "t": 48.188,
-     "end": 48.588
+     "w": "The",
+     "t": 45.915,
+     "end": 46.028
     },
     {
-     "w": "one",
-     "t": 48.613,
-     "end": 49.238
+     "w": "first",
+     "t": 46.065,
+     "end": 46.365
+    },
+    {
+     "w": "version",
+     "t": 46.39,
+     "end": 46.94
     },
     {
      "w": "slides",
-     "t": 49.313,
-     "end": 49.801
+     "t": 46.99,
+     "end": 47.615
     },
     {
      "w": "every",
-     "t": 49.838,
-     "end": 50.113
+     "t": 47.665,
+     "end": 47.952
     },
     {
      "w": "point",
-     "t": 50.138,
-     "end": 50.413
+     "t": 47.99,
+     "end": 48.265
     },
     {
      "w": "onto",
-     "t": 50.438,
-     "end": 50.675
+     "t": 48.29,
+     "end": 48.528
     },
     {
      "w": "its",
-     "t": 50.688,
-     "end": 50.838
+     "t": 48.54,
+     "end": 48.69
     },
     {
      "w": "own",
-     "t": 50.863,
-     "end": 51.125
+     "t": 48.715,
+     "end": 49.002
     },
     {
      "w": "spot",
-     "t": 51.163,
-     "end": 51.488
+     "t": 49.04,
+     "end": 49.415
     },
     {
      "w": "on",
-     "t": 51.513,
-     "end": 51.625
+     "t": 49.44,
+     "end": 49.552
     },
     {
      "w": "a",
-     "t": 51.638,
-     "end": 51.688
+     "t": 49.565,
+     "end": 49.615
     },
     {
      "w": "star",
-     "t": 51.713,
-     "end": 52.253
+     "t": 49.64,
+     "end": 50.17
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/1a/1ab97c182de3f30251543260.wav"
+   "wav": "/root/.cache/sample_space/tts/32/324bdbd7b225b21639f90560.wav"
   },
   {
    "index": 5,
-   "start": 52.9,
+   "start": 50.833,
    "duration": 9.29,
-   "end": 62.19,
+   "end": 60.123,
    "text": "We got the star, and lost all five numbers. [pause 0.9] The center moved, the x spread grew, and the y spread shrank by almost a quarter.",
    "voice": "af_heart",
    "speed": 0.84,
@@ -671,137 +656,137 @@
    "words": [
     {
      "w": "We",
-     "t": 52.915,
-     "end": 53.015
+     "t": 50.848,
+     "end": 50.948
     },
     {
      "w": "got",
-     "t": 53.04,
-     "end": 53.178
+     "t": 50.973,
+     "end": 51.111
     },
     {
      "w": "the",
-     "t": 53.19,
-     "end": 53.278
+     "t": 51.123,
+     "end": 51.211
     },
     {
      "w": "star",
-     "t": 53.315,
-     "end": 53.94
+     "t": 51.248,
+     "end": 51.873
     },
     {
      "w": "and",
-     "t": 54.09,
-     "end": 54.177
+     "t": 52.023,
+     "end": 52.11
     },
     {
      "w": "lost",
-     "t": 54.19,
-     "end": 54.528
+     "t": 52.123,
+     "end": 52.461
     },
     {
      "w": "all",
-     "t": 54.565,
-     "end": 54.802
+     "t": 52.498,
+     "end": 52.735
     },
     {
      "w": "five",
-     "t": 54.84,
-     "end": 55.165
+     "t": 52.773,
+     "end": 53.098
     },
     {
      "w": "numbers",
-     "t": 55.19,
-     "end": 55.83
+     "t": 53.123,
+     "end": 53.763
     },
     {
      "w": "The",
-     "t": 56.765,
-     "end": 56.878
+     "t": 54.698,
+     "end": 54.811
     },
     {
      "w": "center",
-     "t": 56.915,
-     "end": 57.265
+     "t": 54.848,
+     "end": 55.198
     },
     {
      "w": "moved",
-     "t": 57.29,
-     "end": 57.865
+     "t": 55.223,
+     "end": 55.798
     },
     {
      "w": "the",
-     "t": 57.99,
-     "end": 58.128
+     "t": 55.923,
+     "end": 56.061
     },
     {
      "w": "x",
-     "t": 58.165,
-     "end": 58.365
+     "t": 56.098,
+     "end": 56.298
     },
     {
      "w": "spread",
-     "t": 58.39,
-     "end": 58.69
+     "t": 56.323,
+     "end": 56.623
     },
     {
      "w": "grew",
-     "t": 58.715,
-     "end": 59.365
+     "t": 56.648,
+     "end": 57.298
     },
     {
      "w": "and",
-     "t": 59.54,
-     "end": 59.628
+     "t": 57.473,
+     "end": 57.561
     },
     {
      "w": "the",
-     "t": 59.64,
-     "end": 59.715
+     "t": 57.573,
+     "end": 57.648
     },
     {
      "w": "y",
-     "t": 59.74,
-     "end": 60.015
+     "t": 57.673,
+     "end": 57.948
     },
     {
      "w": "spread",
-     "t": 60.04,
-     "end": 60.365
+     "t": 57.973,
+     "end": 58.298
     },
     {
      "w": "shrank",
-     "t": 60.415,
-     "end": 60.765
+     "t": 58.348,
+     "end": 58.698
     },
     {
      "w": "by",
-     "t": 60.79,
-     "end": 60.978
+     "t": 58.723,
+     "end": 58.911
     },
     {
      "w": "almost",
-     "t": 61.015,
-     "end": 61.378
+     "t": 58.948,
+     "end": 59.311
     },
     {
      "w": "a",
-     "t": 61.39,
-     "end": 61.44
+     "t": 59.323,
+     "end": 59.373
     },
     {
      "w": "quarter",
-     "t": 61.465,
-     "end": 62.04
+     "t": 59.398,
+     "end": 59.973
     }
    ],
    "wav": "/root/.cache/sample_space/tts/69/699bb83e04caeba7e11c8a4b.wav"
   },
   {
    "index": 6,
-   "start": 62.833,
+   "start": 60.767,
    "duration": 2.89,
-   "end": 65.723,
+   "end": 63.657,
    "text": "So what exactly do five numbers pin down?",
    "voice": "af_heart",
    "speed": 0.84,
@@ -809,52 +794,52 @@
    "words": [
     {
      "w": "So",
-     "t": 62.893,
-     "end": 63.068
+     "t": 60.827,
+     "end": 61.002
     },
     {
      "w": "what",
-     "t": 63.093,
-     "end": 63.205
+     "t": 61.027,
+     "end": 61.139
     },
     {
      "w": "exactly",
-     "t": 63.218,
-     "end": 63.818
+     "t": 61.152,
+     "end": 61.752
     },
     {
      "w": "do",
-     "t": 63.843,
-     "end": 64.043
+     "t": 61.777,
+     "end": 61.977
     },
     {
      "w": "five",
-     "t": 64.093,
-     "end": 64.405
+     "t": 62.027,
+     "end": 62.339
     },
     {
      "w": "numbers",
-     "t": 64.418,
-     "end": 64.768
+     "t": 62.352,
+     "end": 62.702
     },
     {
      "w": "pin",
-     "t": 64.793,
-     "end": 65.018
+     "t": 62.727,
+     "end": 62.952
     },
     {
      "w": "down",
-     "t": 65.043,
-     "end": 65.523
+     "t": 62.977,
+     "end": 63.457
     }
    ],
    "wav": "/root/.cache/sample_space/tts/d3/d3d2711d3f28f5d0d94a8460.wav"
   },
   {
    "index": 7,
-   "start": 66.167,
+   "start": 64.1,
    "duration": 4.37,
-   "end": 70.537,
+   "end": 68.47,
    "text": "The two averages mark a single point: the cloud's balance point.",
    "voice": "af_heart",
    "speed": 0.84,
@@ -862,67 +847,67 @@
    "words": [
     {
      "w": "The",
-     "t": 66.202,
-     "end": 66.327
+     "t": 64.135,
+     "end": 64.26
     },
     {
      "w": "two",
-     "t": 66.377,
-     "end": 66.59
+     "t": 64.31,
+     "end": 64.523
     },
     {
      "w": "averages",
-     "t": 66.627,
-     "end": 67.227
+     "t": 64.56,
+     "end": 65.16
     },
     {
      "w": "mark",
-     "t": 67.252,
-     "end": 67.439
+     "t": 65.185,
+     "end": 65.372
     },
     {
      "w": "a",
-     "t": 67.452,
-     "end": 67.552
+     "t": 65.385,
+     "end": 65.485
     },
     {
      "w": "single",
-     "t": 67.602,
-     "end": 67.952
+     "t": 65.535,
+     "end": 65.885
     },
     {
      "w": "point",
-     "t": 67.977,
-     "end": 68.602
+     "t": 65.91,
+     "end": 66.535
     },
     {
      "w": "the",
-     "t": 68.777,
-     "end": 68.889
+     "t": 66.71,
+     "end": 66.822
     },
     {
      "w": "cloud's",
-     "t": 68.927,
-     "end": 69.402
+     "t": 66.86,
+     "end": 67.335
     },
     {
      "w": "balance",
-     "t": 69.427,
-     "end": 69.852
+     "t": 67.36,
+     "end": 67.785
     },
     {
      "w": "point",
-     "t": 69.877,
-     "end": 70.387
+     "t": 67.81,
+     "end": 68.32
     }
    ],
    "wav": "/root/.cache/sample_space/tts/a3/a36271dc44964862c5c812be.wav"
   },
   {
    "index": 8,
-   "start": 71.0,
+   "start": 68.933,
    "duration": 5.9,
-   "end": 76.9,
+   "end": 74.833,
    "text": "The two standard deviations reach one deviation out on each side, and draw a box.",
    "voice": "af_heart",
    "speed": 0.84,
@@ -930,405 +915,448 @@
    "words": [
     {
      "w": "The",
-     "t": 71.025,
-     "end": 71.15
+     "t": 68.958,
+     "end": 69.083
     },
     {
      "w": "two",
-     "t": 71.2,
-     "end": 71.488
+     "t": 69.133,
+     "end": 69.421
     },
     {
      "w": "standard",
-     "t": 71.525,
-     "end": 71.925
+     "t": 69.458,
+     "end": 69.858
     },
     {
      "w": "deviations",
-     "t": 71.95,
-     "end": 73.05
+     "t": 69.883,
+     "end": 70.983
     },
     {
      "w": "reach",
-     "t": 73.1,
-     "end": 73.425
+     "t": 71.033,
+     "end": 71.358
     },
     {
      "w": "one",
-     "t": 73.475,
-     "end": 73.7
+     "t": 71.408,
+     "end": 71.633
     },
     {
      "w": "deviation",
-     "t": 73.725,
-     "end": 74.375
+     "t": 71.658,
+     "end": 72.308
     },
     {
      "w": "out",
-     "t": 74.4,
-     "end": 74.562
+     "t": 72.333,
+     "end": 72.495
     },
     {
      "w": "on",
-     "t": 74.575,
-     "end": 74.675
+     "t": 72.508,
+     "end": 72.608
     },
     {
      "w": "each",
-     "t": 74.7,
-     "end": 74.913
+     "t": 72.633,
+     "end": 72.846
     },
     {
      "w": "side",
-     "t": 74.95,
-     "end": 75.65
+     "t": 72.883,
+     "end": 73.583
     },
     {
      "w": "and",
-     "t": 75.8,
-     "end": 75.9
+     "t": 73.733,
+     "end": 73.833
     },
     {
      "w": "draw",
-     "t": 75.925,
-     "end": 76.175
+     "t": 73.858,
+     "end": 74.108
     },
     {
      "w": "a",
-     "t": 76.2,
-     "end": 76.25
+     "t": 74.133,
+     "end": 74.183
     },
     {
      "w": "box",
-     "t": 76.275,
-     "end": 76.9
+     "t": 74.208,
+     "end": 74.833
     }
    ],
    "wav": "/root/.cache/sample_space/tts/0b/0b1698a1759c6f94ce6c8c5f.wav"
   },
   {
    "index": 9,
-   "start": 77.567,
-   "duration": 24.54,
-   "end": 102.107,
-   "text": "Many ellipses touch all four walls. [pause 0.2] The correlation picks one. Correlation r means one standard deviation to the right, on average r standard deviations up. That's the best-fit line, through the middle of every vertical slice. At the wall, the slice is just the touch point, r times ess why above the center. For the dinosaur, it's just below the middle.",
+   "start": 75.5,
+   "duration": 5.31,
+   "end": 80.81,
+   "text": "Many ellipses touch all four walls. [pause 0.2] The correlation, r, picks one. [pause 0.6]",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
      "w": "Many",
-     "t": 77.622,
-     "end": 77.872
+     "t": 75.555,
+     "end": 75.805
     },
     {
      "w": "ellipses",
-     "t": 77.897,
-     "end": 78.447
+     "t": 75.83,
+     "end": 76.38
     },
     {
      "w": "touch",
-     "t": 78.472,
-     "end": 78.759
+     "t": 76.405,
+     "end": 76.692
     },
     {
      "w": "all",
-     "t": 78.797,
-     "end": 78.985
+     "t": 76.73,
+     "end": 76.918
     },
     {
      "w": "four",
-     "t": 79.022,
-     "end": 79.222
+     "t": 76.955,
+     "end": 77.155
     },
     {
      "w": "walls",
-     "t": 79.247,
-     "end": 79.857
+     "t": 77.18,
+     "end": 77.79
     },
     {
      "w": "The",
-     "t": 80.092,
-     "end": 80.167
+     "t": 78.015,
+     "end": 78.09
     },
     {
      "w": "correlation",
-     "t": 80.192,
-     "end": 80.892
+     "t": 78.115,
+     "end": 78.94
+    },
+    {
+     "w": "r",
+     "t": 79.09,
+     "end": 79.34
     },
     {
      "w": "picks",
-     "t": 80.917,
-     "end": 81.192
+     "t": 79.415,
+     "end": 79.69
     },
     {
      "w": "one",
-     "t": 81.217,
-     "end": 81.717
-    },
-    {
-     "w": "Correlation",
-     "t": 82.322,
-     "end": 83.197
-    },
-    {
-     "w": "r",
-     "t": 83.247,
-     "end": 83.547
-    },
-    {
-     "w": "means",
-     "t": 83.572,
-     "end": 83.897
-    },
-    {
-     "w": "one",
-     "t": 83.947,
-     "end": 84.234
-    },
-    {
-     "w": "standard",
-     "t": 84.272,
-     "end": 84.722
-    },
-    {
-     "w": "deviation",
-     "t": 84.747,
-     "end": 85.422
-    },
-    {
-     "w": "to",
-     "t": 85.447,
-     "end": 85.509
-    },
-    {
-     "w": "the",
-     "t": 85.522,
-     "end": 85.597
-    },
-    {
-     "w": "right",
-     "t": 85.622,
-     "end": 86.322
-    },
-    {
-     "w": "on",
-     "t": 86.472,
-     "end": 86.672
-    },
-    {
-     "w": "average",
-     "t": 86.722,
-     "end": 87.222
-    },
-    {
-     "w": "r",
-     "t": 87.272,
-     "end": 87.497
-    },
-    {
-     "w": "standard",
-     "t": 87.522,
-     "end": 87.947
-    },
-    {
-     "w": "deviations",
-     "t": 87.972,
-     "end": 88.735
-    },
-    {
-     "w": "up",
-     "t": 88.772,
-     "end": 89.167
-    },
-    {
-     "w": "That's",
-     "t": 89.717,
-     "end": 90.017
-    },
-    {
-     "w": "the",
-     "t": 90.042,
-     "end": 90.117
-    },
-    {
-     "w": "best-fit",
-     "t": 90.142,
-     "end": 90.592
-    },
-    {
-     "w": "line",
-     "t": 90.617,
-     "end": 91.242
-    },
-    {
-     "w": "through",
-     "t": 91.417,
-     "end": 91.592
-    },
-    {
-     "w": "the",
-     "t": 91.617,
-     "end": 91.717
-    },
-    {
-     "w": "middle",
-     "t": 91.742,
-     "end": 92.017
-    },
-    {
-     "w": "of",
-     "t": 92.042,
-     "end": 92.192
-    },
-    {
-     "w": "every",
-     "t": 92.242,
-     "end": 92.542
-    },
-    {
-     "w": "vertical",
-     "t": 92.567,
-     "end": 93.005
-    },
-    {
-     "w": "slice",
-     "t": 93.042,
-     "end": 93.667
-    },
-    {
-     "w": "At",
-     "t": 93.967,
-     "end": 94.082
-    },
-    {
-     "w": "the",
-     "t": 94.107,
-     "end": 94.22
-    },
-    {
-     "w": "wall",
-     "t": 94.257,
-     "end": 94.682
-    },
-    {
-     "w": "the",
-     "t": 94.782,
-     "end": 94.895
-    },
-    {
-     "w": "slice",
-     "t": 94.932,
-     "end": 95.332
-    },
-    {
-     "w": "is",
-     "t": 95.357,
-     "end": 95.482
-    },
-    {
-     "w": "just",
-     "t": 95.507,
-     "end": 95.695
-    },
-    {
-     "w": "the",
-     "t": 95.707,
-     "end": 95.782
-    },
-    {
-     "w": "touch",
-     "t": 95.807,
-     "end": 96.057
-    },
-    {
-     "w": "point",
-     "t": 96.082,
-     "end": 96.732
-    },
-    {
-     "w": "r",
-     "t": 96.932,
-     "end": 97.132
-    },
-    {
-     "w": "times",
-     "t": 97.157,
-     "end": 97.545
-    },
-    {
-     "w": "ess",
-     "t": 97.582,
-     "end": 97.882
-    },
-    {
-     "w": "why",
-     "t": 97.907,
-     "end": 98.132
-    },
-    {
-     "w": "above",
-     "t": 98.157,
-     "end": 98.42
-    },
-    {
-     "w": "the",
-     "t": 98.432,
-     "end": 98.545
-    },
-    {
-     "w": "center",
-     "t": 98.582,
-     "end": 99.177
-    },
-    {
-     "w": "For",
-     "t": 99.512,
-     "end": 99.625
-    },
-    {
-     "w": "the",
-     "t": 99.637,
-     "end": 99.712
-    },
-    {
-     "w": "dinosaur",
-     "t": 99.737,
-     "end": 100.562
-    },
-    {
-     "w": "it's",
-     "t": 100.712,
-     "end": 100.9
-    },
-    {
-     "w": "just",
-     "t": 100.937,
-     "end": 101.187
-    },
-    {
-     "w": "below",
-     "t": 101.212,
-     "end": 101.537
-    },
-    {
-     "w": "the",
-     "t": 101.562,
-     "end": 101.637
-    },
-    {
-     "w": "middle",
-     "t": 101.662,
-     "end": 102.107
+     "t": 79.715,
+     "end": 80.21
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/0a/0ada1a5230f0c01e7300a9d7.wav"
+   "wav": "/root/.cache/sample_space/tts/eb/eb2357e2a26535c6e6283735.wav"
   },
   {
    "index": 10,
-   "start": 102.767,
+   "start": 81.467,
+   "duration": 22.42,
+   "end": 103.887,
+   "text": "Say r is point eight. Go one standard deviation right. On average, the cloud rises r times a standard deviation. [pause 0.7] That's the best-fit line, through the middle of every vertical slice. [pause 0.7] At the wall, the slices shrink to the touch point, r times ess why above the center. [pause 0.4] For the dinosaur, it's just below the middle.",
+   "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Say",
+     "t": 81.567,
+     "end": 81.755
+    },
+    {
+     "w": "r",
+     "t": 81.792,
+     "end": 81.955
+    },
+    {
+     "w": "is",
+     "t": 81.967,
+     "end": 82.092
+    },
+    {
+     "w": "point",
+     "t": 82.117,
+     "end": 82.367
+    },
+    {
+     "w": "eight",
+     "t": 82.392,
+     "end": 82.887
+    },
+    {
+     "w": "Go",
+     "t": 83.417,
+     "end": 83.667
+    },
+    {
+     "w": "one",
+     "t": 83.717,
+     "end": 83.979
+    },
+    {
+     "w": "standard",
+     "t": 84.017,
+     "end": 84.392
+    },
+    {
+     "w": "deviation",
+     "t": 84.417,
+     "end": 85.042
+    },
+    {
+     "w": "right",
+     "t": 85.067,
+     "end": 85.527
+    },
+    {
+     "w": "On",
+     "t": 85.827,
+     "end": 86.035
+    },
+    {
+     "w": "average",
+     "t": 86.072,
+     "end": 86.822
+    },
+    {
+     "w": "the",
+     "t": 86.972,
+     "end": 87.047
+    },
+    {
+     "w": "cloud",
+     "t": 87.072,
+     "end": 87.472
+    },
+    {
+     "w": "rises",
+     "t": 87.497,
+     "end": 87.997
+    },
+    {
+     "w": "r",
+     "t": 88.047,
+     "end": 88.247
+    },
+    {
+     "w": "times",
+     "t": 88.272,
+     "end": 88.609
+    },
+    {
+     "w": "a",
+     "t": 88.622,
+     "end": 88.709
+    },
+    {
+     "w": "standard",
+     "t": 88.747,
+     "end": 89.197
+    },
+    {
+     "w": "deviation",
+     "t": 89.222,
+     "end": 90.097
+    },
+    {
+     "w": "That's",
+     "t": 90.847,
+     "end": 91.147
+    },
+    {
+     "w": "the",
+     "t": 91.172,
+     "end": 91.247
+    },
+    {
+     "w": "best-fit",
+     "t": 91.272,
+     "end": 91.722
+    },
+    {
+     "w": "line",
+     "t": 91.747,
+     "end": 92.372
+    },
+    {
+     "w": "through",
+     "t": 92.547,
+     "end": 92.722
+    },
+    {
+     "w": "the",
+     "t": 92.747,
+     "end": 92.847
+    },
+    {
+     "w": "middle",
+     "t": 92.872,
+     "end": 93.147
+    },
+    {
+     "w": "of",
+     "t": 93.172,
+     "end": 93.322
+    },
+    {
+     "w": "every",
+     "t": 93.372,
+     "end": 93.672
+    },
+    {
+     "w": "vertical",
+     "t": 93.697,
+     "end": 94.134
+    },
+    {
+     "w": "slice",
+     "t": 94.172,
+     "end": 94.797
+    },
+    {
+     "w": "At",
+     "t": 95.497,
+     "end": 95.599
+    },
+    {
+     "w": "the",
+     "t": 95.612,
+     "end": 95.724
+    },
+    {
+     "w": "wall",
+     "t": 95.762,
+     "end": 96.187
+    },
+    {
+     "w": "the",
+     "t": 96.287,
+     "end": 96.387
+    },
+    {
+     "w": "slices",
+     "t": 96.412,
+     "end": 96.962
+    },
+    {
+     "w": "shrink",
+     "t": 97.012,
+     "end": 97.262
+    },
+    {
+     "w": "to",
+     "t": 97.287,
+     "end": 97.349
+    },
+    {
+     "w": "the",
+     "t": 97.362,
+     "end": 97.437
+    },
+    {
+     "w": "touch",
+     "t": 97.462,
+     "end": 97.712
+    },
+    {
+     "w": "point",
+     "t": 97.737,
+     "end": 98.387
+    },
+    {
+     "w": "r",
+     "t": 98.587,
+     "end": 98.787
+    },
+    {
+     "w": "times",
+     "t": 98.812,
+     "end": 99.199
+    },
+    {
+     "w": "ess",
+     "t": 99.237,
+     "end": 99.549
+    },
+    {
+     "w": "why",
+     "t": 99.587,
+     "end": 99.812
+    },
+    {
+     "w": "above",
+     "t": 99.837,
+     "end": 100.099
+    },
+    {
+     "w": "the",
+     "t": 100.112,
+     "end": 100.224
+    },
+    {
+     "w": "center",
+     "t": 100.262,
+     "end": 100.857
+    },
+    {
+     "w": "For",
+     "t": 101.292,
+     "end": 101.404
+    },
+    {
+     "w": "the",
+     "t": 101.417,
+     "end": 101.492
+    },
+    {
+     "w": "dinosaur",
+     "t": 101.517,
+     "end": 102.342
+    },
+    {
+     "w": "it's",
+     "t": 102.492,
+     "end": 102.679
+    },
+    {
+     "w": "just",
+     "t": 102.717,
+     "end": 102.967
+    },
+    {
+     "w": "below",
+     "t": 102.992,
+     "end": 103.317
+    },
+    {
+     "w": "the",
+     "t": 103.342,
+     "end": 103.417
+    },
+    {
+     "w": "middle",
+     "t": 103.442,
+     "end": 103.887
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/c4/c4cc270426862a8bd91e69ad.wav"
+  },
+  {
+   "index": 11,
+   "start": 104.533,
    "duration": 3.88,
-   "end": 106.647,
+   "end": 108.413,
    "text": "That ellipse is everything the five numbers know. [pause 1.0]",
    "voice": "af_heart",
    "speed": 0.84,
@@ -1336,105 +1364,110 @@
    "words": [
     {
      "w": "That",
-     "t": 102.807,
-     "end": 103.007
+     "t": 104.573,
+     "end": 104.773
     },
     {
      "w": "ellipse",
-     "t": 103.032,
-     "end": 103.495
+     "t": 104.798,
+     "end": 105.261
     },
     {
      "w": "is",
-     "t": 103.532,
-     "end": 103.707
+     "t": 105.298,
+     "end": 105.473
     },
     {
      "w": "everything",
-     "t": 103.757,
-     "end": 104.245
+     "t": 105.523,
+     "end": 106.011
     },
     {
      "w": "the",
-     "t": 104.257,
-     "end": 104.369
+     "t": 106.023,
+     "end": 106.135
     },
     {
      "w": "five",
-     "t": 104.407,
-     "end": 104.782
+     "t": 106.173,
+     "end": 106.548
     },
     {
      "w": "numbers",
-     "t": 104.807,
-     "end": 105.182
+     "t": 106.573,
+     "end": 106.948
     },
     {
      "w": "know",
-     "t": 105.207,
-     "end": 105.647
+     "t": 106.973,
+     "end": 107.413
     }
    ],
    "wav": "/root/.cache/sample_space/tts/3d/3d354dae5e431803656b8b07.wav"
   },
   {
-   "index": 11,
-   "start": 107.1,
-   "duration": 2.92,
-   "end": 110.02,
-   "text": "Now replay version one, and watch the ellipse.",
+   "index": 12,
+   "start": 108.867,
+   "duration": 3.26,
+   "end": 112.127,
+   "text": "Now replay the first version, and watch the ellipse.",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
      "w": "Now",
-     "t": 107.18,
-     "end": 107.405
+     "t": 108.947,
+     "end": 109.197
     },
     {
      "w": "replay",
-     "t": 107.43,
-     "end": 107.78
-    },
-    {
-     "w": "version",
-     "t": 107.805,
-     "end": 108.13
-    },
-    {
-     "w": "one",
-     "t": 108.155,
-     "end": 108.605
-    },
-    {
-     "w": "and",
-     "t": 108.73,
-     "end": 108.842
-    },
-    {
-     "w": "watch",
-     "t": 108.88,
-     "end": 109.23
+     "t": 109.222,
+     "end": 109.585
     },
     {
      "w": "the",
-     "t": 109.255,
-     "end": 109.38
+     "t": 109.597,
+     "end": 109.709
+    },
+    {
+     "w": "first",
+     "t": 109.747,
+     "end": 110.022
+    },
+    {
+     "w": "version",
+     "t": 110.047,
+     "end": 110.697
+    },
+    {
+     "w": "and",
+     "t": 110.822,
+     "end": 110.935
+    },
+    {
+     "w": "watch",
+     "t": 110.972,
+     "end": 111.322
+    },
+    {
+     "w": "the",
+     "t": 111.347,
+     "end": 111.472
     },
     {
      "w": "ellipse",
-     "t": 109.405,
-     "end": 110.02
+     "t": 111.497,
+     "end": 112.127
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/81/817d6f354b351d6b8032d550.wav"
+   "wav": "/root/.cache/sample_space/tts/bf/bfb307473ab8046123e221bd.wav"
   },
   {
-   "index": 12,
-   "start": 110.533,
+   "index": 13,
+   "start": 112.567,
    "duration": 2.83,
-   "end": 113.363,
+   "end": 115.397,
    "text": "How would you fix it? [pause 1.5]",
    "voice": "af_heart",
    "speed": 0.84,
@@ -1442,185 +1475,185 @@
    "words": [
     {
      "w": "How",
-     "t": 110.588,
-     "end": 110.788
+     "t": 112.622,
+     "end": 112.822
     },
     {
      "w": "would",
-     "t": 110.813,
-     "end": 110.938
+     "t": 112.847,
+     "end": 112.972
     },
     {
      "w": "you",
-     "t": 110.963,
-     "end": 111.113
+     "t": 112.997,
+     "end": 113.147
     },
     {
      "w": "fix",
-     "t": 111.163,
-     "end": 111.475
+     "t": 113.197,
+     "end": 113.509
     },
     {
      "w": "it",
-     "t": 111.513,
-     "end": 111.863
+     "t": 113.547,
+     "end": 113.897
     }
    ],
    "wav": "/root/.cache/sample_space/tts/4b/4b2bff95ba966bb5a14071b8.wav"
   },
   {
-   "index": 13,
-   "start": 113.8,
-   "duration": 9.47,
-   "end": 123.27,
-   "text": "Slide it until the centers meet. Stretch it until the boxes match. Then tip it, a slight shear, until it touches the walls at the same height.",
+   "index": 14,
+   "start": 115.833,
+   "duration": 9.48,
+   "end": 125.313,
+   "text": "Slide it until the centers meet. Stretch it until the boxes match. Then tip it, keeping the box, [pause 0.2] until it touches the walls at the same height.",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
      "w": "Slide",
-     "t": 113.895,
-     "end": 114.245
+     "t": 115.928,
+     "end": 116.278
     },
     {
      "w": "it",
-     "t": 114.27,
-     "end": 114.395
+     "t": 116.303,
+     "end": 116.428
     },
     {
      "w": "until",
-     "t": 114.42,
-     "end": 114.683
+     "t": 116.453,
+     "end": 116.716
     },
     {
      "w": "the",
-     "t": 114.695,
-     "end": 114.808
+     "t": 116.728,
+     "end": 116.841
     },
     {
      "w": "centers",
-     "t": 114.845,
-     "end": 115.245
+     "t": 116.878,
+     "end": 117.278
     },
     {
      "w": "meet",
-     "t": 115.27,
-     "end": 115.76
+     "t": 117.303,
+     "end": 117.793
     },
     {
      "w": "Stretch",
-     "t": 116.13,
-     "end": 116.53
+     "t": 118.163,
+     "end": 118.563
     },
     {
      "w": "it",
-     "t": 116.555,
-     "end": 116.68
+     "t": 118.588,
+     "end": 118.713
     },
     {
      "w": "until",
-     "t": 116.705,
-     "end": 116.967
+     "t": 118.738,
+     "end": 119.0
     },
     {
      "w": "the",
-     "t": 116.98,
-     "end": 117.055
+     "t": 119.013,
+     "end": 119.088
     },
     {
      "w": "boxes",
-     "t": 117.08,
-     "end": 117.58
+     "t": 119.113,
+     "end": 119.613
     },
     {
      "w": "match",
-     "t": 117.605,
-     "end": 118.18
+     "t": 119.638,
+     "end": 120.213
     },
     {
      "w": "Then",
-     "t": 118.73,
-     "end": 118.942
+     "t": 120.773,
+     "end": 121.011
     },
     {
      "w": "tip",
-     "t": 118.98,
-     "end": 119.218
+     "t": 121.048,
+     "end": 121.285
     },
     {
      "w": "it",
-     "t": 119.255,
-     "end": 119.455
+     "t": 121.323,
+     "end": 121.523
     },
     {
-     "w": "a",
-     "t": 119.555,
-     "end": 119.655
+     "w": "keeping",
+     "t": 121.623,
+     "end": 121.911
     },
     {
-     "w": "slight",
-     "t": 119.705,
-     "end": 120.08
+     "w": "the",
+     "t": 121.923,
+     "end": 121.998
     },
     {
-     "w": "shear",
-     "t": 120.13,
-     "end": 120.755
+     "w": "box",
+     "t": 122.023,
+     "end": 122.653
     },
     {
      "w": "until",
-     "t": 120.905,
-     "end": 121.168
+     "t": 122.853,
+     "end": 123.185
     },
     {
      "w": "it",
-     "t": 121.18,
-     "end": 121.255
+     "t": 123.198,
+     "end": 123.273
     },
     {
      "w": "touches",
-     "t": 121.28,
-     "end": 121.655
+     "t": 123.298,
+     "end": 123.698
     },
     {
      "w": "the",
-     "t": 121.68,
-     "end": 121.792
+     "t": 123.723,
+     "end": 123.836
     },
     {
      "w": "walls",
-     "t": 121.83,
-     "end": 122.218
+     "t": 123.873,
+     "end": 124.261
     },
     {
      "w": "at",
-     "t": 122.23,
-     "end": 122.292
+     "t": 124.273,
+     "end": 124.336
     },
     {
      "w": "the",
-     "t": 122.305,
-     "end": 122.418
+     "t": 124.348,
+     "end": 124.461
     },
     {
      "w": "same",
-     "t": 122.455,
-     "end": 122.755
+     "t": 124.498,
+     "end": 124.773
     },
     {
      "w": "height",
-     "t": 122.78,
-     "end": 123.27
+     "t": 124.798,
+     "end": 125.313
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/a8/a85db77dfc454ef9342e9f9f.wav"
+   "wav": "/root/.cache/sample_space/tts/eb/eb610ef221385f0d5e3bcee2.wav"
   },
   {
-   "index": 14,
-   "start": 123.933,
+   "index": 15,
+   "start": 125.967,
    "duration": 3.71,
-   "end": 127.643,
+   "end": 129.677,
    "text": "All five match now, to every decimal place. [pause 0.6]",
    "voice": "af_heart",
    "speed": 0.84,
@@ -1628,52 +1661,52 @@
    "words": [
     {
      "w": "All",
-     "t": 123.943,
-     "end": 124.155
+     "t": 125.977,
+     "end": 126.189
     },
     {
      "w": "five",
-     "t": 124.193,
-     "end": 124.518
+     "t": 126.227,
+     "end": 126.552
     },
     {
      "w": "match",
-     "t": 124.543,
-     "end": 124.843
+     "t": 126.577,
+     "end": 126.877
     },
     {
      "w": "now",
-     "t": 124.868,
-     "end": 125.293
+     "t": 126.902,
+     "end": 127.327
     },
     {
      "w": "to",
-     "t": 125.443,
-     "end": 125.581
+     "t": 127.477,
+     "end": 127.615
     },
     {
      "w": "every",
-     "t": 125.618,
-     "end": 125.918
+     "t": 127.652,
+     "end": 127.952
     },
     {
      "w": "decimal",
-     "t": 125.943,
-     "end": 126.393
+     "t": 127.977,
+     "end": 128.427
     },
     {
      "w": "place",
-     "t": 126.418,
-     "end": 127.043
+     "t": 128.452,
+     "end": 129.077
     }
    ],
    "wav": "/root/.cache/sample_space/tts/2b/2b3327215f03edf8768ff885.wav"
   },
   {
-   "index": 15,
-   "start": 128.233,
+   "index": 16,
+   "start": 130.267,
    "duration": 5.03,
-   "end": 133.263,
+   "end": 135.297,
    "text": "But add a sixth number: the median of y. Our star misses it by six.",
    "voice": "af_heart",
    "speed": 0.84,
@@ -1681,1116 +1714,968 @@
    "words": [
     {
      "w": "But",
-     "t": 128.233,
-     "end": 128.351
+     "t": 130.267,
+     "end": 130.385
     },
     {
      "w": "add",
-     "t": 128.388,
-     "end": 128.575
+     "t": 130.422,
+     "end": 130.609
     },
     {
      "w": "a",
-     "t": 128.588,
-     "end": 128.675
+     "t": 130.622,
+     "end": 130.709
     },
     {
      "w": "sixth",
-     "t": 128.713,
-     "end": 129.038
+     "t": 130.747,
+     "end": 131.072
     },
     {
      "w": "number",
-     "t": 129.063,
-     "end": 129.613
+     "t": 131.097,
+     "end": 131.647
     },
     {
      "w": "the",
-     "t": 129.788,
-     "end": 129.888
+     "t": 131.822,
+     "end": 131.922
     },
     {
      "w": "median",
-     "t": 129.913,
-     "end": 130.301
+     "t": 131.947,
+     "end": 132.335
     },
     {
      "w": "of",
-     "t": 130.313,
-     "end": 130.438
+     "t": 132.347,
+     "end": 132.472
     },
     {
      "w": "y.",
-     "t": 130.463,
-     "end": 130.983
+     "t": 132.497,
+     "end": 133.017
     },
     {
      "w": "Our",
-     "t": 131.298,
-     "end": 131.485
+     "t": 133.332,
+     "end": 133.519
     },
     {
      "w": "star",
-     "t": 131.523,
-     "end": 131.823
+     "t": 133.557,
+     "end": 133.857
     },
     {
      "w": "misses",
-     "t": 131.848,
-     "end": 132.148
+     "t": 133.882,
+     "end": 134.182
     },
     {
      "w": "it",
-     "t": 132.173,
-     "end": 132.273
+     "t": 134.207,
+     "end": 134.307
     },
     {
      "w": "by",
-     "t": 132.298,
-     "end": 132.498
+     "t": 134.332,
+     "end": 134.532
     },
     {
      "w": "six",
-     "t": 132.548,
-     "end": 133.113
+     "t": 134.582,
+     "end": 135.147
     }
    ],
    "wav": "/root/.cache/sample_space/tts/ef/ef35321e8afc91bd9220b6c6.wav"
   },
   {
-   "index": 16,
-   "start": 133.7,
-   "duration": 9.89,
-   "end": 143.59,
-   "text": "In 2017, Justin Matejka and George Fitzmaurice built a search that keeps these five numbers fixed while it nudges points toward a target.",
+   "index": 17,
+   "start": 135.733,
+   "duration": 9.68,
+   "end": 145.413,
+   "text": "In 2017, Justin Matejka and George Fitzmaurice built a search. [pause 0.4] It keeps these five numbers fixed while it nudges points toward a target.",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
      "w": "In",
-     "t": 133.72,
-     "end": 133.82
+     "t": 135.763,
+     "end": 135.888
     },
     {
      "w": "2017",
-     "t": 133.845,
-     "end": 135.27
+     "t": 135.913,
+     "end": 137.238
     },
     {
      "w": "Justin",
-     "t": 135.495,
-     "end": 135.92
+     "t": 137.438,
+     "end": 137.838
     },
     {
      "w": "Matejka",
-     "t": 135.945,
-     "end": 136.607
+     "t": 137.863,
+     "end": 138.525
     },
     {
      "w": "and",
-     "t": 136.645,
-     "end": 136.758
+     "t": 138.563,
+     "end": 138.676
     },
     {
      "w": "George",
-     "t": 136.795,
-     "end": 137.17
+     "t": 138.713,
+     "end": 139.088
     },
     {
      "w": "Fitzmaurice",
-     "t": 137.195,
-     "end": 138.02
+     "t": 139.113,
+     "end": 139.751
     },
     {
      "w": "built",
-     "t": 138.07,
-     "end": 138.308
+     "t": 139.788,
+     "end": 140.025
     },
     {
      "w": "a",
-     "t": 138.32,
-     "end": 138.42
+     "t": 140.038,
+     "end": 140.125
     },
     {
      "w": "search",
-     "t": 138.47,
-     "end": 138.895
+     "t": 140.163,
+     "end": 140.713
     },
     {
-     "w": "that",
-     "t": 138.92,
-     "end": 139.07
+     "w": "It",
+     "t": 141.113,
+     "end": 141.233
     },
     {
      "w": "keeps",
-     "t": 139.095,
-     "end": 139.395
+     "t": 141.258,
+     "end": 141.533
     },
     {
      "w": "these",
-     "t": 139.42,
-     "end": 139.72
+     "t": 141.558,
+     "end": 141.846
     },
     {
      "w": "five",
-     "t": 139.77,
-     "end": 140.145
+     "t": 141.883,
+     "end": 142.233
     },
     {
      "w": "numbers",
-     "t": 140.17,
-     "end": 140.582
+     "t": 142.258,
+     "end": 142.646
     },
     {
      "w": "fixed",
-     "t": 140.62,
-     "end": 141.47
+     "t": 142.683,
+     "end": 143.408
     },
     {
      "w": "while",
-     "t": 141.52,
-     "end": 141.682
+     "t": 143.458,
+     "end": 143.596
     },
     {
      "w": "it",
-     "t": 141.695,
-     "end": 141.782
+     "t": 143.608,
+     "end": 143.683
     },
     {
      "w": "nudges",
-     "t": 141.82,
-     "end": 142.182
+     "t": 143.708,
+     "end": 144.045
     },
     {
      "w": "points",
-     "t": 142.22,
-     "end": 142.62
+     "t": 144.083,
+     "end": 144.433
     },
     {
      "w": "toward",
-     "t": 142.645,
-     "end": 142.882
+     "t": 144.458,
+     "end": 144.695
     },
     {
      "w": "a",
-     "t": 142.895,
-     "end": 142.945
+     "t": 144.708,
+     "end": 144.758
     },
     {
      "w": "target",
-     "t": 142.97,
-     "end": 143.59
+     "t": 144.783,
+     "end": 145.413
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/54/549d5476bed5de93ec4484f3.wav"
+   "wav": "/root/.cache/sample_space/tts/80/80147be8fef7101731a369ac.wav"
   },
   {
-   "index": 17,
-   "start": 144.233,
-   "duration": 14.23,
-   "end": 158.463,
-   "text": "From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this star, [pause 0.8] this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Every one has this same ellipse, and a different median.",
+   "index": 18,
+   "start": 146.067,
+   "duration": 14.11,
+   "end": 160.177,
+   "text": "From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this star, [pause 0.8] this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Each one has this same ellipse, and a different median.",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
      "w": "From",
-     "t": 144.268,
-     "end": 144.406
+     "t": 146.102,
+     "end": 146.24
     },
     {
      "w": "the",
-     "t": 144.418,
-     "end": 144.493
+     "t": 146.252,
+     "end": 146.327
     },
     {
      "w": "dinosaur",
-     "t": 144.518,
-     "end": 145.143
+     "t": 146.352,
+     "end": 146.977
     },
     {
      "w": "they",
-     "t": 145.168,
-     "end": 145.293
+     "t": 147.002,
+     "end": 147.127
     },
     {
      "w": "grew",
-     "t": 145.318,
-     "end": 145.518
+     "t": 147.152,
+     "end": 147.352
     },
     {
      "w": "twelve",
-     "t": 145.543,
-     "end": 145.855
+     "t": 147.377,
+     "end": 147.689
     },
     {
      "w": "shapes",
-     "t": 145.893,
-     "end": 146.593
+     "t": 147.727,
+     "end": 148.427
     },
     {
      "w": "this",
-     "t": 146.768,
-     "end": 146.955
+     "t": 148.602,
+     "end": 148.789
     },
     {
      "w": "circle",
-     "t": 146.993,
-     "end": 147.613
+     "t": 148.827,
+     "end": 149.447
     },
     {
      "w": "this",
-     "t": 148.483,
-     "end": 148.658
+     "t": 150.317,
+     "end": 150.492
     },
     {
      "w": "star",
-     "t": 148.683,
-     "end": 149.273
+     "t": 150.517,
+     "end": 151.107
     },
     {
      "w": "this",
-     "t": 150.143,
-     "end": 150.343
+     "t": 151.977,
+     "end": 152.177
     },
     {
      "w": "bullseye",
-     "t": 150.368,
-     "end": 151.133
+     "t": 152.202,
+     "end": 152.967
     },
     {
      "w": "this",
-     "t": 152.003,
-     "end": 152.241
+     "t": 153.837,
+     "end": 154.075
     },
     {
      "w": "X",
-     "t": 152.278,
-     "end": 152.803
+     "t": 154.112,
+     "end": 154.637
     },
     {
      "w": "and",
-     "t": 153.693,
-     "end": 153.818
+     "t": 155.527,
+     "end": 155.652
     },
     {
      "w": "these",
-     "t": 153.843,
-     "end": 154.093
+     "t": 155.677,
+     "end": 155.927
     },
     {
      "w": "stripes",
-     "t": 154.118,
-     "end": 154.813
+     "t": 155.952,
+     "end": 156.647
     },
     {
-     "w": "Every",
-     "t": 155.233,
-     "end": 155.533
+     "w": "Each",
+     "t": 157.067,
+     "end": 157.317
     },
     {
      "w": "one",
-     "t": 155.558,
-     "end": 155.758
+     "t": 157.342,
+     "end": 157.542
     },
     {
      "w": "has",
-     "t": 155.783,
-     "end": 155.983
+     "t": 157.567,
+     "end": 157.767
     },
     {
      "w": "this",
-     "t": 156.008,
-     "end": 156.158
+     "t": 157.792,
+     "end": 157.942
     },
     {
      "w": "same",
-     "t": 156.183,
-     "end": 156.458
+     "t": 157.967,
+     "end": 158.217
     },
     {
      "w": "ellipse",
-     "t": 156.483,
-     "end": 157.183
+     "t": 158.242,
+     "end": 158.892
     },
     {
      "w": "and",
-     "t": 157.308,
-     "end": 157.396
+     "t": 159.017,
+     "end": 159.105
     },
     {
      "w": "a",
-     "t": 157.408,
-     "end": 157.458
+     "t": 159.117,
+     "end": 159.167
     },
     {
      "w": "different",
-     "t": 157.483,
-     "end": 157.783
+     "t": 159.192,
+     "end": 159.492
     },
     {
      "w": "median",
-     "t": 157.808,
-     "end": 158.463
+     "t": 159.517,
+     "end": 160.177
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/fd/fdf04aa921d9df7f16f3f596.wav"
+   "wav": "/root/.cache/sample_space/tts/51/51f8fefcc62418e1e68154d2.wav"
   },
   {
-   "index": 18,
-   "start": 159.067,
-   "duration": 5.45,
-   "end": 164.517,
-   "text": "Francis Anscombe made the point in 1973, with eleven points of his own.",
+   "index": 19,
+   "start": 160.767,
+   "duration": 6.45,
+   "end": 167.217,
+   "text": "Francis Anscombe made the same point in 1973, with eleven points. [pause 1.2]",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
      "w": "Francis",
-     "t": 159.127,
-     "end": 159.677
+     "t": 160.817,
+     "end": 161.367
     },
     {
      "w": "Anscombe",
-     "t": 159.727,
-     "end": 160.327
+     "t": 161.417,
+     "end": 162.017
     },
     {
      "w": "made",
-     "t": 160.352,
-     "end": 160.515
+     "t": 162.042,
+     "end": 162.205
     },
     {
      "w": "the",
-     "t": 160.527,
-     "end": 160.614
-    },
-    {
-     "w": "point",
-     "t": 160.652,
-     "end": 161.027
-    },
-    {
-     "w": "in",
-     "t": 161.052,
-     "end": 161.152
-    },
-    {
-     "w": "1973",
-     "t": 161.177,
-     "end": 162.627
-    },
-    {
-     "w": "with",
-     "t": 162.802,
-     "end": 162.952
-    },
-    {
-     "w": "eleven",
-     "t": 162.977,
-     "end": 163.402
-    },
-    {
-     "w": "points",
-     "t": 163.427,
-     "end": 163.765
-    },
-    {
-     "w": "of",
-     "t": 163.777,
-     "end": 163.839
-    },
-    {
-     "w": "his",
-     "t": 163.852,
-     "end": 164.002
-    },
-    {
-     "w": "own",
-     "t": 164.027,
-     "end": 164.517
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/78/787239e9b5b034a99dafe97a.wav"
-  },
-  {
-   "index": 19,
-   "start": 165.167,
-   "duration": 4.79,
-   "end": 169.957,
-   "text": "His correlation is point eight two, so the ellipse touches the right wall high up.",
-   "voice": "af_heart",
-   "speed": 0.84,
-   "cadence": "shaped",
-   "words": [
-    {
-     "w": "His",
-     "t": 165.182,
-     "end": 165.357
-    },
-    {
-     "w": "correlation",
-     "t": 165.382,
-     "end": 166.057
-    },
-    {
-     "w": "is",
-     "t": 166.082,
-     "end": 166.207
-    },
-    {
-     "w": "point",
-     "t": 166.232,
-     "end": 166.444
-    },
-    {
-     "w": "eight",
-     "t": 166.457,
-     "end": 166.645
-    },
-    {
-     "w": "two",
-     "t": 166.682,
-     "end": 167.182
-    },
-    {
-     "w": "so",
-     "t": 167.407,
-     "end": 167.519
-    },
-    {
-     "w": "the",
-     "t": 167.532,
-     "end": 167.657
-    },
-    {
-     "w": "ellipse",
-     "t": 167.682,
-     "end": 168.094
-    },
-    {
-     "w": "touches",
-     "t": 168.132,
-     "end": 168.557
-    },
-    {
-     "w": "the",
-     "t": 168.582,
-     "end": 168.695
-    },
-    {
-     "w": "right",
-     "t": 168.732,
-     "end": 168.982
-    },
-    {
-     "w": "wall",
-     "t": 169.007,
-     "end": 169.307
-    },
-    {
-     "w": "high",
-     "t": 169.332,
-     "end": 169.557
-    },
-    {
-     "w": "up",
-     "t": 169.582,
-     "end": 169.957
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/93/93e74d5d0fb089f1dcfee71e.wav"
-  },
-  {
-   "index": 20,
-   "start": 170.6,
-   "duration": 7.96,
-   "end": 178.56,
-   "text": "His best-fit line follows the same rule: one ess ex across, r ess why up, through the center and that touch point.",
-   "voice": "af_heart",
-   "speed": 0.84,
-   "cadence": "shaped",
-   "words": [
-    {
-     "w": "His",
-     "t": 170.615,
-     "end": 170.79
-    },
-    {
-     "w": "best-fit",
-     "t": 170.815,
-     "end": 171.215
-    },
-    {
-     "w": "line",
-     "t": 171.24,
-     "end": 171.602
-    },
-    {
-     "w": "follows",
-     "t": 171.64,
-     "end": 172.015
-    },
-    {
-     "w": "the",
-     "t": 172.04,
-     "end": 172.152
+     "t": 162.217,
+     "end": 162.304
     },
     {
      "w": "same",
-     "t": 172.19,
-     "end": 172.49
-    },
-    {
-     "w": "rule",
-     "t": 172.515,
-     "end": 173.24
-    },
-    {
-     "w": "one",
-     "t": 173.465,
-     "end": 173.665
-    },
-    {
-     "w": "ess",
-     "t": 173.69,
-     "end": 173.865
-    },
-    {
-     "w": "ex",
-     "t": 173.89,
-     "end": 174.115
-    },
-    {
-     "w": "across",
-     "t": 174.14,
-     "end": 174.79
-    },
-    {
-     "w": "r",
-     "t": 174.94,
-     "end": 175.165
-    },
-    {
-     "w": "ess",
-     "t": 175.19,
-     "end": 175.39
-    },
-    {
-     "w": "why",
-     "t": 175.415,
-     "end": 175.64
-    },
-    {
-     "w": "up",
-     "t": 175.665,
-     "end": 176.14
-    },
-    {
-     "w": "through",
-     "t": 176.315,
-     "end": 176.49
-    },
-    {
-     "w": "the",
-     "t": 176.515,
-     "end": 176.64
-    },
-    {
-     "w": "center",
-     "t": 176.69,
-     "end": 177.202
-    },
-    {
-     "w": "and",
-     "t": 177.24,
-     "end": 177.34
-    },
-    {
-     "w": "that",
-     "t": 177.365,
-     "end": 177.565
-    },
-    {
-     "w": "touch",
-     "t": 177.59,
-     "end": 177.84
+     "t": 162.342,
+     "end": 162.642
     },
     {
      "w": "point",
-     "t": 177.865,
-     "end": 178.41
+     "t": 162.667,
+     "end": 163.017
+    },
+    {
+     "w": "in",
+     "t": 163.042,
+     "end": 163.142
+    },
+    {
+     "w": "1973",
+     "t": 163.167,
+     "end": 164.617
+    },
+    {
+     "w": "with",
+     "t": 164.792,
+     "end": 164.942
+    },
+    {
+     "w": "eleven",
+     "t": 164.967,
+     "end": 165.392
+    },
+    {
+     "w": "points",
+     "t": 165.417,
+     "end": 166.017
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/40/40259cb7b1df3731939affd0.wav"
+   "wav": "/root/.cache/sample_space/tts/f0/f0c7a1859b47d31b66aa4f6e.wav"
+  },
+  {
+   "index": 20,
+   "start": 167.867,
+   "duration": 4.47,
+   "end": 172.337,
+   "text": "Same rule: ess ex across, [pause 0.3] r times ess why up. [pause 0.5]",
+   "voice": "af_heart",
+   "speed": 0.82,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Same",
+     "t": 167.967,
+     "end": 168.242
+    },
+    {
+     "w": "rule",
+     "t": 168.267,
+     "end": 168.692
+    },
+    {
+     "w": "ess",
+     "t": 168.817,
+     "end": 168.992
+    },
+    {
+     "w": "ex",
+     "t": 169.017,
+     "end": 169.242
+    },
+    {
+     "w": "across",
+     "t": 169.267,
+     "end": 169.967
+    },
+    {
+     "w": "r",
+     "t": 170.312,
+     "end": 170.512
+    },
+    {
+     "w": "times",
+     "t": 170.537,
+     "end": 170.862
+    },
+    {
+     "w": "ess",
+     "t": 170.887,
+     "end": 171.137
+    },
+    {
+     "w": "why",
+     "t": 171.162,
+     "end": 171.387
+    },
+    {
+     "w": "up",
+     "t": 171.412,
+     "end": 171.837
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/4f/4f4fd1a9f9ab212a71c42495.wav"
   },
   {
    "index": 21,
-   "start": 179.0,
-   "duration": 3.2,
-   "end": 182.2,
-   "text": "So the slope is rise, over run. [pause 1.0]",
+   "start": 172.8,
+   "duration": 3.93,
+   "end": 176.73,
+   "text": "So the slope is the rise [pause 0.3] over the run. [pause 1.0]",
    "voice": "af_heart",
    "speed": 0.82,
    "cadence": "shaped",
    "words": [
     {
      "w": "So",
-     "t": 179.075,
-     "end": 179.188
+     "t": 172.875,
+     "end": 173.038
     },
     {
      "w": "the",
-     "t": 179.2,
-     "end": 179.3
+     "t": 173.05,
+     "end": 173.162
     },
     {
      "w": "slope",
-     "t": 179.325,
-     "end": 179.65
+     "t": 173.2,
+     "end": 173.525
     },
     {
      "w": "is",
-     "t": 179.675,
-     "end": 179.812
+     "t": 173.55,
+     "end": 173.662
+    },
+    {
+     "w": "the",
+     "t": 173.675,
+     "end": 173.75
     },
     {
      "w": "rise",
-     "t": 179.85,
-     "end": 180.35
+     "t": 173.775,
+     "end": 174.43
     },
     {
      "w": "over",
-     "t": 180.45,
-     "end": 180.7
+     "t": 174.785,
+     "end": 175.035
+    },
+    {
+     "w": "the",
+     "t": 175.06,
+     "end": 175.16
     },
     {
      "w": "run",
-     "t": 180.725,
-     "end": 181.2
+     "t": 175.185,
+     "end": 175.73
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/67/674348256112b18e44f831bb.wav"
+   "wav": "/root/.cache/sample_space/tts/37/3797649777cd194b56d7e666.wav"
   },
   {
    "index": 22,
-   "start": 182.633,
-   "duration": 9.56,
-   "end": 192.193,
-   "text": "All four of his datasets share these five numbers, so they share the ellipse and line. [pause 0.3] A trend, a curve, an outlier, and one point doing all the work.",
+   "start": 177.167,
+   "duration": 9.76,
+   "end": 186.927,
+   "text": "All four of his datasets share these five numbers, so they share the ellipse and line. [pause 0.5] A trend, a curve, an outlier, and one point doing all the work.",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
      "w": "All",
-     "t": 182.648,
-     "end": 182.886
+     "t": 177.182,
+     "end": 177.42
     },
     {
      "w": "four",
-     "t": 182.923,
-     "end": 183.085
+     "t": 177.457,
+     "end": 177.619
     },
     {
      "w": "of",
-     "t": 183.098,
-     "end": 183.161
+     "t": 177.632,
+     "end": 177.695
     },
     {
      "w": "his",
-     "t": 183.173,
-     "end": 183.323
+     "t": 177.707,
+     "end": 177.857
     },
     {
      "w": "datasets",
-     "t": 183.348,
-     "end": 183.973
+     "t": 177.882,
+     "end": 178.507
     },
     {
      "w": "share",
-     "t": 184.023,
-     "end": 184.248
+     "t": 178.557,
+     "end": 178.782
     },
     {
      "w": "these",
-     "t": 184.273,
-     "end": 184.498
+     "t": 178.807,
+     "end": 179.032
     },
     {
      "w": "five",
-     "t": 184.523,
-     "end": 184.823
+     "t": 179.057,
+     "end": 179.357
     },
     {
      "w": "numbers",
-     "t": 184.848,
-     "end": 185.623
+     "t": 179.382,
+     "end": 180.157
     },
     {
      "w": "so",
-     "t": 185.798,
-     "end": 185.923
+     "t": 180.332,
+     "end": 180.457
     },
     {
      "w": "they",
-     "t": 185.948,
-     "end": 186.098
+     "t": 180.482,
+     "end": 180.632
     },
     {
      "w": "share",
-     "t": 186.148,
-     "end": 186.373
+     "t": 180.682,
+     "end": 180.907
     },
     {
      "w": "the",
-     "t": 186.398,
-     "end": 186.523
+     "t": 180.932,
+     "end": 181.057
     },
     {
      "w": "ellipse",
-     "t": 186.548,
-     "end": 187.06
+     "t": 181.082,
+     "end": 181.594
     },
     {
      "w": "and",
-     "t": 187.098,
-     "end": 187.223
+     "t": 181.632,
+     "end": 181.757
     },
     {
      "w": "line",
-     "t": 187.248,
-     "end": 187.793
+     "t": 181.782,
+     "end": 182.327
     },
     {
      "w": "A",
-     "t": 188.108,
-     "end": 188.195
+     "t": 182.842,
+     "end": 182.929
     },
     {
      "w": "trend",
-     "t": 188.233,
-     "end": 188.758
+     "t": 182.967,
+     "end": 183.492
     },
     {
      "w": "a",
-     "t": 188.858,
-     "end": 188.945
+     "t": 183.592,
+     "end": 183.68
     },
     {
      "w": "curve",
-     "t": 188.983,
-     "end": 189.533
+     "t": 183.717,
+     "end": 184.267
     },
     {
      "w": "an",
-     "t": 189.658,
-     "end": 189.746
+     "t": 184.392,
+     "end": 184.479
     },
     {
      "w": "outlier",
-     "t": 189.783,
-     "end": 190.408
+     "t": 184.517,
+     "end": 185.142
     },
     {
      "w": "and",
-     "t": 190.483,
-     "end": 190.595
+     "t": 185.217,
+     "end": 185.33
     },
     {
      "w": "one",
-     "t": 190.633,
-     "end": 190.871
+     "t": 185.367,
+     "end": 185.605
     },
     {
      "w": "point",
-     "t": 190.908,
-     "end": 191.208
+     "t": 185.642,
+     "end": 185.942
     },
     {
      "w": "doing",
-     "t": 191.233,
-     "end": 191.458
+     "t": 185.967,
+     "end": 186.192
     },
     {
      "w": "all",
-     "t": 191.483,
-     "end": 191.621
+     "t": 186.217,
+     "end": 186.355
     },
     {
      "w": "the",
-     "t": 191.633,
-     "end": 191.708
+     "t": 186.367,
+     "end": 186.442
     },
     {
      "w": "work",
-     "t": 191.733,
-     "end": 192.193
+     "t": 186.467,
+     "end": 186.927
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/69/69a92bd4296c0d2ba9a767c7.wav"
+   "wav": "/root/.cache/sample_space/tts/87/87b594a3d27ce0d330711774.wav"
   },
   {
    "index": 23,
-   "start": 194.0,
-   "duration": 18.63,
-   "end": 212.63,
-   "text": "Your line was exactly right: five numbers fix its slope, minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.",
+   "start": 188.867,
+   "duration": 18.41,
+   "end": 207.277,
+   "text": "Your line was right: five numbers fix it exactly, slope minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.",
    "voice": "af_heart",
    "speed": 0.84,
    "cadence": "shaped",
    "words": [
     {
      "w": "Your",
-     "t": 194.045,
-     "end": 194.22
+     "t": 188.897,
+     "end": 189.047
     },
     {
      "w": "line",
-     "t": 194.245,
-     "end": 194.57
+     "t": 189.072,
+     "end": 189.372
     },
     {
      "w": "was",
-     "t": 194.595,
-     "end": 194.745
-    },
-    {
-     "w": "exactly",
-     "t": 194.77,
-     "end": 195.345
+     "t": 189.397,
+     "end": 189.547
     },
     {
      "w": "right",
-     "t": 195.37,
-     "end": 196.045
+     "t": 189.572,
+     "end": 190.172
     },
     {
      "w": "five",
-     "t": 196.27,
-     "end": 196.62
+     "t": 190.397,
+     "end": 190.747
     },
     {
      "w": "numbers",
-     "t": 196.645,
-     "end": 197.02
+     "t": 190.772,
+     "end": 191.122
     },
     {
      "w": "fix",
-     "t": 197.045,
-     "end": 197.27
+     "t": 191.147,
+     "end": 191.359
     },
     {
-     "w": "its",
-     "t": 197.295,
-     "end": 197.458
+     "w": "it",
+     "t": 191.372,
+     "end": 191.447
+    },
+    {
+     "w": "exactly",
+     "t": 191.472,
+     "end": 192.272
     },
     {
      "w": "slope",
-     "t": 197.495,
-     "end": 198.02
+     "t": 192.472,
+     "end": 192.822
     },
     {
      "w": "minus",
-     "t": 198.17,
-     "end": 198.52
+     "t": 192.847,
+     "end": 193.197
     },
     {
      "w": "point",
-     "t": 198.545,
-     "end": 198.82
+     "t": 193.222,
+     "end": 193.472
     },
     {
      "w": "one",
-     "t": 198.845,
-     "end": 199.33
+     "t": 193.497,
+     "end": 193.977
     },
     {
      "w": "Your",
-     "t": 199.845,
-     "end": 199.995
+     "t": 194.492,
+     "end": 194.642
     },
     {
      "w": "cloud",
-     "t": 200.02,
-     "end": 200.333
+     "t": 194.667,
+     "end": 194.98
     },
     {
      "w": "was",
-     "t": 200.345,
-     "end": 200.495
+     "t": 194.992,
+     "end": 195.142
     },
     {
      "w": "wrong",
-     "t": 200.52,
-     "end": 201.17
+     "t": 195.167,
+     "end": 195.817
     },
     {
      "w": "a",
-     "t": 201.345,
-     "end": 201.433
+     "t": 195.992,
+     "end": 196.079
     },
     {
      "w": "blur",
-     "t": 201.47,
-     "end": 201.795
+     "t": 196.117,
+     "end": 196.442
     },
     {
      "w": "around",
-     "t": 201.82,
-     "end": 202.082
+     "t": 196.467,
+     "end": 196.73
     },
     {
      "w": "this",
-     "t": 202.095,
-     "end": 202.245
+     "t": 196.742,
+     "end": 196.892
     },
     {
      "w": "ellipse",
-     "t": 202.27,
-     "end": 202.77
+     "t": 196.917,
+     "end": 197.417
     },
     {
      "w": "all",
-     "t": 202.87,
-     "end": 203.032
+     "t": 197.517,
+     "end": 197.679
     },
     {
      "w": "that",
-     "t": 203.045,
-     "end": 203.27
+     "t": 197.692,
+     "end": 197.917
     },
     {
      "w": "five",
-     "t": 203.32,
-     "end": 203.695
+     "t": 197.967,
+     "end": 198.342
     },
     {
      "w": "numbers",
-     "t": 203.72,
-     "end": 204.045
+     "t": 198.367,
+     "end": 198.692
     },
     {
      "w": "can",
-     "t": 204.07,
-     "end": 204.245
+     "t": 198.717,
+     "end": 198.892
     },
     {
      "w": "draw",
-     "t": 204.27,
-     "end": 204.79
+     "t": 198.917,
+     "end": 199.437
     },
     {
      "w": "Most",
-     "t": 205.445,
-     "end": 205.732
+     "t": 200.092,
+     "end": 200.379
     },
     {
      "w": "of",
-     "t": 205.745,
-     "end": 205.82
+     "t": 200.392,
+     "end": 200.467
     },
     {
      "w": "those",
-     "t": 205.845,
-     "end": 206.07
+     "t": 200.492,
+     "end": 200.717
     },
     {
      "w": "papers",
-     "t": 206.095,
-     "end": 206.545
+     "t": 200.742,
+     "end": 201.192
     },
     {
      "w": "used",
-     "t": 206.57,
-     "end": 206.782
+     "t": 201.217,
+     "end": 201.429
     },
     {
      "w": "a",
-     "t": 206.795,
-     "end": 206.845
+     "t": 201.442,
+     "end": 201.492
     },
     {
      "w": "bar",
-     "t": 206.87,
-     "end": 207.12
+     "t": 201.517,
+     "end": 201.767
     },
     {
      "w": "graph",
-     "t": 207.145,
-     "end": 207.77
+     "t": 201.792,
+     "end": 202.417
     },
     {
      "w": "which",
-     "t": 207.895,
-     "end": 208.07
+     "t": 202.542,
+     "end": 202.717
     },
     {
      "w": "draws",
-     "t": 208.095,
-     "end": 208.47
+     "t": 202.742,
+     "end": 203.117
     },
     {
      "w": "only",
-     "t": 208.495,
-     "end": 208.82
+     "t": 203.142,
+     "end": 203.467
     },
     {
      "w": "two",
-     "t": 208.87,
-     "end": 209.33
+     "t": 203.517,
+     "end": 203.977
     },
     {
      "w": "The",
-     "t": 209.93,
-     "end": 210.025
+     "t": 204.577,
+     "end": 204.672
     },
     {
      "w": "dinosaur",
-     "t": 210.05,
-     "end": 210.7
+     "t": 204.697,
+     "end": 205.347
     },
     {
      "w": "lived",
-     "t": 210.75,
-     "end": 211.025
+     "t": 205.397,
+     "end": 205.672
     },
     {
      "w": "in",
-     "t": 211.05,
-     "end": 211.187
+     "t": 205.697,
+     "end": 205.834
     },
     {
      "w": "everything",
-     "t": 211.225,
-     "end": 211.75
+     "t": 205.872,
+     "end": 206.397
     },
     {
      "w": "they",
-     "t": 211.775,
-     "end": 211.9
+     "t": 206.422,
+     "end": 206.547
     },
     {
      "w": "leave",
-     "t": 211.925,
-     "end": 212.175
+     "t": 206.572,
+     "end": 206.822
     },
     {
      "w": "out",
-     "t": 212.2,
-     "end": 212.63
+     "t": 206.847,
+     "end": 207.277
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/b1/b1920404cf5172465a6873b2.wav"
+   "wav": "/root/.cache/sample_space/tts/46/461f20a7c9d6d9c4eecd0177.wav"
   }
  ],
  "warnings": [],
  "budget": {
-  "words": 494,
-  "runtime_s": 214.5,
+  "words": 471,
+  "runtime_s": 209.1,
   "budget_words": 500,
   "budget_runtime_s": 215.0,
   "over": false
@@ -2806,9 +2691,9 @@
  },
  "layout_audit": {
   "clearance": 0.15,
-  "checks": 235,
-  "audit_seconds": 2.867,
-  "render_seconds": 975.2,
+  "checks": 227,
+  "audit_seconds": 2.67,
+  "render_seconds": 729.1,
   "errors": 0,
   "count": 0,
   "counts": {

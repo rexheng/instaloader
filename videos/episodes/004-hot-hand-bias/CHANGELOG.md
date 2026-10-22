@@ -495,3 +495,113 @@ as "point five"), no banned phrases. `check_numbers.py` re-run: every value on s
 **Kept:** the one-vote strip (now with its vote counts), "test the test" → live 50% → 40.5% →
 "cold −9.5 points", the half-turn mirror into −19, and the landing on the cold-open frame with the
 test's formula beside its 17/42 marker.
+
+## Round 7 revisions
+
+Both critics scored 8.8 (Hook 9, Clarity 9, Visual 8.5, Motion 8.5, Audio 8.5, Concision 8.5,
+Originality 9), with no caps and no factual errors. Both said every listed fix together reaches 9.
+The plan per dimension below 9 was: Visual needed one focal point in 1:19–1:35, 17/42 shown when
+spoken, and one "Cornell" label. Motion needed a visible rescale, equation holds, and no doubled
+copies in flight. Audio needed breaths in the lineup run. Concision needed the two restating lines
+and the streak-length aside cut.
+
+**Fixes, by critic item** (r7c = craft, r7s = substance)
+- r7c 1 / r7s 3 (no focal point at 1:19–1:35): on "each row gets one vote" the whole table, the
+  pooled strip, Σᵢhᵢ/Σᵢnᵢ = 12/24 and "the obvious guess" go to 30%, and the 40.5% readout to 25%.
+  They work through a row-level system (`rows_to`) that always restores from the saved full state,
+  so dimming never compounds. A row comes back only while it is named:
+  - HHHH from "since a heads gets the next flip checked too";
+  - HTTT on "this lone tails";
+  - the 8 heads rows, then the 11 tails rows, during the lineup;
+  - HHHH and HHHT on "split".
+
+  The 14 denominators flash on "however many flips it checked". The readout comes back as the
+  heads pack onto its marker. The pooled strip and its formula come back on "the ratio of totals".
+- r7c 2 / r7s 1 (17/42 spoken but not shown at 0:57): the marker now settles on "seventeen", and
+  "17/42 =" is written beside the readout, which then reads "17/42 = 40.5%". It rides left with the
+  axis at 1:05 and leaves at "Gather" (1:07). It sits left of the readout, not under it: under it,
+  it would have collided with "cold −9.5 points". That label was also moved 0.1 lower.
+- r7c 3 / r7s 5 (hidden rescale at 2:44): the rescale is now shown as a real zoom.
+  - On "twenty eighteen paper" the pair slides until after-misses sits on 50%.
+  - On "puts the gap" (after a new [pause 0.5]) the red gap gets its number, "−8".
+  - On "at about minus eight points" the axis zooms ×5 about the dashed line (2.0 s, smooth).
+    The 0/25/75/100% ticks run outward and leave, and −10/−5/+5/+10 grow out of the centre onto the
+    same five tick positions (asserted). "50%" hands over to "0". The cursor carries its "−8" to −8,
+    and the gap stretches into the "bias" arrow.
+
+  The factor is ×5, not ×10: the 8-point gap was 0.72 units on the share axis, and the gap axis
+  uses 0.45 units per point (facts row 45).
+- r7c 4 / r7s 2 (equation cadence 1:46–1:56): 5⅔ / 14 = 17/42 is held complete for ≥ 3.25 s
+  (asserted by a hold). Σᵢhᵢ/Σᵢnᵢ stays dimmed through the Σ build and brightens on "ratio of
+  totals", so it no longer arrives as a third equation. 5⅔/14 = 17/42 and (1/14)Σᵢhᵢ/nᵢ = 17/42
+  now complete about 7 s apart.
+- r7c 5 / r7s 2 (lineup run-on): about 1.0 s of silence after "split their votes" (gap 0.9),
+  [pause 0.8] after "Line them up:", [pause 1.0] after "the fourteen votes", and about 1.6 s after
+  "That's seventeen out of forty two".
+- r7c 6 / r7s 6 (concision): cut "Score every row the same way." (the cascade now runs in a
+  [pause 1.0]). Cut "Longer streaks grow the bias." along with the 1- and 2-hit ghosts and their
+  legend. One ghost of the −8 marker now slides to 1,000 shots on "Longer records shrink it". Also
+  cut "a fair coin shows" from the −19 line, and trimmed six gaps by 0.1–0.15 s to pay for the new
+  pauses.
+- r7c 7 (copy across the after-tails strip): no copy. The after-tails heads part flashes in place
+  (vertically, so it never grows into its cursor) while "25/42" is written.
+- r7c 8 / r7s 7 (doubled vote outlines in flight):
+  - On "fourteen" the outlines are counted in place (each one answers in turn) while "14" is
+    written.
+  - On "an average" the outlines themselves fly, with no copies. They shrink and step back to 40%
+    as they lift, then run between the strips into 1/14 Σ (lag 0.08).
+
+  Also new: the HHHH "3/3" copy that flew to hᵢ/nᵢ showed "3/3/3" over its source while it
+  materialised. Now all 14 row ratios answer in place while hᵢ/nᵢ is written.
+- r7c 9 / r7s 8 (landing ghost): the ghost deals in at 75% (the cold open's ghost too, for the
+  rhyme) on "is what a fair coin does". The dashed guess steps back to 25%. The ghost is held
+  ≈ 1.8 s (landing pause 0.8), then the rows fly one after another (lag 0.06). The marker draws
+  only after the rows have passed. The dashed line returns to full on "A fifty percent shooter".
+- r7c 10 (Cornell printed twice): the purple header "Cornell, 1985" itself travels on an arc to
+  tag the +4 marker, and the column head "Cornell" leaves, so "Cornell" is printed once.
+- r7c 11 (HHHH box 2 px from the rings): the HHHH and HTTT boxes take in the rings and sit 0.13
+  clear of them.
+- r7s 4 (GVT's significance logic omitted): the line is now "The study found plus four, too close
+  to zero to count, so no hot hand." On "zero" the dashed zero line pulses and a grey
+  "vs 0: p = .49" appears under "49 − 45 = +4". It was re-verified this round: M&S 2018 §3.1 says
+  "GVT's paired t-test finds the difference to be statistically indistinguishable from zero, and
+  we replicate this result (p=.49)". Since the p-value is M&S's replication, their citation now
+  stays at full strength while it shows (facts row 43).
+- r7s 9 (cold-open breath): [pause 0.3] after "check the next flip:" and after "one of the two is
+  heads." The question still lands by 0:12.8.
+
+**Found by stepping frames (not in the reviews)**
+- In the first preview, the zoom's helper group pulled the −8 marker, its number, the bias arrow
+  and the new tick labels out of the scene's top level. All four vanished for 20 s after the zoom.
+  The cleanup now re-adds them, and the five tick marks, as one group.
+- Moving the header along a Bezier through one absolute point bunched its glyphs mid-flight. It
+  now moves rigidly on an arc.
+- On the first master, the vote outlines left left-to-right, so each one in flight crossed the
+  outlines still waiting on the strip (1:51.8). The right-most now leaves first.
+- On the first master, "the obvious guess" was still fading while the landing ghost dealt in
+  under it (3:17). It now leaves in the first 0.25 s.
+- The p-value label is now MathTex 32 (31 px; citation-level text, above the 24 px floor).
+
+**Self-review loop.** Two previews and two 1080p masters. After each one I ran review_kit and
+stepped frames at 2.5–5 fps across every changed transition: 0:55–0:58, 1:17–1:33, 1:44–1:53,
+2:06, 2:42–2:47, 3:00–3:06 and 3:15–3:21. Everything listed under "Found by stepping frames" was
+caught this way and fixed before the final master.
+
+**Mechanics (final master):**
+- Runtime 3:31.0 (was 3:32.7). 487 words, 150 wpm over speech time. Voice 0.82, with 0.80 for six
+  beats. 0 sentences above 200 wpm.
+- −14.1 LUFS / −2.1 dBTP. Leading silence 0.00 s, trailing 1.74 s. Longest silence 2.17 s (the
+  prediction hold). Longest static stretch 3.5 s (the held 5⅔/14 = 17/42 and the +12 frame).
+- Longest stretch without a breath 13.3 s (was 12.1 s, now at 2:50).
+- 0 render warnings, 0 layout-audit issues in 227 checks, 0 glyph morphs, 7/7 deictics landed,
+  0 review flags, WER 1.1%, no banned phrases.
+
+Whisper still prints 1:37.6–1:50.5 as one unpunctuated segment. Its word timings and the measured
+silences carry every stop: 1:40.0–1:41.0 (1.0 s), 1:41.9–1:42.8 (0.9 s), 1:46.0–1:47.1 (1.1 s),
+1:49.3–1:50.9 (1.6 s). This is a decoding artefact, not a run-on.
+
+`check_numbers.py` was re-run, and every value on screen is unchanged.
+
+**Kept:** the one-vote strip packing onto the 40.5% marker (the same animation, now with a breath before it); "test the
+test" → live 50% → 40.5% → "cold −9.5 points"; the half-turn mirror into −19; and the landing on
+the cold-open frame, with the ghost flying into (1/14) Σᵢ hᵢ/nᵢ = 17/42 and the blue "hot" arrow.

@@ -589,3 +589,70 @@ Frame sweeps (5-8 fps strips over every changed transition) then found:
   "?"; 92.7 % block on "ninety three percent"; the 0:19 stakes picture and the token draw at
   Harvard; INK self-report arrow; landing in one move ending on the ringed 3.
 - facts.md: no new claims; the 92.7 % quote re-checked in the ar5iv text of arXiv:1111.4503.
+
+## Round 7 revisions
+
+Both round-7 critics scored 8.7 (Hook, Visual, Motion, Audio 8.5; Clarity, Concision,
+Originality 9), with no caps and no factual errors. Plan: lift the four 8.5 dimensions without
+touching the three "keep" items (the token-weighted beam and the 0 that kills the cross term; the
+YELLOW-outlined friend bar carried to Facebook; the landing on the cold-open candidates).
+
+**Plan against BAR's 9 anchors**
+- *Hook 8.5* (9: "tension rises through build and fail; ending resolves the opening exactly").
+  Short of it: 46 s of algebra (1:31–2:17) with no target on screen, and a last line that
+  restated 2:16. Upgrade: one spoken question, "Where does the extra half come from?", and a
+  full-strength PURPLE "+0.5 ?" tag that the result fills; the last line turns to the viewer:
+  "Most of us are Betty."
+- *Visual 8.5* (9: "every frame has one focal point; all §5 standards met"). Short of it: dimmed
+  YELLOW read brown (1:16–2:20, 3:09+), the C&F read-out 700 px from its arrow, a "random" label
+  on one of eight senders, a 2.4:1 explanatory tag, the 92.7 % block beside the 635 bar.
+  Upgrade: YELLOW never dims (it goes to 0 or stays at 100 %); read-out directly above its arrow;
+  a legend for the redrawn C&F sample; the scale tag at full strength; 92.7 % beside "average
+  user".
+- *Motion 8.5* (9: "every motion encodes a relation; reading time respected"). Short of it: the
+  C&F hand-off emptied the frame, flights crossed tick labels at 2:41, the 2:15 collapse jittered.
+  Upgrade: destination first (axes, origin dots), one arc move of each sample into its origin;
+  numbers dropping out of their own bar segments through clear gaps; a two-step collapse on
+  TeX's baseline.
+- *Audio 8.5* (9: "each deictic lands; pauses intentional"). Short of it: five numbers in 9 s
+  with flights landing on the next number. Upgrade: [pause 0.4] after "four" and "two and a
+  half", each flight on its own word; [pause 0.3] between the two collapse steps; [pause 0.4]
+  after "a few had thousands" (the 11.5 s breathless run).
+
+**Applied (craft numbering)**
+1. C&F hand-off: on "and should" the axes draw first (0.6 s, 30 %, behind opaque nodes) while
+   edges, names and the GRAY caption leave and the BLUE and YELLOW origin dots appear; then one
+   1.2 s move: the random students arc (path_arc 0.7) into the BLUE origin, the named friends and
+   their tokens (path_arc −0.7) into the YELLOW one, counts riding inside their nodes; then the
+   two legend entries glide to their curve-label spots and the axis numbers and titles fade in.
+2. YELLOW never dims: the panel's outline and 3.0 go to 0 at 1:16 (rest at 35 %); the 3.0
+   fulcrum leaves for the variance and returns at "exactly"; the parked avg(k²)/μ row stays at
+   100 %, scaled 0.8 on the bottom edge; ring callback: YELLOW parts to 0; C&F raw steps full
+   colour at stroke 1.5, dashed fits stroke 4; the landing's 4 leaves; the cold-open "?" full.
+3. "+0.5 ?" tag at top right (5.45, 3.3): the measured +0.5 lifts out of the panel on "extra
+   half"; at "exactly" the result's 0.5 flies into it, the "?" drops, and it goes home to the
+   PURPLE segment as the panel returns. Opening question added.
+4. Facebook flights: tick labels and axis name at 30 % with the bar fill (≈1 s before); the axis
+   name moved left of the axis so nothing lies under the ticks; 190 drops from the BLUE segment,
+   445 from the PURPLE segment, 635 from under its label, invisible until 0.3 below the friend
+   bar, through the 0|200, 400|600, 600|800 gaps; no copy is ever visible on its source.
+5. Collapse: D3 (μ + σ²/μ = 2.5 + 1.25/2.5 = 3.0) and D4 typeset first; "two and a half": fades
+   in place, μ and 2.5 drop vertically to the baseline, the row closes up; "plus a half": 1.25/2.5
+   fades in place, the row closes up, 0.5 rises into the settled slot.
+6. Split sentence: [pause 0.4] after "four" and "two and a half"; 4 flies on "four", the 2.5 on
+   "two and a half", d = k − μ on "her distance", 1.5 on "one and a half".
+7. Read-out left-aligned at the arrow: tips at the in-chart arrow's x, words to the right; y title
+   on two lines and "425 friends / they named" on two lines keep the column above the arrow free,
+   so the copy rises straight up.
+8. "random" on one girl: replaced by the redrawn sampling design and a legend (substance 4).
+9. "sides at ¼ scale": full strength (7.7:1) for as long as the squares are on screen.
+
+**Applied (substance numbering)**
+1. As craft 3. 2. Last line "Most of us are Betty." (5 of 8 girls; 92.7 % of Facebook users);
+   the 2.5 / 3 resolution is silent. 3. As craft 1. 4. The draw follows C&F's design: four
+   mutually non-adjacent girls (Betty, Jane, Pam, Tina) are the random sample; only they send
+   tokens, along each of their friendships; whoever is named (Sue, Alice, Dale, Carol) is the
+   friend sample. Not "one friend each" as suggested: C&F asked for 2–3 friends (out-degree ≤ 3,
+   re-read in the PLoS text), so the GRAY caption reads "name their friends" (facts.md).
+5. As craft 2. 6. 92.7 % block beside the "average user" row, "their own friends' average".
+7. As craft 6. 8. As craft 5. 9. As craft 7. 10. As craft 4.

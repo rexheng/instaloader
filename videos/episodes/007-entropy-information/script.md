@@ -59,7 +59,7 @@ Visual:
 > In 1951, Claude Shannon put the true figure at about one. No compressor beats it on
 > average, and guessing what comes next is how language models are trained.
 
-Visual: the halving diagram clears, the row rises to the top, the tiles drop onto a baseline as the feet of 27 columns, the axis grows, and every column rises to the same price (yellow dashed line, 4.75 in the gutter). A green band at 0.6–1.3 sits behind the bars, labelled ≈1 left of the axis, centred on the band. Citation: *Shannon, 1951 · Bell System Technical Journal*. On "guessing what comes next" the context boxes flash purple left to right; on "language models" an INK **LLM** tag with an arrow points into the ? box (the same tag returns at the payoff), and it leaves with the next beat.
+Visual: the halving diagram clears, the row rises to the top, the tiles drop onto a baseline as the feet of 27 columns, the axis grows, and every column rises to the same price (yellow dashed line); the 4.75 climbs the gutter behind the column tops and settles on the line as the bars reach it. A green band at 0.6–1.3 sits behind the bars, labelled ≈1 left of the axis, centred on the band. Citation: *Shannon, 1951 · Bell System Technical Journal*. On "guessing what comes next" the context boxes flash purple left to right; on "language models" an INK **LLM** tag with an arrow points into the ? box (the same tag returns at the payoff), and it leaves with the next beat.
 
 ### 4. Fail: measured, and why (0:38–0:52)
 > So where do four of every five questions go? Z costs as much as E, yet E turns up a
@@ -100,7 +100,7 @@ As the blue sweep adds the widths up, the ×28 inset of X J Q Z (Z = 10.3) opens
 > That beats four point seven five, but it's four times Shannon's estimate: it ignores what
 > came before.
 
-The failure metric comes back as a live meter: a yellow double arrow from ≈1 up to the ghost 4.75 with **3.75 extra**, the band back at full strength; it stands while "four point seven five" is spoken, then shrinks to 4.11 as the number counts to **3.11 extra** and the ghost fades out. On "prices every character" the meter leaves and the stack rises back into the skyline (each character priced on its own); on "came before it" the context row flashes purple.
+The failure metric comes back as a live meter: a yellow double arrow grows from ≈1 up to the ghost 4.75, its reading riding on its top and counting up to **3.75 extra** (hidden while it is still inside the poured stack), the band back at full strength; it stands while "four point seven five" is spoken, then shrinks to 4.11 as the number counts to **3.11 extra** and the ghost fades out. On "prices every character" the meter leaves and the stack rises back into the skyline (each character priced on its own); on "came before it" the context row flashes purple.
 
 ### 6. Context (2:08–2:58)
 > What comes after a Q? *[pause 1.6]*
@@ -122,20 +122,20 @@ T H fly to the title; the stack rises into the TH-weighted skyline (axis zooms o
 > fractions add up: five questions for these three, not six. After TH, it averages one point seven.
 
 - E flashes yellow; the ? box flags on "impossible".
-- "long runs of letters": the ? box widens into a run of three holding a real run from Shannon's passage, **E ␣ O** (THE OTHER, after T H); the chart dims to 25 % and the 68 % brace leaves. Over the empty top of the chart the run's bill is laid out: each letter (flashing in the row as its copy appears) and, under it, its cost given the two before it, in yellow MathTex 36: **0.5, 0.6, 3.8**.
+- "asks about long runs of letters": the ? box widens into a run of three holding a real run from Shannon's passage, **E ␣ O** (THE OTHER, after T H); the after-TH skyline leaves the chart (0 %: it prices only the first letter) and the 68 % brace leaves. Over the empty chart the run's bill is laid out one column per letter: the letter (flashing in the row as its copy appears), a tag naming its two-letter context (**after TH**, **after HE**, **after E␣**: grey "after", purple letters), and its cost given those two letters, in yellow MathTex 36: **0.5, 0.6, 3.8**. As each column appears, a purple bracket under the context row slides one box to the right, over that letter's two-letter window, and the window flashes purple.
 - "the fractions add up": the sum is built left to right, each cost pulsing as the "+" after it is written; "= 4.9" arrives once every term is in, then **→ 5 questions** on "five questions".
 - "these three, not six": under each cost, as it pulses, its whole-question count drops in: grey **1 + 1 + 4 = 6 · one at a time**, with 6 under 5; 5 flags.
 - "After TH": the chart returns to full strength and the TH skyline pours (the bill stays); on "the average" the level is born at 1.67, the bill and run box step back to 30 %, and 1.67 is copied into the equation.
 
 > But averaged over every two-letter context, it's still two point eight.
 
-The run closes back into the ? box and the bill leaves; the TH stack dims to 26 % while the axis zooms in to 0–5.5, its 1.67 gets a purple **TH** tag, the 4.11 reference rises to 60 %. A yellow dashed level grows at 2.81 ("all two-letter contexts", 2.81 in the gutter), and the gap meter returns at 4.11 (3.11 extra) and shrinks to 2.81 (**1.81 extra**) while 2.81 is copied into the equation (the copy leaves the gutter to the right and rises outside the 4.11 label).
+The run closes back into the ? box and the bill leaves; the TH stack dims to 26 % while the axis zooms in to 0–5.5, its 1.67 gets a purple **TH** tag, the 4.11 reference rises to 60 %. The gap meter grows from ≈1 to 4.11, its reading counting up to 3.11 with the arrow (hidden until it clears the TH stack); a yellow dashed level grows at 2.81 ("all two-letter contexts", 2.81 in the gutter), and the meter shrinks to 2.81 (**1.81 extra**) while 2.81 is copied into the equation (the copy leaves the gutter to the right and rises outside the 4.11 label).
 
 ### 7. Payoff (2:58–3:53)
 > Hundred-letter contexts need more text than any corpus holds, so Shannon used a predictor
 > that knows English: a person.
 
-On "need" the equation steps out and, in its place, grey: **possible contexts: 27² = 729 → 27¹⁰⁰ ≈ 10¹⁴³**, then **Brown Corpus: 5.75 M characters** (the Brown citation flags). The chart fades out completely (0.5 s), and T H leave with it (the row is blank again, as in the cold open); Shannon's passage fades straight in at 40 % on "already knows English" (letters only: no guess exists yet), so no frame is empty. On "a person" a yellow reading cursor locks onto its first letter while the text-so-far row flashes purple.
+On "need" the equation steps out and, in its place, grey: **possible contexts: 27² = 729 → 27¹⁰⁰ ≈ 10¹⁴³** (the gap meter and "all two-letter contexts" leave as it is written, so the arithmetic is the one focal point), then **Brown Corpus: 5.75 M characters** (the Brown citation flags). The chart fades out completely (0.5 s), and T H leave with it (the row is blank again, as in the cold open); Shannon's passage fades straight in at 40 % on "already knows English" (letters only: no guess exists yet), so no frame is empty. On "a person" a yellow reading cursor locks onto its first letter while the text-so-far row flashes purple.
 
 > His subject read a passage letter by letter, guessing each next one until right:
 > seventy-nine of a hundred two on the first guess. *[pause 0.9]*
@@ -143,26 +143,30 @@ On "need" the equation steps out and, in its place, grey: **possible contexts: 2
 Shannon's own record (p. 56), glyphs 12 % larger (pitch 0.33, two-digit counts in 0.45 cells), revealed under a moving cursor: the unread letters step back to 15 % as it starts, and each guess count appears only as the cursor passes its letter; the 1s are grey and the rest yellow; a green tally counts first guesses to 79 / 102. The context row reads along: its 12 boxes hold the last 12 symbols read (purple), and the ? box is the symbol being guessed.
 
 > A twin guessing the same way could rebuild the passage from these counts. Treat each
-> count as a symbol: *[pause 1.0]* the same skyline pours flat at about one point four bits.
-> A better guesser could only lower it.
+> count as a symbol: *[pause 1.2]* the same skyline pours flat at about one point four bits.
+>
+> A better guesser could only lower it. *(its own beat, speed 0.80)*
 
-Twin: letters fade to 12 % and return left to right. The record steps up with its letters at 12 % while the new axes are drawn (no titles yet). The counts then fly by guess number, each leaving its row straight down and curving into the foot of its column, landing straight down (never rising over its own row): all 79 ones into the 1st column (1.1 s), then the 2s (0.6 s), then the rest (0.8 s), each column growing as its counts land (width = share of guesses, height = log₂(1/share)); the axis titles and 1st/2nd/3rd+ arrive after the flight. Right of the tail columns, yellow **log₂(1/q) = 3.67**, its value copied from the 2nd-guess column, held until "flat". It pours flat, and the label leaves with the columns it describes; the small axis zooms to 0–2.1 with Shannon's ≈1 band; the level is labelled **≈ 1.42**; on "better guesser" a yellow double arrow measures **0.42 extra**; on "lower" a down arrow and a grey **upper estimate**.
+Twin: letters fade to 12 % and return left to right. Then the letters and the context row leave (the record returns for the landing), the three rows of counts close up at the top of the frame (in order, none crossing another), and the guess chart's baseline is drawn below them, centred and full width (x −4.6 to 3.4). On "Treat" the counts are sorted into their columns one row at a time, bottom row first, so no count ever passes over one still at rest: each drops straight down to its group's lane (1s lowest, 2s above, each 3+ count its own lane), runs along it to its column, and drops straight into the column's foot, which widens as its counts land (width = share of guesses). Then every column rises to its cost (height = log₂(1/share)) as the vertical axis grows, as the letter columns did at 0:24. Only then do "bits", "share of guesses" and 1st/2nd/3rd+ appear (each label ≥ 0.25 clear of the next), and yellow **log₂(1/q) = 3.67** is written over the low 1st column on a grey leader to the 2nd-guess column, which flashes white-edged, brighter blue. It pours flat, and the label leaves with the columns it describes; the axis zooms to 0–2.1 (the chart now fills the lower two-thirds) and Shannon's ≈1 band is drawn over the stack; the level is labelled **≈ 1.42**, with grey **one passage, context 0–101** under it. On "better guesser" the yellow gap meter grows from ≈1 to the level, counting **0.42 extra**; on "lower" a down arrow and a grey **upper estimate**.
 
 > With a hundred letters of context, Shannon's tests put English between point six and one
 > point three bits.
 
-The guess skyline and the record leave (the record returns for the landing). A 0–5 "bits per character" line across the middle of the frame (y ≈ 0.25, 12 units wide): 4.75 (grey), 4.11, 2.81 and 1.42 (all yellow; 1.42 flies in from the mini skyline), each with a grey tag under the axis: **halving**, **no context**, **2-letter context**, **person**; 2.81 flags on "a hundred letters of context"; the green 0.6–1.3 band, its label in the tag row. Citation: Shannon 1951.
+The guess skyline leaves. A 0–5 "bits per character" line across the middle of the frame (y ≈ 0.25, 12 units wide): 4.75 (grey), 4.11, 2.81 and 1.42 (all yellow; 1.42 flies in from the guess chart, over the top of the frame), each with a grey tag under the axis: **halving**, **no context**, **2-letter context**, **person** (with **102 letters** under it); 2.81 flags on "a hundred letters of context"; the green 0.6–1.3 band, its label in the tag row. Citation: Shannon 1951.
 
-> In twenty twenty-three, a language model compressing part of a book that reached Project
-> Gutenberg after its training needed point eight four bits, inside that range.
+> In twenty twenty-three, a language model compressed part of a book *[pause 0.3]* posted to
+> Project Gutenberg after the model was trained. *[pause 0.4]* It needed point eight four bits,
+> inside that range. *[pause 0.3]*
 
-The Shannon citation fades out completely, then *Valmeekam et al., 2023 · arXiv:2306.04050 (LLMZip), Table IV* fades in. On "a language model" the INK **LLM** marker is born from the 1.42 (person) triangle and waits on a track above it; on "book", "Gutenberg" and "training" a grey note **1924 book · on Gutenberg May 2023 · 27 symbols** (Text 26) builds above its name; on "needed" the marker, name and note slide left together (nothing crosses), and on "point eight four" the marker drops onto 0.84, into the band, with 0.84 on the value row.
+The Shannon citation fades out completely, then *Valmeekam et al., 2023 · arXiv:2306.04050 (LLMZip), Table IV* fades in. On "a language model" the INK **LLM** marker is born from the 1.42 (person) triangle and waits on a track above it; on "book", "Gutenberg" and "trained" a grey note **1924 book · on Gutenberg May 2023 · 27 symbols** (Text 26) builds above its name; on "needed" the marker, name and note slide left together (nothing crosses), and on "point eight four" the marker drops onto 0.84, into the band, with 0.84 on the value row.
 
 ### 8. Landing (3:53–4:00)
-> The hidden character from the start is the Y in the other day. Shannon's subject needed
-> one guess: is it Y? Splitting the alphabet took five. In English, almost no letter arrives without a past.
+> The hidden character from the start *[pause 0.4]* is the Y in the other day. *(its own beat, speed 0.80)*
+>
+> Shannon's subject needed one guess: *[pause 0.3]* is it Y? Splitting the alphabet took five.
+> In English, almost no letter arrives without a past.
 
-0. The bits-per-character line leaves and Shannon's record comes back (letters at 22 %), with THE OTHER DAY at full strength.
+0. The bits-per-character line fades over about 0.65 s; the person's 1.42 marker (and its tags) stays about 0.4 s longer and fades last, and only then Shannon's record comes back in its reading position (letters at 22 %), with THE OTHER DAY at full strength.
 1. As the record fades, the cold-open row (12 boxes, the ? box) fades in at 30 % in its old place.
 2. THE OTHER DA steps under its boxes (the Y under the ? box) as the record goes, then rises straight into them; the Y lands in the ? box on the spoken "Y".
 3. The boxes come to full strength and the 27 candidate tiles (Y highlighted) return, with the 27→1 chain and a grey "5 questions" faint under them: frame one (as at 0:17), re-seen.

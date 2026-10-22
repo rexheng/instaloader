@@ -58,12 +58,23 @@ NAME_SHIFT = {"Sue": LEFT * 0.55, "Carol": LEFT * 0.06}   # (Carol: round 6b, 27
 FAVG_DIR = {"Betty": UP, "Sue": DOWN + 0.45 * LEFT, "Alice": DOWN, "Jane": UP,
             "Pam": RIGHT, "Dale": LEFT, "Tina": UP}
 
-# Round 6 C&F illustration: the class centred, each girl (picked at random) names one friend;
-# one possible draw.  Tokens: Sue 3, Alice 3, Pam 1, Carol 1.
-CF_SHIFT = np.array([3.0, 0.0, 0.0])
-CF_NF_DX = 1.2                                 # "named friend" sits right of the tokens at Alice
-CF_DRAW = {"Betty": "Sue", "Sue": "Alice", "Alice": "Sue", "Jane": "Alice", "Pam": "Alice",
-           "Dale": "Sue", "Carol": "Pam", "Tina": "Carol"}
+# Round 7 C&F illustration (C&F's design): four of the eight girls are the random sample
+# (BLUE rings); only they name friends (C&F asked each for 2-3; here each names all of hers,
+# one token per friend), and whoever is named is the friend sample (YELLOW rings).  The four
+# (Betty, Jane, Pam, Tina) are not friends of one another, so the two samples do not overlap,
+# as in C&F (319 + 425 = 744 students).  Tokens: Sue 2, Alice 2, Dale 1, Carol 2.
+CF_SHIFT = np.array([2.5, 0.0, 0.0])
+CF_RANDOM = ["Betty", "Jane", "Pam", "Tina"]
+CF_DRAW = [("Betty", "Sue"), ("Jane", "Alice"), ("Jane", "Dale"), ("Pam", "Sue"),
+           ("Pam", "Alice"), ("Pam", "Carol"), ("Tina", "Carol")]
+CF_NAMED = ["Sue", "Alice", "Dale", "Carol"]
+assert all(frozenset((a, b)) not in {frozenset(e) for e in EDGES}
+           for i, a in enumerate(CF_RANDOM) for b in CF_RANDOM[i + 1:])
+assert all(frozenset(p) in {frozenset(e) for e in EDGES} for p in CF_DRAW)
+assert sorted({r for _, r in CF_DRAW}) == sorted(CF_NAMED)
+CF_LEG_X = 3.45                                # legend (right of the class), left edge
+CF_LEG_Y = (1.62, 1.2, 0.5)                    # "random students" / "name one friend each" /
+                                               # "named friends"
 
 # "what if" ring: same girls, every count 2
 RING_ORDER = ["Alice", "Jane", "Dale", "Sue", "Betty", "Pam", "Carol", "Tina"]
@@ -177,25 +188,32 @@ NARR = {
     # the area labels) is cut
     "divide": "Now divide top and bottom by the eight girls: the average of k squared, seven and "
               "a half, over the average count, two and a half.",
+    # round 7: the derivation gets a visible target: the measured "+0.5" moves to the corner
+    # as "+0.5 ?" and stays there until the algebra fills it
+    "ask": "Where does the extra half come from?",
     "variance": "Measure each girl's distance from the girls' balance point, two and a half, and "
                 "square it. [pause 1.5] The squares average one and a quarter, the variance, sigma "
                 "squared. [pause]",
-    "split": "Split Sue's count, four, into the balance point, two and a half, plus her distance, one "
-             "and a half. Squaring gives two and a half squared, her distance squared, and a "
-             "cross term. [pause] Every girl splits this way. Because the beam balances, the "
-             "distances add to zero, and the cross terms cancel. [pause]",
+    # round 7: a 0.4 s breath after "four" and after "two and a half", so each number lands
+    # (and its glyph flies) before the next one is spoken
+    "split": "Split Sue's count, four, [pause 0.4] into the balance point, two and a half, [pause 0.4] "
+             "plus her distance, one and a half. Squaring gives two and a half squared, her "
+             "distance squared, and a cross term. [pause] Every girl splits this way. Because the "
+             "beam balances, the distances add to zero, and the cross terms cancel. [pause]",
     # round 6: reading pauses after the rebuilt row (C) and the split row (D1); the three
     # collapses happen in one move on "Here that's two and a half, plus a half"
+    # round 7: a 0.3 s breath splits the collapse into its two steps (2.5 squared over 2.5, then
+    # 1.25 over 2.5)
     "result": "So the average of k squared is mu squared plus sigma squared. [pause 1.6] And friends "
-              "average mu, plus sigma squared over mu. [pause 1.2] Here that's two and a half, plus "
-              "a half: exactly the extra half friend we measured. [pause 0.9] With no spread, the "
-              "ring had no gap. [pause 1.3]",
+              "average mu, plus sigma squared over mu. [pause 1.2] Here that's two and a half, "
+              "[pause 0.3] plus a half: exactly the extra half friend we measured. [pause 0.9] With "
+              "no spread, the ring had no gap. [pause 1.3]",
     # round 6: the spread cue ("a few had thousands") comes before the prediction, and the
     # title's "you" is paid off with Ugander et al.'s 92.7 % (no "so": the mean inequality does
     # not force a majority)
     "fb": "In twenty eleven, Facebook users averaged about a hundred ninety friends, and a few "
-          "had thousands. If every friendship sent tokens, what would the tokens average? "
-          "[pause 1.6]",
+          "had thousands. [pause 0.4] If every friendship sent tokens, what would the tokens "
+          "average? [pause 1.6]",
     "fb2": "About six hundred thirty five: the spread term is more than twice the mean. [pause 0.9] "
            "And ninety three percent of users had fewer friends than their friends averaged. Odds "
            "are, that includes you.",
@@ -208,8 +226,9 @@ NARR = {
           "[pause 0.9] With self-reported symptoms, the lead shrank to about three.",
     # round 6b: the landing is one move (the per-girl tally is cut; Facebook's 93 % now makes
     # the per-person point): Betty's view explains the 4, then the 2.5 and the 3
-    "land": "Betty looks at her one friend, Sue, and sees four. Two and a half counts the girls; "
-            "three counts the tokens.",
+    # round 7: the last line turns the opening onto the viewer (5 of the 8 girls and 92.7 % of
+    # Facebook users sit below their friends' average); the 2.5 / 3 resolution is silent
+    "land": "Betty looks at her one friend, Sue, and sees four. [pause 0.8] Most of us are Betty.",
 }
 
 
@@ -311,21 +330,28 @@ def ring_label(n):
     return t.next_to(Circle(radius=R).move_to(RP[n]), ring_name_dir(n), buff=NAME_BUFF_DEFAULT)
 
 
+def cf_legend():
+    """Round 7: the C&F key, right of the class: BLUE "random students" / GRAY "name their
+    friends" (one sentence over two lines), YELLOW "named friends"."""
+    lr = Text("random students", font=SERIF, font_size=28, color=BLUE)
+    ln = Text("name their friends", font=SERIF, font_size=22, color=GRAY_T)
+    lf = Text("named friends", font=SERIF, font_size=28, color=YELLOW)
+    for t, y in zip((lr, ln, lf), CF_LEG_Y):
+        t.move_to([CF_LEG_X, y, 0], aligned_edge=LEFT)
+    return lr, ln, lf
+
+
 def cf_draw_issues(min_label_gap=0.15):
-    """Round 6: the C&F illustration's eight parked tokens against the shifted name labels,
-    "random", "named friend", "one possible draw", the nodes and each other."""
+    """The C&F illustration's parked tokens against the shifted name labels, the legend, the
+    nodes and each other; and the legend against every name label and node."""
     Pc = {n: P[n] + CF_SHIFT for n in NAMES}
     labels = {n: name_label(n).shift(CF_SHIFT) for n in NAMES}
-    labels["random"] = Text("random", font=SERIF, font_size=28).next_to(
-        Circle(radius=R).move_to(Pc["Jane"]), UP, buff=0.2)
-    nf = Text("named friend", font=SERIF, font_size=28).next_to(
-        Circle(radius=R).move_to(Pc["Alice"]), DOWN, buff=0.2).shift(RIGHT * CF_NF_DX)
-    labels["named friend"] = nf
-    labels["draw"] = Text("one possible draw", font=SERIF, font_size=22).next_to(nf, DOWN, buff=0.2)
+    for t in cf_legend():
+        labels[t.text] = t
     h = NET_TOK / 2
     boxes = []
     issues = []
-    for snd, rcv in CF_DRAW.items():
+    for snd, rcv in CF_DRAW:
         c = tok_end(snd, rcv, Pc)
         tb = (c[0] - h, c[1] - h, c[0] + h, c[1] + h)
         boxes.append(((snd, rcv), tb))
@@ -333,10 +359,23 @@ def cf_draw_issues(min_label_gap=0.15):
             g = _box_gap(tb, _bbox(lab))
             if g < min_label_gap:
                 issues.append(f"cf token {snd}->{rcv} is {g:.3f} from label {n!r}")
+        for n, c2 in Pc.items():
+            qx, qy = np.clip(c2[0], tb[0], tb[2]), np.clip(c2[1], tb[1], tb[3])
+            if float(np.hypot(c2[0] - qx, c2[1] - qy)) - R < 0.05:
+                issues.append(f"cf token {snd}->{rcv} touches node {n}")
     for i in range(len(boxes)):
         for j in range(i + 1, len(boxes)):
             if _box_gap(boxes[i][1], boxes[j][1]) < 0.04:
                 issues.append(f"cf tokens {boxes[i][0]} and {boxes[j][0]} touch")
+    for t in cf_legend():
+        for n in NAMES:
+            if _box_gap(_bbox(t), _bbox(labels[n])) < 0.3:
+                issues.append(f"cf legend {t.text!r} is close to name {n!r}")
+            cb = (Pc[n][0] - R, Pc[n][1] - R, Pc[n][0] + R, Pc[n][1] + R)
+            if _box_gap(_bbox(t), cb) < 0.3:
+                issues.append(f"cf legend {t.text!r} is close to node {n!r}")
+        if t.get_right()[0] > SAFE_X - 0.05:
+            issues.append(f"cf legend {t.text!r} runs to x = {t.get_right()[0]:.2f}")
     return issues
 
 
@@ -545,6 +584,19 @@ def along(mob, pts, fade_tail=0.0):
     return UpdateFromAlphaFunc(mob, upd)
 
 
+def glide(mob, pts, op=None, ease=smooth):
+    """Round 7: move mob along a smooth path through pts; op=(a, b) ramps its opacity from a
+    to b on the way (one updater, so position and opacity never fight)."""
+    path = VMobject().set_points_smoothly([np.array(p, dtype=float) for p in pts])
+
+    def upd(m, a):
+        b = ease(a)
+        m.move_to(path.point_from_proportion(b))
+        if op is not None:
+            m.set_opacity(op[0] + (op[1] - op[0]) * float(np.clip(2 * a, 0, 1)))
+    return UpdateFromAlphaFunc(mob, upd)
+
+
 def count_swap(old, new, a, b, t_out=0.42, t_in=0.58):
     """A node's count rides with the node from a to b; the old count fades out before the
     new one fades in (no crossfade of different digits)."""
@@ -734,6 +786,9 @@ class Episode(NarratedScene):
         self.gv, self.fv = ValueTracker(0.0), ValueTracker(0.0)
         self.Gop = ValueTracker(1.0)                     # the girl read-out's opacity (swaps)
         self.Fop = ValueTracker(1.0)                     # the friend read-out's opacity
+        # Round 7: the YELLOW outline has its own opacity.  YELLOW is never dimmed (at 30-60 %
+        # it reads brown); when the panel steps back, the outline goes to 0 instead
+        self.Yo = ValueTracker(1.0)
 
         def fill_rect(color, y):
             r = Rectangle(width=1.0, height=BAR_H, stroke_width=0, fill_color=color,
@@ -766,7 +821,8 @@ class Episode(NarratedScene):
         def upd_o(m):
             w = max(self.Lf.get_value(), 1e-3)
             m.stretch_to_fit_width(w).move_to([G["x0"] + w / 2, G["yf"], 0])
-            m.set_stroke(opacity=self.Dm.get_value() * self.Fo.get_value() if w > 0.01 else 0.0)
+            m.set_stroke(opacity=self.Dm.get_value() * self.Fo.get_value() * self.Yo.get_value()
+                         if w > 0.01 else 0.0)
 
         self._bar_upd = [(self.gbar, upd_g), (self.fblue, upd_b), (self.fpurp, upd_p),
                          (self.fout, upd_o)]
@@ -876,8 +932,8 @@ class Episode(NarratedScene):
             circ[n].set_stroke(opacity=0.7).set_fill(opacity=0.11)
             name[n].set_opacity(0.7)
         ghost_edges = VGroup(*[edges[frozenset(e)].copy().set_stroke(opacity=0.4) for e in EDGES])
-        for m in (self.glabel, self.flabel, qmark):
-            m.set_opacity(0.3)
+        for m in (self.glabel, self.flabel):         # (round 7: the YELLOW "?" is never a
+            m.set_opacity(0.3)                        # 30 % ghost; it poses the question at full)
         self.add(ghost_edges, *circ.values(), *name.values(), feld, self.glabel, self.flabel, qmark)
         with self.narrate(NARR["open1"], gap=0.2) as beat:
             self.play(LaggedStart(*[AnimationGroup(
@@ -1243,8 +1299,9 @@ class Episode(NarratedScene):
             self.play(flag(fy_num, color=YELLOW), flag(self.fnum, color=YELLOW), run_time=0.8)
             # Round 6: the bar panel steps back to 35 % so the beam and the equation are the
             # only full-strength objects; it returns at "the extra half friend we measured"
+            # (round 7: its YELLOW outline and read-out go to 0, never to a brown 35 %)
             self.play(self.Dm.animate.set_value(0.35), self.Gop.animate.set_value(0.35),
-                      self.Fop.animate.set_value(0.35),
+                      self.Fop.animate.set_value(0.0), self.Yo.animate.set_value(0.0),
                       VGroup(self.glabel, self.flabel, self.axis, gap_grp).animate.set_opacity(0.35),
                       run_time=0.5)
 
@@ -1388,8 +1445,9 @@ class Episode(NarratedScene):
                 areas[n] = MathTex(f"{(k - 2.5) ** 2:.2f}", font_size=36, color=PURPLE).move_to(
                     [x, AREA_Y + LIFT, 0])
         lane_y = LANE_Y + LIFT
-        # Round 6: the scale tag is MathTex 30, left of the squares, and stays (at 40 %) for as
-        # long as the squares are on screen
+        # Round 6: the scale tag is MathTex 30, left of the squares, and stays for as long as
+        # the squares are on screen (round 7: at full strength, 7.7:1; it is the only key to
+        # the squares' sizes)
         quarter = MathTex(r"\text{sides at }\tfrac{1}{4}\text{ scale}", font_size=30, color=GRAY_T)
         quarter.move_to([squares["Betty"].get_left()[0] - 0.35 - quarter.width / 2,
                          sq_top - 1.5 * SQ_SCALE / 2, 0])
@@ -1402,11 +1460,36 @@ class Episode(NarratedScene):
         dims = VGroup(all_stack, sue_box, sue_eq)
         self.gnum.clear_updaters()
         self.fnum.clear_updaters()
-        panel_txt = VGroup(self.glabel, self.flabel, self.gnum, self.fnum, self.axis, gap_grp)
+        # (round 7: the "+0.5" is not in the panel text: it becomes the derivation's target)
+        panel_txt = VGroup(self.glabel, self.flabel, self.gnum, self.fnum, self.axis, gap_pct)
         main = VGroup(*B)
         lift_on = VGroup(*circ.values(), *num.values(), *name.values(), beam, fulc_b, fb_lab,
                          ruler, rticks, rnums)
-        yfulc = VGroup(fulc_y, fy_num)            # the token balance point (3.0): context now
+        yfulc = VGroup(fulc_y, fy_num)            # the token balance point (3.0)
+        # Round 7: the friend-average row is never dimmed (YELLOW at 50 % read brown): it parks
+        # at full strength, scaled 0.8, on the bottom edge; park_c is where the algebra uses it
+        m_shift = np.array([-main.get_x(), ROW_M - B[0].bar.get_y(), 0.0])
+        park_c = main.get_center() + m_shift
+        main_park = main.copy().scale(0.8)
+        main_park.move_to([0.0, -3.08 + main_park.height / 2, 0.0])
+        # Round 7: the open target.  The measured "+0.5" lifts out of the panel into the top
+        # right corner as "+0.5 ?" and stays at full strength through the derivation; the
+        # result's 0.5 flies into it at "exactly the extra half friend we measured"
+        gap_home = gap_lab.get_center().copy()
+        TAG = np.array([5.45, 3.3, 0.0])
+        qtag = MathTex("?", font_size=36, color=PURPLE)
+        qtag.next_to(gap_lab.copy().move_to(TAG), RIGHT, buff=0.12)
+        # (round 7: a short question is read fast by Kokoro, 221 wpm at 0.82; at 0.74 it is a
+        # deliberate 171 wpm)
+        with self.narrate(NARR["ask"], speed=0.74) as beat:
+            beat.wait_until("extra half", offset=-0.35)
+            # (the "· 20%" steps out of the way first; the label rises right of the girl
+            # bar's read-out, then into the corner)
+            self.play(gap_pct.animate(rate_func=window(0, 0.3, 1.0)).set_opacity(0.0),
+                      glide(gap_lab, [gap_home, gap_home + np.array([1.1, 0.07, 0]),
+                                      [TAG[0] + 0.25, 2.85, 0], TAG], op=(0.35, 1.0)),
+                      run_time=1.0)
+            self.play(FadeIn(qtag, shift=0.1 * UP), flag(gap_lab, color=PURPLE), run_time=0.6)
 
         def dip(m, total, t0, t1, low=0.4):
             """Opacity of m dips to `low` between t0 and t1 seconds of a play and comes back."""
@@ -1417,13 +1500,12 @@ class Episode(NarratedScene):
             return UpdateFromAlphaFunc(m, upd)
         with self.narrate(NARR["variance"]) as beat:
             T = 1.0
-            m_shift = np.array([-main.get_x(), ROW_M - B[0].bar.get_y(), 0.0])
-            # Round 6: the YELLOW token balance point (3.0) steps back to 30 %: the distances
-            # are measured from the girls' balance point, 2.5
+            # The YELLOW token balance point (3.0) leaves (round 7: fully, it returns with the
+            # result): the distances are measured from the girls' balance point, 2.5
             self.play(dims.animate(rate_func=window(0, 0.6, T)).shift(OFF).set_opacity(0),
                       lift_on.animate(rate_func=window(0.1, 1.0, T)).shift(OFF),
-                      yfulc.animate(rate_func=window(0.1, 1.0, T)).shift(OFF).set_opacity(CTX_Y),
-                      main.animate(rate_func=window(0.1, 1.0, T)).shift(m_shift).set_opacity(CTX_Y),
+                      yfulc.animate(rate_func=window(0, 0.6, T)).shift(OFF).set_opacity(0.0),
+                      main.animate(rate_func=window(0.1, 1.0, T)).scale(0.8).move_to(main_park),
                       self.Dm.animate(rate_func=window(0, 0.6, T)).set_value(0.0),
                       panel_txt.animate(rate_func=window(0, 0.6, T)).set_opacity(0.0),
                       feld.animate(rate_func=window(0, 0.6, T)).set_opacity(0.0), run_time=T)
@@ -1462,8 +1544,7 @@ class Episode(NarratedScene):
                                    ten.get_center()], fade_tail=0.25)
                   for n in NAMES]
             T = beat.until("quarter", offset=0.3, min_time=1.4)
-            self.play(quarter.animate(rate_func=window(0, 0.4, T)).set_opacity(0.4),
-                      LaggedStart(*fl, lag_ratio=0.04, rate_func=window(0.0, T - 0.5, T)),
+            self.play(LaggedStart(*fl, lag_ratio=0.04, rate_func=window(0.0, T - 0.5, T)),
                       FadeIn(VGroup(Vrow[2], Vrow[3], Vrow[4]), rate_func=window(T - 0.95, T - 0.45, T)),
                       FadeIn(VGroup(Vrow[5], Vrow[6]), rate_func=window(T - 0.5, T, T)),
                       run_time=T)
@@ -1522,15 +1603,18 @@ class Episode(NarratedScene):
         x_sue, y_top = SP["Sue"][0] + XC, GIRL_Y + LIFT
         gap_x = (squares["Dale"].get_right()[0] + squares["Sue"].get_left()[0]) / 2
         with self.narrate(NARR["split"]) as beat:
+            # (round 7: each number flies on its own word, and lands in the 0.4 s breath
+            # before the next number is spoken)
             beat.wait_until("Sue's", offset=-0.1)
+            self.play(flag(num["Sue"], color=INK), flag(name["Sue"], color=INK), run_time=0.6)
+            beat.wait_until("four", offset=-0.3)
             four = num["Sue"].copy()
             # round 6 path: between the Dale and Sue nodes and names, right of the dimmed 3.0,
             # between the distance labels and the count labels, between Dale's and Sue's
             # squares, then left under the squares
             x_dl = (x_sue + SP["Dale"][0] + XC) / 2              # between the two nodes
             y_sq_bot = sq_top - SQ_SCALE * 1.5                  # bottom of the big squares
-            self.play(flag(num["Sue"], color=INK), flag(name["Sue"], color=INK),
-                      fly(four, S1[0], [(x_dl, y_top - 0.3), (x_dl, BNAME_TOP + LIFT - 0.35),
+            self.play(fly(four, S1[0], [(x_dl, y_top - 0.3), (x_dl, BNAME_TOP + LIFT - 0.35),
                                         (x_dl + 0.3, BEAM_Y + LIFT - 0.22),
                                         (x_dl + 0.15, DLAB_Y + LIFT), (gap_x, DEV_Y + LIFT - 0.3),
                                         (gap_x, sq_top - 0.25), (gap_x - 0.5, y_sq_bot - 0.33),
@@ -1540,13 +1624,17 @@ class Episode(NarratedScene):
             self.remove(four)
             self.add(S1[0])
             beat.wait_until("the balance point", offset=-0.1)
-            self.play(flag(fb_lab, color=BLUE), flag(dev_mark, color=BLUE),
-                      FadeIn(VGroup(S1[3], S1[4]), shift=0.1 * UP), run_time=0.8)
+            self.play(Indicate(fulc_b, color=BLUE, scale_factor=1.2), flag(dev_mark, color=BLUE),
+                      run_time=0.8)
+            beat.wait_until("two and a half", offset=-0.2)
+            self.play(FadeIn(VGroup(S1[3], S1[4]), shift=0.1 * UP), flag(fb_lab, color=BLUE),
+                      run_time=0.7)
             beat.wait_until("her distance", offset=-0.1)
+            self.play(flag(dev_r, color=PURPLE), timed(Write(d_lab), 0, 0.8, 0.8), run_time=0.8)
+            beat.wait_until("one and a half", offset=-0.3)
             d15 = dev_labs[4].copy()
             x15 = dev_labs[4].get_x()
-            self.play(flag(dev_r, color=PURPLE), timed(Write(d_lab), 0, 0.8, 1.2),
-                      fly(d15, S1[6], [(x15 - 0.45, DLAB_Y + LIFT - 0.05), (gap_x + 0.05, DEV_Y + LIFT - 0.3),
+            self.play(fly(d15, S1[6], [(x15 - 0.45, DLAB_Y + LIFT - 0.05), (gap_x + 0.05, DEV_Y + LIFT - 0.3),
                                        (gap_x, sq_top - 0.25), (gap_x - 0.5, y_sq_bot - 0.33),
                                        (S1[6].get_x() + 0.4, y_sq_bot - 0.38)], rate_func=leave,
                           squeeze=0.4),
@@ -1664,8 +1752,11 @@ class Episode(NarratedScene):
         # box buffs stay 0.15 clear of the neighbouring "+" and "="; it collapses straight to D4
         D1 = trow(Fr([mu, ("^2", BLUE)], [mu]), r"\;+\;", f_s2mu, r"\;=\;", f_2552, r"\;+\;", f_125,
                   "=", ("3.0", YELLOW))
+        # round 7: the collapse is typeset first (D3, then D4) and happens in two steps on the
+        # TeX baseline: mu^2/mu -> mu and 2.5^2/2.5 -> 2.5 (D3), then 1.25/2.5 -> 0.5 (D4)
+        D3 = trow(mu, "+", f_s2mu, "=", ("2.5", BLUE), "+", f_125, "=", ("3.0", YELLOW))
         D4 = trow(mu, "+", f_s2mu, "=", ("2.5", BLUE), "+", ("0.5", PURPLE), "=", ("3.0", YELLOW))
-        for g in (C, D1, D4):
+        for g in (C, D1, D3, D4):
             place(g, ROW_M, x=0.0)
 
         # the ring comes back as a picture (thumbnail of the 0:31 ring) with its spread
@@ -1704,7 +1795,8 @@ class Episode(NarratedScene):
             # Round 5: every glyph transform pairs like with like (a part with a part, never a
             # MathTex wrapper with a bare part); mismatched nesting smeared "1.25" and "3.0"
             # mid-move, because each glyph morphed into the whole target.
-            self.play(main.animate.set_opacity(1.0), flag(S4, color=INK), run_time=0.6)
+            # (round 7: it was parked at full strength, scaled 0.8; it rises back into place)
+            self.play(main.animate.scale(1 / 0.8).move_to(park_c), flag(S4, color=INK), run_time=0.8)
             beat.wait_until("is mu", offset=-0.6)
             T = 1.6
             self.play(FadeOut(VGroup(B[0].num, B[2].num), shift=0.12 * UP, rate_func=window(0, 0.35, T)),
@@ -1750,46 +1842,90 @@ class Episode(NarratedScene):
             # the two fractions that cancel are boxed while "over mu" is said ...
             beat.wait_until("over mu", offset=-0.1)
             self.play(Create(box1), Create(box2), run_time=0.5)
-            # ... and on "two and a half, plus a half" all three collapse in one move:
-            # mu^2/mu -> mu and 2.5^2/2.5 -> 2.5 (box, exponent, bar and denominator leave, the
-            # base slides to the baseline), 1.25/2.5 -> 0.5
+            # ... round 7: then the collapse, in two steps on their own words, every glyph on
+            # TeX's baseline.  "two and a half": the boxes, exponents, bars and denominators
+            # fade in place, the surviving mu and 2.5 drop straight onto the baseline, then the
+            # row closes up (D3)
             beat.wait_until("Here", offset=-0.15)
             T = 1.5
-            go = window(0.25, 1.2, T)
+            m_mu, m_25 = D1[0].num[0], D1[4].num[0]
+
+            def drop_slide(m, dst, t_drop=(0.3, 0.75), t_slide=(0.8, 1.5)):
+                p0 = m.get_center().copy()
+                p1 = np.array([p0[0], dst.get_y(), 0.0])
+                p2 = dst.get_center()
+
+                def upd(mob, a):
+                    tt = a * T
+                    u = smooth(float(np.clip((tt - t_drop[0]) / (t_drop[1] - t_drop[0]), 0, 1)))
+                    v = smooth(float(np.clip((tt - t_slide[0]) / (t_slide[1] - t_slide[0]), 0, 1)))
+                    mob.move_to(p0 + (p1 - p0) * u + (p2 - p1) * v)
+                return UpdateFromAlphaFunc(m, upd)
+            slide_t = window(0.8, 1.5, T)
             self.play(FadeOut(VGroup(box1, D1[0].num[1], D1[0].bar, D1[0].den,
                                      box2, D1[4].num[1], D1[4].bar, D1[4].den),
-                              shift=0.12 * UP, rate_func=window(0, 0.45, T)),
+                              rate_func=window(0, 0.4, T)),
                       FadeOut(S4, rate_func=window(0, 0.45, T)),
-                      RT_same(D1[0].num[0], D4[0], rate_func=go),
-                      RT_same(D1[4].num[0], D4[4], rate_func=go),
-                      *[RT_same(D1[i], D4[i], rate_func=go) for i in (1, 2, 3, 5, 7, 8)],
-                      *swap(D1[6], D4[6], T, t_out=0.4, t_in=(0.5, 1.05)),
+                      drop_slide(m_mu, D3[0]), drop_slide(m_25, D3[4]),
+                      *[RT_same(D1[i], D3[i], rate_func=slide_t) for i in (1, 2, 3, 5, 6, 7, 8)],
                       run_time=T)
-            # back to the measured class: the picture moves left again, the bars return, and
-            # the result row moves under them; the scale tag and d = k - mu leave with the
-            # variance step, and the token balance point (3.0) is full strength again
-            beat.wait_until("exactly", offset=-0.15)
+            # "plus a half": 1.25/2.5 fades in place, the row closes up, and 0.5 rises into
+            # the settled slot (D4)
+            beat.wait_until("plus a half", offset=-0.15)
+            T = 1.1
+            mv = window(0.25, 0.8, T)
+            self.play(FadeOut(D3[6], rate_func=window(0, 0.35, T)),
+                      RT_same(m_mu, D4[0], rate_func=mv), RT_same(m_25, D4[4], rate_func=mv),
+                      *[RT_same(D3[i], D4[i], rate_func=mv) for i in (1, 2, 3, 5, 7, 8)],
+                      FadeIn(D4[6], shift=0.1 * UP, rate_func=window(0.45, 0.85, T)), run_time=T)
+            # "exactly the extra half friend we measured": the 0.5 flies into the corner tag
+            # and the "?" drops; then the picture moves back left, the bars return, the
+            # result row moves under them and the tag goes home onto the PURPLE segment
+            beat.wait_until("exactly", offset=-0.3)
+            T = 0.8
+            c05 = D4[6].copy()
+            self.allow_overlap(c05, reason="the result's 0.5 lands on the tag's 0.5 and is removed "
+                                           "in the same frame (a merge, not two labels)")
+            tag05 = VGroup(*gap_lab[0][1:])
+            x05 = D4[6].get_x()
+            self.play(FadeOut(VGroup(d_lab, quarter), rate_func=window(0, 0.3, T)),
+                      fly(c05, tag05, [(x05, ROW_M + 0.9), (x05 + 2.8, ROW_M + 1.9),
+                                       (TAG[0] - 0.2, 1.2), (TAG[0] + 0.05, 2.4)], run_time=T,
+                          rate_func=window(0.05, 0.7, T, leave), fade_in=0.0),
+                      FadeOut(qtag, shift=0.12 * UP, rate_func=window(0.55, 0.8, T)), run_time=T)
+            self.remove(c05)
             d4 = VGroup(*D4)
             d4_shift = np.array([X_MR - d4.get_x(), ROW_MR - D4[2].bar.get_y(), 0.0])
-            T = 1.0
-            self.play(FadeOut(VGroup(d_lab, quarter), rate_func=window(0, 0.3, T)),
-                      VGroup(*[m for m in pic.submobjects if m is not fulc_y and m is not fy_num])
+            T = 1.1
+            self.play(VGroup(*[m for m in pic.submobjects if m is not fulc_y and m is not fy_num])
                       .animate(rate_func=window(0, 0.6, T)).shift(LEFT * XC),
                       yfulc.animate(rate_func=window(0, 0.6, T)).shift(LEFT * XC).set_opacity(1.0),
                       d4.animate(rate_func=window(0, 0.7, T)).shift(d4_shift),
-                      self.Dm.animate(rate_func=window(0.55, 1.0, T)).set_value(1.0),
-                      panel_txt.animate(rate_func=window(0.55, 1.0, T)).set_opacity(1.0),
-                      feld.animate(rate_func=window(0.4, 1.0, T)).set_opacity(1.0), run_time=T)
-            beat.wait_until("measured", offset=-0.35)
+                      self.Dm.animate(rate_func=window(0.5, 0.95, T)).set_value(1.0),
+                      self.Yo.animate(rate_func=window(0.5, 0.95, T)).set_value(1.0),
+                      VGroup(*[m for m in panel_txt if m is not gap_pct])
+                      .animate(rate_func=window(0.5, 0.95, T)).set_opacity(1.0),
+                      feld.animate(rate_func=window(0.4, 1.0, T)).set_opacity(1.0),
+                      glide(gap_lab, [TAG, [TAG[0] + 0.25, 2.85, 0],
+                                      gap_home + np.array([1.1, 0.07, 0]), gap_home],
+                            ease=lambda t: smooth(float(np.clip((t * T - 0.25) / 0.7, 0, 1)))),
+                      gap_pct.animate(rate_func=window(0.85, 1.1, T)).set_opacity(1.0), run_time=T)
+            beat.wait_until("measured", offset=-0.15)
             self.play(flag(D4[6], color=PURPLE), flag(self.fpurp, color=PURPLE),
                       flag(gap_lab, color=PURPLE), run_time=0.9)
             # the ring: the class picture, the row and the bars dim; the thumbnail, its collapsed
             # spread and 2 + 0/2 = 2 are the only bright things
             beat.wait_until("With no spread", offset=-0.2)
-            ctx = VGroup(pic, d4, panel_txt)
+            # (round 7: its YELLOW parts, the 3.0 fulcrum, the row's "= 3.0", the outline and
+            # the read-out, go to 0 instead of a brown 30 %)
             d4.save_state()
             panel_txt.save_state()
+            gap_lab.save_state()
+            ctx = VGroup(*[m for m in pic.submobjects if m is not fulc_y and m is not fy_num],
+                         *D4[0:7], *[m for m in panel_txt if m is not self.fnum], gap_lab)
             self.play(ctx.animate.fade(0.7), self.Dm.animate.set_value(0.3),
+                      self.Yo.animate.set_value(0.0),
+                      VGroup(yfulc, D4[7], D4[8], self.fnum).animate.set_opacity(0.0),
                       FadeIn(ring_th, scale=0.85), run_time=0.7)
             spread = VGroup(dev_l, dev_r, *dev_ticks.values()).copy().set_stroke(opacity=1.0)
             self.play(ReplacementTransform(spread, ring_pt), run_time=0.8)
@@ -1802,8 +1938,10 @@ class Episode(NarratedScene):
             self.hold(max(0.0, beat.remaining() - 0.7))
             # round 6: in the closing pause only the result row and the bars come back; the
             # beam picture stays at 30 % and the ring joins it (one focal point)
-            self.play(Restore(d4), Restore(panel_txt), self.Dm.animate.set_value(1.0),
-                      VGroup(ring_th, ring_pt, rr).animate.fade(0.7), run_time=0.6)
+            self.play(Restore(d4), Restore(panel_txt), Restore(gap_lab), self.Dm.animate.set_value(1.0),
+                      self.Yo.animate.set_value(1.0),
+                      VGroup(ring_th, ring_pt, *rr[0:3]).animate.fade(0.7),
+                      VGroup(rr[3], rr[4]).animate.set_opacity(0.0), run_time=0.6)
 
         # ============================================================ 6. Facebook
         beam_grp = VGroup(pic, ring_th, ring_pt, rr)
@@ -1863,11 +2001,17 @@ class Episode(NarratedScene):
         fb_tail = VGroup(brk, ext, cap_tick, cap_num, cap_lab, few_br, few_lab)
         # round 6: the title's "you" (Ugander et al. 2011: "92.7% of users have less friends
         # than the average friend count of their friends"), next to the "average user" row
+        # (round 7: it sits beside the "average user" row only, away from the 635 bar, and
+        # says "their own": Ugander's per-user statistic, not the edge average)
         pct = MathTex(r"92.7\%", font_size=48, color=BLUE)
         pct_l1 = Text("had fewer friends than", font=SERIF, font_size=27, color=BLUE)
-        pct_l2 = Text("their friends' average", font=SERIF, font_size=27, color=BLUE)
-        pct_blk = VGroup(pct, pct_l1, pct_l2).arrange(DOWN, buff=0.16, aligned_edge=LEFT)
-        pct_blk.move_to([SAFE_X - 0.2 - pct_blk.width / 2, 3.45 - pct_blk.height / 2, 0])
+        pct_l2 = Text("their own friends' average", font=SERIF, font_size=27, color=BLUE)
+        pct_blk = VGroup(pct, pct_l1, pct_l2).arrange(DOWN, buff=0.14, aligned_edge=LEFT)
+        pct_blk.move_to([0.55 + pct_blk.width / 2, 3.5 - pct_blk.height / 2, 0])
+        # round 7: the axis name sits left of the axis, at its height, so nothing lies under
+        # the tick labels where the three numbers drop into the row
+        fb_title_to = self.ax_title.copy().scale(s_)
+        fb_title_to.move_to([x0n - 0.3 - fb_title_to.width / 2, yaxn, 0])
         for t in pct_blk:
             t.ss_block = "pct"
         with self.narrate(NARR["fb"]) as beat:
@@ -1900,6 +2044,7 @@ class Episode(NarratedScene):
                       *swap(self.glabel, fb_glabel, T, t_out=0.5, t_in=(0.65, 1.2)),
                       *swap(self.ax_nums, fb_nums, T, t_out=0.5, t_in=(0.65, 1.2)),
                       ReplacementTransform(self.ax_ticks, fb_ticks),
+                      self.ax_title.animate(rate_func=window(0.3, 1.2, T)).move_to(fb_title_to),
                       self.Lg.animate.set_value(190 * fbu),
                       self.Lf.animate.set_value(0.0), self.Lb.animate.set_value(0.0),
                       self.Po.animate.set_value(0.0),
@@ -1925,38 +2070,62 @@ class Episode(NarratedScene):
             self.play(self.Lf.animate.set_value(635 * fbu),
                       fop.animate(rate_func=window(max(0.0, T - 0.45), T, T)).set_value(1.0),
                       FadeOut(q2, rate_func=window(0, 0.3, T)), run_time=T)
-            # the friend bar fills: BLUE up to the mean, PURPLE beyond it
+            # the friend bar fills: BLUE up to the mean, PURPLE beyond it; (round 7) the axis
+            # numbers and name, done with, step back to 30 % now, before anything flies
             self.play(self.Lb.animate.set_value(190 * fbu), self.Po.animate.set_value(1.0),
-                      FadeIn(fb_gap, shift=0.1 * UP), flag(g_int, color=BLUE), run_time=0.8)
-            beat.wait_until("spread term", offset=-0.15)
-            # Round 5: the three numbers fly down into the row along paths that thread the
-            # gaps (190 passes right of "average friend", 190 and 445 drop between the "400"
-            # and "600" ticks one after the other, 635 between "600" and "800"); the axis
-            # numbers and title, done with, dim to 30 % as context.  190 leaves its label
-            # downward first, so the copy never slides along its own digits ("190190").
-            T = 1.3
-
-            def fly_w(src, dst, pts, t0, t1):
-                # (round 6c: faint until it is about half way, so no frame shows it stacked
-                # under the label it left)
-                a = fly(src, dst, pts, run_time=T, rate_func=window(t0, t1, T, leave), fade_in=0.45)
-                a.rate_func = linear
-                return a
-            x_gap = (fb_nums[2].get_right()[0] + fb_nums[3].get_left()[0]) / 2
-            y_num = fb_nums[2].get_y()
-            c190, c445, c635 = (glyphs(g_int).copy(), fb_gap[0][1:].copy(), glyphs(f_int).copy())
-            self.add(c190, c445, c635)
-            self.play(flag(self.fpurp, color=PURPLE), flag(fb_gap, color=PURPLE),
+                      FadeIn(fb_gap, shift=0.1 * UP), flag(g_int, color=BLUE),
                       VGroup(fb_nums, self.ax_title, cap_num, cap_lab).animate(
-                          rate_func=window(0, 0.3, T)).set_opacity(0.3),
-                      fly_w(c190, fb_full[4], [(c190.get_x() + 0.1, ygn - 0.42),
-                                               (self.flabel.get_right()[0] + 0.55, ygn - 0.5),
-                                               (x_gap, y_num)], 0.0, 0.8),
-                      fly_w(c445, fb_full[6], [(x_gap, y_num)], 0.5, 1.2),
-                      fly_w(c635, fb_full[8], [(c635.get_x(), y_num)], 0.15, 0.9),
-                      FadeIn(fb_full[3], rate_func=window(0.5, 0.9, T)),
-                      FadeIn(fb_full[5], rate_func=window(0.8, 1.2, T)),
-                      FadeIn(fb_full[7], rate_func=window(0.6, 1.0, T)), run_time=T)
+                          rate_func=window(0.3, 0.8, 0.8)).set_opacity(0.3), run_time=0.8)
+            beat.wait_until("spread term", offset=-0.3)
+            # Round 7: each number drops out of the bottom of its own bar segment (190 under the
+            # BLUE part, 445 under the PURPLE part, 635 under its label) and threads a gap
+            # between the dimmed tick labels into the row.  A copy is invisible until its top
+            # is 0.3 below the friend bar, so it never crosses a label or doubles its source.
+            T = 1.6
+            y_vis = yfn - BAR_H * s_ / 2 - 0.3
+            y_num = fb_nums[2].get_y()
+
+            def gap_x(i):                  # the middle of the gap between tick labels i, i+1
+                return (fb_nums[i].get_right()[0] + fb_nums[i + 1].get_left()[0]) / 2
+
+            def drop(src, dst, x_col, t0, t1):
+                pts = [src.get_center(), np.array([x_col, y_vis - 0.05, 0]),
+                       np.array([x_col, y_num, 0]),
+                       np.array([x_col + 0.75 * (dst.get_x() - x_col), y_num - 0.75, 0]),
+                       dst.get_center()]
+                path = VMobject().set_points_smoothly(pts)
+                h0, h1 = src.height, dst.height
+                rf = window(t0, t1, T)
+
+                def upd(m, a):
+                    b = rf(a)
+                    m.scale_to_fit_height((h0 + (h1 - h0) * b) * (1.0 - 0.3 * np.sin(np.pi * b)))
+                    m.move_to(path.point_from_proportion(b))
+                    vis = float(np.clip((y_vis - m.get_top()[1]) / 0.15, 0, 1))
+                    m.set_opacity(vis if b > 0 else 0.0)
+                return UpdateFromAlphaFunc(src, upd, rate_func=linear)
+            g_int.clear_updaters()               # (both read-outs are fixed now)
+            f_int.clear_updaters()
+            y_bot = yfn - BAR_H * s_ / 2
+
+            def edge_flash(xa, xb, t0, t1):
+                ln = Line([xa, y_bot, 0], [xb, y_bot, 0], color=INK, stroke_width=5)
+                return ShowPassingFlash(ln, time_width=0.6, rate_func=window(t0, t1, T, linear))
+            c190, c445, c635 = (glyphs(g_int).copy(), fb_gap[0][1:].copy(), glyphs(f_int).copy())
+            for c in (c190, c445, c635):
+                c.set_opacity(0)
+            self.add(c190, c445, c635)
+            self.play(Indicate(g_int, color=BLUE, scale_factor=1.15, rate_func=window(0, 0.6, T, there_and_back)),
+                      edge_flash(x0n, x0n + 190 * fbu, 0.15, 0.75),
+                      Indicate(fb_gap, color=PURPLE, scale_factor=1.15, rate_func=window(0.35, 0.95, T, there_and_back)),
+                      edge_flash(x0n + 190 * fbu, x0n + 635 * fbu, 0.5, 1.1),
+                      Indicate(f_int, color=YELLOW, scale_factor=1.15, rate_func=window(0.7, 1.3, T, there_and_back)),
+                      drop(c190, fb_full[4], gap_x(0), 0.0, 0.9),
+                      drop(c445, fb_full[6], gap_x(2), 0.35, 1.25),
+                      drop(c635, fb_full[8], gap_x(3), 0.7, 1.6),
+                      FadeIn(fb_full[3], rate_func=window(0.6, 0.9, T)),
+                      FadeIn(fb_full[5], rate_func=window(0.95, 1.25, T)),
+                      FadeIn(fb_full[7], rate_func=window(1.3, 1.6, T)), run_time=T)
             self.remove(c190, c445, c635)
             self.add(fb_full[4], fb_full[6], fb_full[8])
             beat.wait_until("twice", offset=-0.1)
@@ -1984,17 +2153,45 @@ class Episode(NarratedScene):
             mm.set_color(GRAY_T)
         cf_cite = citation("Christakis & Fowler, 2010 · PLoS ONE · Fig. 3 redrawn, logistic refit",
                            color=GRAY_T)
-        lab_rand = Text("319 random students", font=SERIF, font_size=28, color=BLUE)
-        lab_rand.move_to(ax.c2p(75, 1.0))           # clear of the blue steps and the axis ticks
-        lab_fr = Text("425 friends they named", font=SERIF, font_size=28, color=YELLOW)
-        lab_fr.next_to(ax.c2p(3, 5.6), RIGHT, buff=0)
-        fit_fr = DashedVMobject(ax.plot(lambda t: logistic(t), x_range=[0, 125, 0.5]),
-                                num_dashes=70).set_stroke(YELLOW, 3.5)
-        fit_rd = DashedVMobject(ax.plot(lambda t: logistic(t, LEAD), x_range=[0, 125, 0.5]),
-                                num_dashes=70).set_stroke(BLUE, 3.5)
         ay = 2.8                                       # any height works: the fits are a pure shift
         t_fr = LOG_M + LOG_S * np.log(ay / (LOG_C - ay))
         dpu = (ax.c2p(1, 0)[0] - ax.c2p(0, 0)[0])            # units per day
+        x_tip = ax.c2p(t_fr, ay)[0]                          # the in-chart lead arrow's tip
+        # Round 7: the y title goes on two lines at the top left, so the column above the
+        # in-chart lead arrow holds no text and its copy rises straight up into the read-out
+        yt = VGroup(Text("diagnosed with flu", font=SERIF, font_size=LABEL, color=GRAY_T),
+                    Text("(% of group)", font=SERIF, font_size=LABEL, color=GRAY_T)
+                    ).arrange(DOWN, buff=0.1, aligned_edge=LEFT)
+        yt.next_to(ax.y_axis.get_top(), UP, buff=0.22)
+        yt.move_to([-4.95 + yt.width / 2, yt.get_y(), 0])
+        assert yt.get_right()[0] < x_tip - 0.3, "y title runs into the lead arrow's column"
+        for t in yt:
+            t.ss_block = "ytitle"
+        ax.remove(ax.y_title)
+        ax.y_title = yt
+        # the axes are drawn first, lines and ticks only (at 30 %, behind the class); the
+        # tick numbers and titles are separate so they appear once the class has gone
+        ax_text = VGroup(ax.x_axis.numbers, ax.y_axis.numbers, ax.x_title, yt)
+        ax.x_axis.remove(ax.x_axis.numbers)
+        ax.y_axis.remove(ax.y_axis.numbers)
+        ax.remove(ax.x_title)
+        ax.set_z_index(-1)
+        lab_rand = Text("319 random students", font=SERIF, font_size=28, color=BLUE)
+        lab_rand.move_to(ax.c2p(75, 1.0))           # clear of the blue steps and the axis ticks
+        # (round 7: two lines, so it too stays left of the arrow's column)
+        lab_fr = VGroup(Text("425 friends", font=SERIF, font_size=28, color=YELLOW),
+                        Text("they named", font=SERIF, font_size=28, color=YELLOW)
+                        ).arrange(DOWN, buff=0.12, aligned_edge=LEFT)
+        lab_fr.move_to([ax.c2p(3, 0)[0] + lab_fr.width / 2, ax.c2p(0, 6.0)[1], 0])
+        assert lab_fr.get_right()[0] < x_tip - 0.3, "friends' label runs into the arrow's column"
+        for t in lab_fr:
+            t.ss_block = "lab_fr"
+        # Round 7: raw steps keep their full colour at stroke 1.5 once the fits arrive; the
+        # dashed fits (stroke 4) are the heavier mark.  YELLOW is never dimmed by opacity.
+        fit_fr = DashedVMobject(ax.plot(lambda t: logistic(t), x_range=[0, 125, 0.5]),
+                                num_dashes=70).set_stroke(YELLOW, 4)
+        fit_rd = DashedVMobject(ax.plot(lambda t: logistic(t, LEAD), x_range=[0, 125, 0.5]),
+                                num_dashes=70).set_stroke(BLUE, 4)
         TIP = 0.16
 
         def lead_arrow_at(tip, days, color=INK):
@@ -2002,22 +2199,28 @@ class Episode(NarratedScene):
                          max_tip_length_to_length_ratio=min(0.95, TIP / max(days * dpu, 1e-3)),
                          max_stroke_width_to_length_ratio=40)
         lead_arrow = lead_arrow_at(ax.c2p(t_fr, ay), LEAD)
-        # read-out above the plot frame: label left, arrow right, the two arrow tips aligned at
-        # the chart's own day scale (second cycle: 0.3 down and 0.4 left, off the safe edge)
-        RO_TIPX, RO_Y1, RO_Y2 = 5.1, 3.25, 2.75
-        ro_tip = np.array([RO_TIPX, RO_Y1, 0.0])
+        # Round 7: the read-out sits directly above the arrow it measures (tips aligned at the
+        # arrow's x, at the chart's own day scale), its words to the right
+        RO_Y1, RO_Y2 = 3.25, 2.72
+        ro_tip = np.array([x_tip, RO_Y1, 0.0])
         ro_arrow = lead_arrow_at(ro_tip, LEAD)
+        x_ro = x_tip + LEAD * dpu + 0.28                    # left edge of the read-out words
         lead_lab = Text("C&F fitted lead: 13.9 days", font=SERIF, font_size=27, color=INK)
-        lead_lab.move_to([RO_TIPX - 0.25, RO_Y1, 0], aligned_edge=RIGHT)
-        ro2_tip = np.array([RO_TIPX, RO_Y2, 0.0])
+        lead_lab.move_to([x_ro, RO_Y1, 0], aligned_edge=LEFT)
+        ro2_tip = np.array([x_tip, RO_Y2, 0.0])
         # round 6: the self-reported read-out is the same kind of measurement as the 13.9-day
         # one, so it is INK too (its arrow at 50 %); GRAY stays the naive guess and the axes
         ro2_long = lead_arrow_at(ro2_tip, LEAD).set_opacity(0.5)
         self_len, sn_op = ValueTracker(LEAD), ValueTracker(0.0)
         ro2_live = always_redraw(lambda: lead_arrow_at(ro2_tip, self_len.get_value()).set_opacity(0.5))
+        self_lab = Text("self-reported:", font=SERIF, font_size=27, color=INK)
+        self_lab.move_to([x_ro, RO_Y2, 0], aligned_edge=LEFT)
+        base_y = self_lab[0].get_bottom()[1]                # the baseline (bottom of the "s")
+        num_w = DecimalNumber(LEAD, num_decimal_places=1, font_size=35, color=INK)
+        num_w.next_to(self_lab, RIGHT, buff=0.16)           # placed for the widest value, 13.9
         days_lab = Text("days", font=SERIF, font_size=27, color=INK)
-        days_lab.move_to([RO_TIPX - 0.25, RO_Y2, 0], aligned_edge=RIGHT)
-        base_y = days_lab[0].get_bottom()[1]                 # the baseline (bottom of the "d")
+        days_lab.next_to(num_w, RIGHT, buff=0.14)
+        days_lab.shift(UP * (base_y - days_lab[0].get_bottom()[1]))
         self_num = DecimalNumber(LEAD, num_decimal_places=1, font_size=35, color=INK)
 
         def upd_sn(m):
@@ -2027,51 +2230,47 @@ class Episode(NarratedScene):
             prog = float(np.clip((LEAD - self_len.get_value()) / (LEAD - SELF_LEAD), 0, 1))
             m.set_opacity(sn_op.get_value() * (0.1 + 0.9 * prog ** 2))   # solid only at 3.2
         upd_sn(self_num)
-        self_lab = Text("self-reported:", font=SERIF, font_size=27, color=INK)
-        self_lab.next_to(self_num, LEFT, buff=0.16)          # placed for the widest value, 13.9
-        self_lab.shift(UP * (base_y - self_lab[0].get_bottom()[1]))
         cal = ValueTracker(0.0)
         rd_live = always_redraw(lambda: stepped_upto(ax, CF["random"]["steps_day_cases"], 319,
                                                      cal.get_value()).set_stroke(BLUE, 5))
         fr_live = always_redraw(lambda: stepped_upto(ax, CF["friends"]["steps_day_cases"], 425,
                                                      cal.get_value()).set_stroke(YELLOW, 5))
-        origin_b = Dot(ax.c2p(0, 0), radius=0.05, color=BLUE)
-        origin_y = Dot(ax.c2p(0, 0), radius=0.05, color=YELLOW)
+        origin = ax.c2p(0, 0)
+        origin_b = Dot(origin, radius=0.09, color=BLUE)
+        origin_y = Dot(origin, radius=0.05, color=YELLOW)
         for dd in (origin_b, origin_y):
-            self.allow_overlap(dd, reason="transient: the random girls and the named friends' tokens "
-                                          "land on their curve's origin, just above the x-axis '0', "
-                                          "and fade as the curves grow")
+            self.allow_overlap(dd, reason="transient: the random students and the named friends "
+                                          "merge into their curves' shared origin, just above the "
+                                          "x-axis '0', and the dots fade as the curves grow")
         fade_out = VGroup(fb_full, self.ax_line, fb_ticks, fb_nums, self.ax_title, fb_gap, fb_tail,
                           fb_glabel, self.flabel, g_int, f_int, pct_blk,
                           self.gbar, self.fblue, self.fpurp, self.fout)
-        # Round 6: C&F's design runs on the episode's own machine.  The class returns (centred)
-        # with the 0:19 stakes picture (Jane "random", the arrow to Alice "named friend"); then
-        # every girl, picked at random, names one friend: one token each, and the tokens pile
-        # on Sue and Alice.  The random girls and the token pile fly to the origins of the BLUE
-        # and YELLOW curves, and "random" / "named friend" become the curves' labels.
+        # Round 7: C&F's design on the episode's own machine.  The class returns; four girls are
+        # the random sample (BLUE rings, "random students"); only they name friends, one token
+        # per friend, and the girls they name are the friend sample (YELLOW rings, "named
+        # friends").  Their tokens read 4, 4, 4, 4, 3, 2, 2.
         Pc = {n: P[n] + CF_SHIFT for n in NAMES}
         circ3, num3, name3, edges3 = self.build_network()
+        node_fill = interpolate_color(ManimColor(BG), ManimColor(BLUE), 0.16)
+        for n in NAMES:                       # opaque, so the faint axes can pass behind
+            circ3[n].set_fill(node_fill, opacity=1.0)
         net3 = VGroup(*edges3.values(), *circ3.values(), *num3.values(), *name3.values())
         net3.shift(CF_SHIFT)
-        lab_r3 = Text("random", font=SERIF, font_size=28, color=BLUE)
-        lab_r3.next_to(circ3["Jane"], UP, buff=0.2)
-        lab_f3 = Text("named friend", font=SERIF, font_size=28, color=YELLOW)
-        lab_f3.next_to(circ3["Alice"], DOWN, buff=0.2).shift(RIGHT * CF_NF_DX)
-        draw_tag = Text("one possible draw", font=SERIF, font_size=22, color=GRAY_T)
-        draw_tag.next_to(lab_f3, DOWN, buff=0.2)
-        arrow3 = Arrow(Pc["Jane"] + unit(Pc["Alice"] - Pc["Jane"]) * (R + 0.16),
-                       Pc["Alice"] + unit(Pc["Jane"] - Pc["Alice"]) * (R + 0.14),
-                       buff=0, color=YELLOW, stroke_width=5, max_tip_length_to_length_ratio=0.25)
+        leg_r, leg_n, leg_f = cf_legend()
         cf_toks = []
-        for snd, rcv in CF_DRAW.items():
+        for snd, rcv in CF_DRAW:
             d = net_token(K[rcv]).move_to(tok_start(snd, rcv, Pc))
             d[1].ss_host = d[0]
             d[0].set_fill(opacity=0)
             d[1].set_opacity(0)
             cf_toks.append((snd, rcv, d, tok_start(snd, rcv, Pc), tok_end(snd, rcv, Pc)))
         pile = VGroup(*[t[2] for t in cf_toks])
-        origin = ax.c2p(0, 0)
-        lab_f3_to = lab_f3.copy().next_to(ax.c2p(3, 5.6), RIGHT, buff=0)
+        rand_grp = VGroup(*[VGroup(circ3[n], num3[n]) for n in CF_RANDOM])
+        named_grp = VGroup(*[VGroup(circ3[n], num3[n]) for n in CF_NAMED], pile)
+        # where the two legend entries go: the BLUE one becomes "319 random students", the
+        # YELLOW one sits at the friends' label spot until the group size is spoken
+        leg_r_to = leg_r.copy().move_to(lab_rand[3:].get_center())
+        leg_f_to = leg_f.copy().move_to([lab_fr.get_left()[0] + leg_f.width / 2, lab_fr.get_y(), 0])
 
         def wave(pairs):
             """Flashes along friendships, each run outward from the first girl of the pair."""
@@ -2087,49 +2286,77 @@ class Episode(NarratedScene):
                       FadeOut(ugander, rate_func=window(0, 0.35, T)),
                       FadeIn(cf_cite, rate_func=window(0.45, 1.0, T)),
                       FadeIn(net3, rate_func=window(0.45, 1.4, T)), run_time=T)
-            # the stakes picture of 0:19: whom to watch, a random student or a friend she names
-            beat.wait_until("work", offset=-0.2)
-            self.play(circ3["Jane"].animate.set_stroke(width=8), FadeIn(lab_r3, shift=0.1 * DOWN),
-                      run_time=0.6)
-            self.play(GrowArrow(arrow3), circ3["Alice"].animate.set_stroke(YELLOW, width=8),
-                      FadeIn(lab_f3, shift=0.1 * UP), run_time=0.7)
-            # every girl, picked at random, names one friend: one token each
+            # "put this to work": the random sample, four girls ringed BLUE (as Jane at 0:19)
+            beat.wait_until("work", offset=-0.25)
+            # (round 7: staggered windows, not a LaggedStart: an AnimationGroup adds its group on
+            # top of the scene, and the opaque nodes would then cover their own digits)
+            self.play(*[circ3[n].animate(rate_func=window(0.15 * i, 0.15 * i + 0.6, 1.2))
+                        .set_stroke(BLUE, width=8) for i, n in enumerate(CF_RANDOM)],
+                      FadeIn(leg_r, shift=0.1 * LEFT, rate_func=window(0.2, 0.8, 1.2)),
+                      FadeIn(leg_n, shift=0.1 * LEFT, rate_func=window(0.5, 1.1, 1.2)), run_time=1.2)
+            # "Named friends": only the random students send tokens, one per friend; whoever
+            # they name is ringed YELLOW, as Alice was at 0:19
             beat.wait_until("Named", offset=-0.3)
             self.add(pile)
-            T = beat.until("more friends", offset=-0.05, min_time=1.2)
-            self.play(FadeOut(arrow3, rate_func=window(0, 0.3, T)),
-                      *[circ3[n].animate(rate_func=window(0, 0.5, T)).set_stroke(BLUE, width=6) for n in NAMES],
-                      self.fly_tokens(cf_toks, T, ValueTracker(0), ValueTracker(0), K, lag=0.06),
-                      FadeIn(draw_tag, rate_func=window(max(0.0, T - 0.5), T, T)), run_time=T)
-            # the named friends: the tokens piled on the two girls with four friends
+            T = beat.until("more friends", offset=-0.05, min_time=1.3)
+            self.play(self.fly_tokens(cf_toks, T, ValueTracker(0), ValueTracker(0), K, lag=0.06),
+                      *[circ3[n].animate(rate_func=window(0.7 * T, T, T)).set_stroke(YELLOW, width=8)
+                        for n in CF_NAMED],
+                      FadeIn(leg_f, shift=0.1 * LEFT, rate_func=window(0.6 * T, T, T)), run_time=T)
+            # "more friends": the named friends' tokens read 4, 4, 4, 4, 3, 2, 2
             beat.wait_until("more friends", offset=-0.05)
-            self.play(*[pulse(t[2], 1.3) for t in cf_toks if t[1] in ("Sue", "Alice")],
-                      Indicate(num3["Sue"], color=INK, scale_factor=1.3),
-                      Indicate(num3["Alice"], color=INK, scale_factor=1.3), run_time=0.8)
+            self.play(*[pulse(t[2], 1.3) for t in cf_toks],
+                      *[Indicate(num3[n], color=INK, scale_factor=1.3) for n in CF_NAMED],
+                      run_time=0.8)
             # "closer to everyone else": one step from Sue and Alice reaches four more girls
             beat.wait_until("closer", offset=-0.25)
             self.play(LaggedStart(AnimationGroup(*wave(hop1)), AnimationGroup(*wave(hop2)),
                                   AnimationGroup(*wave(hop3)), lag_ratio=0.55), run_time=1.5)
-            # the random girls and the token pile fly to the origins of their curves; the
-            # labels move to the curves they will name
-            # (round 6 order: the network clears first, the girls and tokens are gone into the
-            # origin before the axes draw, and the two labels travel one after the other so
-            # they never cross each other, a node or a half-drawn axis)
-            beat.wait_until("catch flu", offset=-0.2)
-            T = 1.7
-            self.play(FadeOut(VGroup(*edges3.values(), *num3.values(), *name3.values(), draw_tag),
-                              rate_func=window(0, 0.4, T)),
-                      timed(Create(ax), 1.0, 1.7, T),
-                      pile.animate(rate_func=window(0.05, 0.8, T)).scale(0.15).move_to(origin).set_opacity(0),
-                      VGroup(*circ3.values()).animate(rate_func=window(0.05, 0.8, T))
-                      .scale(0.12).move_to(origin).set_opacity(0),
-                      lab_f3.animate(rate_func=window(0.3, 1.1, T)).move_to(lab_f3_to),
-                      lab_r3.animate(rate_func=window(0.8, 1.55, T)).move_to(lab_rand[3:9]),
-                      FadeIn(VGroup(origin_b, origin_y), rate_func=window(1.25, 1.7, T)), run_time=T)
-            self.remove(pile, *circ3.values())
+            # Round 7 hand-off, "and should catch flu first".  First the destination: the axes
+            # draw at 30 % behind the class while the edges, names and the GRAY caption leave,
+            # and the two origin dots appear.  Then, in one move, the random students
+            # arc into the BLUE origin and the named friends with their tokens into the
+            # YELLOW one, each count riding in its node until it merges.  Then the legend
+            # entries move to the curves they will name and the axis numbers and titles come
+            # in.  No frame holds less than the axes and both labels.
+            beat.wait_until("and should", offset=-0.1)
+            ax.set_stroke(opacity=0.3)
+            T = 0.6
+            self.play(timed(Create(ax), 0.0, 0.6, T),
+                      FadeOut(VGroup(*edges3.values(), *name3.values(), leg_n),
+                              rate_func=window(0, 0.45, T)),
+                      FadeIn(VGroup(origin_b, origin_y), scale=0.5, rate_func=window(0.3, 0.6, T)),
+                      run_time=T)
+            self.add(origin_b, origin_y)
+            T = 1.2
+
+            def into_origin(grp, arc):
+                start = grp.copy()
+                end = grp.copy().scale(0.08).move_to(origin)
+                pf = path_along_arc(arc)
+                fam = list(zip(grp.family_members_with_points(), start.family_members_with_points(),
+                               end.family_members_with_points()))
+
+                def upd(m, a):
+                    b = smooth(float(np.clip(a * 1.6 / 1.2, 0, 1)))
+                    for sm, s0, s1 in fam:
+                        sm.points = pf(s0.points, s1.points, b)
+                    m.set_opacity(1.0 - float(np.clip((b - 0.75) / 0.25, 0, 1)))
+                return UpdateFromAlphaFunc(grp, upd)
+            TB = 1.6
+            self.play(into_origin(rand_grp, 0.7), into_origin(named_grp, -0.7),
+                      ax.animate(rate_func=window(0, 1.2, TB)).set_stroke(opacity=1.0),
+                      glide(leg_r, [leg_r.get_center(), leg_r_to.get_center()],
+                            ease=lambda t: smooth(float(np.clip((t * TB - 0.8) / 0.8, 0, 1)))),
+                      glide(leg_f, [leg_f.get_center(),
+                                    [leg_f.get_x() - 2.0, leg_f_to.get_y() + 0.35, 0],
+                                    leg_f_to.get_center()],
+                            ease=lambda t: smooth(float(np.clip((t * TB - 0.8) / 0.8, 0, 1)))),
+                      FadeIn(ax_text, rate_func=window(1.1, 1.6, TB)), run_time=TB)
+            self.remove(rand_grp, named_grp, *circ3.values(), *num3.values(), pile)
             self.add(rd_live, fr_live, origin_b, origin_y)
-            # the calendar runs linearly from here to "rose first"; "random" and "named friend"
-            # become the full labels as the group sizes are spoken
+            # the calendar runs linearly from here to "rose first"; the labels gain their group
+            # sizes as the groups are named
             t0 = beat.elapsed()
             t_end = beat.time_of("rose first") - 0.1
             TC = max(4.0, t_end - t0)
@@ -2137,9 +2364,9 @@ class Episode(NarratedScene):
             a_f = float(np.clip(beat.time_of("friends the students") - 0.15 - t0, 0.0, TC - 0.9))
             self.play(cal.animate(rate_func=linear).set_value(125),
                       FadeOut(VGroup(origin_b, origin_y), rate_func=window(0.3, 0.9, TC)),
-                      ReplacementTransform(lab_r3, lab_rand[3:9], rate_func=window(a_u, a_u + 0.7, TC)),
-                      FadeIn(VGroup(lab_rand[:3], lab_rand[9:]), rate_func=window(a_u, a_u + 0.7, TC)),
-                      FadeOut(lab_f3, shift=0.12 * UP, rate_func=window(a_f, a_f + 0.35, TC)),
+                      RT_same(leg_r, lab_rand[3:], rate_func=window(a_u, a_u + 0.05, TC)),
+                      FadeIn(lab_rand[:3], shift=0.1 * RIGHT, rate_func=window(a_u, a_u + 0.7, TC)),
+                      FadeOut(leg_f, shift=0.12 * UP, rate_func=window(a_f, a_f + 0.35, TC)),
                       FadeIn(lab_fr, shift=0.12 * UP, rate_func=window(a_f + 0.4, a_f + 0.9, TC)),
                       run_time=TC)
             rd_live.clear_updaters()
@@ -2147,16 +2374,17 @@ class Episode(NarratedScene):
             self.play(ShowPassingFlash(fr_live.copy().set_stroke(INK, 8), time_width=0.35),
                       run_time=1.2)
             beat.wait_until("fitted", offset=-0.15)
-            self.play(rd_live.animate.set_stroke(opacity=0.6), fr_live.animate.set_stroke(opacity=0.6),
+            self.play(rd_live.animate.set_stroke(width=1.5), fr_live.animate.set_stroke(width=1.5),
                       Create(fit_fr), Create(fit_rd), run_time=1.2)
             beat.wait_until("thirteen", offset=-0.3)
             self.play(GrowArrow(lead_arrow), run_time=0.8)
-            self.play(TransformFromCopy(lead_arrow, ro_arrow, path_arc=-0.5),
-                      FadeIn(lead_lab, shift=0.1 * RIGHT, rate_func=window(0.5, 1.0, 1.0)), run_time=1.0)
+            # (round 7: the copy rises straight up into the read-out above it)
+            self.play(TransformFromCopy(lead_arrow, ro_arrow),
+                      FadeIn(lead_lab, shift=0.1 * LEFT, rate_func=window(0.55, 1.0, 1.0)), run_time=1.0)
             beat.wait_until("self-reported", offset=-0.15)
             # (round 6c: the copy starts transparent, so it never doubles the 13.9 arrow)
             self.play(ReplacementTransform(ro_arrow.copy().set_opacity(0), ro2_long, rate_func=leave),
-                      FadeIn(self_lab, shift=0.1 * RIGHT),
+                      FadeIn(self_lab, shift=0.1 * LEFT),
                       run_time=0.8)
             self.remove(ro2_long)
             self.add(ro2_live)
@@ -2210,7 +2438,7 @@ class Episode(NarratedScene):
         panel2 = VGroup(glabel2, end_g, end_gn, flabel2, q3, ref2, ghosts2, cands2, ax_line2,
                         ax_ticks2, ax_nums2, ax_title2)
         three_to = [X0 + 3.0 * UNIT + 0.45, Y_FRIEND, 0]
-        ring3 = Circle(radius=0.31, color=INK, stroke_width=3).move_to(three_to)
+        ring3 = Circle(radius=0.35, color=INK, stroke_width=3).move_to(three_to)
         ring3.ss_bg = True
         # Round 6b: the landing is one move.  Betty follows her one friendship: her token lands
         # on Sue and reads 4, as every token reads the count where it lands (the 4 candidate);
@@ -2221,8 +2449,8 @@ class Episode(NarratedScene):
         tok_b[0].set_fill(opacity=0)
         tok_b[1].set_opacity(0)
         tok_b_fl = [("Betty", "Sue", tok_b, tok_start("Betty", "Sue", P), tok_end("Betty", "Sue", P))]
-        chart = VGroup(ax, fr_live, rd_live, fit_fr, fit_rd, lab_rand, lab_fr, lead_arrow, ro_arrow,
-                       lead_lab, ro2_live, self_lab, self_num, days_lab)
+        chart = VGroup(ax, ax_text, fr_live, rd_live, fit_fr, fit_rd, lab_rand, lab_fr, lead_arrow,
+                       ro_arrow, lead_lab, ro2_live, self_lab, self_num, days_lab)
         # round 5: the chart is mostly gone before the class fades back in (the two used to
         # cross-dissolve, double-exposing "425 friends they named" over the nodes).  Round 6b:
         # the change happens in the breath before the landing line, so "Betty" lands on it
@@ -2248,28 +2476,33 @@ class Episode(NarratedScene):
             self.play(self.fly_tokens(tok_b_fl, beat.until("four", offset=-0.05, min_time=0.9),
                                       ValueTracker(0), ValueTracker(0), K))
             self.play(pulse(tok_b, 1.3), Indicate(num2["Sue"], color=INK, scale_factor=1.3),
-                      Indicate(cands2[2], color=YELLOW, scale_factor=1.3), run_time=0.8)
-            # two and a half counts the girls ...
-            beat.wait_until("Two and a half", offset=-0.1)
+                      Indicate(cands2[2], color=YELLOW, scale_factor=1.3), run_time=0.7)
+            # Round 7: the resolution is silent, in the breath before the last line: the girl
+            # bar and the 2.5 candidate flash BLUE together (2.5 counts the girls); then every
+            # friendship flashes and the friend bar grows to the 3 (BLUE to 2.5, PURPLE beyond),
+            # which is ringed.  The 4 (what Betty sees) leaves; YELLOW is never dimmed.
+            T = 0.6
             self.play(ShowPassingFlash(SurroundingRectangle(end_g, buff=0.03, color=INK, stroke_width=4),
                                        time_width=0.5),
                       Indicate(end_gn, color=BLUE, scale_factor=1.25),
-                      Indicate(cands2[0], color=BLUE, scale_factor=1.25), run_time=0.9)
-            # ... three counts the friendships: every friendship flashes, the friend bar grows to
-            # the 3 (BLUE to 2.5, PURPLE beyond), and the 3 is ringed
-            beat.wait_until("three counts", offset=-0.3)
-            T = 1.5
-            self.play(LaggedStart(*[ShowPassingFlash(e.copy().set_stroke(YELLOW, 7), time_width=0.6)
-                                    for e in edges2.values()], lag_ratio=0.05, run_time=1.0),
-                      FadeOut(VGroup(q3, ref2, ghosts2, cands2[0]), rate_func=window(0, 0.35, T)),
-                      GrowFromEdge(end_fb, LEFT, rate_func=window(0.2, 0.95, T)),
-                      GrowFromEdge(end_fp, LEFT, rate_func=window(0.95, 1.1, T)),
+                      Indicate(cands2[0], color=BLUE, scale_factor=1.25),
+                      FadeOut(VGroup(q3, ref2, ghosts2, cands2[2]), rate_func=window(0.35, 0.7, T)),
+                      run_time=T)
+            T = 0.85
+            self.play(FadeOut(cands2[0], rate_func=window(0, 0.3, T)),
+                      LaggedStart(*[ShowPassingFlash(e.copy().set_stroke(YELLOW, 7), time_width=0.6)
+                                    for e in edges2.values()], lag_ratio=0.05),
+                      GrowFromEdge(end_fb, LEFT, rate_func=window(0.0, 0.6, T)),
+                      GrowFromEdge(end_fp, LEFT, rate_func=window(0.6, 0.72, T)),
                       # round 5: the YELLOW outline (the friend average) is drawn over its
                       # fills, as on every other friend bar
-                      GrowFromEdge(end_fo, LEFT, rate_func=window(0.2, 1.1, T)),
-                      cands2[1].animate(rate_func=window(0.5, 1.1, T)).move_to(three_to),
-                      cands2[2].animate(rate_func=window(0.5, 1.1, T)).set_opacity(0.55),
-                      Create(ring3, rate_func=window(1.0, 1.5, T)), run_time=T)
+                      GrowFromEdge(end_fo, LEFT, rate_func=window(0.0, 0.72, T)),
+                      cands2[1].animate(rate_func=window(0.2, 0.75, T)).move_to(three_to),
+                      Create(ring3, rate_func=window(0.6, 0.9, T)), run_time=T)
+            # "Most of us are Betty": Betty, and the token that shows her view
+            beat.wait_until("Betty", occurrence=2, offset=-0.2)
+            self.play(Indicate(circ2["Betty"], color=INK, scale_factor=1.25), pulse(tok_b, 1.3),
+                      run_time=0.7)
             self.hold(max(0.0, beat.remaining()))
         self.hold(0.55)                          # the answered frame holds before the card
 

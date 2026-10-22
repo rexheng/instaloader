@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/060-friendship-paradox/final.mp4",
- "duration_s": 209.467,
+ "duration_s": 211.233,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,12 +8,12 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 9.4,
+ "size_mb": 9.7,
  "integrated_lufs": -14.0,
  "lra_lu": 2.6,
  "true_peak_dbtp": -2.1,
  "leading_silence_s": 0.0,
- "trailing_silence_s": 1.91,
+ "trailing_silence_s": 1.9,
  "longest_internal_silence_s": 2.22,
  "silences_over_1_5s": [
   [
@@ -21,28 +21,28 @@
    14.3
   ],
   [
-   96.1,
-   97.72
+   98.7,
+   100.32
   ],
   [
-   127.85,
-   129.55
+   131.05,
+   132.75
   ],
   [
-   142.76,
-   144.87
+   146.18,
+   148.3
   ],
   [
-   156.29,
-   158.47
+   159.82,
+   162.0
   ],
   [
-   198.36,
-   200.3
+   201.9,
+   203.83
   ]
  ],
- "frames": 6284,
- "longest_static_s": 3.7,
+ "frames": 6337,
+ "longest_static_s": 3.43,
  "static_stretches_over_3s": [
   [
    53.23,
@@ -50,38 +50,43 @@
    3.4
   ],
   [
-   126.73,
-   130.43,
-   3.7
+   129.9,
+   133.33,
+   3.43
+  ],
+  [
+   171.1,
+   174.23,
+   3.13
   ]
  ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.087534722222223,
- "transcript_words": 490,
+ "background_luma": 22.113602430555552,
+ "transcript_words": 495,
  "first_word_s": 0.02,
- "last_word_s": 207.676,
- "wpm_speech": 155.4,
- "wpm_overall": 140.4,
- "wpm_excluding_all_pauses": 178.1,
+ "last_word_s": 209.76135,
+ "wpm_speech": 155.3,
+ "wpm_overall": 140.6,
+ "wpm_excluding_all_pauses": 180.0,
  "narration_file": "videos/episodes/060-friendship-paradox/narration.json",
- "wer": 0.0363,
- "narration_words": 468,
+ "wer": 0.0298,
+ "narration_words": 470,
  "banned_phrase_hits": 0,
  "slop_hits": [],
  "narration_craft": {
-  "narration_words": 494,
+  "narration_words": 495,
   "voice_speeds": [
    0.82
   ],
-  "sentence_wpm_median": 171.8,
-  "sentences_over_200wpm": 0,
+  "sentence_wpm_median": 171.7,
+  "sentences_over_200wpm": 1,
   "sentence_gap_median_s": 0.39,
-  "sentence_gap_cv": 0.28,
-  "beat_gap_median_s": 0.73,
-  "longest_breathless_run_s": 11.5,
+  "sentence_gap_cv": 0.27,
+  "beat_gap_median_s": 0.74,
+  "longest_breathless_run_s": 11.2,
   "max_distinct_numbers_20s": 6,
-  "repeated_phrases": 5,
+  "repeated_phrases": 6,
   "glyph_morphs": 0,
   "deictics": 2,
   "deictics_unlanded": 0
@@ -97,7 +102,7 @@
    "small-label": 0
   },
   "allowed": 0,
-  "checks": 197
+  "checks": 206
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -119,7 +124,7 @@
    "file": "keyframes/kf_01_00-00.3.png"
   },
   {
-   "t": 2.87,
+   "t": 2.93,
    "file": "keyframes/kf_02_00-02.9.png"
   },
   {
@@ -171,108 +176,108 @@
    "file": "keyframes/kf_14_01-24.5.png"
   },
   {
+   "t": 87.37,
+   "file": "keyframes/kf_15_01-27.4.png"
+  },
+  {
    "t": 90.63,
-   "file": "keyframes/kf_15_01-30.6.png"
+   "file": "keyframes/kf_16_01-30.6.png"
   },
   {
-   "t": 93.93,
-   "file": "keyframes/kf_16_01-33.9.png"
+   "t": 96.47,
+   "file": "keyframes/kf_17_01-36.5.png"
   },
   {
-   "t": 97.4,
-   "file": "keyframes/kf_17_01-37.4.png"
+   "t": 99.73,
+   "file": "keyframes/kf_18_01-39.7.png"
   },
   {
-   "t": 100.1,
-   "file": "keyframes/kf_18_01-40.1.png"
+   "t": 102.5,
+   "file": "keyframes/kf_19_01-42.5.png"
   },
   {
-   "t": 117.73,
-   "file": "keyframes/kf_19_01-57.7.png"
+   "t": 120.93,
+   "file": "keyframes/kf_20_02-00.9.png"
   },
   {
-   "t": 122.33,
-   "file": "keyframes/kf_20_02-02.3.png"
+   "t": 128.3,
+   "file": "keyframes/kf_21_02-08.3.png"
   },
   {
-   "t": 125.13,
-   "file": "keyframes/kf_21_02-05.1.png"
+   "t": 132.47,
+   "file": "keyframes/kf_22_02-12.5.png"
   },
   {
-   "t": 129.5,
-   "file": "keyframes/kf_22_02-09.5.png"
+   "t": 135.33,
+   "file": "keyframes/kf_23_02-15.3.png"
   },
   {
-   "t": 132.13,
-   "file": "keyframes/kf_23_02-12.1.png"
+   "t": 137.17,
+   "file": "keyframes/kf_24_02-17.2.png"
   },
   {
-   "t": 133.93,
-   "file": "keyframes/kf_24_02-13.9.png"
+   "t": 139.1,
+   "file": "keyframes/kf_25_02-19.1.png"
   },
   {
-   "t": 136.57,
-   "file": "keyframes/kf_25_02-16.6.png"
+   "t": 143.5,
+   "file": "keyframes/kf_26_02-23.5.png"
   },
   {
-   "t": 140.03,
-   "file": "keyframes/kf_26_02-20.0.png"
+   "t": 146.77,
+   "file": "keyframes/kf_27_02-26.8.png"
   },
   {
-   "t": 143.37,
-   "file": "keyframes/kf_27_02-23.4.png"
+   "t": 148.07,
+   "file": "keyframes/kf_28_02-28.1.png"
   },
   {
-   "t": 144.63,
-   "file": "keyframes/kf_28_02-24.6.png"
+   "t": 151.9,
+   "file": "keyframes/kf_29_02-31.9.png"
   },
   {
-   "t": 148.47,
-   "file": "keyframes/kf_29_02-28.5.png"
+   "t": 155.73,
+   "file": "keyframes/kf_30_02-35.7.png"
   },
   {
-   "t": 152.23,
-   "file": "keyframes/kf_30_02-32.2.png"
+   "t": 167.57,
+   "file": "keyframes/kf_31_02-47.6.png"
   },
   {
-   "t": 164.0,
-   "file": "keyframes/kf_31_02-44.0.png"
+   "t": 169.87,
+   "file": "keyframes/kf_32_02-49.9.png"
   },
   {
-   "t": 166.17,
-   "file": "keyframes/kf_32_02-46.2.png"
+   "t": 175.73,
+   "file": "keyframes/kf_33_02-55.7.png"
   },
   {
-   "t": 172.17,
-   "file": "keyframes/kf_33_02-52.2.png"
+   "t": 177.77,
+   "file": "keyframes/kf_34_02-57.8.png"
   },
   {
-   "t": 174.23,
-   "file": "keyframes/kf_34_02-54.2.png"
+   "t": 183.8,
+   "file": "keyframes/kf_35_03-03.8.png"
   },
   {
-   "t": 180.47,
-   "file": "keyframes/kf_35_03-00.5.png"
+   "t": 195.17,
+   "file": "keyframes/kf_36_03-15.2.png"
   },
   {
-   "t": 190.37,
-   "file": "keyframes/kf_36_03-10.4.png"
+   "t": 197.93,
+   "file": "keyframes/kf_37_03-17.9.png"
   },
   {
-   "t": 194.4,
-   "file": "keyframes/kf_37_03-14.4.png"
+   "t": 204.23,
+   "file": "keyframes/kf_38_03-24.2.png"
   },
   {
-   "t": 200.77,
-   "file": "keyframes/kf_38_03-20.8.png"
+   "t": 210.27,
+   "file": "keyframes/kf_39_03-30.3.png"
   },
   {
-   "t": 208.5,
-   "file": "keyframes/kf_39_03-28.5.png"
-  },
-  {
-   "t": 209.43,
-   "file": "keyframes/kf_40_03-29.4.png"
+   "t": 211.2,
+   "file": "keyframes/kf_40_03-31.2.png"
   }
  ],
  "flags": [],

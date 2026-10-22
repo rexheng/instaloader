@@ -135,7 +135,7 @@ heads", the 11 tails rows on "Twelve tails", HHHH and HHHT on "split"; the 14 de
 "however many flips it checked"; the readout comes back as the heads pack onto its marker; the
 pooled strip and its formula come back to full on "the ratio of totals" (never removed, so no
 third equation arrives). The 14 outlines are counted in place (each answers in turn) as "14" is
-written; on "an average" the outlines themselves (no copies) lift off at 40%, run right between the
+written; on "an average" the outlines themselves (no copies, right-most first) lift off at 40%, run right between the
 strips and become 1/14 and Σ. 5⅔ / 14 = 17/42 is held complete ≥ 3.2 s. The HHHH and HTTT boxes
 take the rings in, 0.13 clear of them.
 

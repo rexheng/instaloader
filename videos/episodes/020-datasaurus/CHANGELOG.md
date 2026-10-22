@@ -525,3 +525,128 @@ facts.md needs no edit. No critic claimed a factual error in round 5.
 - The SD-symbol flights (1:12.2–1:13.8, unchanged code) were checked on the 13:31 master.
 - Runtime rose from 3:33.0 to 3:34.5 because of the longer beat-turn gaps. It stays inside the
   3:15–3:35 budget.
+
+## Round 6 revisions
+
+Both critics scored 8.5 (no caps, no factual errors) and said every fix is local. Plan, per
+dimension below 9 (BAR §3 "9" anchor → where it fell short → upgrade):
+
+- **Hook (8.5/8.5).** Anchor: "viewer commits to a likely-wrong prediction by 0:12". Short: the
+  first frame was empty axes with blank slots, the commit landed at 0:12.9, and it asked only
+  about the tilt (the half the viewer gets right). Upgrade: all five values and a faint "?" are
+  on screen at frame 0; one question asks both halves, "What shape is the cloud, and which way
+  does its best-fit line tilt?", ending at 0:10.4 with a 1.8 s hold; three grey candidate lines
+  (up, nearly flat, down) through (x̄, ȳ) are drawn as it is asked, and in B1 two fade and the
+  nearly flat one becomes "your line".
+- **Clarity (8.5/8.5).** Anchor: "viewer could re-derive it after one watch". Short: B9 packed
+  six moves into 22–25 s and only asserted "on average r SDs up"; "Correlation" was swallowed.
+  Upgrade: B9 is split. B9a: "Many ellipses touch all four walls. The correlation, r, picks one."
+  B9b: "Say r is point eight. Go one standard deviation right. On average, the cloud rises r
+  times a standard deviation." over a simulated r = 0.80 cloud (tagged "simulated"), whose 12 points in
+  the slice at the wall are singled out and averaged: their mean lands on the top of the rise.
+  Holds of 0.7 s after the run and rise and after the slices' midpoints; "the slices shrink to the
+  touch point". Also "keeping the box" for the tip (a pure shear would break s_y) and "Your line
+  was right: five numbers fix it exactly".
+- **Visual (8.5/8.5).** Anchor: "every frame has one focal point; nothing to remove". Short: an
+  occluded error bar (0:35), a lone ellipse in an empty frame (3:13.4), the bar crossing the "x"
+  label (3:30.9), a citation under the wrong dataset (2:40.6), the what-if in the dinosaur's
+  solid yellow, doubled glyphs as copies left their sources, a final frame with no focal point.
+  Upgrade: each fixed (list below).
+- **Motion (8.5/9).** Anchor: "every motion encodes a relation". Short: two fade joins (Anscombe
+  entry, landing hand-off). Upgrade: panel I's axes transform into the opening's axes around the
+  growing ellipse; Anscombe's ticks hand over before his readout lands.
+- **Audio (8.5/8).** Anchor: "pauses are intentional; each deictic lands". Short: 12.4 s without a
+  breath, "1sx / rsy / overrun", "one" held 0.62 s. Upgrade: pauses in B9, B2, B16, B22; "ess ex
+  across, r times ess why up" at 0.82 (no "one" before "ess ex"); "the rise over the run";
+  "The first version".
+- **Concision (8/8).** Anchor: "cutting any sentence loses something". Short: the Anscombe block
+  re-made the Dozen's point and re-taught B9's rule over 23 s. Upgrade: B19 cut, B18 and B20
+  shortened to one sentence each; 494 → 471 words (3:34.5 → 3:29.1).
+
+**Fixes, as applied (craft = C, substance = S):**
+1. *Hook (C3, S1).* As above. The "?" now sits in the upper half of the plot and "n = 142" in the
+   lower half, so the candidate lines never cross either (asserted in scene.py).
+2. *B9 (C1, S2, S4, S10, C9).* As above. The what-if geometry (ellipse, touch dots, run, rise,
+   dashed line, slices and midpoints) is drawn at 60 % and returns to full strength as r sweeps
+   back on "For the dinosaur"; the live "r = …" sits under the "simulated" tag at the top left
+   of the plot, where the r = 0.80 cloud never goes. The simulated cloud is uniform inside the
+   2-SD ellipse with exactly the dinosaur's means and SDs and r = 0.80 (seed 10371; facts #36):
+   its least-squares line is the dashed line, and the 12 slice points average 69.41 against the
+   touch point's 69.38.
+3. *Anscombe (C2, C7, S3, S5).* "Francis Anscombe made the same point in 1973, with eleven
+   points. [pause 1.2]" (his 0.82 flies to the touch dot in the pause) · "Same rule: ess ex
+   across, [pause 0.3] r times ess why up." · "So the slope is the rise [pause 0.3] over the
+   run." The three label flights, the line grown on "up" and the formula built from the segments
+   are kept.
+4. *Error bar (C4).* The strip dims to 30 % with the bar, the bar's fill is 12 % (z under the
+   error bar), the error bar has stroke 5 and is drawn on top.
+5. *Hand-off (C5).* Panel I's axis lines and ticks ReplacementTransform into the 0–100 axes, its
+   "y" travels to the big "y", its ellipse grows into the dinosaur's; the tick numbers hand over
+   (old out, then new in: TransformMatchingTex would morph "10" into "25", which BAR treats as
+   glyph soup); only the guess cloud, its labels and the readout fade in.
+6. *Parked bar (C6).* It fades out in place (0.4 s) and fades in at the parked spot (0.4 s); it no
+   longer slides across the cloud or the "x" label.
+7. *Anscombe entry (C8).* Ticks hand over in the first 42 % of the move, his readout lands after
+   them, and his citation fades in only as his points settle.
+8. *"Version one" (C10).* "The first version" (and "replay the first version").
+9. *Doubled glyphs (S9).* Every symbol copy that leaves a table glyph (x̄, ȳ, s_x, s_y in B7–B8;
+   0.82, s_x, r, s_y in B18–B20; the rise and run labels in B21) now dims its source to 20 % over
+   the first 5 % of the flight and restores it once the copy is clear (10 fps strip at 1:10.9:
+   one frame shows the bright copy beside a faint source, the next shows them apart).
+10. *Final frame (S8).* On "dinosaur" the ellipse and the line step back (60 %, stroke 4.5 → 2.5)
+    while the points return at full strength, so the last frame is one blue dinosaur beside one
+    60 % bar. A first master used 40 % as asked (35 %); that yellow read as olive (the hue slip
+    PRODUCTION_GUIDE §13.2.8 warns of), so the step back is a thinner stroke at 60 % instead.
+11. *Breath (S10).* B2 gets [pause 0.4] after "bar graphs:", B16 is split into two sentences with
+    [pause 0.4], B22's mid pause is 0.5 s.
+
+**Not changed, with reasons.**
+- The fix lists conflicted on the hook: craft asked for a tilt question with candidate lines,
+  substance for a shape commit with no tilt question. The one-question form asks both halves
+  ("What shape is the cloud, and which way does its best-fit line tilt?"), so the likely-wrong
+  shape is staked, the candidate lines make the tilt choice visible, and the landing ("Your line
+  was right … Your cloud was wrong") answers both.
+- Craft fix 5 asked for TransformMatchingTex between the tick labels. "0, 10, 20" and "0, 25, 50,
+  75, 100" are different strings, so that would be a glyph morph (BAR §5, PRODUCTION_GUIDE
+  §13.2.6). The axis lines and ticks transform, the "y" travels, and the numbers hand over old-out
+  then new-in.
+- Craft fix 7 asked for "one ess ex across, r times ess why up" at speed 0.78. With "one" in front,
+  whisper still fused the words into "1sx" at both 0.78 and 0.82 (tested on the clip). "ess ex
+  across, r times ess why up" at 0.82 is heard as "SX across, R times SY up". 0.78 is below the
+  guide's 0.80 floor.
+- "r standard deviations" was heard as "our standard deviations" in the full mix, so B9b says
+  "rises r times a standard deviation" (heard "R times a standard deviation").
+- The 1.8 s commit hold makes the longest internal silence 2.37 s (0:10.3–0:12.7). It is a planned
+  prediction pause, under the 2.5 s limit.
+- The Anscombe readout fades in at 2:43.3, after his axes are numbered. That leaves the right half
+  empty for about 2.8 s while his points travel, which is under the 4 s limit.
+
+**Facts.** Neither critic claimed a factual error. New material is recorded in facts.md #36 (the
+simulated r = 0.80 cloud: seed, its exact five numbers, its least-squares line through the touch
+point at 69.381, and its 12 slice points averaging 69.409) and #37 (wording changes; the pure-shear
+check that a shear alone would push s_y to 26.99, verified with numpy).
+
+### Verification (final master, 3:29.1)
+- render.sh: 0 scene warnings. The layout audit found 0 issues in 227 checks, and review_kit
+  raised 0 flags. A first master printed one cue warning: "times" now occurs twice in B9b, so the
+  cue was moved to the second occurrence.
+- 471 words. Pace is 152 wpm over speech time, and no sentence runs above 200 wpm; "Then tip it,
+  keeping the box" ran at 200 until a 0.2 s pause was added. The longest stretch without a breath
+  is 6.7 s, down from 12.4 s. Full stops have a median gap of 0.52 s and beat turns 0.69 s.
+- Loudness: −14.2 LUFS, −4.1 dBTP. Leading silence 0.00 s, trailing 1.94 s. The longest static
+  stretch is 2.77 s.
+- WER 2.6 %. The transcript reads "What shape is the cloud, and which way does its best fit line
+  tilt?" (ends 0:10.5), "the cloud rises R times a standard deviation", "Same rule, SX across, R
+  times SY up", "So the slope is the rise, over the run" and "Your line was right". All 12 deictics
+  are synced.
+- I looked at all 12 contact sheets and at keyframes kf_39 (final frame) and kf_01. I checked frame
+  strips at 5–10 fps across:
+  - the cold-open candidate lines (0:08–0:17);
+  - the simulated slice and its average (1:27.8, 1:29.4, full resolution);
+  - the s_x flight out of the table (1:10.85–1:11.45);
+  - the Anscombe entry, where the ticks hand over before the readout and the citation lands at
+    2:44.5;
+  - the landing hand-off (3:06.9–3:08.5), where the axes grow around the ellipse and the formula
+    comes down the open middle;
+  - the bar parking (3:24.5–3:26.1), where the bar fades in place and reappears beside the plot
+    without touching "x".
