@@ -9,7 +9,7 @@ LINES = {
               "them. If the chord beats the triangle's side, it turns gold.",
     "rain1": "Run ten thousand chords, and the gold share settles near point three three.",
     "arc": "Geometry agrees. Put a corner of the triangle on the first point. The chord is long "
-           "only when the second point lands on this far arc, a third of the rim. [pause 1.2]",
+           "only when the second point lands on this far arc, a third of the rim. [pause 1.0]",
     "build2": "Case closed, until you code it a second way. Pick a random radius, a random point "
               "along it, and draw the chord through that point at right angles.",
     "rain2": "This one settles near point five.",

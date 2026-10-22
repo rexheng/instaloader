@@ -288,3 +288,107 @@ errors claimed; both critics recomputed every number and verified all four citat
 | Motion 9 / 8.5 | every motion encodes a relation; reading time respected | 1.0 s reveal; glyph smears (16.76 / 26.93, cov); short equation hold; axes-less panel I | 1.8 s reveal + 0.4 s hold before "A dinosaur"; numbers travel intact to their half-arms, box grows on "box"; cov derivation removed; quartet axes crossfade |
 | Audio 8.5 / 8.5 | deictics land, pauses intentional, terms clear | "s x" fused ("when sx cancels") | symbols respelled "ess ex" / "ess why"; box lands on "box" |
 | Concision 8 / 8.5 | cutting any sentence loses something | slack search mechanics; 13 s covariance detour; long roll-call pauses | search in two sentences with the readout flashed on "these"; derivation is one sentence plus "rise over run"; roll-call pauses 1.0 / 0.8 / 1.0 / 0.8 |
+
+### What changed (every fix from both reviews)
+
+**Hook and landing (craft 2; substance 1, 2, 5)**
+- B0: "…a correlation of minus point oh six. Picture the cloud. Which way does its best-fit line
+  tilt? [pause 1.5]". The viewer now commits to the cloud (likely wrong) and the line (likely
+  right). The colon after "points" became "with", so the question still ends by about 0:11.5.
+  "n = 142" fades on "Picture the cloud" and the grey "?" holds through the pause.
+- B1: "You probably pictured a shapeless oval, with a nearly flat line." The narrator no longer
+  supplies the guess as fact, and there is no "most people" claim to source.
+- The landing resolves both halves: "Your line was exactly right: five numbers fix its slope, minus
+  point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw." The
+  quartet's "slope = r s_y / s_x" is carried into the landing (top right). On "five numbers" the
+  dinosaur's −0.06, 26.93 and 16.76 fly from their readout rows into it, in a lane to the right of
+  the readout so they never cross the other rows. On "slope" the yellow line grows over the dashed
+  one, and on "minus point one" "≈ −0.10" is written. The formula holds about 7 s. "A blur around
+  this ellipse" replaces the overstated "your cloud was this ellipse".
+
+**Clarity of the insight (craft 1; substance 4)**
+- B9 now shows why the touch point sits r·s_y above the centre. "…on average r standard deviations
+  up. That's the best-fit line, through the middle of every vertical slice. At the wall, the slice
+  is just the touch point, r times ess why above the center." On "best-fit line" a dashed yellow
+  line grows out of the centre through both touch dots. On "middle" and "vertical" five vertical
+  slices of the ellipse appear, with midpoint dots that all sit on the line. On "At the wall" the
+  slices slide right and shrink until each collapses onto the touch dot. During the sweep back to
+  −0.06 the dashed line follows r, so the dot visibly rides it. The s_x label leaves when the line
+  is drawn (no position clears both the sweeping ellipse and the line; searched numerically).
+- The covariance sentences (about 13 s) are cut (substance 3). In their place: "His best-fit line
+  follows the same rule: one ess ex across, r ess why up, through the center and that touch point.
+  So the slope is rise over run." s_x, then r and s_y, fly from Anscombe's readout to label the run
+  and the rise as they are drawn. The line grows out of the centre through the touch point. Then
+  "slope =" is written, and the r s_y label arcs over it into the numerator and the s_x label
+  under it into the denominator. Every term comes from the segment it measures, and the formula
+  holds about 1.5 s alone before the substitution is added below it. This makes craft 4 (the
+  1.5 s cov hold and "when sx cancels") and the cov glyph smear (substance 7) moot.
+
+**Visual (craft 5, 7, 8, 10; substance 6, 8)**
+- The drifted cross turns RED → YELLOW as it slides back with the points and is then dropped,
+  since it coincides with the yellow cross. It is never red over the 5/5 readout.
+- Prediction hold: both boxes fade out completely. They come back on "Stretch", the move that
+  matches them.
+- Final image: on "dinosaur" the ȳ bar and its error bar slide out of the plot to x = 124 at 40 %,
+  beside the 142 points. Nothing crosses the dinosaur but the ellipse and the line.
+- The readout block moved 0.3 right, so "med y" sits about 0.6 units from the axis name "x".
+- Grey text (tick numbers, axis names, "your guess", "your line", headers, "matching", the decimals
+  note, the percentages, all citations) is now #A6ADB7, 8.0:1 on the background. GRAY stays for
+  axes, ghosts and outlines.
+
+**Motion and sync (craft 3, 6, 9, 11; substance 7, 9, 10)**
+- Reveal: "Here are the real points. [pause 1.1] A dinosaur…". The morph starts on "real", runs
+  1.8 s (smooth) and holds 0.4 s before "A dinosaur".
+- B8: "The two standard deviations reach one deviation out on each side, and draw a box." 16.76
+  and 26.93 travel intact, on a small opaque patch, to sit beside the half-arms they measure. The
+  arms light up, the numbers fade, and on "draw" the four walls grow out of the arm tips, complete
+  on "box".
+- Search in two sentences: "built a search that keeps these five numbers fixed. It nudges a random
+  point toward a target shape, and undoes any nudge that breaks them." The readout flashes on
+  "these" and "They chose these five" is gone. The ring, step and undo run at 0.45 s per move.
+- Roll-call pauses are 1.0 / 0.8 / 1.0 / 0.8 (were 1.3 / 1.0 / 1.2 / 0.9), with 0.5 s moves
+  landing 0.2 s before each noun.
+- Quartet hand-off: the zoomed axis lines and panel I's crossfade over the same 0.8 s, and the tick
+  numbers hand over in sequence so they never overprint. The points are never without axes.
+- Anscombe readout: the dinosaur's column leaves with its values, and his two-row layout fades in
+  during the plot hand-off (symbols first, r first), with his values on "points". The empty
+  five-row column and the glyph reshuffle at 2:43 are gone. A glide was tried first, but the two
+  layouts interleave, so some symbols crossed in flight.
+- Symbols are spoken "ess ex" / "ess why".
+- Fixed a toolkit-usage bug found on the way: `go()` passed `rate_func` to `play()`, which
+  overrides every animation's own rate function. Windowed fades inside a point move (for example
+  "86% used bars" leaving at the landing) therefore ran over the whole move. The rate function now
+  goes on the point flow only.
+
+**Facts.** No factual error was claimed. New or reworded claims were checked before use and are
+recorded in facts.md:
+- #26: the slice midpoints lie on y − ȳ = r(s_y/s_x)(x − x̄), and the slice collapses to the touch
+  point at the wall. This was derived and checked numerically for all five slices.
+- #34: −0.06 × 26.93 / 16.76 = −0.096 → −0.10; unrounded and from polyfit it is −0.1036.
+- #12: the search wording.
+- #32: "You probably pictured…" is not a population claim.
+
+### Verification (final master, 3:35.5)
+- render.sh: 0 scene warnings. Layout audit: 0 issues in 251 checks. review_kit: 0 flags.
+- Pace is 158 wpm on speech time, loudness −14.0 LUFS with a −1.8 dBTP true peak.
+- The longest internal silence is 1.97 s (the commit hold). The longest static stretch is 2.90 s.
+- Lead silence is 0.00 s and trailing silence 1.85 s. WER is 4.0 %; Whisper now hears "s y" and
+  "sx" where it heard "when sx cancels".
+- The question ends at 0:11.9.
+- Runtime fell from 3:42.3 to 3:35.5. The search (−4 s), the covariance detour (−11 s) and the
+  roll-call pauses (−1 s) paid for the B9 proof (+5 s), the reveal hold and the slope-at-landing
+  line.
+- I looked at all 12 contact sheets and at keyframes kf_02, kf_18, kf_20, kf_24, kf_29, kf_31,
+  kf_36 and kf_39. I also checked frame strips at the fixed moments:
+  - the cross recolour (1:00.6–1:02);
+  - the SD numbers beside their arms and the walls on "box" (1:09.6–1:13);
+  - the slices collapsing onto the touch dot (1:29.6–1:31.8);
+  - the landing value flights (3:16.9–3:18.5): each number stays legible in the right-hand lane and
+    never crosses another row;
+  - the Anscombe readout hand-off (2:40.6–2:43.8);
+  - the parked bar in the final frame (3:33.6).
+- Two bugs were found in the first master and fixed before this one:
+  - The slices never moved: their VGroup was not in the scene, so its updater never ran. The
+    collapse is now driven by UpdateFromFunc.
+  - Landing values flown with a per-glyph lane offset collapsed into a smear. The offsets are now
+    computed from the whole mobject.

@@ -347,12 +347,18 @@ def place(g, y, x=RX):
     return g
 
 
-def window(t0, t1, total):
+def window(t0, t1, total, ease=smooth):
     """Rate function that runs an animation only between t0 and t1 seconds of a play()
     lasting `total` seconds (so one play can hold staggered starts without Succession)."""
     def f(t):
-        return smooth(float(np.clip((t * total - t0) / max(t1 - t0, 1e-3), 0, 1)))
+        return ease(float(np.clip((t * total - t0) / max(t1 - t0, 1e-3), 0, 1)))
     return f
+
+
+def leave(t):
+    """Ease for copies that start on top of their source: they move off it at once (a
+    smooth start lingers half-overlapped, which reads as a doubled glyph)."""
+    return rate_functions.ease_out_cubic(t)
 
 
 def swap(old, new, total, t_out=0.35, t_in=(0.4, 0.85)):
@@ -377,6 +383,13 @@ def _item(x):
     return (x, INK) if isinstance(x, str) else x
 
 
+# Invisible struts: TeX's own numerator/denominator clearance (~0.09 units under a mu) is
+# below BAR's 0.15; a phantom depth under every numerator and a phantom height over every
+# denominator make TeX shift them all equally, so baselines stay uniform across a row.
+NUM_STRUT = r"\vphantom{\rule[-0.45em]{0pt}{0pt}}"
+DEN_STRUT = r"\vphantom{\rule{0pt}{0.9em}}"
+
+
 def trow(*items, size=46):
     """Second review cycle: one TeX-typeset row (so baselines and spacing come from TeX; the
     old hand-built rows centred a lone mu on the fraction bar, which set it ~10 px high).
@@ -389,12 +402,12 @@ def trow(*items, size=46):
             num, den = [_item(x) for x in it.num], [_item(x) for x in it.den]
             n0 = len(subs)
             for i, (t, c) in enumerate(num):
-                subs.append(("{" if i == 0 else "") + t)
+                subs.append(("{" + NUM_STRUT if i == 0 else "") + t)
                 cols.append(c)
             subs.append(r"\over")
             cols.append(INK)
             for i, (t, c) in enumerate(den):
-                subs.append(t + ("}" if i == len(den) - 1 else ""))
+                subs.append((DEN_STRUT if i == 0 else "") + t + ("}" if i == len(den) - 1 else ""))
                 cols.append(c)
             layout.append(("f", n0, len(num), len(den)))
         else:
@@ -487,7 +500,7 @@ class Episode(NarratedScene):
     EPISODE = 60
     TITLE = "Why Your Friends Have More Friends Than You"
     PRONUNCIATIONS = {"Christakis": "/kɹɪstˈɑkɪs/"}
-    SPEED = 0.82
+    SPEED = 0.80                         # (second cycle: 0.82 measured 166 wpm after the cuts)
 
     # ------------------------------------------------------------------ checks
     @contextlib.contextmanager
@@ -626,6 +639,7 @@ class Episode(NarratedScene):
         self.Fo = ValueTracker(1.0)                      # fades the friend bar alone (reset)
         self.gv, self.fv = ValueTracker(0.0), ValueTracker(0.0)
         self.Gop = ValueTracker(1.0)                     # the girl read-out's opacity (swaps)
+        self.Fop = ValueTracker(1.0)                     # the friend read-out's opacity
 
         def fill_rect(color, y):
             r = Rectangle(width=1.0, height=BAR_H, stroke_width=0, fill_color=color,
@@ -681,6 +695,7 @@ class Episode(NarratedScene):
         def upd_fn(m):
             m.set_value(self.fv.get_value())
             m.next_to([G["x0"] + max(self.Lf.get_value(), 0), G["yf"], 0], RIGHT, buff=0.2)
+            m.set_opacity(self.Fop.get_value())
         self.gnum.add_updater(upd_gn)
         self.fnum.add_updater(upd_fn)
         self._num_upd = [(self.gnum, upd_gn), (self.fnum, upd_fn)]
@@ -775,10 +790,13 @@ class Episode(NarratedScene):
             self.play(LaggedStart(*[FadeIn(num[n], scale=0.6) for n in NAMES], lag_ratio=0.1),
                       FadeIn(self.glabel), Create(self.axis),
                       run_time=beat.until("two and a half", offset=-0.3, min_time=1.0))
+            self.Gop.set_value(0.0)
+            self.gv.set_value(2.5)               # the read-out appears with its value (no count-up)
             self.add(self.gbar, self.gnum)
             copies = VGroup(*[num[n].copy() for n in NAMES])
             target = [X0 + 2.5 * UNIT + 0.45, Y_GIRL, 0]
-            self.play(self.Lg.animate.set_value(2.5 * UNIT), self.gv.animate.set_value(2.5),
+            self.play(self.Lg.animate.set_value(2.5 * UNIT),
+                      self.Gop.animate(rate_func=window(0.85, 1.3, 1.3)).set_value(1.0),
                       LaggedStart(*[c.animate.move_to(target).set_opacity(0) for c in copies],
                                   lag_ratio=0.05), run_time=1.3)
             self.remove(copies)
@@ -863,7 +881,9 @@ class Episode(NarratedScene):
             anims += [count_swap(num[n], ring_nums[n], P[n], RP[n]) for n in NAMES]
             anims += [name[n].animate.move_to(ring_names[n].get_center()) for n in NAMES]
             anims += [Transform(edges[frozenset(e)], ring_edges[frozenset(e)]) for e in keep]
-            anims += [self.Lg.animate.set_value(2.0 * UNIT), self.gv.animate.set_value(2.0),
+            anims += [self.Lg.animate.set_value(2.0 * UNIT),
+                      self.gv.animate(rate_func=lambda t: float(t >= 0.5)).set_value(2.0),
+                      self.Gop.animate(rate_func=there_and_back).set_value(0.0),
                       guess.animate.stretch_to_fit_width(guess2.width, about_edge=LEFT),
                       qmark.animate.next_to(guess2, RIGHT, buff=0.15),
                       feld.animate.set_opacity(0.25)]
@@ -888,10 +908,13 @@ class Episode(NarratedScene):
                       run_time=1.5)
             beat.wait_until("Both averages", offset=-0.1)
             self.play(FadeOut(guess_lab), FadeOut(qmark), run_time=0.4)
+            self.Fop.set_value(0.0)
+            self.fv.set_value(2.0)               # the read-out appears with its value (no count-up)
             self.add(self.fblue, self.fpurp, self.fout, self.fnum)
             self.c_res.set_value(2.0)
             # the friend bar is drawn; the guess box closes onto its right edge, a single tick
-            self.play(self.Lf.animate.set_value(2.0 * UNIT), self.fv.animate.set_value(2.0),
+            self.play(self.Lf.animate.set_value(2.0 * UNIT),
+                      self.Fop.animate(rate_func=window(0.7, 1.0, 1.0)).set_value(1.0),
                       FadeIn(VGroup(self.c_eq2, self.c_res)), *self.collapse(guess, gt, 1.0),
                       run_time=1.0)
             beat.wait_until("guess holds", offset=-0.2)
@@ -907,8 +930,8 @@ class Episode(NarratedScene):
             # holds 2.0 until the real class has settled (second cycle: no transient 2.4)
             T = 1.5
             anims = [FadeOut(pile), FadeOut(whatif),
-                     FadeOut(self.fnum, rate_func=window(0, 0.35, T)),
-                     self.Fo.animate(rate_func=window(0, 0.4, T)).set_value(0.0),
+                     self.Fop.animate(rate_func=window(0, 0.35, T)).set_value(0.0),   # (its updater
+                     self.Fo.animate(rate_func=window(0, 0.4, T)).set_value(0.0),     # sets opacity)
                      feld.animate.set_opacity(1.0)]
             anims += [FadeOut(ring_edges[frozenset(e)]) for e in new]
             anims += [circ[n].animate.move_to(P[n]) for n in NAMES]
@@ -918,6 +941,7 @@ class Episode(NarratedScene):
             anims += [FadeOut(VGroup(self.c_eq2, self.c_res), rate_func=window(0, 0.4, T)),
                       self.c_op.animate(rate_func=window(0, 0.4, T)).set_value(0.0)]
             self.play(*anims, run_time=T)
+            self.remove(self.fnum)
             for tr in (self.Lf, self.Lb, self.fv):
                 tr.set_value(0.0)
             self.Fo.set_value(1.0)
@@ -933,17 +957,24 @@ class Episode(NarratedScene):
             guess.shift(RIGHT * 0.5 * UNIT)          # (collapsed and invisible) onto the new tick
             qmark.next_to(guess3, RIGHT, buff=0.15)
             T = 0.9
+            gt0 = gt.copy()
+
+            def upd_gt(m, al):                   # slide to 2.5, then hand over to the box edge
+                tt = al * T
+                m.become(gt0.copy().shift(RIGHT * 0.5 * UNIT * smooth(min(1.0, tt / (0.5 * T)))))
+                m.set_stroke(opacity=1.0 - float(np.clip((tt - 0.55 * T) / (0.35 * T), 0, 1)))
             self.play(*[FadeIn(edges[k]) for k in drop],
                       self.Lg.animate(rate_func=window(0, 0.6, T)).set_value(2.5 * UNIT),
                       self.gv.animate(rate_func=lambda t: float(t >= 0.33)).set_value(2.5),
                       self.Gop.animate(rate_func=lambda t: there_and_back(min(1.0, t / 0.66)))
                       .set_value(0.0),
-                      gt.animate(rate_func=window(0, 0.5, T)).shift(RIGHT * 0.5 * UNIT),
+                      UpdateFromAlphaFunc(gt, upd_gt, rate_func=linear),
                       guess.animate(rate_func=window(0.4, 0.9, T))
                       .stretch_to_fit_width(2.5 * UNIT, about_edge=RIGHT).set_stroke(opacity=1),
-                      FadeOut(gt, rate_func=window(0.55, 0.9, T)),
                       FadeIn(guess_lab, rate_func=window(0.55, 0.9, T)),
                       FadeIn(qmark, rate_func=window(0.55, 0.9, T)), run_time=T)
+            self.remove(gt)
+            gt.set_stroke(opacity=1.0)           # (kept at 2.5 for the next collapse)
             beat.wait_until("send", offset=-0.15)
             self.add(*[t[2] for t in real_toks])
             self.play(self.fly_tokens(real_toks, beat.until("Twenty", offset=-0.2, min_time=3.5),
@@ -954,9 +985,12 @@ class Episode(NarratedScene):
                       FadeOut(guess_lab), FadeOut(qmark), run_time=0.8)
             beat.wait_until("average three", offset=-0.2)
             self.c_res.set_value(3.0)
+            self.Fop.set_value(0.0)
+            self.fv.set_value(3.0)
             self.add(self.fnum)
             # the YELLOW outline overshoots the guess; the box closes onto its tick at 2.5
-            self.play(self.Lf.animate.set_value(3.0 * UNIT), self.fv.animate.set_value(3.0),
+            self.play(self.Lf.animate.set_value(3.0 * UNIT),
+                      self.Fop.animate(rate_func=window(1.0, 1.4, 1.4)).set_value(1.0),
                       FadeIn(VGroup(self.c_eq2, self.c_res)), *self.collapse(guess, gt, 1.4),
                       run_time=1.4)
         tokens = VGroup(*[t[2] for t in real_toks])
@@ -1050,8 +1084,7 @@ class Episode(NarratedScene):
             anims = []
             for j, L in enumerate(layers):
                 a, b = wins[j]
-                anims += [FadeIn(t, target_position=SP[n], scale=0.4, rate_func=window(a, b, T))
-                          for n, t in L]
+                anims += [FadeIn(t, shift=0.45 * DOWN, rate_func=window(a, b, T)) for n, t in L]
 
             def balance(tt):
                 w = s_ = 0.0
@@ -1066,7 +1099,7 @@ class Episode(NarratedScene):
             def upd_bal(_, al):
                 tt = al * T
                 bal = balance(tt)
-                q = float(np.clip((bal - 2.5) / 0.5, 0, 1))
+                q = float(np.clip((bal - 2.5) / 0.08, 0, 1))   # yellow as soon as it moves
                 fulc_y.move_to([BX(bal), fy, 0])
                 fulc_y.set_fill(interpolate_color(ManimColor(BLUE), ManimColor(YELLOW), q),
                                 opacity=1.0 if tt >= t_go else 0.0)
@@ -1328,7 +1361,7 @@ class Episode(NarratedScene):
             self.play(flag(num["Sue"], color=INK), flag(name["Sue"], color=INK),
                       fly(four, S1[0], [(x_sue + 0.38, y_top - 0.55), (x_sue + 0.15, BEAM_Y + LIFT - 0.3),
                                         (gap_x, DEV_Y + LIFT - 0.25), (gap_x, sq_top - 0.3),
-                                        (S1[0].get_x() + 0.6, ROW_S + 0.6)]),
+                                        (S1[0].get_x() + 0.6, ROW_S + 0.6)], rate_func=leave),
                       FadeIn(S1[1], rate_func=window(0.6, 1.1, 1.1)),
                       FadeIn(S1[2], rate_func=window(0.6, 1.1, 1.1)), run_time=1.1)
             self.remove(four)
@@ -1340,7 +1373,7 @@ class Episode(NarratedScene):
             d15 = dev_labs[4].copy()
             self.play(flag(dev_r, color=PURPLE), Write(d_lab, rate_func=window(0, 0.8, 1.0)),
                       fly(d15, S1[6], [(gap_x, DEV_Y + LIFT - 0.2), (gap_x, sq_top - 0.35),
-                                       (S1[6].get_x() + 0.4, ROW_S + 0.55)]),
+                                       (S1[6].get_x() + 0.4, ROW_S + 0.55)], rate_func=leave),
                       FadeIn(S1[5]), FadeIn(VGroup(S1[7], S1[8])), run_time=1.0)
             self.remove(d15)
             whole(S1)
@@ -1463,6 +1496,7 @@ class Episode(NarratedScene):
         def cancel(fr, target, total):
             """mu^2/mu -> mu: the box, the square and the denominator leave, the base slides."""
             box = SurroundingRectangle(fr, color=INK, buff=0.05, corner_radius=0.06, stroke_width=3)
+            box.stretch_to_fit_width(fr.width + 0.07)        # keeps 0.13+ from the next "+"
             return box, [FadeOut(VGroup(box, fr.num[1], fr.bar, fr.den), shift=0.12 * UP,
                                  rate_func=window(0, 0.4, total)),
                          ReplacementTransform(fr.num[0], target, rate_func=window(0.25, total, total))]
@@ -1484,10 +1518,11 @@ class Episode(NarratedScene):
                       ReplacementTransform(B[2].den, C[2].den, rate_func=window(0.15, 0.9, T)),
                       ReplacementTransform(B[3], C[3], rate_func=window(0.15, 0.9, T)),
                       ReplacementTransform(B[4], C[4], rate_func=window(0.15, 0.9, T)),
-                      TransformFromCopy(VGroup(*S4[2:5]), cnum, rate_func=window(0.5, 1.6, T)),
-                      TransformFromCopy(B[2].den.copy(), nnum[0], rate_func=window(0.5, 1.6, T)),
+                      TransformFromCopy(VGroup(*S4[2:5]), cnum, rate_func=window(0.5, 1.6, T, leave)),
+                      TransformFromCopy(B[2].den.copy(), nnum[0], path_arc=-1.2,
+                                        rate_func=window(0.5, 1.6, T, leave)),
                       FadeIn(VGroup(nnum[1], nnum[2]), rate_func=window(0.9, 1.6, T)),
-                      TransformFromCopy(Vrow[6], nnum[3], rate_func=window(0.5, 1.6, T)),
+                      TransformFromCopy(Vrow[6], nnum[3], rate_func=window(0.5, 1.6, T, leave)),
                       run_time=T)
             beat.wait_until("friends average", offset=-0.1)
             # the split: every term slides to exactly one place (no copies stacked on the
@@ -1529,9 +1564,12 @@ class Episode(NarratedScene):
             beat.wait_until("exactly", offset=-0.15)
             d4 = VGroup(*D4)
             d4_shift = np.array([X_MR - d4.get_x(), ROW_MR - D4[2].bar.get_y(), 0.0])
-            self.play(pic.animate.shift(LEFT * XC), d4.animate.shift(d4_shift),
-                      self.Dm.animate.set_value(1.0), panel_txt.animate.set_opacity(1.0),
-                      feld.animate.set_opacity(1.0), run_time=0.9)
+            T = 1.0
+            self.play(pic.animate(rate_func=window(0, 0.6, T)).shift(LEFT * XC),
+                      d4.animate(rate_func=window(0, 0.7, T)).shift(d4_shift),
+                      self.Dm.animate(rate_func=window(0.55, 1.0, T)).set_value(1.0),
+                      panel_txt.animate(rate_func=window(0.55, 1.0, T)).set_opacity(1.0),
+                      feld.animate(rate_func=window(0.4, 1.0, T)).set_opacity(1.0), run_time=T)
             beat.wait_until("measured", offset=-0.35)
             self.play(flag(D4[6], color=PURPLE), flag(self.fpurp, color=PURPLE),
                       flag(gap_lab, color=PURPLE), run_time=0.9)
@@ -1617,11 +1655,12 @@ class Episode(NarratedScene):
             beat.wait_until("tokens average", offset=-0.15)
             self.play(Indicate(q2, color=YELLOW, scale_factor=1.3), run_time=0.9)
 
-        fvt = ValueTracker(0)
+        fvt, fop = ValueTracker(635), ValueTracker(0.0)   # appears with its value, no count-up
 
         def upd_fi(m):
             m.set_value(fvt.get_value())
             m.next_to([G["x0"] + max(self.Lf.get_value(), 0), G["yf"], 0], RIGHT, buff=0.2 * s_)
+            m.set_opacity(fop.get_value())
         f_int.add_updater(upd_fi)
         fb_gap = MathTex(r"+445", font_size=36 * s_, color=PURPLE)
         fb_gap.next_to([x0n + 635 * fbu, yfn + BAR_H * s_ / 2, 0], UP, buff=0.2)
@@ -1651,7 +1690,8 @@ class Episode(NarratedScene):
         with self.narrate(NARR["fb2"], gap=BREAK) as beat:
             self.add(f_int)
             T = beat.until("A few", offset=-0.8, min_time=1.3)
-            self.play(self.Lf.animate.set_value(635 * fbu), fvt.animate.set_value(635),
+            self.play(self.Lf.animate.set_value(635 * fbu),
+                      fop.animate(rate_func=window(max(0.0, T - 0.45), T, T)).set_value(1.0),
                       FadeOut(q2, rate_func=window(0, 0.3, T)), run_time=T)
             # the friend bar fills: BLUE up to the mean, PURPLE beyond it
             self.play(self.Lb.animate.set_value(190 * fbu), self.Po.animate.set_value(1.0),
@@ -1673,15 +1713,16 @@ class Episode(NarratedScene):
         for m in (self.gbar, self.fblue, self.fpurp, self.fout, g_int, f_int):
             m.clear_updaters()
         ax = axes((0, 125), (0, 8), x_ticks=[0, 30, 60, 90, 120], y_ticks=[0, 2, 4, 6, 8],
-                  x_length=9.4, y_length=3.7, x_label="days since 1 September 2009",
+                  x_length=9.4, y_length=3.4, x_label="days since 1 September 2009",
                   y_label="diagnosed with flu (% of group)")
-        ax.move_to([0.45, 0.12, 0])            # round 3: shorter, so the read-out rows clear the y title
+        ax.move_to([0.45, -0.03, 0])           # 0.3 shorter, bottom where it was: the read-out
+                                               # rows sit clearly above the y title
         for mm in (ax.x_axis.numbers, ax.y_axis.numbers, ax.x_title, ax.y_title):
             mm.set_color(GRAY_T)
         cf_cite = citation("Christakis & Fowler, 2010 · PLoS ONE · Fig. 3 redrawn, logistic refit",
                            color=GRAY_T)
         lab_rand = Text("319 random students", font=SERIF, font_size=28, color=BLUE)
-        lab_rand.move_to(ax.c2p(60, 0.72))          # clear of the blue fit (round 3)
+        lab_rand.move_to(ax.c2p(75, 1.0))           # clear of the blue steps and the axis ticks
         lab_fr = Text("425 friends they named", font=SERIF, font_size=28, color=YELLOW)
         lab_fr.next_to(ax.c2p(3, 5.6), RIGHT, buff=0)
         fr_n, fr_t = lab_fr[:3], lab_fr[3:]          # "425" | "friends they named"
@@ -1702,7 +1743,7 @@ class Episode(NarratedScene):
         lead_arrow = lead_arrow_at(ax.c2p(t_fr, ay), LEAD)
         # read-out above the plot frame: label left, arrow right, the two arrow tips aligned at
         # the chart's own day scale (second cycle: 0.3 down and 0.4 left, off the safe edge)
-        RO_TIPX, RO_Y1, RO_Y2 = 5.1, 3.12, 2.62
+        RO_TIPX, RO_Y1, RO_Y2 = 5.1, 3.25, 2.75
         ro_tip = np.array([RO_TIPX, RO_Y1, 0.0])
         ro_arrow = lead_arrow_at(ro_tip, LEAD)
         lead_lab = Text("C&F fitted lead: 13.9 days", font=SERIF, font_size=26, color=INK)
@@ -1740,7 +1781,7 @@ class Episode(NarratedScene):
                           fb_glabel, self.flabel, g_int, f_int)
         with self.narrate(NARR["cf"], gap=BREAK) as beat:
             # each Facebook bar flies straight to the origin of the curve it becomes, and the
-            # curves grow on one shared calendar from "put this to work"
+            # curves grow on one shared calendar as soon as the axes are built
             T = 1.6
             self.play(FadeOut(fade_out, rate_func=window(0, 0.45, T)),
                       FadeOut(ugander, rate_func=window(0, 0.35, T)),
@@ -1751,9 +1792,9 @@ class Episode(NarratedScene):
                                            rate_func=window(0.35, 1.6, T)),
                       run_time=T)
             self.add(rd_live, fr_live, origin_b, origin_y, lab_fr)
-            beat.wait_until("work", offset=-0.1)
-            # the calendar runs linearly to "rose first", in three pieces so that the named
-            # friends' label can appear on "Named friends" and flash on "more friends"
+            # the calendar runs linearly from here (no empty chart) to "rose first", in three
+            # pieces so that the named friends' label can appear on "Named friends" and flash
+            # on "more friends"
             t0 = beat.elapsed()
             t_end = beat.time_of("rose first") - 0.1
             span = max(4.0, t_end - t0)
@@ -1896,11 +1937,13 @@ class Episode(NarratedScene):
                       Indicate(favg["Betty"], color=YELLOW, scale_factor=1.25), run_time=0.9)
             # two and a half counts the girls ...
             beat.wait_until("Two and a half", offset=-0.1)
-            self.play(flag(end_g, color=BLUE), Indicate(end_gn, color=BLUE, scale_factor=1.25),
+            self.play(ShowPassingFlash(SurroundingRectangle(end_g, buff=0.03, color=INK, stroke_width=4),
+                                       time_width=0.5),
+                      Indicate(end_gn, color=BLUE, scale_factor=1.25),
                       Indicate(cands2[0], color=BLUE, scale_factor=1.25), run_time=0.9)
             # ... three counts the friendships: every friendship flashes, the friend bar grows to
             # the 3 (BLUE to 2.5, PURPLE beyond), and the 3 is ringed
-            beat.wait_until("three counts", offset=-0.15)
+            beat.wait_until("three counts", offset=-0.3)
             T = 1.5
             self.play(LaggedStart(*[ShowPassingFlash(e.copy().set_stroke(YELLOW, 7), time_width=0.6)
                                     for e in edges2.values()], lag_ratio=0.05, run_time=1.0),
@@ -1912,8 +1955,9 @@ class Episode(NarratedScene):
                       cands2[2].animate(rate_func=window(0.5, 1.1, T)).set_opacity(0.3),
                       Create(ring3, rate_func=window(1.0, 1.5, T)), run_time=T)
             self.hold(max(0.0, beat.remaining()))
+        self.hold(0.7)                           # the answered frame holds before the card
 
-        self.end_card(hold=0.55)                 # trailing silence ~1.5 s
+        self.end_card(hold=0.35)                 # trailing silence ~1.9 s
 
 
 if __name__ == "__main__":

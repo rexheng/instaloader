@@ -5,7 +5,7 @@
 that ellipse (a dinosaur, a star, Anscombe's four datasets) has the same five numbers and even the
 same best-fit line. Only a plot shows the shape.
 
-Runtime about 3:36 · narrator af_heart @ 0.84.
+Runtime 3:35.5 · 536 words · narrator af_heart @ 0.84.
 
 ## Palette (colour → one meaning, whole episode)
 

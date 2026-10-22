@@ -302,3 +302,68 @@ kept.
   landing's token re-flight and 4×/1× tally.
 - Audio 8–8.5 → 9: "Split Sue's count, four, into…" (Whisper heard "sus four"); the muddled
   "friends … than girls" comparison is gone.
+
+**Craft fixes**
+1. Fulcrum (motion): the tokens now land layer by layer; layer 1 (one per girl) balances at 2.5, and
+   from layer 2 a copy of the BLUE fulcrum slides right, turning YELLOW, with a live read-out that
+   stops at 2.7, 2.9 and 3.0 (38/14, 52/18, 60/20, each token weighted by how far it has landed).
+   It lands on "three" and flashes with the bar's 3.0. Layers drop in from above so they are visible
+   while the fulcrum moves.
+2. μ baseline (visual): every algebra row from (μ²+σ²)/μ on, plus the Facebook row and the ring's
+   2 + 0/2 = 2, is one TeX formula (`trow`), so TeX sets the baseline and spacing; parts are still
+   moved one by one. Invisible struts give every numerator and denominator the BAR 0.15 clearance
+   from its bar, uniformly, so baselines stay level across a row.
+3. Doubled guess outline (visual): when the friend bar is drawn, the dashed box closes onto its right
+   edge, which stays as one dashed tick (at 2.0 on the ring, where the bar ends on it; at 2.5 on the
+   real class, where the BLUE fill stops at it). On the real class it re-opens leftward from the tick.
+4. Wording / pronunciation: "friends average twenty percent more than girls" cut (both critics);
+   "Split Sue's count, four, into…".
+5. Ring callback (clarity): the bars never change; the class picture, the result row and the bars dim
+   to 30 % while the ring thumbnail, its collapsing spread and 2 + 0/2 = 2 play, then brighten.
+6. Landing (concision): the second token flight and the 4× / 1× tally are cut (see substance 2).
+7. Transient read-outs (motion): the girl read-out holds 2.0 until the real class has settled and
+   swaps to 2.5 while invisible; the same swap replaces the 2.5 → 2.0 count-down on the ring, and the
+   friend and cold-open read-outs appear with their value instead of counting up from 0.0.
+8. Lopsided algebra (visual): on "Measure", the stacks leave, the bar panel and the citation go to 0,
+   the main row parks dimmed at the bottom centre, and the beam picture moves up and right so the
+   balance point is at x = 0; σ² = 10/8 = 1.25 sits beside the squares and every row is centred under
+   the picture. On "exactly the extra half friend we measured" the picture moves back, the bars and
+   citation return and the result row moves under them.
+9. Scale tag: "sides at 1/4 scale", GRAY Text 18, centred under the squares.
+10. C&F read-outs: 0.4 left (arrow ends at x 6.15); the chart is 0.3 shorter with its bottom fixed so
+    both rows sit above the y-axis title (row tops at 3.42); the 13.9-day copy arcs up to the read-out.
+11. Ring thumbnail at 0.55× with digits at 32 (cap height ≥ 24 px).
+
+**Substance fixes**
+1. C&F link: "Christakis and Fowler put this to work at Harvard. Named friends have more friends, so
+   they sit closer to everyone else, and should catch flu first." "friends they named" rises in on
+   "Named friends" and flashes on "more friends"; "425" joins it when spoken. Re-verified: C&F report
+   the friend group's "significantly higher measured in-degree and betweenness centrality".
+2. Landing: back to the cold-open frame itself (candidates 2.5 / 3 / 4 under the drop lines). "Seat by
+   seat, five have fewer friends than their friends average; only Sue and Alice have more. Betty looks
+   at her one friend and sees four. Two and a half counts the girls; three counts the friendships." On
+   the last line every friendship flashes, the friend bar grows to the 3 and the 3 is ringed; 2.5 has
+   gone under the bar and 4 dims. About 15 s.
+3. Ring callback: see craft 5.
+4. Concision: "friends average twenty percent more than girls" and "Sixty over twenty" cut.
+5. Split doubling: C → D1 moves each term to exactly one place; the second bar grows and its
+   denominator rises in after the slide. Copies that start on their source (the numerators rebuilt
+   from the identity) leave it with an ease-out instead of lingering half-overlapped.
+6. "Split Sue's count, four, into…" (Whisper check below).
+7. Facebook: a BLUE brace labelled "a few users" spans the broken axis up to the 5,000 tick
+   ("Facebook's limit"), a range instead of dots that read as data.
+8. "over the average count, two and a half".
+
+**Found while verifying the previews (fixed before the master)**
+- The guess tick stayed at 2.0 on the real class: two animations on one mobject in one play (a slide
+  and a fade); the tick now has a single updater.
+- The new token layers were hidden while rising through the layer below, so the read-out seemed to
+  lead them; they now drop in from above.
+- The fulcrum's BLUE → YELLOW blend passed through a muddy grey; it is YELLOW as soon as it moves.
+- The ring's "2.0" lingered through the dissolve (its updater overrode the FadeOut); its opacity is
+  now driven by the same tracker.
+- TeX's own fraction clearance (0.09) tripped the overlap audit; struts fixed it. The cancel boxes
+  touched their bars when tightened; 0.035 side buff.
+- The self-reported row sat on the line of the chart's y-axis title; lowering the chart crowded the
+  citation, so the chart is 0.3 shorter instead. "319 random students" moved to day 75 at 1 %.
+- The answered closing frame held only ~0.7 s before the end card; it now holds ~1.5 s.

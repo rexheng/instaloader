@@ -1,2798 +1,2803 @@
 {
  "task": "transcribe",
  "language": "English",
- "duration": 234.602718214,
- "text": " You've read this English sentence up to one hidden character. With yes or no questions, how many do you need per character on average? The natural answer is five. Each answer can cut what's left in half, and five cuts take 27 down to one. With perfect 50-50 splits, the ideal is log base two of 27, about 4.75. In 1951, Claude Shannon estimated the true figure at about one. Whatever it is, no text compressor can beat it on average, and guessing what comes next is how language models are trained. So where do four of every five questions go? Splitting the alphabet evenly charges every character the same price. Z costs as much as E, yet in real text, E turns up 130 times as often. Instead, ask questions that split the probability, not the alphabet. Is it a space, E, T, A, or O? Those five make up nearly half of all text. E starts near a tenth of the bar. Each ideal answer keeps half the probability, so E doubles its share of what's left. 3.3 doublings, and E fills the whole bar. Z starts at 1 in 1260, and needs 10.3. In general, a character with probability p needs k questions, where p times 2 to the k equals 1. So 2 to the k equals 1 over p, and k equals log base 2 of 1 over p. Now give each character its own cost as a height. Common characters sit wide and low, rare ones narrow and tall. The widths add up to 1, so the total area is the average number of questions per character. Then pour the skyline flat and its height is that average Shannon called that average the entropy counted in bits one bit per yes or no answer For English letters it 4 That beats 4 but it's still four times Shannon's estimate. It prices every character as if nothing came before it. What comes after a cue? It's you, 98 times out of 100. You swallows the bar. its cost drops to almost nothing, and the average falls to .16 bits. After th, e takes two-thirds of the bar, and its cost shrinks to about half a question. Half a question sounds impossible, but a compressor asks about long runs of letters, and the fractions add up. Here they average 1.7. Q and th are the easy cases. Averaged over every two-letter context, it's still 2.8. Shannon measured this with a person, who read a passage one character at a time, guessing each next one until right. 79 of 102 came on the first guess. A twin who guesses the same way could rebuild the passage from these counts alone. Treat each guess count as a symbol, and the same skyline pores flat at about 1.4 bits. A better guesser could only lower it. Shannon's tests, with 100 letters of context, put English between 0.6 and 1.3 bits per character. In 2023, a language model compressing part of a new book in the same 27 symbols needed 0.84 bits, inside that range. The hidden character from the start is the why at the end of the other day. Shannon's subject got it on the first guess, a single yes or no question. Splitting the alphabet took five. In English, almost no letter arrives without a past.",
+ "duration": 237.50399743999998,
+ "text": " You've read an English sentence up to one hidden character. With yes or no questions, how many do you need per character on average? The natural answer is 5. Each answer can cut what's left in half, and 5 cuts take 27 down to 1. The ideal is log base 2 of 27, about 4.75. In 1951, Claude Shannon estimated the true figure at about 1. Whatever it is, no text compressor can beat it on average, and guessing what comes next is how language models are trained. So where do four of every five questions go? Splitting the alphabet evenly charges every character the same price. Z costs as much as E, yet E turns up 130 times as often. Instead, ask questions that split the probability, not the alphabet. Is it a space, E, T, A, or O? Those five make up nearly half of all text. E starts near a tenth of the bar. Each ideal answer keeps half the probability, so E doubles its share of what's left. 3.3 ideal doublings, and E fills the whole bar. Z starts at 1 in 1260, and needs 10.3. In general, a character with probability P needs K questions, where P times 2 to the k equals 1. So 2 to the k equals 1 over p, and k equals log base 2 of 1 over p. Now give each character its own cost as a height. The widths add up to 1, so the total area is the average number of questions per character. Pour the skyline flat, and its height is that average Shannon called that average the entropy counted in bits 1 bit per yes or no answer For English letters it 4 That beats 4 but it still four times Shannon estimate It prices every character as if nothing came before it What comes after a Q? It's U, 98 times out of 100. U swallows the bar. Its cost drops to almost nothing, and the average falls to 0.16 bits. After th, e takes two-thirds of the bar, and its cost shrinks to about half a question. Half a question, like 3.3 doublings, sounds impossible, but a compressor asks about long runs of letters, and the fractions add up. After th, the average is 1.7, but averaged over every two-letter context, it's still 2.8. Some contexts need more text than any corpus holds, so Shannon used a predictor that already knows English. A person. His subject read a passage letter by letter, guessing each next one until right. 79 of 102 came on the first guess. A twin who guesses the same way could rebuild the passage from these counts alone. Treat each guess count as a symbol, and the same skyline pores, flat at about 1.4 bits. A better guesser could only lower it. Shannon's tests, with 100 letters of context, put English between 0.6 and 1.3 bits per character. In 2023, a language model compressing part of a book that reached Project Gutenberg after its training, in the same 27 symbols, needed 0.84 bits, inside that range. The hidden character from the start is the Y at the end of the other day. Shannon's subject got it on the first guess, a single yes or no question. Splitting the alphabet took five. In English, almost no letter arrives without a past.",
  "words": [
   {
    "word": "You've",
-   "start": 0,
+   "start": 0.02,
    "end": 0.3
   },
   {
    "word": "read",
    "start": 0.3,
-   "end": 0.48
+   "end": 0.46
   },
   {
-   "word": "this",
-   "start": 0.48,
-   "end": 0.7
+   "word": "an",
+   "start": 0.46,
+   "end": 0.58
   },
   {
    "word": "English",
-   "start": 0.7,
-   "end": 1.04
+   "start": 0.58,
+   "end": 0.82
   },
   {
    "word": "sentence",
-   "start": 1.04,
-   "end": 1.56
+   "start": 0.82,
+   "end": 1.4
   },
   {
    "word": "up",
-   "start": 1.56,
-   "end": 2.08
+   "start": 1.4,
+   "end": 1.96
   },
   {
    "word": "to",
-   "start": 2.08,
-   "end": 2.24
+   "start": 1.96,
+   "end": 2.12
   },
   {
    "word": "one",
-   "start": 2.24,
-   "end": 2.46
+   "start": 2.12,
+   "end": 2.34
   },
   {
    "word": "hidden",
-   "start": 2.46,
-   "end": 2.74
+   "start": 2.34,
+   "end": 2.6
   },
   {
    "word": "character.",
-   "start": 2.74,
-   "end": 3.22
+   "start": 2.6,
+   "end": 3.08
   },
   {
    "word": "With",
-   "start": 3.4,
-   "end": 4.08
+   "start": 3.76,
+   "end": 3.96
   },
   {
    "word": "yes",
-   "start": 4.08,
-   "end": 4.3
+   "start": 3.96,
+   "end": 4.18
   },
   {
    "word": "or",
-   "start": 4.3,
-   "end": 4.52
+   "start": 4.18,
+   "end": 4.38
   },
   {
    "word": "no",
-   "start": 4.52,
-   "end": 4.66
+   "start": 4.38,
+   "end": 4.54
   },
   {
    "word": "questions,",
-   "start": 4.66,
-   "end": 5.54
+   "start": 4.54,
+   "end": 5.56
   },
   {
    "word": "how",
-   "start": 5.28,
-   "end": 5.98
+   "start": 5.56,
+   "end": 5.82
   },
   {
    "word": "many",
-   "start": 5.98,
+   "start": 5.82,
+   "end": 6
+  },
+  {
+   "word": "do",
+   "start": 6,
    "end": 6.16
   },
   {
-   "word": "do",
-   "start": 6.16,
-   "end": 6.3
-  },
-  {
    "word": "you",
-   "start": 6.3,
-   "end": 6.4
+   "start": 6.16,
+   "end": 6.22
   },
   {
    "word": "need",
-   "start": 6.4,
-   "end": 6.56
+   "start": 6.22,
+   "end": 6.4
   },
   {
    "word": "per",
-   "start": 6.56,
-   "end": 6.74
+   "start": 6.4,
+   "end": 6.62
   },
   {
    "word": "character",
-   "start": 6.74,
-   "end": 7.24
+   "start": 6.62,
+   "end": 7.04
   },
   {
    "word": "on",
-   "start": 7.24,
-   "end": 7.6
+   "start": 7.04,
+   "end": 7.44
   },
   {
    "word": "average?",
-   "start": 7.6,
-   "end": 8.34
+   "start": 7.44,
+   "end": 7.86
   },
   {
    "word": "The",
-   "start": 10.14,
-   "end": 10.34
+   "start": 10.06,
+   "end": 10.2
   },
   {
    "word": "natural",
-   "start": 10.34,
-   "end": 10.74
+   "start": 10.2,
+   "end": 10.54
   },
   {
    "word": "answer",
-   "start": 10.74,
-   "end": 11.1
+   "start": 10.54,
+   "end": 10.94
   },
   {
    "word": "is",
-   "start": 11.1,
-   "end": 11.36
+   "start": 10.94,
+   "end": 11.22
   },
   {
-   "word": "five.",
-   "start": 11.36,
-   "end": 11.94
+   "word": "5.",
+   "start": 11.22,
+   "end": 11.44
   },
   {
    "word": "Each",
-   "start": 11.86,
-   "end": 12.6
+   "start": 12.2,
+   "end": 12.44
   },
   {
    "word": "answer",
-   "start": 12.6,
-   "end": 13.04
+   "start": 12.44,
+   "end": 12.84
   },
   {
    "word": "can",
-   "start": 13.04,
-   "end": 13.26
+   "start": 12.84,
+   "end": 13.1
   },
   {
    "word": "cut",
-   "start": 13.26,
-   "end": 13.58
+   "start": 13.1,
+   "end": 13.42
   },
   {
    "word": "what's",
-   "start": 13.58,
-   "end": 13.88
+   "start": 13.42,
+   "end": 13.74
   },
   {
    "word": "left",
-   "start": 13.88,
-   "end": 14.1
+   "start": 13.74,
+   "end": 13.92
   },
   {
    "word": "in",
-   "start": 14.1,
-   "end": 14.26
+   "start": 13.92,
+   "end": 14.14
   },
   {
    "word": "half,",
-   "start": 14.26,
-   "end": 14.78
+   "start": 14.14,
+   "end": 14.56
   },
   {
    "word": "and",
-   "start": 14.66,
-   "end": 15.32
+   "start": 14.56,
+   "end": 15.16
   },
   {
-   "word": "five",
-   "start": 15.32,
-   "end": 15.72
+   "word": "5",
+   "start": 15.16,
+   "end": 15.52
   },
   {
    "word": "cuts",
-   "start": 15.72,
-   "end": 16.06
+   "start": 15.52,
+   "end": 15.88
   },
   {
    "word": "take",
-   "start": 16.06,
-   "end": 16.34
+   "start": 15.88,
+   "end": 16.2
   },
   {
    "word": "27",
-   "start": 16.34,
-   "end": 16.88
+   "start": 16.2,
+   "end": 16.72
   },
   {
    "word": "down",
-   "start": 16.88,
-   "end": 17.32
+   "start": 16.72,
+   "end": 17.16
   },
   {
    "word": "to",
-   "start": 17.32,
-   "end": 17.46
-  },
-  {
-   "word": "one.",
-   "start": 17.46,
-   "end": 18
-  },
-  {
-   "word": "With",
-   "start": 17.92,
-   "end": 18.58
-  },
-  {
-   "word": "perfect",
-   "start": 18.58,
-   "end": 19.06
-  },
-  {
-   "word": "50-50",
-   "start": 19.06,
-   "end": 19.66
-  },
-  {
-   "word": "splits,",
-   "start": 19.66,
-   "end": 20.4
-  },
-  {
-   "word": "the",
-   "start": 20.18,
-   "end": 20.8
-  },
-  {
-   "word": "ideal",
-   "start": 20.8,
-   "end": 21.26
-  },
-  {
-   "word": "is",
-   "start": 21.26,
-   "end": 21.48
-  },
-  {
-   "word": "log",
-   "start": 21.48,
-   "end": 21.88
-  },
-  {
-   "word": "base",
-   "start": 21.88,
-   "end": 22.22
-  },
-  {
-   "word": "two",
-   "start": 22.22,
-   "end": 22.52
-  },
-  {
-   "word": "of",
-   "start": 22.52,
-   "end": 22.76
-  },
-  {
-   "word": "27,",
-   "start": 22.76,
-   "end": 23.62
-  },
-  {
-   "word": "about",
-   "start": 23.62,
-   "end": 24.24
-  },
-  {
-   "word": "4.75.",
-   "start": 24.24,
-   "end": 25.86
-  },
-  {
-   "word": "In",
-   "start": 26.26,
-   "end": 26.36
-  },
-  {
-   "word": "1951,",
-   "start": 26.36,
-   "end": 27.96
-  },
-  {
-   "word": "Claude",
-   "start": 27.96,
-   "end": 28.24
-  },
-  {
-   "word": "Shannon",
-   "start": 28.24,
-   "end": 28.56
-  },
-  {
-   "word": "estimated",
-   "start": 28.56,
-   "end": 29.12
-  },
-  {
-   "word": "the",
-   "start": 29.12,
-   "end": 29.48
-  },
-  {
-   "word": "true",
-   "start": 29.48,
-   "end": 29.7
-  },
-  {
-   "word": "figure",
-   "start": 29.7,
-   "end": 30.1
-  },
-  {
-   "word": "at",
-   "start": 30.1,
-   "end": 30.48
-  },
-  {
-   "word": "about",
-   "start": 30.48,
-   "end": 30.68
-  },
-  {
-   "word": "one.",
-   "start": 30.68,
-   "end": 31.24
-  },
-  {
-   "word": "Whatever",
-   "start": 31.68,
-   "end": 31.92
-  },
-  {
-   "word": "it",
-   "start": 31.92,
-   "end": 32.2
-  },
-  {
-   "word": "is,",
-   "start": 32.2,
-   "end": 32.68
-  },
-  {
-   "word": "no",
-   "start": 32.68,
-   "end": 33.12
-  },
-  {
-   "word": "text",
-   "start": 33.12,
-   "end": 33.6
-  },
-  {
-   "word": "compressor",
-   "start": 33.6,
-   "end": 33.94
-  },
-  {
-   "word": "can",
-   "start": 33.94,
-   "end": 34.28
-  },
-  {
-   "word": "beat",
-   "start": 34.28,
-   "end": 34.5
-  },
-  {
-   "word": "it",
-   "start": 34.5,
-   "end": 34.62
-  },
-  {
-   "word": "on",
-   "start": 34.62,
-   "end": 34.76
-  },
-  {
-   "word": "average,",
-   "start": 34.76,
-   "end": 35.5
-  },
-  {
-   "word": "and",
-   "start": 35.9,
-   "end": 36.04
-  },
-  {
-   "word": "guessing",
-   "start": 36.04,
-   "end": 36.4
-  },
-  {
-   "word": "what",
-   "start": 36.4,
-   "end": 36.64
-  },
-  {
-   "word": "comes",
-   "start": 36.64,
-   "end": 36.92
-  },
-  {
-   "word": "next",
-   "start": 36.92,
-   "end": 37.34
-  },
-  {
-   "word": "is",
-   "start": 37.34,
-   "end": 37.72
-  },
-  {
-   "word": "how",
-   "start": 37.72,
-   "end": 37.86
-  },
-  {
-   "word": "language",
-   "start": 37.86,
-   "end": 38.34
-  },
-  {
-   "word": "models",
-   "start": 38.34,
-   "end": 38.68
-  },
-  {
-   "word": "are",
-   "start": 38.68,
-   "end": 38.88
-  },
-  {
-   "word": "trained.",
-   "start": 38.88,
-   "end": 39.24
-  },
-  {
-   "word": "So",
-   "start": 40.04,
-   "end": 40.22
-  },
-  {
-   "word": "where",
-   "start": 40.22,
-   "end": 40.34
-  },
-  {
-   "word": "do",
-   "start": 40.34,
-   "end": 40.52
-  },
-  {
-   "word": "four",
-   "start": 40.52,
-   "end": 40.84
-  },
-  {
-   "word": "of",
-   "start": 40.84,
-   "end": 41.02
-  },
-  {
-   "word": "every",
-   "start": 41.02,
-   "end": 41.34
-  },
-  {
-   "word": "five",
-   "start": 41.34,
-   "end": 41.6
-  },
-  {
-   "word": "questions",
-   "start": 41.6,
-   "end": 42.08
-  },
-  {
-   "word": "go?",
-   "start": 42.08,
-   "end": 42.46
-  },
-  {
-   "word": "Splitting",
-   "start": 43.22,
-   "end": 43.48
-  },
-  {
-   "word": "the",
-   "start": 43.48,
-   "end": 43.68
-  },
-  {
-   "word": "alphabet",
-   "start": 43.68,
-   "end": 44.04
-  },
-  {
-   "word": "evenly",
-   "start": 44.04,
-   "end": 44.66
-  },
-  {
-   "word": "charges",
-   "start": 44.66,
-   "end": 45.16
-  },
-  {
-   "word": "every",
-   "start": 45.16,
-   "end": 45.68
-  },
-  {
-   "word": "character",
-   "start": 45.68,
-   "end": 46.04
-  },
-  {
-   "word": "the",
-   "start": 46.04,
-   "end": 46.34
-  },
-  {
-   "word": "same",
-   "start": 46.34,
-   "end": 46.58
-  },
-  {
-   "word": "price.",
-   "start": 46.58,
-   "end": 47.08
-  },
-  {
-   "word": "Z",
-   "start": 47.72,
-   "end": 47.82
-  },
-  {
-   "word": "costs",
-   "start": 47.82,
-   "end": 48.34
-  },
-  {
-   "word": "as",
-   "start": 48.34,
-   "end": 48.6
-  },
-  {
-   "word": "much",
-   "start": 48.6,
-   "end": 48.74
-  },
-  {
-   "word": "as",
-   "start": 48.74,
-   "end": 48.98
-  },
-  {
-   "word": "E,",
-   "start": 48.98,
-   "end": 49.74
-  },
-  {
-   "word": "yet",
-   "start": 49.74,
-   "end": 49.96
-  },
-  {
-   "word": "in",
-   "start": 49.96,
-   "end": 50.18
-  },
-  {
-   "word": "real",
-   "start": 50.18,
-   "end": 50.4
-  },
-  {
-   "word": "text,",
-   "start": 50.4,
-   "end": 51.08
-  },
-  {
-   "word": "E",
-   "start": 51.08,
-   "end": 51.14
-  },
-  {
-   "word": "turns",
-   "start": 51.14,
-   "end": 51.56
-  },
-  {
-   "word": "up",
-   "start": 51.56,
-   "end": 51.72
-  },
-  {
-   "word": "130",
-   "start": 51.72,
-   "end": 52.16
-  },
-  {
-   "word": "times",
-   "start": 52.16,
-   "end": 53.2
-  },
-  {
-   "word": "as",
-   "start": 53.2,
-   "end": 53.5
-  },
-  {
-   "word": "often.",
-   "start": 53.5,
-   "end": 53.86
-  },
-  {
-   "word": "Instead,",
-   "start": 54.88,
-   "end": 55.44
-  },
-  {
-   "word": "ask",
-   "start": 55.44,
-   "end": 55.7
-  },
-  {
-   "word": "questions",
-   "start": 55.7,
-   "end": 56.16
-  },
-  {
-   "word": "that",
-   "start": 56.16,
-   "end": 56.52
-  },
-  {
-   "word": "split",
-   "start": 56.52,
-   "end": 56.82
-  },
-  {
-   "word": "the",
-   "start": 56.82,
-   "end": 57
-  },
-  {
-   "word": "probability,",
-   "start": 57,
-   "end": 57.82
-  },
-  {
-   "word": "not",
-   "start": 57.82,
-   "end": 58.28
-  },
-  {
-   "word": "the",
-   "start": 58.28,
-   "end": 58.44
-  },
-  {
-   "word": "alphabet.",
-   "start": 58.44,
-   "end": 59.18
-  },
-  {
-   "word": "Is",
-   "start": 59.44,
-   "end": 59.74
-  },
-  {
-   "word": "it",
-   "start": 59.74,
-   "end": 59.82
-  },
-  {
-   "word": "a",
-   "start": 59.82,
-   "end": 59.92
-  },
-  {
-   "word": "space,",
-   "start": 59.92,
-   "end": 60.54
-  },
-  {
-   "word": "E,",
-   "start": 60.54,
-   "end": 60.86
-  },
-  {
-   "word": "T,",
-   "start": 60.86,
-   "end": 61.28
-  },
-  {
-   "word": "A,",
-   "start": 61.28,
-   "end": 61.54
-  },
-  {
-   "word": "or",
-   "start": 61.54,
-   "end": 61.66
-  },
-  {
-   "word": "O?",
-   "start": 61.66,
-   "end": 62.04
-  },
-  {
-   "word": "Those",
-   "start": 62.4,
-   "end": 62.84
-  },
-  {
-   "word": "five",
-   "start": 62.84,
-   "end": 63.16
-  },
-  {
-   "word": "make",
-   "start": 63.16,
-   "end": 63.46
-  },
-  {
-   "word": "up",
-   "start": 63.46,
-   "end": 63.56
-  },
-  {
-   "word": "nearly",
-   "start": 63.56,
-   "end": 63.84
-  },
-  {
-   "word": "half",
-   "start": 63.84,
-   "end": 64.14
-  },
-  {
-   "word": "of",
-   "start": 64.14,
-   "end": 64.34
-  },
-  {
-   "word": "all",
-   "start": 64.34,
-   "end": 64.46
-  },
-  {
-   "word": "text.",
-   "start": 64.46,
-   "end": 65.16
-  },
-  {
-   "word": "E",
-   "start": 65.02,
-   "end": 65.66
-  },
-  {
-   "word": "starts",
-   "start": 65.66,
-   "end": 66.06
-  },
-  {
-   "word": "near",
-   "start": 66.06,
-   "end": 66.34
-  },
-  {
-   "word": "a",
-   "start": 66.34,
-   "end": 66.54
-  },
-  {
-   "word": "tenth",
-   "start": 66.54,
-   "end": 66.68
-  },
-  {
-   "word": "of",
-   "start": 66.68,
-   "end": 66.86
-  },
-  {
-   "word": "the",
-   "start": 66.86,
-   "end": 66.96
-  },
-  {
-   "word": "bar.",
-   "start": 66.96,
-   "end": 67.42
-  },
-  {
-   "word": "Each",
-   "start": 67.8,
-   "end": 68.14
-  },
-  {
-   "word": "ideal",
-   "start": 68.14,
-   "end": 68.56
-  },
-  {
-   "word": "answer",
-   "start": 68.56,
-   "end": 68.98
-  },
-  {
-   "word": "keeps",
-   "start": 68.98,
-   "end": 69.34
-  },
-  {
-   "word": "half",
-   "start": 69.34,
-   "end": 69.58
-  },
-  {
-   "word": "the",
-   "start": 69.58,
-   "end": 69.74
-  },
-  {
-   "word": "probability,",
-   "start": 69.74,
-   "end": 70.6
-  },
-  {
-   "word": "so",
-   "start": 70.6,
-   "end": 71.1
-  },
-  {
-   "word": "E",
-   "start": 71.1,
-   "end": 71.4
-  },
-  {
-   "word": "doubles",
-   "start": 71.4,
-   "end": 71.8
-  },
-  {
-   "word": "its",
-   "start": 71.8,
-   "end": 72.04
-  },
-  {
-   "word": "share",
-   "start": 72.04,
-   "end": 72.34
-  },
-  {
-   "word": "of",
-   "start": 72.34,
-   "end": 72.64
-  },
-  {
-   "word": "what's",
-   "start": 72.64,
-   "end": 72.9
-  },
-  {
-   "word": "left.",
-   "start": 72.9,
-   "end": 73.42
-  },
-  {
-   "word": "3.3",
-   "start": 73.78,
-   "end": 74.66
-  },
-  {
-   "word": "doublings,",
-   "start": 74.66,
-   "end": 75.38
-  },
-  {
-   "word": "and",
-   "start": 75.38,
-   "end": 75.74
-  },
-  {
-   "word": "E",
-   "start": 75.74,
-   "end": 75.92
-  },
-  {
-   "word": "fills",
-   "start": 75.92,
-   "end": 76.2
-  },
-  {
-   "word": "the",
-   "start": 76.2,
-   "end": 76.38
-  },
-  {
-   "word": "whole",
-   "start": 76.38,
-   "end": 76.52
-  },
-  {
-   "word": "bar.",
-   "start": 76.52,
-   "end": 77.1
-  },
-  {
-   "word": "Z",
-   "start": 77.2,
-   "end": 77.72
-  },
-  {
-   "word": "starts",
-   "start": 77.72,
-   "end": 78.14
-  },
-  {
-   "word": "at",
-   "start": 78.14,
-   "end": 78.3
-  },
-  {
-   "word": "1",
-   "start": 78.3,
-   "end": 78.54
-  },
-  {
-   "word": "in",
-   "start": 78.54,
-   "end": 78.7
-  },
-  {
-   "word": "1260,",
-   "start": 78.7,
-   "end": 80.2
-  },
-  {
-   "word": "and",
-   "start": 80.2,
-   "end": 80.7
-  },
-  {
-   "word": "needs",
-   "start": 80.7,
-   "end": 80.92
-  },
-  {
-   "word": "10.3.",
-   "start": 80.92,
-   "end": 82.02
-  },
-  {
-   "word": "In",
-   "start": 82.64,
-   "end": 82.66
-  },
-  {
-   "word": "general,",
-   "start": 82.66,
-   "end": 83.46
-  },
-  {
-   "word": "a",
-   "start": 83.46,
-   "end": 83.6
-  },
-  {
-   "word": "character",
-   "start": 83.6,
-   "end": 83.98
-  },
-  {
-   "word": "with",
-   "start": 83.98,
-   "end": 84.24
-  },
-  {
-   "word": "probability",
-   "start": 84.24,
-   "end": 84.84
-  },
-  {
-   "word": "p",
-   "start": 84.84,
-   "end": 85.1
-  },
-  {
-   "word": "needs",
-   "start": 85.1,
-   "end": 85.56
-  },
-  {
-   "word": "k",
-   "start": 85.56,
-   "end": 85.9
-  },
-  {
-   "word": "questions,",
-   "start": 85.9,
-   "end": 86.74
-  },
-  {
-   "word": "where",
-   "start": 86.74,
-   "end": 87.24
-  },
-  {
-   "word": "p",
-   "start": 87.24,
-   "end": 87.46
-  },
-  {
-   "word": "times",
-   "start": 87.46,
-   "end": 87.88
-  },
-  {
-   "word": "2",
-   "start": 87.88,
-   "end": 88.18
-  },
-  {
-   "word": "to",
-   "start": 88.18,
-   "end": 88.22
-  },
-  {
-   "word": "the",
-   "start": 88.22,
-   "end": 88.44
-  },
-  {
-   "word": "k",
-   "start": 88.44,
-   "end": 88.6
-  },
-  {
-   "word": "equals",
-   "start": 88.38,
-   "end": 89.08
+   "start": 17.16,
+   "end": 17.34
   },
   {
    "word": "1.",
-   "start": 89.08,
-   "end": 89.6
+   "start": 17.34,
+   "end": 17.56
   },
   {
-   "word": "So",
-   "start": 91.08,
-   "end": 91.38
+   "word": "The",
+   "start": 17.14,
+   "end": 18.46
   },
   {
-   "word": "2",
-   "start": 91.38,
-   "end": 91.58
+   "word": "ideal",
+   "start": 18.46,
+   "end": 18.9
   },
   {
-   "word": "to",
-   "start": 91.58,
-   "end": 91.72
-  },
-  {
-   "word": "the",
-   "start": 91.72,
-   "end": 91.86
-  },
-  {
-   "word": "k",
-   "start": 91.86,
-   "end": 92.06
-  },
-  {
-   "word": "equals",
-   "start": 92.06,
-   "end": 92.54
-  },
-  {
-   "word": "1",
-   "start": 92.54,
-   "end": 92.76
-  },
-  {
-   "word": "over",
-   "start": 92.76,
-   "end": 93.02
-  },
-  {
-   "word": "p,",
-   "start": 93.02,
-   "end": 93.62
-  },
-  {
-   "word": "and",
-   "start": 93.62,
-   "end": 94.16
-  },
-  {
-   "word": "k",
-   "start": 94.16,
-   "end": 94.46
-  },
-  {
-   "word": "equals",
-   "start": 94.46,
-   "end": 94.92
+   "word": "is",
+   "start": 18.9,
+   "end": 19.2
   },
   {
    "word": "log",
-   "start": 94.92,
-   "end": 95.3
+   "start": 19.2,
+   "end": 19.52
   },
   {
    "word": "base",
-   "start": 95.3,
-   "end": 95.66
+   "start": 19.52,
+   "end": 19.84
   },
   {
    "word": "2",
-   "start": 95.66,
-   "end": 95.98
+   "start": 19.84,
+   "end": 20.12
   },
   {
    "word": "of",
-   "start": 95.98,
-   "end": 96.24
+   "start": 20.12,
+   "end": 20.36
   },
   {
-   "word": "1",
-   "start": 96.24,
-   "end": 96.44
+   "word": "27,",
+   "start": 20.36,
+   "end": 20.84
   },
   {
-   "word": "over",
-   "start": 96.44,
-   "end": 96.7
+   "word": "about",
+   "start": 20.84,
+   "end": 21.76
   },
   {
-   "word": "p.",
-   "start": 96.7,
-   "end": 97.28
+   "word": "4.75.",
+   "start": 21.76,
+   "end": 23.26
   },
   {
-   "word": "Now",
-   "start": 97.56,
-   "end": 97.92
+   "word": "In",
+   "start": 23.72,
+   "end": 23.84
   },
   {
-   "word": "give",
-   "start": 97.92,
-   "end": 98.12
+   "word": "1951,",
+   "start": 23.84,
+   "end": 25.02
   },
   {
-   "word": "each",
-   "start": 98.12,
-   "end": 98.3
+   "word": "Claude",
+   "start": 25.02,
+   "end": 25.72
+  },
+  {
+   "word": "Shannon",
+   "start": 25.72,
+   "end": 26.02
+  },
+  {
+   "word": "estimated",
+   "start": 26.02,
+   "end": 26.68
+  },
+  {
+   "word": "the",
+   "start": 26.68,
+   "end": 26.94
+  },
+  {
+   "word": "true",
+   "start": 26.94,
+   "end": 27.16
+  },
+  {
+   "word": "figure",
+   "start": 27.16,
+   "end": 27.58
+  },
+  {
+   "word": "at",
+   "start": 27.58,
+   "end": 27.96
+  },
+  {
+   "word": "about",
+   "start": 27.96,
+   "end": 28.14
+  },
+  {
+   "word": "1.",
+   "start": 28.14,
+   "end": 28.42
+  },
+  {
+   "word": "Whatever",
+   "start": 29.16,
+   "end": 29.36
+  },
+  {
+   "word": "it",
+   "start": 29.36,
+   "end": 29.66
+  },
+  {
+   "word": "is,",
+   "start": 29.66,
+   "end": 30.2
+  },
+  {
+   "word": "no",
+   "start": 30.2,
+   "end": 30.6
+  },
+  {
+   "word": "text",
+   "start": 30.6,
+   "end": 31.04
+  },
+  {
+   "word": "compressor",
+   "start": 31.04,
+   "end": 31.48
+  },
+  {
+   "word": "can",
+   "start": 31.48,
+   "end": 31.76
+  },
+  {
+   "word": "beat",
+   "start": 31.76,
+   "end": 31.96
+  },
+  {
+   "word": "it",
+   "start": 31.96,
+   "end": 32.1
+  },
+  {
+   "word": "on",
+   "start": 32.1,
+   "end": 32.2
+  },
+  {
+   "word": "average,",
+   "start": 32.2,
+   "end": 32.96
+  },
+  {
+   "word": "and",
+   "start": 32.96,
+   "end": 33.48
+  },
+  {
+   "word": "guessing",
+   "start": 33.48,
+   "end": 33.86
+  },
+  {
+   "word": "what",
+   "start": 33.86,
+   "end": 34.1
+  },
+  {
+   "word": "comes",
+   "start": 34.1,
+   "end": 34.36
+  },
+  {
+   "word": "next",
+   "start": 34.36,
+   "end": 34.8
+  },
+  {
+   "word": "is",
+   "start": 34.54,
+   "end": 35.2
+  },
+  {
+   "word": "how",
+   "start": 35.2,
+   "end": 35.32
+  },
+  {
+   "word": "language",
+   "start": 35.32,
+   "end": 35.82
+  },
+  {
+   "word": "models",
+   "start": 35.82,
+   "end": 36.2
+  },
+  {
+   "word": "are",
+   "start": 36.2,
+   "end": 36.36
+  },
+  {
+   "word": "trained.",
+   "start": 36.36,
+   "end": 36.98
+  },
+  {
+   "word": "So",
+   "start": 37.1,
+   "end": 37.68
+  },
+  {
+   "word": "where",
+   "start": 37.68,
+   "end": 37.78
+  },
+  {
+   "word": "do",
+   "start": 37.78,
+   "end": 37.96
+  },
+  {
+   "word": "four",
+   "start": 37.96,
+   "end": 38.26
+  },
+  {
+   "word": "of",
+   "start": 38.26,
+   "end": 38.44
+  },
+  {
+   "word": "every",
+   "start": 38.44,
+   "end": 38.78
+  },
+  {
+   "word": "five",
+   "start": 38.78,
+   "end": 39.06
+  },
+  {
+   "word": "questions",
+   "start": 39.06,
+   "end": 39.58
+  },
+  {
+   "word": "go?",
+   "start": 39.58,
+   "end": 40.14
+  },
+  {
+   "word": "Splitting",
+   "start": 40.5,
+   "end": 40.96
+  },
+  {
+   "word": "the",
+   "start": 40.96,
+   "end": 41.1
+  },
+  {
+   "word": "alphabet",
+   "start": 41.1,
+   "end": 41.54
+  },
+  {
+   "word": "evenly",
+   "start": 41.54,
+   "end": 42.12
+  },
+  {
+   "word": "charges",
+   "start": 42.12,
+   "end": 42.62
+  },
+  {
+   "word": "every",
+   "start": 42.62,
+   "end": 43.08
   },
   {
    "word": "character",
-   "start": 98.3,
-   "end": 98.76
+   "start": 43.08,
+   "end": 43.54
+  },
+  {
+   "word": "the",
+   "start": 43.54,
+   "end": 43.8
+  },
+  {
+   "word": "same",
+   "start": 43.8,
+   "end": 44
+  },
+  {
+   "word": "price.",
+   "start": 44,
+   "end": 44.66
+  },
+  {
+   "word": "Z",
+   "start": 45.04,
+   "end": 45.3
+  },
+  {
+   "word": "costs",
+   "start": 45.3,
+   "end": 45.8
+  },
+  {
+   "word": "as",
+   "start": 45.8,
+   "end": 46.04
+  },
+  {
+   "word": "much",
+   "start": 46.04,
+   "end": 46.2
+  },
+  {
+   "word": "as",
+   "start": 46.2,
+   "end": 46.46
+  },
+  {
+   "word": "E,",
+   "start": 46.46,
+   "end": 46.84
+  },
+  {
+   "word": "yet",
+   "start": 46.84,
+   "end": 47.44
+  },
+  {
+   "word": "E",
+   "start": 47.44,
+   "end": 47.56
+  },
+  {
+   "word": "turns",
+   "start": 47.56,
+   "end": 47.88
+  },
+  {
+   "word": "up",
+   "start": 47.88,
+   "end": 48.04
+  },
+  {
+   "word": "130",
+   "start": 48.04,
+   "end": 48.66
+  },
+  {
+   "word": "times",
+   "start": 48.66,
+   "end": 49.52
+  },
+  {
+   "word": "as",
+   "start": 49.52,
+   "end": 49.78
+  },
+  {
+   "word": "often.",
+   "start": 49.78,
+   "end": 50.52
+  },
+  {
+   "word": "Instead,",
+   "start": 50.84,
+   "end": 51.62
+  },
+  {
+   "word": "ask",
+   "start": 51.62,
+   "end": 52
+  },
+  {
+   "word": "questions",
+   "start": 52,
+   "end": 52.44
+  },
+  {
+   "word": "that",
+   "start": 52.44,
+   "end": 52.82
+  },
+  {
+   "word": "split",
+   "start": 52.82,
+   "end": 53.12
+  },
+  {
+   "word": "the",
+   "start": 53.12,
+   "end": 53.3
+  },
+  {
+   "word": "probability,",
+   "start": 53.3,
+   "end": 54.16
+  },
+  {
+   "word": "not",
+   "start": 54.16,
+   "end": 54.6
+  },
+  {
+   "word": "the",
+   "start": 54.6,
+   "end": 54.74
+  },
+  {
+   "word": "alphabet.",
+   "start": 54.74,
+   "end": 55.48
+  },
+  {
+   "word": "Is",
+   "start": 55.98,
+   "end": 56
+  },
+  {
+   "word": "it",
+   "start": 56,
+   "end": 56.14
+  },
+  {
+   "word": "a",
+   "start": 56.14,
+   "end": 56.24
+  },
+  {
+   "word": "space,",
+   "start": 56.24,
+   "end": 56.88
+  },
+  {
+   "word": "E,",
+   "start": 56.88,
+   "end": 57.16
+  },
+  {
+   "word": "T,",
+   "start": 57.16,
+   "end": 57.54
+  },
+  {
+   "word": "A,",
+   "start": 57.54,
+   "end": 57.82
+  },
+  {
+   "word": "or",
+   "start": 57.82,
+   "end": 57.96
+  },
+  {
+   "word": "O?",
+   "start": 57.96,
+   "end": 58.38
+  },
+  {
+   "word": "Those",
+   "start": 58.78,
+   "end": 59.14
+  },
+  {
+   "word": "five",
+   "start": 59.14,
+   "end": 59.46
+  },
+  {
+   "word": "make",
+   "start": 59.46,
+   "end": 59.76
+  },
+  {
+   "word": "up",
+   "start": 59.76,
+   "end": 59.84
+  },
+  {
+   "word": "nearly",
+   "start": 59.84,
+   "end": 60.14
+  },
+  {
+   "word": "half",
+   "start": 60.14,
+   "end": 60.44
+  },
+  {
+   "word": "of",
+   "start": 60.44,
+   "end": 60.64
+  },
+  {
+   "word": "all",
+   "start": 60.64,
+   "end": 60.76
+  },
+  {
+   "word": "text.",
+   "start": 60.76,
+   "end": 61.42
+  },
+  {
+   "word": "E",
+   "start": 61.74,
+   "end": 61.98
+  },
+  {
+   "word": "starts",
+   "start": 61.98,
+   "end": 62.36
+  },
+  {
+   "word": "near",
+   "start": 62.36,
+   "end": 62.64
+  },
+  {
+   "word": "a",
+   "start": 62.64,
+   "end": 62.82
+  },
+  {
+   "word": "tenth",
+   "start": 62.82,
+   "end": 62.98
+  },
+  {
+   "word": "of",
+   "start": 62.98,
+   "end": 63.16
+  },
+  {
+   "word": "the",
+   "start": 63.16,
+   "end": 63.26
+  },
+  {
+   "word": "bar.",
+   "start": 63.26,
+   "end": 63.76
+  },
+  {
+   "word": "Each",
+   "start": 64.1,
+   "end": 64.44
+  },
+  {
+   "word": "ideal",
+   "start": 64.44,
+   "end": 64.84
+  },
+  {
+   "word": "answer",
+   "start": 64.84,
+   "end": 65.3
+  },
+  {
+   "word": "keeps",
+   "start": 65.3,
+   "end": 65.66
+  },
+  {
+   "word": "half",
+   "start": 65.66,
+   "end": 65.86
+  },
+  {
+   "word": "the",
+   "start": 65.86,
+   "end": 66.04
+  },
+  {
+   "word": "probability,",
+   "start": 66.04,
+   "end": 66.82
+  },
+  {
+   "word": "so",
+   "start": 66.82,
+   "end": 67.42
+  },
+  {
+   "word": "E",
+   "start": 67.42,
+   "end": 67.7
+  },
+  {
+   "word": "doubles",
+   "start": 67.7,
+   "end": 68.1
   },
   {
    "word": "its",
+   "start": 68.1,
+   "end": 68.32
+  },
+  {
+   "word": "share",
+   "start": 68.32,
+   "end": 68.68
+  },
+  {
+   "word": "of",
+   "start": 68.68,
+   "end": 68.94
+  },
+  {
+   "word": "what's",
+   "start": 68.94,
+   "end": 69.2
+  },
+  {
+   "word": "left.",
+   "start": 69.2,
+   "end": 69.72
+  },
+  {
+   "word": "3.3",
+   "start": 70.1,
+   "end": 70.92
+  },
+  {
+   "word": "ideal",
+   "start": 70.92,
+   "end": 71.34
+  },
+  {
+   "word": "doublings,",
+   "start": 71.34,
+   "end": 72.1
+  },
+  {
+   "word": "and",
+   "start": 72.1,
+   "end": 72.52
+  },
+  {
+   "word": "E",
+   "start": 72.52,
+   "end": 72.68
+  },
+  {
+   "word": "fills",
+   "start": 72.68,
+   "end": 73
+  },
+  {
+   "word": "the",
+   "start": 73,
+   "end": 73.18
+  },
+  {
+   "word": "whole",
+   "start": 73.18,
+   "end": 73.32
+  },
+  {
+   "word": "bar.",
+   "start": 73.32,
+   "end": 73.9
+  },
+  {
+   "word": "Z",
+   "start": 74.22,
+   "end": 74.54
+  },
+  {
+   "word": "starts",
+   "start": 74.54,
+   "end": 74.94
+  },
+  {
+   "word": "at",
+   "start": 74.94,
+   "end": 75.1
+  },
+  {
+   "word": "1",
+   "start": 75.1,
+   "end": 75.34
+  },
+  {
+   "word": "in",
+   "start": 75.34,
+   "end": 75.5
+  },
+  {
+   "word": "1260,",
+   "start": 75.5,
+   "end": 77
+  },
+  {
+   "word": "and",
+   "start": 77,
+   "end": 77.52
+  },
+  {
+   "word": "needs",
+   "start": 77.52,
+   "end": 77.72
+  },
+  {
+   "word": "10.3.",
+   "start": 77.72,
+   "end": 78.82
+  },
+  {
+   "word": "In",
+   "start": 79.02,
+   "end": 79.48
+  },
+  {
+   "word": "general,",
+   "start": 79.48,
+   "end": 80.06
+  },
+  {
+   "word": "a",
+   "start": 80.06,
+   "end": 80.4
+  },
+  {
+   "word": "character",
+   "start": 80.4,
+   "end": 80.8
+  },
+  {
+   "word": "with",
+   "start": 80.8,
+   "end": 81.04
+  },
+  {
+   "word": "probability",
+   "start": 81.04,
+   "end": 81.64
+  },
+  {
+   "word": "P",
+   "start": 81.64,
+   "end": 81.92
+  },
+  {
+   "word": "needs",
+   "start": 81.92,
+   "end": 82.36
+  },
+  {
+   "word": "K",
+   "start": 82.36,
+   "end": 82.68
+  },
+  {
+   "word": "questions,",
+   "start": 82.68,
+   "end": 83.54
+  },
+  {
+   "word": "where",
+   "start": 83.54,
+   "end": 84.02
+  },
+  {
+   "word": "P",
+   "start": 84.02,
+   "end": 84.32
+  },
+  {
+   "word": "times",
+   "start": 84.32,
+   "end": 84.64
+  },
+  {
+   "word": "2",
+   "start": 84.64,
+   "end": 84.98
+  },
+  {
+   "word": "to",
+   "start": 84.98,
+   "end": 85.04
+  },
+  {
+   "word": "the",
+   "start": 85.04,
+   "end": 85.24
+  },
+  {
+   "word": "k",
+   "start": 85.18,
+   "end": 85.36
+  },
+  {
+   "word": "equals",
+   "start": 85.36,
+   "end": 85.88
+  },
+  {
+   "word": "1.",
+   "start": 85.88,
+   "end": 86.44
+  },
+  {
+   "word": "So",
+   "start": 86.44,
+   "end": 88.14
+  },
+  {
+   "word": "2",
+   "start": 88.14,
+   "end": 88.4
+  },
+  {
+   "word": "to",
+   "start": 88.4,
+   "end": 88.52
+  },
+  {
+   "word": "the",
+   "start": 88.52,
+   "end": 88.66
+  },
+  {
+   "word": "k",
+   "start": 88.66,
+   "end": 88.82
+  },
+  {
+   "word": "equals",
+   "start": 88.82,
+   "end": 89.3
+  },
+  {
+   "word": "1",
+   "start": 89.3,
+   "end": 89.54
+  },
+  {
+   "word": "over",
+   "start": 89.54,
+   "end": 89.78
+  },
+  {
+   "word": "p,",
+   "start": 89.78,
+   "end": 90.38
+  },
+  {
+   "word": "and",
+   "start": 90.38,
+   "end": 90.94
+  },
+  {
+   "word": "k",
+   "start": 90.94,
+   "end": 91.24
+  },
+  {
+   "word": "equals",
+   "start": 91.24,
+   "end": 91.66
+  },
+  {
+   "word": "log",
+   "start": 91.66,
+   "end": 92.08
+  },
+  {
+   "word": "base",
+   "start": 92.08,
+   "end": 92.42
+  },
+  {
+   "word": "2",
+   "start": 92.42,
+   "end": 92.76
+  },
+  {
+   "word": "of",
+   "start": 92.76,
+   "end": 93.04
+  },
+  {
+   "word": "1",
+   "start": 93.04,
+   "end": 93.22
+  },
+  {
+   "word": "over",
+   "start": 93.22,
+   "end": 93.5
+  },
+  {
+   "word": "p.",
+   "start": 93.5,
+   "end": 94.06
+  },
+  {
+   "word": "Now",
+   "start": 94.06,
+   "end": 94.64
+  },
+  {
+   "word": "give",
+   "start": 94.64,
+   "end": 94.9
+  },
+  {
+   "word": "each",
+   "start": 94.42,
+   "end": 95.1
+  },
+  {
+   "word": "character",
+   "start": 95.1,
+   "end": 95.54
+  },
+  {
+   "word": "its",
+   "start": 95.54,
+   "end": 95.74
+  },
+  {
+   "word": "own",
+   "start": 95.74,
+   "end": 96.06
+  },
+  {
+   "word": "cost",
+   "start": 96.06,
+   "end": 96.48
+  },
+  {
+   "word": "as",
+   "start": 96.48,
+   "end": 96.72
+  },
+  {
+   "word": "a",
+   "start": 96.72,
+   "end": 96.82
+  },
+  {
+   "word": "height.",
+   "start": 96.82,
+   "end": 97.32
+  },
+  {
+   "word": "The",
+   "start": 97.32,
+   "end": 97.82
+  },
+  {
+   "word": "widths",
+   "start": 97.82,
+   "end": 98.3
+  },
+  {
+   "word": "add",
+   "start": 98.3,
+   "end": 98.62
+  },
+  {
+   "word": "up",
+   "start": 98.62,
+   "end": 98.76
+  },
+  {
+   "word": "to",
    "start": 98.76,
    "end": 98.94
   },
   {
-   "word": "own",
-   "start": 98.94,
-   "end": 99.26
-  },
-  {
-   "word": "cost",
-   "start": 99.26,
-   "end": 99.68
-  },
-  {
-   "word": "as",
-   "start": 99.68,
-   "end": 99.92
-  },
-  {
-   "word": "a",
-   "start": 99.92,
-   "end": 100.02
-  },
-  {
-   "word": "height.",
-   "start": 100.02,
-   "end": 100.5
-  },
-  {
-   "word": "Common",
-   "start": 100.82,
-   "end": 101.26
-  },
-  {
-   "word": "characters",
-   "start": 101.26,
-   "end": 101.72
-  },
-  {
-   "word": "sit",
-   "start": 101.72,
-   "end": 102.02
-  },
-  {
-   "word": "wide",
-   "start": 102.02,
-   "end": 102.32
-  },
-  {
-   "word": "and",
-   "start": 102.32,
-   "end": 102.48
-  },
-  {
-   "word": "low,",
-   "start": 102.48,
-   "end": 102.9
-  },
-  {
-   "word": "rare",
-   "start": 102.9,
-   "end": 103.46
-  },
-  {
-   "word": "ones",
-   "start": 103.46,
-   "end": 103.68
-  },
-  {
-   "word": "narrow",
-   "start": 103.68,
-   "end": 103.98
-  },
-  {
-   "word": "and",
-   "start": 103.98,
-   "end": 104.32
-  },
-  {
-   "word": "tall.",
-   "start": 104.32,
-   "end": 104.86
-  },
-  {
-   "word": "The",
-   "start": 104.78,
-   "end": 105.36
-  },
-  {
-   "word": "widths",
-   "start": 105.36,
-   "end": 105.82
-  },
-  {
-   "word": "add",
-   "start": 105.82,
-   "end": 106.16
-  },
-  {
-   "word": "up",
-   "start": 106.16,
-   "end": 106.3
-  },
-  {
-   "word": "to",
-   "start": 106.3,
-   "end": 106.48
-  },
-  {
    "word": "1,",
-   "start": 106.48,
-   "end": 106.92
+   "start": 98.94,
+   "end": 99.36
   },
   {
    "word": "so",
-   "start": 106.92,
-   "end": 107.4
+   "start": 99.36,
+   "end": 99.84
   },
   {
    "word": "the",
-   "start": 107.4,
-   "end": 107.56
+   "start": 99.84,
+   "end": 100.02
   },
   {
    "word": "total",
-   "start": 107.56,
-   "end": 107.9
+   "start": 100.02,
+   "end": 100.36
   },
   {
    "word": "area",
-   "start": 107.9,
-   "end": 108.32
+   "start": 100.36,
+   "end": 100.7
   },
   {
    "word": "is",
-   "start": 108.32,
-   "end": 108.66
+   "start": 100.7,
+   "end": 101.1
   },
   {
    "word": "the",
-   "start": 108.66,
-   "end": 108.78
+   "start": 101.1,
+   "end": 101.24
   },
   {
    "word": "average",
-   "start": 108.78,
-   "end": 109.22
+   "start": 100.82,
+   "end": 101.7
   },
   {
    "word": "number",
-   "start": 109.22,
-   "end": 109.52
+   "start": 101.7,
+   "end": 101.98
   },
   {
    "word": "of",
-   "start": 109.52,
-   "end": 109.68
+   "start": 101.98,
+   "end": 102.18
   },
   {
    "word": "questions",
-   "start": 109.68,
-   "end": 110.1
+   "start": 102.18,
+   "end": 102.58
   },
   {
    "word": "per",
-   "start": 110.1,
-   "end": 110.5
+   "start": 102.58,
+   "end": 102.96
   },
   {
    "word": "character.",
-   "start": 110.5,
-   "end": 111.24
+   "start": 102.96,
+   "end": 103.7
   },
   {
-   "word": "Then",
-   "start": 111.78,
-   "end": 111.8
-  },
-  {
-   "word": "pour",
-   "start": 111.8,
-   "end": 112.06
+   "word": "Pour",
+   "start": 103.7,
+   "end": 104.26
   },
   {
    "word": "the",
-   "start": 112.06,
-   "end": 112.24
+   "start": 104.26,
+   "end": 104.44
   },
   {
    "word": "skyline",
-   "start": 112.24,
-   "end": 112.7
+   "start": 104.44,
+   "end": 104.9
   },
   {
    "word": "flat,",
-   "start": 112.7,
-   "end": 113.26
+   "start": 104.9,
+   "end": 105.44
   },
   {
    "word": "and",
-   "start": 113.26,
-   "end": 113.62
+   "start": 105.44,
+   "end": 105.8
   },
   {
    "word": "its",
-   "start": 113.62,
-   "end": 113.74
+   "start": 105.8,
+   "end": 105.92
   },
   {
    "word": "height",
-   "start": 113.74,
-   "end": 114.04
+   "start": 105.92,
+   "end": 106.18
   },
   {
    "word": "is",
-   "start": 114.04,
-   "end": 114.3
+   "start": 106.18,
+   "end": 106.42
   },
   {
    "word": "that",
-   "start": 114.3,
-   "end": 114.48
+   "start": 106.42,
+   "end": 106.6
   },
   {
    "word": "average.",
-   "start": 114.48,
-   "end": 115.3
+   "start": 106.16,
+   "end": 107.4
   },
   {
    "word": "Shannon",
-   "start": 115.58,
-   "end": 116.02
+   "start": 107.4,
+   "end": 108.18
   },
   {
    "word": "called",
-   "start": 116.02,
-   "end": 116.34
+   "start": 108.18,
+   "end": 108.5
   },
   {
    "word": "that",
-   "start": 116.34,
-   "end": 116.54
+   "start": 108.5,
+   "end": 108.7
   },
   {
    "word": "average",
-   "start": 116.54,
-   "end": 116.98
+   "start": 108.7,
+   "end": 109.14
   },
   {
    "word": "the",
-   "start": 116.941345,
-   "end": 117.16135
+   "start": 109.14,
+   "end": 109.36
   },
   {
    "word": "entropy,",
-   "start": 117.16135,
-   "end": 117.88135
+   "start": 109.36,
+   "end": 110.02
   },
   {
    "word": "counted",
-   "start": 117.88135,
-   "end": 118.42135
+   "start": 110.02,
+   "end": 110.62
   },
   {
    "word": "in",
-   "start": 118.121346,
-   "end": 118.66135
+   "start": 110.62,
+   "end": 110.8
   },
   {
    "word": "bits,",
-   "start": 118.66135,
-   "end": 119.28135
+   "start": 110.8,
+   "end": 111.36
   },
   {
-   "word": "one",
-   "start": 119.28135,
-   "end": 119.82134
+   "word": "1",
+   "start": 111.36,
+   "end": 111.98
   },
   {
    "word": "bit",
-   "start": 119.82134,
-   "end": 120.00134
+   "start": 111.98,
+   "end": 112.14
   },
   {
    "word": "per",
-   "start": 120.00134,
-   "end": 120.221344
+   "start": 112.14,
+   "end": 112.36
   },
   {
    "word": "yes",
-   "start": 120.221344,
-   "end": 120.441345
+   "start": 112.36,
+   "end": 112.58
   },
   {
    "word": "or",
-   "start": 120.441345,
-   "end": 120.64134
+   "start": 112.58,
+   "end": 112.8
   },
   {
    "word": "no",
-   "start": 120.64134,
-   "end": 120.761345
+   "start": 112.8,
+   "end": 112.94
   },
   {
    "word": "answer.",
-   "start": 120.761345,
-   "end": 121.56135
+   "start": 112.94,
+   "end": 113.72
   },
   {
    "word": "For",
-   "start": 121.56135,
-   "end": 122.081345
+   "start": 114.22,
+   "end": 114.24
   },
   {
    "word": "English",
-   "start": 122.081345,
-   "end": 122.32135
+   "start": 114.24,
+   "end": 114.52
   },
   {
    "word": "letters,",
-   "start": 122.32135,
-   "end": 123.18134
+   "start": 114.52,
+   "end": 115.34
   },
   {
    "word": "it's",
-   "start": 123.18134,
-   "end": 123.38135
+   "start": 115.34,
+   "end": 115.54
   },
   {
    "word": "4.11.",
-   "start": 123.38135,
-   "end": 124.121346
+   "start": 115.54,
+   "end": 117.24
   },
   {
    "word": "That",
-   "start": 124.121346,
-   "end": 125.16135
+   "start": 117.64,
+   "end": 118
   },
   {
    "word": "beats",
-   "start": 125.16135,
-   "end": 125.441345
+   "start": 118,
+   "end": 118.24
   },
   {
    "word": "4.75,",
-   "start": 125.441345,
-   "end": 127.02135
+   "start": 118.232,
+   "end": 119.771996
   },
   {
    "word": "but",
-   "start": 127.46135,
-   "end": 127.54134
+   "start": 119.771996,
+   "end": 120.312
   },
   {
    "word": "it's",
-   "start": 127.54134,
-   "end": 127.761345
+   "start": 120.312,
+   "end": 120.532
   },
   {
    "word": "still",
-   "start": 127.761345,
-   "end": 127.981346
+   "start": 120.532,
+   "end": 120.712
   },
   {
    "word": "four",
-   "start": 127.981346,
-   "end": 128.36134
+   "start": 120.712,
+   "end": 121.072
   },
   {
    "word": "times",
-   "start": 128.36134,
-   "end": 128.86134
+   "start": 121.072,
+   "end": 121.612
   },
   {
    "word": "Shannon's",
-   "start": 128.86134,
-   "end": 129.42134
+   "start": 121.612,
+   "end": 122.231995
   },
   {
    "word": "estimate.",
-   "start": 129.42134,
-   "end": 130.12134
+   "start": 122.231995,
+   "end": 122.612
   },
   {
    "word": "It",
-   "start": 130.12134,
-   "end": 130.70134
+   "start": 123.332,
+   "end": 123.472
   },
   {
    "word": "prices",
-   "start": 130.70134,
-   "end": 131.06134
+   "start": 123.472,
+   "end": 123.832
   },
   {
    "word": "every",
-   "start": 131.06134,
-   "end": 131.54135
+   "start": 123.832,
+   "end": 124.332
   },
   {
    "word": "character",
-   "start": 131.54135,
-   "end": 132.02135
+   "start": 124.332,
+   "end": 124.752
   },
   {
    "word": "as",
-   "start": 132.02135,
-   "end": 132.44135
+   "start": 124.752,
+   "end": 125.212
   },
   {
    "word": "if",
-   "start": 132.44135,
-   "end": 132.56134
+   "start": 125.212,
+   "end": 125.352
   },
   {
    "word": "nothing",
-   "start": 132.56134,
-   "end": 132.84134
+   "start": 125.352,
+   "end": 125.631996
   },
   {
    "word": "came",
-   "start": 132.84134,
-   "end": 133.18135
+   "start": 125.631996,
+   "end": 125.951996
   },
   {
    "word": "before",
-   "start": 132.70134,
-   "end": 133.52135
+   "start": 125.951996,
+   "end": 126.292
   },
   {
    "word": "it.",
-   "start": 133.52135,
-   "end": 134.02135
+   "start": 126.292,
+   "end": 126.712
   },
   {
    "word": "What",
-   "start": 134.02135,
-   "end": 134.58134
+   "start": 127.131996,
+   "end": 127.352
   },
   {
    "word": "comes",
-   "start": 134.58134,
-   "end": 134.82135
+   "start": 127.352,
+   "end": 127.612
   },
   {
    "word": "after",
-   "start": 134.82135,
-   "end": 135.18135
+   "start": 127.612,
+   "end": 127.951996
   },
   {
    "word": "a",
-   "start": 135.18135,
-   "end": 135.36134
+   "start": 127.951996,
+   "end": 128.112
   },
   {
-   "word": "cue?",
-   "start": 135.36134,
-   "end": 135.88135
+   "word": "Q?",
+   "start": 128.112,
+   "end": 128.272
   },
   {
    "word": "It's",
-   "start": 135.88135,
-   "end": 137.82135
+   "start": 130.592,
+   "end": 130.892
   },
   {
-   "word": "you,",
-   "start": 137.82135,
-   "end": 138.24135
+   "word": "U,",
+   "start": 130.892,
+   "end": 131.612
   },
   {
    "word": "98",
-   "start": 138.24135,
-   "end": 138.86134
+   "start": 131.612,
+   "end": 131.972
   },
   {
    "word": "times",
-   "start": 138.86134,
-   "end": 139.28134
+   "start": 131.972,
+   "end": 132.352
   },
   {
    "word": "out",
-   "start": 139.28134,
-   "end": 139.50134
+   "start": 132.352,
+   "end": 132.57199
   },
   {
    "word": "of",
-   "start": 139.50134,
-   "end": 139.64134
+   "start": 132.57199,
+   "end": 132.692
   },
   {
    "word": "100.",
-   "start": 139.64134,
-   "end": 140.50134
+   "start": 132.692,
+   "end": 132.952
   },
   {
-   "word": "You",
-   "start": 140.50134,
-   "end": 140.92134
+   "word": "U",
+   "start": 133.79199,
+   "end": 133.992
   },
   {
    "word": "swallows",
-   "start": 140.92134,
-   "end": 141.46135
+   "start": 133.992,
+   "end": 134.552
   },
   {
    "word": "the",
-   "start": 141.46135,
-   "end": 141.74135
+   "start": 134.552,
+   "end": 134.812
   },
   {
    "word": "bar.",
-   "start": 141.74135,
-   "end": 142.26135
+   "start": 134.812,
+   "end": 135.092
   },
   {
-   "word": "its",
-   "start": 142.56134,
-   "end": 142.70134
+   "word": "Its",
+   "start": 135.632,
+   "end": 135.79199
   },
   {
    "word": "cost",
-   "start": 142.70134,
-   "end": 143.12134
+   "start": 135.79199,
+   "end": 136.192
   },
   {
    "word": "drops",
-   "start": 143.12134,
-   "end": 143.52135
+   "start": 136.192,
+   "end": 136.57199
   },
   {
    "word": "to",
-   "start": 143.52135,
-   "end": 143.68135
+   "start": 136.57199,
+   "end": 136.752
   },
   {
    "word": "almost",
-   "start": 143.68135,
-   "end": 144.00134
+   "start": 136.752,
+   "end": 137.052
   },
   {
    "word": "nothing,",
-   "start": 144.00134,
-   "end": 144.76135
+   "start": 137.052,
+   "end": 137.492
   },
   {
    "word": "and",
-   "start": 144.20134,
-   "end": 145.20135
+   "start": 137.492,
+   "end": 138.252
   },
   {
    "word": "the",
-   "start": 145.20135,
-   "end": 145.30135
+   "start": 138.252,
+   "end": 138.372
   },
   {
    "word": "average",
-   "start": 145.30135,
-   "end": 145.76135
+   "start": 138.372,
+   "end": 138.712
   },
   {
    "word": "falls",
-   "start": 145.76135,
-   "end": 146.18135
-  },
-  {
-   "word": "to .16",
-   "start": 146.18135,
-   "end": 147.04135
-  },
-  {
-   "word": "bits.",
-   "start": 147.04135,
-   "end": 147.72134
-  },
-  {
-   "word": "After",
-   "start": 148.54135,
-   "end": 148.86134
-  },
-  {
-   "word": "th,",
-   "start": 148.86134,
-   "end": 149.60135
-  },
-  {
-   "word": "e",
-   "start": 149.60135,
-   "end": 149.90134
-  },
-  {
-   "word": "takes",
-   "start": 149.90134,
-   "end": 150.26135
-  },
-  {
-   "word": "two-thirds",
-   "start": 150.26135,
-   "end": 150.70135
-  },
-  {
-   "word": "of",
-   "start": 150.70135,
-   "end": 150.90134
-  },
-  {
-   "word": "the",
-   "start": 150.90134,
-   "end": 151.00134
-  },
-  {
-   "word": "bar,",
-   "start": 151.00134,
-   "end": 151.50134
-  },
-  {
-   "word": "and",
-   "start": 151.10135,
-   "end": 151.92134
-  },
-  {
-   "word": "its",
-   "start": 151.92134,
-   "end": 152.06134
-  },
-  {
-   "word": "cost",
-   "start": 152.06134,
-   "end": 152.50134
-  },
-  {
-   "word": "shrinks",
-   "start": 152.50134,
-   "end": 152.88135
+   "start": 138.712,
+   "end": 139.212
   },
   {
    "word": "to",
-   "start": 152.88135,
-   "end": 153.04135
+   "start": 139.212,
+   "end": 139.452
   },
   {
-   "word": "about",
-   "start": 153.04135,
-   "end": 153.26135
-  },
-  {
-   "word": "half",
-   "start": 153.26135,
-   "end": 153.52135
-  },
-  {
-   "word": "a",
-   "start": 153.52135,
-   "end": 153.72134
-  },
-  {
-   "word": "question.",
-   "start": 153.72134,
-   "end": 154.32135
-  },
-  {
-   "word": "Half",
-   "start": 154.70135,
-   "end": 155.00134
-  },
-  {
-   "word": "a",
-   "start": 155.00134,
-   "end": 155.14134
-  },
-  {
-   "word": "question",
-   "start": 155.14134,
-   "end": 155.50134
-  },
-  {
-   "word": "sounds",
-   "start": 155.50134,
-   "end": 156.00134
-  },
-  {
-   "word": "impossible,",
-   "start": 156.00134,
-   "end": 156.92134
-  },
-  {
-   "word": "but",
-   "start": 156.40134,
-   "end": 157.40134
-  },
-  {
-   "word": "a",
-   "start": 157.40134,
-   "end": 157.48135
-  },
-  {
-   "word": "compressor",
-   "start": 157.48135,
-   "end": 157.96135
-  },
-  {
-   "word": "asks",
-   "start": 157.96135,
-   "end": 158.56134
-  },
-  {
-   "word": "about",
-   "start": 158.56134,
-   "end": 158.86134
-  },
-  {
-   "word": "long",
-   "start": 158.86134,
-   "end": 159.34134
-  },
-  {
-   "word": "runs",
-   "start": 159.34134,
-   "end": 159.70135
-  },
-  {
-   "word": "of",
-   "start": 159.70135,
-   "end": 159.88135
-  },
-  {
-   "word": "letters,",
-   "start": 159.88135,
-   "end": 160.48135
-  },
-  {
-   "word": "and",
-   "start": 160.00134,
-   "end": 160.90134
-  },
-  {
-   "word": "the",
-   "start": 160.90134,
-   "end": 160.98135
-  },
-  {
-   "word": "fractions",
-   "start": 160.98135,
-   "end": 161.52135
-  },
-  {
-   "word": "add",
-   "start": 161.52135,
-   "end": 161.90134
-  },
-  {
-   "word": "up.",
-   "start": 161.90134,
-   "end": 162.26135
-  },
-  {
-   "word": "Here",
-   "start": 161.90134,
-   "end": 162.94135
-  },
-  {
-   "word": "they",
-   "start": 162.94135,
-   "end": 163.08134
-  },
-  {
-   "word": "average",
-   "start": 163.08134,
-   "end": 163.52135
-  },
-  {
-   "word": "1.7.",
-   "start": 163.52135,
-   "end": 164.58134
-  },
-  {
-   "word": "Q",
-   "start": 164.94135,
-   "end": 165.28134
-  },
-  {
-   "word": "and",
-   "start": 165.28134,
-   "end": 165.50134
-  },
-  {
-   "word": "th",
-   "start": 165.50134,
-   "end": 165.82135
-  },
-  {
-   "word": "are",
-   "start": 165.82135,
-   "end": 166.12134
-  },
-  {
-   "word": "the",
-   "start": 166.12134,
-   "end": 166.22134
-  },
-  {
-   "word": "easy",
-   "start": 166.22134,
-   "end": 166.52135
-  },
-  {
-   "word": "cases.",
-   "start": 166.52135,
-   "end": 167.30135
-  },
-  {
-   "word": "Averaged",
-   "start": 167.68135,
-   "end": 168.22134
-  },
-  {
-   "word": "over",
-   "start": 168.22134,
-   "end": 168.50134
-  },
-  {
-   "word": "every",
-   "start": 168.50134,
-   "end": 168.88135
-  },
-  {
-   "word": "two-letter",
-   "start": 168.88135,
-   "end": 169.32135
-  },
-  {
-   "word": "context,",
-   "start": 169.32135,
-   "end": 170.32135
-  },
-  {
-   "word": "it's",
-   "start": 170.64134,
-   "end": 170.84134
-  },
-  {
-   "word": "still",
-   "start": 170.84134,
-   "end": 171.02135
-  },
-  {
-   "word": "2.8.",
-   "start": 171.02135,
-   "end": 172.00134
-  },
-  {
-   "word": "Shannon",
-   "start": 172.00134,
-   "end": 172.90134
-  },
-  {
-   "word": "measured",
-   "start": 172.90134,
-   "end": 173.30135
-  },
-  {
-   "word": "this",
-   "start": 173.30135,
-   "end": 173.56134
-  },
-  {
-   "word": "with",
-   "start": 173.56134,
-   "end": 173.74135
-  },
-  {
-   "word": "a",
-   "start": 173.74135,
-   "end": 173.86134
-  },
-  {
-   "word": "person,",
-   "start": 173.86134,
-   "end": 174.56134
-  },
-  {
-   "word": "who",
-   "start": 174.56134,
-   "end": 174.98135
-  },
-  {
-   "word": "read",
-   "start": 174.98135,
-   "end": 175.14134
-  },
-  {
-   "word": "a",
-   "start": 175.14134,
-   "end": 175.26135
-  },
-  {
-   "word": "passage",
-   "start": 175.26135,
-   "end": 175.76135
-  },
-  {
-   "word": "one",
-   "start": 175.76135,
-   "end": 176.12134
-  },
-  {
-   "word": "character",
-   "start": 176.12134,
-   "end": 176.52135
-  },
-  {
-   "word": "at",
-   "start": 176.52135,
-   "end": 176.82135
-  },
-  {
-   "word": "a",
-   "start": 176.82135,
-   "end": 176.90134
-  },
-  {
-   "word": "time,",
-   "start": 176.90134,
-   "end": 177.46135
-  },
-  {
-   "word": "guessing",
-   "start": 177.82135,
-   "end": 178.08134
-  },
-  {
-   "word": "each",
-   "start": 178.08134,
-   "end": 178.44135
-  },
-  {
-   "word": "next",
-   "start": 178.44135,
-   "end": 178.82135
-  },
-  {
-   "word": "one",
-   "start": 178.82135,
-   "end": 179.08134
-  },
-  {
-   "word": "until",
-   "start": 179.08134,
-   "end": 179.42136
-  },
-  {
-   "word": "right.",
-   "start": 179.42136,
-   "end": 179.94135
-  },
-  {
-   "word": "79",
-   "start": 179.94135,
-   "end": 180.78134
-  },
-  {
-   "word": "of",
-   "start": 180.78134,
-   "end": 181.26135
-  },
-  {
-   "word": "102",
-   "start": 181.26135,
-   "end": 181.60135
-  },
-  {
-   "word": "came",
-   "start": 181.60135,
-   "end": 182.76135
-  },
-  {
-   "word": "on",
-   "start": 182.76135,
-   "end": 182.92136
-  },
-  {
-   "word": "the",
-   "start": 182.92136,
-   "end": 183.04135
-  },
-  {
-   "word": "first",
-   "start": 183.04135,
-   "end": 183.28134
-  },
-  {
-   "word": "guess.",
-   "start": 183.28134,
-   "end": 183.94135
-  },
-  {
-   "word": "A",
-   "start": 183.94135,
-   "end": 184.32135
-  },
-  {
-   "word": "twin",
-   "start": 184.32135,
-   "end": 184.68134
-  },
-  {
-   "word": "who",
-   "start": 184.68134,
-   "end": 185.02135
-  },
-  {
-   "word": "guesses",
-   "start": 185.02135,
-   "end": 185.32135
-  },
-  {
-   "word": "the",
-   "start": 185.32135,
-   "end": 185.64134
-  },
-  {
-   "word": "same",
-   "start": 185.64134,
-   "end": 185.90134
-  },
-  {
-   "word": "way",
-   "start": 185.50134,
-   "end": 186.32135
-  },
-  {
-   "word": "could",
-   "start": 186.32135,
-   "end": 186.96135
-  },
-  {
-   "word": "rebuild",
-   "start": 186.96135,
-   "end": 187.32135
-  },
-  {
-   "word": "the",
-   "start": 187.32135,
-   "end": 187.52135
-  },
-  {
-   "word": "passage",
-   "start": 187.52135,
-   "end": 187.88135
-  },
-  {
-   "word": "from",
-   "start": 187.88135,
-   "end": 188.26135
-  },
-  {
-   "word": "these",
-   "start": 188.26135,
-   "end": 188.46135
-  },
-  {
-   "word": "counts",
-   "start": 188.46135,
-   "end": 188.76135
-  },
-  {
-   "word": "alone.",
-   "start": 188.76135,
-   "end": 189.24135
-  },
-  {
-   "word": "Treat",
-   "start": 189.24135,
-   "end": 190.10135
-  },
-  {
-   "word": "each",
-   "start": 190.10135,
-   "end": 190.46135
-  },
-  {
-   "word": "guess",
-   "start": 190.46135,
-   "end": 190.68134
-  },
-  {
-   "word": "count",
-   "start": 190.68134,
-   "end": 190.98135
-  },
-  {
-   "word": "as",
-   "start": 190.98135,
-   "end": 191.28134
-  },
-  {
-   "word": "a",
-   "start": 191.28134,
-   "end": 191.38135
-  },
-  {
-   "word": "symbol,",
-   "start": 191.38135,
-   "end": 191.68134
-  },
-  {
-   "word": "and",
-   "start": 192.28134,
-   "end": 192.40134
-  },
-  {
-   "word": "the",
-   "start": 192.40134,
-   "end": 192.54135
-  },
-  {
-   "word": "same",
-   "start": 192.54135,
-   "end": 192.78134
-  },
-  {
-   "word": "skyline",
-   "start": 192.78134,
-   "end": 193.36134
-  },
-  {
-   "word": "pores",
-   "start": 193.36134,
-   "end": 193.70135
-  },
-  {
-   "word": "flat",
-   "start": 193.70135,
-   "end": 194.26135
-  },
-  {
-   "word": "at",
-   "start": 194.26135,
-   "end": 194.50134
-  },
-  {
-   "word": "about",
-   "start": 194.50134,
-   "end": 194.66135
-  },
-  {
-   "word": "1.4",
-   "start": 194.66135,
-   "end": 195.58134
+   "word": "0.16",
+   "start": 139.452,
+   "end": 140.112
   },
   {
    "word": "bits.",
-   "start": 195.58134,
-   "end": 195.96135
+   "start": 140.112,
+   "end": 140.552
   },
   {
-   "word": "A",
-   "start": 195.96135,
-   "end": 196.68134
+   "word": "After",
+   "start": 141.772,
+   "end": 141.852
   },
   {
-   "word": "better",
-   "start": 196.68134,
-   "end": 196.98135
+   "word": "th,",
+   "start": 141.852,
+   "end": 142.892
   },
   {
-   "word": "guesser",
-   "start": 196.98135,
-   "end": 197.48135
+   "word": "e",
+   "start": 142.892,
+   "end": 142.972
   },
   {
-   "word": "could",
-   "start": 197.48135,
-   "end": 197.66135
+   "word": "takes",
+   "start": 142.972,
+   "end": 143.332
   },
   {
-   "word": "only",
-   "start": 197.66135,
-   "end": 197.92136
-  },
-  {
-   "word": "lower",
-   "start": 197.92136,
-   "end": 198.16135
-  },
-  {
-   "word": "it.",
-   "start": 198.16135,
-   "end": 198.62134
-  },
-  {
-   "word": "Shannon's",
-   "start": 199.12134,
-   "end": 199.58134
-  },
-  {
-   "word": "tests,",
-   "start": 199.58134,
-   "end": 200.48135
-  },
-  {
-   "word": "with",
-   "start": 200.48135,
-   "end": 200.52135
-  },
-  {
-   "word": "100",
-   "start": 200.52135,
-   "end": 200.84134
-  },
-  {
-   "word": "letters",
-   "start": 200.84134,
-   "end": 201.28134
+   "word": "two-thirds",
+   "start": 143.332,
+   "end": 143.752
   },
   {
    "word": "of",
-   "start": 201.28134,
-   "end": 201.52135
+   "start": 143.752,
+   "end": 143.972
   },
   {
-   "word": "context,",
-   "start": 201.52135,
-   "end": 202.70135
+   "word": "the",
+   "start": 143.972,
+   "end": 144.052
   },
   {
-   "word": "put",
-   "start": 202.70135,
-   "end": 202.88135
-  },
-  {
-   "word": "English",
-   "start": 202.88135,
-   "end": 203.18134
-  },
-  {
-   "word": "between",
-   "start": 203.18134,
-   "end": 203.60135
-  },
-  {
-   "word": "0.6",
-   "start": 203.60135,
-   "end": 204.40134
+   "word": "bar,",
+   "start": 144.052,
+   "end": 144.552
   },
   {
    "word": "and",
-   "start": 204.40134,
-   "end": 204.72134
+   "start": 144.552,
+   "end": 144.972
   },
   {
-   "word": "1.3",
-   "start": 204.72134,
-   "end": 205.54135
+   "word": "its",
+   "start": 144.972,
+   "end": 145.092
   },
   {
-   "word": "bits",
-   "start": 205.54135,
-   "end": 205.74135
+   "word": "cost",
+   "start": 145.092,
+   "end": 145.532
   },
   {
-   "word": "per",
-   "start": 205.74135,
-   "end": 206.00134
+   "word": "shrinks",
+   "start": 145.532,
+   "end": 145.932
   },
   {
-   "word": "character.",
-   "start": 206.00134,
-   "end": 206.70135
+   "word": "to",
+   "start": 145.932,
+   "end": 146.112
   },
   {
-   "word": "In",
-   "start": 207.04135,
-   "end": 207.20135
+   "word": "about",
+   "start": 146.112,
+   "end": 146.312
   },
   {
-   "word": "2023,",
-   "start": 207.20135,
-   "end": 208.36134
-  },
-  {
-   "word": "a",
-   "start": 208.36134,
-   "end": 208.80135
-  },
-  {
-   "word": "language",
-   "start": 208.80135,
-   "end": 209.24135
-  },
-  {
-   "word": "model",
-   "start": 209.24135,
-   "end": 209.70135
-  },
-  {
-   "word": "compressing",
-   "start": 209.70135,
-   "end": 210.38135
-  },
-  {
-   "word": "part",
-   "start": 210.38135,
-   "end": 210.64134
-  },
-  {
-   "word": "of",
-   "start": 210.64134,
-   "end": 210.76135
+   "word": "half",
+   "start": 146.312,
+   "end": 146.592
   },
   {
    "word": "a",
-   "start": 210.76135,
-   "end": 210.88135
-  },
-  {
-   "word": "new",
-   "start": 210.88135,
-   "end": 211.06134
-  },
-  {
-   "word": "book",
-   "start": 211.06134,
-   "end": 211.40134
-  },
-  {
-   "word": "in",
-   "start": 211.40134,
-   "end": 211.66135
-  },
-  {
-   "word": "the",
-   "start": 211.66135,
-   "end": 211.76135
-  },
-  {
-   "word": "same",
-   "start": 211.76135,
-   "end": 212.06134
-  },
-  {
-   "word": "27",
-   "start": 212.06134,
-   "end": 212.66135
-  },
-  {
-   "word": "symbols",
-   "start": 212.66135,
-   "end": 213.24135
-  },
-  {
-   "word": "needed",
-   "start": 213.24135,
-   "end": 214.04135
-  },
-  {
-   "word": "0.84",
-   "start": 214.04135,
-   "end": 214.66135
-  },
-  {
-   "word": "bits,",
-   "start": 214.66135,
-   "end": 215.64134
-  },
-  {
-   "word": "inside",
-   "start": 215.64134,
-   "end": 216.28134
-  },
-  {
-   "word": "that",
-   "start": 216.28134,
-   "end": 216.76135
-  },
-  {
-   "word": "range.",
-   "start": 216.76135,
-   "end": 217.36134
-  },
-  {
-   "word": "The",
-   "start": 217.96135,
-   "end": 218.10135
-  },
-  {
-   "word": "hidden",
-   "start": 218.10135,
-   "end": 218.40134
-  },
-  {
-   "word": "character",
-   "start": 218.40134,
-   "end": 218.82135
-  },
-  {
-   "word": "from",
-   "start": 218.82135,
-   "end": 219.10135
-  },
-  {
-   "word": "the",
-   "start": 219.10135,
-   "end": 219.24135
-  },
-  {
-   "word": "start",
-   "start": 219.24135,
-   "end": 219.56134
-  },
-  {
-   "word": "is",
-   "start": 219.56134,
-   "end": 220.20135
-  },
-  {
-   "word": "the",
-   "start": 220.20135,
-   "end": 220.40134
-  },
-  {
-   "word": "why",
-   "start": 220.40134,
-   "end": 220.64134
-  },
-  {
-   "word": "at",
-   "start": 220.64134,
-   "end": 220.90134
-  },
-  {
-   "word": "the",
-   "start": 220.90134,
-   "end": 221.02135
-  },
-  {
-   "word": "end",
-   "start": 221.02135,
-   "end": 221.28134
-  },
-  {
-   "word": "of",
-   "start": 221.28134,
-   "end": 221.40134
-  },
-  {
-   "word": "the",
-   "start": 221.40134,
-   "end": 221.52135
-  },
-  {
-   "word": "other",
-   "start": 221.52135,
-   "end": 221.70135
-  },
-  {
-   "word": "day.",
-   "start": 221.70135,
-   "end": 222.26135
-  },
-  {
-   "word": "Shannon's",
-   "start": 222.78134,
-   "end": 223.26135
-  },
-  {
-   "word": "subject",
-   "start": 223.26135,
-   "end": 223.54135
-  },
-  {
-   "word": "got",
-   "start": 223.54135,
-   "end": 223.88135
-  },
-  {
-   "word": "it",
-   "start": 223.88135,
-   "end": 224.00134
-  },
-  {
-   "word": "on",
-   "start": 224.00134,
-   "end": 224.12134
-  },
-  {
-   "word": "the",
-   "start": 224.12134,
-   "end": 224.22134
-  },
-  {
-   "word": "first",
-   "start": 224.22134,
-   "end": 224.46135
-  },
-  {
-   "word": "guess,",
-   "start": 224.46135,
-   "end": 225.10135
-  },
-  {
-   "word": "a",
-   "start": 225.10135,
-   "end": 225.50134
-  },
-  {
-   "word": "single",
-   "start": 225.50134,
-   "end": 225.90134
-  },
-  {
-   "word": "yes",
-   "start": 225.90134,
-   "end": 226.16135
-  },
-  {
-   "word": "or",
-   "start": 226.16135,
-   "end": 226.40134
-  },
-  {
-   "word": "no",
-   "start": 226.40134,
-   "end": 226.52135
+   "start": 146.592,
+   "end": 146.752
   },
   {
    "word": "question.",
-   "start": 226.52135,
-   "end": 227.46135
+   "start": 146.752,
+   "end": 147.432
   },
   {
-   "word": "Splitting",
-   "start": 227.58134,
-   "end": 228.10135
-  },
-  {
-   "word": "the",
-   "start": 228.10135,
-   "end": 228.26135
-  },
-  {
-   "word": "alphabet",
-   "start": 228.26135,
-   "end": 228.70135
-  },
-  {
-   "word": "took",
-   "start": 228.70135,
-   "end": 228.98135
-  },
-  {
-   "word": "five.",
-   "start": 228.98135,
-   "end": 229.54135
-  },
-  {
-   "word": "In",
-   "start": 229.82135,
-   "end": 230.14134
-  },
-  {
-   "word": "English,",
-   "start": 230.14134,
-   "end": 230.98135
-  },
-  {
-   "word": "almost",
-   "start": 230.98135,
-   "end": 231.22134
-  },
-  {
-   "word": "no",
-   "start": 231.22134,
-   "end": 231.50134
-  },
-  {
-   "word": "letter",
-   "start": 231.50134,
-   "end": 231.74135
-  },
-  {
-   "word": "arrives",
-   "start": 231.74135,
-   "end": 232.30135
-  },
-  {
-   "word": "without",
-   "start": 232.30135,
-   "end": 232.62134
+   "word": "Half",
+   "start": 147.79199,
+   "end": 148.092
   },
   {
    "word": "a",
-   "start": 232.62134,
-   "end": 232.82135
+   "start": 148.092,
+   "end": 148.172
+  },
+  {
+   "word": "question,",
+   "start": 148.172,
+   "end": 148.612
+  },
+  {
+   "word": "like",
+   "start": 148.612,
+   "end": 148.992
+  },
+  {
+   "word": "3.3",
+   "start": 148.992,
+   "end": 149.85199
+  },
+  {
+   "word": "doublings,",
+   "start": 149.85199,
+   "end": 150.57199
+  },
+  {
+   "word": "sounds",
+   "start": 150.57199,
+   "end": 151.212
+  },
+  {
+   "word": "impossible,",
+   "start": 151.212,
+   "end": 152.092
+  },
+  {
+   "word": "but",
+   "start": 152.092,
+   "end": 152.712
+  },
+  {
+   "word": "a",
+   "start": 152.712,
+   "end": 152.812
+  },
+  {
+   "word": "compressor",
+   "start": 152.812,
+   "end": 153.312
+  },
+  {
+   "word": "asks",
+   "start": 153.312,
+   "end": 153.892
+  },
+  {
+   "word": "about",
+   "start": 153.892,
+   "end": 154.172
+  },
+  {
+   "word": "long",
+   "start": 154.172,
+   "end": 154.732
+  },
+  {
+   "word": "runs",
+   "start": 154.212,
+   "end": 155.092
+  },
+  {
+   "word": "of",
+   "start": 155.092,
+   "end": 155.312
+  },
+  {
+   "word": "letters,",
+   "start": 155.312,
+   "end": 155.912
+  },
+  {
+   "word": "and",
+   "start": 155.912,
+   "end": 156.312
+  },
+  {
+   "word": "the",
+   "start": 156.312,
+   "end": 156.412
+  },
+  {
+   "word": "fractions",
+   "start": 156.412,
+   "end": 156.912
+  },
+  {
+   "word": "add",
+   "start": 156.912,
+   "end": 157.332
+  },
+  {
+   "word": "up.",
+   "start": 157.332,
+   "end": 157.712
+  },
+  {
+   "word": "After",
+   "start": 158.07199,
+   "end": 158.472
+  },
+  {
+   "word": "th,",
+   "start": 158.472,
+   "end": 159.192
+  },
+  {
+   "word": "the",
+   "start": 159.192,
+   "end": 159.492
+  },
+  {
+   "word": "average",
+   "start": 159.492,
+   "end": 159.892
+  },
+  {
+   "word": "is",
+   "start": 159.892,
+   "end": 160.132
+  },
+  {
+   "word": "1.7,",
+   "start": 160.132,
+   "end": 161.29199
+  },
+  {
+   "word": "but",
+   "start": 161.29199,
+   "end": 161.732
+  },
+  {
+   "word": "averaged",
+   "start": 161.732,
+   "end": 162.29199
+  },
+  {
+   "word": "over",
+   "start": 162.29199,
+   "end": 162.592
+  },
+  {
+   "word": "every",
+   "start": 162.592,
+   "end": 162.992
+  },
+  {
+   "word": "two-letter",
+   "start": 162.992,
+   "end": 163.452
+  },
+  {
+   "word": "context,",
+   "start": 163.452,
+   "end": 164.552
+  },
+  {
+   "word": "it's",
+   "start": 164.552,
+   "end": 164.952
+  },
+  {
+   "word": "still",
+   "start": 164.952,
+   "end": 165.192
+  },
+  {
+   "word": "2.8.",
+   "start": 164.672,
+   "end": 166.192
+  },
+  {
+   "word": "Some",
+   "start": 166.932,
+   "end": 166.952
+  },
+  {
+   "word": "contexts",
+   "start": 166.952,
+   "end": 167.612
+  },
+  {
+   "word": "need",
+   "start": 167.612,
+   "end": 167.892
+  },
+  {
+   "word": "more",
+   "start": 167.892,
+   "end": 168.132
+  },
+  {
+   "word": "text",
+   "start": 168.132,
+   "end": 168.512
+  },
+  {
+   "word": "than",
+   "start": 168.512,
+   "end": 168.692
+  },
+  {
+   "word": "any",
+   "start": 168.692,
+   "end": 168.892
+  },
+  {
+   "word": "corpus",
+   "start": 168.892,
+   "end": 169.272
+  },
+  {
+   "word": "holds,",
+   "start": 169.272,
+   "end": 169.912
+  },
+  {
+   "word": "so",
+   "start": 169.912,
+   "end": 170.412
+  },
+  {
+   "word": "Shannon",
+   "start": 170.412,
+   "end": 170.832
+  },
+  {
+   "word": "used",
+   "start": 170.832,
+   "end": 171.172
+  },
+  {
+   "word": "a",
+   "start": 171.172,
+   "end": 171.312
+  },
+  {
+   "word": "predictor",
+   "start": 171.312,
+   "end": 171.832
+  },
+  {
+   "word": "that",
+   "start": 171.832,
+   "end": 172.052
+  },
+  {
+   "word": "already",
+   "start": 172.052,
+   "end": 172.412
+  },
+  {
+   "word": "knows",
+   "start": 171.932,
+   "end": 172.752
+  },
+  {
+   "word": "English.",
+   "start": 172.752,
+   "end": 173.372
+  },
+  {
+   "word": "A",
+   "start": 173.552,
+   "end": 174.15201
+  },
+  {
+   "word": "person.",
+   "start": 174.15201,
+   "end": 174.752
+  },
+  {
+   "word": "His",
+   "start": 175.132,
+   "end": 175.412
+  },
+  {
+   "word": "subject",
+   "start": 175.412,
+   "end": 175.872
+  },
+  {
+   "word": "read",
+   "start": 175.872,
+   "end": 176.092
+  },
+  {
+   "word": "a",
+   "start": 176.092,
+   "end": 176.192
+  },
+  {
+   "word": "passage",
+   "start": 176.192,
+   "end": 176.712
+  },
+  {
+   "word": "letter",
+   "start": 176.712,
+   "end": 177.012
+  },
+  {
+   "word": "by",
+   "start": 177.012,
+   "end": 177.212
+  },
+  {
+   "word": "letter,",
+   "start": 177.212,
+   "end": 177.79199
+  },
+  {
+   "word": "guessing",
+   "start": 177.79199,
+   "end": 178.37201
+  },
+  {
+   "word": "each",
+   "start": 178.37201,
+   "end": 178.692
+  },
+  {
+   "word": "next",
+   "start": 178.692,
+   "end": 179.052
+  },
+  {
+   "word": "one",
+   "start": 179.052,
+   "end": 179.252
+  },
+  {
+   "word": "until",
+   "start": 179.252,
+   "end": 179.57199
+  },
+  {
+   "word": "right.",
+   "start": 179.57199,
+   "end": 180.13199
+  },
+  {
+   "word": "79",
+   "start": 180.552,
+   "end": 181.172
+  },
+  {
+   "word": "of",
+   "start": 181.172,
+   "end": 181.472
+  },
+  {
+   "word": "102",
+   "start": 181.472,
+   "end": 182.012
+  },
+  {
+   "word": "came",
+   "start": 182.012,
+   "end": 182.952
+  },
+  {
+   "word": "on",
+   "start": 182.952,
+   "end": 183.112
+  },
+  {
+   "word": "the",
+   "start": 183.112,
+   "end": 183.232
+  },
+  {
+   "word": "first",
+   "start": 183.232,
+   "end": 183.512
+  },
+  {
+   "word": "guess.",
+   "start": 183.512,
+   "end": 184.052
+  },
+  {
+   "word": "A",
+   "start": 183.952,
+   "end": 184.57199
+  },
+  {
+   "word": "twin",
+   "start": 184.57199,
+   "end": 184.992
+  },
+  {
+   "word": "who",
+   "start": 184.992,
+   "end": 185.232
+  },
+  {
+   "word": "guesses",
+   "start": 185.232,
+   "end": 185.592
+  },
+  {
+   "word": "the",
+   "start": 185.592,
+   "end": 185.87201
+  },
+  {
+   "word": "same",
+   "start": 185.87201,
+   "end": 186.15201
+  },
+  {
+   "word": "way",
+   "start": 186.15201,
+   "end": 186.532
+  },
+  {
+   "word": "could",
+   "start": 186.532,
+   "end": 187.15201
+  },
+  {
+   "word": "rebuild",
+   "start": 187.15201,
+   "end": 187.532
+  },
+  {
+   "word": "the",
+   "start": 187.532,
+   "end": 187.712
+  },
+  {
+   "word": "passage",
+   "start": 187.712,
+   "end": 188.112
+  },
+  {
+   "word": "from",
+   "start": 188.112,
+   "end": 188.432
+  },
+  {
+   "word": "these",
+   "start": 188.432,
+   "end": 188.63199
+  },
+  {
+   "word": "counts",
+   "start": 188.63199,
+   "end": 188.972
+  },
+  {
+   "word": "alone.",
+   "start": 188.972,
+   "end": 189.672
+  },
+  {
+   "word": "Treat",
+   "start": 189.87201,
+   "end": 190.392
+  },
+  {
+   "word": "each",
+   "start": 190.392,
+   "end": 190.672
+  },
+  {
+   "word": "guess",
+   "start": 190.672,
+   "end": 190.912
+  },
+  {
+   "word": "count",
+   "start": 190.912,
+   "end": 191.232
+  },
+  {
+   "word": "as",
+   "start": 191.232,
+   "end": 191.472
+  },
+  {
+   "word": "a",
+   "start": 191.472,
+   "end": 191.592
+  },
+  {
+   "word": "symbol,",
+   "start": 191.592,
+   "end": 192.092
+  },
+  {
+   "word": "and",
+   "start": 192.092,
+   "end": 192.612
+  },
+  {
+   "word": "the",
+   "start": 192.612,
+   "end": 192.712
+  },
+  {
+   "word": "same",
+   "start": 192.712,
+   "end": 192.932
+  },
+  {
+   "word": "skyline",
+   "start": 192.932,
+   "end": 193.552
+  },
+  {
+   "word": "pores,",
+   "start": 193.552,
+   "end": 194.172
+  },
+  {
+   "word": "flat",
+   "start": 194.172,
+   "end": 194.532
+  },
+  {
+   "word": "at",
+   "start": 194.532,
+   "end": 194.692
+  },
+  {
+   "word": "about",
+   "start": 194.692,
+   "end": 194.87201
+  },
+  {
+   "word": "1.4",
+   "start": 194.87201,
+   "end": 195.79199
+  },
+  {
+   "word": "bits.",
+   "start": 195.79199,
+   "end": 196.79199
+  },
+  {
+   "word": "A",
+   "start": 196.812,
+   "end": 196.912
+  },
+  {
+   "word": "better",
+   "start": 196.912,
+   "end": 197.192
+  },
+  {
+   "word": "guesser",
+   "start": 197.192,
+   "end": 197.672
+  },
+  {
+   "word": "could",
+   "start": 197.672,
+   "end": 197.892
+  },
+  {
+   "word": "only",
+   "start": 197.892,
+   "end": 198.112
+  },
+  {
+   "word": "lower",
+   "start": 198.112,
+   "end": 198.432
+  },
+  {
+   "word": "it.",
+   "start": 198.432,
+   "end": 198.85199
+  },
+  {
+   "word": "Shannon's",
+   "start": 199.212,
+   "end": 199.79199
+  },
+  {
+   "word": "tests,",
+   "start": 199.79199,
+   "end": 200.412
+  },
+  {
+   "word": "with",
+   "start": 200.412,
+   "end": 200.732
+  },
+  {
+   "word": "100",
+   "start": 200.732,
+   "end": 201.112
+  },
+  {
+   "word": "letters",
+   "start": 201.112,
+   "end": 201.532
+  },
+  {
+   "word": "of",
+   "start": 201.532,
+   "end": 201.712
+  },
+  {
+   "word": "context,",
+   "start": 201.712,
+   "end": 202.612
+  },
+  {
+   "word": "put",
+   "start": 202.452,
+   "end": 203.112
+  },
+  {
+   "word": "English",
+   "start": 203.112,
+   "end": 203.412
+  },
+  {
+   "word": "between",
+   "start": 203.412,
+   "end": 203.812
+  },
+  {
+   "word": "0.6",
+   "start": 203.812,
+   "end": 204.612
+  },
+  {
+   "word": "and",
+   "start": 204.612,
+   "end": 204.952
+  },
+  {
+   "word": "1.3",
+   "start": 204.952,
+   "end": 205.752
+  },
+  {
+   "word": "bits",
+   "start": 205.752,
+   "end": 206.032
+  },
+  {
+   "word": "per",
+   "start": 206.032,
+   "end": 206.232
+  },
+  {
+   "word": "character.",
+   "start": 206.232,
+   "end": 206.892
+  },
+  {
+   "word": "In",
+   "start": 206.752,
+   "end": 207.392
+  },
+  {
+   "word": "2023,",
+   "start": 207.392,
+   "end": 208.672
+  },
+  {
+   "word": "a",
+   "start": 208.672,
+   "end": 208.952
+  },
+  {
+   "word": "language",
+   "start": 208.952,
+   "end": 209.392
+  },
+  {
+   "word": "model",
+   "start": 209.392,
+   "end": 209.87201
+  },
+  {
+   "word": "compressing",
+   "start": 209.87201,
+   "end": 210.492
+  },
+  {
+   "word": "part",
+   "start": 210.492,
+   "end": 210.752
+  },
+  {
+   "word": "of",
+   "start": 210.752,
+   "end": 210.85199
+  },
+  {
+   "word": "a",
+   "start": 210.85199,
+   "end": 210.952
+  },
+  {
+   "word": "book",
+   "start": 210.952,
+   "end": 211.192
+  },
+  {
+   "word": "that",
+   "start": 210.812,
+   "end": 211.452
+  },
+  {
+   "word": "reached",
+   "start": 211.452,
+   "end": 211.812
+  },
+  {
+   "word": "Project",
+   "start": 211.812,
+   "end": 212.35199
+  },
+  {
+   "word": "Gutenberg",
+   "start": 212.35199,
+   "end": 213.052
+  },
+  {
+   "word": "after",
+   "start": 213.052,
+   "end": 213.532
+  },
+  {
+   "word": "its",
+   "start": 213.532,
+   "end": 213.712
+  },
+  {
+   "word": "training,",
+   "start": 213.712,
+   "end": 214.452
+  },
+  {
+   "word": "in",
+   "start": 214.35199,
+   "end": 214.992
+  },
+  {
+   "word": "the",
+   "start": 214.992,
+   "end": 215.092
+  },
+  {
+   "word": "same",
+   "start": 215.092,
+   "end": 215.37201
+  },
+  {
+   "word": "27",
+   "start": 215.37201,
+   "end": 215.992
+  },
+  {
+   "word": "symbols,",
+   "start": 215.992,
+   "end": 216.952
+  },
+  {
+   "word": "needed",
+   "start": 216.952,
+   "end": 217.37201
+  },
+  {
+   "word": "0.84",
+   "start": 217.37201,
+   "end": 218.192
+  },
+  {
+   "word": "bits,",
+   "start": 218.192,
+   "end": 218.812
+  },
+  {
+   "word": "inside",
+   "start": 218.65201,
+   "end": 219.612
+  },
+  {
+   "word": "that",
+   "start": 219.612,
+   "end": 219.912
+  },
+  {
+   "word": "range.",
+   "start": 219.912,
+   "end": 220.552
+  },
+  {
+   "word": "The",
+   "start": 220.552,
+   "end": 221.192
+  },
+  {
+   "word": "hidden",
+   "start": 221.192,
+   "end": 221.512
+  },
+  {
+   "word": "character",
+   "start": 221.512,
+   "end": 221.972
+  },
+  {
+   "word": "from",
+   "start": 221.972,
+   "end": 222.212
+  },
+  {
+   "word": "the",
+   "start": 222.212,
+   "end": 222.35199
+  },
+  {
+   "word": "start",
+   "start": 222.35199,
+   "end": 222.732
+  },
+  {
+   "word": "is",
+   "start": 222.672,
+   "end": 223.312
+  },
+  {
+   "word": "the",
+   "start": 223.312,
+   "end": 223.512
+  },
+  {
+   "word": "Y",
+   "start": 223.512,
+   "end": 223.712
+  },
+  {
+   "word": "at",
+   "start": 223.712,
+   "end": 223.992
+  },
+  {
+   "word": "the",
+   "start": 223.992,
+   "end": 224.112
+  },
+  {
+   "word": "end",
+   "start": 224.112,
+   "end": 224.392
+  },
+  {
+   "word": "of",
+   "start": 224.392,
+   "end": 224.512
+  },
+  {
+   "word": "the",
+   "start": 224.512,
+   "end": 224.612
+  },
+  {
+   "word": "other",
+   "start": 224.612,
+   "end": 224.832
+  },
+  {
+   "word": "day.",
+   "start": 224.832,
+   "end": 225.392
+  },
+  {
+   "word": "Shannon's",
+   "start": 225.85199,
+   "end": 226.35199
+  },
+  {
+   "word": "subject",
+   "start": 226.35199,
+   "end": 226.692
+  },
+  {
+   "word": "got",
+   "start": 226.692,
+   "end": 226.972
+  },
+  {
+   "word": "it",
+   "start": 226.972,
+   "end": 227.112
+  },
+  {
+   "word": "on",
+   "start": 227.112,
+   "end": 227.232
+  },
+  {
+   "word": "the",
+   "start": 227.232,
+   "end": 227.332
+  },
+  {
+   "word": "first",
+   "start": 227.332,
+   "end": 227.592
+  },
+  {
+   "word": "guess,",
+   "start": 227.592,
+   "end": 228.232
+  },
+  {
+   "word": "a",
+   "start": 228.012,
+   "end": 228.612
+  },
+  {
+   "word": "single",
+   "start": 228.612,
+   "end": 229.052
+  },
+  {
+   "word": "yes",
+   "start": 229.052,
+   "end": 229.29199
+  },
+  {
+   "word": "or",
+   "start": 229.29199,
+   "end": 229.492
+  },
+  {
+   "word": "no",
+   "start": 229.492,
+   "end": 229.65201
+  },
+  {
+   "word": "question.",
+   "start": 229.65201,
+   "end": 230.472
+  },
+  {
+   "word": "Splitting",
+   "start": 230.29199,
+   "end": 231.212
+  },
+  {
+   "word": "the",
+   "start": 231.212,
+   "end": 231.37201
+  },
+  {
+   "word": "alphabet",
+   "start": 231.37201,
+   "end": 231.772
+  },
+  {
+   "word": "took",
+   "start": 231.772,
+   "end": 232.092
+  },
+  {
+   "word": "five.",
+   "start": 232.092,
+   "end": 232.65201
+  },
+  {
+   "word": "In",
+   "start": 232.612,
+   "end": 233.232
+  },
+  {
+   "word": "English,",
+   "start": 233.232,
+   "end": 233.832
+  },
+  {
+   "word": "almost",
+   "start": 233.832,
+   "end": 234.35199
+  },
+  {
+   "word": "no",
+   "start": 234.35199,
+   "end": 234.592
+  },
+  {
+   "word": "letter",
+   "start": 234.592,
+   "end": 234.87201
+  },
+  {
+   "word": "arrives",
+   "start": 234.87201,
+   "end": 235.412
+  },
+  {
+   "word": "without",
+   "start": 235.412,
+   "end": 235.732
+  },
+  {
+   "word": "a",
+   "start": 235.732,
+   "end": 235.932
   },
   {
    "word": "past.",
-   "start": 232.82135,
-   "end": 233.76135
+   "start": 235.932,
+   "end": 236.85199
   }
  ],
  "segments": [
@@ -2800,14 +2805,14 @@
    "id": 0,
    "seek": 0,
    "start": 0,
-   "end": 3.8999999,
-   "text": " You've read this English sentence up to one hidden character.",
+   "end": 3.12,
+   "text": " You've read an English sentence up to one hidden character.",
    "tokens": [
     50365,
     509,
     600,
     1401,
-    341,
+    364,
     3669,
     8174,
     493,
@@ -2816,42 +2821,27 @@
     7633,
     2517,
     13,
-    50560
+    50521
    ],
    "temperature": 0,
-   "avg_logprob": -0.09033669,
-   "compression_ratio": 1.4465116,
+   "avg_logprob": -0.18541579,
+   "compression_ratio": 1.4396552,
    "no_speech_prob": 0
   },
   {
    "id": 1,
    "seek": 0,
-   "start": 3.8999999,
-   "end": 5.7799997,
-   "text": " With yes or no questions,",
+   "start": 3.78,
+   "end": 8.0199995,
+   "text": " With yes or no questions, how many do you need per character on average?",
    "tokens": [
-    50560,
+    50554,
     2022,
     2086,
     420,
     572,
     1651,
     11,
-    50654
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.09033669,
-   "compression_ratio": 1.4465116,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 2,
-   "seek": 0,
-   "start": 5.7799997,
-   "end": 8.48,
-   "text": " how many do you need per character on average?",
-   "tokens": [
-    50654,
     577,
     867,
     360,
@@ -2862,42 +2852,42 @@
     322,
     4274,
     30,
-    50789
+    50766
    ],
    "temperature": 0,
-   "avg_logprob": -0.09033669,
-   "compression_ratio": 1.4465116,
+   "avg_logprob": -0.18541579,
+   "compression_ratio": 1.4396552,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 2,
+   "seek": 0,
+   "start": 9.58,
+   "end": 11.599999,
+   "text": " The natural answer is 5.",
+   "tokens": [
+    50844,
+    440,
+    3303,
+    1867,
+    307,
+    1025,
+    13,
+    50945
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.18541579,
+   "compression_ratio": 1.4396552,
    "no_speech_prob": 0
   },
   {
    "id": 3,
    "seek": 0,
-   "start": 10.219999,
-   "end": 12.36,
-   "text": " The natural answer is five.",
+   "start": 12.2,
+   "end": 17.64,
+   "text": " Each answer can cut what's left in half, and 5 cuts take 27 down to 1.",
    "tokens": [
-    50876,
-    440,
-    3303,
-    1867,
-    307,
-    1732,
-    13,
-    50983
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.09033669,
-   "compression_ratio": 1.4465116,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 4,
-   "seek": 0,
-   "start": 12.36,
-   "end": 15.16,
-   "text": " Each answer can cut what's left in half,",
-   "tokens": [
-    50983,
+    50975,
     6947,
     1867,
     393,
@@ -2908,73 +2898,36 @@
     294,
     1922,
     11,
-    51123
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.09033669,
-   "compression_ratio": 1.4465116,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 5,
-   "seek": 0,
-   "start": 15.16,
-   "end": 18.42,
-   "text": " and five cuts take 27 down to one.",
-   "tokens": [
-    51123,
     293,
-    1732,
+    1025,
     9992,
     747,
     7634,
     760,
     281,
-    472,
+    502,
     13,
-    51286
+    51247
    ],
    "temperature": 0,
-   "avg_logprob": -0.09033669,
-   "compression_ratio": 1.4465116,
+   "avg_logprob": -0.18541579,
+   "compression_ratio": 1.4396552,
    "no_speech_prob": 0
   },
   {
-   "id": 6,
+   "id": 4,
    "seek": 0,
-   "start": 18.42,
-   "end": 20.68,
-   "text": " With perfect 50-50 splits,",
+   "start": 17.64,
+   "end": 22.8,
+   "text": " The ideal is log base 2 of 27, about 4.75.",
    "tokens": [
-    51286,
-    2022,
-    2176,
-    2625,
-    12,
-    2803,
-    37741,
-    11,
-    51399
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.09033669,
-   "compression_ratio": 1.4465116,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 7,
-   "seek": 0,
-   "start": 20.68,
-   "end": 25.68,
-   "text": " the ideal is log base two of 27, about 4.75.",
-   "tokens": [
-    51399,
-    264,
+    51247,
+    440,
     7157,
     307,
     3565,
     3096,
-    732,
+    568,
     295,
     7634,
     11,
@@ -2983,21 +2936,21 @@
     13,
     11901,
     13,
-    51649
+    51505
    ],
    "temperature": 0,
-   "avg_logprob": -0.09033669,
-   "compression_ratio": 1.4465116,
+   "avg_logprob": -0.18541579,
+   "compression_ratio": 1.4396552,
    "no_speech_prob": 0
   },
   {
-   "id": 8,
-   "seek": 2568,
-   "start": 25.68,
-   "end": 31.08,
-   "text": " In 1951, Claude Shannon estimated the true figure at about one.",
+   "id": 5,
+   "seek": 0,
+   "start": 23.72,
+   "end": 28.539999,
+   "text": " In 1951, Claude Shannon estimated the true figure at about 1.",
    "tokens": [
-    50365,
+    51551,
     682,
     10858,
     16,
@@ -3011,23 +2964,23 @@
     2573,
     412,
     466,
-    472,
+    502,
     13,
-    50635
+    51792
    ],
    "temperature": 0,
-   "avg_logprob": -0.12777014,
-   "compression_ratio": 1.4841269,
+   "avg_logprob": -0.18541579,
+   "compression_ratio": 1.4396552,
    "no_speech_prob": 0
   },
   {
-   "id": 9,
-   "seek": 2568,
-   "start": 31.68,
-   "end": 35.34,
-   "text": " Whatever it is, no text compressor can beat it on average,",
+   "id": 6,
+   "seek": 2854,
+   "start": 28.539999,
+   "end": 35.039997,
+   "text": " Whatever it is, no text compressor can beat it on average, and guessing what comes next",
    "tokens": [
-    50665,
+    50365,
     8541,
     309,
     307,
@@ -3041,26 +2994,26 @@
     322,
     4274,
     11,
-    50848
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.12777014,
-   "compression_ratio": 1.4841269,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 10,
-   "seek": 2568,
-   "start": 35.84,
-   "end": 39.34,
-   "text": " and guessing what comes next is how language models are trained.",
-   "tokens": [
-    50873,
     293,
     17939,
     437,
     1487,
     958,
+    50690
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1528283,
+   "compression_ratio": 1.5400844,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 7,
+   "seek": 2854,
+   "start": 35.039997,
+   "end": 37.6,
+   "text": " is how language models are trained.",
+   "tokens": [
+    50690,
     307,
     577,
     2856,
@@ -3068,21 +3021,21 @@
     366,
     8895,
     13,
-    51048
+    50818
    ],
    "temperature": 0,
-   "avg_logprob": -0.12777014,
-   "compression_ratio": 1.4841269,
+   "avg_logprob": -0.1528283,
+   "compression_ratio": 1.5400844,
    "no_speech_prob": 0
   },
   {
-   "id": 11,
-   "seek": 2568,
-   "start": 40.04,
-   "end": 42.52,
+   "id": 8,
+   "seek": 2854,
+   "start": 37.6,
+   "end": 40.92,
    "text": " So where do four of every five questions go?",
    "tokens": [
-    51083,
+    50818,
     407,
     689,
     360,
@@ -3093,21 +3046,21 @@
     1651,
     352,
     30,
-    51207
+    50984
    ],
    "temperature": 0,
-   "avg_logprob": -0.12777014,
-   "compression_ratio": 1.4841269,
+   "avg_logprob": -0.1528283,
+   "compression_ratio": 1.5400844,
    "no_speech_prob": 0
   },
   {
-   "id": 12,
-   "seek": 2568,
-   "start": 43.16,
-   "end": 47.079998,
+   "id": 9,
+   "seek": 2854,
+   "start": 40.92,
+   "end": 45.219997,
    "text": " Splitting the alphabet evenly charges every character the same price.",
    "tokens": [
-    51239,
+    50984,
     19788,
     2414,
     264,
@@ -3120,21 +3073,21 @@
     912,
     3218,
     13,
-    51435
+    51199
    ],
    "temperature": 0,
-   "avg_logprob": -0.12777014,
-   "compression_ratio": 1.4841269,
+   "avg_logprob": -0.1528283,
+   "compression_ratio": 1.5400844,
    "no_speech_prob": 0
   },
   {
-   "id": 13,
-   "seek": 2568,
-   "start": 47.72,
-   "end": 53.92,
-   "text": " Z costs as much as E, yet in real text, E turns up 130 times as often.",
+   "id": 10,
+   "seek": 2854,
+   "start": 45.219997,
+   "end": 50.92,
+   "text": " Z costs as much as E, yet E turns up 130 times as often.",
    "tokens": [
-    51467,
+    51199,
     1176,
     5497,
     382,
@@ -3143,10 +3096,6 @@
     462,
     11,
     1939,
-    294,
-    957,
-    2487,
-    11,
     462,
     4523,
     493,
@@ -3155,21 +3104,21 @@
     382,
     2049,
     13,
-    51777
+    51484
    ],
    "temperature": 0,
-   "avg_logprob": -0.12777014,
-   "compression_ratio": 1.4841269,
+   "avg_logprob": -0.1528283,
+   "compression_ratio": 1.5400844,
    "no_speech_prob": 0
   },
   {
-   "id": 14,
-   "seek": 5392,
-   "start": 53.92,
-   "end": 59.679996,
+   "id": 11,
+   "seek": 2854,
+   "start": 50.92,
+   "end": 55.98,
    "text": " Instead, ask questions that split the probability, not the alphabet.",
    "tokens": [
-    50365,
+    51484,
     7156,
     11,
     1029,
@@ -3183,21 +3132,21 @@
     264,
     23339,
     13,
-    50653
+    51737
    ],
    "temperature": 0,
-   "avg_logprob": -0.16047744,
-   "compression_ratio": 1.504386,
+   "avg_logprob": -0.1528283,
+   "compression_ratio": 1.5400844,
    "no_speech_prob": 0
   },
   {
-   "id": 15,
-   "seek": 5392,
-   "start": 59.679996,
-   "end": 62.76,
+   "id": 12,
+   "seek": 5598,
+   "start": 55.98,
+   "end": 59.06,
    "text": " Is it a space, E, T, A, or O?",
    "tokens": [
-    50653,
+    50365,
     1119,
     309,
     257,
@@ -3212,21 +3161,21 @@
     420,
     422,
     30,
-    50807
+    50519
    ],
    "temperature": 0,
-   "avg_logprob": -0.16047744,
-   "compression_ratio": 1.504386,
+   "avg_logprob": -0.1505075,
+   "compression_ratio": 1.5082644,
    "no_speech_prob": 0
   },
   {
-   "id": 16,
-   "seek": 5392,
-   "start": 62.76,
-   "end": 65.52,
+   "id": 13,
+   "seek": 5598,
+   "start": 59.06,
+   "end": 61.82,
    "text": " Those five make up nearly half of all text.",
    "tokens": [
-    50807,
+    50519,
     3950,
     1732,
     652,
@@ -3237,21 +3186,21 @@
     439,
     2487,
     13,
-    50945
+    50657
    ],
    "temperature": 0,
-   "avg_logprob": -0.16047744,
-   "compression_ratio": 1.504386,
+   "avg_logprob": -0.1505075,
+   "compression_ratio": 1.5082644,
    "no_speech_prob": 0
   },
   {
-   "id": 17,
-   "seek": 5392,
-   "start": 65.52,
-   "end": 68.06,
+   "id": 14,
+   "seek": 5598,
+   "start": 61.82,
+   "end": 64.36,
    "text": " E starts near a tenth of the bar.",
    "tokens": [
-    50945,
+    50657,
     462,
     3719,
     2651,
@@ -3261,21 +3210,21 @@
     264,
     2159,
     13,
-    51072
+    50784
    ],
    "temperature": 0,
-   "avg_logprob": -0.16047744,
-   "compression_ratio": 1.504386,
+   "avg_logprob": -0.1505075,
+   "compression_ratio": 1.5082644,
    "no_speech_prob": 0
   },
   {
-   "id": 18,
-   "seek": 5392,
-   "start": 68.06,
-   "end": 74.04,
+   "id": 15,
+   "seek": 5598,
+   "start": 64.36,
+   "end": 70.38,
    "text": " Each ideal answer keeps half the probability, so E doubles its share of what's left.",
    "tokens": [
-    51072,
+    50784,
     6947,
     7157,
     1867,
@@ -3294,24 +3243,25 @@
     311,
     1411,
     13,
-    51371
+    51085
    ],
    "temperature": 0,
-   "avg_logprob": -0.16047744,
-   "compression_ratio": 1.504386,
+   "avg_logprob": -0.1505075,
+   "compression_ratio": 1.5082644,
    "no_speech_prob": 0
   },
   {
-   "id": 19,
-   "seek": 5392,
-   "start": 74.04,
-   "end": 77.659996,
-   "text": " 3.3 doublings, and E fills the whole bar.",
+   "id": 16,
+   "seek": 5598,
+   "start": 70.38,
+   "end": 74.46,
+   "text": " 3.3 ideal doublings, and E fills the whole bar.",
    "tokens": [
-    51371,
+    51085,
     805,
     13,
     18,
+    7157,
     2482,
     5199,
     1109,
@@ -3323,21 +3273,21 @@
     1379,
     2159,
     13,
-    51552
+    51289
    ],
    "temperature": 0,
-   "avg_logprob": -0.16047744,
-   "compression_ratio": 1.504386,
+   "avg_logprob": -0.1505075,
+   "compression_ratio": 1.5082644,
    "no_speech_prob": 0
   },
   {
-   "id": 20,
-   "seek": 5392,
-   "start": 77.659996,
-   "end": 82.619995,
+   "id": 17,
+   "seek": 5598,
+   "start": 74.46,
+   "end": 79.42,
    "text": " Z starts at 1 in 1260, and needs 10.3.",
    "tokens": [
-    51552,
+    51289,
     1176,
     3719,
     412,
@@ -3352,21 +3302,21 @@
     13,
     18,
     13,
-    51800
+    51537
    ],
    "temperature": 0,
-   "avg_logprob": -0.16047744,
-   "compression_ratio": 1.504386,
+   "avg_logprob": -0.1505075,
+   "compression_ratio": 1.5082644,
    "no_speech_prob": 0
   },
   {
-   "id": 21,
-   "seek": 8262,
-   "start": 82.619995,
-   "end": 88.799995,
-   "text": " In general, a character with probability p needs k questions, where p times 2 to the k",
+   "id": 18,
+   "seek": 5598,
+   "start": 79.42,
+   "end": 85.18,
+   "text": " In general, a character with probability P needs K questions, where P times 2 to the",
    "tokens": [
-    50365,
+    51537,
     682,
     2674,
     11,
@@ -3374,51 +3324,36 @@
     2517,
     365,
     8482,
-    280,
+    430,
     2203,
-    350,
+    591,
     1651,
     11,
     689,
-    280,
+    430,
     1413,
     568,
     281,
     264,
-    350,
-    50674
+    51825
    ],
    "temperature": 0,
-   "avg_logprob": -0.1092167,
-   "compression_ratio": 1.6666666,
+   "avg_logprob": -0.1505075,
+   "compression_ratio": 1.5082644,
    "no_speech_prob": 0
   },
   {
-   "id": 22,
-   "seek": 8262,
-   "start": 88.799995,
-   "end": 91.299995,
-   "text": " equals 1.",
+   "id": 19,
+   "seek": 8518,
+   "start": 85.18,
+   "end": 94.92,
+   "text": " k equals 1. So 2 to the k equals 1 over p, and k equals log base 2 of 1 over p. Now give",
    "tokens": [
-    50674,
+    50365,
+    350,
     6915,
     502,
     13,
-    50799
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.1092167,
-   "compression_ratio": 1.6666666,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 23,
-   "seek": 8262,
-   "start": 91.299995,
-   "end": 97.77999,
-   "text": " So 2 to the k equals 1 over p, and k equals log base 2 of 1 over p.",
-   "tokens": [
-    50799,
     407,
     568,
     281,
@@ -3440,23 +3375,23 @@
     670,
     280,
     13,
-    51123
+    823,
+    976,
+    50852
    ],
    "temperature": 0,
-   "avg_logprob": -0.1092167,
-   "compression_ratio": 1.6666666,
+   "avg_logprob": -0.09198153,
+   "compression_ratio": 1.672811,
    "no_speech_prob": 0
   },
   {
-   "id": 24,
-   "seek": 8262,
-   "start": 97.77999,
-   "end": 101.2,
-   "text": " Now give each character its own cost as a height.",
+   "id": 20,
+   "seek": 8518,
+   "start": 94.92,
+   "end": 101.32,
+   "text": " each character its own cost as a height. The widths add up to 1, so the total area is the",
    "tokens": [
-    51123,
-    823,
-    976,
+    50852,
     1184,
     2517,
     1080,
@@ -3466,49 +3401,6 @@
     257,
     6681,
     13,
-    51294
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.1092167,
-   "compression_ratio": 1.6666666,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 25,
-   "seek": 8262,
-   "start": 101.2,
-   "end": 105.27999,
-   "text": " Common characters sit wide and low, rare ones narrow and tall.",
-   "tokens": [
-    51294,
-    18235,
-    4342,
-    1394,
-    4874,
-    293,
-    2295,
-    11,
-    5892,
-    2306,
-    9432,
-    293,
-    6764,
-    13,
-    51498
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.1092167,
-   "compression_ratio": 1.6666666,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 26,
-   "seek": 8262,
-   "start": 105.27999,
-   "end": 111.77999,
-   "text": " The widths add up to 1, so the total area is the average number of questions per character.",
-   "tokens": [
-    51498,
     440,
     11402,
     82,
@@ -3523,6 +3415,21 @@
     1859,
     307,
     264,
+    51172
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.09198153,
+   "compression_ratio": 1.672811,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 21,
+   "seek": 8518,
+   "start": 101.32,
+   "end": 106.659996,
+   "text": " average number of questions per character. Pour the skyline flat, and its height is that",
+   "tokens": [
+    51172,
     4274,
     1230,
     295,
@@ -3530,23 +3437,7 @@
     680,
     2517,
     13,
-    51823
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.1092167,
-   "compression_ratio": 1.6666666,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 27,
-   "seek": 112,
-   "start": 111.78,
-   "end": 126.54134,
-   "text": " Then pour the skyline flat and its height is that average Shannon called that average the entropy counted in bits one bit per yes or no answer For English letters it 4 That beats 4",
-   "tokens": [
-    50365,
-    1396,
-    2016,
+    8732,
     264,
     5443,
     1889,
@@ -3557,10 +3448,23 @@
     6681,
     307,
     300,
+    51439
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.09198153,
+   "compression_ratio": 1.672811,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 22,
+   "seek": 113,
+   "start": 106.659996,
+   "end": 126.652,
+   "text": " average Shannon called that average the entropy counted in bits 1 bit per yes or no answer For English letters it 4 That beats 4 but it still four times Shannon estimate It prices every character as if nothing came before it",
+   "tokens": [
+    51439,
     4274,
     13,
-    50573,
-    50573,
     28974,
     1219,
     300,
@@ -3569,12 +3473,10 @@
     30867,
     11,
     20150,
-    50673,
-    50673,
     294,
     9239,
     11,
-    472,
+    502,
     857,
     680,
     2086,
@@ -3582,6 +3484,8 @@
     572,
     1867,
     13,
+    51817,
+    50365,
     1171,
     3669,
     7825,
@@ -3592,27 +3496,14 @@
     13,
     5348,
     13,
+    50553,
+    50553,
     663,
     16447,
     1017,
     13,
     11901,
     11,
-    51077
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.14872582,
-   "compression_ratio": 1.4836066,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 28,
-   "seek": 112,
-   "start": 126.54134,
-   "end": 133.20134,
-   "text": " but it's still four times Shannon's estimate. It prices every character as if nothing came",
-   "tokens": [
-    51077,
     457,
     309,
     311,
@@ -3623,6 +3514,8 @@
     311,
     12539,
     13,
+    50808,
+    50844,
     467,
     7901,
     633,
@@ -3631,33 +3524,48 @@
     498,
     1825,
     1361,
-    51410
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.14872582,
-   "compression_ratio": 1.4836066,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 29,
-   "seek": 112,
-   "start": 133.20134,
-   "end": 142.20134,
-   "text": " before it. What comes after a cue? It's you, 98 times out of 100. You swallows the bar.",
-   "tokens": [
-    51410,
     949,
     309,
     13,
+    51010
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19662252,
+   "compression_ratio": 1.4243902,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 23,
+   "seek": 113,
+   "start": 127.172,
+   "end": 128.372,
+   "text": " What comes after a Q?",
+   "tokens": [
+    51036,
     708,
     1487,
     934,
     257,
-    22656,
+    1249,
     30,
+    51096
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19662252,
+   "compression_ratio": 1.4243902,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 24,
+   "seek": 113,
+   "start": 130.152,
+   "end": 132.992,
+   "text": " It's U, 98 times out of 100.",
+   "tokens": [
+    51185,
     467,
     311,
-    291,
+    624,
     11,
     20860,
     1413,
@@ -3665,73 +3573,74 @@
     295,
     2319,
     13,
-    509,
+    51327
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.19662252,
+   "compression_ratio": 1.4243902,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 25,
+   "seek": 113,
+   "start": 133.772,
+   "end": 135.112,
+   "text": " U swallows the bar.",
+   "tokens": [
+    51366,
+    624,
     1693,
     38811,
     264,
     2159,
     13,
-    51860
+    51433
    ],
    "temperature": 0,
-   "avg_logprob": -0.14872582,
-   "compression_ratio": 1.4836066,
+   "avg_logprob": -0.19662252,
+   "compression_ratio": 1.4243902,
    "no_speech_prob": 0
   },
   {
-   "id": 30,
-   "seek": 3102,
-   "start": 142.20134,
-   "end": 144.70134,
-   "text": " its cost drops to almost nothing,",
+   "id": 26,
+   "seek": 113,
+   "start": 135.632,
+   "end": 140.612,
+   "text": " Its cost drops to almost nothing, and the average falls to 0.16 bits.",
    "tokens": [
-    50365,
-    1080,
+    51459,
+    6953,
     2063,
     11438,
     281,
     1920,
     1825,
     11,
-    50490
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.17512572,
-   "compression_ratio": 1.682243,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 31,
-   "seek": 3102,
-   "start": 144.70134,
-   "end": 147.70134,
-   "text": " and the average falls to .16 bits.",
-   "tokens": [
-    50490,
     293,
     264,
     4274,
     8804,
     281,
-    2411,
+    1958,
+    13,
     6866,
     9239,
     13,
-    50640
+    51708
    ],
    "temperature": 0,
-   "avg_logprob": -0.17512572,
-   "compression_ratio": 1.682243,
+   "avg_logprob": -0.19662252,
+   "compression_ratio": 1.4243902,
    "no_speech_prob": 0
   },
   {
-   "id": 32,
-   "seek": 3102,
-   "start": 147.70134,
-   "end": 151.50134,
-   "text": " After th, e takes two-thirds of the bar,",
+   "id": 27,
+   "seek": 2799,
+   "start": 140.612,
+   "end": 148.052,
+   "text": " After th, e takes two-thirds of the bar, and its cost shrinks to about half a question.",
    "tokens": [
-    50640,
+    50365,
     2381,
     258,
     11,
@@ -3744,21 +3653,6 @@
     264,
     2159,
     11,
-    50830
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.17512572,
-   "compression_ratio": 1.682243,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 33,
-   "seek": 3102,
-   "start": 151.50134,
-   "end": 154.40134,
-   "text": " and its cost shrinks to about half a question.",
-   "tokens": [
-    50830,
     293,
     1080,
     2063,
@@ -3770,135 +3664,94 @@
     257,
     1168,
     13,
-    50975
+    50737
    ],
    "temperature": 0,
-   "avg_logprob": -0.17512572,
-   "compression_ratio": 1.682243,
+   "avg_logprob": -0.12569372,
+   "compression_ratio": 1.5346534,
    "no_speech_prob": 0
   },
   {
-   "id": 34,
-   "seek": 3102,
-   "start": 154.40134,
-   "end": 156.90134,
-   "text": " Half a question sounds impossible,",
+   "id": 28,
+   "seek": 2799,
+   "start": 148.052,
+   "end": 154.712,
+   "text": " Half a question, like 3.3 doublings, sounds impossible, but a compressor asks about long",
    "tokens": [
-    50975,
+    50737,
     15917,
     257,
     1168,
+    11,
+    411,
+    805,
+    13,
+    18,
+    2482,
+    5199,
+    1109,
+    11,
     3263,
     6243,
     11,
-    51100
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.17512572,
-   "compression_ratio": 1.682243,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 35,
-   "seek": 3102,
-   "start": 156.90134,
-   "end": 160.50134,
-   "text": " but a compressor asks about long runs of letters,",
-   "tokens": [
-    51100,
     457,
     257,
     28765,
     8962,
     466,
     938,
+    51070
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12569372,
+   "compression_ratio": 1.5346534,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 29,
+   "seek": 2799,
+   "start": 154.712,
+   "end": 158.43199,
+   "text": " runs of letters, and the fractions add up.",
+   "tokens": [
+    51070,
     6676,
     295,
     7825,
     11,
-    51280
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.17512572,
-   "compression_ratio": 1.682243,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 36,
-   "seek": 3102,
-   "start": 160.50134,
-   "end": 162.40134,
-   "text": " and the fractions add up.",
-   "tokens": [
-    51280,
     293,
     264,
     36058,
     909,
     493,
     13,
-    51375
+    51256
    ],
    "temperature": 0,
-   "avg_logprob": -0.17512572,
-   "compression_ratio": 1.682243,
+   "avg_logprob": -0.12569372,
+   "compression_ratio": 1.5346534,
    "no_speech_prob": 0
   },
   {
-   "id": 37,
-   "seek": 3102,
-   "start": 162.40134,
-   "end": 164.70134,
-   "text": " Here they average 1.7.",
+   "id": 30,
+   "seek": 2799,
+   "start": 158.43199,
+   "end": 165.172,
+   "text": " After th, the average is 1.7, but averaged over every two-letter context, it's still",
    "tokens": [
-    51375,
-    1692,
-    436,
+    51256,
+    2381,
+    258,
+    11,
+    264,
     4274,
+    307,
     502,
     13,
     22,
-    13,
-    51490
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.17512572,
-   "compression_ratio": 1.682243,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 38,
-   "seek": 3102,
-   "start": 164.70134,
-   "end": 167.40134,
-   "text": " Q and th are the easy cases.",
-   "tokens": [
-    51490,
-    1249,
-    293,
-    258,
-    366,
-    264,
-    1858,
-    3331,
-    13,
-    51625
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.17512572,
-   "compression_ratio": 1.682243,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 39,
-   "seek": 3102,
-   "start": 167.40134,
-   "end": 170.20134,
-   "text": " Averaged over every two-letter context,",
-   "tokens": [
-    51625,
-    316,
-    331,
+    11,
+    457,
+    18247,
     2980,
     670,
     633,
@@ -3907,60 +3760,122 @@
     21248,
     4319,
     11,
-    51765
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.17512572,
-   "compression_ratio": 1.682243,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 40,
-   "seek": 5902,
-   "start": 170.20134,
-   "end": 177.30135,
-   "text": " it's still 2.8. Shannon measured this with a person, who read a passage one character at a time,",
-   "tokens": [
-    50365,
     309,
     311,
     920,
+    51593
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12569372,
+   "compression_ratio": 1.5346534,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 31,
+   "seek": 2799,
+   "start": 165.172,
+   "end": 166.892,
+   "text": " 2.8.",
+   "tokens": [
+    51593,
     568,
     13,
     23,
     13,
-    28974,
-    12690,
-    341,
-    365,
-    257,
-    954,
-    11,
-    567,
-    1401,
-    257,
-    11497,
-    472,
-    2517,
-    412,
-    257,
-    565,
-    11,
-    50720
+    51679
    ],
    "temperature": 0,
-   "avg_logprob": -0.10887039,
-   "compression_ratio": 1.579832,
+   "avg_logprob": -0.12569372,
+   "compression_ratio": 1.5346534,
    "no_speech_prob": 0
   },
   {
-   "id": 41,
-   "seek": 5902,
-   "start": 177.84134,
-   "end": 186.00134,
-   "text": " guessing each next one until right. 79 of 102 came on the first guess. A twin who guesses the same",
+   "id": 32,
+   "seek": 5427,
+   "start": 166.892,
+   "end": 172.432,
+   "text": " Some contexts need more text than any corpus holds, so Shannon used a predictor that already",
    "tokens": [
-    50747,
+    50365,
+    2188,
+    30628,
+    643,
+    544,
+    2487,
+    813,
+    604,
+    1181,
+    31624,
+    9190,
+    11,
+    370,
+    28974,
+    1143,
+    257,
+    6069,
+    284,
+    300,
+    1217,
+    50642
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13613346,
+   "compression_ratio": 1.5576923,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 33,
+   "seek": 5427,
+   "start": 172.432,
+   "end": 174.052,
+   "text": " knows English.",
+   "tokens": [
+    50642,
+    3255,
+    3669,
+    13,
+    50723
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13613346,
+   "compression_ratio": 1.5576923,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 34,
+   "seek": 5427,
+   "start": 174.052,
+   "end": 175.372,
+   "text": " A person.",
+   "tokens": [
+    50723,
+    316,
+    954,
+    13,
+    50789
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13613346,
+   "compression_ratio": 1.5576923,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 35,
+   "seek": 5427,
+   "start": 175.372,
+   "end": 180.57199,
+   "text": " His subject read a passage letter by letter, guessing each next one until right.",
+   "tokens": [
+    50789,
+    2812,
+    3983,
+    1401,
+    257,
+    11497,
+    5063,
+    538,
+    5063,
+    11,
     17939,
     1184,
     958,
@@ -3968,6 +3883,21 @@
     1826,
     558,
     13,
+    51049
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13613346,
+   "compression_ratio": 1.5576923,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 36,
+   "seek": 5427,
+   "start": 180.57199,
+   "end": 184.452,
+   "text": " 79 of 102 came on the first guess.",
+   "tokens": [
+    51049,
     32803,
     295,
     45937,
@@ -3977,27 +3907,27 @@
     700,
     2041,
     13,
+    51243
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13613346,
+   "compression_ratio": 1.5576923,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 37,
+   "seek": 5427,
+   "start": 184.452,
+   "end": 190.372,
+   "text": " A twin who guesses the same way could rebuild the passage from these counts alone.",
+   "tokens": [
+    51243,
     316,
     18397,
     567,
     42703,
     264,
     912,
-    51155
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.10887039,
-   "compression_ratio": 1.579832,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 42,
-   "seek": 5902,
-   "start": 186.00134,
-   "end": 191.72134,
-   "text": " way could rebuild the passage from these counts alone. Treat each guess count as a symbol,",
-   "tokens": [
-    51155,
     636,
     727,
     16877,
@@ -4008,6 +3938,21 @@
     14893,
     3312,
     13,
+    51539
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13613346,
+   "compression_ratio": 1.5576923,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 38,
+   "seek": 5427,
+   "start": 190.372,
+   "end": 196.812,
+   "text": " Treat each guess count as a symbol, and the same skyline pores, flat at about 1.4 bits.",
+   "tokens": [
+    51539,
     20298,
     1184,
     2041,
@@ -4016,27 +3961,13 @@
     257,
     5986,
     11,
-    51441
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.10887039,
-   "compression_ratio": 1.579832,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 43,
-   "seek": 5902,
-   "start": 192.22134,
-   "end": 198.54135,
-   "text": " and the same skyline pores flat at about 1.4 bits. A better guesser could only lower it.",
-   "tokens": [
-    51466,
     293,
     264,
     912,
     5443,
     1889,
     30082,
+    11,
     4962,
     412,
     466,
@@ -4045,6 +3976,21 @@
     19,
     9239,
     13,
+    51861
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13613346,
+   "compression_ratio": 1.5576923,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 39,
+   "seek": 8419,
+   "start": 196.812,
+   "end": 199.272,
+   "text": " A better guesser could only lower it.",
+   "tokens": [
+    50365,
     316,
     1101,
     2041,
@@ -4054,21 +4000,21 @@
     3126,
     309,
     13,
-    51782
+    50488
    ],
    "temperature": 0,
-   "avg_logprob": -0.10887039,
-   "compression_ratio": 1.579832,
+   "avg_logprob": -0.08042968,
+   "compression_ratio": 1.476378,
    "no_speech_prob": 0
   },
   {
-   "id": 44,
-   "seek": 8736,
-   "start": 198.54135,
-   "end": 206.44135,
-   "text": " Shannon's tests, with 100 letters of context, put English between 0.6 and 1.3 bits per character.",
+   "id": 40,
+   "seek": 8419,
+   "start": 199.272,
+   "end": 202.952,
+   "text": " Shannon's tests, with 100 letters of context,",
    "tokens": [
-    50365,
+    50488,
     28974,
     311,
     6921,
@@ -4079,6 +4025,21 @@
     295,
     4319,
     11,
+    50672
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.08042968,
+   "compression_ratio": 1.476378,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 41,
+   "seek": 8419,
+   "start": 202.952,
+   "end": 207.252,
+   "text": " put English between 0.6 and 1.3 bits per character.",
+   "tokens": [
+    50672,
     829,
     3669,
     1296,
@@ -4093,21 +4054,21 @@
     680,
     2517,
     13,
-    50760
+    50887
    ],
    "temperature": 0,
-   "avg_logprob": -0.19841337,
-   "compression_ratio": 1.4057971,
+   "avg_logprob": -0.08042968,
+   "compression_ratio": 1.476378,
    "no_speech_prob": 0
   },
   {
-   "id": 45,
-   "seek": 8736,
-   "start": 207.08134,
-   "end": 217.28134,
-   "text": " In 2023, a language model compressing part of a new book in the same 27 symbols needed 0.84 bits, inside that range.",
+   "id": 42,
+   "seek": 8419,
+   "start": 207.252,
+   "end": 211.312,
+   "text": " In 2023, a language model compressing part of a book",
    "tokens": [
-    50792,
+    50887,
     682,
     44377,
     11,
@@ -4119,47 +4080,116 @@
     644,
     295,
     257,
-    777,
     1446,
+    51090
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.08042968,
+   "compression_ratio": 1.476378,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 43,
+   "seek": 8419,
+   "start": 211.312,
+   "end": 214.85199,
+   "text": " that reached Project Gutenberg after its training,",
+   "tokens": [
+    51090,
+    300,
+    6488,
+    9849,
+    42833,
+    6873,
+    934,
+    1080,
+    3097,
+    11,
+    51267
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.08042968,
+   "compression_ratio": 1.476378,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 44,
+   "seek": 8419,
+   "start": 214.85199,
+   "end": 219.152,
+   "text": " in the same 27 symbols, needed 0.84 bits,",
+   "tokens": [
+    51267,
     294,
     264,
     912,
     7634,
     16944,
+    11,
     2978,
     1958,
     13,
     25494,
     9239,
     11,
+    51482
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.08042968,
+   "compression_ratio": 1.476378,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 45,
+   "seek": 8419,
+   "start": 219.152,
+   "end": 221.052,
+   "text": " inside that range.",
+   "tokens": [
+    51482,
     1854,
     300,
     3613,
     13,
-    51302
+    51577
    ],
    "temperature": 0,
-   "avg_logprob": -0.19841337,
-   "compression_ratio": 1.4057971,
+   "avg_logprob": -0.08042968,
+   "compression_ratio": 1.476378,
    "no_speech_prob": 0
   },
   {
    "id": 46,
-   "seek": 8736,
-   "start": 217.90134,
-   "end": 222.14134,
-   "text": " The hidden character from the start is the why at the end of the other day.",
+   "seek": 8419,
+   "start": 221.052,
+   "end": 223.172,
+   "text": " The hidden character from the start",
    "tokens": [
-    51333,
+    51577,
     440,
     7633,
     2517,
     490,
     264,
     722,
+    51683
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.08042968,
+   "compression_ratio": 1.476378,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 47,
+   "seek": 8419,
+   "start": 223.172,
+   "end": 225.832,
+   "text": " is the Y at the end of the other day.",
+   "tokens": [
+    51683,
     307,
     264,
-    983,
+    398,
     412,
     264,
     917,
@@ -4168,19 +4198,19 @@
     661,
     786,
     13,
-    51545
+    51816
    ],
    "temperature": 0,
-   "avg_logprob": -0.19841337,
-   "compression_ratio": 1.4057971,
+   "avg_logprob": -0.08042968,
+   "compression_ratio": 1.476378,
    "no_speech_prob": 0
   },
   {
-   "id": 47,
-   "seek": 11096,
-   "start": 222.14134,
-   "end": 227.84134,
-   "text": " Shannon's subject got it on the first guess, a single yes or no question.",
+   "id": 48,
+   "seek": 11321,
+   "start": 225.832,
+   "end": 228.512,
+   "text": " Shannon's subject got it on the first guess,",
    "tokens": [
     50365,
     28974,
@@ -4193,6 +4223,21 @@
     700,
     2041,
     11,
+    50499
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12704529,
+   "compression_ratio": 1.288,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 49,
+   "seek": 11321,
+   "start": 228.512,
+   "end": 230.79199,
+   "text": " a single yes or no question.",
+   "tokens": [
+    50499,
     257,
     2167,
     2086,
@@ -4200,21 +4245,21 @@
     572,
     1168,
     13,
-    50650
+    50613
    ],
    "temperature": 0,
-   "avg_logprob": -0.20422918,
+   "avg_logprob": -0.12704529,
    "compression_ratio": 1.288,
    "no_speech_prob": 0
   },
   {
-   "id": 48,
-   "seek": 11096,
-   "start": 227.84134,
-   "end": 230.10135,
+   "id": 50,
+   "seek": 11321,
+   "start": 230.79199,
+   "end": 233.112,
    "text": " Splitting the alphabet took five.",
    "tokens": [
-    50650,
+    50613,
     19788,
     2414,
     264,
@@ -4222,21 +4267,21 @@
     1890,
     1732,
     13,
-    50763
+    50729
    ],
    "temperature": 0,
-   "avg_logprob": -0.20422918,
+   "avg_logprob": -0.12704529,
    "compression_ratio": 1.288,
    "no_speech_prob": 0
   },
   {
-   "id": 49,
-   "seek": 11096,
-   "start": 230.10135,
-   "end": 233.46133,
+   "id": 51,
+   "seek": 11321,
+   "start": 233.112,
+   "end": 236.71199,
    "text": " In English, almost no letter arrives without a past.",
    "tokens": [
-    50763,
+    50729,
     682,
     3669,
     11,
@@ -4248,15 +4293,15 @@
     257,
     1791,
     13,
-    50931
+    50909
    ],
    "temperature": 0,
-   "avg_logprob": -0.20422918,
+   "avg_logprob": -0.12704529,
    "compression_ratio": 1.288,
    "no_speech_prob": 0
   }
  ],
  "x_groq": {
-  "id": "req_01m50xjfgtef59exq8vstsy4k7"
+  "id": "req_01m51avvn8edzt7d8h9r3vd7kh"
  }
 }

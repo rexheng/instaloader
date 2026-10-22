@@ -135,7 +135,7 @@ T H fly to the title; the stack rises into the TH-weighted skyline (axis zooms o
 The run closes back into the ? box, the TH stack dims to 30 % and its 1.67 gets a purple **TH** tag, the 4.11 reference rises to 60 %. A yellow dashed level grows at 2.81 ("all two-letter contexts", 2.81 in the gutter), and the gap meter returns at 4.11 (3.11 extra) and shrinks to 2.81 (**1.81 extra**) while 2.81 is copied into the equation.
 
 ### 7. Payoff (2:58–3:53)
-> Long contexts need more text than any corpus holds, so Shannon used a predictor that already
+> Longer contexts need more text than any corpus holds, so Shannon used a predictor that already
 > knows English: a person.
 
 On "need" the equation steps out and, in its place, grey: **possible contexts: 27² = 729 → 27¹⁰⁰ ≈ 10¹⁴³**, then **Brown Corpus: 5.75 M characters** (the Brown citation flags). The chart fades out completely; then Shannon's record fades in at 15 % on "a person".

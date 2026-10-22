@@ -1,200 +1,196 @@
 1
-00:00:00,000 --> 00:00:02,660
+00:00:00,000 --> 00:00:02,560
 One in five hundred people has this disease.
 
 2
-00:00:03,040 --> 00:00:08,890
-A test catches ninety-nine percent of cases and wrongly flags one percent of the healthy.
+00:00:02,940 --> 00:00:08,470
+A test catches ninety-nine percent of the sick and wrongly flags one percent of the healthy.
 
 3
-00:00:09,270 --> 00:00:12,240
+00:00:08,850 --> 00:00:11,740
 If yours says positive, what's the chance you're sick?
 
 4
-00:00:12,540 --> 00:00:13,510
+00:00:12,120 --> 00:00:13,030
 Pick a number.
 
 5
-00:00:15,466 --> 00:00:20,016
+00:00:14,966 --> 00:00:19,516
 Most doctors and medical students given a problem like this got it wrong.
 
 6
-00:00:20,366 --> 00:00:27,346
-Their most common answer was the test's own accuracy, here ninety-nine percent: you'd start treatment today.
+00:00:19,866 --> 00:00:24,966
+Their most common answer was their test's own accuracy: ninety-five percent.
 
 7
-00:00:27,700 --> 00:00:29,430
-Check that rule by counting.
+00:00:25,346 --> 00:00:29,026
+For our test, that's ninety-nine: you'd start treatment today.
 
 8
-00:00:29,630 --> 00:00:33,460
-Here are ten thousand people, and suppose half of them are sick.
+00:00:29,366 --> 00:00:31,096
+Check that rule by counting.
 
 9
-00:00:33,800 --> 00:00:34,930
-Test everyone.
+00:00:31,296 --> 00:00:35,126
+Here are ten thousand people, and suppose half of them are sick.
 
 10
-00:00:35,130 --> 00:00:39,360
-Ninety-nine percent of the sick light up, and one percent of the healthy.
+00:00:35,466 --> 00:00:36,596
+Test everyone.
 
 11
-00:00:39,700 --> 00:00:43,520
-Of the five thousand who lit up, ninety-nine percent are sick.
+00:00:36,796 --> 00:00:41,026
+Ninety-nine percent of the sick light up, and one percent of the healthy.
 
 12
-00:00:43,820 --> 00:00:45,300
-Here, the rule holds.
+00:00:41,366 --> 00:00:45,186
+Of the five thousand who lit up, ninety-nine percent are sick.
 
 13
-00:00:45,666 --> 00:00:49,666
-Now make the disease rare, like yours: one in five hundred.
+00:00:45,486 --> 00:00:46,966
+Here, the rule holds.
 
 14
-00:00:49,866 --> 00:00:51,776
-That leaves twenty sick people.
+00:00:47,333 --> 00:00:51,333
+Now make the disease rare, like yours: one in five hundred.
 
 15
-00:00:52,133 --> 00:00:53,473
-Run the same test.
+00:00:51,533 --> 00:00:53,443
+That leaves twenty sick people.
 
 16
-00:00:53,673 --> 00:01:00,133
-About twenty sick people light up, plus one percent of the nine thousand nine hundred eighty healthy ones.
+00:00:53,800 --> 00:00:55,140
+Run the same test.
 
 17
-00:01:00,333 --> 00:01:01,783
-That's about a hundred.
+00:00:55,340 --> 00:01:01,800
+About twenty sick people light up, plus one percent of the nine thousand nine hundred eighty healthy ones.
 
 18
-00:01:02,133 --> 00:01:05,883
-So of a hundred and twenty positives, only twenty are sick.
+00:01:02,000 --> 00:01:03,450
+That's about a hundred.
 
 19
-00:01:06,100 --> 00:01:07,590
-Seventeen percent.
+00:01:03,800 --> 00:01:07,550
+So of a hundred and twenty positives, only twenty are sick.
 
 20
-00:01:08,600 --> 00:01:10,330
-The rule said ninety-nine.
+00:01:07,733 --> 00:01:09,223
+Seventeen percent.
 
 21
-00:01:10,530 --> 00:01:12,110
-Six times too high.
+00:01:10,233 --> 00:01:11,963
+The rule said ninety-nine.
 
 22
-00:01:13,100 --> 00:01:17,710
-One percent sounds small, but here it's one percent of nearly everyone.
+00:01:12,163 --> 00:01:13,743
+Six times too high.
 
 23
-00:01:18,066 --> 00:01:22,616
-Your positive result ruled out everyone who tested negative.
+00:01:14,733 --> 00:01:19,343
+One percent sounds small, but here it's one percent of nearly everyone.
 
 24
-00:01:23,200 --> 00:01:28,310
-What's left is a smaller sample space: these hundred and twenty people.
+00:01:19,700 --> 00:01:24,250
+Your positive result ruled out everyone who tested negative.
 
 25
-00:01:28,666 --> 00:01:32,026
-Your chance of being sick is the red share of this crowd.
+00:01:24,866 --> 00:01:29,976
+What's left is a smaller sample space: these hundred and twenty people.
 
 26
-00:01:32,326 --> 00:01:34,726
-Twenty, out of twenty plus a hundred.
+00:01:30,333 --> 00:01:33,693
+Your chance of being sick is the red share of this crowd.
 
 27
-00:01:36,333 --> 00:01:41,113
-Unrounded, the red count is twenty sick people times ninety-nine percent.
+00:01:33,993 --> 00:01:36,393
+Twenty, out of twenty plus a hundred.
 
 28
-00:01:41,713 --> 00:01:47,263
-The blue count is nine thousand nine hundred eighty healthy people times one percent.
+00:01:37,966 --> 00:01:42,746
+Unrounded, the red count is twenty sick people times ninety-nine percent.
 
 29
-00:01:47,600 --> 00:01:51,380
-Divide top and bottom by the ten thousand we started with.
+00:01:43,346 --> 00:01:48,896
+The blue count is nine thousand nine hundred eighty healthy people times one percent.
 
 30
-00:01:51,580 --> 00:01:59,560
-Twenty people become two in a thousand, and nine thousand nine hundred eighty become nine hundred ninety-eight in a thousand.
+00:01:49,233 --> 00:01:51,533
+Divide everything by the ten thousand.
 
 31
-00:01:59,760 --> 00:02:01,150
-The share can't change.
+00:01:51,733 --> 00:01:57,033
+Counts become shares: two in a thousand sick, nine hundred ninety-eight healthy.
 
 32
-00:02:01,500 --> 00:02:07,930
-These are how common each group is, and these, how often each group tests positive: Bayes' theorem.
+00:01:57,233 --> 00:01:58,623
+The share can't change.
 
 33
-00:02:08,266 --> 00:02:13,556
-All it does is shrink the sample space to what the evidence allows, then take the share.
+00:01:58,966 --> 00:02:05,396
+These are how common each group is, and these, how often each group tests positive: Bayes' theorem.
 
 34
-00:02:14,700 --> 00:02:17,180
-Swap the disease for a police watch list.
+00:02:05,733 --> 00:02:11,023
+All it does is shrink the sample space to what the evidence allows, then take the share.
 
 35
-00:02:17,533 --> 00:02:24,353
-At the twenty seventeen Champions League final, about a hundred and seventy thousand people were in Cardiff.
+00:02:12,166 --> 00:02:14,646
+Swap the disease for a police watch list.
 
 36
-00:02:24,553 --> 00:02:32,103
-The watch lists held about twelve hundred faces, so even a small error rate per face would swamp the real matches.
+00:02:15,000 --> 00:02:21,820
+At the twenty seventeen Champions League final, about a hundred and seventy thousand people were in Cardiff.
 
 37
-00:02:32,466 --> 00:02:35,156
-Face-recognition cameras scanned the crowd.
+00:02:22,020 --> 00:02:29,570
+The watch lists held about twelve hundred faces, so even a small error rate per face would swamp the real matches.
 
 38
-00:02:35,456 --> 00:02:38,876
-They raised two thousand four hundred and seventy alerts.
+00:02:29,933 --> 00:02:32,623
+Face-recognition cameras scanned the crowd.
 
 39
-00:02:39,266 --> 00:02:41,896
-Shrink to the alerts, and take the red share.
+00:02:32,923 --> 00:02:36,343
+They raised two thousand four hundred and seventy alerts.
 
 40
-00:02:42,276 --> 00:02:46,786
-Police counted a hundred and seventy-three as right: seven percent.
+00:02:36,733 --> 00:02:39,363
+Shrink to the alerts, and take the red share.
 
 41
-00:02:47,133 --> 00:02:51,483
-In machine learning, the share of alerts that are right is called precision.
+00:02:39,600 --> 00:02:44,110
+Police counted a hundred and seventy-three as right: seven percent.
 
 42
-00:02:51,833 --> 00:02:55,363
-The university's evaluators counted three percent here.
+00:02:44,466 --> 00:02:48,816
+In machine learning, the share of alerts that are right is called precision.
 
 43
-00:02:55,743 --> 00:03:02,683
-After a new algorithm and better photos cut the false alarms, they counted forty-six at the Six Nations.
+00:02:49,166 --> 00:02:55,586
+Cardiff University's evaluators counted only alerts the logbooks confirmed: three percent.
 
 44
-00:03:03,033 --> 00:03:04,253
-Back to your test.
+00:02:55,966 --> 00:03:05,676
+Months later, a new algorithm, better photos and practised operators thinned out the false alarms, and their count rose to forty-six percent.
 
 45
-00:03:05,153 --> 00:03:08,393
-The title's ninety-nine percent accuracy is real.
+00:03:06,033 --> 00:03:07,253
+Back to your test.
 
 46
-00:03:08,773 --> 00:03:15,093
-But a test that calls everyone healthy scores ninety-nine point eight: more accurate, and useless.
-
-47
-00:03:15,433 --> 00:03:18,663
+00:03:08,600 --> 00:03:11,830
 Your seventeen percent assumes a random screen.
 
-48
-00:03:18,963 --> 00:03:29,003
+47
+00:03:12,130 --> 00:03:22,170
 Symptoms raise the one in five hundred, and the answer climbs: at one in a hundred, fifty percent; at one in two, ninety-nine, where the rule held.
 
-49
-00:03:31,033 --> 00:03:36,143
+48
+00:03:24,200 --> 00:03:29,310
 Ninety-nine percent is the test's recall: how often the sick test positive.
 
-50
-00:03:36,443 --> 00:03:41,263
+49
+00:03:29,610 --> 00:03:34,430
 Seventeen percent is its precision: how often the positive are sick.
 

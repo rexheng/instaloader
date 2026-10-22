@@ -5,7 +5,7 @@ so the average friend has avg(k²)/μ = μ + σ²/μ friends (the cross terms va
 distances from the balance point sum to zero), which is more than the average person whenever friend
 counts vary, and epidemiologists can use this to see an outbreak coming.
 
-Runtime 3:41 · 560 words · voice af_heart, speed 0.82, sentence gaps 0.26 s inside a beat and
+Runtime 3:3x · 510 words · voice af_heart, speed 0.80, sentence gaps 0.26 s inside a beat and
 0.7 s at section boundaries; 0.6 s holds after each new equation row in the algebra (round 3).
 Pronunciation override: Christakis → /kɹɪstˈɑkɪs/.
 

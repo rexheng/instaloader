@@ -421,3 +421,110 @@ errors claimed. Both say every fix together reaches about 9.0, narrowly, with no
 | Hook 8.5 | commit by 0:12; ending resolves the opening | question ends 0:13.4 | cold open at speed 0.88, no pause before "Pick a number"; a "your guess" marker slides along the empty meter during the hold |
 | Audio 8.5 | deictics land | "watch list" had nothing to land on | red "on a watch list" legend lands on the words |
 | Originality 8 / 8.5 | an image viewers would remember | Cardiff base rate never shown | "≤ 1 in 140" under the watch-list legend; evaluators' bar visibly sheds false alarms 3 % -> 46 % |
+
+### What changed
+
+**Facts (no error was claimed; one proposed wording was checked and not used).**
+- I re-read Davies, Innes & Dawson (2018). Their 3 % comes from "Operator logs … used to clarify whether
+  or not these matches were accurate … 3% (N=78) were 'true positives' (confirmed by the operators)",
+  across 2,632 alerts that include the police-officer test list, with many decisions never logged.
+  So the narration now gives the real reason their count is below the force's 7 %: "Cardiff
+  University's evaluators counted only alerts the logbooks confirmed: three percent." The substance
+  critic's suggested "checking every alert themselves" does not describe their method, so it is not
+  used (facts.md §C records the quote).
+- Six Nations 2018: 22 of 48 judged true (46 %), 22 false, 4 missing; "Months later, a new algorithm,
+  better photos and practised operators thinned out the false alarms, and their count rose to
+  forty-six percent." Davies et al. credit the new algorithm and operator familiarity with the
+  settings, and after the final only high-standard custody photos were enrolled.
+- "≤ 1 in 140" = 1,200 / 170,000 = 1 in 141.7, an upper bound. It is *more* common than the hook's
+  1 in 500 (the critic's aside that the targets are rarer is not right), so no comparison is drawn.
+- The accuracy paradox (99.8 % for a test that calls everyone healthy) is cut: it is the whole topic of
+  episode 44 ("99.8% Accurate and Completely Useless"), and both critics wanted a one-move landing.
+  check.py and facts.md are updated (99 ÷ 17 = 5.82, sums 5,000 and 120, 7 px crowd cells).
+
+**Fail beat (craft 1, 10; substance 5).** Every person who tests positive is now a vector square: the
+20 sick grow 3× on "twenty sick" (no ring); as the beam passes, every positive gets the same yellow
+ring and the 100 healthy positives grow 3×, so 100 ringed blue squares visibly outnumber 20 ringed red
+ones. On "one percent" only those 100 pulse; on "nearly everyone" the 9,980. A grey rule and "5,000"
+appear under the positives column on "five thousand", and "120" on "a hundred and twenty". The 6×
+brace is now a grey bracket from the meter's 17 % fill edge to the naive 99 % marker, labelled
+"99 ÷ 17 ≈ 6×".
+
+**Brackets (craft 2).** All four braces (strip "20"/"100", Cardiff "173 right"/"2,297 wrong") are
+straight brackets: a rule with two 0.12 end ticks, stroke 4, drawn with Create.
+
+**Evaluators on their own bar (craft 3; substance 1).** The main bar keeps only the police 7 %
+("police count" to its right). A thin red/blue "university evaluators" bar below fills to 3 % ("2017
+final"), the tag becomes "Six Nations 2018" on "Months later", and from "photos" to "alarms" its blue
+share shrinks while red grows to 46 % (smooth, ≈ 2.5 s). "forty-six percent" is spoken with its unit.
+
+**Stakes (craft 4; substance 6).** "Their most common answer was their test's own accuracy:
+ninety-five percent. For our test, that's ninety-nine: you'd start treatment today." A grey "their test:
+95% accurate" sits under "44% said 95%" for ≈ 4 s, and on "ninety-nine" a copy of the "95%" turns into
+"99%" in the first 40 % of its trip, then travels round the right end of the meter onto the naive marker.
+
+**÷ 10,000 (craft 5; substance 3).** "Divide everything by the ten thousand. Counts become shares: two
+in a thousand sick, nine hundred ninety-eight healthy. The share can't change." (9.4 s, was 13.9 s; the
+third "nine thousand nine hundred eighty" is gone). The table and the formula change together on each
+spoken number (20 → 0.002 in the people column and both 20s in the formula in one move, then 9,980 →
+0.998).
+
+**Into Cardiff (craft 6, 7; substance 7, 8).** One staged move on "Swap the disease for a police watch
+list": the algebra clears and the meter empties and retitles in place, then the meter goes to the top
+right while the strip's 120 people spread out into the crowd (the 20 sick become 20 of the listed
+faces) and the crowd fades in around them; the red legend "■ on a watch list" lands on "watch list".
+The crowd is larger (700 px, 7 px cells with 5 px squares) at 80 % opacity, the listed squares are
+11 px, and every flagged square grows to 11 px with a yellow ring as the beam passes. The legend moved
+under the meter on the right and now reads "on a watch list / ≤ 1,200 faces · ≤ 1 in 140 / = 17
+people · illustration"; "≤ 1 in 140" pulses on "error rate per face". A grey dateline "Cardiff · 3 June
+2017" sits over "≈ 170,000 people" from "Champions League final". The two citations share one line so
+nothing crowds the crowd.
+
+**Diagram → table (craft 8).** One 1.5 s morph: each node + label becomes its row's bullet + label
+(labels arc over their nodes, which they pass), each arrow becomes its row arrow with its rate riding
+along (the 1 % now sits under its arrow in the table, as in the diagram), the + travels in a straight
+line just ahead of the arrow tips into the positives' header, and the meter steps down out of the way.
+Only "1 in 500", "you" and the ring fade, as they have no row.
+
+**Hook (substance 4).** No pause before "Pick a number", "of the sick", cold open at speed 0.88: the
+question ends at 0:11.7 (was 0:12.6). A hollow grey "your guess" marker slides once along the empty
+meter during the 1.6 s hold.
+
+**Landing (craft 9; substance 2, 9).** "Back to your test" (the alerts collapse into the + while the
+diagram re-forms around it and the meter slides back, in one overlapping move) → the 17 % grows back on
+"seventeen percent" → the prevalence sweep → the chiasmus. "recall" is written as the red flow pulses;
+the two-tag frame is complete from "precision" and holds ≈ 3.5 s to the end card. The landing runs
+≈ 30 s (was 39 s) with two moves and ends on one line.
+
+**Kept (all three keep items from both reviews):** the persistent meter docked on the 24 × 5 strip with
+its 17 % red segment over the 4 red columns, and again over the 2,470-cell raster at 7 %; the
+derivation built from the picture (brackets → 20 / (20 + 100), table → 20 × 0.99 and 9,980 × 0.01,
+Bayes form with the yellow and red boxes); the half-sick control case; the raster collapsing into the +;
+the landing sweep with one updater, "1 in 100 · 50%" held while spoken and the naive marker at 1 in 2.
+
+### Self-check (review kit on the final 1080p master)
+
+- Runtime 3:36.2 (was 3:42.9). 152 wpm on speech time; 516 words by the review kit's count (was 536).
+- −14.1 LUFS / −2.3 dBTP. Leading silence 0.0 s, trailing 1.86 s, longest internal silence 2.16 s
+  (the planned "Pick a number" hold). Longest static stretch 3.3 s (2:51.0, under the evaluators' line).
+- WER 2.2 % (only "a hundred" heard as "one hundred", "logbooks"/"log books", "practised"/"practiced").
+  0 banned phrases, 0 flags, 0 render warnings. Layout audit: 0 issues in 205 checks.
+- I looked at all 12 contact sheets, the keyframes at 0:21, 1:12, 2:29, 2:55, and frames every
+  0.14–0.2 s through every changed transition: the 95 → 99 trip (0:25.9–0:27.3), the diagram → table
+  morph (0:29.4–0:31.1), the grid's arrival, the fail-beat beam, the meter's two-axis move (1:25.6–1:27),
+  the ÷ 10,000 swaps (1:52–1:55), the strip → crowd move (2:12.3–2:14.5), the evaluators' bar
+  (2:48–3:04) and the landing rebuild (3:05.9–3:08.3).
+- These passes caught and fixed: the "+" and "1 %" crossing the meter title mid-morph (the + now travels
+  just ahead of the arrow tips; the meter steps lower, earlier); the ring lingering as a loose circle
+  (fades early); the travelling glyph still reading "95%" (the 95 → 99 change now finishes in the first
+  40 % of the trip); black holes in the crowd where the later listed faces would be; the rightmost
+  column of positives not finishing its growth (the beam's tracker now runs 3 % past the edge); the
+  "Six Nations 2018" tag running into "university evaluators" (tags now sit right of their bars); a
+  4.3 s static stretch in the evaluators' line (the bar now moves from "photos" to "alarms"); a
+  near-empty frame on "Back to your test" (the diagram now re-forms while the alerts collapse); three
+  clearance warnings (grid header vs a top-row ring, citation vs crowd bottom and beam).
+
+Honest estimate against BAR §3: Hook 9, Clarity 9, Visual 9, Motion 9, Audio 9, Concision 9,
+Originality 8.5 → weighted 8.95, i.e. 8.9–9.0. The binding risk remains Originality: the core example is the
+canonical one, and the Cardiff act (crowd → alerts raster → police vs evaluators bars) carries the
+episode's own image.

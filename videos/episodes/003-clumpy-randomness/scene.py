@@ -68,7 +68,8 @@ RX = 2.75                                          # right-panel centre x (phase
 EQ1_Y = 3.05                                       # Poisson formula row once the histogram is up
 SHADE = [0.0, 0.17, 0.34, 0.52, 0.68, 0.8]         # cell fill opacity by hit count
 FS = 38                                            # working equation size
-EMPTY_FILL = 0.85                                  # empty squares: clearly YELLOW, not olive
+EMPTY_FILL = 0.4                                   # empty squares: a light yellow tint inside a
+                                                   # full-yellow outline of each empty region
 INSET_SCALE = 5                                    # tail inset magnification
 MAP_DIM = 0.3                                      # map behind the derivation / zoom insets
 MAP_LOW = 0.35                                     # map beside the chi-squared build
@@ -87,7 +88,7 @@ RM_X0, RM_Y0 = -6.3, -1.7                          # scene position of (E min, N
 RM_E0, RM_N0 = REAL[:, 0].min(), REAL[:, 1].min()
 RDOT = 0.035                                       # dot diameter < one 0.5 km square (0.1)
 # misfit distribution (phase 2b, left)
-MF_X0, MF_LEN, MF_MAX, MF_Y = -6.2, 3.8, 16, -1.85
+MF_X0, MF_LEN, MF_MAX, MF_Y = -5.3, 3.0, 16, -1.85   # room on the left for the "maps" label
 MF_H = 2.3
 
 
@@ -122,8 +123,12 @@ def grayify(ax: Axes) -> Axes:
     return ax
 
 
-def cite(s: str, size: float = 20) -> Text:
-    return citation(s, size=size, color=GRAY)
+def cite(s: str, size: float = 22) -> Text:
+    """Bottom-left source line.  Not shrunk to fit (the series helper fits to 75 % of the safe
+    width, which took round 1's two-source line below the 24 px citation minimum)."""
+    m = Text(s, font=SERIF, font_size=size, color=GRAY)
+    assert m.width <= 2 * SAFE_X, (s, m.width)
+    return m.move_to([-SAFE_X + m.width / 2, CONTENT_BOTTOM + 0.08 + m.height / 2, 0])
 
 
 def count_label(tracker, one: str, many: str, color, size=36) -> VGroup:
@@ -193,6 +198,23 @@ class Panel:
 
     def cells_with(self, k: int) -> VGroup:
         return VGroup(*[self.cells[i] for i in self.where(k)])
+
+    def empty_edges(self, color=YELLOW, width: float = 2.5) -> VMobject:
+        """Outline of every connected region of empty squares: the cell edges that separate an
+        empty square from a hit square or the map's border (no inner grid lines)."""
+        cell = self.cellsize
+        o = self.frame.get_corner(DL)
+        empty = {(i, j) for i in range(G) for j in range(G) if self.counts[i * G + j] == 0}
+        m = VMobject(stroke_color=color, stroke_width=width).set_z_index(2)
+        for i, j in empty:
+            for di, dj, a, b in ((-1, 0, (0, 0), (0, 1)), (1, 0, (1, 0), (1, 1)),
+                                 (0, -1, (0, 0), (1, 0)), (0, 1, (0, 1), (1, 1))):
+                if (i + di, j + dj) not in empty:
+                    p0 = o + np.array([(i + a[0]) * cell, (j + a[1]) * cell, 0])
+                    p1 = o + np.array([(i + b[0]) * cell, (j + b[1]) * cell, 0])
+                    m.start_new_path(p0)
+                    m.add_line_to(p1)
+        return m
 
     def outline(self, idx: int, color=RED, width: float = 3.5, z: float = 2) -> Square:
         c = self.cells[idx]
@@ -398,8 +420,10 @@ class Episode(NarratedScene):
             p.hits_t.set_value(0)
         self.add(A.frame, Bp.frame, A.top, Bp.top, A.dots, Bp.dots)
 
-        # pick the clusters the stakes circles land on (A's 5-hit cells + densest 4)
-        big = sorted(range(G * G), key=lambda i: -A.counts[i])[:3]
+        # the clusters the stakes circles land on: A's three densest squares away from the
+        # border, so each circle (radius 1.35 squares) stays inside the map's frame
+        big = sorted((i for i in range(G * G) if 0 < i // G < G - 1 and 0 < i % G < G - 1),
+                     key=lambda i: -A.counts[i])[:3]
 
         # ============================================================ 1. cold open
         def rain(m, a):

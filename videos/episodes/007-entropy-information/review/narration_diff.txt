@@ -1,15 +1,13 @@
-WER 2.0% over 591 script words (numbers spelled out, 'and' ignored)
+WER 1.7% over 595 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/007-entropy-information/narration.json
 
-[0:51.7] replace  script: 'a'                                      heard: 'one'
-[1:18.7] delete   script: 'hundred'                                heard: '∅'
-[2:15.4] replace  script: 'q'                                      heard: 'cue'
-[2:17.8] replace  script: 'u'                                      heard: 'you'
-[2:19.6] replace  script: 'a'                                      heard: 'one'
-[2:20.5] replace  script: 'u'                                      heard: 'you'
-[3:01.3] replace  script: 'a'                                      heard: 'one'
-[3:13.4] replace  script: 'pours'                                  heard: 'pores'
-[3:20.5] replace  script: 'a'                                      heard: 'one'
-[3:23.6] insert   script: '∅'                                      heard: 'zero'
-[3:34.0] insert   script: '∅'                                      heard: 'zero'
-[3:40.4] replace  script: 'y'                                      heard: 'why'
+[0:48.0] replace  script: 'a'                                      heard: 'one'
+[1:15.5] delete   script: 'hundred'                                heard: '∅'
+[2:12.7] replace  script: 'a'                                      heard: 'one'
+[2:19.5] insert   script: '∅'                                      heard: 'zero'
+[2:46.9] replace  script: 'long'                                   heard: 'some'
+[3:01.5] replace  script: 'a'                                      heard: 'one'
+[3:13.6] replace  script: 'pours'                                  heard: 'pores'
+[3:20.7] replace  script: 'a'                                      heard: 'one'
+[3:23.8] insert   script: '∅'                                      heard: 'zero'
+[3:37.4] insert   script: '∅'                                      heard: 'zero'

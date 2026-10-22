@@ -220,6 +220,21 @@ def axes_op(axx, line_op, num_op):
             nm.set_opacity(num_op)
 
 
+def lane_path(cx, src, dst, rise=0.0):
+    """path_func for Transform(src_copy, dst): leave sideways at the source's height, travel in a
+    vertical lane at x = cx, and arrive sideways (from a little above) at the target. The offsets
+    come from the whole mobjects, because Transform calls path_func glyph by glyph, so every
+    glyph moves by the same amount and the number stays legible in flight; a value flown out of
+    a table this way never crosses the table's other rows."""
+    d1 = np.array([cx - src.get_center()[0], 0.0, 0.0])
+    d2 = np.array([cx - dst.get_center()[0], rise, 0.0])
+
+    def pf(s, e, a):
+        b = 1 - a
+        return b ** 3 * s + 3 * a * b * b * (s + d1) + 3 * a * a * b * (e + d2) + a ** 3 * e
+    return pf
+
+
 def item(sym, val, size=36):
     """One readout entry 'sym = val' (symbol in ink, value in yellow)."""
     m = MathTex(sym, "=", val, font_size=size)
@@ -562,8 +577,8 @@ class Episode(NarratedScene):
         self.cross_on = True
 
         # ================================================================ INSIGHT
-        seg_x = Line(ax.c2p(T[0], T[1]), ax.c2p(T[0] + T[2], T[1]), color=YELLOW, stroke_width=5)
-        seg_y = Line(ax.c2p(T[0], T[1]), ax.c2p(T[0], T[1] + T[3]), color=YELLOW, stroke_width=5)
+        seg_x = Line(ax.c2p(T[0], T[1]), ax.c2p(T[0] + T[2], T[1]), color=YELLOW, stroke_width=9)
+        seg_y = Line(ax.c2p(T[0], T[1]), ax.c2p(T[0], T[1] + T[3]), color=YELLOW, stroke_width=9)
         sides = [Line(ax.c2p(T[0] + sx * T[2], T[1] - T[3]), ax.c2p(T[0] + sx * T[2], T[1] + T[3]))
                  for sx in (-1, 1)] + \
                 [Line(ax.c2p(T[0] - T[2], T[1] + sy * T[3]), ax.c2p(T[0] + T[2], T[1] + sy * T[3]))
@@ -773,10 +788,8 @@ class Episode(NarratedScene):
                       run_time=0.8)
             # at the wall a slice is a single point: every slice slides there and collapses
             beat.wait_until("the wall", offset=-0.1)
-            chords.add_updater(upd_chords)
-            self.play(qv.animate.set_value(1.0), run_time=beat.until("touch point", offset=-0.15),
-                      rate_func=smooth)
-            chords.clear_updaters()
+            self.play(qv.animate.set_value(1.0), UpdateFromFunc(chords, upd_chords),
+                      run_time=beat.until("touch point", offset=-0.15), rate_func=smooth)
             self.play(FadeOut(chords), FadeOut(mids), flag(tR), run_time=0.7)
             beat.wait_until("times", offset=-0.3)
             place_rs(rt.get_value())
@@ -1065,7 +1078,8 @@ class Episode(NarratedScene):
             # the dinosaur's values leave with the dinosaur; the empty symbol slots wait for his
             self.play(FadeOut(VGroup(hdr_t, hdr_n, *self.nows, *self.marks, med_row),
                               shift=0.15 * RIGHT),
-                      *[FadeOut(tgts[i], shift=0.2 * DOWN) for i in range(5)], run_time=0.5)
+                      *[FadeOut(tgts[i], shift=0.2 * DOWN) for i in range(5)],
+                      FadeOut(VGroup(*syms, *eqs), shift=0.15 * LEFT), run_time=0.5)
             beat.wait_until("Anscombe", offset=-0.25)
             T_m = beat.until("eleven", offset=-0.05)
             self.play(Succession(FadeOut(cite_mf, run_time=0.35), FadeIn(cite_an, run_time=0.35),
@@ -1077,18 +1091,22 @@ class Episode(NarratedScene):
                           min(1.0, max(0.0, (a - 0.55) / 0.45)))),
                       UpdateFromAlphaFunc(self.dots, to_anscombe),
                       Transform(self.ell, ell_a), Transform(box_y, box_a), Transform(cen_y, cen_a),
-                      Transform(tR, tch_a), Transform(tL, tchL_a), run_time=T_m)
+                      Transform(tR, tch_a), Transform(tL, tchL_a),
+                      # his readout's symbols arrive in its own two-row layout (r first); the
+                      # values follow on "points"
+                      LaggedStart(*[FadeIn(VGroup(an[i][0], an[i][1]), shift=0.1 * UP)
+                                    for i in (4, 2, 3, 0, 1)], lag_ratio=0.15,
+                                  rate_func=window(0.35, 0.85)),
+                      run_time=T_m)
             self.remove(ax)
             self.remove(self.dots)
             self.add(dots_a)
             beat.wait_until("points", offset=-0.1)
-            # his eleven points flagged while the symbols glide into his readout (mid-right)
+            # his eleven points flagged while his values arrive in the readout (mid-right)
             self.play(LaggedStart(*[Indicate(d, color=BLUE, scale_factor=1.6) for d in dots_a],
                                   lag_ratio=0.06),
-                      *[ReplacementTransform(syms[i], an[i][0]) for i in range(5)],
-                      *[ReplacementTransform(eqs[i], an[i][1]) for i in range(5)], run_time=1.0)
-            self.play(LaggedStart(*[FadeIn(an[i][2], shift=0.15 * UP) for i in (4, 2, 3, 0, 1)],
-                                  lag_ratio=0.15), run_time=0.7)
+                      LaggedStart(*[FadeIn(an[i][2], shift=0.15 * UP) for i in (4, 2, 3, 0, 1)],
+                                  lag_ratio=0.15), run_time=1.0)
 
         with self.narrate("His correlation is point eight two, so the ellipse touches the right "
                           "wall high up.") as beat:
@@ -1134,16 +1152,16 @@ class Episode(NarratedScene):
                       run_time=0.75)
             beat.wait_until("run", offset=-0.2)
             self.play(TransformFromCopy(lbl_run, denC, path_arc=-0.7), run_time=0.75)
-            beat.wait_until("Plug", offset=-0.45)
-            self.play(Write(s_eq), Create(sub_bar), run_time=0.4)
+            beat.wait_until("Plug", offset=-0.5)
             srcs = [an[4][2], an[3][2], an[2][2]]
             dsts = [sub_n1, sub_n2, sub_den]
-            self.play(Indicate(srcs[0], color=YELLOW, scale_factor=1.15), run_time=0.3)
+            self.play(Write(s_eq), Create(sub_bar),
+                      Indicate(srcs[0], color=YELLOW, scale_factor=1.15), run_time=0.4)
             self.play(TransformFromCopy(srcs[0], dsts[0]), Write(sub_x),
-                      Indicate(srcs[1], color=YELLOW, scale_factor=1.15), run_time=0.5)
+                      Indicate(srcs[1], color=YELLOW, scale_factor=1.15), run_time=0.45)
             self.play(TransformFromCopy(srcs[1], dsts[1]),
-                      Indicate(srcs[2], color=YELLOW, scale_factor=1.15), run_time=0.5)
-            self.play(TransformFromCopy(srcs[2], dsts[2]), run_time=0.5)
+                      Indicate(srcs[2], color=YELLOW, scale_factor=1.15), run_time=0.45)
+            self.play(TransformFromCopy(srcs[2], dsts[2]), run_time=0.45)
             beat.wait_until("half", offset=-0.45)
             self.play(Write(sub_ap), Write(sub_val), run_time=0.5)
             self.play(flag(sub_val), run_time=0.8)
@@ -1302,6 +1320,8 @@ class Episode(NarratedScene):
         fl_left, fl_y = l_lhs.get_right()[0] + 0.22, l_lhs[1].get_center()[1]
         l_bar = frac(l_num, l_den, left=fl_left, y=fl_y)
         v_bar = frac(v_num, v_den, left=fl_left, y=fl_y)
+        v_num.shift(UP * 0.05)                               # >= 0.15 from the fraction bar
+        v_den.shift(DOWN * 0.05)
         v_ap.next_to(v_bar, RIGHT, buff=0.22).match_y(l_lhs[1])
         v_val.next_to(v_ap, RIGHT, buff=0.22).match_y(l_lhs[1])
         f_land = VGroup(l_lhs, l_num, l_bar, l_den)
@@ -1323,14 +1343,21 @@ class Episode(NarratedScene):
             self.play(Indicate(VGroup(guess_line2, line_lbl2), color=INK, scale_factor=1.0),
                       run_time=0.7)
             # the symbols give way to the dinosaur's own values, flown from the readout
-            beat.wait_until("five numbers", offset=-0.15)
-            self.play(f1[1].animate.set_opacity(0), f1[3].animate.set_opacity(0),
-                      Transform(f1[2], v_bar),
-                      TransformFromCopy(table_cold[4][2], v_n1),
-                      TransformFromCopy(table_cold[3][2], v_n2),
-                      TransformFromCopy(table_cold[2][2], v_den), FadeIn(v_x), run_time=1.1)
-            beat.wait_until("slope", offset=-0.3)
-            self.play(GrowFromPoint(line_l, cen_l), run_time=1.0)
+            # each value leaves its row sideways, climbs a lane right of the readout and slides
+            # into its slot (never through the other rows)
+            beat.wait_until("five numbers", offset=-0.5)
+            flights = []
+            for i_, dst_ in ((4, v_n1), (3, v_n2), (2, v_den)):
+                src_ = table_cold[i_][2]
+                flights.append(ReplacementTransform(src_.copy(), dst_,
+                                                    path_func=lane_path(6.75, src_, dst_, 0.8)))
+            self.play(f1[1].animate(rate_func=window(0.0, 0.4)).set_opacity(0),
+                      f1[3].animate(rate_func=window(0.0, 0.4)).set_opacity(0),
+                      Transform(f1[2], v_bar, rate_func=window(0.0, 0.4)),
+                      LaggedStart(*flights, lag_ratio=0.3),
+                      FadeIn(v_x, rate_func=window(0.5, 0.8)), run_time=1.3)
+            beat.wait_until("slope", offset=-0.35)
+            self.play(GrowFromPoint(line_l, cen_l), run_time=0.7)
             beat.wait_until("minus", offset=-0.15)
             self.play(Write(v_ap), Write(v_val), run_time=0.6)
             beat.wait_until("cloud", offset=-0.1)

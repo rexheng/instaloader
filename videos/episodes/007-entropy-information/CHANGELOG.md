@@ -106,3 +106,37 @@ Round 3 scored craft 8.6 and substance 8.4, with no caps and no factual errors (
 - "questions" is no longer sentence-final ("…the average number of questions per character"); the word measured about 7 dB louder in the synthesized clip and whisper now transcribes it. "Then pour the skyline flat" gives "pour" a consonant lead-in (whisper had heard "or").
 
 **Verification and mechanics.** The final master is 3:54.6 at 160 wpm over speech time, with −14.0 LUFS / −1.9 dBTP, 0.00 s lead and 1.24 s trail, a longest internal silence of 1.96 s and a longest static stretch of 3.6 s (the closing hold). WER is 2.0 %, with "questions" and "pour" both transcribed. There are 0 banned phrases and 0 scene warnings, and the layout audit reports 0 issues in 218 checks with no allowances. Besides all 13 contact sheets and the keyframes, frames were swept at 0.25–0.5 s across the log₂27 build, the re-sort, the after-Q and after-TH beats (brace, gutter route, title swap, zooms, equation slot) and the landing. Two bugs were caught and fixed this way. The record's letters failed to lift with their counts because an `.animate` target was built before the twin fades. In the landing, THE OTHER DAY vanished for 1 s because the fade list matched the record group by identity, not by family.
+
+## Round 1 revisions (review cycle 2)
+
+Cycle-2 round 1 scored craft 8.0 and substance 8.6, with no caps and no factual errors (both critics recomputed every number; LLMZip 0.8426 checked on arXiv). Every listed fix from both critics is applied, plus three cheap items from the earlier round-4 reviews of the same cut (no chart/record superimposition, the guess skyline zoomed so its level is readable, the landing row present through the reveal). The keep items survive unchanged: the doubling strips with live counters, the skyline pour (now four times), and Shannon's record → twin → guess skyline → landing.
+
+**Plan: where each dimension stood against the BAR "9" anchor, and the upgrade**
+- **Clarity (8 / 8.5).** Anchor: "viewer could re-derive it after one watch". Two hinges were asserted: why half a question is possible, and why Shannon switched to a person. Upgrade: a real four-letter run with its costs adding to a whole number of questions, and a sentence plus an on-screen count of possible contexts.
+- **Hook (8 / 8.5).** Anchor: "tension rises through build and fail". The 3.75 gap never came back. Upgrade: a live gap meter (3.75 → 3.11 → 1.81, then 0.42), band at full strength while it shows.
+- **Visual (8 / 8.5).** Anchor: "every frame has one focal point". Upgrade: the main equation built centre stage at 56, the run's frame with the skyline dimmed, the record glyphs 12 % larger, citations never superimposed, the landing played into its own boxes, palette fixed (2.81 yellow; grey is only the abandoned 4.75).
+- **Motion (8 / 8.5).** Anchor: "every motion encodes a relation". Upgrade: the LLM marker born from 1.42 and moved only to 0.84; U and E re-weighted and re-priced together; the prediction pause left still; tick swaps that never mix two scales; cross-fades instead of glyph soup.
+- **Audio (8 / 8.5).** A 0.3 s pause before "four point one one"; the clipped "TH" sentence is gone.
+- **Concision (8 / 8.5).** Cut "With perfect fifty-fifty splits", "Common characters sit wide and low, rare ones narrow and tall", "Q and TH are the easy cases" and "in real text"; this pays for the two new sentences.
+
+**Clarity and substance**
+- **Fractions add up (craft 1).** On "long runs of letters" the ? box widens into four boxes holding E R E ␣ (THERE, after T H) and each letter's cost given the two before it appears in yellow (0.5, 3.0, 2.6, 1.6; `data.py` → `run_THERE`). On "the fractions add up" the four costs flow into "7.7 → 8 questions". The skyline dims to 40 % meanwhile, so the run is the focus.
+- **Why a person (substance 1).** New line: "Longer contexts need more text than any corpus holds, so Shannon used a predictor that already knows English: a person." On screen: "possible contexts: 27² = 729 → 27¹⁰⁰ ≈ 10¹⁴³" and "Brown Corpus: 5.75 M characters" (facts 21f quotes Shannon's own reason, p. 54).
+- **"New book" (substance 2).** Now "part of a book that reached Project Gutenberg after its training", with a grey note "1924 book · on Gutenberg May 2023 · 27 symbols" that builds word by word. We avoid "first put online" (facts 30).
+- **Gap meter (substance 3).** The fail beat's double arrow returns: 3.75 → 3.11 on "That beats four point seven five", 3.11 → 1.81 at the two-letter average, and 0.42 on the zoomed guess skyline (which now shows Shannon's ≈1 band).
+- **Two-letter average (craft 7).** The TH stack dims to 30 %, 1.67 gets a purple TH tag, and 2.81 is copied into the equation. Shannon's setup is tightened to "His subject read a passage letter by letter…".
+- **Guess skyline (craft 8).** Yellow "log₂(1/q) = 3.67" beside the 2nd-guess column; the poured level reads "≤ 1.42".
+- **Wording.** "an English sentence", "three point three ideal doublings", "Half a question, like three point three doublings, sounds impossible", "After TH, the average is one point seven", "The ideal is log base two of twenty-seven".
+
+**Visual and motion**
+- **Equation (craft 4).** On "In general" the strips step up 0.65 and dim to 40 % (counters stay bright), and p·2ᵏ = 1 → 2ᵏ = 1/p → k = log₂(1/p) is built centred at font 56. The strips clear before the formula rises to the top row; E's 3.3 reappears as its new height.
+- **LLM (craft 2, 9).** The INK "LLM" tag points into the ? box during "how language models are trained". At the payoff the marker is a TransformFromCopy of the 1.42 triangle, waits above it, and moves only 1.42 → 0.84.
+- **Prediction pause (craft 3).** The unpour now happens on "it prices every character as if nothing came before it"; "What comes after a Q?" only swaps in the Q and the "?" and holds still (pause 1.6 s).
+- **Re-pricing (craft 6, substance 4).** `tile_morph`: widths move linearly (the bar always tiles 0–100 %), heights geometrically, so U widens to 98 % while its cost falls (on "U swallows the bar") and E re-prices on "two thirds". The 98% label is shown over U on "ninety-eight" and rides a fixed-height brace.
+- **Citations (craft 10, substance 5).** `Succession(FadeOut(Shannon), FadeIn(Valmeekam))`.
+- **Record (craft 11).** Glyphs 27/24 pt (12 % larger; pitch 0.33, the widest line just fits the safe area), line spacing 1.12, unread lines at 15 %. The chart fades out completely before the record fades in, and the text-so-far row stays through the change, so no frame is empty.
+- **Landing (craft 5).** The cold-open boxes and ? box fade in at 30 % as the record fades; THE OTHER DA flies straight into them and the Y lands in the ? box on the spoken "Y"; then the boxes come to full strength and the tiles return.
+- **Ticks (substance 6).** In every zoom the old ticks are gone in the first 30 %, the new ones fade in at their places in the last 35 %.
+- **Palette (substance 7).** 2.81 is yellow everywhere (level, gutter, bits line); the dimmed 4.11 reference is yellow at 30 %, not grey.
+- **Glyph soup (substance 12).** "k" → "average", "average" → "H" and "questions" → "bits" are cross-fades.
+- **Small items.** ≈1 centred on the band (substance 14); the inset opens with the width sweep (the "wide and low" sentence is cut, substance 10); the ? box flags on "sounds impossible"; the LLM note builds in three parts, so no static stretch over 4 s.

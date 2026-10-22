@@ -1066,7 +1066,7 @@ class Episode(NarratedScene):
                           gap=0.15) as beat:
             self.play(FadeIn(qtown, shift=0.2 * LEFT), FadeIn(bot_lab[0], shift=0.2 * LEFT),
                       run_time=beat.until("quarter", offset=-0.1, min_time=0.4))
-            self.play(TransformFromCopy(bot_lab[0], q_mark, path_arc=0.9), *col_state({k_q}),
+            self.play(TransformFromCopy(bot_lab[0], q_mark, path_arc=-0.9), *col_state({k_q}),
                       run_time=0.7)
 
             def qrun(group, alpha):
@@ -1078,7 +1078,7 @@ class Episode(NarratedScene):
             self.play(TransformFromCopy(qtown, qpt), FadeIn(VGroup(bot_lab[1], bot_lab[2])),
                       run_time=0.9)
             beat.wait_until("third", offset=-0.25)
-            self.play(TransformFromCopy(top_lab[0], t_mark, path_arc=-0.6), *col_state({k_q, k_t}),
+            self.play(TransformFromCopy(top_lab[0], t_mark, path_arc=0.6), *col_state({k_q, k_t}),
                       run_time=0.7)
             beat.wait_until("jumps", offset=-0.1)
             self.play(Indicate(ours, color=INK, scale_factor=1.8), run_time=0.8)
@@ -1274,7 +1274,7 @@ class Episode(NarratedScene):
             self.fly_into([(w_gold, w_num), (w_all, w_den)], extra=[Create(w_bar)], run_time=1.0)
             # its demand comes from the town that demanded a third (top right), a short clear path
             # its demand is the caret's 1/3 (the thumbnails have left the ladder)
-            self.play(Write(w_rel), TransformFromCopy(dlab, w_t, path_arc=0.5), run_time=0.9)
+            self.play(Write(w_rel), TransformFromCopy(dlab, w_t), run_time=0.9)
             beat.wait_until("two sevenths", offset=-0.2)
             self.play(FadeIn(l27, shift=0.1 * UP), FadeIn(c27, shift=0.1 * DOWN), run_time=0.5)
             self.flash_box(VGroup(b27, c27), w_frac, color=INK, buff=0.06, run_time=1.0)
@@ -1382,12 +1382,15 @@ class Episode(NarratedScene):
                           "there the jump came later, between about a third and a half.") as beat:
             # the 2:19 morph in reverse: bars sink into the baseline, the baseline becomes the
             # x-axis again, and only then does the dot chart come back (never both at once)
+            # (the ladder's x title leaves with the bars, before the chart's title returns: the
+            # two titles never overlap; the thumbnails return as the baseline moves)
             self.play(*[b.animate.stretch_to_fit_height(0.01).move_to([b.get_x(), BL, 0])
-                        for b in bar_grp], FadeOut(ladder_lab), run_time=0.5)
+                        for b in bar_grp], FadeOut(ladder_lab), FadeOut(xt_share), run_time=0.5)
             self.remove(bar_grp)
             self.play(Transform(x_line, Line(ax.c2p(0, 40), ax.c2p(60, 40), color=GRAY,
                                              stroke_width=2.5)),
-                      FadeOut(xt_share), ax.x_title.animate.set_opacity(1), run_time=0.6)
+                      ax.x_title.animate.set_opacity(1), *[FadeIn(m) for m in thumbs],
+                      run_time=0.6)
             # ("random mix" stays out from here on: fewer words while Schelling's labels show)
             restore = [m.animate.set_opacity(1) for m in [ours, qpt, base, ax.y_axis,
                                                           ax.y_title, ax.x_axis]]
@@ -1396,8 +1399,7 @@ class Episode(NarratedScene):
                             c_[2].animate.set_opacity(1)]
             # the source arrives with the chart it belongs to (just after "paper"); the two
             # towns come back to their slots
-            self.play(*restore, *[FadeIn(m) for m in thumbs], FadeIn(cite1, shift=0.1 * UP),
-                      run_time=0.7)
+            self.play(*restore, FadeIn(cite1, shift=0.1 * UP), run_time=0.7)
             self.remove(x_line)
             beat.wait_until("model", offset=-0.2)
             self.flash_box(self.town, qtown, buff=0.05, run_time=1.0)
@@ -1421,10 +1423,10 @@ class Episode(NarratedScene):
                 m.stretch_to_fit_width(max(0.01, band_w * a)).move_to(band_l, aligned_edge=LEFT)
             ours_dim = []
             for c_ in cloud.values():
-                ours_dim += [c_[0].animate.set_stroke(opacity=0.35),
-                             c_[1].animate.set_fill(opacity=0.38 * 0.35),
-                             c_[2].animate.set_stroke(opacity=0.35)]
-            ours_dim += [ours.animate.set_opacity(0.35), qpt.animate.set_opacity(0.35)]
+                ours_dim += [c_[0].animate.set_stroke(opacity=0.3),
+                             c_[1].animate.set_fill(opacity=0.08),
+                             c_[2].animate.set_stroke(opacity=0.3)]
+            ours_dim += [ours.animate.set_fill(opacity=0.3), qpt.animate.set_fill(opacity=0.3)]
             self.play(UpdateFromAlphaFunc(band, grow),
                       LaggedStart(*[Create(l) for l in hatch], lag_ratio=0.15), *ours_dim,
                       run_time=beat.until("half", end=True, offset=0.05, min_time=1.5),
@@ -1571,11 +1573,14 @@ class Episode(NarratedScene):
         with self.narrate("Look again at the first town. As Schelling argued, whatever you guessed "
                           "its people demanded, the map alone could not have told you.",
                           speed=0.81) as beat:
+            # one animation on the town: it grows back home and its tiles return to full strength
+            self.town.generate_target()
+            self.town.target.scale(1 / ZS).move_to([GX, GY, 0])
+            self.town.target[1].set_fill(opacity=1.0)
             self.play(FadeOut(ztown), FadeOut(zmatch), FadeOut(omatch), FadeOut(z_dem_full[0]),
                       FadeOut(z_rule), FadeOut(tt_tag),
                       FadeOut(cite2), FadeOut(cite_ul), FadeOut(o_dem),
-                      self.town.animate.scale(1 / ZS).move_to([GX, GY, 0]),
-                      self.board.animate.set_fill(opacity=1.0),
+                      MoveToTarget(self.town),
                       run_time=beat.until("first", offset=-0.1, min_time=1.0))
             self.play(FadeIn(self.meter), FadeIn(sim_tag), run_time=0.7)
             beat.wait_until("Whatever", offset=-0.2)

@@ -230,7 +230,7 @@ class Episode(NarratedScene):
     EPISODE = 1
     TITLE = "Three Right Answers to One Probability Question"
     SPEED = 0.84
-    BEAT_GAP = 0.3
+    BEAT_GAP = 0.27
 
     # ------------------------------------------------------------------ data
     def prepare(self):
@@ -553,7 +553,7 @@ class Episode(NarratedScene):
             self.play(FadeIn(img1), hand1.animate.set_stroke(opacity=0.0), FadeIn(tally1),
                       FadeIn(cap), run_time=0.4)
             self.remove(hand1)
-            self.rain(big, "endpoints", tally1, cnt, run_time=max(3.2, beat.remaining() + 0.5))
+            self.rain(big, "endpoints", tally1, cnt, run_time=max(3.0, beat.remaining() + 0.1))
             cap_b.clear_updaters()
 
         # ---- geometry: corner on the first point, second point sweeps, far arc = 1/3
@@ -717,7 +717,7 @@ class Episode(NarratedScene):
             beat.wait_until("That", offset=-0.5)
             img3 = p3.make_texture(self.stages["midpoint"][0])
             self.play(FadeIn(img3), FadeIn(tally3), FadeOut(ch), FadeOut(mdot), run_time=0.4)
-            self.rain(p3, "midpoint", tally3, None, run_time=max(2.8, beat.remaining() + 0.3))
+            self.rain(p3, "midpoint", tally3, None, run_time=max(2.2, beat.remaining() + 0.1))
 
         # ---- the measured failure: error bars and the gap; Bertrand's verdict, both halves
         q1 = text("« Aucune des trois n'est fausse,", size=28, slant=ITALIC, color=INK)
@@ -1024,13 +1024,17 @@ class Episode(NarratedScene):
         sb_title = label("gold share", size=26, color=GRAY).move_to(P3((SB_BIG + SB_SMALL) / 2, SB_TITLE_Y))
 
         def col_head(word, x):
-            g = VGroup(label(word, size=26, color=GRAY), label("circle", size=26, color=GRAY))
-            g.arrange(DOWN, buff=0.08)
-            g[0].set_x(x)
-            g[1].set_x(x)
-            return g.move_to(P3(x, SB_HEAD_Y))
+            # two lines on shared baselines: "circle" at one height in both heads, and the first
+            # words aligned by their ascenders ("b", "l"), so "big" and "small" share a baseline
+            # too ("g" simply descends)
+            w, c = label(word, size=26, color=GRAY), label("circle", size=26, color=GRAY)
+            c.move_to(P3(x, SB_HEAD_Y - 0.17))
+            w.set_x(x)
+            w.set_y(c.get_top()[1] + 0.12 + 0.25 - w.height / 2 + (w.height - 0.25))
+            return VGroup(w, c)
         head_b = col_head("big", SB_BIG)
-        head_s = col_head("small", SB_SMALL).align_to(head_b, UP)
+        head_s = col_head("small", SB_SMALL)
+        head_s[0].align_to(head_b[0], UP)
 
         def sb_row(i, name, col):
             y = SB_ROWS[i]
@@ -1150,7 +1154,7 @@ class Episode(NarratedScene):
             R, row = prog[key], rows[key]
             n = len(R.shown)
             t0 = beat.elapsed()
-            t_big = beat.time_of(*w_big) - 0.12
+            t_big = beat.time_of(*w_big) - 0.45      # settled just before its word
             t_end = beat.time_of(*w_small) + 0.35
             rt1 = max(0.6, t_big - t0)
             k1 = 3 + (n - 3) * rt1 / max(rt1 + 0.4, t_end - t0)
@@ -1357,10 +1361,13 @@ class Episode(NarratedScene):
                 m.clear_updaters()
             self.flatten_groups()
             # the floor gives way straight to the two words: "at random" starts writing while the
-            # floor is still fading, so no frame is empty
-            self.play(*[FadeOut(m, rate_func=window(0, 0.6, smooth)) for m in self.visible()],
-                      FadeIn(cite_fg, shift=0.1 * UP, rate_func=window(0.55, 1.0, smooth)),
-                      Write(atr_big, rate_func=window(0.14, 0.95, linear)), run_time=1.15)
+            # floor is still fading out, so no frame is empty
+            # (the circle and the straws, which lie under where the words are written, go first)
+            fast = [bcirc, binc, btri, *rains_all]
+            self.play(*[FadeOut(m, rate_func=window(0, 0.22 if m in fast else 0.5, smooth))
+                        for m in self.visible()],
+                      FadeIn(cite_fg, shift=0.1 * UP, rate_func=window(0.5, 0.95, smooth)),
+                      Write(atr_big, rate_func=window(0.26, 1.0, linear)), run_time=1.2)
             self.play(Create(atr_big_ul), run_time=0.35)
             # the chart builds with its bars (no empty baseline); the words step down into the
             # slot under it, where they will be made precise
@@ -1494,11 +1501,12 @@ class Episode(NarratedScene):
             moves.append(r[2].animate.shift(P3(R01 - r[2].get_right()[0], y - r[2].get_y())).set_opacity(0.35))
         with self.narrate(LINES["land"]) as beat:
             self.flatten_groups()
-            # the block's header and rule clear first; its two rows stay
-            self.play(*[FadeOut(m) for m in self.visible() if m not in (sb_r1, sb_r2)], run_time=0.45)
-            # the first frame, back again; Stony Brook's rows step down out of its way, dimmed
-            self.play(*moves, FadeIn(big_end), FadeIn(tri_end), FadeIn(chord0b), FadeIn(e0b),
-                      FadeIn(q_end), run_time=0.8)
+            # one cross-fade (no empty frame): the example and the block's header and rule leave,
+            # the first frame comes back, and Stony Brook's rows step down out of its way, dimmed
+            rest = [m for m in self.visible() if m not in (sb_r1, sb_r2)]
+            self.play(*[FadeOut(m, rate_func=window(0, 0.55, smooth)) for m in rest], *moves,
+                      *[FadeIn(m, rate_func=window(0.3, 1.0, smooth))
+                        for m in (big_end, tri_end, chord0b, e0b, q_end)], run_time=1.0)
             # the axis first, then the sweep that finds every answer on it
             self.play(Create(line01), FadeIn(ends_lbl), run_time=0.5)
             self.add(overlay, marker, marks)
@@ -1529,4 +1537,4 @@ class Episode(NarratedScene):
             self.play(sb_r1[0].animate.set_opacity(1.0), sb_r1[1].animate.set_color(INK).set_opacity(1.0),
                       sb_r2[0].animate.set_opacity(1.0), sb_r2[1].animate.set_opacity(1.0), run_time=0.6)
         overlay.clear_updaters()
-        self.hold(1.4)
+        self.hold(1.0)
