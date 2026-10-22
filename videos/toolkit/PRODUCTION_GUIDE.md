@@ -539,3 +539,10 @@ What the toolkit cannot decide is what the frame is *about*. Focal point, empty 
    - Pause in the middle of every transform and check that what is on screen is still true.
    - Keep one name per quantity.
 6. **Run `review_kit`.** The "Narration craft" section should have no flagged line. If one remains, its text names the fix.
+
+## 14. Revision budget (finish inside one usage window)
+
+Revisions that run for hours get cut off by usage limits before critics ever see them. Keep each revision to roughly 60–90 minutes:
+- Iterate on layout and timing with `render.sh --preview` (about 6× faster); check frames there.
+- At most **2 full 1080p master renders** per revision: one after the fixes, one final after inspecting it.
+- Fix the highest-impact items first (caps, then the lowest-scoring dimensions per §12–13); stop polishing once every listed fix has landed.
