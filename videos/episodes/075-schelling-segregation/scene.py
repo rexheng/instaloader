@@ -567,10 +567,10 @@ class Episode(NarratedScene):
         with self.narrate("We read real city maps the same way, guessing motives from "
                           "patterns. So how can a demand of one third build a town of three "
                           "quarters?", speed=0.82, gap=0.45) as beat:
-            # (round 5 cont.) the rule stays, dimmed to context, so the lower right is not left
+            # (round 5 cont.) the rule stays, dimmed to 60 %, so the lower right is not left
             # empty for the whole stakes beat; it comes back to full strength when the question
             # names it ("a demand of one third") and leaves with the rewind
-            self.play(*self.soft_dim(rule_all, 0.35), FadeOut(ex_box), run_time=0.7)
+            self.play(*self.soft_dim(rule_all, 0.6), FadeOut(ex_box), run_time=0.7)
             beat.wait_until("motives", offset=-0.25)
             self.pulse(self.pur_lab, 1.12, run_time=0.6)
             beat.wait_until("patterns", offset=-0.2)
@@ -754,12 +754,13 @@ class Episode(NarratedScene):
         mag = VGroup(mempty, *mtiles.values())
 
         def recap(s):
-            """Cross-fade the caption in place (a Text morph would garble letters mid-way)."""
+            """Replace the caption in place: the old one fades out, THEN the new one fades in
+            (toolkit swap; a simultaneous cross-fade showed "aftere round 1" for a few frames)."""
             new = text(s, size=28, color=GRAY)
             new.move_to(caps[-1]).align_to(caps[-1], LEFT)
             old = caps[-1]
             caps.append(new)
-            return [FadeOut(old), FadeIn(new)]
+            return [swap(old, new, shift=0.0)]
 
         def ring3(rc, color=INK):
             return Square(3 * MAG_P + 0.06, stroke_color=color, stroke_width=5).move_to(mag_cell(*rc))
@@ -1116,8 +1117,8 @@ class Episode(NarratedScene):
         F14, F27, F13, F38, F35 = (Fraction(1, 4), Fraction(2, 7), Fraction(1, 3),
                                    Fraction(3, 8), Fraction(3, 5))
         assert rungs[0] == 0 and rungs[-1] == F35 and len(rungs) == 14
-        lbase = Line([lx(0) - 0.25, BL, 0], [lx(F35) + 0.25, BL, 0], color=GRAY, stroke_width=2.5)
-        x_line = Line(ax.c2p(0, 40), ax.c2p(60, 40), color=GRAY, stroke_width=2.5)
+        lbase = Line([lx(0) - 0.25, BL, 0], [lx(F35) + 0.25, BL, 0], color=AXIS, stroke_width=2.5)
+        x_line = Line(ax.c2p(0, 40), ax.c2p(60, 40), color=AXIS, stroke_width=2.5)  # = the axes
         bars = {}
         for f in rungs:
             h = self.ladder[f] * HS
@@ -1229,9 +1230,11 @@ class Episode(NarratedScene):
             #              only at the end, both long gone (nothing moves through anything)
             #   0.40-1.00  both ladder titles fade in (the old x title is gone by 0.35 s)
             #   0.50-1.34  the bars sprout from the line, left to right, standing on it
-            T_ALL, L0, L1 = 1.5, 0.15, 0.6              # total; line start; line duration
-            B0, BLAG, BDUR = 0.5, 0.03, 0.45            # first bar; lag per bar; bar duration
-            assert B0 + BLAG * (len(rungs) - 1) + BDUR <= T_ALL
+            T_ALL = max(2.0, beat.until("With", offset=-0.15))
+            L0, L1 = 0.1, 0.6                           # line start; line duration
+            B0, BDUR = 0.25, 0.9                        # first bar; one bar's growth
+            BLAG = (T_ALL - B0 - BDUR) / (len(rungs) - 1)   # left to right, as the line speaks
+            assert BLAG > 0 and B0 + BLAG * (len(rungs) - 1) + BDUR <= T_ALL + 1e-6
             xs0, xe0 = x_line.get_start().copy(), x_line.get_end().copy()
             xs1, xe1 = lbase.get_start().copy(), lbase.get_end().copy()
             hfull = {f: bars[f].height for f in rungs}
@@ -1248,14 +1251,14 @@ class Episode(NarratedScene):
                     v = smooth(float(np.clip((a * T_ALL - B0 - BLAG * i) / BDUR, 0.0, 1.0)))
                     h = max(hfull[f] * v, 1e-3)
                     bars[f].stretch_to_fit_height(h).move_to([lx(f), y + h / 2, 0])
-            self.play(*[m.animate(run_time=0.35).set_opacity(0) for m in chart_ctx],
-                      ax.x_title.animate(run_time=0.35).set_opacity(0),
-                      *[FadeOut(m, run_time=0.35) for m in thumbs],
-                      FadeOut(q_mark, run_time=0.35), FadeOut(t_mark, run_time=0.35),
+            self.play(*[m.animate(run_time=0.3).set_opacity(0) for m in chart_ctx],
+                      ax.x_title.animate(run_time=0.3).set_opacity(0),
+                      *[FadeOut(m, run_time=0.3) for m in thumbs],
+                      FadeOut(q_mark, run_time=0.3), FadeOut(t_mark, run_time=0.3),
                       UpdateFromAlphaFunc(x_line, rise, run_time=T_ALL, rate_func=linear),
                       UpdateFromAlphaFunc(bar_grp, sprout, run_time=T_ALL, rate_func=linear),
-                      Succession(Wait(run_time=0.4), FadeIn(xt_share, run_time=0.6)),
-                      Succession(Wait(run_time=0.4), FadeIn(bars_note, run_time=0.6)))
+                      Succession(Wait(run_time=0.35), FadeIn(xt_share, run_time=0.6)),
+                      Succession(Wait(run_time=0.35), FadeIn(bars_note, run_time=0.6)))
             for f in rungs:
                 assert abs(bars[f].height - hfull[f]) < 1e-6 and abs(bars[f].get_bottom()[1] - BL) < 1e-6
             beat.wait_until("these", offset=-0.2)
@@ -1328,10 +1331,10 @@ class Episode(NarratedScene):
         with self.narrate("Every household at three eighths is one lost match away from it.",
                           gap=0.45) as beat:
             beat.wait_until("three", offset=-0.2)
-            # one focal point: the bars. A's patch (the last sentence's subject) dims to 35 % until
+            # one focal point: the bars. A's patch (the last sentence's subject) dims to 60 % until
             # the slide brings it back for "that chain never starts"
             self.play(FadeIn(l38, shift=0.1 * UP), FadeIn(c38, shift=0.1 * DOWN),
-                      *self.soft_dim(why, 0.35), run_time=0.6)
+                      *self.soft_dim(why, 0.6), run_time=0.6)
             beat.wait_until("lost", offset=-0.3)
             self.play(Create(drop), FadeIn(drop_lab, shift=0.05 * DOWN),
                       run_time=beat.until("it", offset=0.1, min_time=0.9))
@@ -1434,7 +1437,7 @@ class Episode(NarratedScene):
                         for b in bar_grp], FadeOut(ladder_lab), FadeOut(xt_share),
                       *[FadeIn(m) for m in thumbs], run_time=0.5)
             self.remove(bar_grp)
-            self.play(Transform(x_line, Line(ax.c2p(0, 40), ax.c2p(60, 40), color=GRAY,
+            self.play(Transform(x_line, Line(ax.c2p(0, 40), ax.c2p(60, 40), color=AXIS,
                                              stroke_width=2.5)),
                       ax.x_title.animate.set_opacity(1), run_time=0.6)
             # ("random mix" stays out from here on: fewer words while Schelling's labels show)

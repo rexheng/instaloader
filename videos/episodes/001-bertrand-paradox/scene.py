@@ -465,7 +465,9 @@ class Episode(NarratedScene):
                       stroke_width=5).set_z_index(2)
         q = question(size=48).move_to(P3(COL_X, 2.25))
         side_hl = big.side(1).set_stroke(INK, 6).set_z_index(4)
-        with self.narrate(LINES["open"]) as beat:
+        # (the open and the arc beat at 0.80, the guide's floor: at 0.83 their plain clauses ran
+        #  202-223 wpm, which critics hear as hurried)
+        with self.narrate(LINES["open"], speed=0.80) as beat:
             self.play(FadeIn(e0, scale=0.5), run_time=0.5)
             self.play(Create(chord0), run_time=beat.until("at random", offset=-0.1))
             beat.wait_until("longer", offset=-0.1)
@@ -592,14 +594,14 @@ class Episode(NarratedScene):
                         MathTex("=", font_size=MATH + 4),
                         frac("1", "3", BLUE, BLUE, size=MATH + 4)).arrange(RIGHT, buff=0.25)
         arc_eq.move_to(P3(COL_X, -1.85))
-        with self.narrate(LINES["arc"]) as beat:
+        with self.narrate(LINES["arc"], speed=0.80) as beat:
             self.play(img1.animate.set_opacity(0.16), GrowFromCenter(P1),
-                      run_time=beat.until("Put", offset=-0.1))
+                      run_time=beat.until("With", offset=-0.1))
             self.play(Rotate(big.tri, angle=a1 - PI / 2, about_point=BIG_C), run_time=1.6)
             beat.wait_until("The chord", offset=-0.1)
             self.add(sw, P2)
             self.play(phi.animate.set_value(a1 + np.deg2rad(205)),
-                      run_time=beat.until("this far", offset=-0.05), rate_func=smooth)
+                      run_time=beat.until("this arc", offset=-0.05), rate_func=smooth)
             self.play(Create(far), phi.animate.set_value(a1 + np.deg2rad(180)), run_time=0.8)
             # the far arc itself flies into "120 degrees", then the whole rim into "360 degrees"
             self.lift_into([(far, arc_eq[0].num, YELLOW)], extra=[Create(arc_eq[0].bar, rate_func=late)],
@@ -617,8 +619,6 @@ class Episode(NarratedScene):
         ap1 = MathTex(r"\approx", font_size=MATH)
         t1_target = tally1.copy().set(font_size=MATH)
         place_row([t1_target, ap1, small_frac], PANEL_X[0], TALLY_Y)
-        shared_cap = label("10,000 simulated chords each", size=26, color=GRAY)
-        shared_cap.move_to(P3(0, -1.55))
         # the scoreboard: each recipe's tally drops onto one number line as soon as it settles
         nl = NumberLine(x_range=[0.2, 0.55, 0.1], length=9.0, color=GRAY, stroke_width=2.5,
                         include_numbers=True, font_size=MATH_SMALL,
@@ -629,6 +629,12 @@ class Episode(NarratedScene):
         #                                      citation by > 0.2)
         nl_title = label("gold share", size=26, color=GRAY).next_to(nl, RIGHT, buff=0.25)
         nl_title.shift(UP * (nl.n2p(0.3)[1] - nl_title.get_y()))
+        # what every tally counts, under the line's own title (clear of every dot that drops from a
+        # tally onto the line: mid-frame, the purple and green dots flew through it)
+        shared_cap = VGroup(label("10,000 simulated", size=24, color=GRAY),
+                            label("chords each", size=24, color=GRAY)).arrange(DOWN, buff=0.08,
+                                                                             aligned_edge=RIGHT)
+        shared_cap.next_to(nl_title, DOWN, buff=0.2).align_to(nl_title, RIGHT)
         finals = [R0[k]["share"][-1] for k in KEYS]
 
         def errbar(v, col):
@@ -1129,13 +1135,20 @@ class Episode(NarratedScene):
             keep = [p2.circle, p2.tri, inc2]
             self.flatten_groups()
             gone = [m for m in self.visible() if m not in keep]
-            self.play(*[FadeOut(m) for m in gone], run_time=0.6)
-            # the one circle moves onto the floor; the whole scoreboard is waiting from the start
-            self.play(ReplacementTransform(p2.circle, bcirc), ReplacementTransform(p2.tri, btri),
-                      ReplacementTransform(inc2, binc), FadeIn(cite_j, shift=0.1 * UP),
-                      FadeIn(sb_title), FadeIn(head_b), FadeIn(head_s),
+            # one move: the panels fade while the one circle already travels onto the floor (no
+            # near-empty frame); the scoreboard's text arrives only once the panels have gone
+            rtj = 1.4
+            late_in = window(0.5 / rtj, 1.0, smooth)
+            mv = window(0.1 / rtj, 1.0, smooth)
+            self.play(*[FadeOut(m, rate_func=window(0, 0.45 / rtj, smooth)) for m in gone],
+                      ReplacementTransform(p2.circle, bcirc, rate_func=mv),
+                      ReplacementTransform(p2.tri, btri, rate_func=mv),
+                      ReplacementTransform(inc2, binc, rate_func=mv),
+                      FadeIn(cite_j, shift=0.1 * UP, rate_func=late_in),
+                      FadeIn(sb_title, rate_func=late_in), FadeIn(head_b, rate_func=late_in),
+                      FadeIn(head_s, rate_func=late_in),
                       LaggedStart(*[FadeIn(VGroup(rows[k][0], dashes[k])) for k in rows],
-                                  lag_ratio=0.15), run_time=1.1)
+                                  lag_ratio=0.15, rate_func=late_in), run_time=rtj)
             self.purge(p2.circle, p2.tri, inc2)
             self.dedupe()
             beat.wait_until("physical", offset=-0.2)
@@ -1476,7 +1489,7 @@ class Episode(NarratedScene):
             # a random class: one dot per class; "at random" flags on its word, then becomes what
             # it means here, "spread evenly over: classes"
             beat.wait_until("class", offset=-0.15)
-            rt = max(0.8, beat.until("and the average", offset=-0.1))
+            rt = max(0.8, beat.until("the average", offset=-0.1))
             a = max(0.0, beat.time_of("at random") - 0.1 - beat.elapsed()) / rt
             self.play(LaggedStart(*[GrowFromCenter(d) for d in cdots], lag_ratio=0.3),
                       Indicate(cap_atr, color=INK, scale_factor=1.1, rate_func=window(a, a + 0.6 / rt)),

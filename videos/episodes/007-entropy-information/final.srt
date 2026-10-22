@@ -1,184 +1,164 @@
 1
-00:00:00,000 --> 00:00:03,300
+00:00:00,000 --> 00:00:03,430
 You've read an English sentence up to one hidden character.
 
 2
-00:00:03,680 --> 00:00:08,050
-With yes-or-no questions, how many do you need per character, on average?
+00:00:03,730 --> 00:00:07,440
+With yes-or-no questions, how many do you need, on average?
 
 3
-00:00:09,900 --> 00:00:11,640
-The natural answer is five.
+00:00:09,400 --> 00:00:16,360
+The natural answer is five: each answer halves what's left, and five halvings take twenty-seven to one.
 
 4
-00:00:12,020 --> 00:00:17,490
-Each answer can cut what's left in half, and five cuts take twenty-seven down to one.
+00:00:16,966 --> 00:00:21,856
+The ideal is log base two of twenty-seven: four point seven five.
 
 5
-00:00:18,033 --> 00:00:23,023
-The ideal is log base two of twenty-seven, about four point seven five.
+00:00:22,466 --> 00:00:26,946
+In 1951, Claude Shannon put the true figure at about one.
 
 6
-00:00:23,366 --> 00:00:28,336
-In 1951, Claude Shannon estimated the true figure at about one.
+00:00:27,446 --> 00:00:33,736
+No compressor beats it on average, and guessing what comes next is how language models are trained.
 
 7
-00:00:28,716 --> 00:00:36,516
-Whatever it is, no text compressor can beat it on average, and guessing what comes next is how language models are trained.
-
-8
-00:00:36,966 --> 00:00:39,586
+00:00:34,200 --> 00:00:36,990
 So where do four of every five questions go?
 
+8
+00:00:37,590 --> 00:00:42,910
+Z costs as much as E, yet E turns up a hundred thirty times as often.
+
 9
-00:00:39,966 --> 00:00:44,106
-Splitting the alphabet evenly charges every character the same price.
+00:00:43,366 --> 00:00:49,346
+Instead, split the probability, not the alphabet: is it a space, E, T, A or O?
 
 10
-00:00:44,486 --> 00:00:49,836
-Z costs as much as E, yet E turns up a hundred and thirty times as often.
+00:00:50,146 --> 00:00:51,426
+That's nearly half.
 
 11
-00:00:50,300 --> 00:00:54,820
-Instead, ask questions that split the probability, not the alphabet.
+00:00:52,033 --> 00:00:53,623
+E starts near a tenth.
 
 12
-00:00:55,200 --> 00:00:57,700
-Is it a space, E, T, A, or O?
+00:00:53,923 --> 00:00:58,523
+Each ideal answer keeps half the probability, so E's share doubles.
 
 13
-00:00:58,080 --> 00:01:00,710
-Those five make up nearly half of all text.
+00:00:58,823 --> 00:01:01,103
+Three point three doublings fill the bar.
 
 14
-00:01:01,066 --> 00:01:03,016
-E starts near a tenth of the bar.
+00:01:01,566 --> 00:01:05,436
+Z, one in twelve hundred sixty, needs ten point three.
 
 15
-00:01:03,396 --> 00:01:08,906
-Each ideal answer keeps half the probability, so E doubles its share of what's left.
+00:01:06,033 --> 00:01:12,343
+A character with probability p needs k questions, where p times two to the k equals one.
 
 16
-00:01:09,286 --> 00:01:13,036
-Three point three ideal doublings, and E fills the whole bar.
-
-17
-00:01:13,400 --> 00:01:17,950
-Z starts at one in twelve hundred and sixty, and needs ten point three.
-
-18
-00:01:18,433 --> 00:01:25,503
-In general, a character with probability p needs k questions, where p times two to the k equals one.
-
-19
-00:01:27,003 --> 00:01:33,033
+00:01:13,843 --> 00:01:20,273
 So two to the k equals one over p, and k equals log base two of one over p.
 
-20
-00:01:33,400 --> 00:01:36,250
-Now give each character its own cost as a height.
+17
+00:01:20,733 --> 00:01:23,193
+Now make each character's cost its height.
 
-21
-00:01:36,600 --> 00:01:42,550
-The widths add up to one, so the total area is the average number of questions per character.
+18
+00:01:23,633 --> 00:01:27,353
+The widths add to one, so the area is the average cost.
 
-22
-00:01:42,930 --> 00:01:46,280
+19
+00:01:27,653 --> 00:01:31,053
 Pour the skyline flat, and its height is that average.
 
+20
+00:01:31,500 --> 00:01:35,870
+Shannon called it entropy, in bits: one bit per yes-or-no answer.
+
+21
+00:01:36,170 --> 00:01:38,790
+For English letters: four point one one.
+
+22
+00:01:40,133 --> 00:01:47,143
+That beats four point seven five, but it's four times Shannon's estimate: it ignores what came before.
+
 23
-00:01:46,633 --> 00:01:52,483
-Shannon called that average the entropy, counted in bits, one bit per yes-or-no answer.
-
-24
-00:01:52,863 --> 00:01:54,473
-For English letters, it's
-
-25
-00:01:54,773 --> 00:01:56,113
-four point one one.
-
-26
-00:01:56,466 --> 00:02:05,456
-That beats four point seven five, but it's still four times Shannon's estimate: it prices every character as if nothing came before it.
-
-27
-00:02:05,800 --> 00:02:07,300
+00:01:47,566 --> 00:01:49,076
 What comes after a Q?
 
-28
-00:02:09,266 --> 00:02:11,976
-It's U, ninety-eight times out of a hundred.
+24
+00:01:51,133 --> 00:01:53,743
+It's U, ninety-eight times in a hundred.
 
-29
-00:02:12,356 --> 00:02:19,336
-U swallows the bar, its cost drops to almost nothing, and the average falls to point one six bits.
+25
+00:01:54,243 --> 00:01:58,713
+U swallows the bar, and the average falls to point one six bits.
 
-30
-00:02:20,133 --> 00:02:25,863
-After TH, E takes two thirds of the bar, and its cost shrinks to about half a question.
+26
+00:02:00,066 --> 00:02:04,986
+After TH, E takes two thirds of the bar, and costs about half a question.
 
-31
-00:02:26,200 --> 00:02:36,730
+27
+00:02:05,433 --> 00:02:16,583
 Half a question sounds impossible, but a compressor asks about long runs of letters, and the fractions add up: five questions for these three, not six.
 
-32
-00:02:37,110 --> 00:02:40,190
-After TH, the average is one point seven.
+28
+00:02:17,083 --> 00:02:20,093
+After TH, it averages one point seven.
 
-33
-00:02:40,533 --> 00:02:45,113
+29
+00:02:20,700 --> 00:02:25,350
 But averaged over every two-letter context, it's still two point eight.
 
+30
+00:02:25,933 --> 00:02:34,313
+Hundred-letter contexts need more text than any corpus holds, so Shannon used a predictor that knows English: a person.
+
+31
+00:02:34,766 --> 00:02:43,656
+His subject read a passage letter by letter, guessing each next one until right: seventy-nine of a hundred two on the first guess.
+
+32
+00:02:45,000 --> 00:02:49,260
+A twin guessing the same way could rebuild the passage from these counts.
+
+33
+00:02:49,560 --> 00:02:51,350
+Treat each count as a symbol:
+
 34
-00:02:45,466 --> 00:02:54,486
-Contexts of a hundred letters need more text than any corpus holds, so Shannon used a predictor that already knows English: a person.
+00:02:52,350 --> 00:02:56,090
+the same skyline pours flat at about one point four bits.
 
 35
-00:02:54,833 --> 00:02:59,773
-His subject read a passage letter by letter, guessing each next one until right.
-
-36
-00:03:00,153 --> 00:03:03,673
-Seventy-nine of a hundred and two came on the first guess.
-
-37
-00:03:04,033 --> 00:03:09,173
-A twin who guesses the same way could rebuild the passage from these counts alone.
-
-38
-00:03:09,553 --> 00:03:11,633
-Treat each guess count as a symbol,
-
-39
-00:03:12,433 --> 00:03:16,273
-and the same skyline pours flat at about one point four bits.
-
-40
-00:03:16,653 --> 00:03:18,713
+00:02:56,590 --> 00:02:58,690
 A better guesser could only lower it.
 
+36
+00:02:59,133 --> 00:03:06,153
+With a hundred letters of context, Shannon's tests put English between point six and one point three bits.
+
+37
+00:03:06,766 --> 00:03:18,296
+In twenty twenty-three, a language model compressing part of a book that reached Project Gutenberg after its training needed point eight four bits, inside that range.
+
+38
+00:03:18,733 --> 00:03:22,503
+The hidden character from the start is the Y in the other day.
+
+39
+00:03:22,803 --> 00:03:25,993
+Shannon's subject needed one guess: is it Y?
+
+40
+00:03:26,593 --> 00:03:27,893
+Halving took five.
+
 41
-00:03:19,066 --> 00:03:26,626
-Shannon's tests, with a hundred letters of context, put English between point six and one point three bits per character.
-
-42
-00:03:26,966 --> 00:03:40,106
-In twenty twenty-three, a language model compressing part of a book that reached Project Gutenberg after its training, in the same twenty-seven symbols, needed point eight four bits, inside that range.
-
-43
-00:03:40,566 --> 00:03:44,926
-The hidden character from the start is the Y at the end of the other day.
-
-44
-00:03:45,306 --> 00:03:50,786
-Shannon's subject got it on the first guess, a single yes-or-no question: is it Y?
-
-45
-00:03:51,166 --> 00:03:53,096
-Splitting the alphabet took five.
-
-46
-00:03:53,476 --> 00:03:56,916
+00:03:28,493 --> 00:03:32,033
 In English, almost no letter arrives without a past.
 

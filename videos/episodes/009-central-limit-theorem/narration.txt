@@ -12,26 +12,26 @@
 
 [01:05.3] Each time the group grows four times, the skewness halves: two over root n, and two is the skewness of one wait.
 
-[01:13.5] The root comes from the cubes. [pause 0.15] Add four bus waits: their cubed gaps add up to four times one wait's. [pause 0.15] But the spread only doubles, so its cube grows eight times. [pause 0.15] Four over eight: half the lean. [pause 0.15] In general, n over n to the one and a half.
+[01:13.8] The root comes from the cubes. [pause 0.15] Add four bus waits: their cubed gaps add up to four times one wait's. [pause 0.15] But the spread only doubles, so its cube grows eight times. [pause 0.15] Four over eight: half the lean. [pause 0.15] In general, n over n to the one and a half.
 
-[01:30.0] Kurtosis, the extra tail weight, fades faster: it quarters each time. [pause 0.15] Every finer difference fades faster still. [pause 0.15] Only the bell survives. [pause 0.15] That's the central limit theorem. [pause 0.15] It needs independent pieces, and one more condition.
+[01:30.5] Kurtosis, the extra tail weight, fades faster: it quarters each time. [pause 0.15] Every finer difference fades faster still. [pause 0.15] Only the bell survives. [pause 0.15] That's the central limit theorem. [pause 0.15] It needs independent pieces, and one more condition.
 
-[01:45.3] Back to the textbook's thirty. [pause 0.5] Two over root thirty: point three seven. [pause 0.15] Close to a bell, by eye.
+[01:45.8] Back to the textbook's thirty. [pause 0.5] Two over root thirty: point three seven. [pause 0.15] Close to a bell, by eye.
 
-[01:52.0] But tests live in the tails: a ninety-five percent interval should miss two and a half percent on each side. [pause 0.15] Tests estimate the spread from the same data. [pause 0.15] With lopsided waits, a low average comes with a small spread, so its interval stops short. [pause 0.8] With thirty waits: seven percent low, one percent high.
+[01:52.5] But tests live in the tails: a ninety-five percent interval should miss two and a half percent on each side. [pause 0.15] Tests estimate the spread from the same data. [pause 0.15] With lopsided waits, a low average comes with a small spread, so its interval stops short. [pause 0.8] With thirty waits: seven percent low, one percent high.
 
-[02:12.3] Ron Kohavi and colleagues want each side between two and three percent. [pause 0.15] Their rule: n at least three hundred fifty-five times the skewness squared. [pause 0.3] Divide by n and take the root: [pause 1.0] it's our formula: the average's skewness at most point oh five three. [pause 0.15] At three hundred, the lean is point one two: still too much. [pause 0.15] For these waits: fourteen twenty, lean point oh five three, and both misses reach the band. [pause 1.2]
+[02:12.8] Ron Kohavi and colleagues want each side between two and three percent. [pause 0.15] Their rule: n at least three hundred fifty-five times the skewness, squared. [pause 0.3] Divide by n and take the root: [pause 1.0] it's our formula: the average's skewness at most point oh five three. [pause 0.15] At three hundred, the lean is point one two: still too much. [pause 0.15] For these waits: fourteen twenty, lean point oh five three, and both misses reach the band. [pause 1.2]
 
-[02:39.7] Bing's revenue per user had a skewness near eighteen: a hundred and fourteen thousand users. [pause 0.15] Capping each user at ten dollars a week: under ten thousand.
+[02:40.4] Bing's revenue per user had a skewness near eighteen: a hundred and fourteen thousand users. [pause 0.15] Capping each user at ten dollars a week: under ten thousand.
 
-[02:50.4] And for some data, no number on this axis is enough.
+[02:51.0] And for some data, no number on this axis is enough.
 
-[02:54.8] A lighthouse one mile off a straight shore flashes at random angles, and each flash lands somewhere on the shore.
+[02:55.8] A lighthouse one mile off a straight shore flashes at random angles, and each flash lands somewhere on the shore.
 
-[03:02.2] Track the average landing spot. [pause 0.15] It never settles: a flash aimed almost along the shore lands absurdly far away, and yanks it.
+[03:03.1] Track the average landing spot. [pause 0.15] It never settles: a flash aimed almost along the shore lands absurdly far away, and yanks it.
 
-[03:11.0] Among a thousand flashes, the farthest typically lands about nine hundred miles off. [pause 0.15] Divided by a thousand, it still drags the average about a mile. [pause 0.15] Half of single flashes land within a mile of the middle. [pause 0.15] Repeat the thousand-flash average two hundred times, and still only half do.
+[03:11.9] Among a thousand flashes, the farthest typically lands about nine hundred miles off. [pause 0.15] Divided by a thousand, it still drags the average about a mile. [pause 0.15] Half of single flashes land within a mile of the middle. [pause 0.15] Repeat the thousand-flash average two hundred times, and still only half do.
 
-[03:30.0] The theorem needs finite variance: no single piece can outweigh the rest. [pause 0.15] Here the variance is infinite. [pause 0.15] The median ignores how far the extremes fly, so it homes in.
+[03:31.0] The theorem needs finite variance: no single piece can outweigh the rest. [pause 0.15] Here the variance is infinite. [pause 0.15] The median ignores how far the extremes fly, so it homes in.
 
-[03:42.1] So the answer is over a thousand, not thirty. [pause 0.15] Collect forever: still lopsided. [pause 0.15] The bell was never in the data. [pause 0.15] It's in the average.
+[03:43.1] So the answer is over a thousand, not thirty. [pause 0.15] Collect forever: still lopsided. [pause 0.15] The bell was never in the data. [pause 0.15] It's in the average.

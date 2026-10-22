@@ -388,12 +388,11 @@ class Episode(NarratedScene):
             self.play(Create(arcs[0]), Create(arcs[1]), run_time=beat.until("next", offset=0.1))
             self.play(Create(big_rings[0]), Create(big_rings[1]), run_time=0.7)
             beat.wait_until("one", offset=-0.2)
-            # the ringed heads lifts into the yellow 1 (its copy fades in as it leaves the coin,
-            # so the letter is never doubled)
-            low = BIG_C0[1] - BIG_R - 0.55
-            self.play(carry(big[1][1], big_score[0], run_time=0.8,
-                            path_func=via((big[1].get_x() + 0.4, low, 0),
-                                          (big_score[0].get_x() - 0.5, low, 0))))
+            # the ringed heads' yellow disc shrinks into the yellow 1 (no letter travels, so no
+            # glyph is ever doubled), as the two rings will shrink into the 2
+            self.play(self.fly_into([big[1][0]], big_score[0], arc=PI / 2, start=0.3),
+                      run_time=0.8)
+            self.clean_fly()
             self.play(self.fly_into(list(big_rings), big_score[2], arc=PI / 2, lag=0.1, start=0.4),
                       FadeIn(big_score[1]), run_time=0.8)
             self.clean_fly()
@@ -512,9 +511,12 @@ class Episode(NarratedScene):
             self.play(LaggedStart(*[Create(r) for r in c1["rings"]], lag_ratio=0.3),
                       run_time=beat.until("two", offset=-0.1))
             heads_chk = VGroup(*[c1["coins"][i] for i in c1["chk"] if c1["seq"][i] == "H"])
-            self.play(carry(heads_chk, c1["score"][0], path_arc=-1.2),
-                      carry(c1["rings"], c1["score"][2], path_arc=-1.2),
+            # the two heads' discs shrink into the 2 and the three rings into the 3 (no letters
+            # travel), arcing over the row
+            self.play(self.fly_into([c[0] for c in heads_chk], c1["score"][0], arc=-1.0, lag=0.1),
+                      self.fly_into(list(c1["rings"]), c1["score"][2], arc=-1.0, lag=0.1),
                       FadeIn(c1["score"][1]), run_time=1.0)
+            self.clean_fly()
             self.adopt(c1["rings"], c1["score"])
             beat.wait_until("Score", offset=-0.1)
             rest = [k for k in SCORED if k not in (k0, k1)]
@@ -1015,7 +1017,7 @@ class Episode(NarratedScene):
         g_miss.move_to([X0 + 0.45, SB2 + 0.27, 0])
         # the one-half line keeps its meaning from the cold open: what the 1985 test assumed a
         # random shooter reads (both cursors sit on it until the crowding pulls them apart)
-        obv = text("the obvious guess", size=26).move_to([C, CUR_TOP + 0.3, 0])
+        obv = text("the obvious guess", size=26).move_to([C, CUR_TOP + 0.38, 0])
         with self.beat("cornell") as beat:
             # "The nineteen eighty five study": the coin strips clear to two thin lanes first;
             # the study's design header (grey) and its citation come in behind them
@@ -1141,7 +1143,7 @@ class Episode(NarratedScene):
                       *[hand_off(share_nums[j], gnums[j]) for j in range(5)],
                       hand_off(ztitle, gtitle),
                       FadeIn(m8), FadeIn(rnd_lbl), FadeIn(bias_lbl, shift=0.1 * UP),
-                      obv.animate.move_to([C, G_TOP + 0.3, 0]),
+                      obv.animate.move_to([C, G_TOP + 0.38, 0]),
                       right_col.animate.set_opacity(0.3),
                       run_time=0.9)
             # "Longer streaks grow the bias": 1, 2 and 3 hits in a row slide out of zero

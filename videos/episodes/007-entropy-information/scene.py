@@ -430,6 +430,7 @@ class Episode(NarratedScene):
     TITLE = "How Much Information Is in a Letter?"
     SPEED = 0.83                       # PRODUCTION_GUIDE §13: 0.82-0.84, never faster
     CADENCE = "shaped"                 # sentence and beat gaps follow the sense
+    BEAT_GAP = 0.55                    # beat turns audibly longer than full stops (~0.53 s)
     PRONUNCIATIONS = {"TH": "tee aitch"}
 
     # ============================================================== construct
@@ -643,18 +644,17 @@ class Episode(NarratedScene):
                 moves.append(ReplacementTransform(self.tile[s][0], feet[s]))
                 moves.append(ReplacementTransform(self.tile[s][1], labs[s]))
             self.play(LaggedStart(*moves, lag_ratio=0.02),
-                      run_time=beat.until("true", offset=-0.1, min_time=1.0))
-            # 4. ... the vertical axis grows ...
-            self.play(Create(self.y_axis), FadeIn(self.y_ticks), FadeIn(self.y_title), run_time=0.6)
+                      run_time=beat.until("Shannon", offset=-0.1, min_time=1.0))
+            # 4. ... the vertical axis grows as every column rises to the same price; 4.75
+            #    rides up the gutter with the column tops and the line is born there
+            self.play(Create(self.y_axis), FadeIn(self.y_ticks), FadeIn(self.y_title),
+                      *[ReplacementTransform(feet[s], cols[s]) for s in ALPHA],
+                      ReplacementTransform(self.logf[3], self.avg_num),
+                      Create(self.avg_line), FadeIn(self.cite_sh, shift=0.1 * UP),
+                      run_time=1.0)
             self.remove(self.y_ticks)              # ticks live on their own (they re-scale)
             self.add(*self.ytick.values())
             self._tick_leavers, self._tick_arrivals = [], []
-            # 5. ... and every column rises to the same price; 4.75 rides up the gutter with
-            #    the column tops and the line is born there
-            self.play(*[ReplacementTransform(feet[s], cols[s]) for s in ALPHA],
-                      ReplacementTransform(self.logf[3], self.avg_num),
-                      Create(self.avg_line), FadeIn(self.cite_sh, shift=0.1 * UP),
-                      run_time=0.9)
             self.add_label_updater()
             beat.wait_until("about one", offset=-0.2)
             self.play(FadeIn(self.band), FadeIn(self.band_lab, shift=0.1 * LEFT), run_time=0.9)
@@ -1155,7 +1155,7 @@ class Episode(NarratedScene):
                       FadeIn(inset_base), FadeIn(inset_labs), FadeIn(zoom_lab),
                       FadeIn(z_cost, shift=0.1 * UP), Create(sweep),
                       run_time=beat.until("to one", offset=0.0, end=True, min_time=1.0))
-            self.play(flag(self.x_ticks[-1][1], color=BLUE), outline_flash(list(inset)), run_time=0.7)
+            self.play(flag(self.x_ticks[-1][1], color=BLUE), outline_flash(list(inset)), run_time=0.45)
             beat.wait_until("area", offset=-0.2)
             # each term arrives from what it measures: p from the widths, the cost from k
             self.play(*[c.animate(rate_func=there_and_back).set_fill(YELLOW, opacity=0.85)
@@ -1190,8 +1190,8 @@ class Episode(NarratedScene):
         VGroup(f4, eq_tail).arrange(RIGHT, buff=0.22).move_to([-0.35, TOP_Y, 0])
         new_title = text("bits", size=LABEL - 2, color=GRAY).move_to(self.y_title, aligned_edge=LEFT)
         with self.narrate("Shannon called it entropy, in bits: one bit per yes-or-no answer. For "
-                          "English letters: four point one one. [pause 0.9]") as beat:
-            beat.wait_until("entropy", offset=-0.25)
+                          "English letters: four point one one. [pause 0.8]") as beat:
+            beat.wait_until("entropy", offset=-0.35)
             # 'average' and 'H' share no glyphs: the word steps out before the symbol steps in
             # (no frame stacks the two)
             # and the rest of the formula only slides left once the word is (almost) gone
@@ -1200,7 +1200,7 @@ class Episode(NarratedScene):
                                              rate_func=lambda t: smooth(max(0.0, (t - 0.32) / 0.68)))
                         for i in range(1, 5)],
                       FadeIn(f4[0], shift=0.15 * UP, rate_func=lambda t: smooth(max(0.0, (t - 0.55) / 0.45))),
-                      run_time=1.2)
+                      run_time=0.95)
             self.remove(self.f3)
             self.add(f4)
             beat.wait_until("bits", offset=-0.15)
@@ -1249,11 +1249,12 @@ class Episode(NarratedScene):
             # it ignores what came before: the stack rises back into the skyline, each
             # character priced on its own, and the context row flashes on "came before"
             beat.wait_until("ignores", offset=-0.2)
-            self.play(FadeOut(garrow), FadeOut(glab), run_time=0.3)
+            gone = lambda t: smooth(min(1.0, t / 0.3))
+            self.unpour(P, {s: cost(P[s]) for s in ALPHA},
+                        run_time=beat.until("came", offset=-0.1, min_time=0.8),
+                        extra=[FadeOut(garrow, rate_func=gone), FadeOut(glab, rate_func=gone)])
             garrow.clear_updaters()
             glab.clear_updaters()
-            self.unpour(P, {s: cost(P[s]) for s in ALPHA},
-                        run_time=beat.until("came", offset=-0.1, min_time=1.1))
             self.play(pflash(VGroup(self.lead, self.hidden), scale=1.0), *self.labels_to(1.0),
                       run_time=0.9)
 
@@ -1438,7 +1439,7 @@ class Episode(NarratedScene):
                       run_time=beat.until("Q", offset=0.1, min_time=0.8))
 
         with self.narrate("It's U, ninety-eight times in a hundred. U swallows the bar, and the "
-                          "average falls to point one six bits. [pause 0.9]") as beat:
+                          "average falls to point one six bits. [pause 0.7]") as beat:
             beat.wait_until("U", offset=-0.3)
             t_anims, t_done = self.swap_title(self.x_title_for("Q"), [qb[1]])
             u98, u_br, u_grow = self.tracking_brace("U", cy(prior["U"]) + 0.16, r"98\%")
@@ -1452,13 +1453,13 @@ class Episode(NarratedScene):
             # geometrically, so the drawn area only ever shrinks); the brace grows with it
             beat.wait_until("swallows", offset=-0.2)
             self.play(*tile_morph(self.cols, P, P_Q, prior, {s: cost(P_Q[s]) for s in ALPHA}, UNIT),
-                      u_grow, run_time=beat.until("bar", end=True, offset=0.25, min_time=1.4))
+                      u_grow, run_time=beat.until("bar", end=True, offset=0.0, min_time=1.2))
             # pour (the 98 % brace and the letters leave in its first 0.3 s); everything left is
             # a level under 4.2, so the axis zooms in with it
             zoom = self.zoom(UNIT_C, extra_lines=[ref])
             gone = lambda t: smooth(min(1.0, t / 0.3))
             self.pour(P_Q, {s: cost(P_Q[s]) for s in ALPHA},
-                      run_time=beat.until("falls", offset=-0.1, min_time=1.0),
+                      run_time=beat.until("falls", offset=-0.1, min_time=0.75),
                       extra=[*zoom, FadeOut(u98, rate_func=gone), FadeOut(u_br, rate_func=gone),
                              *self.labels_to(0.0)])
             self.zoom_done()
@@ -1774,6 +1775,11 @@ class Episode(NarratedScene):
             tally_n.clear_updaters()
             tally_n.set_value(79).move_to(right_edge, aligned_edge=RIGHT)
             self.play(FadeOut(cursor), flag(tally_n, color=GREEN), run_time=0.9)
+            # ... on the first guess: the 79 grey 1s are the first guesses
+            beat.wait_until("first", offset=-0.15)
+            self.play(LaggedStart(*[Indicate(nums[i], color=GREEN, scale_factor=1.25)
+                                    for i in range(n_cells) if gvals[i] == 1], lag_ratio=0.012),
+                      run_time=1.1)
         self.tally, self.cite = tally, cite
 
         # ---- the guess numbers as a new alphabet: the same skyline, then the same pour
@@ -2104,7 +2110,8 @@ class Episode(NarratedScene):
         dim_q = qbox.copy().set_stroke(opacity=0.3)
         dim_lead = lead.copy().set_opacity(0.18)
         with self.narrate("The hidden character from the start is the Y in the other day. "
-                          "Shannon's subject needed one guess: is it Y? Halving took five. In "
+                          "Shannon's subject needed one guess: is it Y? Splitting the alphabet took "
+                          "five. In "
                           "English, almost no letter arrives without a past.") as beat:
             # 0. the summary line goes and Shannon's record comes back (faint), with THE OTHER
             #    DAY at full strength: the hidden character was in it all along
@@ -2149,7 +2156,7 @@ class Episode(NarratedScene):
             beat.wait_until("is it", offset=-0.15)
             self.play(flag(VGroup(qbox, ybox_letter), color=YELLOW), run_time=0.7)
             # one guess against the halving's five questions
-            beat.wait_until("Halving", offset=-0.2)
+            beat.wait_until("Splitting", offset=-0.2)
             self.play(FadeIn(chain), FadeIn(five, shift=0.1 * UP),
                       run_time=beat.until("five", offset=-0.1, min_time=0.7))
             self.play(flag(five), Indicate(chain, color=YELLOW, scale_factor=1.04), run_time=0.8)

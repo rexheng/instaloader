@@ -1,47 +1,47 @@
-[00:00.0] You've read an English sentence up to one hidden character. With yes-or-no questions, how many do you need per character, on average? [pause 1.5]
+[00:00.0] You've read an English sentence up to one hidden character. With yes-or-no questions, how many do you need, on average? [pause 1.5]
 
-[00:09.9] The natural answer is five. Each answer can cut what's left in half, and five cuts take twenty-seven down to one.
+[00:09.4] The natural answer is five: each answer halves what's left, and five halvings take twenty-seven to one.
 
-[00:18.0] The ideal is log base two of twenty-seven, about four point seven five.
+[00:17.0] The ideal is log base two of twenty-seven: four point seven five.
 
-[00:23.4] In 1951, Claude Shannon estimated the true figure at about one. Whatever it is, no text compressor can beat it on average, and guessing what comes next is how language models are trained.
+[00:22.5] In 1951, Claude Shannon put the true figure at about one. No compressor beats it on average, and guessing what comes next is how language models are trained.
 
-[00:37.0] So where do four of every five questions go? Splitting the alphabet evenly charges every character the same price. Z costs as much as E, yet E turns up a hundred and thirty times as often.
+[00:34.2] So where do four of every five questions go? Z costs as much as E, yet E turns up a hundred thirty times as often.
 
-[00:50.3] Instead, ask questions that split the probability, not the alphabet. Is it a space, E, T, A, or O? Those five make up nearly half of all text.
+[00:43.4] Instead, split the probability, not the alphabet: is it a space, E, T, A or O? That's nearly half.
 
-[01:01.1] E starts near a tenth of the bar. Each ideal answer keeps half the probability, so E doubles its share of what's left. Three point three ideal doublings, and E fills the whole bar.
+[00:52.0] E starts near a tenth. Each ideal answer keeps half the probability, so E's share doubles. Three point three doublings fill the bar.
 
-[01:13.4] Z starts at one in twelve hundred and sixty, and needs ten point three.
+[01:01.6] Z, one in twelve hundred sixty, needs ten point three.
 
-[01:18.4] In general, a character with probability p needs k questions, where p times two to the k equals one. [pause 1.5] So two to the k equals one over p, and k equals log base two of one over p.
+[01:06.0] A character with probability p needs k questions, where p times two to the k equals one. [pause 1.5] So two to the k equals one over p, and k equals log base two of one over p.
 
-[01:33.4] Now give each character its own cost as a height.
+[01:20.7] Now make each character's cost its height.
 
-[01:36.6] The widths add up to one, so the total area is the average number of questions per character. Pour the skyline flat, and its height is that average.
+[01:23.6] The widths add to one, so the area is the average cost. Pour the skyline flat, and its height is that average.
 
-[01:46.6] Shannon called that average the entropy, counted in bits, one bit per yes-or-no answer. For English letters, it's [pause 0.3] four point one one.
+[01:31.5] Shannon called it entropy, in bits: one bit per yes-or-no answer. For English letters: four point one one. [pause 0.9]
 
-[01:56.5] That beats four point seven five, but it's still four times Shannon's estimate: it prices every character as if nothing came before it.
+[01:40.1] That beats four point seven five, but it's four times Shannon's estimate: it ignores what came before.
 
-[02:05.8] What comes after a Q? [pause 1.6]
+[01:47.6] What comes after a Q? [pause 1.6]
 
-[02:09.3] It's U, ninety-eight times out of a hundred. U swallows the bar, its cost drops to almost nothing, and the average falls to point one six bits. [pause 0.45]
+[01:51.1] It's U, ninety-eight times in a hundred. U swallows the bar, and the average falls to point one six bits. [pause 0.9]
 
-[02:20.1] After TH, E takes two thirds of the bar, and its cost shrinks to about half a question.
+[02:00.1] After TH, E takes two thirds of the bar, and costs about half a question.
 
-[02:26.2] Half a question sounds impossible, but a compressor asks about long runs of letters, and the fractions add up: five questions for these three, not six. After TH, the average is one point seven.
+[02:05.4] Half a question sounds impossible, but a compressor asks about long runs of letters, and the fractions add up: five questions for these three, not six. After TH, it averages one point seven.
 
-[02:40.5] But averaged over every two-letter context, it's still two point eight.
+[02:20.7] But averaged over every two-letter context, it's still two point eight.
 
-[02:45.5] Contexts of a hundred letters need more text than any corpus holds, so Shannon used a predictor that already knows English: a person.
+[02:25.9] Hundred-letter contexts need more text than any corpus holds, so Shannon used a predictor that knows English: a person.
 
-[02:54.8] His subject read a passage letter by letter, guessing each next one until right. Seventy-nine of a hundred and two came on the first guess.
+[02:34.8] His subject read a passage letter by letter, guessing each next one until right: seventy-nine of a hundred two on the first guess. [pause 0.9]
 
-[03:04.0] A twin who guesses the same way could rebuild the passage from these counts alone. Treat each guess count as a symbol, [pause 0.8] and the same skyline pours flat at about one point four bits. A better guesser could only lower it.
+[02:45.0] A twin guessing the same way could rebuild the passage from these counts. Treat each count as a symbol: [pause 1.0] the same skyline pours flat at about one point four bits. A better guesser could only lower it.
 
-[03:19.1] Shannon's tests, with a hundred letters of context, put English between point six and one point three bits per character.
+[02:59.1] With a hundred letters of context, Shannon's tests put English between point six and one point three bits.
 
-[03:27.0] In twenty twenty-three, a language model compressing part of a book that reached Project Gutenberg after its training, in the same twenty-seven symbols, needed point eight four bits, inside that range.
+[03:06.8] In twenty twenty-three, a language model compressing part of a book that reached Project Gutenberg after its training needed point eight four bits, inside that range.
 
-[03:40.6] The hidden character from the start is the Y at the end of the other day. Shannon's subject got it on the first guess, a single yes-or-no question: is it Y? Splitting the alphabet took five. In English, almost no letter arrives without a past.
+[03:18.7] The hidden character from the start is the Y in the other day. Shannon's subject needed one guess: is it Y? Halving took five. In English, almost no letter arrives without a past.

@@ -230,3 +230,35 @@ The previous attempt was interrupted after its last master render (final.mp4 09:
 
 ### Every round-5 fix, re-checked on the 09:49 master
 Garbled morph at 1:44.8 (strip 1:41.6–1:44.6, 4 fps: the old fraction slides out, then D's slides in; never two digit sets) · jump labels at 3:04.8 (sheet 2:55–2:59: "our jump" gone before the bracket slides, then "Schelling's jump: 35–50%") · ladder focal regions (kf 2:27.1, 2:45.4: thumbnails gone, A's patch in the right column, counts only as spoken) · "households (simulated start)" (kf 2:17.6) · Schelling frame (kf 2:57.7: one rules label; sheet 2:59: hatched band, our columns dimmed) · subject outline (kf 1:17.5, 1:38.4) · "this chart" (kf 1:57.7: axes drawn) · spoken columns (kf 2:05.3: ¼ mark and bright column) · counter pulse · "In the other" (whisper: "In the other, nobody minds their neighbors at all.") · 38 spoken + "38 content by their turn" (kf 0:55.4–1:06.4) · rule-town texture (kf 3:05.5, 3:13.6) · no zone pulses, towns dimmed (kf 3:31.7) · HUD centred beside the board (kf 1:06.4). All landed. Mechanics of that master: 3:43.2, 158 wpm, −14.0 LUFS / −1.7 dBTP, max silence 1.96 s, max static 3.67 s, WER 0.0 %, 0 render warnings, layout audit 0 issues in 231 checks, 0 banned phrases.
+
+### New standard mid-revision (toolkit commit 760d507, PRODUCTION_GUIDE §13)
+
+While this pass was under way the toolkit gained the §13 targets from 28 critic reviews: ≤ 500 words and 3:15–3:35, shaped cadence, 0.9–1.4 s after key results, no sentence over 200 wpm, deictic sync, no glyph morphs, Text ≥ 27 for labels the narration refers to, one focal point per frame. The 09:49 master failed three of them (526 words / 3:43; 6 sentences over 200 wpm; flat 0.41 s gaps with beat turns at 0.43 s). The revision therefore went further than the plan above.
+
+### What changed
+
+**Narration: 526 → 483 words, 3:43 → about 3:34, `CADENCE = "shaped"`** (§13.1, §13.4)
+- Cut by the mute test, each one something the frame already shows or a restatement:
+  - "about one in six" (0:41);
+  - the second spoken "two hundred and thirty-eight" (2:22): "unhappy 238" is on the ladder, and the repeat was the report's flagged phrase;
+  - the third domino step, "Then the next one, also at three eighths, tips in round three" (and its 1.1 s pause, D's ring and the early replay of C's round-3 move). A → B → C already makes the chain; a round-3 critic had called it a repeat of the first two;
+  - "It traces this to reduced credit in the areas marked in red" folded into the study sentence as "…for decades, through reduced credit", the abstract's own mechanism;
+  - the second "at all", "of them", "of a household's" (the report's other repeated phrase), "that suited them" → "suitable".
+- Voice: every beat at 0.82–0.84 (was 0.80–0.85; the HOLC beat was 0.85, above the new 0.84 ceiling). Shaped cadence: full stops 0.47 s median, beat turns 0.67 s (were 0.41 / 0.43, "metronomic"). A 0.9 s hold after each key result: "It reads seventy-four.", "…it jumps to seventy-six.", "…that chain never starts." The ¼ prediction hold is 1.5 s (was 1.2).
+- Sentences over 200 wpm: 6 → 2. "It is happy to be outnumbered two to one" joins the rule sentence ("…it moves, so it is happy…", 193 wpm); "So how does a demand of a third…" → "So how can a demand of one third…" (197); "Three eighths is more than a third" → "Three eighths beats a third" (188). The two left ("That whole town is one point on this chart", "Look again at the first town") are 6-word lines.
+- Held function word: "Before round one," held its "one" 0.60 s before the comma; it is now "At the start,".
+- Deictics: 15, all landing (`beat.on("these", …)` brings "? demanded" in on "these households"; the 50 % readout pulses on "Here"; the round-1 dim runs 1.4 s, through "of these").
+
+**Frames** (§13.2)
+- Labels the narration refers to are at Text 27 (34.6 px): "empty: not counted", the HUD notes ("38 content by their turn", "67 content at the start"), "random mix", "each dot: one simulated town", "households (simulated start)", "unhappy", "lose one match", "our jump". The rule inset moved 0.45 left so its label still clears the safe area.
+- Schelling frame: "Schelling's jump: 35–50%" → "Schelling: 35–50%" at Text 27, and the rules label "nearest move · 25–30% empty" is gone (at 27 it does not fit left of his band, and it repeated the narration). The citation is underlined on "nearest" instead, so the rules point at their source. One label and one band on the chart.
+- One focal point on the ladder: A's patch dims to 60 % (§13.2.8: a saturated hue fades only to 60 %) while the bars are the subject ("Every household at three eighths…", the ¼ prediction) and returns during the caret's slide, just before its 2/7 ≥ ¼ flip on "that chain never starts".
+- Stakes beat: the rule inset stays, dimmed to 60 %, instead of leaving the lower right empty for 9 s; it returns to full on "a demand of one third" and fades with the rewind.
+- The ladder baseline and the x-axis copy that becomes it use the new `AXIS` colour, the same as the chart's axes, so the line does not change shade as it starts to move.
+
+**Motion** (the three near-empty frames found on the 09:49 master)
+- 1:55: the axes start drawing halfway through the town's shrink (x-axis and y-axis first, below and left of the moving town; titles last), so the shrunken town never sits alone; its copy leaves on "whole" and lands on "point".
+- 2:11: the ladder entrance is one 1.5 s move: the dot chart fades (0–0.35 s), its x-axis rises into the baseline (0.15–0.75 s), the titles fade in (0.4–1.0 s), and the bars sprout from the moving line (0.5–1.35 s). The sheet frame that used to show a bare line now shows the bars coming up.
+- 3:33: our town returns to full strength while the rule town and the labels fade, so the one town left is the subject of "Look again at the first town".
+
+**Checked before the master** (dry run of the scene with the new toolkit, no frames rendered): 0 warnings (budget, deictic, glyph morph, speed, overlap, text size), layout audit 0 issues in 220 checks, and the review kit's Narration craft section has no flagged line (483 words / 3:33.9; median sentence 167 wpm, 2 over 200; full stops 0.47 s vs beat turns 0.67 s; longest run without a breath 14.7 s; 6 numbers in the busiest 20 s).

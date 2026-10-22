@@ -720,9 +720,10 @@ class Episode(NarratedScene):
             self.play(TransformMatchingShapes(dist_lab, dist_lab2), FadeOut(vi_lab), FadeOut(cite_vi),
                       n2.animate.set_opacity(0.3), kl_lab.animate.set_opacity(0.35), run_time=0.8)
             beat.wait_until("Data first", offset=-0.1)
-            self.play(flag(n1[1]), run_time=0.8)
-            beat.wait_until("point", offset=-0.15)
-            self.play(FadeIn(r1, shift=0.1 * LEFT), run_time=0.7)
+            self.play(flag(n1[1]), run_time=0.6)
+            # "this bell": the bell flashes as its score appears beside the D-line
+            beat.on("this bell", self.flash_bell(run_time=0.7), FadeIn(r1, shift=0.1 * LEFT),
+                    run_time=0.7)
             beat.wait_until("Shift", offset=-0.15)
             # each excursion: out, hold and flag the raised number, back
             for tracker, val in ((self.mu, MA + NV["shift"]), (self.sd, SA * NV["stretch"])):

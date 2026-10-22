@@ -1,47 +1,47 @@
-[00:00.0] A hundred and forty-two points with two averages, two standard deviations, and a correlation of minus point oh six. Picture the cloud. Which way does its best-fit line tilt? [pause 1.5]
+[00:00.0] A hundred forty-two points with two averages, two standard deviations, and a correlation of minus point oh six. Picture the cloud, and its best-fit line. Which way does it tilt? [pause 1.5]
 
-[00:13.8] You probably pictured a shapeless oval, with a nearly flat line. Here are the real points. [pause 1.1] A dinosaur, drawn by Alberto Cairo, with these same five numbers.
+[00:14.9] You probably pictured a shapeless oval, with a nearly flat line. Here are the real points. [pause 1.1] A dinosaur, drawn by Alberto Cairo, with these same five numbers.
 
-[00:26.1] In a review of seven hundred and three physiology papers, eighty-six percent used bar graphs: an average and an error bar. Only thirteen percent showed the points.
+[00:27.3] In a review of seven hundred three physiology papers, eighty-six percent used bar graphs: an average and an error bar. Only thirteen percent showed the points.
 
-[00:37.8] So how much can five numbers hide? Let's hide a star in them, and demand that all five still match the dinosaur's to two decimals.
+[00:39.3] How much can five numbers hide? Let's hide a star in them, and demand that all five match the dinosaur's to two decimals.
 
-[00:46.3] Version one slides every point onto its own spot on a star.
+[00:47.9] Version one slides every point onto its own spot on a star.
 
-[00:50.8] We got the star, and lost all five numbers. [pause 0.2] The center moved, the x spread grew, and the y spread shrank by almost a quarter.
+[00:52.5] We got the star, and lost all five numbers. [pause 0.9] The center moved, the x spread grew, and the y spread shrank by almost a quarter.
 
-[00:59.9] So what exactly do five numbers pin down?
+[01:02.4] So what exactly do five numbers pin down?
 
-[01:02.9] The two averages mark a single point: the cloud's balance point.
+[01:05.8] The two averages mark a single point: the cloud's balance point.
 
-[01:07.2] The two standard deviations reach one deviation out on each side, and draw a box.
+[01:10.6] The two standard deviations reach one deviation out on each side, and draw a box.
 
-[01:13.3] Many ellipses touch all four walls. [pause 0.2] The correlation picks one. Correlation r means one standard deviation to the right, on average r standard deviations up. That's the best-fit line, through the middle of every vertical slice. At the wall, the slice is just the touch point, r times ess why above the center. For minus point oh six, that's just below the middle.
+[01:16.9] Many ellipses touch all four walls. [pause 0.2] The correlation picks one. Correlation r means one standard deviation to the right, on average r standard deviations up. That's the best-fit line, through the middle of every vertical slice. At the wall, the slice is just the touch point, r times ess why above the center. For the dinosaur, it's just below the middle.
 
-[01:38.6] That ellipse is everything the five numbers know.
+[01:41.9] That ellipse is everything the five numbers know. [pause 1.0]
 
-[01:41.9] Now replay version one, and watch the ellipse.
+[01:46.3] Now replay version one, and watch the ellipse.
 
-[01:45.3] How would you fix the star? [pause 1.5]
+[01:49.7] How would you fix it? [pause 1.5]
 
-[01:48.8] Slide it until the centers meet. Stretch it until the boxes match. Then tip it, a slight shear, until it touches the walls at the same height.
+[01:53.0] Slide it until the centers meet. Stretch it until the boxes match. Then tip it, a slight shear, until it touches the walls at the same height.
 
-[01:58.5] All five match now, to every decimal place.
+[02:02.9] All five match now, to every decimal place. [pause 0.6]
 
-[02:02.3] But add a sixth number, the median of y, and our star misses it by six.
+[02:07.3] But add a sixth number: the median of y. Our star misses it by six.
 
-[02:07.3] In 2017, Justin Matejka and George Fitzmaurice built a search that keeps these five numbers fixed. It nudges a random point toward a target shape, and undoes any nudge that breaks them. Repeat it enough times, and the dinosaur becomes a circle.
+[02:12.7] In 2017, Justin Matejka and George Fitzmaurice built a search that keeps these five numbers fixed while it nudges points toward a target.
 
-[02:24.4] From the dinosaur they grew twelve shapes, like this star, [pause 1.0] this bullseye, [pause 0.8] this X, [pause 1.0] these stripes, [pause 0.8] and these dots. Every one of them has this same ellipse, and a different median.
+[02:23.1] From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this star, [pause 0.8] this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Every one has this same ellipse, and a different median.
 
-[02:40.1] Francis Anscombe made the point in 1973, with eleven points of his own.
+[02:38.0] Francis Anscombe made the point in 1973, with eleven points of his own.
 
-[02:45.7] His correlation is point eight two, so the ellipse touches the right wall high up.
+[02:43.9] His correlation is point eight two, so the ellipse touches the right wall high up.
 
-[02:50.8] His best-fit line follows the same rule: one ess ex across, r ess why up, through the center and that touch point.
+[02:49.1] His best-fit line follows the same rule: one ess ex across, r ess why up, through the center and that touch point.
 
-[02:58.8] So the slope is rise over run. [pause 1.0] Plug in his numbers, and it's one half.
+[02:57.5] So the slope is rise, over run. [pause 1.0]
 
-[03:04.8] All four of his datasets share these five numbers, so they share the ellipse and the line. [pause 0.3] A trend, a curve, an outlier, and one point doing all the work.
+[03:01.2] All four of his datasets share these five numbers, so they share the ellipse and line. [pause 0.3] A trend, a curve, an outlier, and one point doing all the work.
 
-[03:15.8] Your line was exactly right: five numbers fix its slope, minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.
+[03:12.5] Your line was exactly right: five numbers fix its slope, minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.

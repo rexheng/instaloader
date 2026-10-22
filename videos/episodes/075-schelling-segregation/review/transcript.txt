@@ -1,51 +1,50 @@
-[0:00.0–0:06.7] In this simulated town, on average, three-quarters of a household's neighbors match its color.
-[0:06.7–0:11.4] How much matching do these households demand?
-[0:11.4–0:12.7] Just a third.
-[0:12.7–0:16.7] Each household counts the occupied squares around it.
-[0:16.7–0:19.8] If fewer than a third of them match, it moves.
-[0:19.8–0:22.6] It is happy to be outnumbered two to one.
-[0:22.6–0:28.0] We read maps of real cities the same way, guessing motives from patterns.
-[0:28.0–0:32.8] So how does a demand of a third build a town of three quarters?
-[0:32.8–0:35.8] Rewind to the start, a random mix.
-[0:35.8–0:40.8] Here on average, half of a household's neighbors match well above a third.
-[0:40.8–0:45.6] Still these 238 are unhappy, about one in six.
-[0:45.6–0:51.9] The obvious plan is to move each of them to a random empty square where it would be content.
-[0:51.9–0:56.0] Then everyone is content and the town stays mixed.
-[0:56.0–1:02.8] Round 1 takes 200 moves. The other 38 were content by their turn. If the plan had worked,
-[1:02.8–1:10.0] this counter would read 0. It reads 74, and 67 of these were content before round 1. They
-[1:10.0–1:13.6] never moved. Their neighbors did.
-[1:13.6–1:20.5] Replay one corner. Before round 1, this gold household had 3 gold neighbors out of 8. 3
-[1:20.5–1:23.3] Eighths is more than a third, so it stayed.
-[1:23.3–1:25.4] Then this neighbor moved away.
-[1:25.4–1:26.9] Is it still content?
-[1:28.4–1:30.5] Two gold out of seven.
-[1:30.5–1:34.8] Two sevenths is less than a third, so now it wants out.
-[1:34.8–1:37.6] Its neighbor here also has three eighths.
-[1:37.6–1:40.3] In round two, our household leaves,
-[1:40.3–1:42.3] and this one drops to two sevenths.
-[1:43.3–1:45.7] Then the next one, also at three eighths,
-[1:45.7–2:00.1] tips in round three Now run the whole town After round 7 nobody wants to move That whole town is one point on this chart
-[2:00.1–2:05.6] Demand a quarter and the same starting town barely sorts, 58%.
-[2:05.6–2:08.4] Demand a third and it jumps to 76.
-[2:08.4–2:14.6] To see why that happens, sort the random start by each household's share of matching neighbors.
-[2:14.6–2:19.5] With at most eight neighbors, these are the only shares up to 60%.
-[2:19.5–2:26.1] At a third, everyone left of it is unhappy, 238, including the neighbor that started our
-[2:26.1–2:29.1] corner's chain, at two-sevenths.
-[2:29.1–2:33.4] Every household at three-eighths is one lost match away from it.
-[2:33.4–2:37.6] At a quarter, how many would start unhappy?
-[2:37.6–2:41.1] Only these two bars change sides, and they're tall.
-[2:41.1–2:45.6] Now just 95 start unhappy, and that chain never starts.
-[2:45.6–2:50.2] In his 1971 paper, Thomas Schelling ran this model.
-[2:50.2–2:56.1] His households moved to the nearest square that suited them, on emptier boards, and there
-[2:56.1–3:00.7] the jump came later, between about a third and a half.
-[3:00.7–3:04.6] Two simulated towns, both 76 percent.
-[3:04.6–3:07.8] In one town, households demand a third.
-[3:07.8–3:11.0] In the other, nobody minds their neighbors at all.
-[3:11.0–3:14.6] Which one wanted a third?
-[3:14.6–3:19.5] This one, the other was placed by a rule, with no preferences at all.
-[3:19.5–3:26.8] In real cities, one study finds that 1930s federal lending maps increased racial segregation
-[3:26.8–3:28.3] for decades.
-[3:28.3–3:33.2] It traces this to reduced credit in the areas marked in red.
-[3:33.2–3:35.4] Look again at the first town.
-[3:35.4–3:40.7] As Schelling argued, whatever you guessed its people demanded, the map alone could not
-[3:40.7–3:41.6] have told you.
+[0:00.0–0:06.1] In this simulated town, on average, three-quarters of a household's neighbors match its color.
+[0:06.7–0:08.9] How much matching do these households demand?
+[0:10.8–0:11.9] Just a third.
+[0:12.5–0:16.0] Each household counts the occupied squares around it.
+[0:16.4–0:21.8] If fewer than a third match, it moves, so it is happy to be outnumbered two to one.
+[0:22.6–0:26.8] We read Real City maps the same way, guessing motives from patterns.
+[0:26.8–0:31.6] So how can a demand of one-third build a town of three-quarters?
+[0:32.7–0:34.9] Rewind to the start, a random mix.
+[0:35.7–0:39.3] Here, on average, half the neighbors match well above a third.
+[0:39.9–0:42.5] Still, these 238 are unhappy.
+[0:43.2–0:48.6] The obvious plan is to move each one to a random empty square, where it would be content.
+[0:49.0–0:52.4] Then everyone is content, and the town stays mixed.
+[0:53.1–0:55.1] Round 1 takes 200 moves.
+[0:55.6–0:58.2] The other 38 were content by their turn.
+[0:58.8–1:01.7] If the plan had worked, this counter would read 0.
+[1:02.4–1:03.6] It reads 74.
+[1:04.9–1:08.1] 67 of these were content before round 1.
+[1:08.5–1:09.4] They never moved.
+[1:10.0–1:11.1] Their neighbors did.
+[1:11.9–1:13.0] Replay 1 corners.
+[1:13.0–1:17.8] At the start, this gold household had 3 gold neighbors out of 8.
+[1:18.5–1:20.9] 3 eighths beats a third, so it stayed.
+[1:20.9–1:23.1] Then this neighbor moved away.
+[1:23.1–1:24.9] Is it still content?
+[1:26.4–1:28.2] Two gold out of seven.
+[1:29.0–1:32.5] Two-sevenths is less than a third, so now it wants out.
+[1:33.2–1:35.5] Its neighbor here also has three-eighths.
+[1:36.0–1:40.4] In round two, our household leaves, and this one drops to two-sevenths.
+[1:41.1–1:52.7] Now run the whole town After round seven nobody wants to move That whole town is one point on this chart
+[1:52.7–1:59.8] Demand a quarter and the same starting town barely sorts, 58%. Demand a third and it jumps
+[1:59.8–2:07.0] to 76. To see why that happens, sort the random start by each household's share of matching
+[2:07.0–2:14.5] neighbors. With at most eight neighbors, these are the only shares up to 60%. At a third,
+[2:14.5–2:19.8] everyone left of it is unhappy, including the neighbor that started our corners chain
+[2:19.8–2:27.0] at two-sevenths. Every household at three-eighths is one lost match away from it. At a quarter,
+[2:27.0–2:30.5] how many would start unhappy?
+[2:30.5–2:36.8] Only these two bars change sides, and they're tall. Just 95 start unhappy, and that chain
+[2:36.8–2:39.3] never starts.
+[2:39.3–2:43.7] In his 1971 paper, Thomas Schelling ran this model.
+[2:43.7–2:49.8] His households moved to the nearest suitable square, on emptier boards, and there the jump
+[2:49.8–2:54.2] came later, between about a third and a half.
+[2:54.2–2:58.3] Two simulated towns, both 76 percent.
+[2:58.3–3:01.6] In one town, households demand a third.
+[3:01.6–3:05.0] In the other, nobody minds their neighbors at all.
+[3:05.0–3:08.7] Which one wanted a third?
+[3:08.7–3:13.2] This one, the other was placed by a rule, with no preferences.
+[3:13.2–3:20.3] In real cities, one study finds that 1930s federal lending maps increased racial segregation
+[3:20.3–3:24.2] for decades, through reduced credit.
+[3:24.2–3:26.2] Look again at the first town.
+[3:26.2–3:31.4] As Schelling argued, whatever you guessed its people demanded, the map alone could not
+[3:31.4–3:32.4] have told you.

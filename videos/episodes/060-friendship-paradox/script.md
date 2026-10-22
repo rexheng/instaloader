@@ -86,7 +86,7 @@ Sue's, Alice's and Betty's tokens pulse as named. Sue's name label now sits up-l
 > cancel. *[pause]*
 > So the average of k squared is mu squared plus sigma squared. *[pause 1.6]* And friends average mu,
 > plus sigma squared over mu. *[pause 1.2]* Here that's two and a half, plus a half: exactly the
-> extra half friend we measured. *[pause 0.9]* And the ring? No spread, so no gap. *[pause 1.3]*
+> extra half friend we measured. *[pause 0.9]* With no spread, the ring had no gap. *[pause 1.3]*
 
 Visual (the one picture): the girls slide onto a beam (0.8 apart), each name riding along to sit
 under her node (Text 20). Round 6: a GRAY count ruler draws under the beam, ticks 1, 2, 3, 4 at the
@@ -128,7 +128,7 @@ Every highlight box (cross term, cancels) has buff 0.15 with widened TeX spaces 
 On "exactly the extra half friend we measured" the picture moves back left, the bars and citation
 return, the result row moves under the bars, and its 0.5 flashes with the PURPLE bar segment.
 The ring: the class picture, the row and the bars dim to 30 %; a 0.55× thumbnail of the 0:31 ring
-(digits 32) appears lower left; on "no spread" a copy of the PURPLE distance line collapses into a
+(digits 32) appears lower left on "With no spread", and a copy of the PURPLE distance line collapses into a
 point at its centre; on "no gap" μ + σ²/μ is copied beside it as 2 + 0/2 = 2. The bars never change
 (round 1 showed 2.0 / 2.0 beside a beam reading 2.5 and 3). In the closing pause only the result
 row and the bars brighten; the beam picture and the ring stay at 30 % and clear as Facebook starts.

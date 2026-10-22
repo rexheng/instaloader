@@ -2,3630 +2,2846 @@
  "scene": "Episode",
  "episode": 7,
  "title": "How Much Information Is in a Letter?",
- "video_duration": 237.567,
+ "video_duration": 212.767,
  "beats": [
   {
    "index": 0,
    "start": 0.0,
-   "duration": 9.55,
-   "end": 9.55,
-   "text": "You've read an English sentence up to one hidden character. With yes-or-no questions, how many do you need per character, on average? [pause 1.5]",
+   "duration": 8.94,
+   "end": 8.94,
+   "text": "You've read an English sentence up to one hidden character. With yes-or-no questions, how many do you need, on average? [pause 1.5]",
    "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
+   "speed": 0.83,
+   "cadence": "shaped",
    "words": [
     {
      "w": "You've",
      "t": 0.03,
-     "end": 0.23
+     "end": 0.255
     },
     {
      "w": "read",
-     "t": 0.255,
-     "end": 0.442
+     "t": 0.28,
+     "end": 0.467
     },
     {
      "w": "an",
-     "t": 0.455,
-     "end": 0.53
+     "t": 0.48,
+     "end": 0.555
     },
     {
      "w": "English",
-     "t": 0.555,
-     "end": 0.918
+     "t": 0.58,
+     "end": 0.942
     },
     {
      "w": "sentence",
-     "t": 0.955,
-     "end": 1.68
+     "t": 0.98,
+     "end": 1.78
     },
     {
      "w": "up",
-     "t": 1.73,
-     "end": 1.905
+     "t": 1.83,
+     "end": 2.005
     },
     {
      "w": "to",
-     "t": 1.93,
-     "end": 2.042
+     "t": 2.03,
+     "end": 2.142
     },
     {
      "w": "one",
-     "t": 2.08,
-     "end": 2.305
+     "t": 2.18,
+     "end": 2.405
     },
     {
      "w": "hidden",
-     "t": 2.33,
-     "end": 2.605
+     "t": 2.43,
+     "end": 2.705
     },
     {
      "w": "character",
-     "t": 2.63,
-     "end": 3.3
+     "t": 2.73,
+     "end": 3.43
     },
     {
      "w": "With",
-     "t": 3.68,
-     "end": 3.867
+     "t": 3.745,
+     "end": 3.92
     },
     {
      "w": "yes-or-no",
-     "t": 3.905,
-     "end": 4.48
+     "t": 3.945,
+     "end": 4.495
     },
     {
      "w": "questions",
-     "t": 4.505,
-     "end": 5.405
+     "t": 4.52,
+     "end": 5.395
     },
     {
      "w": "how",
-     "t": 5.58,
-     "end": 5.742
+     "t": 5.57,
+     "end": 5.732
     },
     {
      "w": "many",
-     "t": 5.755,
-     "end": 5.942
+     "t": 5.745,
+     "end": 5.932
     },
     {
      "w": "do",
-     "t": 5.955,
-     "end": 6.042
+     "t": 5.945,
+     "end": 6.032
     },
     {
      "w": "you",
-     "t": 6.055,
-     "end": 6.13
+     "t": 6.045,
+     "end": 6.12
     },
     {
      "w": "need",
-     "t": 6.155,
-     "end": 6.355
-    },
-    {
-     "w": "per",
-     "t": 6.38,
-     "end": 6.53
-    },
-    {
-     "w": "character",
-     "t": 6.555,
-     "end": 7.105
+     "t": 6.145,
+     "end": 6.445
     },
     {
      "w": "on",
-     "t": 7.205,
-     "end": 7.342
+     "t": 6.52,
+     "end": 6.658
     },
     {
      "w": "average",
-     "t": 7.38,
-     "end": 8.05
+     "t": 6.695,
+     "end": 7.44
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/cf/cf231c145ff182a8a46e3fcf.wav"
+   "wav": "/root/.cache/sample_space/tts/55/55b6e4a872b126944b236365.wav"
   },
   {
    "index": 1,
-   "start": 9.9,
-   "duration": 7.59,
-   "end": 17.49,
-   "text": "The natural answer is five. Each answer can cut what's left in half, and five cuts take twenty-seven down to one.",
+   "start": 9.4,
+   "duration": 7.11,
+   "end": 16.51,
+   "text": "The natural answer is five: each answer halves what's left, and five halvings take twenty-seven to one.",
    "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
+   "speed": 0.83,
+   "cadence": "shaped",
    "words": [
     {
      "w": "The",
-     "t": 9.925,
-     "end": 10.025
+     "t": 9.415,
+     "end": 9.515
     },
     {
      "w": "natural",
-     "t": 10.05,
-     "end": 10.475
+     "t": 9.54,
+     "end": 10.053
     },
     {
      "w": "answer",
-     "t": 10.5,
-     "end": 10.875
+     "t": 10.09,
+     "end": 10.54
     },
     {
      "w": "is",
-     "t": 10.9,
-     "end": 11.025
+     "t": 10.565,
+     "end": 10.702
     },
     {
      "w": "five",
-     "t": 11.05,
-     "end": 11.64
+     "t": 10.74,
+     "end": 11.565
     },
     {
-     "w": "Each",
-     "t": 12.03,
-     "end": 12.318
+     "w": "each",
+     "t": 11.765,
+     "end": 12.052
     },
     {
      "w": "answer",
-     "t": 12.355,
-     "end": 12.73
+     "t": 12.09,
+     "end": 12.515
     },
     {
-     "w": "can",
-     "t": 12.755,
-     "end": 12.955
-    },
-    {
-     "w": "cut",
-     "t": 13.005,
-     "end": 13.23
+     "w": "halves",
+     "t": 12.54,
+     "end": 12.84
     },
     {
      "w": "what's",
-     "t": 13.255,
-     "end": 13.48
+     "t": 12.865,
+     "end": 13.09
     },
     {
      "w": "left",
-     "t": 13.505,
-     "end": 13.718
-    },
-    {
-     "w": "in",
-     "t": 13.73,
-     "end": 13.855
-    },
-    {
-     "w": "half",
-     "t": 13.88,
-     "end": 14.58
+     "t": 13.115,
+     "end": 13.69
     },
     {
      "w": "and",
-     "t": 14.755,
-     "end": 14.905
+     "t": 13.79,
+     "end": 13.94
     },
     {
      "w": "five",
-     "t": 14.955,
-     "end": 15.33
+     "t": 13.99,
+     "end": 14.365
     },
     {
-     "w": "cuts",
-     "t": 15.355,
-     "end": 15.655
+     "w": "halvings",
+     "t": 14.39,
+     "end": 14.84
     },
     {
      "w": "take",
-     "t": 15.68,
-     "end": 15.942
+     "t": 14.865,
+     "end": 15.09
     },
     {
      "w": "twenty-seven",
-     "t": 15.98,
-     "end": 16.605
-    },
-    {
-     "w": "down",
-     "t": 16.63,
-     "end": 16.88
+     "t": 15.115,
+     "end": 15.74
     },
     {
      "w": "to",
-     "t": 16.905,
-     "end": 17.005
+     "t": 15.765,
+     "end": 15.865
     },
     {
      "w": "one",
-     "t": 17.03,
-     "end": 17.49
+     "t": 15.89,
+     "end": 16.36
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/20/204e516568ad7178c1b6d618.wav"
+   "wav": "/root/.cache/sample_space/tts/09/09832e01e3db85b8b41de8b6.wav"
   },
   {
    "index": 2,
-   "start": 18.033,
-   "duration": 4.99,
-   "end": 23.023,
-   "text": "The ideal is log base two of twenty-seven, about four point seven five.",
+   "start": 16.967,
+   "duration": 5.04,
+   "end": 22.007,
+   "text": "The ideal is log base two of twenty-seven: four point seven five.",
    "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
+   "speed": 0.83,
+   "cadence": "shaped",
    "words": [
     {
      "w": "The",
-     "t": 18.048,
-     "end": 18.198
+     "t": 16.982,
+     "end": 17.132
     },
     {
      "w": "ideal",
-     "t": 18.248,
-     "end": 18.735
+     "t": 17.182,
+     "end": 17.695
     },
     {
      "w": "is",
-     "t": 18.773,
-     "end": 18.923
+     "t": 17.732,
+     "end": 17.882
     },
     {
      "w": "log",
-     "t": 18.973,
-     "end": 19.298
+     "t": 17.932,
+     "end": 18.257
     },
     {
      "w": "base",
-     "t": 19.323,
-     "end": 19.623
+     "t": 18.282,
+     "end": 18.657
     },
     {
      "w": "two",
-     "t": 19.673,
-     "end": 19.948
+     "t": 18.707,
+     "end": 19.007
     },
     {
      "w": "of",
-     "t": 19.973,
-     "end": 20.048
+     "t": 19.032,
+     "end": 19.157
     },
     {
      "w": "twenty-seven",
-     "t": 20.073,
-     "end": 21.048
-    },
-    {
-     "w": "about",
-     "t": 21.223,
-     "end": 21.535
+     "t": 19.182,
+     "end": 20.132
     },
     {
      "w": "four",
-     "t": 21.573,
-     "end": 21.773
+     "t": 20.357,
+     "end": 20.607
     },
     {
      "w": "point",
-     "t": 21.798,
-     "end": 22.048
+     "t": 20.632,
+     "end": 20.882
     },
     {
      "w": "seven",
-     "t": 22.073,
-     "end": 22.411
+     "t": 20.907,
+     "end": 21.245
     },
     {
      "w": "five",
-     "t": 22.448,
-     "end": 23.023
+     "t": 21.282,
+     "end": 21.857
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/e2/e20f2a8fc45463d0dab4d6b5.wav"
+   "wav": "/root/.cache/sample_space/tts/64/642db4d315326142bfa0bb60.wav"
   },
   {
    "index": 3,
-   "start": 23.367,
-   "duration": 13.15,
-   "end": 36.517,
-   "text": "In 1951, Claude Shannon estimated the true figure at about one. Whatever it is, no text compressor can beat it on average, and guessing what comes next is how language models are trained.",
+   "start": 22.467,
+   "duration": 11.27,
+   "end": 33.737,
+   "text": "In 1951, Claude Shannon put the true figure at about one. No compressor beats it on average, and guessing what comes next is how language models are trained.",
    "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
+   "speed": 0.83,
+   "cadence": "shaped",
    "words": [
     {
      "w": "In",
-     "t": 23.387,
-     "end": 23.487
+     "t": 22.512,
+     "end": 22.612
     },
     {
      "w": "1951",
-     "t": 23.512,
-     "end": 24.862
+     "t": 22.637,
+     "end": 23.962
     },
     {
      "w": "Claude",
-     "t": 25.062,
-     "end": 25.399
+     "t": 24.162,
+     "end": 24.562
     },
     {
      "w": "Shannon",
-     "t": 25.437,
-     "end": 25.887
-    },
-    {
-     "w": "estimated",
-     "t": 25.937,
-     "end": 26.499
-    },
-    {
-     "w": "the",
-     "t": 26.512,
-     "end": 26.599
-    },
-    {
-     "w": "true",
-     "t": 26.637,
-     "end": 26.899
-    },
-    {
-     "w": "figure",
-     "t": 26.937,
-     "end": 27.412
-    },
-    {
-     "w": "at",
-     "t": 27.462,
-     "end": 27.525
-    },
-    {
-     "w": "about",
-     "t": 27.537,
-     "end": 27.837
-    },
-    {
-     "w": "one",
-     "t": 27.862,
-     "end": 28.337
-    },
-    {
-     "w": "Whatever",
-     "t": 28.732,
-     "end": 29.132
-    },
-    {
-     "w": "it",
-     "t": 29.157,
-     "end": 29.307
-    },
-    {
-     "w": "is",
-     "t": 29.357,
-     "end": 29.782
-    },
-    {
-     "w": "no",
-     "t": 29.957,
-     "end": 30.219
-    },
-    {
-     "w": "text",
-     "t": 30.257,
-     "end": 30.582
-    },
-    {
-     "w": "compressor",
-     "t": 30.607,
-     "end": 31.107
-    },
-    {
-     "w": "can",
-     "t": 31.132,
-     "end": 31.307
-    },
-    {
-     "w": "beat",
-     "t": 31.332,
-     "end": 31.494
-    },
-    {
-     "w": "it",
-     "t": 31.507,
-     "end": 31.569
-    },
-    {
-     "w": "on",
-     "t": 31.582,
-     "end": 31.769
-    },
-    {
-     "w": "average",
-     "t": 31.807,
-     "end": 32.732
-    },
-    {
-     "w": "and",
-     "t": 32.907,
-     "end": 33.019
-    },
-    {
-     "w": "guessing",
-     "t": 33.057,
-     "end": 33.482
-    },
-    {
-     "w": "what",
-     "t": 33.507,
-     "end": 33.632
-    },
-    {
-     "w": "comes",
-     "t": 33.657,
-     "end": 33.957
-    },
-    {
-     "w": "next",
-     "t": 33.982,
-     "end": 34.532
-    },
-    {
-     "w": "is",
-     "t": 34.582,
-     "end": 34.682
-    },
-    {
-     "w": "how",
-     "t": 34.707,
-     "end": 34.919
-    },
-    {
-     "w": "language",
-     "t": 34.957,
-     "end": 35.407
-    },
-    {
-     "w": "models",
-     "t": 35.432,
-     "end": 35.757
-    },
-    {
-     "w": "are",
-     "t": 35.782,
-     "end": 35.857
-    },
-    {
-     "w": "trained",
-     "t": 35.882,
-     "end": 36.517
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/aa/aaee5374e8457780908ed651.wav"
-  },
-  {
-   "index": 4,
-   "start": 36.967,
-   "duration": 12.87,
-   "end": 49.837,
-   "text": "So where do four of every five questions go? Splitting the alphabet evenly charges every character the same price. Z costs as much as E, yet E turns up a hundred and thirty times as often.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "So",
-     "t": 37.027,
-     "end": 37.177
-    },
-    {
-     "w": "where",
-     "t": 37.202,
-     "end": 37.352
-    },
-    {
-     "w": "do",
-     "t": 37.377,
-     "end": 37.552
-    },
-    {
-     "w": "four",
-     "t": 37.602,
-     "end": 37.852
-    },
-    {
-     "w": "of",
-     "t": 37.877,
-     "end": 38.014
-    },
-    {
-     "w": "every",
-     "t": 38.052,
-     "end": 38.327
-    },
-    {
-     "w": "five",
-     "t": 38.352,
-     "end": 38.627
-    },
-    {
-     "w": "questions",
-     "t": 38.652,
-     "end": 39.152
-    },
-    {
-     "w": "go",
-     "t": 39.177,
-     "end": 39.587
-    },
-    {
-     "w": "Splitting",
-     "t": 40.027,
-     "end": 40.389
-    },
-    {
-     "w": "the",
-     "t": 40.402,
-     "end": 40.539
-    },
-    {
-     "w": "alphabet",
-     "t": 40.577,
-     "end": 41.177
-    },
-    {
-     "w": "evenly",
-     "t": 41.227,
-     "end": 41.652
-    },
-    {
-     "w": "charges",
-     "t": 41.702,
-     "end": 42.227
-    },
-    {
-     "w": "every",
-     "t": 42.277,
-     "end": 42.577
-    },
-    {
-     "w": "character",
-     "t": 42.602,
-     "end": 43.077
-    },
-    {
-     "w": "the",
-     "t": 43.102,
-     "end": 43.202
-    },
-    {
-     "w": "same",
-     "t": 43.227,
-     "end": 43.502
-    },
-    {
-     "w": "price",
-     "t": 43.527,
-     "end": 44.107
-    },
-    {
-     "w": "Z",
-     "t": 44.552,
-     "end": 44.765
-    },
-    {
-     "w": "costs",
-     "t": 44.802,
-     "end": 45.227
-    },
-    {
-     "w": "as",
-     "t": 45.252,
-     "end": 45.377
-    },
-    {
-     "w": "much",
-     "t": 45.402,
-     "end": 45.627
-    },
-    {
-     "w": "as",
-     "t": 45.652,
-     "end": 45.789
-    },
-    {
-     "w": "E",
-     "t": 45.827,
-     "end": 46.377
-    },
-    {
-     "w": "yet",
-     "t": 46.602,
-     "end": 46.802
-    },
-    {
-     "w": "E",
-     "t": 46.827,
-     "end": 46.952
-    },
-    {
-     "w": "turns",
-     "t": 46.977,
-     "end": 47.265
-    },
-    {
-     "w": "up",
-     "t": 47.277,
-     "end": 47.389
-    },
-    {
-     "w": "a",
-     "t": 47.402,
-     "end": 47.489
-    },
-    {
-     "w": "hundred",
-     "t": 47.527,
-     "end": 48.015
-    },
-    {
-     "w": "and",
-     "t": 48.052,
-     "end": 48.189
-    },
-    {
-     "w": "thirty",
-     "t": 48.227,
-     "end": 48.527
-    },
-    {
-     "w": "times",
-     "t": 48.552,
-     "end": 49.002
-    },
-    {
-     "w": "as",
-     "t": 49.027,
-     "end": 49.165
-    },
-    {
-     "w": "often",
-     "t": 49.202,
-     "end": 49.837
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/3b/3bb321b3e8ff0cd010a526e9.wav"
-  },
-  {
-   "index": 5,
-   "start": 50.3,
-   "duration": 10.41,
-   "end": 60.71,
-   "text": "Instead, ask questions that split the probability, not the alphabet. Is it a space, E, T, A, or O? Those five make up nearly half of all text.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Instead",
-     "t": 50.34,
-     "end": 50.99
-    },
-    {
-     "w": "ask",
-     "t": 51.14,
-     "end": 51.415
-    },
-    {
-     "w": "questions",
-     "t": 51.44,
-     "end": 52.015
-    },
-    {
-     "w": "that",
-     "t": 52.04,
-     "end": 52.227
-    },
-    {
-     "w": "split",
-     "t": 52.265,
-     "end": 52.552
-    },
-    {
-     "w": "the",
-     "t": 52.565,
-     "end": 52.64
-    },
-    {
-     "w": "probability",
-     "t": 52.665,
-     "end": 53.59
-    },
-    {
-     "w": "not",
-     "t": 53.765,
-     "end": 53.952
-    },
-    {
-     "w": "the",
-     "t": 53.965,
-     "end": 54.09
-    },
-    {
-     "w": "alphabet",
-     "t": 54.115,
-     "end": 54.82
-    },
-    {
-     "w": "Is",
-     "t": 55.2,
-     "end": 55.332
-    },
-    {
-     "w": "it",
-     "t": 55.345,
-     "end": 55.407
-    },
-    {
-     "w": "a",
-     "t": 55.42,
-     "end": 55.47
-    },
-    {
-     "w": "space",
-     "t": 55.495,
-     "end": 56.045
-    },
-    {
-     "w": "E",
-     "t": 56.17,
-     "end": 56.32
-    },
-    {
-     "w": "T",
-     "t": 56.42,
-     "end": 56.695
-    },
-    {
-     "w": "A",
-     "t": 56.82,
-     "end": 57.045
-    },
-    {
-     "w": "or",
-     "t": 57.12,
-     "end": 57.258
-    },
-    {
-     "w": "O",
-     "t": 57.295,
-     "end": 57.7
-    },
-    {
-     "w": "Those",
-     "t": 58.12,
-     "end": 58.445
-    },
-    {
-     "w": "five",
-     "t": 58.47,
-     "end": 58.845
-    },
-    {
-     "w": "make",
-     "t": 58.87,
-     "end": 59.032
-    },
-    {
-     "w": "up",
-     "t": 59.045,
-     "end": 59.195
-    },
-    {
-     "w": "nearly",
-     "t": 59.22,
-     "end": 59.545
-    },
-    {
-     "w": "half",
-     "t": 59.57,
-     "end": 59.808
-    },
-    {
-     "w": "of",
-     "t": 59.82,
-     "end": 59.895
-    },
-    {
-     "w": "all",
-     "t": 59.92,
-     "end": 60.095
-    },
-    {
-     "w": "text",
-     "t": 60.12,
-     "end": 60.71
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/f1/f1fe6bbc4fc045db5bc47637.wav"
-  },
-  {
-   "index": 6,
-   "start": 61.067,
-   "duration": 11.97,
-   "end": 73.037,
-   "text": "E starts near a tenth of the bar. Each ideal answer keeps half the probability, so E doubles its share of what's left. Three point three ideal doublings, and E fills the whole bar.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "E",
-     "t": 61.087,
-     "end": 61.287
-    },
-    {
-     "w": "starts",
-     "t": 61.312,
-     "end": 61.662
-    },
-    {
-     "w": "near",
-     "t": 61.687,
-     "end": 61.912
-    },
-    {
-     "w": "a",
-     "t": 61.937,
-     "end": 62.012
-    },
-    {
-     "w": "tenth",
-     "t": 62.037,
-     "end": 62.299
-    },
-    {
-     "w": "of",
-     "t": 62.312,
-     "end": 62.374
-    },
-    {
-     "w": "the",
-     "t": 62.387,
-     "end": 62.462
-    },
-    {
-     "w": "bar",
-     "t": 62.487,
-     "end": 63.017
-    },
-    {
-     "w": "Each",
-     "t": 63.407,
-     "end": 63.707
-    },
-    {
-     "w": "ideal",
-     "t": 63.757,
-     "end": 64.132
-    },
-    {
-     "w": "answer",
-     "t": 64.157,
-     "end": 64.582
-    },
-    {
-     "w": "keeps",
-     "t": 64.607,
-     "end": 64.857
-    },
-    {
-     "w": "half",
-     "t": 64.882,
-     "end": 65.095
-    },
-    {
-     "w": "the",
-     "t": 65.107,
-     "end": 65.182
-    },
-    {
-     "w": "probability",
-     "t": 65.207,
-     "end": 66.182
-    },
-    {
-     "w": "so",
-     "t": 66.382,
-     "end": 66.682
-    },
-    {
-     "w": "E",
-     "t": 66.732,
-     "end": 66.919
-    },
-    {
-     "w": "doubles",
-     "t": 66.957,
-     "end": 67.332
-    },
-    {
-     "w": "its",
-     "t": 67.357,
-     "end": 67.532
-    },
-    {
-     "w": "share",
-     "t": 67.582,
-     "end": 67.932
-    },
-    {
-     "w": "of",
-     "t": 67.957,
-     "end": 68.057
-    },
-    {
-     "w": "what's",
-     "t": 68.082,
-     "end": 68.332
-    },
-    {
-     "w": "left",
-     "t": 68.357,
-     "end": 68.907
-    },
-    {
-     "w": "Three",
-     "t": 69.357,
-     "end": 69.582
-    },
-    {
-     "w": "point",
-     "t": 69.607,
-     "end": 69.857
-    },
-    {
-     "w": "three",
-     "t": 69.882,
-     "end": 70.095
-    },
-    {
-     "w": "ideal",
-     "t": 70.132,
-     "end": 70.507
-    },
-    {
-     "w": "doublings",
-     "t": 70.532,
-     "end": 71.357
-    },
-    {
-     "w": "and",
-     "t": 71.482,
-     "end": 71.619
-    },
-    {
-     "w": "E",
-     "t": 71.657,
-     "end": 71.857
-    },
-    {
-     "w": "fills",
-     "t": 71.907,
-     "end": 72.17
-    },
-    {
-     "w": "the",
-     "t": 72.182,
-     "end": 72.257
-    },
-    {
-     "w": "whole",
-     "t": 72.282,
-     "end": 72.507
-    },
-    {
-     "w": "bar",
-     "t": 72.532,
-     "end": 73.037
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/58/5828c98a57d18b106fe1efb1.wav"
-  },
-  {
-   "index": 7,
-   "start": 73.4,
-   "duration": 4.55,
-   "end": 77.95,
-   "text": "Z starts at one in twelve hundred and sixty, and needs ten point three.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Z",
-     "t": 73.505,
-     "end": 73.78
-    },
-    {
-     "w": "starts",
-     "t": 73.805,
-     "end": 74.092
-    },
-    {
-     "w": "at",
-     "t": 74.105,
-     "end": 74.18
-    },
-    {
-     "w": "one",
-     "t": 74.205,
-     "end": 74.48
-    },
-    {
-     "w": "in",
-     "t": 74.505,
-     "end": 74.63
-    },
-    {
-     "w": "twelve",
-     "t": 74.655,
-     "end": 74.98
-    },
-    {
-     "w": "hundred",
-     "t": 75.005,
-     "end": 75.405
-    },
-    {
-     "w": "and",
-     "t": 75.43,
-     "end": 75.542
-    },
-    {
-     "w": "sixty",
-     "t": 75.58,
-     "end": 76.355
-    },
-    {
-     "w": "and",
-     "t": 76.53,
-     "end": 76.618
-    },
-    {
-     "w": "needs",
-     "t": 76.63,
-     "end": 76.892
-    },
-    {
-     "w": "ten",
-     "t": 76.93,
-     "end": 77.155
-    },
-    {
-     "w": "point",
-     "t": 77.18,
-     "end": 77.442
-    },
-    {
-     "w": "three",
-     "t": 77.48,
-     "end": 77.95
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/65/65e85b5febd69267b6215718.wav"
-  },
-  {
-   "index": 8,
-   "start": 78.433,
-   "duration": 14.6,
-   "end": 93.033,
-   "text": "In general, a character with probability p needs k questions, where p times two to the k equals one. [pause 1.5] So two to the k equals one over p, and k equals log base two of one over p.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "In",
-     "t": 78.463,
-     "end": 78.6
-    },
-    {
-     "w": "general",
-     "t": 78.638,
-     "end": 79.263
-    },
-    {
-     "w": "a",
-     "t": 79.413,
-     "end": 79.501
-    },
-    {
-     "w": "character",
-     "t": 79.538,
-     "end": 80.013
-    },
-    {
-     "w": "with",
-     "t": 80.038,
-     "end": 80.188
-    },
-    {
-     "w": "probability",
-     "t": 80.213,
-     "end": 80.851
-    },
-    {
-     "w": "p",
-     "t": 80.888,
-     "end": 81.113
-    },
-    {
-     "w": "needs",
-     "t": 81.138,
-     "end": 81.588
-    },
-    {
-     "w": "k",
-     "t": 81.638,
-     "end": 81.838
-    },
-    {
-     "w": "questions",
-     "t": 81.863,
-     "end": 82.838
-    },
-    {
-     "w": "where",
-     "t": 82.988,
-     "end": 83.15
-    },
-    {
-     "w": "p",
-     "t": 83.188,
-     "end": 83.438
-    },
-    {
-     "w": "times",
-     "t": 83.463,
-     "end": 83.863
-    },
-    {
-     "w": "two",
-     "t": 83.913,
-     "end": 84.088
-    },
-    {
-     "w": "to",
-     "t": 84.113,
-     "end": 84.175
-    },
-    {
-     "w": "the",
-     "t": 84.188,
-     "end": 84.275
-    },
-    {
-     "w": "k",
-     "t": 84.313,
-     "end": 84.638
-    },
-    {
-     "w": "equals",
-     "t": 84.663,
-     "end": 85.013
-    },
-    {
-     "w": "one",
-     "t": 85.038,
-     "end": 85.503
-    },
-    {
-     "w": "So",
-     "t": 87.063,
-     "end": 87.251
-    },
-    {
-     "w": "two",
-     "t": 87.288,
-     "end": 87.463
-    },
-    {
-     "w": "to",
-     "t": 87.488,
-     "end": 87.551
-    },
-    {
-     "w": "the",
-     "t": 87.563,
-     "end": 87.638
-    },
-    {
-     "w": "k",
-     "t": 87.663,
-     "end": 88.026
-    },
-    {
-     "w": "equals",
-     "t": 88.063,
-     "end": 88.413
-    },
-    {
-     "w": "one",
-     "t": 88.438,
-     "end": 88.613
-    },
-    {
-     "w": "over",
-     "t": 88.638,
-     "end": 88.901
-    },
-    {
-     "w": "p",
-     "t": 88.938,
-     "end": 89.613
-    },
-    {
-     "w": "and",
-     "t": 89.813,
-     "end": 89.938
-    },
-    {
-     "w": "k",
-     "t": 89.988,
-     "end": 90.375
-    },
-    {
-     "w": "equals",
-     "t": 90.413,
-     "end": 90.788
-    },
-    {
-     "w": "log",
-     "t": 90.838,
-     "end": 91.163
-    },
-    {
-     "w": "base",
-     "t": 91.188,
-     "end": 91.513
-    },
-    {
-     "w": "two",
-     "t": 91.563,
-     "end": 91.838
-    },
-    {
-     "w": "of",
-     "t": 91.863,
-     "end": 91.988
-    },
-    {
-     "w": "one",
-     "t": 92.013,
-     "end": 92.238
-    },
-    {
-     "w": "over",
-     "t": 92.263,
-     "end": 92.501
-    },
-    {
-     "w": "p.",
-     "t": 92.538,
-     "end": 93.033
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/8b/8b9d8c9455c16610c0942742.wav"
-  },
-  {
-   "index": 9,
-   "start": 93.4,
-   "duration": 2.85,
-   "end": 96.25,
-   "text": "Now give each character its own cost as a height.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Now",
-     "t": 93.465,
-     "end": 93.715
-    },
-    {
-     "w": "give",
-     "t": 93.74,
-     "end": 93.89
-    },
-    {
-     "w": "each",
-     "t": 93.915,
-     "end": 94.115
-    },
-    {
-     "w": "character",
-     "t": 94.14,
-     "end": 94.578
-    },
-    {
-     "w": "its",
-     "t": 94.59,
-     "end": 94.752
-    },
-    {
-     "w": "own",
-     "t": 94.79,
-     "end": 95.028
-    },
-    {
-     "w": "cost",
-     "t": 95.065,
-     "end": 95.528
-    },
-    {
-     "w": "as",
-     "t": 95.565,
-     "end": 95.652
-    },
-    {
-     "w": "a",
-     "t": 95.665,
-     "end": 95.715
-    },
-    {
-     "w": "height",
-     "t": 95.74,
-     "end": 96.25
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/29/29b5bc91b94c1c0acb411945.wav"
-  },
-  {
-   "index": 10,
-   "start": 96.6,
-   "duration": 9.68,
-   "end": 106.28,
-   "text": "The widths add up to one, so the total area is the average number of questions per character. Pour the skyline flat, and its height is that average.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "The",
-     "t": 96.625,
-     "end": 96.75
-    },
-    {
-     "w": "widths",
-     "t": 96.8,
-     "end": 97.275
-    },
-    {
-     "w": "add",
-     "t": 97.325,
-     "end": 97.538
-    },
-    {
-     "w": "up",
-     "t": 97.55,
-     "end": 97.7
-    },
-    {
-     "w": "to",
-     "t": 97.725,
-     "end": 97.825
-    },
-    {
-     "w": "one",
-     "t": 97.85,
-     "end": 98.45
-    },
-    {
-     "w": "so",
-     "t": 98.625,
-     "end": 98.8
-    },
-    {
-     "w": "the",
-     "t": 98.825,
-     "end": 98.938
-    },
-    {
-     "w": "total",
-     "t": 98.975,
-     "end": 99.35
-    },
-    {
-     "w": "area",
-     "t": 99.375,
-     "end": 99.888
-    },
-    {
-     "w": "is",
-     "t": 99.925,
-     "end": 100.038
-    },
-    {
-     "w": "the",
-     "t": 100.05,
-     "end": 100.2
-    },
-    {
-     "w": "average",
-     "t": 100.25,
-     "end": 100.7
-    },
-    {
-     "w": "number",
-     "t": 100.725,
-     "end": 100.938
-    },
-    {
-     "w": "of",
-     "t": 100.95,
-     "end": 101.05
-    },
-    {
-     "w": "questions",
-     "t": 101.075,
-     "end": 101.7
-    },
-    {
-     "w": "per",
-     "t": 101.725,
-     "end": 101.875
-    },
-    {
-     "w": "character",
-     "t": 101.9,
-     "end": 102.55
-    },
-    {
-     "w": "Pour",
-     "t": 102.935,
-     "end": 103.185
-    },
-    {
-     "w": "the",
-     "t": 103.21,
-     "end": 103.31
-    },
-    {
-     "w": "skyline",
-     "t": 103.335,
-     "end": 103.822
-    },
-    {
-     "w": "flat",
-     "t": 103.86,
-     "end": 104.435
-    },
-    {
-     "w": "and",
-     "t": 104.56,
-     "end": 104.647
-    },
-    {
-     "w": "its",
-     "t": 104.66,
-     "end": 104.822
-    },
-    {
-     "w": "height",
-     "t": 104.86,
-     "end": 105.185
-    },
-    {
-     "w": "is",
-     "t": 105.21,
-     "end": 105.335
-    },
-    {
-     "w": "that",
-     "t": 105.36,
-     "end": 105.51
-    },
-    {
-     "w": "average",
-     "t": 105.535,
-     "end": 106.28
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/7b/7bd6d869155fc02895682651.wav"
-  },
-  {
-   "index": 11,
-   "start": 106.633,
-   "duration": 9.48,
-   "end": 116.113,
-   "text": "Shannon called that average the entropy, counted in bits, one bit per yes-or-no answer. For English letters, it's [pause 0.3] four point one one.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Shannon",
-     "t": 106.718,
-     "end": 107.093
-    },
-    {
-     "w": "called",
-     "t": 107.118,
-     "end": 107.368
-    },
-    {
-     "w": "that",
-     "t": 107.393,
-     "end": 107.605
-    },
-    {
-     "w": "average",
-     "t": 107.643,
-     "end": 108.043
-    },
-    {
-     "w": "the",
-     "t": 108.068,
-     "end": 108.193
-    },
-    {
-     "w": "entropy",
-     "t": 108.218,
-     "end": 108.918
-    },
-    {
-     "w": "counted",
-     "t": 109.118,
-     "end": 109.493
-    },
-    {
-     "w": "in",
-     "t": 109.518,
-     "end": 109.643
-    },
-    {
-     "w": "bits",
-     "t": 109.668,
-     "end": 110.368
-    },
-    {
-     "w": "one",
-     "t": 110.593,
-     "end": 110.818
-    },
-    {
-     "w": "bit",
-     "t": 110.843,
-     "end": 111.018
-    },
-    {
-     "w": "per",
-     "t": 111.043,
-     "end": 111.218
-    },
-    {
-     "w": "yes-or-no",
-     "t": 111.243,
-     "end": 111.818
-    },
-    {
-     "w": "answer",
-     "t": 111.843,
-     "end": 112.483
-    },
-    {
-     "w": "For",
-     "t": 112.908,
-     "end": 113.033
-    },
-    {
-     "w": "English",
-     "t": 113.058,
-     "end": 113.383
-    },
-    {
-     "w": "letters",
-     "t": 113.408,
-     "end": 113.933
-    },
-    {
-     "w": "it's",
-     "t": 114.083,
-     "end": 114.473
-    },
-    {
-     "w": "four",
-     "t": 114.868,
-     "end": 115.093
-    },
-    {
-     "w": "point",
-     "t": 115.118,
-     "end": 115.343
-    },
-    {
-     "w": "one",
-     "t": 115.368,
-     "end": 115.568
-    },
-    {
-     "w": "one",
-     "t": 115.593,
-     "end": 116.113
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/fb/fbeea0842de71763fef6ebb9.wav"
-  },
-  {
-   "index": 12,
-   "start": 116.467,
-   "duration": 8.99,
-   "end": 125.457,
-   "text": "That beats four point seven five, but it's still four times Shannon's estimate: it prices every character as if nothing came before it.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "That",
-     "t": 116.502,
-     "end": 116.727
-    },
-    {
-     "w": "beats",
-     "t": 116.752,
-     "end": 117.064
-    },
-    {
-     "w": "four",
-     "t": 117.102,
-     "end": 117.352
-    },
-    {
-     "w": "point",
-     "t": 117.377,
-     "end": 117.627
-    },
-    {
-     "w": "seven",
-     "t": 117.652,
-     "end": 117.989
-    },
-    {
-     "w": "five",
-     "t": 118.027,
-     "end": 118.827
-    },
-    {
-     "w": "but",
-     "t": 118.952,
-     "end": 119.065
-    },
-    {
-     "w": "it's",
-     "t": 119.077,
-     "end": 119.202
-    },
-    {
-     "w": "still",
-     "t": 119.227,
-     "end": 119.565
-    },
-    {
-     "w": "four",
-     "t": 119.627,
-     "end": 119.939
-    },
-    {
-     "w": "times",
-     "t": 119.977,
-     "end": 120.452
-    },
-    {
-     "w": "Shannon's",
-     "t": 120.502,
-     "end": 120.939
-    },
-    {
-     "w": "estimate",
-     "t": 120.977,
-     "end": 121.877
-    },
-    {
-     "w": "it",
-     "t": 122.052,
-     "end": 122.152
-    },
-    {
-     "w": "prices",
-     "t": 122.177,
-     "end": 122.702
-    },
-    {
-     "w": "every",
-     "t": 122.752,
-     "end": 123.065
-    },
-    {
-     "w": "character",
-     "t": 123.102,
-     "end": 123.727
-    },
-    {
-     "w": "as",
-     "t": 123.777,
-     "end": 123.902
-    },
-    {
-     "w": "if",
-     "t": 123.927,
-     "end": 124.052
-    },
-    {
-     "w": "nothing",
-     "t": 124.077,
-     "end": 124.427
-    },
-    {
-     "w": "came",
-     "t": 124.452,
-     "end": 124.677
-    },
-    {
-     "w": "before",
-     "t": 124.702,
-     "end": 125.115
-    },
-    {
-     "w": "it",
-     "t": 125.152,
-     "end": 125.457
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/d2/d2026166b6a6d3c94570a83a.wav"
-  },
-  {
-   "index": 13,
-   "start": 125.8,
-   "duration": 3.1,
-   "end": 128.9,
-   "text": "What comes after a Q? [pause 1.6]",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "What",
-     "t": 125.835,
-     "end": 126.01
-    },
-    {
-     "w": "comes",
-     "t": 126.035,
-     "end": 126.335
-    },
-    {
-     "w": "after",
-     "t": 126.36,
-     "end": 126.647
-    },
-    {
-     "w": "a",
-     "t": 126.66,
-     "end": 126.735
-    },
-    {
-     "w": "Q",
-     "t": 126.76,
-     "end": 127.3
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/b8/b84b79a22399b6b9bddbba1f.wav"
-  },
-  {
-   "index": 14,
-   "start": 129.267,
-   "duration": 10.52,
-   "end": 139.787,
-   "text": "It's U, ninety-eight times out of a hundred. U swallows the bar, its cost drops to almost nothing, and the average falls to point one six bits. [pause 0.45]",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "It's",
-     "t": 129.267,
-     "end": 129.499
-    },
-    {
-     "w": "U",
-     "t": 129.537,
-     "end": 129.987
-    },
-    {
-     "w": "ninety-eight",
-     "t": 130.162,
-     "end": 130.687
-    },
-    {
-     "w": "times",
-     "t": 130.712,
-     "end": 131.062
-    },
-    {
-     "w": "out",
-     "t": 131.087,
-     "end": 131.199
-    },
-    {
-     "w": "of",
-     "t": 131.212,
-     "end": 131.274
-    },
-    {
-     "w": "a",
-     "t": 131.287,
-     "end": 131.337
-    },
-    {
-     "w": "hundred",
-     "t": 131.362,
-     "end": 131.977
-    },
-    {
-     "w": "U",
-     "t": 132.447,
-     "end": 132.747
-    },
-    {
-     "w": "swallows",
-     "t": 132.797,
-     "end": 133.322
-    },
-    {
-     "w": "the",
-     "t": 133.347,
-     "end": 133.422
-    },
-    {
-     "w": "bar",
-     "t": 133.447,
-     "end": 134.097
-    },
-    {
-     "w": "its",
-     "t": 134.272,
-     "end": 134.459
-    },
-    {
-     "w": "cost",
-     "t": 134.497,
-     "end": 134.897
-    },
-    {
-     "w": "drops",
-     "t": 134.922,
-     "end": 135.272
-    },
-    {
-     "w": "to",
-     "t": 135.297,
-     "end": 135.397
-    },
-    {
-     "w": "almost",
-     "t": 135.422,
-     "end": 135.797
-    },
-    {
-     "w": "nothing",
-     "t": 135.822,
-     "end": 136.597
-    },
-    {
-     "w": "and",
-     "t": 136.722,
-     "end": 136.809
-    },
-    {
-     "w": "the",
-     "t": 136.822,
-     "end": 136.935
-    },
-    {
-     "w": "average",
-     "t": 136.972,
-     "end": 137.435
-    },
-    {
-     "w": "falls",
-     "t": 137.472,
-     "end": 137.822
-    },
-    {
-     "w": "to",
-     "t": 137.847,
-     "end": 137.922
-    },
-    {
-     "w": "point",
-     "t": 137.947,
-     "end": 138.222
-    },
-    {
-     "w": "one",
-     "t": 138.247,
-     "end": 138.459
-    },
-    {
-     "w": "six",
-     "t": 138.497,
-     "end": 138.772
-    },
-    {
-     "w": "bits",
-     "t": 138.797,
-     "end": 139.337
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/21/216ed8f72d0f2a721c1c23e1.wav"
-  },
-  {
-   "index": 15,
-   "start": 140.133,
-   "duration": 5.73,
-   "end": 145.863,
-   "text": "After TH, E takes two thirds of the bar, and its cost shrinks to about half a question.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "After",
-     "t": 140.163,
-     "end": 140.475
-    },
-    {
-     "w": "TH",
-     "t": 140.513,
-     "end": 141.213
-    },
-    {
-     "w": "E",
-     "t": 141.363,
-     "end": 141.538
-    },
-    {
-     "w": "takes",
-     "t": 141.563,
-     "end": 141.851
-    },
-    {
-     "w": "two",
-     "t": 141.888,
-     "end": 142.063
-    },
-    {
-     "w": "thirds",
-     "t": 142.088,
-     "end": 142.351
-    },
-    {
-     "w": "of",
-     "t": 142.363,
-     "end": 142.425
-    },
-    {
-     "w": "the",
-     "t": 142.438,
-     "end": 142.513
-    },
-    {
-     "w": "bar",
-     "t": 142.538,
-     "end": 143.213
-    },
-    {
-     "w": "and",
-     "t": 143.338,
-     "end": 143.425
-    },
-    {
-     "w": "its",
-     "t": 143.438,
-     "end": 143.601
-    },
-    {
-     "w": "cost",
-     "t": 143.638,
-     "end": 144.113
-    },
-    {
-     "w": "shrinks",
-     "t": 144.163,
-     "end": 144.463
-    },
-    {
-     "w": "to",
-     "t": 144.488,
-     "end": 144.563
-    },
-    {
-     "w": "about",
-     "t": 144.588,
-     "end": 144.838
-    },
-    {
-     "w": "half",
-     "t": 144.863,
-     "end": 145.1
-    },
-    {
-     "w": "a",
-     "t": 145.113,
-     "end": 145.163
-    },
-    {
-     "w": "question",
-     "t": 145.188,
-     "end": 145.863
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/01/0140f22c609c937417036e95.wav"
-  },
-  {
-   "index": 16,
-   "start": 146.2,
-   "duration": 13.99,
-   "end": 160.19,
-   "text": "Half a question sounds impossible, but a compressor asks about long runs of letters, and the fractions add up: five questions for these three, not six. After TH, the average is one point seven.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Half",
-     "t": 146.25,
-     "end": 146.462
-    },
-    {
-     "w": "a",
-     "t": 146.475,
-     "end": 146.525
-    },
-    {
-     "w": "question",
-     "t": 146.55,
-     "end": 147.062
-    },
-    {
-     "w": "sounds",
-     "t": 147.1,
-     "end": 147.4
-    },
-    {
-     "w": "impossible",
-     "t": 147.425,
-     "end": 148.425
-    },
-    {
-     "w": "but",
-     "t": 148.525,
-     "end": 148.638
-    },
-    {
-     "w": "a",
-     "t": 148.65,
-     "end": 148.7
-    },
-    {
-     "w": "compressor",
-     "t": 148.725,
-     "end": 149.375
-    },
-    {
-     "w": "asks",
-     "t": 149.425,
-     "end": 149.825
-    },
-    {
-     "w": "about",
-     "t": 149.85,
-     "end": 150.175
-    },
-    {
-     "w": "long",
-     "t": 150.225,
-     "end": 150.625
-    },
-    {
-     "w": "runs",
-     "t": 150.65,
-     "end": 150.938
-    },
-    {
-     "w": "of",
-     "t": 150.95,
-     "end": 151.05
-    },
-    {
-     "w": "letters",
-     "t": 151.075,
-     "end": 151.8
-    },
-    {
-     "w": "and",
-     "t": 151.925,
-     "end": 152.012
-    },
-    {
-     "w": "the",
-     "t": 152.025,
-     "end": 152.113
-    },
-    {
-     "w": "fractions",
-     "t": 152.15,
-     "end": 152.775
-    },
-    {
-     "w": "add",
-     "t": 152.825,
-     "end": 153.038
-    },
-    {
-     "w": "up",
-     "t": 153.05,
-     "end": 153.725
-    },
-    {
-     "w": "five",
-     "t": 154.0,
-     "end": 154.325
-    },
-    {
-     "w": "questions",
-     "t": 154.35,
-     "end": 154.875
-    },
-    {
-     "w": "for",
-     "t": 154.9,
-     "end": 155.0
-    },
-    {
-     "w": "these",
-     "t": 155.025,
-     "end": 155.262
-    },
-    {
-     "w": "three",
-     "t": 155.3,
-     "end": 155.725
-    },
-    {
-     "w": "not",
-     "t": 155.875,
-     "end": 156.112
-    },
-    {
-     "w": "six",
-     "t": 156.15,
-     "end": 156.73
-    },
-    {
-     "w": "After",
-     "t": 157.14,
-     "end": 157.465
-    },
-    {
-     "w": "TH",
-     "t": 157.49,
-     "end": 158.19
-    },
-    {
-     "w": "the",
-     "t": 158.315,
-     "end": 158.452
-    },
-    {
-     "w": "average",
-     "t": 158.49,
-     "end": 158.915
-    },
-    {
-     "w": "is",
-     "t": 158.94,
-     "end": 159.078
-    },
-    {
-     "w": "one",
-     "t": 159.115,
-     "end": 159.34
-    },
-    {
-     "w": "point",
-     "t": 159.365,
-     "end": 159.628
-    },
-    {
-     "w": "seven",
-     "t": 159.665,
-     "end": 160.19
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/f4/f423cbef748e4e7672852acc.wav"
-  },
-  {
-   "index": 17,
-   "start": 160.533,
-   "duration": 4.58,
-   "end": 165.113,
-   "text": "But averaged over every two-letter context, it's still two point eight.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "But",
-     "t": 160.533,
-     "end": 160.688
-    },
-    {
-     "w": "averaged",
-     "t": 160.738,
-     "end": 161.263
-    },
-    {
-     "w": "over",
-     "t": 161.288,
-     "end": 161.588
-    },
-    {
-     "w": "every",
-     "t": 161.638,
-     "end": 161.951
-    },
-    {
-     "w": "two-letter",
-     "t": 161.988,
-     "end": 162.463
-    },
-    {
-     "w": "context",
-     "t": 162.488,
-     "end": 163.488
-    },
-    {
-     "w": "it's",
-     "t": 163.663,
-     "end": 163.813
-    },
-    {
-     "w": "still",
-     "t": 163.838,
-     "end": 164.138
-    },
-    {
-     "w": "two",
-     "t": 164.188,
-     "end": 164.363
-    },
-    {
-     "w": "point",
-     "t": 164.388,
-     "end": 164.638
-    },
-    {
-     "w": "eight",
-     "t": 164.663,
-     "end": 165.113
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/3d/3d671fd648d5c65192522e75.wav"
-  },
-  {
-   "index": 18,
-   "start": 165.467,
-   "duration": 9.02,
-   "end": 174.487,
-   "text": "Contexts of a hundred letters need more text than any corpus holds, so Shannon used a predictor that already knows English: a person.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Contexts",
-     "t": 165.482,
-     "end": 166.169
-    },
-    {
-     "w": "of",
-     "t": 166.182,
-     "end": 166.244
-    },
-    {
-     "w": "a",
-     "t": 166.257,
-     "end": 166.345
-    },
-    {
-     "w": "hundred",
-     "t": 166.382,
-     "end": 166.782
-    },
-    {
-     "w": "letters",
-     "t": 166.807,
-     "end": 167.219
-    },
-    {
-     "w": "need",
-     "t": 167.257,
-     "end": 167.457
-    },
-    {
-     "w": "more",
-     "t": 167.482,
-     "end": 167.707
-    },
-    {
-     "w": "text",
-     "t": 167.757,
-     "end": 168.157
-    },
-    {
-     "w": "than",
-     "t": 168.182,
-     "end": 168.307
-    },
-    {
-     "w": "any",
-     "t": 168.332,
-     "end": 168.507
-    },
-    {
-     "w": "corpus",
-     "t": 168.532,
-     "end": 168.932
-    },
-    {
-     "w": "holds",
-     "t": 168.957,
-     "end": 169.707
-    },
-    {
-     "w": "so",
-     "t": 169.857,
-     "end": 170.069
-    },
-    {
-     "w": "Shannon",
-     "t": 170.132,
-     "end": 170.519
-    },
-    {
-     "w": "used",
-     "t": 170.557,
-     "end": 170.819
-    },
-    {
-     "w": "a",
-     "t": 170.832,
-     "end": 170.882
-    },
-    {
-     "w": "predictor",
-     "t": 170.907,
-     "end": 171.557
-    },
-    {
-     "w": "that",
-     "t": 171.582,
-     "end": 171.757
-    },
-    {
-     "w": "already",
-     "t": 171.782,
-     "end": 172.132
-    },
-    {
-     "w": "knows",
-     "t": 172.157,
-     "end": 172.519
-    },
-    {
-     "w": "English",
-     "t": 172.557,
-     "end": 173.482
-    },
-    {
-     "w": "a",
-     "t": 173.682,
-     "end": 173.757
-    },
-    {
-     "w": "person",
-     "t": 173.782,
-     "end": 174.487
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/1d/1d54a132ab2315e6602706fd.wav"
-  },
-  {
-   "index": 19,
-   "start": 174.833,
-   "duration": 8.84,
-   "end": 183.673,
-   "text": "His subject read a passage letter by letter, guessing each next one until right. Seventy-nine of a hundred and two came on the first guess.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "His",
-     "t": 174.838,
-     "end": 175.025
-    },
-    {
-     "w": "subject",
-     "t": 175.063,
-     "end": 175.563
-    },
-    {
-     "w": "read",
-     "t": 175.588,
-     "end": 175.725
-    },
-    {
-     "w": "a",
-     "t": 175.738,
-     "end": 175.801
-    },
-    {
-     "w": "passage",
-     "t": 175.838,
-     "end": 176.388
-    },
-    {
-     "w": "letter",
-     "t": 176.413,
-     "end": 176.688
-    },
-    {
-     "w": "by",
-     "t": 176.713,
-     "end": 176.863
-    },
-    {
-     "w": "letter",
-     "t": 176.888,
-     "end": 177.463
-    },
-    {
-     "w": "guessing",
-     "t": 177.663,
-     "end": 178.063
-    },
-    {
-     "w": "each",
-     "t": 178.088,
-     "end": 178.388
-    },
-    {
-     "w": "next",
-     "t": 178.413,
-     "end": 178.688
-    },
-    {
-     "w": "one",
-     "t": 178.713,
-     "end": 178.913
-    },
-    {
-     "w": "until",
-     "t": 178.938,
-     "end": 179.238
-    },
-    {
-     "w": "right",
-     "t": 179.263,
-     "end": 179.773
-    },
-    {
-     "w": "Seventy-nine",
-     "t": 180.228,
-     "end": 180.953
-    },
-    {
-     "w": "of",
-     "t": 180.978,
-     "end": 181.041
-    },
-    {
-     "w": "a",
-     "t": 181.053,
-     "end": 181.103
-    },
-    {
-     "w": "hundred",
-     "t": 181.128,
-     "end": 181.578
-    },
-    {
-     "w": "and",
-     "t": 181.628,
-     "end": 181.778
-    },
-    {
-     "w": "two",
-     "t": 181.828,
-     "end": 182.315
-    },
-    {
-     "w": "came",
-     "t": 182.378,
-     "end": 182.591
-    },
-    {
-     "w": "on",
-     "t": 182.603,
-     "end": 182.691
-    },
-    {
-     "w": "the",
-     "t": 182.703,
-     "end": 182.791
-    },
-    {
-     "w": "first",
-     "t": 182.828,
-     "end": 183.128
-    },
-    {
-     "w": "guess",
-     "t": 183.153,
-     "end": 183.673
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/37/3726accce1da79bc8caebf05.wav"
-  },
-  {
-   "index": 20,
-   "start": 184.033,
-   "duration": 14.68,
-   "end": 198.713,
-   "text": "A twin who guesses the same way could rebuild the passage from these counts alone. Treat each guess count as a symbol, [pause 0.8] and the same skyline pours flat at about one point four bits. A better guesser could only lower it.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "A",
-     "t": 184.048,
-     "end": 184.148
-    },
-    {
-     "w": "twin",
-     "t": 184.198,
-     "end": 184.673
-    },
-    {
-     "w": "who",
-     "t": 184.698,
-     "end": 184.835
-    },
-    {
-     "w": "guesses",
-     "t": 184.873,
-     "end": 185.323
-    },
-    {
-     "w": "the",
-     "t": 185.348,
-     "end": 185.473
-    },
-    {
-     "w": "same",
-     "t": 185.523,
-     "end": 185.823
-    },
-    {
-     "w": "way",
-     "t": 185.848,
-     "end": 186.535
-    },
-    {
-     "w": "could",
-     "t": 186.598,
-     "end": 186.773
-    },
-    {
-     "w": "rebuild",
-     "t": 186.798,
-     "end": 187.185
-    },
-    {
-     "w": "the",
-     "t": 187.198,
-     "end": 187.273
-    },
-    {
-     "w": "passage",
-     "t": 187.298,
-     "end": 187.848
-    },
-    {
-     "w": "from",
-     "t": 187.873,
-     "end": 187.998
-    },
-    {
-     "w": "these",
-     "t": 188.023,
-     "end": 188.248
-    },
-    {
-     "w": "counts",
-     "t": 188.273,
-     "end": 188.573
-    },
-    {
-     "w": "alone",
-     "t": 188.598,
-     "end": 189.173
-    },
-    {
-     "w": "Treat",
-     "t": 189.578,
-     "end": 189.828
-    },
-    {
-     "w": "each",
-     "t": 189.853,
-     "end": 190.078
-    },
-    {
-     "w": "guess",
-     "t": 190.103,
-     "end": 190.453
-    },
-    {
-     "w": "count",
-     "t": 190.503,
-     "end": 190.853
-    },
-    {
-     "w": "as",
-     "t": 190.878,
-     "end": 190.965
-    },
-    {
-     "w": "a",
-     "t": 190.978,
-     "end": 191.065
-    },
-    {
-     "w": "symbol",
-     "t": 191.103,
-     "end": 191.633
-    },
-    {
-     "w": "and",
-     "t": 192.453,
-     "end": 192.541
-    },
-    {
-     "w": "the",
-     "t": 192.553,
-     "end": 192.641
-    },
-    {
-     "w": "same",
-     "t": 192.678,
-     "end": 192.978
-    },
-    {
-     "w": "skyline",
-     "t": 193.003,
-     "end": 193.478
-    },
-    {
-     "w": "pours",
-     "t": 193.503,
-     "end": 194.141
-    },
-    {
-     "w": "flat",
-     "t": 194.203,
-     "end": 194.541
-    },
-    {
-     "w": "at",
-     "t": 194.578,
-     "end": 194.641
-    },
-    {
-     "w": "about",
-     "t": 194.653,
-     "end": 194.915
-    },
-    {
-     "w": "one",
-     "t": 194.953,
-     "end": 195.178
-    },
-    {
-     "w": "point",
-     "t": 195.203,
-     "end": 195.491
-    },
-    {
-     "w": "four",
-     "t": 195.528,
-     "end": 195.728
-    },
-    {
-     "w": "bits",
-     "t": 195.753,
-     "end": 196.273
-    },
-    {
-     "w": "A",
-     "t": 196.668,
-     "end": 196.755
-    },
-    {
-     "w": "better",
-     "t": 196.793,
-     "end": 197.118
-    },
-    {
-     "w": "guesser",
-     "t": 197.143,
-     "end": 197.568
-    },
-    {
-     "w": "could",
-     "t": 197.593,
-     "end": 197.718
-    },
-    {
-     "w": "only",
-     "t": 197.743,
-     "end": 198.018
-    },
-    {
-     "w": "lower",
-     "t": 198.043,
-     "end": 198.393
-    },
-    {
-     "w": "it",
-     "t": 198.418,
-     "end": 198.713
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/77/772f853db82424583da43cd5.wav"
-  },
-  {
-   "index": 21,
-   "start": 199.067,
-   "duration": 7.56,
-   "end": 206.627,
-   "text": "Shannon's tests, with a hundred letters of context, put English between point six and one point three bits per character.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Shannon's",
-     "t": 199.142,
-     "end": 199.605
-    },
-    {
-     "w": "tests",
-     "t": 199.642,
-     "end": 200.292
-    },
-    {
-     "w": "with",
-     "t": 200.392,
-     "end": 200.505
-    },
-    {
-     "w": "a",
-     "t": 200.517,
-     "end": 200.604
-    },
-    {
-     "w": "hundred",
-     "t": 200.642,
-     "end": 201.042
-    },
-    {
-     "w": "letters",
-     "t": 201.067,
-     "end": 201.379
-    },
-    {
-     "w": "of",
-     "t": 201.392,
-     "end": 201.492
-    },
-    {
-     "w": "context",
-     "t": 201.517,
-     "end": 202.542
+     "t": 24.612,
+     "end": 24.987
     },
     {
      "w": "put",
-     "t": 202.692,
-     "end": 202.842
-    },
-    {
-     "w": "English",
-     "t": 202.867,
-     "end": 203.242
-    },
-    {
-     "w": "between",
-     "t": 203.267,
-     "end": 203.617
-    },
-    {
-     "w": "point",
-     "t": 203.642,
-     "end": 203.992
-    },
-    {
-     "w": "six",
-     "t": 204.042,
-     "end": 204.529
-    },
-    {
-     "w": "and",
-     "t": 204.567,
-     "end": 204.705
-    },
-    {
-     "w": "one",
-     "t": 204.742,
-     "end": 204.967
-    },
-    {
-     "w": "point",
-     "t": 204.992,
-     "end": 205.255
-    },
-    {
-     "w": "three",
-     "t": 205.292,
-     "end": 205.492
-    },
-    {
-     "w": "bits",
-     "t": 205.517,
-     "end": 205.792
-    },
-    {
-     "w": "per",
-     "t": 205.817,
-     "end": 205.942
-    },
-    {
-     "w": "character",
-     "t": 205.967,
-     "end": 206.627
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/1c/1c87d6ab0346bbdf73677ede.wav"
-  },
-  {
-   "index": 22,
-   "start": 206.967,
-   "duration": 13.14,
-   "end": 220.107,
-   "text": "In twenty twenty-three, a language model compressing part of a book that reached Project Gutenberg after its training, in the same twenty-seven symbols, needed point eight four bits, inside that range.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "In",
-     "t": 206.997,
-     "end": 207.122
-    },
-    {
-     "w": "twenty",
-     "t": 207.147,
-     "end": 207.447
-    },
-    {
-     "w": "twenty-three",
-     "t": 207.472,
-     "end": 208.372
-    },
-    {
-     "w": "a",
-     "t": 208.572,
-     "end": 208.672
-    },
-    {
-     "w": "language",
-     "t": 208.722,
-     "end": 209.209
-    },
-    {
-     "w": "model",
-     "t": 209.247,
-     "end": 209.66
-    },
-    {
-     "w": "compressing",
-     "t": 209.697,
-     "end": 210.247
-    },
-    {
-     "w": "part",
-     "t": 210.272,
-     "end": 210.485
-    },
-    {
-     "w": "of",
-     "t": 210.497,
-     "end": 210.56
-    },
-    {
-     "w": "a",
-     "t": 210.572,
-     "end": 210.635
-    },
-    {
-     "w": "book",
-     "t": 210.672,
-     "end": 210.997
-    },
-    {
-     "w": "that",
-     "t": 211.022,
-     "end": 211.197
-    },
-    {
-     "w": "reached",
-     "t": 211.222,
-     "end": 211.585
-    },
-    {
-     "w": "Project",
-     "t": 211.622,
-     "end": 212.134
-    },
-    {
-     "w": "Gutenberg",
-     "t": 212.172,
-     "end": 212.872
-    },
-    {
-     "w": "after",
-     "t": 212.922,
-     "end": 213.209
-    },
-    {
-     "w": "its",
-     "t": 213.222,
-     "end": 213.397
-    },
-    {
-     "w": "training",
-     "t": 213.422,
-     "end": 214.347
-    },
-    {
-     "w": "in",
-     "t": 214.522,
-     "end": 214.609
+     "t": 25.012,
+     "end": 25.124
     },
     {
      "w": "the",
-     "t": 214.622,
-     "end": 214.709
+     "t": 25.137,
+     "end": 25.237
     },
     {
-     "w": "same",
-     "t": 214.747,
-     "end": 215.097
+     "w": "true",
+     "t": 25.287,
+     "end": 25.562
     },
     {
-     "w": "twenty-seven",
-     "t": 215.122,
-     "end": 215.759
-    },
-    {
-     "w": "symbols",
-     "t": 215.797,
-     "end": 216.497
-    },
-    {
-     "w": "needed",
-     "t": 216.672,
-     "end": 216.972
-    },
-    {
-     "w": "point",
-     "t": 216.997,
-     "end": 217.322
-    },
-    {
-     "w": "eight",
-     "t": 217.347,
-     "end": 217.585
-    },
-    {
-     "w": "four",
-     "t": 217.622,
-     "end": 217.847
-    },
-    {
-     "w": "bits",
-     "t": 217.872,
-     "end": 218.522
-    },
-    {
-     "w": "inside",
-     "t": 218.697,
-     "end": 219.247
-    },
-    {
-     "w": "that",
-     "t": 219.272,
-     "end": 219.447
-    },
-    {
-     "w": "range",
-     "t": 219.472,
-     "end": 220.107
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/a6/a6a3571e8a951c1d9b13a040.wav"
-  },
-  {
-   "index": 23,
-   "start": 220.567,
-   "duration": 16.35,
-   "end": 236.917,
-   "text": "The hidden character from the start is the Y at the end of the other day. Shannon's subject got it on the first guess, a single yes-or-no question: is it Y? Splitting the alphabet took five. In English, almost no letter arrives without a past.",
-   "voice": "af_heart",
-   "speed": 0.85,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "The",
-     "t": 220.592,
-     "end": 220.73
-    },
-    {
-     "w": "hidden",
-     "t": 220.767,
-     "end": 221.079
-    },
-    {
-     "w": "character",
-     "t": 221.117,
-     "end": 221.592
-    },
-    {
-     "w": "from",
-     "t": 221.617,
-     "end": 221.755
-    },
-    {
-     "w": "the",
-     "t": 221.767,
-     "end": 221.854
-    },
-    {
-     "w": "start",
-     "t": 221.892,
-     "end": 222.655
-    },
-    {
-     "w": "is",
-     "t": 222.717,
-     "end": 222.842
-    },
-    {
-     "w": "the",
-     "t": 222.867,
-     "end": 222.979
-    },
-    {
-     "w": "Y",
-     "t": 223.017,
-     "end": 223.392
+     "w": "figure",
+     "t": 25.612,
+     "end": 26.025
     },
     {
      "w": "at",
-     "t": 223.417,
-     "end": 223.479
+     "t": 26.062,
+     "end": 26.124
     },
     {
-     "w": "the",
-     "t": 223.492,
-     "end": 223.642
+     "w": "about",
+     "t": 26.137,
+     "end": 26.437
     },
     {
-     "w": "end",
-     "t": 223.692,
-     "end": 223.905
+     "w": "one",
+     "t": 26.462,
+     "end": 26.947
     },
     {
-     "w": "of",
-     "t": 223.917,
-     "end": 223.979
+     "w": "No",
+     "t": 27.537,
+     "end": 27.787
     },
     {
-     "w": "the",
-     "t": 223.992,
-     "end": 224.117
+     "w": "compressor",
+     "t": 27.812,
+     "end": 28.387
     },
     {
-     "w": "other",
-     "t": 224.142,
-     "end": 224.417
-    },
-    {
-     "w": "day",
-     "t": 224.442,
-     "end": 224.927
-    },
-    {
-     "w": "Shannon's",
-     "t": 225.407,
-     "end": 225.807
-    },
-    {
-     "w": "subject",
-     "t": 225.832,
-     "end": 226.307
-    },
-    {
-     "w": "got",
-     "t": 226.332,
-     "end": 226.507
+     "w": "beats",
+     "t": 28.437,
+     "end": 28.712
     },
     {
      "w": "it",
-     "t": 226.532,
-     "end": 226.595
+     "t": 28.737,
+     "end": 28.8
     },
     {
      "w": "on",
-     "t": 226.607,
-     "end": 226.695
+     "t": 28.812,
+     "end": 28.975
     },
     {
-     "w": "the",
-     "t": 226.707,
-     "end": 226.795
+     "w": "average",
+     "t": 29.012,
+     "end": 29.912
     },
     {
-     "w": "first",
-     "t": 226.832,
-     "end": 227.132
+     "w": "and",
+     "t": 30.087,
+     "end": 30.225
     },
     {
-     "w": "guess",
-     "t": 227.157,
-     "end": 227.732
+     "w": "guessing",
+     "t": 30.262,
+     "end": 30.662
     },
     {
-     "w": "a",
-     "t": 227.907,
-     "end": 228.02
+     "w": "what",
+     "t": 30.687,
+     "end": 30.812
     },
     {
-     "w": "single",
-     "t": 228.082,
-     "end": 228.432
+     "w": "comes",
+     "t": 30.837,
+     "end": 31.137
     },
     {
-     "w": "yes-or-no",
-     "t": 228.457,
-     "end": 229.007
-    },
-    {
-     "w": "question",
-     "t": 229.032,
-     "end": 229.857
+     "w": "next",
+     "t": 31.162,
+     "end": 31.762
     },
     {
      "w": "is",
-     "t": 230.032,
-     "end": 230.157
+     "t": 31.812,
+     "end": 31.912
     },
     {
-     "w": "it",
-     "t": 230.182,
-     "end": 230.282
+     "w": "how",
+     "t": 31.937,
+     "end": 32.125
     },
     {
-     "w": "Y",
-     "t": 230.307,
-     "end": 230.787
+     "w": "language",
+     "t": 32.162,
+     "end": 32.612
     },
     {
-     "w": "Splitting",
-     "t": 231.237,
-     "end": 231.625
+     "w": "models",
+     "t": 32.637,
+     "end": 32.987
     },
     {
-     "w": "the",
-     "t": 231.637,
-     "end": 231.775
+     "w": "are",
+     "t": 33.012,
+     "end": 33.087
     },
     {
-     "w": "alphabet",
-     "t": 231.812,
-     "end": 232.287
+     "w": "trained",
+     "t": 33.112,
+     "end": 33.737
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/45/4551c1026b6da2225625b5ea.wav"
+  },
+  {
+   "index": 4,
+   "start": 34.2,
+   "duration": 8.71,
+   "end": 42.91,
+   "text": "So where do four of every five questions go? Z costs as much as E, yet E turns up a hundred thirty times as often.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "So",
+     "t": 34.275,
+     "end": 34.425
     },
     {
-     "w": "took",
-     "t": 232.312,
-     "end": 232.487
+     "w": "where",
+     "t": 34.45,
+     "end": 34.625
+    },
+    {
+     "w": "do",
+     "t": 34.65,
+     "end": 34.825
+    },
+    {
+     "w": "four",
+     "t": 34.875,
+     "end": 35.15
+    },
+    {
+     "w": "of",
+     "t": 35.175,
+     "end": 35.325
+    },
+    {
+     "w": "every",
+     "t": 35.375,
+     "end": 35.65
     },
     {
      "w": "five",
-     "t": 232.512,
-     "end": 233.097
+     "t": 35.675,
+     "end": 35.975
     },
     {
-     "w": "In",
-     "t": 233.497,
-     "end": 233.622
+     "w": "questions",
+     "t": 36.0,
+     "end": 36.55
     },
     {
-     "w": "English",
-     "t": 233.647,
-     "end": 234.247
+     "w": "go",
+     "t": 36.575,
+     "end": 36.99
     },
     {
-     "w": "almost",
-     "t": 234.397,
-     "end": 234.772
+     "w": "Z",
+     "t": 37.67,
+     "end": 37.895
     },
     {
-     "w": "no",
-     "t": 234.797,
-     "end": 234.972
+     "w": "costs",
+     "t": 37.945,
+     "end": 38.395
     },
     {
-     "w": "letter",
-     "t": 234.997,
-     "end": 235.297
+     "w": "as",
+     "t": 38.42,
+     "end": 38.545
     },
     {
-     "w": "arrives",
-     "t": 235.322,
-     "end": 235.847
+     "w": "much",
+     "t": 38.57,
+     "end": 38.795
     },
     {
-     "w": "without",
-     "t": 235.872,
-     "end": 236.16
+     "w": "as",
+     "t": 38.82,
+     "end": 38.958
+    },
+    {
+     "w": "E",
+     "t": 38.995,
+     "end": 39.545
+    },
+    {
+     "w": "yet",
+     "t": 39.77,
+     "end": 40.008
+    },
+    {
+     "w": "E",
+     "t": 40.045,
+     "end": 40.208
+    },
+    {
+     "w": "turns",
+     "t": 40.245,
+     "end": 40.533
+    },
+    {
+     "w": "up",
+     "t": 40.545,
+     "end": 40.67
     },
     {
      "w": "a",
-     "t": 236.172,
-     "end": 236.222
+     "t": 40.695,
+     "end": 40.783
+    },
+    {
+     "w": "hundred",
+     "t": 40.82,
+     "end": 41.258
+    },
+    {
+     "w": "thirty",
+     "t": 41.295,
+     "end": 41.595
+    },
+    {
+     "w": "times",
+     "t": 41.62,
+     "end": 42.07
+    },
+    {
+     "w": "as",
+     "t": 42.095,
+     "end": 42.233
+    },
+    {
+     "w": "often",
+     "t": 42.27,
+     "end": 42.91
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/5f/5fa0771928248e19442739bf.wav"
+  },
+  {
+   "index": 5,
+   "start": 43.367,
+   "duration": 8.21,
+   "end": 51.577,
+   "text": "Instead, split the probability, not the alphabet: is it a space, E, T, A or O? That's nearly half.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Instead",
+     "t": 43.397,
+     "end": 43.922
+    },
+    {
+     "w": "split",
+     "t": 43.997,
+     "end": 44.234
+    },
+    {
+     "w": "the",
+     "t": 44.247,
+     "end": 44.322
+    },
+    {
+     "w": "probability",
+     "t": 44.347,
+     "end": 44.997
+    },
+    {
+     "w": "not",
+     "t": 45.072,
+     "end": 45.209
+    },
+    {
+     "w": "the",
+     "t": 45.222,
+     "end": 45.347
+    },
+    {
+     "w": "alphabet",
+     "t": 45.372,
+     "end": 46.297
+    },
+    {
+     "w": "is",
+     "t": 46.472,
+     "end": 46.56
+    },
+    {
+     "w": "it",
+     "t": 46.572,
+     "end": 46.635
+    },
+    {
+     "w": "a",
+     "t": 46.647,
+     "end": 46.71
+    },
+    {
+     "w": "space",
+     "t": 46.747,
+     "end": 47.297
+    },
+    {
+     "w": "E",
+     "t": 47.447,
+     "end": 47.722
+    },
+    {
+     "w": "T",
+     "t": 47.847,
+     "end": 48.222
+    },
+    {
+     "w": "A",
+     "t": 48.372,
+     "end": 48.659
+    },
+    {
+     "w": "or",
+     "t": 48.697,
+     "end": 48.859
+    },
+    {
+     "w": "O",
+     "t": 48.897,
+     "end": 49.347
+    },
+    {
+     "w": "That's",
+     "t": 50.207,
+     "end": 50.507
+    },
+    {
+     "w": "nearly",
+     "t": 50.532,
+     "end": 50.832
+    },
+    {
+     "w": "half",
+     "t": 50.857,
+     "end": 51.427
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/69/699942318694eb4c2bcf9bdb.wav"
+  },
+  {
+   "index": 6,
+   "start": 52.033,
+   "duration": 9.07,
+   "end": 61.103,
+   "text": "E starts near a tenth. Each ideal answer keeps half the probability, so E's share doubles. Three point three doublings fill the bar.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "E",
+     "t": 52.108,
+     "end": 52.308
+    },
+    {
+     "w": "starts",
+     "t": 52.333,
+     "end": 52.683
+    },
+    {
+     "w": "near",
+     "t": 52.708,
+     "end": 52.895
+    },
+    {
+     "w": "a",
+     "t": 52.908,
+     "end": 52.995
+    },
+    {
+     "w": "tenth",
+     "t": 53.033,
+     "end": 53.623
+    },
+    {
+     "w": "Each",
+     "t": 53.933,
+     "end": 54.233
+    },
+    {
+     "w": "ideal",
+     "t": 54.283,
+     "end": 54.658
+    },
+    {
+     "w": "answer",
+     "t": 54.683,
+     "end": 55.083
+    },
+    {
+     "w": "keeps",
+     "t": 55.108,
+     "end": 55.358
+    },
+    {
+     "w": "half",
+     "t": 55.383,
+     "end": 55.595
+    },
+    {
+     "w": "the",
+     "t": 55.608,
+     "end": 55.683
+    },
+    {
+     "w": "probability",
+     "t": 55.708,
+     "end": 56.658
+    },
+    {
+     "w": "so",
+     "t": 56.858,
+     "end": 57.133
+    },
+    {
+     "w": "E's",
+     "t": 57.183,
+     "end": 57.558
+    },
+    {
+     "w": "share",
+     "t": 57.608,
+     "end": 57.833
+    },
+    {
+     "w": "doubles",
+     "t": 57.858,
+     "end": 58.523
+    },
+    {
+     "w": "Three",
+     "t": 58.898,
+     "end": 59.148
+    },
+    {
+     "w": "point",
+     "t": 59.173,
+     "end": 59.423
+    },
+    {
+     "w": "three",
+     "t": 59.448,
+     "end": 59.648
+    },
+    {
+     "w": "doublings",
+     "t": 59.673,
+     "end": 60.223
+    },
+    {
+     "w": "fill",
+     "t": 60.273,
+     "end": 60.485
+    },
+    {
+     "w": "the",
+     "t": 60.498,
+     "end": 60.573
+    },
+    {
+     "w": "bar",
+     "t": 60.598,
+     "end": 61.103
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/03/03e63fac77c0624514b608b8.wav"
+  },
+  {
+   "index": 7,
+   "start": 61.567,
+   "duration": 4.02,
+   "end": 65.587,
+   "text": "Z, one in twelve hundred sixty, needs ten point three.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Z",
+     "t": 61.717,
+     "end": 62.042
+    },
+    {
+     "w": "one",
+     "t": 62.167,
+     "end": 62.392
+    },
+    {
+     "w": "in",
+     "t": 62.417,
+     "end": 62.517
+    },
+    {
+     "w": "twelve",
+     "t": 62.542,
+     "end": 62.805
+    },
+    {
+     "w": "hundred",
+     "t": 62.817,
+     "end": 63.142
+    },
+    {
+     "w": "sixty",
+     "t": 63.167,
+     "end": 63.867
+    },
+    {
+     "w": "needs",
+     "t": 64.067,
+     "end": 64.329
+    },
+    {
+     "w": "ten",
+     "t": 64.367,
+     "end": 64.592
+    },
+    {
+     "w": "point",
+     "t": 64.617,
+     "end": 64.905
+    },
+    {
+     "w": "three",
+     "t": 64.942,
+     "end": 65.437
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/61/61b8d24cd8f70f57c5e517ca.wav"
+  },
+  {
+   "index": 8,
+   "start": 66.033,
+   "duration": 14.24,
+   "end": 80.273,
+   "text": "A character with probability p needs k questions, where p times two to the k equals one. [pause 1.5] So two to the k equals one over p, and k equals log base two of one over p.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "A",
+     "t": 66.053,
+     "end": 66.14
+    },
+    {
+     "w": "character",
+     "t": 66.178,
+     "end": 66.653
+    },
+    {
+     "w": "with",
+     "t": 66.678,
+     "end": 66.828
+    },
+    {
+     "w": "probability",
+     "t": 66.853,
+     "end": 67.515
+    },
+    {
+     "w": "p",
+     "t": 67.553,
+     "end": 67.778
+    },
+    {
+     "w": "needs",
+     "t": 67.803,
+     "end": 68.165
+    },
+    {
+     "w": "k",
+     "t": 68.203,
+     "end": 68.428
+    },
+    {
+     "w": "questions",
+     "t": 68.453,
+     "end": 69.428
+    },
+    {
+     "w": "where",
+     "t": 69.578,
+     "end": 69.778
+    },
+    {
+     "w": "p",
+     "t": 69.828,
+     "end": 70.103
+    },
+    {
+     "w": "times",
+     "t": 70.128,
+     "end": 70.553
+    },
+    {
+     "w": "two",
+     "t": 70.603,
+     "end": 70.828
+    },
+    {
+     "w": "to",
+     "t": 70.853,
+     "end": 70.915
+    },
+    {
+     "w": "the",
+     "t": 70.928,
+     "end": 71.041
+    },
+    {
+     "w": "k",
+     "t": 71.078,
+     "end": 71.441
+    },
+    {
+     "w": "equals",
+     "t": 71.478,
+     "end": 71.853
+    },
+    {
+     "w": "one",
+     "t": 71.878,
+     "end": 72.343
+    },
+    {
+     "w": "So",
+     "t": 73.918,
+     "end": 74.131
+    },
+    {
+     "w": "two",
+     "t": 74.168,
+     "end": 74.343
+    },
+    {
+     "w": "to",
+     "t": 74.368,
+     "end": 74.43
+    },
+    {
+     "w": "the",
+     "t": 74.443,
+     "end": 74.531
+    },
+    {
+     "w": "k",
+     "t": 74.568,
+     "end": 74.981
+    },
+    {
+     "w": "equals",
+     "t": 75.018,
+     "end": 75.368
+    },
+    {
+     "w": "one",
+     "t": 75.393,
+     "end": 75.593
+    },
+    {
+     "w": "over",
+     "t": 75.618,
+     "end": 75.881
+    },
+    {
+     "w": "p",
+     "t": 75.918,
+     "end": 76.618
+    },
+    {
+     "w": "and",
+     "t": 76.818,
+     "end": 76.943
+    },
+    {
+     "w": "k",
+     "t": 76.993,
+     "end": 77.431
+    },
+    {
+     "w": "equals",
+     "t": 77.468,
+     "end": 77.868
+    },
+    {
+     "w": "log",
+     "t": 77.918,
+     "end": 78.268
+    },
+    {
+     "w": "base",
+     "t": 78.293,
+     "end": 78.693
+    },
+    {
+     "w": "two",
+     "t": 78.743,
+     "end": 79.018
+    },
+    {
+     "w": "of",
+     "t": 79.043,
+     "end": 79.168
+    },
+    {
+     "w": "one",
+     "t": 79.193,
+     "end": 79.443
+    },
+    {
+     "w": "over",
+     "t": 79.468,
+     "end": 79.731
+    },
+    {
+     "w": "p.",
+     "t": 79.768,
+     "end": 80.273
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/aa/aac9b9403fa011411473367e.wav"
+  },
+  {
+   "index": 9,
+   "start": 80.733,
+   "duration": 2.46,
+   "end": 83.193,
+   "text": "Now make each character's cost its height.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Now",
+     "t": 80.823,
+     "end": 81.048
+    },
+    {
+     "w": "make",
+     "t": 81.073,
+     "end": 81.285
+    },
+    {
+     "w": "each",
+     "t": 81.323,
+     "end": 81.523
+    },
+    {
+     "w": "character's",
+     "t": 81.548,
+     "end": 82.161
+    },
+    {
+     "w": "cost",
+     "t": 82.198,
+     "end": 82.485
+    },
+    {
+     "w": "its",
+     "t": 82.498,
+     "end": 82.648
+    },
+    {
+     "w": "height",
+     "t": 82.673,
+     "end": 83.193
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/83/8386abf226c0ee4d10b7f3e9.wav"
+  },
+  {
+   "index": 10,
+   "start": 83.633,
+   "duration": 7.42,
+   "end": 91.053,
+   "text": "The widths add to one, so the area is the average cost. Pour the skyline flat, and its height is that average.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "The",
+     "t": 83.648,
+     "end": 83.748
+    },
+    {
+     "w": "widths",
+     "t": 83.773,
+     "end": 84.085
+    },
+    {
+     "w": "add",
+     "t": 84.123,
+     "end": 84.323
+    },
+    {
+     "w": "to",
+     "t": 84.348,
+     "end": 84.448
+    },
+    {
+     "w": "one",
+     "t": 84.473,
+     "end": 84.973
+    },
+    {
+     "w": "so",
+     "t": 85.148,
+     "end": 85.261
+    },
+    {
+     "w": "the",
+     "t": 85.273,
+     "end": 85.41
+    },
+    {
+     "w": "area",
+     "t": 85.448,
+     "end": 85.885
+    },
+    {
+     "w": "is",
+     "t": 85.923,
+     "end": 86.035
+    },
+    {
+     "w": "the",
+     "t": 86.048,
+     "end": 86.198
+    },
+    {
+     "w": "average",
+     "t": 86.248,
+     "end": 86.685
+    },
+    {
+     "w": "cost",
+     "t": 86.723,
+     "end": 87.353
+    },
+    {
+     "w": "Pour",
+     "t": 87.658,
+     "end": 87.908
+    },
+    {
+     "w": "the",
+     "t": 87.933,
+     "end": 88.033
+    },
+    {
+     "w": "skyline",
+     "t": 88.058,
+     "end": 88.571
+    },
+    {
+     "w": "flat",
+     "t": 88.608,
+     "end": 89.183
+    },
+    {
+     "w": "and",
+     "t": 89.308,
+     "end": 89.396
+    },
+    {
+     "w": "its",
+     "t": 89.408,
+     "end": 89.571
+    },
+    {
+     "w": "height",
+     "t": 89.608,
+     "end": 89.933
+    },
+    {
+     "w": "is",
+     "t": 89.958,
+     "end": 90.083
+    },
+    {
+     "w": "that",
+     "t": 90.108,
+     "end": 90.271
+    },
+    {
+     "w": "average",
+     "t": 90.308,
+     "end": 91.053
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/ea/ea724d090fd2191b53abb3d7.wav"
+  },
+  {
+   "index": 11,
+   "start": 91.5,
+   "duration": 8.19,
+   "end": 99.69,
+   "text": "Shannon called it entropy, in bits: one bit per yes-or-no answer. For English letters: four point one one. [pause 0.9]",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Shannon",
+     "t": 91.6,
+     "end": 91.975
+    },
+    {
+     "w": "called",
+     "t": 92.0,
+     "end": 92.238
+    },
+    {
+     "w": "it",
+     "t": 92.25,
+     "end": 92.325
+    },
+    {
+     "w": "entropy",
+     "t": 92.35,
+     "end": 92.825
+    },
+    {
+     "w": "in",
+     "t": 92.925,
+     "end": 93.05
+    },
+    {
+     "w": "bits",
+     "t": 93.075,
+     "end": 93.775
+    },
+    {
+     "w": "one",
+     "t": 94.0,
+     "end": 94.225
+    },
+    {
+     "w": "bit",
+     "t": 94.25,
+     "end": 94.4
+    },
+    {
+     "w": "per",
+     "t": 94.425,
+     "end": 94.6
+    },
+    {
+     "w": "yes-or-no",
+     "t": 94.625,
+     "end": 95.2
+    },
+    {
+     "w": "answer",
+     "t": 95.225,
+     "end": 95.87
+    },
+    {
+     "w": "For",
+     "t": 96.24,
+     "end": 96.39
+    },
+    {
+     "w": "English",
+     "t": 96.415,
+     "end": 96.765
+    },
+    {
+     "w": "letters",
+     "t": 96.79,
+     "end": 97.365
+    },
+    {
+     "w": "four",
+     "t": 97.565,
+     "end": 97.79
+    },
+    {
+     "w": "point",
+     "t": 97.815,
+     "end": 98.04
+    },
+    {
+     "w": "one",
+     "t": 98.065,
+     "end": 98.265
+    },
+    {
+     "w": "one",
+     "t": 98.29,
+     "end": 98.79
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/96/969e3ffc1aa118e3f0eb70b1.wav"
+  },
+  {
+   "index": 12,
+   "start": 100.133,
+   "duration": 7.01,
+   "end": 107.143,
+   "text": "That beats four point seven five, but it's four times Shannon's estimate: it ignores what came before.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "That",
+     "t": 100.183,
+     "end": 100.433
+    },
+    {
+     "w": "beats",
+     "t": 100.458,
+     "end": 100.771
+    },
+    {
+     "w": "four",
+     "t": 100.808,
+     "end": 101.058
+    },
+    {
+     "w": "point",
+     "t": 101.083,
+     "end": 101.333
+    },
+    {
+     "w": "seven",
+     "t": 101.358,
+     "end": 101.695
+    },
+    {
+     "w": "five",
+     "t": 101.733,
+     "end": 102.458
+    },
+    {
+     "w": "but",
+     "t": 102.583,
+     "end": 102.695
+    },
+    {
+     "w": "it's",
+     "t": 102.708,
+     "end": 102.883
+    },
+    {
+     "w": "four",
+     "t": 102.908,
+     "end": 103.221
+    },
+    {
+     "w": "times",
+     "t": 103.258,
+     "end": 103.733
+    },
+    {
+     "w": "Shannon's",
+     "t": 103.783,
+     "end": 104.221
+    },
+    {
+     "w": "estimate",
+     "t": 104.258,
+     "end": 105.158
+    },
+    {
+     "w": "it",
+     "t": 105.333,
+     "end": 105.433
+    },
+    {
+     "w": "ignores",
+     "t": 105.458,
+     "end": 106.033
+    },
+    {
+     "w": "what",
+     "t": 106.058,
+     "end": 106.183
+    },
+    {
+     "w": "came",
+     "t": 106.208,
+     "end": 106.408
+    },
+    {
+     "w": "before",
+     "t": 106.433,
+     "end": 107.143
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/97/97ec5fc6d84b438fd702ddfd.wav"
+  },
+  {
+   "index": 13,
+   "start": 107.567,
+   "duration": 3.11,
+   "end": 110.677,
+   "text": "What comes after a Q? [pause 1.6]",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "What",
+     "t": 107.607,
+     "end": 107.782
+    },
+    {
+     "w": "comes",
+     "t": 107.807,
+     "end": 108.107
+    },
+    {
+     "w": "after",
+     "t": 108.132,
+     "end": 108.419
+    },
+    {
+     "w": "a",
+     "t": 108.432,
+     "end": 108.507
+    },
+    {
+     "w": "Q",
+     "t": 108.532,
+     "end": 109.077
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f4/f42b32b88dc0968f896ccd2c.wav"
+  },
+  {
+   "index": 14,
+   "start": 111.133,
+   "duration": 8.48,
+   "end": 119.613,
+   "text": "It's U, ninety-eight times in a hundred. U swallows the bar, and the average falls to point one six bits. [pause 0.9]",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "It's",
+     "t": 111.133,
+     "end": 111.365
+    },
+    {
+     "w": "U",
+     "t": 111.403,
+     "end": 111.853
+    },
+    {
+     "w": "ninety-eight",
+     "t": 112.028,
+     "end": 112.553
+    },
+    {
+     "w": "times",
+     "t": 112.578,
+     "end": 112.965
+    },
+    {
+     "w": "in",
+     "t": 112.978,
+     "end": 113.04
+    },
+    {
+     "w": "a",
+     "t": 113.053,
+     "end": 113.103
+    },
+    {
+     "w": "hundred",
+     "t": 113.128,
+     "end": 113.743
+    },
+    {
+     "w": "U",
+     "t": 114.313,
+     "end": 114.588
+    },
+    {
+     "w": "swallows",
+     "t": 114.638,
+     "end": 115.163
+    },
+    {
+     "w": "the",
+     "t": 115.188,
+     "end": 115.263
+    },
+    {
+     "w": "bar",
+     "t": 115.288,
+     "end": 115.913
+    },
+    {
+     "w": "and",
+     "t": 116.063,
+     "end": 116.151
+    },
+    {
+     "w": "the",
+     "t": 116.163,
+     "end": 116.275
+    },
+    {
+     "w": "average",
+     "t": 116.313,
+     "end": 116.713
+    },
+    {
+     "w": "falls",
+     "t": 116.738,
+     "end": 117.063
+    },
+    {
+     "w": "to",
+     "t": 117.088,
+     "end": 117.188
+    },
+    {
+     "w": "point",
+     "t": 117.213,
+     "end": 117.551
+    },
+    {
+     "w": "one",
+     "t": 117.588,
+     "end": 117.825
+    },
+    {
+     "w": "six",
+     "t": 117.863,
+     "end": 118.138
+    },
+    {
+     "w": "bits",
+     "t": 118.163,
+     "end": 118.713
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/cb/cbdfc0fa1b7d0dabbfaf8407.wav"
+  },
+  {
+   "index": 15,
+   "start": 120.067,
+   "duration": 4.92,
+   "end": 124.987,
+   "text": "After TH, E takes two thirds of the bar, and costs about half a question.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "After",
+     "t": 120.097,
+     "end": 120.409
+    },
+    {
+     "w": "TH",
+     "t": 120.447,
+     "end": 121.197
+    },
+    {
+     "w": "E",
+     "t": 121.372,
+     "end": 121.559
+    },
+    {
+     "w": "takes",
+     "t": 121.597,
+     "end": 121.885
+    },
+    {
+     "w": "two",
+     "t": 121.922,
+     "end": 122.097
+    },
+    {
+     "w": "thirds",
+     "t": 122.122,
+     "end": 122.385
+    },
+    {
+     "w": "of",
+     "t": 122.397,
+     "end": 122.459
+    },
+    {
+     "w": "the",
+     "t": 122.472,
+     "end": 122.547
+    },
+    {
+     "w": "bar",
+     "t": 122.572,
+     "end": 123.072
+    },
+    {
+     "w": "and",
+     "t": 123.197,
+     "end": 123.309
+    },
+    {
+     "w": "costs",
+     "t": 123.347,
+     "end": 123.709
+    },
+    {
+     "w": "about",
+     "t": 123.722,
+     "end": 123.972
+    },
+    {
+     "w": "half",
+     "t": 123.997,
+     "end": 124.209
+    },
+    {
+     "w": "a",
+     "t": 124.222,
+     "end": 124.272
+    },
+    {
+     "w": "question",
+     "t": 124.297,
+     "end": 124.987
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/4d/4da812396ec5e0eaecdde688.wav"
+  },
+  {
+   "index": 16,
+   "start": 125.433,
+   "duration": 14.81,
+   "end": 140.243,
+   "text": "Half a question sounds impossible, but a compressor asks about long runs of letters, and the fractions add up: five questions for these three, not six. After TH, it averages one point seven.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Half",
+     "t": 125.473,
+     "end": 125.685
+    },
+    {
+     "w": "a",
+     "t": 125.698,
+     "end": 125.748
+    },
+    {
+     "w": "question",
+     "t": 125.773,
+     "end": 126.323
+    },
+    {
+     "w": "sounds",
+     "t": 126.373,
+     "end": 126.748
+    },
+    {
+     "w": "impossible",
+     "t": 126.773,
+     "end": 127.848
+    },
+    {
+     "w": "but",
+     "t": 127.973,
+     "end": 128.085
+    },
+    {
+     "w": "a",
+     "t": 128.098,
+     "end": 128.148
+    },
+    {
+     "w": "compressor",
+     "t": 128.173,
+     "end": 128.848
+    },
+    {
+     "w": "asks",
+     "t": 128.898,
+     "end": 129.298
+    },
+    {
+     "w": "about",
+     "t": 129.323,
+     "end": 129.648
+    },
+    {
+     "w": "long",
+     "t": 129.698,
+     "end": 130.098
+    },
+    {
+     "w": "runs",
+     "t": 130.123,
+     "end": 130.435
+    },
+    {
+     "w": "of",
+     "t": 130.448,
+     "end": 130.573
+    },
+    {
+     "w": "letters",
+     "t": 130.598,
+     "end": 131.323
+    },
+    {
+     "w": "and",
+     "t": 131.448,
+     "end": 131.535
+    },
+    {
+     "w": "the",
+     "t": 131.548,
+     "end": 131.636
+    },
+    {
+     "w": "fractions",
+     "t": 131.673,
+     "end": 132.398
+    },
+    {
+     "w": "add",
+     "t": 132.448,
+     "end": 132.661
+    },
+    {
+     "w": "up",
+     "t": 132.673,
+     "end": 133.373
+    },
+    {
+     "w": "five",
+     "t": 133.648,
+     "end": 133.998
+    },
+    {
+     "w": "questions",
+     "t": 134.023,
+     "end": 134.598
+    },
+    {
+     "w": "for",
+     "t": 134.623,
+     "end": 134.723
+    },
+    {
+     "w": "these",
+     "t": 134.748,
+     "end": 135.01
+    },
+    {
+     "w": "three",
+     "t": 135.048,
+     "end": 135.473
+    },
+    {
+     "w": "not",
+     "t": 135.648,
+     "end": 135.923
+    },
+    {
+     "w": "six",
+     "t": 135.973,
+     "end": 136.583
+    },
+    {
+     "w": "After",
+     "t": 137.113,
+     "end": 137.451
+    },
+    {
+     "w": "TH",
+     "t": 137.488,
+     "end": 138.213
+    },
+    {
+     "w": "it",
+     "t": 138.338,
+     "end": 138.438
+    },
+    {
+     "w": "averages",
+     "t": 138.463,
+     "end": 138.951
+    },
+    {
+     "w": "one",
+     "t": 138.988,
+     "end": 139.213
+    },
+    {
+     "w": "point",
+     "t": 139.238,
+     "end": 139.526
+    },
+    {
+     "w": "seven",
+     "t": 139.563,
+     "end": 140.093
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/10/10b4d0dc0b76aa57a2b5f059.wav"
+  },
+  {
+   "index": 17,
+   "start": 140.7,
+   "duration": 4.8,
+   "end": 145.5,
+   "text": "But averaged over every two-letter context, it's still two point eight.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "But",
+     "t": 140.715,
+     "end": 140.89
+    },
+    {
+     "w": "averaged",
+     "t": 140.94,
+     "end": 141.49
+    },
+    {
+     "w": "over",
+     "t": 141.515,
+     "end": 141.815
+    },
+    {
+     "w": "every",
+     "t": 141.865,
+     "end": 142.178
+    },
+    {
+     "w": "two-letter",
+     "t": 142.215,
+     "end": 142.715
+    },
+    {
+     "w": "context",
+     "t": 142.74,
+     "end": 143.74
+    },
+    {
+     "w": "it's",
+     "t": 143.915,
+     "end": 144.065
+    },
+    {
+     "w": "still",
+     "t": 144.09,
+     "end": 144.39
+    },
+    {
+     "w": "two",
+     "t": 144.44,
+     "end": 144.615
+    },
+    {
+     "w": "point",
+     "t": 144.64,
+     "end": 144.89
+    },
+    {
+     "w": "eight",
+     "t": 144.915,
+     "end": 145.35
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/31/310f656df1bdfd9b3a66093c.wav"
+  },
+  {
+   "index": 18,
+   "start": 145.933,
+   "duration": 8.38,
+   "end": 154.313,
+   "text": "Hundred-letter contexts need more text than any corpus holds, so Shannon used a predictor that knows English: a person.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Hundred-letter",
+     "t": 145.983,
+     "end": 146.658
+    },
+    {
+     "w": "contexts",
+     "t": 146.683,
+     "end": 147.47
+    },
+    {
+     "w": "need",
+     "t": 147.508,
+     "end": 147.708
+    },
+    {
+     "w": "more",
+     "t": 147.733,
+     "end": 147.958
+    },
+    {
+     "w": "text",
+     "t": 148.008,
+     "end": 148.358
+    },
+    {
+     "w": "than",
+     "t": 148.383,
+     "end": 148.508
+    },
+    {
+     "w": "any",
+     "t": 148.533,
+     "end": 148.708
+    },
+    {
+     "w": "corpus",
+     "t": 148.733,
+     "end": 149.133
+    },
+    {
+     "w": "holds",
+     "t": 149.158,
+     "end": 149.933
+    },
+    {
+     "w": "so",
+     "t": 150.083,
+     "end": 150.321
+    },
+    {
+     "w": "Shannon",
+     "t": 150.383,
+     "end": 150.771
+    },
+    {
+     "w": "used",
+     "t": 150.808,
+     "end": 151.071
+    },
+    {
+     "w": "a",
+     "t": 151.083,
+     "end": 151.133
+    },
+    {
+     "w": "predictor",
+     "t": 151.158,
+     "end": 151.733
+    },
+    {
+     "w": "that",
+     "t": 151.758,
+     "end": 151.933
+    },
+    {
+     "w": "knows",
+     "t": 151.958,
+     "end": 152.346
+    },
+    {
+     "w": "English",
+     "t": 152.383,
+     "end": 153.308
+    },
+    {
+     "w": "a",
+     "t": 153.508,
+     "end": 153.583
+    },
+    {
+     "w": "person",
+     "t": 153.608,
+     "end": 154.313
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/eb/ebb15cec24f1339ca76e8efe.wav"
+  },
+  {
+   "index": 19,
+   "start": 154.767,
+   "duration": 9.79,
+   "end": 164.557,
+   "text": "His subject read a passage letter by letter, guessing each next one until right: seventy-nine of a hundred two on the first guess. [pause 0.9]",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "His",
+     "t": 154.782,
+     "end": 154.994
+    },
+    {
+     "w": "subject",
+     "t": 155.032,
+     "end": 155.582
+    },
+    {
+     "w": "read",
+     "t": 155.607,
+     "end": 155.745
+    },
+    {
+     "w": "a",
+     "t": 155.757,
+     "end": 155.832
+    },
+    {
+     "w": "passage",
+     "t": 155.882,
+     "end": 156.519
+    },
+    {
+     "w": "letter",
+     "t": 156.557,
+     "end": 156.857
+    },
+    {
+     "w": "by",
+     "t": 156.882,
+     "end": 157.082
+    },
+    {
+     "w": "letter",
+     "t": 157.107,
+     "end": 157.657
+    },
+    {
+     "w": "guessing",
+     "t": 157.857,
+     "end": 158.257
+    },
+    {
+     "w": "each",
+     "t": 158.282,
+     "end": 158.619
+    },
+    {
+     "w": "next",
+     "t": 158.657,
+     "end": 158.957
+    },
+    {
+     "w": "one",
+     "t": 158.982,
+     "end": 159.282
+    },
+    {
+     "w": "until",
+     "t": 159.307,
+     "end": 159.607
+    },
+    {
+     "w": "right",
+     "t": 159.632,
+     "end": 160.432
+    },
+    {
+     "w": "seventy-nine",
+     "t": 160.707,
+     "end": 161.432
+    },
+    {
+     "w": "of",
+     "t": 161.457,
+     "end": 161.519
+    },
+    {
+     "w": "a",
+     "t": 161.532,
+     "end": 161.582
+    },
+    {
+     "w": "hundred",
+     "t": 161.607,
+     "end": 162.032
+    },
+    {
+     "w": "two",
+     "t": 162.082,
+     "end": 162.495
+    },
+    {
+     "w": "on",
+     "t": 162.532,
+     "end": 162.645
+    },
+    {
+     "w": "the",
+     "t": 162.657,
+     "end": 162.745
+    },
+    {
+     "w": "first",
+     "t": 162.782,
+     "end": 163.082
+    },
+    {
+     "w": "guess",
+     "t": 163.107,
+     "end": 163.657
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/08/08ed852a70f5e86d4999f542.wav"
+  },
+  {
+   "index": 20,
+   "start": 165.0,
+   "duration": 13.69,
+   "end": 178.69,
+   "text": "A twin guessing the same way could rebuild the passage from these counts. Treat each count as a symbol: [pause 1.0] the same skyline pours flat at about one point four bits. A better guesser could only lower it.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "A",
+     "t": 165.01,
+     "end": 165.11
+    },
+    {
+     "w": "twin",
+     "t": 165.16,
+     "end": 165.648
+    },
+    {
+     "w": "guessing",
+     "t": 165.685,
+     "end": 166.135
+    },
+    {
+     "w": "the",
+     "t": 166.16,
+     "end": 166.285
+    },
+    {
+     "w": "same",
+     "t": 166.335,
+     "end": 166.635
+    },
+    {
+     "w": "way",
+     "t": 166.66,
+     "end": 167.022
+    },
+    {
+     "w": "could",
+     "t": 167.06,
+     "end": 167.235
+    },
+    {
+     "w": "rebuild",
+     "t": 167.26,
+     "end": 167.648
+    },
+    {
+     "w": "the",
+     "t": 167.66,
+     "end": 167.735
+    },
+    {
+     "w": "passage",
+     "t": 167.76,
+     "end": 168.285
+    },
+    {
+     "w": "from",
+     "t": 168.31,
+     "end": 168.435
+    },
+    {
+     "w": "these",
+     "t": 168.46,
+     "end": 168.685
+    },
+    {
+     "w": "counts",
+     "t": 168.71,
+     "end": 169.26
+    },
+    {
+     "w": "Treat",
+     "t": 169.61,
+     "end": 169.86
+    },
+    {
+     "w": "each",
+     "t": 169.885,
+     "end": 170.122
+    },
+    {
+     "w": "count",
+     "t": 170.16,
+     "end": 170.522
+    },
+    {
+     "w": "as",
+     "t": 170.56,
+     "end": 170.648
+    },
+    {
+     "w": "a",
+     "t": 170.66,
+     "end": 170.748
+    },
+    {
+     "w": "symbol",
+     "t": 170.785,
+     "end": 171.35
+    },
+    {
+     "w": "the",
+     "t": 172.365,
+     "end": 172.478
+    },
+    {
+     "w": "same",
+     "t": 172.515,
+     "end": 172.815
+    },
+    {
+     "w": "skyline",
+     "t": 172.84,
+     "end": 173.34
+    },
+    {
+     "w": "pours",
+     "t": 173.365,
+     "end": 174.002
+    },
+    {
+     "w": "flat",
+     "t": 174.065,
+     "end": 174.39
+    },
+    {
+     "w": "at",
+     "t": 174.415,
+     "end": 174.478
+    },
+    {
+     "w": "about",
+     "t": 174.49,
+     "end": 174.74
+    },
+    {
+     "w": "one",
+     "t": 174.765,
+     "end": 174.965
+    },
+    {
+     "w": "point",
+     "t": 174.99,
+     "end": 175.278
+    },
+    {
+     "w": "four",
+     "t": 175.315,
+     "end": 175.515
+    },
+    {
+     "w": "bits",
+     "t": 175.54,
+     "end": 176.09
+    },
+    {
+     "w": "A",
+     "t": 176.62,
+     "end": 176.708
+    },
+    {
+     "w": "better",
+     "t": 176.745,
+     "end": 177.07
+    },
+    {
+     "w": "guesser",
+     "t": 177.095,
+     "end": 177.52
+    },
+    {
+     "w": "could",
+     "t": 177.545,
+     "end": 177.67
+    },
+    {
+     "w": "only",
+     "t": 177.695,
+     "end": 177.97
+    },
+    {
+     "w": "lower",
+     "t": 177.995,
+     "end": 178.345
+    },
+    {
+     "w": "it",
+     "t": 178.37,
+     "end": 178.69
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/5c/5cf5cf879adb8d0d7bff4d12.wav"
+  },
+  {
+   "index": 21,
+   "start": 179.133,
+   "duration": 7.17,
+   "end": 186.303,
+   "text": "With a hundred letters of context, Shannon's tests put English between point six and one point three bits.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "With",
+     "t": 179.148,
+     "end": 179.286
+    },
+    {
+     "w": "a",
+     "t": 179.298,
+     "end": 179.385
+    },
+    {
+     "w": "hundred",
+     "t": 179.423,
+     "end": 179.823
+    },
+    {
+     "w": "letters",
+     "t": 179.848,
+     "end": 180.16
+    },
+    {
+     "w": "of",
+     "t": 180.173,
+     "end": 180.273
+    },
+    {
+     "w": "context",
+     "t": 180.298,
+     "end": 181.373
+    },
+    {
+     "w": "Shannon's",
+     "t": 181.598,
+     "end": 182.06
+    },
+    {
+     "w": "tests",
+     "t": 182.098,
+     "end": 182.498
+    },
+    {
+     "w": "put",
+     "t": 182.523,
+     "end": 182.648
+    },
+    {
+     "w": "English",
+     "t": 182.673,
+     "end": 183.123
+    },
+    {
+     "w": "between",
+     "t": 183.148,
+     "end": 183.498
+    },
+    {
+     "w": "point",
+     "t": 183.523,
+     "end": 183.885
+    },
+    {
+     "w": "six",
+     "t": 183.948,
+     "end": 184.573
+    },
+    {
+     "w": "and",
+     "t": 184.623,
+     "end": 184.761
+    },
+    {
+     "w": "one",
+     "t": 184.798,
+     "end": 185.023
+    },
+    {
+     "w": "point",
+     "t": 185.048,
+     "end": 185.311
+    },
+    {
+     "w": "three",
+     "t": 185.348,
+     "end": 185.548
+    },
+    {
+     "w": "bits",
+     "t": 185.573,
+     "end": 186.153
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/7b/7b7b4454859fa9b50d77d1a5.wav"
+  },
+  {
+   "index": 22,
+   "start": 186.767,
+   "duration": 11.53,
+   "end": 198.297,
+   "text": "In twenty twenty-three, a language model compressing part of a book that reached Project Gutenberg after its training needed point eight four bits, inside that range.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "In",
+     "t": 186.812,
+     "end": 186.937
+    },
+    {
+     "w": "twenty",
+     "t": 186.962,
+     "end": 187.262
+    },
+    {
+     "w": "twenty-three",
+     "t": 187.287,
+     "end": 188.287
+    },
+    {
+     "w": "a",
+     "t": 188.537,
+     "end": 188.637
+    },
+    {
+     "w": "language",
+     "t": 188.687,
+     "end": 189.199
+    },
+    {
+     "w": "model",
+     "t": 189.237,
+     "end": 189.699
+    },
+    {
+     "w": "compressing",
+     "t": 189.737,
+     "end": 190.299
+    },
+    {
+     "w": "part",
+     "t": 190.337,
+     "end": 190.549
+    },
+    {
+     "w": "of",
+     "t": 190.562,
+     "end": 190.625
+    },
+    {
+     "w": "a",
+     "t": 190.637,
+     "end": 190.724
+    },
+    {
+     "w": "book",
+     "t": 190.762,
+     "end": 191.125
+    },
+    {
+     "w": "that",
+     "t": 191.162,
+     "end": 191.349
+    },
+    {
+     "w": "reached",
+     "t": 191.387,
+     "end": 191.775
+    },
+    {
+     "w": "Project",
+     "t": 191.812,
+     "end": 192.375
+    },
+    {
+     "w": "Gutenberg",
+     "t": 192.412,
+     "end": 193.449
+    },
+    {
+     "w": "after",
+     "t": 193.512,
+     "end": 193.799
+    },
+    {
+     "w": "its",
+     "t": 193.812,
+     "end": 193.987
+    },
+    {
+     "w": "training",
+     "t": 194.012,
+     "end": 194.462
+    },
+    {
+     "w": "needed",
+     "t": 194.487,
+     "end": 194.787
+    },
+    {
+     "w": "point",
+     "t": 194.812,
+     "end": 195.137
+    },
+    {
+     "w": "eight",
+     "t": 195.162,
+     "end": 195.437
+    },
+    {
+     "w": "four",
+     "t": 195.487,
+     "end": 195.737
+    },
+    {
+     "w": "bits",
+     "t": 195.762,
+     "end": 196.562
+    },
+    {
+     "w": "inside",
+     "t": 196.787,
+     "end": 197.412
+    },
+    {
+     "w": "that",
+     "t": 197.437,
+     "end": 197.637
+    },
+    {
+     "w": "range",
+     "t": 197.662,
+     "end": 198.297
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/34/34e480e37cf4f9104b2a3b0d.wav"
+  },
+  {
+   "index": 23,
+   "start": 198.733,
+   "duration": 13.3,
+   "end": 212.033,
+   "text": "The hidden character from the start is the Y in the other day. Shannon's subject needed one guess: is it Y? Halving took five. In English, almost no letter arrives without a past.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "The",
+     "t": 198.758,
+     "end": 198.896
+    },
+    {
+     "w": "hidden",
+     "t": 198.933,
+     "end": 199.245
+    },
+    {
+     "w": "character",
+     "t": 199.283,
+     "end": 199.758
+    },
+    {
+     "w": "from",
+     "t": 199.783,
+     "end": 199.921
+    },
+    {
+     "w": "the",
+     "t": 199.933,
+     "end": 200.02
+    },
+    {
+     "w": "start",
+     "t": 200.058,
+     "end": 200.795
+    },
+    {
+     "w": "is",
+     "t": 200.858,
+     "end": 200.983
+    },
+    {
+     "w": "the",
+     "t": 201.008,
+     "end": 201.121
+    },
+    {
+     "w": "Y",
+     "t": 201.158,
+     "end": 201.483
+    },
+    {
+     "w": "in",
+     "t": 201.508,
+     "end": 201.571
+    },
+    {
+     "w": "the",
+     "t": 201.583,
+     "end": 201.683
+    },
+    {
+     "w": "other",
+     "t": 201.708,
+     "end": 201.983
+    },
+    {
+     "w": "day",
+     "t": 202.008,
+     "end": 202.503
+    },
+    {
+     "w": "Shannon's",
+     "t": 202.903,
+     "end": 203.303
+    },
+    {
+     "w": "subject",
+     "t": 203.328,
+     "end": 203.803
+    },
+    {
+     "w": "needed",
+     "t": 203.828,
+     "end": 204.128
+    },
+    {
+     "w": "one",
+     "t": 204.153,
+     "end": 204.353
+    },
+    {
+     "w": "guess",
+     "t": 204.378,
+     "end": 205.003
+    },
+    {
+     "w": "is",
+     "t": 205.203,
+     "end": 205.328
+    },
+    {
+     "w": "it",
+     "t": 205.353,
+     "end": 205.453
+    },
+    {
+     "w": "Y",
+     "t": 205.478,
+     "end": 205.993
+    },
+    {
+     "w": "Halving",
+     "t": 206.643,
+     "end": 206.968
+    },
+    {
+     "w": "took",
+     "t": 206.993,
+     "end": 207.231
+    },
+    {
+     "w": "five",
+     "t": 207.268,
+     "end": 207.893
+    },
+    {
+     "w": "In",
+     "t": 208.538,
+     "end": 208.663
+    },
+    {
+     "w": "English",
+     "t": 208.688,
+     "end": 209.313
+    },
+    {
+     "w": "almost",
+     "t": 209.463,
+     "end": 209.863
+    },
+    {
+     "w": "no",
+     "t": 209.888,
+     "end": 210.063
+    },
+    {
+     "w": "letter",
+     "t": 210.088,
+     "end": 210.388
+    },
+    {
+     "w": "arrives",
+     "t": 210.413,
+     "end": 210.938
+    },
+    {
+     "w": "without",
+     "t": 210.963,
+     "end": 211.275
+    },
+    {
+     "w": "a",
+     "t": 211.288,
+     "end": 211.338
     },
     {
      "w": "past",
-     "t": 236.247,
-     "end": 236.917
+     "t": 211.363,
+     "end": 212.033
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/c0/c0334dbbba776c7e6b16c53c.wav"
+   "wav": "/root/.cache/sample_space/tts/88/88d22d7b188cc765f1a06184.wav"
   }
  ],
  "warnings": [
   {
-   "t": 0.0,
-   "msg": "voice speed 0.85 > 0.84: every Audio 9 was spoken at 0.82-0.84 with planned pauses; faster delivery was called hurried. Keep 0.82-0.84, shape the pauses and cut words (PRODUCTION_GUIDE §13.3)"
+   "t": 22.47,
+   "msg": "beat 3: reached 'about one' 0.76s after it was spoken - shorten the preceding animations"
   },
   {
-   "t": 237.57,
-   "msg": "concision budget: 602 words, 3:57.6. Critics docked Concision for runtime in 16 of 28 round-5/6 reviews (9 of 10 episodes >= 3:41); budget <= 500 words and <= 3:35 (PRODUCTION_GUIDE §13)"
+   "t": 83.63,
+   "msg": "beat 10: reached 'area' 0.42s after it was spoken - shorten the preceding animations"
+  },
+  {
+   "t": 91.5,
+   "msg": "beat 11: reached 'bits' 0.37s after it was spoken - shorten the preceding animations"
+  },
+  {
+   "t": 100.13,
+   "msg": "beat 12: animations reached 'came' 0.56s after it was spoken - narration and visuals out of sync; shorten the preceding animations"
+  },
+  {
+   "t": 111.13,
+   "msg": "beat 14: animations reached 'falls' 0.53s after it was spoken - narration and visuals out of sync; shorten the preceding animations"
   }
  ],
  "budget": {
-  "words": 602,
-  "runtime_s": 237.6,
+  "words": 494,
+  "runtime_s": 212.8,
   "budget_words": 500,
   "budget_runtime_s": 215.0,
-  "over": true
+  "over": false
  },
- "glyph_morphs": [
-  {
-   "t": 10.9,
-   "animation": "ReplacementTransform",
-   "from": "?",
-   "to": "5"
-  }
- ],
+ "glyph_morphs": [],
  "deictic_sync": {
   "window": [
    -0.8,
    0.4
   ],
-  "deictics": 3,
+  "deictics": 2,
   "unlanded": []
  },
  "layout_audit": {
   "clearance": 0.15,
-  "checks": 224,
-  "audit_seconds": 4.296,
-  "render_seconds": 697.0,
+  "checks": 215,
+  "audit_seconds": 3.141,
+  "render_seconds": 663.4,
   "errors": 0,
-  "count": 4,
+  "count": 0,
   "counts": {
    "overlap": 0,
    "clearance": 0,
    "safe-area": 0,
    "caption-zone": 0,
-   "text-size": 4,
-   "small-label": 15
+   "text-size": 0,
+   "small-label": 0
   },
-  "issues": [
-   {
-    "kind": "text-size",
-    "start": 98.47,
-    "end": 99.17,
-    "held": 0.7,
-    "text": "Text 'J'",
-    "text_pos": [
-     5.54,
-     -2.17
-    ],
-    "detail": "cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)",
-    "msg": "text-size 1:38.5-1:39.2 (held 0.7s) Text 'J' @(+5.54, -2.17) cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "text-size",
-    "start": 98.47,
-    "end": 99.17,
-    "held": 0.7,
-    "text": "Text 'Q'",
-    "text_pos": [
-     5.89,
-     -2.17
-    ],
-    "detail": "cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)",
-    "msg": "text-size 1:38.5-1:39.2 (held 0.7s) Text 'Q' @(+5.89, -2.17) cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "text-size",
-    "start": 98.47,
-    "end": 99.17,
-    "held": 0.7,
-    "text": "Text 'X'",
-    "text_pos": [
-     5.09,
-     -2.17
-    ],
-    "detail": "cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)",
-    "msg": "text-size 1:38.5-1:39.2 (held 0.7s) Text 'X' @(+5.09, -2.17) cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "text-size",
-    "start": 98.47,
-    "end": 99.17,
-    "held": 0.7,
-    "text": "Text 'Z'",
-    "text_pos": [
-     6.17,
-     -2.17
-    ],
-    "detail": "cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)",
-    "msg": "text-size 1:38.5-1:39.2 (held 0.7s) Text 'Z' @(+6.17, -2.17) cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)"
-   }
-  ],
-  "advisory": [
-   {
-    "kind": "small-label",
-    "start": 47.27,
-    "end": 61.07,
-    "held": 13.8,
-    "text": "MathTex '0\\%'",
-    "text_pos": [
-     -5.2,
-     -2.57
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 0:47.3-1:01.1 (held 13.8s) MathTex '0\\%' @(-5.20, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 47.27,
-    "end": 61.07,
-    "held": 13.8,
-    "text": "MathTex '100\\%'",
-    "text_pos": [
-     4.4,
-     -2.57
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 0:47.3-1:01.1 (held 13.8s) MathTex '100\\%' @(+4.40, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 47.27,
-    "end": 61.07,
-    "held": 13.8,
-    "text": "MathTex '25\\%'",
-    "text_pos": [
-     -2.8,
-     -2.57
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 0:47.3-1:01.1 (held 13.8s) MathTex '25\\%' @(-2.80, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 47.27,
-    "end": 61.07,
-    "held": 13.8,
-    "text": "MathTex '50\\%'",
-    "text_pos": [
-     -0.4,
-     -2.57
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 0:47.3-1:01.1 (held 13.8s) MathTex '50\\%' @(-0.40, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 47.27,
-    "end": 61.07,
-    "held": 13.8,
-    "text": "MathTex '75\\%'",
-    "text_pos": [
-     2.0,
-     -2.57
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 0:47.3-1:01.1 (held 13.8s) MathTex '75\\%' @(+2.00, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 94.8,
-    "end": 171.57,
-    "held": 76.77,
-    "text": "MathTex '0\\%'",
-    "text_pos": [
-     -5.2,
-     -2.57
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 1:34.8-2:51.6 (held 76.8s) MathTex '0\\%' @(-5.20, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 94.8,
-    "end": 171.57,
-    "held": 76.77,
-    "text": "MathTex '100\\%'",
-    "text_pos": [
-     4.4,
-     -2.57
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 1:34.8-2:51.6 (held 76.8s) MathTex '100\\%' @(+4.40, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 94.8,
-    "end": 171.57,
-    "held": 76.77,
-    "text": "MathTex '25\\%'",
-    "text_pos": [
-     -2.8,
-     -2.57
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 1:34.8-2:51.6 (held 76.8s) MathTex '25\\%' @(-2.80, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 94.8,
-    "end": 171.57,
-    "held": 76.77,
-    "text": "MathTex '50\\%'",
-    "text_pos": [
-     -0.4,
-     -2.57
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 1:34.8-2:51.6 (held 76.8s) MathTex '50\\%' @(-0.40, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 94.8,
-    "end": 171.57,
-    "held": 76.77,
-    "text": "MathTex '75\\%'",
-    "text_pos": [
-     2.0,
-     -2.57
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 1:34.8-2:51.6 (held 76.8s) MathTex '75\\%' @(+2.00, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 189.33,
-    "end": 199.07,
-    "held": 9.73,
-    "text": "MathTex '0'",
-    "text_pos": [
-     -5.22,
-     -1.9
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 3:09.3-3:19.1 (held 9.7s) MathTex '0' @(-5.22, -1.90) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 189.33,
-    "end": 199.07,
-    "held": 9.73,
-    "text": "MathTex '0\\%'",
-    "text_pos": [
-     -5.0,
-     -2.57
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 3:09.3-3:19.1 (held 9.7s) MathTex '0\\%' @(-5.00, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 189.33,
-    "end": 199.07,
-    "held": 9.73,
-    "text": "MathTex '100\\%'",
-    "text_pos": [
-     2.6,
-     -2.57
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 3:09.3-3:19.1 (held 9.7s) MathTex '100\\%' @(+2.60, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 189.33,
-    "end": 194.87,
-    "held": 5.53,
-    "text": "MathTex '5'",
-    "text_pos": [
-     -5.21,
-     -0.8
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 3:09.3-3:14.9 (held 5.5s) MathTex '5' @(-5.21, -0.80) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   },
-   {
-    "kind": "small-label",
-    "start": 195.67,
-    "end": 199.07,
-    "held": 3.4,
-    "text": "MathTex '2'",
-    "text_pos": [
-     -5.21,
-     -0.3
-    ],
-    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
-    "msg": "small-label 3:15.7-3:19.1 (held 3.4s) MathTex '2' @(-5.21, -0.30) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
-   }
-  ],
+  "issues": [],
+  "advisory": [],
   "allowed": [],
   "excluded": [
    {

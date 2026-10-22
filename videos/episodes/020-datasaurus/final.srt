@@ -1,200 +1,192 @@
 1
-00:00:00,000 --> 00:00:07,960
-A hundred and forty-two points with two averages, two standard deviations, and a correlation of minus point oh six.
+00:00:00,000 --> 00:00:08,000
+A hundred forty-two points with two averages, two standard deviations, and a correlation of minus point oh six.
 
 2
-00:00:08,340 --> 00:00:09,480
-Picture the cloud.
+00:00:08,500 --> 00:00:10,910
+Picture the cloud, and its best-fit line.
 
 3
-00:00:09,860 --> 00:00:11,950
-Which way does its best-fit line tilt?
+00:00:11,410 --> 00:00:12,940
+Which way does it tilt?
 
 4
-00:00:13,800 --> 00:00:17,850
+00:00:14,900 --> 00:00:18,950
 You probably pictured a shapeless oval, with a nearly flat line.
 
 5
-00:00:18,230 --> 00:00:19,710
+00:00:19,450 --> 00:00:20,930
 Here are the real points.
 
 6
-00:00:20,810 --> 00:00:25,430
+00:00:22,030 --> 00:00:26,650
 A dinosaur, drawn by Alberto Cairo, with these same five numbers.
 
 7
-00:00:26,066 --> 00:00:34,786
-In a review of seven hundred and three physiology papers, eighty-six percent used bar graphs: an average and an error bar.
+00:00:27,300 --> 00:00:35,920
+In a review of seven hundred three physiology papers, eighty-six percent used bar graphs: an average and an error bar.
 
 8
-00:00:35,166 --> 00:00:37,426
+00:00:36,420 --> 00:00:38,680
 Only thirteen percent showed the points.
 
 9
-00:00:37,766 --> 00:00:39,906
-So how much can five numbers hide?
+00:00:39,266 --> 00:00:41,246
+How much can five numbers hide?
 
 10
-00:00:40,286 --> 00:00:46,096
-Let's hide a star in them, and demand that all five still match the dinosaur's to two decimals.
+00:00:41,846 --> 00:00:47,476
+Let's hide a star in them, and demand that all five match the dinosaur's to two decimals.
 
 11
-00:00:46,300 --> 00:00:50,420
+00:00:47,933 --> 00:00:52,053
 Version one slides every point onto its own spot on a star.
 
 12
-00:00:50,766 --> 00:00:53,696
+00:00:52,500 --> 00:00:55,430
 We got the star, and lost all five numbers.
 
 13
-00:00:53,896 --> 00:00:59,206
+00:00:56,330 --> 00:01:01,640
 The center moved, the x spread grew, and the y spread shrank by almost a quarter.
 
 14
-00:00:59,866 --> 00:01:02,556
+00:01:02,433 --> 00:01:05,123
 So what exactly do five numbers pin down?
 
 15
-00:01:02,900 --> 00:01:07,070
+00:01:05,766 --> 00:01:09,986
 The two averages mark a single point: the cloud's balance point.
 
 16
-00:01:07,233 --> 00:01:13,133
+00:01:10,600 --> 00:01:16,500
 The two standard deviations reach one deviation out on each side, and draw a box.
 
 17
-00:01:13,333 --> 00:01:15,623
+00:01:16,933 --> 00:01:19,223
 Many ellipses touch all four walls.
 
 18
-00:01:15,823 --> 00:01:17,483
+00:01:19,423 --> 00:01:21,083
 The correlation picks one.
 
 19
-00:01:17,863 --> 00:01:24,713
+00:01:21,683 --> 00:01:28,533
 Correlation r means one standard deviation to the right, on average r standard deviations up.
 
 20
-00:01:25,093 --> 00:01:29,093
+00:01:29,033 --> 00:01:33,033
 That's the best-fit line, through the middle of every vertical slice.
 
 21
-00:01:29,473 --> 00:01:34,683
+00:01:33,333 --> 00:01:38,543
 At the wall, the slice is just the touch point, r times ess why above the center.
 
 22
-00:01:35,063 --> 00:01:38,283
-For minus point oh six, that's just below the middle.
+00:01:38,843 --> 00:01:41,473
+For the dinosaur, it's just below the middle.
 
 23
-00:01:38,633 --> 00:01:41,513
+00:01:41,933 --> 00:01:44,813
 That ellipse is everything the five numbers know.
 
 24
-00:01:41,866 --> 00:01:44,786
+00:01:46,266 --> 00:01:49,186
 Now replay version one, and watch the ellipse.
 
 25
-00:01:45,300 --> 00:01:46,930
-How would you fix the star?
+00:01:49,700 --> 00:01:51,030
+How would you fix it?
 
 26
-00:01:48,766 --> 00:01:50,726
+00:01:52,966 --> 00:01:54,926
 Slide it until the centers meet.
 
 27
-00:01:51,106 --> 00:01:53,226
+00:01:55,226 --> 00:01:57,346
 Stretch it until the boxes match.
 
 28
-00:01:53,606 --> 00:01:58,196
+00:01:57,846 --> 00:02:02,436
 Then tip it, a slight shear, until it touches the walls at the same height.
 
 29
-00:01:58,533 --> 00:02:01,643
+00:02:02,900 --> 00:02:06,010
 All five match now, to every decimal place.
 
 30
-00:02:02,300 --> 00:02:06,990
-But add a sixth number, the median of y, and our star misses it by six.
+00:02:07,266 --> 00:02:10,016
+But add a sixth number: the median of y.
 
 31
-00:02:07,333 --> 00:02:14,523
-In 2017, Justin Matejka and George Fitzmaurice built a search that keeps these five numbers fixed.
+00:02:10,316 --> 00:02:12,146
+Our star misses it by six.
 
 32
-00:02:14,903 --> 00:02:20,053
-It nudges a random point toward a target shape, and undoes any nudge that breaks them.
+00:02:12,733 --> 00:02:22,623
+In 2017, Justin Matejka and George Fitzmaurice built a search that keeps these five numbers fixed while it nudges points toward a target.
 
 33
-00:02:20,433 --> 00:02:24,073
-Repeat it enough times, and the dinosaur becomes a circle.
+00:02:23,066 --> 00:02:26,446
+From the dinosaur they grew twelve shapes: this circle,
 
 34
-00:02:24,433 --> 00:02:27,723
-From the dinosaur they grew twelve shapes, like this star,
+00:02:27,246 --> 00:02:28,106
+this star,
 
 35
-00:02:28,723 --> 00:02:29,783
+00:02:28,906 --> 00:02:29,966
 this bullseye,
 
 36
-00:02:30,583 --> 00:02:31,453
+00:02:30,766 --> 00:02:31,636
 this X,
 
 37
-00:02:32,453 --> 00:02:33,503
-these stripes,
+00:02:32,436 --> 00:02:33,646
+and these stripes.
 
 38
-00:02:34,303 --> 00:02:35,403
-and these dots.
+00:02:34,046 --> 00:02:37,296
+Every one has this same ellipse, and a different median.
 
 39
-00:02:35,783 --> 00:02:39,383
-Every one of them has this same ellipse, and a different median.
-
-40
-00:02:40,100 --> 00:02:45,500
+00:02:38,000 --> 00:02:43,450
 Francis Anscombe made the point in 1973, with eleven points of his own.
 
-41
-00:02:45,700 --> 00:02:50,490
+40
+00:02:43,900 --> 00:02:48,690
 His correlation is point eight two, so the ellipse touches the right wall high up.
 
-42
-00:02:50,833 --> 00:02:58,643
+41
+00:02:49,133 --> 00:02:56,943
 His best-fit line follows the same rule: one ess ex across, r ess why up, through the center and that touch point.
 
+42
+00:02:57,533 --> 00:02:59,733
+So the slope is rise, over run.
+
 43
-00:02:58,833 --> 00:03:00,873
-So the slope is rise over run.
+00:03:01,166 --> 00:03:06,326
+All four of his datasets share these five numbers, so they share the ellipse and line.
 
 44
-00:03:01,873 --> 00:03:04,153
-Plug in his numbers, and it's one half.
-
-45
-00:03:04,766 --> 00:03:09,966
-All four of his datasets share these five numbers, so they share the ellipse and the line.
-
-46
-00:03:10,266 --> 00:03:14,366
+00:03:06,626 --> 00:03:10,726
 A trend, a curve, an outlier, and one point doing all the work.
 
-47
-00:03:15,833 --> 00:03:20,993
+45
+00:03:12,533 --> 00:03:17,863
 Your line was exactly right: five numbers fix its slope, minus point one.
 
-48
-00:03:21,373 --> 00:03:26,333
+46
+00:03:18,363 --> 00:03:23,323
 Your cloud was wrong: a blur around this ellipse, all that five numbers can draw.
 
-49
-00:03:26,933 --> 00:03:30,873
+47
+00:03:23,923 --> 00:03:27,863
 Most of those papers used a bar graph, which draws only two.
 
-50
-00:03:31,473 --> 00:03:34,173
+48
+00:03:28,463 --> 00:03:31,163
 The dinosaur lived in everything they leave out.
 

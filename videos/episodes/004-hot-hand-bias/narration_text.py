@@ -54,7 +54,7 @@ BEATS = {
                "players: up to a hundred shots each, from where they'd hit about half. After "
                "three hits, versus after three misses.",
     "minus8": "For a random shooter, the same crowding pulls after hits down to forty six percent "
-              "on average, and after misses up to fifty four. [pause 0.12] Miller and Sanjurjo's "
+              "on average, and after misses up to fifty four. [pause 0.45] Miller and Sanjurjo's "
               "twenty eighteen paper puts the gap at about minus eight points. [pause 0.9] Longer "
               "streaks grow the bias. [pause 0.9] Longer records shrink it, [pause 0.5] but a "
               "hundred shots isn't long.",

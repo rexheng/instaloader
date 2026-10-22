@@ -1,39 +1,39 @@
-[00:00.0] Draw a chord across this circle at random. What's the chance it's longer than a side of this triangle? Pick a number. [pause 1.5]
+[00:00.0] Draw a chord across this circle, at random. What's the chance it's longer than a side of this triangle? Pick a number. [pause 1.5]
 
-[00:09.4] Bertrand posed this puzzle in eighteen eighty-nine, as a warning about two words: at random. Leave them vague, and one college's average class is forty, or a hundred forty-seven.
+[00:10.3] Bertrand posed this puzzle in eighteen eighty-nine, as a warning about two words: at random. Leave them vague, and one college's average class is forty, or a hundred forty-seven.
 
-[00:22.7] Start with the obvious simulation: two random points on the rim, joined. If the chord beats the triangle's side, it turns gold.
+[00:23.6] Start with the obvious simulation: two random points on the rim, joined. If the chord beats the triangle's side, it turns gold.
 
-[00:31.6] Ten thousand chords in, the gold share settles near point three three.
+[00:32.5] Ten thousand chords in, the gold share settles near point three three.
 
-[00:36.5] Geometry agrees. Put a corner on the first point, and the chord is long only when it ends on this far arc, a third of the rim. [pause 1.0]
+[00:37.4] Geometry agrees. With a corner on the first point, the chord is long only when its other end lands on this arc, a third of the rim. [pause 1.0]
 
-[00:46.4] Case closed, until you code it a second way: a random radius, a point on it, and the chord through it at right angles.
+[00:48.3] Case closed, until you code it a second way: a random radius, a point on it, and the chord through it at right angles.
 
-[00:54.6] This one settles near point five.
+[00:56.5] This one settles near point five.
 
-[00:57.3] A third program picks any point inside as the chord's midpoint. That settles near point two five.
+[00:59.2] A third program picks any point inside as the chord's midpoint. That settles near point two five.
 
-[01:04.6] Bertrand printed all three, and wrote that none is wrong and none is right. Each tally is good to about one point. They disagree by twenty-five, and the code has no bug.
+[01:06.4] Bertrand printed all three, writing that none is wrong and none is right. Each tally is accurate to about one point. They disagree by twenty-five, and the code has no bug.
 
-[01:16.2] One point sets a chord's length: its midpoint. Slide it outward and the chord shrinks. It matches the side at half a radius, on the circle inside the triangle.
+[01:18.4] One point sets a chord's length: its midpoint. Slide it outward and the chord shrinks. It matches the side at half a radius, on the circle inside the triangle.
 
-[01:27.2] So a chord is long exactly when its midpoint lands in this gold circle. Each program is a way of scattering midpoints.
+[01:29.4] So a chord is long exactly when its midpoint lands in this gold circle. Each program is a way of scattering midpoints.
 
-[01:35.7] Shrink every chord to its midpoint. The midpoint program fills the disk evenly, so this circle, a quarter of the area, catches a quarter.
+[01:37.9] Shrink every chord to its midpoint. The midpoint program fills the disk evenly, so this circle, a quarter of the area, catches a quarter.
 
-[01:45.8] The radius program spreads them evenly along the radius. Where will they crowd? [pause 1.5] Toward the center: every ring gets an equal share, and inner rings are small. Half the radius: one half.
+[01:48.0] The radius program spreads them evenly along the radius. Where will they crowd? [pause 1.5] Toward the center: every ring gets an equal share, and inner rings are small. Half the radius: one half.
 
-[02:00.5] The endpoints program piles them against the rim, so only a third land inside, the third we found.
+[02:02.7] The endpoints program piles them against the rim: only a third land inside, the third we found.
 
-[02:07.8] Three programs, three things spread evenly: rim, radius, area. At random never said which. [pause 0.9]
+[02:09.9] Three programs, three things spread evenly: rim, radius, area. At random never said which. [pause 0.9]
 
-[02:16.4] Edwin Jaynes argued that a physical process picks one. Tossed straws can't be aimed, so the answer can't depend on where the circle sits, or its size.
+[02:18.5] Edwin Jaynes argued a physical process picks one. Straws tossed from a standing height can't be aimed, so the answer can't depend on where the circle sits, or its size.
 
-[02:27.0] One rain lands on both circles. Each judges with its own gold circle, so a fair program scores the same on both. Midpoint: a quarter, then point four one. [pause 1.0] Endpoints: a third, then point four seven. [pause 1.0] Only the radius program gives a half on both. [pause 0.9]
+[02:30.4] One rain lands on both circles. Each judges with its own gold circle, so a fair program scores the same on both. Midpoint: a quarter, then point four one. [pause 1.0] Endpoints: a third, then point four seven. [pause 1.0] Only the radius program gives a half on both. [pause 0.9]
 
-[02:47.1] Jaynes and Charles Tyler tossed real straws at a five-inch circle. The hundred twenty-eight that crossed it matched the radius program. [pause 0.9]
+[02:50.5] Jaynes and Charles Tyler tossed real straws at a five-inch circle. The hundred twenty-eight that crossed it matched the radius program. [pause 0.9]
 
-[02:57.0] Surveys hide the same two words. Take classes of ten, ten and a hundred. Pick a class at random, and the average is forty. Pick a student instead, and it's eighty-five. At Stony Brook, the same two picks gave forty and a hundred forty-seven. [pause 0.5]
+[03:00.3] Surveys hide the same two words. Take classes of ten, ten and a hundred. Pick a class at random: the average is forty. Pick a student instead, and it's eighty-five. At Stony Brook, the same two picks gave forty and a hundred forty-seven. [pause 0.5]
 
-[03:15.2] Whatever number you picked, some way of drawing chords makes it right. Name the way, and the answer is fixed: a half for tossed straws, a hundred forty-seven for a random student.
+[03:18.5] Whatever number you picked, some way of drawing chords makes it right. Name the way, and the answer is fixed: a half for tossed straws, a hundred forty-seven for a random student.

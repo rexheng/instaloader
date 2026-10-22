@@ -160,13 +160,13 @@ The Shannon citation fades out completely, then *Valmeekam et al., 2023 · arXiv
 
 ### 8. Landing (3:53–4:00)
 > The hidden character from the start is the Y in the other day. Shannon's subject needed
-> one guess: is it Y? Halving took five. In English, almost no letter arrives without a past.
+> one guess: is it Y? Splitting the alphabet took five. In English, almost no letter arrives without a past.
 
 0. The bits-per-character line leaves and Shannon's record comes back (letters at 22 %), with THE OTHER DAY at full strength.
 1. As the record fades, the cold-open row (12 boxes, the ? box) fades in at 30 % in its old place.
 2. THE OTHER DA steps under its boxes (the Y under the ? box) as the record goes, then rises straight into them; the Y lands in the ? box on the spoken "Y".
 3. The boxes come to full strength and the 27 candidate tiles (Y highlighted) return: frame one, re-seen.
-4. "1 guess" in green on "one guess"; on "is it Y" the ? box with its Y flags yellow; on "Halving" the 27→1 chain and "5 questions" return and flag on "five" and dim on "In English" while the context flashes. The frame holds to the end.
+4. "1 guess" in green on "one guess"; on "is it Y" the ? box with its Y flags yellow; on "Splitting" the 27→1 chain and "5 questions" return and flag on "five" and dim on "In English" while the context flashes. The frame holds to the end.
 
 ## Sources
 - C. E. Shannon, "Prediction and Entropy of Printed English", *Bell System Technical Journal*

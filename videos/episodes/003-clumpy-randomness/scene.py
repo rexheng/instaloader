@@ -25,7 +25,7 @@ from sample_space import *
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import sim                                         # noqa: E402
-from narration_text import B, BEAT_SPEED, PRON, SPEED   # noqa: E402
+from narration_text import B, BEAT_SPEED, CADENCE, PRON, SPEED   # noqa: E402
 
 # secondary text a little lighter than the series grey: 7.9:1 on BG (BAR: text >= 7:1)
 GRAY = "#A6ABB5"
@@ -93,7 +93,10 @@ MF_H = 2.0
 # Tower Bridge, the V-1 campaign's nominal aiming point (Evans & Delaney 2018), BNG km
 # (OS grid reference TQ 336 802); half the V-1s fell more than 12.5 km from it (their CEP-T)
 TOWER_BRIDGE = (533.6, 180.2)
-CEP_KM = 12.5
+# their overall mean point of impact (2,111 V-1s, June-August 1944) lay "in Dulwich": drawn at
+# Dulwich Village, OS grid TQ 333 735 (approximate: the paper names the district, not a point)
+DULWICH = (533.3, 173.5)
+RS = 1.35                                          # real map scale-up for the limits beat
 
 
 def rm(e, n):
@@ -131,6 +134,7 @@ def cite(s: str, size: float = 22) -> Text:
     """Bottom-left source line.  Not shrunk to fit (the series helper fits to 75 % of the safe
     width, which took round 1's two-source line below the 24 px citation minimum)."""
     m = Text(s, font=SERIF, font_size=size, color=GRAY)
+    m.ss_role = "citation"                       # held to the 24 px citation floor
     assert m.width <= 2 * SAFE_X, (s, m.width)
     return m.move_to([-SAFE_X + m.width / 2, CONTENT_BOTTOM + 0.08 + m.height / 2, 0])
 
@@ -186,7 +190,7 @@ class Panel:
         self.map = VGroup(self.cells, self.grid, self.frame, self.dots)
         self.name = Text(name, font_size=40).next_to(self.frame, UP, buff=0.2)
         self.name.align_to(self.frame, LEFT)
-        self.sim = Text("simulated", font_size=24, color=GRAY)
+        self.sim = Text("simulated", font_size=27, color=GRAY)   # the narration names it
         self.sim.next_to(self.name, RIGHT, buff=0.22, aligned_edge=DOWN)
         self.hits_t = ValueTracker(N)
         self.hits = live_number(self.hits_t, 0, size=36, suffix=r"\text{hits}")
@@ -392,6 +396,7 @@ class Episode(NarratedScene):
     TITLE = "Which Map Is Random?"
     PRONUNCIATIONS = PRON
     SPEED = SPEED
+    CADENCE = CADENCE
 
     def say_beat(self, key: str):
         return self.narrate(B[key], speed=BEAT_SPEED.get(key))
@@ -412,7 +417,7 @@ class Episode(NarratedScene):
         self.remove(g)
         self.add(dst)
 
-    def end_card(self, hold: float = 0.8, run_time: float = 0.5):
+    def end_card(self, hold: float = 0.6, run_time: float = 0.5):
         card = end_card(self.EPISODE, self.TITLE)
         card[1].set_color(GRAY)
         self.play(*[FadeOut(m) for m in list(self.mobjects)], FadeIn(card, shift=0.1 * UP),
@@ -444,7 +449,7 @@ class Episode(NarratedScene):
         aorb = Text("A or B?", font_size=30, color=GRAY).move_to([0, -3.0, 0])
         with self.say_beat("cold") as beat:
             self.play(UpdateFromAlphaFunc(VGroup(A.dots, Bp.dots), rain), rate_func=linear,
-                      run_time=beat.until("chance"))
+                      run_time=beat.until("rule", end=True))
             beat.wait_until("Which", offset=-0.1)
             self.play(flag(A.name), FadeIn(aorb, shift=0.1 * UP), run_time=0.7)
             self.play(flag(Bp.name), run_time=0.7)
@@ -495,10 +500,11 @@ class Episode(NarratedScene):
             beat.wait_until("Cut", offset=-0.1)
             self.add(A.cells, Bp.cells)
             self.bring_to_front(A.dots, Bp.dots)
-            self.play(Create(A.grid), Create(Bp.grid), run_time=beat.until("count"))
+            self.play(Create(A.grid), Create(Bp.grid),
+                      run_time=beat.until("squares", end=True))
             self.bring_to_front(A.frame, Bp.frame, A.dots, Bp.dots)
             self.play(UpdateFromAlphaFunc(VGroup(A.cells, Bp.cells), sweep),
-                      run_time=beat.until("flag", offset=-0.1))
+                      run_time=beat.until("hits", offset=-0.1))
             beat.wait_until("this one", offset=-0.3)
             self.play(Create(ex_box), LaggedStart(*[flag(d) for d in ex_dots], lag_ratio=0.15),
                       Create(ring, run_time=0.4), run_time=1.0)
@@ -575,7 +581,7 @@ class Episode(NarratedScene):
             A.hits[1].next_to(m, RIGHT, buff=0.15)
 
         with self.say_beat("reveal") as beat:
-            self.play(ReplacementTransform(tagA, tagA2), FadeOut(tagB, shift=0.1 * DOWN),
+            self.play(swap(tagA, tagA2), FadeOut(tagB, shift=0.1 * DOWN),
                       run_time=beat.until("dropped", offset=-0.15))
             A.hits[0].add_updater(hits_upd)
             self.play(UpdateFromAlphaFunc(A.dots, rerain, rate_func=linear),
@@ -619,12 +625,12 @@ class Episode(NarratedScene):
             self.play(Create(insB[1]), FadeIn(insB[2:4]), FadeIn(insB[5]), run_time=0.6)
             self.play(LaggedStart(*[GrowFromCenter(d) for d in insB.discs], lag_ratio=0.08),
                       run_time=beat.until("square", occurrence=1, offset=0.2, end=True))
-            beat.wait_until("detector", offset=-0.2)
-            self.play(Create(insA[0]), FadeIn(citeFK), run_time=0.5)
-            self.play(Create(insA[1]), FadeIn(insA[2:4]), FadeIn(insA[5]), run_time=0.7)
+            # "Your eye expects chance to look that even": A's zoom builds, and its discs that
+            # crowd a neighbour (closer than B's rule) turn red on "even"
+            self.play(Create(insA[0]), FadeIn(citeFK), run_time=0.4)
+            self.play(Create(insA[1]), FadeIn(insA[2:4]), FadeIn(insA[5]), run_time=0.5)
             self.play(LaggedStart(*[GrowFromCenter(d) for d in insA.discs], lag_ratio=0.05),
-                      run_time=1.2)
-            beat.wait_until("spread", offset=-0.1)
+                      run_time=beat.until("even", offset=-0.15, min_time=0.6))
             self.play(insA.close.animate.set_fill(RED, 0.4).set_stroke(RED, 2.5), run_time=0.9)
 
         # ============================================================ 6. one square
@@ -645,12 +651,14 @@ class Episode(NarratedScene):
         EL = formula("=", r"\Big(1-", r"\frac{\lambda}{537}", r"\Big)^{537}", r"\approx",
                      r"e^{-\lambda}", r"\approx 0.3937", size=FS)
         # place the two rows so their "=" signs line up and the block is centred
-        EL.shift(e_eq.get_center() - EL[0].get_center() + 1.3 * DOWN)
+        EL.shift(e_eq.get_center() - EL[0].get_center() + 1.7 * DOWN)   # spread down the right half
         blk = VGroup(E1, EL)
         # high enough that the histogram preview (axes top 0.75, title above) clears it
         blk.shift(np.array([RX - 0.15, 1.95, 0]) - np.array([blk.get_center()[0], E1.get_center()[1], 0]))
         e_word.set_color(YELLOW)
         EL[5].set_color(PURPLE)
+        E1_DROP = 1.0                                  # E1 sits lower until the preview needs room
+        E1.shift(E1_DROP * DOWN)
         ysq = A.outline(pick, color=YELLOW, width=4.5, z=3)
         gP = Square(P2_SIDE).move_to(P2_C)
         for m in (A.name, A.sim, tagA2):
@@ -668,11 +676,16 @@ class Episode(NarratedScene):
                                                          about_point=A.frame.get_center())
                       .shift(P2_C - A.frame.get_center()),
                       *[MoveToTarget(m) for m in (A.name, A.sim, tagA2)], FadeIn(A.hits),
-                      A.level_anim(MAP_DIM, 1, extra=dim_boxes), run_time=1.1)
+                      A.level_anim(MAP_DIM, 1, extra=dim_boxes), run_time=0.9)
             ysq.become(A.outline(pick, color=YELLOW, width=4.5, z=3))
-            self.play(Create(ysq), boxes.animate.set_stroke(opacity=0.3), run_time=0.5)
-            beat.wait_until("Each", offset=-0.1)
+            # "Each bomb lands in this square": the one square is outlined on the word
+            beat.on("this square", Create(ysq), boxes.animate.set_stroke(opacity=0.3),
+                    run_time=0.5)
+            # "...with chance one in five seventy-six": the square and the grid become 1/576
+            beat.wait_until("one in", offset=-0.1)
             self.allow_overlap(e_frac[1], e_pow, reason="fraction bar and the closing \\Big) "
+                               "of the same typeset equation (TeX spacing)")
+            self.allow_overlap(EL[2][1], EL[3], reason="fraction bar and the closing \\Big) "
                                "of the same typeset equation (TeX spacing)")
             self.play(TransformFromCopy(ysq, e_frac[0]), Create(e_frac[1]),
                       FadeIn(e_frac[2:], shift=0.4 * RIGHT),
@@ -681,11 +694,12 @@ class Episode(NarratedScene):
             beat.wait_until("To stay", offset=-0.1)
             self.play(Write(VGroup(e_P, e_word, e_close, e_eq, e_open)), run_time=1.0)
             beat.wait_until("all five", offset=-0.1)
-            self.play(TransformFromCopy(A.hits[0], e_pow), run_time=1.1)
+            # the hits counter's 537 is carried into the exponent (a cross-fade, no glyph morph)
+            self.play(carry(A.hits[0], e_pow), run_time=1.1)
 
         # ============================================================ 7. guess
         Q = formula(r"\text{empty squares}", r"\approx", r"\ ?", size=FS)
-        Q.move_to([RX, EL.get_center()[1], 0])
+        Q.move_to([RX, E1.get_center()[1] - 1.4, 0])
         Q[0].set_color(YELLOW)
         with self.say_beat("guess") as beat:
             self.play(Write(Q), run_time=1.0)
@@ -704,8 +718,8 @@ class Episode(NarratedScene):
             # the answer arrives with its arithmetic: 0.3933, then 0.3933 x 576 ~ 227
             self.play(Write(e_val), FadeOut(Q, shift=0.15 * UP), run_time=0.6)
             self.play(TransformFromCopy(e_val[1:], L2[0]), Write(L2[1:]),
-                      run_time=beat.until("squares", offset=-0.1, min_time=1.0))
-            beat.wait_until("stay", offset=-0.2)
+                      run_time=beat.until("twenty-seven", end=True, min_time=1.0))
+            beat.wait_until("Map A", offset=-0.2)
             self.add(cntE)
             # the empty squares: a light yellow tint inside a full-yellow outline of each empty
             # region, so the gaps read as yellow without swamping the dots and the red clumps
@@ -749,13 +763,16 @@ class Episode(NarratedScene):
             A.set_level(1, 1 - a)
         with self.say_beat("gaps") as beat:
             cntE[0].clear_updaters()
+            # "Those empty squares": their yellow outline pulses on the word
+            beat.on("Those", A.edges.animate(rate_func=there_and_back).set_stroke(width=6),
+                    run_time=0.8)
             beat.wait_until("clumps", offset=-0.25)
             self.play(boxes.animate.set_stroke(opacity=1), run_time=0.8)
             beat.wait_until("three hundred", offset=-0.2)
-            self.play(FadeOut(L2, shift=0.1 * UP), FadeIn(L3, shift=0.1 * UP), run_time=1.0)
-            beat.wait_until("one and", offset=-0.15)
+            self.play(swap(L2, L3), run_time=0.9)
+            beat.wait_until("share", offset=-0.15)
             self.play(flag(L3[1]), run_time=0.8)
-            beat.wait_until("plenty", offset=-0.3)
+            beat.wait_until("many", offset=-0.3)
             self.add(cnt2)
             # one focal layer: the 131 blue outlines and the dots; the yellow gaps and their
             # count leave, and the red 3+ outlines (a subset of the 2+) leave until the histogram
@@ -769,7 +786,9 @@ class Episode(NarratedScene):
             A.edges = None
             cnt2[0].clear_updaters()
             beat.wait_until("judge", offset=-0.2)
-            self.play(FadeOut(VGroup(L3, cnt2), shift=0.1 * UP), Create(ax), run_time=0.9)
+            # the equation rises to make room for the histogram it will have to fill
+            self.play(FadeOut(VGroup(L3, cnt2), shift=0.1 * UP), E1.animate.shift(E1_DROP * UP),
+                      Create(ax, rate_func=window(0.3, 0.7)), run_time=1.0)
             self.play(GrowFromEdge(pbars[0], DOWN), FadeIn(p227, shift=0.1 * UP), run_time=0.7)
             beat.wait_until("every", offset=-0.15)
             self.play(LaggedStart(*[FadeIn(q, shift=0.15 * UP) for q in qmarks], lag_ratio=0.15),
@@ -811,9 +830,9 @@ class Episode(NarratedScene):
             beat.wait_until("big power", offset=-0.1)
             self.play(flag(EL[3][1:]), run_time=0.8)
             beat.wait_until("almost", offset=-0.1)
-            self.play(Write(EL[4]), Write(EL[5]), run_time=0.9)
-            self.play(Write(EL[6]), run_time=0.7)
-            self.play(flag(e_val[1:], color=INK), flag(EL[6][1:], color=INK), run_time=0.8)
+            self.play(Write(EL[4]), Write(EL[5]), run_time=0.7)
+            self.play(Write(EL[6]), run_time=0.6)
+            self.play(flag(e_val[1:], color=INK), flag(EL[6][1:], color=INK), run_time=0.7)
 
         # ============================================================ 11. two hits
         P0 = formula("P(", "0", ")", r"\approx", r"e^{-\lambda}", size=FS)
@@ -825,7 +844,7 @@ class Episode(NarratedScene):
         # the 537 bombs, lined up as a block of dots (47 per row)
         ticks = VGroup(*[Dot([-0.5 + (i % 47) * 0.14, 2.2 - (i // 47) * 0.085, 0], radius=0.034,
                              color=INK, fill_opacity=0.8) for i in range(N)])
-        bombs_lbl = Text("537 bombs", font_size=24, color=GRAY)
+        bombs_lbl = Text("537 bombs", font_size=27, color=GRAY)
         bombs_lbl.next_to(ticks, DOWN, buff=0.12).align_to(ticks, RIGHT)
         bigsq = Square(1.3, stroke_color=YELLOW, stroke_width=4.5).move_to([0.35, 0.15, 0])
         pick2 = (150, 371)
@@ -848,26 +867,27 @@ class Episode(NarratedScene):
                       ReplacementTransform(EL[4], P0_here[3]),
                       ReplacementTransform(EL[5], P0_here[4]), run_time=0.4)
             self.settle(P0_here)
-            self.play(ReplacementTransform(P0_here, P0), Transform(LAMB, LAMB_T), run_time=0.45)
+            # "For two hits in this square": the square is enlarged on the word, while P(0) and
+            # lambda move aside and map A's 537 hits line up as a block of 537 bombs
+            self.play(ReplacementTransform(P0_here, P0), Transform(LAMB, LAMB_T),
+                      TransformFromCopy(ysq, bigsq), ReplacementTransform(A.dots.copy(), ticks),
+                      FadeIn(bombs_lbl), run_time=0.8)
+            # "pick two bombs": two of them turn yellow and drop into the square
             beat.wait_until("pick", offset=-0.1)
-            self.play(ReplacementTransform(A.dots.copy(), ticks), FadeIn(bombs_lbl), run_time=0.9)
-            beat.wait_until("land here", offset=-0.2)
-            self.play(TransformFromCopy(ysq, bigsq),
-                      *[ticks[i].animate.set_fill(YELLOW, 1).scale(1.8) for i in pick2], run_time=0.6)
-            self.play(*[TransformFromCopy(ticks[i], h) for i, h in zip(pick2, hits2)],
-                      run_time=0.5)
+            self.play(*[ticks[i].animate.set_fill(YELLOW, 1).scale(1.8) for i in pick2],
+                      *[TransformFromCopy(ticks[i], h) for i, h in zip(pick2, hits2)],
+                      run_time=0.6)
+            # each factor is written as its own objects light up (no dots-to-digits morph):
+            # 537 choices for the first bomb, the other 536 for the second, 2! orders
             beat.wait_until("five thirty-seven", offset=-0.15)
-            a_, g_ = self.ghost(ticks, fr2[0:3])
-            self.play(Write(P2[0:4]), a_, run_time=0.7)
-            self.land(g_, fr2[0:3])
+            self.play(Write(P2[0:4]), carry(bombs_lbl[0:3], fr2[0:3]),
+                      flag(ticks, color=YELLOW, run_time=0.7), run_time=0.7)
             beat.wait_until("five thirty-six", offset=-0.15)
-            a_, g_ = self.ghost(rest, fr2[4:7])
-            self.play(FadeIn(fr2[3]), a_, run_time=0.7)
-            self.land(g_, fr2[4:7])
+            self.play(FadeIn(fr2[3]), Write(fr2[4:7]), ticks[pick2[0]].animate.set_opacity(0.3),
+                      flag(rest, color=YELLOW, run_time=0.7), run_time=0.7)
             beat.wait_until("over two", offset=-0.1)
-            a_, g_ = self.ghost(hits2, fr2[8])
-            self.play(Create(fr2[7]), a_, FadeIn(fr2[9]), run_time=0.7)
-            self.land(g_, fr2[8])
+            self.play(Create(fr2[7]), Write(fr2[8:10]), flag(hits2, color=INK, run_time=0.7),
+                      run_time=0.7)
             # "since order doesn't matter": the two hits trade places; same pair, counted twice
             beat.wait_until("order", offset=-0.15)
             self.play(Swap(hits2[0], hits2[1], path_arc=PI / 2), flag(fr2[8:10]), run_time=0.8)
@@ -892,7 +912,7 @@ class Episode(NarratedScene):
         n537 = formula("537", size=FS, color=YELLOW)
         n537.match_height(fr2[4:7]).move_to(fr2[4:7])
 
-        def swap(src, dst, run_time=0.6):
+        def swap_glyphs(src, dst, run_time=0.6):
             """Every count glyph changes at once (lifts out, the new one rises in yellow); the
             rest of the formula slides to its new spacing."""
             anims = []
@@ -946,10 +966,10 @@ class Episode(NarratedScene):
             beat.wait_until("each two", offset=-0.1)
             self.play(*[F1[i][j].animate.set_color(YELLOW) for i, j in changed], run_time=0.5)
             beat.wait_until("becomes", offset=0.0)
-            swap(F1, F3)
+            swap_glyphs(F1, F3)
             # "for any k, a k"
             beat.wait_until("k", offset=-0.1)
-            swap(F3, F5)
+            swap_glyphs(F3, F5)
             beat.wait_until("The powers", offset=-0.3)
             Pk = F5
             # 537 and 576 (the powers' bases) and lambda = 537/576 light up together
@@ -958,7 +978,9 @@ class Episode(NarratedScene):
                       *[Pk[i][j].animate.set_color(INK) for i, j in changed], run_time=0.6)
             beat.wait_until("into lambda", offset=-0.1)
             self.play(ReplacementTransform(VGroup(*Pk[0], *Pk[1], *Pk[2]), E5[0]),
-                      ReplacementTransform(Pk[3], E5[1]), ReplacementTransform(Pk[8], E5[3]),
+                      ReplacementTransform(Pk[3], E5[1]),
+                      # the same e^-lambda glyphs (E5's copy only has a thin space in front)
+                      allow_morph(ReplacementTransform(Pk[8], E5[3])),
                       ReplacementTransform(Pk[4][3], E5[2][1]),
                       ReplacementTransform(Pk[4][4:7], E5[2][2:5]),
                       FadeOut(VGroup(Pk[4][0:3], Pk[6], Pk[5], Pk[7]),
@@ -968,12 +990,13 @@ class Episode(NarratedScene):
             self.settle(E5)
             beat.wait_until("Poisson", offset=-0.2)
             self.play(FadeIn(pois, shift=0.1 * LEFT), run_time=0.6)
-            # the finished formula holds through the pause, then rises to make room
+            # the finished formula holds through the pause while the scaffolding leaves (so the
+            # formula never travels through fading text), then rises to make room
+            self.play(FadeOut(picture), FadeOut(P0), FadeOut(LAMB), run_time=0.6)
             beat.wait_until("Times", offset=-0.1)
-            self.play(FadeOut(picture), FadeOut(P0), FadeOut(LAMB),
-                      Transform(E5, E5_top), pois.animate.move_to(pois_top), run_time=0.9)
+            self.play(Transform(E5, E5_top), pois.animate.move_to(pois_top), run_time=0.8)
             self.play(Create(ax), Create(ins), FadeIn(ylab[0]),
-                      TransformFromCopy(E5[0], ylab[1]), run_time=0.9)
+                      TransformFromCopy(E5[0], ylab[1][4:]), Write(ylab[1][:4]), run_time=0.9)
             beat.wait_until("these", offset=-0.2)
             self.play(LaggedStart(*[GrowFromEdge(b, DOWN) for b in pbars], lag_ratio=0.15),
                       LaggedStart(*[GrowFromEdge(b, DOWN) for b in ipb], lag_ratio=0.15),
@@ -1019,13 +1042,23 @@ class Episode(NarratedScene):
         mylab.next_to(myax.get_end(), LEFT, buff=0.15).align_to(myax.get_end(), UP)
         hist_n, _ = np.histogram(NULL, bins=np.arange(0, MF_MAX + 1))
         hscale = MF_H / hist_n.max()
+        # two numbered ticks on the maps axis (maps per unit of misfit)
+        myt = VGroup()
+        for v in (1000, 2000):
+            yv = MF_Y + v * hscale
+            tk = Line([my0 - 0.06, yv, 0], [my0 + 0.06, yv, 0], stroke_color=GRAY, stroke_width=2.5)
+            nm = formula(r"%d" % v, size=MATH_SMALL, color=GRAY).next_to([my0 - 0.06, yv, 0], LEFT,
+                                                                       buff=0.12)
+            nm.ss_role = "tick"
+            myt.add(tk, nm)
+        myax = VGroup(myax, myt)
         nbars = VGroup(*[Rectangle(width=MF_LEN / MF_MAX * 0.86, height=max(c * hscale, 0.004),
                                    stroke_width=0, fill_color=PURPLE, fill_opacity=0.55)
                          .move_to([mfx(k + 0.5), MF_Y, 0], aligned_edge=DOWN)
                          for k, c in enumerate(hist_n)])
         worse = VGroup(*nbars[2:])                     # bins from 2.0 up: scores worse than A
-        mhead = VGroup(Text("20,000 chance maps", font_size=26, color=PURPLE),
-                       Text("simulated", font_size=24, color=GRAY)).arrange(RIGHT, buff=0.2,
+        mhead = VGroup(Text("20,000 chance maps", font_size=27, color=PURPLE),
+                       Text("simulated", font_size=27, color=GRAY)).arrange(RIGHT, buff=0.2,
                                                                             aligned_edge=DOWN)
         mhead.move_to([MF_X0 + mhead.width / 2 - 0.1, 2.3, 0])
         TH = 1.1                                       # thumbnail side
@@ -1108,16 +1141,16 @@ class Episode(NarratedScene):
             beat.wait_until("divide", offset=-0.1)
             self.play(*[TransformFromCopy(slA[k], terms[k]) for k in range(6)],
                       FadeIn(pluses), flag(VGroup(pbars, ipb), color=INK), run_time=1.0)
-            # why divide: a miss of ~2 on chance's 7.1 bar costs more than ~5 on its 227 bar
-            beat.wait_until("two on", offset=-0.1)
+            # why divide: "a miss on a short bar counts more" - the 4-hit bar's small miss on
+            # chance's 7.1 costs 0.49, more than the 0-hit bar's bigger miss on 227 (0.10)
+            beat.wait_until("short", offset=-0.15)
             self.play(flag(VGroup(slA[4], terms[4], ipb[1]), color=INK), run_time=0.9)
-            beat.wait_until("five on", offset=-0.1)
-            self.play(flag(VGroup(slA[0], terms[0], pbars[0]), color=INK), run_time=0.9)
-            beat.wait_until("Add", offset=-0.15)
+            # "Map A scores two point oh": the terms fly into the readout as it adds them
+            beat.wait_until("Map A", offset=-0.15)
             self.play(*[FadeOut(t.copy(), target_position=rnum.get_center(), scale=0.6)
                         for t in terms],
-                      tM.animate.set_value(sum(PARTS_A)), run_time=1.1)
-            beat.wait_until("scores", offset=-0.1)
+                      tM.animate.set_value(sum(PARTS_A)),
+                      run_time=beat.until("point", offset=0.1, min_time=0.9))
             self.play(flag(rnum, color=INK),
                       FadeOut(VGroup(A.top, tagA2, boxes, A.grid, A.cells)), run_time=0.8)
             beat.wait_until("Three", offset=-0.25)
@@ -1136,16 +1169,16 @@ class Episode(NarratedScene):
             self.play(worse.animate.set_fill(opacity=0.95),
                       VGroup(*nbars[:2]).animate.set_fill(opacity=0.25), run_time=0.7)
             beat.wait_until("share", offset=0.2)
-            a_, g_ = self.ghost(worse, pval)
-            self.play(a_, run_time=0.9)
-            self.land(g_, pval)
+            # "That share, p": the bright bins hand their share to the p label (a cross-fade
+            # along the path, not a bars-to-glyphs morph)
+            self.play(carry(worse, pval), run_time=0.9)
 
         # ============================================================ 13b. map B
         zeros = obs_bars(ax, H_B)
         izeros = inset_obs(ax, H_B)
         # B's bar values: 109 sits inside chance's 227 outline, clear of the bar and both sides
-        l109 = formula("109", size=26, color=BLUE).next_to(zeros[0], UP, buff=0.25)
-        l397 = formula("397", size=MATH_SMALL, color=BLUE).next_to(zeros[1], UP, buff=0.2)
+        l109 = formula("109", size=36, color=BLUE).next_to(zeros[0], UP, buff=0.22)
+        l397 = formula("397", size=36, color=BLUE).next_to(zeros[1], UP, buff=0.2)
         slB = gap_slivers(ax, H_B)
         b_y = MF_Y + 0.45
         barr = Arrow([mfx(MF_MAX) + 0.05, b_y, 0], [mfx(MF_MAX) + 0.85, b_y, 0], buff=0,
@@ -1192,8 +1225,8 @@ class Episode(NarratedScene):
                       flag(rnum, color=INK), FadeOut(slB),
                       UpdateFromAlphaFunc(thumb, lambda m, a: a_level(MAP_LOW + (1 - MAP_LOW) * a)),
                       run_time=0.7)
-            beat.wait_until("fingerprint", offset=-0.2)
-            self.play(flag(VGroup(blab, barr)), run_time=0.9)
+            # "A pattern this even": B's evenly spaced hits light up with its off-scale score
+            beat.on("this even", flag(bthumb), flag(VGroup(blab, barr)), run_time=0.9)
 
         # ============================================================ 14. aim, Clarke + real map
         flat, iflat = obs_bars(ax, [0] * 6), inset_obs(ax, [0] * 6)
@@ -1214,7 +1247,7 @@ class Episode(NarratedScene):
                         .set_stroke(RED, 5).move_to(a_o + [q[0] * acell, q[1] * acell, 0])
                         .set_z_index(2) for q in _D["aims"]])
         ahead = VGroup(Text("aimed", font_size=40, color=RED),
-                       Text("simulated", font_size=24, color=GRAY)).arrange(RIGHT, buff=0.22,
+                       Text("simulated", font_size=27, color=GRAY)).arrange(RIGHT, buff=0.22,
                                                                             aligned_edge=DOWN)
         ahead.next_to(aframe, UP, buff=0.2).align_to(aframe, LEFT)
         aim_t = ValueTracker(0)
@@ -1346,15 +1379,18 @@ class Episode(NarratedScene):
                       inset_anim(MAP_DIM, 1), run_time=1.0)
             self.remove(abars)
             self.add(rdots)
+            # London's real hits rain in like the cold open; the title and the river arrive as
+            # "London's real hits" is spoken
             self.play(FadeIn(cite2, shift=0.1 * UP), FadeIn(cite3),
-                      UpdateFromAlphaFunc(rdots, rain_real), rate_func=linear,
-                      run_time=beat.until("real", offset=-0.1))
-            self.play(FadeIn(rtitle, shift=0.1 * DOWN), Create(river), FadeIn(tl), run_time=1.0)
+                      UpdateFromAlphaFunc(rdots, rain_real, rate_func=linear),
+                      FadeIn(rtitle, shift=0.1 * DOWN, rate_func=window(0.45, 0.55)),
+                      Create(river, rate_func=window(0.45, 0.55)),
+                      FadeIn(tl, rate_func=window(0.6, 0.4)),
+                      run_time=beat.until("hits", end=True, min_time=1.5))
             beat.wait_until("five hundred", offset=-0.2)
             self.play(Create(cbox), run_time=0.9)
             beat.wait_until("hundred seventy-six", offset=-0.2)
             self.play(Create(cgrid), outside.animate.set_opacity(0.35), run_time=1.0)
-            beat.wait_until("London", offset=-0.2)
             self.play(FadeIn(clbl, shift=0.1 * UP), FadeIn(recr, shift=0.1 * UP), run_time=0.7)
 
         # ============================================================ 15. London's table
@@ -1378,101 +1414,86 @@ class Episode(NarratedScene):
                       LaggedStart(*[TransformFromCopy(pbars[k], rowP[k]) for k in range(6)],
                                   lag_ratio=0.1), run_time=beat.until("two hundred", offset=-0.1))
             self.play(flag(rowP[0]), run_time=0.8)
+            # "Clarke counted two hundred twenty-nine": his bars grow into chance's outlines,
+            # the empty-square bar first, with his row of counts
             beat.wait_until("Clarke counted", offset=-0.1)
-            self.play(Transform(bA[0], lond[0]), FadeIn(rowB[0], shift=0.1 * UP), FadeIn(hdrB),
-                      run_time=0.9)
-            beat.wait_until("Single", offset=-0.2)
-            self.play(flag(rowP[1]), run_time=0.8)
-            beat.wait_until("eleven", offset=-0.1)
-            self.play(Transform(bA[1], lond[1]), FadeIn(rowB[1], shift=0.1 * UP), run_time=0.9)
-            self.play(LaggedStart(*[AnimationGroup(Transform(bA[k], lond[k]),
+            self.play(FadeIn(hdrB),
+                      LaggedStart(*[AnimationGroup(Transform(bA[k], lond[k]),
                                                    FadeIn(rowB[k], shift=0.1 * UP))
-                                    for k in range(2, 6)], lag_ratio=0.25),
-                      Transform(ibA, ilond),
-                      run_time=beat.until("Same", offset=-0.1))
+                                    for k in range(6)], lag_ratio=0.2),
+                      Transform(ibA, ilond, rate_func=window(0.4, 0.6)),
+                      run_time=beat.until("Overall", offset=-0.1, min_time=1.6))
             self.play(FadeOut(pois), FadeIn(rL[0], shift=0.1 * UP), run_time=0.6)
             beat.wait_until("p equals", offset=-0.1)
             self.play(Write(rL[1]), run_time=0.8)
 
         # ============================================================ 16. limits
-        # (a) aim: Tower Bridge and the circle holding half the V-1s (Evans & Delaney 2018)
-        tbx = rm(*TOWER_BRIDGE)
-        R_cep = CEP_KM * RM_S
-        xmark = VGroup(Line(LEFT, RIGHT), Line(DOWN, UP)).scale(0.16).rotate(PI / 4)
-        xmark.set_stroke(RED, 5).move_to(tbx).set_z_index(5)
-        cep = Circle(radius=R_cep, stroke_color=RED, stroke_width=3.5)
-        cep.set_z_index(4)
-        cep_lbl = Text("12.5 km", font_size=26, color=RED)
-        # radius drawn up and to the right, where the label sits outside the circle, clear of hits
-        best_a = None
-        for deg in range(20, 75, 2):
-            u = np.array([np.cos(np.radians(deg)), np.sin(np.radians(deg)), 0])
-            tip = tbx + R_cep * u
-            cep_lbl.next_to(tip, u, buff=0.18)
-            P = np.vstack([q, rs, E5.get_corner(DL)[None, :], E5.get_corner(DR)[None, :]])
-            gx = np.maximum(np.abs(P[:, 0] - cep_lbl.get_x()) - cep_lbl.width / 2, 0)
-            gy = np.maximum(np.abs(P[:, 1] - cep_lbl.get_y()) - cep_lbl.height / 2, 0)
-            clear = np.hypot(gx, gy).min() - RDOT
-            if clear > 0.2 and cep_lbl.get_top()[1] < SAFE_TOP - 0.1:
-                best_a = deg
-                break
-        assert best_a is not None
-        u = np.array([np.cos(np.radians(best_a)), np.sin(np.radians(best_a)), 0])
-        rad = Line(tbx, tbx + R_cep * u, stroke_color=RED, stroke_width=3).set_z_index(4)
-        cep.rotate(np.radians(best_a), about_point=ORIGIN).move_to(tbx)   # drawn from the tip
-        assert cep.get_top()[1] < rtitle.get_bottom()[1] - 0.15
-        cep_lbl.next_to(tbx + R_cep * u, u, buff=0.18)
+        # one honest limit, with its cause: the V-1s were aimed at central London (Tower Bridge)
+        # but fell short on average (mean point of impact in Dulwich; Evans & Delaney 2018), so
+        # hits thin out to the north; the test needs one lambda, so Clarke chose an area where
+        # it held steady.  The chart has done its job: the real map grows into the frame.
+        m_top = rm(RM_E0, REAL[:, 1].max())[1]
+        anchor = np.array([RM_X0, m_top, 0.0])
+        lift = np.array([0.0, 2.9 - m_top, 0.0])
+
+        def T(p):
+            return anchor + (np.asarray(p, dtype=float) - anchor) * RS + lift
+        mapgrp = VGroup(rdots, river, cbox, cgrid)
+        tbx, dul = T(rm(*TOWER_BRIDGE)), T(rm(*DULWICH))
+        xmark = VGroup(Line(LEFT, RIGHT), Line(DOWN, UP)).scale(0.2).rotate(PI / 4)
+        xmark.set_stroke(RED, 6).move_to(tbx).set_z_index(6)
+        short = Arrow(tbx, dul, buff=0.2, color=RED, stroke_width=6,
+                      max_tip_length_to_length_ratio=0.16).set_z_index(6)
         citeE = cite("Evans & Delaney, 2018 · Applied Geography 99", size=20)
         citeE.next_to(cite2, RIGHT, buff=0.5).align_to(cite2, DOWN)
-        # (b) one lambda: the north box, and the two densities side by side in one column,
-        # each on the row of its own box
-        n0, n1 = rm(NBOX[0], NBOX[2]), rm(NBOX[1], NBOX[3])
+        n0, n1 = T(rm(NBOX[0], NBOX[2])), T(rm(NBOX[1], NBOX[3]))
         nbox = Rectangle(width=n1[0] - n0[0], height=n1[1] - n0[1], stroke_color=INK,
                          stroke_width=4)
         nbox.move_to((n0 + n1) / 2).set_z_index(3)
-        col_x = q[:, 0].max() + RDOT + 0.3             # just east of the easternmost hit
-        clbl_t = clbl.copy().move_to([0, cbox.get_y(), 0]).align_to([col_x, 0, 0], LEFT)
+        cb_y = T(cbox.get_center())[1]
+        col_x = T(np.array([q[:, 0].max(), 0.0, 0.0]))[0] + RDOT * RS + 0.35
+        clbl_t = clbl.copy().move_to([0, cb_y, 0]).align_to([col_x, 0, 0], LEFT)
         recr_t = recr.copy().next_to(clbl_t, DOWN, buff=0.15).align_to(clbl_t, LEFT)
         dn_name = formula(r"\text{north}", size=36).move_to([0, nbox.get_y(), 0])
         dn_name.align_to([col_x, 0, 0], LEFT)
-        val_x = clbl_t.get_right()[0] + 0.35
+        val_x = clbl_t.get_right()[0] + 0.3
         dn_val = formula(r"1.9\ \text{hits/km}^2", size=36)
         dn_val.move_to([0, nbox.get_y(), 0]).align_to([val_x, 0, 0], LEFT)
         dn_val.align_to(dn_name, DOWN)
         dc_val = formula(r"3.7\ \text{hits/km}^2", size=36, color=YELLOW)
-        dc_val.move_to([0, cbox.get_y(), 0]).align_to([val_x, 0, 0], LEFT)
+        dc_val.move_to([0, cb_y, 0]).align_to([val_x, 0, 0], LEFT)
         dc_val.align_to(clbl_t, DOWN)
-        assert dc_val.get_right()[0] < SAFE_X - 0.1 and dn_val.get_right()[0] < SAFE_X - 0.1
+        assert dc_val.get_right()[0] < SAFE_X - 0.1 and dn_val.get_right()[0] < SAFE_X - 0.1, \
+            (dc_val.get_right(), dn_val.get_right())
         cite4 = cite("hits/km²: our count · L. Shaw, 2025 · Zenodo", size=20)
         cite4.next_to(cite3, RIGHT, buff=0.5).align_to(cite3, DOWN)
+        tl_t = T(tl.get_center())
         chart = VGroup(ax, pbars, bA, ins, ipb, ibA, rowP, rowB, hdrP, hdrB, rL)
         with self.say_beat("limit") as beat:
-            # the chart has done its job: it leaves, and the map gets the frame; Clarke's label
-            # moves to the rectangle's own row, where its density will go
-            self.play(FadeOut(chart), clbl.animate.move_to(clbl_t), recr.animate.move_to(recr_t),
-                      run_time=0.8)
-            beat.wait_until("Tower", offset=-0.2)
+            # the chart leaves first (nothing grows under fading text), then the map grows into
+            # the frame and Clarke's label moves to its own row in a column east of the map
+            self.play(FadeOut(chart), run_time=0.45)
+            self.play(mapgrp.animate.scale(RS, about_point=anchor).shift(lift),
+                      tl.animate.move_to(tl_t), clbl.animate.move_to(clbl_t),
+                      recr.animate.move_to(recr_t), run_time=0.9)
+            # "aimed at central London": the aiming point, Tower Bridge
+            beat.wait_until("London", offset=-0.15)
             self.play(GrowFromCenter(xmark), FadeIn(citeE, shift=0.1 * UP), run_time=0.6)
-            # "half fell more than twelve kilometres from it": the radius reaches out 12.5 km;
-            # "outside this circle": it sweeps the circle round from its tip.  (The "Thames"
-            # label sits where the circle passes: it steps out while the circle is up.)
-            beat.wait_until("twelve", offset=-0.2)
-            self.play(Create(rad), FadeIn(cep_lbl, rate_func=window(0.5, 0.5)),
-                      FadeOut(tl, rate_func=window(0, 0.3)), run_time=0.9)
-            beat.wait_until("outside", offset=-0.1)
-            self.play(Create(cep), run_time=1.2)
+            # "but tended to fall short": from the aiming point to their mean point of impact
+            beat.wait_until("fall short", offset=-0.1)
+            self.play(GrowArrow(short), run_time=0.8)
+            # "so farther north, hits were about half as dense": 1.9 against 3.7 per km^2
+            beat.wait_until("farther", offset=-0.2)
+            self.play(Create(nbox), north_dots.animate.set_opacity(1),
+                      FadeIn(dn_name, shift=0.1 * LEFT), run_time=0.7)
+            beat.wait_until("half", offset=-0.2)
+            self.play(FadeIn(dn_val, shift=0.1 * LEFT), FadeIn(dc_val, shift=0.1 * LEFT),
+                      FadeIn(cite4, shift=0.1 * UP), run_time=0.7)
             beat.wait_until("one lambda", offset=-0.2)
-            self.play(FadeOut(VGroup(cep, rad, cep_lbl, xmark)), FadeIn(tl),
-                      flag(E5[2][0]), flag(E5[3]), run_time=0.9)
-            beat.wait_until("farther", offset=-0.25)
-            self.play(Create(nbox), north_dots.animate.set_opacity(1), run_time=0.7)
-            self.play(flag(nbox), FadeIn(dn_name, shift=0.1 * LEFT), run_time=0.7)
-            beat.wait_until("half", occurrence=2, offset=-0.2)
-            self.play(FadeIn(dn_val, shift=0.1 * LEFT), FadeIn(cite4, shift=0.1 * UP),
-                      run_time=0.7)
+            self.play(flag(E5[2][0]), flag(E5[3]), run_time=0.9)
             beat.wait_until("Clarke chose", offset=-0.15)
             self.play(cbox.animate(rate_func=there_and_back).set_stroke(width=8),
-                      FadeIn(dc_val, shift=0.1 * LEFT, rate_func=window(0.3, 0.6)), run_time=1.2)
+                      flag(dc_val, color=INK), run_time=1.2)
 
         # ============================================================ 17. landing
         A2 = Panel(PTS_A, CNT_A, "A", P1_SIDE, P1_A)

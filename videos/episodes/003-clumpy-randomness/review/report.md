@@ -1,50 +1,59 @@
 # Review kit — `final.mp4`
 
-Generated 2026-10-16 00:46 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
+Generated 2026-10-22 14:14 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
 
 ## Mechanics (BAR §3 caps / §5 standards)
 
 | metric | value | bar | status |
 |---|---|---|---|
-| runtime | 3:49.5 (229.5s) | 2:30–4:00 | ok |
-| video | 1920x1080 @ 30 fps, h264/yuv420p, 17.11 MB | 1920x1080 @ 30 | ok |
-| pace | 161 wpm (speech time) · 154 overall · 186 excl. all pauses; 588 words | 140–165 (cap <120/>180) | ok |
-| loudness | -14.0 LUFS, LRA 2.2 LU | −14 ±1 | ok |
-| true peak | -1.8 dBTP | ≤ −1.5 | ok |
+| runtime | 3:33.8 (213.8s) | 2:30–4:00 | ok |
+| video | 1920x1080 @ 30 fps, h264/yuv420p, 16.86 MB | 1920x1080 @ 30 | ok |
+| pace | 161 wpm (speech time) · 150 overall · 187 excl. all pauses; 535 words | 140–165 (cap <120/>180) | ok |
+| loudness | -14.1 LUFS, LRA 2.4 LU | −14 ±1 | ok |
+| true peak | -2.1 dBTP | ≤ −1.5 | ok |
 | leading silence | 0.00s | ≤ 1 s | ok |
-| trailing silence | 1.74s | ≤ 2 s | ok |
-| longest internal silence | 1.98s | ≤ 2.5 s | ok |
-| longest fully static stretch | 3.57s | ≤ 4 s (cap ≥ 8 s) | ok |
+| trailing silence | 1.84s | ≤ 2 s | ok |
+| longest internal silence | 2.04s | ≤ 2.5 s | ok |
+| longest fully static stretch | 2.90s | ≤ 4 s (cap ≥ 8 s) | ok |
 | black frames | 0 run(s) | none | ok |
 | background-only stretches > 1 s | 0 | none | ok |
-| transcript vs script | WER 3.3% (552 words) | ≲ 8 % | ok |
+| transcript vs script | WER 3.4% (505 words) | ≲ 8 % | ok |
 | banned phrases (§4) | 0 | 0 | ok |
 
 ## Flags
 
-- layout audit: 1 issue(s) — 0 overlapping, 1 < 0.15 apart, 0 outside the safe area, 0 in the caption zone (see 'Layout audit')
+- pace: median sentence 163 wpm, 4 sentence(s) > 200 wpm, speed 0.84 (critics: 'hurried'; keep speed ≤ 0.84, break the fast sentences, add pauses at turns)
+- breathless run: 16 s of speech with no pause ≥ 0.35 s at 2:45.3 (whisper hears one run-on sentence)
 
 ### Silences ≥ 0.3 s
 
-0:03.0–0:03.5 (0.5s), 0:06.2–0:06.7 (0.5s), 0:08.2–0:08.7 (0.5s), 0:09.8–0:11.8 (2.0s), 0:14.7–0:15.2 (0.5s), 0:16.5–0:16.9 (0.4s), 0:20.3–0:20.9 (0.5s), 0:23.5–0:24.0 (0.5s), 0:26.1–0:26.6 (0.5s), 0:29.9–0:30.4 (0.5s), 0:34.5–0:35.0 (0.5s), 0:37.3–0:37.8 (0.5s), 0:38.9–0:39.4 (0.5s), 0:42.1–0:42.6 (0.5s), 0:43.3–0:44.4 (1.0s), 0:46.7–0:47.1 (0.4s), 0:49.9–0:50.4 (0.5s), 0:51.4–0:51.8 (0.4s), 0:54.3–0:54.8 (0.5s), 0:59.3–0:59.7 (0.4s), 1:00.7–1:01.2 (0.5s), 1:03.4–1:03.7 (0.4s), 1:05.9–1:06.5 (0.5s), 1:07.4–1:07.8 (0.4s), 1:10.1–1:10.6 (0.5s), 1:12.6–1:14.5 (1.9s), 1:17.7–1:18.2 (0.5s), 1:20.3–1:21.4 (1.1s), 1:23.1–1:23.6 (0.5s), 1:28.6–1:28.9 (0.3s), 1:30.5–1:31.0 (0.5s), 1:33.1–1:33.7 (0.6s), 1:37.1–1:37.6 (0.5s), 1:40.1–1:41.3 (1.2s), 1:43.8–1:44.4 (0.5s), 1:48.3–1:49.0 (0.7s), 1:53.3–1:53.9 (0.6s), 1:55.6–1:56.7 (1.1s), 2:00.1–2:00.4 (0.3s), 2:01.5–2:01.8 (0.3s), 2:06.1–2:06.8 (0.6s), 2:08.5–2:09.3 (0.8s), 2:12.4–2:12.8 (0.4s), 2:14.7–2:15.2 (0.5s), 2:18.0–2:18.5 (0.5s), 2:20.7–2:21.0 (0.3s), 2:23.9–2:24.4 (0.5s), 2:25.6–2:26.0 (0.4s), 2:29.9–2:30.4 (0.5s), 2:32.0–2:32.5 (0.5s), 2:35.2–2:35.6 (0.5s), 2:37.3–2:37.7 (0.5s), 2:40.7–2:41.0 (0.3s), 2:44.9–2:45.4 (0.5s), 2:48.8–2:49.3 (0.5s), 2:51.2–2:51.7 (0.5s), 2:54.1–2:54.6 (0.5s), 3:00.9–3:01.5 (0.6s), 3:06.4–3:06.9 (0.5s), 3:10.3–3:10.7 (0.4s), 3:12.9–3:13.2 (0.3s), 3:17.0–3:17.3 (0.3s), 3:19.7–3:20.0 (0.3s), 3:21.4–3:21.8 (0.5s), 3:23.8–3:24.3 (0.5s), 3:27.8–3:28.3 (0.5s), 3:30.6–3:31.2 (0.6s), 3:37.2–3:37.7 (0.5s), 3:38.7–3:39.8 (1.0s), 3:43.4–3:43.9 (0.5s), 3:47.8–3:49.5 (1.8s)
+0:03.0–0:03.5 (0.4s), 0:06.3–0:06.9 (0.6s), 0:08.0–0:09.7 (1.8s), 0:11.0–0:11.6 (0.5s), 0:12.7–0:13.3 (0.5s), 0:18.0–0:18.5 (0.5s), 0:21.3–0:21.9 (0.6s), 0:24.1–0:24.5 (0.4s), 0:27.9–0:28.3 (0.4s), 0:31.8–0:32.5 (0.7s), 0:36.3–0:36.9 (0.6s), 0:38.1–0:38.7 (0.6s), 0:39.5–0:40.5 (1.0s), 0:42.9–0:43.3 (0.4s), 0:46.1–0:46.5 (0.4s), 0:47.6–0:48.0 (0.4s), 0:50.6–0:51.0 (0.4s), 0:53.2–0:53.8 (0.6s), 0:54.9–0:55.4 (0.5s), 0:59.0–0:59.6 (0.6s), 1:03.1–1:03.7 (0.6s), 1:05.5–1:07.6 (2.0s), 1:09.2–1:09.6 (0.4s), 1:11.5–1:12.8 (1.3s), 1:14.9–1:15.4 (0.5s), 1:20.1–1:20.5 (0.4s), 1:23.5–1:24.1 (0.6s), 1:26.1–1:26.8 (0.6s), 1:28.5–1:28.8 (0.3s), 1:30.2–1:30.6 (0.4s), 1:33.1–1:34.2 (1.1s), 1:36.7–1:37.2 (0.6s), 1:43.1–1:43.6 (0.5s), 1:47.8–1:48.4 (0.6s), 1:50.1–1:50.7 (0.6s), 1:53.4–1:53.9 (0.5s), 1:56.2–1:56.6 (0.4s), 1:57.9–1:58.5 (0.6s), 2:00.8–2:01.3 (0.5s), 2:02.9–2:04.0 (1.1s), 2:06.1–2:06.4 (0.3s), 2:08.1–2:08.7 (0.6s), 2:11.6–2:12.3 (0.7s), 2:15.4–2:15.9 (0.5s), 2:20.9–2:21.4 (0.4s), 2:23.7–2:24.2 (0.4s), 2:25.8–2:26.4 (0.6s), 2:29.4–2:29.9 (0.4s), 2:32.3–2:33.7 (1.5s), 2:40.6–2:41.2 (0.6s), 2:44.7–2:45.3 (0.6s), 2:47.3–2:47.8 (0.5s), 2:50.3–2:50.7 (0.4s), 2:56.1–2:56.8 (0.6s), 3:01.1–3:01.6 (0.6s), 3:05.1–3:05.4 (0.4s), 3:07.5–3:07.9 (0.4s), 3:10.0–3:11.6 (1.6s), 3:16.8–3:17.2 (0.4s), 3:19.0–3:19.4 (0.4s), 3:21.0–3:21.5 (0.5s), 3:23.6–3:24.1 (0.6s), 3:25.1–3:26.2 (1.1s), 3:29.0–3:29.4 (0.4s), 3:32.0–3:33.8 (1.8s)
 
-### Static stretches ≥ 3 s
+## Narration craft (PRODUCTION_GUIDE §13: the systemic 9-blockers)
 
-0:45.1–0:48.7 (3.6s), 1:53.6–1:56.7 (3.0s)
+Measured from narration.json (Kokoro's own word timings). Each line names the defect critics docked and the target that scored 9.
+
+- **Budget:** 485 words in 3:33.8. Target ≤ 500 words, 3:15–3:35. 16 of 28 round-5/6 reviews docked Concision for length; 9 of the 10 episodes at ≥ 3:41 were told to cut, none at ≤ 3:37 was.
+- **Pace between pauses:** voice speed 0.84; median sentence 163 wpm (episodes 165–178; number-dense sentences run faster), 4 sentence(s) above 200 wpm. 9 of 28 reviews called the delivery hurried; the Audio 9s were at the same 160–164 wpm, with planned pauses and no run-ons.
+  - 3:26.3 254 wpm: “Map A 's clumps are what no…”
+  - 2:24.2 214 wpm: “Map A scores two point oh…”
+  - 0:51.0 209 wpm: “Your eye expects chance to look that…”
+  - 3:29.4 202 wpm: “If you chose map B you chose…”
+- **Cadence:** full stops 0.36 s median (variation 0.23), beat turns 0.51 s; longest stretch without a ≥ 0.35 s breath 15.8 s at 2:45.3. Audio 9 went to episodes with 0.9–1.4 s after key results and every turn audibly longer than a full stop; flat 0.4 s gaps were called 'metronomic' (use CADENCE = "shaped" and [pause 1.0] after results).
+- **Number load:** 34 spoken numbers; busiest 20 s from 1:35.9 has 7 different ones. Critics docked Clarity where 3+ new figures arrived inside ~20 s without a picture for each.
+- **Repeated phrases** (each repeat must be a deliberate callback; restating what the screen or an earlier line already said was the most common Concision deduction, 24 of 28 reviews): “five hundred seventy-six squares” 0:25.8, 2:58.9; “chance one in five” 0:56.7, 1:44.5; “one in five seventy-six” 0:57.1, 1:44.9; “e to the minus” 1:31.9, 1:48.3; “to the minus lambda” 1:32.1, 1:48.6
+- **Glyph morphs:** 0 Transform(s) between different strings (render as glyph soup; 13 of 28 reviews docked one). Use swap() / carry() / live_number() / TransformMatchingTex.
+- **Deictic sync:** 5 deictic words; 0 with no animation starting within −0.8…+0.4 s (Audio 9 required every one to land within ~0.6 s).
 
 ## Layout audit (automatic overlap check, BAR §5)
 
-1 issue(s): 0 overlapping/touching, 1 closer than 0.15, 0 outside the safe area, 0 in the caption zone; 1 allowed by the producer. 221 frames checked (after every animation and hold).
+0 issue(s): 0 overlapping/touching, 0 closer than 0.15, 0 outside the safe area, 0 in the caption zone, 0 text(s) under the 24 px cap-height floor; 2 allowed by the producer. 224 frames checked (after every animation and hold).
 
-`overlap`, `safe-area` and `caption-zone` are cap-7 defects (text overlapping another element or leaving the frame); `clearance` is cramped spacing under BAR's 0.15 (Visual points). Fix each, or declare a deliberate one in scene.py with `self.allow_overlap(a, b, reason=...)`.
-
-| # | time | held | kind | text | other / detail | gap |
-|---|---|---|---|---|---|---|
-| 1 | 2:05.8 | in motion | clearance | MathTex 'e^{-\lambda}' @(3.52, -1.29) | Rectangle @(2.86, -1.37) | +0.08 |
 
 Allowed by the producer (check that each reason holds):
 
-- [1:08.7–1:34.4] MathTex '\Big)^{537}' vs Rectangle: “fraction bar and the closing \Big) of the same typeset equation (TeX spacing)”
+- [1:02.0–1:20.4] MathTex '\Big)^{537}' vs Rectangle: “fraction bar and the closing \Big) of the same typeset equation (TeX spacing)”
+- [1:27.4–1:27.4] MathTex '\Big)^{537}' vs Rectangle: “fraction bar and the closing \Big) of the same typeset equation (TeX spacing)”
 
 ## Contact sheets (one frame every 2s; words spoken ±1s under each)
 
@@ -59,143 +68,129 @@ Allowed by the producer (check that each reason holds):
 - `sheets/sheet_09.png` — 2:25.0–2:41.0
 - `sheets/sheet_10.png` — 2:43.0–2:59.0
 - `sheets/sheet_11.png` — 3:01.0–3:17.0
-- `sheets/sheet_12.png` — 3:19.0–3:35.0
-- `sheets/sheet_13.png` — 3:37.0–3:49.0
+- `sheets/sheet_12.png` — 3:19.0–3:33.0
 
 ## Keyframes (full resolution, frames where the picture settles)
 
-- `keyframes/kf_01_00-08.0.png` — 0:08.0
-- `keyframes/kf_02_00-16.9.png` — 0:16.9
-- `keyframes/kf_03_00-19.1.png` — 0:19.1
-- `keyframes/kf_04_00-26.0.png` — 0:26.0
-- `keyframes/kf_05_00-33.2.png` — 0:33.2
-- `keyframes/kf_06_00-39.6.png` — 0:39.6
-- `keyframes/kf_07_00-57.7.png` — 0:57.7
-- `keyframes/kf_08_01-01.9.png` — 1:01.9
-- `keyframes/kf_09_01-16.6.png` — 1:16.6
-- `keyframes/kf_10_01-22.1.png` — 1:22.1
-- `keyframes/kf_11_01-23.7.png` — 1:23.7
-- `keyframes/kf_12_01-28.7.png` — 1:28.7
-- `keyframes/kf_13_01-32.3.png` — 1:32.3
-- `keyframes/kf_14_01-37.5.png` — 1:37.5
-- `keyframes/kf_15_01-45.5.png` — 1:45.5
-- `keyframes/kf_16_01-57.9.png` — 1:57.9
-- `keyframes/kf_17_02-00.6.png` — 2:00.6
-- `keyframes/kf_18_02-06.5.png` — 2:06.5
-- `keyframes/kf_19_02-08.9.png` — 2:08.9
-- `keyframes/kf_20_02-14.7.png` — 2:14.7
-- `keyframes/kf_21_02-18.0.png` — 2:18.0
-- `keyframes/kf_22_02-22.1.png` — 2:22.1
-- `keyframes/kf_23_02-30.6.png` — 2:30.6
-- `keyframes/kf_24_02-32.0.png` — 2:32.0
-- `keyframes/kf_25_02-36.4.png` — 2:36.4
-- `keyframes/kf_26_02-40.7.png` — 2:40.7
-- `keyframes/kf_27_02-48.9.png` — 2:48.9
-- `keyframes/kf_28_02-54.5.png` — 2:54.5
-- `keyframes/kf_29_03-01.1.png` — 3:01.1
-- `keyframes/kf_30_03-05.4.png` — 3:05.4
-- `keyframes/kf_31_03-14.5.png` — 3:14.5
-- `keyframes/kf_32_03-21.7.png` — 3:21.7
-- `keyframes/kf_33_03-24.1.png` — 3:24.1
-- `keyframes/kf_34_03-24.9.png` — 3:24.9
-- `keyframes/kf_35_03-26.0.png` — 3:26.0
-- `keyframes/kf_36_03-32.8.png` — 3:32.8
-- `keyframes/kf_37_03-34.3.png` — 3:34.3
-- `keyframes/kf_38_03-41.4.png` — 3:41.4
-- `keyframes/kf_39_03-44.2.png` — 3:44.2
-- `keyframes/kf_40_03-49.5.png` — 3:49.5
+- `keyframes/kf_01_00-06.7.png` — 0:06.7
+- `keyframes/kf_02_00-14.7.png` — 0:14.7
+- `keyframes/kf_03_00-17.1.png` — 0:17.1
+- `keyframes/kf_04_00-23.9.png` — 0:23.9
+- `keyframes/kf_05_00-30.7.png` — 0:30.7
+- `keyframes/kf_06_00-34.9.png` — 0:34.9
+- `keyframes/kf_07_00-52.8.png` — 0:52.8
+- `keyframes/kf_08_00-58.8.png` — 0:58.8
+- `keyframes/kf_09_01-00.8.png` — 1:00.8
+- `keyframes/kf_10_01-07.3.png` — 1:07.3
+- `keyframes/kf_11_01-14.0.png` — 1:14.0
+- `keyframes/kf_12_01-15.5.png` — 1:15.5
+- `keyframes/kf_13_01-18.4.png` — 1:18.4
+- `keyframes/kf_14_01-22.5.png` — 1:22.5
+- `keyframes/kf_15_01-25.3.png` — 1:25.3
+- `keyframes/kf_16_01-30.5.png` — 1:30.5
+- `keyframes/kf_17_01-40.3.png` — 1:40.3
+- `keyframes/kf_18_01-52.0.png` — 1:52.0
+- `keyframes/kf_19_01-54.7.png` — 1:54.7
+- `keyframes/kf_20_01-58.1.png` — 1:58.1
+- `keyframes/kf_21_02-01.2.png` — 2:01.2
+- `keyframes/kf_22_02-03.5.png` — 2:03.5
+- `keyframes/kf_23_02-06.3.png` — 2:06.3
+- `keyframes/kf_24_02-13.7.png` — 2:13.7
+- `keyframes/kf_25_02-18.0.png` — 2:18.0
+- `keyframes/kf_26_02-23.8.png` — 2:23.8
+- `keyframes/kf_27_02-30.3.png` — 2:30.3
+- `keyframes/kf_28_02-36.4.png` — 2:36.4
+- `keyframes/kf_29_02-44.6.png` — 2:44.6
+- `keyframes/kf_30_02-48.9.png` — 2:48.9
+- `keyframes/kf_31_02-58.7.png` — 2:58.7
+- `keyframes/kf_32_03-01.4.png` — 3:01.4
+- `keyframes/kf_33_03-04.9.png` — 3:04.9
+- `keyframes/kf_34_03-11.4.png` — 3:11.4
+- `keyframes/kf_35_03-14.6.png` — 3:14.6
+- `keyframes/kf_36_03-17.5.png` — 3:17.5
+- `keyframes/kf_37_03-23.7.png` — 3:23.7
+- `keyframes/kf_38_03-29.7.png` — 3:29.7
+- `keyframes/kf_39_03-32.5.png` — 3:32.5
+- `keyframes/kf_40_03-33.8.png` — 3:33.8
 
 ## Transcript (whisper-large-v3-turbo, word timings in transcript_words.tsv)
 
 ```
-[0:00.0–0:03.5] Each map holds 537 hits.
-[0:03.5–0:06.7] On one, every hit landed by pure chance.
-[0:06.7–0:08.7] The other follows a rule.
-[0:08.7–0:10.1] Which one is chance?
-[0:11.8–0:15.2] Both are simulated, but the question is real.
-[0:15.2–0:19.4] In 1944, Londoners claimed German flying bombs
-[0:19.4–0:22.0] fell in clusters, and precise aim
-[0:22.0–0:24.0] would put factories at risk.
-[0:24.0–0:26.6] Build the detector your eye is running.
-[0:26.6–0:31.6] Cut each map into 576 squares, count the hits,
-[0:31.6–0:35.0] and flag any square with three or more, like this one.
-[0:35.0–0:37.8] Map A lights up with 39 targets.
-[0:37.8–0:39.4] Map B gets none.
-[0:39.4–0:42.6] So A looks aimed, and B looks like chance.
-[0:42.6–0:44.4] Backwards.
-[0:44.4–0:47.1] I dropped every hit on map A at random,
-[0:47.1–0:50.4] so all 39 targets are false alarms.
-[0:50.4–0:54.8] Map B's rule, no two hits closer than 4 fifths of a square.
-[0:54.8–0:59.1] The detector, like your eye, expected chance to spread out that evenly.
-[0:59.7–1:00.6] Take one square.
-[1:01.2–1:05.9] Each bomb has a 1 in 500 and 76 chance of landing in it.
-[1:05.9–1:10.0] To stay empty, all 537 must miss.
-[1:10.6–1:12.5] Guess how many squares get no hit at all?
-[1:14.1–1:17.6] About 200 and 27 squares stay empty.
-[1:18.3–1:20.2] Map A has 222.
-[1:21.0–1:23.0] Those gaps force the clumps.
-[1:23.0–1:30.5] The other 354 squares share all the hits, one and a half each, so plenty must double up.
-[1:31.0–1:32.9] Call the average hits per square lambda.
-[1:33.7–1:40.0] One minus a small slice, raised to a big power, is almost exactly e to the minus lambda.
-[1:41.2–1:43.8] For two hits, pick which two bombs land here.
-[1:44.4–1:48.2] 537 times 536 over two ways.
-[1:48.2–2:02.7] Each lands with chance one in 576 and the rest miss E to the minus lambda again 536 is almost 537 so for any k each two becomes a k
-[2:03.4–2:06.8] the powers merge into lambda to the k,
-[2:06.8–2:09.3] the Poisson distribution.
-[2:09.3–2:14.3] Times 576 squares, it predicts these purple bars.
-[2:15.2–2:18.5] The honest detector compares whole histograms.
-[2:18.5–2:21.0] Map A sits on the purple bars.
-[2:21.0–2:24.4] 39 targets and chance predicts 39.
-[2:24.4–2:26.0] The chi-squared misfit.
-[2:26.0–2:29.1] Square each bar's gap, divide by chance's bar,
-[2:29.1–2:30.4] and add them up.
-[2:30.4–2:32.5] Map A scores 2.0.
-[2:32.5–2:35.6] Pure chance maps score worse three times than four.
-[2:35.6–2:37.7] P equals 0.74.
-[2:37.7–2:41.0] Map B, half the expected empty squares,
-[2:41.0–2:45.4] a tower of single hits, and a misfit of 272.
-[2:45.4–2:49.3] A pattern this even is the fingerprint of a spacing rule.
-[2:49.3–2:51.7] Aimed bombs would miss the other way.
-[2:51.7–2:54.6] Extra empty squares, extra pileups.
-[2:54.6–2:59.3] In 1946, the actuary R.D. Clark published this test
-[2:59.3–3:01.5] on real flying bomb hits.
-[3:01.5–3:06.5] 537 in 576 squares of South London.
-[3:06.9–3:10.7] Chance predicted 227 empty squares.
-[3:10.7–3:13.2] Clark counted 229.
-[3:13.2–3:16.8] Single hits, 211, exactly as predicted.
-[3:17.3–3:19.4] Same test, P equals 0.88.
-[3:20.0–3:21.1] No sign of clustering.
-[3:21.8–3:23.7] That doesn't mean the bombs were un-aimed.
-[3:24.3–3:27.7] They were aimed at London, just too loosely to choose a street.
-[3:28.3–3:30.4] And the test needs one lambda everywhere.
-[3:31.3–3:34.0] Farther north, hits fell about half as densely,
-[3:34.0–3:37.1] so Clark chose an area where lambda held steady.
-[3:37.7–3:38.6] So look again.
-[3:38.6–3:43.6] The clumps in Map A are what no aim at all looks like.
-[3:43.6–3:47.9] If you picked Map B, you pick the one following a rule.
+[0:00.0–0:03.4] Each map holds 537 bomb hits.
+[0:03.4–0:06.9] One is pure chance, the other follows a rule.
+[0:06.9–0:08.2] Which is chance?
+[0:09.7–0:11.6] Both are simulated.
+[0:11.6–0:13.2] The question isn't.
+[0:13.2–0:18.5] In 1944, Londoners claimed flying bombs fell in clusters,
+[0:18.5–0:21.8] and precise aim would put factories at risk.
+[0:21.8–0:24.5] Build the detector your eye is running.
+[0:24.5–0:28.3] Cut each map into 576 squares,
+[0:28.3–0:32.5] and flag any square with three or more hits, like this one.
+[0:32.5–0:36.9] Map A lights up with 39 targets, map B with none.
+[0:36.9–0:38.7] So A looks aimed.
+[0:38.7–0:40.5] Backwards.
+[0:40.5–0:43.3] I dropped every hit on map A at random,
+[0:43.3–0:46.5] so all 39 targets are false alarms.
+[0:46.5–0:51.0] Map B's rule, no two hits closer than 4 fifths of a square.
+[0:51.0–0:53.8] Your eye expects chance to look that even.
+[0:53.8–0:55.4] Take one square.
+[0:55.4–0:58.9] Each bomb lands in it with chance 1 in 576.
+[0:59.5–1:03.0] To stay empty, all 537 must miss.
+[1:03.7–1:05.3] Guess how many squares stay empty?
+[1:07.2–1:09.1] About 227.
+[1:09.6–1:11.4] Map A has 222.
+[1:12.4–1:14.8] Those empty squares force the clumps.
+[1:15.4–1:18.2] The other 354 share all the hits.
+[1:18.6–1:20.0] So many must double up.
+[1:20.5–1:23.4] To judge London, chance must predict every bar.
+[1:23.4–1:26.0] Call the average hits per square lambda.
+[1:26.0–1:29.9] One minus a small slice, raised to a big power,
+[1:29.9–1:33.0] is almost exactly e to the minus lambda.
+[1:33.0–1:36.6] For two hits in this square, pick two bombs.
+[1:36.6–1:58.5] 537 times 536 ways over two since order doesn matter Each lands with chance one in 576 and the rest miss E to the minus lambda again 536 is almost 537 For three hits each two becomes a 3 For any k a k
+[1:58.5–2:06.5] The powers merge into lambda to the k, the Poisson distribution. Times 576 squares, it
+[2:06.5–2:08.7] It predicts these purple bars.
+[2:08.7–2:12.3] The honest detector compares whole histograms.
+[2:12.3–2:16.0] 39 targets and chance predicts 39.
+[2:16.0–2:21.5] The chi-squared misfit squares each bar's gap and divides by chance's bar.
+[2:21.5–2:24.4] So a miss on a short bar counts more.
+[2:24.4–2:26.6] Map A scores 2.0.
+[2:26.6–2:30.1] Three in four simulated chance maps score worse.
+[2:30.1–2:34.0] That share P is .74.
+[2:34.0–2:41.2] Step B, half the expected empty squares, a tower of single hits, misfit 272.
+[2:41.2–2:45.6] A pattern this even is the fingerprint of a spacing rule.
+[2:45.6–2:48.1] Aimed bombs would miss the other way.
+[2:48.1–2:50.8] Extra empty squares, extra pileups.
+[2:50.8–2:56.9] In 1946, R. D. Clarke published the same test on London's real hits.
+[2:56.9–3:02.0] 537 in 576 squares.
+[3:02.0–3:12.4] predicted 227 empty squares. Clark counted 229. Overall, p equals 0.88. The bombs were
+[3:12.4–3:18.2] aimed at central London, but tended to fall short, so farther north, hits were about half
+[3:18.2–3:24.6] as dense. The test needs one lambda. Clark chose an area where it held steady. So look
+[3:24.6–3:31.4] again. Map ace clumps are what no aim at all looks like. If you chose map b, you chose
+[3:31.4–3:31.9] the rule.
 ```
 
-## Narration vs transcript (WER 3.3%)
+## Narration vs transcript (WER 3.4%)
 
 Differences (numbers spelled out, 'and' ignored). A technical term heard wrong usually means it was mispronounced:
 
 ```
-[1:44.4] insert   script: '∅'                                      heard: 'hundred'
-[1:45.8] insert   script: '∅'                                      heard: 'hundred'
+[0:57.8] insert   script: '∅'                                      heard: 'hundred'
+[1:36.6] insert   script: '∅'                                      heard: 'hundred'
+[1:38.7] insert   script: '∅'                                      heard: 'hundred'
+[1:45.3] insert   script: '∅'                                      heard: 'hundred'
 [1:50.8] insert   script: '∅'                                      heard: 'hundred'
-[1:56.7] insert   script: '∅'                                      heard: 'hundred'
-[1:58.5] insert   script: '∅'                                      heard: 'hundred'
-[2:31.2] replace  script: 'oh'                                     heard: 'zero'
-[2:34.6] replace  script: 'in'                                     heard: 'than'
-[2:36.2] insert   script: '∅'                                      heard: 'zero'
-[2:53.5] replace  script: 'pile ups'                               heard: 'pileups'
-[2:58.0] replace  script: 'clarke'                                 heard: 'clark'
-[3:03.8] insert   script: '∅'                                      heard: 'hundred'
-[3:10.2] replace  script: 'clarke'                                 heard: 'clark'
-[3:18.8] insert   script: '∅'                                      heard: 'zero'
-[3:23.2] replace  script: 'unaimed'                                heard: 'un aimed'
-[3:34.6] replace  script: 'clarke'                                 heard: 'clark'
-[3:46.0] replace  script: 'picked'                                 heard: 'pick'
+[1:52.2] insert   script: '∅'                                      heard: 'hundred'
+[2:04.3] insert   script: '∅'                                      heard: 'hundred'
+[2:06.1] insert   script: '∅'                                      heard: 'it'
+[2:24.9] replace  script: 'oh'                                     heard: 'zero'
+[2:34.0] replace  script: 'map'                                    heard: 'step'
+[2:49.6] replace  script: 'pile ups'                               heard: 'pileups'
+[3:02.1] delete   script: 'chance'                                 heard: '∅'
+[3:05.0] replace  script: 'clarke'                                 heard: 'clark'
+[3:09.1] insert   script: '∅'                                      heard: 'zero'
+[3:21.1] replace  script: 'clarke'                                 heard: 'clark'
+[3:26.6] replace  script: "a's"                                    heard: 'ace'
 ```
 
-_review kit ran in 116s_
+_review kit ran in 157s_

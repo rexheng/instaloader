@@ -19,32 +19,35 @@
 [0:55.8–0:57.1] These averages lean less.
 [0:57.3–1:06.2] skewness 1. 16 per average, 0.5, 64, 0.25, nearly this perfect bell in green. Each time the group
 [1:06.2–1:12.5] grows 4 times, the skewness halves. 2 over root n, and 2 is the skewness of 1 weight.
-[1:13.1–1:19.4] The root comes from the cubes. Add 4 bus weights. Their cubed gaps add up to 4 times 1 weights,
-[1:19.7–1:26.1] but the spread only doubles, so its cube grows 8 times. 4 over 8, half the lean. In general,
-[1:26.1–1:28.1] n over n to the 1.5.
-[1:30.0–1:32.8] Kurtosis, the extra tail weight, fades faster.
-[1:33.3–1:34.5] It quarters each time.
-[1:34.8–1:37.1] Every finer difference fades faster still.
-[1:37.5–1:38.7] Only the bell survives.
-[1:39.1–1:40.7] That's the central limit theorem.
-[1:41.1–1:44.2] It needs independent pieces and one more condition.
-[1:45.3–1:46.7] Back to the textbook's 30.
-[1:47.4–2:05.0] 2 over root 30 0 close to a bell by eye But tests live in the tails A 95 interval should miss 2 on each side Tests estimate the spread from the same data With lopsided weights a low average comes with a small
-[2:05.0–2:13.2] spread, so its interval stops short. With 30 weights, 7% low, 1% high. Ron Kohavi and
-[2:13.2–2:20.5] colleagues want each side between 2 and 3%. Their rule, n at least 355 times the skewn
-[2:20.5–2:28.5] squared. Divide by n and take the root. It's our formula. The average's skewness at most .053.
-[2:28.8–2:37.4] At 300, the lean is .12, still too much. For these weights, 1420, lean .053, and both misses
-[2:37.4–2:47.1] reach the band. Bing's revenue per user had a skewness near 18, 114,000 users, capping each user
-[2:47.1–2:53.5] at $10 a week, under 10,000. And for some data, no number on this axis is enough.
-[2:54.8–3:00.6] A lighthouse one mile off a straight shore flashes at random angles, and each flash lands
-[3:00.6–3:07.3] somewhere on the shore. Track the average landing spot. It never settles. A flash aimed almost along
-[3:07.3–3:14.0] the shore lands absurdly far away and yanks it. Among a thousand flashes, the farthest typically
-[3:14.0–3:21.1] lands about 900 miles off. Divided by a thousand, it still drags the average about a mile. Half
-[3:21.1–3:26.4] of single flashes land within a mile of the middle. Repeat the thousand flash average
-[3:26.4–3:33.7] 200 times, and still only half do. The theorem needs finite variance. No single piece can
-[3:33.7–3:39.9] outweigh the rest. Here the variance is infinite. The median ignores how far the extremes fly,
-[3:39.9–3:42.3] So it homes in.
-[3:42.3–3:45.5] So the answer is over a thousand, not thirty.
-[3:45.5–3:47.6] Collect forever, still lopsided.
-[3:47.6–3:49.7] The bell was never in the data.
-[3:49.7–3:50.8] It's in the average.
+[1:13.4–1:19.7] The root comes from the cubes. Add 4 bus weights. Their cubed gaps add up to 4 times 1 weights,
+[1:20.0–1:26.4] but the spread only doubles, so its cube grows 8 times. 4 over 8, half the lean. In general,
+[1:26.4–1:28.4] n over n to the 1.5.
+[1:30.5–1:33.3] Kurtosis, the extra tail weight, fades faster.
+[1:33.8–1:35.0] It quarters each time.
+[1:35.3–1:37.6] Every finer difference fades faster still.
+[1:38.0–1:39.2] Only the bell survives.
+[1:39.6–1:41.2] That's the central limit theorem.
+[1:41.6–1:44.7] It needs independent pieces and one more condition.
+[1:45.8–1:47.2] Back to the textbook's 30.
+[1:48.0–2:05.5] 2 over root 30 0 close to a bell by eye But tests live in the tails A 95 interval should miss 2 on each side Tests estimate the spread from the same data With lopsided weights a low average comes with a small
+[2:05.5–2:13.7] spread, so its interval stops short. With 30 weights, 7% low, 1% high. Ron Kohavi and
+[2:13.7–2:21.1] colleagues want each side between 2 and 3%. Their rule, n at least 355 times the skewness
+[2:21.1–2:29.2] squared. Divide by n and take the root. It's our formula. The average is skewness at most .053.
+[2:29.5–2:38.1] At 300, the lean is .12, still too much. For these weights, 1420, lean .053, and both misses
+[2:38.1–2:47.8] reach the band. Bing's revenue per user had a skewness near 18, 114,000 users, capping each user
+[2:47.8–2:54.8] at $10 a week, under 10,000. And for some data, no number on this axis is enough.
+[2:54.8–3:01.7] A lighthouse one mile off a straight shore flashes at random angles, and each flash lands
+[3:01.7–3:07.5] somewhere on the shore. Track the average landing spot. It never settles. A flash aimed
+[3:07.5–3:14.0] almost along the shore lands absurdly far away and yanks it. Among a thousand flashes,
+[3:14.0–3:17.5] The farthest typically lands about 900 miles off.
+[3:17.5–3:22.1] Divided by a thousand, it still drags the average about a mile.
+[3:22.1–3:25.8] Half of single flashes land within a mile of the middle.
+[3:25.8–3:31.1] Repeat the thousand flash average 200 times, and still only half do.
+[3:31.1–3:33.6] The theorem needs finite variance.
+[3:33.6–3:36.1] No single piece can outweigh the rest.
+[3:36.1–3:38.0] Here the variance is infinite.
+[3:38.0–3:43.3] The median ignores how far the extremes fly, so it homes in.
+[3:43.3–3:46.4] So the answer is over a thousand, not thirty.
+[3:46.4–3:48.6] Collect forever, still lopsided.
+[3:48.6–3:50.7] The bell was never in the data.
+[3:50.7–3:51.8] It's in the average.

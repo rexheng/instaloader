@@ -188,8 +188,8 @@ NARR = {
     # collapses happen in one move on "Here that's two and a half, plus a half"
     "result": "So the average of k squared is mu squared plus sigma squared. [pause 1.6] And friends "
               "average mu, plus sigma squared over mu. [pause 1.2] Here that's two and a half, plus "
-              "a half: exactly the extra half friend we measured. [pause 0.9] And the ring? No "
-              "spread, so no gap. [pause 1.3]",
+              "a half: exactly the extra half friend we measured. [pause 0.9] With no spread, the "
+              "ring had no gap. [pause 1.3]",
     # round 6: the spread cue ("a few had thousands") comes before the prediction, and the
     # title's "you" is paid off with Ugander et al.'s 92.7 % (no "so": the mean inequality does
     # not force a majority)
@@ -1769,13 +1769,12 @@ class Episode(NarratedScene):
                       flag(gap_lab, color=PURPLE), run_time=0.9)
             # the ring: the class picture, the row and the bars dim; the thumbnail, its collapsed
             # spread and 2 + 0/2 = 2 are the only bright things
-            beat.wait_until("ring", offset=-0.2)
+            beat.wait_until("With no spread", offset=-0.2)
             ctx = VGroup(pic, d4, panel_txt)
             d4.save_state()
             panel_txt.save_state()
             self.play(ctx.animate.fade(0.7), self.Dm.animate.set_value(0.3),
                       FadeIn(ring_th, scale=0.85), run_time=0.7)
-            beat.wait_until("no spread", offset=-0.15)
             spread = VGroup(dev_l, dev_r, *dev_ticks.values()).copy().set_stroke(opacity=1.0)
             self.play(ReplacementTransform(spread, ring_pt), run_time=0.8)
             beat.wait_until("no gap", offset=-0.3)

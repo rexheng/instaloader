@@ -5,7 +5,8 @@ each riffle roughly halves the gap between that count and a random deck's while 
 deck's spread stays fixed, so the deck stays almost perfectly detectable for four riffles and
 then falls off a cliff around seven, even though the top card already looks random after four.
 
-Runtime ≈ 3:47 · ≈ 556 words · voice af_heart, speed 0.84.
+Runtime ≈ 3:33 · 493 words · voice af_heart, speed 0.84, CADENCE "shaped" (beat gap 0.4 s, 0.9 s after
+the key results), the prediction question at 0.80.
 
 ## Palette (one meaning each, whole episode)
 
@@ -41,41 +42,38 @@ often" both decks rise 0.8 as the accuracy meter draws below them (coin flip 50 
 100 %); a "?" hops 50 → 75 → 100 % as each option is spoken, then a 1.5 s hold.
 
 ### 2. Stakes (0:15–0:23)
-> Monte Carlo samplers move by random steps, like these riffles. Stop them too early, and they
-> still remember where they started.
+> Monte Carlo samplers move by random steps, like these riffles. Stopped too early, they still
+> remember where they started.
 
 Visual: on "random steps" the left deck re-sorts and replays its four riffles fast under a purple
-counter "step 1 … step 4"; "step 4" flags on "Stop them too early"; on "remember where they started"
+counter "step 1 … step 4"; "step 4" flags on "Stopped too early"; on "remember where they started"
 the sorted deck's profile (grey dashed diagonal) is drawn over it.
 
 ### 3. Naive build: the top card (0:23–0:43)
-> The obvious check is the top card, the one you'd be dealt. Here's how often each card ends up
-> there after four riffles.
+> The obvious check is the top card: here's how often each card lands there after four riffles.
 
-> Almost flat. Only the old top card stands out: one time in fifteen. Judging by the top card,
-> you'd be right fifty two percent of the time. Four riffles look like plenty.
+> Only the old top card stands out: one time in fifteen. Judge by it, and you're right *[pause 0.3]*
+> fifty two percent of the time. *[pause 0.9]* Four riffles look like plenty.
 
 Visual: as before (top card boxed; its copy flies into its bar of the purple histogram; blue
-dashed "perfect: 1 in 52"; card 1's excess red, "1 in 15"; meter fills red to 52.4 %).
+dashed "perfect: 1 in 52"; card 1's excess red, "1 in 15"; meter fills red to 52.4 %). On "Four riffles look like plenty" the chart leaves and
+the deck grows into the centre.
 
 ### 4. Fail: rising sequences (0:43–1:31)
-> A guesser who sees the whole deck does far better. The model cuts near the middle, then drops
-> cards from each half in proportion to its size.
+> The model cuts near the middle, then drops cards from each half in proportion to its size.
 
-> Each half stays in order, so one riffle leaves two rising sequences: runs of consecutive cards,
-> reading left to right.
+> Each half stays in order, so one riffle leaves two rising sequences: runs of consecutive cards.
 
 > Give each sequence its own level. The cut crosses each level once, so a riffle can at most
-> split it in two.
+> split each level in two.
 
 > Three riffles, *[pause 0.8]* eight. Four riffles, *[pause 0.6]* at most sixteen; this deck has
 > fourteen.
 
-> A perfect shuffle averages twenty six and a half, and gives sixteen or fewer once in two million
-> decks.
+> A perfect shuffle gives sixteen or fewer once in two million decks.
 
-> Call sixteen or fewer riffled, and you'd be wrong about once in four million games. The top card
-> can't see this; it lives in the order between cards.
+> Call sixteen or fewer riffled, and you'd be wrong once in four million games. *[pause 0.9]* The
+> top card can't see this: it lives in the order between cards.
 
 Visual: the top-card chart fades before the deck moves; grey "top card 52.4%" ghost (one font
 size) under the meter track. Slow riffle with the two-line citation *Gilbert–Shannon–Reeds model
@@ -87,10 +85,10 @@ two levels into four (exact: L1-left, L1-right, L2-left, L2-right), ceiling "≤
 8; riffle 4: 14 under "≤ 2⁴ = 16". Counters and ceiling labels change by a short slide (old up and
 out, new up and in), never a glyph morph; the faint shelf lines hide while cards fly. Tag "one
 simulated deck". Side by side: the perfect deck returns with 26 levels (its shelves at 15 %, caps
-kept), "average 26.5" (leaves once spoken, as the 16-line crosses), "≤ 16: 1 in 2.1 million"; the
+kept; "26" shows its count, the 26.5 average is no longer spoken or shown), "≤ 16: 1 in 2.1 million"; the
 citation and the top-card ghost dim to 25 % during this beat. On "wrong about once in four
-million" the needle jumps to 99.99998 %; on "The top card can't see this" the top card is boxed
-and the ghost returns to full; caps flash on "order between cards".
+million" the needle jumps to 99.99998 %; on "The top card" the top card is boxed
+and the ghost returns to full; on "this" the two counts 14 and 26 flash; caps flash on "order between cards".
 
 ### 5. Insight (1:31–2:50)
 > Bayer and Diaconis proved that in this model, decks with the same count are equally likely.
@@ -98,25 +96,25 @@ and the ghost returns to full; caps flash on "order between cards".
 
 > So pile decks onto their counts, *[pause 0.6]* then every possible deck, weighted by its chance.
 
-> The red area, purple above blue, is the distance from random. Right now it's one.
+> The red area, purple above blue, is the distance from random.
 
-> How many more riffles to bring it below a half? *[pause 1.5]*
+> How many more riffles until it's below a half? *[pause 1.5]* (spoken at 0.80)
 
-> A fifth riffle: point nine two. A sixth: point six one. A seventh: point three three.
+> A fifth riffle: point nine two. A sixth: point six one. A seventh: point three three. *[pause 0.9]*
 
-> Guess riffled where purple is higher: you catch sixty five percent of riffled decks, and flag
-> thirty two percent of perfect ones. Accuracy is a half, plus half the difference, and the
+> Guess riffled where purple is higher: you catch sixty five percent of riffled decks. You also
+> flag thirty two percent of perfect ones. Accuracy is a half, plus half the difference, and the
 > difference is the red area.
 
-> Each riffle roughly halved the gap, but blue's spread, its standard deviation, stayed about two.
-> While the gap spans several spreads, the distance stays near one. Within about one spread, it
-> halves every riffle: that's the cliff.
+> Each riffle roughly halved the gap; blue's spread, its standard deviation, stayed about two.
+> While the gap spans several spreads, the distance stays near one. Within one spread, it halves
+> every riffle: that's the cliff.
 
-> Multiply each gap by two to the k, and it settles near two hundred thirty. *[pause 1.2]*
-> Divide that by two each riffle, and it reaches one spread after just under seven.
+> Multiply each gap by two to the k, and it settles near two hundred thirty. *[pause 1.6]* Set
+> the gap equal to one spread, and k is just under seven.
 
-> For n cards, two hundred thirty grows like n squared, but the spread only like root n, so the
-> cliff sits near three halves log base two of n.
+> For n cards, two hundred thirty grows like n squared, but the spread like root n, so the cliff
+> sits near three halves log base two of n.
 
 Visual: meter leaves, then *Bayer & Diaconis, 1992 · Ann. Appl. Probab.* fades in. "chance 3.5 ×
 10⁻⁶⁰" / "chance 1.2 × 10⁻⁶⁸"; on "equally likely" the riffled deck rearranges into another
@@ -125,7 +123,7 @@ Visual: meter leaves, then *Bayer & Diaconis, 1992 · Ann. Appl. Probab.* fades 
 26; 39 more tokens of each colour rain into stacks ("40 simulated decks each", one token = 1/40);
 on "every possible deck, weighted by its chance" the label leaves and the stacks become the exact bars (blue bars + outline, purple
 outline); "4 riffles" rides above the purple histogram on the row above the axis title.
-Red fills purple-above-blue on "red area"; the d-inset draws on "distance"; "d = 1.00" at 4.
+Red fills purple-above-blue on "red area"; the d-inset draws on "distance" and "d = 1.00" appears at 4.
 Prediction: d = ½ line, "0.5" flags, 1.5 s hold, during which the yellow gap bracket (legs on the
 two centres) draws and its bar flies up into "gap: 12.4". **Contiguous answer:** a 30 % ghost of
 the 4-riffle bracket stays; purple slides to 5, 6, 7 riffles (the tag names the target, d hidden
@@ -148,14 +146,14 @@ dashed line at 6.77 on the d-plot. For n: the chart dims; 230 → `n(n+1)/12` ("
 2.1 → `√((n+1)/12)` ("∼ √n"), `k ≈ 6.8` → `k ≈ (3/2) log₂ n − 1.8`, grey "(gap = spread rule)".
 
 ### 6. Payoff (2:50–3:17)
-> Aldous proved that law. Bayer and Diaconis computed the exact curve: for fifty two cards, seven
-> riffles is the first count below a half.
+> Aldous proved that law. *[pause 0.4]* Bayer and Diaconis computed the exact curve: for fifty two
+> cards, seven riffles is the first below a half. *[pause 0.9]*
 
-> Trefethen and Trefethen measured information instead: no cliff, and five or six shuffles do a
+> Trefethen and Trefethen measured information instead: no cliff; five or six shuffles do a
 > reasonable job.
 
-> Many Markov chains share this cliff, and samplers share the trap: one statistic can settle, like
-> the top card, long before the whole chain has.
+> Many Markov chains share this cliff, and samplers share the trap: one statistic, like the top
+> card, settles long before the whole chain.
 
 Visual: the d-plot grows into the full distance curve (Table 1 values), the equations stay top
 right at 45 %. *Aldous, 1983 · Séminaire de Probabilités XVII* while `k ≈ (3/2) log₂ n − 1.8`
@@ -167,13 +165,10 @@ PNAS*, the cliff flashes on "cliff", the grey dashed "top card only (computed)" 
 and drops early beside the red "whole deck" (labels on "statistic").
 
 ### 7. Landing (3:17–3:38)
-> Back to the coin flip. After four riffles you'd almost never be wrong, same as with an
-> unshuffled deck.
+> Back to the coin flip. Three more riffles, *[pause 1.2]* and you'd be right only two times in
+> three.
 
-> Three more riffles, *[pause 1.2]* and you'd be right only two times out of three.
-
-> Four riffles fool someone watching the top card. Fooling someone who counts sequences that well
-> takes ten.
+> Four riffles fool someone watching the top card. Fooling someone who counts sequences takes ten.
 
 Visual: the opening deck returns in level view (caps only, 14 levels, "one simulated deck"),
 meter at 99.99998 % with the grey "top card 52.4%" ghost. Each riffle: cut, then the cards drop

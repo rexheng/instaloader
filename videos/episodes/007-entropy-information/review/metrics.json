@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/007-entropy-information/final.mp4",
- "duration_s": 237.567,
+ "duration_s": 212.767,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,65 +8,84 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 10.24,
- "integrated_lufs": -14.0,
- "lra_lu": 2.2,
- "true_peak_dbtp": -2.0,
+ "size_mb": 9.36,
+ "integrated_lufs": -14.1,
+ "lra_lu": 2.5,
+ "true_peak_dbtp": -2.1,
  "leading_silence_s": 0.0,
- "trailing_silence_s": 0.74,
- "longest_internal_silence_s": 2.09,
+ "trailing_silence_s": 0.82,
+ "longest_internal_silence_s": 2.17,
  "silences_over_1_5s": [
   [
-   7.96,
-   9.94
+   7.35,
+   9.43
   ],
   [
-   85.42,
-   87.04
+   72.26,
+   73.87
   ],
   [
-   127.21,
-   129.3
+   109.0,
+   111.17
   ]
  ],
- "frames": 7127,
- "longest_static_s": 3.17,
+ "frames": 6383,
+ "longest_static_s": 3.57,
  "static_stretches_over_3s": [
   [
-   4.23,
-   7.4,
-   3.17
+   161.43,
+   165.0,
+   3.57
   ],
   [
-   234.43,
-   237.57,
-   3.13
+   209.47,
+   212.77,
+   3.3
   ]
  ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.024774305555557,
- "transcript_words": 618,
+ "background_luma": 22.210572916666667,
+ "transcript_words": 509,
  "first_word_s": 0.02,
- "last_word_s": 237.204,
- "wpm_speech": 160.2,
- "wpm_overall": 156.1,
- "wpm_excluding_all_pauses": 187.6,
+ "last_word_s": 212.32935,
+ "wpm_speech": 152.0,
+ "wpm_overall": 143.5,
+ "wpm_excluding_all_pauses": 179.4,
  "narration_file": "videos/episodes/007-entropy-information/narration.json",
- "wer": 0.0133,
- "narration_words": 603,
+ "wer": 0.022,
+ "narration_words": 499,
  "banned_phrase_hits": 0,
  "slop_hits": [],
+ "narration_craft": {
+  "narration_words": 494,
+  "voice_speeds": [
+   0.83
+  ],
+  "sentence_wpm_median": 161.3,
+  "sentences_over_200wpm": 2,
+  "sentence_gap_median_s": 0.53,
+  "sentence_gap_cv": 0.32,
+  "beat_gap_median_s": 0.62,
+  "longest_breathless_run_s": 11.5,
+  "max_distinct_numbers_20s": 6,
+  "repeated_phrases": 3,
+  "glyph_morphs": 0,
+  "deictics": 2,
+  "deictics_unlanded": 0
+ },
  "layout_audit": {
   "count": 0,
   "counts": {
    "overlap": 0,
    "clearance": 0,
    "safe-area": 0,
-   "caption-zone": 0
+   "caption-zone": 0,
+   "text-size": 0,
+   "small-label": 0
   },
   "allowed": 0,
-  "checks": 224
+  "checks": 215
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -80,172 +99,173 @@
   "sheets/sheet_09.png",
   "sheets/sheet_10.png",
   "sheets/sheet_11.png",
-  "sheets/sheet_12.png",
-  "sheets/sheet_13.png",
-  "sheets/sheet_14.png"
+  "sheets/sheet_12.png"
  ],
  "keyframes": [
   {
-   "t": 3.57,
+   "t": 3.63,
    "file": "keyframes/kf_01_00-03.6.png"
   },
   {
-   "t": 10.63,
-   "file": "keyframes/kf_02_00-10.6.png"
+   "t": 10.33,
+   "file": "keyframes/kf_02_00-10.3.png"
   },
   {
-   "t": 16.47,
-   "file": "keyframes/kf_03_00-16.5.png"
+   "t": 16.9,
+   "file": "keyframes/kf_03_00-16.9.png"
   },
   {
-   "t": 23.03,
-   "file": "keyframes/kf_04_00-23.0.png"
+   "t": 22.13,
+   "file": "keyframes/kf_04_00-22.1.png"
   },
   {
-   "t": 32.47,
-   "file": "keyframes/kf_05_00-32.5.png"
+   "t": 29.7,
+   "file": "keyframes/kf_05_00-29.7.png"
   },
   {
-   "t": 39.53,
-   "file": "keyframes/kf_06_00-39.5.png"
+   "t": 37.07,
+   "file": "keyframes/kf_06_00-37.1.png"
   },
   {
-   "t": 47.83,
-   "file": "keyframes/kf_07_00-47.8.png"
+   "t": 43.03,
+   "file": "keyframes/kf_07_00-43.0.png"
   },
   {
-   "t": 55.23,
-   "file": "keyframes/kf_08_00-55.2.png"
+   "t": 46.5,
+   "file": "keyframes/kf_08_00-46.5.png"
   },
   {
-   "t": 60.73,
-   "file": "keyframes/kf_09_01-00.7.png"
+   "t": 51.97,
+   "file": "keyframes/kf_09_00-52.0.png"
   },
   {
-   "t": 64.4,
-   "file": "keyframes/kf_10_01-04.4.png"
+   "t": 55.07,
+   "file": "keyframes/kf_10_00-55.1.png"
   },
   {
-   "t": 66.53,
-   "file": "keyframes/kf_11_01-06.5.png"
+   "t": 57.43,
+   "file": "keyframes/kf_11_00-57.4.png"
   },
   {
-   "t": 68.97,
-   "file": "keyframes/kf_12_01-09.0.png"
+   "t": 61.33,
+   "file": "keyframes/kf_12_01-01.3.png"
   },
   {
-   "t": 73.1,
-   "file": "keyframes/kf_13_01-13.1.png"
+   "t": 63.67,
+   "file": "keyframes/kf_13_01-03.7.png"
   },
   {
-   "t": 76.1,
-   "file": "keyframes/kf_14_01-16.1.png"
+   "t": 69.8,
+   "file": "keyframes/kf_14_01-09.8.png"
   },
   {
-   "t": 83.1,
-   "file": "keyframes/kf_15_01-23.1.png"
+   "t": 80.63,
+   "file": "keyframes/kf_15_01-20.6.png"
+  },
+  {
+   "t": 87.27,
+   "file": "keyframes/kf_16_01-27.3.png"
+  },
+  {
+   "t": 92.0,
+   "file": "keyframes/kf_17_01-32.0.png"
   },
   {
    "t": 96.5,
-   "file": "keyframes/kf_16_01-36.5.png"
+   "file": "keyframes/kf_18_01-36.5.png"
   },
   {
-   "t": 107.37,
-   "file": "keyframes/kf_17_01-47.4.png"
+   "t": 104.9,
+   "file": "keyframes/kf_19_01-44.9.png"
   },
   {
-   "t": 109.43,
-   "file": "keyframes/kf_18_01-49.4.png"
+   "t": 110.5,
+   "file": "keyframes/kf_20_01-50.5.png"
   },
   {
-   "t": 121.6,
-   "file": "keyframes/kf_19_02-01.6.png"
+   "t": 119.67,
+   "file": "keyframes/kf_21_01-59.7.png"
   },
   {
-   "t": 125.6,
-   "file": "keyframes/kf_20_02-05.6.png"
+   "t": 128.97,
+   "file": "keyframes/kf_22_02-09.0.png"
   },
   {
-   "t": 128.67,
-   "file": "keyframes/kf_21_02-08.7.png"
+   "t": 136.87,
+   "file": "keyframes/kf_23_02-16.9.png"
   },
   {
-   "t": 136.07,
-   "file": "keyframes/kf_22_02-16.1.png"
+   "t": 140.5,
+   "file": "keyframes/kf_24_02-20.5.png"
   },
   {
-   "t": 139.77,
-   "file": "keyframes/kf_23_02-19.8.png"
+   "t": 146.83,
+   "file": "keyframes/kf_25_02-26.8.png"
   },
   {
-   "t": 142.0,
-   "file": "keyframes/kf_24_02-22.0.png"
+   "t": 151.57,
+   "file": "keyframes/kf_26_02-31.6.png"
   },
   {
-   "t": 149.5,
-   "file": "keyframes/kf_25_02-29.5.png"
+   "t": 153.4,
+   "file": "keyframes/kf_27_02-33.4.png"
   },
   {
-   "t": 152.77,
-   "file": "keyframes/kf_26_02-32.8.png"
+   "t": 158.77,
+   "file": "keyframes/kf_28_02-38.8.png"
   },
   {
-   "t": 160.37,
-   "file": "keyframes/kf_27_02-40.4.png"
+   "t": 164.1,
+   "file": "keyframes/kf_29_02-44.1.png"
   },
   {
-   "t": 166.97,
-   "file": "keyframes/kf_28_02-47.0.png"
+   "t": 167.13,
+   "file": "keyframes/kf_30_02-47.1.png"
   },
   {
-   "t": 171.33,
-   "file": "keyframes/kf_29_02-51.3.png"
+   "t": 173.43,
+   "file": "keyframes/kf_31_02-53.4.png"
   },
   {
-   "t": 173.47,
-   "file": "keyframes/kf_30_02-53.5.png"
+   "t": 176.4,
+   "file": "keyframes/kf_32_02-56.4.png"
   },
   {
-   "t": 183.87,
-   "file": "keyframes/kf_31_03-03.9.png"
+   "t": 182.87,
+   "file": "keyframes/kf_33_03-02.9.png"
   },
   {
-   "t": 186.3,
-   "file": "keyframes/kf_32_03-06.3.png"
+   "t": 187.97,
+   "file": "keyframes/kf_34_03-08.0.png"
   },
   {
-   "t": 193.6,
-   "file": "keyframes/kf_33_03-13.6.png"
+   "t": 190.4,
+   "file": "keyframes/kf_35_03-10.4.png"
   },
   {
-   "t": 196.5,
-   "file": "keyframes/kf_34_03-16.5.png"
+   "t": 193.67,
+   "file": "keyframes/kf_36_03-13.7.png"
   },
   {
-   "t": 203.23,
-   "file": "keyframes/kf_35_03-23.2.png"
+   "t": 198.47,
+   "file": "keyframes/kf_37_03-18.5.png"
   },
   {
-   "t": 210.33,
-   "file": "keyframes/kf_36_03-30.3.png"
+   "t": 203.57,
+   "file": "keyframes/kf_38_03-23.6.png"
   },
   {
-   "t": 220.27,
-   "file": "keyframes/kf_37_03-40.3.png"
+   "t": 208.5,
+   "file": "keyframes/kf_39_03-28.5.png"
   },
   {
-   "t": 226.33,
-   "file": "keyframes/kf_38_03-46.3.png"
-  },
-  {
-   "t": 231.9,
-   "file": "keyframes/kf_39_03-51.9.png"
-  },
-  {
-   "t": 237.53,
-   "file": "keyframes/kf_40_03-57.5.png"
+   "t": 212.73,
+   "file": "keyframes/kf_40_03-32.7.png"
   }
  ],
- "flags": [],
+ "flags": [
+  "5 scene warning(s) from NarratedScene (timing/layout)",
+  "cadence: full stops 0.53 s (variation 0.32), beat turns 0.62 s — metronomic, turns get no more air than full stops"
+ ],
  "implied_caps": []
 }

@@ -71,162 +71,162 @@ Sixty-four: point two five, nearly this perfect bell in green.
 Each time the group grows four times, the skewness halves: two over root n, and two is the skewness of one wait.
 
 19
-00:01:13,466 --> 00:01:15,106
+00:01:13,766 --> 00:01:15,406
 The root comes from the cubes.
 
 20
-00:01:15,256 --> 00:01:19,616
+00:01:15,556 --> 00:01:19,916
 Add four bus waits: their cubed gaps add up to four times one wait's.
 
 21
-00:01:19,766 --> 00:01:23,256
+00:01:20,066 --> 00:01:23,556
 But the spread only doubles, so its cube grows eight times.
 
 22
-00:01:23,406 --> 00:01:25,326
+00:01:23,706 --> 00:01:25,626
 Four over eight: half the lean.
 
 23
-00:01:25,476 --> 00:01:28,286
+00:01:25,776 --> 00:01:28,586
 In general, n over n to the one and a half.
 
 24
-00:01:30,000 --> 00:01:34,630
+00:01:30,500 --> 00:01:35,130
 Kurtosis, the extra tail weight, fades faster: it quarters each time.
 
 25
-00:01:34,780 --> 00:01:37,300
+00:01:35,280 --> 00:01:37,800
 Every finer difference fades faster still.
 
 26
-00:01:37,450 --> 00:01:38,920
+00:01:37,950 --> 00:01:39,420
 Only the bell survives.
 
 27
-00:01:39,070 --> 00:01:40,940
+00:01:39,570 --> 00:01:41,440
 That's the central limit theorem.
 
 28
-00:01:41,090 --> 00:01:44,500
+00:01:41,590 --> 00:01:45,000
 It needs independent pieces, and one more condition.
 
 29
-00:01:45,300 --> 00:01:47,000
+00:01:45,800 --> 00:01:47,500
 Back to the textbook's thirty.
 
 30
-00:01:47,500 --> 00:01:50,190
+00:01:48,000 --> 00:01:50,690
 Two over root thirty: point three seven.
 
 31
-00:01:50,340 --> 00:01:51,820
+00:01:50,840 --> 00:01:52,320
 Close to a bell, by eye.
 
 32
-00:01:52,033 --> 00:01:58,783
+00:01:52,533 --> 00:01:59,283
 But tests live in the tails: a ninety-five percent interval should miss two and a half percent on each side.
 
 33
-00:01:58,933 --> 00:02:01,503
+00:01:59,433 --> 00:02:02,003
 Tests estimate the spread from the same data.
 
 34
-00:02:01,653 --> 00:02:07,653
+00:02:02,153 --> 00:02:08,153
 With lopsided waits, a low average comes with a small spread, so its interval stops short.
 
 35
-00:02:08,453 --> 00:02:12,103
+00:02:08,953 --> 00:02:12,603
 With thirty waits: seven percent low, one percent high.
 
 36
-00:02:12,300 --> 00:02:16,740
+00:02:12,800 --> 00:02:17,240
 Ron Kohavi and colleagues want each side between two and three percent.
 
 37
-00:02:16,890 --> 00:02:21,230
-Their rule: n at least three hundred fifty-five times the skewness squared.
+00:02:17,390 --> 00:02:21,900
+Their rule: n at least three hundred fifty-five times the skewness, squared.
 
 38
-00:02:21,530 --> 00:02:23,480
+00:02:22,200 --> 00:02:24,150
 Divide by n and take the root:
 
 39
-00:02:24,480 --> 00:02:28,720
+00:02:25,150 --> 00:02:29,390
 it's our formula: the average's skewness at most point oh five three.
 
 40
-00:02:28,870 --> 00:02:32,450
+00:02:29,540 --> 00:02:33,120
 At three hundred, the lean is point one two: still too much.
 
 41
-00:02:32,600 --> 00:02:38,460
+00:02:33,270 --> 00:02:39,130
 For these waits: fourteen twenty, lean point oh five three, and both misses reach the band.
 
 42
-00:02:39,700 --> 00:02:45,930
+00:02:40,366 --> 00:02:46,596
 Bing's revenue per user had a skewness near eighteen: a hundred and fourteen thousand users.
 
 43
-00:02:46,080 --> 00:02:50,080
+00:02:46,746 --> 00:02:50,746
 Capping each user at ten dollars a week: under ten thousand.
 
 44
-00:02:50,366 --> 00:02:53,736
+00:02:51,033 --> 00:02:54,403
 And for some data, no number on this axis is enough.
 
 45
-00:02:54,833 --> 00:03:01,963
+00:02:55,800 --> 00:03:02,930
 A lighthouse one mile off a straight shore flashes at random angles, and each flash lands somewhere on the shore.
 
 46
-00:03:02,166 --> 00:03:04,046
+00:03:03,133 --> 00:03:05,013
 Track the average landing spot.
 
 47
-00:03:04,196 --> 00:03:10,496
+00:03:05,163 --> 00:03:11,463
 It never settles: a flash aimed almost along the shore lands absurdly far away, and yanks it.
 
 48
-00:03:10,966 --> 00:03:16,306
+00:03:11,933 --> 00:03:17,273
 Among a thousand flashes, the farthest typically lands about nine hundred miles off.
 
 49
-00:03:16,456 --> 00:03:20,656
+00:03:17,423 --> 00:03:21,623
 Divided by a thousand, it still drags the average about a mile.
 
 50
-00:03:20,806 --> 00:03:24,336
+00:03:21,773 --> 00:03:25,303
 Half of single flashes land within a mile of the middle.
 
 51
-00:03:24,486 --> 00:03:29,196
+00:03:25,453 --> 00:03:30,163
 Repeat the thousand-flash average two hundred times, and still only half do.
 
 52
-00:03:30,000 --> 00:03:34,780
+00:03:30,966 --> 00:03:35,746
 The theorem needs finite variance: no single piece can outweigh the rest.
 
 53
-00:03:34,930 --> 00:03:36,780
+00:03:35,896 --> 00:03:37,746
 Here the variance is infinite.
 
 54
-00:03:36,930 --> 00:03:40,800
+00:03:37,896 --> 00:03:41,766
 The median ignores how far the extremes fly, so it homes in.
 
 55
-00:03:42,133 --> 00:03:44,943
+00:03:43,100 --> 00:03:45,910
 So the answer is over a thousand, not thirty.
 
 56
-00:03:45,093 --> 00:03:47,353
+00:03:46,060 --> 00:03:48,320
 Collect forever: still lopsided.
 
 57
-00:03:47,503 --> 00:03:49,323
+00:03:48,470 --> 00:03:50,290
 The bell was never in the data.
 
 58
-00:03:49,473 --> 00:03:50,813
+00:03:50,440 --> 00:03:51,780
 It's in the average.
 

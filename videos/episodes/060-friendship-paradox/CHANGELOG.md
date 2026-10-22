@@ -536,7 +536,7 @@ full stops. So:
 - *Voice*: CADENCE = "shaped"; [pause 0.9] after "more than twice the mean", "thirteen point nine
   days ahead" and "the extra half friend we measured"; a [pause 0.5] breath in the Harvard beat;
   the fast sentences rewritten ("The guess fell short by half a friend, because ...", "Line the girls
-  up ...: they balance at two and a half", "And the ring? No spread, so no gap.") and measured under
+  up ...: they balance at two and a half", "With no spread, the ring had no gap.") and measured under
   200 wpm in Kokoro's timings.
 - *Render warnings fixed*: "d = k − μ" touched the ruler's end (moved 0.22 past it); the variance
   beat reached "variance" 0.9 s late (the areas now complete within 1.4 s, are read through a 1.5 s

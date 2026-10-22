@@ -702,3 +702,61 @@ lower; its slide stops inside the safe area.
 segment; the unbroken object chain (cold-open diagram → table, now with its "1 in 500" → grid → strip →
 crowd → raster → + badge → cold-open diagram with flows); the half-sick control and the bracketed 6×; the
 landing's live sweep on one updater and the recall / precision tags on the opening frame's 99 % and 17 %.
+
+### Self-check and second pass (same round, continued after an interruption)
+
+The edits above had been rendered (final.mp4 09:42) but never reviewed. The review kit was re-run on
+that master (0 warnings, 0 layout issues, 3:40.7) and every contact sheet and the keyframes at each
+fixed timestamp were read, plus 4–15 fps strips through the slider (0:47–0:55), the numbers → names
+step (2:01–2:05), the strip → crowd hand-off (2:09–2:13), the 145 squares filing in (2:32–2:36), the
+precision ghost (2:46–2:50) and the raster → + badge (3:08–3:12). All the round-6 fixes had landed.
+Midway through this pass the toolkit gained PRODUCTION_GUIDE §13 ("the systemic 9-blockers") and a
+"Narration craft" section in the review kit, which flagged this cut for length (508 words, 3:40.7),
+a metronomic cadence and an 18 s breathless run. Those are now critic-visible, so this pass also
+follows §13.7.
+
+**Defects found in the frames and fixed.**
+- *Raster → badge (3:09.5).* The outline was eased twice (`smooth` inside a window that is already
+  smooth), so it lagged and then raced the shrinking raster, and the raster poked out of it for
+  ≈ 0.2 s. Both now run on one clock; the raster stays inside the outline until it is the disk.
+- *"precision" copy (2:48.7).* TransformFromCopy started on top of the title at full strength (a
+  double strike). It is now a Flight that starts invisible just above the title; "too" arrives last.
+- *Live meters vs displayed counts.* During the fail-beat slider and the landing sweep the meter
+  showed the exact P(sick∣+) at N while the table showed rounded whole people, so a paused frame could
+  disagree by a point (sheet 0:53: "1 in 388 · 26 / 100 → 126" with "20 %", but 26/126 = 20.6 %). This
+  happened at 59 of the 499 integer N. Both meters are now driven from the displayed counts (red ÷
+  column sum), so every frame re-derives; the spoken N (500, 100, 2) are unchanged (check.py, facts.md).
+- *"1 in 500" over "0 sick" (0:33).* The head counts appeared with the empty grid, under the cold
+  open's "1 in 500". They now arrive only once the label has rolled to "1 in 2".
+- *A false equation mid-build (1:46).* "Divide everything" changed the sick and healthy rows in two
+  moves, so for a moment the formula mixed shares and counts (0.002 × 0.99 / (… + 9,980 × 0.01)
+  ≈ 17 %). It is one move now, so the formula is true at every frame.
+- *Glyph morphs.* "95%" → "99%" interpolated the 5 into a 9 (a smeared glyph at 0:25.9); the alert
+  meter's title morphed glyph by glyph into "precision"; the numbers → names step was a per-glyph
+  ReplacementTransform. Now: the travelling label cross-fades (the 9 and % stay put), the title rolls
+  out and "precision" rolls in, and each number rolls out towards its name's slot while the name rolls
+  in from there (numerator first, braces stretching), so no two strings are ever legible at once.
+  The render's glyph-morph lint reports 0.
+- *Type floors.* The bar tags' second lines (Text 18 = 23 px) are Text 21; "Six Nations 2018 / 48
+  alerts" is two lines so it stays inside the safe area; "your test" is Text 24.
+
+**§13 budget and voice (Concision, Audio).** `CADENCE = "shaped"` (sense-following gaps; "hundred and
+twenty" read "hundred twenty"), the cold open at 0.84 instead of 0.88, a 0.3 s breath after the hook
+question, 0.9 s after the thesis, and 37 fewer words by the mute test:
+- "Check that rule by counting: ten thousand people, half of them sick." (was 18 words, now 12);
+- "Test everyone, and watch who lights up." (the beam and the ticking counts show the 99 % / 1 %; the
+  spoken rates repeated the cold open word for word);
+- "…plus one percent of everyone else: about a hundred." (the 9,980 is on the table; no longer
+  spoken, and no repeat of "percent of the healthy");
+- "Divide everything by ten thousand: counts become shares. The share can't change." (was 22 words;
+  §13.4 cites this very step as narrated for 14 s);
+- "Symptoms raise the one in five hundred: at one in a hundred…" (the label rises on those words).
+"Shrink to the alerts. Take the red share." is two short sentences (it ran at 214 wpm); "and these
+are how often…" no longer holds "these" for 0.67 s; the "red share" sentence is at 0.80.
+
+**Deictics.** "this disease" pulses the sick node, "a problem like this" pulses the problem's three
+numbers, "Here, the rule holds" lands on the meter at the naive marker, and the second "these" grows
+its braces (the render's deictic check had listed all four).
+
+**Kept:** everything in the round-6 keep lists (strip under the meter, the unbroken object chain, the
+half-sick control and the 6× bracket, the live slider and sweep, the recall/precision tags).

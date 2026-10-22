@@ -30,7 +30,8 @@ from sample_space import *
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from narration_text import BEATS, GAP_AFTER, PRONUNCIATIONS as SAY, SPEED as VOICE_SPEED  # noqa: E402
+from narration_text import (BEATS, GAP_AFTER, BEAT_SPEED, PRONUNCIATIONS as SAY, SPEED as VOICE_SPEED,  # noqa: E402
+                            CADENCE as VOICE_CADENCE)
 
 D = np.load(HERE / "data.npz")
 BAR_OPACITY = 0.85
@@ -203,7 +204,7 @@ def marker(x, y, val, name):
     """A required sample size on the log axis: INK dot and value, gray name."""
     d = Dot(P(x, y), radius=0.09, color=INK)
     v = MathTex(val, font_size=MATH, color=INK).next_to(d, UP, buff=0.2)
-    nm = Text(name, font_size=LABEL - 2, color=GRAY).next_to(v, UP, buff=0.18)
+    nm = Text(name, font_size=LABEL - 1, color=GRAY).next_to(v, UP, buff=0.18)
     return VGroup(d, v, nm)
 
 
@@ -224,6 +225,7 @@ NS = [1, 4, 16, 64]
 WIN = {1: (0, 50), 4: (-7.5, 30), 16: (1.25, 20), 64: (5.625, 15)}
 TICKS = {1: [0, 20, 40], 4: [0, 10, 20], 16: [5, 10, 15], 64: [6, 10, 14]}
 BIG_L, BIG_W, BIG_B, BIG_H = -6.0, 4.8, 0.15, 1.9      # the n = 30 panel
+HEAD30_Y = 3.31                                         # its "n = 30" header (above the intervals)
 ROW1, ROW2, RX = 1.6, -0.08, 3.95                       # payoff equation rows (right column):
 ROW_D, ROW_R = ROW1, ROW2                               # derived inequality above, Kohavi's rule below
 READ_P = (0.16, 2.95)                                   # the average's skewness, above the meter
@@ -251,10 +253,11 @@ class Episode(NarratedScene):
     TITLE = "Why Bell Curves Are Everywhere, and When They're Not"
     PRONUNCIATIONS = SAY
     SPEED = VOICE_SPEED
+    CADENCE = VOICE_CADENCE
 
     def beat(self, key):
         """Narrate one beat with its planned trailing silence (see narration_text.GAP_AFTER)."""
-        return self.narrate(BEATS[key], gap=GAP_AFTER[key])
+        return self.narrate(BEATS[key], gap=GAP_AFTER[key], speed=BEAT_SPEED.get(key))
 
     # ------------------------------------------------------------------ builders
     def src_axes(self):
@@ -280,7 +283,7 @@ class Episode(NarratedScene):
     def prediction(self, label="average of 30"):
         """Cold-open right side: arrow -> dashed bell with a question mark, and three guesses."""
         arrow = Arrow(P(1.8, 0.2), P(3.2, 0.2), color=GRAY, stroke_width=4, buff=0)
-        more = Text(label, font_size=LABEL - 2, color=INK).next_to(arrow, UP, buff=0.18)
+        more = Text(label, font_size=LABEL - 1, color=INK).next_to(arrow, UP, buff=0.18)
         def bell_y(x):
             return -2.0 + 2.55 * np.exp(-0.5 * ((x - BELL_C) / 0.52) ** 2)
         bell = FunctionGraph(bell_y, x_range=[BELL_C - 1.25, BELL_C + 1.25], color=GREEN, stroke_width=4)
@@ -344,8 +347,10 @@ class Episode(NarratedScene):
             self.play(head.animate.set_fill(opacity=BAR_OPACITY), tail_brace.animate.set_opacity(0.4),
                       tail_lbl.animate.set_opacity(0.4), run_time=0.5)
             beat.wait_until("bell", offset=-0.35)
-            self.play(Create(base), Create(dashed), run_time=beat.until("does", offset=-0.1, min_time=0.8))
-            self.play(FadeIn(qmark, scale=0.8), run_time=0.5)
+            self.play(Create(base), Create(dashed), run_time=beat.until("these", offset=-0.15, min_time=0.8))
+            # "these waits": the histogram flashes as the "?" lands on the guessed bell
+            self.play(FadeIn(qmark, scale=0.8), LaggedStart(*[glow(b, 0.35, 0.5) for b in bars], lag_ratio=0.03),
+                      run_time=0.7)
             for i, cue in enumerate([("thirty", 2), ("three hundred", 1), ("over", 1)]):
                 beat.wait_until(cue[0], cue[1], offset=-0.15)
                 extra = [FadeOut(tail_brace), FadeOut(tail_lbl)] if i == 0 else []
@@ -369,19 +374,16 @@ class Episode(NarratedScene):
         pred = VGroup(arrow, more, dashed, base, qmark, chips, tails, t_lbls)
         with self.beat("collect") as beat:
             self.play(dimmed(pred, 0.3), FadeOut(cite_k), run_time=beat.until("collecting", offset=-0.2, min_time=0.6))
-            self.play(LaggedStart(*[glow(b, 0.35, 0.6) for b in bars], lag_ratio=0.04),
-                      run_time=beat.until("Collect a", offset=-0.3, min_time=0.9))
-            cues = ["thousand", "ten thousand", "hundred thousand"]
-            beat.wait_until(cues[0], offset=-0.3)
-            for i, cue in enumerate(cues):
-                newc = Text(labels[i], font_size=LABEL, color=INK)
-                newc.move_to(count).align_to(count, RIGHT)
-                rt = beat.until(cues[i + 1], offset=-0.3, min_time=0.5) if i < 2 else 0.9
-                self.play(Transform(bars, hist_bars(ax, edges, shares[i + 1])),
-                          FadeTransform(count, newc), run_time=rt)
-                count = newc
-            beat.wait_until("shape", offset=-0.2)
-            self.play(Create(curve), run_time=1.4, rate_func=SMOOTH)
+            beat.wait_until("hundred", offset=-0.3)
+            newc = Text(labels[2], font_size=LABEL, color=INK)
+            newc.move_to(count).align_to(count, RIGHT)
+            self.play(Transform(bars, hist_bars(ax, edges, shares[3])), swap(count, newc, run_time=1.2),
+                      run_time=1.2)
+            count = newc
+            beat.wait_until("smoother", offset=-0.2)
+            self.play(LaggedStart(*[glow(b, 0.35, 0.6) for b in bars], lag_ratio=0.03), run_time=0.9)
+            beat.wait_until("same", offset=-0.2)
+            self.play(Create(curve), run_time=1.3, rate_func=SMOOTH)
         self.curve, self.count = curve, count
 
         # ---- beat 4: measured failure: skewness, defined term by term, stays at two
@@ -391,7 +393,7 @@ class Episode(NarratedScene):
         ch.x_axis.remove(ch.x_axis.numbers)
         xl = VGroup(*[MathTex(f"10^{k}", font_size=MATH_SMALL, color=GRAY)
                       .next_to(ch.c2p(i + 1, 0), DOWN, buff=0.2) for i, k in enumerate([2, 3, 4, 5])])
-        xt = Text("waits collected", font_size=LABEL - 2, color=GRAY)
+        xt = Text("waits collected", font_size=LABEL - 1, color=GRAY)
         xt.next_to(xl, DOWN, buff=0.16).align_to(ch.x_axis.get_right(), RIGHT)
         zero_lbl = ch.y_axis.numbers[0]
         bell_lbl = Text("bell", font_size=LABEL, color=GREEN).next_to(zero_lbl, LEFT, buff=0.15)
@@ -417,7 +419,7 @@ class Episode(NarratedScene):
         vlabs = VGroup(*[MathTex(f"{s:.2f}", font_size=28, color=BLUE).next_to(b, UP, buff=0.17)
                          for s, b in zip(skews, sbars)])
         gap = Brace(Line(ch.c2p(4.4, 0), ch.c2p(4.4, 2.0)), direction=RIGHT, color=GRAY, buff=0.05)
-        gap_lbl = VGroup(Text("gap", font_size=LABEL - 2, color=GRAY),
+        gap_lbl = VGroup(Text("gap", font_size=LABEL - 1, color=GRAY),
                          MathTex(r"\approx 2", font_size=32, color=GRAY)).arrange(DOWN, buff=0.08)
         gap_lbl.next_to(gap, RIGHT, buff=0.16)
         with self.beat("fail") as beat:
@@ -437,6 +439,8 @@ class Episode(NarratedScene):
             self.play(FadeOut(VGroup(mu_line, mu_lbl, dist, dist_lbl)),
                       zero_lbl.animate.set_color(GREEN), FadeIn(bell_lbl, shift=0.1 * RIGHT),
                       Create(zero_line), run_time=0.8)
+            # "These waits": the histogram they come from flashes (deictic sync)
+            beat.on("These", LaggedStart(*[glow(b, 0.35, 0.5) for b in bars], lag_ratio=0.03), run_time=0.6)
             beat.wait_until("two", offset=-0.35)
             self.play(LaggedStart(*[AnimationGroup(GrowFromEdge(b, DOWN), FadeIn(v, shift=0.1 * UP))
                                     for b, v in zip(sbars, vlabs)], lag_ratio=0.25),
@@ -457,7 +461,7 @@ class Episode(NarratedScene):
                for i, n in enumerate(NS)]
         heads = VGroup(*[MathTex("n", "=", str(n), font_size=MATH).move_to(P(PX[i], HEAD_Y))
                          for i, n in enumerate(NS)])
-        xshared = Text("average of n waits (minutes)", font_size=LABEL - 2, color=GRAY)
+        xshared = Text("average of n waits (minutes)", font_size=LABEL - 1, color=GRAY)
         xshared.move_to(P(0, XLAB_Y))
         ylab = Text("share (%)", font_size=LABEL - 4, color=GRAY).rotate(PI / 2)
         ylab.move_to(P(pax[0].y_axis.numbers.get_left()[0] - 0.17 - ylab.width / 2, PY0 + PH / 2))
@@ -512,7 +516,7 @@ class Episode(NarratedScene):
                       FadeIn(reads[0][0], rate_func=late_in), run_time=1.2)
             beat.wait_until("Four", offset=-0.1)
             self.play(LaggedStart(*[TransformFromCopy(new_src[b], c, path_arc=0.4) for b, c in zip(bins, chips)],
-                                  lag_ratio=0.15), run_time=beat.until("the one", offset=-0.1, min_time=1.0))
+                                  lag_ratio=0.15), run_time=beat.until("one long", offset=-0.1, min_time=1.0))
             beat.wait_until("long", offset=-0.15)
             self.play(emph(chips[2], 1.18), run_time=0.8)
             beat.wait_until("diluted", offset=-0.2)
@@ -544,17 +548,18 @@ class Episode(NarratedScene):
             else:
                 bells.add(normal_curve(pax[i], 10, 10 / np.sqrt(n), (hi - lo) / 24, lo, hi))
         with self.beat("avg") as beat:
+            # "These averages": the n = 4 histogram flashes as it is named
+            beat.on("These", glow(avg_bars[4], 0.45, 0.6), run_time=0.6)
             beat.wait_until("skewness", offset=-0.2)
-            self.play(Write(reads[1]), run_time=0.8)
-            beat.wait_until("Sixteen", offset=-0.3)
+            self.play(Write(reads[1]), run_time=0.7)
+            # the next histogram grows while its size is said, and its reading lands on the value
             self.play(LaggedStart(*[GrowFromEdge(b, DOWN) for b in avg_bars[16]], lag_ratio=0.04),
-                      run_time=beat.until("point five", offset=-0.2, min_time=1.0))
-            self.play(Write(reads[2]), run_time=0.7)
-            beat.wait_until("Sixty", offset=-0.3)
+                      run_time=beat.until("point five", offset=-0.2, min_time=0.8))
+            self.play(Write(reads[2]), run_time=0.6)
             self.play(LaggedStart(*[GrowFromEdge(b, DOWN) for b in avg_bars[64]], lag_ratio=0.04),
-                      run_time=beat.until("point two five", offset=-0.2, min_time=1.0))
-            self.play(Write(reads[3]), run_time=0.7)
-            beat.wait_until("perfect", offset=-0.2)
+                      run_time=beat.until("point two five", offset=-0.2, min_time=0.8))
+            self.play(Write(reads[3]), run_time=0.6)
+            beat.wait_until("this", offset=-0.15)
             self.play(LaggedStart(*[Create(b) for b in bells], lag_ratio=0.25),
                       run_time=beat.remaining(min_time=1.2))
 
@@ -642,7 +647,8 @@ class Episode(NarratedScene):
                           for k, (x, y, z) in enumerate(spots)])
         home = spots.index((0, 0, 0))
         gunit = gcubes[home].copy()
-        cap_b = Text("cubed gaps", font_size=SMALL, color=BLUE).move_to(P(blue.get_center()[0], -3.0))
+        cap_b = Text("cubed gaps", font_size=LABEL - 1, color=BLUE)
+        cap_b.move_to(P(-6.3 + cap_b.width / 2, -2.99))
         cap_g = MathTex(r"\text{spread}^3", font_size=30, color=GRAY).move_to(P(GX + A, -3.0))
         # the spread itself: one wait's sigma, then the four-wait sum's 2 sigma (= root 4 sigma)
         y1 = B0 + A + CUBE_D[1] + 0.3
@@ -733,9 +739,9 @@ class Episode(NarratedScene):
             lab = MathTex(r"\div 4", font_size=MATH_SMALL, color=INK).next_to(a, UP, buff=0.16)
             d4.add(VGroup(a, lab))
         clt = Text("central limit theorem", font_size=36, color=INK).move_to(P(-3.0, FORM_Y + 0.26))
-        cond_a = Text("independent pieces", font_size=LABEL - 4, color=GRAY)
-        cond_b = Text("+ one condition", font_size=LABEL - 4, color=GRAY)
-        VGroup(cond_a, cond_b).arrange(RIGHT, buff=0.18).move_to(P(-3.0, FORM_Y - 0.28))
+        cond_a = Text("independent pieces", font_size=LABEL - 1, color=GRAY)
+        cond_b = Text("+ one condition", font_size=LABEL - 1, color=GRAY)
+        VGroup(cond_a, cond_b).arrange(RIGHT, buff=0.18).move_to(P(-3.0, FORM_Y - 0.31))
         tail_bars = VGroup(*new_src[8:])                    # one wait's tail (20 minutes and longer)
         with self.beat("kurt") as beat:
             # the skew row steps back; the new reading starts under one wait's 1.98
@@ -743,22 +749,21 @@ class Episode(NarratedScene):
                       run_time=beat.until("extra", offset=-0.1, min_time=0.8))
             beat.wait_until("tail", offset=-0.2)
             self.play(glow(tail_bars, 0.5, 0.8), run_time=0.8)
-            beat.wait_until("fades", offset=-0.15)
-            self.play(LaggedStart(*[FadeIn(k, shift=0.12 * DOWN) for k in kurts[1:]], lag_ratio=0.3),
-                      run_time=beat.until("quarters", offset=-0.2, min_time=0.9))
-            self.play(LaggedStart(*[GrowArrow(g[0]) for g in d4], lag_ratio=0.2),
-                      LaggedStart(*[FadeIn(g[1]) for g in d4], lag_ratio=0.2), run_time=0.7)
+            # "quarters each time": each average's reading arrives with its /4 arrow
+            beat.wait_until("quarters", offset=-0.3)
+            self.play(LaggedStart(*[AnimationGroup(GrowArrow(g[0]), FadeIn(g[1]), FadeIn(k, shift=0.12 * DOWN))
+                                    for g, k in zip(d4, kurts[1:])], lag_ratio=0.35), run_time=1.3)
             beat.wait_until("Every", offset=-0.1)
             # every finer difference fades faster still: the bars close on their bells, panel by panel
             self.play(LaggedStart(*[Indicate(b, color=GREEN, scale_factor=1.05) for b in bells], lag_ratio=0.45),
-                      run_time=beat.until("Only", offset=-0.25, min_time=1.5))
+                      run_time=beat.until("only", offset=-0.25, min_time=1.5))
             self.play(glow(avg_bars[64], 0.45, 0.9), Indicate(bells[2], color=GREEN, scale_factor=1.06),
                       run_time=0.9)
             beat.wait_until("central", offset=-0.3)
             self.play(FadeIn(clt, shift=0.12 * UP), run_time=0.6)
             beat.wait_until("independent", offset=-0.15)
             self.play(FadeIn(cond_a, shift=0.1 * UP), run_time=0.5)
-            beat.wait_until("one more", offset=-0.15)
+            beat.wait_until("plus", offset=-0.15)
             self.play(FadeIn(cond_b, shift=0.1 * UP), run_time=0.5)
         self.gen = gen
         # the n = 16 panel carries on into the textbook's n = 30; everything else leaves
@@ -789,7 +794,7 @@ class Episode(NarratedScene):
             AREAS[n] = VGroup(AX[n].get_area(BELL[n], x_range=(e[0], e[7]), color=GREEN, opacity=0.35),
                               AX[n].get_area(BELL[n], x_range=(e[21], e[-1]), color=GREEN, opacity=0.35))
             HEAD[n] = MathTex("n", "=", {30: "30", 300: "300", 1420: r"1{,}420"}[n], font_size=MATH)
-            HEAD[n].move_to(P(BIG_L + HEAD[n].width / 2, 2.95))
+            HEAD[n].move_to(P(BIG_L + HEAD[n].width / 2, HEAD30_Y))
             if n != 30:                          # later panels arrive already dimmed
                 for b in BARS[n][MID]:
                     b.set_fill(opacity=0.3)
@@ -797,16 +802,18 @@ class Episode(NarratedScene):
                     scale_opacity(m, PDIM)
         ax30, bars30, bell30, areas30, head30 = AX[30], BARS[30], BELL[30], AREAS[30], HEAD[30]
         exact_tag = text("exact", size=SMALL, color=GRAY, slant=ITALIC)     # beside the n label
-        exact_tag.move_to(P(-4.0 + exact_tag.width / 2, 2.95))
-        xl30 = Text("average (minutes)", font_size=LABEL - 2, color=GRAY)
+        exact_tag.move_to(P(-4.0 + exact_tag.width / 2, HEAD30_Y))
+        xl30 = Text("average (minutes)", font_size=LABEL - 1, color=GRAY)
         xl30.next_to(ax30.x_axis.numbers, DOWN, buff=0.15).align_to(ax30.x_axis.get_right(), RIGHT)
 
         # one test of 30 waits with a low average: the interval the true spread would give
         # (green, dashed) and the one its own small spread gives (yellow, above), short of mu
         xb, s_ex, h_known, h_est = D["ex30"]
-        y_k, y_e = BIG_B + 1.55, BIG_B + 1.87
+        # the two intervals ride just above the histogram, so their labels (left-aligned at the
+        # panel's edge, Text 26) clear every bar; the mu line rises past both
+        y_k, y_e = BIG_B + 1.95, BIG_B + 2.27
         x_mu = ax30.c2p(10, 0)[0]
-        mu_line = DashedLine(P(x_mu, BIG_B), P(x_mu, BIG_B + BIG_H), color=GRAY, stroke_width=3,
+        mu_line = DashedLine(P(x_mu, BIG_B), P(x_mu, y_e + 0.14), color=GRAY, stroke_width=3,
                              dash_length=0.08)
         mu_lbl = MathTex(r"\mu", font_size=36, color=GRAY).next_to(mu_line, UP, buff=0.12)
 
@@ -820,10 +827,10 @@ class Episode(NarratedScene):
         ex_dot2 = Dot(P(ax30.c2p(xb, 0)[0], y_e), radius=0.08, color=YELLOW).set_z_index(3)
         iv_known = interval(xb - h_known, xb + h_known, y_k, GREEN, dashed=True)
         iv_est = interval(xb - h_est, xb + h_est, y_e, YELLOW)
-        lab_k = Text("true spread", font_size=SMALL - 2, color=GREEN)
-        lab_k.next_to(iv_known, DOWN, buff=0.17).align_to(iv_known, LEFT)
-        lab_e = Text("own spread", font_size=SMALL - 2, color=YELLOW)
-        lab_e.next_to(iv_est, UP, buff=0.17).align_to(iv_est, LEFT)
+        lab_k = Text("true spread", font_size=26, color=GREEN)
+        lab_k.next_to(iv_known, DOWN, buff=0.17).align_to(P(-6.1, 0), LEFT)
+        lab_e = Text("own spread", font_size=26, color=YELLOW)
+        lab_e.next_to(iv_est, UP, buff=0.17).align_to(P(-6.1, 0), LEFT)
 
         # the miss meter: simulated share of 95% intervals that miss low / high, against 2.5%
         miss = {n: D[f"miss{n}"] * 100 for n in NS3}
@@ -836,9 +843,9 @@ class Episode(NarratedScene):
         m_band = Rectangle(width=MX[1] - MX[0] + 0.72, height=M_S, stroke_width=0, fill_color=GRAY,
                            fill_opacity=0.3).move_to(P((MX[0] + MX[1]) / 2, y25))
         band_lbl = MathTex(r"2\text{--}3\%", font_size=30, color=GRAY).next_to(m_band, RIGHT, buff=0.3)
-        m_lr = VGroup(*[Text(w_, font_size=SMALL, color=GRAY).move_to(P(x, BIG_B - 0.82))
+        m_lr = VGroup(*[Text(w_, font_size=LABEL - 1, color=GRAY).move_to(P(x, BIG_B - 0.87))
                         for w_, x in zip(("low", "high"), MX)])
-        m_ttl = Text("misses (simulated)", font_size=SMALL, color=GRAY)
+        m_ttl = Text("misses (simulated)", font_size=LABEL - 1, color=GRAY)
         m_ttl.move_to(P((MX[0] + MX[1]) / 2, 2.38))
         live = VGroup()
         for t, x in zip(trk, MX):
@@ -874,7 +881,7 @@ class Episode(NarratedScene):
                               stroke_width=2.5) for e in range(1, 6)])
         tl = VGroup(*[MathTex("10" if e == 1 else f"10^{e}", font_size=MATH_SMALL, color=GRAY)
                       .next_to(P(lx(10 ** e), AX_Y), DOWN, buff=0.27) for e in range(1, 6)])
-        ttl = Text("sample size", font_size=LABEL - 2, color=GRAY)
+        ttl = Text("sample size", font_size=LABEL - 1, color=GRAY)
         ttl.next_to(tl, DOWN, buff=0.15).align_to(P(L1, 0), RIGHT)
         m30 = marker(lx(30), AX_Y, "30", "textbook")
         m30[0].set_color(GRAY)
@@ -883,7 +890,6 @@ class Episode(NarratedScene):
         m300 = VGroup(d300, MathTex("300", font_size=MATH, color=GRAY).next_to(d300, UP, buff=0.2))
         m1420 = marker(lx(1420), AX_Y, r"1{,}420", "waits")
         mbing = marker(lx(113746), AX_Y, r"114{,}000", "Bing revenue")
-        mcap = marker(lx(9599), AX_Y, r"9{,}600", "capped")
         axis_ctx = VGroup(line, ticks, tl, ttl, m30)
 
         # ---- beat 9: back to the textbook's thirty: the n = 16 panel grows into n = 30
@@ -926,7 +932,7 @@ class Episode(NarratedScene):
             self.play(Create(m_ref), FadeIn(ref_lbl, shift=0.1 * LEFT), run_time=0.6)
             beat.wait_until("each side", offset=-0.25)
             self.play(glow(areas30, 0.5, 0.8), flag(ref_lbl, color=GREEN), run_time=0.8)
-            beat.wait_until("Tests", 2, offset=-0.1)
+            beat.wait_until("estimates", offset=-0.2)
             self.play(Create(mu_line), FadeIn(mu_lbl, shift=0.1 * DOWN), run_time=0.6)
             beat.wait_until("lopsided", offset=-0.15)
             self.play(glow(VGroup(*bars30[15:]), 0.5, 0.8), run_time=0.8)
@@ -992,7 +998,7 @@ class Episode(NarratedScene):
             beat.wait_until("each side", offset=-0.2)
             self.play(glow(VGroup(*bars30[0:7], *bars30[21:]), 0.5, 0.8),
                       *[flag(m, color=YELLOW) for m in live], run_time=0.8)
-            beat.wait_until("two and three", offset=-0.25)
+            beat.wait_until("two to three", offset=-0.25)
             self.play(FadeTransform(ref_lbl, band_lbl), FadeIn(m_band), run_time=0.8)
             self.bring_to_front(mbars, m_ref)
             beat.wait_until("Their rule", offset=-0.2)
@@ -1038,7 +1044,6 @@ class Episode(NarratedScene):
             self.play(flag(S4[6], color=INK), FadeIn(m1420[0], scale=0.5),
                       FadeIn(m1420[1], shift=0.25 * UP), FadeIn(m1420[2], shift=0.1 * UP), *to_panel(1420),
                       run_time=1.1)
-            beat.wait_until("lean", 2, offset=-0.15)
             self.play(flag(state["rd2"], color=YELLOW), flag(S3b[4], color=YELLOW), run_time=0.7)
             beat.wait_until("band", offset=-0.3)
             for m in (*live, *mbars):
@@ -1049,14 +1054,11 @@ class Episode(NarratedScene):
             self.play(FadeOut(ring), run_time=0.4)
 
         # ---- beat 12: Bing's revenue, and the cap: the sample-size axis becomes the subject
-        UP_AX, AX_DX = 1.9, 0.5                 # the axis rises, and moves left to make room for "never"
+        UP_AX, AX_DX = 1.5, 0.5                 # the axis rises to mid-frame, and moves left to make room for "never"
         S5 = MathTex("n", r"\ge", "355", r"\cdot", r"17.9^2", r"\approx", r"114{,}000", font_size=MATH)
         S5[4][0:4].set_color(BLUE)
-        S5.move_to(P(0, 2.45))
-        S6 = MathTex("n", r"\ge", "355", r"\cdot", r"5.2^2", r"\approx", r"9{,}600", font_size=MATH)
-        S6[4][0:3].set_color(BLUE)
-        S6.move_to(P(0, 2.45))
-        for m in (mbing, mcap):
+        S5.move_to(P(0, 2.1))
+        for m in (mbing,):
             m.shift(UP * UP_AX + LEFT * AX_DX)
         payoff = VGroup(AX[1420], BARS[1420], BELL[1420], AREAS[1420], HEAD[1420], exact_tag, xl30,
                         rd[0], rd[1], state["rd2"],
@@ -1064,7 +1066,7 @@ class Episode(NarratedScene):
         axis_all = VGroup(axis_ctx, m300, m1420)
         with self.beat("bing") as beat:
             self.play(FadeOut(payoff), run_time=0.45)
-            self.play(axis_all.animate.shift(UP * UP_AX + LEFT * AX_DX), S4.animate.move_to(P(0, 2.45)),
+            self.play(axis_all.animate.shift(UP * UP_AX + LEFT * AX_DX), S4.animate.move_to(P(0, 2.1)),
                       run_time=0.7)
             beat.wait_until("eighteen", offset=-0.4)
             self.play(ReplacementTransform(S4[0:4], S5[0:4]), *roll(S4[4:], S5[4:]), run_time=1.0)
@@ -1073,25 +1075,17 @@ class Episode(NarratedScene):
             self.play(flag(S5[6], color=INK), FadeIn(mbing[0], scale=0.5),
                       FadeIn(mbing[1], shift=0.25 * UP), run_time=0.8)
             self.play(FadeIn(mbing[2], shift=0.1 * UP), run_time=0.4)
-            beat.wait_until("Capping", offset=-0.2)
-            self.play(ReplacementTransform(S5[0:4], S6[0:4]), *roll(S5[4:], S6[4:]),
-                      run_time=beat.until("under", offset=-0.2, min_time=1.0))
-            travel = mbing[0].copy()
-            self.play(travel.animate(path_arc=0.9).move_to(mcap[0]), run_time=0.8)
-            self.remove(travel)
-            self.add(mcap[0])
-            self.play(FadeIn(mcap[1:], shift=0.1 * UP), flag(S6[6], color=INK), run_time=0.6)
 
         # ---- the third answer to the cold open: for some data, no sample size is enough
         ay, l0, l1 = AX_Y + UP_AX, L0 - AX_DX, L1 - AX_DX
         sweep = Line(P(l0, ay), P(l1, ay), color=INK, stroke_width=6)
         ext = DashedLine(P(l1 + 0.05, ay), P(l1 + 0.6, ay), color=RED, stroke_width=3, dash_length=0.08)
         nd = Circle(radius=0.09, color=RED, stroke_width=3).move_to(P(l1 + 0.75, ay))
-        nlab = Text("never", font_size=LABEL - 2, color=RED).next_to(nd, UP, buff=0.27)
+        nlab = Text("never", font_size=LABEL - 1, color=RED).next_to(nd, UP, buff=0.27)
         with self.beat("never") as beat:
             beat.wait_until("no number", offset=-0.25)
             # every number on the axis is swept past; the sweep runs off its end into "never"
-            self.play(Create(sweep), dimmed(S6, 0.35), run_time=0.8, rate_func=smooth)
+            self.play(Create(sweep), dimmed(S5, 0.35), run_time=0.8, rate_func=smooth)
             self.play(FadeOut(sweep), Create(ext), FadeIn(nd, scale=0.5), FadeIn(nlab, shift=0.1 * UP),
                       run_time=0.6)
             beat.wait_until("enough", offset=-0.2)
@@ -1109,15 +1103,15 @@ class Episode(NarratedScene):
                           for v in range(-5, 6)])
         snums = VGroup(*[MathTex(str(v), font_size=MATH_SMALL, color=GRAY).move_to(P(v, SHORE_Y - 0.36))
                          for v in (-4, -2, 0, 2, 4)])
-        stitle = Text("miles", font_size=LABEL - 2, color=GRAY)
+        stitle = Text("miles", font_size=LABEL - 1, color=GRAY)
         stitle.move_to(P(5.6 - stitle.width / 2, SHORE_Y - 0.75))
         lamp = VGroup(Circle(radius=0.16, color=INK, stroke_width=3).move_to(LAMP),
                       Dot(LAMP, radius=0.07, color=INK))
-        lamp_lbl = Text("lighthouse", font_size=LABEL - 2, color=INK)
+        lamp_lbl = Text("lighthouse", font_size=LABEL - 1, color=INK)
         lamp_lbl.next_to(lamp, RIGHT, buff=0.15).shift(UP * 0.22)
         drop = DashedLine(LAMP + DOWN * 0.18, P(0, SHORE_Y), color=GRAY, stroke_width=2, dash_length=0.07)
-        mile = MathTex(r"1\text{ mi}", font_size=MATH_SMALL, color=GRAY).next_to(drop, LEFT, buff=0.15)
-        mile.set_y(SHORE_Y + 0.62)
+        mile = MathTex(r"1\text{ mi}", font_size=MATH_LABEL, color=GRAY).next_to(drop, LEFT, buff=0.15)
+        mile.set_y(SHORE_Y + 0.58)
         cite = citation("Lighthouse problem: Gull, 1988 · Sivia & Skilling, 2006, Data Analysis")
         sim_tag = text("simulated", size=SMALL, color=GRAY, slant=ITALIC)
         sim_tag.move_to(P(6.3 - sim_tag.width / 2, 3.35))
@@ -1187,9 +1181,9 @@ class Episode(NarratedScene):
         xlast = Text("1,000 flashes", font_size=LABEL - 4, color=GRAY)
         xlast.next_to(P(TP_R, TP_B), DOWN, buff=0.18)
         xlast.shift(LEFT * max(0, xlast.get_right()[0] - 6.3))
-        ttl = Text("miles", font_size=LABEL - 2, color=GRAY)
+        ttl = Text("miles", font_size=LABEL - 1, color=GRAY)
         ttl.move_to(P(TP_L - 0.45 + ttl.width / 2, TP_T + 0.32))
-        avg_lbl = Text("average", font_size=LABEL - 2, color=YELLOW)
+        avg_lbl = Text("average", font_size=LABEL - 1, color=YELLOW)
         avg_lbl.add_background_rectangle(color=BG, opacity=1, buff=0.06)
         trace = VMobject(color=YELLOW, stroke_width=3.5)
 
@@ -1214,48 +1208,36 @@ class Episode(NarratedScene):
             else:
                 m.move_to(P(TP_R - m.width / 2, end[1] + 0.32))
 
-        j1 = 20                                   # flash 20 lands 32 miles off
-        far_lbl = MathTex(r"\leftarrow 32\text{ mi}", font_size=MATH, color=RED)
-        far_lbl.move_to(P(-5.6 + far_lbl.width / 2 + 0.1, SHORE_Y + 0.45))
-        with self.beat("runmean") as beat:
-            self.play(FadeOut(cite), FadeOut(lamp_lbl), Create(frame), FadeIn(zero), FadeIn(yt), FadeIn(ytk),
-                      FadeIn(xt), FadeIn(xlast), FadeIn(ttl), FadeIn(sim_tag), run_time=1.0)
-            self.add(trace, marker_)
-            avg_lbl.add_updater(upd_avg_lbl)
-            self.add(avg_lbl)
-            self.play(K.animate.set_value(j1 - 1), run_time=beat.until("aimed", offset=-0.5, min_time=1.0),
-                      rate_func=linear)
-            self.play(K.animate.set_value(j1), run_time=0.3, rate_func=linear)
-            beam.set_color(RED)
-            beat.wait_until("absurdly", offset=-0.2)
-            self.play(FadeIn(far_lbl, shift=0.2 * LEFT), run_time=0.6)
-            beat.wait_until("yanks", offset=-0.25)
-            self.play(Indicate(marker_, color=YELLOW, scale_factor=1.6), run_time=0.8)
-            beam.set_color(BLUE)
-            self.play(FadeOut(far_lbl), K.animate.set_value(250), run_time=beat.remaining(min_time=0.6),
-                      rate_func=linear)
-
-        # ---- the farthest of a thousand, then 200 repeats of the whole average
+        # ---- the running average: it swings, then one flash 902 miles away yanks it
         jf = int(np.abs(x).argmax())             # flash 841: +902 miles
         red_lbl = MathTex(r"902\text{ mi} \rightarrow", font_size=MATH, color=RED)
         red_lbl.move_to(P(5.95 - red_lbl.width / 2, SHORE_Y + 0.55))
-        without = (rmean[-1] * 1000 - x[jf]) / 999          # final average without flash 841
-        y_a, y_b = tp(1000, without)[1], tp(1000, rmean[-1])[1]
-        jx = TP_R + 0.14
-        jump = VGroup(Line(P(jx, y_a), P(jx, y_b), color=RED, stroke_width=4),
-                      Line(P(jx - 0.08, y_a), P(jx + 0.08, y_a), color=RED, stroke_width=4),
-                      Line(P(jx - 0.08, y_b), P(jx + 0.08, y_b), color=RED, stroke_width=4))
-        ghost = Circle(radius=0.07, color=RED, stroke_width=3).move_to(tp(1000, without))
-        jdot = Dot(tp(jf + 1, rmean[jf]), radius=0.07, color=RED)
-        div = MathTex(r"902 \div 1{,}000 \approx 0.9\text{ mi}", font_size=MATH, color=RED)
-        div.move_to(P(1.7, TP_T - 0.28))
-        # middle half of this run's single flashes, from its quartile dots
+        jdot = Dot(tp(jf + 1, rmean[jf]), radius=0.07, color=RED).set_z_index(4)
+        with self.beat("runmean") as beat:
+            self.play(FadeOut(cite), FadeOut(lamp_lbl), Create(frame), FadeIn(zero), FadeIn(yt), FadeIn(ytk),
+                      FadeIn(xt), FadeIn(xlast), FadeIn(ttl), FadeIn(sim_tag),
+                      K.animate(rate_func=linear).set_value(40), run_time=1.0)
+            # the trace and its (opaque-backed) label go on top of the chart's zero line
+            self.add(trace, marker_)
+            avg_lbl.add_updater(upd_avg_lbl)
+            self.add(avg_lbl)
+            # "it never settles": hundreds of flashes, the average keeps lurching
+            self.play(K.animate.set_value(jf), run_time=beat.until("aimed", offset=-0.3, min_time=1.5),
+                      rate_func=lambda t: t ** 1.4)
+            beam.set_color(RED)
+            self.play(K.animate.set_value(jf + 1), run_time=0.35, rate_func=linear)
+            beat.wait_until("nine hundred", offset=-0.25)
+            self.play(FadeIn(red_lbl, shift=0.2 * RIGHT), FadeIn(jdot, scale=0.5), run_time=0.6)
+            beat.wait_until("away", offset=-0.2)
+            self.play(Indicate(marker_, color=YELLOW, scale_factor=1.6), flag(jdot, color=RED), run_time=0.8)
+
+        # ---- 200 repeats of the whole thousand-flash average: no narrower than one flash
         order = np.argsort(x)
         iq1, iq3 = int(order[249]), int(order[750])
         bq1, bq3 = float(x[iq1]), float(x[iq3])
         b1 = bracket(bq1, bq3, SHORE_Y - 0.78, BLUE)
-        b1l = Text("one flash", font_size=LABEL - 2, color=BLUE).next_to(b1, RIGHT, buff=0.25)
-        half = Text("middle half", font_size=LABEL - 2, color=GRAY).next_to(b1, LEFT, buff=0.3)
+        b1l = Text("one flash", font_size=LABEL - 1, color=BLUE).next_to(b1, RIGHT, buff=0.25)
+        half = Text("middle half", font_size=LABEL - 1, color=GRAY).next_to(b1, LEFT, buff=0.3)
         # 200 averages of 1,000 flashes on a second line
         strip = Line(P(-5.5, STRIP_Y), P(5.5, STRIP_Y), color=GRAY, stroke_width=2)
         jit = np.random.default_rng(11).uniform(-0.1, 0.1, len(avgs))
@@ -1274,48 +1256,32 @@ class Episode(NarratedScene):
         ia1 = int(np.argmin([abs(a - aq1) for a in vis]))
         ia3 = int(np.argmin([abs(a - aq3) for a in vis]))
         b2 = bracket(aq1, aq3, STRIP_Y - 0.5, YELLOW)
-        b2l = Text("average of 1,000", font_size=LABEL - 2, color=YELLOW).next_to(b2, RIGHT, buff=0.25)
+        b2l = Text("average of 1,000", font_size=LABEL - 1, color=YELLOW).next_to(b2, RIGHT, buff=0.25)
         with self.beat("dilute") as beat:
-            self.play(K.animate.set_value(1000), run_time=beat.until("farthest", offset=-0.3, min_time=1.4),
-                      rate_func=lambda t: t ** 1.3)
             beam.clear_updaters()
-            self.play(beam.animate.put_start_and_end_on(LAMP, beam_end(x[jf])).set_stroke(RED, opacity=1),
-                      FadeIn(red_lbl, shift=0.2 * RIGHT), FadeIn(jdot), run_time=0.9)
-            beat.wait_until("Divided", offset=-0.2)
-            self.play(Write(div), run_time=1.0)
-            beat.wait_until("drags", offset=-0.1)
-            self.play(FadeIn(ghost), Create(jump), run_time=0.8)
-            beat.wait_until("Half", offset=-0.2)
-            # the far flash has made its point: clear it so the spread comparison is the focus
-            qd = VGroup(dots[iq1], dots[iq3])
-            self.play(FadeOut(beam), FadeOut(red_lbl), FadeOut(ghost), FadeOut(jump), FadeOut(div),
-                      *[d.animate.set_fill(opacity=1).scale(2.0) for d in qd], run_time=0.6)
-            self.play(TransformFromCopy(qd, b1), FadeIn(half), FadeIn(b1l),
-                      run_time=beat.until("Repeat", offset=-0.2, min_time=0.9))
+            # the run finishes (all 1,000 flashes) while the far beam and its label leave
+            self.play(K.animate.set_value(1000), FadeOut(beam), FadeOut(red_lbl), run_time=0.8,
+                      rate_func=smooth)
             self.play(Create(strip), run_time=0.4)
             self.play(LaggedStart(*[FadeIn(d, shift=0.25 * DOWN) for d in adots], lag_ratio=0.012),
                       FadeIn(cnt_l), FadeIn(cnt_r),
-                      run_time=beat.until("still", 2, offset=-0.2, min_time=1.6))
+                      run_time=beat.until("still", offset=-0.2, min_time=1.4))
+            # "still as spread out": the averages' middle half, from its quartile dots ...
+            beat.wait_until("spread", offset=-0.3)
             aqd = VGroup(adots[ia1], adots[ia3])
-            self.play(*[d.animate.set_fill(opacity=1).scale(2.0) for d in aqd], run_time=0.5)
-            self.play(TransformFromCopy(aqd, b2), FadeIn(b2l), run_time=0.8)
-            self.play(emph(VGroup(b1, b2), 1.06), run_time=0.8)
+            self.play(*[d.animate.set_fill(opacity=1).scale(2.0) for d in aqd], run_time=0.35)
+            self.play(TransformFromCopy(aqd, b2), FadeIn(b2l), run_time=0.6)
+            # ... "as one flash": the single flashes' middle half, the same width
+            beat.wait_until("one flash", offset=-0.3)
+            qd = VGroup(dots[iq1], dots[iq3])
+            self.play(*[d.animate.set_fill(opacity=1).scale(2.0) for d in qd], run_time=0.35)
+            self.play(TransformFromCopy(qd, b1), FadeIn(half), FadeIn(b1l), run_time=0.6)
 
-        # ---- the condition, and the median
-        var_ok = MathTex(r"\text{variance} < \infty", font_size=MATH + 4, color=INK)
+        # ---- the condition: finite variance, broken here
+        var_ok = MathTex(r"\text{variance}", "<", r"\infty", font_size=MATH + 4, color=INK)
         var_ok.move_to(P(-3.6, SHORE_Y + 0.62))
-        var_bad = MathTex(r"\text{variance} = \infty", font_size=MATH + 4, color=RED).move_to(var_ok)
-        Km = ValueTracker(1)
-        mtrace = VMobject(color=PURPLE, stroke_width=4)
-
-        def upd_mtrace(m):
-            kk = max(int(Km.get_value()), 2)
-            m.set_points_as_corners([tp(i + 1, rmed[i]) for i in range(kk)])
-        mtrace.add_updater(upd_mtrace)
-        mmark = Triangle(color=PURPLE, fill_opacity=1, stroke_width=0).scale(0.11).rotate(PI)
-        mmark.add_updater(lambda m: m.move_to(P(float(rmed[max(int(Km.get_value()), 1) - 1]),
-                                                SHORE_Y + 0.2)))
-        med_lbl = Text("median", font_size=LABEL - 2, color=PURPLE)
+        var_bad = MathTex(r"\text{variance}", "=", r"\infty", font_size=MATH + 4, color=RED)
+        var_bad.move_to(var_ok)
         context = VGroup(b1, b2, b1l, b2l, half, strip, adots, cnt_l, cnt_r, dots[iq1], dots[iq3])
         chart = VGroup(frame, zero, yt, ytk, xt, xlast, ttl)
         with self.beat("variance") as beat:
@@ -1328,21 +1294,8 @@ class Episode(NarratedScene):
                       avg_lbl.animate.set_opacity(0.3), FadeOut(mile), run_time=1.0)
             beat.wait_until("single piece", offset=-0.2)
             self.play(Indicate(jdot, color=RED, scale_factor=2.2), run_time=0.9)
-            beat.wait_until("infinite", offset=-0.4)
-            self.play(TransformMatchingTex(var_ok, var_bad), dimmed(context, 0.3), run_time=0.6)
-            beat.wait_until("median", offset=-0.2)
-            # the chart comes back for the median; the average stays in the background
-            self.play(dimmed(chart, 1 / 0.3), marker_.animate.set_opacity(0.4),
-                      jdot.animate.set_opacity(0.4), run_time=0.5)
-            self.add(mtrace, mmark)
-            self.play(Km.animate.set_value(1000), run_time=beat.until("homes", offset=-0.1, min_time=2.0),
-                      rate_func=linear)
-            end = mtrace.get_end()
-            med_lbl.move_to(P(TP_R - 0.05 - med_lbl.width / 2, end[1] - 0.32))
-            self.play(FadeIn(med_lbl, shift=0.1 * UP), Indicate(mmark, color=PURPLE, scale_factor=1.6),
-                      run_time=0.9)
-        for m in (mtrace, mmark):
-            m.clear_updaters()
+            # "Here, it's infinite": the condition turns, on the word
+            beat.on("Here", TransformMatchingTex(var_ok, var_bad), dimmed(context, 0.3), run_time=0.7)
 
     # ================================================================== 11 landing
     def part_landing(self):
@@ -1367,7 +1320,7 @@ class Episode(NarratedScene):
         rax.y_axis.set_opacity(0)
         rbars = hist_bars(rax, D["avg1420_edges"], D["avg1420_shares"] * 100, color=YELLOW)
         rbell = normal_curve(rax, 10, 10 / np.sqrt(1420), (hi - lo) / 24, lo, hi)
-        avg_more = Text("average of 1,420", font_size=LABEL - 2, color=YELLOW).move_to(more)
+        avg_more = Text("average of 1,420", font_size=LABEL - 1, color=YELLOW).move_to(more)
         right_chip = chips[2]
         # out, then in: the lighthouse fades first, the cold-open frame second (no double
         # exposure), while the shore line itself slides into the waits axis
@@ -1393,14 +1346,11 @@ class Episode(NarratedScene):
                       right_chip[0].animate.set_stroke(INK, width=4), emph(right_chip[1], 1.15), run_time=0.8)
             beat.wait_until("not thirty", offset=-0.2)
             self.play(FadeTransform(more, avg_more), run_time=0.8)
-            beat.wait_until("lopsided", offset=-0.35)
-            self.play(head.animate.set_fill(opacity=0.4), GrowFromCenter(tail_brace),
-                      FadeIn(tail_lbl, shift=0.1 * DOWN), run_time=0.7)
             beat.wait_until("never", offset=-0.25)
             self.play(FadeOut(qmark), dashed.animate.set_stroke(opacity=0.3), FadeOut(chips),
-                      FadeOut(tails), FadeOut(t_lbls),
-                      head.animate.set_fill(opacity=BAR_OPACITY), FadeOut(tail_brace), FadeOut(tail_lbl),
-                      run_time=0.7)
+                      FadeOut(tails), FadeOut(t_lbls), run_time=0.7)
+            # "in the data": the lopsided histogram flashes
+            beat.on("data", LaggedStart(*[glow(b, 0.4, 0.5) for b in bars], lag_ratio=0.03), run_time=0.7)
             beat.wait_until("It's", offset=-0.2)
             self.play(FadeOut(base), FadeOut(dashed), FadeIn(rax),
                       LaggedStart(*[GrowFromEdge(b, DOWN) for b in rbars], lag_ratio=0.03),

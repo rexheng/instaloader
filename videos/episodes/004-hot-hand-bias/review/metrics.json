@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/004-hot-hand-bias/final.mp4",
- "duration_s": 204.1,
+ "duration_s": 211.733,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,79 +8,80 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 10.69,
- "integrated_lufs": -14.3,
+ "size_mb": 11.01,
+ "integrated_lufs": -14.0,
  "lra_lu": 2.5,
- "true_peak_dbtp": -2.0,
+ "true_peak_dbtp": -1.9,
  "leading_silence_s": 0.0,
- "trailing_silence_s": 1.89,
+ "trailing_silence_s": 1.88,
  "longest_internal_silence_s": 2.17,
  "silences_over_1_5s": [
   [
-   11.96,
-   14.13
+   12.06,
+   14.23
   ],
   [
-   112.41,
-   114.03
+   116.02,
+   117.64
   ],
   [
-   188.3,
-   190.2
+   194.5,
+   196.4
   ]
  ],
- "frames": 6123,
- "longest_static_s": 3.7,
+ "frames": 6352,
+ "longest_static_s": 3.77,
  "static_stretches_over_3s": [
   [
-   181.13,
-   184.83,
-   3.7
+   187.23,
+   191.0,
+   3.77
   ]
  ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
  "background_luma": null,
- "transcript_words": 498,
+ "transcript_words": 499,
  "first_word_s": 0,
- "last_word_s": 202.29865,
- "wpm_speech": 158.2,
- "wpm_overall": 146.4,
- "wpm_excluding_all_pauses": 182.9,
+ "last_word_s": 210.28665,
+ "wpm_speech": 152.1,
+ "wpm_overall": 141.4,
+ "wpm_excluding_all_pauses": 175.9,
  "narration_file": "videos/episodes/004-hot-hand-bias/narration.json",
- "wer": 0.0164,
- "narration_words": 489,
+ "wer": 0.0143,
+ "narration_words": 488,
  "banned_phrase_hits": 0,
  "slop_hits": [],
  "narration_craft": {
-  "narration_words": 499,
+  "narration_words": 498,
   "voice_speeds": [
-   0.83
+   0.8,
+   0.82
   ],
-  "sentence_wpm_median": 173.4,
-  "sentences_over_200wpm": 6,
-  "sentence_gap_median_s": 0.34,
-  "sentence_gap_cv": 0.19,
-  "beat_gap_median_s": 0.66,
-  "longest_breathless_run_s": 14.8,
-  "max_distinct_numbers_20s": 7,
+  "sentence_wpm_median": 168.8,
+  "sentences_over_200wpm": 1,
+  "sentence_gap_median_s": 0.35,
+  "sentence_gap_cv": 0.22,
+  "beat_gap_median_s": 0.65,
+  "longest_breathless_run_s": 15.2,
+  "max_distinct_numbers_20s": 6,
   "repeated_phrases": 3,
   "glyph_morphs": 0,
   "deictics": 7,
   "deictics_unlanded": 0
  },
  "layout_audit": {
-  "count": 0,
+  "count": 1,
   "counts": {
    "overlap": 0,
-   "clearance": 0,
+   "clearance": 1,
    "safe-area": 0,
    "caption-zone": 0,
    "text-size": 0,
    "small-label": 0
   },
   "allowed": 0,
-  "checks": 220
+  "checks": 223
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -98,168 +99,169 @@
  ],
  "keyframes": [
   {
-   "t": 2.77,
+   "t": 2.8,
    "file": "keyframes/kf_01_00-02.8.png"
   },
   {
-   "t": 4.6,
-   "file": "keyframes/kf_02_00-04.6.png"
+   "t": 4.67,
+   "file": "keyframes/kf_02_00-04.7.png"
   },
   {
-   "t": 8.67,
-   "file": "keyframes/kf_03_00-08.7.png"
+   "t": 8.77,
+   "file": "keyframes/kf_03_00-08.8.png"
   },
   {
-   "t": 10.47,
-   "file": "keyframes/kf_04_00-10.5.png"
+   "t": 13.53,
+   "file": "keyframes/kf_04_00-13.5.png"
   },
   {
-   "t": 15.4,
-   "file": "keyframes/kf_05_00-15.4.png"
+   "t": 15.53,
+   "file": "keyframes/kf_05_00-15.5.png"
   },
   {
-   "t": 20.17,
-   "file": "keyframes/kf_06_00-20.2.png"
+   "t": 20.37,
+   "file": "keyframes/kf_06_00-20.4.png"
   },
   {
-   "t": 23.57,
-   "file": "keyframes/kf_07_00-23.6.png"
+   "t": 23.67,
+   "file": "keyframes/kf_07_00-23.7.png"
   },
   {
-   "t": 25.57,
-   "file": "keyframes/kf_08_00-25.6.png"
+   "t": 27.27,
+   "file": "keyframes/kf_08_00-27.3.png"
   },
   {
-   "t": 31.57,
-   "file": "keyframes/kf_09_00-31.6.png"
+   "t": 32.0,
+   "file": "keyframes/kf_09_00-32.0.png"
   },
   {
-   "t": 33.63,
-   "file": "keyframes/kf_10_00-33.6.png"
+   "t": 33.97,
+   "file": "keyframes/kf_10_00-34.0.png"
   },
   {
-   "t": 40.43,
-   "file": "keyframes/kf_11_00-40.4.png"
+   "t": 36.47,
+   "file": "keyframes/kf_11_00-36.5.png"
   },
   {
-   "t": 43.87,
-   "file": "keyframes/kf_12_00-43.9.png"
+   "t": 41.0,
+   "file": "keyframes/kf_12_00-41.0.png"
   },
   {
-   "t": 47.77,
-   "file": "keyframes/kf_13_00-47.8.png"
+   "t": 44.4,
+   "file": "keyframes/kf_13_00-44.4.png"
   },
   {
-   "t": 50.73,
-   "file": "keyframes/kf_14_00-50.7.png"
+   "t": 48.53,
+   "file": "keyframes/kf_14_00-48.5.png"
   },
   {
-   "t": 59.13,
-   "file": "keyframes/kf_15_00-59.1.png"
+   "t": 51.87,
+   "file": "keyframes/kf_15_00-51.9.png"
   },
   {
-   "t": 68.2,
-   "file": "keyframes/kf_16_01-08.2.png"
+   "t": 60.57,
+   "file": "keyframes/kf_16_01-00.6.png"
   },
   {
-   "t": 74.43,
-   "file": "keyframes/kf_17_01-14.4.png"
+   "t": 71.4,
+   "file": "keyframes/kf_17_01-11.4.png"
   },
   {
-   "t": 82.6,
-   "file": "keyframes/kf_18_01-22.6.png"
+   "t": 76.4,
+   "file": "keyframes/kf_18_01-16.4.png"
   },
   {
-   "t": 87.63,
-   "file": "keyframes/kf_19_01-27.6.png"
+   "t": 85.87,
+   "file": "keyframes/kf_19_01-25.9.png"
   },
   {
-   "t": 89.6,
-   "file": "keyframes/kf_20_01-29.6.png"
+   "t": 90.5,
+   "file": "keyframes/kf_20_01-30.5.png"
   },
   {
-   "t": 92.8,
-   "file": "keyframes/kf_21_01-32.8.png"
+   "t": 92.07,
+   "file": "keyframes/kf_21_01-32.1.png"
   },
   {
-   "t": 95.07,
-   "file": "keyframes/kf_22_01-35.1.png"
+   "t": 99.0,
+   "file": "keyframes/kf_22_01-39.0.png"
   },
   {
-   "t": 98.13,
-   "file": "keyframes/kf_23_01-38.1.png"
+   "t": 101.53,
+   "file": "keyframes/kf_23_01-41.5.png"
   },
   {
-   "t": 103.0,
-   "file": "keyframes/kf_24_01-43.0.png"
+   "t": 106.43,
+   "file": "keyframes/kf_24_01-46.4.png"
   },
   {
-   "t": 110.23,
-   "file": "keyframes/kf_25_01-50.2.png"
+   "t": 113.83,
+   "file": "keyframes/kf_25_01-53.8.png"
   },
   {
-   "t": 113.73,
-   "file": "keyframes/kf_26_01-53.7.png"
+   "t": 117.4,
+   "file": "keyframes/kf_26_01-57.4.png"
   },
   {
-   "t": 116.63,
-   "file": "keyframes/kf_27_01-56.6.png"
+   "t": 120.27,
+   "file": "keyframes/kf_27_02-00.3.png"
   },
   {
-   "t": 120.53,
-   "file": "keyframes/kf_28_02-00.5.png"
+   "t": 124.23,
+   "file": "keyframes/kf_28_02-04.2.png"
   },
   {
-   "t": 133.4,
-   "file": "keyframes/kf_29_02-13.4.png"
+   "t": 136.97,
+   "file": "keyframes/kf_29_02-17.0.png"
   },
   {
-   "t": 134.93,
-   "file": "keyframes/kf_30_02-14.9.png"
+   "t": 138.5,
+   "file": "keyframes/kf_30_02-18.5.png"
   },
   {
-   "t": 143.33,
-   "file": "keyframes/kf_31_02-23.3.png"
+   "t": 143.8,
+   "file": "keyframes/kf_31_02-23.8.png"
   },
   {
-   "t": 147.97,
-   "file": "keyframes/kf_32_02-28.0.png"
+   "t": 164.83,
+   "file": "keyframes/kf_32_02-44.8.png"
   },
   {
-   "t": 160.73,
-   "file": "keyframes/kf_33_02-40.7.png"
+   "t": 174.13,
+   "file": "keyframes/kf_33_02-54.1.png"
   },
   {
-   "t": 169.63,
-   "file": "keyframes/kf_34_02-49.6.png"
+   "t": 190.03,
+   "file": "keyframes/kf_34_03-10.0.png"
   },
   {
-   "t": 183.9,
-   "file": "keyframes/kf_35_03-03.9.png"
+   "t": 197.77,
+   "file": "keyframes/kf_35_03-17.8.png"
   },
   {
-   "t": 192.7,
-   "file": "keyframes/kf_36_03-12.7.png"
+   "t": 199.43,
+   "file": "keyframes/kf_36_03-19.4.png"
   },
   {
-   "t": 196.6,
-   "file": "keyframes/kf_37_03-16.6.png"
+   "t": 203.7,
+   "file": "keyframes/kf_37_03-23.7.png"
   },
   {
-   "t": 198.8,
-   "file": "keyframes/kf_38_03-18.8.png"
+   "t": 206.07,
+   "file": "keyframes/kf_38_03-26.1.png"
   },
   {
-   "t": 200.6,
-   "file": "keyframes/kf_39_03-20.6.png"
+   "t": 207.97,
+   "file": "keyframes/kf_39_03-28.0.png"
   },
   {
-   "t": 204.07,
-   "file": "keyframes/kf_40_03-24.1.png"
+   "t": 211.7,
+   "file": "keyframes/kf_40_03-31.7.png"
   }
  ],
  "flags": [
-  "pace: median sentence 173 wpm, 6 sentence(s) > 200 wpm, speed 0.83 (critics: 'hurried'; keep speed ≤ 0.84, break the fast sentences, add pauses at turns)"
+  "breathless run: 15 s of speech with no pause ≥ 0.35 s at 2:29.2 (whisper hears one run-on sentence)",
+  "layout audit: 1 issue(s) — 0 overlapping, 1 < 0.15 apart, 0 outside the safe area, 0 in the caption zone, 0 under 24 px (see 'Layout audit')"
  ],
  "implied_caps": []
 }

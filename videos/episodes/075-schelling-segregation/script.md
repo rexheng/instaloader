@@ -4,8 +4,9 @@
 match still build a town where three quarters match, because each departure tips a neighbor
 that was content; so a segregated map cannot tell you what its people wanted.
 
-Runtime 3:56.4 · 568 words · narrator af_heart @ 0.84 (0.80–0.85 per beat);
-variable gaps: ≈ 0.25 s inside a thought, ≈ 0.9 s at beat boundaries.
+Runtime ≈ 3:34 · 483 words (budget ≤ 500, 3:15–3:35) · narrator af_heart @ 0.84 (0.82–0.84 per
+beat) with CADENCE = "shaped": full stops ≈ 0.47 s, beat turns ≈ 0.67 s, a 0.9 s hold after each of
+the three key results (74, 76 %, 95), prediction holds 1.5 s.
 
 (Round 1 title "Mild Preferences, Extreme Segregation" overclaimed: 76 % against a 50 % random
 baseline is strong, not extreme, and Schelling himself called his one-third result "slight".)
@@ -85,7 +86,8 @@ except the corner; the HUD and the meter's 64 % readout fade out completely (onl
 stays, the source of the formula's ⅓). A white box lands on the corner, and the corner
 **rewinds**: household A flies home from where round 1 sent it, and the rings return to the
 start state. The corner's 4×5 squares fly out into a large inset (675 px wide), formula to its
-right, state caption ("before round 1", "after round 2"…) under the formula. The inset flies
+right, state caption ("before round 1", "after round 2"…) under the formula; each caption change is
+a sequential swap (old out, then new in), never a cross-fade. The inset flies
 out of the corner box while the corner rewinds (one move). The subject household carries a white
 inner outline (B, then C); A's ring stays at 50 % until "Then this neighbor moved away". The board's corner and the inset stay
 in step for the whole replay, using the real tiles and the real moves: A flies out to its
@@ -117,11 +119,11 @@ fade, then the new household's slide in from the right; the ⅓ stays. The same 
 
 ### 7 · The cascade completes (1:51–2:02)
 *Screen:* on "Now" the inset folds away, then the board grows back to full size and strength
-and the HUD returns; rounds 2–7 run in the 1.8 s pause (moves row 72, 41, 16, 9, 2, 1; the
+and the HUD returns; rounds 2–7 run in the 1.4 s pause (moves row 72, 41, 16, 9, 2, 1; the
 replayed movers are already home, so they do not move twice). The counter reaches 0 on
 "nobody"; the 76 % pulses after "move".
 
-> Now run the whole town. [pause 1.8] After round seven, nobody wants to move.
+> Now run the whole town. [pause 1.4] After round seven, nobody wants to move.
 
 ### 8 · Generalise: the tipping curve (2:03–2:18)
 *Screen:* the HUD fades (0.4 s) while the town shrinks into its thumbnail slot; the axes start
@@ -144,14 +146,15 @@ town re-run at ¼ sorts in the lower thumbnail ("¼ → 58 %").
 
 ### 9 · Why the jump: the share ladder (2:12–2:45)
 *Screen:* the ladder is its own chart, about 1.3× the dot chart and 0.8 units higher. On "sort",
-one 1.5 s move: the two thumbnails and their labels leave with the dot chart (one focal region),
-and the dot chart leaves completely (dots, y-axis, its title, the x numbers and ticks, the
-random-mix line; 0–0.35 s); its x-axis line rises and stretches into the ladder's GRAY baseline
-(0.15–0.75 s; it reaches the old label row and the dot rows only after they are gone); both
-ladder titles fade in (0.4–1.0 s, after the old x title has left); and the bars sprout from the
-line as it lands, left to right, standing on it (0.5–1.35 s). The frame never holds a lone line
-(round 5 cont.: the previous cut showed the bare line for about 0.9 s). One bar per share a
-household of the random start actually has (k of n, n ≤ 8). The vertical is named where a y-axis title sits: INK "households (simulated start)". On "these" a highlight sweeps along
+one move that runs from "sort" to "With": the two thumbnails and their labels leave with the dot
+chart (one focal region), and the dot chart leaves completely (dots, y-axis, its title, the x
+numbers and ticks, the random-mix line; 0–0.3 s); its x-axis line rises and stretches into the
+ladder's baseline (0.1–0.7 s); both ladder titles fade in (0.35–0.95 s, after the old x title
+has left); and the bars sprout from the line, left to right, standing on it, one every ≈ 0.25 s
+across "by each household's share of matching neighbors" (from 0.25 s to "With"). The frame is
+never a bare line and never static for 4 s (round 5 cont.: the 09:49 cut showed the bare line for
+about 0.9 s, and a first fix left the finished bars static for 4.5 s before "these"). One bar per
+share a household of the random start actually has (k of n, n ≤ 8). The vertical is named where a y-axis title sits: INK "households (simulated start)". On "these" a highlight sweeps along
 the bars; on "sixty percent" the ends are marked "0%" and "60%".
 
 The rung fractions sit in one row under the baseline. GRAY counts (MathTex 32) sit centred

@@ -11,6 +11,8 @@
    "end": 14.78,
    "text": "Heads, I riffle shuffle a sorted deck four times. Tails, a computer shuffles it perfectly. From the deck alone, how often could you tell which? Pick fifty, seventy five, or a hundred percent. [pause 1.5]",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Heads",
@@ -187,6 +189,8 @@
    "end": 23.493,
    "text": "Monte Carlo samplers move by random steps, like these riffles. Stop them too early, and they still remember where they started.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Monte",
@@ -303,6 +307,8 @@
    "end": 31.503,
    "text": "The obvious check is the top card, the one you'd be dealt. Here's how often each card ends up there after four riffles.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "The",
@@ -429,6 +435,8 @@
    "end": 44.047,
    "text": "Almost flat. Only the old top card stands out: one time in fifteen. Judging by the top card, you'd be right fifty two percent of the time. Four riffles look like plenty.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Almost",
@@ -600,6 +608,8 @@
    "end": 53.05,
    "text": "A guesser who sees the whole deck does far better. The model cuts near the middle, then drops cards from each half in proportion to its size.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "A",
@@ -746,6 +756,8 @@
    "end": 61.86,
    "text": "Each half stays in order, so one riffle leaves two rising sequences: runs of consecutive cards, reading left to right.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Each",
@@ -857,6 +869,8 @@
    "end": 69.02,
    "text": "Give each sequence its own level. The cut crosses each level once, so a riffle can at most split it in two.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Give",
@@ -978,6 +992,8 @@
    "end": 76.747,
    "text": "Three riffles, [pause 0.8] eight. Four riffles, [pause 0.6] at most sixteen; this deck has fourteen.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Three",
@@ -1049,6 +1065,8 @@
    "end": 83.78,
    "text": "A perfect shuffle averages twenty six and a half, and gives sixteen or fewer once in two million decks.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "A",
@@ -1155,6 +1173,8 @@
    "end": 93.873,
    "text": "Call sixteen or fewer riffled, and you'd be wrong about once in four million games. The top card can't see this; it lives in the order between cards.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Call",
@@ -1306,6 +1326,8 @@
    "end": 100.823,
    "text": "Bayer and Diaconis proved that in this model, decks with the same count are equally likely. [pause 0.7]",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Bayer",
@@ -1397,6 +1419,8 @@
    "end": 106.9,
    "text": "So pile decks onto their counts, [pause 0.6] then every possible deck, weighted by its chance.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "So",
@@ -1478,6 +1502,8 @@
    "end": 112.947,
    "text": "The red area, purple above blue, is the distance from random. Right now it's one.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "The",
@@ -1564,6 +1590,8 @@
    "end": 117.27,
    "text": "How many more riffles to bring it below a half? [pause 1.5]",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "How",
@@ -1625,6 +1653,8 @@
    "end": 124.203,
    "text": "A fifth riffle: point nine two. A sixth: point six one. A seventh: point three three.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "A",
@@ -1716,6 +1746,8 @@
    "end": 138.507,
    "text": "Guess riffled where purple is higher: you catch sixty five percent of riffled decks, and flag thirty two percent of perfect ones. Accuracy is a half, plus half the difference, and the difference is the red area.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Guess",
@@ -1912,6 +1944,8 @@
    "end": 154.087,
    "text": "Each riffle roughly halved the gap, but blue's spread, its standard deviation, stayed about two. While the gap spans several spreads, the distance stays near one. Within about one spread, it halves every riffle: that's the cliff.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Each",
@@ -2108,6 +2142,8 @@
    "end": 165.853,
    "text": "Multiply each gap by two to the k, and it settles near two hundred thirty. [pause 1.2] Divide that by two each riffle, and it reaches one spread after just under seven.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Multiply",
@@ -2269,6 +2305,8 @@
    "end": 176.28,
    "text": "For n cards, two hundred thirty grows like n squared, but the spread only like root n, so the cliff sits near three halves log base two of n.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "For",
@@ -2425,6 +2463,8 @@
    "end": 186.763,
    "text": "Aldous proved that law. [pause 0.4] Bayer and Diaconis computed the exact curve: for fifty two cards, seven riffles is the first count below a half.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Aldous",
@@ -2556,6 +2596,8 @@
    "end": 195.2,
    "text": "Trefethen and Trefethen measured information instead: no cliff, and five or six shuffles do a reasonable job.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Trefethen",
@@ -2652,6 +2694,8 @@
    "end": 205.383,
    "text": "Many Markov chains share this cliff, and samplers share the trap: one statistic can settle, like the top card, long before the whole chain has.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Many",
@@ -2788,6 +2832,8 @@
    "end": 212.693,
    "text": "Back to the coin flip. After four riffles you'd almost never be wrong, same as with an unshuffled deck.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Back",
@@ -2894,6 +2940,8 @@
    "end": 218.013,
    "text": "Three more riffles, [pause 1.2] and you'd be right only two times out of three.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Three",
@@ -2970,6 +3018,8 @@
    "end": 225.267,
    "text": "Four riffles fool someone watching the top card. Fooling someone who counts sequences that well takes ten.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Four",
@@ -3060,21 +3110,82 @@
    "wav": "/root/.cache/sample_space/tts/0c/0cf707f90acfd53ac277ad3a.wav"
   }
  ],
- "warnings": [],
+ "warnings": [
+  {
+   "t": 227.07,
+   "msg": "concision budget: 556 words, 3:47.1. Critics docked Concision for runtime in 16 of 28 round-5/6 reviews (9 of 10 episodes >= 3:41); budget <= 500 words and <= 3:35 (PRODUCTION_GUIDE §13)"
+  },
+  {
+   "t": 227.07,
+   "msg": "deictic sync: 1 of 5 deictic words have no animation starting within -0.8..+0.4 s ('this it' 1:31.2). Use beat.on(word, anim) so the highlight lands on the word"
+  }
+ ],
+ "budget": {
+  "words": 556,
+  "runtime_s": 227.1,
+  "budget_words": 500,
+  "budget_runtime_s": 215.0,
+  "over": true
+ },
+ "glyph_morphs": [],
+ "deictic_sync": {
+  "window": [
+   -0.8,
+   0.4
+  ],
+  "deictics": 5,
+  "unlanded": [
+   {
+    "t": 91.22,
+    "phrase": "this it",
+    "nearest_animation_start": 1.11
+   }
+  ]
+ },
  "layout_audit": {
   "clearance": 0.15,
-  "checks": 272,
-  "audit_seconds": 2.347,
-  "render_seconds": 418.6,
+  "checks": 276,
+  "audit_seconds": 4.065,
+  "render_seconds": 631.8,
   "errors": 0,
   "count": 0,
   "counts": {
    "overlap": 0,
    "clearance": 0,
    "safe-area": 0,
-   "caption-zone": 0
+   "caption-zone": 0,
+   "text-size": 0,
+   "small-label": 2
   },
   "issues": [],
+  "advisory": [
+   {
+    "kind": "small-label",
+    "start": 48.93,
+    "end": 77.1,
+    "held": 28.17,
+    "text": "Text 'Gilbert, 1955 · Bell Labs; …'",
+    "text_pos": [
+     -4.11,
+     -3.0
+    ],
+    "detail": "cap height ≈ 26 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 0:48.9-1:17.1 (held 28.2s) Text 'Gilbert, 1955 · Bell Labs; …' @(-4.11, -3.00) cap height ≈ 26 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 48.93,
+    "end": 77.1,
+    "held": 28.17,
+    "text": "Text 'Gilbert–Shannon–Reeds model'",
+    "text_pos": [
+     -4.54,
+     -2.67
+    ],
+    "detail": "cap height ≈ 26 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 0:48.9-1:17.1 (held 28.2s) Text 'Gilbert–Shannon–Reeds model' @(-4.54, -2.67) cap height ≈ 26 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   }
+  ],
   "allowed": [],
   "excluded": []
  }

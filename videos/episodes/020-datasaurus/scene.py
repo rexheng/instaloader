@@ -261,6 +261,28 @@ def bez_path(src, dst, c1, c2):
     return pf
 
 
+def elbow_path(src, dst, cx, t1=0.28, t2=0.72):
+    """path_func for ReplacementTransform(src_copy, dst): the copy's centre slides sideways to
+    the lane x = cx at the source's height, runs straight down (or up) the lane, then slides
+    sideways into the target, each leg eased. Unlike a Bezier through the same corners it
+    really stays in the lane, so it never cuts the corner through text beside the lane. The
+    shape (and size) interpolate as usual; the offset is the same for every glyph."""
+    cs, ce = src.get_center(), dst.get_center()
+    A = np.array([cx, cs[1], 0.0])
+    B = np.array([cx, ce[1], 0.0])
+
+    def centre(a):
+        if a <= t1:
+            return cs + (A - cs) * smooth(a / t1)
+        if a <= t2:
+            return A + (B - A) * smooth((a - t1) / (t2 - t1))
+        return B + (ce - B) * smooth((a - t2) / (1 - t2))
+
+    def pf(s, e, a):
+        return s + (e - s) * a + (centre(a) - (cs + (ce - cs) * a))
+    return pf
+
+
 def item(sym, val, size=36):
     """One readout entry 'sym = val' (symbol in ink, value in yellow)."""
     m = MathTex(sym, "=", val, font_size=size)
@@ -514,8 +536,8 @@ class Episode(NarratedScene):
             beat.wait_until("error", offset=-0.15)
             self.play(Create(err_bar), flag(rows[3]), run_time=0.8)
             beat.wait_until("Only", offset=-0.05)
-            self.play(bar_rect.animate.set_fill(opacity=0.08).set_stroke(opacity=0.55),
-                      err_bar.animate.set_stroke(opacity=0.55), pct86.animate.set_opacity(0.4),
+            self.play(bar_rect.animate.set_fill(opacity=0.08).set_stroke(opacity=0.6),
+                      err_bar.animate.set_stroke(opacity=0.6), pct86.animate.set_opacity(0.4),
                       self.dots.animate.set_opacity(1.0), Write(pct13),
                       run_time=beat.until("points", offset=0.1))
 
@@ -547,7 +569,7 @@ class Episode(NarratedScene):
         require_safe(note, "decimals note")
 
         with self.narrate("How much can five numbers hide? Let's hide a star in them, and "
-                          "demand that all five match the dinosaur's to two decimals.") as beat:
+                          "demand that all five match the dinosaur's to two decimals.", gap=0.66) as beat:
             # the labels beside the strip are gone before the points spread out over them
             self.go(lambda a: lerp(strip, dino, a), 1.3, smooth,
                     FadeOut(bar_rect), FadeOut(err_bar), FadeOut(cite_w),
@@ -573,7 +595,8 @@ class Episode(NarratedScene):
             self.live = True
 
         # ================================================================ VERSION ONE
-        with self.narrate("Version one slides every point onto its own spot on a star.") as beat:
+        with self.narrate("Version one slides every point onto its own spot on a star.",
+                          gap=0.66) as beat:
             self.play(self.dots.animate.set_opacity(1.0), run_time=beat.until("slides", offset=-0.1))
             self.go(lambda a: lerp(dino, star0, a), 3.0)
 
@@ -649,17 +672,18 @@ class Episode(NarratedScene):
             beat.wait_until("averages", offset=-0.1)
             self.play(flag(VGroup(tgts[0], tgts[1])), run_time=0.8)
             beat.wait_until("single", offset=-0.1)
-            # part -> part copies (same structure, so each glyph maps onto itself); the x-bar
-            # copy leaves first and the two paths never meet
-            p_xb = MathTex(r"\bar{x}", font_size=42).move_to(syms[0])[0].set_z_index(7)
-            p_yb = MathTex(r"\bar{y}", font_size=42).move_to(syms[1])[0].set_z_index(7)
-            self.play(FadeIn(xy_patch, rate_func=window(0.0, 0.3)),
-                      LaggedStart(ReplacementTransform(p_xb, xy_lbl[1]),
-                                  ReplacementTransform(p_yb, xy_lbl[3]), lag_ratio=0.35),
-                      *[FadeIn(xy_lbl[k], rate_func=window(0.6, 1.0)) for k in (0, 2, 4)],
-                      run_time=1.1)
-            self.remove(*xy_lbl.submobjects)
-            self.add(xy_lbl)                                  # one label again, not five parts
+            # one label, flown as one: a copy of "(x-bar, y-bar)" whose x-bar and y-bar sit on the
+            # table's symbols (white, table size) and whose brackets and comma wait, invisible, in
+            # place. Same string and structure as the target, so each glyph maps onto itself; the
+            # two symbols travel on parallel paths that never meet, and the brackets fade in
+            xy_src = xy_lbl.copy().set_color(INK)
+            for k_, sym_ in ((1, syms[0]), (3, syms[1])):
+                xy_src[k_].scale(42 / 38).move_to(sym_)
+            for k_ in (0, 2, 4):
+                xy_src[k_].set_opacity(0)
+            self.add(xy_src)
+            self.play(ReplacementTransform(xy_src, xy_lbl),
+                      FadeIn(xy_patch, rate_func=window(0.55, 0.85)), run_time=1.1)
             beat.wait_until("balance", offset=-0.1)
             self.play(flag(cen_y), run_time=0.8)
 
@@ -679,7 +703,7 @@ class Episode(NarratedScene):
         require_clear(c_sy, harm_y, varm_y, cen_y, seg_x, seg_y, what="s_y by its arm")
         require_clear(c_sx, c_sy, what="s_x vs s_y arm labels")
         with self.narrate("The two standard deviations reach one deviation out on each side, "
-                          "and draw a box.") as beat:
+                          "and draw a box.", gap=0.66) as beat:
             beat.wait_until("standard", offset=-0.15)
             self.play(flag(VGroup(tgts[2], tgts[3])),
                       FadeOut(VGroup(xy_lbl, xy_patch), rate_func=window(0.0, 0.6)),
@@ -814,7 +838,7 @@ class Episode(NarratedScene):
                           "average r standard deviations up. That's the best-fit line, through "
                           "the middle of every vertical slice. At the wall, the slice is just the "
                           "touch point, r times ess why above the center. For the dinosaur, it's "
-                          "just below the middle.") as beat:
+                          "just below the middle.", gap=0.66) as beat:
             beat.wait_until("Many", offset=-0.1)
             self.play(LaggedStart(*[Create(g) for g in ghosts], lag_ratio=0.35), run_time=0.9)
             beat.wait_until("walls", offset=-0.2)
@@ -838,9 +862,9 @@ class Episode(NarratedScene):
             r_live.add_updater(lambda m: place_live(rt.get_value()))
             beat.wait_until("Correlation", occurrence=2, offset=-0.15)
             # start from r = 0: the touch point sits level with the centre
-            # (yellow is dimmed only to 55 %: further down it reads olive, a new hue)
-            self.play(self.dots.animate.set_opacity(0), r_row.animate.set_opacity(0.55),
-                      self.count.animate.set_opacity(0.55), FadeIn(r_live), run_time=0.5)
+            # (yellow is dimmed only to 60 %: further down it reads olive, a new hue)
+            self.play(self.dots.animate.set_opacity(0), r_row.animate.set_opacity(0.6),
+                      self.count.animate.set_opacity(0.6), FadeIn(r_live), run_time=0.5)
             # (separate play: the live label's digits change while r crosses zero)
             self.play(rt.animate.set_value(0.0), run_time=0.6)
             beat.wait_until("one standard", offset=-0.1)
@@ -920,7 +944,7 @@ class Episode(NarratedScene):
 
         with self.narrate("Slide it until the centers meet. Stretch it until the boxes match. "
                           "Then tip it, a slight shear, until it touches the walls at the same "
-                          "height.") as beat:
+                          "height.", gap=0.66) as beat:
             self.go(lambda a: lerp(star0, slid, a), beat.until("centers", offset=0.5),
                     op_from=0.4, op_to=1.0)
             beat.wait_until("Stretch", offset=-0.05)
@@ -932,7 +956,7 @@ class Episode(NarratedScene):
             self.red_on = False
             self.play(FadeOut(red), run_time=0.6)
 
-        with self.narrate("All five match now, to every decimal place. [pause 0.6]", gap=0.65) as beat:
+        with self.narrate("All five match now, to every decimal place. [pause 0.6]", gap=0.6) as beat:
             self.play(flag(self.count, color=GREEN), run_time=0.9)
             beat.wait_until("every", offset=-0.15)
             self.play(LaggedStart(*[flag(n, color=GREEN) for n in self.nows], lag_ratio=0.1),
@@ -989,7 +1013,7 @@ class Episode(NarratedScene):
         # points set off one by one toward it while the five numbers never change
         with self.narrate("In 2017, Justin Matejka and George Fitzmaurice built a search that "
                           "keeps these five numbers fixed while it nudges points toward a "
-                          "target.") as beat:
+                          "target.", gap=0.66) as beat:
             beat.wait_until("Matejka", offset=-0.3)
             self.play(FadeIn(cite_mf), run_time=0.6)
             self.geo_live = True
@@ -1007,7 +1031,7 @@ class Episode(NarratedScene):
         with self.narrate("From the dinosaur they grew twelve shapes: this circle, [pause 0.8] "
                           "this star, [pause 0.8] this bullseye, [pause 0.8] this X, [pause 0.8] "
                           "and these stripes. Every one has this same ellipse, and a different "
-                          "median.", gap=0.7) as beat:
+                          "median.", gap=0.6) as beat:
             beat.on("this circle", FadeOut(circ_line), Indicate(self.dots, color=BLUE,
                                                                 scale_factor=1.04), lead=0.3,
                     run_time=0.8)
@@ -1143,7 +1167,7 @@ class Episode(NarratedScene):
         require_clear(VGroup(f_lhs, numC, denC, barC), readout_low, what="slope vs readout")
 
         with self.narrate("Francis Anscombe made the point in 1973, with eleven points of his "
-                          "own.") as beat:
+                          "own.", gap=0.66) as beat:
             self.add(ax2)                    # same frame, axis lines and names as ax
             # the dinosaur's values leave with the dinosaur; the empty symbol slots wait for his
             self.play(FadeOut(VGroup(hdr_t, hdr_n, *self.nows, *self.marks, med_row),
@@ -1177,7 +1201,7 @@ class Episode(NarratedScene):
                                   lag_ratio=0.06), run_time=1.0)
 
         with self.narrate("His correlation is point eight two, so the ellipse touches the right "
-                          "wall high up.") as beat:
+                          "wall high up.", gap=0.66) as beat:
             beat.wait_until("correlation", offset=-0.15)
             self.play(flag(an[4]), run_time=0.8)
             beat.wait_until("touches", offset=-0.5)
@@ -1188,8 +1212,10 @@ class Episode(NarratedScene):
             # up out of its row first (never across "r ="), then left to the touch dot
             self.play(ReplacementTransform(c82, d82, path_func=lift_path(c82, d82, 1.0, (0.6, 0.0))),
                       run_time=0.7)
-            self.play(FadeOut(d82, target_position=tR.get_center(), scale=0.3), flag(tR),
-                      run_time=0.6)
+            self.play(flag(tR), run_time=0.6)
+            # it marks the touch height until "high up", then settles into the dot
+            beat.wait_until("high", offset=-0.1)
+            self.play(FadeOut(d82, target_position=tR.get_center(), scale=0.3), run_time=0.6)
 
         # B9's rule, recognised: one s_x across, r s_y up, through the centre and the touch point.
         # The labels come from Anscombe's readout; then slope = rise / run is built from them.
@@ -1437,25 +1463,26 @@ class Episode(NarratedScene):
             for i_, dst_ in ((4, v_n1), (3, v_n2), (2, v_den)):
                 src_ = table_cold[i_][2]
                 pf_ = (lift_path(src_, dst_, -0.6) if i_ == 4 else
-                       lane_path(6.0, src_, dst_, 0.0))
+                       elbow_path(src_, dst_, 6.0))
                 # a whole-MathTex copy (same structure as its target), so each glyph maps onto
                 # itself and the number stays legible in flight
                 cp_ = MathTex(f"{TR[i_]:.2f}", font_size=42, color=YELLOW).move_to(src_)
                 flights.append(ReplacementTransform(cp_, dst_, path_func=pf_))
-            # each symbol floats up (or down) and out just before its value arrives, so a value
-            # never lands on a fading symbol (no cross-fade in place); the numerator values land
-            # at about 0.62 and 0.81 of the move, the denominator's at 1.0. Each source value
-            # dims while its copy leaves it, so the two never read as a doubled number
+            # each symbol floats up (or down) and out before its value arrives, so a value never
+            # lands on a fading symbol (no cross-fade in place); the numerator values land at
+            # about 0.62 and 0.81 of the move, the denominator's at 1.0. Each source value is
+            # hidden while its copy leaves it and fades back once the copy is clear, so the two
+            # never read as a doubled number
             srcs_l = [table_cold[i_][2] for i_ in (4, 3, 2)]
             starts = [0.0, 0.1875, 0.375]                      # LaggedStart(lag 0.3) of three
 
             def dim_sources(m, a):
                 for src_, s0 in zip(srcs_l, starts):
-                    up = min(1.0, max(0.0, (a - s0) / 0.05))
-                    down = min(1.0, max(0.0, (a - s0 - 0.28) / 0.15))
-                    src_.set_opacity(1 - 0.7 * up * (1 - down))
-            self.play(f1[1].animate(rate_func=window(0.18, 0.42)).shift(UP * 0.25).set_opacity(0),
-                      f1[3].animate(rate_func=window(0.5, 0.75)).shift(DOWN * 0.25).set_opacity(0),
+                    up = min(1.0, max(0.0, (a - s0) / 0.02))
+                    down = min(1.0, max(0.0, (a - s0 - 0.25) / 0.15))
+                    src_.set_opacity(1 - up * (1 - down))
+            self.play(f1[1].animate(rate_func=window(0.0, 0.25)).shift(UP * 0.25).set_opacity(0),
+                      f1[3].animate(rate_func=window(0.3, 0.55)).shift(DOWN * 0.25).set_opacity(0),
                       Transform(f1[2], v_bar, rate_func=window(0.25, 0.6)),
                       LaggedStart(*flights, lag_ratio=0.3),
                       UpdateFromAlphaFunc(VGroup(*srcs_l), dim_sources, rate_func=linear),
@@ -1476,12 +1503,12 @@ class Episode(NarratedScene):
                       VGroup(ell_l, line_l).animate(rate_func=there_and_back).set_stroke(width=7),
                       run_time=0.9)
             beat.wait_until("Most", offset=-0.1)
-            # the line steps back to 55 % and the ellipse to 60 %, so the squeezed copy, the bar
+            # the line and the ellipse step back to 60 %, so the squeezed copy, the bar
             # and the error bar are the only full-strength strokes where they meet
             self.play(FadeIn(cite_w2), FadeIn(pct86_l, shift=0.1 * DOWN),
                       FadeOut(VGroup(f1, v_num, v_den, v_ap, v_val)),
                       self.dots.animate.set_opacity(0.15),
-                      line_l.animate.set_stroke(opacity=0.55),
+                      line_l.animate.set_stroke(opacity=0.6),
                       ell_l.animate.set_stroke(opacity=0.6), run_time=0.6)
             beat.wait_until("bar graph", offset=-0.15)
             # the ellipse squeezed to its vertical extent is exactly the error bar, y-bar +- s_y
