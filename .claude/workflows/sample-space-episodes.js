@@ -113,6 +113,19 @@ Revise the episode so that fresh, independent critics will score it >= 9.0:
 5. Append a short "Round ${round} revisions" section to ${prod.episode_dir}/CHANGELOG.md. Return the structured result.`
 }
 
+function resumeRevisePrompt(id, dir, title, round) {
+  return `${COMMON}
+
+You are the writer, director and animator of episode ${id} ("${title}"), in ${dir}. Review round ${round} did not pass (both critics must give >= 9.0). The full reviews are ${dir}/reviews/round${round}-craft.md and ${dir}/reviews/round${round}-substance.md. A previous attempt at this revision may have been interrupted part-way (compare CHANGELOG.md, scene.py and final.mp4 timestamps with the reviews): continue from the current files rather than starting over.
+
+Revise the episode so that fresh, independent critics will score it >= 9.0:
+1. Read videos/BAR.md and videos/toolkit/PRODUCTION_GUIDE.md again (especially sections 11 and 12 and the automatic overlap audit), then your script.md, facts.md, scene.py, CHANGELOG.md and both round-${round} reviews.
+2. Treat every factual-error claim seriously: re-verify with sources. If the critic is right, fix it everywhere (narration, on-screen, facts.md). If the critic is wrong, keep it but strengthen the on-screen sourcing and record the evidence in facts.md.
+3. Apply every fix (or a better solution to the same problem). Clear every cap first. If a critic says the structure cannot reach 9, restructure rather than polish. Preserve the "keep" items.
+4. Re-render the master to ${dir}/final.mp4 via render.sh (fix every [sample_space] WARNING, including overlap warnings), regenerate ${dir}/review with review_kit.sh (--narration ${dir}/narration.json), then LOOK at every contact sheet and the keyframes around every fixed timestamp with the Read tool. Verify each fix landed and nothing new broke. Iterate until it is >= 9 by your honest reading of BAR.md.
+5. Append a short "Round ${round} revisions" section to ${dir}/CHANGELOG.md. Return the structured result.`
+}
+
 function publishPrompt(id, prod, history) {
   const rows = history.map(h => `| ${h.round} | ${h.scores.join(' / ')} | ${h.pass ? 'PASS' : 'fail'} |`).join('\n')
   return `In ${REPO}: write ${prod.episode_dir}/REVIEW.md containing exactly this (fill nothing else in):
@@ -139,6 +152,11 @@ async function runEpisode(item) {
   let prod
   if (typeof item === 'object' && item.dir && startRound > 1) {
     prod = { episode_dir: item.dir, final_mp4: `${item.dir}/final.mp4`, title: item.title || `Episode ${id}`, runtime_s: 0, self_score: 0, changes: 'resumed', unresolved: [] }
+    if (item.reviseFrom) {
+      const rev = await agent(resumeRevisePrompt(id, item.dir, prod.title, item.reviseFrom), { label: `revise:${id}:r${item.reviseFrom}`, phase: 'Revise', schema: PRODUCER_SCHEMA })
+      if (!rev) return { id, status: 'interrupted', stage: `revise r${item.reviseFrom}`, dir: item.dir, title: prod.title }
+      prod = rev
+    }
   } else {
     prod = await agent(producerPrompt(id), { label: `produce:${id}`, phase: 'Produce', schema: PRODUCER_SCHEMA })
   }
