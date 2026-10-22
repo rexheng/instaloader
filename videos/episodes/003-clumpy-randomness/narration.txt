@@ -6,30 +6,30 @@
 
 [00:32.5] Map A lights up with thirty-nine targets, map B with none. So A looks aimed.
 
-[00:38.6] Backwards. [pause 0.9] I dropped every hit on map A at random, so all thirty-nine targets are false alarms. Map B's rule: no two hits closer than four fifths of a square. Your eye expects chance to look that even.
+[00:38.6] Backwards. [pause 0.7] I dropped every hit on map A at random, so all thirty-nine targets are false alarms. Map B's rule: no two hits closer than four fifths of a square. Your eye, like the detector, expects chance to look that even.
 
-[00:53.8] Take one square. Each bomb lands in it with chance one in five seventy-six. To stay empty, all five hundred thirty-seven must miss.
+[00:55.4] Each bomb has a one in five seventy-six chance of landing in this square. To stay empty, all five hundred thirty-seven must miss.
 
-[01:03.7] Guess how many squares stay empty. [pause 1.5]
+[01:04.1] Guess how many squares stay empty. [pause 1.1]
 
-[01:07.5] About two hundred twenty-seven. [pause 0.3] Map A has two hundred twenty-two. [pause 0.7]
+[01:07.6] About two hundred twenty-seven. [pause 0.3] Map A has two hundred twenty-two. [pause 0.5]
 
-[01:12.7] Those empty squares force the clumps: the other three hundred fifty-four share all the hits, so many must double up. To judge London, chance must predict every bar.
+[01:12.6] Those empty squares force the clumps: the other three hundred fifty-four share all the hits, so many must double up. To judge London, chance must predict every bar.
 
-[01:24.0] Call the average hits per square lambda. [pause 0.5] One minus a small slice, raised to a big power, is almost exactly e to the minus lambda. [pause 0.5]
+[01:23.9] Let's call the average hits per square lambda. [pause 0.5] One minus a small slice, raised to a big power, is almost exactly e to the minus lambda.
 
-[01:34.2] For two hits in this square, pick two bombs: five thirty-seven times five thirty-six ways, over two, since order doesn't matter. [pause 0.4] Each lands with chance one in five seventy-six, and the rest miss: e to the minus lambda again.
+[01:33.8] For two hits in this square, pick two bombs: five thirty-seven times five thirty-six ways, over two, since order doesn't matter. [pause 0.5] Each has a one in five seventy-six chance, and the rest miss: e to the minus lambda again.
 
-[01:50.6] Five thirty-six is almost five thirty-seven. [pause 0.4] For three hits, each two becomes a three; for any k, a k. [pause 0.5] The powers merge into lambda to the k: the Poisson distribution. [pause 1.0] Times five seventy-six squares, it predicts these purple bars.
+[01:50.0] Five thirty-six is almost five thirty-seven. [pause 0.3] For three hits, each two becomes a three; for any k, a k. [pause 0.5] The powers merge into lambda to the k: the Poisson distribution. [pause 0.8] Times five seventy-six squares, it predicts these purple bars.
 
-[02:08.6] The honest detector compares whole histograms. [pause 0.6] Thirty-nine targets, and chance predicts thirty-nine. [pause 0.4] The chi-squared misfit squares each bar's gap and divides by chance's bar, so a miss on a short bar counts more. Map A scores two point oh. Three in four simulated chance maps score worse. That share, p, is point seven four. [pause 0.9]
+[02:07.9] The honest detector compares whole histograms. [pause 0.4] Thirty-nine targets, and chance predicts thirty-nine. [pause 0.4] The chi-squared misfit squares each bar's gap and divides by chance's bar, so a miss on a short bar counts more. Map A scores [pause 0.2] two point oh. Three out of four simulated chance maps score worse. That share, p, is point seven four. [pause 0.7]
 
-[02:33.7] Map B: half the expected empty squares, a tower of single hits, misfit two hundred seventy-two. [pause 0.5] A pattern this even is the fingerprint of a spacing rule.
+[02:33.4] Now map B: half the expected empty squares, a tower of single hits, misfit two hundred seventy-two. [pause 0.3] A pattern this even is the fingerprint of a spacing rule.
 
-[02:45.3] Aimed bombs would miss the other way: extra empty squares, extra pile-ups. In nineteen forty-six, R D Clarke published the same test on London's real hits: five hundred thirty-seven, in five hundred seventy-six squares.
+[02:45.3] Aimed bombs would miss the other way: extra empty squares, extra pile-ups. [pause 0.4] In nineteen forty-six, R D Clarke published the same test on London's real hits: five hundred thirty-seven, in five hundred seventy-six squares.
 
-[03:01.6] Chance predicted two hundred twenty-seven empty squares; Clarke counted two hundred twenty-nine. [pause 0.3] Overall, p equals point eight eight. [pause 1.0]
+[03:01.7] Chance predicted two hundred twenty-seven empty squares; Clarke counted two hundred twenty-nine. [pause 0.3] Overall, p equals point eight eight. [pause 0.7]
 
-[03:11.6] The bombs were aimed at central London but tended to fall short, so farther north, hits were about half as dense. The test needs one lambda: Clarke chose an area where it held steady.
+[03:11.4] The bombs were aimed at central London but tended to fall short, so farther north, hits were about half as dense. The test needs one lambda: Clarke chose an area where it held steady.
 
-[03:24.1] So look again. [pause 1.0] Map A's clumps are what no aim at all looks like. If you chose map B, you chose the rule.
+[03:23.9] So look again. [pause 0.8] The clumps in map A [pause 0.4] are what no aim at all looks like. If you chose map B, [pause 0.3] you chose the rule.

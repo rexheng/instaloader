@@ -101,7 +101,8 @@ objects until "the extra half friend we measured".
 On "Sue holds four tokens" her stack is boxed and her name flashes. "sum of counts / tokens" becomes
 Σk²/Σk. The divide step: Σk²÷8 / Σk÷8 = 60÷8 / 20÷8 → avg(k²)/μ = 7.5/2.5.
 Variance (second cycle layout): on "Measure", the stacks leave, the bar panel and the citation go to 0,
-the main row parks at 30 % at the bottom centre, the YELLOW 3.0 fulcrum dims to 30 % (round 6), and
+the main row parks at 50 % at the bottom centre, the YELLOW 3.0 fulcrum dims to 50 % (round 6; round 6c:
+at 30 % the YELLOW read olive), and
 the beam picture moves up and right so the balance point sits at x = 0: one centred column, picture
 on top, rows below. PURPLE distances are drawn ON the count ruler from the BLUE 2.5 to each tick, with
 their labels (MathTex 36) above it; on "two and a half" the BLUE fulcrum, its label and the 2.5 mark
@@ -174,10 +175,11 @@ friend". On "Named friends" every girl (picked at random) sends one token to one
 (tagged "one possible draw"): the tokens pile 3 on Sue, 3 on Alice, 1 on Pam, 1 on Carol; the piles
 pulse on "more friends". On "closer to everyone else" a flash runs out from Sue and Alice: one step
 reaches Betty, Dale, Pam and Jane, a second Carol, a third Tina. On "catch flu first" (round 6 order: the network clears first, then the axes draw, and the labels move one after the other)
-the random girls shrink into the BLUE curve's origin and the token pile into the YELLOW one, and
+the random girls shrink into the BLUE curve's origin and the token pile into the YELLOW one (round 6c: the
+axes draw only once they have gone, 1.0-1.7 s into the move), and
 "random" / "named friend" move to the curves' label spots; they become "319 random students" and
 "425 friends they named" as the two groups are named (C&F Fig. 3, redrawn). Flash along the friends' curve on "rose first". Dashed logistic fits
-(shared shape refit in sim.py, shift held at C&F's 13.9 days) with the raw steps dimmed; an INK arrow
+(shared shape refit in sim.py, shift held at C&F's 13.9 days) with the raw steps dimmed to 60 % (round 6c); an INK arrow
 between the fits at 2.8 %; a copy arcs up into the read-out above the plot, "C&F fitted lead: 13.9
 days" left of it (0.3 below and 0.4 left of round 1's spot, off the safe edge). On "self-reported" an
 INK copy at 50 % (round 6: GRAY is the naive guess and the axes) drops into the row below; on "shrank" it shrinks, tip fixed, while a live number reads its
@@ -196,7 +198,7 @@ reading 4 (a token reads the count where it lands) on "sees four", while Sue's 4
 candidate flash. "Two and a half counts
 the girls": the girl bar, its 2.5 and the 2.5 candidate flash BLUE. "three counts the tokens": every
 friendship flashes, the "?" and drop lines leave, the friend bar grows (YELLOW outline, BLUE to 2.5,
-PURPLE beyond) to the 3, which slides to the bar's end and is ringed; the 4 dims. End card.
+PURPLE beyond) to the 3, which slides to the bar's end and is ringed; the 4 steps back to 55 %. End card.
 (Round 6b: the per-girl tally "seat by seat, five have fewer ..." is cut. Facebook's 93 % already
 makes the per-person point, and the landing is now one move that accounts for all three
 candidates: 4 is what Betty sees, 2.5 counts the girls, 3 counts the tokens.)

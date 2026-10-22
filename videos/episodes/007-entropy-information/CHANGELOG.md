@@ -205,3 +205,28 @@ Both round-6 critics docked Concision (8.5) and Audio (8.5). The substance criti
 - **Words 602 → 496.** Cut: "Splitting the alphabet evenly charges every character the same price" (the one price line shows it, and it now flashes on "as much as E"); "its cost drops to almost nothing" (U flattens on screen); "in the same twenty-seven symbols" (the note on screen says "27 symbols"); "Whatever it is"; "In general"; "counted"; "the whole"; "ideal" (second use); "of all text". Shortened: the landing (45 → 35 words, one move: "Shannon's subject needed one guess: is it Y? Splitting the alphabet took five."), "That beats 4.75, but it's four times Shannon's estimate: it ignores what came before", and "Hundred-letter contexts…".
 - **Voice.** `SPEED` 0.85 → 0.83 with `CADENCE = "shaped"` (beat gap 0.45 s). There is now a 0.9 s pause after the 4.11, 0.16 and 79/102 results, the hold before the guess skyline pours is 1.0 s, and the 1.5 s and 1.6 s prediction holds stay.
 - **Re-cued.** Every animation is driven by the new word timings. The doubling cuts land on "halves"; the 4.75 is written on "four"; the even-split hatching now leaves on "Z"; the after-Q pour starts right after U swallows the bar (the 98 % brace leaves inside it); the number line is built by "context"; the LLM note's last part arrives on "training"; and the landing's chain returns on "Splitting". The glyph-morph lint's one hit ("?" → "5" at 0:11) is now `swap()`. Tick labels carry `ss_role = "tick"`, and the inset letters are Text 20 (they were 23 px, under the 24 px floor).
+
+### Round 6 revisions, final pass (motion sweep)
+
+The 14:37 master from the narration-budget pass had never been frame-checked. This pass swept every transform at 3–4 fps (`ffmpeg … fps=4`, BAR §11.6), fixed what the sweep found, and re-rendered and re-checked. No claim changed. Every round-6 fix stays in, and so do the keep items: the pour, the context row with the Y landing, and the gap meter with Shannon's record.
+
+- **Glyph soup removed (craft 5–6, substance 6–7; §13.2.6).** Five transforms still interpolated unlike outlines. Each one showed up in a 2 s sheet frame or a 4 fps strip.
+  - 0:20.8: "5" → "4.75" was a `FadeTransform` in place, and the two were superimposed in sheet frame 0:21. It is now `swap()`: the 5 steps up and out before 4.75 steps in.
+  - 0:24.5–0:25.3: 4.75 riding into the gutter was a `ReplacementTransform` between MathTex objects of different structure ("4.ℤ5"). It now moves and scales as itself.
+  - 1:26.5: "k" faded out while Σ was written on the same spot. Now k leaves first, Σ is written after it, and "=" slides only once k is gone.
+  - 1:59.5 and 2:20.3: the 0.16 and 1.67 copies grew on top of their gutter labels (`TransformFromCopy`), giving "1̶.67". Every level copy now takes the route 2.81 already used: out of the gutter to the right, up outside the chart, and into the slot from below. It stays invisible while it overlaps its source.
+  - 3:01.1: the mini 1.42 → payoff-line 1.42 `ReplacementTransform` garbled ("1̶4̶2"). It now moves as itself.
+- **The live meter reads in front of the lines.** At 2:25.0, "2.41 extra" was struck through by the 4.11 dashed line while the meter shrank. The reading now has an opaque BG backing, so the dashes pass behind it. Its digits are re-raised above the backing on every frame, because `set_value` rebuilds them at z 0.
+- **Landing frame (§13.1 composition).** From 3:22 to 3:28 the lower half was empty while the narration ran. Now the halving chain and its "5 questions" come back faint with the tiles, so the frame is the 0:17 frame re-seen. On "Splitting" they come up to full strength and flag. Afterwards "5 questions" rests in grey (the abandoned method, like the 4.75 ghost) instead of 30 % yellow, which reads as olive. The record's letters are now gone before the row's boxes come up over its last line.
+- **Narration (whisper, §13.3).**
+  - "Five halvings" was heard as "havings": misaki says /hˈævɪŋz/, a homophone. It is now "five cuts", which names the yellow cuts on screen.
+  - "Ninety-eight times in a hundred" was heard as "times and a hundred". It is now "ninety-eight percent of the time", matching the 98 % on screen.
+  - WER fell from 2.4 % to 1.4 %. The remaining diffs are number formatting and "Y" heard as "why".
+- **Budget.** `BEAT_GAP` went from 0.55 to 0.51. Runtime is now 3:34.2, inside the 3:35 budget; the 3:35.5 overrun was the render's one warning. Beat turns are 0.67 s against 0.40 s full stops.
+- **Labels.** "LLM" (0:32) and "TH" (2:23) went from Text 24 to Text 28, and "26 letters + space" from 24 to 26.
+
+**Verification.**
+- Master: 3:34.2, 152 wpm over speech time, −14.0 LUFS / −2.1 dBTP, lead 0.00 s, trail 0.88 s.
+- Longest internal silence 2.23 s (the Q prediction hold). Longest static stretch 3.3 s (the closing hold).
+- 0 render warnings. Layout audit: 0 issues in 218 checks, nothing allowed. 0 glyph morphs, 0 unlanded deictics, 0 banned phrases.
+- I read all 12 contact sheets. I re-swept, at 4 fps, 0:20–0:22, 0:23.7–0:25.7, 1:25.6–1:27.6, 1:57.8–2:00.8, 2:18.3–2:21.3, 2:23.5–2:26.5, 2:59.6–3:01.6 and 3:19.6–3:22.1.

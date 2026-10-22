@@ -304,3 +304,68 @@ scene edits (no render); this pass continues from those files.
   like chance", the separate 537·536 ≈ 537² line; shorter stakes line.
 - Originality (8–8.5): the real V-1 map now carries the aim itself: Tower Bridge and the
   12.5 km circle that holds only half the V-1s is bigger than the whole county map.
+
+**What changed** (all three round-5 passes; the first two were interrupted before a reviewed
+render, this one continued from their files and re-rendered twice)
+
+- *Facts.* Neither critic found an error. The one unsourced line ("aimed at London, just too
+  loosely to choose a street", substance 6) is gone. The limit is now "The bombs were aimed at
+  central London but tended to fall short, so farther north, hits were about half as dense",
+  re-verified in Evans & Delaney 2018 (*Applied Geography* 99: published aiming point Tower
+  Bridge; overall mean point of impact of 2,111 V-1s 5.6 km south, in Dulwich; "as a consequence
+  of this bias, V1 impact density was less … north of the Thames") and Shaw & Shaw 2019 ("tended
+  to fall short of the centre of London"). The red × and arrow are credited on screen with
+  "aim: Evans & Delaney, 2018 · Applied Geography 99" ("aim:" in the marks' red). facts.md has
+  the quotes.
+- *Hook / clarity (substance 1–3, craft 1, 3).* There is a forward line: "To judge London, chance
+  must predict every bar", shown over a preview histogram with chance's 227 and "?" over the other
+  bars. The k = 3 step is in ("for three hits, each two becomes a three; for any k, a k"), with all
+  the 2s changing at once. 536 becomes 537 in place and folds into 537²; the separate side line is
+  cut. "Over two, since order doesn't matter" plays while the two hits swap places. The χ² now says
+  why it divides ("so a miss on a short bar counts more", with the 4-hit sliver, its 0.49 and
+  chance's 7.1 flagged) and names p ("That share, p, is point seven four"). "Gap" now means only
+  the bar difference: B's tag is "rule: spacing ≥ 4/5 square", and the line is "Those empty
+  squares force the clumps".
+- *Visual (craft 2, 4, 7, 10, 12; substance 5, 8).* The empty squares are a yellow outline of
+  each empty region with no fill. A yellow tint under 60 % read olive on the slate, so no tint is
+  used. The outline goes before the histogram; map A returns with blue shading. Thumbnails show
+  dots and frame only. The null histogram has a "maps" axis with 1000/2000 ticks. Readouts read
+  χ²_A and χ²_B, and each shows "= ?" until its terms are added: no frame says "= 0.0" or a stale
+  "= 2.0" under B. A's score marker never fades below 60 %. The two densities sit in one column on
+  their boxes' rows. Citations are at 20 (≈ 25 px cap). The "109" label is lifted to buff 0.22.
+  The aimed map has its grid.
+- *Motion (craft 5, 6, 11; substance 9).* A's hits re-rain on "I dropped every hit" (the 3.6 s
+  static frame is gone). The cells → bars flight is count by count. "chance: 39.3" is a flag
+  followed by a Write, with no shredding morph. The aimed bars ride the chart while they fade. The
+  histogram axes draw only after the 1.5 line and the 2+ count have left. The P(k) copy lands in
+  the axis title before "= 576·" is written. The target counter lands on "thirty-nine". 1/576 now
+  forms as "one in" is spoken, 0.9 s into the beat (was 2 s late). Landing: London's rectangle
+  squares up (equal area) while A's hits cross London's at half strength and A's header arrives,
+  so the frame never dips to an empty square. It then opens into map A as B slides in.
+- *Audio (craft 8, 9; substance 4).* Numbers are written without "and". "Three out of four
+  simulated chance maps score worse": round 4's "three times in four" was heard as "than", and
+  this pass's "Three in four" as "3 and 4". "Each has a one in five seventy-six chance" replaces
+  "with chance one in…", which was heard as "1 and 576". "Let's call the average…" (a bare "Call" opening the beat lost
+  its /k/ and was heard as "all"). The close is "If you chose map B, you
+  chose the rule" (the "-ed" of "picked" was swallowed). The pace is 0.84 with shaped cadence and
+  0.82 for the closing beat, with breaths inside the short fast lines. A 0.65 s gap follows the
+  three beats that end on a story turn, so turns are longer than full stops (0.66 vs 0.36 s
+  median). The two-hit beat has a 0.5 s breath (it ran 16 s without one).
+- *Concision (substance 7).* 588 → 492 words and 3:49.5 → 3:34.7. Cut: "Map A sits on the purple
+  bars", "No sign of clustering", "Single hits: two hundred eleven, exactly as predicted", the
+  537·536 ≈ 537² side line, the second limit (the CEP circle), and "but the question is real" →
+  "The question isn't."
+- *Keep items preserved.* The cold-open A/B frame returns as the closing frame. The P(2) build
+  from the bomb block and the enlarged square is unchanged. So are the gap slivers → terms → 2.0
+  → A on the 20,000-map null, B at 271.7, the aimed-map counterexample, Clarke's table growing into
+  chance's outlines, and the honest one-λ limit.
+
+**Mechanics** (final master, review kit, 0 render warnings): 3:34.7, 492 words, 157 wpm on speech
+time (151 overall), 0 sentences above 200 wpm, full stops 0.36 s vs beat turns 0.66 s, longest
+run without a breath 12.1 s, −14.0 LUFS / −1.5 dBTP, longest silence 1.8 s (the planned prediction
+hold), longest static stretch 2.6 s, WER 2.5 % (every remaining difference is number formatting
+or "Clark"), 0 banned phrases, 0 glyph morphs, 6/6 deictics on an animation, layout audit 0
+issues in 227 checks (two declared fraction-bar/parenthesis pairs). Checked: all 12 contact
+sheets, keyframes at 0:57, 1:18, 2:34, 3:01 and 3:23, and 4 fps strips across the axes draw
+(1:20), the P(k) copy into the axis title (2:04), the A → B readout swap (2:32) and the landing
+transform (3:24).

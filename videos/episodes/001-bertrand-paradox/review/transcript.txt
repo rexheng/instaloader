@@ -1,59 +1,49 @@
-[0:00.0–0:02.8] Draw a chord across this circle at random.
-[0:02.8–0:07.0] What's the chance it comes out longer than a side of this triangle?
-[0:07.0–0:09.7] Pick a number.
-[0:09.7–0:17.2] Joseph Bertrand published this puzzle in 1889 as a warning about two words, at random.
-[0:17.2–0:24.1] Leave them vague, and one college can report an average class of 40 or 147.
-[0:24.1–0:26.6] Start with the obvious simulation.
-[0:26.6–0:29.9] Pick two points on the rim at random and join them.
-[0:29.9–0:33.8] If the chord beats the triangle's side, it turns gold.
-[0:33.8–0:39.0] Run 10,000 chords, and the gold share settles near point 3-3.
-[0:39.0–0:40.7] Geometry agrees.
-[0:40.7–0:43.7] Put a corner of the triangle on the first point.
-[0:43.7–0:48.1] The chord is long only when the second point lands on this far arc,
-[0:48.1–0:50.4] a third of the rim.
-[0:50.4–0:53.7] Case closed until you code it a second way.
-[0:53.7–0:57.5] Pick a random radius, a random point along it,
-[0:57.5–1:00.8] and draw the chord through that point at right angles.
-[1:00.8–1:03.1] This one settles near point five.
-[1:03.1–1:07.2] A third program picks a random point anywhere inside
-[1:07.2–1:09.3] and makes it the chord's midpoint.
-[1:09.3–1:11.6] That settles near point two five.
-[1:11.6–1:15.1] Bertrand printed all three and wrote that none is wrong
-[1:15.1–1:16.6] and none is right.
-[1:16.6–1:19.9] Each tally is good to about one percentage point.
-[1:19.9–1:23.3] They disagree by 25 percentage points
-[1:23.3–1:25.4] and none of the code has a bug.
-[1:25.4–1:27.4] One point sets a chord's length.
-[1:27.4–1:31.5] its midpoint. Slide it outward and the cord shrinks.
-[1:31.5–1:36.7] It matches the triangle's side when the midpoint is half a radius out,
-[1:36.7–1:39.5] on the circle that fits inside the triangle.
-[1:39.5–1:44.7] So a cord is long exactly when its midpoint lands in this gold circle.
-[1:44.7–1:48.5] And each program is just a way of scattering midpoints.
-[1:48.5–2:02.3] Shrink every cord to its midpoint The midpoint program spreads them evenly So this circle with a quarter of the area catches a quarter of them The radius program spreads them evenly along the radius
-[2:02.3–2:04.3] Where will they crowd?
-[2:04.3–2:10.3] Toward the center. Every ring gets an equal share and inner rings are small.
-[2:10.3–2:12.3] Half the radius, so one half.
-[2:12.3–2:19.3] And the endpoints program piles them against the rim, so only a third land inside, the third we found.
-[2:20.3–2:22.5] Three programs, three things spread evenly.
-[2:23.3–2:25.0] Rim, radius, area.
-[2:25.6–2:27.4] At random, never said which.
-[2:28.7–2:32.2] Edwin Jaynes argued that a physical process picks one.
-[2:32.8–2:36.0] Straws tossed from a standing height can't be aimed,
-[2:36.6–2:40.6] so the answer can't depend on where the circle sits or how big it is.
-[2:40.6–2:43.4] One rain lands on both circles at once.
-[2:44.0–2:46.1] Each judges with its own gold circle,
-[2:46.6–2:49.3] so a fair program must score the same on both.
-[2:49.3–2:53.3] Midpoint gives a quarter, then .41.
-[2:53.3–2:57.3] Endpoints give a third, then .47.
-[2:57.3–3:01.3] Only the radius program gives a half on both.
-[3:01.3–3:07.3] Janes and Charles Tyler tossed real broom straws at a 5-inch circle,
-[3:07.3–3:13.3] and the 128 that crossed it matched the radius program's flat spread.
-[3:13.3–3:16.3] Surveys hide the same two words.
-[3:16.3–3:19.5] Take classes of 10, 10, and 100.
-[3:19.5–3:23.4] Pick a class at random, and the average size is 40.
-[3:23.4–3:25.2] Pick a student at random.
-[3:25.2–3:30.3] Spread evenly over students instead of classes, and it's 85.
-[3:30.3–3:37.3] At Stony Brook in 1974, those two picks gave 40 and 100 47.
-[3:37.3–3:41.9] So whatever number you picked, some way of drawing chords makes it right.
-[3:41.9–3:44.7] Name the way, and the answer is fixed.
-[3:44.7–3:49.2] a half for tossed straws, 147 for a random student,
+[0:00.0–0:03.2] Draw a chord across this circle, at random.
+[0:03.2–0:07.3] What's the chance it's longer than a side of this triangle?
+[0:07.3–0:10.3] Pick a number.
+[0:10.3–0:17.1] Bertrand posed this puzzle in 1889 as a warning about two words, at random.
+[0:17.1–0:23.6] Leave them vague, and one college's average class is 40, or 147.
+[0:23.6–0:28.6] Start with the obvious simulation, two random points on the rim joined.
+[0:28.6–0:32.6] If the chord beats the triangle side, it turns gold.
+[0:32.6–0:37.5] 10,000 chords in, the gold share settles near point 3-3.
+[0:37.5–0:39.3] Geometry agrees.
+[0:39.3–0:41.5] With a corner on the first point,
+[0:41.5–0:45.7] the chord is long only when its other end lands on this arc,
+[0:45.7–0:47.0] a third of the rim.
+[0:48.3–0:51.6] Case closed until you code it a second way.
+[0:51.6–0:53.9] A random radius, a point on it,
+[0:53.9–0:56.5] and the chord through it at right angles.
+[0:56.5–0:59.2] This one settles near point five.
+[0:59.2–1:02.2] A third program picks any point inside
+[1:02.2–1:03.8] as the chord's midpoint.
+[1:03.8–1:06.5] That settles near point two five.
+[1:06.5–1:08.5] Bertrand printed all three,
+[1:08.5–1:11.4] writing that none is wrong and none is right.
+[1:11.4–1:14.7] Each tally is good to about one percentage point.
+[1:14.7–1:18.8] They disagree by 25 and the code has no bug.
+[1:18.8–1:22.0] One point sets a chord's length, its midpoint.
+[1:22.0–1:24.6] Slide it outward and the chord shrinks.
+[1:24.6–1:27.3] It matches the side at half a radius
+[1:27.3–1:29.8] on the circle inside the triangle.
+[1:29.8–1:32.0] So a chord is long exactly
+[1:32.0–1:34.9] when its midpoint lands in this gold circle.
+[1:34.9–1:38.3] Each program is a way of scattering midpoints.
+[1:38.3–1:40.8] Shrink every chord to its midpoint.
+[1:40.8–1:52.6] The midpoint program fills the disk evenly So this circle a quarter of the area catches a quarter The radius program spreads them evenly along the radius
+[1:52.6–1:55.4] Where will they crowd?
+[1:55.4–1:56.9] Toward the center.
+[1:56.9–2:00.8] Every ring gets an equal share and inner rings are small.
+[2:00.8–2:03.2] Half the radius, one half.
+[2:03.2–2:06.5] The endpoints program piles them against the rim.
+[2:06.5–2:10.5] Only a third land inside, the third we found.
+[2:10.5–2:17.2] programs three things spread evenly rim radius area at random never said which
+[2:18.7–2:25.3] edwin janes argued a physical process picks one straws tossed from a standing height can't be
+[2:25.3–2:32.1] aimed so the answer can't depend on where the circle sits or its size one rain lands on both
+[2:32.1–2:39.5] circles each judges with its own gold circle so a fair program scores the same on both midpoint
+[2:39.5–2:49.2] a quarter, then .41. Endpoints, a third, then .47. Only the radius program gives a half on both.
+[2:50.8–2:57.5] Janes and Charles Tyler tossed real straws at a five-inch circle. The 128 that crossed it
+[2:57.5–3:05.7] matched the radius program. Surveys hide the same two words. Take classes of 10, 10, and 100.
+[3:05.7–3:13.2] pick a class at random the average is 40 pick a student instead and it's 85 at
+[3:13.2–3:20.7] Stony Brook the same two picks gave 40 and 147 whatever number you picked some
+[3:20.7–3:25.5] way of drawing chords makes it right name the way and the answer is fixed a
+[3:25.5–3:30.3] half for toss straws 147 for a random student

@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/007-entropy-information/final.mp4",
- "duration_s": 215.467,
+ "duration_s": 214.167,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,51 +8,51 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 9.45,
+ "size_mb": 9.37,
  "integrated_lufs": -14.0,
- "lra_lu": 2.5,
- "true_peak_dbtp": -2.0,
+ "lra_lu": 2.6,
+ "true_peak_dbtp": -2.1,
  "leading_silence_s": 0.0,
- "trailing_silence_s": 0.95,
- "longest_internal_silence_s": 2.27,
+ "trailing_silence_s": 0.88,
+ "longest_internal_silence_s": 2.23,
  "silences_over_1_5s": [
   [
    7.35,
-   9.53
+   9.47
   ],
   [
-   73.06,
-   74.67
+   72.56,
+   74.17
   ],
   [
-   110.23,
-   112.5
+   109.53,
+   111.76
   ],
   [
-   165.21,
-   166.76
+   164.14,
+   165.66
   ]
  ],
- "frames": 6464,
- "longest_static_s": 3.47,
+ "frames": 6425,
+ "longest_static_s": 3.33,
  "static_stretches_over_3s": [
   [
-   212.0,
-   215.47,
-   3.47
+   210.83,
+   214.17,
+   3.33
   ]
  ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.207916666666666,
- "transcript_words": 513,
+ "background_luma": 22.211423611111112,
+ "transcript_words": 511,
  "first_word_s": 0.02,
- "last_word_s": 214.91335,
- "wpm_speech": 151.4,
- "wpm_overall": 142.9,
- "wpm_excluding_all_pauses": 180.0,
+ "last_word_s": 213.41335,
+ "wpm_speech": 151.8,
+ "wpm_overall": 143.2,
+ "wpm_excluding_all_pauses": 179.7,
  "narration_file": "videos/episodes/007-entropy-information/narration.json",
- "wer": 0.024,
+ "wer": 0.014,
  "narration_words": 501,
  "banned_phrase_hits": 0,
  "slop_hits": [],
@@ -63,11 +63,11 @@
   ],
   "sentence_wpm_median": 161.3,
   "sentences_over_200wpm": 2,
-  "sentence_gap_median_s": 0.53,
-  "sentence_gap_cv": 0.32,
-  "beat_gap_median_s": 0.72,
+  "sentence_gap_median_s": 0.4,
+  "sentence_gap_cv": 0.33,
+  "beat_gap_median_s": 0.67,
   "longest_breathless_run_s": 11.5,
-  "max_distinct_numbers_20s": 5,
+  "max_distinct_numbers_20s": 6,
   "repeated_phrases": 4,
   "glyph_morphs": 0,
   "deictics": 2,
@@ -106,165 +106,162 @@
    "file": "keyframes/kf_01_00-03.6.png"
   },
   {
-   "t": 10.13,
-   "file": "keyframes/kf_02_00-10.1.png"
+   "t": 10.33,
+   "file": "keyframes/kf_02_00-10.3.png"
   },
   {
-   "t": 17.07,
-   "file": "keyframes/kf_03_00-17.1.png"
+   "t": 16.9,
+   "file": "keyframes/kf_03_00-16.9.png"
   },
   {
-   "t": 22.4,
-   "file": "keyframes/kf_04_00-22.4.png"
+   "t": 22.17,
+   "file": "keyframes/kf_04_00-22.2.png"
   },
   {
-   "t": 26.3,
-   "file": "keyframes/kf_05_00-26.3.png"
+   "t": 26.07,
+   "file": "keyframes/kf_05_00-26.1.png"
   },
   {
-   "t": 37.4,
-   "file": "keyframes/kf_06_00-37.4.png"
+   "t": 37.03,
+   "file": "keyframes/kf_06_00-37.0.png"
   },
   {
-   "t": 43.47,
-   "file": "keyframes/kf_07_00-43.5.png"
+   "t": 43.13,
+   "file": "keyframes/kf_07_00-43.1.png"
   },
   {
-   "t": 46.97,
-   "file": "keyframes/kf_08_00-47.0.png"
+   "t": 46.63,
+   "file": "keyframes/kf_08_00-46.6.png"
   },
   {
-   "t": 56.13,
-   "file": "keyframes/kf_09_00-56.1.png"
+   "t": 55.73,
+   "file": "keyframes/kf_09_00-55.7.png"
   },
   {
-   "t": 58.03,
-   "file": "keyframes/kf_10_00-58.0.png"
+   "t": 57.67,
+   "file": "keyframes/kf_10_00-57.7.png"
   },
   {
-   "t": 62.0,
-   "file": "keyframes/kf_11_01-02.0.png"
+   "t": 61.57,
+   "file": "keyframes/kf_11_01-01.6.png"
   },
   {
-   "t": 64.33,
-   "file": "keyframes/kf_12_01-04.3.png"
+   "t": 63.9,
+   "file": "keyframes/kf_12_01-03.9.png"
   },
   {
-   "t": 70.6,
-   "file": "keyframes/kf_13_01-10.6.png"
+   "t": 70.1,
+   "file": "keyframes/kf_13_01-10.1.png"
   },
   {
-   "t": 81.5,
-   "file": "keyframes/kf_14_01-21.5.png"
+   "t": 80.97,
+   "file": "keyframes/kf_14_01-21.0.png"
   },
   {
-   "t": 88.23,
-   "file": "keyframes/kf_15_01-28.2.png"
+   "t": 87.6,
+   "file": "keyframes/kf_15_01-27.6.png"
   },
   {
-   "t": 92.67,
-   "file": "keyframes/kf_16_01-32.7.png"
+   "t": 92.3,
+   "file": "keyframes/kf_16_01-32.3.png"
   },
   {
-   "t": 97.6,
-   "file": "keyframes/kf_17_01-37.6.png"
+   "t": 96.97,
+   "file": "keyframes/kf_17_01-37.0.png"
   },
   {
-   "t": 102.73,
-   "file": "keyframes/kf_18_01-42.7.png"
+   "t": 101.97,
+   "file": "keyframes/kf_18_01-42.0.png"
   },
   {
-   "t": 105.93,
-   "file": "keyframes/kf_19_01-45.9.png"
+   "t": 105.3,
+   "file": "keyframes/kf_19_01-45.3.png"
   },
   {
-   "t": 108.67,
-   "file": "keyframes/kf_20_01-48.7.png"
+   "t": 107.9,
+   "file": "keyframes/kf_20_01-47.9.png"
   },
   {
-   "t": 111.8,
-   "file": "keyframes/kf_21_01-51.8.png"
+   "t": 111.07,
+   "file": "keyframes/kf_21_01-51.1.png"
   },
   {
-   "t": 120.93,
-   "file": "keyframes/kf_22_02-00.9.png"
+   "t": 119.93,
+   "file": "keyframes/kf_22_01-59.9.png"
   },
   {
-   "t": 130.3,
-   "file": "keyframes/kf_23_02-10.3.png"
+   "t": 129.3,
+   "file": "keyframes/kf_23_02-09.3.png"
   },
   {
-   "t": 138.13,
-   "file": "keyframes/kf_24_02-18.1.png"
+   "t": 137.2,
+   "file": "keyframes/kf_24_02-17.2.png"
   },
   {
-   "t": 142.07,
-   "file": "keyframes/kf_25_02-22.1.png"
+   "t": 141.0,
+   "file": "keyframes/kf_25_02-21.0.png"
   },
   {
-   "t": 148.33,
-   "file": "keyframes/kf_26_02-28.3.png"
+   "t": 147.47,
+   "file": "keyframes/kf_26_02-27.5.png"
   },
   {
-   "t": 153.03,
-   "file": "keyframes/kf_27_02-33.0.png"
+   "t": 152.0,
+   "file": "keyframes/kf_27_02-32.0.png"
   },
   {
-   "t": 154.93,
-   "file": "keyframes/kf_28_02-34.9.png"
+   "t": 153.9,
+   "file": "keyframes/kf_28_02-33.9.png"
   },
   {
-   "t": 166.33,
-   "file": "keyframes/kf_29_02-46.3.png"
+   "t": 165.3,
+   "file": "keyframes/kf_29_02-45.3.png"
   },
   {
-   "t": 168.63,
-   "file": "keyframes/kf_30_02-48.6.png"
+   "t": 167.53,
+   "file": "keyframes/kf_30_02-47.5.png"
   },
   {
-   "t": 175.17,
-   "file": "keyframes/kf_31_02-55.2.png"
+   "t": 174.07,
+   "file": "keyframes/kf_31_02-54.1.png"
   },
   {
-   "t": 178.13,
-   "file": "keyframes/kf_32_02-58.1.png"
+   "t": 177.03,
+   "file": "keyframes/kf_32_02-57.0.png"
   },
   {
-   "t": 184.7,
-   "file": "keyframes/kf_33_03-04.7.png"
+   "t": 183.57,
+   "file": "keyframes/kf_33_03-03.6.png"
   },
   {
-   "t": 189.87,
-   "file": "keyframes/kf_34_03-09.9.png"
+   "t": 188.7,
+   "file": "keyframes/kf_34_03-08.7.png"
   },
   {
-   "t": 192.33,
-   "file": "keyframes/kf_35_03-12.3.png"
+   "t": 191.13,
+   "file": "keyframes/kf_35_03-11.1.png"
   },
   {
-   "t": 195.6,
-   "file": "keyframes/kf_36_03-15.6.png"
+   "t": 194.4,
+   "file": "keyframes/kf_36_03-14.4.png"
   },
   {
-   "t": 200.63,
-   "file": "keyframes/kf_37_03-20.6.png"
+   "t": 199.23,
+   "file": "keyframes/kf_37_03-19.2.png"
   },
   {
-   "t": 205.6,
-   "file": "keyframes/kf_38_03-25.6.png"
+   "t": 204.43,
+   "file": "keyframes/kf_38_03-24.4.png"
   },
   {
-   "t": 211.07,
-   "file": "keyframes/kf_39_03-31.1.png"
+   "t": 209.87,
+   "file": "keyframes/kf_39_03-29.9.png"
   },
   {
-   "t": 215.43,
-   "file": "keyframes/kf_40_03-35.4.png"
+   "t": 214.13,
+   "file": "keyframes/kf_40_03-34.1.png"
   }
  ],
- "flags": [
-  "1 scene warning(s) from NarratedScene (timing/layout)",
-  "concision budget: 496 words / 3:35.5 (target ≤ 500 words, ≤ 3:35)"
- ],
+ "flags": [],
  "implied_caps": []
 }

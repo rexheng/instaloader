@@ -115,86 +115,86 @@ So the test takes an average of ratios, one per row,
 instead of the ratio of totals.
 
 30
-00:01:57,600 --> 00:01:59,760
+00:01:57,600 --> 00:02:00,080
 Now score the flip after each tails.
 
 31
-00:02:00,060 --> 00:02:07,920
+00:02:00,380 --> 00:02:08,780
 Swap heads and tails, and the strip flips over one half: the test reads high, twenty five out of forty two.
 
 32
-00:02:08,533 --> 00:02:13,743
+00:02:09,366 --> 00:02:14,576
 Subtract the averages: a fair coin shows a gap of minus nineteen points.
 
 33
-00:02:14,800 --> 00:02:25,030
+00:02:15,633 --> 00:02:25,863
 The nineteen eighty five study ran the same comparison on twenty six Cornell players: up to a hundred shots each, from where they'd hit about half.
 
 34
-00:02:25,530 --> 00:02:28,720
+00:02:26,363 --> 00:02:29,553
 After three hits, versus after three misses.
 
 35
-00:02:29,166 --> 00:02:38,176
+00:02:30,000 --> 00:02:39,010
 For a random shooter, the same crowding pulls after hits down to forty six percent on average, and after misses up to fifty four.
 
 36
-00:02:38,626 --> 00:02:44,726
+00:02:39,460 --> 00:02:45,560
 Miller and Sanjurjo's twenty eighteen paper puts the gap at about minus eight points.
 
 37
-00:02:45,626 --> 00:02:47,506
+00:02:46,460 --> 00:02:48,340
 Longer streaks grow the bias.
 
 38
-00:02:48,406 --> 00:02:50,026
+00:02:49,240 --> 00:02:50,860
 Longer records shrink it,
 
 39
-00:02:50,526 --> 00:02:52,476
+00:02:51,360 --> 00:02:53,310
 but a hundred shots isn't long.
 
 40
-00:02:52,933 --> 00:03:00,283
+00:02:53,766 --> 00:03:01,116
 The Cornell players hit forty nine percent after three hits, and forty five after three misses.
 
 41
-00:03:00,583 --> 00:03:02,633
+00:03:01,416 --> 00:03:03,466
 The study took that plus four
 
 42
-00:03:02,933 --> 00:03:04,543
+00:03:03,766 --> 00:03:05,376
 to mean no hot hand.
 
 43
-00:03:05,433 --> 00:03:08,563
+00:03:06,266 --> 00:03:09,396
 Measured from minus eight, it's twelve points hot.
 
 44
-00:03:09,463 --> 00:03:14,913
+00:03:10,296 --> 00:03:15,746
 That's evidence for a hot hand in a gym, not proof it survives defenders in a game.
 
 45
-00:03:16,700 --> 00:03:17,660
+00:03:17,333 --> 00:03:18,293
 One half
 
 46
-00:03:17,810 --> 00:03:19,510
+00:03:18,443 --> 00:03:20,143
 is what a fair coin does.
 
 47
-00:03:20,010 --> 00:03:23,860
+00:03:20,643 --> 00:03:24,493
 Seventeen out of forty two is what this test sees.
 
 48
-00:03:24,160 --> 00:03:25,840
+00:03:24,793 --> 00:03:26,473
 A fifty percent shooter
 
 49
-00:03:26,140 --> 00:03:28,390
+00:03:26,773 --> 00:03:29,023
 who averages one half on this test
 
 50
-00:03:28,590 --> 00:03:30,280
+00:03:29,223 --> 00:03:30,913
 is already running hot.
 

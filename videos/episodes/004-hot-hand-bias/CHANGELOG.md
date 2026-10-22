@@ -414,3 +414,84 @@ weak minute and the 1:36–1:47 "fewer rows, fewer votes" step as the one assert
 - *Hook 8.5*: the prediction prompt is one instruction shorter; the big row fades while the
   sixteen-run ghost (now readable, r = 0.15) deals, so the viewer looks at one thing.
 - *Originality 8.5–9*: unchanged ideas (keep items) made sharper by the vote count.
+
+**Fixes, by critic item** (r6c = round-6 craft, r6s = round-6 substance). The first pass (11:35–
+14:45) applied every listed fix; this continuation re-rendered, stepped every changed transition at
+4–10 fps and fixed the motion defects that the sampled frames still showed.
+- r6c 1 / r6s 2 (crowding → 17/42 asserted): "Twelve heads crowd into eight rows" boxes the 8 rows
+  while the 6 rows without a checked heads, the pooled strip, its formula and "the obvious guess"
+  dim to 30%; the dimming swaps for the 11 tails rows. "Crowded heads split their votes" keeps only
+  HHHH and HHHT bright and pulses their five third-of-a-vote slices. "Line them up: the heads hold
+  five and two thirds of the fourteen votes" writes "5⅔ votes" over the packed yellow and "8⅓
+  votes" over the grey; 5⅔ travels to the right column, the 14 vote outlines fly into the 14, and
+  on "That's" "= 17/42" slides in beside 5⅔/14. (The first pass carried 5⅔/14 into 17/42 as a
+  cross-fade: stepped at 7.5 fps it read "5⅔⅔ / 144" for 0.4 s, so nothing flies there now.)
+- r6c 2 (49/45 superposed, then debris): copies of 49 and 45 start invisible and travel whole to
+  the right of Cornell's marker as "49 − 45"; "= +4" lands as the marker grows. New: the equation is
+  no longer shed when the chart re-centres (the first pass faded "49 − 45 =" while "+4" slid left
+  through it, a glyph collision at 3:05.6); it travels with its marker and stays under the +12
+  brace, with "no defenders" beneath it.
+- r6c 3 (left-heavy payoff): the chart, its markers and the equation re-centre by +1.4 on
+  "Measured from minus eight", under the centred title.
+- r6c 4 (tiles through the 40.5% label): "40.5%" and "the obvious guess" step back to 25% while
+  the tiles regroup and return on "however many flips it checked".
+- r6c 5 (invisible landing ghost): the sixteen-run ghost returns in the cold open's place and size
+  (coin radius 0.15, 60%) and is held ≈ 1 s before its 14 scored rows fly into (1/14) Σ hᵢ/nᵢ.
+- r6c 6 (ink "hot" arrows): both are blue, the test's reading; ink stays the assumption.
+- r6c 7 / r6s 7 (doubled glyphs at 0:04.9 and 1:50): new `travel()` helper: a copy moves whole
+  along a routed Bezier, fading in as it leaves its source and out before its replacement appears.
+  The cold open's heads disc and both rings now materialise just *below* the row (while the coin
+  and its rings answer) and travel under it into the 1 and the 2 (the first pass still showed a
+  full-opacity disc sliding across the H and T coins at 0:04.8; a first reroute still grazed them). The
+  row-ratio step is one HHHH "3/3" at table size that comes down onto the empty hᵢ/nᵢ slot from
+  above (the first pass's cross-fade crossed "1/14 Σ" at 1:52.4).
+- r6c 8 / r6s 1 / r6s 6 (payoff density): the simulated record and the 40–60% zoom are cut; the
+  46/54 cursors run on the 0–100% axis and the same tick marks are relabelled −10…+10.
+- r6c 9 (run-on 1:36–1:53): four clips (lineup, split, pack, formula) with 0.5–0.9 s gaps. Whisper
+  still prints that stretch as one unpunctuated segment (a decoding artefact: its word timings
+  carry every full stop, "rows." 1:35.98, "eleven." 1:38.74, "votes." 1:40.58, "up." 1:42.56,
+  "votes." 1:46.12, "42." 1:48.86, each followed by a 0.4–1.2 s pause).
+- r6c 10 (hook): "Do this for every four flip run, and average."; the big row fades to 40% while
+  the 16 ghost runs (r 0.15) deal, then collapse into the "?".
+- r6s 3 (landing): on "who averages one half on this test" the row dims to 30% and the blue dot is
+  tagged "its rows average 1/2"; the "hot" arrow starts at the 17/42 marker; ≥ 2 s hold.
+- r6s 4 (header over non-Cornell data): grey "1985 design · 26 players · up to 100 shots", each
+  phrase joining only after the header has slid aside (the first pass let "26 players" fade in on
+  top of the still-moving "design" at 2:18.7); the grey header fades out and only then the purple
+  "Cornell, 1985" fades in (no cross-fade).
+- r6s 5 (GVT citation dimmed under its own data): GVT's line is at full strength from "The Cornell
+  players" on; M&S steps back while 49 − 45 = +4 is read; both full from "Measured from minus eight".
+
+**Other motion defects found by stepping frames (not in the reviews)**
+- 0:42–0:44 HHHT: disc and ring copies flew through the tight row; now the three rings flash as
+  "/3" is written and the two ringed heads pulse as the "2" is written (nothing flies).
+- 1:12–1:13: 14 numerator and 14 denominator copies left their table digits (doubled "3̶3") and
+  crossed the table as 20 px debris; now the digits pulse in place (about the edge away from the
+  slash) while Σᵢhᵢ and then Σᵢnᵢ are written.
+- 1:55: the Σ pulses (×1.35 about their centres) grew into the fraction bar and hᵢ; now ×1.25 about
+  the corner facing away from their neighbours, and 1/14 Σ grows leftwards.
+- 3:15.4–3:16.6: the payoff faded to a lone −10…+10 axis for 0.5 s before the cold open returned;
+  now one 1.3 s move (payoff fades in its first third while the line and dashed zero drop into the
+  share axis and the row fades back in).
+- 3:21: the marker's copy into "17/42" read as a doubled marker line; now the marker flashes and
+  "17/42" slides out of it to the left.
+- "Now score the flip after each tails…" was the one sentence above 200 wpm: the mirror beat is
+  read at 0.80.
+
+**Self-review loop.** Two 1080p masters (after the continuation's fixes, then after the frame check),
+each followed by review_kit and frame strips at 4–10 fps across every changed transition (0:04,
+0:42, 1:12, 1:46, 1:52, 1:55, 2:18–2:22, 2:54, 3:06, 3:15, 3:21). Found in the first master and
+fixed in the second: the cold-open copies, materialising on their own coins, still grazed the T and
+the last H; the landing's payoff-to-cold-open move still showed a lone axis for ~0.3 s; the marker
+copy into 17/42 read as a doubled line.
+
+**Mechanics (final master):** 3:32.7, 151 wpm over speech time (498 words, budget ≤ 500), voice
+0.82 (0.80 for six short-sentence beats), 0 sentences above 200 wpm, −14.0 LUFS / −1.9 dBTP,
+leading silence 0.00 s, trailing 1.88 s, longest silence 2.17 s (the planned prediction hold),
+longest static stretch 3.6 s, 0 render warnings, 0 layout-audit issues in 220 checks, 0 glyph
+morphs, 7/7 deictics landed, 0 review flags, WER 0.8% (only "a" heard as "one" twice and "a half"
+as "point five"), no banned phrases. `check_numbers.py` re-run: every value on screen unchanged.
+
+**Kept:** the one-vote strip (now with its vote counts), "test the test" → live 50% → 40.5% →
+"cold −9.5 points", the half-turn mirror into −19, and the landing on the cold-open frame with the
+test's formula beside its 17/42 marker.

@@ -456,3 +456,72 @@ each value into its "="; the r-row flag at 1:37 flags −0.06 and −0.06 separa
   a full-strength copy of the ellipse is squeezed into the ±s_y error bar, so the squeezed copy,
   the bar and the error bar are the only full-strength strokes where they meet (round-4 craft 4).
   Both return to full strength on "dinosaur".
+
+### Continuation (after the interrupted pass)
+
+The pass above was cut off twice: after its first plan, and again after a 13:31 master (3:33.0)
+whose fixes were never logged. This continuation picks up from those files, logs what that pass
+changed, audits its master as a fresh critic would, and fixes what that audit found.
+
+**Logged from the interrupted pass (already in scene.py, script.md and facts.md):**
+- *Concision, 536 → 494 words (3:35.5 → 3:33).* Two retellings were cut. The first was the
+  one-point nudge-and-undo demonstration and its two sentences: the star fix had already proved
+  "hold the five". The second was "Plug in his numbers, and it's one half", with its Anscombe
+  substitution: the landing plugs in the dinosaur's numbers, which is the one substitution the
+  story needs. facts.md #12, #18, #27 and #28 record the cuts.
+- *Audio.* There are planned pauses after the key results ("lost all five numbers" 0.9 s,
+  "everything the five numbers know" 1.0 s, "every decimal place" 0.6 s). "For minus point oh
+  six" became "For the dinosaur", so the cold open's phrase is no longer repeated. The roll call
+  starts on "this circle". "So the slope is rise, over run" is spoken at 0.82, so no sentence runs
+  above 200 wpm.
+- *Motion.* "(x̄, ȳ)" is flown as one label: copies of the x̄ and ȳ symbols leave the table's
+  left-most column, so nothing crosses a value. This fixes the 1:08.2 clearance warning. Anscombe's
+  0.82 now marks the touch height until "high up", which clears the 4.0 s static stretch at
+  2:47.6. At the landing, s_y and s_x travel in a true elbow lane (sideways, down, sideways), and
+  their sources are fully hidden while the copies leave. In the 13:31 master the 16.76 copy
+  overprinted its own row ("16.7616.76" at 3:15).
+- *Cadence.* Beat gaps are 0.66 s where they were 0.46–0.51 s. The review kit had flagged
+  "metronomic" (full stops 0.51 s, beat turns 0.64 s, needed ≥ 0.66 s).
+
+**Found in the audit and fixed now:**
+- *Landing (3:13–3:24), Visual.* "slope =" started 35 px right of the plot's axis name "x", so
+  the frame read as one expression, "x slope =". This was the round-1 "x  med y" defect again.
+  The formula is now label size 36 and moved 0.5 right. Its left edge sits 0.78 units from "x",
+  which is asserted in scene.py, and the substituted form ends at the safe margin.
+- *Final image (3:31–3:33), Visual.* The parked bar and error bar had no tag once "86% used bars"
+  faded. The tag now fades out at the top left and back in over the parked error bar, so the last
+  frame reads as 142 points beside "86% used bars", one bar and one error bar, with the citation
+  still on screen. It never crosses the returning points.
+- *Anscombe beat (2:41–2:58), Visual and composition.* His readout sat level with his touch
+  point, so the lower-right quadrant stayed empty for about 16 s. BAR §13.1 allows at most 4 s.
+  The two rows now straddle his centre line. The 0.82 rises out of its row and travels up and
+  left, intact, to the touch dot. The s_x, r and s_y copies still cross above the box, on the same
+  route as before. The readout's later step down to make room for the formula ends where it did.
+- Re-checked and left as they are: "one" is held 0.62 s in "Version one" (TTS variants gave
+  0.50–0.59 s; it is a stressed name, not a function word); the commit ends at 0:12.9; the landing
+  is four sentences.
+
+Narration, beat order and every number on screen are unchanged by this continuation, so
+facts.md needs no edit. No critic claimed a factual error in round 5.
+
+### Verification (final master, 3:34.5)
+- render.sh reported 0 scene warnings. The layout audit found 0 issues in 235 checks, and
+  review_kit raised 0 flags; the round-5 cadence flag ("metronomic") is gone.
+- Words and timing: 494 words, 150 wpm over speech time, no sentence above 200 wpm.
+- Loudness: −14.0 LUFS integrated, −1.6 dBTP true peak.
+- Silence: the longest is 2.09 s, the commit hold. Leading silence is 0.00 s and trailing 1.92 s.
+- The longest fully static stretch is 3.40 s.
+- Cadence: full stops median 0.51 s, beat turns 0.68 s.
+- WER 3.7 %; 12 deictics, all synced.
+- I looked at all 12 contact sheets and at keyframes kf_29 (2:52.2), kf_34 (3:15.7), kf_35
+  (3:21.7) and kf_39 (3:32.7).
+- I also checked frame strips at 4–7.5 fps across every moved or changed transform:
+  - the landing value flights (3:16.0–3:18.4): every number stays legible and nothing
+    overprints, where the 13:31 master printed "16.7616.76";
+  - the landing hand-off (3:12.3–3:13.7);
+  - the "(x̄, ȳ)" flight (1:07.3–1:08.7);
+  - the 0.82 flight to the touch dot (2:47.5–2:48.5);
+  - the s_x, r and s_y flights to the run and the rise (2:53–2:56).
+- The SD-symbol flights (1:12.2–1:13.8, unchanged code) were checked on the 13:31 master.
+- Runtime rose from 3:33.0 to 3:34.5 because of the longer beat-turn gaps. It stays inside the
+  3:15–3:35 budget.

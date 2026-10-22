@@ -15,7 +15,7 @@ Runtime target is about 3:30 (≤ 500 words, PRODUCTION_GUIDE §13). Voice af_he
 | YELLOW | questions (= bits): the "?" box (and the run box), halving cuts and arrows, the "3.75 extra" overlay and every later "N extra" gap meter, doubling counters, `2^k`, `k`, `log₂(1/p)`, `log₂(1/q)`, `H`, every Σ p log₂(1/p) level (4.11, 0.16, 1.67, 2.81, 1.42; dimmed to 30 % when only a reference), the run's letter costs and total, E's outline at "half a question", guess counts above 1 |
 | GREEN | Shannon's measurements: the ≈1 band (0.6–1.3), the first-guess tally, "1 guess" |
 | PURPLE | context, the characters already read: the dim "already read" row, Q, TH, THE OTHER DA |
-| GRAY | axes, ticks, titles, citations, leaders, the inset frame, the context counter, the abandoned 4.75 (the only grey level), the "one at a time" row of the run's bill, first-guess "1"s, the payoff tags, "upper estimate", the LLM book note |
+| GRAY | axes, ticks, titles, citations, leaders, the inset frame, the context counter, the abandoned 4.75 (the only grey level), the landing's resting "5 questions" (the abandoned halving count), the "one at a time" row of the run's bill, first-guess "1"s, the payoff tags, "upper estimate", the LLM book note |
 | INK | letters, labels, the language-model tag and marker ("LLM") |
 
 Emphasis rules:
@@ -48,7 +48,7 @@ Visual (the frame is centred vertically; everything is there from frame 1):
 - *questions per character* **?** arrives on "With" (≈ 0:04) at y ≈ −1.6. Prediction hold 1.5 s.
 
 ### 2. Naive build: cut the alphabet in half (0:10–0:24)
-> The natural answer is five: each answer halves what's left, and five halvings take
+> The natural answer is five: each answer halves what's left, and five cuts take
 > twenty-seven to one. The ideal is log base two of twenty-seven: four point seven five.
 
 Visual:
@@ -107,7 +107,7 @@ The failure metric comes back as a live meter: a yellow double arrow from ≈1 u
 
 Only the question changes: the box before the ? becomes a purple **Q**, the equation's value becomes a yellow **?**, the 4.11 level dims to a 30 % reference. Then a static frame for the prediction.
 
-> It's U, ninety-eight times in a hundred. U swallows the bar, and the average falls to
+> It's U, ninety-eight percent of the time. U swallows the bar, and the average falls to
 > point one six bits. *[pause 0.9]*
 
 - On "It's U": U gets the outline flash, the x-axis title becomes "share after Q" (the Q flies down the right gutter), and a blue **98%** appears over U.
@@ -165,8 +165,8 @@ The Shannon citation fades out completely, then *Valmeekam et al., 2023 · arXiv
 0. The bits-per-character line leaves and Shannon's record comes back (letters at 22 %), with THE OTHER DAY at full strength.
 1. As the record fades, the cold-open row (12 boxes, the ? box) fades in at 30 % in its old place.
 2. THE OTHER DA steps under its boxes (the Y under the ? box) as the record goes, then rises straight into them; the Y lands in the ? box on the spoken "Y".
-3. The boxes come to full strength and the 27 candidate tiles (Y highlighted) return: frame one, re-seen.
-4. "1 guess" in green on "one guess"; on "is it Y" the ? box with its Y flags yellow; on "Splitting" the 27→1 chain and "5 questions" return and flag on "five" and dim on "In English" while the context flashes. The frame holds to the end.
+3. The boxes come to full strength and the 27 candidate tiles (Y highlighted) return, with the 27→1 chain and a grey "5 questions" faint under them: frame one (as at 0:17), re-seen.
+4. "1 guess" in green on "one guess"; on "is it Y" the ? box with its Y flags yellow; on "Splitting" the chain and "5 questions" come to full strength (yellow) and flag on "five", and step back (chain 30 %, "5 questions" grey) on "In English" while the context flashes. The frame holds to the end.
 
 ## Sources
 - C. E. Shannon, "Prediction and Entropy of Printed English", *Bell System Technical Journal*

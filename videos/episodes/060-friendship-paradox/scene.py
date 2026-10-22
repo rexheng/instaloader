@@ -428,6 +428,15 @@ def window(t0, t1, total, ease=smooth):
     return f
 
 
+def timed(anim, t0, t1, total):
+    """Run a lagged animation (Create, Write) between t0 and t1 seconds of a `total`-second
+    play.  (Round 6c: a window rate_func on a lagged animation is applied to every
+    submobject's sub-alpha, so its first parts finished at once: the C&F x-axis was drawn
+    in one frame across the still-visible class.  Here the window times the group.)"""
+    anim.rate_func = linear
+    return AnimationGroup(anim, rate_func=window(t0, t1, total))
+
+
 def leave(t):
     """Ease for copies that start on top of their source: they move off it at once (a
     smooth start lingers half-overlapped, which reads as a doubled glyph)."""
@@ -505,10 +514,12 @@ def trow(*items, size=46):
     return VGroup(*out)
 
 
-def fly(mob, target, waypoints=(), run_time=1.0, rate_func=smooth, squeeze=0.0):
+def fly(mob, target, waypoints=(), run_time=1.0, rate_func=smooth, squeeze=0.0, fade_in=0.2):
     """Move `mob` (a copy) along a smooth path through waypoints onto `target`, matching its
     height; used where a straight flight would cross labels.  `squeeze` shrinks it mid-flight
-    (round 6: so a wider label threads a narrow gap)."""
+    (round 6: so a wider label threads a narrow gap).  Round 6c: the copy fades in over the
+    first `fade_in` of its path, so it never sits stacked on the value it was copied from
+    (a 2 s contact-sheet frame caught "635 / 635")."""
     pts = [mob.get_center(), *[np.array([w[0], w[1], 0.0], dtype=float) for w in waypoints],
            target.get_center()]
     path = VMobject().set_points_smoothly(pts)
@@ -518,6 +529,8 @@ def fly(mob, target, waypoints=(), run_time=1.0, rate_func=smooth, squeeze=0.0):
         b = rate_func(a)
         m.scale_to_fit_height((h0 + (h1 - h0) * b) * (1.0 - squeeze * np.sin(np.pi * b)))
         m.move_to(path.point_from_proportion(b))
+        if fade_in > 0:
+            m.set_opacity(float(np.clip(b / fade_in, 0.0, 1.0)))
     return UpdateFromAlphaFunc(mob, upd, run_time=run_time)
 
 
@@ -568,6 +581,9 @@ def logistic(t, shift=0.0):
 
 
 TEXT_TYPES = (Text, MathTex, SingleStringMathTex, Tex, DecimalNumber)
+# Round 6c: dimmed YELLOW context sits at 50 %, not 30 % (at 30 % it reads olive, a palette slip
+# critics docked in other episodes; PRODUCTION_GUIDE 13.2.8)
+CTX_Y = 0.5
 
 
 class Episode(NarratedScene):
@@ -1406,8 +1422,8 @@ class Episode(NarratedScene):
             # are measured from the girls' balance point, 2.5
             self.play(dims.animate(rate_func=window(0, 0.6, T)).shift(OFF).set_opacity(0),
                       lift_on.animate(rate_func=window(0.1, 1.0, T)).shift(OFF),
-                      yfulc.animate(rate_func=window(0.1, 1.0, T)).shift(OFF).set_opacity(0.3),
-                      main.animate(rate_func=window(0.1, 1.0, T)).shift(m_shift).set_opacity(0.3),
+                      yfulc.animate(rate_func=window(0.1, 1.0, T)).shift(OFF).set_opacity(CTX_Y),
+                      main.animate(rate_func=window(0.1, 1.0, T)).shift(m_shift).set_opacity(CTX_Y),
                       self.Dm.animate(rate_func=window(0, 0.6, T)).set_value(0.0),
                       panel_txt.animate(rate_func=window(0, 0.6, T)).set_opacity(0.0),
                       feld.animate(rate_func=window(0, 0.6, T)).set_opacity(0.0), run_time=T)
@@ -1529,7 +1545,7 @@ class Episode(NarratedScene):
             beat.wait_until("her distance", offset=-0.1)
             d15 = dev_labs[4].copy()
             x15 = dev_labs[4].get_x()
-            self.play(flag(dev_r, color=PURPLE), Write(d_lab, rate_func=window(0, 0.8, 1.2)),
+            self.play(flag(dev_r, color=PURPLE), timed(Write(d_lab), 0, 0.8, 1.2),
                       fly(d15, S1[6], [(x15 - 0.45, DLAB_Y + LIFT - 0.05), (gap_x + 0.05, DEV_Y + LIFT - 0.3),
                                        (gap_x, sq_top - 0.25), (gap_x - 0.5, y_sq_bot - 0.33),
                                        (S1[6].get_x() + 0.4, y_sq_bot - 0.38)], rate_func=leave,
@@ -1921,7 +1937,9 @@ class Episode(NarratedScene):
             T = 1.3
 
             def fly_w(src, dst, pts, t0, t1):
-                a = fly(src, dst, pts, run_time=T, rate_func=window(t0, t1, T))
+                # (round 6c: faint until it is about half way, so no frame shows it stacked
+                # under the label it left)
+                a = fly(src, dst, pts, run_time=T, rate_func=window(t0, t1, T, leave), fade_in=0.45)
                 a.rate_func = linear
                 return a
             x_gap = (fb_nums[2].get_right()[0] + fb_nums[3].get_left()[0]) / 2
@@ -2101,7 +2119,7 @@ class Episode(NarratedScene):
             T = 1.7
             self.play(FadeOut(VGroup(*edges3.values(), *num3.values(), *name3.values(), draw_tag),
                               rate_func=window(0, 0.4, T)),
-                      Create(ax, rate_func=window(0.75, 1.7, T)),
+                      timed(Create(ax), 1.0, 1.7, T),
                       pile.animate(rate_func=window(0.05, 0.8, T)).scale(0.15).move_to(origin).set_opacity(0),
                       VGroup(*circ3.values()).animate(rate_func=window(0.05, 0.8, T))
                       .scale(0.12).move_to(origin).set_opacity(0),
@@ -2129,14 +2147,16 @@ class Episode(NarratedScene):
             self.play(ShowPassingFlash(fr_live.copy().set_stroke(INK, 8), time_width=0.35),
                       run_time=1.2)
             beat.wait_until("fitted", offset=-0.15)
-            self.play(rd_live.animate.set_stroke(opacity=0.45), fr_live.animate.set_stroke(opacity=0.45),
+            self.play(rd_live.animate.set_stroke(opacity=0.6), fr_live.animate.set_stroke(opacity=0.6),
                       Create(fit_fr), Create(fit_rd), run_time=1.2)
             beat.wait_until("thirteen", offset=-0.3)
             self.play(GrowArrow(lead_arrow), run_time=0.8)
             self.play(TransformFromCopy(lead_arrow, ro_arrow, path_arc=-0.5),
                       FadeIn(lead_lab, shift=0.1 * RIGHT, rate_func=window(0.5, 1.0, 1.0)), run_time=1.0)
             beat.wait_until("self-reported", offset=-0.15)
-            self.play(TransformFromCopy(ro_arrow, ro2_long), FadeIn(self_lab, shift=0.1 * RIGHT),
+            # (round 6c: the copy starts transparent, so it never doubles the 13.9 arrow)
+            self.play(ReplacementTransform(ro_arrow.copy().set_opacity(0), ro2_long, rate_func=leave),
+                      FadeIn(self_lab, shift=0.1 * RIGHT),
                       run_time=0.8)
             self.remove(ro2_long)
             self.add(ro2_live)
@@ -2248,7 +2268,7 @@ class Episode(NarratedScene):
                       # fills, as on every other friend bar
                       GrowFromEdge(end_fo, LEFT, rate_func=window(0.2, 1.1, T)),
                       cands2[1].animate(rate_func=window(0.5, 1.1, T)).move_to(three_to),
-                      cands2[2].animate(rate_func=window(0.5, 1.1, T)).set_opacity(0.3),
+                      cands2[2].animate(rate_func=window(0.5, 1.1, T)).set_opacity(0.55),
                       Create(ring3, rate_func=window(1.0, 1.5, T)), run_time=T)
             self.hold(max(0.0, beat.remaining()))
         self.hold(0.55)                          # the answered frame holds before the card

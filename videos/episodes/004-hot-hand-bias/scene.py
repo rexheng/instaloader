@@ -258,6 +258,63 @@ class Episode(NarratedScene):
         self.remove(*self._fly)
         self._fly = []
 
+    def travel(self, src, end, waypoints=(), scale_to: float = 1.0, fade=(0.3, 0.6, 0.85),
+               bright: bool = False, start_shift=ORIGIN):
+        """A copy of `src` travels whole along a Bezier through `waypoints` to the point `end`.
+        Its opacity rises from 0 while it leaves (so it is never seen doubled over its source)
+        and falls to 0 before it arrives (so it is never seen over the glyph that replaces it):
+        fade = (fully visible at, starts fading at, gone at), as fractions of the run.  Play it
+        with rate_func linear (position is eased inside); call clean_fly() after the play.
+        `start_shift`: the copy materialises that far from its source (e.g. just below a coin,
+        so it never crosses the coin or its neighbours)."""
+        base = src.copy().shift(start_shift)
+        if bright:
+            base.set_opacity(1.0)
+        cp = base.copy().fade(1.0)
+        self.add(cp)
+        self._fly.append(cp)
+        curve = bezier([base.get_center()] + [np.array(w, dtype=float) for w in waypoints]
+                       + [np.array(end, dtype=float)])
+        a, b, c = fade
+
+        def upd(m, alpha):
+            t = smooth(alpha)
+            k = min(1.0, alpha / a) if a > 0 else 1.0
+            if alpha > b:
+                k *= max(0.0, 1.0 - (alpha - b) / (c - b))
+            m.become(base)
+            m.scale(1.0 + (scale_to - 1.0) * t)
+            m.move_to(curve(t))
+            m.fade(1.0 - k)
+
+        return UpdateFromAlphaFunc(cp, upd, rate_func=linear)
+
+    @staticmethod
+    def depart(m, end, waypoints=(), scale_to: float = 0.3, mid: float = 0.4,
+               fade=(0.25, 0.6, 0.9)):
+        """`m` itself (no copy, so it is never seen doubled) leaves along a Bezier through
+        `waypoints` to `end`: it steps back to `mid` opacity as it lifts off, travels at that
+        strength, and is gone before it arrives (fade = (at mid by, starts fading, gone by))."""
+        base = m.copy()
+        curve = bezier([base.get_center()] + [np.array(w, dtype=float) for w in waypoints]
+                       + [np.array(end, dtype=float)])
+        a, b, c = fade
+
+        def upd(mob, alpha):
+            t = smooth(alpha)
+            if alpha < a:
+                k = 1.0 - (1.0 - mid) * alpha / a
+            elif alpha < b:
+                k = mid
+            else:
+                k = mid * max(0.0, 1.0 - (alpha - b) / (c - b))
+            mob.become(base)
+            mob.scale(1.0 + (scale_to - 1.0) * t)
+            mob.move_to(curve(t))
+            mob.fade(1.0 - k)
+
+        return UpdateFromAlphaFunc(m, upd, rate_func=linear)
+
     def build_table(self):
         self.cards = []
         for k, s in enumerate(SEQS):
@@ -336,7 +393,7 @@ class Episode(NarratedScene):
         holder, keep = token
         holder.submobjects = list(keep)
 
-    def build_mini(self, scale: float = 0.81, at=(0, 0.1, 0), op: float = 0.6) -> VGroup:
+    def build_mini(self, scale: float = 0.81, at=(0, 0.1, 0), op: float = 0.75) -> VGroup:
         """A ghost of all sixteen sequences (the table, in miniature): the rows packed tight
         (no room is needed for scores) so the coins keep radius 0.185 * 0.81 = 0.15."""
         rows = []
@@ -370,7 +427,7 @@ class Episode(NarratedScene):
         lift = (BIG_C - BIG_C0)
         mini = self.build_mini(at=(vx(0.5), -0.15, 0))
         for g_ in mini:
-            self.allow_overlap(g_, reason="ghost miniature of the 16-row table (60% opacity): "
+            self.allow_overlap(g_, reason="ghost miniature of the 16-row table (75% opacity): "
                                           "each letter sits inside its own small coin")
         qmark = MathTex("?", font_size=64, color=INK).move_to([vx(0.5), AX_Y + 1.15, 0])
         # the three answers the viewer can commit to, on the line itself
@@ -388,13 +445,29 @@ class Episode(NarratedScene):
             self.play(Create(arcs[0]), Create(arcs[1]), run_time=beat.until("next", offset=0.1))
             self.play(Create(big_rings[0]), Create(big_rings[1]), run_time=0.7)
             beat.wait_until("one", offset=-0.2)
-            # the ringed heads' yellow disc shrinks into the yellow 1 (no letter travels, so no
-            # glyph is ever doubled), as the two rings will shrink into the 2
-            self.play(self.fly_into([big[1][0]], big_score[0], arc=PI / 2, start=0.3),
-                      run_time=0.8)
+            # the ringed heads' yellow disc travels under the row into the yellow 1 (no letter
+            # travels; the copy fades in as it leaves its coin, so nothing is seen doubled), and
+            # the two rings travel the same way into the 2
+            # (each copy materialises just below its coin while the coin answers, so no copy
+            # ever crosses a coin)
+            e1, e2 = big_score[0].get_center(), big_score[2].get_center()
+            low = big.get_bottom()[1] - 0.95
+            self.play(self.travel(big[1][0], e1, [(big[1].get_x() + 1.0, low - 0.3, 0),
+                                                  (e1[0] - 0.5, low - 0.2, 0)],
+                                  scale_to=0.3, fade=(0.3, 0.6, 0.85),
+                                  start_shift=DOWN * 1.3),
+                      pulse(big[1], 1.08, run_time=0.6),
+                      FadeIn(big_score[0], scale=0.6, rate_func=delayed(0.7)), run_time=0.9)
             self.clean_fly()
-            self.play(self.fly_into(list(big_rings), big_score[2], arc=PI / 2, lag=0.1, start=0.4),
-                      FadeIn(big_score[1]), run_time=0.8)
+            self.play(LaggedStart(*[self.travel(r_, e2, [(r_.get_x() + 1.0, low - 0.4, 0),
+                                                         (e2[0] - 0.5, low - 0.3, 0)],
+                                                scale_to=0.25, fade=(0.3, 0.6, 0.85),
+                                                start_shift=DOWN * 1.45)
+                                    for r_ in big_rings], lag_ratio=0.15),
+                      *[r_.animate(rate_func=there_and_back, run_time=0.6).set_stroke(width=8)
+                        for r_ in big_rings],
+                      FadeIn(big_score[1]),
+                      FadeIn(big_score[2], scale=0.6, rate_func=delayed(0.72)), run_time=0.9)
             self.clean_fly()
             self.adopt(big_rings, big_score, arcs)
             # "Do this for every four flip run": the row rises, the share axis draws beneath
@@ -509,22 +582,27 @@ class Episode(NarratedScene):
         with self.beat("score") as beat:
             self.play(Create(focus), run_time=beat.until("checks", offset=-0.1))
             self.play(LaggedStart(*[Create(r) for r in c1["rings"]], lag_ratio=0.3),
-                      run_time=beat.until("two", offset=-0.1))
+                      run_time=beat.until("flips", offset=0.1))
+            # "three flips": the three rings answer and their count, 3, is written (nothing
+            # flies through the tight row)
+            self.play(LaggedStart(*[r.animate(rate_func=there_and_back).set_stroke(width=7)
+                                    for r in c1["rings"]], lag_ratio=0.15),
+                      FadeIn(c1["score"][1]), FadeIn(c1["score"][2], shift=0.1 * LEFT),
+                      run_time=0.6)
+            # "two are heads": the two checked heads answer and their count, 2, is written
             heads_chk = VGroup(*[c1["coins"][i] for i in c1["chk"] if c1["seq"][i] == "H"])
-            # the two heads' discs shrink into the 2 and the three rings into the 3 (no letters
-            # travel), arcing over the row
-            self.play(self.fly_into([c[0] for c in heads_chk], c1["score"][0], arc=-1.0, lag=0.1),
-                      self.fly_into(list(c1["rings"]), c1["score"][2], arc=-1.0, lag=0.1),
-                      FadeIn(c1["score"][1]), run_time=1.0)
-            self.clean_fly()
+            beat.wait_until("two", offset=-0.15)
+            self.play(LaggedStart(*[pulse(c, 1.15) for c in heads_chk], lag_ratio=0.2),
+                      FadeIn(c1["score"][0], shift=0.1 * LEFT), run_time=0.8)
             self.adopt(c1["rings"], c1["score"])
-            beat.wait_until("Score", offset=-0.1)
+            # every other row is scored the same way, silently (round 7: the sentence that
+            # narrated this cascade is cut; it runs in the pause after "two are heads")
             rest = [k for k in SCORED if k not in (k0, k1)]
             self.play(FadeOut(focus),
                       LaggedStart(*[AnimationGroup(Create(cards[k]["rings"]),
                                                    FadeIn(cards[k]["score"], shift=0.1 * LEFT))
                                     for k in rest], lag_ratio=0.18),
-                      run_time=beat.remaining(2.2))
+                      run_time=beat.remaining(1.5))
 
         undef_boxes = VGroup(*[box(cards[k]["coins"], color=INK, buff=0.1) for k in UNDEF])
         with self.beat("undefined") as beat:
@@ -562,6 +640,8 @@ class Episode(NarratedScene):
                                  color=BLUE)
         mean_num.add_updater(lambda d: d.set_value(100 * m.get_value()).move_to(
             [vx(m.get_value()) - 0.2 - d.width / 2, LBL_Y, 0]))
+        # the average as the fraction the narration speaks, left of its readout
+        frac_lbl = MathTex(r"17/42", "=", font_size=36, color=BLUE)
         with self.beat("average") as beat:
             beat.wait_until("Drop", offset=-0.1)
             shrink = [cards[k]["score"].copy() for k in SCORED]
@@ -579,10 +659,15 @@ class Episode(NarratedScene):
             mean_num.update()
             self.add(blue_line)
             self.play(FadeIn(mean_num), run_time=0.4)
-            self.play(m.animate.set_value(MEAN), run_time=beat.until_end_of("two"),
+            # the marker settles as "seventeen" is spoken, and the fraction is written beside
+            # its readout ("17/42 = 40.5%"), so the spoken number is on screen (round 7)
+            self.play(m.animate.set_value(MEAN), run_time=beat.until("seventeen", offset=0.2),
                       rate_func=smooth)
+            frac_lbl.next_to(mean_num, LEFT, buff=0.16)
+            frac_lbl.shift(UP * (mean_num[0].get_bottom()[1] - frac_lbl[0][0].get_bottom()[1]))
+            self.play(Write(frac_lbl), run_time=0.8)
 
-        GAP_Y = -0.9
+        GAP_Y = -1.0
         gap_arrow = h_arrow(vx(0.5) - 0.2, vx(MEAN) + 0.06, GAP_Y, color=RED, width=5)
         cold_w = text("cold", size=28, color=RED)
         cold_n = MathTex(r"-9.5\text{ points}", font_size=36, color=RED)
@@ -641,11 +726,12 @@ class Episode(NarratedScene):
             # row-average marker shrinks to the vote lane (below the pooled strip to come), so
             # the pooled strip is read only against the dashed one-half line
             self.play(OFF.animate.set_value(0.0), axis_group.animate.shift(LEFT * SHIFT1),
+                      frac_lbl.animate.shift(LEFT * SHIFT1),
                       mtop.animate.set_value(SB_Y + TILE_H / 2 + 0.15),
                       run_time=beat.until("Gather", offset=-0.2))
             srcs = heads_src + tails_src
             # each ringed coin's disc becomes a tile (the letters stay in the table)
-            self.play(FadeOut(dots), FadeOut(gap_arrow), FadeOut(cold_lbl),
+            self.play(FadeOut(dots), FadeOut(gap_arrow), FadeOut(cold_lbl), FadeOut(frac_lbl),
                       LaggedStart(*[TransformFromCopy(c[0], t) for c, t in zip(srcs, a_tiles)],
                                   lag_ratio=0.035),
                       run_time=beat.until("twelve", offset=-0.15))
@@ -662,11 +748,14 @@ class Episode(NarratedScene):
             self.play(FadeOut(scrim), ReplacementTransform(frac_a[0], fa[2][0:2]),
                       ReplacementTransform(frac_a[1], fa[2][2]),
                       ReplacementTransform(frac_a[2], fa[2][3:5]), run_time=0.45)
-            self.play(self.fly_into(nums, fa_num, lag=0.03), run_time=0.6)
-            self.clean_fly()
+            # every row's heads count answers in the table while the sum over rows is written
+            # (in place: 14 digits flying across the table read as debris), then every row's
+            # checked count while the denominator's sum is written
+            self.play(LaggedStart(*[pulse(n_, 1.3, edge=RIGHT) for n_ in nums], lag_ratio=0.03),
+                      FadeIn(fa_num, shift=0.1 * DOWN), run_time=0.7)
             beat.wait_until("flips", 2, offset=-0.3)
-            self.play(self.fly_into(dens, fa_den, lag=0.03), FadeIn(fa_bar), run_time=0.6)
-            self.clean_fly()
+            self.play(LaggedStart(*[pulse(d_, 1.3, edge=LEFT) for d_ in dens], lag_ratio=0.03),
+                      FadeIn(fa_den, shift=0.1 * UP), FadeIn(fa_bar), run_time=0.7)
             # "exactly half": only now, with both sides complete, the "="
             beat.wait_until("exactly", offset=-0.15)
             self.play(FadeIn(fa[1]), run_time=0.4)
@@ -706,6 +795,31 @@ class Episode(NarratedScene):
 
         vote_boxes = vote_outlines()
         denoms = VGroup(*[cards[k]["score"][2] for k in SCORED])
+        # every table row as one group, saved at full strength: from "each row gets one vote"
+        # on, the table steps back to 30% and a row comes back only while it is named (round 7)
+        rowg = {k: VGroup(cards[k]["coins"], cards[k]["rings"], cards[k]["score"])
+                for k in range(16)}
+        for k in range(16):
+            rowg[k].save_state()
+        row_lvl = {k: 1.0 for k in range(16)}
+
+        def rows_to(levels: dict) -> list:
+            """Animations taking each row k to `levels[k]` of its full strength (from the saved
+            full state, so levels never compound)."""
+            anims = []
+            for k, f in levels.items():
+                if abs(row_lvl[k] - f) < 1e-6:
+                    continue
+                tgt = rowg[k].saved_state.copy()
+                if k in UNDEF:
+                    tgt[2].fade(1.0 - f)          # its coins already sit at 30%
+                elif f < 1.0:
+                    tgt.fade(1.0 - f)
+                anims.append(Transform(rowg[k], tgt))
+                row_lvl[k] = f
+            return anims
+
+        a_tiles.save_state()
         with self.beat("votes") as beat:
             mean_num.clear_updaters()            # the line has stopped moving: the label rests
             beat.wait_until("row by row", offset=-0.3)
@@ -714,12 +828,17 @@ class Episode(NarratedScene):
             self.play(LaggedStart(*[TransformFromCopy(s_, t_) for s_, t_ in zip(srcs, b_tiles)],
                                   lag_ratio=0.03),
                       mean_num.animate(rate_func=early(0.3)).set_opacity(0.25),
-                      guess_lbl.animate(rate_func=early(0.3)).set_opacity(0.25),
+                      guess_lbl.animate(rate_func=early(0.3)).set_opacity(0.3),
                       run_time=beat.until("one vote", offset=-0.15))
+            # "each row gets one vote": the vote strip is the one subject; the table, the pooled
+            # strip and its formula step back to 30% until each is named again
             self.play(Transform(b_tiles, b_vote_targets), Create(vote_boxes),
+                      *rows_to({k: 0.3 for k in range(16)}), a_tiles.animate.fade(0.7),
+                      fa.animate.set_opacity(0.3),
                       run_time=beat.until("however", offset=-0.1))
-            self.play(LaggedStart(*[pulse(d, 1.3) for d in denoms], lag_ratio=0.06),
-                      mean_num.animate.set_opacity(1.0), guess_lbl.animate.set_opacity(1.0),
+            # "however many flips it checked": every row's checked count answers in the table
+            self.play(LaggedStart(*[d.animate(rate_func=there_and_back).scale(1.3)
+                                    .set_opacity(1.0) for d in denoms], lag_ratio=0.06),
                       run_time=beat.remaining(1.0))
 
         # crowds: HHHH's three heads share one vote; HTTT's lone tails keeps a whole one
@@ -730,8 +849,10 @@ class Episode(NarratedScene):
                                      cA["coins"][i + 1].get_top() + UP * 0.07, angle=-PI / 2,
                                      color=BLUE, stroke_width=3, tip_length=0.12)
                          for i in range(3)])
-        boxA = box(VGroup(cA["coins"], cA["score"], chain), color=INK, buff=0.06)
-        boxB = box(VGroup(cards[kB]["coins"], cards[kB]["score"]), color=INK, buff=0.1)
+        # round 7: the boxes take the blue rings in and keep 0.13 clear of them (was ~2 px)
+        boxA = box(VGroup(cA["coins"], cA["rings"], cA["score"], chain), color=INK, buff=0.13)
+        boxB = box(VGroup(cards[kB]["coins"], cards[kB]["rings"], cards[kB]["score"]),
+                   color=INK, buff=0.13)
         segA = vote_boxes[rA].copy().set_stroke(INK, 5)
         segB = vote_boxes[rB].copy().set_stroke(INK, 5)
         with self.beat("crowds") as beat:
@@ -743,19 +864,23 @@ class Episode(NarratedScene):
                            if t[0] == "H"]
             self.play(LaggedStart(*[pulse(t, 1.2) for t in crowd_tiles], lag_ratio=0.08),
                       run_time=1.0)
-            beat.wait_until("since", offset=-0.1)
+            # "since a heads gets the next flip checked too": HHHH, named, comes back to full
+            beat.wait_until("since", offset=-0.25)
+            self.play(*rows_to({kA: 1.0}), run_time=0.5)
             self.play(LaggedStart(*[Create(a) for a in chain], lag_ratio=0.6),
                       run_time=beat.until("Here", offset=-0.2))
             self.play(Create(boxA), Create(segA), run_time=0.8)
             beat.wait_until("single", offset=-0.1)
             self.play(pulse(VGroup(*[b_tiles[j] for j in range(3)]), 1.15), run_time=0.8)
+            # "this lone tails": HHHH steps back, HTTT comes forward
             beat.wait_until("lone", offset=-0.35)
             self.play(FadeOut(boxA), FadeOut(segA), FadeOut(chain),
-                      Create(boxB), Create(segB), run_time=0.8)
+                      *rows_to({kA: 0.3, kB: 1.0}), Create(boxB), Create(segB), run_time=0.8)
             beat.wait_until("whole", offset=-0.1)
             idxB = sum(len(rows_b[q]) for q in range(rB))
             self.play(pulse(b_tiles[idxB], 1.15), run_time=0.8)
-            self.play(FadeOut(boxB), FadeOut(segB), run_time=beat.remaining(0.5))
+            self.play(FadeOut(boxB), FadeOut(segB), *rows_to({kB: 0.3}),
+                      run_time=beat.remaining(0.5))
 
         # lineup: where the heads and the tails live; then pack the votes and count them
         h_rows = [k for k in SCORED if INFO[SEQS[k]]["h"] > 0]
@@ -763,8 +888,6 @@ class Episode(NarratedScene):
         assert len(h_rows) == 8 and len(t_rows) == 11
         no_h = [k for k in SCORED if k not in h_rows]        # 6 rows: no checked heads
         no_t = [k for k in SCORED if k not in t_rows]        # 3 rows: no checked tails
-        rowg = {k: VGroup(cards[k]["coins"], cards[k]["rings"], cards[k]["score"])
-                for k in SCORED}
         h_boxes = VGroup(*[box(cards[k]["coins"], color=YELLOW, buff=0.12, stroke_width=4.5)
                            for k in h_rows])
         t_boxes = VGroup(*[box(cards[k]["coins"], color=INK, buff=0.12, stroke_width=3)
@@ -804,32 +927,27 @@ class Episode(NarratedScene):
         frac57 = VGroup(f_num, f_bar, f_den).arrange(DOWN, buff=0.1)
         frac57.move_to([fb[3].get_left()[0] - 0.2 - frac57.width / 2, 0, 0])
         frac57.shift(UP * (fb[3].get_center()[1] - f_bar.get_center()[1]))
-        for k in SCORED:
-            rowg[k].save_state()
-        a_tiles.save_state()
         with self.beat("lineup") as beat:
-            # "Twelve heads crowd into eight rows": those rows; everything else steps back
+            # "Twelve heads crowd into eight rows": those rows come forward (the rest of the
+            # table, the pooled strip and its formula are already at 30%)
             beat.wait_until("Twelve", offset=-0.1)
             self.play(LaggedStart(*[Create(b) for b in h_boxes], lag_ratio=0.1),
                       FadeIn(cnt_h, shift=0.1 * LEFT, rate_func=delayed(0.5)),
-                      *[rowg[k].animate.fade(0.7) for k in no_h],
-                      a_tiles.animate.fade(0.7), fa.animate.set_opacity(0.3),
-                      guess_lbl.animate.set_opacity(0.3), run_time=1.0)
-            # "Twelve tails spread across eleven": swap which rows step back
+                      *rows_to({k: 1.0 for k in h_rows}), run_time=1.0)
+            # "Twelve tails spread across eleven": swap which rows are forward
             beat.wait_until("Twelve", 2, offset=-0.3)
-            self.play(FadeOut(h_boxes), *[Restore(rowg[k]) for k in no_h],
-                      *[rowg[k].animate.fade(0.7) for k in no_t], run_time=0.5)
+            self.play(FadeOut(h_boxes),
+                      *rows_to({**{k: 0.3 for k in no_t}, **{k: 1.0 for k in no_h}}),
+                      run_time=0.5)
             self.play(LaggedStart(*[Create(b) for b in t_boxes], lag_ratio=0.08),
                       FadeIn(cnt_t, shift=0.1 * LEFT, rate_func=delayed(0.5)), run_time=1.0)
 
         crowded = (kA, k1)                                   # HHHH, HHHT: thirds of a vote
         with self.beat("split") as beat:
-            # only the two crowded rows stay bright: their heads are the thinnest slices
+            # only the two crowded rows stay forward: their heads are the thinnest slices
             self.play(FadeOut(t_boxes), FadeOut(cnt_t, rate_func=early(0.6)),
                       FadeOut(cnt_h, rate_func=early(0.6)),
-                      *[Restore(rowg[k]) for k in no_t if k in crowded],
-                      *[rowg[k].animate.fade(0.7) for k in SCORED
-                        if k not in crowded and k not in no_t],
+                      *rows_to({k: (1.0 if k in crowded else 0.3) for k in SCORED}),
                       run_time=0.6)
             # "Crowded heads split their votes": HHHH's and HHHT's heads, a third of a vote each
             beat.wait_until("split", offset=-0.15)
@@ -838,60 +956,78 @@ class Episode(NarratedScene):
                       run_time=0.9)
 
         with self.beat("pack") as beat:
-            # "Line them up": the whole table steps back; the votes pack, heads first.
+            # "Line them up": the whole table steps back; the votes pack, heads first, and
+            # stop on the 40.5% marker, whose readout comes forward as they arrive.
             # The 14 vote outlines stay, so the heads' part can be counted in votes.
-            self.play(FadeOut(guess_lbl), FadeOut(fa),
-                      *[rowg[k].animate.fade(0.7) for k in crowded],
-                      *[VGroup(cards[k]["coins"], cards[k]["score"]).animate.fade(0.7)
-                        for k in UNDEF],
+            beat.wait_until("Line", offset=-0.1)
+            self.play(FadeOut(guess_lbl), *rows_to({k: 0.3 for k in crowded}),
                       *[Transform(b_tiles[i], sorted_targets[i]) for i in range(len(flat))],
-                      run_time=beat.until("five", offset=-0.2))
+                      mean_num.animate(rate_func=delayed(0.4)).set_opacity(1.0),
+                      run_time=beat.until("heads", offset=-0.1))
             # "five and two thirds": counted on the strip, then carried into a numerator
-            # (routed above the strip and clear of the grey count still to come)
-            # the packed heads stop on the 40.5% marker; its label hands over to the vote count
+            # (routed above the strip and clear of the grey count still to come);
+            # the marker's readout hands over to the vote count
+            beat.wait_until("five", offset=-0.5)
             self.play(FadeOut(mean_num, rate_func=early(0.45)),
                       FadeIn(vh_lbl, shift=0.1 * DOWN, rate_func=delayed(0.4)), run_time=0.7)
             self.play(emerge(vh_lbl[0], f_num, run_time=0.9,
                              path=via((0.0, -0.05, 0), (4.0, -0.15, 0))))
-            # "of the fourteen votes": the tails' 8 1/3, and the 14 outlines become the 14
+            # "of the fourteen votes": the tails' 8 1/3; the 14 outlines are counted in place
+            # (each answers in turn) while their count, 14, is written (round 7: the copies
+            # that flew out of them showed doubled boxes)
             beat.wait_until("fourteen", offset=-0.15)
             self.play(FadeIn(vt_lbl, shift=0.1 * DOWN),
-                      self.fly_into(list(vote_boxes), f_den, lag=0.02),
-                      FadeIn(f_bar, rate_func=delayed(0.4)), run_time=0.9)
-            self.clean_fly()
+                      LaggedStart(*[o.animate(rate_func=there_and_back).set_stroke(width=5)
+                                    for o in vote_boxes], lag_ratio=0.06),
+                      FadeIn(f_den, shift=0.1 * UP, rate_func=delayed(0.45)),
+                      FadeIn(f_bar, rate_func=delayed(0.35)), run_time=1.0)
             self.adopt(frac57)
             # "That's seventeen out of forty two": 5 2/3 over 14 is 17/42
-            beat.wait_until("seventeen", offset=-0.4)
-            self.play(carry(frac57, fb[4], run_time=0.9),
-                      FadeIn(fb[3], rate_func=delayed(0.6)), run_time=0.9)
+            # (no copy flies: a cross-fade of 5 2/3 over 14 into 17/42 read as glyph soup)
+            beat.wait_until("That's", offset=-0.05)
+            self.play(FadeIn(fb[3], shift=0.15 * RIGHT, rate_func=early(0.5)),
+                      FadeIn(fb[4], shift=0.3 * RIGHT, rate_func=delayed(0.3)), run_time=0.7)
+            t_frac57 = self.time
 
         with self.beat("formula") as beat:
-            # the worked case steps aside for the general form (no "=" while a side is open)
+            # 5 2/3 / 14 = 17/42 is held complete >= 3.2 s (BAR: 2 s + 0.4 s per term), then the
+            # worked case steps aside for the general form (no "=" while a side is open)
+            beat.wait_until("the", offset=0.0)
+            if self.time - t_frac57 < 3.25:
+                self.hold(3.25 - (self.time - t_frac57))
             self.play(FadeOut(frac57), FadeOut(fb[3]), FadeOut(vh_lbl), FadeOut(vt_lbl),
-                      run_time=0.5)
-            # "an average": the 14 equal vote outlines become the 1/14 and the sum
-            beat.wait_until("average", offset=-0.3)
-            self.play(LaggedStart(*[o.animate(rate_func=there_and_back).set_stroke(width=4.5)
-                                    for o in vote_boxes], lag_ratio=0.04), run_time=0.5)
-            self.play(self.fly_into(list(vote_boxes), fb[0], lag=0.02), FadeOut(vote_boxes),
-                      FadeIn(fb[1], rate_func=delayed(0.4)), run_time=0.7)
-            self.clean_fly()
-            # "of ratios": one row's own ratio (HHHH's 3/3), at table size, becomes h_i / n_i
-            self.play(carry(cards[kA]["score"], fb[2], run_time=beat.until("one", offset=-0.1)))
-            # "one per row": every row's ratio answers in the table; the "=" joins 17/42
-            self.play(FadeIn(fb[3]), pulse(fb[4], 1.12),
-                      LaggedStart(*[cards[k]["score"].animate(rate_func=there_and_back)
-                                    .set_opacity(1.0) for k in SCORED], lag_ratio=0.04),
+                      run_time=0.45)
+            # "an average": the 14 equal vote outlines themselves (no copies, so nothing is seen
+            # doubled) lift off the strip at 40%, run right between the two strips, and become
+            # the 1/14 and the sum (the 1/14 lands on "average")
+            e0 = fb[0].get_center()
+            self.play(LaggedStart(*[self.depart(o, e0, [(o.get_x(), -0.3, 0), (e0[0] - 0.4, -0.3, 0)],
+                                                scale_to=0.3, mid=0.4)
+                                    for o in vote_boxes], lag_ratio=0.05),
+                      FadeIn(fb[0], rate_func=delayed(0.6)), FadeIn(fb[1], rate_func=delayed(0.65)),
                       run_time=0.9)
+            self.remove(vote_boxes, *vote_boxes)
+            # "of ratios": every row's own ratio answers in the table (in place, at full
+            # strength, one after another) while h_i / n_i is written in the sum (round 7: the
+            # copy of HHHH's 3/3 that flew there was first seen doubled over its source)
+            beat.wait_until("ratios", offset=-0.1)
+            self.play(LaggedStart(*[cards[k]["score"].animate(rate_func=there_and_back)
+                                    .scale(1.15).set_opacity(1.0) for k in SCORED],
+                                  lag_ratio=0.05),
+                      FadeIn(fb[2], shift=0.1 * UP, rate_func=delayed(0.35)), run_time=1.0)
+            # "one per row": the "=" joins 17/42
+            beat.wait_until("one per row", offset=-0.15)
+            self.play(FadeIn(fb[3]), pulse(fb[4], 1.12), run_time=0.7)
             self.adopt(fb)
-            # "instead of the ratio of totals": the pooled strip and its formula return; the one
-            # structural difference is the sum outside the ratio (below) or inside it (above)
+            # "instead": the sum outside the ratio; "the ratio of totals": the pooled strip and
+            # its formula, dimmed since "each row gets one vote", come back to full, and the
+            # sums inside that ratio answer (each pulse grows away from its neighbours)
             beat.wait_until("instead", offset=-0.15)
-            fa.set_opacity(1.0)
-            self.play(pulse(VGroup(fb[0], fb[1]), 1.18), FadeIn(fa), Restore(a_tiles),
-                      run_time=0.7)
-            beat.wait_until("ratio", 2, offset=-0.1)
-            self.play(pulse(fa[0][0], 1.35), pulse(fa[0][5], 1.35), run_time=0.8)
+            self.play(pulse(VGroup(fb[0], fb[1]), 1.18, edge=RIGHT), run_time=0.6)
+            beat.wait_until("ratio", 2, offset=-0.15)
+            self.play(fa.animate.set_opacity(1.0), Restore(a_tiles), run_time=0.6)
+            self.play(pulse(fa[0][0], 1.25, edge=DR), pulse(fa[0][5], 1.25, edge=UR),
+                      run_time=0.8)
             # the table has done its job
             self.play(FadeOut(table), run_time=beat.remaining(0.6))
 
@@ -968,10 +1104,13 @@ class Episode(NarratedScene):
             # "the test reads high": the after-tails cursor sits right of one half
             beat.wait_until("high", offset=-0.2)
             self.play(pulse(lab_T, 1.1), run_time=0.7)
-            beat.wait_until("twenty", offset=-0.15)
-            self.play(self.fly_into([block(X0, X0 + W * MEAN_T - 0.05, SB2)], val_T),
-                      run_time=0.9)
-            self.clean_fly()
+            # "twenty five out of forty two": the after-tails heads part answers in place (a
+            # vertical flash, so it never grows into its cursor) and its value is written
+            # beside "after tails" (round 7: no translucent copy crosses the strip)
+            beat.wait_until("twenty", offset=-0.2)
+            heads_T = VGroup(*[t for t, (_x, _w, f) in zip(lane_T, flip_data) if swap[f] == "H"])
+            self.play(heads_T.animate(rate_func=there_and_back, run_time=0.6).stretch(1.35, 1),
+                      Write(val_T, run_time=0.8), run_time=0.8)
 
         gap19 = h_arrow(xs(MEAN_T), xs(MEAN), LBL2, color=RED, width=5)
         lbl19 = MathTex(r"-19\text{ points}", font_size=36, color=RED)
@@ -1010,7 +1149,7 @@ class Episode(NarratedScene):
         lab_H3 = text("after 3 hits", size=26).move_to(lab_H, aligned_edge=LEFT)
         lab_T3 = text("after 3 misses", size=26).move_to(lab_T, aligned_edge=LEFT)
         # each lane's condition, drawn at its left end: three hits (yellow dots) / three misses
-        # (hollow grey dots), the same glyphs the streak-length ticks carry later
+        # (hollow grey dots)
         g_hits = hit_glyph(3).move_to([X0 + 0.45, SA2 + 0.27, 0])
         g_miss = VGroup(*[Circle(radius=0.065, stroke_color=GRAY, stroke_width=2.5)
                           for _ in range(3)]).arrange(RIGHT, buff=0.07)
@@ -1038,12 +1177,15 @@ class Episode(NarratedScene):
                       FadeIn(g_miss, shift=0.1 * RIGHT, rate_func=delayed(0.4)),
                       *anims, run_time=0.8)
             self.retitle_done(tok)
-            beat.wait_until("twenty six", offset=-0.1)
-            self.play(header[0].animate.move_to(h_two[0]), FadeIn(header[1], shift=0.15 * DOWN),
-                      run_time=0.7)
-            beat.wait_until("hundred", offset=-0.1)
-            self.play(header[0].animate.move_to(h_final[0]), header[1].animate.move_to(h_final[1]),
-                      FadeIn(header[2], shift=0.15 * DOWN, rate_func=delayed(0.5)), run_time=0.9)
+            # each phrase joins only once the header has made room for it (never over it)
+            beat.wait_until("twenty six", offset=-0.25)
+            self.play(header[0].animate(rate_func=early(0.55)).move_to(h_two[0]),
+                      FadeIn(header[1], shift=0.15 * DOWN, rate_func=delayed(0.55)),
+                      run_time=1.0)
+            beat.wait_until("hundred", offset=-0.25)
+            self.play(header[0].animate(rate_func=early(0.55)).move_to(h_final[0]),
+                      header[1].animate(rate_func=early(0.55)).move_to(h_final[1]),
+                      FadeIn(header[2], shift=0.15 * DOWN, rate_func=delayed(0.55)), run_time=1.0)
             self.adopt(header)
             # "from where they'd hit about half": the one-half line and its tick
             beat.wait_until("half", offset=-0.2)
@@ -1071,10 +1213,8 @@ class Episode(NarratedScene):
         gtitle = MathTex(r"\text{after-hits} - \text{after-misses (points)}", font_size=30,
                          color=TGRAY)
         gtitle.move_to([vx(1) + 0.2 - gtitle.width / 2, AX2 - 0.82, 0])
-        marker8 = Line([gx(-8), AX2, 0], [gx(-8), G_TOP, 0], color=BLUE, stroke_width=5)
         dashed_g = DashedLine([C, AX2, 0], [C, G_TOP, 0], color=INK, stroke_width=3,
                               dash_length=0.12)
-        bias_arrow = h_arrow(C - 0.03, gx(-8) + 0.03, G_ARR, color=RED, width=5)
         bias_lbl = text("bias", size=28, color=RED).move_to([(C + gx(-8)) / 2, G_ARR + 0.36, 0])
         rnd_lbl = VGroup(text("random", size=26, color=BLUE), text("shooter", size=26, color=BLUE))
         rnd_lbl.arrange(DOWN, buff=0.1, aligned_edge=RIGHT)
@@ -1085,27 +1225,53 @@ class Episode(NarratedScene):
         head_R = text("random", size=26, color=BLUE)
         head_R.move_to([RC_X + head_R.width / 2, SA2 + 0.74, 0])
         right_col = VGroup(head_R, lab_H3, lab_T3, v46, v54)
-        # streak length: three ghost ticks (1, 2, 3 hits in a row) slide out of zero; each
-        # carries its own flag of yellow hit dots, and the 3-hit one lands exactly under -8
+        # record length (round 7: the streak-length ghosts are cut): one ghost of the -8 marker,
+        # GVT's 3-hit case, slides to where a 1,000-shot record would put it, and back
         GH = 0.45
-        ghosts = VGroup(*[Line([gx(0), AX2, 0], [gx(0), AX2 + GH, 0], color=BLUE,
-                               stroke_width=5, stroke_opacity=0.0) for _ in (1, 2, 3)])
-        ghosts.set_z_index(-1)                       # behind the -8 marker it lands under
-        glyphs = VGroup(*[hit_glyph(k) for k in (1, 2, 3)])
-        gops = [ValueTracker(0.0) for _ in (1, 2, 3)]
-        for g_, t_, o_ in zip(glyphs, ghosts, gops):
-            flag_to(g_, t_).set_opacity(0)
-            g_.add_updater(lambda mob, t_=t_, o_=o_: flag_to(mob, t_).set_opacity(o_.get_value()))
-        x100 = {1: gx(STREAK_100[1]), 2: gx(STREAK_100[2]), 3: gx(-8)}   # -7.94 is drawn as -8
-        x1000 = {k: gx(STREAK_1000[k]) for k in (1, 2, 3)}
-        legend = text("hits in a row", size=24, color=TGRAY)
-        _fl2 = hit_glyph(2)
-        _fl2.move_to([x100[2] - 0.09 - _fl2.width / 2, AX2 + GH - 0.075, 0])
-        legend.move_to([_fl2.get_center()[0], AX2 + GH + 0.2 + legend.height / 2, 0])
-        _fl3 = hit_glyph(3)
+        ghost = Line([gx(-8), AX2, 0], [gx(-8), AX2 + GH, 0], color=BLUE, stroke_width=5,
+                     stroke_opacity=0.0)
+        ghost.set_z_index(-1)                        # behind the -8 marker it starts under
+        x1000 = gx(STREAK_1000[3])
         long_lbl = text("1,000 shots", size=26, color=BLUE)
-        long_lbl.move_to([x1000[3] - 0.09 - _fl3.width - 0.18 - long_lbl.width / 2,
-                          AX2 + GH - 0.075, 0])
+        long_lbl.move_to([x1000 - 0.2 - long_lbl.width / 2, AX2 + GH - 0.05, 0])
+        # the x5 zoom about the dashed line (the share axis's 25-point ticks become the gap
+        # axis's 5-point ticks): the old ticks run outward and leave, the new ones grow out of
+        # the centre, the after-hits cursor and the red gap ride the zoom to -8 (round 7)
+        share_v = [0.0, 0.25, 0.5, 0.75, 1.0]
+        gap_p = [-10, -5, 0, 5, 10]
+        new_marks = VGroup(*[Line([gx(p), AX2 - 0.08, 0], [gx(p), AX2 + 0.08, 0], color=GRAY,
+                                  stroke_width=2.5) for p in gap_p])
+        line_l, line_r = vx(0) - 0.2, vx(1) + 0.2           # the axis line's ends (OFF = 0)
+
+        def zoom_step(rig, alpha):
+            zf = 5.0 ** alpha
+            on_line = lambda x_: line_l + 0.05 <= x_ <= line_r - 0.05
+            for j, v in enumerate(share_v):
+                if j == 2:
+                    continue                        # the 50% mark is the centre: it stays
+                x_ = C + (v - 0.5) * W * zf
+                k = max(0.0, 1.0 - (zf - 1.0) / 0.9) if on_line(x_) else 0.0
+                old_marks[j].move_to([x_, AX2, 0]).set_stroke(opacity=k)
+                share_nums[j].move_to([x_, share_nums[j].get_y(), 0]).set_opacity(k)
+            for j, p in enumerate(gap_p):
+                if j == 2:
+                    continue
+                x_ = C + p * (PT / 5.0) * zf
+                new_marks[j].move_to([x_, AX2, 0]).set_stroke(
+                    opacity=min(1.0, max(0.0, (zf - 1.3) / 1.2)))
+                gnums[j].move_to([x_, gnums[j].get_y(), 0]).set_opacity(
+                    min(1.0, max(0.0, (zf - 2.6) / 1.2)))
+            # 50% -> 0 at the centre: the old label leaves before the new one arrives
+            share_nums[2].set_opacity(max(0.0, 1.0 - alpha / 0.35))
+            gnums[2].set_opacity(min(1.0, max(0.0, (alpha - 0.5) / 0.3)))
+            xc = C + (0.42 - 0.5) * W * zf          # the after-hits cursor (after-misses on C)
+            ybot = LBL2 + (AX2 - LBL2) * alpha
+            ytop = CUR_TOP + (G_TOP - CUR_TOP) * alpha
+            ya = LBL2 + (G_ARR - LBL2) * alpha
+            cur_H.become(Line([xc, ybot, 0], [xc, ytop, 0], color=BLUE, stroke_width=5))
+            ga.become(h_arrow(C - 0.03 * alpha, xc + 0.03 * alpha, ya, color=RED, width=5))
+            m8.move_to([xc - 0.2 - m8.width / 2, ya, 0])
+
         with self.beat("minus8") as beat:
             # "For a random shooter": the column is labelled before any number lands in it
             beat.wait_until("random", offset=-0.2)
@@ -1126,9 +1292,9 @@ class Episode(NarratedScene):
             beat.wait_until("Miller", offset=-0.2)
             self.play(cite_gvt.animate.set_opacity(0.3), pulse(cite_ms, 1.06, edge=LEFT),
                       run_time=0.8)
-            # "the gap": measure after-hits from after-misses (slide the pair until after-misses
-            # sits on the one-half line), then read the same marks as the gap in points
-            beat.wait_until("gap", offset=-0.35)
+            # "twenty eighteen paper": measure after-hits from after-misses (slide the pair
+            # until after-misses sits on the one-half line); the lanes are done
+            beat.wait_until("twenty", offset=-0.1)
             self.play(sH.animate.set_value(0.42), sT.animate.set_value(0.50),
                       FadeOut(tracks), FadeOut(g_hits), FadeOut(g_miss), run_time=0.9)
             gap_live.clear_updaters()
@@ -1137,37 +1303,52 @@ class Episode(NarratedScene):
             ga = h_arrow(xs(sT.get_value()), xs(sH.get_value()), LBL2, color=RED, width=5)
             self.remove(gap_live)
             self.add(ga)
-            # the lanes are gone: the right column dims until Cornell's numbers join it
-            self.play(Transform(cur_H, marker8), Transform(ga, bias_arrow), FadeOut(cur_T),
+            # "puts the gap": the gap between the two cursors gets its number, -8, at the end
+            # that moved
+            m8.move_to([cur_H.get_x() - 0.2 - m8.width / 2, LBL2, 0])
+            beat.wait_until("gap", offset=-0.3)
+            self.play(FadeIn(m8, shift=0.1 * LEFT), run_time=0.6)
+            # "at about minus eight points": zoom x5 about the dashed line; the tick labels turn
+            # from shares into gap points, the right column steps back
+            beat.wait_until("about", offset=-0.2)
+            old_marks = list(tick_marks)
+            for j in (0, 1, 3, 4):
+                new_marks[j].set_stroke(opacity=0)
+                gnums[j].set_opacity(0)
+            gnums[2].set_opacity(0)
+            tick_marks.add(*[new_marks[j] for j in (0, 1, 3, 4)])   # drawn with the axis
+            self.add(gnums)
+            # everything the zoom moves is in its group (Manim redraws only animated mobjects)
+            rig = VGroup(cur_H, ga, m8, *old_marks, *share_nums,
+                         *[new_marks[j] for j in (0, 1, 3, 4)], *gnums)
+            self.play(UpdateFromAlphaFunc(rig, zoom_step, rate_func=smooth),
+                      FadeOut(cur_T, rate_func=early(0.4)),
                       Transform(dashed, dashed_g),
-                      *[hand_off(share_nums[j], gnums[j]) for j in range(5)],
                       hand_off(ztitle, gtitle),
-                      FadeIn(m8), FadeIn(rnd_lbl), FadeIn(bias_lbl, shift=0.1 * UP),
                       obv.animate.move_to([C, G_TOP + 0.38, 0]),
                       right_col.animate.set_opacity(0.3),
-                      run_time=0.9)
-            # "Longer streaks grow the bias": 1, 2 and 3 hits in a row slide out of zero
+                      FadeIn(rnd_lbl, rate_func=delayed(0.7)),
+                      FadeIn(bias_lbl, shift=0.1 * UP, rate_func=delayed(0.7)),
+                      run_time=2.0)
+            # the zoomed axis: its five marks are the gap axis's -10 ... +10
+            # (adding the rig pulled its members out of the scene's top level, so take the whole
+            # rig out and put back what stays: the five marks as one group again, the new
+            # labels, the -8 marker, its number and the bias arrow)
+            self.remove(rig, *rig, share_nums)
+            tick_marks.submobjects = [new_marks[0], new_marks[1], old_marks[2], new_marks[3],
+                                      new_marks[4]]
+            self.add(tick_marks, gnums, cur_H, ga, m8)
+            assert all(abs(tick_marks[j].get_center()[0] - gx(v)) < 1e-6
+                       for j, v in enumerate(gap_p))
+            # "Longer records shrink it": with 1,000 shots the -8 (GVT's 3-hit case) slides
+            # almost to zero
             beat.wait_until("Longer", offset=-0.15)
-            self.add(ghosts, glyphs)
-            self.play(*[ghosts[k - 1].animate.move_to([x100[k], AX2 + GH / 2, 0])
-                        .set_stroke(opacity=0.6) for k in (1, 2, 3)],
-                      *[o_.animate.set_value(1.0) for o_ in gops],
-                      FadeIn(legend, rate_func=delayed(0.4)),
-                      run_time=1.1)
-            # hold the 100-shot picture (and its legend) until "Longer records"
-            beat.wait_until("Longer", 2, offset=-0.2)
-            # "Longer records shrink it": with 1,000 shots the 3-hit tick (GVT's case) slides
-            # almost to zero, carrying its flag; the other two step aside
-            self.play(ghosts[0].animate.set_stroke(opacity=0), ghosts[1].animate.set_stroke(opacity=0),
-                      gops[0].animate.set_value(0), gops[1].animate.set_value(0),
-                      FadeOut(legend, rate_func=lambda t: smooth(min(1.0, 2.5 * t))),
-                      ghosts[2].animate.move_to([x1000[3], AX2 + GH / 2, 0]),
-                      FadeIn(long_lbl, rate_func=delayed(0.55)),
-                      run_time=1.2)
-            self.remove(ghosts[0], ghosts[1])
+            self.add(ghost)
+            self.play(ghost.animate.move_to([x1000, AX2 + GH / 2, 0]).set_stroke(opacity=0.6),
+                      FadeIn(long_lbl, rate_func=delayed(0.55)), run_time=1.2)
             # "but a hundred shots isn't long": back under -8
             beat.wait_until("isn't", offset=-0.1)
-            self.play(ghosts[2].animate.move_to([x100[3], AX2 + GH / 2, 0]),
+            self.play(ghost.animate.move_to([gx(-8), AX2 + GH / 2, 0]),
                       FadeOut(long_lbl, rate_func=lambda t: smooth(min(1.0, 6 * t))),
                       header[2].animate(rate_func=there_and_back).set_opacity(1.0),
                       run_time=beat.remaining(0.8))
@@ -1181,26 +1362,27 @@ class Episode(NarratedScene):
         marker4 = Line([gx(4), AX2, 0], [gx(4), G_TOP, 0], color=PURPLE, stroke_width=5)
         eq4 = MathTex("49", "-", "45", "=", "+4", font_size=40, color=PURPLE)
         eq4.move_to([gx(4) + 0.2 + eq4.width / 2, G_ARR, 0])
-        p4 = MathTex("+4", font_size=40, color=PURPLE)
-        p4.move_to([gx(4) + SH2 + 0.2 + p4.width / 2, G_ARR, 0])     # once the chart re-centres
+        # what the 1985 test measured +4 against: zero, and found it non-significant
+        # (M&S 2018 §3.1 replicate GVT's paired t-test: p = .49)
+        p_lbl = MathTex(r"\text{vs }0\text{: }p = .49", font_size=30, color=TGRAY)
+        p_lbl.next_to(eq4, DOWN, buff=0.22, aligned_edge=LEFT)
         with self.beat("observed") as beat:
-            # the 3-hit ghost leaves (it sits under -8); Cornell's data arrives: purple title,
-            # GVT's citation back to full, the column's head becomes "Cornell"
-            self.play(ghosts[2].animate.set_stroke(opacity=0), gops[2].animate.set_value(0),
-                      FadeOut(header[1:]), hand_off(header[0], title_C),
+            # the ghost leaves (it sits under -8); Cornell's data arrives: purple title, GVT's
+            # citation back to full, the column's head becomes "Cornell" (M&S stays at full: the
+            # p-value shown below is their replication of GVT's test)
+            self.play(ghost.animate.set_stroke(opacity=0),
+                      FadeOut(header, rate_func=early(0.45)),
+                      FadeIn(title_C, shift=0.1 * DOWN, rate_func=delayed(0.5)),
                       lab_H3.animate.set_opacity(1.0), lab_T3.animate.set_opacity(1.0),
                       hand_off(head_R, head_C),
-                      cite_gvt.animate.set_opacity(1.0), cite_ms.animate.set_opacity(0.3),
-                      run_time=0.8)
-            for g_ in glyphs:
-                g_.clear_updaters()
-            self.remove(ghosts[2], glyphs)
+                      cite_gvt.animate.set_opacity(1.0), run_time=0.8)
+            self.remove(ghost)
             beat.wait_until("forty nine", offset=-0.2)
             self.play(hand_off(v46, p49), run_time=0.6)
             beat.wait_until("forty five", offset=-0.2)
             self.play(hand_off(v54, p45), run_time=0.6)
-            # "...after three misses. The study took that": 49 and 45 travel, whole, to the
-            # right of where Cornell's marker will stand, and the subtraction is written there
+            # "...after three misses. The study found": 49 and 45 travel, whole, to the right
+            # of where Cornell's marker will stand, and the subtraction is written there
             beat.wait_until("misses", offset=0.05)
             self.play(emerge(p49[0][0:2], eq4[0], run_time=1.0),
                       emerge(p45[0][0:2], eq4[2], run_time=1.0, arc=-0.5),
@@ -1210,37 +1392,40 @@ class Episode(NarratedScene):
             self.play(Create(marker4), FadeIn(eq4[3]), FadeIn(eq4[4], shift=0.1 * RIGHT),
                       run_time=0.8)
             self.adopt(eq4)
-            # "no hot hand": GVT measured +4 from the obvious guess, zero
-            beat.wait_until("no hot", offset=-0.2)
-            self.play(pulse(dashed, 1.06), pulse(obv, 1.12), run_time=0.9)
+            # "too close to zero to count": the test was +4 against zero, the obvious guess
+            beat.wait_until("zero", offset=-0.25)
+            self.play(pulse(dashed, 1.06), pulse(obv, 1.12),
+                      FadeIn(p_lbl, shift=0.1 * UP), run_time=0.9)
 
         brace = BraceBetweenPoints([gx(-8) + SH2, G_TOP + 0.22, 0], [gx(4) + SH2, G_TOP + 0.22, 0],
                                    direction=UP, color=PURPLE)
         brace_lbl = MathTex(r"+12\text{ points}", font_size=40, color=PURPLE)
         brace_lbl.next_to(brace, UP, buff=0.2)
         gym = text("no defenders", size=26, color=TGRAY, slant=ITALIC)
-        gym.next_to(p4, DOWN, buff=0.25, aligned_edge=LEFT)
+        # under "49 - 45 = +4", where it will stand once the chart re-centres
+        gym.next_to(eq4, DOWN, buff=0.25, aligned_edge=LEFT).shift(RIGHT * SH2)
         chart = VGroup(self.axis[0], tick_marks, gnums, gtitle, dashed, cur_H, ga, m8, rnd_lbl,
-                       bias_lbl, marker4)
-        # the +4 marker's tag, mirroring "random shooter" at -8: the column head travels there
-        tag_C = text("Cornell", size=26, color=PURPLE)
+                       bias_lbl, marker4, eq4)
+        # the +4 marker's tag, mirroring "random shooter" at -8: the header itself travels
+        # there, so "Cornell" is printed once (round 7)
+        tag_C = text("Cornell, 1985", size=30, color=PURPLE)
         tag_C.move_to([gx(4) + SH2 + 0.2 + tag_C.width / 2, rnd_lbl.get_center()[1], 0])
         with self.beat("hot") as beat:
             # "Measured from minus eight": the right column has done its job; the chart takes
-            # the frame, centred under its title, and +4 sheds its working
-            self.play(FadeOut(VGroup(lab_H3, lab_T3, p49, p45), rate_func=early(0.5)),
-                      head_C.animate.move_to(tag_C.get_center()),
+            # the frame, carrying 49 - 45 = +4 with its marker; the header comes down (right,
+            # then down, clear of the marker) to tag the +4 marker
+            self.play(FadeOut(VGroup(lab_H3, lab_T3, p49, p45, head_C), rate_func=early(0.45)),
+                      FadeOut(p_lbl, shift=RIGHT * SH2, rate_func=early(0.45)),
+                      ReplacementTransform(title_C, tag_C, rate_func=delayed(0.15),
+                                           path_func=via((3.4, 3.0, 0))),
                       FadeOut(obv, shift=RIGHT * SH2, rate_func=early(0.5)),
-                      chart.animate.shift(RIGHT * SH2),
-                      FadeOut(eq4[0:4], shift=RIGHT * SH2, rate_func=early(0.5)),
-                      ReplacementTransform(eq4[4], p4),
-                      cite_ms.animate.set_opacity(1.0), run_time=0.9)
+                      chart.animate.shift(RIGHT * SH2), run_time=1.1)
             self.play(GrowFromCenter(brace), run_time=beat.until("twelve", offset=-0.35))
             self.play(FadeIn(brace_lbl, shift=0.15 * DOWN), run_time=0.6)
             beat.wait_until("gym", offset=-0.25)
             self.play(FadeIn(gym, shift=0.1 * UP), run_time=0.7)
             beat.wait_until("defenders", offset=-0.2)
-            self.play(pulse(gym, 1.1), pulse(VGroup(marker4, p4), 1.04), run_time=0.9)
+            self.play(pulse(gym, 1.1), pulse(eq4[4], 1.15, edge=LEFT), run_time=0.9)
 
         # ================================================================ 10 landing
         old_line, old_dashed = self.axis[0], dashed
@@ -1274,7 +1459,7 @@ class Episode(NarratedScene):
         # the cold open's ghost of the sixteen runs: same place, size and opacity as at 0:09
         mini2 = self.build_mini(at=(vx(0.5), -0.15, 0))
         for g_ in mini2:
-            self.allow_overlap(g_, reason="ghost miniature of the 16-row table (60% opacity): "
+            self.allow_overlap(g_, reason="ghost miniature of the 16-row table (75% opacity): "
                                           "each letter sits inside its own small coin")
         # the shooter's average sits on the formula's line, on the one-half line
         DOT_Y = LBL_Y + 0.05
@@ -1303,50 +1488,54 @@ class Episode(NarratedScene):
 
         for m_ in list(self.mobjects):
             visit(m_)
-        self.play(*[FadeOut(o_) for o_ in outs], run_time=0.5)
-        self.play(ReplacementTransform(old_line, self.axis[0]),
-                  *[ReplacementTransform(tick_marks[j], self.axis[1][j]) for j in range(5)],
-                  *[FadeOut(gnums[j], rate_func=lambda t: smooth(min(1.0, 2.2 * t)))
+        # one move (no near-empty frame between the two pictures): the payoff fades while its
+        # line and dashed zero drop into the share axis, and the cold open fades back in
+        self.play(*[FadeOut(o_, rate_func=early(0.3)) for o_ in outs],
+                  ReplacementTransform(old_line, self.axis[0], rate_func=delayed(0.1)),
+                  *[ReplacementTransform(tick_marks[j], self.axis[1][j], rate_func=delayed(0.1))
                     for j in range(5)],
-                  *[FadeIn(self.axis[2][j], rate_func=delayed(0.5)) for j in range(5)],
-                  ReplacementTransform(old_dashed, dashed2),
-                  *[FadeIn(m_, rate_func=delayed(0.35)) for m_ in
+                  *[FadeOut(gnums[j], rate_func=early(0.3)) for j in range(5)],
+                  *[FadeIn(self.axis[2][j], rate_func=delayed(0.3)) for j in range(5)],
+                  ReplacementTransform(old_dashed, dashed2, rate_func=delayed(0.1)),
+                  *[FadeIn(m_, rate_func=delayed(0.26)) for m_ in
                     (self.axis[3], guess2, big2, rings2, arcs2, score2)],
-                  run_time=1.0)
+                  run_time=1.3)
         self.adopt(self.axis)
         with self.beat("landing") as beat:
             beat.wait_until("One half", offset=-0.2)
             self.play(pulse(dashed2, 1.06), pulse(guess2, edge=LEFT), run_time=0.9)
-            # "a fair coin does": the cold open's sixteen runs return, in the cold open's place
-            # and size, while the row steps back (as it did then)
-            beat.wait_until("fair", offset=-0.1)
+            # "is what a fair coin does": the cold open's sixteen runs return, in the cold open's
+            # place and size (75%), while the row steps back (as it did then) and the dashed
+            # guess steps back to 25% so it does not cut through them (round 7)
+            beat.wait_until("is", offset=-0.1)
             row2 = VGroup(big2, rings2, arcs2, score2)
             row2.save_state()
             self.play(LaggedStart(*[FadeIn(g, shift=0.06 * DOWN) for g in mini2], lag_ratio=0.05),
                       row2.animate.fade(0.6), FadeOut(guess2),
-                      dashed2.animate.set_stroke(opacity=0.15), run_time=0.9)
-            # "Seventeen out of forty two": they average into the test's formula, which lands
-            # on its marker at 17/42
+                      dashed2.animate.set_stroke(opacity=0.25), run_time=0.8)
+            # held >= 1.5 s, then "Seventeen out of forty two": they average, one row after
+            # another, into the test's formula, which lands beside its marker at 17/42
             beat.wait_until("Seventeen", offset=-0.15)
             scored_rows = [mini2[k] for k in SCORED]
-            fly = self.fly_into(scored_rows, VGroup(fl[0], fl[1], fl[2]), lag=0.02)
+            fly = self.fly_into(scored_rows, VGroup(fl[0], fl[1], fl[2]), lag=0.06, start=0.72)
             self.remove(*scored_rows)             # the rows themselves fly (their copies)
-            self.play(fly, *[FadeOut(mini2[k]) for k in UNDEF], Restore(row2),
-                      dashed2.animate.set_stroke(opacity=1.0),
-                      Create(blue2, rate_func=delayed(0.3)), run_time=0.9)
+            self.play(fly, *[FadeOut(mini2[k]) for k in UNDEF], Restore(row2), run_time=1.3)
             self.clean_fly()
             self.remove(*mini2)
-            self.play(FadeIn(fl[3]), self.fly_into([blue2], fl[4]), run_time=0.6)
-            self.clean_fly()
+            # the marker draws at 40.5%, and its own reading joins the formula: 17/42 slides out
+            # of it to the left (no copy of the line, which read as a doubled marker)
+            self.play(Create(blue2), run_time=0.4)
+            self.play(FadeIn(fl[3]), blue2.animate(rate_func=there_and_back).set_stroke(width=9),
+                      FadeIn(fl[4], shift=0.35 * LEFT, rate_func=delayed(0.25)), run_time=0.7)
             self.adopt(fl)
             beat.wait_until("this test", offset=-0.15)
             self.play(pulse(fl[4], 1.12), pulse(blue2, 1.04), run_time=0.8)
-            # "A fifty percent shooter": the row is a shooter again, and the one-half line is
-            # that shooter's usual rate
+            # "A fifty percent shooter": the row is a shooter again, and the one-half line (back
+            # to full) is that shooter's usual rate
             beat.wait_until("fifty percent", offset=-0.15)
             anims, tok = self.retitle(self.axis[3], t_hits3)
-            self.swap_glyphs([c[1] for c in big2], list(words2), *anims, pulse(dashed2, 1.06),
-                             run_time=0.9)
+            self.swap_glyphs([c[1] for c in big2], list(words2), *anims,
+                             dashed2.animate.set_stroke(opacity=1.0), run_time=0.9)
             self.retitle_done(tok)
             # "who averages one half on this test": the shooter's average over its rows, on
             # the one-half line; the single row steps back so it is not read as that score
@@ -1357,4 +1546,4 @@ class Episode(NarratedScene):
             self.play(GrowArrow(hot3), FadeIn(hot3_lbl, shift=0.1 * RIGHT),
                       run_time=beat.until("hot", offset=-0.05))
         # hold the answered frame >= 2 s after the arrow lands; no ident over it
-        self.hold(1.35)
+        self.hold(1.2)

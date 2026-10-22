@@ -181,3 +181,72 @@ Round 6 review: craft 8.9, substance 8.9 (both 8.875 weighted); no caps and no f
 - *Motion margin (9/9).* Three rains and six numbers in 10 s. → Each finished row holds 1.1 s, and each relation sign arrives 0.2 s after its second number.
 - *Audio margin (9/9).* "So this circle" landed on nothing. → The gold disk lights on "this", and each disk's outline flies into its term on its own word.
 - *Hook (9/9), title nitpick.* The title lives in `videos/curriculum.json`, outside this episode's directory, so it is not changed here (see facts.md, round 6).
+
+**What landed (craft fixes 1–8, substance fixes 1–5)**
+- *Survey entrance (craft 1, substance 1).* On "Surveys" the board clears while the example chart draws in the centre (baseline, then its three bars), so the beat has its object from its first second. The promise "average class / 40 or 147" comes back on the right where it stood at 0:19, and "at random" is written into its slot under the chart. The old 3 s of loose text is gone.
+- *French quote (craft 2).* One centred line under all three tallies, Text 26 italic, 0.42 clear above and below (the render logs the clearance). The panel group sits 0.2 higher and the number line 0.08 lower to make the room.
+- *One gold circle at a time (craft 3).* While the big circle judges, its gold rule is dashed at 60 % and the small one steps back to 30 %. On "own gold circle" one 0.5 s cross-fade hands over.
+- *"So this circle" (craft 4).* The panel-3 gold disk lights on "this". Its outline flies into π(r/2)² on "quarter" and the purple rim into πr² on "area".
+- *Landing (craft 5, substance 3).* One sentence: "Name the way, and the answer is fixed: a half for tossed straws, a hundred forty-seven for a random student." 1/4 and 1/3 dim on "fixed", the 1/2 takes its "straws" tag on "a half", and the 147 row comes up to ink on its words. The random class's 40 stays dimmed in its labelled row, as the other two chord answers do.
+- *Stack focal point (craft 6).* Panels 2 and 3 step back to 35 % while the 0.334 column builds, and return on "Three programs".
+- *Rains (craft 7).* Each finished row holds about 1.3 s, and each relation sign arrives 0.2 s after its second number.
+- *Real vs simulated (substance 2).* The "simulated" tag and the straws are gone before "Jaynes and Charles Tyler". The floor then holds only the circle, its gold rule and a grey "5 in" mark across its full width, labelled "5-inch-wide circle" (craft 8; Jaynes: "5-in.-diameter").
+- *Program, not recipe (substance 4).* "One rain lands on both circles. Each judges with its own gold circle, so a fair program scores the same on both."
+- *Right column (substance 5).* The predicted histogram's axis waits at 30 % from the start of the Tyler beat, and its bars grow on "radius".
+- *Title (substance 6, nitpick).* Unchanged. It lives in `videos/curriculum.json`, outside this directory; it never appears in the video, and "three" is first spoken at 1:07, after the commit at 0:07.
+
+**Concision: cut to the §13 budget (576 → 500 words, 3:48 → 3:32)**
+Both critics put the episode "near the top of the window" with two payoffs. The narration was cut sentence by sentence with the mute test, and no beat or on-screen step was removed. Examples: "Joseph Bertrand published" became "Bertrand posed"; "Pick a student at random, spread evenly over students instead of classes" became "Pick a student instead", because the label "spread evenly over: students" carries the rest; "in nineteen seventy-four" was dropped because the header shows it. The voice is 0.83 with `CADENCE = "shaped"`, except the open and the arc beat at 0.80; planned pauses of 0.9–1.5 s remain after each result. Every claim and on-screen number is unchanged (facts.md, round 6).
+
+**Final pass (found in my own frame review of the cut, not in the round-6 reviews)**
+- *"One point" twice.* "Each tally is accurate to about one point" dropped the unit, and four seconds later "One point sets a chord's length" used "point" in another sense. It now reads "good to about one percentage point" (500 words).
+- *0:50, a lone panel.* For about 0.7 s after the big circle shrank into panel 1, the right two-thirds of the frame were empty. The number line and panel 2 now start drawing in the second half of that move. They are windowed as a group, because Manim applies a rate function to each submobject's own slot, and a windowed `Create` of the number line had begun at once and cut across the still-large circle.
+- *2:19, a lone circle.* A 4 fps sweep found about 0.4 s with only the travelling circle on screen. The right-hand panel now clears first (0.35 s), and the board's text fades in where it stood while the other panels are still fading.
+- *3:00, the survey cross-dissolve.* The new baseline was drawn across the old floor circle while it was still at about 75 %, and "at random" began writing over the fading "5 in" mark (the same per-letter windowing). A first fix (a faster fade) left about 0.3 s of near-black frame, right where the 3:01 contact-sheet frame falls. Now the floor's half of the frame (circle, gold rule, "5 in" mark, citation) clears in the last 0.25 s of the Tyler beat's breath, while the predicted histogram on the right stays up. On "Surveys" only the right column fades, and it shares no place with the chart, so the chart draws from the first frame. The `Write` is windowed as a group.
+- *"forty" sync.* The 0.35 s late warning on "forty" (3:09) is gone: the "at random" → "spread evenly over: classes" swap and the dashed random-class line now share one move that lands on the word.
+
+**Mechanics (review/report.md, final master):** 3:31.7, 500 words, 156 wpm in speech (145 overall), −14.0 LUFS / −2.0 dBTP. Longest silence 2.08 s (the planned "Pick a number" hold), longest static stretch 3.17 s (the same hold), trailing silence 1.54 s, no black frames. 0 render warnings, 0 layout-audit issues in 245 checks, 0 glyph morphs, 7 of 7 deictics landed, 0 banned phrases, 0 flags. WER 2.0 %: homophones and number formatting only ("Janes", "a"/"one", "toss straws"). Whisper now hears "40 and 147" at Stony Brook. 6 fps sweeps of 0:49.6–0:52, 2:18.7–2:21 and 2:59.8–3:02.3 show no near-empty frame and no stroke drawn across another object.
+
+**Honest self-score (BAR §3):** Hook 9 · Clarity 9 · Visual 9 · Motion 9 · Audio 9 · Concision 9 · Originality 9, so 9.0, with no caps. Remaining risks: the title still announces "three" answers (it lives in curriculum.json), Whisper spells "Jaynes" as "Janes", and the cuts between beats are cross-dissolves of about 0.4 s rather than full transforms.
+
+## Round 7 revisions
+
+Round 7 split: craft 8.8 (fail; Clarity 8.5, Visual 8.5), substance 9.0 (pass, no margin). Neither critic found a factual error, and neither applied a cap.
+
+**Plan the climb (PRODUCTION_GUIDE §12.2, written before editing)**
+- *Visual (craft 8.5; 9 = "every frame has one focal point; all §5 standards met; nothing to remove").* Three frames missed it.
+  - 2:23–2:31: about 200 straws at 70 % buried the circle move.
+  - 2:28–2:30: two full gold circles were on screen at once, and then a dark halo smeared into a crescent.
+  - 2:53–3:00: the right column was a stack of five text items, 13–16 prose words.
+  → Fix: a light straw texture, so the moving circle is the one focal point. One gold circle at every moment, with the halo never morphed. Cut the right column to three items, and give the floor side its own label.
+- *Clarity (craft 8.5; 9 = "viewer could re-derive it after one watch").* Two problems.
+  - The demo line's two verdicts were carried by colour alone, and the big verdict held about 1.4 s.
+  - "Rain" was spoken while the straws were still falling.
+  - The honest limit of the half was only implicit.
+  → Fix: write "short" and "long" on the two pieces and hold the big verdict ≥ 1.5 s. Say "one program's rain" over a clear floor. Put "unaimed" in the landing, spoken and on screen.
+- *Motion margin (9/9).* Two moves fought the narration.
+  - The purple equation folded during "Where will they crowd?".
+  - At 2:51 the gold handoff overlapped.
+  → Fix: nothing moves during the prediction except the viewer's eye, and the handoffs run in sequence.
+- *Audio margin (9/9).* "And the code has no bug" got only 0.6 s. → Fix: `[pause 0.8]`.
+
+**What landed (craft fixes 1–10, substance fixes 1–6)**
+- *Straw rain (craft 1).* 60 straws are drawn, not 150. Only the newest three are at full strength (80 %). Each straw steps back to 25 % within about 0.5 s of landing; the rain counts its age in straws and runs eight straws past the last one, so the newest settle too. The circle move starts only after the whole texture is at 25 %.
+- *Gold handoff at 2:28 (craft 2).* A copy of the big gold rule lies over the original. The original and the big triangle then fade (0.4 s), with nothing moving. The copy alone shrinks and slides into the small circle, so there is exactly one gold circle on the floor at every frame (checked at 3 fps over 2:26.9–2:30.6). The dark halo is never transformed. It fades in with the first rain, which is the only thing it is for, and that also leaves "long" clear room inside the small gold rule.
+- *Tyler column (craft 3, substance 3).* "radius 0.50" and "5-inch-wide circle" are deleted. The straws row moves down to head the right column, "straws ? → ≈ radius", directly above "radius program *predicted*" and its histogram. The histogram is wider and taller (4.0 × 1.0 units for 10 %). "128 straws crossed it" sits on the floor under the "5 in" mark, which still spans the diameter. The floor outline and the "simulated" tag leave at the start of the beat, so nothing simulated shares the frame with the real tosses.
+- *Two verdicts in words (craft 4, substance 1).*
+  - On "circles" the big circle judges: dashed gold rule, grey chord, and "short" (grey, Text 22) beside the chord outside the small circle. This holds at full strength for about 1.6 s.
+  - On "own" one 0.5 s cross-fade hands over to the small gold rule, the gold piece and "long" (gold, Text 22, inside the small gold rule).
+  - Both words stay up at least 1.9 s and leave with the line on the first rain's start. `[pause 0.6]` follows "the same on both".
+  - The labels are placed from the line's own geometry and clear the tilted 7 px gold stroke by ≥ 0.15.
+- *"One program's rain" (substance 2).* The narration names whose rain it is, and the straws have left the floor before the sentence starts. The first thing drawn on "rain" is that program's line.
+- *Prediction pause (craft 5).* The purple π(r/2)²/πr² = 1/4 no longer folds during "Where will they crowd?". On "Where", panels 1 and 3 step back to 40 % and nothing moves. They come back on "Toward the center" with panel 2's collapse. The purple equation now folds together with the green one on "Three programs", so the row reads 0.334 ≈ 1/3, 0.498 ≈ 1/2, 0.248 ≈ 1/4 side by side. The critic suggested folding it in the 0.7 s breath after "catches a quarter", but that would have held the finished equation only ≈ 0.3 s (BAR §5 asks ≥ 3.2 s for three terms). Folding it later solves the same problem without cutting the hold.
+- *Tyler hand-off at 2:51 (craft 6).* The moves run in sequence: the small circle, the heads, the title and every program row leave (0.35 s, the small gold rule last), and only then does the big gold rule return (0.35 s).
+- *"No bug" (craft 7).* `[pause 0.8]` after the sentence. The number line, error bars, brace and "25 points" fade on that pause (0.5 s), so the breath before "One point sets a chord's length" is 1.25 s on a clean frame.
+- *Board naming (craft 8).* Each program row has its panel's glyph left of its name, the thing it spreads evenly as lit on "rim, radius, area": a blue rim, a green radius and a purple-filled disk. The glyphs wait at 30 % with their rows, light with their rain and dim with the failed rows. The column heads are now one word each ("big", "small", since the two circles on the floor say "circle"), so the demo frame stays at 11 prose words with "short" and "long".
+- *Honest limit (craft 9, substance 6).* The landing says "a half for unaimed straws". On screen a grey "unaimed" (Text 22) sits under the green "straws" tag. Whisper hears "un-aimed straws"; the old line was heard as "toss straws".
+- *2:19 lone circle (craft 10).* The right panel clears in 0.3 s, and the board's text is fully up by 0.7 s into the 1.4 s move (it was about 10 % at 2:19.4). At 8 fps no frame holds only the travelling circle.
+- *3:19 ghost (substance 4).* The Stony Brook header and its rule are fully gone in 0.25 s. The question starts fading in at 0.35 s, so nothing overprints, and the rows cross the rule's place only after it has gone.
+- *Histogram caption (substance 5).* "midpoints by distance from center", which keeps the panel frames at 12 prose words.
+- *Title (substance 7, nitpick).* Unchanged. It lives in `videos/curriculum.json`, outside this episode's directory, which this revision may not touch.
+- *Budget.* "writing that none is wrong, none is right" (the quote's own shape, −1 word) pays for "program's". The narration is 500 words.

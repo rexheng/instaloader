@@ -4,48 +4,43 @@
 [0:15.0–0:19.7] You probably pictured a shapeless oval with a nearly flat line.
 [0:19.7–0:22.0] Here are the real points.
 [0:22.0–0:27.4] A dinosaur drawn by Alberto Cairo with these same five numbers.
-[0:27.4–0:34.1] In a review of 703 physiology papers, 86% used bar graphs.
-[0:34.1–0:36.7] An average and an error bar.
+[0:27.4–0:36.7] In a review of 703 physiology papers, 86% used bar graphs, an average and an error bar.
 [0:36.7–0:39.4] Only 13% showed the points.
-[0:39.4–0:42.2] How much can five numbers hide?
-[0:42.2–0:48.4] Let's hide a star in them, and demand that all five match the dinosaurs to two decimals.
-[0:48.4–0:52.6] Version 1 slides every point onto its own spot on a star.
-[0:52.6–0:56.4] We got the star, and lost all five numbers.
-[0:56.4–1:02.6] The center moved, the x spread grew, and the y spread shrank by almost a quarter.
-[1:02.6–1:05.9] So what exactly do five numbers pin down?
-[1:05.9–1:10.7] The two averages mark a single point, the cloud's balance point.
-[1:10.7–1:17.2] The two standard deviations reach one deviation out on each side and draw a box.
-[1:17.2–1:19.5] Many ellipses touch all four walls.
-[1:19.5–1:22.4] The correlation picks one.
-[1:22.4–1:26.0] Correlation r means one standard deviation to the right.
-[1:26.0–1:31.5] average r standard deviations up. That's the best fit line through the middle of
-[1:31.5–1:37.1] every vertical slice. At the wall the slice is just the touch point r times s
-[1:37.1–1:50.9] y above the center For the dinosaur it just below the middle That ellipse is everything the five numbers know Now replay version 1 and watch the ellipse How would you fix it
-[1:52.7–1:54.8] Slide it until the centers meet.
-[1:55.4–1:57.2] Stretch it until the boxes match.
-[1:57.8–2:02.3] Then tip it a slight shear until it touches the walls at the same height.
-[2:02.9–2:05.8] All five match now to every decimal place.
-[2:06.8–2:09.8] But add a sixth number, the median of y.
-[2:09.8–2:11.9] Our star misses it by six.
-[2:12.8–2:20.1] In 2017, Justin Matejka and George Fitzmaurice built a search that keeps these five numbers fixed
-[2:20.1–2:22.3] while it nudges points toward a target.
-[2:23.1–2:25.1] From the dinosaur, they grew 12 shapes.
-[2:25.6–2:26.2] This circle.
-[2:27.2–2:27.9] This star.
-[2:28.9–2:29.8] This bullseye.
-[2:30.7–2:31.4] This X.
-[2:32.4–2:33.4] And these stripes.
-[2:34.1–2:37.0] Everyone has the same ellipse and a different median.
-[2:37.0–2:44.0] Francis Anscombe made the point in 1973, with 11 points of his own.
-[2:44.0–2:49.2] His correlation is 0.82, so the ellipse touches the right wall high up.
-[2:49.2–2:56.0] His best fit line follows the same rule, 1sx across, rsy up, through the center and that
-[2:56.0–2:57.7] touch point.
-[2:57.7–3:01.3] So the slope is rise, overrun.
-[3:01.3–3:06.6] All four of his datasets share these five numbers, so they share the ellipse and line,
-[3:06.6–3:12.5] A trend, a curve, an outlier, and one point doing all the work.
-[3:12.5–3:14.7] Your line was exactly right.
-[3:14.7–3:18.3] Five numbers fix its slope, minus point one.
-[3:18.3–3:19.8] Your cloud was wrong.
-[3:19.8–3:23.9] A blur around this ellipse, all that five numbers can draw.
-[3:23.9–3:28.4] Most of those papers used a bar graph, which draws only two.
-[3:28.4–3:31.2] The dinosaur lived in everything they leave out.
+[0:39.4–0:41.5] How much can five numbers hide?
+[0:41.5–0:48.6] Let's hide a star in them, and demand that all five match the dinosaurs to two decimals.
+[0:48.6–0:53.0] Version 1 slides every point onto its own spot on a star.
+[0:53.0–0:56.8] We got the star, and lost all five numbers.
+[0:56.8–1:03.0] The center moved, the X spread grew, and the Y spread shrank by almost a quarter.
+[1:03.0–1:06.3] So what exactly do five numbers pin down?
+[1:06.3–1:11.1] The two averages mark a single point, the cloud's balance point.
+[1:11.1–1:17.8] The two standard deviations reach one deviation out on each side and draw a box.
+[1:17.8–1:20.2] Many ellipses touch all four walls.
+[1:20.2–1:23.0] The correlation picks one.
+[1:23.0–1:26.0] r means one standard deviation to the right.
+[1:26.0–1:29.0] On average, r standard deviations up.
+[1:29.0–1:34.0] That's the best fit line, through the middle of every vertical slice.
+[1:34.0–1:39.0] At the wall, the slice is just the touch point, r times s y above the center.
+[1:39.0–1:42.0] For the dinosaur, it's just below the middle.
+[1:42.0–1:53.2] That ellipse is everything the five numbers know Now replay version 1 and watch the ellipse How would you fix it
+[1:53.2–1:58.2] Slide it until the centers meet. Stretch it until the boxes match.
+[1:58.2–2:03.2] Then tip it a slight shear until it touches the walls at the same height.
+[2:03.2–2:07.2] All five match now to every decimal place.
+[2:07.2–2:13.8] But add a sixth number, the median of Y. Our star misses it by six.
+[2:13.8–2:20.5] In 2017, Justin Matejka and George Fitzmaurice built a search that keeps these five numbers
+[2:20.5–2:24.4] fixed while it nudges points toward a target.
+[2:24.4–2:28.6] From the dinosaur, they grew 12 shapes. This circle.
+[2:28.6–2:35.5] This star. This bullseye. This X. And these stripes.
+[2:35.5–2:39.2] Everyone has the same ellipse and a different median.
+[2:39.2–2:45.3] Francis Anscombe made the point in 1973, with 11 points of his own.
+[2:45.3–2:50.7] His correlation is 0.82, so the ellipse touches the right wall high up.
+[2:50.7–2:57.5] His best fit line follows the same rule, 1sx across, rsy up, through the center and that
+[2:57.5–2:59.2] touch point.
+[2:59.2–3:02.8] So the slope is rise, overrun.
+[3:02.8–3:08.1] All four of his datasets share these five numbers, so they share the ellipse and line.
+[3:08.1–3:14.2] A trend, a curve, an outlier, and one point doing all the work.
+[3:14.2–3:16.6] Your line was exactly right.
+[3:16.6–3:20.0] Five numbers fix its slope, minus point one.
+[3:20.0–3:21.3] Your cloud was wrong.
+[3:21.3–3:25.7] A blur around this ellipse, all that five numbers can draw.
+[3:25.7–3:30.0] Most of those papers used a bar graph, which draws only two.
+[3:30.0–3:32.6] The dinosaur lived in everything they leave out.

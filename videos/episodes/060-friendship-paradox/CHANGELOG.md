@@ -551,3 +551,41 @@ full stops. So:
   "the students".
 - *Type and contrast*: labels Text 27 (34 px), beam names 21 (27 px), "Facebook's limit" 22; grey
   text is the series GRAY #A2AAB5 (7.7:1), lines AXIS.
+
+**Round 6c (render, frame pass and fixes; continues the interrupted pass above)**
+State found: the 6b edits (scene.py 13:27) had never been rendered; final.mp4 (12:03) was the
+3:40 / 542-word first master. The first 1080p render of 6b then failed at concat: a 48-byte
+partial movie left by the interrupted run sat in the render cache. Removed it and re-rendered.
+Frame sweeps (5-8 fps strips over every changed transition) then found:
+1. 3:00, C&F payoff: the x-axis was drawn in one frame straight across the still-visible class
+   (nodes, names, tokens). A `window()` rate function on a lagged `Create` is applied to every
+   submobject's sub-alpha, so the first parts finished at once. New `timed()` helper times the
+   whole group; the axes now draw 1.0-1.7 s into the move, after the girls and the token pile
+   have shrunk into the curves' origins. Same helper for the Write of "d = k - mu".
+2. Dimmed YELLOW read olive at 30 % (the 3.0 fulcrum 1:31-2:17, the parked friend-average row
+   1:31-2:04; PRODUCTION_GUIDE 13.2.8). Both now sit at 50 %. The raw flu steps behind the fits
+   go to 60 % (were 45 %), and the landing's "4" candidate to 55 % (was 30 %).
+3. 2:41: the flying copies of 190 / 445 / 635 sat stacked on their own labels for a frame
+   ("635 / 635" on the contact sheet). Flights now leave with ease-out and fade in over the
+   first 45 % of their path (the other carried values, Sue's 4 and her 1.5, over the first
+   20 %). The 3:15 self-report arrow copy starts transparent, so it never doubles the 13.9-day
+   arrow. Checked on the master at 10 fps over 2:40.5-2:41.8 and 3:14.6-3:15.7.
+
+**Verified on the master** (review/report.md, all 12 sheets, keyframes at 0:00, 1:24, 1:37,
+2:02, 2:13, 2:24, 2:44, 2:46, 2:54, 3:00, 3:14, 3:28; strips over 0:59-1:06, 1:30-1:39,
+1:55-2:24, 2:24-2:33, 2:40-2:42, 2:57-3:02, 3:14-3:16, 3:18-3:29)
+- Runtime 3:29.5, 494 words (budget 500 / 3:35). Pace 155 wpm on speech time, 0 sentences over
+  200 wpm, longest run without a breath 11.5 s. -14.0 LUFS / -2.1 dBTP. Leading silence 0.00 s,
+  trailing 1.91 s, longest silence 2.22 s (the "Pick one" hold), longest static stretch 3.7 s.
+- 0 render warnings, 0 layout-audit issues in 197 checks, 0 review-kit flags, 0 banned
+  phrases, 0 glyph morphs, deictics 2/2 synced. WER 3.6 %; every difference is Whisper's
+  number formatting ("seven and a half" -> "7 1/2") or a homophone (girls' / girl's).
+  "Divide" is now transcribed.
+- Round-6 fixes confirmed in frames: frame 0 poses the question (friendships at 40 %, ghost
+  rows); count ruler under the beam, distances end on ticks 1-4; "the girls' balance point, two
+  and a half" with the 3.0 fulcrum stepped back; rebuilt row held 4.5 s and split row 3.5 s,
+  then one collapse; box buffs 0.15; scale tag kept until the picture moves back; Facebook
+  source, label and axis change in one move on "Facebook"; "a few had thousands" before the
+  "?"; 92.7 % block on "ninety three percent"; the 0:19 stakes picture and the token draw at
+  Harvard; INK self-report arrow; landing in one move ending on the ringed 3.
+- facts.md: no new claims; the 92.7 % quote re-checked in the ar5iv text of arXiv:1111.4503.

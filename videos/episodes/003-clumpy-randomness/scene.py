@@ -25,7 +25,7 @@ from sample_space import *
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import sim                                         # noqa: E402
-from narration_text import B, BEAT_SPEED, CADENCE, PRON, SPEED   # noqa: E402
+from narration_text import B, BEAT_GAP_AFTER, BEAT_SPEED, CADENCE, PRON, SPEED   # noqa: E402
 
 # secondary text a little lighter than the series grey: 7.9:1 on BG (BAR: text >= 7:1)
 GRAY = "#A6ABB5"
@@ -68,8 +68,10 @@ RX = 2.75                                          # right-panel centre x (phase
 EQ1_Y = 3.05                                       # Poisson formula row once the histogram is up
 SHADE = [0.0, 0.17, 0.34, 0.52, 0.68, 0.8]         # cell fill opacity by hit count
 FS = 38                                            # working equation size
-EMPTY_FILL = 0.3                                   # empty squares: a light yellow tint inside a
-                                                   # full-yellow outline of each empty region
+EMPTY_FILL = 0.0                                   # empty squares: a full-yellow outline of each
+                                                   # empty region, no fill (a yellow tint under 60 %
+                                                   # reads olive on the slate background)
+EMPTY_EDGE = 2.6                                   # its stroke width
 INSET_SCALE = 5                                    # tail inset magnification
 MAP_DIM = 0.3                                      # map behind the derivation / zoom insets
 MAP_LOW = 0.35                                     # map beside the chi-squared build
@@ -209,7 +211,7 @@ class Panel:
     def cells_with(self, k: int) -> VGroup:
         return VGroup(*[self.cells[i] for i in self.where(k)])
 
-    def empty_edges(self, color=YELLOW, width: float = 3.0) -> VMobject:
+    def empty_edges(self, color=YELLOW, width: float = EMPTY_EDGE) -> VMobject:
         """Outline of every connected region of empty squares: the cell edges that separate an
         empty square from a hit square or the map's border (no inner grid lines)."""
         cell = self.frame.width / G                  # the map may have been rescaled
@@ -399,7 +401,7 @@ class Episode(NarratedScene):
     CADENCE = CADENCE
 
     def say_beat(self, key: str):
-        return self.narrate(B[key], speed=BEAT_SPEED.get(key))
+        return self.narrate(B[key], speed=BEAT_SPEED.get(key), gap=BEAT_GAP_AFTER.get(key))
 
     def settle(self, m: Mobject):
         """After glyph-wise Replacement transforms, keep one copy of m on screen."""
@@ -668,20 +670,22 @@ class Episode(NarratedScene):
         A.sim.target.next_to(A.name.target, RIGHT, buff=0.22 * s, aligned_edge=DOWN)
         tagA2.target.next_to(gP, DOWN, buff=0.2 * s).align_to(gP, LEFT)
         A.hits.scale(s).next_to(gP, UP, buff=0.2 * s).align_to(gP, RIGHT)
+        # the one square, outlined where it will sit once A has grown back
+        ysq.become(Square(P2_SIDE / G, stroke_color=YELLOW, stroke_width=4.5).set_z_index(3)
+                   .move_to(P2_C + (A.cells[pick].get_center() - A.frame.get_center())
+                            * (P2_SIDE / Z_SIDE)))
         with self.say_beat("square") as beat:
-            # B and the zooms clear out before A grows over the zooms' place
+            # B and the zooms clear out before A grows over the zooms' place; the one square is
+            # outlined as "Each bomb" is spoken
             self.play(FadeOut(VGroup(Bp.map, Bp.name, Bp.sim, tagB2, insA, insB, cntA.number,
                                      alarm, citeFK), rate_func=window(0, 0.4)),
                       VGroup(A.map, boxes).animate.scale(P2_SIDE / Z_SIDE,
                                                          about_point=A.frame.get_center())
                       .shift(P2_C - A.frame.get_center()),
                       *[MoveToTarget(m) for m in (A.name, A.sim, tagA2)], FadeIn(A.hits),
-                      A.level_anim(MAP_DIM, 1, extra=dim_boxes), run_time=0.9)
-            ysq.become(A.outline(pick, color=YELLOW, width=4.5, z=3))
-            # "Each bomb lands in this square": the one square is outlined on the word
-            beat.on("this square", Create(ysq), boxes.animate.set_stroke(opacity=0.3),
-                    run_time=0.5)
-            # "...with chance one in five seventy-six": the square and the grid become 1/576
+                      A.level_anim(MAP_DIM, 1, extra=dim_boxes),
+                      Create(ysq, rate_func=window(0.55, 0.45)), run_time=0.9)
+            # "...has a one in five seventy-six chance": the square and the grid become 1/576
             beat.wait_until("one in", offset=-0.1)
             self.allow_overlap(e_frac[1], e_pow, reason="fraction bar and the closing \\Big) "
                                "of the same typeset equation (TeX spacing)")
@@ -690,7 +694,10 @@ class Episode(NarratedScene):
             self.play(TransformFromCopy(ysq, e_frac[0]), Create(e_frac[1]),
                       FadeIn(e_frac[2:], shift=0.4 * RIGHT),
                       A.grid.animate(rate_func=there_and_back).set_stroke(YELLOW, 2, 0.9),
-                      run_time=1.3)
+                      boxes.animate.set_stroke(opacity=0.3), run_time=1.3)
+            # "...of landing in this square": the square pulses on the word
+            beat.on("this square", ysq.animate(rate_func=there_and_back).set_stroke(width=9),
+                    run_time=0.7)
             beat.wait_until("To stay", offset=-0.1)
             self.play(Write(VGroup(e_P, e_word, e_close, e_eq, e_open)), run_time=1.0)
             beat.wait_until("all five", offset=-0.1)
@@ -721,14 +728,10 @@ class Episode(NarratedScene):
                       run_time=beat.until("twenty-seven", end=True, min_time=1.0))
             beat.wait_until("Map A", offset=-0.2)
             self.add(cntE)
-            # the empty squares: a light yellow tint inside a full-yellow outline of each empty
-            # region, so the gaps read as yellow without swamping the dots and the red clumps
-            A.edges = A.empty_edges().set_stroke(opacity=0)
-            self.add(A.edges)
-            self.play(LaggedStart(*[c.animate.set_fill(YELLOW, EMPTY_FILL) for c in empties],
-                                  lag_ratio=0.01),
-                      A.edges.animate.set_stroke(opacity=1),
-                      tE.animate.set_value(222), FadeOut(ysq),
+            # the empty squares: a full-yellow outline of each empty region (no fill), drawn as
+            # the counter runs, so the gaps read as yellow without swamping the dots and clumps
+            A.edges = A.empty_edges()
+            self.play(Create(A.edges), tE.animate.set_value(222), FadeOut(ysq),
                       run_time=beat.until("twenty-two", offset=0.2))
             A.yellow_empties = True
             self.play(flag(cntE, color=INK), run_time=0.8)
@@ -786,9 +789,12 @@ class Episode(NarratedScene):
             A.edges = None
             cnt2[0].clear_updaters()
             beat.wait_until("judge", offset=-0.2)
-            # the equation rises to make room for the histogram it will have to fill
-            self.play(FadeOut(VGroup(L3, cnt2), shift=0.1 * UP), E1.animate.shift(E1_DROP * UP),
-                      Create(ax, rate_func=window(0.3, 0.7)), run_time=1.0)
+            # the equation rises to make room for the histogram it will have to fill; the
+            # 1.5 line and the 2+ count have gone before the axes start to draw (nothing is
+            # drawn through fading text)
+            self.play(FadeOut(VGroup(L3, cnt2), shift=0.1 * UP, rate_func=window(0, 0.4)),
+                      E1.animate.shift(E1_DROP * UP),
+                      Create(ax, rate_func=window(0.42, 0.58)), run_time=1.1)
             self.play(GrowFromEdge(pbars[0], DOWN), FadeIn(p227, shift=0.1 * UP), run_time=0.7)
             beat.wait_until("every", offset=-0.15)
             self.play(LaggedStart(*[FadeIn(q, shift=0.15 * UP) for q in qmarks], lag_ratio=0.15),
@@ -995,8 +1001,11 @@ class Episode(NarratedScene):
             self.play(FadeOut(picture), FadeOut(P0), FadeOut(LAMB), run_time=0.6)
             beat.wait_until("Times", offset=-0.1)
             self.play(Transform(E5, E5_top), pois.animate.move_to(pois_top), run_time=0.8)
-            self.play(Create(ax), Create(ins), FadeIn(ylab[0]),
-                      TransformFromCopy(E5[0], ylab[1][4:]), Write(ylab[1][:4]), run_time=0.9)
+            # P(k) is copied down into the axis title first; "= 576·" is written in front of it
+            # only once it has landed (the copy never flies through other glyphs)
+            self.play(Create(ax), Create(ins), TransformFromCopy(E5[0], ylab[1][4:]),
+                      run_time=0.8)
+            self.play(FadeIn(ylab[0]), Write(ylab[1][:4]), run_time=0.5)
             beat.wait_until("these", offset=-0.2)
             self.play(LaggedStart(*[GrowFromEdge(b, DOWN) for b in pbars], lag_ratio=0.15),
                       LaggedStart(*[GrowFromEdge(b, DOWN) for b in ipb], lag_ratio=0.15),
@@ -1016,9 +1025,30 @@ class Episode(NarratedScene):
         rd = formula(r"\chi^2_{\text{A}}", "=", r"\sum \text{gap}^2/\text{chance}", "=", size=36)
         rnum = DecimalNumber(0, num_decimal_places=1, font_size=36, color=YELLOW)
         rgrp = VGroup(rd, rnum).arrange(RIGHT, buff=0.18).move_to([RX + 0.25, 1.95, 0])
-        rnum.add_updater(lambda m: m.set_value(tM.get_value()))
         rdB = formula(r"\chi^2_{\text{B}}", size=36)
         rdB.move_to(rd[0], aligned_edge=LEFT)
+        # until its terms are added, the readout says "= ?" (never a false "= 0.0" or a
+        # stale "= 2.0" under the B subscript)
+        qA = formula(r"?", size=36, color=YELLOW).move_to(rnum, aligned_edge=LEFT)
+        qB = qA.copy()
+
+        def roll_in(q, value, run_time, *extra):
+            """The "?" gives way to the live readout, which counts up to `value`."""
+            tM.set_value(0)
+            rnum.set_value(0)
+            rnum.set_opacity(0)
+            self.add(rnum)
+            rnum.add_updater(lambda m: m.set_value(tM.get_value()))
+
+            def fade(m, a):
+                m.set_opacity(1 - min(1.0, a / 0.2))
+                rnum.set_opacity(min(1.0, max(0.0, (a - 0.12) / 0.2)))
+            self.play(UpdateFromAlphaFunc(q, fade), tM.animate.set_value(value), *extra,
+                      run_time=run_time)
+            self.remove(q)
+            rnum.clear_updaters()
+            rnum.set_value(value)
+            rnum.set_opacity(1)
         slA = gap_slivers(ax, H_A)
         terms = VGroup(*[formula(t, size=MATH_SMALL, color=YELLOW) for t in PARTS_TXT])
         for k, t in enumerate(terms):
@@ -1132,7 +1162,7 @@ class Episode(NarratedScene):
             beat.wait_until("chi", offset=-0.15)
             # the map steps back: the yellow gap slivers will be the only full-strength yellow
             # (the Poisson formula steps back too: the misfit readout is the equation in focus)
-            self.play(Write(rd), FadeIn(rnum), VGroup(E5, pois).animate.set_opacity(0.55),
+            self.play(Write(rd), FadeIn(qA), VGroup(E5, pois).animate.set_opacity(0.55),
                       A.level_anim(1, MAP_LOW, 0, 0, extra=dim_all, rate_func=window(0, 0.67)),
                       run_time=0.9)
             beat.wait_until("square", offset=-0.2)
@@ -1148,10 +1178,9 @@ class Episode(NarratedScene):
             self.play(flag(VGroup(slA[4], terms[4], ipb[1]), color=INK), run_time=0.9)
             # "Map A scores two point oh": the terms fly into the readout as it adds them
             beat.wait_until("Map A", offset=-0.15)
-            self.play(*[FadeOut(t.copy(), target_position=rnum.get_center(), scale=0.6)
-                        for t in terms],
-                      tM.animate.set_value(sum(PARTS_A)),
-                      run_time=beat.until("point", offset=0.1, min_time=0.9))
+            roll_in(qA, sum(PARTS_A), beat.until("point", offset=0.1, min_time=0.9),
+                    *[FadeOut(t.copy(), target_position=qA.get_center(), scale=0.6)
+                      for t in terms])
             self.play(flag(rnum, color=INK),
                       FadeOut(VGroup(A.top, tagA2, boxes, A.grid, A.cells)), run_time=0.8)
             beat.wait_until("Three", offset=-0.25)
@@ -1199,10 +1228,13 @@ class Episode(NarratedScene):
             A.dots.set_opacity(f)
             A.frame.set_stroke(opacity=f)
             a_side.set_opacity(f)
+            mark.set_stroke(opacity=max(f, 0.6))       # yellow below 60 % reads olive
         with self.say_beat("fixb") as beat:
             rnum.clear_updaters()
+            # the subscript becomes B and A's 2.0 gives way to "?" until B's gaps are added
             self.play(Transform(bA, zeros), Transform(ibA, izeros),
                       FadeOut(rd[0][-1], shift=0.15 * UP), FadeIn(rdB[0][-1], shift=0.15 * UP),
+                      FadeOut(rnum, shift=0.15 * UP), FadeIn(qB, shift=0.15 * UP),
                       FadeIn(bthumb), FadeIn(blt),
                       UpdateFromAlphaFunc(thumb, lambda m, a: a_level(1 - (1 - MAP_LOW) * a),
                                           rate_func=window(0, 0.6)), run_time=0.85)
@@ -1212,13 +1244,11 @@ class Episode(NarratedScene):
             self.play(FadeIn(l109, shift=0.1 * UP), flag(bA[0]), run_time=0.9)
             beat.wait_until("tower", offset=-0.15)
             self.play(FadeIn(l397, shift=0.1 * UP), flag(bA[1]), run_time=0.9)
-            beat.wait_until("misfit", offset=-0.2)
-            rnum.add_updater(lambda m: m.set_value(tM.get_value()))
-            self.play(LaggedStart(*[GrowFromCenter(r) for r in slB], lag_ratio=0.08),
-                      FadeOut(l109), FadeOut(l397), tM.animate.set_value(MIS_B),
-                      run_time=beat.until("seventy-two", end=True, offset=-0.1))
-            rnum.clear_updaters()
-            rnum.set_value(MIS_B)
+            # the two bar values leave before B's gap slivers grow through their place
+            beat.wait_until("misfit", offset=-0.4)
+            self.play(FadeOut(l109), FadeOut(l397), run_time=0.35)
+            roll_in(qB, MIS_B, beat.until("seventy-two", end=True, offset=-0.1, min_time=1.0),
+                    LaggedStart(*[GrowFromCenter(r) for r in slB], lag_ratio=0.08))
             self.hold(0.15)
             # B's score lands off the end of the axis while the readout it comes from flashes
             # (no number flies across the chart)
@@ -1241,9 +1271,9 @@ class Episode(NarratedScene):
         aframe, agrid, adots = Am.frame, Am.grid, Am.dots
         a_o = aframe.get_corner(DL)
         adots.set_opacity(0)
-        # its empty squares, drawn the way map A's were (light yellow tint + outline)
+        # its empty squares, drawn the way map A's were (yellow outline of each empty region)
         aempty = Am.cells_with(0).set_fill(YELLOW, 0)
-        aedges = Am.empty_edges().set_stroke(opacity=0)
+        aedges = Am.empty_edges()
         aims = VGroup(*[VGroup(Line(LEFT, RIGHT), Line(DOWN, UP)).scale(0.16).rotate(PI / 4)
                         .set_stroke(RED, 5).move_to(a_o + [q[0] * acell, q[1] * acell, 0])
                         .set_z_index(2) for q in _D["aims"]])
@@ -1362,16 +1392,13 @@ class Episode(NarratedScene):
                       run_time=beat.until("empty", offset=-0.2, min_time=1.0))
             ahits[0].clear_updaters()
             beat.wait_until("empty", offset=-0.2)
-            self.add(aedges)
             self.play(LaggedStart(*[GrowFromEdge(b, DOWN) for b in abars[:3]], lag_ratio=0.2),
-                      aempty.animate.set_fill(YELLOW, EMPTY_FILL),
-                      aedges.animate.set_stroke(opacity=1), run_time=0.9)
+                      Create(aedges), run_time=0.9)
             beat.wait_until("pile", offset=-0.2)
             # the empties step back as the pile-ups (and the aim points) take the focus
             self.play(LaggedStart(*[GrowFromEdge(b, DOWN) for b in abars[3:]], lag_ratio=0.2),
                       LaggedStart(*[GrowFromCenter(x) for x in aims], lag_ratio=0.2),
-                      aempty.animate.set_fill(opacity=0), aedges.animate.set_stroke(opacity=0),
-                      run_time=0.9)
+                      aedges.animate.set_stroke(opacity=0), run_time=0.9)
             beat.wait_until("nineteen", offset=-0.1)
             # the aimed outline bars travel with the chart while they fade (none left behind)
             self.play(abars.animate.shift(shift3).set_stroke(opacity=0),
@@ -1445,7 +1472,10 @@ class Episode(NarratedScene):
         xmark.set_stroke(RED, 6).move_to(tbx).set_z_index(6)
         short = Arrow(tbx, dul, buff=0.2, color=RED, stroke_width=6,
                       max_tip_length_to_length_ratio=0.16).set_z_index(6)
-        citeE = cite("Evans & Delaney, 2018 · Applied Geography 99", size=20)
+        # "aim:" names the red marks the source stands behind (the x and the arrow), as "map:"
+        # and "hits/km²:" do for the lines beside it
+        citeE = cite("aim: Evans & Delaney, 2018 · Applied Geography 99", size=20)
+        citeE[:4].set_color(RED)                       # "aim:" in the marks' own red
         citeE.next_to(cite2, RIGHT, buff=0.5).align_to(cite2, DOWN)
         n0, n1 = T(rm(NBOX[0], NBOX[2])), T(rm(NBOX[1], NBOX[3]))
         nbox = Rectangle(width=n1[0] - n0[0], height=n1[1] - n0[1], stroke_color=INK,
@@ -1528,17 +1558,19 @@ class Episode(NarratedScene):
             outgoing = [m for m in list(self.mobjects)
                         if not any(id(x) in keep for x in m.get_family())]
             self.add(adots0)
-            a_in = window(0.5, 0.5)
+            # A's hits come in while London's go (the two cross at half strength, so the frame
+            # never dips to an empty square); A's header and map B arrive in the same move
+            a_in = window(0.2, 0.6)
             self.play(*[FadeOut(m) for m in outgoing],
                       UpdateFromAlphaFunc(rdots, lambda m, a: [
                           d.set_opacity(b * (1 - smooth(a))) for d, b in zip(rdots, base_op)]),
                       Transform(cbox, csq),
                       UpdateFromAlphaFunc(adots0, lambda m, a: m.set_opacity(a_in(a))),
+                      FadeIn(A2.top, shift=0.1 * DOWN, rate_func=window(0.4, 0.6)),
                       run_time=0.9)
             self.remove(rdots)
             self.play(ReplacementTransform(cbox, A2.frame), ReplacementTransform(adots0, A2.dots),
-                      FadeIn(A2.top, shift=0.1 * DOWN), b2grp.animate.shift(8 * LEFT),
-                      run_time=1.0)
+                      b2grp.animate.shift(8 * LEFT), run_time=1.0)
             beat.wait_until("clumps", offset=-0.25)
             self.play(LaggedStart(*[Create(c) for c in circles2], lag_ratio=0.25),
                       FadeIn(tagA3, shift=0.1 * UP), run_time=1.1)

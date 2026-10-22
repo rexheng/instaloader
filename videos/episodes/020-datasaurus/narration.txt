@@ -6,42 +6,42 @@
 
 [00:39.3] How much can five numbers hide? Let's hide a star in them, and demand that all five match the dinosaur's to two decimals.
 
-[00:47.9] Version one slides every point onto its own spot on a star.
+[00:48.1] Version one slides every point onto its own spot on a star.
 
-[00:52.5] We got the star, and lost all five numbers. [pause 0.9] The center moved, the x spread grew, and the y spread shrank by almost a quarter.
+[00:52.9] We got the star, and lost all five numbers. [pause 0.9] The center moved, the x spread grew, and the y spread shrank by almost a quarter.
 
-[01:02.4] So what exactly do five numbers pin down?
+[01:02.8] So what exactly do five numbers pin down?
 
-[01:05.8] The two averages mark a single point: the cloud's balance point.
+[01:06.2] The two averages mark a single point: the cloud's balance point.
 
-[01:10.6] The two standard deviations reach one deviation out on each side, and draw a box.
+[01:11.0] The two standard deviations reach one deviation out on each side, and draw a box.
 
-[01:16.9] Many ellipses touch all four walls. [pause 0.2] The correlation picks one. Correlation r means one standard deviation to the right, on average r standard deviations up. That's the best-fit line, through the middle of every vertical slice. At the wall, the slice is just the touch point, r times ess why above the center. For the dinosaur, it's just below the middle.
+[01:17.6] Many ellipses touch all four walls. [pause 0.2] The correlation picks one. Correlation r means one standard deviation to the right, on average r standard deviations up. That's the best-fit line, through the middle of every vertical slice. At the wall, the slice is just the touch point, r times ess why above the center. For the dinosaur, it's just below the middle.
 
-[01:41.9] That ellipse is everything the five numbers know. [pause 1.0]
+[01:42.8] That ellipse is everything the five numbers know. [pause 1.0]
 
-[01:46.3] Now replay version one, and watch the ellipse.
+[01:47.1] Now replay version one, and watch the ellipse.
 
-[01:49.7] How would you fix it? [pause 1.5]
+[01:50.5] How would you fix it? [pause 1.5]
 
-[01:53.0] Slide it until the centers meet. Stretch it until the boxes match. Then tip it, a slight shear, until it touches the walls at the same height.
+[01:53.8] Slide it until the centers meet. Stretch it until the boxes match. Then tip it, a slight shear, until it touches the walls at the same height.
 
-[02:02.9] All five match now, to every decimal place. [pause 0.6]
+[02:03.9] All five match now, to every decimal place. [pause 0.6]
 
-[02:07.3] But add a sixth number: the median of y. Our star misses it by six.
+[02:08.2] But add a sixth number: the median of y. Our star misses it by six.
 
-[02:12.7] In 2017, Justin Matejka and George Fitzmaurice built a search that keeps these five numbers fixed while it nudges points toward a target.
+[02:13.7] In 2017, Justin Matejka and George Fitzmaurice built a search that keeps these five numbers fixed while it nudges points toward a target.
 
-[02:23.1] From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this star, [pause 0.8] this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Every one has this same ellipse, and a different median.
+[02:24.2] From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this star, [pause 0.8] this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Every one has this same ellipse, and a different median.
 
-[02:38.0] Francis Anscombe made the point in 1973, with eleven points of his own.
+[02:39.1] Francis Anscombe made the point in 1973, with eleven points of his own.
 
-[02:43.9] His correlation is point eight two, so the ellipse touches the right wall high up.
+[02:45.2] His correlation is point eight two, so the ellipse touches the right wall high up.
 
-[02:49.1] His best-fit line follows the same rule: one ess ex across, r ess why up, through the center and that touch point.
+[02:50.6] His best-fit line follows the same rule: one ess ex across, r ess why up, through the center and that touch point.
 
-[02:57.5] So the slope is rise, over run. [pause 1.0]
+[02:59.0] So the slope is rise, over run. [pause 1.0]
 
-[03:01.2] All four of his datasets share these five numbers, so they share the ellipse and line. [pause 0.3] A trend, a curve, an outlier, and one point doing all the work.
+[03:02.6] All four of his datasets share these five numbers, so they share the ellipse and line. [pause 0.3] A trend, a curve, an outlier, and one point doing all the work.
 
-[03:12.5] Your line was exactly right: five numbers fix its slope, minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.
+[03:14.0] Your line was exactly right: five numbers fix its slope, minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.

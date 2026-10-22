@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/004-hot-hand-bias/final.mp4",
- "duration_s": 211.733,
+ "duration_s": 212.7,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,7 +8,7 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 11.01,
+ "size_mb": 11.05,
  "integrated_lufs": -14.0,
  "lra_lu": 2.5,
  "true_peak_dbtp": -1.9,
@@ -22,33 +22,33 @@
   ],
   [
    116.02,
-   117.64
+   117.63
   ],
   [
-   194.5,
-   196.4
+   195.66,
+   197.37
   ]
  ],
- "frames": 6352,
- "longest_static_s": 3.77,
+ "frames": 6381,
+ "longest_static_s": 3.6,
  "static_stretches_over_3s": [
   [
-   187.23,
-   191.0,
-   3.77
+   188.4,
+   192.0,
+   3.6
   ]
  ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
  "background_luma": null,
- "transcript_words": 499,
+ "transcript_words": 497,
  "first_word_s": 0,
- "last_word_s": 210.28665,
- "wpm_speech": 152.1,
- "wpm_overall": 141.4,
- "wpm_excluding_all_pauses": 175.9,
+ "last_word_s": 211.21735,
+ "wpm_speech": 150.6,
+ "wpm_overall": 140.2,
+ "wpm_excluding_all_pauses": 174.6,
  "narration_file": "videos/episodes/004-hot-hand-bias/narration.json",
- "wer": 0.0143,
+ "wer": 0.0082,
  "narration_words": 488,
  "banned_phrase_hits": 0,
  "slop_hits": [],
@@ -59,11 +59,11 @@
    0.82
   ],
   "sentence_wpm_median": 168.8,
-  "sentences_over_200wpm": 1,
+  "sentences_over_200wpm": 0,
   "sentence_gap_median_s": 0.35,
   "sentence_gap_cv": 0.22,
   "beat_gap_median_s": 0.65,
-  "longest_breathless_run_s": 15.2,
+  "longest_breathless_run_s": 12.1,
   "max_distinct_numbers_20s": 6,
   "repeated_phrases": 3,
   "glyph_morphs": 0,
@@ -71,17 +71,17 @@
   "deictics_unlanded": 0
  },
  "layout_audit": {
-  "count": 1,
+  "count": 0,
   "counts": {
    "overlap": 0,
-   "clearance": 1,
+   "clearance": 0,
    "safe-area": 0,
    "caption-zone": 0,
    "text-size": 0,
    "small-label": 0
   },
   "allowed": 0,
-  "checks": 223
+  "checks": 220
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -103,7 +103,7 @@
    "file": "keyframes/kf_01_00-02.8.png"
   },
   {
-   "t": 4.67,
+   "t": 4.7,
    "file": "keyframes/kf_02_00-04.7.png"
   },
   {
@@ -111,7 +111,7 @@
    "file": "keyframes/kf_03_00-08.8.png"
   },
   {
-   "t": 13.53,
+   "t": 13.5,
    "file": "keyframes/kf_04_00-13.5.png"
   },
   {
@@ -147,12 +147,12 @@
    "file": "keyframes/kf_12_00-41.0.png"
   },
   {
-   "t": 44.4,
-   "file": "keyframes/kf_13_00-44.4.png"
+   "t": 44.33,
+   "file": "keyframes/kf_13_00-44.3.png"
   },
   {
-   "t": 48.53,
-   "file": "keyframes/kf_14_00-48.5.png"
+   "t": 46.97,
+   "file": "keyframes/kf_14_00-47.0.png"
   },
   {
    "t": 51.87,
@@ -175,93 +175,90 @@
    "file": "keyframes/kf_19_01-25.9.png"
   },
   {
-   "t": 90.5,
-   "file": "keyframes/kf_20_01-30.5.png"
-  },
-  {
    "t": 92.07,
-   "file": "keyframes/kf_21_01-32.1.png"
+   "file": "keyframes/kf_20_01-32.1.png"
   },
   {
    "t": 99.0,
-   "file": "keyframes/kf_22_01-39.0.png"
+   "file": "keyframes/kf_21_01-39.0.png"
   },
   {
    "t": 101.53,
-   "file": "keyframes/kf_23_01-41.5.png"
+   "file": "keyframes/kf_22_01-41.5.png"
   },
   {
-   "t": 106.43,
-   "file": "keyframes/kf_24_01-46.4.png"
+   "t": 106.5,
+   "file": "keyframes/kf_23_01-46.5.png"
   },
   {
    "t": 113.83,
-   "file": "keyframes/kf_25_01-53.8.png"
+   "file": "keyframes/kf_24_01-53.8.png"
   },
   {
    "t": 117.4,
-   "file": "keyframes/kf_26_01-57.4.png"
+   "file": "keyframes/kf_25_01-57.4.png"
   },
   {
-   "t": 120.27,
-   "file": "keyframes/kf_27_02-00.3.png"
+   "t": 120.53,
+   "file": "keyframes/kf_26_02-00.5.png"
   },
   {
-   "t": 124.23,
-   "file": "keyframes/kf_28_02-04.2.png"
+   "t": 122.3,
+   "file": "keyframes/kf_27_02-02.3.png"
   },
   {
-   "t": 136.97,
-   "file": "keyframes/kf_29_02-17.0.png"
+   "t": 124.77,
+   "file": "keyframes/kf_28_02-04.8.png"
   },
   {
-   "t": 138.5,
-   "file": "keyframes/kf_30_02-18.5.png"
+   "t": 137.8,
+   "file": "keyframes/kf_29_02-17.8.png"
   },
   {
-   "t": 143.8,
-   "file": "keyframes/kf_31_02-23.8.png"
+   "t": 139.23,
+   "file": "keyframes/kf_30_02-19.2.png"
   },
   {
-   "t": 164.83,
-   "file": "keyframes/kf_32_02-44.8.png"
+   "t": 144.67,
+   "file": "keyframes/kf_31_02-24.7.png"
   },
   {
-   "t": 174.13,
-   "file": "keyframes/kf_33_02-54.1.png"
+   "t": 166.0,
+   "file": "keyframes/kf_32_02-46.0.png"
   },
   {
-   "t": 190.03,
-   "file": "keyframes/kf_34_03-10.0.png"
+   "t": 175.27,
+   "file": "keyframes/kf_33_02-55.3.png"
   },
   {
-   "t": 197.77,
-   "file": "keyframes/kf_35_03-17.8.png"
+   "t": 191.1,
+   "file": "keyframes/kf_34_03-11.1.png"
   },
   {
-   "t": 199.43,
-   "file": "keyframes/kf_36_03-19.4.png"
+   "t": 198.67,
+   "file": "keyframes/kf_35_03-18.7.png"
   },
   {
-   "t": 203.7,
-   "file": "keyframes/kf_37_03-23.7.png"
+   "t": 200.4,
+   "file": "keyframes/kf_36_03-20.4.png"
   },
   {
-   "t": 206.07,
-   "file": "keyframes/kf_38_03-26.1.png"
+   "t": 204.67,
+   "file": "keyframes/kf_37_03-24.7.png"
   },
   {
-   "t": 207.97,
-   "file": "keyframes/kf_39_03-28.0.png"
+   "t": 207.03,
+   "file": "keyframes/kf_38_03-27.0.png"
   },
   {
-   "t": 211.7,
-   "file": "keyframes/kf_40_03-31.7.png"
+   "t": 209.13,
+   "file": "keyframes/kf_39_03-29.1.png"
+  },
+  {
+   "t": 212.67,
+   "file": "keyframes/kf_40_03-32.7.png"
   }
  ],
- "flags": [
-  "breathless run: 15 s of speech with no pause ≥ 0.35 s at 2:29.2 (whisper hears one run-on sentence)",
-  "layout audit: 1 issue(s) — 0 overlapping, 1 < 0.15 apart, 0 outside the safe area, 0 in the caption zone, 0 under 24 px (see 'Layout audit')"
- ],
+ "flags": [],
  "implied_caps": []
 }

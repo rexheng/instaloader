@@ -92,18 +92,19 @@ working only; every value below is recomputed by `check_numbers.py` (section 1 a
 | 34 | Cold open: "Do this for every four flip run, and average." (was "Average the shares over all sixteen sequences") | Same procedure; "every four flip run" = the 16 equally likely sequences shown as the ghost (row 1). The two runs with no share are handled at 0:48 (row 3). | — |
 | 35 | "Twelve heads crowd into eight rows. Twelve tails spread across eleven." On screen the 8 (then 11) rows are boxed while the other rows dim; "12 heads · 8 rows", "12 tails · 11 rows". | Row 9. | arithmetic |
 | 36 | "Crowded heads split their votes." On screen the five thinnest heads slices pulse (HHHH's three and HHHT's two, a third of a vote each) with those two rows' 3/3 and 2/3; every other row dims. | Each checked flip holds 1/nᵢ of its row's single vote; the rows that check three flips are HHHH and HHHT, holding 3 + 2 = 5 checked heads at 1/3 vote each. Average vote per checked heads 17/3 ÷ 12 = 0.47, per checked tails 25/3 ÷ 12 = 0.69 (row 12). | arithmetic; M&S 2018 p. 3 (row 11) |
-| 37 | "Line them up, and the heads hold five and two thirds of the fourteen votes. That's seventeen out of forty two." On screen "5⅔ votes" over the packed yellow, "8⅓ votes" over the grey, then 5⅔ / 14 = 17/42 built from the yellow count and the 14 vote outlines. | Σ hᵢ/nᵢ = 3·1 + 2/3 + 4·½ = 17/3 = 5⅔; tails Σ (nᵢ − hᵢ)/nᵢ = 25/3 = 8⅓; 17/3 + 25/3 = 14; (17/3)/14 = 17/42. Replaces round 5's "Fewer rows, fewer votes", which named a row count rather than the dilution (round-6 substance fix 2). | arithmetic; `check_numbers.py` §1 |
+| 37 | "Line them up: the heads hold five and two thirds of the fourteen votes. That's seventeen out of forty two." On screen "5⅔ votes" over the packed yellow, "8⅓ votes" over the grey, then 5⅔ / 14 = 17/42 built from the yellow count and the 14 vote outlines. | Σ hᵢ/nᵢ = 3·1 + 2/3 + 4·½ = 17/3 = 5⅔; tails Σ (nᵢ − hᵢ)/nᵢ = 25/3 = 8⅓; 17/3 + 25/3 = 14; (17/3)/14 = 17/42. Replaces round 5's "Fewer rows, fewer votes", which named a row count rather than the dilution (round-6 substance fix 2). | arithmetic; `check_numbers.py` §1 |
 | 38 | "For a random shooter, the same crowding pulls after hits down to forty six percent on average, and after misses up to fifty four." (was "pulls those, on average, to forty six and fifty four percent") | Exact DP, n = 100, p = .5: 46.03% / 53.97% (row 17). Direction per M&S §3.2. | M&S 2018 §3.2, Fig. 1 |
 | 39 | Payoff header (round 6): "1985 design · 26 players · up to 100 shots" in grey while the random shooter's numbers are on screen; it becomes the purple "Cornell, 1985" only when Cornell's 49% / 45% arrive. | Design facts as row 15. The random shooter is computed on that design (n = 100, p = .5), so the header names the design, not Cornell data (round-6 substance fix 4). | M&S 2018 §3.1 |
-| 40 | On screen: "49 − 45 = +4" written from Cornell's own 49% and 45%, beside the purple +4 marker. | GVT's averages .49 and .45 (row 16); 49 − 45 = 4 points. | M&S 2018 §3.1 |
+| 40 | On screen: "49 − 45 = +4" written from Cornell's own 49% and 45%, beside the purple +4 marker, and kept beside it under the +12 brace to the end of the payoff (round-6 revision: the working is no longer dropped). | GVT's averages .49 and .45 (row 16); 49 − 45 = 4 points. | M&S 2018 §3.1 |
 | 41 | Difference axis: −10, −5, 0, +5, +10 points on the same tick marks as the 0–100% share axis (0.45 units per point); the 46% / 54% cursors run on the 0–100% axis (no 40–60% zoom). | Tick positions asserted in `scene.py`; −8 is drawn at −8.0 (exact −7.94, row 17b). | — |
 | 42 | Landing: blue dot on the one-half line tagged "its rows average 1/2"; the hit/hit/miss/hit row dims to 30% as it appears. | Same claim as row 23: the shooter's test score is an average over its rows, not one 4-shot row (round-6 substance fix 3). | rows 6, 23 |
 | — | **Removed:** the simulated 100-shot record (row 30) and its rings. | Both critics: it taught the ring rule twice and no count from it was used. No simulated data is on screen any more. | — |
 
 Citations on screen (unchanged, both verified in round 6): "Gilovich et al., 1985 · Cognitive
 Psychology" (17(3):295–314) and "Miller & Sanjurjo, 2018 · Econometrica" (86(6):2019–2047). Round 6:
-GVT's citation is at full strength whenever GVT's own numbers are on screen (49%, 45%, +4), and
-neither citation is dimmed after Cornell's data arrives.
+GVT's citation is at full strength whenever GVT's own numbers are on screen (49%, 45%, +4); the
+M&S line steps back to 30% only while Cornell's own 49 − 45 = +4 is being read, and both are at full
+strength from "Measured from minus eight" to the end of the payoff (substance fix 5).
 
 Round-6 wording trims for the 500-word budget (PRODUCTION_GUIDE §13; no claim changed): "a famous
 study" → "a study"; "So first" → "First"; "two of them are heads" → "two are heads"; "Two rows never
@@ -114,3 +115,18 @@ heads" (whisper had heard "rows"); "after a tails, the test reads high" → "the
 players" (a beat-initial "Cornell's" was heard as "Daniel's"). Payoff, on screen: "the obvious
 guess" (ink) labels the one-half line while both cursors sit on it and rides down with it to the
 zero gap, i.e. what GVT's test assumed a random shooter reads (row 16: +4 was read against zero).
+
+## Round-7 revision: new, reworded or removed claims
+
+No claim was found wrong in round 7 (both critics re-derived every number and re-checked both
+citations). Every value below is recomputed by `check_numbers.py`; the one new empirical item
+(p = .49) was re-checked against the paper's text this round.
+
+| # | Claim (as spoken / shown) | Verification | Source |
+|---|---|---|---|
+| 43 | "The study found plus four, too close to zero to count, so no hot hand." (was "The study took that plus four to mean no hot hand.") On screen, under "49 − 45 = +4": "vs 0: p = .49" (grey), from "zero" until the chart re-centres (≈ 3.5 s). | M&S 2018 §3.1, *Results*: "As indicated in GVT, players on average hit .49 when on a hit streak, versus .45 when on a miss streak. GVT's paired t-test finds the difference to be statistically indistinguishable from zero, and we replicate this result (p=.49)." Checked this round in the arXiv HTML (1902.01265v1 §3.1) and the Melbourne repository PDF. The p-value is M&S's replication of GVT's test, so the M&S citation now stays at full strength (it no longer steps back) while it is on screen; GVT's citation is also at full. "Too close to zero to count" = statistically indistinguishable from zero. | M&S 2018 §3.1 |
+| 44 | On screen at 0:57, beside the live readout: "17/42 = 40.5%". | 17/42 = 0.404762 → 40.5% to one decimal (the readout's own precision). Written as the narration says "seventeen out of forty two"; it leaves at "Gather" (1:07). | arithmetic (row 6) |
+| 45 | The share axis becomes the gap axis by a ×5 zoom about the dashed 50% line (2:44–2:46). | Share axis: 9.0 units per 100 points = 0.09 units/point; gap axis: PT = 0.45 units/point, so the zoom is exactly ×5 (the critics' "×10" read the gap as 0.36 units; it is 8 × 0.09 = 0.72). The after-misses cursor sits on 50% before the zoom, so the after-hits cursor at 42% (8 points left) lands on −8 = gx(−8) = C − 3.6. The old ticks 0/25/75/100% run outward and leave; the new ticks −10/−5/+5/+10 grow out of the centre to the same five tick positions (asserted in `scene.py`); "50%" hands over to "0" in place. | arithmetic; `scene.py` |
+| 46 | "Longer records shrink it, but a hundred shots isn't long." One ghost of the −8 marker slides to its 1,000-shot place (−0.71), labelled "1,000 shots", and back. | As row 18 (exact DP: −7.935 at n = 100, −0.708 at n = 1,000, k = 3). | M&S 2018 abstract; `check_numbers.py` §2 |
+| — | **Removed:** "Score every row the same way." (the scoring cascade runs silently) and "Longer streaks grow the bias." with the 1- and 2-hit ghost ticks and their "hits in a row" legend. | Concision (round-7 craft fix 6). The streak-length claim (row 18, first half) is no longer made. | — |
+| — | The +4 marker's tag is now the header itself, "Cornell, 1985" (it travels down from the top), so "Cornell" is printed once. | Same facts as row 15. | — |

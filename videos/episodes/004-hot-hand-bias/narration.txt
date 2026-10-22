@@ -30,14 +30,14 @@
 
 [01:57.6] Now score the flip after each tails. Swap heads and tails, and the strip flips over one half: the test reads high, twenty five out of forty two.
 
-[02:08.5] Subtract the averages: a fair coin shows a gap of minus nineteen points.
+[02:09.4] Subtract the averages: a fair coin shows a gap of minus nineteen points.
 
-[02:14.8] The nineteen eighty five study ran the same comparison on twenty six Cornell players: up to a hundred shots each, from where they'd hit about half. After three hits, versus after three misses.
+[02:15.6] The nineteen eighty five study ran the same comparison on twenty six Cornell players: up to a hundred shots each, from where they'd hit about half. After three hits, versus after three misses.
 
-[02:29.2] For a random shooter, the same crowding pulls after hits down to forty six percent on average, and after misses up to fifty four. [pause 0.45] Miller and Sanjurjo's twenty eighteen paper puts the gap at about minus eight points. [pause 0.9] Longer streaks grow the bias. [pause 0.9] Longer records shrink it, [pause 0.5] but a hundred shots isn't long.
+[02:30.0] For a random shooter, the same crowding pulls after hits down to forty six percent on average, and after misses up to fifty four. [pause 0.45] Miller and Sanjurjo's twenty eighteen paper puts the gap at about minus eight points. [pause 0.9] Longer streaks grow the bias. [pause 0.9] Longer records shrink it, [pause 0.5] but a hundred shots isn't long.
 
-[02:52.9] The Cornell players hit forty nine percent after three hits, and forty five after three misses. The study took that plus four [pause 0.3] to mean no hot hand.
+[02:53.8] The Cornell players hit forty nine percent after three hits, and forty five after three misses. The study took that plus four [pause 0.3] to mean no hot hand.
 
-[03:05.4] Measured from minus eight, it's twelve points hot. [pause 0.9] That's evidence for a hot hand in a gym, not proof it survives defenders in a game.
+[03:06.3] Measured from minus eight, it's twelve points hot. [pause 0.9] That's evidence for a hot hand in a gym, not proof it survives defenders in a game.
 
-[03:16.7] One half [pause 0.15] is what a fair coin does. [pause 0.5] Seventeen out of forty two is what this test sees. A fifty percent shooter [pause 0.3] who averages one half on this test [pause 0.2] is already running hot.
+[03:17.3] One half [pause 0.15] is what a fair coin does. [pause 0.5] Seventeen out of forty two is what this test sees. A fifty percent shooter [pause 0.3] who averages one half on this test [pause 0.2] is already running hot.

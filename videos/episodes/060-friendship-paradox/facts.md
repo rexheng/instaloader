@@ -172,3 +172,11 @@ on-screen values and citations are the ones already sourced above.
 | Landing: "Betty looks at her one friend, Sue, and sees four." Betty's YELLOW token travels the Betty–Sue friendship, lands on Sue and reads 4. | Betty's only friend is Sue; Sue has 4 friends (Feld: "Betty's only friend, Sue"). As everywhere in the episode, a token reads the friend count of the girl it lands on. | Feld 1991 |
 | "About six hundred thirty five: the spread term is more than twice the mean." ("itself" cut) | 635 − 190 = 445 > 2 × 190 = 380. | Ugander et al. 2011 |
 | Text-grade grey is now the series GRAY #A2AAB5 (7.7:1 on BG); lines use AXIS #8B939E. | Toolkit style.py (Oct 2026). | presentation |
+
+## Round 6c (render and frame pass; no new claims)
+
+No number, claim or citation changed. The one round-6 addition, Ugander et al.'s "92.7 % of users
+have less friends than the average friend count of their friends", was re-checked once more
+(22 Oct 2026) in the ar5iv HTML of arXiv:1111.4503: "For completeness, we also note that 92.7% of
+users have less friends than the average friend count of their friends." Spoken as "ninety three
+percent", shown as 92.7 % under the Ugander citation.
