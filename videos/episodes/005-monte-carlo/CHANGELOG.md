@@ -183,3 +183,71 @@ misses = ½√N; per dart ½/√N) and #20a (Glasserman §1.1.1 quote for O(n^(�
 than N^(−1/2) for d > 4, matching the chart's crossover between d = 3 and 6). #12 and #26 reworded; a round-3
 resolutions section explains why the cell-width variant of the laws was not used (1/N^(1/d) = 0.50 at d = 20 while
 the integer grid's cell is the whole box).
+
+## Round 5 revisions
+
+Round-5 critics (files round5-craft.md / round5-substance.md, which review the 01:25 cut): craft 8.2, substance 8.5,
+no caps, no factual errors (every number and all three citations re-verified by both). Both said "reaches 9 narrowly".
+
+**Plan of the climb (BAR §3 "9" anchors vs the round-5 cut), written before editing.**
+- Hook 8.5 -> 9 ("viewer commits to a likely-wrong prediction by 0:12; ... the ending re-sees the first frame"): the
+  first 5 s were 100 static grey axes and an abstract "average a function"; the stake arrived at 0:22. Upgrade: the
+  axes sweep in left to right while a YELLOW "d = 1 -> 100" counter counts them, and the first sentence carries the
+  stake ("to price an option on a hundred stocks, an average over a hundred inputs", Glasserman on screen from 0:02).
+- Clarity 8-8.5 -> 9 ("viewer could re-derive it after one watch; assumptions stated"): (a) the ball's radius grew
+  silently (0.80 -> 5.77) and collided with the radius-one limit beat; now said ("grown just enough"), shown (a GRAY
+  "ball radius" row, the gauges' "= 0.80²" / "= 5.77²") and cashed in ("Keep the radius at one instead");
+  (b) the diagonal's cause was unnamed; now "all hundred coordinates move in lockstep", shown by one flat line sliding
+  as a whole, and contrasted with the dart ("A dart's coordinates are drawn independently"); (c) √N halves -> ½/√N
+  skipped the divide-by-N; now an explicit chain (√N·½)/N -> ½/√N with the cancelled √N flagged; (d) the two laws were
+  never cashed in; now "The exponents tie at four dimensions, near where our lines crossed", with N^(−2/d) = N^(−1/2)
+  at d = 4 and a YELLOW d = 4 marker on the returning chart; (e) one name, "typical miss", for the estimate's spread
+  (formula, chart axis "miss", dashed line).
+- Visual 8-8.5 -> 9 ("one focal point per frame"): the 26 s formula-only stretch is replaced by laws above a compact
+  copy of the dimension chart, and the 0.05-point answer drops from the formula onto the chart's dashed line; the
+  histograms no longer share their row with the coin line (it waits at 30 % above them); the random walk is ~1.4x
+  larger with thicker steps.
+- Motion 8-8.5 -> 9 ("every motion encodes a relation"): no glyph-scramble (the chart's grid dots become the 3x3
+  grid-search dots and its dart dots the nine random trials); no false axis morph into the limit chart (the
+  Bergstra & Bengio panel fades out completely before the new axes are drawn); nothing slides through fading labels.
+- Audio 8.5 -> 9: the chart -> squares unfold now happens before "Look at the shadows", so the shadows drop on the
+  word; "16 halves / if they never cancelled" holds through a 0.6 s pause.
+- Concision 7.5-8 -> 9: cut "Pricing an option ... is this kind of average", "Hold that thought", "in every dimension",
+  "just as wide" (merged), "Two runs in three land closer; all six of ours did" (the six dots under the dashed line
+  show it); added sentences each carry a new step (radius, lockstep, divide by N, the d = 4 tie).
+
+**What changed, by critic fix.**
+- Craft 12 / substance 2 (hook, stakes): first sentence "A million evaluations to price an option on a hundred
+  stocks: an average over a hundred inputs. An even grid feels thorough." The 100 axes sweep in left to right while a
+  YELLOW counter "d = 1 -> 100" counts them (lands on "a hundred stocks"); "e.g. an option on 100 stocks" + Glasserman
+  from 0:02; the separate stakes sentence is gone. The question still ends at 0:11.3 with a 1.5 s hold.
+- Substance 6: "Since Metropolis and Ulam's 1949 paper, the standard tool has been random points" with Glasserman and
+  M&U stacked bottom-left (≈5 s). Craft 4 / substance 4: "Hold that thought" cut.
+- Substance 1: "a ball, grown just enough to cover exactly half the box" with "ball radius 0.80 -> 0.98" ticking beside
+  the cube; GRAY "ball radius" row (0.80 ... 5.77) under the chart; gauges "> 0.64 = 0.80²" and "< 33.3 = 5.77²";
+  limit beat "Fix the radius at one, and by thirty dimensions the ball fills ...".
+- Substance 4/5, craft 4: B8 "just the centre" (no "just one:"), B9 "two values on nineteen axes", "The darts stay
+  under a tenth of a point" (no "in every dimension").
+- Craft 9: the chart -> squares unfold runs before "Look at the shadows", so the rails and shadows land on the word.
+- Craft 3: "...and still miss by eight points: their coordinates move in lockstep" while the one flat line slides up
+  and back as a whole; B13 opens "A dart's coordinates are drawn independently", with the diagonal's flat line kept at
+  30 % and flashed against the dart's jagged polyline.
+- Craft 5: during the histograms the coin line waits at 30 % above them (one focal point); histograms 10 % wider;
+  "In two dimensions or a hundred, the estimates spread this wide" grows both brackets together.
+- Craft 6, 10, 1: walk ≈1.4x larger (0.42 x 0.21 steps, 6 px arrows), coin line full size lower right; "16 halves /
+  if they never cancelled" holds through a 0.6 s pause; the explicit chain "typical miss = (√N · ½)/N" (√N from the
+  walk's label, ½ from the coin's bracket, N from "N halves") -> "½/√N" with the numerator's √N dropping into the N,
+  narrated "N darts stray about root N halves. Divide by the N darts: a half over root N."
+- Craft 2, 11 / substance 3, 8, 10: the walk dims to 30 % (no slide through fading labels); the darts' law sits top
+  left ("random darts"), σ-swap, "no d"; the grid's law top right ("grid, smooth f: miss ∝ N^(−2/d)", Glasserman
+  §1.1); "The exponents tie at four dimensions, near where our lines crossed": copies of N^(−2/d) and √N build
+  "N^(−2/d) = N^(−1/2) at d = 4" while a compact copy of the dimension chart is drawn beneath, and a YELLOW dashed
+  d = 4 marker rises where the lines cross (segments cross at d ≈ 4.6). The prediction is computed above that chart and
+  "0.05 points" drops onto its new dashed "typical miss" line; the six dart dots (all under it) flash. "Two runs in
+  three ..." cut. One name throughout: "typical miss" (formula, dashed line), "miss" (grid law, chart axis).
+- Craft 7 / substance 7: no curve-to-word morph; the chart fades while its grid dots become the nine grid trials and
+  its dart dots the nine random trials; the squares are drawn after the fade; "random search" / "grid search" are
+  written on those words.
+- Craft 8 / substance 9: the Bergstra & Bengio panel fades out completely (0.5 s) before the limit chart's axes are
+  drawn; no axis morph.
+- Narrator 0.86 -> 0.87, boundary pause 0.6 -> 0.5 s: runtime 3:57 -> about 3:51.

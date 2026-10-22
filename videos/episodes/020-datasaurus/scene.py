@@ -235,6 +235,19 @@ def lane_path(cx, src, dst, rise=0.0):
     return pf
 
 
+def lift_path(src, dst, up=1.0, arrive=(0.0, 0.0)):
+    """path_func for ReplacementTransform(src_copy, dst): rise straight up out of the source's
+    row first (so the copy never drags across its neighbours in a table), then travel, arriving
+    along `arrive`. Constant offsets for every glyph, so the copy stays legible in flight."""
+    U = np.array([0.0, up, 0.0])
+    V = np.array([arrive[0], arrive[1], 0.0])
+
+    def pf(s, e, a):
+        b = 1 - a
+        return b ** 3 * s + 3 * a * b * b * (s + U) + 3 * a * a * b * (e + V) + a ** 3 * e
+    return pf
+
+
 def item(sym, val, size=36):
     """One readout entry 'sym = val' (symbol in ink, value in yellow)."""
     m = MathTex(sym, "=", val, font_size=size)
@@ -612,9 +625,18 @@ class Episode(NarratedScene):
             beat.wait_until("averages", offset=-0.1)
             self.play(flag(VGroup(tgts[0], tgts[1])), run_time=0.8)
             beat.wait_until("single", offset=-0.1)
-            cen_c = cen_y.copy()
-            self.play(TransformFromCopy(VGroup(tgts[0], tgts[1]), cen_c), run_time=1.0)
-            self.remove(cen_c)
+            # each average travels intact (on an opaque patch) to the corner beside the dot,
+            # then settles into it; one after the other, so the two never overlap in flight
+            park = cen_y.get_center() + RIGHT * 0.2 + UP * 0.2
+            into = []
+            for t_ in (tgts[0], tgts[1]):
+                c_ = t_.copy()
+                c_.add_background_rectangle(color=BG, opacity=1.0, buff=0.05)
+                self.add(c_)
+                into.append(Succession(
+                    c_.animate(run_time=0.5).scale(0.85).move_to(park, aligned_edge=DL),
+                    FadeOut(c_, target_position=cen_y.get_center(), scale=0.25, run_time=0.3)))
+            self.play(LaggedStart(*into, lag_ratio=0.45), run_time=1.16)
             beat.wait_until("balance", offset=-0.1)
             self.play(flag(cen_y), run_time=0.8)
 
@@ -638,8 +660,10 @@ class Episode(NarratedScene):
             self.play(flag(VGroup(tgts[2], tgts[3])), run_time=0.8)
             beat.wait_until("reach", offset=-0.15)
             self.add(c_sx, c_sy)
-            self.play(c_sx.animate.scale(0.85).move_to(c_sx_to),
-                      c_sy.animate.scale(0.85).move_to(c_sy_to), run_time=1.0)
+            # staggered: their straight paths cross, so 16.76 is home before 26.93 gets there
+            self.play(LaggedStart(c_sx.animate.scale(0.85).move_to(c_sx_to),
+                                  c_sy.animate.scale(0.85).move_to(c_sy_to), lag_ratio=0.5),
+                      run_time=1.1)
             beat.wait_until("out", offset=-0.2)
             self.play(Create(seg_x), Create(seg_y), run_time=0.6)
             self.play(FadeOut(c_sx, scale=0.8), FadeOut(c_sy, scale=0.8), run_time=0.4)
@@ -723,6 +747,14 @@ class Episode(NarratedScene):
         def place_labels(r):
             place_rs(r)
             place_live(r)
+
+        # once "r s_y" names the rise, the live r label steps up to the box's top-right corner
+        # (it names the ellipse being drawn, not the rise), so the rise never has two labels
+        corner_l = ax.c2p(wall_x, T[1] + T[3]) + RIGHT * 0.25
+
+        def place_live_corner(r):
+            r_live[1].set_value(r)
+            r_live.move_to(corner_l, aligned_edge=LEFT)
         for r_chk in (float(T[4]), 0.0, 0.4, 0.8):           # settled states of the sweep
             place_labels(r_chk)
             s_chk = (T[0], T[1], T[2], T[3], r_chk)
@@ -738,6 +770,15 @@ class Episode(NarratedScene):
                               what=f"B9 s_x label at r={r_chk:.2f}")
         place_labels(0.8)
         require_clear(VGroup(rs_lbl, r_live), chords, mids, what="B9 labels vs slices")
+        for r_chk in (0.8, 0.4, 0.0, float(T[4])):           # the corner label, sweeping back
+            place_live_corner(r_chk)
+            place_rs(r_chk)
+            require_clear(r_live, ell_mob(ax, (T[0], T[1], T[2], T[3], r_chk)), box_mob(ax, T),
+                          bfl_line(r_chk), rs_lbl, rise_line(r_chk),
+                          Dot(ax.c2p(wall_x, T[1] + r_chk * T[3]), radius=0.075),
+                          VGroup(*syms, *eqs, *tgts, *self.nows),
+                          what=f"B9 corner r label at r={r_chk:.2f}")
+            require_safe(r_live, f"B9 corner r label at r={r_chk:.2f}")
         place_labels(float(T[4]))
 
         with self.narrate("Many ellipses touch all four walls. [pause 0.2] The correlation picks "
@@ -753,10 +794,11 @@ class Episode(NarratedScene):
             beat.wait_until("correlation", offset=-0.1)
             self.play(flag(tgts[4]), run_time=0.6)
             beat.wait_until("picks", offset=-0.15)
-            self.play(FadeOut(ghosts), AnimationGroup(
-                Create(self.ell), AnimationGroup(TransformFromCopy(tgts[4], tR),
-                                                 FadeIn(tL, scale=0.5)), lag_ratio=0.45),
-                      run_time=1.0)
+            # the ellipse is drawn from its right touch point round to the left one: each touch
+            # dot appears as the stroke reaches the wall (no glyph-to-dot morph across the table)
+            self.play(FadeOut(ghosts), Create(self.ell),
+                      FadeIn(tR, scale=0.4, rate_func=window(0.0, 0.2)),
+                      FadeIn(tL, scale=0.4, rate_func=window(0.45, 0.65)), run_time=1.0)
 
             def sweep(m):
                 s = (T[0], T[1], T[2], T[3], rt.get_value())
@@ -790,7 +832,11 @@ class Episode(NarratedScene):
             beat.wait_until("the wall", offset=-0.1)
             self.play(qv.animate.set_value(1.0), UpdateFromFunc(chords, upd_chords),
                       run_time=beat.until("touch point", offset=-0.15), rate_func=smooth)
-            self.play(FadeOut(chords), FadeOut(mids), flag(tR), run_time=0.7)
+            # the r label steps up to the corner first, so "r s_y" is written into free space
+            r_live.clear_updaters()
+            self.play(FadeOut(chords), FadeOut(mids), flag(tR),
+                      r_live.animate.move_to(corner_l, aligned_edge=LEFT), run_time=0.7)
+            r_live.add_updater(lambda m: place_live_corner(rt.get_value()))
             beat.wait_until("times", offset=-0.3)
             place_rs(rt.get_value())
             self.play(Write(rs_lbl), run_time=0.8)
@@ -800,10 +846,12 @@ class Episode(NarratedScene):
             self.play(rt.animate.set_value(float(T[4])), run_time=1.2, rate_func=smooth)
             for m in (self.ell, tR, tL, rise9, r_live, rs_lbl, bfl):
                 m.clear_updaters()
-            place_labels(float(T[4]))
+            place_rs(float(T[4]))
+            place_live_corner(float(T[4]))
             self.play(FadeOut(r_live), r_row.animate.set_opacity(1.0),
                       self.count.animate.set_opacity(1.0), run_time=0.45)
-            self.play(Indicate(VGroup(tgts[4], self.nows[4]), color=YELLOW, scale_factor=1.1),
+            # each value flagged on its own (a group Indicate would push 0.06 into its "=")
+            self.play(LaggedStart(flag(tgts[4]), flag(self.nows[4]), lag_ratio=0.25),
                       run_time=0.75)
             beat.wait_until("middle", occurrence=2, offset=-0.3)
             self.play(flag(tR), run_time=0.8)
@@ -836,13 +884,16 @@ class Episode(NarratedScene):
             self.box_op = v
             self.box_r.set_stroke(opacity=v)
             box_y.set_stroke(opacity=v)
+        # the star steps back to 40 % for the hold, so the two ellipses are the one focal point
         with self.narrate("How would you fix the star? [pause 1.5]") as beat:
-            self.play(UpdateFromAlphaFunc(box_y, set_box_op), run_time=0.6)
+            self.play(UpdateFromAlphaFunc(box_y, set_box_op), self.dots.animate.set_opacity(0.4),
+                      run_time=0.6)
 
         with self.narrate("Slide it until the centers meet. Stretch it until the boxes match. "
                           "Then tip it, a slight shear, until it touches the walls at the same "
                           "height.") as beat:
-            self.go(lambda a: lerp(star0, slid, a), beat.until("centers", offset=0.5))
+            self.go(lambda a: lerp(star0, slid, a), beat.until("centers", offset=0.5),
+                    op_from=0.4, op_to=1.0)
             beat.wait_until("Stretch", offset=-0.05)
             self.go(lambda a: lerp(slid, stretched, a), beat.until("boxes", offset=0.5), smooth,
                     UpdateFromAlphaFunc(box_y, lambda m, a: set_box_op(m, min(1.0, a / 0.35),
@@ -895,7 +946,10 @@ class Episode(NarratedScene):
         for name in order:
             cur = match(cur, D[name])
             seq[name] = cur
-        five_cols = VGroup(*[VGroup(tgts[i], self.nows[i], self.marks[i]) for i in range(5)])
+        five_cols = VGroup(*[VGroup(syms[i], eqs[i], tgts[i], self.nows[i], self.marks[i])
+                             for i in range(5)])
+        hl5 = box(five_cols, color=YELLOW, buff=0.14)
+        require_clear(hl5, hdr_t, hdr_n, med_row, what="'these five' box")
         self.live = self.med_live = True
         # one nudge, acted out: a step toward the target circle breaks the numbers, so it is
         # undone
@@ -919,9 +973,11 @@ class Episode(NarratedScene):
             self.geo_live = True
             # our star walks back to the dinosaur with the five held; the readout flashes on "these"
             self.go(self.path_fixed(fixed_star, dino), beat.until("these", offset=-0.1))
-            self.play(LaggedStart(*[flag(c) for c in five_cols], lag_ratio=0.1), run_time=1.0)
+            # "these five numbers": a box round the five rows (as for Anscombe's), not a scale
+            # flash, which would push each value into its "="
+            self.play(Create(hl5), run_time=0.6)
             beat.wait_until("nudges", offset=-0.1)
-            self.play(Create(ring), Create(circ_line), run_time=0.6)
+            self.play(Create(ring), Create(circ_line), FadeOut(hl5), run_time=0.6)
             beat.wait_until("toward", offset=-0.15)
             self.go(lambda a: lerp(dino, nudged, a), 0.45)        # x-bar and s_x break
             beat.wait_until("undoes", offset=-0.1)
@@ -1113,11 +1169,15 @@ class Episode(NarratedScene):
             beat.wait_until("correlation", offset=-0.15)
             self.play(flag(an[4]), run_time=0.8)
             beat.wait_until("touches", offset=-0.5)
-            # r is level with the touch point: a short flight straight left
-            tch_c = tR.copy()
-            self.play(TransformFromCopy(an[4], tch_c), run_time=1.0)
-            self.remove(tch_c)
-            self.play(flag(tR), run_time=0.7)
+            # r is level with the touch point: its value travels straight left, intact, and
+            # settles into the touch dot (no glyph-to-dot morph)
+            c82 = an[4][2].copy()
+            d82 = c82.copy().next_to(tR, RIGHT, buff=0.3)
+            # up out of its row first (never across "r ="), then left to the touch dot
+            self.play(ReplacementTransform(c82, d82, path_func=lift_path(c82, d82, 1.0, (0.6, 0.0))),
+                      run_time=0.7)
+            self.play(FadeOut(d82, target_position=tR.get_center(), scale=0.3), flag(tR),
+                      run_time=0.6)
 
         # B9's rule, recognised: one s_x across, r s_y up, through the centre and the touch point.
         # The labels come from Anscombe's readout; then slope = rise / run is built from them.
@@ -1127,12 +1187,26 @@ class Episode(NarratedScene):
             self.play(readout_a.animate.shift(LOW), run_time=0.8)
             beat.wait_until("one", offset=-0.45)
             self.play(Indicate(an[2][0], color=YELLOW, scale_factor=1.25), run_time=0.35)
-            self.play(Create(run_seg), TransformFromCopy(an[2][0], lbl_run), run_time=0.8)
+            # each symbol copy lifts straight out of the readout, then travels to its segment.
+            # The copies are built with the same structure as their targets (a whole MathTex
+            # into a whole MathTex, a part into a part), so every glyph maps onto itself and
+            # the symbol stays legible in flight
+            p_sx = MathTex("s_x", font_size=36).move_to(an[2][0])
+            self.play(Create(run_seg), ReplacementTransform(
+                p_sx, lbl_run, path_func=lift_path(p_sx, lbl_run, 1.0, (0.6, 0.0))),
+                run_time=0.8)
             beat.wait_until("r ess", offset=-0.4)
-            self.play(Indicate(VGroup(an[4][0], an[3][0]), color=YELLOW, scale_factor=1.25),
-                      run_time=0.35)
-            self.play(Create(rise_seg), TransformFromCopy(an[4][0], lbl_rise[0]),
-                      TransformFromCopy(an[3][0], lbl_rise[1]), run_time=0.8)
+            # each symbol flagged about its own centre (a group Indicate pushed s_y into its "=")
+            self.play(Indicate(an[4][0], color=YELLOW, scale_factor=1.25),
+                      Indicate(an[3][0], color=YELLOW, scale_factor=1.25), run_time=0.35)
+            p_r = MathTex("r", font_size=36).move_to(an[4][0])[0]
+            p_sy = MathTex("s_y", font_size=36).move_to(an[3][0])[0]
+            self.play(Create(rise_seg),
+                      ReplacementTransform(p_r, lbl_rise[0],
+                                           path_func=lift_path(p_r, lbl_rise[0], 1.0)),
+                      ReplacementTransform(p_sy, lbl_rise[1],
+                                           path_func=lift_path(p_sy, lbl_rise[1], 1.0)),
+                      run_time=0.8)
             beat.wait_until("center", offset=-0.2)
             self.play(flag(cen_y), run_time=0.5)
             self.play(GrowFromPoint(line_a, cen_y.get_center()),
@@ -1155,13 +1229,19 @@ class Episode(NarratedScene):
             beat.wait_until("Plug", offset=-0.5)
             srcs = [an[4][2], an[3][2], an[2][2]]
             dsts = [sub_n1, sub_n2, sub_den]
-            self.play(Write(s_eq), Create(sub_bar),
-                      Indicate(srcs[0], color=YELLOW, scale_factor=1.15), run_time=0.4)
-            self.play(TransformFromCopy(srcs[0], dsts[0]), Write(sub_x),
-                      Indicate(srcs[1], color=YELLOW, scale_factor=1.15), run_time=0.45)
-            self.play(TransformFromCopy(srcs[1], dsts[1]),
-                      Indicate(srcs[2], color=YELLOW, scale_factor=1.15), run_time=0.45)
-            self.play(TransformFromCopy(srcs[2], dsts[2]), run_time=0.45)
+            self.play(Write(s_eq), Indicate(srcs[0], color=YELLOW, scale_factor=1.15),
+                      run_time=0.4)
+            # the fraction bar grows with the first value's flight: never an empty template
+            # each value: a whole-MathTex copy (same structure as its target, so the digits
+            # map onto themselves) lifts out of the readout row, then travels up to its slot
+            def fly_val(k):
+                pr_ = MathTex(an_vals[(4, 3, 2)[k]], font_size=36, color=YELLOW).move_to(srcs[k])
+                return ReplacementTransform(pr_, dsts[k], path_func=lift_path(pr_, dsts[k], 0.6))
+            self.play(fly_val(0), Create(sub_bar), Write(sub_x),
+                      Indicate(srcs[1], color=YELLOW, scale_factor=1.15), run_time=0.55)
+            self.play(fly_val(1), Indicate(srcs[2], color=YELLOW, scale_factor=1.15),
+                      run_time=0.55)
+            self.play(fly_val(2), run_time=0.55)
             beat.wait_until("half", offset=-0.45)
             self.play(Write(sub_ap), Write(sub_val), run_time=0.5)
             self.play(flag(sub_val), run_time=0.8)
@@ -1351,11 +1431,14 @@ class Episode(NarratedScene):
                 src_ = table_cold[i_][2]
                 flights.append(ReplacementTransform(src_.copy(), dst_,
                                                     path_func=lane_path(6.75, src_, dst_, 0.8)))
-            self.play(f1[1].animate(rate_func=window(0.0, 0.4)).set_opacity(0),
-                      f1[3].animate(rate_func=window(0.0, 0.4)).set_opacity(0),
-                      Transform(f1[2], v_bar, rate_func=window(0.0, 0.4)),
+            # each symbol gives way only as its value arrives (numerator values land at about
+            # 0.62 and 0.81 of the move, the denominator's at 1.0), so the formula never reads
+            # as an empty template
+            self.play(f1[1].animate(rate_func=window(0.4, 0.72)).set_opacity(0),
+                      f1[3].animate(rate_func=window(0.68, 0.95)).set_opacity(0),
+                      Transform(f1[2], v_bar, rate_func=window(0.25, 0.6)),
                       LaggedStart(*flights, lag_ratio=0.3),
-                      FadeIn(v_x, rate_func=window(0.5, 0.8)), run_time=1.3)
+                      FadeIn(v_x, rate_func=window(0.55, 0.8)), run_time=1.3)
             beat.wait_until("slope", offset=-0.35)
             self.play(GrowFromPoint(line_l, cen_l), run_time=0.7)
             beat.wait_until("minus", offset=-0.15)
@@ -1370,9 +1453,13 @@ class Episode(NarratedScene):
                       VGroup(ell_l, line_l).animate(rate_func=there_and_back).set_stroke(width=7),
                       run_time=0.9)
             beat.wait_until("Most", offset=-0.1)
+            # the line steps back to 30 % and the ellipse to 60 %, so the squeezed copy, the bar
+            # and the error bar are the only full-strength strokes where they meet
             self.play(FadeIn(cite_w2), FadeIn(pct86_l, shift=0.1 * DOWN),
                       FadeOut(VGroup(f1, v_num, v_den, v_ap, v_val)),
-                      self.dots.animate.set_opacity(0.15), run_time=0.6)
+                      self.dots.animate.set_opacity(0.15),
+                      line_l.animate.set_stroke(opacity=0.3),
+                      ell_l.animate.set_stroke(opacity=0.6), run_time=0.6)
             beat.wait_until("bar graph", offset=-0.15)
             # the ellipse squeezed to its vertical extent is exactly the error bar, y-bar +- s_y
             self.add(squash)
@@ -1386,6 +1473,7 @@ class Episode(NarratedScene):
                     bar_l.animate.shift(bar_dx).set_fill(opacity=0.09).set_stroke(opacity=0.4),
                     err_l.animate.shift(bar_dx).set_stroke(opacity=0.4),
                     FadeOut(pct86_l, rate_func=window(0.0, 0.35)),
+                    line_l.animate.set_stroke(opacity=1.0), ell_l.animate.set_stroke(opacity=1.0),
                     color_from=GRAY, color_to=BLUE, op_from=0.15, op_to=1.0)
 
         # clean exit: the plot leaves first, so the card never sits on top of the data

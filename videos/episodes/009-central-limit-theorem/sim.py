@@ -46,16 +46,21 @@ def main() -> dict:
 
     # ------------------------------------------------------------- averages of n waits
     rng = np.random.default_rng(1157)
-    # window = mean -3.5 sd .. mean +4 sd (clamped at 0), so each bell is drawn whole
-    groups = {4: (0, 30), 16: (1.25, 20), 64: (5.625, 15)}
+    # window = mean -3.5 sd .. mean +4 sd, so each bell is drawn whole (round 5: no longer
+    # clamped at 0 for n = 4: the bell's left tail below 0 is drawn, dimmed; no average is < 0).
+    # Every window is 7.5 sd wide in 24 bins, so the three bells have the same height.
+    groups = {4: (-7.5, 30), 16: (1.25, 20), 64: (5.625, 15)}
     for n, (lo, hi) in groups.items():
         means = rng.exponential(MEAN, (10_000, n)).mean(1)
-        edges = np.linspace(lo, hi, 25)                       # 24 bins = 0.25 sd each
+        edges = np.linspace(lo, hi, 25)                       # 24 bins = 0.3125 sd each
         out[f"avg{n}_edges"] = edges
         out[f"avg{n}_shares"] = shares(means, edges)
         out[f"avg{n}_skew"] = skew(means)
         sd = MEAN / np.sqrt(n)
         out[f"avg{n}_bell"] = np.diff(stats.norm(MEAN, sd).cdf(edges))
+        d = means - means.mean()
+        print(f"  sample excess kurtosis of these averages {(d**4).mean() / (d**2).mean()**2 - 3:.3f} "
+              f"(exact 6/n = {6 / n:.4f}; the screen shows the exact values)")
         print(f"averages of {n:2d}: skew {skew(means):.3f} (exact {2 / np.sqrt(n):.3f}), "
               f"sd {means.std():.3f} (exact {sd:.3f}), outside window "
               f"{np.mean((means < lo) | (means > hi)):.4f}")

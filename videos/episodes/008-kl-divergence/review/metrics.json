@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/008-kl-divergence/final.mp4",
- "duration_s": 207.433,
+ "duration_s": 210.467,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,66 +8,75 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 9.08,
+ "size_mb": 9.19,
  "integrated_lufs": -14.0,
- "lra_lu": 2.2,
- "true_peak_dbtp": -1.6,
+ "lra_lu": 2.3,
+ "true_peak_dbtp": -1.7,
  "leading_silence_s": 0.0,
- "trailing_silence_s": 0.91,
- "longest_internal_silence_s": 1.96,
+ "trailing_silence_s": 0.9,
+ "longest_internal_silence_s": 2.22,
  "silences_over_1_5s": [
   [
-   12.41,
-   14.37
+   12.91,
+   14.87
   ],
   [
-   116.77,
-   118.73
+   121.33,
+   123.3
+  ],
+  [
+   156.71,
+   158.94
   ]
  ],
- "frames": 6223,
- "longest_static_s": 3.63,
+ "frames": 6314,
+ "longest_static_s": 3.7,
  "static_stretches_over_3s": [
   [
-   100.13,
-   103.43,
-   3.3
+   39.9,
+   42.97,
+   3.07
   ],
   [
-   135.33,
-   138.33,
-   3.0
+   59.97,
+   63.3,
+   3.33
   ],
   [
-   166.77,
-   170.4,
-   3.63
+   103.37,
+   107.07,
+   3.7
+  ],
+  [
+   184.07,
+   187.17,
+   3.1
   ]
  ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
  "background_luma": null,
- "transcript_words": 544,
+ "transcript_words": 543,
  "first_word_s": 0,
- "last_word_s": 206.60266,
- "wpm_speech": 163.5,
- "wpm_overall": 157.4,
- "wpm_excluding_all_pauses": 183.4,
+ "last_word_s": 209.63734,
+ "wpm_speech": 162.6,
+ "wpm_overall": 154.8,
+ "wpm_excluding_all_pauses": 183.2,
  "narration_file": "videos/episodes/008-kl-divergence/narration.json",
- "wer": 0.0134,
+ "wer": 0.0211,
  "narration_words": 522,
  "banned_phrase_hits": 0,
  "slop_hits": [],
  "layout_audit": {
-  "count": 0,
+  "count": 10,
   "counts": {
-   "overlap": 0,
-   "clearance": 0,
+   "overlap": 6,
+   "clearance": 4,
    "safe-area": 0,
    "caption-zone": 0
   },
-  "allowed": 0,
-  "checks": 189
+  "allowed": 1,
+  "checks": 196
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -85,166 +94,170 @@
  ],
  "keyframes": [
   {
-   "t": 5.57,
-   "file": "keyframes/kf_01_00-05.6.png"
+   "t": 3.0,
+   "file": "keyframes/kf_01_00-03.0.png"
   },
   {
-   "t": 14.1,
-   "file": "keyframes/kf_02_00-14.1.png"
+   "t": 4.77,
+   "file": "keyframes/kf_02_00-04.8.png"
   },
   {
-   "t": 17.07,
-   "file": "keyframes/kf_03_00-17.1.png"
+   "t": 14.6,
+   "file": "keyframes/kf_03_00-14.6.png"
   },
   {
-   "t": 18.9,
-   "file": "keyframes/kf_04_00-18.9.png"
+   "t": 17.0,
+   "file": "keyframes/kf_04_00-17.0.png"
   },
   {
-   "t": 24.03,
-   "file": "keyframes/kf_05_00-24.0.png"
+   "t": 18.93,
+   "file": "keyframes/kf_05_00-18.9.png"
   },
   {
-   "t": 30.13,
-   "file": "keyframes/kf_06_00-30.1.png"
+   "t": 23.0,
+   "file": "keyframes/kf_06_00-23.0.png"
   },
   {
-   "t": 39.87,
-   "file": "keyframes/kf_07_00-39.9.png"
+   "t": 27.43,
+   "file": "keyframes/kf_07_00-27.4.png"
   },
   {
-   "t": 45.7,
-   "file": "keyframes/kf_08_00-45.7.png"
+   "t": 32.07,
+   "file": "keyframes/kf_08_00-32.1.png"
   },
   {
-   "t": 53.33,
-   "file": "keyframes/kf_09_00-53.3.png"
+   "t": 48.23,
+   "file": "keyframes/kf_09_00-48.2.png"
   },
   {
-   "t": 54.9,
-   "file": "keyframes/kf_10_00-54.9.png"
+   "t": 55.73,
+   "file": "keyframes/kf_10_00-55.7.png"
   },
   {
-   "t": 60.27,
-   "file": "keyframes/kf_11_01-00.3.png"
+   "t": 57.3,
+   "file": "keyframes/kf_11_00-57.3.png"
   },
   {
    "t": 62.47,
    "file": "keyframes/kf_12_01-02.5.png"
   },
   {
-   "t": 65.13,
-   "file": "keyframes/kf_13_01-05.1.png"
+   "t": 64.87,
+   "file": "keyframes/kf_13_01-04.9.png"
   },
   {
-   "t": 68.1,
-   "file": "keyframes/kf_14_01-08.1.png"
+   "t": 67.63,
+   "file": "keyframes/kf_14_01-07.6.png"
   },
   {
-   "t": 80.3,
-   "file": "keyframes/kf_15_01-20.3.png"
+   "t": 70.5,
+   "file": "keyframes/kf_15_01-10.5.png"
   },
   {
-   "t": 81.17,
-   "file": "keyframes/kf_16_01-21.2.png"
+   "t": 82.7,
+   "file": "keyframes/kf_16_01-22.7.png"
   },
   {
-   "t": 83.9,
-   "file": "keyframes/kf_17_01-23.9.png"
+   "t": 86.0,
+   "file": "keyframes/kf_17_01-26.0.png"
   },
   {
-   "t": 89.63,
-   "file": "keyframes/kf_18_01-29.6.png"
+   "t": 102.2,
+   "file": "keyframes/kf_18_01-42.2.png"
   },
   {
-   "t": 98.9,
-   "file": "keyframes/kf_19_01-38.9.png"
+   "t": 119.93,
+   "file": "keyframes/kf_19_01-59.9.png"
   },
   {
-   "t": 102.6,
-   "file": "keyframes/kf_20_01-42.6.png"
+   "t": 122.67,
+   "file": "keyframes/kf_20_02-02.7.png"
   },
   {
-   "t": 109.27,
-   "file": "keyframes/kf_21_01-49.3.png"
+   "t": 125.07,
+   "file": "keyframes/kf_21_02-05.1.png"
   },
   {
-   "t": 120.4,
-   "file": "keyframes/kf_22_02-00.4.png"
+   "t": 135.13,
+   "file": "keyframes/kf_22_02-15.1.png"
   },
   {
-   "t": 130.6,
-   "file": "keyframes/kf_23_02-10.6.png"
+   "t": 141.97,
+   "file": "keyframes/kf_23_02-22.0.png"
   },
   {
-   "t": 139.63,
-   "file": "keyframes/kf_24_02-19.6.png"
+   "t": 144.13,
+   "file": "keyframes/kf_24_02-24.1.png"
   },
   {
-   "t": 146.87,
-   "file": "keyframes/kf_25_02-26.9.png"
+   "t": 151.43,
+   "file": "keyframes/kf_25_02-31.4.png"
   },
   {
-   "t": 156.27,
-   "file": "keyframes/kf_26_02-36.3.png"
+   "t": 162.6,
+   "file": "keyframes/kf_26_02-42.6.png"
   },
   {
-   "t": 159.57,
-   "file": "keyframes/kf_27_02-39.6.png"
+   "t": 167.77,
+   "file": "keyframes/kf_27_02-47.8.png"
   },
   {
-   "t": 164.0,
-   "file": "keyframes/kf_28_02-44.0.png"
+   "t": 171.13,
+   "file": "keyframes/kf_28_02-51.1.png"
   },
   {
-   "t": 165.87,
-   "file": "keyframes/kf_29_02-45.9.png"
+   "t": 173.07,
+   "file": "keyframes/kf_29_02-53.1.png"
   },
   {
-   "t": 169.47,
-   "file": "keyframes/kf_30_02-49.5.png"
+   "t": 176.93,
+   "file": "keyframes/kf_30_02-56.9.png"
   },
   {
-   "t": 172.57,
-   "file": "keyframes/kf_31_02-52.6.png"
+   "t": 180.03,
+   "file": "keyframes/kf_31_03-00.0.png"
   },
   {
-   "t": 178.2,
-   "file": "keyframes/kf_32_02-58.2.png"
+   "t": 182.33,
+   "file": "keyframes/kf_32_03-02.3.png"
   },
   {
-   "t": 180.2,
-   "file": "keyframes/kf_33_03-00.2.png"
+   "t": 186.37,
+   "file": "keyframes/kf_33_03-06.4.png"
   },
   {
-   "t": 182.03,
-   "file": "keyframes/kf_34_03-02.0.png"
+   "t": 191.93,
+   "file": "keyframes/kf_34_03-11.9.png"
   },
   {
-   "t": 186.03,
-   "file": "keyframes/kf_35_03-06.0.png"
+   "t": 195.47,
+   "file": "keyframes/kf_35_03-15.5.png"
   },
   {
-   "t": 190.13,
-   "file": "keyframes/kf_36_03-10.1.png"
+   "t": 198.57,
+   "file": "keyframes/kf_36_03-18.6.png"
   },
   {
-   "t": 196.43,
-   "file": "keyframes/kf_37_03-16.4.png"
+   "t": 201.6,
+   "file": "keyframes/kf_37_03-21.6.png"
   },
   {
-   "t": 200.27,
-   "file": "keyframes/kf_38_03-20.3.png"
+   "t": 206.1,
+   "file": "keyframes/kf_38_03-26.1.png"
   },
   {
-   "t": 206.13,
-   "file": "keyframes/kf_39_03-26.1.png"
+   "t": 209.33,
+   "file": "keyframes/kf_39_03-29.3.png"
   },
   {
-   "t": 207.4,
-   "file": "keyframes/kf_40_03-27.4.png"
+   "t": 210.43,
+   "file": "keyframes/kf_40_03-30.4.png"
   }
  ],
- "flags": [],
- "implied_caps": []
+ "flags": [
+  "layout audit: 10 issue(s) — 6 overlapping, 4 < 0.15 apart, 0 outside the safe area, 0 in the caption zone (see 'Layout audit')"
+ ],
+ "implied_caps": [
+  "cap 7 (text overlapping/overflowing, layout audit)"
+ ]
 }

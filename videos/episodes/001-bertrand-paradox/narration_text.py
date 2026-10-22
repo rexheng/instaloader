@@ -32,22 +32,22 @@ LINES = {
            "the third we found.",
     "which": "Three programs, three things spread evenly: rim, radius, area. At random never said "
              "which. [pause 0.8]",
-    "jaynes": "Edwin Jaynes argued that a physical process picks one: straws "
-              "tossed from a standing height can't be aimed, so the answer can't depend on where "
-              "the circle sits or how big it is.",
-    "test": "One rain lands on both circles at once, and each judges with its own gold circle, "
-            "so a fair recipe must score the same on both. Midpoint gives a quarter, then point "
-            "four one. [pause 0.8] Endpoints give a third, then point four seven. [pause 0.8] Only "
-            "the radius program gives a half on both. [pause 0.6]",
+    "jaynes": "Edwin Jaynes argued that a physical process picks one. Straws tossed from a "
+              "standing height can't be aimed, so the answer can't depend on where the circle sits "
+              "or how big it is.",
+    "test": "One rain lands on both circles at once. Each judges with its own gold circle, so a "
+            "fair program must score the same on both. Midpoint gives a quarter, then point four "
+            "one. [pause 1.1] Endpoints give a third, then point four seven. [pause 1.1] Only the "
+            "radius program gives a half on both. [pause 0.9]",
     "tyler": "Jaynes and Charles Tyler tossed real broom straws at a five-inch circle, and the "
              "hundred and twenty-eight that crossed it matched the radius program's flat "
              "spread. [pause 0.8]",
     "classes": "Surveys hide the same two words. Take classes of ten, ten and a hundred. Pick a "
                "class at random, and the average size is forty. Pick a student at random, spread "
                "evenly over students instead of classes, and it's eighty-five. At Stony Brook in "
-               "nineteen seventy-four, those two picks gave forty, and a hundred forty-seven. "
+               "nineteen seventy-four, those two picks gave forty and a hundred forty-seven. "
                "[pause 0.5]",
     "land": "So whatever number you picked, some way of drawing chords makes it right. Name the "
-            "way, and only one is. Forty and a hundred forty-seven are both right, once you say "
-            "who's picked.",
+            "way, and the answer is fixed: a half for tossed straws, a hundred forty-seven for a "
+            "random student.",
 }

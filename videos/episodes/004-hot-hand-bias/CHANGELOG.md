@@ -282,3 +282,97 @@ HTTT's lone tails stretched to a whole one, the yellow sliding onto 40.5%); "tes
 marker 50% → 40.5% → "cold −9.5 points"; the half-turn mirror and the after-hits cursor carried into
 the −8 marker with the axis relabelled in place, ending on the purple +12 brace; the landing on the
 rebuilt cold-open frame with the 16 rows collapsing onto 17/42 and "hot" drawn to the 50% dot.
+
+## Round 5 revisions
+
+Reviews: `reviews/round5-craft.md` (8.1) and `reviews/round5-substance.md` (8.3). No caps. They
+review the same master as round 4 (`round4-craft.md` 8.8, `round4-substance.md` capped at 6 for the
+transient Σᵢ hᵢ/nᵢ = 17/42), so the fixes from all four reviews are applied together.
+
+**Climb plan (BAR §3 "9" anchor → shortfall → upgrade)**
+- *Clarity* ("re-derive after one watch; all numbers check out"): a false mid-build equation
+  (1:44.4–1:45.6); "reads hot" used for the after-tails reading; 8 vs 11 rows not tied to 17/42;
+  the formula pair lived ~3 s. → No "=" until a side is complete; "reads high"; on-screen counts
+  "12 heads · 8 rows" / "12 tails · 11 rows" and "Fewer rows, fewer votes"; Σhᵢ/Σnᵢ built where the
+  pooled half is computed (1:15) so both formulas sit together ≥ 4 s; named "average of ratios" vs
+  "ratio of totals" with the Σ positions flashed.
+- *Visual* ("one focal point; all §5 standards"): cluttered climax frame; empty-lane stretch
+  2:09–2:21; grey text 5.8–6.5:1; purple header over random-shooter content; 20 px table letters.
+  → Table dims and "the obvious guess" text leaves before the formulas; a simulated 100-shot record
+  fills 2:09–2:21; grey text #A9AEB6 (8.1:1); header in ink until Cornell's data; table letters 21.
+- *Motion* ("every motion encodes a relation"): formula held under the §5 minimum; 0:17–0:32 only
+  text events; 2:11–2:21 only header words. → Holds ≥ 3.6 s; coins morph on "basketball shots";
+  arcs re-traced on "this kind of check"; rings on the record's shots after 3 hits / 3 misses; the
+  axis rescales with its tick labels moving (never unlabeled); the payoff axis and dashed line
+  transform into the landing's instead of a dissolve.
+- *Hook*: explicit three-way prediction ("Below, at, or above one half?") with options on the axis.
+- *Audio*: "Sanjurjo" re-phonemized (/sɑnhˈuɹhO/; whisper now returns "Sanjurjo's").
+- *Concision*: "That's one vote per row" and "Count all the flips together first…" cut;
+  "Tails crowd the same way" merged into the mirror line.
+
+**Fixes, by critic item** (r5c = round-5 craft, r5s = round-5 substance, r4c/r4s = round 4)
+- False intermediate equation (r5s 1, r4s 1): the row-average formula is now built as 1/14 + Σ
+  (from the 14 vote outlines), then hᵢ/nᵢ (the 14 row scores fly in whole), and only then "=" next
+  to the 17/42 that was parked at its right on "seventeen out of forty two". The pooled
+  Σᵢhᵢ/Σᵢnᵢ is built at 1:15 ("Total heads over total flips: exactly half"), so the two formulas
+  are born 35 s apart, sit together ≥ 4 s, and its "=" also arrives only once both sides exist.
+- Formula hold, typography and focus (r5c 1, 4; r4c 1, 2; r4s 2, 6): both displaystyle, size 40,
+  "=" signs on one vertical, each beside the strip it computes. On "line them up" the table dims to
+  30% and "the obvious guess" text leaves; the pooled formula dims while the row-average one is
+  built and returns on "instead of the ratio of totals", when the 1/14 Σ and then the two inner Σ
+  pulse (the one structural difference). On the mirror, the 17/42 itself moves up to become the
+  "after heads" lane value; the test's formula returns in the landing beside its marker.
+- Crowding made quantitative (r5c 5): "12 heads · 8 rows" and "12 tails · 11 rows" written as the
+  boxes are counted, then "Fewer rows, fewer votes" with the thin heads slices pulsing. (Not
+  "12 heads ÷ 8 votes": heads hold 17/3 votes, not 8; facts.md row 27.)
+- "reads hot" → "reads high" for the after-tails value (r5c 2); "Tails crowd the same way" → "Now
+  score the flip after each tails", spoken while the second lane is built (r4s 3, r5c 8).
+- Concision (r5c 8, r5s 2): "That's one vote per row" and "Count all the flips together first, and
+  you get one half" are cut.
+- 2:09–2:21 empty lanes (r5c 3, r5s 5): one simulated 100-shot random-shooter record (seed 292,
+  labelled "simulated / random shooter") deals in on "up to a hundred shots each"; blue rings mark
+  the shots after three hits, then after three misses; it fades as the cursors move to 46/54
+  ("on average" added). Lanes and axis title switch to basketball terms on "the same comparison";
+  the 0–100% → 40–60% zoom slides each tick with its label (never unlabeled); the header is built
+  centred and in ink. Substance's alternative (26 purple dots from Table 2) was not used: Table 2's
+  per-player hit rates span .35–.60, off the 40–60% axis, and the record also teaches the test.
+- Purple only with Cornell data (r5c 9, r4c 8): "Cornell, 1985" is ink until "Cornell's players",
+  then turns purple with 49%/45%. The right column fades out when the +12 brace lands (r5s 8).
+- Hook (r5s 4, r4s 4): "Below, at, or above one half?" with "< 1/2", "= 1/2", "> 1/2" on the line;
+  "= 1/2" becomes "the obvious guess". Question ends ≈ 0:12.3.
+- Stakes motion (r5c 6, r4c 5): arcs and rings re-trace on "this kind of check"; coins become
+  hit/miss and the axis title "shots/hits" on "basketball shots" (moved from "Heads are hits",
+  which now pulses the hit words). "ran this same check" → "ran this kind of check" (r4s 5).
+- Contrast (r5c 7, r4c 4): grey text #A9AEB6 (8.1:1); grey shapes unchanged. Table coin letters
+  Text 19 bold, 24.5 px cap height (r5s 7); coin pitch 0.50 and ring radius r + 0.04 keep ≥ 0.15
+  clearance.
+- Landing (r5s 6, r4c 7, r4s 8): the payoff's number line and dashed zero line transform into the
+  share axis and dashed one-half guess (no full dissolve); the sixteen ghost rows fly into
+  (1/14)Σhᵢ/nᵢ beside the 17/42 marker; on "A fifty percent shooter" the row becomes hit/miss and
+  the title "shots/hits"; thicker arrow, "hot" at 38; final hold ≈ 1.3 s.
+- Sanjurjo (r5c 10, r5s 3): /sɑnhˈuɹhO/; whisper now transcribes "Sanjurjo's".
+- Not applied: r5s 9 ("three-hit streaks crowd harder"), optional; it would precede a smaller gap
+  (−8 vs −19) and the ghost ticks already show why. r4c 6 / r4s 7 (drop the reverse hit→H morph):
+  kept, since "a shooter we know is random: a fair coin" is the mapping back.
+
+**Self-review loop.** One preview and four 1080p masters, each followed by frame strips at 3–4 fps
+around every changed transition (§11.6). Found and fixed along the way: table letters at Text 21
+touched their coin rims (now 19, pitch 0.50); the inline 12/24 reached x = 6.45 (now right-aligned
+to its stacked place); the 14 digit flights into hᵢ/nᵢ read as debris (now whole row ratios fly,
+with the pooled formula dimmed while they pass); "26 players" and "up to 100 shots" overlapped
+while the header re-centred; adjacent record rings overlapped; text morphs ("= 1/2" → "the obvious
+guess", H ↔ hit, 17/42 stacked → inline, "after heads" → "after 3 hits", "?" ↔ values, the axis
+title words) showed superposed glyphs mid-way, so every one is now a sequential hand-off (the old
+glyphs leave before the new ones arrive) with no frame holding both.
+
+**Mechanics (final master):** 3:24.0, 152 wpm over speech time (499 words), −14.0 LUFS /
+−2.1 dBTP, leading silence 0.00 s, trailing 1.32 s, longest silence 2.06 s (the planned
+prediction hold), longest static stretch 2.7 s, 0 render warnings, 0 layout-audit issues in 216
+checks, 0 review flags, WER 0.4% (only "a" heard as "one" twice; "Sanjurjo's" now transcribed
+correctly), no banned phrases.
+
+**Kept (all four reviews' keep lists):** the one-vote strip (HHHH's three heads squeezed into one
+vote, HTTT's lone tails stretched to a whole one, the yellow sliding onto 40.5%); "test the test" →
+the live 50% → 40.5% marker → "cold −9.5 points"; the half-turn mirror and the two lanes slid into
+the difference axis, ending on the purple +12 brace with "no defenders"; the landing on the
+cold-open frame, now with the test's formula beside its 17/42 marker.

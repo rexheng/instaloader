@@ -160,3 +160,45 @@ during the swap at 1:48) is treated as a factual error and removed at the root.
   after "moves to three".
 - *Concision 8.5 → 9.* Honest limit merged into two short sentences (≈ 4 s shorter); the landing's
   first line now answers the bet instead of restating the title.
+
+
+## Round 5 revisions
+
+Round-5 critics: craft 8.1, substance 8.1 (no caps). Both reviewed the 23:04 render, which
+predates the round-3 edits above: that revision was interrupted after editing scene.py and was
+never rendered. This round renders those edits together with every round-5 fix.
+
+**Plan of the climb (BAR §3 "9" anchors).**
+- *Hook 8 → 9 ("commits to a likely-wrong prediction by 0:12").* The bet now rests on a stated
+  belief, not on undefined words: `D(data ‖ bell)` writes on the first frame with the curve, its
+  blue "data" slot flashes on "Data first", the arguments arc on "Swap the order", and the wrong
+  belief is voiced as the symmetry of a distance: "If closeness is a distance, order can't
+  matter: it stays at one. Or does it move to two, or three?" Stakes made concrete: "Every
+  maximum-likelihood fit shrinks it with the data first, and Bayesian machine learning shrinks
+  it with the order flipped." The answer (yellow 3) now persists on B's crown through the
+  teardown and the chart's regrowth until "settle on one hump"; 1.2 s pause after "moves to three".
+- *Clarity 8 → 9.* No false equation can appear (copy drops in as "= ?", one swap move). Bracket
+  labels "±1.14" / "±0.44". The payoff number is a measured result: Giordano, Broderick & Jordan
+  2018 (JMLR) Tables 2–3, re-verified against the paper (β₃ means 0.110 / 0.110, SDs 0.020 /
+  0.004), citation now names both tables. Honest limit rebuilt around the assumption the viewer
+  needs, in one clause each: raw points make every bell-first score infinite (272-tick rug,
+  `D(bell ‖ data) = ∞`), so the data is smoothed; smooth more heavily and the best bell-first fit
+  spreads wide, "almost back to A". "R's default" and "cross-validation" are no longer spoken.
+  Readouts p, q, log₂ dim to 30 % while the scanner is away from 2 min and come back with it,
+  so the slide to B starts from 1.98.
+- *Visual 7.5–8 → 9.* Three-panel stretch rebuilt: the chart (the subject) is 2.8 units tall
+  instead of 1.85; bills share a [−0.5, 2.5] bits/min range; each bill names its order in its
+  corner ("data first" / "bell first"); once the integrals have been read the blocks collapse
+  to two D-lines with live totals, each centred on its own bill. Payoff legend moved right
+  (left edge −1.0, clear of the y-axis title), set as `D(data ‖ bell)` / `D(bell ‖ posterior)`
+  to match the episode's own notation; row 1 dims when row 2 lands; A steps out during the
+  bracket comparison. "peak ≈ 11" at size 36 with its arrow stopping short of the plateau.
+- *Motion 8.5 → 9.* The pull-out's baseline draws while the chart shrinks (the empty half has a
+  destination); highlight boxes fade in whole (no corner dot); landing: each closing sentence
+  writes its own answered D-line and returns its yellow number while its bell fills.
+- *Audio 8–8.5 → 9.* 0.8 s after "one point one" (beat turn); the densest stretch (bell B,
+  1:30–1:46) spoken at speed 0.80; 1.0 s after "five point eight bits"; 1.2 s after the answer.
+- *Concision 8 → 9.* Honest limit cut from three concepts to one assumption and one
+  consequence; the restating line before the closing pair is cut (the D-lines with → A / → B
+  and the yellow 1 / 3 return silently, each with its sentence).
+

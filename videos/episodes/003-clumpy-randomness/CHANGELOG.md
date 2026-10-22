@@ -270,3 +270,37 @@ overall), −14.0 LUFS / −1.8 dBTP, longest static 3.6 s, longest silence 2.0 
 prediction hold), WER 3.3 %, 0 sync warnings, 0 overlaps; the one clearance note is the same
 end-of-animation frame as round 3 (2:05.8, not held). Checked frames at 4 fps across the zoom
 row, the square-beat return, the B thumbnail, the aimed map, the Clarke label and the landing.
+
+## Round 5 revisions
+
+Round 5 review (the round-4 cut, reviewed twice): craft 8.0 / 8.6, substance 8.3 / 8.8, no
+caps. Every critic said "reaches 9, narrowly, if the derivation and the yellow-swamped frames are
+fixed". A previous attempt at this revision stopped after the narration rewrite and three small
+scene edits (no render); this pass continues from those files.
+
+**Plan the climb** (BAR §3 "9" anchor → where it fell short → the upgrade)
+- Hook (8.5): "tension rises through build and fail". Short: 1:31–2:14 ran with no stated
+  question. Upgrade: "To judge London, chance must predict every bar" over a preview of the
+  histogram (chance's 227 in bar 0, "?" over 1–5+), which the derivation then fills.
+- Clarity (8–9): "viewer could re-derive it after one watch". Short: four glyph swaps in 10 s;
+  "over two" unexplained; χ² division unexplained; p never named. Upgrade: 536 → 537 in place,
+  537·537 → 537²; "for three hits, each two becomes a three; for any k, a k" (all at once, with
+  pauses); "since order doesn't matter" with the two hits swapping; "a miss of two on seven
+  outweighs a miss of five on two hundred twenty-seven" on A's own bars; "That share, p".
+- Visual (7.5–8.5): "every frame has one focal point". Short: solid yellow over 39 % of map A
+  (1:19–1:31, 2:17), yellow-speckle thumbnails, unlabelled null histogram, citations 22 px,
+  densities 600 px apart, gridless aimed map. Upgrade: 40 % tint + yellow region outline, gone
+  before the histogram; blue shading on return; dots-only thumbnails; "maps" axis; citations
+  at 20 (≈25 px cap); the two densities in one column on their boxes' rows; aimed grid.
+- Motion (8–9): "every motion encodes a relation". Short: static reveal (3.6 s), cells→bars
+  cloud, "39.3" shredding, red bars left behind, rectangle squashing map A. Upgrade: re-rain on
+  "I dropped every hit"; count-by-count flight (k-hit squares outline, then fly into bar k);
+  flag + Write; aimed bars ride the chart while fading; rectangle → equal-area square → frame.
+- Audio (8–8.5): "each deictic lands; pauses intentional". Short: stretched "and" in numbers,
+  "three times than four", "you pick the one", counter late on "thirty-nine", 1/576 late.
+  Upgrade: numbers without "and", "Three in four simulated chance maps score worse", "you chose",
+  counter and fraction cued to their words.
+- Concision (7.5–9): cut "Map A sits on the purple bars", "No sign of clustering", "and B looks
+  like chance", the separate 537·536 ≈ 537² line; shorter stakes line.
+- Originality (8–8.5): the real V-1 map now carries the aim itself: Tower Bridge and the
+  12.5 km circle that holds only half the V-1s is bigger than the whole county map.

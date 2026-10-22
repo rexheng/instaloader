@@ -92,3 +92,24 @@ print("evaluators' bar: final 78/2632 =", f"{78 / 2632:.3f}", "-> 3% ; Six Natio
 print("crowd raster: 100 x 100 squares in 7 px cells =", 100 * 7, "px =", f"{700 / 135:.3f}", "units")
 print("fail beat: positives drawn at 3x (18 px): 20 sick + 100 healthy =", 20 + 100,
       "; healthy share of the ringed squares =", f"{100 / 120:.3f}")
+# ---- round 5 revisions: the landing's live head counts per 10,000 people beside the two flows
+for n in (500, 271, 100, 2):
+    tp, fp = 10000 / n * 0.99, (10000 - 10000 / n) * 0.01
+    print(f"landing counts at 1 in {n}: red {tp:.1f} -> {round(tp)} ; blue {fp:.1f} -> {round(fp)} ;"
+          f" share {tp / (tp + fp):.3f}")
+# ---- round 6 revisions
+# fail beat: ONE prevalence slider 1 in 2 -> 1 in 500 on the same test; the table shows expected
+# counts at each rounded N, the meter shows P(sick|+) at that N
+for n in (2, 3, 10, 50, 100, 200, 500):
+    s = 10000 / n
+    sp, hp = round(0.99 * s), round(0.01 * (10000 - s))
+    print(f"slider 1 in {n}: sick {round(s)} -> + {sp} ; healthy {10000 - round(s)} -> + {hp} ;"
+          f" positives {sp + hp} ; meter {float(ppv(F(1, n))):.3f}")
+# derivation: the positives column divided by 10,000 too
+print("positives / 10,000: 19.8 ->", 19.8 / 10000, " 99.8 ->", 99.8 / 10000,
+      "; = 0.002 x 0.99 =", round(0.002 * 0.99, 5), "; 0.998 x 0.01 =", round(0.998 * 0.01, 5))
+# Davies et al. 2018: table row "Champions League (4 days) | extremely large | 2632 | 78 (3%) | 1"
+# Six Nations: 56 matches, 48 non-police, 22 judged 'Y' by operators (46 %); of those 22, 7 were
+# stopped and found false by intervention teams -> at most 15 of 48 confirmed true by that later test
+print("Six Nations, operators' Y:", f"{22 / 48:.3f}", "; if the 7 later found false are removed:",
+      f"{15 / 48:.3f}", "(still 10x the final's 3 %)")

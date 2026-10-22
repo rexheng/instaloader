@@ -5,7 +5,7 @@ so the average friend has avg(k²)/μ = μ + σ²/μ friends (the cross terms va
 distances from the balance point sum to zero), which is more than the average person whenever friend
 counts vary, and epidemiologists can use this to see an outbreak coming.
 
-Runtime 3:3x · 510 words · voice af_heart, speed 0.80, sentence gaps 0.26 s inside a beat and
+Runtime 3:33 · 509 words · voice af_heart, speed 0.82 (round 5; ~152–160 wpm), sentence gaps 0.26 s inside a beat and
 0.7 s at section boundaries; 0.6 s holds after each new equation row in the algebra (round 3).
 Pronunciation override: Christakis → /kɹɪstˈɑkɪs/.
 
@@ -106,7 +106,8 @@ it; the area labels 2.25 / 0.25 fly along the tag's row into σ² = 10/8 = 1.25,
 squares it averages.
 The cross-term step (centred row under the picture): 4² = (2.5 + 1.5)²; Sue's 4 flies down from her
 node (threading between the labels and squares) and 1.5 from her distance label; on "her distance"
-PURPLE "d = k − μ" is written beside the beam → 4² = 2.5² + 1.5² + 2·2.5·1.5 (cross term INK-boxed) →
+PURPLE "d = k − μ" is written at the right end of the PURPLE distance line it names (round 5; it
+fades when the picture moves back) → 4² = 2.5² + 1.5² + 2·2.5·1.5 (cross term INK-boxed) →
 averaged over the eight girls (all nodes flash): avg(k²) = μ² + σ² + 2μ·avg(d). The distance labels gain
 signs; on "add to zero" they merge into a PURPLE 0 under the balance point, that 0 drops between the
 middle squares to replace avg(d) and the box shrinks around 2μ·0; on "cancel" the boxed term leaves.
@@ -130,7 +131,9 @@ point at its centre; on "no gap" μ + σ²/μ is copied beside it as 2 + 0/2 = 2
 
 As 635 lands the bar fills BLUE to 190 and PURPLE beyond ("+445"). On "A few users" the axis
 breaks and runs on to a "5,000" tick tagged "Facebook's limit", and a BLUE brace labelled "a few users"
-spans that stretch (a range, not plotted dots). On "spread term" the PURPLE segment flashes and the row
+spans that stretch (a range, not plotted dots). On "spread term" the PURPLE segment flashes, the axis
+numbers and title dim to 30 % (context), and 190, 445 and 635 fly down into the row along paths that
+thread the gaps between labels (round 5), so the row
 builds.
 
 Visual: the beam and the algebra leave; the bar panel scales 1.25× and moves to the centre (one
@@ -163,7 +166,8 @@ Citation: Christakis & Fowler, 2010 · PLoS ONE · Fig. 3 redrawn, logistic refi
 > Betty looks at her one friend and sees four. Two and a half counts the girls; three counts the
 > friendships.
 
-Visual: the chart dissolves into the cold-open frame itself: the network, "average girl 2.5", and
+Visual: the chart fades out, then the cold-open frame itself fades back in (round 5: no
+cross-dissolve): the network, "average girl 2.5", and
 "average friend ?" with the drop lines and the YELLOW candidates 2.5 / 3 / 4 from 0:11. On "Seat by
 seat", INK outlines and each girl's friends' average in YELLOW (4, 3.5, 3.33, 3.33, 2); Sue and Alice
 get 2.75 and 3. On "Betty looks" the other labels leave, Betty's 4 stays; on "sees four" the Betty–Sue

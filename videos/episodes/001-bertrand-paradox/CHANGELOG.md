@@ -117,3 +117,67 @@ Round 3 review: craft 8.6, substance 8.6; no caps, no factual errors. Both criti
 - The audit flagged two clearance problems. The rim highlight box sat too close to the histogram caption, so the bar itself now turns blue. "At random" sat too close to the chart title, so it is now Text 28, shifted right.
 
 **Mechanics (review/report.md):** 3:51.3, 161 wpm in speech (152 overall), −14.0 LUFS / −1.6 dBTP. Longest silence 1.92 s, the planned "Pick a number" hold. Longest static 3.0 s. Trailing silence 1.81 s, no black frames. 0 render warnings, 0 layout-audit issues in 252 checks, 0 banned phrases, 0 flags. WER 2.0 %: homophones and number formatting only (chord/cord, Jaynes/Janes, "a hundred" → "one hundred").
+
+## Round 5 revisions
+
+Round 5 review: craft 8.4, substance 8.6; no caps and no factual errors (both critics re-ran the invariance board with 2M lines per program and checked all three citations). Both said every fix together reaches about 9.0. This pass was done in two sittings: the first rewrote the narration, facts and most of the scene and rendered a cut, but stopped before the frame review. This second sitting reviewed that cut frame by frame, fixed what was still open, and re-rendered.
+
+**Plan for the climb (BAR §12.2), per dimension scored below 9**
+- *Clarity (8.5/8.5; 9 = "viewer could re-derive it after one watch; assumptions stated").* The small circle's own rule was never said. "Spread of chord lengths" pointed at a distribution the episode never drew. The chords-to-classes bridge was only asserted. → Say the rule ("each judges with its own gold circle"), draw the predicted flat spread, and show "spread evenly over: classes → students".
+- *Visual (8/8.5; 9 = "every frame has one focal point; nothing to remove").* Problems: the invariance frames were cluttered, the column heads were icons, the histograms had no y scale, "25 points" read as the radius tally's caption, the 0.334 column broke the safe edge, the survey beat opened on a near-empty frame, and the landing labels didn't match. → Remove the residue, add word heads and a 10 % reference, sit the label on its brace and dim the tallies, nudge the histogram, bring back the stakes column, and give both landing labels the same ink.
+- *Motion (8.5/8.5; 9 = "every motion encodes a relation").* The triangle turned mid-shrink, the rains were rushed, and the survey beat began with a fresh Write in an arbitrary place. → Turn the triangle in place before the move, give each rain about 3 s plus a held row, and return the stakes beat's own objects to their own place.
+- *Audio (8.5/8.5).* "Jaynes said" merged into "Jane said", and the premise was a 14 s run-on sentence. → "argued", two sentences, and the narrator slowed from 0.84 to 0.82.
+- *Concision (8/8.5).* Slack: "Same circle, same gold rule", two sentences saying one thing at 1:38, the straws row's "– → ? → ? = ?" steps, and 40/147 spoken twice in 15 s. → Cut or merge each one.
+- *Hook (8.5/9).* The stakes line was abstract. → Preview the payoff's own numbers: "one college can report an average class of forty, or a hundred forty-seven".
+- *Originality (8.5/8.5).* Keep and sharpen the episode's own images: the two-circle scoreboard with the one line judged twice, the 0.334 stack, and the bars widening into students.
+
+**First sitting (narration, facts, scene)**
+- Stakes (substance 4): "Leave them vague, and one college can report an average class of forty, or a hundred forty-seven". "Average class" and "40 or 147" appear on their words under "at random". facts.md H10 records why the critic's suggested wording ("a college with forty-student classes…") would be false: if every class had 40 students, every student would also report 40.
+- Invariance test (craft 1, 3; substance 1, 11).
+  - The narration now says the rule: "One rain lands on both circles at once, and each judges with its own gold circle, so a fair recipe must score the same on both."
+  - The big triangle and the big gold circle fade to 0 as the small circle arrives.
+  - The column heads are words, "big circle" and "small circle".
+  - Each rain draws 36 lines, with the big-circle chords at 15 % and the pieces inside the small circle at full strength. Each tally settles before its number is spoken.
+  - The 0.8 s pauses hold each finished row, with the floor clear, before the next rain.
+- Real experiment (craft 2, substance 2): the narration says "…matched the radius program's flat spread". On "matched" the straws row's "?" becomes "≈ radius". On "radius program's" the green row flags and the predicted histogram grows: "radius program *predicted*", exactly 10 % per band, with the 10 % line. facts.md H7 shows why this is exact: chord length is a decreasing function of midpoint distance, so fitting Jaynes's Eq. (13) is the same as a flat distance spread. The simulated skilled tosser was cut, so the real tosses are the last word on the "?". The limit still stands in the landing (G9) and in "can't be aimed".
+- Class-size bridge (craft 4, substance 3): "Pick a student at random, spread evenly over students instead of classes". "At random" in the slot under the chart gives way to "spread evenly over: classes", and the last word turns to "students" as it is spoken while the dots split and the bars widen.
+- Histograms (craft 7, substance 6): a dashed 10 % reference line, with a "10%" tick on the midpoint and radius histograms.
+- Concision (craft 6, substance 9): "Same circle, same gold rule" is cut. "So a chord is long exactly when its midpoint lands in this gold circle, and each program is just a way of scattering midpoints" merges two sentences. The straws row goes from "–" to "? = ?" in one step.
+- Audio (craft 9, substance 8): "Jaynes said" becomes "Jaynes argued". misaki already gives /ʤˈAnz/, and Whisper writes the homophone "Janes" for every spelling tried.
+- Landing (craft 5, substance 10): the Stony Brook rows sit as one block under the 0–1 line, labels at its left end and numbers at its right. Both labels come up to the same ink on "who's picked", flagged by opacity rather than scale.
+- Other: the panel triangle turns upright in place before the panel moves (craft 10). The half-empty frames are filled (substance 5): every scoreboard row is waiting at 30 % from the first frame, and the class chart starts centred and slides left only for Stony Brook. The survey-beat cross-fade has no empty frame (substance 7).
+
+**Second sitting (found in the frame review of the first cut, and fixed)**
+- *Survey entrance, 3:10–3:14 (round-4 craft 1, substance 1a).* The cut opened on "at random" written mid-frame, which then held almost alone for about 2.5 s while the chart title waited for its bars. Now the stakes beat's own right-hand column comes back exactly where and as it was at 0:15–0:23: "at random" and "average class / 40 or 147". "At random" is underlined again on "two words". The board's text fades before anything is written where it stood, so nothing is overprinted. The promise waits on the right while the example builds, and leaves on "Pick a class".
+- *"25 points" (round-4 craft 7, substance 7).* The label sat about 0.14 under the green 0.498 and read as its caption. The brace is now flatter (0.7×), the label sits 0.1 above it at Text 26, and the three tallies step back to 35 % while the gap is measured. They return on "none of the code". The clearance to the tally row is now about 0.35.
+- *Bertrand citation (round-5 craft 8).* The number line is 0.05 higher, so its tick labels clear the citation by 0.38.
+- *0.334 column (round-4 craft 4, substance 6).* Its baseline stub reached x = −6.52, outside the safe area. The endpoints histogram moved 0.25 right, so the stub now starts at −6.27.
+- *Predicted histogram axis (BAR §5: every axis named).* Its ends read "center … r/2 … rim", which names the quantity (distance from the centre) without adding a caption to an already full frame.
+- *Jaynes premise (round-4 substance 3).* It is now two sentences: "…a physical process picks one. Straws tossed from a standing height can't be aimed, so…". Whisper had transcribed it as one unbroken run.
+- *Landing repetition (round-4 substance 8).* "Both averages are right, once you say who's picked." The numbers stay on screen and brighten on "Both averages".
+- *Narrator speed* 0.84 → 0.82: the sentence interiors ran at 186 wpm excluding pauses.
+- *"…gave forty, and a hundred forty-seven"* was transcribed "40, and 100 47" in two renders. On synthesized test clips, the same line without the comma ("gave forty and a hundred forty-seven") is heard as "40 and 147", so the comma is gone.
+- *Found in a 0.5 s sweep of the new cut.* (1) The board's text and the first stroke of "at random" overlapped for about one frame. The board now finishes fading (27 % of the move) before the writing starts (40 %). (2) Moving down to its slot, "at random" passed over "average class". It now travels on a path that bows up and to the left, clear of the block. A plain arc (path_arc) tilted the words in flight, so the bow is a pure offset and the words stay upright. (3) The raised number line brought the error bars within 0.17 of the French quote, so the quote moved up 0.03 (0.21 below it, 0.17 above). (4) The audit flagged "25 points" 0.10 from its brace, so the label now sits 0.17 above the brace and about 0.28 below the tally row.
+
+**Mechanics (review/report.md, final master):** 3:48.4, 157 wpm in speech (151 overall, 576 words), −14.0 LUFS / −1.7 dBTP. Longest silence 1.87 s (the planned "Pick a number" hold), longest static stretch 2.97 s, trailing silence 1.36 s, no black frames. 0 render warnings, 0 layout-audit issues in 244 checks, 0 banned phrases, 0 flags. WER 1.6 %: homophones and number formatting only (chord/cord, Jaynes/Janes, "a"/"one"). Whisper now hears "Surveys", "40 and 147" and "Both averages".
+
+**Honest self-score (BAR §3):** Hook 9 · Clarity 9 · Visual 9 · Motion 9 · Audio 9 · Concision 8.5 · Originality 9, for about 8.95 weighted (rounds to 9.0), with no caps. What still keeps it from a clear 9: 3:48 is near the top of the window with two payoffs; the title announces "three answers" before the viewer commits; and Whisper spells "Jaynes" as the homophone "Janes".
+
+## Round 6 revisions
+
+Round 6 review: craft 8.9, substance 8.9 (both 8.875 weighted); no caps and no factual errors. Both critics re-ran the invariance board with 2M lines per program and checked all three citations. Both said fixes 1–3 alone reach 9.0. Every dimension below 9 was Visual (8.5/8.5) or Concision (8.5/8.5).
+
+**Plan for the climb (BAR §12.2), per dimension scored below 9**
+- *Visual (8.5/8.5; 9 = "every frame has one focal point; all §5 standards met; nothing to remove").* Six frames missed it:
+  - 3:13–3:17, the survey entrance: an almost black frame, then three loose text items with no object.
+  - 1:13–1:19: the two-line French quote was squeezed 20 px under the tallies and centred under 0.498, so it read as that tally's caption.
+  - 2:44–2:46: two full-strength gold circles crossed during "its own gold circle".
+  - 2:17–2:21: the 0.334 stack competed with two bright panels.
+  - 3:01–3:13: the "simulated" tag and straw texture stayed up during the real tosses.
+  - 3:03–3:09: a half-empty right column.
+  → Give each frame one subject: the chart draws on "Surveys"; the quote is one centred line with ≥ 0.35 clearance; one gold circle at a time; panels 2–3 dimmed while the stack builds; the floor cleared of everything simulated; the histogram axis waiting at 30 %.
+- *Concision (8.5/8.5; 9 = "cutting any sentence loses something").* Two problems: a double closer whose "only one … both" collided, and about 4 s of survey re-entry before anything new appeared. → One closing sentence, and a chart on screen from the first second of the survey beat.
+- *Clarity margin (9/9).* "Fair recipe" brought in a new noun inside a 9 s sentence, and "5-inch circle" could be read as a radius. → "fair program", the sentence split after "at once", and "5-inch-wide circle" with a "5 in" mark across the circle.
+- *Motion margin (9/9).* Three rains and six numbers in 10 s. → Each finished row holds 1.1 s, and each relation sign arrives 0.2 s after its second number.
+- *Audio margin (9/9).* "So this circle" landed on nothing. → The gold disk lights on "this", and each disk's outline flies into its term on its own word.
+- *Hook (9/9), title nitpick.* The title lives in `videos/curriculum.json`, outside this episode's directory, so it is not changed here (see facts.md, round 6).

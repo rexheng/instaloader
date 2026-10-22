@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/060-friendship-paradox/final.mp4",
- "duration_s": 213.467,
+ "duration_s": 213.3,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,12 +8,12 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 9.7,
+ "size_mb": 9.54,
  "integrated_lufs": -14.0,
  "lra_lu": 2.1,
  "true_peak_dbtp": -2.1,
  "leading_silence_s": 0.0,
- "trailing_silence_s": 1.98,
+ "trailing_silence_s": 1.81,
  "longest_internal_silence_s": 2.23,
  "silences_over_1_5s": [
   [
@@ -29,20 +29,20 @@
    157.92
   ]
  ],
- "frames": 6404,
- "longest_static_s": 2.53,
+ "frames": 6399,
+ "longest_static_s": 2.6,
  "static_stretches_over_3s": [],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": null,
- "transcript_words": 566,
+ "background_luma": 22.070572916666666,
+ "transcript_words": 540,
  "first_word_s": 0.02,
- "last_word_s": 213.26134,
- "wpm_speech": 165.9,
- "wpm_overall": 159.1,
- "wpm_excluding_all_pauses": 190.4,
+ "last_word_s": 211.636,
+ "wpm_speech": 159.5,
+ "wpm_overall": 151.9,
+ "wpm_excluding_all_pauses": 183.3,
  "narration_file": "videos/episodes/060-friendship-paradox/narration.json",
- "wer": 0.055,
+ "wer": 0.0079,
  "narration_words": 509,
  "banned_phrase_hits": 0,
  "slop_hits": [],
@@ -55,7 +55,7 @@
    "caption-zone": 0
   },
   "allowed": 0,
-  "checks": 195
+  "checks": 194
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -125,52 +125,52 @@
    "file": "keyframes/kf_13_01-17.7.png"
   },
   {
-   "t": 87.3,
-   "file": "keyframes/kf_14_01-27.3.png"
+   "t": 82.57,
+   "file": "keyframes/kf_14_01-22.6.png"
   },
   {
-   "t": 90.3,
-   "file": "keyframes/kf_15_01-30.3.png"
+   "t": 87.0,
+   "file": "keyframes/kf_15_01-27.0.png"
+  },
+  {
+   "t": 90.6,
+   "file": "keyframes/kf_16_01-30.6.png"
   },
   {
    "t": 96.57,
-   "file": "keyframes/kf_16_01-36.6.png"
+   "file": "keyframes/kf_17_01-36.6.png"
   },
   {
    "t": 99.43,
-   "file": "keyframes/kf_17_01-39.4.png"
+   "file": "keyframes/kf_18_01-39.4.png"
   },
   {
    "t": 103.2,
-   "file": "keyframes/kf_18_01-43.2.png"
+   "file": "keyframes/kf_19_01-43.2.png"
   },
   {
    "t": 121.6,
-   "file": "keyframes/kf_19_02-01.6.png"
+   "file": "keyframes/kf_20_02-01.6.png"
   },
   {
    "t": 128.97,
-   "file": "keyframes/kf_20_02-09.0.png"
+   "file": "keyframes/kf_21_02-09.0.png"
   },
   {
    "t": 131.93,
-   "file": "keyframes/kf_21_02-11.9.png"
+   "file": "keyframes/kf_22_02-11.9.png"
   },
   {
    "t": 133.83,
-   "file": "keyframes/kf_22_02-13.8.png"
+   "file": "keyframes/kf_23_02-13.8.png"
   },
   {
    "t": 135.87,
-   "file": "keyframes/kf_23_02-15.9.png"
+   "file": "keyframes/kf_24_02-15.9.png"
   },
   {
-   "t": 138.47,
-   "file": "keyframes/kf_24_02-18.5.png"
-  },
-  {
-   "t": 140.1,
-   "file": "keyframes/kf_25_02-20.1.png"
+   "t": 140.17,
+   "file": "keyframes/kf_25_02-20.2.png"
   },
   {
    "t": 144.73,
@@ -193,16 +193,16 @@
    "file": "keyframes/kf_30_02-43.1.png"
   },
   {
-   "t": 170.33,
-   "file": "keyframes/kf_31_02-50.3.png"
+   "t": 167.1,
+   "file": "keyframes/kf_31_02-47.1.png"
   },
   {
-   "t": 176.8,
-   "file": "keyframes/kf_32_02-56.8.png"
+   "t": 171.17,
+   "file": "keyframes/kf_32_02-51.2.png"
   },
   {
-   "t": 188.6,
-   "file": "keyframes/kf_33_03-08.6.png"
+   "t": 183.33,
+   "file": "keyframes/kf_33_03-03.3.png"
   },
   {
    "t": 192.17,
@@ -225,16 +225,14 @@
    "file": "keyframes/kf_38_03-26.6.png"
   },
   {
-   "t": 212.47,
-   "file": "keyframes/kf_39_03-32.5.png"
+   "t": 212.33,
+   "file": "keyframes/kf_39_03-32.3.png"
   },
   {
-   "t": 213.43,
-   "file": "keyframes/kf_40_03-33.4.png"
+   "t": 213.27,
+   "file": "keyframes/kf_40_03-33.3.png"
   }
  ],
- "flags": [
-  "pace: 166 wpm outside 140–165"
- ],
+ "flags": [],
  "implied_caps": []
 }

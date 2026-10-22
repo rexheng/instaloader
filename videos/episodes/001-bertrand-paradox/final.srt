@@ -1,188 +1,192 @@
 1
-00:00:00,000 --> 00:00:02,390
+00:00:00,000 --> 00:00:02,460
 Draw a chord across this circle at random.
 
 2
-00:00:02,770 --> 00:00:06,410
+00:00:02,840 --> 00:00:06,550
 What's the chance it comes out longer than a side of this triangle?
 
 3
-00:00:06,790 --> 00:00:07,760
+00:00:06,930 --> 00:00:07,900
 Pick a number.
 
 4
-00:00:09,533 --> 00:00:16,433
+00:00:09,666 --> 00:00:16,846
 Joseph Bertrand published this puzzle in eighteen eighty-nine, as a warning about two words: at random.
 
 5
-00:00:16,813 --> 00:00:23,173
+00:00:17,226 --> 00:00:23,816
 Leave them vague, and one college can report an average class of forty, or a hundred forty-seven.
 
 6
-00:00:23,433 --> 00:00:25,433
+00:00:24,100 --> 00:00:26,170
 Start with the obvious simulation.
 
 7
-00:00:25,813 --> 00:00:28,773
+00:00:26,550 --> 00:00:29,540
 Pick two points on the rim at random, and join them.
 
 8
-00:00:29,153 --> 00:00:32,673
+00:00:29,920 --> 00:00:33,510
 If the chord beats the triangle's side, it turns gold.
 
 9
-00:00:32,933 --> 00:00:37,403
+00:00:33,766 --> 00:00:38,266
 Run ten thousand chords, and the gold share settles near point three three.
 
 10
-00:00:38,100 --> 00:00:39,440
+00:00:38,933 --> 00:00:40,283
 Geometry agrees.
 
 11
-00:00:39,820 --> 00:00:42,370
+00:00:40,663 --> 00:00:43,293
 Put a corner of the triangle on the first point.
 
 12
-00:00:42,750 --> 00:00:48,010
+00:00:43,673 --> 00:00:49,123
 The chord is long only when the second point lands on this far arc, a third of the rim.
 
 13
-00:00:49,266 --> 00:00:52,196
+00:00:50,400 --> 00:00:53,340
 Case closed, until you code it a second way.
 
 14
-00:00:52,576 --> 00:00:59,246
+00:00:53,720 --> 00:01:00,520
 Pick a random radius, a random point along it, and draw the chord through that point at right angles.
 
 15
-00:00:59,533 --> 00:01:01,543
+00:01:00,800 --> 00:01:02,860
 This one settles near point five.
 
 16
-00:01:01,833 --> 00:01:07,433
+00:01:03,100 --> 00:01:08,860
 A third program picks a random point anywhere inside, and makes it the chord's midpoint.
 
 17
-00:01:07,813 --> 00:01:09,813
+00:01:09,240 --> 00:01:11,290
 That settles near point two five.
 
 18
-00:01:10,100 --> 00:01:14,700
+00:01:11,566 --> 00:01:16,226
 Bertrand printed all three, and wrote that none is wrong, and none is right.
 
 19
-00:01:15,080 --> 00:01:17,860
+00:01:16,606 --> 00:01:19,466
 Each tally is good to about one percentage point.
 
 20
-00:01:18,240 --> 00:01:23,310
+00:01:19,846 --> 00:01:25,066
 They disagree by twenty-five percentage points, and none of the code has a bug.
 
 21
-00:01:23,566 --> 00:01:26,516
+00:01:25,333 --> 00:01:28,333
 One point sets a chord's length: its midpoint.
 
 22
-00:01:26,896 --> 00:01:29,146
+00:01:28,713 --> 00:01:31,063
 Slide it outward and the chord shrinks.
 
 23
-00:01:29,526 --> 00:01:36,996
+00:01:31,443 --> 00:01:39,193
 It matches the triangle's side when the midpoint is half a radius out, on the circle that fits inside the triangle.
 
 24
-00:01:37,266 --> 00:01:45,806
+00:01:39,466 --> 00:01:48,206
 So a chord is long exactly when its midpoint lands in this gold circle, and each program is just a way of scattering midpoints.
 
 25
-00:01:46,066 --> 00:01:48,226
+00:01:48,466 --> 00:01:50,686
 Shrink every chord to its midpoint.
 
 26
-00:01:48,606 --> 00:01:55,616
+00:01:51,066 --> 00:01:58,276
 The midpoint program spreads them evenly, so this circle, with a quarter of the area, catches a quarter of them.
 
 27
-00:01:55,900 --> 00:01:59,630
+00:01:58,533 --> 00:02:02,373
 The radius program spreads them evenly along the radius.
 
 28
-00:02:00,010 --> 00:02:01,270
+00:02:02,753 --> 00:02:04,083
 Where will they crowd?
 
 29
-00:02:02,570 --> 00:02:07,560
+00:02:05,383 --> 00:02:10,453
 Toward the center: every ring gets an equal share, and inner rings are small.
 
 30
-00:02:07,940 --> 00:02:09,950
+00:02:10,833 --> 00:02:12,903
 Half the radius, so one half.
 
 31
-00:02:10,233 --> 00:02:16,973
+00:02:13,166 --> 00:02:19,986
 And the endpoints program piles them against the rim, so only a third land inside, the third we found.
 
 32
-00:02:17,233 --> 00:02:21,993
+00:02:20,266 --> 00:02:25,196
 Three programs, three things spread evenly: rim, radius, area.
 
 33
-00:02:22,373 --> 00:02:24,353
+00:02:25,576 --> 00:02:27,586
 At random never said which.
 
 34
-00:02:25,433 --> 00:02:37,523
-Edwin Jaynes argued that a physical process picks one: straws tossed from a standing height can't be aimed, so the answer can't depend on where the circle sits or how big it is.
+00:02:28,666 --> 00:02:32,366
+Edwin Jaynes argued that a physical process picks one.
 
 35
-00:02:37,800 --> 00:02:46,570
-One rain lands on both circles at once, and each judges with its own gold circle, so a fair recipe must score the same on both.
+00:02:32,746 --> 00:02:40,776
+Straws tossed from a standing height can't be aimed, so the answer can't depend on where the circle sits or how big it is.
 
 36
-00:02:46,950 --> 00:02:49,900
-Midpoint gives a quarter, then point four one.
+00:02:41,033 --> 00:02:49,923
+One rain lands on both circles at once, and each judges with its own gold circle, so a fair recipe must score the same on both.
 
 37
-00:02:50,700 --> 00:02:53,640
-Endpoints give a third, then point four seven.
+00:02:50,303 --> 00:02:53,263
+Midpoint gives a quarter, then point four one.
 
 38
-00:02:54,440 --> 00:02:57,240
-Only the radius program gives a half on both.
+00:02:54,063 --> 00:02:57,123
+Endpoints give a third, then point four seven.
 
 39
-00:02:58,100 --> 00:03:08,680
-Jaynes and Charles Tyler tossed real broom straws at a five-inch circle, and the hundred and twenty-eight that crossed it matched the radius program's flat spread.
+00:02:57,923 --> 00:03:00,763
+Only the radius program gives a half on both.
 
 40
-00:03:09,733 --> 00:03:11,853
-Surveys hide the same two words.
+00:03:01,633 --> 00:03:12,403
+Jaynes and Charles Tyler tossed real broom straws at a five-inch circle, and the hundred and twenty-eight that crossed it matched the radius program's flat spread.
 
 41
-00:03:12,233 --> 00:03:15,003
-Take classes of ten, ten and a hundred.
+00:03:13,466 --> 00:03:15,596
+Surveys hide the same two words.
 
 42
-00:03:15,383 --> 00:03:18,783
-Pick a class at random, and the average size is forty.
+00:03:15,976 --> 00:03:18,776
+Take classes of ten, ten and a hundred.
 
 43
-00:03:19,163 --> 00:03:25,473
-Pick a student at random, spread evenly over students instead of classes, and it's eighty-five.
+00:03:19,156 --> 00:03:22,686
+Pick a class at random, and the average size is forty.
 
 44
-00:03:25,853 --> 00:03:31,943
-At Stony Brook in nineteen seventy-four, those two picks gave forty, and a hundred forty-seven.
+00:03:23,066 --> 00:03:29,556
+Pick a student at random, spread evenly over students instead of classes, and it's eighty-five.
 
 45
-00:03:32,700 --> 00:03:36,820
-So whatever number you picked, some way of drawing chords makes it right.
+00:03:29,936 --> 00:03:36,146
+At Stony Brook in nineteen seventy-four, those two picks gave forty and a hundred forty-seven.
 
 46
-00:03:37,200 --> 00:03:39,210
-Name the way, and only one is.
+00:03:36,933 --> 00:03:41,123
+So whatever number you picked, some way of drawing chords makes it right.
 
 47
-00:03:39,590 --> 00:03:44,220
-Forty and a hundred forty-seven are both right, once you say who's picked.
+00:03:41,503 --> 00:03:43,533
+Name the way, and only one is.
+
+48
+00:03:43,913 --> 00:03:47,123
+Both averages are right, once you say who's picked.
 

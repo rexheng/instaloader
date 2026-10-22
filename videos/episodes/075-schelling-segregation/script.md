@@ -72,8 +72,10 @@ climbs to 64 %; the counter stops at 74, above "plan predicts 0". On "thirty-eig
 content tile dims, the 7 outlined tiles that were already unhappy at the start turn grey, 67 RED
 rings remain, and the 38 note gives its slot to "67 content at the start" (out, then in).
 
-> Round one takes two hundred moves; the other thirty-eight were content by their turn. The
-> matching share jumps to sixty-four percent.
+> Round one takes two hundred moves; the other thirty-eight were content by their turn.
+
+(Round 5 cut "The matching share jumps to sixty-four percent": the meter climbs to 64 % live
+during the round, so the sentence only read the screen aloud.)
 >
 > If the plan had worked, this counter would read zero. It reads seventy-four, and
 > sixty-seven of these were content before round one. They never moved. Their neighbors did.
@@ -104,7 +106,11 @@ the demand marker. Each fraction state holds ≥ 1.5 s: C's 2/7 < ⅓ through a 
 > Two gold out of seven. Two sevenths is less than a third, so now it wants out.
 >
 > Its neighbor here also has three eighths. In round two, our household leaves, and this one
-> drops to two sevenths. [pause 1.1] Then the next one, at three eighths, [pause 0.3] tips.
+> drops to two sevenths. [pause 1.1] Then the next one, also at three eighths, tips in round three.
+
+(Round 5: "tips" used to stand alone after a 0.3 s pause, and the full-track whisper heard "It ips".
+Inside the clause it transcribes cleanly; "also" and "in round three" keep D's 3/8 ≥ ⅓ on screen
+about 1.9 s, and the move starts 0.7 s before "Then" so C's 2/7 < ⅓ still holds about 1.6 s.)
 
 (A new subject household (B → C, C → D): the old fraction and relation slide out to the left and
 fade, then the new household's slide in from the right; the ⅓ stays. The same household's numbers
@@ -121,7 +127,9 @@ replayed movers are already home, so they do not move twice). The counter reache
 ### 8 · Generalise: the tipping curve (2:03–2:18)
 *Screen:* the HUD fades (0.4 s) while the town shrinks into its thumbnail slot; the axes are
 fully drawn by "point", where a copy of the town lands as the dot (33.3, 75.5). After "chart" the
-30-town clouds fade in under the note "each dot: one simulated town" (no narration). On "a
+30-town clouds fade in under the note "each dot: one simulated town" (no narration), and only then
+does "⅓ → 76 %" appear beside the thumbnail (round 5: the flying copy used to pass over it while
+it faded in; likewise "→ 58 %" arrives after the ¼ town's copy has landed as its dot). On "a
 quarter" the PURPLE ¼ flies from the lower thumbnail's label to a mark at its column, which
 brightens while the others dim to 40 %; on "a third" the ⅓ does the same from the upper label. 30 simulated towns per demand: dots r = 0.05 at 38 %
 opacity, ±0.6 pp jitter, INK mean tick and GRAY min–max whisker per column. The same starting
@@ -135,8 +143,9 @@ town re-run at ¼ sorts in the lower thumbnail ("¼ → 58 %").
 ### 9 · Why the jump: the share ladder (2:12–2:45)
 *Screen:* the ladder is its own chart, about 1.3× the dot chart and 0.8 units higher. On "sort",
 the two thumbnails and their labels leave with the dot chart (one focal region), and the dot chart leaves completely (dots, y-axis, its title, the x numbers and ticks, the
-random-mix line); then its x-axis line moves up and stretches into the ladder's GRAY baseline
-while INK "share of neighbors matching" fades in. Only then do the bars grow
+random-mix line, 0.45 s); then its x-axis line moves up and stretches into the ladder's GRAY
+baseline while both ladder titles fade in (round 5: the frame is never a lone line), and the bars
+grow within 1.3 s of the line landing,
 from the baseline, one per share a household of the random start actually has (k of n,
 n ≤ 8). The vertical is named where a y-axis title sits: INK "households (simulated start)". On "these" a highlight sweeps along
 the bars; on "sixty percent" the ends are marked "0%" and "60%".
@@ -171,15 +180,17 @@ the dashed outline turns solid, and A's formula flips to 2/7 ≥ ¼.
 
 ### 10 · Payoff + honest limits (2:45–3:01)
 *Screen:* the 2:12 morph in reverse: the bars sink into the baseline and the ladder labels
-fade (0.6 s); the baseline shrinks back into the x-axis while the x title returns to PURPLE
-"demanded (% of neighbors)" (0.7 s); only then do the dots, y-axis and random-mix line return
-(0.6 s), with the two thumbnails. Citation "Schelling, 1971 · Journal of Mathematical Sociology" appears on "paper",
+fade while the two thumbnails return to their column (0.5 s); the baseline shrinks back into the
+x-axis while the x title returns to PURPLE "demanded (% of neighbors)" (0.6 s); only then do the
+dots, y-axis and random-mix line return (0.7 s). Citation "Schelling, 1971 · Journal of Mathematical Sociology" appears on "paper",
 and a box flashes the two towns on "model". A GRAY "our jump" bracket over ¼–⅓ appears on
 "His households", its label on the bracket's own row to its left. One GRAY label "nearest move · 25–30% empty" appears in two parts on "nearest" and "emptier",
 right-aligned under that row. On "the jump": "our jump" fades out (0.3 s), then the bracket
 slides to 35–50 % (0.6 s), then "Schelling's jump: 35–50%" fades in once it has stopped. The band
 (a light GRAY hatch, fill 7 %) sweeps from 35 to 50 exactly on "between about a third and a half"
-while our dots, mean ticks and town dots dim to 35 %, so it reads as his model's result.
+while our 30-town dots and mean ticks dim to about 30 %, so it reads as his model's result. Our
+two towns' dots (¼ → 58 %, ⅓ → 76 %) stay at full strength: they are the ends of "our jump", left
+of his band, and the two thumbnails they belong to are still on screen.
 
 > In his 1971 paper, Thomas Schelling ran this model. His households moved to the nearest
 > square that suited them, on emptier boards, and there the jump came later, between about a
@@ -199,9 +210,10 @@ Reveal: a box goes on the right town, and "⅓ demanded" travels up the empty ga
 above the towns, never over tiles. "0 demanded" does the same to the left town while its zone
 lines draw on. "· placed by a rule" appears only after it lands. Both headers are centred on
 their boards, with "demanded" on one baseline 0.25 above the boards. Citation "Aaronson, Hartley
-& Mazumder, 2021 · AEJ: Economic Policy" on "study"; on "1930s" both toy towns dim to 30 % (the
-toy rule is not a model of the 1930s maps, so the zone lines no longer pulse); the two "76% match"
-labels pulse on "decades"; the citation is underlined on "traces". The rule town's grain matches a
+& Mazumder, 2021 · AEJ: Economic Policy" on "study"; both toy towns dim to 30 % slowly across
+"1930s federal lending maps" (the toy rule is not a model of the 1930s maps, so the zone lines no
+longer pulse); the two "76% match" labels, the segregation measure, pulse on "segregation"; the
+citation is underlined on "traces". No stretch of this beat is static for more than about 2.2 s. The rule town's grain matches a
 Schelling town's texture (no stray tiles), so the picture cannot give the answer away.
 
 > Two simulated towns, both seventy-six percent. In one town, households demand a third. In the
@@ -212,7 +224,8 @@ Schelling town's texture (no stray tiles), so the picture cannot give the answer
 > traces this to reduced credit in the areas marked in red.
 
 ### 12 · Landing (3:48–3:56)
-*Screen:* the rule-made town fades. Ours grows back into the opening position, the meter and
+*Screen:* the rule-made town and every label fade first (0.45 s; round 5: the growing town no
+longer passes over fading labels). Ours then grows back into the opening position, the meter and
 the "simulated" tag return, and the PURPLE marker goes back to "?" at 76 %: the exact opening
 frame.
 

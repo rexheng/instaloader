@@ -392,3 +392,67 @@ recorded in facts.md:
     collapse is now driven by UpdateFromFunc.
   - Landing values flown with a per-glyph lane offset collapsed into a smear. The offsets are now
     computed from the whole mobject.
+
+## Round 5 revisions
+
+The two round-5 review files (`reviews/round5-craft.md`, `reviews/round5-substance.md`) are
+byte-identical to the second cycle's round-1 reviews (craft 8.5, substance 8.3; they review the
+3:42.3 cut). Every one of their 21 fixes was already applied in "Round 1 revisions (second review
+cycle)" above, and no factual error was claimed in them (both critics recomputed every number and
+verified all four citations). This round therefore re-audits the current 3:35.5 master the way a
+fresh critic would: every contact sheet, the keyframes, and 4 fps frame strips across every
+transform (§11.6). It also clears the round-4 fixes that the cycle-2 critics did not repeat but a
+fresh critic could raise again.
+
+### Plan of the climb (written before editing)
+
+| Dimension | BAR "9" anchor | Where the current cut falls short (evidence) | Upgrade |
+|---|---|---|---|
+| Visual 8.5 | every frame one focal point, all §5 standards met | flash on "these" (2:12) scales each row 1.08 about its own centre, so the yellow values crowd their "=" ("x̄ =54.26"); the r-row Indicate at 1:37 does the same ("r =−0.06"); two yellow labels stacked on the rise ("r s_y" over "r = 0.80", 1:31–1:34, round-4 craft 6); at the landing four yellow strokes meet at the bar top (line, bar top, error bar, ellipse; 3:29–3:31, round-4 craft 4); prediction hold has the full-strength star competing with the two ellipses (1:45–1:48, round-4 substance 7) | "these" becomes a yellow box round the five rows (as for Anscombe's "these five numbers"); r-row flags run per value; the live "r = …" label moves to the box's top-right corner while "r s_y" names the rise, and rides there through the sweep back; line to 30 % and ellipse to 60 % while the ellipse is squeezed into the error bar, restored on "dinosaur"; star points at 40 % for the prediction hold, back to full on "Slide" |
+| Motion 8.5–9 | every motion encodes a relation; nothing smears | 4 fps strips show glyphs dragged across neighbouring text: the r value flown into the touch dot crosses "r =" (1:16.8–1:17.3); Anscombe's s_x / r / s_y symbols leave the readout across "0.82" and "2.03" (2:53.6–2:56.0); the substitution and landing fractions sit empty ("= ——", "slope = ——") for about 0.5 s before their values arrive (3:01.3, 3:17.8; round-4 craft 7) | touch dots grow out of the centre-line ends instead of a glyph-to-dot morph (r is flagged on "correlation" and its live label takes over in the sweep); symbol copies lift straight up out of the readout before travelling (constant offsets per mobject, so each glyph stays legible); fraction bars grow with the first value's flight; at the landing each symbol fades only as its value arrives |
+| Hook 8.5 / Clarity 9 / Audio 9 / Concision 8.5–9 / Originality 9 | — | no new defect found in narration, sync or facts; WER 4 %, every deictic lands within 0.3 s, 0 banned phrases | narration unchanged, so the verified sync and every fact in facts.md stay valid |
+
+### What changed
+
+Narration, timing of every beat, and every number on screen are unchanged (facts.md needs no
+edit). All changes are to motion and layout, found by 4 fps frame strips across every transform.
+
+**Glyphs no longer smear in flight (§11.6).** The root cause, found in full-resolution crops, was
+structural: a value or symbol that is one *part* of a readout entry (`MathTex(sym, "=", val)[2]`)
+was transformed into a *whole* `MathTex`, which has one more level of nesting. Manim then pairs
+the glyphs badly and the digits merge mid-flight ("0.82" read as "0⁂"; "3.32" as "33ꞩ"). Every
+flight now uses a copy with the same structure as its target, so each glyph maps onto itself, and
+leaves its row along a path that rises straight out of the table before travelling (`lift_path`),
+so it never drags across "r =" or a neighbouring value.
+- 1:16 "picks one": the r value no longer morphs into the touch dot across the "r =" glyphs. The
+  ellipse is drawn starting at its right touch point; each touch dot appears as the stroke reaches
+  its wall.
+- 1:04 "single point": 54.26 and 47.83 travel intact (on opaque patches) one after the other to
+  the corner beside the centre dot and settle into it, instead of eight glyphs morphing into a dot.
+- 1:09 "reach": 16.76 and 26.93 travel one after the other (their straight paths cross; in the old
+  cut the two numbers overprinted at 1:09.0).
+- 2:48 "touches": Anscombe's 0.82 rises out of its row, then travels left, intact, into the touch dot.
+- 2:53–2:56: s_x, r and s_y rise out of the readout and travel to label the run and the rise.
+  They are flagged one at a time; the old group Indicate scaled the pair about their common centre
+  and pushed s_y into its "=" ("s_ȳ 2.03" on the 2:55 contact-sheet frame).
+- 3:01–3:03: 0.82, 2.03 and 3.32 rise out of the readout and fly to the substitution intact.
+
+**No empty templates.** The substitution's fraction bar grows with the first value's flight (it
+used to sit as "= ——" for about 0.4 s). At the landing, "r s_y" and "s_x" fade only as the
+dinosaur's values arrive, so "slope = ——" never shows empty.
+
+**One label per object (B9).** The live "r = 0.80" label steps up to the box's top-right corner
+on "touch point", before "r s_y" is written beside the rise, and rides there through the sweep back
+to −0.06. The two yellow labels no longer stack on the rise (round-4 craft 6).
+
+**Indicate effects stay inside their own space.** "these five numbers" (2:12) is a yellow box
+round the five rows (as for Anscombe's readout at 3:05) instead of a 1.08 scale flash that pushed
+each value into its "="; the r-row flag at 1:37 flags −0.06 and −0.06 separately.
+
+**Focal point.**
+- Prediction hold (1:45–1:48): the star dims to 40 % with the boxes gone, so the two ellipses and
+  centres carry the question; it returns to full strength during "Slide" (round-4 substance 7).
+- Landing squeeze (3:27–3:33): the best-fit line steps back to 30 % and the ellipse to 60 % while
+  a full-strength copy of the ellipse is squeezed into the ±s_y error bar, so the squeezed copy,
+  the bar and the error bar are the only full-strength strokes where they meet (round-4 craft 4).
+  Both return to full strength on "dinosaur".

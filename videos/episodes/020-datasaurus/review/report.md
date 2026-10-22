@@ -1,20 +1,20 @@
 # Review kit — `final.mp4`
 
-Generated 2026-10-16 03:46 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
+Generated 2026-10-22 08:09 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
 
 ## Mechanics (BAR §3 caps / §5 standards)
 
 | metric | value | bar | status |
 |---|---|---|---|
 | runtime | 3:35.5 (215.5s) | 2:30–4:00 | ok |
-| video | 1920x1080 @ 30 fps, h264/yuv420p, 10.92 MB | 1920x1080 @ 30 | ok |
+| video | 1920x1080 @ 30 fps, h264/yuv420p, 10.89 MB | 1920x1080 @ 30 | ok |
 | pace | 158 wpm (speech time) · 149 overall · 185 excl. all pauses; 536 words | 140–165 (cap <120/>180) | ok |
 | loudness | -14.0 LUFS, LRA 2.4 LU | −14 ±1 | ok |
 | true peak | -1.8 dBTP | ≤ −1.5 | ok |
 | leading silence | 0.00s | ≤ 1 s | ok |
 | trailing silence | 1.85s | ≤ 2 s | ok |
 | longest internal silence | 1.97s | ≤ 2.5 s | ok |
-| longest fully static stretch | 2.90s | ≤ 4 s (cap ≥ 8 s) | ok |
+| longest fully static stretch | 2.50s | ≤ 4 s (cap ≥ 8 s) | ok |
 | black frames | 0 run(s) | none | ok |
 | background-only stretches > 1 s | 0 | none | ok |
 | transcript vs script | WER 4.0% (520 words) | ≲ 8 % | ok |
@@ -65,15 +65,15 @@ Generated 2026-10-16 03:46 by videos/toolkit/review_kit.sh. Frames are evidence;
 - `keyframes/kf_13_01-02.7.png` — 1:02.7
 - `keyframes/kf_14_01-07.2.png` — 1:07.2
 - `keyframes/kf_15_01-15.8.png` — 1:15.8
-- `keyframes/kf_16_01-17.7.png` — 1:17.7
-- `keyframes/kf_17_01-21.7.png` — 1:21.7
-- `keyframes/kf_18_01-32.3.png` — 1:32.3
-- `keyframes/kf_19_01-38.2.png` — 1:38.2
-- `keyframes/kf_20_01-48.1.png` — 1:48.1
+- `keyframes/kf_16_01-20.9.png` — 1:20.9
+- `keyframes/kf_17_01-32.2.png` — 1:32.2
+- `keyframes/kf_18_01-38.6.png` — 1:38.6
+- `keyframes/kf_19_01-45.3.png` — 1:45.3
+- `keyframes/kf_20_01-48.7.png` — 1:48.7
 - `keyframes/kf_21_01-50.9.png` — 1:50.9
 - `keyframes/kf_22_01-53.7.png` — 1:53.7
 - `keyframes/kf_23_02-02.3.png` — 2:02.3
-- `keyframes/kf_24_02-07.4.png` — 2:07.4
+- `keyframes/kf_24_02-13.8.png` — 2:13.8
 - `keyframes/kf_25_02-17.8.png` — 2:17.8
 - `keyframes/kf_26_02-25.8.png` — 2:25.8
 - `keyframes/kf_27_02-31.1.png` — 2:31.1
@@ -88,7 +88,7 @@ Generated 2026-10-16 03:46 by videos/toolkit/review_kit.sh. Frames are evidence;
 - `keyframes/kf_36_03-26.1.png` — 3:26.1
 - `keyframes/kf_37_03-27.6.png` — 3:27.6
 - `keyframes/kf_38_03-30.9.png` — 3:30.9
-- `keyframes/kf_39_03-33.6.png` — 3:33.6
+- `keyframes/kf_39_03-33.7.png` — 3:33.7
 - `keyframes/kf_40_03-35.4.png` — 3:35.4
 
 ## Transcript (whisper-large-v3-turbo, word timings in transcript_words.tsv)
@@ -166,4 +166,4 @@ Differences (numbers spelled out, 'and' ignored). A technical term heard wrong u
 [3:05.2] replace  script: 'datasets'                               heard: 'data sets'
 ```
 
-_review kit ran in 145s_
+_review kit ran in 148s_

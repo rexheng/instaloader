@@ -2928,8 +2928,8 @@
  "layout_audit": {
   "clearance": 0.15,
   "checks": 251,
-  "audit_seconds": 2.941,
-  "render_seconds": 925.7,
+  "audit_seconds": 3.349,
+  "render_seconds": 1065.3,
   "errors": 0,
   "count": 0,
   "counts": {

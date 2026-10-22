@@ -182,3 +182,35 @@ Review: craft 8.5, substance 8.6, no caps, no factual errors; both said every fi
 | Clarity (8.5 / 8.5) | "Viewer could re-derive it after one watch" | 238 vs 200 gap; spoken columns unmarked; subject household unmarked; "map alone" beatable by texture; zone pulses equate the toy rule with HOLC | "the other thirty-eight were content by their turn" + live "moves" HUD row; ¼ and ⅓ fly from the thumbnail labels to their columns, which brighten; white inner outline on the subject household; rule town regenerated to match the Schelling town's texture (no stray tiles); zone pulses removed, towns dimmed under the HOLC sentence |
 | Audio (8.5 / 8.5) | "Each deictic lands as the element highlights" | "this chart" over an empty frame; "this counter" un-highlighted; "other" swallowed | Axes drawn by "point"; counter pulses on "this"; "In one town … In the other, nobody minds …" (whisper-checked) |
 | Concision (8 / 8) | "Cutting any sentence loses something" | 3:50; restatements | Cut "So most households are content", "Round after round, the tipping spreads", "Seventy-six percent, the town we started with", "Thirty towns at each demand…" |
+
+## Round 5 revisions
+
+Round 5 reviews: craft 8.5, substance 8.6, no caps, no factual errors (the same text as the second cycle's round-1 reviews, against the 01:12 master). The previous attempt had written the plan above and edited scene.py, script.md and facts.md, but its master render was interrupted, so `final.mp4` still showed the defects the critics saw. This revision continued from those files, rendered them, checked every fix on the frames, and fixed what the frames still showed.
+
+**Every round-5 fix, checked on the new master**
+
+| Fix (critic) | Where it landed | Status |
+|---|---|---|
+| Garbled 2/7 → 3/8 morph (craft 3, substance 1) | 1:42–1:44: the old household's fraction slides out left and fades, then the next one slides in. Frames at 10 fps never show two digit sets. Same-household changes cross-fade in place, 0.3 s per half | fixed |
+| "our jump" and "Schelling's jump" superimposed (craft 4, substance 2) | 2:58–3:00: the label fades out, then the bracket slides, then the new label fades in. Frames at 5 fps show one label at a time | fixed |
+| Ladder had three focal regions (craft 1) | Thumbnails leave on "sort". A's patch moves to the vacated right column. Counts appear only as spoken (67, 125, then 76) | fixed |
+| Ladder vertical had no name (craft 8) | "households (simulated start)" sits at the top-left, where a y-axis title would be | fixed |
+| Schelling frame had about 22 words and the band sat over our dots (craft 2, substance 8) | One label, "nearest move · 25–30% empty". The band is hatched at 7 % fill. Our 30-town dots and mean ticks dim to about 30 %. Our two towns' dots stay bright, marking the ends of "our jump" left of his band | fixed |
+| Subject household had no marker (craft 5) | White inner outline on B, then C, then D. A's ring stays at 50 % until "this neighbor" | fixed |
+| "this chart" spoken over an empty frame (craft 6) | Axes are drawn before "point" | fixed |
+| Spoken columns not marked (craft 7) | ¼ and ⅓ fly from the thumbnail labels to their columns, which brighten | fixed |
+| Counter not highlighted on "this counter" (craft 9) | Pulse on "this" | fixed |
+| "other" swallowed (craft 10, substance 6) | "In one town … In the other, nobody minds …". Whisper transcribes it | fixed |
+| 238 vs 200 gap (substance 5) | "the other thirty-eight were content by their turn", plus a live "moves" row and a note | fixed |
+| Rule town beatable by texture (substance 3) | Fine-grained zone field, so the towns are indistinguishable at 3:04 (frame checked) | fixed |
+| Zone pulses equated the toy rule with HOLC (substance 4) | Pulses removed. Both towns dim under the HOLC sentence | fixed |
+| Concision (craft 11, substance 7) | Cut "So most households are content", "Round after round…", "Seventy-six percent, the town…" and "Thirty towns at each demand…", plus (this round) "The matching share jumps to sixty-four percent", which only read the meter aloud | fixed |
+| HUD balance, 2 s near-empty park (craft 12) | HUD sits beside the board's middle. The inset flies out with the corner rewind | fixed |
+
+**Found on the first round-5 master and fixed**
+- **"tips" (1:48).** It stood alone after a 0.3 s pause, and the full-track whisper heard "It ips". The line is now "Then the next one, also at three eighths, tips in round three." Synthesized alone, it transcribes word for word, and on the full track WER is 0.2 % (only "corner's"/"corners"). The move starts 0.7 s before "Then", so C's 2/7 < ⅓ still holds about 1.6 s and D's 3/8 ≥ ⅓ holds about 1.9 s.
+- **4.2 s static stretch at 3:25 (HOLC sentence).** The towns now dim slowly across "1930s federal lending maps". The two "76% match" labels, our segregation measure, pulse on "segregation". The longest static stretch in the episode is now 3.7 s.
+- **Lone line on an empty frame at 2:13.** Both ladder titles now arrive while the axis line moves, and the bars are up within 1.3 s. In the reverse morph (2:46) the thumbnails return while the bars sink.
+- **Labels crossed by flying copies.** At 1:57 the town's copy flew over "⅓ → 76%" while it faded in. At 2:04 the ¼ town's copy flew over "→ 58%". Both labels now arrive after their copy lands.
+- **Landing (3:33).** Our growing town passed over the fading rule town and its labels. Those now fade first (0.45 s), then the town grows home.
+- **Dot dimming.** The no-op dims on our two town dots were removed, so the code matches the picture.

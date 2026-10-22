@@ -616,9 +616,9 @@ class Episode(NarratedScene):
             self.pulse(self.ink_lab, 1.1)
 
         # 5 - run round one, and the measured failure -----------------------------------
+        # (round 5: "The matching share jumps to sixty-four percent" was cut: the meter shows it)
         with self.narrate("Round one takes two hundred moves; the other thirty-eight were "
-                          "content by their turn. The matching share jumps to sixty-four "
-                          "percent.") as beat:
+                          "content by their turn.") as beat:
             # (a number that changes digits cannot fade in while it counts: rows first)
             self.play(FadeOut(preview), FadeOut(src_box), FadeOut(dest_box),
                       FadeIn(self.round_lab), FadeIn(self.moves_lab), run_time=0.4)
@@ -628,8 +628,7 @@ class Episode(NarratedScene):
             note38 = self.note(f"{b1['content_before_turn']} content by their turn")
             beat.wait_until("thirty", offset=-0.2)
             self.play(FadeIn(note38, shift=0.1 * UP), run_time=0.6)
-            beat.wait_until("sixty", offset=-0.2)
-            self.pulse(self.ink_lab, 1.12, run_time=0.8)
+            # (the meter climbs 50 % -> 64 % live during the round; no spoken number)
 
         movers1 = {m[0] for m in self.rounds[0]}
         others = [self.tiles[h] for h in self.tiles if h not in self.cur_unhappy]
@@ -874,9 +873,12 @@ class Episode(NarratedScene):
         g1, g2 = self.states[1][0], self.states[2][0]
         arrivals2 = [(r, c) for r in range(r0, r1 + 1) for c in range(c0, c1 + 1)
                      if g1[r, c] == 0 and g2[r, c] > 0]
+        # (round 5: "tips" no longer stands alone after a pause, where whisper heard "It ips";
+        # "also" and "in round three" keep D's 3/8 >= 1/3 on screen >= 1.5 s without a pause)
         with self.narrate("Its neighbor here also has three eighths. In round two, our household "
                           "leaves, and this one drops to two sevenths. [pause 1.1] Then the next "
-                          "one, at three eighths, [pause 0.3] tips.", speed=0.83, gap=1.4) as beat:
+                          "one, also at three eighths, tips in round three.", speed=0.83,
+                          gap=1.4) as beat:
             ringC = ring3(C_)
             beat.wait_until("neighbor", offset=-0.25)
             # the focus moves to C, and C's own formula replaces B's (slide = new household)
@@ -905,15 +907,15 @@ class Episode(NarratedScene):
             beat.wait_until("drops", offset=-0.45)
             self.play(*resolve_to("2", "7", "<"), ringC.animate.set_stroke(RED), mag_ring(C_),
                       ring_on(hC), run_time=0.7)
-            # C's 2/7 < 1/3 holds through "two sevenths" and the pause (>= 1.5 s)
+            # C's 2/7 < 1/3 holds through "two sevenths" and most of the pause (>= 1.5 s)
             ringD = ring3(D_)
-            beat.wait_until("Then", offset=-0.4)
+            beat.wait_until("Then", offset=-0.7)
             self.play(ReplacementTransform(ringC, ringD), subj.animate.move_to(mag_cell(*D_)),
                       *focus(D_, extra=[C_]), next_household("3", "8", r"\geq", 0.9),
                       run_time=0.9)
-            # D's 3/8 >= 1/3 holds through "at three eighths"; on "tips" C leaves and D's fraction
-            # changes in the same move (cause and effect together, never a stale fraction), so
-            # D's 2/7 < 1/3 then holds >= 1.5 s through the pause into the next beat
+            # D's 3/8 >= 1/3 holds through "also at three eighths" (~1.9 s); on "tips" C leaves and
+            # D's fraction changes in the same move (cause and effect together, never a stale
+            # fraction), so D's 2/7 < 1/3 then holds through "in round three" into the next beat
             beat.wait_until("tips", offset=-0.35)
             c_in = mtiles.pop(C_)
             self.play(c_in.animate.shift(UP * 1.0).set_opacity(0),
@@ -1012,13 +1014,16 @@ class Episode(NarratedScene):
                   self.town.animate(run_time=0.9, rate_func=SMOOTH).scale(s_thumb).move_to(TOP))
         with self.narrate("That whole town is one point on this chart.", gap=1.2) as beat:
             self.play(Create(ax), run_time=1.0)
-            self.play(TransformFromCopy(self.town, ours), FadeIn(top_lab, shift=0.1 * LEFT),
+            # (the town's copy flies left past where "1/3 -> 76%" will sit: the label arrives
+            # only after the copy has landed, so nothing ever flies through it)
+            self.play(TransformFromCopy(self.town, ours),
                       run_time=beat.until("point", offset=0.15, min_time=0.6))
             # thirty simulated towns per demand: the note says it, the dots show it (no words)
             beat.wait_until("chart", offset=-0.1)
             self.play(LaggedStart(*[FadeIn(cloud[t], lag_ratio=0.02) for t in sorted(cloud)],
                                   lag_ratio=0.25),
-                      Create(base), FadeIn(base_lab), FadeIn(dot_note), run_time=2.0)
+                      Create(base), FadeIn(base_lab), FadeIn(dot_note),
+                      FadeIn(top_lab, shift=0.1 * LEFT), run_time=2.0)
 
         qtiles = {}
         for hid, (r, c) in self.start_pos.items():
@@ -1075,8 +1080,9 @@ class Episode(NarratedScene):
                     qtiles[h].move_to(q_start[h] + (q_end[h] - q_start[h]) * a)
             self.play(UpdateFromAlphaFunc(qboard, qrun),
                       run_time=beat.until("fifty", offset=-0.1, min_time=1.5), rate_func=linear)
-            self.play(TransformFromCopy(qtown, qpt), FadeIn(VGroup(bot_lab[1], bot_lab[2])),
-                      run_time=0.9)
+            # the copy flies over the spot where "-> 58%" sits: the result arrives after it lands
+            self.play(TransformFromCopy(qtown, qpt), run_time=0.8)
+            self.play(FadeIn(VGroup(bot_lab[1], bot_lab[2]), shift=0.1 * LEFT), run_time=0.5)
             beat.wait_until("third", offset=-0.25)
             self.play(TransformFromCopy(top_lab[0], t_mark, path_arc=0.6), *col_state({k_q, k_t}),
                       run_time=0.7)
@@ -1206,13 +1212,14 @@ class Episode(NarratedScene):
             beat.wait_until("sort", offset=-0.2)
             self.add(x_line)
             # first the dot chart goes (nothing moves through it), then the axis line moves
+            # while both ladder titles arrive (never a lone line on an empty frame), and the
+            # bars are up within ~1.3 s of the line landing
             self.play(*[m.animate.set_opacity(0) for m in chart_ctx],
                       ax.x_title.animate.set_opacity(0), *[FadeOut(m) for m in thumbs],
-                      FadeOut(q_mark), FadeOut(t_mark), run_time=0.5)
-            self.play(Transform(x_line, lbase), FadeIn(xt_share), run_time=0.6)
-            self.play(LaggedStart(*[GrowFromEdge(b, DOWN) for b in bar_grp], lag_ratio=0.08),
-                      FadeIn(bars_note),
-                      run_time=beat.until("eight", offset=-0.2, min_time=1.6))
+                      FadeOut(q_mark), FadeOut(t_mark), run_time=0.45)
+            self.play(Transform(x_line, lbase), FadeIn(xt_share), FadeIn(bars_note), run_time=0.6)
+            self.play(LaggedStart(*[GrowFromEdge(b, DOWN) for b in bar_grp], lag_ratio=0.05),
+                      run_time=min(1.3, beat.until("eight", offset=-0.2, min_time=1.0)))
             beat.wait_until("these", offset=-0.2)
             # point at every value that occurs, left to right
             self.play(LaggedStart(*[b.animate(rate_func=there_and_back).stretch(
@@ -1384,13 +1391,15 @@ class Episode(NarratedScene):
             # x-axis again, and only then does the dot chart come back (never both at once)
             # (the ladder's x title leaves with the bars, before the chart's title returns: the
             # two titles never overlap; the thumbnails return as the baseline moves)
+            # (the two thumbnails return while the bars sink: their column is clear of the
+            # ladder, and the frame is never a lone line)
             self.play(*[b.animate.stretch_to_fit_height(0.01).move_to([b.get_x(), BL, 0])
-                        for b in bar_grp], FadeOut(ladder_lab), FadeOut(xt_share), run_time=0.5)
+                        for b in bar_grp], FadeOut(ladder_lab), FadeOut(xt_share),
+                      *[FadeIn(m) for m in thumbs], run_time=0.5)
             self.remove(bar_grp)
             self.play(Transform(x_line, Line(ax.c2p(0, 40), ax.c2p(60, 40), color=GRAY,
                                              stroke_width=2.5)),
-                      ax.x_title.animate.set_opacity(1), *[FadeIn(m) for m in thumbs],
-                      run_time=0.6)
+                      ax.x_title.animate.set_opacity(1), run_time=0.6)
             # ("random mix" stays out from here on: fewer words while Schelling's labels show)
             restore = [m.animate.set_opacity(1) for m in [ours, qpt, base, ax.y_axis,
                                                           ax.y_title, ax.x_axis]]
@@ -1426,7 +1435,8 @@ class Episode(NarratedScene):
                 ours_dim += [c_[0].animate.set_stroke(opacity=0.3),
                              c_[1].animate.set_fill(opacity=0.08),
                              c_[2].animate.set_stroke(opacity=0.3)]
-            ours_dim += [ours.animate.set_fill(opacity=0.3), qpt.animate.set_fill(opacity=0.3)]
+            # our two towns' dots (1/4 -> 58 %, 1/3 -> 76 %) stay at full strength: they are the
+            # ends of "our jump", left of his band, and they are tied to the two thumbnails
             self.play(UpdateFromAlphaFunc(band, grow),
                       LaggedStart(*[Create(l) for l in hatch], lag_ratio=0.15), *ours_dim,
                       run_time=beat.until("half", end=True, offset=0.05, min_time=1.5),
@@ -1550,14 +1560,17 @@ class Episode(NarratedScene):
             self.play(FadeIn(z_rule, shift=0.1 * LEFT), run_time=0.6)
             beat.wait_until("study", offset=-0.3)
             self.play(FadeIn(cite2, shift=0.1 * UP), run_time=0.7)
-            # real cities are not the toy towns: both towns dim (the toy rule is not a model of
-            # the 1930s maps); only the citation and the two "76% match" labels stay in focus
+            # real cities are not the toy towns: both towns dim slowly under "1930s federal
+            # lending maps" (the toy rule is not a model of those maps); only the citation and
+            # the two "76% match" labels (the segregation measure) stay in focus, and they pulse
+            # on "segregation"
             beat.wait_until("1930s", offset=-0.2)
             self.play(ztiles.animate.set_fill(opacity=0.3), zlines.animate.set_stroke(opacity=0.3),
-                      self.board.animate.set_fill(opacity=0.3), run_time=0.8)
-            beat.wait_until("decades", offset=-0.25)
+                      self.board.animate.set_fill(opacity=0.3),
+                      run_time=beat.until("lending", end=True, offset=0.1, min_time=0.8))
+            beat.wait_until("segregation", offset=-0.25)
             self.play(*[m.animate(rate_func=there_and_back).scale(1.1) for m in (zmatch, omatch)],
-                      run_time=0.8)
+                      run_time=0.9)
             beat.wait_until("traces", offset=-0.2)
             cite_ul = underline(cite2, color=GRAY, buff=0.05, stroke_width=3)
             assert cite_ul.get_bottom()[1] >= -3.2
@@ -1570,18 +1583,20 @@ class Episode(NarratedScene):
         self.ty.set_value(TY0)
         for m in (self.track, self.fill, self.lo, self.hi, self.mline, self.ink_lab, self.pur_lab):
             m.update()
+        # the rule town and every label leave first, in the pause between the beats (round 5:
+        # the growing town used to pass over them while they faded); then one move on the town:
+        # it grows back home and its tiles return to full strength, landing on "first"
+        self.town.generate_target()
+        self.town.target.scale(1 / ZS).move_to([GX, GY, 0])
+        self.town.target[1].set_fill(opacity=1.0)
+        self.play(FadeOut(ztown), FadeOut(zmatch), FadeOut(omatch), FadeOut(z_dem_full[0]),
+                  FadeOut(z_rule), FadeOut(tt_tag),
+                  FadeOut(cite2), FadeOut(cite_ul), FadeOut(o_dem), run_time=0.45)
         with self.narrate("Look again at the first town. As Schelling argued, whatever you guessed "
                           "its people demanded, the map alone could not have told you.",
                           speed=0.81) as beat:
-            # one animation on the town: it grows back home and its tiles return to full strength
-            self.town.generate_target()
-            self.town.target.scale(1 / ZS).move_to([GX, GY, 0])
-            self.town.target[1].set_fill(opacity=1.0)
-            self.play(FadeOut(ztown), FadeOut(zmatch), FadeOut(omatch), FadeOut(z_dem_full[0]),
-                      FadeOut(z_rule), FadeOut(tt_tag),
-                      FadeOut(cite2), FadeOut(cite_ul), FadeOut(o_dem),
-                      MoveToTarget(self.town),
-                      run_time=beat.until("first", offset=-0.1, min_time=1.0))
+            self.play(MoveToTarget(self.town),
+                      run_time=beat.until("first", offset=-0.1, min_time=0.6))
             self.play(FadeIn(self.meter), FadeIn(sim_tag), run_time=0.7)
             beat.wait_until("Whatever", offset=-0.2)
             self.play(self.swap(self.dem_sym, q_sym),

@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/007-entropy-information/final.mp4",
- "duration_s": 237.5,
+ "duration_s": 237.567,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,53 +8,58 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 10.48,
- "integrated_lufs": -14.1,
- "lra_lu": 2.3,
- "true_peak_dbtp": -2.2,
+ "size_mb": 10.27,
+ "integrated_lufs": -14.0,
+ "lra_lu": 2.2,
+ "true_peak_dbtp": -2.0,
  "leading_silence_s": 0.0,
- "trailing_silence_s": 1.04,
+ "trailing_silence_s": 0.74,
  "longest_internal_silence_s": 2.09,
  "silences_over_1_5s": [
   [
-   8.13,
-   10.09
+   7.96,
+   9.94
   ],
   [
-   86.36,
-   87.98
+   85.42,
+   87.04
   ],
   [
-   128.55,
-   130.63
+   127.21,
+   129.3
   ]
  ],
- "frames": 7125,
- "longest_static_s": 3.5,
+ "frames": 7127,
+ "longest_static_s": 4.03,
  "static_stretches_over_3s": [
   [
-   4.33,
-   7.57,
-   3.23
+   4.23,
+   7.4,
+   3.17
   ],
   [
-   234.0,
-   237.5,
-   3.5
+   212.53,
+   216.57,
+   4.03
+  ],
+  [
+   234.43,
+   237.57,
+   3.13
   ]
  ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
  "background_luma": null,
- "transcript_words": 610,
+ "transcript_words": 618,
  "first_word_s": 0.02,
- "last_word_s": 236.85199,
- "wpm_speech": 158.3,
- "wpm_overall": 154.1,
- "wpm_excluding_all_pauses": 185.1,
+ "last_word_s": 237.204,
+ "wpm_speech": 160.2,
+ "wpm_overall": 156.1,
+ "wpm_excluding_all_pauses": 187.6,
  "narration_file": "videos/episodes/007-entropy-information/narration.json",
- "wer": 0.0168,
- "narration_words": 595,
+ "wer": 0.0133,
+ "narration_words": 603,
  "banned_phrase_hits": 0,
  "slop_hits": [],
  "layout_audit": {
@@ -66,7 +71,7 @@
    "caption-zone": 0
   },
   "allowed": 0,
-  "checks": 216
+  "checks": 224
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -86,166 +91,168 @@
  ],
  "keyframes": [
   {
-   "t": 3.67,
-   "file": "keyframes/kf_01_00-03.7.png"
+   "t": 3.57,
+   "file": "keyframes/kf_01_00-03.6.png"
   },
   {
-   "t": 10.4,
-   "file": "keyframes/kf_02_00-10.4.png"
+   "t": 10.63,
+   "file": "keyframes/kf_02_00-10.6.png"
   },
   {
-   "t": 17.43,
-   "file": "keyframes/kf_03_00-17.4.png"
+   "t": 16.47,
+   "file": "keyframes/kf_03_00-16.5.png"
   },
   {
-   "t": 23.37,
-   "file": "keyframes/kf_04_00-23.4.png"
+   "t": 23.03,
+   "file": "keyframes/kf_04_00-23.0.png"
   },
   {
-   "t": 27.87,
-   "file": "keyframes/kf_05_00-27.9.png"
+   "t": 32.47,
+   "file": "keyframes/kf_05_00-32.5.png"
   },
   {
-   "t": 39.9,
-   "file": "keyframes/kf_06_00-39.9.png"
+   "t": 39.53,
+   "file": "keyframes/kf_06_00-39.5.png"
   },
   {
-   "t": 48.47,
-   "file": "keyframes/kf_07_00-48.5.png"
+   "t": 47.83,
+   "file": "keyframes/kf_07_00-47.8.png"
   },
   {
-   "t": 55.9,
-   "file": "keyframes/kf_08_00-55.9.png"
+   "t": 55.23,
+   "file": "keyframes/kf_08_00-55.2.png"
   },
   {
-   "t": 61.63,
-   "file": "keyframes/kf_09_01-01.6.png"
+   "t": 60.73,
+   "file": "keyframes/kf_09_01-00.7.png"
   },
   {
-   "t": 65.23,
-   "file": "keyframes/kf_10_01-05.2.png"
+   "t": 64.4,
+   "file": "keyframes/kf_10_01-04.4.png"
   },
   {
-   "t": 67.4,
-   "file": "keyframes/kf_11_01-07.4.png"
+   "t": 66.53,
+   "file": "keyframes/kf_11_01-06.5.png"
   },
   {
-   "t": 69.83,
-   "file": "keyframes/kf_12_01-09.8.png"
+   "t": 68.97,
+   "file": "keyframes/kf_12_01-09.0.png"
   },
   {
-   "t": 73.97,
-   "file": "keyframes/kf_13_01-14.0.png"
+   "t": 73.1,
+   "file": "keyframes/kf_13_01-13.1.png"
   },
   {
-   "t": 76.9,
-   "file": "keyframes/kf_14_01-16.9.png"
+   "t": 76.1,
+   "file": "keyframes/kf_14_01-16.1.png"
   },
   {
-   "t": 84.03,
-   "file": "keyframes/kf_15_01-24.0.png"
+   "t": 83.1,
+   "file": "keyframes/kf_15_01-23.1.png"
   },
   {
-   "t": 97.53,
-   "file": "keyframes/kf_16_01-37.5.png"
+   "t": 96.5,
+   "file": "keyframes/kf_16_01-36.5.png"
   },
   {
-   "t": 108.93,
-   "file": "keyframes/kf_17_01-48.9.png"
+   "t": 107.37,
+   "file": "keyframes/kf_17_01-47.4.png"
   },
   {
-   "t": 110.6,
-   "file": "keyframes/kf_18_01-50.6.png"
+   "t": 109.43,
+   "file": "keyframes/kf_18_01-49.4.png"
   },
   {
-   "t": 122.93,
-   "file": "keyframes/kf_19_02-02.9.png"
+   "t": 121.6,
+   "file": "keyframes/kf_19_02-01.6.png"
   },
   {
-   "t": 126.9,
-   "file": "keyframes/kf_20_02-06.9.png"
+   "t": 125.63,
+   "file": "keyframes/kf_20_02-05.6.png"
   },
   {
-   "t": 130.0,
-   "file": "keyframes/kf_21_02-10.0.png"
+   "t": 128.67,
+   "file": "keyframes/kf_21_02-08.7.png"
   },
   {
-   "t": 137.5,
-   "file": "keyframes/kf_22_02-17.5.png"
+   "t": 136.07,
+   "file": "keyframes/kf_22_02-16.1.png"
   },
   {
-   "t": 141.27,
-   "file": "keyframes/kf_23_02-21.3.png"
+   "t": 139.77,
+   "file": "keyframes/kf_23_02-19.8.png"
   },
   {
-   "t": 143.5,
-   "file": "keyframes/kf_24_02-23.5.png"
+   "t": 142.0,
+   "file": "keyframes/kf_24_02-22.0.png"
   },
   {
-   "t": 153.6,
-   "file": "keyframes/kf_25_02-33.6.png"
+   "t": 149.5,
+   "file": "keyframes/kf_25_02-29.5.png"
   },
   {
-   "t": 161.5,
-   "file": "keyframes/kf_26_02-41.5.png"
+   "t": 154.7,
+   "file": "keyframes/kf_26_02-34.7.png"
   },
   {
-   "t": 167.33,
-   "file": "keyframes/kf_27_02-47.3.png"
+   "t": 160.37,
+   "file": "keyframes/kf_27_02-40.4.png"
   },
   {
-   "t": 171.67,
-   "file": "keyframes/kf_28_02-51.7.png"
+   "t": 166.97,
+   "file": "keyframes/kf_28_02-47.0.png"
   },
   {
-   "t": 172.8,
-   "file": "keyframes/kf_29_02-52.8.png"
+   "t": 171.33,
+   "file": "keyframes/kf_29_02-51.3.png"
   },
   {
-   "t": 175.13,
-   "file": "keyframes/kf_30_02-55.1.png"
+   "t": 173.47,
+   "file": "keyframes/kf_30_02-53.5.png"
   },
   {
-   "t": 184.17,
-   "file": "keyframes/kf_31_03-04.2.png"
+   "t": 183.87,
+   "file": "keyframes/kf_31_03-03.9.png"
   },
   {
-   "t": 186.7,
-   "file": "keyframes/kf_32_03-06.7.png"
+   "t": 186.3,
+   "file": "keyframes/kf_32_03-06.3.png"
   },
   {
-   "t": 194.67,
-   "file": "keyframes/kf_33_03-14.7.png"
+   "t": 193.6,
+   "file": "keyframes/kf_33_03-13.6.png"
   },
   {
-   "t": 196.57,
-   "file": "keyframes/kf_34_03-16.6.png"
+   "t": 196.5,
+   "file": "keyframes/kf_34_03-16.5.png"
   },
   {
-   "t": 203.73,
-   "file": "keyframes/kf_35_03-23.7.png"
+   "t": 203.23,
+   "file": "keyframes/kf_35_03-23.2.png"
   },
   {
-   "t": 210.53,
-   "file": "keyframes/kf_36_03-30.5.png"
+   "t": 210.33,
+   "file": "keyframes/kf_36_03-30.3.png"
   },
   {
-   "t": 218.63,
-   "file": "keyframes/kf_37_03-38.6.png"
+   "t": 220.27,
+   "file": "keyframes/kf_37_03-40.3.png"
   },
   {
-   "t": 226.57,
-   "file": "keyframes/kf_38_03-46.6.png"
+   "t": 226.07,
+   "file": "keyframes/kf_38_03-46.1.png"
   },
   {
-   "t": 231.57,
-   "file": "keyframes/kf_39_03-51.6.png"
+   "t": 231.9,
+   "file": "keyframes/kf_39_03-51.9.png"
   },
   {
-   "t": 237.47,
+   "t": 237.53,
    "file": "keyframes/kf_40_03-57.5.png"
   }
  ],
- "flags": [],
+ "flags": [
+  "static frame: 4.0s fully static (limit 4 s, cap at 8 s)"
+ ],
  "implied_caps": []
 }

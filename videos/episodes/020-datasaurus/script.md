@@ -78,7 +78,8 @@ grew, and the y spread shrank by almost a quarter.
 standard deviation to the right, on average r standard deviations up. That's the best-fit line,
 through the middle of every vertical slice. At the wall, the slice is just the touch point, r
 times ess why above the center. For minus point oh six, that's just below the middle.
-> Ghost ellipses on "Many", the YELLOW ellipse and touch dots on "picks one". On "Correlation r
+> Ghost ellipses on "Many", the YELLOW ellipse on "picks one", drawn from the right touch point
+> round to the left one, each touch dot appearing as the stroke reaches its wall. On "Correlation r
 > means" the ellipse becomes a "what if" (dinosaur faded, r row dimmed, live "r = …" label), r goes
 > to 0; the run (labelled s_x) on "one standard deviation to the right"; r sweeps 0 → 0.80 and the
 > rise grows on "r standard deviations up". On "best-fit line" a dashed YELLOW line grows out of
@@ -86,7 +87,8 @@ times ess why above the center. For minus point oh six, that's just below the mi
 > five thin vertical slices of the ellipse are drawn (x̄ ± 0.8 s_x, ± 0.4 s_x, x̄); on "vertical"
 > their midpoints appear, all on the dashed line. On "At the wall" the slices slide right and
 > shrink until each one collapses onto the touch dot, which is flagged on "touch point"; "r s_y" is
-> written beside the rise on "r times". On "minus point oh six" r sweeps back to −0.06 with the
+> written beside the rise on "r times" while the live "r = 0.80" label steps up to the box's
+> top-right corner (one label per object). On "minus point oh six" r sweeps back to −0.06 with the
 > dashed line still through the touch dot; the r row returns and is Indicated; the touch dot flags
 > on "middle".
 
@@ -97,7 +99,8 @@ times ess why above the center. For minus point oh six, that's just below the mi
 > A RED centre/box/ellipse, computed live, drifts off the YELLOW one.
 
 **B12.** How would you fix the star? [pause 1.5]
-> Both boxes fade out, so the two ellipses and centres alone carry the prediction hold.
+> Both boxes fade out and the star dims to 40 %, so the two ellipses and centres alone carry the
+> prediction hold; the star returns to full strength during "Slide".
 
 **B13.** Slide it until the centers meet. Stretch it until the boxes match. Then tip it, a slight
 shear, until it touches the walls at the same height.
@@ -113,7 +116,7 @@ shear, until it touches the walls at the same height.
 numbers fixed. It nudges a random point toward a target shape, and undoes any nudge that breaks
 them. Repeat it enough times, and the dinosaur becomes a circle.
 > Citation on "Matejka"; our star walks back to the dinosaur with the five held; the readout's five
-> columns flash on "these". On "nudges" a tail point is ringed and the dashed target circle drawn;
+> rows are boxed in YELLOW on "these" (no scale flash). On "nudges" a tail point is ringed and the dashed target circle drawn;
 > on "toward" it steps 5.5 units toward the circle (x̄ and s_x turn RED ≠); on "undoes" it steps
 > back (all =); on "breaks" the column and ellipse are Indicated. On "Repeat" the points set off one
 > by one into the real `circle` set; the five = never change, the median wanders.
@@ -129,18 +132,21 @@ this same ellipse, and a different median.
 > first, level with his touch point.
 
 **B19.** His correlation is point eight two, so the ellipse touches the right wall high up.
+> On "touches" his 0.82 travels straight left, intact, and settles into the touch dot.
 
 **B20.** His best-fit line follows the same rule: one ess ex across, r ess why up, through the
 center and that touch point.
 > The readout steps down to make room. On "one ess ex across" the s_x symbol is Indicated in his
-> readout and flies down to label the run as it is drawn; on "r ess why up" r and s_y fly from the
-> readout to label the rise as it grows; on "center" the centre flags and the best-fit line grows
+> readout, and a copy lifts straight up out of the readout row before travelling to label the run as
+> it is drawn; on "r ess why up" r and s_y are flagged one by one and lift out the same way to label
+> the rise as it grows; on "center" the centre flags and the best-fit line grows
 > out of it through the touch point. (B9's picture, recognised.)
 
 **B21.** So the slope is rise over run. [pause 1.0] Plug in his numbers, and it's one half.
 > "slope =" on "slope"; the r s_y label arcs up over it into the numerator on "rise", the s_x label
 > arcs under into the denominator on "run" (slope = r s_y / s_x, every term from its segment). The
-> formula holds alone, then 0.82 × 2.03 / 3.32 ≈ 0.50 is built from the readout.
+> formula holds alone, then 0.82 × 2.03 / 3.32 ≈ 0.50 is built from the readout; the fraction bar
+> grows with the first value's flight, so the template is never empty.
 
 **B22.** All four of his datasets share these five numbers, so they share the ellipse and the line.
 [pause 0.3] A trend, a curve, an outlier, and one point doing all the work.
@@ -158,10 +164,11 @@ leave out.
 > "slope = r s_y / s_x" slides to the top right; the opening frame fades in around them (axes,
 > YELLOW readout, grey guess cloud, "your guess", the dashed "your line"). "exactly right":
 > the dashed line is Indicated. "five numbers": the symbols give way to the dinosaur's −0.06,
-> 26.93 and 16.76, each flown from its readout row; "slope": the YELLOW best-fit line grows over
+> 26.93 and 16.76, each flown from its readout row (each symbol fades only as its value arrives); "slope": the YELLOW best-fit line grows over
 > the dashed one; "minus point one": "≈ −0.10". "cloud": "your guess" is flagged; "this ellipse":
 > pulsed while the cloud dims around it; "all that": the guess labels go. "Most of those papers":
-> the Weissgerber citation and "86% used bars" return and the formula leaves; "bar graph": a copy
+> the Weissgerber citation and "86% used bars" return, the formula leaves, the line steps back to
+> 30 % and the ellipse to 60 % (restored on "dinosaur"); "bar graph": a copy
 > of the ellipse is squeezed to its vertical extent, exactly the ±s_y error bar, as the ȳ bar grows
 > under it; "two": the ȳ and s_y rows flag. "dinosaur": the points return to the dinosaur while the
 > bar and its error bar step out of the plot (40 %) and sit beside the 142 points. End card.

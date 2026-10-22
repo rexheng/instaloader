@@ -1,35 +1,37 @@
 [00:00.0] A hundred waits for a bus: mostly short, with a long tail. [pause 0.15] Textbooks say the average of thirty is safe to treat as a bell. [pause 0.15] For these waits, does it take thirty, three hundred, or over a thousand? [pause 1.5]
 
-[00:13.8] A-B tests lean on that bell, and on revenue data, thirty is off by a factor of thousands.
+[00:13.8] A-B tests lean on that bell's tails, and on revenue data, thirty is off by a factor of thousands.
 
-[00:20.1] First, look for the bell in the data itself. [pause 0.15] Collect a thousand, ten thousand, a hundred thousand. [pause 0.15] The bars get smoother, but the shape doesn't budge.
+[00:20.7] Maybe thirty just means collecting enough waits. [pause 0.15] Collect a thousand, ten thousand, a hundred thousand. [pause 0.15] The bars get smoother, but the shape doesn't budge.
 
-[00:29.5] Measure the lean with skewness: the average cubed gap from the mean, left gaps counting negative, over the spread cubed. [pause 0.15] A perfect bell scores zero. [pause 0.15] These waits for a bus score about two at every sample size.
+[00:30.4] Measure the lean with skewness: the average cubed gap from the mean, left gaps counting negative, over the spread cubed. [pause 0.15] A perfect bell scores zero. [pause 0.15] These waits for a bus score about two at every sample size.
 
-[00:43.9] So average instead. [pause 0.5] Four bus waits: the one long wait gets diluted by three short ones. [pause 0.8] Drop that one number here. [pause 0.15] Do that ten thousand times.
+[00:44.7] So average instead. [pause 0.5] Four bus waits: the one long wait gets diluted by three short ones. [pause 0.8] Drop that one number here. [pause 0.15] Do that ten thousand times.
 
-[00:54.9] These averages lean less: skewness one. [pause 0.15] Sixteen per average: point five. [pause 0.15] Sixty-four: point two five, nearly this perfect bell in green.
+[00:55.8] These averages lean less: skewness one. [pause 0.15] Sixteen per average: point five. [pause 0.15] Sixty-four: point two five, nearly this perfect bell in green.
 
-[01:04.5] Each time the group grows four times, the skewness halves: two over root n, and two is the skewness of one wait.
+[01:05.3] Each time the group grows four times, the skewness halves: two over root n, and two is the skewness of one wait.
 
-[01:12.6] The root comes from the cubes. [pause 0.15] Add four waits: their cubed gaps add up, four times one wait's. [pause 0.15] But the spread only doubles, so its cube grows eight times. [pause 0.15] Four over eight: half the lean. [pause 0.15] In general, n over n to the one and a half.
+[01:13.5] The root comes from the cubes. [pause 0.15] Add four bus waits: their cubed gaps add up to four times one wait's. [pause 0.15] But the spread only doubles, so its cube grows eight times. [pause 0.15] Four over eight: half the lean. [pause 0.15] In general, n over n to the one and a half.
 
-[01:28.0] A coin that lands heads one time in ten is just two spikes, yet its averages make the same bell, by the same rule. [pause 0.15] Kurtosis, the extra tail weight, fades faster, as one over n, and every finer difference faster still. [pause 0.15] Only the bell survives. [pause 0.15] That's the central limit theorem. [pause 0.15] It needs independent pieces, and one more condition.
+[01:30.0] Kurtosis, the extra tail weight, fades faster: it quarters each time. [pause 0.15] Every finer difference fades faster still. [pause 0.15] Only the bell survives. [pause 0.15] That's the central limit theorem. [pause 0.15] It needs independent pieces, and one more condition.
 
-[01:51.1] Back to the textbook's thirty. [pause 0.5] Two over root thirty: point three seven. [pause 0.15] Close to a bell, by eye.
+[01:45.3] Back to the textbook's thirty. [pause 0.5] Two over root thirty: point three seven. [pause 0.15] Close to a bell, by eye.
 
-[01:57.8] But tests live in the tails: a ninety-five percent interval should miss two and a half percent on each side. [pause 0.15] Tests estimate the spread from the same data, so a low average gets a small spread, and its interval stops short. [pause 0.15] With thirty waits: seven percent low, one percent high.
+[01:52.0] But tests live in the tails: a ninety-five percent interval should miss two and a half percent on each side. [pause 0.15] Tests estimate the spread from the same data. [pause 0.15] With lopsided waits, a low average comes with a small spread, so its interval stops short. [pause 0.8] With thirty waits: seven percent low, one percent high.
 
-[02:16.0] Ron Kohavi and colleagues, using Bing's data, want each side between two and three percent. [pause 0.15] Their rule: n at least three hundred fifty-five times the skewness squared. [pause 0.3] Divide by n and take the root: [pause 1.0] it's our formula: the average's skewness at most point oh five three. [pause 0.15] Three hundred still misses. [pause 0.15] For these waits: fourteen twenty, and both misses reach the band. [pause 1.2]
+[02:12.3] Ron Kohavi and colleagues want each side between two and three percent. [pause 0.15] Their rule: n at least three hundred fifty-five times the skewness squared. [pause 0.3] Divide by n and take the root: [pause 1.0] it's our formula: the average's skewness at most point oh five three. [pause 0.15] At three hundred, the lean is point one two: still too much. [pause 0.15] For these waits: fourteen twenty, lean point oh five three, and both misses reach the band. [pause 1.2]
 
-[02:41.2] Bing's revenue per user had a skewness near eighteen: a hundred and fourteen thousand users. [pause 0.15] Capping each user at ten dollars a week: under ten thousand.
+[02:39.7] Bing's revenue per user had a skewness near eighteen: a hundred and fourteen thousand users. [pause 0.15] Capping each user at ten dollars a week: under ten thousand.
 
-[02:52.6] Now the condition. [pause 0.15] A lighthouse one mile off a straight shore flashes at random angles, and each flash lands somewhere on the shore.
+[02:50.4] And for some data, no number on this axis is enough.
 
-[03:01.3] Track the average landing spot. [pause 0.15] It never settles: a flash aimed almost along the shore lands absurdly far away, and yanks it.
+[02:54.8] A lighthouse one mile off a straight shore flashes at random angles, and each flash lands somewhere on the shore.
 
-[03:10.1] Among a thousand flashes, the farthest typically lands about nine hundred miles off. [pause 0.15] Divided by a thousand, it still drags the average about a mile. [pause 0.15] Half of single flashes land within a mile of the middle. [pause 0.15] Repeat the thousand-flash average two hundred times, and still only half do.
+[03:02.2] Track the average landing spot. [pause 0.15] It never settles: a flash aimed almost along the shore lands absurdly far away, and yanks it.
 
-[03:29.2] The theorem needs finite variance: no single piece can outweigh the rest. [pause 0.15] Here the variance is infinite. [pause 0.15] The median ignores how far the extremes fly, so it homes in.
+[03:11.0] Among a thousand flashes, the farthest typically lands about nine hundred miles off. [pause 0.15] Divided by a thousand, it still drags the average about a mile. [pause 0.15] Half of single flashes land within a mile of the middle. [pause 0.15] Repeat the thousand-flash average two hundred times, and still only half do.
 
-[03:41.0] So the answer is over a thousand, not thirty. [pause 0.15] And collect forever: this histogram stays lopsided. [pause 0.15] The bell was never in the data. [pause 0.15] It's in the average.
+[03:30.0] The theorem needs finite variance: no single piece can outweigh the rest. [pause 0.15] Here the variance is infinite. [pause 0.15] The median ignores how far the extremes fly, so it homes in.
+
+[03:42.1] So the answer is over a thousand, not thirty. [pause 0.15] Collect forever: still lopsided. [pause 0.15] The bell was never in the data. [pause 0.15] It's in the average.

@@ -367,3 +367,71 @@ kept.
 - The self-reported row sat on the line of the chart's y-axis title; lowering the chart crowded the
   citation, so the chart is 0.3 shorter instead. "319 random students" moved to day 75 at 1 %.
 - The answered closing frame held only ~0.7 s before the end card; it now holds ~1.5 s.
+
+## Round 5 revisions
+
+Round 5 (craft 8.3, substance 8.5; no caps, no factual errors) returned the same two reviews as the
+second cycle's round 1, so their fixes were already in scene.py (see "Round 1 revisions (second
+review cycle)" above). That revision had been interrupted: scene.py was edited after its only master
+(16 Oct, 03:34), and a master at speed 0.80 never finished. This round finished it, checked each
+round-5 fix item on new renders, swept every transition at 4 fps (§11.6) and fixed what the sweeps
+still showed.
+
+**Plan (BAR §3 "9" anchors)**
+- Visual and Motion ("one focal point"; "every motion encodes a relation"): no frame, even
+  mid-transition, may show smeared or stacked glyphs or text crossing text. The 16 Oct sheets
+  showed them at 1:25 (÷8 over Σk²), 2:12 to 2:13 (smeared "1.25" and "σ²") and 2:19 (picture
+  over the bar panel).
+- Audio and Concision ("pauses intentional"; "cutting any sentence loses something"): keep the
+  3:33 cut at speed 0.82. The 0.80 change answered a Whisper artefact, not a real pace problem.
+- Hook, Clarity and Originality: no structural change. Both critics said the episode reaches 9
+  once their fixes are applied, and the fixes are now verified on the master.
+
+**Fixed this round**
+1. Divide step (1:25): the terms slide first, and each "÷ 8" fades in only once its term has
+   parked. Mid-slide frames had read "Σk²8" and "Σ÷k8".
+2. Glyph smear (2:09 to 2:13, 2:44): several transforms paired a MathTex wrapper with a bare TeX
+   part, so each glyph morphed into the whole target. "1.25", "σ²", "3.0" and the flying "2.5"
+   smeared for about 0.5 s. Every pair now matches level for level. The Facebook read-outs'
+   DecimalNumber digits are flattened (`glyphs()`) before they fly into 190 + 445 = 635, and those
+   copies leave their source with an ease-out, with no doubled start frame.
+3. "d = k − μ" now sits at the right end of the PURPLE distance line it names. Beside the beam it
+   had read as one line with the YELLOW "3.0". It fades as the picture moves back at "exactly".
+4. The cancel boxes are 0.2 units taller, so the exponent of 2.5² no longer touches the box.
+5. Ring to real class (0:44): the ring's 16 tokens and its "what if" label fade within 0.4 s,
+   before the nodes sweep through them.
+6. Landing (3:17): the chart fades out before the class fades in, so "425 friends they named" is
+   no longer double-exposed over the nodes.
+7. "a few users" is now Text 26 (was 24).
+8. Speed is back to 0.82. The 16 Oct "166 wpm" flag came from Whisper transcribing 1:41 to 1:53
+   twice (566 words for a 509-word script). At 0.80 the cut ran 3:48 at about 143 wpm.
+9. The answered closing frame holds 0.55 s before the end card, so the trailing silence is under
+   2 s with margin.
+10. The YELLOW outline of the closing friend bar is now drawn over its fills, as on every other
+    friend bar. It had sat beneath them, so the bar's edge was missing.
+11. Facebook row (2:43): the straight flights of 190, 445 and 635 into μ + σ²/μ = 190 + 445 = 635
+    had crossed "average friend" and the tick labels. 190 now drops below its own label, passes
+    right of "average friend" and goes down through the gap between the "400" and "600" ticks.
+    445 then takes the same gap, and 635 drops between "600" and "800". The axis numbers and
+    title, done with by then, dim to 30 % as context.
+
+Checked and already in place from the interrupted revision: the picture moves back before the
+bars return at "exactly" (no overlap at 2:19). The Facebook friend read-out appears with its value
+635, without counting up through 473.
+
+**Verified on the master** (review/report.md and frames)
+- Runtime 3:33.3. Pace 160 wpm on speech time, 152 overall. −14.0 LUFS / −2.1 dBTP. Leading
+  silence 0.00 s, trailing 1.81 s, longest silence 2.23 s (the planned "Pick one" hold), longest
+  static stretch 2.60 s.
+- WER 0.8 %. The only differences are "divide" (spoken at full level; see facts.md, Round 5),
+  "a hundred" → "one hundred" and "twenty oh nine" → "2009". The Whisper repeat and the "Thank
+  you." hallucination are gone.
+- 0 render warnings, 0 layout-audit issues in 194 checks, 0 flags, 0 banned phrases.
+- All 12 contact sheets and the keyframes at 1:10, 1:27, 2:01, 2:13, 2:20, 2:26, 2:43, 2:47, 3:12,
+  3:24 and 3:32 were read.
+- Frames swept at 1 to 6 fps, on the previews and on the master, across 0:43 to 0:46 (ring to class), 1:24 to 1:27 (divide),
+  1:52 to 2:07 (split), 2:08 to 2:14 (C and D rows), 2:25 to 2:31 (into Facebook), 2:40 to 2:46
+  (Facebook row), 2:46 to 2:52 (into Harvard) and 3:16 to 3:18 (landing). None shows a smear, a
+  stacked glyph or text crossing full-strength text.
+- What remains is copies in flight that cross a bar, or text dimmed to 30 %, for at most 0.2 s.
+  That is deliberate.

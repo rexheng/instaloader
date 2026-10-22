@@ -1,9 +1,6 @@
-WER 5.5% over 509 script words (numbers spelled out, 'and' ignored)
+WER 0.8% over 509 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/060-friendship-paradox/narration.json
 
 [1:25.0] delete   script: 'divide'                                 heard: '∅'
-[1:42.0] insert   script: '∅'                                      heard: "one a quarter the variance sigma squared split sue's count four into the balance point two a half plus her distance"
 [2:29.5] replace  script: 'a'                                      heard: 'one'
 [2:47.4] replace  script: 'twenty oh'                              heard: 'two thousand'
-[3:02.5] insert   script: '∅'                                      heard: 'students'
-[3:32.6] insert   script: '∅'                                      heard: 'thank you'

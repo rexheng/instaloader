@@ -528,3 +528,177 @@ Honest estimate against BAR §3: Hook 9, Clarity 9, Visual 9, Motion 9, Audio 9,
 Originality 8.5 → weighted 8.95, i.e. 8.9–9.0. The binding risk remains Originality: the core example is the
 canonical one, and the Cardiff act (crowd → alerts raster → police vs evaluators bars) carries the
 episode's own image.
+
+## Round 5 revisions
+
+Reviews: `reviews/round5-craft.md` and `reviews/round5-substance.md` (8.4 / 8.4). They are the same texts as
+`reviews/round1-*.md` (review cycle 2): no caps and no factual errors claimed, and every fix in them was
+already applied in "Round 1 revisions (review cycle 2)" above (final.mp4 3:36.2, rendered after the reviews).
+So this round re-checks that each fix landed, audits the current cut frame by frame as a fresh critic would
+(sheets, keyframes and 2–10 fps sweeps through every transition), and climbs on what is left. Facts were
+re-checked against facts.md; nothing was claimed wrong, so nothing changes there except the record of the
+new landing numbers.
+
+### Climb plan (written before editing)
+
+| Dimension (cycle-2 score) | BAR "9" anchor | Where the current cut still falls short | Upgrade |
+|---|---|---|---|
+| Hook 8.5 / Originality 8–8.5 | "the ending resolves the opening exactly"; "a non-obvious image viewers would remember" | the landing rebuilds the cold-open diagram with thin arrows, and the people-width flows only appear 4 s later, on "Symptoms"; the counts 20 / 100 appear only after the sweep, in silence | the first frame is re-seen at once: on "Back to your test" the two arrows swell into people-width flows (a thin red flow of 20, a fat blue flow of 100) in the pause, so the 1 % arrow is visibly the one that fills the +; the counts stay live through the prevalence sweep (99 / 99 at 1 in 100; 4,950 / 50 at 1 in 2, the half-sick table of the naive build) |
+| Visual 8 / 8.5 | "all §5 standards met; nothing to remove" | "≈" and "≤" in the Cardiff header and legend fall back to a heavier sans font (CMU Serif has no glyph for them: checked with fontTools) | typeset both with LaTeX (MathTex at the matching cap height) |
+| Motion 8.5 | "every motion encodes a relation"; no near-empty frame | on "Back to your test" everything fades in the first 30 % and the diagram only starts at 35 %, so ≈ 0.5 s shows a lone meter and a ring (3:06.5); the end card cross-fades over the closing frame, so "Ω Sample Space" prints over "chance you're sick" for ≈ 0.4 s | the diagram starts re-forming while the Cardiff picture is still leaving (overlapping windows); the closing frame fades out before the card fades in |
+| Audio 8.5 | pauses intentional | the 1.0 s pause after "Back to your test" carries no new picture | the pause (1.6 s) is where the arrows become people-width flows |
+| Clarity 8.5 | numbers like-for-like, re-derivable | the landing's 20 / 100 have no unit | a small grey "per 10,000 people" under "you" when the counts appear |
+
+### What changed
+
+**Facts.** No error was claimed and none was found. Re-checked: BBC News (4 May 2018), the Guardian
+(5 May 2018) and WalesOnline all give 2,470 potential matches and 2,297 incorrect (173 right, 7 %); the
+Manrai, Davies et al. and Six Nations rows in facts.md stand as written. New on screen are the landing's
+live counts per 10,000 people: 10,000/N × 0.99 and (10,000 − 10,000/N) × 0.01, i.e. 20 / 100 at 1 in 500,
+99 / 99 at 1 in 100 (50 %) and 4,950 / 50 at 1 in 2 (99 %). They are recomputed in check.py (last block)
+and recorded in facts.md §A.
+
+**Landing: the first frame, re-seen (Hook, Originality, Audio).** "Back to your test" now gets a 1.6 s
+pause that carries the picture. The alerts still collapse into the + (kept), the cold-open diagram
+re-forms, and in the pause both arrows swell into flows as wide as the people they carry. The thin 99 %
+flow is labelled "20" and the fat 1 % flow "100", with a grey "per 10,000 people" in the wedge between
+them. So the frame the viewer committed on is shown again, and now the 1 % arrow is visibly the one that
+fills the +. The 17 % fills on "seventeen percent" as before. On "Symptoms" the naive 99 % marker returns
+as the target of the climb. One updater then drives the label, both flows, both counts and the meter:
+"1 in 100 · 99 / 99 · 50 %" on its words, then "1 in 2 · 4,950 / 50 · 99 %" on "ninety-nine", which are
+the numbers of the half-sick table where the rule held. The return to 1 in 500 runs in the pause, and the
+recall / precision chiasmus is unchanged. (The counts used to appear only after the sweep, in silence.)
+
+**No empty frame on "Back to your test" (Motion).** The diagram now cross-fades in (8–60 % of the move)
+while the Cardiff picture fades out (0–42 %), and the meter's ride starts at 20 % instead of 35 %. At
+3:06.6 the frame shows the nodes, labels, ring and meter; before, it showed a lone meter and ring.
+
+**End card (Visual).** The closing frame fades out (0.3 s) before the card fades in (0.3 s), so
+"Ω Sample Space" no longer prints over "chance you're sick". The finished two-tag frame holds about 2.5 s.
+
+**Glyphs (Visual).** "≈ 170,000 people" and "≤ 1,200 faces · ≤ 1 in 140" are typeset in LaTeX at the
+matching cap height (MathTex 38 / 36 ≈ Text 28 / 26). CMU Serif has no ≈ or ≤ (checked with fontTools),
+so Pango had drawn them in a heavier sans fallback. {\le} is set as an ordinary symbol, so both bounds get
+the same spacing.
+
+**Kept:** all three keep items from both reviews, namely the meter docked on the 24 × 5 strip and on the
+2,470-cell raster, the derivation built from the picture, the half-sick control, the raster collapsing into
+the +, and the landing sweep (one updater, "1 in 100 · 50 %" held while spoken, naive marker at 1 in 2).
+
+### Self-check (review kit on the final 1080p master)
+
+- render.sh: 0 warnings, layout audit 0 issues in 207 checks. The preview pass had caught two problems,
+  both now fixed: the naive marker was built while the meter still had its Cardiff geometry (so it sat
+  mid-bar), and "per 10,000 people" was 0.11 from the widest red flow. Clearance from both flows at every
+  prevalence is now ≥ 0.23, by computed geometry.
+- Runtime 3:36.9. 152 wpm on speech time, 515 words. −14.1 LUFS / −2.3 dBTP. Leading silence 0.0 s,
+  trailing 1.93 s. Longest internal silences: 2.16 s (the planned "Pick a number" hold) and 2.1 s (the new
+  "Back to your test" pause). Longest static stretch 3.3 s (2:51); the closing two-tag frame holds 3.1 s.
+  0 banned phrases, 0 flags.
+- WER 2.2 %. In the full-file transcript "Police" is heard as "This" (2:40) and "Your" as "Or" (3:09), both
+  at segment starts. Re-transcribing just those stretches with the same model gives "Police counted 173
+  as right, 7%" and "Your 17% assumes a random screen", so these are segmentation misses, not
+  pronunciation.
+- Looked at all 12 contact sheets and keyframes kf_28 (legend glyphs), kf_36 (the re-seen first frame),
+  kf_38 (1 in 2 · 4,950 / 50 · 99 %) and kf_39 (back at 1 in 500). Also stepped through frames at 4–5 fps
+  over 3:05.9–3:09.5 (collapse, cross-fade, arrows swelling into flows) and 3:33.8–3:36.9 (fade out, then
+  card), plus a 2 fps sweep of the whole landing in the preview. Nothing overlaps and no frame is empty.
+
+Honest estimate against BAR §3: Hook 9, Clarity 9, Visual 9, Motion 9, Audio 9, Concision 9,
+Originality 8.5–9, so weighted 8.95–9.0. Originality is still the binding dimension, because the core
+example is the canonical one. The episode's own images now sit at both ends of act 2 and at the close:
+the strip under the meter, the Cardiff crowd collapsing into the raster, and the people-width flows that
+re-read frame one.
+
+## Round 6 revisions
+
+Reviews: `reviews/round6-craft.md` (8.5, reaches 9 "only just") and `reviews/round6-substance.md`
+(8.5, "reaches 9 if fixed: no" — Originality held at 8 by the canonical spine; it names a Cardiff cold
+open, or, as the cheaper route, making the half-sick → rare transition one continuous prevalence slide
+with the meter falling live). No caps, no factual errors; one source conflict (4-day alert count shown as
+one match-day crowd) and two nits (images vs faces; the 46 % is the operators' initial judgment).
+
+### Climb plan (written before editing)
+
+Structure. The substance critic says polish cannot reach 9, so the fail beat is restructured rather than
+polished. A Cardiff cold open was considered and rejected: the title promises a medical test, both critics'
+keep items hang on the cold-open diagram being re-seen at the landing, and the Cardiff case has no premise
+a viewer could compute from (its precision also depends on who counts). The restructure keeps every keep
+item and replaces the recolour with the episode's own image: **the same test, a prevalence slider and a
+meter that falls live**. The half-sick case is drawn as a block (the left 50 columns), so the beam lights
+almost all of the left half and a sprinkle of the right; then "Now make the disease rarer, down to yours"
+drains the block from its right edge while the table's prevalence label ("1 in 2", carried in from the cold
+open's "1 in 500") ticks to 1 in 500, the counts tick as expected counts, and the meter slides from 99 % to
+17 % away from the naive marker. The failure is measured as it happens; the counting then names the cause.
+
+| Dimension (craft / substance) | BAR "9" anchor | Where the cut falls short | Upgrade |
+|---|---|---|---|
+| Originality 8 / 8 | "a non-obvious angle or image viewers would remember" | canonical example; the fresh parts are secondary | the live prevalence slide (above); the two meters share one word: "precision" morphs from the alert meter's title and a ghost of the disease meter's 17 % appears tagged "precision too"; the 3 % → 46 % rise is tied to the blue term of Bayes' denominator ("P(+ ∣ not listed) ↓") |
+| Clarity 8.5 / 8.5 | "viewer could re-derive it after one watch; all numbers check; sources correct" | numbers → symbols by cross-fade, no mapping; "these/these" point at nothing; stale positives under "÷ 10,000"; 4-day count shown as one day | per-term transforms 0.002 → P(sick) etc. with "≈ 17 %" kept; grey braces "how common" / "how often" grow on the spoken words and stretch with their terms; the positives column is divided too; "Over four days", "final week" everywhere, Davies table row in facts.md |
+| Visual 8.5 / 8.5 | "every frame has one focal point; all §5 standards met" | moiré half-sick grid; overlapping 3× squares; ~22 words in the Cardiff frame; dead band; olive badge; small "your guess"; mixed bar-label grammar | block layout; every positive ≥ 5 cells from every other; ghosted meter title, dateline fades, 2-line legend docked 0.5 under the meter; badge never dimmed; "your guess" Text 26; both bars tagged the same way (who / which alerts, on the right) |
+| Motion 8.5 / 9 | "every motion encodes a relation" | cross-fade into Bayes; lumpy outline → disk; 145 squares arrive as a jumble | per-term morphs (lag 0.3, numerator first); outline → disk as one rounded rectangle whose corners grow into a circle, ring after landing; the 145 file into their blocks in order, red first |
+| Audio 8.5 / 8.5 | "each deictic lands as the element highlights" | the two "these"; "nine thousand nine hundred eighty" spoken twice; soft onsets at "Police" / "Your" | braces on the words; "every healthy person"; 80 ms pre-roll on those two beats |
+| Concision 8.5 / 8.5 | "cutting any sentence loses something" | 22 s of mechanical substitution | the two "unrounded" sentences merge into one move |
+| Hook 8.5 / 8.5 | "ending resolves the opening exactly" | the close never says the title's word back | "The title's ninety-nine percent is the test's recall" |
+
+### What changed
+
+**Facts (substance fix 1 and both nits; all accepted after re-reading the sources on 2026-10-22).**
+Davies et al.'s deployment table reads "Champions League (4 days) | extremely large | 2632 | 78 (3%)", and
+Wired UK (4 May 2018) puts the 2,470 alerts in "Champions League Final week"; only the BBC says "on the day
+of the final". The narration now says "Over four days, they raised two thousand four hundred and seventy
+alerts", the dateline reads "Cardiff · Champions League final week, 2017" (and fades once read), and the
+evaluators' tag reads "final week · 2,632 alerts". "Twelve hundred faces" became "twelve hundred photos"
+(Davies: "around 1200 images", including the police "friendlies" list) and the 1,200 is no longer written
+on screen; only the bound it implies is ("≤ 1 in 140"). The Six Nations 46 % is the operators' logbook
+judgment, the same method as the final's 3 %; facts.md now records that intervention teams later found 7
+of those 22 false (at most 15 / 48 = 31 %, still ten times 3 %) and the tag shows the small base, "48
+alerts". facts.md §A/§C, script.md sources and check.py (last block) carry the new rows.
+
+**Fail beat, restructured (substance "reaches 9: no"; Originality).** The recolour is gone. The half-sick
+case is now a block (the left 50 columns: no moiré; the beam lights almost all of the left half and a
+sprinkle of the right). The cold open's "1 in 500" rides into the table's header in the diagram → table
+morph and rolls to "1 in 2" on "half". Then one slider, on "Now keep the same test, and make the disease
+rarer and rarer, down to yours: one in five hundred": the label runs 1 in 2 → 1 in 500 (log-spaced), the
+block drains from its right edge (the 50 false-alarm people in it stay lit as they turn blue), the table
+ticks as expected counts (1 in 5: 2,000 → 1,980 / 8,000 → 80; 1 in 100: 100 → 99 / 9,900 → 99), and the
+meter falls live from 99 % to 17 % away from the naive marker. The failure is measured as it happens;
+"About twenty sick people light up, plus one percent of the 9,980 healthy ones: about a hundred" then
+names the cause as the 20 and the 100 grow into ringed squares on their own words. Every positive is ≥ 5
+cells from every other, so all 120 rings are distinct (craft 7, substance 4). The landing's sweep is now
+this slider run backwards.
+
+**Numbers → Bayes (craft 1, 2, 3, 6; substance 6).** The two "unrounded" sentences are one ("the red
+count is twenty sick people times ninety-nine percent, and the blue, every healthy person times one
+percent"), one layout change with each term arriving on its words; 9,980 is no longer spoken twice. On
+"Divide everything" each row of the table divides on its spoken number, positives too (19.8 → 0.00198,
+99.8 → 0.00998), so nothing under "÷ 10,000" is stale, the "1 in 500" label leaves, and nothing yellow is
+dimmed. Grey braces "how common" (under 0.002 and 0.998) and "how often" (under 0.99 and 0.01) grow on
+those words; on "Name them, and you have Bayes' theorem" each number turns into its name in place
+(0.002 → P(sick), 0.99 → P(+∣sick), 0.998 → P(healthy), 0.01 → P(+∣healthy); numerator first, lag 0.3),
+the braces stretch with their terms, "≈ 17 %" stays on the right, and the labelled form holds until the
+braces hand over to the yellow box on "shrink".
+
+**Cardiff (craft 4, 5, 9, 10; substance 2, 3, 9).** The meter waits ghosted at 30 % (title, track, "?")
+until "Shrink to the alerts", like the cold open's meter. The legend is two lines docked 0.5 under the
+meter ("■ watch list · ≤ 1 in 140", "■ = 17 people · illustration"); about 10 words of prose at most. The
+145 flagged squares file into the raster one by one in block order (red first, then left to right, each
+move ≥ 0.5 s). On "precision" the alert meter's title turns into the word, a small ghost of the disease
+meter (17 %, "your test") appears beside it and the word is copied above it: "precision too". Both bars are
+tagged the same way on the right ("police count / 2,470 alerts", "evaluators' count / final week · 2,632
+alerts" → "Six Nations 2018 · 48 alerts"). The rise to 46 % is tied to the formula: "…thinned out the false
+alarms, the blue term in Bayes' denominator…", with a blue "P(+ ∣ not listed) ↓" appearing under the
+shrinking blue segment; the shrink starts on "a new algorithm".
+
+**Landing and hook (craft 8; substance 5, 8).** The raster's outline stays one convex shape (a rounded
+rectangle whose sides shrink and corners grow into the badge's circle), the disk grows inside it at full
+opacity, the cross arrives once it has landed, and "you" closes round the badge only then. The close is
+"The title's ninety-nine percent is the test's recall…", so the last lines re-read the title. "The police
+counted…" and "Your seventeen percent…" start with 80 ms of silent pre-roll; the full-file whisper
+transcript now hears "The police counted" and "Your 17% assumes". "your guess" is Text 26 and sits 0.1
+lower; its slide stops inside the safe area.
+
+**Kept:** the 120 survivors lining up into the 24 × 5 strip under the 17 % meter, red columns under the red
+segment; the unbroken object chain (cold-open diagram → table, now with its "1 in 500" → grid → strip →
+crowd → raster → + badge → cold-open diagram with flows); the half-sick control and the bracketed 6×; the
+landing's live sweep on one updater and the recall / precision tags on the opening frame's 99 % and 17 %.

@@ -4,7 +4,8 @@
     videos/toolkit/render.sh videos/episodes/006-riffle-shuffle-cutoff/scene.py Episode \
         videos/episodes/006-riffle-shuffle-cutoff/final.mp4
 
-Numbers: sim.py -> data.json (exact), deck_pick.py -> decks.json (seeded example decks).
+Numbers: sim.py -> data.json (exact), deck_pick.py -> decks.json (seeded example decks),
+pile.py -> pile.json (the 40 + 40 simulated decks that rain into the stacks).
 """
 from __future__ import annotations
 
@@ -19,6 +20,7 @@ from sample_space import *
 HERE = Path(__file__).resolve().parent
 DATA = json.loads((HERE / "data.json").read_text())
 DECKS = json.loads((HERE / "decks.json").read_text())
+PILE = json.loads((HERE / "pile.json").read_text())
 N = 52
 TGRAY = ManimColor("#A3AAB4")          # grey for TEXT (7.7:1 on BG); GRAY stays for axes/lines
 
@@ -104,6 +106,7 @@ class Deck:
         self.step = step
         self.runs = runs
         self.wash: dict[int, float] = {}
+        self.shelf = 0.45                 # opacity of the faint per-level shelf lines (0 = caps only)
         self.levels = level_map(runs) if (levels and runs) else None
         self.cards = {c: self._bar(c, i) for i, c in enumerate(self.order)}
         self.group = VGroup(*[self.cards[c] for c in range(1, N + 1)])
@@ -186,9 +189,9 @@ def deck_marks(deck: Deck) -> VGroup:
         if len(tops) >= 2:
             if deck.levels is None:
                 g.add(VMobject(stroke_color=YELLOW, stroke_width=2.4).set_points_as_corners(tops))
-            else:
+            elif deck.shelf > 0:
                 g.add(Line(tops[0], tops[-1], stroke_color=YELLOW, stroke_width=1.6,
-                           stroke_opacity=0.55).set_z_index(-1))
+                           stroke_opacity=deck.shelf).set_z_index(-1))
         for p in tops:
             g.add(Line(p + LEFT * cap / 2, p + RIGHT * cap / 2, color=YELLOW,
                        stroke_width=4.5).set_z_index(2))
@@ -252,9 +255,7 @@ class Meter:
         x = self.x_of(acc)
         tri = Triangle(color=GRAY, fill_color=GRAY, fill_opacity=1, stroke_width=0) \
             .scale(0.09).move_to([x, self.Y - 0.2, 0])
-        lbl = VGroup(text("top card", size=SMALL, color=TGRAY),
-                     MathTex(rf"{100 * acc:.1f}\%", font_size=MATH_SMALL - 4, color=TGRAY))
-        lbl.arrange(RIGHT, buff=0.12)
+        lbl = text(f"top card {100 * acc:.1f}%", size=SMALL, color=TGRAY)   # one font, one size
         lbl.move_to([x, self.Y - 0.95, 0]).align_to([x - 0.1, 0, 0], LEFT)
         return tri, lbl
 
@@ -326,26 +327,71 @@ class Episode(NarratedScene):
     SPEED = 0.84
 
     # ------------------------------------------------------------------ helpers
-    def riffle(self, deck: Deck, k: int, t_cut=0.4, t_drop=0.65, lift=0.3, extra=(), extra_drop=()):
+    def riffle(self, deck: Deck, k: int, t_cut=0.4, t_drop=0.65, lift=0.3, extra=(), extra_drop=(),
+               new_levels=False):
         """Riffle number k (decks.json): cut and lift the top packet, then the cards drop
         bottom-first (right to left) into their interleaved slots.  Bars also take their
-        current colour (deck.wash) during the cut."""
+        current colour (deck.wash) during the cut.  The faint level shelves hide while cards
+        fly (they would cross the deck); with new_levels the cards drop straight onto the
+        levels of the new deck."""
         old, new, c = DECKS["decks"][k - 1], DECKS["decks"][k], DECKS["cuts"][k - 1]
         s = deck.s
-        anims = [deck.cards[x].animate.shift(UP * lift * s + LEFT * 0.12 * s).set_fill(deck.color(x))
-                 for x in old[:c]]
-        anims += [deck.cards[x].animate.shift(RIGHT * 0.12 * s).set_fill(deck.color(x))
+        shelf, deck.shelf = deck.shelf, 0.0
+        anims = [deck.cards[x].animate(rate_func=SMOOTH).shift(UP * lift * s + LEFT * 0.12 * s)
+                 .set_fill(deck.color(x)) for x in old[:c]]
+        anims += [deck.cards[x].animate(rate_func=SMOOTH).shift(RIGHT * 0.12 * s).set_fill(deck.color(x))
                   for x in old[c:]]
-        self.play(*anims, *extra, run_time=t_cut, rate_func=SMOOTH)
+        self.play(*anims, *extra, run_time=t_cut)
         deck.order = list(new)
+        if new_levels:
+            deck._set(runs=DECKS["runs"][k], levels=True)
         drops = [Transform(deck.cards[new[i]], deck.target(new[i], i)) for i in reversed(range(N))]
         self.play(LaggedStart(*drops, lag_ratio=0.025), *extra_drop, run_time=t_drop)
+        deck.shelf = shelf
 
     def split(self, deck: Deck, k: int, step: float, run_time=0.6, extra=()):
         """After riffle k: re-read the rising sequences; every bar moves to its new level
         (and the level unit rescales smoothly)."""
-        self.play(*deck.relayout(runs=DECKS["runs"][k], levels=True, step=step), *extra,
-                  run_time=run_time, rate_func=SMOOTH)
+        shelf, deck.shelf = deck.shelf, 0.0
+        self.play(*deck.relayout(runs=DECKS["runs"][k], levels=True, step=step, rate_func=SMOOTH),
+                  *extra, run_time=run_time)
+        deck.shelf = shelf
+
+    @staticmethod
+    def swap(old, new, d=0.22):
+        """Counter change without a glyph morph: the old value slides up and out in the first
+        half, then the new one slides up into its place (the two never share a frame)."""
+        return [FadeOut(old, shift=UP * d, rate_func=lambda t: smooth(min(1.0, 2.0 * t))),
+                FadeIn(new, shift=UP * d, rate_func=lambda t: smooth(max(0.0, 2.0 * t - 1.0)))]
+
+    def fly_into(self, src, target, arc=0.0):
+        """A copy of a measured line (a bracket) flies to the number or word it becomes,
+        shrinking and fading out as the target fades in (no glyph morph, no height-matching).
+        arc > 0 bows the path to the right of travel, arc < 0 to the left (around labels)."""
+        c = src.copy()
+        self.add(c)
+        return [c.animate(path_arc=arc).scale_to_fit_width(max(target.width, 0.05)).move_to(target)
+                .set_stroke(opacity=0), FadeIn(target, shift=0.05 * UP)]
+
+    def fly_copy(self, src, target, arc=0.0, land=0.75):
+        """A copy of a number flies (whole, unchanged) to where its successor goes, and only on
+        arrival hands over to it: copy fades out, target fades in (no double-glyph morph)."""
+        c = src.copy()
+        self.add(c)
+        p0, p1 = c.get_center(), target.get_center()
+        path = path_along_arc(arc)
+
+        def upd(m, a):
+            m.move_to(path(p0, p1, smooth(min(1.0, a / land))))
+            m.set_opacity(1.0 - smooth(max(0.0, (a - land) / (1.0 - land))))
+
+        return [UpdateFromAlphaFunc(c, upd),
+                FadeIn(target, rate_func=lambda t: smooth(max(0.0, (t - land) / (1.0 - land))))]
+
+    def cite_swap(self, old, new, t_out=0.3, t_in=0.4):
+        """Citations never crossfade in the same spot: the old one leaves first."""
+        self.play(FadeOut(old), run_time=t_out)
+        self.play(FadeIn(new), run_time=t_in)
 
     # ------------------------------------------------------------------ scene
     def construct(self):
@@ -354,16 +400,17 @@ class Episode(NarratedScene):
         ghost, ghost_lbl = meter.ghost(acc_top)
 
         # ============================================================ 1. cold open: two decks
-        deck = Deck(range(1, N + 1), **COLD_L)
-        perfect0 = Deck(range(1, N + 1), **COLD_R)
+        LIFT = 0.8                                     # decks sit lower until the meter needs room
+        deck = Deck(range(1, N + 1), **{**COLD_L, "by": COLD_L["by"] - LIFT})
+        perfect0 = Deck(range(1, N + 1), **{**COLD_R, "by": COLD_R["by"] - LIFT})
         top_lbl = text("top", size=LABEL - 2, color=TGRAY).next_to(
             [deck.left(), deck.by, 0], DOWN, buff=0.18).align_to([deck.left(), 0, 0], LEFT)
         bot_lbl = text("bottom", size=LABEL - 2, color=TGRAY).next_to(
             [deck.right(), deck.by, 0], DOWN, buff=0.18).align_to([deck.right(), 0, 0], RIGHT)
         one = MathTex("1", font_size=MATH_SMALL, color=TGRAY).next_to(deck.cards[1], UP, buff=0.2)
         fifty2 = MathTex("52", font_size=MATH_SMALL, color=TGRAY).next_to(deck.cards[52], UP, buff=0.2)
-        heads = text("heads: 4 riffles", size=LABEL, color=PURPLE).move_to([COLD_L["cx"], 2.45, 0])
-        tails = text("tails: perfect shuffle", size=LABEL, color=BLUE).move_to([COLD_R["cx"], 2.45, 0])
+        heads = text("heads: 4 riffles", size=LABEL, color=PURPLE).move_to([COLD_L["cx"], 2.45 - LIFT, 0])
+        tails = text("tails: perfect shuffle", size=LABEL, color=BLUE).move_to([COLD_R["cx"], 2.45 - LIFT, 0])
         guess = MathTex("?", font_size=60, color=INK)
         self.add(deck.group, perfect0.group, top_lbl, bot_lbl, one, fifty2)
         with self.narrate("Heads, I riffle shuffle a sorted deck four times. Tails, a computer "
@@ -389,7 +436,10 @@ class Episode(NarratedScene):
             self.play(FadeOut(top_lbl), FadeOut(bot_lbl), run_time=0.5)
             beat.wait_until("how often", offset=-0.3)
             guess.move_to([meter.x_of(0.75), meter.Y + 0.55, 0])
-            self.play(Create(meter.base), run_time=1.0)
+            # the decks rise to make room as the meter (the question's answer scale) draws
+            self.play(Create(meter.base), *deck.relayout(by=COLD_L["by"]),
+                      *perfect0.relayout(by=COLD_R["by"]),
+                      heads.animate.shift(LIFT * UP), tails.animate.shift(LIFT * UP), run_time=1.0)
             self.play(FadeIn(guess, shift=0.2 * DOWN), run_time=0.5)
             for a, w, lab in ((0.5, "fifty", 0), (0.75, "seventy", 1), (1.0, "hundred", 2)):
                 beat.wait_until(w, offset=-0.25)
@@ -401,14 +451,26 @@ class Episode(NarratedScene):
         sorted_ghost = DashedLine([deck.left(), deck.by + (H0 + H1) * deck.hs, 0],
                                   [deck.right(), deck.top_y(), 0], color=TGRAY,
                                   stroke_width=3, dash_length=0.12)
-        with self.narrate("Any simulation that mixes by random steps faces this question: stopped "
-                          "too early, it still remembers where it started.") as beat:
-            beat.wait_until("mixes", offset=-0.2)
-            self.play(Indicate(heads, color=PURPLE, scale_factor=1.08), run_time=0.9)
-            beat.wait_until("stopped", offset=-0.2)
-            self.play(Indicate(deck.group, color=INK, scale_factor=1.03), run_time=0.9)
-            beat.wait_until("remembers", offset=-0.3)
-            self.play(Create(sorted_ghost), run_time=1.3, rate_func=LINEAR)
+        step_pos = np.array([COLD_L["cx"], deck.by - 0.4, 0])
+
+        def step_tex(i):
+            return MathTex(rf"\text{{step }} {i}", font_size=MATH_SMALL + 4, color=PURPLE).move_to(step_pos)
+
+        with self.narrate("Monte Carlo samplers move by random steps, like these riffles. Stop them "
+                          "too early, and they still remember where they started.") as beat:
+            beat.wait_until("move", offset=-0.1)
+            # the same four riffles, replayed as numbered random steps
+            self.play(*deck.relayout(order=range(1, N + 1)), run_time=0.45, rate_func=SMOOTH)
+            step = None
+            for k in range(1, 5):
+                new = step_tex(k)
+                extra = tuple(self.swap(step, new)) if step is not None else (FadeIn(new, shift=0.16 * UP),)
+                self.riffle(deck, k, t_cut=0.22, t_drop=0.42, extra_drop=extra)
+                step = new
+            beat.wait_until("Stop them", offset=-0.2)
+            self.play(Indicate(step, color=PURPLE, scale_factor=1.25), run_time=0.8)
+            beat.wait_until("remember", offset=-0.3)
+            self.play(Create(sorted_ghost), run_time=1.2, rate_func=LINEAR)
 
         # ============================================================ 3. naive: the top card
         th = dict(cx=3.95, by=2.1, s=0.42)
@@ -428,9 +490,9 @@ class Episode(NarratedScene):
             .arrange(DOWN, buff=0.1, aligned_edge=LEFT).next_to(perfect_line, RIGHT, buff=0.2)
         one15 = text("1 in 15", size=LABEL, color=RED).next_to(ax1.c2p(1, 100 * TOP4[0]), RIGHT, buff=0.3)
         with self.narrate("The obvious check is the top card, the one you'd be dealt. Here's how "
-                          "often each card lands there after four riffles.") as beat:
+                          "often each card ends up there after four riffles.") as beat:
             self.play(FadeOut(heads), FadeOut(tails), FadeOut(guess), FadeOut(sorted_ghost),
-                      FadeOut(perfect0.group),
+                      FadeOut(perfect0.group), FadeOut(step),
                       meter.left_lbl.animate.set_opacity(0.4),
                       meter.right_lbl.animate.set_opacity(0.4), run_time=0.7)
             topcard = deck.card_at(0)
@@ -471,7 +533,10 @@ class Episode(NarratedScene):
 
         # ============================================================ 4. fail
         C = dict(cx=-1.3, by=-1.25, s=0.74, hs=0.95)   # centre slot: the slow riffle
-        gsr = citation("Gilbert, 1955 · Reeds, 1981", color=TGRAY)
+        gsr = VGroup(text("Gilbert–Shannon–Reeds model", size=20, color=TGRAY),
+                     text("Gilbert, 1955 · Bell Labs; Reeds, 1981", size=20, color=TGRAY)) \
+            .arrange(DOWN, buff=0.1, aligned_edge=LEFT)
+        gsr.move_to([-SAFE_X + gsr.width / 2, CONTENT_BOTTOM + 0.08 + gsr.height / 2, 0])
         with self.narrate("A guesser who sees the whole deck does far better. The model cuts near "
                           "the middle, then drops cards from each half in proportion to its "
                           "size.") as beat:
@@ -498,7 +563,11 @@ class Episode(NarratedScene):
 
         # counter (top right) and the two sequences of riffle 1
         cnt_pos = np.array([4.75, 3.1, 0])
-        cnt = MathTex("2", font_size=64, color=YELLOW).move_to(cnt_pos)
+
+        def cnt_tex(v):
+            return MathTex(str(v), font_size=64, color=YELLOW).move_to(cnt_pos)
+
+        cnt = cnt_tex(2)
         cnt_lbl = text("rising sequences", size=LABEL - 2, color=TGRAY).next_to(cnt, DOWN, buff=0.12)
         deck.runs = DECKS["runs"][1]
         marks = always_redraw(lambda: deck_marks(deck))
@@ -533,19 +602,29 @@ class Episode(NarratedScene):
             m = MathTex(rf"\le 2^{k} = {2 ** k}", font_size=MATH_SMALL + 2, color=TGRAY)
             return m.next_to([deck.right() + 0.15, ceil_y(k), 0], RIGHT, buff=0.15)
 
+        height_lbl = text("height = which sequence", size=SMALL, color=TGRAY)
+        height_lbl.next_to([deck.right(), deck.by + 0.75, 0], RIGHT, buff=0.3)
         with self.narrate("Give each sequence its own level. The cut crosses each level once, so "
                           "a riffle can at most split it in two.") as beat:
             self.play(FadeOut(reader), run_time=0.3)
             beat.wait_until("each sequence", offset=-0.1)
+            # the old bar tops stay behind for a moment as faint ticks: height changes meaning
+            cw = (BAR_W + 0.05) * deck.s
+            old_tops = VGroup(*[Line(deck.cards[c].get_top() + LEFT * cw / 2,
+                                     deck.cards[c].get_top() + RIGHT * cw / 2,
+                                     color=INK, stroke_width=2.5, stroke_opacity=0.3)
+                                for c in range(1, N + 1)])
+            self.add(old_tops)
             self.play(*deck.relayout(levels=True, step=STEPS[1], hs=1.0), FadeOut(lowlab),
-                      FadeOut(hilab), run_time=1.0, rate_func=SMOOTH)
+                      FadeOut(hilab), FadeIn(height_lbl, shift=0.1 * LEFT), run_time=1.0,
+                      rate_func=SMOOTH)
             c2 = DECKS["cuts"][1]
             xc2 = deck.slot_x(c2 - 1) + PITCH * deck.s / 2
             cut2 = DashedLine([xc2, deck.by - 0.15, 0], [xc2, deck.level_y(2) + 0.45, 0],
                               color=GRAY, stroke_width=2.5, dash_length=0.08)
             cut2_lbl = text("cut", size=LABEL - 2, color=TGRAY).next_to(cut2, UP, buff=0.12)
             beat.wait_until("cut", offset=-0.2)
-            self.play(Create(cut2), FadeIn(cut2_lbl), run_time=0.6)
+            self.play(Create(cut2), FadeIn(cut2_lbl), FadeOut(old_tops), run_time=0.6)
             rings = VGroup(*[Circle(radius=0.13, color=YELLOW, stroke_width=3.5)
                              .move_to([xc2, deck.level_y(j), 0]) for j in (1, 2)])
             right2 = DECKS["decks"][1][c2:]
@@ -558,30 +637,36 @@ class Episode(NarratedScene):
                         extra_drop=(FadeOut(cut2), FadeOut(cut2_lbl)))
             ceil = ceil_line(2)
             ceil_lbl = ceil_tex(2)
+            new = cnt_tex(4)
             self.split(deck, 2, STEPS[2], run_time=max(0.9, beat.until("two", occurrence=1, offset=0.3)),
-                       extra=(Transform(cnt, MathTex("4", font_size=64, color=YELLOW).move_to(cnt_pos)),
-                              FadeIn(ceil), FadeIn(ceil_lbl)))
+                       extra=(*self.swap(cnt, new), FadeIn(ceil), FadeIn(ceil_lbl)))
+            cnt = new
 
-        tag_sim = text("one simulated deck (GSR model)", size=SMALL, color=TGRAY)
+        tag_sim = text("one simulated deck", size=SMALL, color=TGRAY)
         tag_sim.move_to([0, 2.95, 0]).align_to([-6.2, 0, 0], LEFT)
         with self.narrate("Three riffles, [pause 0.8] eight. Four riffles, [pause 0.6] at most "
                           "sixteen; this deck has fourteen.") as beat:
             deck.wash = {}                                  # the packet tint goes back to grey
-            self.riffle(deck, 3, t_cut=0.5, t_drop=0.9, lift=0.35)
+            self.riffle(deck, 3, t_cut=0.5, t_drop=0.9, lift=0.35, extra=(FadeOut(height_lbl),))
+            new, new_l = cnt_tex(8), ceil_tex(3)
             self.split(deck, 3, STEPS[3], run_time=max(0.7, beat.until("eight", offset=0.25)),
-                       extra=(Transform(cnt, MathTex("8", font_size=64, color=YELLOW).move_to(cnt_pos)),
-                              Transform(ceil, ceil_line(3)), Transform(ceil_lbl, ceil_tex(3))))
+                       extra=(*self.swap(cnt, new), *self.swap(ceil_lbl, new_l),
+                              Transform(ceil, ceil_line(3))))
+            cnt, ceil_lbl = new, new_l
             beat.wait_until("Four", offset=-0.1)
             self.riffle(deck, 4, t_cut=0.45, t_drop=0.8, lift=0.3)
+            new, new_l = cnt_tex(14), ceil_tex(4)
             self.split(deck, 4, STEPS[4], run_time=max(0.7, beat.until("sixteen", offset=0.2)),
-                       extra=(Transform(cnt, MathTex("14", font_size=64, color=YELLOW).move_to(cnt_pos)),
-                              Transform(ceil, ceil_line(4)), Transform(ceil_lbl, ceil_tex(4))))
+                       extra=(*self.swap(cnt, new), *self.swap(ceil_lbl, new_l),
+                              Transform(ceil, ceil_line(4))))
+            cnt, ceil_lbl = new, new_l
             self.play(Indicate(ceil_lbl, color=INK, scale_factor=1.15), run_time=0.7)
             beat.wait_until("fourteen", offset=-0.3)
             self.play(Indicate(cnt, color=YELLOW, scale_factor=1.25), FadeIn(tag_sim), run_time=0.8)
 
         # ---- side by side with a perfect shuffle: the two cold-open decks, same level unit
         perfect = Deck(DECKS["random"], runs=DECKS["random_runs"], levels=True, **SIDE_B)
+        perfect.shelf = 0.15                                 # 26 shelves: keep only the caps legible
         p_marks = deck_marks(perfect)
         ghostA = Deck(DECKS["decks"][4], runs=DECKS["runs"][4], levels=True, **SIDE_A)
         line16_y = ghostA.level_y(16.5)
@@ -595,7 +680,7 @@ class Episode(NarratedScene):
         cntA_lbl = text("rising sequences", size=LABEL - 2, color=TGRAY).next_to(cntA, RIGHT, buff=0.2)
         tagA = text("4 riffles", size=LABEL, color=PURPLE).next_to(VGroup(cntA, cntA_lbl), UP, buff=0.2)
         tagA.align_to(cntA, LEFT)
-        tag_simA = text("one simulated deck (GSR model)", size=SMALL, color=TGRAY)
+        tag_simA = text("one simulated deck", size=SMALL, color=TGRAY)
         tag_simA.next_to([SIDE_A["cx"], SIDE_A["by"], 0], DOWN, buff=0.28)
         cntP = MathTex("26", font_size=56, color=YELLOW).move_to([perfect.left() + 0.35, perfect.top_y() + 0.45, 0])
         avg = MathTex(r"\text{average } 26.5", font_size=MATH_SMALL + 2, color=TGRAY)
@@ -606,24 +691,29 @@ class Episode(NarratedScene):
         rare.next_to([SIDE_B["cx"], SIDE_B["by"], 0], DOWN, buff=0.28)
         with self.narrate("A perfect shuffle averages twenty six and a half, and gives sixteen or "
                           "fewer once in two million decks.") as beat:
+            late = lambda t: smooth(max(0.0, (t - 0.55) / 0.45))    # appear once the counter has passed
+            early_out = lambda t: smooth(min(1.0, 3.0 * t))
             self.play(*deck.relayout(**SIDE_A),
-                      Transform(ceil, line16), FadeOut(ceil_lbl), FadeIn(lbl16),
-                      Transform(cnt, cntA), Transform(cnt_lbl, cntA_lbl), FadeIn(tagA),
-                      Transform(tag_sim, tag_simA),
+                      Transform(ceil, line16), FadeOut(ceil_lbl, rate_func=early_out), FadeIn(lbl16),
+                      Transform(cnt, cntA, path_arc=0.5), FadeOut(cnt_lbl, rate_func=early_out),
+                      FadeIn(cntA_lbl, rate_func=late),
+                      FadeOut(tag_sim, rate_func=early_out), FadeIn(tag_simA, rate_func=late),
+                      VGroup(ghost, ghost_lbl, gsr).animate.set_opacity(0.25),
                       LaggedStart(*[FadeIn(perfect.cards[c], shift=0.2 * UP) for c in perfect.order],
                                   lag_ratio=0.01),
-                      FadeIn(tagP), run_time=beat.until("averages", offset=-0.3, min_time=1.0))
-            self.play(FadeIn(p_marks), FadeIn(cntP, scale=0.8),
+                      run_time=beat.until("averages", offset=-0.3, min_time=1.0))
+            self.play(FadeIn(p_marks), FadeIn(cntP, scale=0.8), FadeIn(tagA), FadeIn(tagP),
                       run_time=beat.until("twenty six", offset=-0.2, min_time=0.5))
             self.play(FadeIn(avg, shift=0.1 * LEFT), run_time=0.6)
             beat.wait_until("sixteen", offset=-0.2)
-            self.play(Transform(ceil, line16_full), run_time=0.8)
+            # "average 26.5" has been read and heard: it leaves as the 16-line crosses over
+            self.play(Transform(ceil, line16_full), FadeOut(avg), run_time=0.8)
             self.play(FadeIn(rare, shift=0.1 * UP), run_time=0.6)
 
         acc4 = 1 - DATA["p_uniform_le16"] / 2
-        with self.narrate("Call any deck with sixteen or fewer riffled, and you'd be wrong about "
-                          "once in four million games. The top card can't see this; it lives in "
-                          "the order between cards.") as beat:
+        with self.narrate("Call sixteen or fewer riffled, and you'd be wrong about once in four "
+                          "million games. The top card can't see this; it lives in the order "
+                          "between cards.") as beat:
             below = Rectangle(width=line16_full.width, height=line16_y - SIDE_A["by"], stroke_width=0,
                               fill_color=PURPLE, fill_opacity=0.12)
             below.move_to(line16_full.get_center(), aligned_edge=UP)
@@ -636,18 +726,18 @@ class Episode(NarratedScene):
             meter.value.clear_updaters()
             precise = MathTex(r"99.99998\%", font_size=MATH, color=INK)
             precise.next_to(meter.needle, UP, buff=0.18).align_to(meter.value, RIGHT)
-            self.play(ReplacementTransform(meter.value, precise), run_time=0.5)
+            self.play(*self.swap(meter.value, precise), run_time=0.45)
             beat.wait_until("top card", offset=-0.2)
             tbox2 = box(deck.card_at(0), color=INK, buff=0.05, stroke_width=2.5)
-            self.play(Create(tbox2), run_time=0.6)
+            self.play(Create(tbox2), VGroup(ghost, ghost_lbl).animate.set_opacity(1.0), run_time=0.6)
             beat.wait_until("order between", offset=-0.2)
             self.play(FadeOut(tbox2), FadeOut(below), Indicate(marks, color=YELLOW, scale_factor=1.0),
                       Indicate(p_marks, color=YELLOW, scale_factor=1.0), run_time=1.0)
 
         # ============================================================ 5. insight: one chart
-        ax = axes((7.5, 36.5), (0, 0.4), x_length=7.4, y_length=3.0,
+        ax = axes((7.5, 36.5), (0, 0.4), x_length=7.4, y_length=2.8,
                   x_ticks=[10, 15, 20, 25, 30, 35], y_ticks=[0, 0.1, 0.2, 0.3, 0.4],
-                  x_label="rising sequences", y_label="chance")
+                  x_label="rising sequences", y_label="share of decks")
         regray(ax)
         ax.shift(np.array([-5.72, -1.6, 0]) - ax.c2p(7.5, 0))
         bd_cite = citation("Bayer & Diaconis, 1992 · Ann. Appl. Probab.", size=20, color=TGRAY)
@@ -671,7 +761,7 @@ class Episode(NarratedScene):
             return g
 
         purple = always_redraw(purple_now)
-        TAG_Y = ax.c2p(0, 0.4)[1] + 0.32                     # just above the plot, over purple
+        TAG_Y = ax.c2p(0, 0.4)[1] + 0.9                     # one row above the y-axis title
 
         def tag_now():
             return riffles_tex(K[0]).move_to([ax.c2p(mean_of(kt.get_value()), 0)[0], TAG_Y, 0])
@@ -683,23 +773,24 @@ class Episode(NarratedScene):
         regray(inset)
         inset.shift(np.array([2.75, -1.8, 0]) - inset.c2p(0, 0))
 
-        SQ = ax.c2p(0.86, 0)[0] - ax.c2p(0, 0)[0]           # one deck = one square token
-        y_ax = ax.c2p(0, 0)[1]
+        # one deck = one token, one token = 1/40 of the stack (40 simulated decks of each kind)
+        TOK = 0.025
+        TW = (ax.c2p(0.86, 0)[0] - ax.c2p(0, 0)[0]) * 0.92
+        TH = (ax.c2p(0, TOK)[1] - ax.c2p(0, 0)[1]) * 0.86
 
-        def square_xy(x, y_bottom, color):
-            return Square(SQ, stroke_width=0, fill_color=color, fill_opacity=1) \
-                .move_to([x, y_bottom + SQ / 2, 0])
+        def token(color):
+            return Rectangle(width=TW, height=TH, stroke_width=0, fill_color=color, fill_opacity=1)
 
-        def square_at(r, color):
-            return square_xy(ax.c2p(r, 0)[0], y_ax, color)
+        def token_xy(r, j):
+            return ax.c2p(r, (j + 0.5) * TOK)
 
         def squeeze(d: Deck, x, y_bottom, color):
-            """Each bar becomes one 1/52 slice of the square, keeping its left-right order."""
-            x0 = x - SQ / 2
+            """Each bar becomes one 1/52 slice of the token, keeping its left-right order."""
+            x0 = x - TW / 2
             anims = []
             for i, c in enumerate(d.order):
-                tgt = Rectangle(width=SQ / N, height=SQ, stroke_width=0, fill_color=color,
-                                fill_opacity=1).move_to([x0 + (i + 0.5) * SQ / N, y_bottom + SQ / 2, 0])
+                tgt = Rectangle(width=TW / N, height=TH, stroke_width=0, fill_color=color,
+                                fill_opacity=1).move_to([x0 + (i + 0.5) * TW / N, y_bottom + TH / 2, 0])
                 anims.append(Transform(d.cards[c], tgt))
             return anims
 
@@ -714,7 +805,7 @@ class Episode(NarratedScene):
                           "are equally likely. [pause 0.7]") as beat:
             meter.freeze()
             self.play(FadeOut(VGroup(meter.base, meter.fill, meter.needle, precise, ghost, ghost_lbl)),
-                      FadeOut(gsr), FadeOut(tag_sim), FadeOut(rare), run_time=0.6)
+                      FadeOut(gsr), FadeOut(tag_simA), FadeOut(rare), run_time=0.6)
             self.play(FadeIn(bd_cite), run_time=0.5)
             beat.wait_until("model", offset=-0.2)
             self.play(Indicate(cnt, color=YELLOW, scale_factor=1.25),
@@ -727,31 +818,56 @@ class Episode(NarratedScene):
             self.hold(0.4)
             # each deck becomes ONE token (its 52 bars squeeze, in order, into a square) in place
             marks.clear_updaters()
-            self.play(FadeOut(VGroup(marks, p_marks, ceil, lbl16, avg, cnt_lbl, chA, chP, same,
+            self.play(FadeOut(VGroup(marks, p_marks, ceil, lbl16, cnt, cntA_lbl, cntP, chA, chP, same,
                                      tagA, tagP), rate_func=lambda t: smooth(min(1.0, 2.0 * t))),
                       *squeeze(deck, SIDE_A["cx"], SIDE_A["by"], PURPLE),
                       *squeeze(perfect, SIDE_B["cx"], SIDE_B["by"], BLUE),
-                      cnt.animate.scale(0.6).move_to([SIDE_A["cx"], SIDE_A["by"] + SQ + 0.33, 0]),
-                      cntP.animate.scale(0.6).move_to([SIDE_B["cx"], SIDE_B["by"] + SQ + 0.33, 0]),
                       run_time=max(1.0, beat.remaining()), rate_func=SMOOTH)
             self.remove(*deck.cards.values(), *perfect.cards.values())
-            blockA = square_xy(SIDE_A["cx"], SIDE_A["by"], PURPLE)
-            blockP = square_xy(SIDE_B["cx"], SIDE_B["by"], BLUE)
+            blockA = token(PURPLE).move_to([SIDE_A["cx"], SIDE_A["by"] + TH / 2, 0])
+            blockP = token(BLUE).move_to([SIDE_B["cx"], SIDE_B["by"] + TH / 2, 0])
             self.add(blockA, blockP)
 
-        one_deckA = text("1 deck", size=SMALL, color=TGRAY)
-        one_deckP = text("1 deck", size=SMALL, color=TGRAY)
-        with self.narrate("So pile each deck onto its count. [pause 0.4]") as beat:
-            # the axes first, on their own; then each token drops onto its count
-            self.play(Create(ax), run_time=0.7)
-            tA, tP = square_at(14, PURPLE), square_at(26, BLUE)
-            self.play(blockA.animate.move_to(tA), blockP.animate.move_to(tP),
-                      cnt.animate.next_to(tA, UP, buff=0.18), cntP.animate.next_to(tP, UP, buff=0.18),
-                      run_time=max(0.8, beat.until("count", offset=0.1)), rate_func=SMOOTH)
-            one_deckA.next_to(cnt, UP, buff=0.2)
-            one_deckP.next_to(cntP, UP, buff=0.2)
-            self.play(FadeIn(one_deckA, shift=0.1 * DOWN), FadeIn(one_deckP, shift=0.1 * DOWN),
-                      run_time=0.5)
+        # ---- 40 simulated decks of each kind rain onto their counts, then every possible deck
+        rain, cols_p, cols_u = [], {14: [blockA]}, {26: [blockP]}
+        for rp, ru in zip(PILE["riffled4"][1:], PILE["perfect"][1:]):
+            for r, cols, color in ((rp, cols_p, PURPLE), (ru, cols_u, BLUE)):
+                j = len(cols.setdefault(r, []))
+                t = token(color).move_to(token_xy(r, j))
+                cols[r].append(t)
+                rain.append(t)
+        sim40 = text("40 simulated decks each", size=SMALL, color=TGRAY)
+        sim40.move_to(ax.c2p(30, 0.37)).align_to([ax.c2p(36.5, 0)[0], 0, 0], RIGHT)
+        purple_bars = VGroup(*[bar_rect(ax, r, 0, float(rs_pmf(4.0)[r - 1]), 0.86, stroke_width=0,
+                                        fill_color=PURPLE, fill_opacity=0.45) for r in range(8, 37)])
+        p4 = rs_pmf(4.0)
+        pl4 = step_line(ax, p4, *support(p4), PURPLE, 4)
+        with self.narrate("So pile decks onto their counts, [pause 0.6] then every possible deck, "
+                          "weighted by its chance.") as beat:
+            # the axes draw while the two tokens drop onto their counts
+            self.play(Create(ax), blockA.animate.move_to(token_xy(14, 0)),
+                      blockP.animate.move_to(token_xy(26, 0)),
+                      run_time=max(0.9, beat.until("onto", offset=-0.1)), rate_func=SMOOTH)
+            self.play(LaggedStart(*[FadeIn(t, shift=0.6 * DOWN) for t in rain], lag_ratio=0.03),
+                      FadeIn(sim40, rate_func=lambda t: smooth(min(1.0, 4.0 * t))),
+                      run_time=max(1.2, beat.until("every", offset=-0.1)))
+            # the stacks become the exact chance of each count (Bayer & Diaconis; Eulerian numbers)
+            morph = []
+            for i, r in enumerate(range(8, 37)):
+                for cols, bars in ((cols_u, blue_bars), (cols_p, purple_bars)):
+                    if r in cols:
+                        morph.append(ReplacementTransform(VGroup(*cols[r]), bars[i]))
+                    elif bars is blue_bars or p4[r - 1] > 1e-3:
+                        morph.append(GrowFromEdge(bars[i], DOWN))
+            # the 40-deck label leaves as the stacks become exact chances
+            self.play(*morph, FadeOut(sim40, rate_func=lambda t: smooth(min(1.0, 3.0 * t))),
+                      run_time=max(1.1, beat.until("weighted", offset=0.1)), rate_func=SMOOTH)
+            self.play(FadeOut(purple_bars), Create(pl4), Create(blue_line), FadeIn(tagB),
+                      run_time=0.7)
+            self.remove(pl4)
+            self.add(purple)
+            tagK = always_redraw(tag_now)
+            self.play(FadeIn(tagK, shift=0.1 * DOWN), run_time=0.4)
 
         dlive = always_redraw(lambda: Dot(inset.c2p(kt.get_value(), tv_of(kt.get_value())),
                                           radius=0.075, color=RED))
@@ -763,19 +879,8 @@ class Episode(NarratedScene):
             return m.next_to(inset.c2p(k, v), UR if v > 0.5 else DL, buff=0.2)
 
         dlab = d_label(4)
-        with self.narrate("Blue is a perfect shuffle, purple is four riffles. The red area, purple "
-                          "above blue, is the distance from random. Right now it's one.") as beat:
-            self.play(FadeOut(VGroup(cntP, one_deckP, one_deckA, cnt)), run_time=0.35)
-            self.play(FadeOut(blockP),
-                      LaggedStart(*[GrowFromEdge(b, DOWN) for b in blue_bars], lag_ratio=0.03),
-                      Create(blue_line), FadeIn(tagB),
-                      run_time=beat.until("purple", offset=-0.1, min_time=1.0))
-            p4 = rs_pmf(4.0)
-            pl4 = step_line(ax, p4, *support(p4), PURPLE, 4)
-            tagK = always_redraw(tag_now)
-            self.play(FadeOut(blockA), Create(pl4), FadeIn(tagK, shift=0.1 * DOWN), run_time=1.0)
-            self.remove(pl4)
-            self.add(purple)
+        with self.narrate("The red area, purple above blue, is the distance from random. Right "
+                          "now it's one.") as beat:
             beat.wait_until("red area", offset=-0.2)
             self.play(red_op.animate.set_value(1.0), run_time=0.9)
             beat.wait_until("distance", offset=-0.2)
@@ -792,153 +897,142 @@ class Episode(NarratedScene):
             yp = float(p[int(round(m)) - 1])
             return max(yp, float(U_PMF[26])) + 0.022, yp
 
-        def gap_now():
-            k = kt.get_value()
+        def gap_at(k, opacity=1.0):
             m = mean_of(k)
             yb, yp = gap_y(k)
             yu = float(U_PMF[26])
             a, b = ax.c2p(m, yb), ax.c2p(MEAN_U, yb)
-            return VGroup(Line(a, b, color=YELLOW, stroke_width=3.5),
-                          Line(a, ax.c2p(m, yp), color=YELLOW, stroke_width=2.5),
-                          Line(b, ax.c2p(MEAN_U, yu), color=YELLOW, stroke_width=2.5))
+            return VGroup(Line(a, b, color=YELLOW, stroke_width=3.5, stroke_opacity=opacity),
+                          Line(a, ax.c2p(m, yp), color=YELLOW, stroke_width=2.5, stroke_opacity=opacity),
+                          Line(b, ax.c2p(MEAN_U, yu), color=YELLOW, stroke_width=2.5, stroke_opacity=opacity))
 
-        def gap_label(k):
-            return MathTex(GAP_TXT[k], font_size=MATH_SMALL + 2, color=YELLOW) \
-                .next_to(gap_now()[0], UP, buff=0.18)
+        def gap_now():
+            return gap_at(kt.get_value())
 
         row = MathTex(r"\text{gap:}\;", GAP_TXT[4], r"\to", GAP_TXT[5], r"\to", GAP_TXT[6],
                       r"\to", GAP_TXT[7], font_size=MATH_SMALL + 6, color=YELLOW)
-        row.move_to([-3.2, 3.05, 0])
+        row.move_to([-3.2, 3.15, 0])
         row.shift((-4.75 - row[0].get_right()[0]) * RIGHT)
         half = DashedLine(inset.c2p(0, 0.5), inset.c2p(10.5, 0.5), color=GRAY, stroke_width=2.5,
                           dash_length=0.08)
+
+        def to_row(i):
+            """The bracket's length becomes the row's number: a copy of the bar flies up and
+            fades into the value."""
+            return self.fly_into(gap_now()[0], row[i], arc=1.4)
+
         with self.narrate("How many more riffles to bring it below a half? [pause 1.5]") as beat:
-            gnum = gap_label(4)
-            gap_br = always_redraw(gap_now)
-            self.play(Create(gap_br), FadeIn(gnum, shift=0.1 * UP), Write(row[0]), run_time=0.6)
-            self.play(TransformFromCopy(gnum, row[1]), run_time=0.5)
             beat.wait_until("below a half", offset=-0.3)
             self.play(Create(half), Indicate(inset.y_axis.numbers[1], color=INK, scale_factor=1.3),
                       run_time=0.9)
+            beat.wait_until("half", offset=0.5)
+            gap_br = always_redraw(gap_now)
+            self.play(Create(gap_br), Write(row[0]), run_time=0.5)
+            self.play(*to_row(1), run_time=0.5)
 
         def fade_fast(m):
             return FadeOut(m, rate_func=lambda t: smooth(min(1.0, 3.0 * t)))
 
         def slide_to(k, run_time):
-            """Slide purple to k riffles; the tag names the target at the start; the gap and d
-            labels are hidden while the riffle count is not a whole number."""
+            """Slide purple to k riffles; the tag names the target at the start; the d label is
+            hidden while the riffle count is not a whole number."""
             K[0] = k
             return [kt.animate(run_time=run_time, rate_func=EASE).set_value(k)]
 
+        ghost_br = gap_at(4, opacity=0.3)                  # where the gap was at 4 riffles
         dots = {4: dot4}
-        with self.narrate("A fifth riffle: point nine two. A sixth: point six one.") as beat:
-            for k, cue, val in ((5, "fifth", "nine"), (6, "sixth", "six one")):
+        with self.narrate("A fifth riffle: point nine two. A sixth: point six one. A seventh: "
+                          "point three three.") as beat:
+            self.add(ghost_br)
+            for k, cue, val in ((5, "fifth", "nine"), (6, "sixth", "six one"),
+                                (7, "seventh", "three three")):
                 if beat.elapsed() < beat.time_of(cue) - 0.3:
                     beat.wait_until(cue, offset=-0.3)
                 rt = beat.until(val, offset=-0.15, min_time=0.8)
-                self.play(*slide_to(k, rt), fade_fast(gnum), fade_fast(dlab), run_time=rt)
+                self.play(*slide_to(k, rt), fade_fast(dlab), run_time=rt)
                 d = Dot(inset.c2p(k, TV[k - 1]), radius=0.075, color=RED)
                 dots[k] = d
                 self.add(d)
-                gnum, dlab = gap_label(k), d_label(k)
-                self.play(FadeIn(gnum), FadeIn(dlab), run_time=0.3)
+                dlab = d_label(k)
                 i = k - 4
-                self.play(Write(row[2 * i]), TransformFromCopy(gnum, row[2 * i + 1]), run_time=0.5)
+                self.play(FadeIn(dlab), Write(row[2 * i]), *to_row(2 * i + 1), run_time=0.5)
+            self.play(Indicate(half, color=INK, scale_factor=1.0), run_time=0.6)
 
-        # ---- the accuracy rule, read off the chart at k = 6
-        p6 = rs_pmf(6.0)
-        zone_x = 24.5                                       # purple > blue for r <= 24 at k = 6
+        # ---- what d = 0.33 buys a guesser, read off the chart at k = 7
+        p7 = rs_pmf(7.0)
+        zone_x = 25.5                                       # purple > blue for r <= 25 at k = 7
         z0, zm, z1, ztop = ax.c2p(7.5, 0), ax.c2p(zone_x, 0), ax.c2p(36.5, 0), ax.c2p(0, 0.4)[1]
         zA = Rectangle(width=zm[0] - z0[0], height=ztop - z0[1], stroke_width=0, fill_color=PURPLE,
                        fill_opacity=0.1).move_to([(z0[0] + zm[0]) / 2, (z0[1] + ztop) / 2, 0]).set_z_index(-3)
         zB = Rectangle(width=z1[0] - zm[0], height=ztop - z0[1], stroke_width=0, fill_color=BLUE,
                        fill_opacity=0.1).move_to([(zm[0] + z1[0]) / 2, (z0[1] + ztop) / 2, 0]).set_z_index(-3)
-        zy = ax.c2p(0, 0.37)[1]
-        zA_lbl = text("say riffled", size=LABEL - 2, color=PURPLE).move_to([ax.c2p(17.0, 0)[0], zy, 0])
-        zB_lbl = text("say perfect", size=LABEL - 2, color=BLUE).move_to([ax.c2p(30.5, 0)[0], zy, 0])
-        areaP = step_area(ax, p6, 8, 24, PURPLE, 0.55)
+        zy = ax.c2p(0, 0.31)[1]
+        zA_lbl = text("say riffled", size=LABEL - 2, color=PURPLE).move_to([ax.c2p(17.5, 0)[0], zy, 0])
+        zB_lbl = text("say perfect", size=LABEL - 2, color=BLUE).move_to([ax.c2p(31.0, 0)[0], zy, 0])
+        areaP = step_area(ax, p7, support(p7)[0], 25, PURPLE, 0.55)
         areaU = VGroup(*[bar_rect(ax, r, 0, U_PMF[r - 1], 0.86, stroke_width=0, fill_color=BLUE,
-                                  fill_opacity=0.95) for r in range(15, 25)])
-        EQ_R, EQ_Y, K_Y = 6.2, 2.7, 1.55
-        e1 = MathTex(r"\text{accuracy}", "=", r"\tfrac12", "(", "0.78", ")", "+", r"\tfrac12", "(",
-                     "1", "-", "0.17", ")", font_size=MATH)
+                                  fill_opacity=0.95) for r in range(15, 26)])
+        EQ_R, EQ_Y, K_Y = 6.2, 2.55, 1.55
+        e1 = MathTex(r"\text{accuracy}", "=", r"\tfrac12", "(", "0.65", ")", "+", r"\tfrac12", "(",
+                     "1", "-", "0.32", ")", font_size=MATH)
         e1[4].set_color(PURPLE)
         e1[11].set_color(BLUE)
-        e1.move_to([3.7, EQ_Y, 0]).align_to([EQ_R, 0, 0], RIGHT)
-        e2 = MathTex("=", r"\tfrac12", "+", r"\tfrac12", "(", "0.78", "-", "0.17", ")", font_size=MATH)
+        e1.move_to([3.2, EQ_Y, 0]).align_to([EQ_R, 0, 0], RIGHT)
+        e2 = MathTex("=", r"\tfrac12", "+", r"\tfrac12", "(", "0.65", "-", "0.32", ")", font_size=MATH)
         e2[5].set_color(PURPLE)
         e2[7].set_color(BLUE)
         e2.next_to(e1, DOWN, buff=0.3).align_to(e1[1], LEFT)      # '=' under '='
         e3 = MathTex(r"\text{accuracy}", "=", r"\tfrac12", "+", r"\tfrac12", "d", font_size=MATH)
         e3[5].set_color(RED)
-        e3.move_to(e1, aligned_edge=LEFT)
-        with self.narrate("Guess riffled wherever purple is higher. You catch seventy eight percent "
-                          "of riffled decks, but flag seventeen percent of perfect ones. Accuracy "
-                          "is a half plus half the difference: the red area.") as beat:
+        e3.shift(e1[0].get_center() - e3[0].get_center())       # "accuracy =" never moves
+        with self.narrate("Guess riffled where purple is higher: you catch sixty five percent of "
+                          "riffled decks, and flag thirty two percent of perfect ones. Accuracy is "
+                          "a half, plus half the difference, and the difference is the red area.") as beat:
             # one focal point: the gap story steps aside while accuracy is read off the areas
             gap_br.clear_updaters()
-            self.play(FadeOut(VGroup(row[0:6], gap_br, gnum, tagB)),
+            self.play(FadeOut(VGroup(gap_br, ghost_br, tagB)), row.animate.set_opacity(0.3),
                       FadeIn(zA), FadeIn(zB), FadeIn(zA_lbl), FadeIn(zB_lbl), run_time=1.0)
-            beat.wait_until("seventy eight", offset=-0.4)
+            beat.wait_until("sixty five", offset=-0.4)
             self.play(FadeIn(areaP), Write(e1[0:4]), run_time=0.7)
-            self.play(ReplacementTransform(areaP.copy(), e1[4]), Write(e1[5]), run_time=0.8)
-            beat.wait_until("seventeen", offset=-0.4)
+            self.play(ReplacementTransform(areaP.copy(), e1[4], path_arc=-0.8), Write(e1[5]), run_time=0.8)
+            beat.wait_until("thirty two", offset=-0.4)
             self.play(FadeOut(areaP), FadeIn(areaU), Write(e1[6:11]), run_time=0.7)
-            self.play(ReplacementTransform(areaU.copy(), e1[11]), Write(e1[12]), run_time=0.8)
-            beat.wait_until("half plus", offset=-0.5)
+            self.play(ReplacementTransform(areaU.copy(), e1[11], path_arc=-0.8), Write(e1[12]), run_time=0.8)
+            beat.wait_until("half the difference", offset=-0.5)
             pairs = ((1, 0), (7, 1), (6, 2), (2, 3), (3, 4), (4, 5), (10, 6), (11, 7), (12, 8))
             self.play(FadeOut(areaU),
                       LaggedStart(*[TransformFromCopy(e1[a], e2[b]) for a, b in pairs], lag_ratio=0.12),
-                      run_time=1.6)
+                      run_time=1.5)
+            beat.wait_until("difference is", offset=-0.2)
+            self.play(Indicate(VGroup(*e2[4:9]), color=RED, scale_factor=1.1), run_time=0.7)
             beat.wait_until("red area", offset=-0.3)
-            self.play(Indicate(VGroup(*e2[4:9]), color=RED, scale_factor=1.1),
-                      red_op.animate.set_value(0.35), run_time=0.5)
-            self.play(red_op.animate.set_value(1.0), run_time=0.5)
-
-        gap_br = always_redraw(gap_now)
-        with self.narrate("A seventh riffle: point three three.") as beat:
+            # the difference IS the red area: it becomes d, and the two lines become one
+            self.play(FadeOut(VGroup(*e1[2:])), FadeOut(e2[0]), red_op.animate.set_value(0.3),
+                      run_time=0.35)
+            diff = VGroup(*e2[4:9])
             self.play(ReplacementTransform(VGroup(*e1[0:2]), VGroup(*e3[0:2])),
                       ReplacementTransform(VGroup(*e2[1:4]), VGroup(*e3[2:5])),
-                      FadeTransform(VGroup(*e2[4:9]), e3[5], stretch=False),
-                      FadeOut(VGroup(*e1[2:])), FadeOut(e2[0]),
-                      FadeOut(VGroup(zA, zB, zA_lbl, zB_lbl)), FadeIn(row[0:6]), FadeIn(gap_br),
-                      run_time=0.8)
-            rt = beat.until("three three", offset=-0.15, min_time=0.8)
-            self.play(*slide_to(7, rt), fade_fast(dlab), e3.animate.set_opacity(0.3), run_time=rt)
-            dots[7] = Dot(inset.c2p(7, TV[6]), radius=0.075, color=RED)
-            self.add(dots[7])
-            gnum, dlab = gap_label(7), d_label(7)
-            self.play(FadeIn(gnum), FadeIn(dlab), run_time=0.3)
-            self.play(Write(row[6]), TransformFromCopy(gnum, row[7]), run_time=0.5)
+                      diff.animate(rate_func=lambda t: smooth(min(1.0, 1.6 * t)))
+                      .scale(0.35).move_to(e3[5]).set_opacity(0),
+                      FadeIn(e3[5], scale=1.6, rate_func=lambda t: smooth(max(0.0, 2.0 * t - 1.0))),
+                      run_time=0.9)
+            self.remove(diff)
+            self.play(red_op.animate.set_value(1.0), Indicate(e3[5], color=RED, scale_factor=1.3),
+                      run_time=0.7)
 
+        # ---- why the cliff: the gap measured in blue spreads, at 4 riffles and now
         halves = MathTex(r"(\text{each step} \approx \div 2)", font_size=MATH_SMALL, color=TGRAY)
         halves.next_to(row, RIGHT, buff=0.4)
         spread_y = 0.607 * float(U_PMF[26])          # a bell is 61 % of its peak one spread out
         spread = bracket(ax.c2p(MEAN_U, spread_y), ax.c2p(MEAN_U + SD_U, spread_y), BLUE, tick=0.1)
         spread_num = MathTex(r"\text{spread } 2.1", font_size=MATH_SMALL + 2, color=BLUE)
         spread_num.next_to(ax.c2p(30.0, spread_y), RIGHT, buff=0.05)
-        with self.narrate("Meanwhile the gap between the centers roughly halved each riffle, while "
-                          "purple's spread settled to blue's: about two.") as beat:
-            self.play(FadeOut(e3), run_time=0.5)
-            beat.wait_until("gap", offset=-0.2)
-            self.play(Indicate(VGroup(row[1:8]), color=YELLOW, scale_factor=1.06), run_time=0.9)
-            beat.wait_until("halved", offset=-0.3)
-            self.play(FadeIn(halves, shift=0.1 * LEFT), run_time=0.8)
-            beat.wait_until("spread", offset=-0.2)
-            self.play(Create(spread), FadeIn(spread_num), run_time=0.9)
-            beat.wait_until("about two", offset=-0.2)
-            self.play(Indicate(spread_num, color=BLUE, scale_factor=1.15), run_time=0.8)
-
-        # ---- the mechanism, shown: rewind to 4 riffles, measure the gap in spreads, replay
         HOP_H = 0.17
-        hop_op = ValueTracker(0.0)
 
-        def hops_now():
+        def hops_at(k, opacity=1.0):
+            """Blue spread-long hops laid along the gap from blue's centre (the last one cut
+            exactly where the gap ends)."""
             g = VGroup()
-            op = hop_op.get_value()
-            if op <= 1e-3:
-                return g
-            k = kt.get_value()
             xl = mean_of(k)
             yb, _ = gap_y(k)
             j = 0
@@ -948,11 +1042,11 @@ class Episode(NarratedScene):
                     break
                 frac = min(1.0, (xb - xl) / SD_U)
                 pa, pb = ax.c2p(xb - SD_U, yb), ax.c2p(xb, yb)
-                r = (pb[0] - pa[0]) / 2
-                ang = math.acos(1 - 2 * frac)            # a cut hop ends exactly at the gap's end
-                arc = Arc(radius=r, start_angle=0, angle=ang, arc_center=(pa + pb) / 2,
-                          stroke_color=BLUE, stroke_width=3.5, stroke_opacity=op)
-                arc.stretch(HOP_H / r, 1, about_point=(pa + pb) / 2)
+                rr = (pb[0] - pa[0]) / 2
+                ang = math.acos(1 - 2 * frac)
+                arc = Arc(radius=rr, start_angle=0, angle=ang, arc_center=(pa + pb) / 2,
+                          stroke_color=BLUE, stroke_width=3.5, stroke_opacity=opacity)
+                arc.stretch(HOP_H / rr, 1, about_point=(pa + pb) / 2)
                 g.add(arc)
                 j += 1
             return g
@@ -964,27 +1058,36 @@ class Episode(NarratedScene):
             yb, _ = gap_y(k)
             return m.next_to(ax.c2p(MEAN_U, yb), RIGHT, buff=0.3).shift(0.12 * UP)
 
-        hops = always_redraw(hops_now)
+        ghost_full = gap_at(4, opacity=0.6)
+        hops4, hops7 = hops_at(4, 0.8), hops_at(7)
+        r4, r7 = ratio_label(4), ratio_label(7)
+        gap7 = gap_at(7)
         cliff = VMobject(stroke_color=RED, stroke_width=3.5)
         early = VGroup(*[Dot(inset.c2p(k, TV[k - 1]), radius=0.075, color=RED) for k in (1, 2, 3)])
-        with self.narrate("While the gap spans several spreads, the distance stays near one. Once "
-                          "it's down to about one spread, the distance halves too. That's the "
-                          "cliff.") as beat:
-            rt = beat.until("several", offset=0.05, min_time=0.9)
-            self.play(*slide_to(4, rt), fade_fast(gnum), fade_fast(dlab), run_time=rt)
-            self.add(hops)
-            self.play(hop_op.animate.set_value(1.0), run_time=0.6)
-            r4 = ratio_label(4)
+        with self.narrate("Each riffle roughly halved the gap, but blue's spread, its standard "
+                          "deviation, stayed about two. While the gap spans several spreads, the "
+                          "distance stays near one. Within about one spread, it halves every "
+                          "riffle: that's the cliff.") as beat:
+            self.play(FadeOut(VGroup(zA, zB, zA_lbl, zB_lbl)), row.animate.set_opacity(1.0),
+                      FadeIn(gap7), run_time=0.6)
+            beat.wait_until("halved", offset=-0.3)
+            self.play(Indicate(VGroup(*row[1:8]), color=YELLOW, scale_factor=1.06),
+                      FadeIn(halves, shift=0.1 * LEFT), run_time=0.9)
+            beat.wait_until("blue's spread", offset=-0.2)
+            self.play(Create(spread), FadeIn(spread_num), FadeOut(e3), run_time=0.8)
+            beat.wait_until("about two", offset=-0.2)
+            self.play(Indicate(spread_num, color=BLUE, scale_factor=1.15), run_time=0.8)
+            beat.wait_until("several", offset=-0.4)
+            # four riffles: the gap was six spreads long and the distance sat at one
+            self.play(FadeIn(ghost_full), Create(hops4, lag_ratio=0.3), run_time=0.9)
             self.play(FadeIn(r4, shift=0.1 * LEFT), run_time=0.4)
             beat.wait_until("stays near one", offset=-0.3)
             self.play(LaggedStart(*[FadeIn(d, scale=1.6) for d in early], lag_ratio=0.3),
                       Indicate(dots[4], color=RED, scale_factor=1.6), run_time=1.0)
-            beat.wait_until("Once", offset=-0.1)
-            rt = beat.until("one spread", offset=0.45, min_time=1.2)
-            self.play(*slide_to(7, rt), fade_fast(r4), run_time=rt)
-            r7 = ratio_label(7)
-            self.play(FadeIn(r7, shift=0.1 * LEFT), run_time=0.4)
-            beat.wait_until("halves too", offset=-0.3)
+            beat.wait_until("Within", offset=-0.2)
+            # seven riffles: less than one spread
+            self.play(Create(hops7), FadeIn(r7, shift=0.1 * LEFT), run_time=0.7)
+            beat.wait_until("halves every", offset=-0.3)
             dots[8] = Dot(inset.c2p(8, TV[7]), radius=0.075, color=RED)
             self.play(Indicate(dots[6], color=RED, scale_factor=1.6),
                       Indicate(dots[7], color=RED, scale_factor=1.6), FadeIn(dots[8], scale=1.6),
@@ -993,109 +1096,99 @@ class Episode(NarratedScene):
             cliff.set_points_smoothly([inset.c2p(k, TV[k - 1]) for k in range(1, 9)])
             self.play(Create(cliff), run_time=1.0)
 
-        # ---- 230 from the data, then k: one equation, transformed in place
+        # ---- 230 from the data, then k: one equation line, changed one term at a time
         prods = VGroup(*[MathTex(PROD_TXT[i], font_size=MATH_SMALL + 6, color=YELLOW)
-                         .move_to([row[2 * i + 1].get_center()[0], 2.45, 0]) for i in range(4)])
+                         .move_to([row[2 * i + 1].get_center()[0], 2.6, 0]) for i in range(4)])
         prod_head = MathTex(r"\times 2^k\;\approx", font_size=MATH_SMALL + 6, color=YELLOW)
-        prod_head.move_to([row[0].get_center()[0], 2.45, 0]).align_to([-4.75, 0, 0], RIGHT)
+        prod_head.move_to([row[0].get_center()[0], 2.6, 0]).align_to([-4.75, 0, 0], RIGHT)
         prod_arrows = VGroup(*[MathTex(r"\to", font_size=MATH_SMALL + 6, color=YELLOW)
-                               .move_to([row[2 * i].get_center()[0], 2.45, 0]) for i in (1, 2, 3)])
+                               .move_to([row[2 * i].get_center()[0], 2.6, 0]) for i in (1, 2, 3)])
         p230 = MathTex(r"\to 230", font_size=MATH_SMALL + 6, color=YELLOW).next_to(prods[3], RIGHT, buff=0.18)
         ES = MATH + 4
-        eq1 = MathTex(r"\text{gap}", r"\approx", "230", "/", "2^k", "=", "2.1", font_size=ES)
-        eq1[0].set_color(YELLOW); eq1[2:5].set_color(YELLOW); eq1[6].set_color(BLUE)
-        eq1.move_to([3.9, EQ_Y, 0]).align_to([EQ_R, 0, 0], RIGHT)
-        eq2 = MathTex(r"2^k", r"\approx", "230", "/", "2.1", r"\approx", "110", font_size=ES)
-        eq2[0].set_color(YELLOW); eq2[2].set_color(YELLOW); eq2[4].set_color(BLUE)
-        eq2.move_to(eq1).align_to(eq1, RIGHT)
+
+        def frac_of(num_tex, den_tex=r"2^k", size=ES):
+            num = MathTex(num_tex, font_size=size, color=YELLOW)
+            den = MathTex(den_tex, font_size=size, color=YELLOW)
+            w = max(num.width, den.width) + 0.14
+            bar = Line(LEFT * w / 2, RIGHT * w / 2, stroke_width=2.5, color=YELLOW)
+            return VGroup(num, bar, den).arrange(DOWN, buff=0.1)
+
+        lhsA = MathTex(r"\text{gap}", font_size=ES, color=YELLOW)
+        apx = MathTex(r"\approx", font_size=ES)
+        fr = frac_of("230")
+        eqA = VGroup(lhsA, apx, fr).arrange(RIGHT, buff=0.22)
+        eqA.move_to([4.5, EQ_Y, 0]).align_to([EQ_R, 0, 0], RIGHT)
+        lhsB = MathTex("2.1", font_size=ES, color=BLUE).move_to(lhsA).align_to(lhsA, RIGHT)
         kline = MathTex(r"\Rightarrow\ k", r"\approx", "6.8", font_size=ES)
         kline.move_to([4.5, K_Y, 0]).align_to([EQ_R, 0, 0], RIGHT)
-        with self.narrate("Gap times two to the k levels off near two hundred thirty. [pause 1.2] "
-                          "So the gap meets the spread when two to the k is about a hundred and "
-                          "ten: just under seven. [pause 0.8]") as beat:
-            hops.clear_updaters()
-            self.play(FadeOut(hops), FadeOut(r7), run_time=0.4)
+        k68 = DashedLine(inset.c2p(6.77, 0), inset.c2p(6.77, 1.0), color=GRAY, stroke_width=2.5,
+                         dash_length=0.08)
+        with self.narrate("Multiply each gap by two to the k, and it settles near two hundred "
+                          "thirty. [pause 1.2] Divide that by two each riffle, and it reaches one "
+                          "spread after just under seven.") as beat:
+            self.play(FadeOut(VGroup(hops4, hops7, r4, r7, ghost_full, halves)), run_time=0.4)
             self.play(Write(prod_head), run_time=0.5)
-            self.play(LaggedStart(*[TransformFromCopy(row[2 * i + 1], prods[i]) for i in range(4)],
-                                  lag_ratio=0.35),
+            self.play(LaggedStart(*[AnimationGroup(*self.fly_copy(row[2 * i + 1], prods[i]))
+                                    for i in range(4)], lag_ratio=0.35),
                       LaggedStart(*[FadeIn(a) for a in prod_arrows], lag_ratio=0.35),
                       run_time=beat.until("two hundred", offset=-0.3, min_time=1.4))
             self.play(Write(p230), run_time=0.6)
-            # sources dim first, then each term flies in from what it measures
+            # gap ≈ 230 / 2^k, each term from what it measures
             rows = VGroup(row, prod_head, prods, prod_arrows, p230)
-            self.play(rows.animate.set_opacity(0.3), spread_num.animate.set_opacity(0.3),
-                      FadeOut(halves), run_time=0.35)
-            gap_src = gap_now()[0].copy()
-            self.play(ReplacementTransform(gap_src, eq1[0], path_arc=-0.9),
-                      TransformFromCopy(p230[0][1:], eq1[2], path_arc=0.5),
-                      TransformFromCopy(spread_num[0][-3:], eq1[6], path_arc=1.2),
-                      Write(eq1[1]), Write(eq1[3:6]), run_time=1.2)
-            # staged rearrangement: gap and = leave, 2^k arcs over, 2.1 arcs under, then ≈ 110
-            beat.wait_until("about", offset=0.0)
-            self.play(FadeOut(eq1[0]), FadeOut(eq1[5]), run_time=0.35)
-            self.play(ReplacementTransform(eq1[4], eq2[0], path_arc=1.6),
-                      ReplacementTransform(eq1[1], eq2[1]), ReplacementTransform(eq1[2], eq2[2]),
-                      ReplacementTransform(eq1[3], eq2[3]),
-                      ReplacementTransform(eq1[6], eq2[4], path_arc=-1.6), run_time=0.9)
-            self.play(Write(eq2[5:7]), run_time=0.5)
+            # the 230 flies first (nothing in its path), then "gap" rises from the bracket
+            self.play(*self.fly_copy(p230[0][1:], fr[0], arc=-0.7), Create(fr[1]),
+                      Write(fr[2]), run_time=0.8)
+            self.play(*self.fly_into(gap7[0], lhsA, arc=-0.8), Write(apx), run_time=0.7)
+            beat.wait_until("one spread", offset=-0.3)
+            # set the gap equal to one spread: "gap" becomes the blue 2.1
+            self.play(*self.fly_copy(spread_num[0][-3:], lhsB, arc=0.6),
+                      FadeOut(lhsA, rate_func=lambda t: smooth(min(1.0, 2.0 * t))),
+                      Indicate(spread, color=BLUE, scale_factor=1.0), run_time=0.9)
             beat.wait_until("just under", offset=-0.2)
-            k68 = DashedLine(inset.c2p(6.77, 0), inset.c2p(6.77, 1.0), color=GRAY, stroke_width=2.5,
-                             dash_length=0.08)
             self.play(Write(kline), Create(k68), run_time=1.0)
 
-        # ---- the same equation for n cards (no re-layout: the numbers become their formulas)
-        lhsF = MathTex(r"2^k", r"\approx", font_size=ES)
-        lhsF[0].set_color(YELLOW)
-        fracF = fraction(r"52\cdot 53/12", r"\sqrt{53/12}")
-        tailF = MathTex(r"\approx", "110", font_size=ES)
-        eqF = VGroup(lhsF, fracF, tailF).arrange(RIGHT, buff=0.2)
-        eqF.move_to([3.9, EQ_Y, 0]).align_to([EQ_R, 0, 0], RIGHT)
-        lhsN = MathTex(r"2^k", r"\approx", font_size=ES)
-        lhsN[0].set_color(YELLOW)
-        fracN = fraction(r"n(n+1)/12", r"\sqrt{(n+1)/12}")
-        sq = MathTex(r"\sim n^2", font_size=MATH_SMALL + 4, color=YELLOW)
+        # ---- the same line for n cards: only the numbers change into their formulas
+        numN = MathTex(r"n(n{+}1)/12", font_size=ES, color=YELLOW).move_to(fr[0])
+        lhsN = MathTex(r"\sqrt{(n{+}1)/12}", font_size=ES, color=BLUE)
+        frN = VGroup(numN, fr[1].copy().set(width=numN.width + 0.14), fr[2].copy())
+        frN.arrange(DOWN, buff=0.1)
+        eqN = VGroup(lhsN, apx.copy(), frN).arrange(RIGHT, buff=0.22)
+        eqN.move_to([4.0, EQ_Y, 0]).align_to([EQ_R, 0, 0], RIGHT)
+        sq = MathTex(r"\sim n^2", font_size=MATH_SMALL + 4, color=YELLOW).next_to(frN[0], UP, buff=0.18)
         rt_n = MathTex(r"\sim \sqrt{n}", font_size=MATH_SMALL + 4, color=BLUE)
-        eqN = VGroup(lhsN, fracN).arrange(RIGHT, buff=0.2)
-        sq.next_to(fracN[0], RIGHT, buff=0.25)
-        rt_n.next_to(fracN[2], RIGHT, buff=0.25)
-        VGroup(eqN, sq, rt_n).move_to([3.9, EQ_Y, 0]).align_to([EQ_R, 0, 0], RIGHT)
+        rt_n.next_to(lhsN, UP, buff=0.18).align_to(sq, DOWN)
         kN = MathTex("k", r"\approx", r"\tfrac32 \log_2 n - 1.8", font_size=ES)
         kN.move_to(kline).align_to([EQ_R, 0, 0], RIGHT)
         heur = text("(gap = spread rule)", size=SMALL, color=TGRAY).next_to(kN, DOWN, buff=0.15)
+        ald_cite = citation("Aldous, 1983 · Séminaire de Probabilités XVII", size=20, color=TGRAY)
+        bd2 = citation("Bayer & Diaconis, 1992 · Ann. Appl. Probab.", size=20, color=TGRAY)
         heur.align_to(kN, RIGHT)
-        with self.narrate("Both numbers come from the deck's size. [pause 1.0] For n cards, the "
-                          "gap grows like n squared, but the spread only like root n, so the cliff "
-                          "sits near three halves log base two of n.") as beat:
+        with self.narrate("For n cards, two hundred thirty grows like n squared, but the spread "
+                          "only like root n, so the cliff sits near three halves log base two of "
+                          "n.") as beat:
             purple.clear_updaters()
-            gap_br.clear_updaters()
             tagK.clear_updaters()
-            ctx = VGroup(ax, blue_bars, blue_line, purple, gap_br, tagK, spread, spread_num)
-            self.play(ctx.animate.fade(0.7),
-                      ReplacementTransform(eq2[0:2], lhsF), FadeTransform(eq2[2], fracF[0], stretch=False),
-                      ReplacementTransform(eq2[3], fracF[1]), FadeTransform(eq2[4], fracF[2], stretch=False),
-                      ReplacementTransform(eq2[5:7], tailF), run_time=1.2)
-            beat.wait_until("gap grows", offset=-0.2)
-            nF, nN = fracF[0][0], fracN[0][0]
-            dF, dN = fracF[2][0], fracN[2][0]
-            # only the 52s and 53s change (52 -> n, 53 -> n+1); /12, the bar and the root just move
-            self.play(ReplacementTransform(lhsF, lhsN), FadeOut(tailF),
-                      FadeTransform(VGroup(*nF[0:2]), nN[0], stretch=False),
-                      FadeOut(nF[2]),
-                      FadeTransform(VGroup(*nF[3:5]), VGroup(*nN[1:6]), stretch=False),
-                      ReplacementTransform(VGroup(*nF[5:8]), VGroup(*nN[6:9])),
-                      ReplacementTransform(fracF[1], fracN[1]),
-                      ReplacementTransform(VGroup(*dF[0:2]), VGroup(*dN[0:2])),
-                      FadeTransform(VGroup(*dF[2:4]), VGroup(*dN[2:7]), stretch=False),
-                      ReplacementTransform(VGroup(*dF[4:7]), VGroup(*dN[7:10])), run_time=1.0)
+            ctx = VGroup(ax, blue_bars, blue_line, purple, gap7, tagK, spread, spread_num)
+            self.play(ctx.animate.fade(0.7), FadeOut(rows),
+                      ReplacementTransform(apx, eqN[1]), ReplacementTransform(fr[1], frN[1]),
+                      ReplacementTransform(fr[2], frN[2]), lhsB.animate.move_to(lhsN).align_to(lhsN, RIGHT),
+                      fr[0].animate.move_to(numN), run_time=0.9)
+            beat.wait_until("two hundred", offset=-0.2)
+            self.play(*self.swap(fr[0], numN, d=0.2), run_time=0.7)
             beat.wait_until("squared", offset=-0.2)
-            self.play(FadeIn(sq, shift=0.1 * LEFT), run_time=0.5)
+            self.play(FadeIn(sq, shift=0.1 * DOWN), run_time=0.5)
+            beat.wait_until("spread only", offset=-0.2)
+            self.play(*self.swap(lhsB, lhsN, d=0.2), run_time=0.7)
             beat.wait_until("root n", offset=-0.1)
-            self.play(FadeIn(rt_n, shift=0.1 * LEFT), run_time=0.5)
+            self.play(FadeIn(rt_n, shift=0.1 * DOWN), run_time=0.5)
             beat.wait_until("three halves", offset=-0.3)
-            self.play(FadeOut(kline[0][0]), ReplacementTransform(kline[0][1], kN[0]),
-                      ReplacementTransform(kline[1], kN[1]), FadeTransform(kline[2], kN[2], stretch=False),
-                      run_time=1.2)
-            self.play(FadeIn(heur), run_time=0.5)
+            self.play(FadeOut(kline[0][0], rate_func=lambda t: smooth(min(1.0, 3.0 * t))),
+                      ReplacementTransform(kline[0][1], kN[0]),
+                      ReplacementTransform(kline[1], kN[1]), *self.swap(kline[2], kN[2], d=0.2),
+                      run_time=1.0)
+            # the law is Aldous's: his citation replaces the theorem's while it is on screen
+            self.play(FadeIn(heur), FadeOut(bd_cite), run_time=0.5)
+            self.play(FadeIn(ald_cite), run_time=0.4)
 
         # ============================================================ 6. payoff
         big = axes((0, 10.5), (0, 1), x_length=7.0, y_length=3.5, x_ticks=[0, 2, 4, 6, 8, 10],
@@ -1111,43 +1204,48 @@ class Episode(NarratedScene):
                         .next_to(big.c2p(k, TV[k - 1]), UR, buff=0.22) for k in (5, 6, 7, 8)])
         EQX = 4.05
         small_dots = VGroup(*early, *[dots[k] for k in (4, 5, 6, 7, 8)])
-        ald_cite = VGroup(citation("Bayer & Diaconis, 1992 · Ann. Appl. Probab.", size=20, color=TGRAY))
-        ald_cite.add_to_back(citation("Aldous, 1983 · Séminaire de Probabilités XVII", size=20,
-                                      color=TGRAY).shift(0.3 * UP))
-        with self.narrate("Aldous, then Bayer and Diaconis, proved it: for fifty two cards, seven "
-                          "riffles is the first count that brings the distance below a half.") as beat:
+        eq_final = VGroup(eqN[1], frN[1], frN[2], lhsN, numN, sq, rt_n, kN)
+        with self.narrate("Aldous proved that law. [pause 0.4] Bayer and Diaconis computed the exact "
+                          "curve: for fifty two cards, seven riffles is the first count below a "
+                          "half.") as beat:
             dlive.clear_updaters()
-            self.play(FadeOut(VGroup(ax, blue_bars, blue_line, purple, tagK, gap_br, spread,
-                                     spread_num, rows, k68, dlive)),
-                      ReplacementTransform(inset, big), ReplacementTransform(small_dots, big_dots[:8]),
+            # the dimmed chart leaves first, then the d-plot grows into the full curve
+            self.play(FadeOut(VGroup(ax, blue_bars, blue_line, purple, tagK, gap7, spread,
+                                     spread_num, k68, dlive, dlab)),
+                      FadeOut(heur), eq_final.animate.set_opacity(0.45), run_time=0.4)
+            self.play(ReplacementTransform(inset, big), ReplacementTransform(small_dots, big_dots[:8]),
                       ReplacementTransform(cliff, big_cliff), ReplacementTransform(half, big_half),
-                      FadeOut(bd_cite), run_time=1.0)
-            self.play(FadeIn(big_dots[8:], scale=1.5), FadeIn(ald_cite), run_time=0.8)
+                      run_time=0.8)
+            self.play(Indicate(kN, color=INK, scale_factor=1.08), Indicate(ald_cite, color=INK, scale_factor=1.05),
+                      run_time=0.6)
+            beat.wait_until("Bayer", offset=-0.3)
+            self.cite_swap(ald_cite, bd2)
+            beat.wait_until("exact curve", offset=-0.2)
+            self.play(FadeIn(big_dots[8:], scale=1.5), Indicate(big_cliff, color=RED, scale_factor=1.0),
+                      run_time=0.8)
             beat.wait_until("fifty two", offset=-0.3)
             self.play(LaggedStart(*[FadeIn(v, shift=0.1 * LEFT) for v in vals], lag_ratio=0.25),
-                      run_time=1.3)
+                      run_time=1.2)
             beat.wait_until("seven", offset=-0.2)
-            self.play(Indicate(big_dots[6], color=RED, scale_factor=1.8), run_time=0.9)
+            self.play(Indicate(big_dots[6], color=RED, scale_factor=1.8),
+                      Indicate(vals[2], color=RED, scale_factor=1.2), run_time=0.9)
             beat.wait_until("below", offset=-0.2)
             self.play(Indicate(big_half, color=INK, scale_factor=1.0), run_time=0.8)
 
-        tref = citation("Trefethen & Trefethen, 2000 · Proc. R. Soc. A", color=TGRAY)
+        tref = citation("Trefethen & Trefethen, 2000 · Proc. R. Soc. A", size=20, color=TGRAY)
         info = VGroup(text("information yardstick:", size=LABEL - 2, color=TGRAY),
                       text("no cliff, 5–6 riffles", size=LABEL - 2, color=TGRAY)) \
             .arrange(DOWN, buff=0.2, aligned_edge=LEFT).move_to([EQX, -1.35, 0])
         band = Rectangle(width=big.c2p(6, 0)[0] - big.c2p(5, 0)[0], height=big.c2p(0, 1)[1] - big.c2p(0, 0)[1],
                          stroke_width=0, fill_color=GRAY, fill_opacity=0.22)
         band.move_to((big.c2p(5, 0) + big.c2p(6, 1)) / 2)
-        with self.narrate("Seven belongs to this yardstick. Trefethen and Trefethen measured "
-                          "information instead: no cliff, and five or six shuffles do a reasonable "
-                          "job.") as beat:
-            self.play(Indicate(big.y_title, color=INK, scale_factor=1.1),
-                      FadeOut(VGroup(vals[0], vals[1], vals[3])),
-                      Indicate(vals[2], color=RED, scale_factor=1.2), run_time=1.0)
-            beat.wait_until("Trefethen", offset=-0.2)
-            self.play(FadeOut(ald_cite), FadeIn(tref), run_time=0.6)
+        with self.narrate("Trefethen and Trefethen measured information instead: no cliff, and five "
+                          "or six shuffles do a reasonable job.") as beat:
+            self.play(FadeOut(bd2), FadeOut(VGroup(vals[0], vals[1], vals[3])), run_time=0.3)
+            self.play(FadeIn(tref), run_time=0.4)
             beat.wait_until("information", offset=-0.2)
-            self.play(FadeIn(info[0], shift=0.1 * UP), run_time=0.7)
+            self.play(FadeIn(info[0], shift=0.1 * UP), Indicate(big.y_title, color=INK, scale_factor=1.1),
+                      run_time=0.7)
             beat.wait_until("no cliff", offset=-0.3)
             self.play(FadeIn(info[1], shift=0.1 * UP), run_time=0.7)
             beat.wait_until("five or six", offset=-0.2)
@@ -1156,18 +1254,19 @@ class Episode(NarratedScene):
         top_curve = DashedVMobject(VMobject(stroke_color=GRAY, stroke_width=3.5).set_points_smoothly(
             [big.c2p(k, TOP_TV[k - 1]) for k in range(1, 11)]), num_dashes=45)
         top_dots = VGroup(*[Dot(big.c2p(k, TOP_TV[k - 1]), radius=0.06, color=GRAY) for k in range(1, 5)])
-        top_lbl = text("top card only", size=LABEL - 2, color=TGRAY).next_to(
-            big.c2p(1.3, TOP_TV[0]), RIGHT, buff=0.2)
+        top_lbl = VGroup(text("top card only", size=LABEL - 2, color=TGRAY),
+                         text("(computed)", size=SMALL, color=TGRAY)).arrange(DOWN, buff=0.08,
+                                                                             aligned_edge=LEFT)
+        top_lbl.next_to(big.c2p(1.3, TOP_TV[0]), RIGHT, buff=0.2).shift(0.1 * UP)
         whole_lbl = text("whole deck", size=LABEL - 2, color=RED).next_to(
             big.c2p(8.25, TV[7] + 0.06), RIGHT, buff=0.15)
-        dia = citation("Diaconis, 1996 · PNAS", color=TGRAY)
-        eq_final = VGroup(eqN, sq, rt_n, kN)
+        dia = citation("Diaconis, 1996 · PNAS", size=20, color=TGRAY)
         with self.narrate("Many Markov chains share this cliff, and samplers share the trap: one "
                           "statistic can settle, like the top card, long before the whole chain "
                           "has.") as beat:
-            self.play(FadeOut(tref), FadeIn(dia), FadeOut(info), FadeOut(band), FadeOut(vals[2]),
-                      FadeOut(heur), eq_final.animate.set_opacity(0.3), run_time=0.8)
-            self.play(Indicate(big_cliff, color=RED, scale_factor=1.0),
+            self.play(FadeOut(tref), FadeOut(info), FadeOut(band), FadeOut(vals[2]),
+                      eq_final.animate.set_opacity(0.3), run_time=0.4)
+            self.play(FadeIn(dia), Indicate(big_cliff, color=RED, scale_factor=1.0),
                       LaggedStart(*[Indicate(d, color=RED, scale_factor=1.5) for d in big_dots[3:8]],
                                   lag_ratio=0.2), run_time=1.2)
             beat.wait_until("statistic", offset=-0.3)
@@ -1183,21 +1282,31 @@ class Episode(NarratedScene):
         land_cnt_pos = np.array([4.6, 2.85, 0])
         tag_pos = np.array([-4.3, 2.85, 0])
         L = dict(cx=0.0, by=-1.1, s=0.8, hs=1.0, step=0.1)
+
+        def land_cnt(v):
+            return MathTex(str(v), font_size=60, color=YELLOW).move_to(land_cnt_pos)
+
+        def land_tag(k):
+            return riffles_tex(k, MATH).move_to(tag_pos).align_to(tag_pos + LEFT * 0.75, LEFT)
+
         with self.narrate("Back to the coin flip. After four riffles you'd almost never be wrong, "
                           "same as with an unshuffled deck.") as beat:
             deck2 = Deck(DECKS["decks"][4], runs=DECKS["runs"][4], levels=True, **L)
+            deck2.shelf = 0.0                                 # caps only: nothing crosses mid-riffle
             marks2 = always_redraw(lambda: deck_marks(deck2))
             meter.acc.set_value(acc4)
             meter.make_live()
             meter.value.clear_updaters()
             meter.left_lbl.set_opacity(0.4)
             meter.right_lbl.set_opacity(0.4)
+            ghost.set_opacity(1.0)
+            ghost_lbl.set_opacity(1.0)
             prec2 = MathTex(r"99.99998\%", font_size=MATH, color=INK)
             prec2.next_to(meter._needle(), UP, buff=0.18).align_to(precise, RIGHT)
-            tagL = riffles_tex(4, MATH).move_to(tag_pos)
-            cntL = MathTex("14", font_size=60, color=YELLOW).move_to(land_cnt_pos)
+            tagL = land_tag(4)
+            cntL = land_cnt(14)
             cntL_lbl = text("rising sequences", size=LABEL - 2, color=TGRAY).next_to(cntL, LEFT, buff=0.25)
-            simL = text("one simulated deck (GSR model)", size=SMALL, color=TGRAY)
+            simL = text("one simulated deck", size=SMALL, color=TGRAY)
             simL.next_to(tagL, DOWN, buff=0.15).align_to(tagL, LEFT)
             self.play(FadeOut(VGroup(big, big_dots, big_cliff, big_half, top_curve, top_dots, top_lbl,
                                      whole_lbl, eq_final, dia)), run_time=0.5)
@@ -1209,32 +1318,32 @@ class Episode(NarratedScene):
             beat.wait_until("unshuffled", offset=-0.2)
             self.play(Indicate(marks2, color=YELLOW, scale_factor=1.0), run_time=0.9)
 
+        val_op = ValueTracker(0.0)
         val = DecimalNumber(100 * acc4, num_decimal_places=1, unit=r"\%", font_size=MATH, color=INK)
         val.add_updater(lambda m: m.set_value(100 * meter.acc.get_value()))
         val.add_updater(lambda m: m.next_to(meter.needle, UP, buff=0.18))
-        # the 99.99998 % label hands over to the live number once the needle has moved
-        meter.acc.set_value(0.5 + TV[4] / 2)
-        val5 = DecimalNumber(100 * meter.acc.get_value(), num_decimal_places=1, unit=r"\%",
-                             font_size=MATH, color=INK).next_to(meter._needle(), UP, buff=0.18)
-        meter.acc.set_value(acc4)
+        val.add_updater(lambda m: m.set_opacity(val_op.get_value()))
+        state = {"tag": tagL, "cnt": cntL}
 
-        def land_riffle(k, t_cut, t_drop, t_split, extra=()):
-            self.riffle(deck2, k, t_cut=t_cut, t_drop=t_drop, lift=0.3)
-            self.play(*deck2.relayout(runs=DECKS["runs"][k], levels=True),
-                      Transform(cntL, MathTex(str(DECKS["R"][k - 1]), font_size=60, color=YELLOW)
-                                .move_to(land_cnt_pos)),
-                      Transform(tagL, riffles_tex(k, MATH).move_to(tag_pos)),
-                      meter.acc.animate.set_value(0.5 + TV[k - 1] / 2), *extra,
-                      run_time=t_split, rate_func=SMOOTH)
+        def land_riffle(k, t_cut, t_drop, first=False):
+            """One riffle: cut, then the cards drop straight onto the new deck's levels while the
+            meter steps to ½(1 + d) and the counters tick."""
+            new_tag, new_cnt = land_tag(k), land_cnt(DECKS["R"][k - 1])
+            extra = (*self.swap(state["tag"], new_tag), *self.swap(state["cnt"], new_cnt),
+                     meter.acc.animate.set_value(0.5 + TV[k - 1] / 2))
+            cut = ()
+            if first:            # 99.99998 % leaves first, then the live value fades in at the needle
+                cut = (FadeOut(prec2, shift=UP * 0.16),)
+                extra += (val_op.animate.set_value(1.0),)
+            self.riffle(deck2, k, t_cut=t_cut, t_drop=t_drop, lift=0.3, new_levels=True, extra=cut,
+                        extra_drop=extra)
+            state["tag"], state["cnt"] = new_tag, new_cnt
 
-        with self.narrate("Three more riffles, [pause 1.2] and you'd be right only two times in "
-                          "three.") as beat:
+        with self.narrate("Three more riffles, [pause 1.2] and you'd be right only two times out "
+                          "of three.") as beat:
+            self.add(val)
             for k in (5, 6, 7):
-                hand = (Transform(prec2, val5),) if k == 5 else ()
-                land_riffle(k, 0.25, 0.4, 0.4, extra=hand)
-                if k == 5:
-                    self.remove(prec2)
-                    self.add(val)
+                land_riffle(k, 0.3, 0.6, first=(k == 5))
             beat.wait_until("two times", offset=-0.2)
             self.play(Indicate(val, color=RED, scale_factor=1.15), run_time=0.8)
 
@@ -1243,7 +1352,7 @@ class Episode(NarratedScene):
             beat.wait_until("top card", offset=-0.2)
             self.play(Indicate(VGroup(ghost, ghost_lbl), color=INK, scale_factor=1.15), run_time=0.7)
             for k in (8, 9, 10):
-                land_riffle(k, 0.28, 0.42, 0.4)
+                land_riffle(k, 0.3, 0.6)
             beat.wait_until("ten", offset=-0.1)
             self.play(Indicate(VGroup(ghost, ghost_lbl), color=INK, scale_factor=1.15), run_time=0.6)
 

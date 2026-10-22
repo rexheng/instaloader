@@ -3,7 +3,7 @@
 Kept separate so the script can be synthesized and timed without rendering:
     python videos/episodes/009-central-limit-theorem/narration_text.py
 
-Cadence (round 3): sentences inside a beat are joined by "[pause 0.15]" (about 0.27 s of
+Cadence (round 3; round 5 rewrote the coin beat as "kurt"): sentences inside a beat are joined by "[pause 0.15]" (about 0.27 s of
 silence once the clip trim pads are added), and GAP_AFTER gives the silence after each narrate
 block: short inside a story beat, about 0.9 s at the seven story-beat boundaries.
 """
@@ -22,10 +22,10 @@ BEATS = {
              "Textbooks say the average of thirty is safe to treat as a bell." + S +
              "For these waits, does it take thirty, three hundred, or over a thousand? [pause 1.5]"),
     # 2 stakes
-    "stakes": ("A-B tests lean on that bell, and on revenue data, thirty is off by a factor "
-               "of thousands."),
-    # 3 naive build: look for the bell in the data itself
-    "collect": ("First, look for the bell in the data itself." + S + "Collect a thousand, ten "
+    "stakes": ("A-B tests lean on that bell's tails, and on revenue data, thirty is off by a "
+               "factor of thousands."),
+    # 3 naive build: voice the naive reading of the textbook's thirty, then test it
+    "collect": ("Maybe thirty just means collecting enough waits." + S + "Collect a thousand, ten "
                 "thousand, a hundred thousand." + S + "The bars get smoother, but the shape "
                 "doesn't budge."),
     # 4 measured failure (skewness defined, term by term, with signed gaps)
@@ -41,35 +41,36 @@ BEATS = {
     # 6 insight: the formula from the readings, then why it is root n (drawn as cubes)
     "formula": ("Each time the group grows four times, the skewness halves: two over root "
                 "n, and two is the skewness of one wait."),
-    "why": ("The root comes from the cubes." + S + "Add four waits: their cubed gaps add up, four "
-            "times one wait's." + S + "But the spread only doubles, so its cube grows eight "
+    "why": ("The root comes from the cubes." + S + "Add four bus waits: their cubed gaps add up to "
+            "four times one wait's." + S + "But the spread only doubles, so its cube grows eight "
             "times." + S + "Four over eight: half the lean." + S + "In general, n over n to the "
             "one and a half."),
-    # 7 universality, and why it is a bell (every other difference fades too)
-    "coin": ("A coin that lands heads one time in ten is just two spikes, yet its averages "
-             "make the same bell, by the same rule." + S + "Kurtosis, the extra tail weight, fades "
-             "faster, as one over n, and every finer difference faster still." + S + "Only the "
-             "bell survives." + S + "That's the central limit theorem." + S + "It needs "
-             "independent pieces, and one more condition."),
+    # 7 why it is a bell: the extra tail weight fades faster still (on the same four panels)
+    "kurt": ("Kurtosis, the extra tail weight, fades faster: it quarters each time." + S + "Every "
+             "finer difference fades faster still." + S + "Only the bell survives." + S + "That's "
+             "the central limit theorem." + S + "It needs independent pieces, and one more "
+             "condition."),
     # 8 payoff: how many is enough, measured where tests live (95% interval misses)
     "thirty": ("Back to the textbook's thirty. [pause 0.5] Two over root thirty: point three "
                "seven." + S + "Close to a bell, by eye."),
     "tails": ("But tests live in the tails: a ninety-five percent interval should miss two and "
-              "a half percent on each side." + S + "Tests estimate the spread from the same data, so "
-              "a low average gets a small spread, and its interval stops short." + S +
-              "With thirty waits: seven percent low, one percent high."),
-    "kohavi": ("Ron Kohavi and colleagues, using Bing's data, want each side between two and "
-               "three percent." + S + "Their rule: n at least three hundred fifty-five times the "
-               "skewness squared. [pause 0.3] Divide by n and take the root: [pause 1.0] "
-               "it's our formula: the average's skewness at most point oh five three." + S +
-               "Three hundred still misses." + S + "For these waits: fourteen twenty, and both "
-               "misses reach the band. [pause 1.2]"),
+              "a half percent on each side." + S + "Tests estimate the spread from the same data." +
+              S + "With lopsided waits, a low average comes with a small spread, so its interval "
+              "stops short. [pause 0.8] With thirty waits: seven percent low, one percent high."),
+    "kohavi": ("Ron Kohavi and colleagues want each side between two and three percent." + S +
+               "Their rule: n at least three hundred fifty-five times the skewness squared. "
+               "[pause 0.3] Divide by n and take the root: [pause 1.0] it's our formula: the "
+               "average's skewness at most point oh five three." + S + "At three hundred, the "
+               "lean is point one two: still too much." + S + "For these waits: fourteen twenty, "
+               "lean point oh five three, and both misses reach the band. [pause 1.2]"),
     "bing": ("Bing's revenue per user had a skewness near eighteen: a hundred and fourteen "
              "thousand users." + S + "Capping each user at ten dollars a week: under ten "
              "thousand."),
+    # the third answer to the cold open: for some data, no sample size is enough
+    "never": "And for some data, no number on this axis is enough.",
     # 9 the condition: the lighthouse
-    "lighthouse": ("Now the condition." + S + "A lighthouse one mile off a straight shore flashes "
-                   "at random angles, and each flash lands somewhere on the shore."),
+    "lighthouse": ("A lighthouse one mile off a straight shore flashes at random angles, and "
+                   "each flash lands somewhere on the shore."),
     "runmean": ("Track the average landing spot." + S + "It never settles: a flash aimed almost "
                 "along the shore lands absurdly far away, and yanks it."),
     "dilute": ("Among a thousand flashes, the farthest typically lands about nine hundred "
@@ -80,16 +81,15 @@ BEATS = {
                  "Here the variance is infinite." + S + "The median ignores how far the extremes "
                  "fly, so it homes in."),
     # 10 landing: answer the opening question on the opening image
-    "landing": ("So the answer is over a thousand, not thirty." + S + "And collect forever: this "
-                "histogram stays lopsided." + S + "The bell was never in the data." + S + "It's in "
-                "the average."),
+    "landing": ("So the answer is over a thousand, not thirty." + S + "Collect forever: still "
+                "lopsided." + S + "The bell was never in the data." + S + "It's in the average."),
 }
 
 # silence after each narrate block (s); about 0.9 s at story-beat boundaries
 GAP_AFTER = {
     "open": 0.12, "stakes": 0.35, "collect": 0.2, "fail": 0.8, "average": 0.15, "avg": 0.2,
-    "formula": 0.8, "why": 0.8, "coin": 0.8, "thirty": 0.2, "tails": 0.2, "kohavi": 0.05,
-    "bing": 0.05, "lighthouse": 0.2, "runmean": 0.2, "dilute": 0.8, "variance": 0.05,
+    "formula": 0.8, "why": 0.9, "kurt": 0.8, "thirty": 0.2, "tails": 0.2, "kohavi": 0.05,
+    "bing": 0.3, "never": 0.6, "lighthouse": 0.2, "runmean": 0.2, "dilute": 0.8, "variance": 0.05,
     "landing": 0.35,
 }
 

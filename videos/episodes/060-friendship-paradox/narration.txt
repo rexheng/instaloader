@@ -1,41 +1,41 @@
 [00:00.0] Eight girls at an Illinois high school, and every friendship between them.
 
-[00:05.1] On average, each girl has two and a half friends.
+[00:04.7] On average, each girl has two and a half friends.
 
-[00:08.7] How many friends does the average friend have? Pick one. [pause 2.0]
+[00:08.1] How many friends does the average friend have? Pick one. [pause 2.0]
 
-[00:14.9] It matters to health researchers choosing whom to watch for flu: random students, or the friends those students name.
+[00:13.9] It matters to health researchers choosing whom to watch for flu: random students, or the friends those students name.
 
-[00:23.9] The natural guess is two and a half again: every friend is one of these same eight girls.
+[00:22.3] The natural guess is two and a half again: every friend is one of these same eight girls.
 
-[00:30.3] Check that on a rewired class where every girl has two friends. Send a token both ways along every friendship.
+[00:28.2] Check that on a rewired class where every girl has two friends. Send a token both ways along every friendship.
 
-[00:38.7] Each token reads the friend count where it lands, here always two. Both averages are two: the guess holds.
+[00:36.2] Each token reads the friend count where it lands, here always two. Both averages are two: the guess holds.
 
-[00:46.9] Now restore the real friendships and send the tokens again. They read one, two, three, or four. Twenty tokens add up to sixty: friends average three.
+[00:43.9] Now restore the real friendships and send the tokens again. They read one, two, three, or four. Twenty tokens add up to sixty: friends average three.
 
-[00:58.7] The guess was half a friend too low. The tokens piled up unevenly: four on Sue, four on Alice, one on Betty.
+[00:55.0] The guess was half a friend too low. The tokens piled up unevenly: four on Sue, four on Alice, one on Betty.
 
-[01:07.6] Line the girls up by friend count: two at each count, from one to four, so they balance at two and a half.
+[01:03.3] Line the girls up by friend count: two at each count, from one to four, so they balance at two and a half.
 
-[01:15.2] The tokens stack higher on the right, one per friend, so they balance at three.
+[01:10.3] The tokens stack higher on the right, one per friend, so they balance at three.
 
-[01:20.9] Sue holds four tokens, each worth four: sixteen. A girl with k friends adds k squared on top, and k on the bottom.
+[01:15.6] Sue holds four tokens, each worth four: sixteen. A girl with k friends adds k squared on top, and k on the bottom.
 
-[01:30.4] Divide top and bottom by the eight girls: the average of k squared, seven and a half, over the average count, two and a half.
+[01:24.5] Divide top and bottom by the eight girls: the average of k squared, seven and a half, over the average count, two and a half.
 
-[01:39.8] Measure each girl's distance from the balance point and square it: two and a quarter at the ends, a quarter in the middle. They average one and a quarter, the variance, sigma squared. [pause]
+[01:33.4] Measure each girl's distance from the balance point and square it: two and a quarter at the ends, a quarter in the middle. They average one and a quarter, the variance, sigma squared. [pause]
 
-[01:53.4] Split Sue's count, four, into the balance point, two and a half, plus her distance, one and a half. Squaring gives two and a half squared, her distance squared, and a cross term. [pause] Every girl splits this way, and because the beam balances, the left and right distances add to zero and the cross terms cancel. [pause]
+[01:46.2] Split Sue's count, four, into the balance point, two and a half, plus her distance, one and a half. Squaring gives two and a half squared, her distance squared, and a cross term. [pause] Every girl splits this way, and because the beam balances, the left and right distances add to zero and the cross terms cancel. [pause]
 
-[02:16.7] So the average of k squared is mu squared plus sigma squared, and friends average mu, plus sigma squared over mu. Here that's two and a half, plus a half: exactly the extra half friend we measured. The ring had no spread, so it had no gap. [pause 1.3]
+[02:07.9] So the average of k squared is mu squared plus sigma squared, and friends average mu, plus sigma squared over mu. Here that's two and a half, plus a half: exactly the extra half friend we measured. The ring had no spread, so it had no gap. [pause 1.3]
 
-[02:36.7] In twenty eleven, Facebook users averaged about a hundred and ninety friends. If every friendship sent tokens, what would the tokens average? [pause 1.6]
+[02:26.2] In twenty eleven, Facebook users averaged about a hundred and ninety friends. If every friendship sent tokens, what would the tokens average? [pause 1.6]
 
-[02:49.0] About six hundred and thirty five. A few users had thousands of friends, so the spread term is more than twice the mean itself.
+[02:37.9] About six hundred and thirty five. A few users had thousands of friends, so the spread term is more than twice the mean itself.
 
-[02:59.0] In twenty oh nine, Christakis and Fowler put this to work at Harvard. Named friends have more friends, so they sit closer to everyone else, and should catch flu first. They tracked flu diagnoses in three hundred nineteen random students and four hundred twenty five friends they named. The friends' curve rose first: fitted curves put them thirteen point nine days ahead. With self-reported symptoms, the lead shrank to about three.
+[02:47.2] In twenty oh nine, Christakis and Fowler put this to work at Harvard. Named friends have more friends, so they sit closer to everyone else, and should catch flu first. They tracked flu diagnoses in three hundred nineteen random students and four hundred twenty five friends they named. The friends' curve rose first: fitted curves put them thirteen point nine days ahead. With self-reported symptoms, the lead shrank to about three.
 
-[03:30.6] Back to the eight girls. Seat by seat, five have fewer friends than their friends average; only Sue and Alice have more.
+[03:16.8] Back to the eight girls. Seat by seat, five have fewer friends than their friends average; only Sue and Alice have more.
 
-[03:39.3] Betty looks at her one friend and sees four. Two and a half counts the girls; three counts the friendships.
+[03:25.1] Betty looks at her one friend and sees four. Two and a half counts the girls; three counts the friendships.

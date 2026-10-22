@@ -8,7 +8,7 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 10.92,
+ "size_mb": 10.89,
  "integrated_lufs": -14.0,
  "lra_lu": 2.4,
  "true_peak_dbtp": -1.8,
@@ -26,11 +26,11 @@
   ]
  ],
  "frames": 6464,
- "longest_static_s": 2.9,
+ "longest_static_s": 2.5,
  "static_stretches_over_3s": [],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.023706597222223,
+ "background_luma": 22.02353298611111,
  "transcript_words": 536,
  "first_word_s": 0,
  "last_word_s": 213.71335,
@@ -129,24 +129,24 @@
    "file": "keyframes/kf_15_01-15.8.png"
   },
   {
-   "t": 77.73,
-   "file": "keyframes/kf_16_01-17.7.png"
+   "t": 80.93,
+   "file": "keyframes/kf_16_01-20.9.png"
   },
   {
-   "t": 81.73,
-   "file": "keyframes/kf_17_01-21.7.png"
+   "t": 92.23,
+   "file": "keyframes/kf_17_01-32.2.png"
   },
   {
-   "t": 92.27,
-   "file": "keyframes/kf_18_01-32.3.png"
+   "t": 98.63,
+   "file": "keyframes/kf_18_01-38.6.png"
   },
   {
-   "t": 98.17,
-   "file": "keyframes/kf_19_01-38.2.png"
+   "t": 105.27,
+   "file": "keyframes/kf_19_01-45.3.png"
   },
   {
-   "t": 108.07,
-   "file": "keyframes/kf_20_01-48.1.png"
+   "t": 108.67,
+   "file": "keyframes/kf_20_01-48.7.png"
   },
   {
    "t": 110.93,
@@ -161,11 +161,11 @@
    "file": "keyframes/kf_23_02-02.3.png"
   },
   {
-   "t": 127.37,
-   "file": "keyframes/kf_24_02-07.4.png"
+   "t": 133.83,
+   "file": "keyframes/kf_24_02-13.8.png"
   },
   {
-   "t": 137.83,
+   "t": 137.77,
    "file": "keyframes/kf_25_02-17.8.png"
   },
   {
@@ -185,7 +185,7 @@
    "file": "keyframes/kf_29_02-43.8.png"
   },
   {
-   "t": 172.9,
+   "t": 172.87,
    "file": "keyframes/kf_30_02-52.9.png"
   },
   {
@@ -209,7 +209,7 @@
    "file": "keyframes/kf_35_03-22.8.png"
   },
   {
-   "t": 206.13,
+   "t": 206.07,
    "file": "keyframes/kf_36_03-26.1.png"
   },
   {
@@ -221,8 +221,8 @@
    "file": "keyframes/kf_38_03-30.9.png"
   },
   {
-   "t": 213.63,
-   "file": "keyframes/kf_39_03-33.6.png"
+   "t": 213.73,
+   "file": "keyframes/kf_39_03-33.7.png"
   },
   {
    "t": 215.43,

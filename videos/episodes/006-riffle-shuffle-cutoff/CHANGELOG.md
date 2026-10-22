@@ -210,3 +210,101 @@ normalisation, homophones and "Aldous" heard as "all does", the intended ALL-dus
 phrases · 0 render warnings · layout audit 0 issues in 269 checks · 0 review flags.
 Four master renders this round; every contact sheet and the frames around each fixed timestamp
 were checked, plus 0.25–0.3 s frame steps through the accuracy, eq1, eqF, n and k transitions.
+
+## Round 5 revisions
+
+Round 5 (the reviews in reviews/round5-*.md score the round-2 master): craft 8.0, substance 8.3
+(both FAIL, no caps, no factual errors; one imprecise attribution). Both critics: reaches 9 if
+fixed, but only with real cuts. The gap was concision (5 → 6 → 7 shown three times, a rewind,
+a four-state equation chain, 3:54 runtime), the accuracy derivation sitting between the
+prediction and its answer, an un-narrated jump from one deck to the distribution, garbled
+counter morphs, a crossfaded citation, and the Aldous attribution.
+
+### Plan of the climb (BAR §3 "9" anchors vs where the episode fell short)
+- **Concision 7 / 7.5 → 9** ("cutting any sentence loses something"): the rewind to 4 riffles,
+  "Seven belongs to this yardstick", the separate 230 → 110 → 6.8 → 52·53/12 → n chain and the
+  "Blue is a perfect shuffle, purple is four riffles" restatement go. The insight becomes one
+  pass: question → 5, 6, 7 → what 0.33 buys a guesser → why (gap vs spread, shown on a ghost of
+  the 4-riffle gap, no slide back) → one equation line → n. Target ≤ 3:40 (was 3:54).
+- **Hook 8.5 → 9** ("tension rises through build and fail"): the prediction is answered without
+  interruption (5, 6, 7 contiguous); the stakes line gets a concrete picture (Monte Carlo
+  samplers; the deck replays its four riffles as numbered random steps, then the sorted profile).
+  Cold-open decks centred vertically until the meter needs the space.
+- **Clarity 8 → 9** ("re-derive after one watch"): "pile every possible deck onto its count,
+  weighted by its chance" is shown (40 simulated decks of each kind rain into stacks on a
+  "share of decks" axis, then become the exact chances); accuracy derived once at 7 riffles from
+  non-trivial areas (65 % caught, 32 % flagged) with "the difference is the red area" said
+  unambiguously and held ≥ 3 s; "spread" named as blue's standard deviation; one equation line
+  `gap ≈ 230/2^k` → `230/2^k ≈ 2.1` → `k ≈ 6.8`, then the same line for n; attribution split
+  (Aldous: the law; Bayer & Diaconis: the exact curve and 52-card count).
+- **Visual 8 → 9** ("one focal point; all §5 standards met"): word load at the side-by-side cut
+  (average 26.5 leaves once spoken, citation and ghost dimmed, perfect-deck shelves fainter);
+  "GSR" leaves the tags and is spelled out in the citation; ghost label one font size; citations
+  swap in sequence, never crossfade; "top card only (computed)".
+- **Motion 8 / 8.5 → 9** ("every motion encodes a relation; reading time respected"): counters
+  and labels swap by a short slide (old up and out, new up and in) instead of glyph morphs;
+  copies that fly into rows cross-fade on arrival; equation states each hold ≥ 2 s + 0.4 s/term;
+  the level view leaves the old bar tops as faint ticks with "height = which sequence".
+- **Audio 8 / 8.5 → 9**: "Gap times two to the k levels off" (garden path) → "Multiply each gap by
+  two to the k, and it settles near two hundred thirty"; "halves too" → "starts halving".
+- **Originality 8.5 / 9**: keep the level view, the meter spine and the spread hops; the deck
+  rain into stacks is new.
+
+### Structure (what changed in order)
+Old insight (86.7 s): theorem → pile → red area → prediction → 5, 6 → accuracy at 6 → 7 → gap/spread →
+rewind to 4 and replay to 7 with hops → 230 → 110 → 6.8 → 52·53/12 → n. New insight (~78 s):
+theorem → 40 + 40 decks rain into stacks, then every deck weighted by its chance → red area, d = 1 →
+prediction (the gap bracket and "gap: 12.4" draw in the hold) → **5, 6, 7 contiguous** (a 30 % ghost
+of the 4-riffle gap stays) → what 0.33 buys a guesser (accuracy derived at 7 from non-trivial areas)
+→ why: row halves, blue spread (its standard deviation) stays ~2, hops laid on the 4-riffle ghost
+(5.9 spreads, d = 1) and on the live gap (0.85 spreads, d halving), cliff drawn → one equation line
+(`gap ≈ 230/2^k` → `2.1 ≈ 230/2^k` ⇒ `k ≈ 6.8`) → the same line for n. Payoff loses "Seven belongs
+to this yardstick"; the landing's riffles drop straight onto the new levels (≈ 0.9 s each).
+
+### Fix-by-fix (craft C1–C14, substance S1–S10)
+- C1/S2 concision: rewind cut (the 4-riffle state is a ghost bracket, never re-slid); "Seven belongs to
+  this yardstick" cut; 230 → 110 → 52·53/12 states cut; "Blue is a perfect shuffle, purple is four
+  riffles" cut (the tags say it); landing riffle = cut + drop onto the new levels in one move.
+  Runtime 3:54 → see mechanics below (3:45; the rest of the old runtime now carries the pile bridge
+  and the accuracy derivation's non-trivial numbers).
+- C2 `accuracy = ½ + ½ d` holds ≥ 3.5 s at full opacity: the rest of line 1 leaves first, then the
+  difference shrinks into a red d while "½ + ½" closes up under a fixed "accuracy =", the red area
+  flashes with d; it leaves (not dims) when the spread bracket draws.
+- C3 pile bridge: "So pile decks onto their counts, then every possible deck, weighted by its chance":
+  our two tokens drop on 14 and 26 as the axes draw, 39 + 39 simulated decks rain into stacks
+  ("40 simulated decks each", `pile.py`), then on "every possible deck" the label leaves and the stacks
+  become the exact bars; y-axis "share of decks" (was "chance").
+- C4 garden path: "Multiply each gap by two to the k, and it settles near two hundred thirty".
+- C5 equation: one line, one term changed at a time, each state held ≥ 3 s (`[pause 1.2]`):
+  `gap ≈ 230/2^k` → "gap" replaced by the blue 2.1 flown from the spread label → `⇒ k ≈ 6.8`;
+  for n the 230, the 2.1 and the 6.8 each slide out and their formulas slide in.
+- C6 spread label stays at full opacity and is indicated as its 2.1 flies; rows leave for the n line.
+- C7 citations never crossfade: every swap is fade-out then fade-in (`cite_swap`), Aldous's citation
+  arrives on "three halves log base two of n" and holds through "Aldous proved that law".
+- C8 counters (riffle tag, sequence count, ceilings, meter value, 99.99998 % hand-over, equation terms)
+  change by a two-phase slide (old up and out, then new up and in, never both in one frame); bracket
+  copies fly to the row on an arc and fade into the value (no glyph morph); area copies arc above the
+  inset title.
+- C9/S10 stakes: "Monte Carlo samplers move by random steps, like these riffles. Stop them too early,
+  and they still remember where they started." The deck re-sorts and replays its four riffles under
+  "step 1 … step 4"; "step 4" flags on "Stop them too early"; the sorted profile draws on "remember".
+- C10 cold open: decks sit 0.8 lower until the meter draws, then rise with it.
+- C11 ghost label is one Text "top card 52.4%" at one size.
+- C12/S4 attribution: "Aldous proved that law. Bayer and Diaconis computed the exact curve: for fifty
+  two cards, seven riffles is the first count below a half." Gilbert citation now names the model and
+  the venue: "Gilbert–Shannon–Reeds model / Gilbert, 1955 · Bell Labs; Reeds, 1981".
+- C13 "halves too" → "it halves every riffle"; "halving" (heard as "having") → "Divide that by two each
+  riffle"; "two times in three" → "two times out of three".
+- C14 level view: the old bar tops stay as faint ticks for ~1 s and "height = which sequence" sits by the
+  deck until riffle 3; the faint shelf lines hide while cards fly (no skewed traces mid-riffle).
+- S1 the prediction is answered without interruption (5, 6, 7 back to back); accuracy comes after, at 7.
+- S3 "Accuracy is a half, plus half the difference, and the difference is the red area."
+- S5 "GSR" gone from the tags ("one simulated deck"); the model is named in the citation.
+- S6 "blue's spread, its standard deviation" spoken while the spread bracket draws.
+- S7 side-by-side word load: "average 26.5" leaves as the 16-line crosses; citation and ghost dim to
+  25 % (the ghost returns on "The top card can't see this"); perfect-deck shelves at 15 %; the counter
+  arcs over and the tags fade in after it passes (no label crosses another).
+- S8 "top card only (computed)".
+- S9 see C7.
+- Also: two-line "top card only / (computed)" label keeps clear of the cliff; e3 left-aligned so
+  "accuracy =" never moves; TAG row raised so "k riffles" clears the y-axis title.

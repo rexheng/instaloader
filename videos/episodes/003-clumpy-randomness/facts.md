@@ -22,7 +22,8 @@ the London map is labelled "real V-1 hits".
 | What aim/clustering would look like: extra empty squares and extra pile-ups | Clarke: "an excess number of squares containing either a high number of flying bombs or none at all, with a deficiency in the intermediate classes" | Clarke 1946 |
 | "Same test: p = 0.88" | Clarke: χ² = 1.17, 4 degrees of freedom, P = .88; recomputed χ² = 1.171, p(df 4) = 0.883 (Shaw & Shaw's supplement recreates 0.8832 and explains why df = 4: six classes − 1 − 1 estimated λ). The episode's own A/B tests use the same six classes and df = 4 | Clarke 1946; Shaw & Shaw supplementary analysis (2019) |
 | "No sign of clustering" | Clarke: the result "lends no support to the clustering hypothesis" | Clarke 1946 |
-| The bombs were aimed at London (but imprecisely) | Shaw & Shaw describe the V-1 campaign "at London" and that V-1s "tended to fall short of the centre of London"; the real map shows hits spread across the whole ~25 km-wide county (5 km scale bar drawn from the data's coordinates) | Shaw & Shaw 2019; `real_data.npz` |
+| (round 5) "The bombs were aimed, at Tower Bridge, but half fell outside this circle, more than twelve kilometres away"; red × at Tower Bridge and a red circle of radius 12.5 km labelled "12.5 km"; on-screen citation "Evans & Delaney, 2018 · Applied Geography 99" | Evans & Delaney: "for the purposes of this paper we assume a nominal primary aiming point for all V1 missiles launched against the London target to be Tower Bridge at 51.505°N/0.075°W" (published sources: Jones 1978, Werrell 1985, Young 1978 …); "the V1 has an estimated CEP-T of 12.5 km, i.e., that 50% of the cruise missiles launched at London fell within a circle with radius 12.5 km (area = 491 km²) centred on Tower Bridge"; archival CEP-MPI estimates 11.3–12.9 km. So half fell more than 12.5 km from the aiming point ("more than twelve kilometres" is a safe rounding down). Tower Bridge is OS grid TQ 336 802 → E 533.6 km, N 180.2 km, drawn with the same transform as the hits. The circle encloses 98.4 % of the 887 hits on the County of London map (max distance 13.7 km), which is why it visibly contains the whole map: the other half of the V-1s fell beyond the county | S. G. Evans & K. B. Delaney, "The V1 (Flying Bomb) attack on London (1944–1945); the applied geography of early cruise missile accuracy", *Applied Geography* 99 (2018) 44–53, doi:10.1016/j.apgeog.2018.07.019; `real_data.npz` |
+| (removed in round 5) "aimed at London, just too loosely to choose a street" | Round-5 substance review: a qualitative accuracy claim with no specific source. Replaced by the sourced CEP figure above | — |
 
 ## The real V-1 map (new in round 1 revisions)
 
@@ -102,9 +103,9 @@ consistent with the density comparison.
 
 ## Wording guards
 
-- The episode never says the bombs were unaimed: they were aimed at London, too loosely to
-  choose a street, and the test only shows no clustering *at that scale, within an area of
-  constant density*.
+- The episode never says the bombs were unaimed: they were aimed at Tower Bridge, but half fell
+  more than 12.5 km from it (Evans & Delaney 2018), and the test only shows no clustering *at
+  that scale, within an area of constant density*.
 - "Flying bombs" throughout (V-1), never "rockets".
 - "A pattern this even is the fingerprint of a **spacing** rule" (round 1 said "a rule", which
   over-generalised: aim is also a rule, and it produces the opposite fingerprint; round 2's "Too
@@ -120,9 +121,28 @@ consistent with the density comparison.
   because the runs appear too long to be random." Their own experiments include 2-D grids
   ("Sequences and grids with P(A)s equally distant from .50 are not judged equally random").
   Over-alternation in a grid is exactly "too even": the eye expects chance to spread hits out.
-- Closing line (round 4): "If you picked map B, you picked the one following a rule." Round 3
+- Closing line (round 5): "If you chose map B, you chose the one following a rule." (Round 4's
+  "you picked the one" lost its final -ed before "the" in the transcript.) Round 4: "If you picked
+  map B, you picked the one following a rule." Round 3
   said "the one with a plan", which a reviewer read as conflating B's spacing rule with aim
   (aim produces the opposite fingerprint, shown at 2:56). "Following a rule" repeats the cold
   open's "The other follows a rule" and the rule tag that flashes.
 - The "≈ Clarke's area" rectangle is Shaw & Shaw's re-creation, and the numbers in the table are
   Clarke's; facts above explain the 537 vs 532 difference.
+
+## Round 5 additions
+
+| Claim (as used in the episode) | Check |
+|---|---|
+| "five thirty-seven times five thirty-six ways, over two, since order doesn't matter" (the two yellow hits swap places on screen) | 537 choices for one bomb × 536 for the other counts every pair twice ({a, b} as a-then-b and b-then-a), so C(537, 2) = 537·536/2 = 143,916 |
+| "Five thirty-six is almost five thirty-seven": the 536 turns into a 537 in place and 537·537 folds into 537² | 537·536 = 287,832 vs 537² = 288,369 (0.19 % apart) |
+| "For three hits, each two becomes a three": P(3) ≈ 537³/3! · (1/576)³ · e^−λ on screen | C(537, 3) = 537·536·535/3!; 537·536·535/537³ = 0.9944. Expected squares with 3 hits: exact binomial 576 × 0.05310 = 30.59, Poisson 576 × 0.05316 = 30.62 |
+| "for any k, a k": P(k) ≈ 537^k/k! · (1/576)^k · e^−λ = λ^k e^−λ / k! | as before (the "≈" covers 537·536·…·(538−k) ≈ 537^k and (575/576)^(537−k) ≈ e^−λ) |
+| "To judge London, chance must predict every bar": preview of the histogram axes with chance's bar 0 = 227 and "?" over 1, 2, 3, 4, 5+ | 227 is the 576 × 0.3933 just computed; the other bars are what the derivation then supplies |
+| "so a miss of two on seven outweighs a miss of five on two hundred twenty-seven" (flags the 4-hit and 0-hit bars and their terms) | Map A's own bars: 4 hits: observed 9 vs chance 7.14, miss 1.86 → term 1.86²/7.14 = 0.49; 0 hits: 222 vs 226.74, miss 4.74 → term 4.74²/226.74 = 0.10. The terms shown are 0.49 and 0.10 |
+| "Three in four simulated chance maps score worse. That share, p, is point seven four." | 74.5 % of the 20,000 simulated chance maps score ≥ 2.0 (Monte Carlo s.e. 0.3 %); χ²₄ tail 0.736 |
+| Readouts "χ²_A = … = 2.0" and "χ²_B = … = 271.7" | as before; the subscript names the map |
+| The aimed map's empty squares are tinted on "extra empty squares" | 399 empty squares on the aimed map vs 226.7 expected (`sim.py`) |
+| "farther north, hits were about half as dense"; densities shown in one column: "north 1.9 hits/km²" and "≈ Clarke's area 3.7 hits/km²" | 86/45 = 1.91 and 537/144 = 3.73 (532/144 = 3.69 for the re-created rectangle); ratio 0.51 |
+| "five hundred seventy-six squares of London" (round 4 said "south London") | Shaw & Shaw's re-created rectangle includes a strip north of the Thames (see above), so the narration no longer says "south" over it |
+| Cut: "No sign of clustering" | restated p = 0.88, which is on screen and spoken |

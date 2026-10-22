@@ -28,11 +28,11 @@ fractions, 2 of 6, both towns at 76 %).
 | 3 | "Happy to be outnumbered two to one" | ⅓ same ⇔ 2:1 | same/(same+diff) ≥ 1/3 ⇔ diff ≤ 2·same. Boxed example: gold household at row 15, col 15 of the final town has 2 gold, 4 blue, 2 empty neighbors → "2 of 6 match" (asserted in scene.py) | sim.py |
 | 4 | Random start: on average half of neighbors match; meter 50 % | 0.4992 | sim, seed 3 initial state | sim.py |
 | 5 | "Still, these two hundred and thirty-eight are unhappy, about one in six" (cycle 2: "So most households are content" cut as a restatement); RED counter counts to 238 as the rings draw | 238 / 1440 = 16.5 % (1 in 6.05) | sim | sim.py |
-| 6 | "Round one takes two hundred moves; the other thirty-eight were content by their turn. The matching share jumps to sixty-four percent." HUD row "moves" counts live to 200; GRAY note "38 content by their turn" on "thirty-eight" (cycle 2, substance fix 5: the 238 vs 200 gap is now spoken, so the note no longer competes with the narration) | 200; 38; 0.6441 | `round1_breakdown()`: of the 238, 200 moved, **38 were content when their turn came** (other households' moves had changed their neighborhood), 0 found no acceptable square; asserted in scene.py | sim.py |
+| 6 | "Round one takes two hundred moves; the other thirty-eight were content by their turn." (round 5: "The matching share jumps to sixty-four percent" cut; the meter still climbs to 64 % live) HUD row "moves" counts live to 200; GRAY note "38 content by their turn" on "thirty-eight" (cycle 2, substance fix 5: the 238 vs 200 gap is now spoken, so the note no longer competes with the narration) | 200; 38; 0.6441 | `round1_breakdown()`: of the 238, 200 moved, **38 were content when their turn came** (other households' moves had changed their neighborhood), 0 found no acceptable square; asserted in scene.py | sim.py |
 | 7 | After round one the unhappy counter reads 74, not 0 ("plan predicts 0") | 74 | sim | sim.py |
 | 8 | "sixty-seven of these were content before round one. They never moved."; on screen 67 RED rings kept, 7 turn grey, "67 content at the start" | 67 of 74 | 67 of the 74 were content at the start; only households unhappy at the start of a round move in it, so none of the 67 moved in round 1 (asserted in scene.py). The other 7 were unhappy at the start (6 moved and are unhappy again, 1 was fixed before its turn and tipped again) | sim.py |
 | 9 | Gold household B (row 4, col 14): 3 gold of 8 before round 1 → 2 gold of 7 after neighbor A (row 4, col 15) leaves; nothing else in its neighborhood changes | 3/8 = 0.375 ≥ 0.333; 2/7 = 0.286 < 0.333 | sim, checked square by square (patch changes per round: r1 A leaves; r2 B leaves, a blue household arrives at A's old square, outside C's and D's neighborhoods; r3 C leaves; r4 D leaves) | sim.py |
-| 10 | B leaves in round 2; C (row 3, col 13) goes 3/8 → 2/7; "Then the next one, at three eighths, tips" (round 3 wording): D (row 3, col 12) has 3 gold of 8 after round 2, C leaves in round 3, D goes 3/8 → 2/7 (leaves in round 4) | — | `verify_chain()` ("after round 2: D (2, 3, 8)", "after round 3: D (2, 2, 7)") | sim.py |
+| 10 | B leaves in round 2; C (row 3, col 13) goes 3/8 → 2/7; "Then the next one, also at three eighths, tips in round three" (round 5 wording; round 3 had "Then the next one, at three eighths, [pause] tips"): D (row 3, col 12) has 3 gold of 8 after round 2, C leaves in round 3, D goes 3/8 → 2/7 (leaves in round 4) | — | `verify_chain()` ("after round 2: D (2, 3, 8)", "after round 3: D (2, 2, 7)") | sim.py |
 | 10a | The board's corner replays in step with the inset (round 2: B → (28, 37), household 1144 from (31, 34) into A's old square (4, 15); round 3: C → (32, 1)) | real moves | `rounds[1]`, `rounds[2]` filtered to the patch: exactly these 3 moves touch rows 2–5 × cols 11–15 in rounds 2–3; both destinations were empty at the start of their round, so showing them early never overlaps a tile (asserted in scene.py) | sim.py |
 | 11 | "Now run the whole town. After round seven, nobody wants to move." (cycle 2: "Round after round, the tipping spreads" and "Seventy-six percent, the town we started with" cut; the rounds play in a 1.8 s pause and the meter shows 76 %) ; HUD "moves" shows each round's moves live | moves per round 200, 72, 41, 16, 9, 2, 1; unhappy after each round 74, 41, 16, 9, 2, 1, 0; 0.7553 | sim (round 7 still has 1 mover, so "after round seven" is exact) | sim.py |
 | 12 | Chart: 30 simulated towns per demand (on screen: "each dot: one simulated town"; cycle 2 cut the spoken "Thirty towns at each demand, from zero to sixty percent"); INK tick = mean, GRAY whisker = min–max. On "a quarter" / "a third" the PURPLE ¼ / ⅓ fly from the thumbnail labels to their columns, which brighten while the others dim to 40 % | 0 → 0.500; 0.1 → 0.514; 0.2 → 0.569; ¼ → 0.584 (0.565–0.613); ⅓ → 0.749 (0.716–0.781); 0.4 → 0.822; 0.5 → 0.867; 0.6 → 0.965 | sim, seeds 0–29 | sim.py |
@@ -111,3 +111,23 @@ Neither critic claimed a factual error; both re-ran sim.py and verified Schellin
 | 238 unhappy vs 200 moves never explained (substance 5) | right | spoken clause + live "moves" row + note (claim 6) |
 | "other" dropped by whisper at 3:15 (both) | likely rushed prosody | line re-split and re-synthesized; whisper transcribes "In the other, nobody minds" (claim 19) |
 | Schelling's band over our dots reads as his data (both) | right | hatched band, our dots at 35 % (claim 17) |
+
+## Round 5 (Oct 2026): re-verification and transcript notes
+
+The round-5 reviews (identical to the second cycle's round-1 reviews) claimed no factual error;
+both critics re-ran sim.py and verified both citations. Nothing factual changed. Wording changes:
+
+| Change | Check |
+|---|---|
+| "Then the next one, also at three eighths, tips in round three" | `verify_chain()`: D (row 3, col 12) has 3 gold of 8 after round 2 ("after round 2: D (2, 3, 8)") and 2 of 7 after round 3, when C leaves ("after round 3: D (2, 2, 7)"); so D tips (becomes unhappy) in round three and leaves in round 4. "also" refers to C, which had 3/8 too (claim 10). The on-screen caption at that moment is "after round 3" |
+| Cut "The matching share jumps to sixty-four percent" | the meter still shows 64 % (0.6441) after round 1; no number is spoken any more |
+| On screen: the two "76% match" labels pulse on "segregation" (was "decades") | the labels are the segregation measure of the two toy towns; the towns stay dimmed, so the pulse ties the study's word to our measure without equating the toy rule with the maps (claim 20) |
+
+**Transcript slips that are whisper's, not the voice's.** The first round-5 master's full-track
+whisper (Groq whisper-large-v3-turbo) wrote "3 is more than a third" for "Three eighths is more
+than a third" (1:23) and "It ips" for a pause-isolated "tips" (1:48). Kokoro's own timings place
+"eighths" at 0.35 s (83.52–83.87 s). Re-synthesized on their own and sent to the same whisper,
+both lines transcribe word for word ("…out of eight. Three eighths is more than a third, so it
+stayed." and "…Then the next one, at three eighths. Tips."). "tips" was still rewritten so it
+never starts a clip after a pause (the new line transcribes as "…also at 3 eighths, tips in round
+three.").

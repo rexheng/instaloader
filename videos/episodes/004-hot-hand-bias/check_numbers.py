@@ -7,6 +7,7 @@ Sections
      k = 1, 2, 3 (the ghost ticks in the payoff: n = 1000 takes about a minute)
   3. the expected per-player DIFFERENCE  P(hit|3 hits) - P(hit|3 misses), which needs both
      streak types in the same record: Monte Carlo with 1,000,000 sequences (seeded)
+  4. Cornell's numbers;  5. the simulated 100-shot record shown in the payoff (seed 292)
 """
 from fractions import Fraction as F
 from itertools import product
@@ -41,6 +42,10 @@ print("share distribution:", {str(k): shares.count(k) for k in sorted(set(shares
 rows_with_h = sum(1 for s, h, n in scored if h > 0)
 rows_with_t = sum(1 for s, h, n in scored if n - h > 0)
 print("rows holding a checked heads:", rows_with_h, " rows holding a checked tails:", rows_with_t)
+
+# votes held (round 5: "Fewer rows, fewer votes"): heads 17/3 of 14, tails 25/3 of 14
+print("votes held by heads:", sum(F(h, n) for _, h, n in scored),
+      " by tails:", sum(F(n - h, n) for _, h, n in scored), " of", len(scored))
 
 rows_t = share_rows("T")
 scored_t = [(s, h, n) for s, h, n in rows_t if n > 0]
@@ -119,3 +124,10 @@ for n in (100, 1000):
 # ---- 4. Cornell numbers (Miller & Sanjurjo 2018, Table 2, reproducing GVT Table 4) ----
 print("Cornell: after 3 hits .49, after 3 misses .45 -> +4 pts; baseline -8 -> gap",
       4 - (-8), "pts")
+
+# ---- 5. the simulated 100-shot record shown at 2:22 (scene.py REC; counts not shown on screen) --
+rec = np.random.default_rng(292).random(100) < 0.5
+ah = [i for i in range(3, 100) if rec[i - 3:i].all()]
+am = [i for i in range(3, 100) if (~rec[i - 3:i]).all()]
+print(f"record (seed 292): {rec.sum()} hits of 100; after 3 hits {rec[ah].sum()}/{len(ah)}, "
+      f"after 3 misses {rec[am].sum()}/{len(am)}")

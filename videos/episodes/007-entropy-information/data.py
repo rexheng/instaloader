@@ -36,9 +36,10 @@ RECORD_GUESSES = [
 ]
 # Shannon 1951, p. 64: experimental bounds (bits/letter) for N = 100 letters of context
 SHANNON_BOUNDS_N100 = (0.6, 1.3)
-# "The fractions add up": a real run from the record (THERE -> E R E space, after T H),
-# each character priced by the two-letter-context table
-RUN_CONTEXT, RUN_TEXT = "TH", "ERE "
+# "The fractions add up": a real run from the record (THE OTHER -> E, space, O after T H),
+# each character priced by the two-letter-context table.  E and the space each cost about
+# half a question; asked one letter at a time, each still takes a whole question.
+RUN_CONTEXT, RUN_TEXT = "TH", "E O"
 
 
 def load_brown(d: str) -> str:
@@ -115,12 +116,18 @@ def main(brown_dir: str):
     nQ, pQ = next_dist(text, "Q")
     nTH, pTH = next_dist(text, "TH")
 
-    # the run E R E _ after TH: each character's ideal cost given the two before it
+    # the run E _ O after TH: each character's ideal cost given the two before it, and the
+    # whole questions it takes asked on its own (its depth in the best yes/no tree for that
+    # context, i.e. a Huffman code; here it equals the cost rounded up)
     run, ctx = [], RUN_CONTEXT
     for ch in RUN_TEXT:
         n_c, d_c = next_dist(text, ctx[-2:])
-        run.append({"ch": ch, "context": ctx[-2:], "n": n_c, "p": d_c[ch],
-                    "cost": -math.log2(d_c[ch])})
+        depth = huffman_depths(d_c)[ch]
+        cost = -math.log2(d_c[ch])
+        assert depth == math.ceil(cost)
+        run.append({"ch": ch, "context": ctx[-2:], "n": n_c, "p": d_c[ch], "cost": cost,
+                    "huffman_depth": depth, "context_H": entropy(d_c.values()),
+                    "context_huffman_avg": sum(d_c[x] * d for x, d in huffman_depths(d_c).items())})
         ctx += ch
     run_total = sum(r["cost"] for r in run)
 
@@ -151,9 +158,9 @@ def main(brown_dir: str):
         "record": {"text": RECORD_TEXT, "guesses": RECORD_GUESSES, "first_try": gc[1],
                    "symbols": len(g), "total_guesses": sum(g)},
         "shannon_bounds_N100": SHANNON_BOUNDS_N100,
-        "run_THERE": {"context": RUN_CONTEXT, "run": RUN_TEXT, "letters": run,
-                      "total": run_total, "questions": math.ceil(run_total),
-                      "one_at_a_time": sum(math.ceil(r["cost"]) for r in run)},
+        "run_after_TH": {"context": RUN_CONTEXT, "run": RUN_TEXT, "letters": run,
+                         "total": run_total, "questions": math.ceil(run_total),
+                         "one_at_a_time": sum(r["huffman_depth"] for r in run)},
         "contexts": {"possible_2": 27 ** 2, "possible_100_log10": 100 * math.log10(27),
                      "brown_10grams_distinct": len(grams10), "brown_10grams_seen_once": once10},
     }
@@ -171,7 +178,8 @@ def main(brown_dir: str):
           f"H(X|2 prev) = {out['H_given_2_prev']:.4f}")
     print(f"record: {gc[1]}/{len(g)} first try, {sum(g)} guesses")
     print("run after TH:", [(r["ch"], r["context"], round(r["p"], 4), round(r["cost"], 3)) for r in run],
-          f"total {run_total:.3f} -> {math.ceil(run_total)} questions")
+          f"total {run_total:.3f} -> {math.ceil(run_total)} questions; one at a time "
+          f"{[r['huffman_depth'] for r in run]} = {sum(r['huffman_depth'] for r in run)}")
     print(f"10-letter strings in Brown: {len(grams10):,} distinct, {once10 / len(grams10):.1%} seen once; "
           f"27^100 = 10^{100 * math.log10(27):.2f}")
 

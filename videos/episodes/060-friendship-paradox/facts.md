@@ -132,3 +132,13 @@ Betty: one token), not tags beside the nodes, where they read as labels of the w
 | Ring callback: the bars stay at 2.5 / 3.0 (dimmed); the ring thumbnail carries 2 + 0/2 = 2 | Round 1 switched the bars to 2.0 / 2.0 while the beam still showed 2.5 and 3. The ring: μ = 2, σ² = 0, μ + σ²/μ = 2. | computed |
 | Facebook: a BLUE brace labelled "a few users" spans the broken stretch of the axis from just past 800 to the 5,000 tick ("Facebook's limit") | It marks a range, with no values claimed (round 1's four dots read as plotted data). Ugander et al.: "a much smaller population have many hundreds or even thousands of friends"; "a clear cutoff at 5000 friends, a limit imposed by Facebook". | Ugander et al. 2011, arXiv:1111.4503 |
 | Cut from the narration | "friends average twenty percent more than girls" (muddled: the friends are girls; "+0.5 · 20%" stays on screen, on the PURPLE excess over the BLUE 2.5) and "Sixty over twenty" (the fraction is on screen). The landing's second token flight and 4× / 1× tally are cut. | presentation |
+
+## Round 5 (no new claims)
+
+The round-5 reviews list no wrong, fabricated or uncited claims, and this revision adds no new number
+or claim; every on-screen value is unchanged. Two measurement notes for the review pack:
+
+| Note | Evidence |
+|---|---|
+| Whisper drops the first word of "Divide top and bottom by the eight girls" (report: `delete 'divide'` at 1:25). | The word is spoken at full level: RMS over 84.6–85.1 s of the preview is −11.8 to −14.7 dBFS (the gap before it, 84.1–84.5 s, is digital silence). Kokoro's own word timing puts "Divide" at 84.60–85.10 s. It is a transcription drop, not a swallowed word. |
+| Pace. The 0.82-speed master of 16 Oct was flagged at 166 wpm. | That transcript repeated 1:41–1:53 ("…the variance, sigma squared, Split Sue's count…" twice), 566 words for a 509-word script. With the same speed and no repeat, the round-5 preview measures 160 wpm on speech time and 152 overall (WER 0.8 %). |

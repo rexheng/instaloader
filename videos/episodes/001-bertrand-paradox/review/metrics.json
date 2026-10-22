@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/001-bertrand-paradox/final.mp4",
- "duration_s": 225.5,
+ "duration_s": 228.4,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,34 +8,34 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 14.5,
- "integrated_lufs": -14.1,
+ "size_mb": 14.75,
+ "integrated_lufs": -14.0,
  "lra_lu": 2.2,
- "true_peak_dbtp": -1.6,
+ "true_peak_dbtp": -1.7,
  "leading_silence_s": 0.0,
- "trailing_silence_s": 1.37,
- "longest_internal_silence_s": 1.89,
+ "trailing_silence_s": 1.36,
+ "longest_internal_silence_s": 1.87,
  "silences_over_1_5s": [
   [
-   7.68,
-   9.57
+   7.83,
+   9.69
   ]
  ],
- "frames": 6765,
- "longest_static_s": 2.93,
+ "frames": 6852,
+ "longest_static_s": 2.97,
  "static_stretches_over_3s": [],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
  "background_luma": null,
- "transcript_words": 582,
- "first_word_s": 0.02,
- "last_word_s": 224.38666,
- "wpm_speech": 160.7,
- "wpm_overall": 154.9,
- "wpm_excluding_all_pauses": 186.5,
+ "transcript_words": 576,
+ "first_word_s": 0.04,
+ "last_word_s": 227.37735,
+ "wpm_speech": 156.9,
+ "wpm_overall": 151.3,
+ "wpm_excluding_all_pauses": 182.0,
  "narration_file": "videos/episodes/001-bertrand-paradox/narration.json",
- "wer": 0.027,
- "narration_words": 556,
+ "wer": 0.0163,
+ "narration_words": 552,
  "banned_phrase_hits": 0,
  "slop_hits": [],
  "layout_audit": {
@@ -47,7 +47,7 @@
    "caption-zone": 0
   },
   "allowed": 0,
-  "checks": 246
+  "checks": 244
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -70,160 +70,160 @@
    "file": "keyframes/kf_01_00-03.6.png"
   },
   {
-   "t": 13.83,
-   "file": "keyframes/kf_02_00-13.8.png"
+   "t": 14.2,
+   "file": "keyframes/kf_02_00-14.2.png"
   },
   {
-   "t": 25.97,
-   "file": "keyframes/kf_03_00-26.0.png"
+   "t": 26.7,
+   "file": "keyframes/kf_03_00-26.7.png"
   },
   {
-   "t": 34.6,
-   "file": "keyframes/kf_04_00-34.6.png"
+   "t": 39.2,
+   "file": "keyframes/kf_04_00-39.2.png"
   },
   {
-   "t": 38.37,
-   "file": "keyframes/kf_05_00-38.4.png"
+   "t": 43.23,
+   "file": "keyframes/kf_05_00-43.2.png"
   },
   {
-   "t": 42.33,
-   "file": "keyframes/kf_06_00-42.3.png"
+   "t": 47.53,
+   "file": "keyframes/kf_06_00-47.5.png"
   },
   {
-   "t": 51.0,
-   "file": "keyframes/kf_07_00-51.0.png"
+   "t": 57.57,
+   "file": "keyframes/kf_07_00-57.6.png"
   },
   {
-   "t": 56.23,
-   "file": "keyframes/kf_08_00-56.2.png"
+   "t": 66.77,
+   "file": "keyframes/kf_08_01-06.8.png"
   },
   {
-   "t": 65.4,
-   "file": "keyframes/kf_09_01-05.4.png"
+   "t": 73.7,
+   "file": "keyframes/kf_09_01-13.7.png"
   },
   {
-   "t": 72.2,
-   "file": "keyframes/kf_10_01-12.2.png"
+   "t": 75.23,
+   "file": "keyframes/kf_10_01-15.2.png"
   },
   {
-   "t": 73.67,
-   "file": "keyframes/kf_11_01-13.7.png"
+   "t": 83.13,
+   "file": "keyframes/kf_11_01-23.1.png"
   },
   {
-   "t": 81.67,
-   "file": "keyframes/kf_12_01-21.7.png"
+   "t": 85.17,
+   "file": "keyframes/kf_12_01-25.2.png"
   },
   {
-   "t": 83.53,
-   "file": "keyframes/kf_13_01-23.5.png"
+   "t": 88.5,
+   "file": "keyframes/kf_13_01-28.5.png"
   },
   {
-   "t": 86.7,
-   "file": "keyframes/kf_14_01-26.7.png"
+   "t": 96.47,
+   "file": "keyframes/kf_14_01-36.5.png"
   },
   {
-   "t": 94.33,
-   "file": "keyframes/kf_15_01-34.3.png"
+   "t": 104.63,
+   "file": "keyframes/kf_15_01-44.6.png"
   },
   {
-   "t": 102.33,
-   "file": "keyframes/kf_16_01-42.3.png"
+   "t": 113.7,
+   "file": "keyframes/kf_16_01-53.7.png"
   },
   {
-   "t": 106.0,
-   "file": "keyframes/kf_17_01-46.0.png"
+   "t": 124.63,
+   "file": "keyframes/kf_17_02-04.6.png"
   },
   {
-   "t": 111.13,
-   "file": "keyframes/kf_18_01-51.1.png"
+   "t": 128.83,
+   "file": "keyframes/kf_18_02-08.8.png"
   },
   {
-   "t": 121.83,
-   "file": "keyframes/kf_19_02-01.8.png"
+   "t": 130.57,
+   "file": "keyframes/kf_19_02-10.6.png"
   },
   {
-   "t": 127.8,
-   "file": "keyframes/kf_20_02-07.8.png"
+   "t": 140.1,
+   "file": "keyframes/kf_20_02-20.1.png"
   },
   {
-   "t": 137.03,
-   "file": "keyframes/kf_21_02-17.0.png"
+   "t": 143.0,
+   "file": "keyframes/kf_21_02-23.0.png"
   },
   {
-   "t": 139.9,
-   "file": "keyframes/kf_22_02-19.9.png"
+   "t": 148.33,
+   "file": "keyframes/kf_22_02-28.3.png"
   },
   {
-   "t": 145.13,
-   "file": "keyframes/kf_23_02-25.1.png"
+   "t": 152.27,
+   "file": "keyframes/kf_23_02-32.3.png"
   },
   {
-   "t": 149.03,
-   "file": "keyframes/kf_24_02-29.0.png"
+   "t": 156.43,
+   "file": "keyframes/kf_24_02-36.4.png"
   },
   {
-   "t": 157.8,
-   "file": "keyframes/kf_25_02-37.8.png"
+   "t": 161.03,
+   "file": "keyframes/kf_25_02-41.0.png"
   },
   {
-   "t": 159.17,
-   "file": "keyframes/kf_26_02-39.2.png"
+   "t": 162.4,
+   "file": "keyframes/kf_26_02-42.4.png"
   },
   {
-   "t": 161.9,
-   "file": "keyframes/kf_27_02-41.9.png"
+   "t": 165.2,
+   "file": "keyframes/kf_27_02-45.2.png"
   },
   {
-   "t": 166.4,
-   "file": "keyframes/kf_28_02-46.4.png"
+   "t": 169.73,
+   "file": "keyframes/kf_28_02-49.7.png"
   },
   {
-   "t": 170.33,
-   "file": "keyframes/kf_29_02-50.3.png"
+   "t": 173.67,
+   "file": "keyframes/kf_29_02-53.7.png"
   },
   {
-   "t": 178.1,
-   "file": "keyframes/kf_30_02-58.1.png"
+   "t": 181.63,
+   "file": "keyframes/kf_30_03-01.6.png"
   },
   {
-   "t": 181.17,
-   "file": "keyframes/kf_31_03-01.2.png"
+   "t": 184.8,
+   "file": "keyframes/kf_31_03-04.8.png"
   },
   {
-   "t": 189.2,
-   "file": "keyframes/kf_32_03-09.2.png"
+   "t": 193.0,
+   "file": "keyframes/kf_32_03-13.0.png"
   },
   {
-   "t": 191.57,
-   "file": "keyframes/kf_33_03-11.6.png"
+   "t": 195.53,
+   "file": "keyframes/kf_33_03-15.5.png"
   },
   {
-   "t": 192.87,
-   "file": "keyframes/kf_34_03-12.9.png"
+   "t": 196.63,
+   "file": "keyframes/kf_34_03-16.6.png"
   },
   {
-   "t": 195.63,
-   "file": "keyframes/kf_35_03-15.6.png"
+   "t": 199.13,
+   "file": "keyframes/kf_35_03-19.1.png"
   },
   {
-   "t": 199.0,
-   "file": "keyframes/kf_36_03-19.0.png"
+   "t": 202.9,
+   "file": "keyframes/kf_36_03-22.9.png"
   },
   {
-   "t": 205.73,
-   "file": "keyframes/kf_37_03-25.7.png"
+   "t": 209.8,
+   "file": "keyframes/kf_37_03-29.8.png"
   },
   {
-   "t": 208.93,
-   "file": "keyframes/kf_38_03-28.9.png"
+   "t": 213.23,
+   "file": "keyframes/kf_38_03-33.2.png"
   },
   {
-   "t": 219.27,
-   "file": "keyframes/kf_39_03-39.3.png"
+   "t": 222.33,
+   "file": "keyframes/kf_39_03-42.3.png"
   },
   {
-   "t": 225.47,
-   "file": "keyframes/kf_40_03-45.5.png"
+   "t": 228.37,
+   "file": "keyframes/kf_40_03-48.4.png"
   }
  ],
  "flags": [],

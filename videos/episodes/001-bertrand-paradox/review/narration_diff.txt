@@ -1,18 +1,12 @@
-WER 2.7% over 556 script words (numbers spelled out, 'and' ignored)
+WER 1.6% over 552 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/001-bertrand-paradox/narration.json
 
-[0:21.7] replace  script: 'a'                                      heard: 'one'
-[0:30.2] replace  script: "triangle's"                             heard: 'triangle'
-[0:36.6] replace  script: 'three'                                  heard: 'thirty'
-[1:00.7] insert   script: '∅'                                      heard: 'zero'
-[1:08.7] insert   script: '∅'                                      heard: 'zero'
-[1:28.2] replace  script: 'chord'                                  heard: 'cord'
-[1:37.3] replace  script: 'chord'                                  heard: 'cord'
-[1:46.8] replace  script: 'chord'                                  heard: 'cord'
-[2:25.7] replace  script: 'jaynes'                                 heard: 'janes'
-[2:57.5] replace  script: 'jaynes'                                 heard: 'janes'
-[3:03.7] insert   script: '∅'                                      heard: 'one'
-[3:10.3] delete   script: 'surveys'                                heard: '∅'
-[3:14.3] replace  script: 'a'                                      heard: 'one'
-[3:30.5] replace  script: 'a'                                      heard: 'one'
-[3:40.2] replace  script: 'a'                                      heard: 'one'
+[0:22.3] replace  script: 'a'                                      heard: 'one'
+[1:30.1] replace  script: 'chord'                                  heard: 'cord'
+[1:39.4] replace  script: 'chord'                                  heard: 'cord'
+[1:49.2] replace  script: 'chord'                                  heard: 'cord'
+[2:29.0] replace  script: 'jaynes'                                 heard: 'janes'
+[3:01.7] replace  script: 'jaynes'                                 heard: 'janes'
+[3:07.3] insert   script: '∅'                                      heard: 'one'
+[3:18.1] replace  script: 'a'                                      heard: 'one'
+[3:34.7] replace  script: 'a'                                      heard: 'one'

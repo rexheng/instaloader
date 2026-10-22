@@ -48,10 +48,10 @@ BIG_C = np.array([-2.75, 0.05, 0.0])
 BIG_R = 2.6
 COL_X = 3.35                      # right-hand column (cold open, naive build, landing)
 PANEL_R = 1.35
-PANEL_Y = 1.45
+PANEL_Y = 1.65                    # round 6: the panel group sits 0.2 higher (room for the quote)
 PANEL_X = [-4.4, 0.0, 4.4]
-LABEL_Y = 3.2
-TALLY_Y = -0.64
+LABEL_Y = 3.4                     # (label tops at y ~ 3.57, inside the 3.6 safe line)
+TALLY_Y = -0.44
 HIST_BASE = -2.72
 HIST_W = 3.0
 HIST_SCALE = 3.6                  # bar height per unit share
@@ -229,7 +229,7 @@ class Rain:
 class Episode(NarratedScene):
     EPISODE = 1
     TITLE = "Three Right Answers to One Probability Question"
-    SPEED = 0.84
+    SPEED = 0.82
     BEAT_GAP = 0.27
 
     # ------------------------------------------------------------------ data
@@ -315,24 +315,29 @@ class Episode(NarratedScene):
         self.dedupe()
 
     def lift_into(self, pairs, extra=(), rt=0.9, width=4):
-        """Each (source shape, target term, colour): an outline copy lifts off the source and
-        flies straight into the term in one move (scale shrinks geometrically while it
-        travels), handing over to the glyphs in the last 40 %.  No filled morph, no pause."""
+        """Each (source shape, target term, colour[, a0, a1]): an outline copy lifts off the
+        source and flies straight into the term in one move (scale shrinks geometrically while it
+        travels), handing over to the glyphs in the last 40 %.  No filled morph, no pause.
+        Optional a0, a1 (fractions of rt) let each term start on its own word."""
         anims, icons = [], []
-        for src, term, col in pairs:
+        for pr in pairs:
+            src, term, col = pr[:3]
+            a0, a1 = (pr[3], pr[4]) if len(pr) > 3 else (0.0, 1.0)
             ic = src.copy().set_fill(opacity=0).set_stroke(col, width=width, opacity=1)
             ic.clear_updaters()
             start = ic.copy()
             k = max(term.height, 0.28) / max(start.height, 1e-3)
 
-            def upd(m, a, start=start, term=term, k=k):
+            def upd(m, a, start=start, term=term, k=k, a0=a0, a1=a1):
+                a = float(np.clip((a - a0) / (a1 - a0), 0, 1))
                 m.become(start)
                 m.scale(k ** smooth(min(1.0, a / 0.6)))      # shrink first ...
                 m.move_to(interpolate(start.get_center(), term.get_center(), smooth(a)))  # ... travel
-                m.set_stroke(opacity=1 - float(np.clip((a - 0.6) / 0.4, 0, 1)))
+                m.set_stroke(opacity=(1 - float(np.clip((a - 0.6) / 0.4, 0, 1))) if a > 0 else 0)
             icons.append(ic)
             anims.append(UpdateFromAlphaFunc(ic, upd))
-            anims.append(FadeIn(term, rate_func=late))
+            anims.append(FadeIn(term, rate_func=lambda t, a0=a0, a1=a1: late(
+                float(np.clip((t - a0) / (a1 - a0), 0, 1)))))
         self.add(*icons)
         self.play(*anims, *extra, run_time=rt)
         self.remove(*icons)
@@ -373,7 +378,7 @@ class Episode(NarratedScene):
                 fix(counter)
 
     def make_hist(self, key, x, base=HIST_BASE, scale=HIST_SCALE, width=HIST_W, ref_label=True,
-                  share=None):
+                  share=None, ends=("0", "r")):
         """Share of all 10,000 midpoints in ten distance bands; gold = closer than r/2.  A dashed
         reference line marks 10 % (the share every band would get under an even spread along the
         radius), labelled just left of the axis."""
@@ -389,9 +394,12 @@ class Episode(NarratedScene):
             for i, s in enumerate(share)])
         axis = Line(P3(x0 - 0.06, base), P3(x0 + width + 0.06, base), color=GRAY,
                     stroke_width=2.5)
-        ticks = VGroup(*[MathTex(t, font_size=MATH_SMALL - 2, color=GRAY)
-                         .next_to(P3(x0 + width * f, base), DOWN, buff=0.17)
-                         for t, f in (("0", 0), ("r/2", 0.5), ("r", 1))])
+        def tick(t):
+            if t in ("0", "r", "r/2"):
+                return MathTex(t, font_size=MATH_SMALL - 2, color=GRAY)
+            return label(t, size=22, color=GRAY)      # a word names the axis: "center" ... "rim"
+        ticks = VGroup(*[tick(t).next_to(P3(x0 + width * f, base), DOWN, buff=0.17)
+                         for t, f in ((ends[0], 0), ("r/2", 0.5), (ends[1], 1))])
         # one baseline for all three: "0" and "r" sit where the "2" of r/2 sits
         bl = ticks[1][0][2].get_bottom()[1]
         for t in (ticks[0], ticks[2]):
@@ -470,15 +478,22 @@ class Episode(NarratedScene):
 
         # ============================================================ stakes
         cite_b = citation("Bertrand, 1889 · Calcul des probabilités")
-        atr = text("at random", size=HEADING, slant=ITALIC).move_to(P3(COL_X, 1.25))
-        atr_ul = underline(atr, color=GRAY, buff=0.08, stroke_width=3)
-        # the stakes, previewed in the payoff's own numbers: one college, two average class sizes
-        avg_lab = label("average class", size=26, color=GRAY).move_to(P3(COL_X, 0.12))
-        avg40 = MathTex("40", font_size=48, color=INK)
-        avg_or = label("or", size=26, color=GRAY)
-        avg147 = MathTex("147", font_size=48, color=INK)
-        avg_row = VGroup(avg40, avg_or, avg147).arrange(RIGHT, buff=0.35).move_to(P3(COL_X, -0.62))
-        avg_or.set_y(avg40.get_y())
+
+        def stakes_words():
+            """'at random' under the question, and the stakes previewed in the payoff's own
+            numbers (one college, two average class sizes).  Built by a function because the
+            survey beat brings back exactly these objects, in exactly this place."""
+            a = text("at random", size=HEADING, slant=ITALIC).move_to(P3(COL_X, 1.25))
+            ul = underline(a, color=GRAY, buff=0.08, stroke_width=3)
+            lab = label("average class", size=26, color=GRAY).move_to(P3(COL_X, 0.12))
+            n40 = MathTex("40", font_size=48, color=INK)
+            o = label("or", size=26, color=GRAY)
+            n147 = MathTex("147", font_size=48, color=INK)
+            row = VGroup(n40, o, n147).arrange(RIGHT, buff=0.35).move_to(P3(COL_X, -0.62))
+            o.set_y(n40.get_y())
+            return a, ul, lab, row
+        atr, atr_ul, avg_lab, avg_row = stakes_words()
+        avg40, avg_or, avg147 = avg_row
         with self.narrate(LINES["stakes"]) as beat:
             beat.wait_until("puzzle", offset=-0.2)
             self.play(Indicate(q, color=INK, scale_factor=1.06), run_time=0.8)
@@ -609,8 +624,9 @@ class Episode(NarratedScene):
                         include_numbers=True, font_size=MATH_SMALL,
                         decimal_number_config={"num_decimal_places": 1, "color": GRAY},
                         tick_size=0.07)
-        nl.move_to(P3(-0.3, -2.275))          # (centre includes the numbers: the line sits ~0.2 higher;
-        #                                      its tick labels clear the citation by >= 0.3)
+        nl.move_to(P3(-0.3, -2.305))          # (centre includes the numbers: the line sits ~0.2 higher;
+        #                                      round 6: 0.08 lower, its tick labels still clear the
+        #                                      citation by > 0.2)
         nl_title = label("gold share", size=26, color=GRAY).next_to(nl, RIGHT, buff=0.25)
         nl_title.shift(UP * (nl.n2p(0.3)[1] - nl_title.get_y()))
         finals = [R0[k]["share"][-1] for k in KEYS]
@@ -720,13 +736,30 @@ class Episode(NarratedScene):
             self.rain(p3, "midpoint", tally3, None, run_time=max(2.2, beat.remaining() + 0.1))
 
         # ---- the measured failure: error bars and the gap; Bertrand's verdict, both halves
-        q1 = text("« Aucune des trois n'est fausse,", size=28, slant=ITALIC, color=INK)
-        q2 = text("aucune n'est exacte »", size=28, slant=ITALIC, color=INK)
-        VGroup(q1, q2).arrange(DOWN, buff=0.1).move_to(P3(-0.3, -1.36))
+        # one line, centred under all three tallies (Bertrand's verdict on all three, not a caption
+        # of the middle one), midway between the tally row and the tops of the error bars; its two
+        # halves arrive on "wrong" and "right"
+        q_full = text("« Aucune des trois n'est fausse, aucune n'est exacte »", size=26, slant=ITALIC,
+                      color=INK)
+        n_q1 = len("«Aucunedestroisn'estfausse,")
+        row_bottom = min(m.get_bottom()[1] for m in (tally1, small_frac, tally2, tally3))
+        eb_top = nl.n2p(0.3)[1] + 0.13
+        q_full.move_to(P3(0, (row_bottom + eb_top) / 2))
+        # each half is its own Text, laid exactly over its glyphs in the full line
+        q1 = text("« Aucune des trois n'est fausse,", size=26, slant=ITALIC, color=INK)
+        q2 = text("aucune n'est exacte »", size=26, slant=ITALIC, color=INK)
+        q1.move_to(VGroup(*q_full[:n_q1]).get_center())
+        q2.move_to(VGroup(*q_full[n_q1:]).get_center())
+        logging.getLogger("sample_space").info(
+            f"quote clearance: above {row_bottom - q_full.get_top()[1]:.2f}, "
+            f"below {q_full.get_bottom()[1] - eb_top:.2f}, width {q_full.width:.2f}")
         cite_b2 = citation("Bertrand, 1889 · Calcul des probabilités")
-        gap_brace = BraceBetweenPoints(nl.n2p(finals[2]) + UP * 0.14, nl.n2p(finals[1]) + UP * 0.14,
+        gap_brace = BraceBetweenPoints(nl.n2p(finals[2]) + UP * 0.16, nl.n2p(finals[1]) + UP * 0.16,
                                        direction=UP, color=INK)
-        gap_lbl = label("25 points", size=28, color=INK).next_to(gap_brace, UP, buff=0.18)
+        gap_brace.stretch(0.7, 1, about_edge=DOWN)
+        # the label sits on its brace, well clear of the tally row (which steps back meanwhile)
+        gap_lbl = label("25 points", size=26, color=INK).next_to(gap_brace, UP, buff=0.17)
+        tally_row = [tally1, ap1, small_frac, tally2, tally3]
         with self.narrate(LINES["gap"]) as beat:
             self.play(FadeOut(shared_cap), drop_dot(tally3, ebars[2][3]),
                       img3.animate.set_opacity(RAIN_DIM), FadeIn(cite_b2, shift=0.1 * UP),
@@ -742,10 +775,12 @@ class Episode(NarratedScene):
                         for e in ebars], run_time=0.9)
             beat.wait_until("disagree", offset=-0.3)
             self.play(FadeOut(q1), FadeOut(q2), FadeOut(cite_b2), run_time=0.35)
-            self.play(GrowFromCenter(gap_brace), run_time=0.5)
+            self.play(GrowFromCenter(gap_brace), *[m.animate.set_opacity(0.35) for m in tally_row],
+                      run_time=0.5)
             self.play(Write(gap_lbl), run_time=beat.until("points", occurrence=1, offset=0.2))
             beat.wait_until("code", offset=-0.3)
-            self.play(*[lb.animate.set_opacity(1.0) for lb in labs], run_time=0.3)
+            self.play(*[lb.animate.set_opacity(1.0) for lb in labs],
+                      *[m.animate.set_opacity(1.0) for m in tally_row], run_time=0.3)
             self.play(LaggedStart(*[Indicate(lb, color=lb.get_color(), scale_factor=1.1) for lb in labs],
                                   lag_ratio=0.25), run_time=1.1)
 
@@ -857,7 +892,9 @@ class Episode(NarratedScene):
                       Create(h.ref, rate_func=late), *more, *extra, run_time=run_time)
 
         # the endpoints histogram carries no "10%" label: its left side holds the stacked column
-        hists = [self.make_hist(k, x, ref_label=(k != "endpoints")) for k, x in zip(KEYS, PANEL_X)]
+        # (nudged right 0.25 so the stacked column left of its axis stays inside x >= -6.4)
+        hists = [self.make_hist(k, x + (0.25 if k == "endpoints" else 0.0), ref_label=(k != "endpoints"))
+                 for k, x in zip(KEYS, PANEL_X)]
         # the caption sits over the only histogram until the row fills, then moves to the middle
         cap2 = VGroup(label("share of midpoints,", size=24, color=GRAY),
                       label("by distance from center", size=24, color=GRAY)).arrange(DOWN, buff=0.06)
@@ -878,13 +915,21 @@ class Episode(NarratedScene):
             grow_hist(hists[2], extra=[FadeIn(cap2)])
             self.play(ReplacementTransform(tally3, t3_slot), run_time=0.5)
             tally3 = t3_slot
-            beat.wait_until("this circle", offset=-0.15)
-            self.play(Indicate(incs[2], color=YELLOW, scale_factor=1.12),
-                      run_time=max(0.5, min(0.8, beat.until("quarter", offset=-0.35))))
-            # the two disks' outlines fly straight down into the fraction; the approximately
-            # sign arrives with them, so the tally never shows an unfinished relation
-            self.lift_into([(incs[2], eq3f.num, YELLOW), (p3.circle, eq3f.den, PURPLE)],
-                           extra=[Create(eq3f.bar, rate_func=late), FadeIn(ap3, rate_func=late)], rt=0.9)
+            # "this circle": the gold disk itself lights up (its fill 0.14 -> 0.5 -> 0.14), no scale
+            beat.wait_until("this circle", offset=-0.1)
+            self.play(incs[2].animate(rate_func=there_and_back).set_fill(YELLOW, 0.5), run_time=0.6)
+            # each disk's outline flies into its own term on its own word: the gold one into
+            # pi (r/2)^2 on "quarter", the purple rim into pi r^2 on "area"; the approximately
+            # sign arrives with the first, so the tally never shows an unfinished relation
+            beat.wait_until("quarter", offset=-0.05)
+            d_area = max(0.3, beat.time_of("area") - beat.time_of("quarter"))
+            rt_l = d_area + 0.9
+            fa = d_area / rt_l
+            self.lift_into([(incs[2], eq3f.num, YELLOW, 0.0, 0.9 / rt_l),
+                            (p3.circle, eq3f.den, PURPLE, fa, 1.0)],
+                           extra=[Create(eq3f.bar, rate_func=window(0.55 * 0.9 / rt_l, 0.9 / rt_l, smooth)),
+                                  FadeIn(ap3, rate_func=window(0.55 * 0.9 / rt_l, 0.9 / rt_l, smooth))],
+                           rt=rt_l)
             beat.wait_until("quarter", occurrence=2, offset=-0.3)
             self.play(Write(eq3s), Write(eq3r), run_time=0.6)
         sf3 = frac("1", "4", PURPLE, PURPLE, size=FRAC)
@@ -960,9 +1005,17 @@ class Episode(NarratedScene):
             self.play(FadeIn(rim_ring), last_bar.animate.set_fill(BLUE, opacity=0.92), run_time=0.35)
             self.hold(0.3)
             self.play(FadeOut(rim_ring), last_bar.animate.set_fill(GRAY, opacity=0.92), run_time=0.35)
+            # "only a third land inside": panel 1 is the one subject while its gold bars stack up;
+            # panels 2 and 3 (dots, equations, histograms) step back to 35 % until "Three programs"
             beat.wait_until("only", offset=-0.2)
+            p23 = [p2.circle, p2.tri, inc2, dots2, rad2, half_seg, labs[1], tally2, ap2, eq2f, eq2s,
+                   eq2r, hists[1], p3.circle, p3.tri, incs[2], dots3, labs[2], tally3, ap3b, sf3,
+                   hists[2], cap1]
+            for m in p23:
+                m.save_state()
             self.play(Create(stack_base), *[TransformFromCopy(b, s) for b, s in zip(hists[0].bars[:5], stack)],
-                      *[b.animate.set_opacity(0.35) for b in hists[0].bars[:5]], run_time=0.9)
+                      *[b.animate.set_opacity(0.35) for b in hists[0].bars[:5]],
+                      *[m.animate.fade(0.65) for m in p23], run_time=0.9)
             self.play(FadeIn(stack_lbl, shift=0.1 * RIGHT), run_time=0.5)
             beat.wait_until("third we found", offset=-0.2)
             self.play(flag(small_frac, color=BLUE), flag(tally1, color=BLUE),
@@ -970,12 +1023,14 @@ class Episode(NarratedScene):
 
         # ---- what each recipe spreads evenly
         sf2 = frac("1", "2", GREEN, GREEN, size=FRAC)
-        ap2b = ap2.copy()
-        row2 = place_row([tally2.copy(), ap2b, sf2], PANEL_X[1], TALLY_Y)
+        ap2b = ap2.copy().set_opacity(1.0)
+        row2 = place_row([tally2.copy().set_opacity(1.0), ap2b, sf2], PANEL_X[1], TALLY_Y)
         rad_hl = Line(p2.c, rim(p2.c, p2.R, np.deg2rad(-30)), color=GREEN, stroke_width=11).set_z_index(6)
         with self.narrate(LINES["which"]) as beat:
-            # the 1/2 has been up through the whole endpoint beat: fold it into the tally
-            self.play(FadeOut(eq2f), FadeOut(eq2s), FadeOut(half_seg), run_time=0.35)
+            # "Three programs": panels 2 and 3 come back; the 1/2 has been up through the whole
+            # endpoint beat, so it folds into the tally
+            self.play(FadeOut(eq2f), FadeOut(eq2s), FadeOut(half_seg),
+                      *[Restore(m) for m in p23 if m not in (eq2f, eq2s, half_seg)], run_time=0.45)
             self.play(ReplacementTransform(tally2, row2[0]), ReplacementTransform(ap2, ap2b),
                       ReplacementTransform(eq2r, sf2), run_time=0.5)
             tally2 = row2[0]
@@ -1131,7 +1186,11 @@ class Episode(NarratedScene):
                         color=YELLOW if abs(dist) < r / 2 else GRAY)
         demo_big = demo_chord(JC_B, JR_B, 5).set_z_index(7)
         demo_small = demo_chord(JC_S, JR_S, 7).set_z_index(8)
-        binc_flash = binc.copy().set_stroke(YELLOW, width=4, opacity=1.0).set_z_index(6)
+        # the big circle's own rule is shown dashed and at 60 % while it judges, and the small gold
+        # circle steps back meanwhile: only one gold circle is ever at full strength
+        binc_flash = DashedVMobject(Circle(radius=JR_B / 2).move_to(JC_B), num_dashes=40,
+                                    dashed_ratio=0.55).set_stroke(YELLOW, width=4, opacity=0.6)
+        binc_flash.set_z_index(6)
 
         def start_rain(key, *extra):
             """The row lights up and its dashes give way to live numbers as the first lines fall."""
@@ -1150,12 +1209,13 @@ class Episode(NarratedScene):
             """The rest of a program's rain, timed to its sentence: its lines keep falling until
             the small-circle number is spoken; the tallies (all 100,000 lines behind the ~36
             drawn) settle by the time the big-circle number is spoken, then each number flags
-            on its word and the row's relation sign appears with the second one."""
+            on its word and the row's relation sign arrives 0.2 s after the second one (number,
+            number, verdict)."""
             R, row = prog[key], rows[key]
             n = len(R.shown)
             t0 = beat.elapsed()
             t_big = beat.time_of(*w_big) - 0.45      # settled just before its word
-            t_end = beat.time_of(*w_small) + 0.35
+            t_end = beat.time_of(*w_small) + 0.75
             rt1 = max(0.6, t_big - t0)
             k1 = 3 + (n - 3) * rt1 / max(rt1 + 0.4, t_end - t0)
             R.k_conv = k1
@@ -1166,10 +1226,11 @@ class Episode(NarratedScene):
             row[2].set_value(R.share("small", all_lines=True))
             rt2 = max(0.6, t_end - beat.elapsed())
             a2 = float(np.clip((beat.time_of(*w_small) - 0.1 - beat.elapsed()) / rt2, 0, 0.9))
+            a3 = float(np.clip(a2 + 0.3 / rt2, 0, 0.9))       # the verdict, 0.2 s after the number
             self.play(R.k.animate(rate_func=linear).set_value(n),
                       Indicate(row[1], color=col, scale_factor=1.2, rate_func=window(0, 0.6 / rt2)),
                       Indicate(row[2], color=col, scale_factor=1.2, rate_func=window(a2, a2 + 0.6 / rt2)),
-                      FadeIn(sym, scale=0.6, rate_func=window(a2, a2 + 0.5 / rt2, smooth)),
+                      FadeIn(sym, scale=0.6, rate_func=window(a3, a3 + 0.45 / rt2, smooth)),
                       *extra_end, run_time=rt2)
 
         failed = VGroup(rows["midpoint"], syms["midpoint"], rows["endpoints"], syms["endpoints"])
@@ -1183,11 +1244,14 @@ class Episode(NarratedScene):
             # each judges with its own gold circle: the big circle's chord misses the big gold
             # circle (short, grey); the piece inside the small circle crosses the small gold
             # circle (long, gold)
-            beat.wait_until("each", offset=-0.1)
-            self.play(FadeIn(binc_flash), d_full.animate.set_stroke(opacity=0.25), Create(demo_big),
-                      run_time=0.6)
-            beat.wait_until("own", offset=-0.15)
-            self.play(FadeOut(binc_flash), demo_big.animate.set_stroke(opacity=0.4), FadeOut(d_big_dots),
+            beat.wait_until("Each", offset=-0.1)
+            self.play(FadeIn(binc_flash), sinc.animate.set_stroke(opacity=0.3),
+                      d_full.animate.set_stroke(opacity=0.25), Create(demo_big), run_time=0.6)
+            # "its own gold circle": one 0.5 s cross-fade hands the verdict to the small circle
+            beat.wait_until("own", offset=-0.1)
+            xf = window(0, 0.5 / 0.7, smooth)
+            self.play(FadeOut(binc_flash, rate_func=xf), sinc.animate(rate_func=xf).set_stroke(opacity=1.0),
+                      demo_big.animate.set_stroke(opacity=0.4), FadeOut(d_big_dots),
                       Create(demo_small), run_time=0.7)
             # the criterion is the straws' "? = ?": the same on both circles
             beat.wait_until("same", offset=-0.15)
@@ -1208,16 +1272,17 @@ class Episode(NarratedScene):
             # row's "=" is the one that answers the straws' "? = ?"
             self.play(failed.animate.set_opacity(0.3), prog["radial"].alpha.animate.set_value(0.0),
                       Indicate(straw_eq, color=INK, scale_factor=1.15),
-                      Indicate(syms["radial"], color=GREEN, scale_factor=1.4), run_time=0.8)
+                      Indicate(syms["radial"], color=GREEN, scale_factor=1.4), run_time=0.7)
 
         # the real experiment: "5-inch circle", "128 straws crossed it", and the radius program's
         # predicted flat spread (exactly 10 % per band; their own counts were not published)
-        real0 = label("5-inch circle", size=28, color=INK)
+        real0 = label("5-inch-wide circle", size=28, color=INK)
         real1 = label("128 straws crossed it", size=28, color=INK)
         real = VGroup(real0, real1).arrange(DOWN, buff=0.16, aligned_edge=LEFT)
         real.move_to(P3(0, -0.02)).align_to(P3(SB_LAB_L, 0), LEFT)
         T_X = 4.0
-        th = self.make_hist("radial", T_X, base=-2.5, scale=6.0, width=3.6, share=[0.1] * 10)
+        th = self.make_hist("radial", T_X, base=-2.5, scale=6.0, width=3.6, share=[0.1] * 10,
+                            ends=("center", "rim"))
         t_title = VGroup(label("radius program", size=26, color=GREEN),
                          label("predicted", size=26, color=GRAY, slant=ITALIC)).arrange(RIGHT, buff=0.2)
         t_title[1].align_to(t_title[0], DOWN)
@@ -1226,21 +1291,34 @@ class Episode(NarratedScene):
                            label("radius", size=28, color=GREEN)).arrange(RIGHT, buff=0.18)
         straw_ans.move_to(P3(0, SB_ROWS[0])).align_to(P3(SB_BIG - 0.3, 0), LEFT)
         straw_ans[1].align_to(rows["straws"][0], DOWN)
+        # the real circle's width, marked under it (Jaynes: a 5-in.-diameter circle on the floor)
+        y_dim = JC_B[1] - JR_B - 0.36
+        dim_lbl = label("5 in", size=26, color=GRAY).move_to(P3(JC_B[0], y_dim))
+        gap = dim_lbl.width / 2 + 0.2
+        xl, xr = JC_B[0] - JR_B, JC_B[0] + JR_B
+        dim_mark = VGroup(
+            Line(P3(xl, y_dim), P3(JC_B[0] - gap, y_dim), color=GRAY, stroke_width=2.5),
+            Line(P3(JC_B[0] + gap, y_dim), P3(xr, y_dim), color=GRAY, stroke_width=2.5),
+            Line(P3(xl, y_dim - 0.11), P3(xl, y_dim + 0.11), color=GRAY, stroke_width=2.5),
+            Line(P3(xr, y_dim - 0.11), P3(xr, y_dim + 0.11), color=GRAY, stroke_width=2.5))
+        th_frame = VGroup(th.axis, th.ticks, th.ref, th.ref_lbl)     # axis first, bars on their word
         with self.narrate(LINES["tyler"]) as beat:
             # 1. the test is over: its circle, its column, the failed rows and the heads leave
             self.play(FadeOut(scirc), FadeOut(sinc), FadeOut(shalo), FadeOut(head_s), FadeOut(head_b),
                       FadeOut(sb_title), FadeOut(qmarks[1]), FadeOut(syms["straws"]), FadeOut(failed),
                       FadeOut(rows["radial"][2]), FadeOut(syms["radial"]),
                       small_on.animate.set_value(0.0), run_time=0.6)
-            # 2. one circle again, with its gold rule; the simulated straws come back only as dim
-            #    context (the real experiment is what answers the "?"), and the radius row moves
-            #    up under the straws row
-            self.play(binc.animate.set_stroke(opacity=1.0), straws.alpha.animate.set_value(1.0),
-                      sim_alpha.animate.set_value(0.3), floor_rect.animate.set_stroke(opacity=0.3),
-                      sim_tag.animate.set_opacity(0.3), big_alpha.animate.set_value(1.0),
-                      rows["radial"][:2].animate.shift(UP * (SB_ROWS[1] - SB_ROWS[3])), run_time=0.8)
+            # 2. real tosses now: the simulation's tag leaves (its straws are already gone), one
+            #    plain circle with its gold rule stays on the floor, the radius row moves up under
+            #    the straws row, and the predicted histogram's empty axis waits at 30 % below them
+            for m in th_frame:
+                m.set_opacity(0.3) if m is not th.ref else m.set_stroke(opacity=0.6 * 0.3)
+            self.play(binc.animate.set_stroke(opacity=1.0), FadeOut(sim_tag),
+                      floor_rect.animate.set_stroke(opacity=0.3), big_alpha.animate.set_value(1.0),
+                      rows["radial"][:2].animate.shift(UP * (SB_ROWS[1] - SB_ROWS[3])),
+                      FadeIn(th_frame), run_time=0.8)
             beat.wait_until("five-inch", offset=-0.2)
-            self.play(FadeIn(real0, shift=0.1 * UP), run_time=0.6)
+            self.play(FadeIn(real0, shift=0.1 * UP), Create(dim_mark), FadeIn(dim_lbl), run_time=0.7)
             beat.wait_until("hundred", offset=-0.2)
             self.play(FadeIn(real1, shift=0.1 * UP), run_time=0.6)
             # "matched": the real tosses answer the straws' "?" -- the radius program
@@ -1250,9 +1328,10 @@ class Episode(NarratedScene):
             # grows, 10 % in every band
             beat.wait_until("radius", offset=-0.1)
             self.play(Indicate(rows["radial"][:2], color=GREEN, scale_factor=1.15),
-                      FadeIn(t_title, shift=0.1 * UP), Create(th.axis), FadeIn(th.ticks),
+                      FadeIn(t_title, shift=0.1 * UP), th.axis.animate.set_stroke(opacity=1.0),
+                      th.ticks.animate.set_opacity(1.0), th.ref_lbl.animate.set_opacity(1.0),
                       LaggedStart(*[GrowFromEdge(b, DOWN) for b in th.bars], lag_ratio=0.06),
-                      Create(th.ref, rate_func=late), FadeIn(th.ref_lbl, rate_func=late), run_time=1.0)
+                      th.ref.animate(rate_func=late).set_stroke(opacity=0.6), run_time=1.0)
 
         # ============================================================ the same two words in data
         wt = ValueTracker(0.0)          # 0: every class counts once -> 1: every student counts once
@@ -1331,9 +1410,13 @@ class Episode(NarratedScene):
         sp_c.move_to(P3(0, slot_y)).align_to(sp_s, LEFT)
         sp_s.align_to(sp_c, DOWN)
         NPRE = len("spreadevenlyover:")             # glyphs before the changing word
-        atr_big = text("at random", size=HEADING, slant=ITALIC).move_to(P3(chart_mid, 0.75))
-        atr_big_ul = underline(atr_big, color=GRAY, buff=0.08, stroke_width=3)
-        atr2 = text("at random", size=28, slant=ITALIC).move_to(P3(chart_mid, slot_y))
+        # the stakes beat's promise "average class 40 or 147" returns exactly where and as it was
+        # (0:19-0:23); "at random" returns straight into its slot under the class chart, where it
+        # will be made precise (no trip across the chart)
+        _, _, sk_lab, sk_row = stakes_words()
+        sk_blk = VGroup(sk_lab, sk_row)
+        eq_mid = x00 + (3 * W_EQ + 2 * CB_GAP) / 2          # centre of the equal-width chart
+        atr2 = text("at random", size=30, slant=ITALIC).move_to(P3(eq_mid, slot_y))
         atr2_ul = underline(atr2, color=GRAY, buff=0.07, stroke_width=2.5)
         cap_atr = VGroup(atr2, atr2_ul)
         # the real university, in its own framed block (not on the toy chart's scale)
@@ -1360,27 +1443,28 @@ class Episode(NarratedScene):
             for m in rains_all:
                 m.clear_updaters()
             self.flatten_groups()
-            # the floor gives way straight to the two words: "at random" starts writing while the
-            # floor is still fading out, so no frame is empty
-            # (the circle and the straws, which lie under where the words are written, go first)
-            fast = [bcirc, binc, btri, *rains_all]
-            self.play(*[FadeOut(m, rate_func=window(0, 0.22 if m in fast else 0.5, smooth))
-                        for m in self.visible()],
-                      FadeIn(cite_fg, shift=0.1 * UP, rate_func=window(0.5, 0.95, smooth)),
-                      Write(atr_big, rate_func=window(0.26, 1.0, linear)), run_time=1.2)
-            self.play(Create(atr_big_ul), run_time=0.35)
-            # the chart builds with its bars (no empty baseline); the words step down into the
-            # slot under it, where they will be made precise
-            beat.wait_until("Take", offset=-0.35)
-            self.play(ReplacementTransform(atr_big, atr2), ReplacementTransform(atr_big_ul, atr2_ul),
-                      FadeIn(ytitle), FadeIn(ex_tag), run_time=0.6)
-            for occ, i in ((1, 0), (2, 1)):
-                beat.wait_until("ten", occurrence=occ, offset=-0.15)
-                extra = [Create(cbase)] if i == 0 else []
-                self.play(GrowFromEdge(bars[i], DOWN), FadeIn(sz_lbl[i], shift=0.1 * UP), *extra,
-                          run_time=0.5)
-            beat.wait_until("hundred", offset=-0.15)
-            self.play(GrowFromEdge(bars[2], DOWN), FadeIn(sz_lbl[2], shift=0.1 * UP), run_time=0.7)
+            # "Surveys": the floor and the board fade out while, 0.3 s later, the example chart
+            # draws in the centre (baseline, then its three bars), its title and tag fade in, the
+            # promise "average class 40 or 147" comes back on the right and "at random" is written
+            # in its slot under the chart, so the frame never empties
+            rt0 = 1.5
+            self.play(*[FadeOut(m, rate_func=window(0, 0.3 / rt0, smooth)) for m in self.visible()],
+                      Create(cbase, rate_func=window(0.3 / rt0, 0.75 / rt0, smooth)),
+                      *[GrowFromEdge(b, DOWN, rate_func=window((0.45 + 0.15 * i) / rt0, (1.1 + 0.15 * i) / rt0,
+                                                               smooth)) for i, b in enumerate(bars)],
+                      FadeIn(VGroup(ytitle, ex_tag), rate_func=window(0.4 / rt0, 1.0 / rt0, smooth)),
+                      FadeIn(cite_fg, shift=0.1 * UP, rate_func=window(0.45 / rt0, 1.05 / rt0, smooth)),
+                      FadeIn(sk_blk, shift=0.1 * UP, rate_func=window(0.6 / rt0, 1.0, smooth)),
+                      Write(atr2, rate_func=window(0.6 / rt0, 1.0, linear)), run_time=rt0)
+            # "the same two words": underlined on their word, as at 0:16
+            beat.wait_until("two words", offset=-0.1)
+            self.play(Create(atr2_ul), run_time=0.5)
+            # each class's size arrives on its word, its bar outlined in ink as it is named
+            for i, (w, occ) in enumerate((("ten", 1), ("ten", 2), ("hundred", 1))):
+                beat.wait_until(w, occurrence=occ, offset=-0.15)
+                self.play(FadeIn(sz_lbl[i], shift=0.1 * UP),
+                          bars[i].animate(rate_func=there_and_back).set_stroke(INK, width=3.5),
+                          run_time=0.55)
             # a random class: one dot per class; "at random" flags on its word, then becomes what
             # it means here, "spread evenly over: classes"
             beat.wait_until("class", offset=-0.15)
@@ -1388,6 +1472,7 @@ class Episode(NarratedScene):
             a = max(0.0, beat.time_of("at random") - 0.1 - beat.elapsed()) / rt
             self.play(LaggedStart(*[GrowFromCenter(d) for d in cdots], lag_ratio=0.3),
                       Indicate(cap_atr, color=INK, scale_factor=1.1, rate_func=window(a, a + 0.6 / rt)),
+                      FadeOut(sk_blk, shift=0.12 * UP, rate_func=window(0, 0.35 / rt, smooth)),
                       run_time=rt)
             self.play(LaggedStart(FadeOut(cap_atr, shift=0.15 * UP), FadeIn(sp_c, shift=0.15 * UP),
                                   lag_ratio=0.6), run_time=0.8)
@@ -1521,20 +1606,21 @@ class Episode(NarratedScene):
             self.play(FadeOut(marker), chord0b.animate.set_color(YELLOW),
                       GrowFromCenter(Dot(mid0, radius=0.09, color=INK).set_z_index(5)),
                       Create(inc0), run_time=0.7)
-            # "Name the way, and only one is": the straws pick the green half, the others step back
+            # "Name the way, and the answer is fixed": the gold disk fills; on "fixed" the other two
+            # answers step back
             beat.wait_until("Name", offset=-0.1)
-            self.play(inc0.animate.set_fill(YELLOW, 0.12), FadeIn(straw_tag, shift=0.1 * LEFT),
-                      Indicate(marks[2], color=GREEN, scale_factor=1.25), run_time=0.6)
-            beat.wait_until("only", offset=-0.1)
+            self.play(inc0.animate.set_fill(YELLOW, 0.12), run_time=0.6)
+            beat.wait_until("fixed", offset=-0.1)
             self.play(marks[0].animate.set_opacity(0.3), marks[1].animate.set_opacity(0.3), run_time=0.5)
-            # "Forty and a hundred forty-seven are both right, once you say who's picked": each
-            # number brightens on its word, then both labels come up to the same ink together
-            beat.wait_until("Forty", offset=-0.2)
-            self.play(sb_r1[2].animate.set_opacity(1.0), run_time=0.4)
-            beat.wait_until("hundred", offset=-0.2)
+            # "a half for tossed straws": the green half flags and takes its "straws" tag
+            beat.wait_until("half", offset=-0.1)
+            self.play(Indicate(marks[2], color=GREEN, scale_factor=1.25),
+                      FadeIn(straw_tag, shift=0.1 * LEFT, rate_func=window(0.3, 1.0, smooth)), run_time=0.8)
+            # "a hundred forty-seven for a random student": only that row comes up to full ink;
+            # the random class's 40 stays where it is, dimmed, like the other two chord answers
+            beat.wait_until("hundred", offset=-0.15)
             self.play(sb_r2[2].animate.set_opacity(1.0), run_time=0.5)
-            beat.wait_until("who's", offset=-0.25)
-            self.play(sb_r1[0].animate.set_opacity(1.0), sb_r1[1].animate.set_color(INK).set_opacity(1.0),
-                      sb_r2[0].animate.set_opacity(1.0), sb_r2[1].animate.set_opacity(1.0), run_time=0.6)
+            beat.wait_until("random student", offset=-0.15)
+            self.play(sb_r2[0].animate.set_opacity(1.0), sb_r2[1].animate.set_opacity(1.0), run_time=0.5)
         overlay.clear_updaters()
         self.hold(1.0)
