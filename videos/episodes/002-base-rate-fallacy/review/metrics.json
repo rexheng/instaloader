@@ -8,7 +8,7 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 14.62,
+ "size_mb": 14.66,
  "integrated_lufs": -14.0,
  "lra_lu": 2.6,
  "true_peak_dbtp": -2.1,
@@ -34,17 +34,11 @@
   ]
  ],
  "frames": 6621,
- "longest_static_s": 4.27,
- "static_stretches_over_3s": [
-  [
-   177.07,
-   181.33,
-   4.27
-  ]
- ],
+ "longest_static_s": 2.73,
+ "static_stretches_over_3s": [],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.050868055555554,
+ "background_luma": 22.051267361111112,
  "transcript_words": 522,
  "first_word_s": 0.02,
  "last_word_s": 219.25735,
@@ -56,6 +50,18 @@
  "narration_words": 503,
  "banned_phrase_hits": 0,
  "slop_hits": [],
+ "narration_craft": {
+  "narration_words": 508,
+  "voice_speeds": [],
+  "sentence_wpm_median": 166.3,
+  "sentences_over_200wpm": 2,
+  "sentence_gap_median_s": 0.4,
+  "sentence_gap_cv": 0.06,
+  "beat_gap_median_s": 0.41,
+  "longest_breathless_run_s": 18.4,
+  "max_distinct_numbers_20s": 7,
+  "repeated_phrases": 4
+ },
  "layout_audit": {
   "count": 0,
   "counts": {
@@ -128,8 +134,8 @@
    "file": "keyframes/kf_11_00-54.9.png"
   },
   {
-   "t": 57.1,
-   "file": "keyframes/kf_12_00-57.1.png"
+   "t": 57.17,
+   "file": "keyframes/kf_12_00-57.2.png"
   },
   {
    "t": 71.13,
@@ -160,8 +166,8 @@
    "file": "keyframes/kf_19_01-49.4.png"
   },
   {
-   "t": 111.4,
-   "file": "keyframes/kf_20_01-51.4.png"
+   "t": 111.47,
+   "file": "keyframes/kf_20_01-51.5.png"
   },
   {
    "t": 115.73,
@@ -176,7 +182,7 @@
    "file": "keyframes/kf_23_02-07.8.png"
   },
   {
-   "t": 133.37,
+   "t": 133.4,
    "file": "keyframes/kf_24_02-13.4.png"
   },
   {
@@ -220,7 +226,7 @@
    "file": "keyframes/kf_34_02-56.1.png"
   },
   {
-   "t": 192.2,
+   "t": 192.17,
    "file": "keyframes/kf_35_03-12.2.png"
   },
   {
@@ -245,7 +251,9 @@
   }
  ],
  "flags": [
-  "static frame: 4.3s fully static (limit 4 s, cap at 8 s)"
+  "concision budget: 508 words / 3:40.7 (target ≤ 500 words, ≤ 3:35)",
+  "cadence: full stops 0.40 s (variation 0.06), beat turns 0.41 s — metronomic, turns get no more air than full stops",
+  "breathless run: 18 s of speech with no pause ≥ 0.35 s at 1:37.0 (whisper hears one run-on sentence)"
  ],
  "implied_caps": []
 }

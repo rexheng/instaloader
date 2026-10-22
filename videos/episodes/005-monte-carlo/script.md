@@ -9,7 +9,7 @@ functions, has d in its exponent (N^(−2/d)). (Honest limits: a general functio
 spread sigma; more distinct values per axis alone is not the cure; and a vanishingly small answer still
 defeats plain darts.)
 
-Runtime about 3:52, about 600 words, narrator af_heart @ 0.87 (about 163 wpm over speech time).
+Runtime about 3:57, about 605 words, narrator af_heart @ 0.86 (about 163 wpm over speech time).
 Pauses: about 0.25 s between sentences inside a thought, about 0.85 s at the beat boundaries (after the
 stakes, after "the grid wins", after the fail, after the diagonal, after both laws, after "all six of ours
 did", after Bergstra & Bengio), 0.8 s holds after the 2^100 number, the ½/√N result and the 0.05-point answer,
@@ -33,12 +33,12 @@ the whole answer").
 ## Beats
 
 ### Cold open (0:00–0:12)
-**B0.** A million evaluations to price an option on a hundred stocks: an average over a hundred inputs. An even
-grid feels thorough. How many values does each input get? [pause 1.5]
+**B0.** A million evaluations to price an option on a hundred stocks: an average over a hundred inputs. Spread
+them as a grid; that feels thorough. How many values does each input get? [pause 1.5]
 > First frame: "N = 1,000,000 points", axis 1 and a YELLOW counter "d = 1". The 100 grey axes sweep in left to right
 > while the counter counts them, landing on "d = 100" on "a hundred stocks"; "e.g. an option on 100 stocks" with
 > "Glasserman, 2003 · Monte Carlo Methods in Financial Engineering, Springer" (≈6 s); on "average" the caption becomes
-> "each line: one input, from 0 to 1" while axis 1 flashes; PURPLE grid levels sweep on "even grid";
+> "each line: one input, from 0 to 1" while axis 1 flashes; PURPLE grid levels sweep on "Spread them as a grid";
 > "grid values per input: ?"; 1.5 s hold.
 
 ### Reveal + stakes + open loop (0:12–0:35)
@@ -63,8 +63,8 @@ average is the disc's share: exactly one half.
 ### Fail: the dimension climb at a fixed budget (0:58–1:32)
 **B6.** Now give each a million points, and add inputs. The disc becomes a ball, grown just enough to cover exactly
 half the box.
-> The squares leave; the darts square's frame and disc become the back face of a large cube **centred on an empty
-> frame**; "d = 2" -> "d = 3" lands with the cube's depth edges; only the outline inflates into the exact
+> The squares' contents leave and the true answer settles below first; then the darts square's four edges and disc
+> travel edge to edge onto the back face of a large cube **centred on an empty frame**; "d = 2" -> "d = 3" lands with the cube's depth edges; only the outline inflates into the exact
 > r = 0.985 eighth of a ball, then its fill fades in, while "ball radius 0.80" ticks to 0.98; "true answer ½ in every
 > dimension" under it.
 
@@ -97,8 +97,8 @@ tenth of a point.
 > values" (from the shadow label): "100^(1/2) = 10 values"; on "d-th root of N" it generalises to "N^(1/d)
 > values per axis" (held about 3 s).
 
-**B12.** But shadows alone are not the fix. A million points on the diagonal, each one a flat line here, give
-every axis a million values, and still miss by eight points: their coordinates move in lockstep. [pause 0.6]
+**B12.** But shadows alone are not the fix. A million points on the diagonal give every axis a million values,
+and still miss by eight points: their coordinates move in lockstep. [pause 0.4]
 > The 100 BLUE shadows flash. The grid side leaves; the darts square slides left and dims ("2 dimensions"); a
 > 100-axis panel ("100 dimensions"); "10^6 points on the diagonal". ONE flat PURPLE line is drawn alone with
 > "one point: (t, t, ..., t)" beside it (about 1.5 s), then the other 25 sweep up; every axis flashes PURPLE.
@@ -107,15 +107,16 @@ every axis a million values, and still miss by eight points: their coordinates m
 > slides up the panel and back as a whole while "(t, t, ..., t)" flashes.
 
 **B13.** A dart's coordinates are drawn independently, so it lands inside with a chance equal to the answer, in two
-dimensions or a hundred. Their estimate is a share of heads in N coin flips.
+dimensions or a hundred. Each dart is a coin flip; the estimate is the share of heads.
 > The diagonal clears; the 2-D square returns; the cold-open dart is ringed and its 100-D polyline is drawn alone
 > (no haze); the diagonal's flat line stays at 30 % and flashes against the dart's jagged line on "independently".
 > Under each, a gauge: "x1² + x2² = 1.20 > 0.64 = 0.80²" with a BLUE bar growing past the dashed INK r² tick,
 > "outside -> 0"; "x1² + ... + x100² = 31.8 < 33.3 = 5.77²", bar stopping short of the tick, "inside -> 1". The disc
 > fill pulses on "chance equal to the answer". Everything but the two verdicts steps away (the square's outline
-> stays at 30 %); each verdict and its dart become that dart's coin; the other 99 darts of the 100-D run fan in
-> as faint polylines on the panel; then every dart collapses into its coin, the 2-D 99 from their dots, and the
-> square's outline becomes the coin block's frame: "44/100" and "48/100".
+> stays at 30 %); on "coin flip" each verdict and its dart become that dart's coin; the other 99 darts of the
+> 100-D run fan in as faint (7 %) polylines on the panel; on "share of heads" every dart becomes its coin, the 2-D
+> 99 from their dots, the 100-D 99 fading into their coins as they shrink (no bright blob), and the square's outline
+> becomes the coin block's frame: "44/100" and "48/100".
 
 **B14.** One flip is zero or one. Its average is a half, and every flip misses that by exactly a half.
 > The ringed dart's coin moves onto a 0–1 number line shown 1.8x large below centre, captioned "one yes/no dart"
@@ -129,7 +130,7 @@ spread this wide. Quadruple the darts, and both get twice as narrow.
 
 **B15b (why root N).** Each dart misses by a half, up or down at random, so the misses partly cancel: sixteen darts
 stray about four halves, not sixteen. [pause 0.6] N darts stray about root N halves. Divide by the N darts:
-[pause 0.4] a half over root N. With a hundred darts, that's five points; we measured four point eight. [pause 0.6]
+[pause 0.3] a half over root N. With a hundred darts, that's five points; we measured four point eight. [pause 0.4]
 > The histograms have made their point and leave; the coin line moves to the lower right. Sixteen copies of its
 > RED ½ miss bracket become sixteen RED step arrows, up for a dart inside, down for one outside (darts 62–77 of
 > the 2-D run: 10 in, 6 out), chained into a random walk over a dashed INK zero line; the down steps flash on
@@ -155,11 +156,12 @@ near where our lines crossed.
 > marker rises at the crossing.
 
 **B17.** So, back to our ball, with a million darts, in any dimension: how far off is a typical estimate?
-[pause 1.5] One half over a thousand: five hundredths of a point. [pause 1.2]
+[pause 1.5] One half over a thousand: five hundredths of a point. [pause 1.0]
 > Everything but the formula leaves; the formula moves to (0, 0.6) and grows 1.15x; σ FadeTransforms back to ½
 > (our ball); N -> 1,000,000; "no d" flashes on "any dimension"; the open question returns as a BLUE "= ?" for
 > the prediction hold; √1,000,000 -> 1000 on "a thousand"; the "?" becomes the answer on "five hundredths":
-> "typical miss = 0.0005 = 0.05 points" at the top centre, above the compact chart; then "0.05 points" drops
+> "typical miss = 0.0005 = 0.05 points" at the top centre, above the compact chart, held through the pause
+> (~1.7 s fully formed); then "0.05 points" flies down as one rigid label (same glyphs, scaled and moved)
 > onto the chart as its new dashed BLUE line's label, "typical miss: 0.05 points" (right of the line), and the six
 > BLUE dots, all under the line, flash. (This closes the B2 question.)
 

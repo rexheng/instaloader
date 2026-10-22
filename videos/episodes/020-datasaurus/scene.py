@@ -248,6 +248,19 @@ def lift_path(src, dst, up=1.0, arrive=(0.0, 0.0)):
     return pf
 
 
+def bez_path(src, dst, c1, c2):
+    """path_func for ReplacementTransform(src_copy, dst): a cubic Bezier through the absolute
+    control points c1, c2 (for the mobject's centre). Every glyph is offset by the same amount,
+    so the copy stays legible and can be routed around text it must not cross."""
+    d1 = np.array([c1[0], c1[1], 0.0]) - src.get_center()
+    d2 = np.array([c2[0], c2[1], 0.0]) - dst.get_center()
+
+    def pf(s, e, a):
+        b = 1 - a
+        return b ** 3 * s + 3 * a * b * b * (s + d1) + 3 * a * a * b * (e + d2) + a ** 3 * e
+    return pf
+
+
 def item(sym, val, size=36):
     """One readout entry 'sym = val' (symbol in ink, value in yellow)."""
     m = MathTex(sym, "=", val, font_size=size)
@@ -535,9 +548,11 @@ class Episode(NarratedScene):
         with self.narrate("So how much can five numbers hide? Let's hide a star in them, and "
                           "demand that all five still match the dinosaur's to two "
                           "decimals.", gap=0.2) as beat:
+            # the labels beside the strip are gone before the points spread out over them
             self.go(lambda a: lerp(strip, dino, a), 1.3, smooth,
-                    FadeOut(bar_rect), FadeOut(err_bar), FadeOut(cite_w), FadeOut(pct86),
-                    FadeOut(pct13),
+                    FadeOut(bar_rect), FadeOut(err_bar), FadeOut(cite_w),
+                    FadeOut(pct86, rate_func=window(0.0, 0.25)),
+                    FadeOut(pct13, rate_func=window(0.0, 0.25)),
                     UpdateFromAlphaFunc(ax, lambda m, a: x_ctx.set_opacity(0.25 + 0.75 * a)))
             beat.wait_until("Let's", offset=-0.05)
             self.play(self.dots.animate.set_opacity(0.3), run_time=0.5)
@@ -619,54 +634,66 @@ class Episode(NarratedScene):
             self.remove(ticker, self.cen_r, self.harm_r, self.varm_r)   # cross = the yellow one
             self.play(LaggedStart(*[flag(t) for t in tgts], lag_ratio=0.1), run_time=1.0)
 
+        # the point is labelled with the symbols of the two averages: (x-bar, y-bar). The
+        # symbols are the left-most glyphs of their rows, so their copies leave the table
+        # without crossing any other glyph (a value would have to cross its own "x-bar =")
+        xy_lbl = MathTex("(", r"\bar{x}", ",", r"\bar{y}", ")", font_size=38,
+                         color=YELLOW).set_z_index(7)
+        xy_lbl.next_to(cen_y, UR, buff=0.24)                 # >= 0.2 from the arms and the right cap
+        xy_patch = BackgroundRectangle(xy_lbl, color=BG, fill_opacity=1.0,
+                                       buff=0.06).set_z_index(6)
+        require_clear(xy_lbl, harm_y, varm_y, cen_y, what="(x-bar, y-bar) label")
+        require_safe(xy_lbl, "(x-bar, y-bar) label")
         with self.narrate("The two averages mark a single point: the cloud's balance point.",
                           gap=0.15) as beat:
             self.play(self.dots.animate.set_opacity(0.28), run_time=0.45)
             beat.wait_until("averages", offset=-0.1)
             self.play(flag(VGroup(tgts[0], tgts[1])), run_time=0.8)
             beat.wait_until("single", offset=-0.1)
-            # each average travels intact (on an opaque patch) to the corner beside the dot,
-            # then settles into it; one after the other, so the two never overlap in flight
-            park = cen_y.get_center() + RIGHT * 0.2 + UP * 0.2
-            into = []
-            for t_ in (tgts[0], tgts[1]):
-                c_ = t_.copy()
-                c_.add_background_rectangle(color=BG, opacity=1.0, buff=0.05)
-                self.add(c_)
-                into.append(Succession(
-                    c_.animate(run_time=0.5).scale(0.85).move_to(park, aligned_edge=DL),
-                    FadeOut(c_, target_position=cen_y.get_center(), scale=0.25, run_time=0.3)))
-            self.play(LaggedStart(*into, lag_ratio=0.45), run_time=1.16)
+            # part -> part copies (same structure, so each glyph maps onto itself); the x-bar
+            # copy leaves first and the two paths never meet
+            p_xb = MathTex(r"\bar{x}", font_size=42).move_to(syms[0])[0].set_z_index(7)
+            p_yb = MathTex(r"\bar{y}", font_size=42).move_to(syms[1])[0].set_z_index(7)
+            self.play(FadeIn(xy_patch, rate_func=window(0.0, 0.3)),
+                      LaggedStart(ReplacementTransform(p_xb, xy_lbl[1]),
+                                  ReplacementTransform(p_yb, xy_lbl[3]), lag_ratio=0.35),
+                      FadeIn(VGroup(xy_lbl[0], xy_lbl[2], xy_lbl[4]),
+                             rate_func=window(0.6, 1.0)), run_time=1.1)
             beat.wait_until("balance", offset=-0.1)
             self.play(flag(cen_y), run_time=0.8)
 
-        # each SD value travels intact to the half-arm it measures (on an opaque patch over the
-        # dimmed points), the arm lights up, and the walls grow out of the arm tips on "box"
-        c_sx = tgts[2].copy()
-        c_sy = tgts[3].copy()
-        for c_ in (c_sx, c_sy):
-            c_.add_background_rectangle(color=BG, opacity=1.0, buff=0.05)
+        # each SD symbol travels to the half-arm it measures (s_x under the right half-arm,
+        # s_y beside the upper one, each on an opaque patch over the dimmed points), the arm
+        # lights up, and the walls grow out of the arm tips on "box". The symbols are the
+        # left-most glyphs of their rows, so the copies leave the table without crossing any
+        # glyph, and they travel one after the other (s_x is home before s_y sets off)
+        c_sx = MathTex(r"s_x", font_size=40, color=YELLOW).set_z_index(7)
+        c_sy = MathTex(r"s_y", font_size=40, color=YELLOW).set_z_index(7)
         # under the right half-arm, clear of the vertical arm and of the right cap (>= 0.15)
-        h_sx, w_sy = 0.85 * c_sx.height, 0.85 * c_sy.width
-        c_sx_to = ax.c2p(T[0] + T[2] / 2, T[1]) + RIGHT * 0.32 + DOWN * (0.3 + h_sx / 2)
-        c_sy_to = ax.c2p(T[0], T[1] + T[3] / 2) + RIGHT * (0.2 + w_sy / 2)
-        require_clear(c_sx.copy().scale(0.85).move_to(c_sx_to), harm_y, varm_y, cen_y,
-                      what="16.76 by its arm")
-        require_clear(c_sy.copy().scale(0.85).move_to(c_sy_to), harm_y, varm_y, cen_y,
-                      what="26.93 by its arm")
+        c_sx.move_to(ax.c2p(T[0] + T[2] / 2, T[1]) + DOWN * (0.3 + c_sx.height / 2))
+        c_sy.move_to(ax.c2p(T[0], T[1] + T[3] / 2) + RIGHT * (0.24 + c_sy.width / 2))
+        pt_sx = BackgroundRectangle(c_sx, color=BG, fill_opacity=1.0, buff=0.06).set_z_index(6)
+        pt_sy = BackgroundRectangle(c_sy, color=BG, fill_opacity=1.0, buff=0.06).set_z_index(6)
+        require_clear(c_sx, harm_y, varm_y, cen_y, seg_x, seg_y, what="s_x by its arm")
+        require_clear(c_sy, harm_y, varm_y, cen_y, seg_x, seg_y, what="s_y by its arm")
+        require_clear(c_sx, c_sy, what="s_x vs s_y arm labels")
         with self.narrate("The two standard deviations reach one deviation out on each side, "
                           "and draw a box.", gap=0.2) as beat:
             beat.wait_until("standard", offset=-0.15)
-            self.play(flag(VGroup(tgts[2], tgts[3])), run_time=0.8)
+            self.play(flag(VGroup(tgts[2], tgts[3])),
+                      FadeOut(VGroup(xy_lbl, xy_patch), rate_func=window(0.0, 0.6)),
+                      run_time=0.8)
             beat.wait_until("reach", offset=-0.15)
-            self.add(c_sx, c_sy)
-            # staggered: their straight paths cross, so 16.76 is home before 26.93 gets there
-            self.play(LaggedStart(c_sx.animate.scale(0.85).move_to(c_sx_to),
-                                  c_sy.animate.scale(0.85).move_to(c_sy_to), lag_ratio=0.5),
-                      run_time=1.1)
+            q_sx = MathTex(r"s_x", font_size=42).move_to(syms[2]).set_z_index(7)
+            q_sy = MathTex(r"s_y", font_size=42).move_to(syms[3]).set_z_index(7)
+            self.play(Succession(
+                AnimationGroup(ReplacementTransform(q_sx, c_sx, path_arc=-0.5),   # dips under the arm cap
+                               FadeIn(pt_sx, rate_func=window(0.5, 1.0))),
+                AnimationGroup(ReplacementTransform(q_sy, c_sy), FadeIn(pt_sy, rate_func=window(0.5, 1.0)))),
+                run_time=min(1.2, beat.until("out", offset=-0.25)))
             beat.wait_until("out", offset=-0.2)
             self.play(Create(seg_x), Create(seg_y), run_time=0.6)
-            self.play(FadeOut(c_sx, scale=0.8), FadeOut(c_sy, scale=0.8), run_time=0.4)
+            self.play(FadeOut(VGroup(c_sx, pt_sx, c_sy, pt_sy), scale=0.8), run_time=0.4)
             beat.wait_until("draw", offset=-0.1)
             self.play(*[GrowFromCenter(sd) for sd in sides], run_time=0.7)
             self.remove(*sides)
@@ -1148,21 +1175,19 @@ class Episode(NarratedScene):
                       UpdateFromAlphaFunc(self.dots, to_anscombe),
                       Transform(self.ell, ell_a), Transform(box_y, box_a), Transform(cen_y, cen_a),
                       Transform(tR, tch_a), Transform(tL, tchL_a),
-                      # his readout's symbols arrive in its own two-row layout (r first); the
-                      # values follow on "points"
-                      LaggedStart(*[FadeIn(VGroup(an[i][0], an[i][1]), shift=0.1 * UP)
-                                    for i in (4, 2, 3, 0, 1)], lag_ratio=0.15,
-                                  rate_func=window(0.35, 0.85)),
+                      # his readout arrives whole, entry by entry, in its own two-row layout
+                      # (r first) while his points travel: the right half is empty for well
+                      # under a second, and no "r =" ever waits without its value
+                      LaggedStart(*[FadeIn(an[i], shift=0.1 * UP) for i in (4, 2, 3, 0, 1)],
+                                  lag_ratio=0.15, rate_func=window(0.12, 0.6)),
                       run_time=T_m)
             self.remove(ax)
             self.remove(self.dots)
             self.add(dots_a)
             beat.wait_until("points", offset=-0.1)
-            # his eleven points flagged while his values arrive in the readout (mid-right)
+            # his eleven points flagged on "points"
             self.play(LaggedStart(*[Indicate(d, color=BLUE, scale_factor=1.6) for d in dots_a],
-                                  lag_ratio=0.06),
-                      LaggedStart(*[FadeIn(an[i][2], shift=0.15 * UP) for i in (4, 2, 3, 0, 1)],
-                                  lag_ratio=0.15), run_time=1.0)
+                                  lag_ratio=0.06), run_time=1.0)
 
         with self.narrate("His correlation is point eight two, so the ellipse touches the right "
                           "wall high up.") as beat:
@@ -1219,11 +1244,15 @@ class Episode(NarratedScene):
                           "it's one half.") as beat:
             beat.wait_until("slope", offset=-0.15)
             self.play(Write(f_lhs), run_time=0.55)
-            # TransformFromCopy runs the arc backwards: positive bulges this rightward flight up
-            # and over "slope =", negative takes the denominator's flight under it
+            # the numerator climbs straight up from the rise, then crosses high above
+            # "slope =" and drops into place (never through the formula); the denominator's
+            # flight dips under it
             beat.wait_until("rise", offset=-0.2)
-            self.play(TransformFromCopy(lbl_rise, numC, path_arc=1.3), Create(barC),
-                      run_time=0.75)
+            c_rise = lbl_rise.copy()
+            hi_y = f_lhs.get_top()[1] + 0.75
+            self.play(ReplacementTransform(c_rise, numC, path_func=bez_path(
+                          c_rise, numC, (c_rise.get_x(), hi_y + 0.1), (numC.get_x() - 0.8, hi_y + 0.25))),
+                      Create(barC, rate_func=window(0.4, 1.0)), run_time=0.8)
             beat.wait_until("run", offset=-0.2)
             self.play(TransformFromCopy(lbl_run, denC, path_arc=-0.7), run_time=0.75)
             beat.wait_until("Plug", offset=-0.5)
@@ -1396,7 +1425,9 @@ class Episode(NarratedScene):
         v_ap = MathTex(r"\approx", font_size=FSL)
         v_val = MathTex(f"{TR[4] * TR[3] / TR[2]:.2f}", font_size=FSL, color=YELLOW)
         assert f"{TR[4] * TR[3] / TR[2]:.2f}" == f"{slope_d:.2f}" == "-0.10"
-        l_lhs.move_to([0.3, 3.0, 0], aligned_edge=LEFT)
+        # under the readout (the open band below the r row), not squeezed into the strip above
+        # x-bar: the r value is the closest row, and every value flies down into it
+        l_lhs.move_to([0.5, -1.85, 0], aligned_edge=LEFT)
         fl_left, fl_y = l_lhs.get_right()[0] + 0.22, l_lhs[1].get_center()[1]
         l_bar = frac(l_num, l_den, left=fl_left, y=fl_y)
         v_bar = frac(v_num, v_den, left=fl_left, y=fl_y)
@@ -1406,14 +1437,20 @@ class Episode(NarratedScene):
         v_val.next_to(v_ap, RIGHT, buff=0.22).match_y(l_lhs[1])
         f_land = VGroup(l_lhs, l_num, l_bar, l_den)
         land_eq = VGroup(l_lhs, v_num, v_bar, v_den, v_ap, v_val)
-        require_safe(land_eq, "landing slope")
+        require_safe(land_eq, "landing slope", right=6.35)
         require_clear(land_eq, table_cold, ax, what="landing slope vs readout and plot")
+        require_clear(land_eq, table_cold, gap=0.25, what="landing slope vs readout (breathing room)")
+        require_clear(VGroup(f_land, v_ap, v_val), self.dots, guess_line2, line_lbl2, ell_l, line_l,
+                      what="landing slope vs the cloud and its lines")
+        assert table_cold.get_bottom()[1] - land_eq.get_top()[1] >= 0.25
 
-        # one continuous object: the quartet leaves, then the opening returns around the ellipse
-        self.play(FadeOut(Group(*quartet), rate_func=window(0.0, 0.42)),
+        # one continuous object: the quartet leaves, then the opening returns around the ellipse.
+        # The formula sets off only once the quartet has gone and has cleared the readout's slot
+        # before the opening fades in, so it never crosses the panels or the readout
+        self.play(FadeOut(Group(*quartet), rate_func=window(0.0, 0.32)),
                   ReplacementTransform(self.ell, ell_l, rate_func=window(0.0, 0.7)),
-                  Transform(f1, f_land, rate_func=window(0.0, 0.8)),
-                  FadeIn(opening, rate_func=window(0.44, 0.92)), run_time=1.15)
+                  Transform(f1, f_land, rate_func=window(0.3, 0.72)),
+                  FadeIn(opening, rate_func=window(0.55, 0.95)), run_time=1.35)
         with self.narrate("Your line was exactly right: five numbers fix its slope, minus point "
                           "one. Your cloud was wrong: a blur around this ellipse, all that five "
                           "numbers can draw. [pause 0.6] Most of those papers used a bar graph, "
@@ -1422,15 +1459,20 @@ class Episode(NarratedScene):
             beat.wait_until("exactly", offset=-0.15)
             self.play(Indicate(VGroup(guess_line2, line_lbl2), color=INK, scale_factor=1.0),
                       run_time=0.7)
-            # the symbols give way to the dinosaur's own values, flown from the readout
-            # each value leaves its row sideways, climbs a lane right of the readout and slides
-            # into its slot (never through the other rows)
+            # the symbols give way to the dinosaur's own values, flown down from the readout:
+            # r (the bottom row) drops straight out of its row and slides left into its slot;
+            # s_y and s_x leave sideways and descend a lane right of the readout, so neither
+            # crosses another row, then slide in from the right
             beat.wait_until("five numbers", offset=-0.5)
             flights = []
             for i_, dst_ in ((4, v_n1), (3, v_n2), (2, v_den)):
                 src_ = table_cold[i_][2]
-                flights.append(ReplacementTransform(src_.copy(), dst_,
-                                                    path_func=lane_path(6.75, src_, dst_, 0.8)))
+                pf_ = (lift_path(src_, dst_, -0.6) if i_ == 4 else
+                       lane_path(6.0, src_, dst_, 0.0))
+                # a whole-MathTex copy (same structure as its target), so each glyph maps onto
+                # itself and the number stays legible in flight
+                cp_ = MathTex(f"{TR[i_]:.2f}", font_size=42, color=YELLOW).move_to(src_)
+                flights.append(ReplacementTransform(cp_, dst_, path_func=pf_))
             # each symbol gives way only as its value arrives (numerator values land at about
             # 0.62 and 0.81 of the move, the denominator's at 1.0), so the formula never reads
             # as an empty template

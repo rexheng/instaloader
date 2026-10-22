@@ -131,3 +131,9 @@ both lines transcribe word for word ("…out of eight. Three eighths is more tha
 stayed." and "…Then the next one, at three eighths. Tips."). "tips" was still rewritten so it
 never starts a clip after a pause (the new line transcribes as "…also at 3 eighths, tips in round
 three.").
+
+**Round 5, continued (Oct 22).** No narration, number or citation changed in this pass (motion
+only: the chart axes, the ladder entrance and the landing). The Aaronson, Hartley & Mazumder
+abstract was re-read on aeaweb.org (doi 10.1257/pol.20190414): "The maps led to reduced home
+ownership rates, house values, and rents and increased racial segregation in later decades", as
+claim 20 says.

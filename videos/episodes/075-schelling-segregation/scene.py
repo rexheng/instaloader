@@ -99,6 +99,7 @@ class Episode(NarratedScene):
     EPISODE = 75
     TITLE = "Mild Preferences, Segregated Towns"
     SPEED = 0.84
+    CADENCE = "shaped"                   # gaps follow the sense (PRODUCTION_GUIDE §13.3)
 
     # ------------------------------------------------------------------ data
     def prep(self):
@@ -490,10 +491,11 @@ class Episode(NarratedScene):
             self.play(Write(self.ink_lab), run_time=0.6)
             beat.wait_until("three", offset=-0.15)
             self.pulse(self.ink_lab, 1.12)
-            beat.wait_until("How", offset=-0.1)
-            self.play(FadeIn(self.mline), FadeIn(self.pur_lab, shift=0.15 * UP), run_time=0.8)
-            beat.wait_until("demand", offset=-0.15)
-            self.pulse(self.pur_lab, 1.15)
+            # the unknown demand arrives on "these households demand" (deictic sync)
+            beat.on("these", FadeIn(self.mline), FadeIn(self.pur_lab, shift=0.15 * UP),
+                    lead=0.15, run_time=0.8)
+            beat.wait_until("demand", offset=-0.05)
+            self.pulse(self.pur_lab, 1.15, run_time=0.8)
 
         # 2 - reveal: a third, and what the rule looks like -------------------------------
         third_sym = MathTex(r"\tfrac{1}{3}", font_size=56, color=PURPLE)
@@ -529,8 +531,8 @@ class Episode(NarratedScene):
         empty_lab = text("empty: not counted", size=24, color=GRAY)
         empty_lab.next_to(rule_lab, DOWN, buff=0.32).align_to(rule_lab, LEFT)
         with self.narrate("Just a third. [pause 0.25] Each household counts the occupied squares "
-                          "around it. If fewer than a third of them match, it moves. It is "
-                          "happy to be outnumbered two to one.", speed=0.81) as beat:
+                          "around it. If fewer than a third match, it moves, so it is happy to be "
+                          "outnumbered two to one.", speed=0.82) as beat:
             self.play(self.dem.animate.set_value(1 / 3),
                       self.swap(self.dem_sym, third_sym),
                       Create(ex_box),
@@ -548,9 +550,9 @@ class Episode(NarratedScene):
         # 3 - stakes ---------------------------------------------------------------------
         rule_all = VGroup(rule_slots, rule_tiles, rule_x, rule_frame, centre_ring, gold_rings,
                           rule_lab, empty_lab)
-        with self.narrate("We read maps of real cities the same way, guessing motives from "
-                          "patterns. So how does a demand of a third build a town of three "
-                          "quarters?", speed=0.82, gap=0.75) as beat:
+        with self.narrate("We read real city maps the same way, guessing motives from "
+                          "patterns. So how can a demand of one third build a town of three "
+                          "quarters?", speed=0.82, gap=0.6) as beat:
             self.play(FadeOut(rule_all), FadeOut(ex_box), run_time=0.7)
             beat.wait_until("motives", offset=-0.25)
             self.pulse(self.pur_lab, 1.12, run_time=0.6)
@@ -562,8 +564,8 @@ class Episode(NarratedScene):
             self.pulse(self.ink_lab, 1.12)
 
         # 4 - naive build: rewind to a random mix -------------------------------------------
-        with self.narrate("Rewind to the start, a random mix. Here, on average, half "
-                          "of a household's neighbors match, well above a third.", gap=0.12) as beat:
+        with self.narrate("Rewind to the start, a random mix. Here, on average, half the "
+                          "neighbors match, well above a third.", gap=0.12) as beat:
             starts = {h: self.tiles[h].get_center() for h in self.tiles}
             ends = {h: cell(*self.start_pos[h]) for h in self.tiles}
             order = sorted(self.tiles)
@@ -576,15 +578,15 @@ class Episode(NarratedScene):
                       self.match.animate.set_value(self.share0),
                       run_time=beat.until("Here", min_time=2.2), rate_func=linear)
             self.pos = dict(self.start_pos)
-            beat.wait_until("half", offset=-0.15)
+            # "Here, on average, half": the 50 % readout pulses as "Here" lands
+            beat.wait_until("Here", offset=-0.1)
             self.pulse(self.ink_lab, 1.12)
             # dock the meter now, so the counter can arrive on "these" (never crossing labels)
             self.play(self.ty.animate.set_value(TY1), run_time=0.9, rate_func=SMOOTH)
             beat.wait_until("above", offset=-0.1)
             self.pulse(self.pur_lab, 1.15)
 
-        with self.narrate("Still, these two hundred and thirty-eight are unhappy, about one "
-                          "in six.") as beat:
+        with self.narrate("Still, these two hundred thirty-eight are unhappy.") as beat:
             self.play(FadeIn(self.counter, shift=0.1 * UP),
                       run_time=beat.until("these", offset=-0.1, min_time=0.4))
             unh_tiles = [self.tiles[h] for h in sorted(self.unh0)]
@@ -593,8 +595,8 @@ class Episode(NarratedScene):
                 self.unh.animate.set_value(len(self.unh0)),
                 run_time=1.6, rate_func=linear)
             self.cur_unhappy = frozenset(self.unh0)
-            beat.wait_until("one in six", offset=-0.2)
-            self.pulse(self.counter, 1.1)
+            beat.wait_until("unhappy", offset=-0.1)
+            self.pulse(self.counter, 1.1, run_time=0.8)
 
         # the plan, previewed on its first mover
         m0 = self.rounds[0][PREVIEW_MOVE]          # a real round-1 move, long enough to read
@@ -603,9 +605,9 @@ class Episode(NarratedScene):
                                  num_dashes=24, color=INK).set_stroke(width=4)
         dest_box = Square(TILE + 0.14, stroke_color=INK, stroke_width=4).move_to(b0)
         src_box = Square(TILE + 0.14, stroke_color=INK, stroke_width=4).move_to(a0)
-        with self.narrate("The obvious plan is to move each of them to a random empty square "
+        with self.narrate("The obvious plan is to move each one to a random empty square "
                           "where it would be content. [pause 0.2] Then everyone is content, and "
-                          "the town stays mixed.", speed=0.81) as beat:
+                          "the town stays mixed.", speed=0.82) as beat:
             beat.wait_until("each", offset=-0.2)
             self.play(Create(src_box), run_time=0.6)
             beat.wait_until("random", offset=-0.2)
@@ -638,8 +640,9 @@ class Episode(NarratedScene):
         assert all(h not in movers1 for h in self.cur_unhappy if h not in self.unh0)
         note67 = self.note(f"{n_content0} content at the start")
         with self.narrate("If the plan had worked, this counter would read zero. It reads "
-                          "seventy-four, and sixty-seven of these were content before round one. "
-                          "[pause 0.15] They never moved. Their neighbors did.", gap=0.75) as beat:
+                          "seventy-four. [pause 0.9] Sixty-seven of these were content before "
+                          "round one. [pause 0.15] They never moved. Their neighbors did.",
+                          gap=0.6) as beat:
             beat.wait_until("this", offset=-0.3)
             self.pulse(self.counter, 1.15, run_time=0.8)
             beat.wait_until("zero", offset=-0.25)
@@ -808,9 +811,9 @@ class Episode(NarratedScene):
         subj = Square(MAG_T - 0.12, stroke_color=INK, stroke_width=4).move_to(mag_cell(*B_))
         subj.set_z_index(4)
 
-        with self.narrate("Replay one corner. [pause 0.3] Before round one, this gold household "
-                          "had three gold neighbors out of eight. Three eighths is more than a "
-                          "third, so it stayed.") as beat:
+        with self.narrate("Replay one corner. [pause 0.3] At the start, this gold household "
+                          "had three gold neighbors out of eight. Three eighths beats a third, so "
+                          "it stayed.", speed=0.82) as beat:
             # the board parks at the left edge at 0.7 (context dimmed), making room for the inset
             park, park_done = self.relayout(RC, RS, opacity={h: 0.3 for h in ctx_ids})
             fw = (N * P + 0.07) * RS
@@ -835,7 +838,7 @@ class Episode(NarratedScene):
             self.fly_into([(golds, F["num"])], run_time=1.0)
             beat.wait_until("eight", offset=-0.3)
             self.fly_into([(alln, F["den"])], extra=[Create(F["bar"])], run_time=1.0)
-            beat.wait_until("more", offset=-0.2)
+            beat.wait_until("beats", offset=-0.2)
             self.play(Write(F["rel"]), run_time=0.5)
             self.play(TransformFromCopy(self.dem_sym, f_third, path_arc=0.6 * PI), run_time=1.1)
 
@@ -860,7 +863,7 @@ class Episode(NarratedScene):
             self.pulse(ringB, 1.06, run_time=0.8)
 
         with self.narrate("Two gold out of seven. Two sevenths is less than a third, so now "
-                          "it wants out.", speed=0.8) as beat:
+                          "it wants out.", speed=0.82) as beat:
             self.play(self.swap(F["num"], fpiece("2", YELLOW)), run_time=0.6)
             beat.wait_until("seven", offset=-0.25)
             self.play(self.swap(F["den"], fpiece("7")), run_time=0.6)
@@ -873,12 +876,11 @@ class Episode(NarratedScene):
         g1, g2 = self.states[1][0], self.states[2][0]
         arrivals2 = [(r, c) for r in range(r0, r1 + 1) for c in range(c0, c1 + 1)
                      if g1[r, c] == 0 and g2[r, c] > 0]
-        # (round 5: "tips" no longer stands alone after a pause, where whisper heard "It ips";
-        # "also" and "in round three" keep D's 3/8 >= 1/3 on screen >= 1.5 s without a pause)
+        # (round 5 cont.: the third step, "Then the next one, also at three eighths, tips in round
+        # three", was cut for the concision budget; two links already make the chain, A -> B -> C)
         with self.narrate("Its neighbor here also has three eighths. In round two, our household "
-                          "leaves, and this one drops to two sevenths. [pause 1.1] Then the next "
-                          "one, also at three eighths, tips in round three.", speed=0.83,
-                          gap=1.4) as beat:
+                          "leaves, and this one drops to two sevenths. [pause 0.9]", speed=0.83,
+                          gap=0.6) as beat:
             ringC = ring3(C_)
             beat.wait_until("neighbor", offset=-0.25)
             # the focus moves to C, and C's own formula replaces B's (slide = new household)
@@ -907,31 +909,12 @@ class Episode(NarratedScene):
             beat.wait_until("drops", offset=-0.45)
             self.play(*resolve_to("2", "7", "<"), ringC.animate.set_stroke(RED), mag_ring(C_),
                       ring_on(hC), run_time=0.7)
-            # C's 2/7 < 1/3 holds through "two sevenths" and most of the pause (>= 1.5 s)
-            ringD = ring3(D_)
-            beat.wait_until("Then", offset=-0.7)
-            self.play(ReplacementTransform(ringC, ringD), subj.animate.move_to(mag_cell(*D_)),
-                      *focus(D_, extra=[C_]), next_household("3", "8", r"\geq", 0.9),
-                      run_time=0.9)
-            # D's 3/8 >= 1/3 holds through "also at three eighths" (~1.9 s); on "tips" C leaves and
-            # D's fraction changes in the same move (cause and effect together, never a stale
-            # fraction), so D's 2/7 < 1/3 then holds through "in round three" into the next beat
-            beat.wait_until("tips", offset=-0.35)
-            c_in = mtiles.pop(C_)
-            self.play(c_in.animate.shift(UP * 1.0).set_opacity(0),
-                      *[board_fly(h, b, 0.3, False) for h, a, b in mv3],
-                      *recap("after round 3"), *resolve_to("2", "7", "<"),
-                      ringD.animate.set_stroke(RED), mag_ring(D_), ring_on(hD), run_time=0.9)
-            for h, a, b in mv3:
-                self.pos[h] = b
-                self.early[h] = 2
-                self.tiles[h].set_z_index(0)
-            self.remove(c_in)
+            # C's 2/7 < 1/3 then holds through the pause and into the next beat (>= 1.5 s)
 
         # 7 - the cascade completes ------------------------------------------------------
         with self.narrate("Now run the whole town. [pause 1.8] After round seven, nobody wants "
-                          "to move.", gap=0.5) as beat:
-            mag_all = VGroup(mframe, mempty, *mtiles.values(), ringD, subj, caps[-1], F["num"],
+                          "to move.", gap=0.25) as beat:
+            mag_all = VGroup(mframe, mempty, *mtiles.values(), ringC, subj, caps[-1], F["num"],
                              F["bar"], F["den"], F["rel"], f_third)
             self.round_no.set_value(1)
             # the corner's replay folds away first, so the growing board never runs under it
@@ -1007,15 +990,21 @@ class Episode(NarratedScene):
         bot_lab.next_to(BOT + LEFT * TS / 2, LEFT, buff=0.3)
 
         # the HUD leaves and the finished town shrinks into its slot (the meter is gone before
-        # the town reaches it); the axes are fully drawn before "point" ... "this chart"
+        # the town reaches it). The axes start drawing halfway through the shrink: the x-axis
+        # (y = -1.62) and the y-axis (x = -5.3) are drawn first, while the town is already
+        # above y = -0.74 and right of x = -0.92; the titles come last, after it has landed.
+        # So the frame never holds a lone thumbnail, and the chart is complete before "That
+        # whole town ... this chart"
         self.play(FadeOut(self.meter, run_time=0.4), FadeOut(self.counter, run_time=0.4),
                   FadeOut(self.plan, run_time=0.4), FadeOut(self.round_lab, run_time=0.4),
                   FadeOut(self.moves_lab, run_time=0.4), FadeOut(sim_tag, run_time=0.4),
-                  self.town.animate(run_time=0.9, rate_func=SMOOTH).scale(s_thumb).move_to(TOP))
+                  self.town.animate(run_time=0.9, rate_func=SMOOTH).scale(s_thumb).move_to(TOP),
+                  Succession(Wait(run_time=0.45), Create(ax, run_time=1.0)))
         with self.narrate("That whole town is one point on this chart.", gap=1.2) as beat:
-            self.play(Create(ax), run_time=1.0)
             # (the town's copy flies left past where "1/3 -> 76%" will sit: the label arrives
-            # only after the copy has landed, so nothing ever flies through it)
+            # only after the copy has landed, so nothing ever flies through it). It leaves on
+            # "whole" (the chart is already drawn) and lands on "point"
+            beat.wait_until("whole", offset=-0.1)
             self.play(TransformFromCopy(self.town, ours),
                       run_time=beat.until("point", offset=0.15, min_time=0.6))
             # thirty simulated towns per demand: the note says it, the dots show it (no words)
@@ -1067,8 +1056,8 @@ class Episode(NarratedScene):
             return anims
 
         with self.narrate("Demand a quarter, and the same starting town barely sorts: "
-                          "fifty-eight percent. Demand a third, and it jumps to seventy-six.",
-                          gap=0.15) as beat:
+                          "fifty-eight percent. Demand a third, and it jumps to seventy-six. "
+                          "[pause 0.9]", gap=0.15) as beat:
             self.play(FadeIn(qtown, shift=0.2 * LEFT), FadeIn(bot_lab[0], shift=0.2 * LEFT),
                       run_time=beat.until("quarter", offset=-0.1, min_time=0.4))
             self.play(TransformFromCopy(bot_lab[0], q_mark, path_arc=-0.9), *col_state({k_q}),
@@ -1211,15 +1200,42 @@ class Episode(NarratedScene):
             # the dot chart leaves completely, and its x-axis line becomes the ladder's baseline
             beat.wait_until("sort", offset=-0.2)
             self.add(x_line)
-            # first the dot chart goes (nothing moves through it), then the axis line moves
-            # while both ladder titles arrive (never a lone line on an empty frame), and the
-            # bars are up within ~1.3 s of the line landing
-            self.play(*[m.animate.set_opacity(0) for m in chart_ctx],
-                      ax.x_title.animate.set_opacity(0), *[FadeOut(m) for m in thumbs],
-                      FadeOut(q_mark), FadeOut(t_mark), run_time=0.45)
-            self.play(Transform(x_line, lbase), FadeIn(xt_share), FadeIn(bars_note), run_time=0.6)
-            self.play(LaggedStart(*[GrowFromEdge(b, DOWN) for b in bar_grp], lag_ratio=0.05),
-                      run_time=min(1.3, beat.until("eight", offset=-0.2, min_time=1.0)))
+            # one move (round 5 cont.; the frame never holds a lone line). In seconds:
+            #   0.00-0.35  the dot chart and thumbnails fade out completely
+            #   0.15-0.75  its x-axis line rises into the ladder's baseline; it reaches the
+            #              "random mix" / 1/4 / 1/3 row (y = -1.25) at ~0.45 s and the dot rows
+            #              only at the end, both long gone (nothing moves through anything)
+            #   0.40-1.00  both ladder titles fade in (the old x title is gone by 0.35 s)
+            #   0.50-1.34  the bars sprout from the line, left to right, standing on it
+            T_ALL, L0, L1 = 1.5, 0.15, 0.6              # total; line start; line duration
+            B0, BLAG, BDUR = 0.5, 0.03, 0.45            # first bar; lag per bar; bar duration
+            assert B0 + BLAG * (len(rungs) - 1) + BDUR <= T_ALL
+            xs0, xe0 = x_line.get_start().copy(), x_line.get_end().copy()
+            xs1, xe1 = lbase.get_start().copy(), lbase.get_end().copy()
+            hfull = {f: bars[f].height for f in rungs}
+            for f in rungs:
+                bars[f].stretch_to_fit_height(1e-3).move_to([lx(f), xs0[1], 0])
+
+            def rise(m, a):
+                u = smooth(float(np.clip((a * T_ALL - L0) / L1, 0.0, 1.0)))
+                m.put_start_and_end_on(xs0 + (xs1 - xs0) * u, xe0 + (xe1 - xe0) * u)
+
+            def sprout(_m, a):
+                y = x_line.get_start()[1]           # bars stand on the line wherever it is
+                for i, f in enumerate(rungs):
+                    v = smooth(float(np.clip((a * T_ALL - B0 - BLAG * i) / BDUR, 0.0, 1.0)))
+                    h = max(hfull[f] * v, 1e-3)
+                    bars[f].stretch_to_fit_height(h).move_to([lx(f), y + h / 2, 0])
+            self.play(*[m.animate(run_time=0.35).set_opacity(0) for m in chart_ctx],
+                      ax.x_title.animate(run_time=0.35).set_opacity(0),
+                      *[FadeOut(m, run_time=0.35) for m in thumbs],
+                      FadeOut(q_mark, run_time=0.35), FadeOut(t_mark, run_time=0.35),
+                      UpdateFromAlphaFunc(x_line, rise, run_time=T_ALL, rate_func=linear),
+                      UpdateFromAlphaFunc(bar_grp, sprout, run_time=T_ALL, rate_func=linear),
+                      Succession(Wait(run_time=0.4), FadeIn(xt_share, run_time=0.6)),
+                      Succession(Wait(run_time=0.4), FadeIn(bars_note, run_time=0.6)))
+            for f in rungs:
+                assert abs(bars[f].height - hfull[f]) < 1e-6 and abs(bars[f].get_bottom()[1] - BL) < 1e-6
             beat.wait_until("these", offset=-0.2)
             # point at every value that occurs, left to right
             self.play(LaggedStart(*[b.animate(rate_func=there_and_back).stretch(
@@ -1265,9 +1281,10 @@ class Episode(NarratedScene):
         assert why.get_right()[0] <= 6.35 and why.get_left()[0] >= why_x0 - 0.05, why.get_left()
         assert why.get_bottom()[1] > BL + 0.15
 
-        with self.narrate("At a third, everyone left of it is unhappy, two hundred and "
-                          "thirty-eight, including the neighbor that started our corner's chain, "
-                          "at two sevenths.") as beat:
+        # (round 5 cont.: the spoken "two hundred and thirty-eight" was cut: "unhappy 238" is on
+        # screen, and the number had already been spoken at 0:41)
+        with self.narrate("At a third, everyone left of it is unhappy, including the neighbor "
+                          "that started our corner's chain, at two sevenths.") as beat:
             beat.wait_until("third", offset=-0.25)
             self.play(FadeIn(caret, shift=0.12 * UP), Create(out13), FadeIn(dlab, shift=0.1 * UP),
                       run_time=0.7)
@@ -1287,14 +1304,14 @@ class Episode(NarratedScene):
             self.flash_box(VGroup(b27, c27), w_frac, color=INK, buff=0.06, run_time=1.0)
 
         with self.narrate("Every household at three eighths is one lost match away from it.",
-                          gap=0.3) as beat:
+                          gap=0.6) as beat:
             beat.wait_until("three", offset=-0.2)
             self.play(FadeIn(l38, shift=0.1 * UP), FadeIn(c38, shift=0.1 * DOWN), run_time=0.6)
             beat.wait_until("lost", offset=-0.3)
             self.play(Create(drop), FadeIn(drop_lab, shift=0.05 * DOWN),
                       run_time=beat.until("it", offset=0.1, min_time=0.9))
 
-        with self.narrate("At a quarter, how many would start unhappy? [pause 1.2]",
+        with self.narrate("At a quarter, how many would start unhappy? [pause 1.5]",
                           gap=0.25) as beat:
             beat.wait_until("quarter", offset=-0.25)
             self.play(FadeIn(q_caret, shift=0.12 * UP), Create(q_out), FadeIn(q_lab, shift=0.1 * UP),
@@ -1303,8 +1320,8 @@ class Episode(NarratedScene):
             self.pulse(unh_lab, 1.1, run_time=0.8)
 
         out14 = outline_on(F14)
-        with self.narrate("Only these two bars change sides, and they're tall: now just "
-                          "ninety-five start unhappy, and that chain never starts.") as beat:
+        with self.narrate("Only these two bars change sides, and they're tall: just "
+                          "ninety-five start unhappy, and that chain never starts. [pause 0.9]") as beat:
             # the threshold's outline and label lift off; the caret carries the demand to 1/4;
             # the 3/8 -> 2/7 arrow goes with it (at 1/4 the 2/7 bar is content)
             self.play(FadeOut(dlab), FadeOut(out13), run_time=0.3)
@@ -1385,8 +1402,8 @@ class Episode(NarratedScene):
         ladder_lab = VGroup(bars_note, caret, out14, q_lab, l27, l38, c14, c27, c38, unh_lab, why,
                             end0, end60)
         with self.narrate("In his 1971 paper, Thomas Schelling ran this model. His households "
-                          "moved to the nearest square that suited them, on emptier boards, and "
-                          "there the jump came later, between about a third and a half.") as beat:
+                          "moved to the nearest suitable square, on emptier boards, and there the "
+                          "jump came later, between about a third and a half.") as beat:
             # the 2:19 morph in reverse: bars sink into the baseline, the baseline becomes the
             # x-axis again, and only then does the dot chart come back (never both at once)
             # (the ladder's x title leaves with the bars, before the chart's title returns: the
@@ -1543,10 +1560,13 @@ class Episode(NarratedScene):
             self.play(*[m.animate(rate_func=there_and_back).scale(1.08) for m in (chipA, chipB)],
                       run_time=0.8)
 
+        # (round 5 cont.: "It traces this to reduced credit in the areas marked in red" is folded
+        # into the study's sentence as "through reduced credit", the abstract's own words; the
+        # second "at all" is cut)
         with self.narrate("This one. [pause 0.2] The other was placed by a rule, with no "
-                          "preferences at all. In real cities, one study finds that 1930s federal "
-                          "lending maps increased racial segregation for decades. It traces this to "
-                          "reduced credit in the areas marked in red.", speed=0.85, gap=0.6) as beat:
+                          "preferences. In real cities, one study finds that 1930s federal lending "
+                          "maps increased racial segregation for decades, through reduced credit.",
+                          speed=0.84, gap=0.6) as beat:
             box_o = SurroundingRectangle(self.town, color=INK, buff=0.02, stroke_width=3)
             self.play(Create(box_o), via_gap(chipA, o_dem, 1.0), FadeOut(qmark), run_time=1.0)
             self.remove(chipA)
@@ -1571,7 +1591,7 @@ class Episode(NarratedScene):
             beat.wait_until("segregation", offset=-0.25)
             self.play(*[m.animate(rate_func=there_and_back).scale(1.1) for m in (zmatch, omatch)],
                       run_time=0.9)
-            beat.wait_until("traces", offset=-0.2)
+            beat.wait_until("credit", offset=-0.2)
             cite_ul = underline(cite2, color=GRAY, buff=0.05, stroke_width=3)
             assert cite_ul.get_bottom()[1] >= -3.2
             self.play(Create(cite_ul), run_time=0.8)
@@ -1589,12 +1609,15 @@ class Episode(NarratedScene):
         self.town.generate_target()
         self.town.target.scale(1 / ZS).move_to([GX, GY, 0])
         self.town.target[1].set_fill(opacity=1.0)
+        # (round 5 cont.: our town returns to full strength as the rest fades, so the one town
+        # left on screen is the focus of "Look again at the first town", not a dim leftover)
         self.play(FadeOut(ztown), FadeOut(zmatch), FadeOut(omatch), FadeOut(z_dem_full[0]),
                   FadeOut(z_rule), FadeOut(tt_tag),
-                  FadeOut(cite2), FadeOut(cite_ul), FadeOut(o_dem), run_time=0.45)
+                  FadeOut(cite2), FadeOut(cite_ul), FadeOut(o_dem),
+                  self.board.animate.set_fill(opacity=1.0), run_time=0.45)
         with self.narrate("Look again at the first town. As Schelling argued, whatever you guessed "
                           "its people demanded, the map alone could not have told you.",
-                          speed=0.81) as beat:
+                          speed=0.82) as beat:
             self.play(MoveToTarget(self.town),
                       run_time=beat.until("first", offset=-0.1, min_time=0.6))
             self.play(FadeIn(self.meter), FadeIn(sim_tag), run_time=0.7)

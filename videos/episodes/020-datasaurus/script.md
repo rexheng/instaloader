@@ -66,13 +66,16 @@ grew, and the y spread shrank by almost a quarter.
 > lands on the dinosaur's own cross (it is never red over the 5/5 readout).
 
 **B7.** The two averages mark a single point: the cloud's balance point.
-> Points dim. Copies of 54.26 and 47.83 fly into the YELLOW dot at (x̄, ȳ).
+> Points dim; 54.26 and 47.83 flag on "averages". On "single" copies of the x̄ and ȳ symbols (the
+> left-most glyphs of their rows, so they leave the table without crossing any other glyph) fly
+> out and label the YELLOW dot "(x̄, ȳ)", on a small opaque patch; the dot flags on "balance".
 
 **B8.** The two standard deviations reach one deviation out on each side, and draw a box.
-> On "reach" copies of 16.76 and 26.93 travel intact (on a small opaque patch) to the half-arms
-> they measure: 16.76 under the right half-arm, 26.93 beside the upper one. On "out" both half-arms
-> light up and the numbers fade; on "draw" the four walls grow out of the arm tips, complete on
-> "box".
+> The "(x̄, ȳ)" label leaves on "standard" as 16.76 and 26.93 flag. On "reach" copies of the s_x and
+> s_y symbols fly out of the table, one after the other (s_x is home before s_y sets off, so the
+> two never meet), turning YELLOW, and label the half-arms they measure: s_x under the right
+> half-arm, s_y beside the upper one (opaque patches). On "out" both half-arms light up and the
+> labels fade; on "draw" the four walls grow out of the arm tips, complete on "box".
 
 **B9.** Many ellipses touch all four walls. The correlation picks one. Correlation r means one
 standard deviation to the right, on average r standard deviations up. That's the best-fit line,
@@ -128,8 +131,10 @@ this same ellipse, and a different median.
 > dots never visibly move; the median jumps 50.11, 47.38, 39.87, 50.47, 51.29 (all ≠ 46.02).
 
 **B18.** Francis Anscombe made the point in 1973, with eleven points of his own.
-> As before: 11 of the points travel to Anscombe's dataset I; his readout lands mid-right with r
-> first, level with his touch point.
+> As before: 11 of the points travel to Anscombe's dataset I. His readout arrives whole, entry by
+> entry (r first), while his points travel, mid-right and level with his touch point: the right
+> half is never empty for more than about half a second and no symbol waits without its value.
+> On "points" his eleven points are flagged.
 
 **B19.** His correlation is point eight two, so the ellipse touches the right wall high up.
 > On "touches" his 0.82 travels straight left, intact, and settles into the touch dot.
@@ -143,8 +148,9 @@ center and that touch point.
 > out of it through the touch point. (B9's picture, recognised.)
 
 **B21.** So the slope is rise over run. [pause 1.0] Plug in his numbers, and it's one half.
-> "slope =" on "slope"; the r s_y label arcs up over it into the numerator on "rise", the s_x label
-> arcs under into the denominator on "run" (slope = r s_y / s_x, every term from its segment). The
+> "slope =" on "slope"; on "rise" a copy of the r s_y label climbs straight up from the rise,
+> crosses high above "slope =" and drops into the numerator (it never passes through the formula);
+> the s_x label arcs under into the denominator on "run" (slope = r s_y / s_x, every term from its segment). The
 > formula holds alone, then 0.82 × 2.03 / 3.32 ≈ 0.50 is built from the readout; the fraction bar
 > grows with the first value's flight, so the template is never empty.
 
@@ -160,11 +166,14 @@ center and that touch point.
 wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those
 papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they
 leave out.
-> Hand-off (1.15 s): the quartet fades while panel I's ellipse grows back to the dinosaur's and
-> "slope = r s_y / s_x" slides to the top right; the opening frame fades in around them (axes,
+> Hand-off (1.35 s): the quartet fades while panel I's ellipse grows back to the dinosaur's; once
+> the quartet has gone, "slope = r s_y / s_x" moves to the open band under the readout (below the
+> r row, not squeezed into the strip above x̄), and the opening frame fades in around them (axes,
 > YELLOW readout, grey guess cloud, "your guess", the dashed "your line"). "exactly right":
 > the dashed line is Indicated. "five numbers": the symbols give way to the dinosaur's −0.06,
-> 26.93 and 16.76, each flown from its readout row (each symbol fades only as its value arrives); "slope": the YELLOW best-fit line grows over
+> 26.93 and 16.76, each flown down from its readout row (r drops straight out of the bottom row;
+> s_y and s_x leave sideways and descend a lane right of the readout, so no value crosses another
+> row; each symbol fades only as its value arrives); "slope": the YELLOW best-fit line grows over
 > the dashed one; "minus point one": "≈ −0.10". "cloud": "your guess" is flagged; "this ellipse":
 > pulsed while the cloud dims around it; "all that": the guess labels go. "Most of those papers":
 > the Weissgerber citation and "86% used bars" return, the formula leaves, the line steps back to

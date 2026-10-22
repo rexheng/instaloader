@@ -1,13 +1,13 @@
 # Review kit — `final.mp4`
 
-Generated 2026-10-22 09:22 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
+Generated 2026-10-22 11:31 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
 
 ## Mechanics (BAR §3 caps / §5 standards)
 
 | metric | value | bar | status |
 |---|---|---|---|
 | runtime | 3:47.1 (227.1s) | 2:30–4:00 | ok |
-| video | 1920x1080 @ 30 fps, h264/yuv420p, 10.27 MB | 1920x1080 @ 30 | ok |
+| video | 1920x1080 @ 30 fps, h264/yuv420p, 10.23 MB | 1920x1080 @ 30 | ok |
 | pace | 154 wpm (speech time) · 147 overall · 181 excl. all pauses; 558 words | 140–165 (cap <120/>180) | ok |
 | loudness | -14.2 LUFS, LRA 2.4 LU | −14 ±1 | ok |
 | true peak | -2.7 dBTP | ≤ −1.5 | ok |
@@ -64,7 +64,7 @@ Generated 2026-10-22 09:22 by videos/toolkit/review_kit.sh. Frames are evidence;
 - `keyframes/kf_07_00-55.7.png` — 0:55.7
 - `keyframes/kf_08_01-06.5.png` — 1:06.5
 - `keyframes/kf_09_01-11.6.png` — 1:11.6
-- `keyframes/kf_10_01-17.0.png` — 1:17.0
+- `keyframes/kf_10_01-16.8.png` — 1:16.8
 - `keyframes/kf_11_01-24.0.png` — 1:24.0
 - `keyframes/kf_12_01-26.3.png` — 1:26.3
 - `keyframes/kf_13_01-29.6.png` — 1:29.6
@@ -164,4 +164,4 @@ Differences (numbers spelled out, 'and' ignored). A technical term heard wrong u
 [2:56.6] replace  script: 'aldous'                                 heard: 'aldus'
 ```
 
-_review kit ran in 101s_
+_review kit ran in 202s_

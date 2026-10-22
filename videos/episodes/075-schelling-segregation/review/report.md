@@ -1,15 +1,15 @@
 # Review kit — `final.mp4`
 
-Generated 2026-10-22 07:37 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
+Generated 2026-10-22 11:31 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
 
 ## Mechanics (BAR §3 caps / §5 standards)
 
 | metric | value | bar | status |
 |---|---|---|---|
-| runtime | 3:42.8 (222.8s) | 2:30–4:00 | ok |
-| video | 1920x1080 @ 30 fps, h264/yuv420p, 17.49 MB | 1920x1080 @ 30 | ok |
-| pace | 157 wpm (speech time) · 145 overall · 180 excl. all pauses; 539 words | 140–165 (cap <120/>180) | ok |
-| loudness | -14.0 LUFS, LRA 2.7 LU | −14 ±1 | ok |
+| runtime | 3:43.2 (223.2s) | 2:30–4:00 | ok |
+| video | 1920x1080 @ 30 fps, h264/yuv420p, 17.15 MB | 1920x1080 @ 30 | ok |
+| pace | 158 wpm (speech time) · 145 overall · 180 excl. all pauses; 539 words | 140–165 (cap <120/>180) | ok |
+| loudness | -14.0 LUFS, LRA 2.8 LU | −14 ±1 | ok |
 | true peak | -1.7 dBTP | ≤ −1.5 | ok |
 | leading silence | 0.00s | ≤ 1 s | ok |
 | trailing silence | 1.73s | ≤ 2 s | ok |
@@ -17,7 +17,7 @@ Generated 2026-10-22 07:37 by videos/toolkit/review_kit.sh. Frames are evidence;
 | longest fully static stretch | 3.67s | ≤ 4 s (cap ≥ 8 s) | ok |
 | black frames | 0 run(s) | none | ok |
 | background-only stretches > 1 s | 0 | none | ok |
-| transcript vs script | WER 0.2% (528 words) | ≲ 8 % | ok |
+| transcript vs script | WER 0.0% (528 words) | ≲ 8 % | ok |
 | banned phrases (§4) | 0 | 0 | ok |
 
 ## Flags
@@ -26,15 +26,15 @@ Generated 2026-10-22 07:37 by videos/toolkit/review_kit.sh. Frames are evidence;
 
 ### Silences ≥ 0.3 s
 
-0:02.7–0:03.2 (0.5s), 0:06.2–0:06.7 (0.5s), 0:09.2–0:11.1 (2.0s), 0:12.1–0:12.5 (0.4s), 0:13.6–0:13.9 (0.3s), 0:16.1–0:16.5 (0.5s), 0:19.2–0:19.7 (0.5s), 0:22.0–0:22.5 (0.5s), 0:25.2–0:25.6 (0.4s), 0:27.3–0:27.8 (0.5s), 0:31.8–0:32.7 (0.9s), 0:35.0–0:35.5 (0.5s), 0:36.8–0:37.1 (0.3s), 0:43.5–0:43.9 (0.4s), 0:45.0–0:45.5 (0.5s), 0:50.0–0:50.3 (0.3s), 0:51.4–0:51.7 (0.3s), 0:53.2–0:53.6 (0.3s), 0:55.2–0:55.6 (0.5s), 0:57.9–0:58.2 (0.4s), 1:00.7–1:01.2 (0.5s), 1:04.2–1:04.7 (0.5s), 1:06.1–1:06.5 (0.4s), 1:11.0–1:11.5 (0.5s), 1:12.6–1:13.5 (0.9s), 1:14.6–1:15.1 (0.4s), 1:16.1–1:16.5 (0.4s), 1:19.6–1:20.1 (0.5s), 1:22.8–1:23.3 (0.5s), 1:24.9–1:25.4 (0.5s), 1:26.7–1:28.4 (1.7s), 1:30.0–1:30.5 (0.5s), 1:32.7–1:33.0 (0.4s), 1:34.3–1:34.8 (0.5s), 1:37.1–1:37.6 (0.5s), 1:42.0–1:43.3 (1.2s), 1:46.8–1:48.4 (1.5s), 1:49.7–1:51.6 (1.9s), 1:54.2–1:55.7 (1.5s), 1:58.2–1:59.7 (1.5s), 2:03.1–2:03.5 (0.4s), 2:04.7–2:05.2 (0.5s), 2:09.8–2:10.2 (0.4s), 2:14.0–2:14.5 (0.5s), 2:18.9–2:19.4 (0.5s), 2:22.1–2:22.5 (0.4s), 2:28.4–2:28.9 (0.5s), 2:32.8–2:33.3 (0.4s), 2:35.8–2:37.4 (1.6s), 2:40.3–2:40.9 (0.6s), 2:45.1–2:45.5 (0.5s), 2:49.5–2:50.0 (0.5s), 2:57.3–2:57.7 (0.4s), 2:59.4–3:00.6 (1.2s), 3:04.0–3:04.5 (0.5s), 3:07.2–3:07.7 (0.5s), 3:10.4–3:10.9 (0.5s), 3:12.4–3:14.3 (2.0s), 3:15.0–3:15.4 (0.3s), 3:18.9–3:19.4 (0.5s), 3:20.3–3:20.8 (0.4s), 3:27.7–3:28.2 (0.5s), 3:31.8–3:32.6 (0.7s), 3:34.3–3:34.8 (0.5s), 3:36.1–3:36.4 (0.4s), 3:38.5–3:38.9 (0.4s), 3:41.0–3:42.8 (1.7s)
+0:02.7–0:03.2 (0.5s), 0:06.2–0:06.7 (0.5s), 0:09.2–0:11.1 (2.0s), 0:12.1–0:12.5 (0.4s), 0:13.6–0:13.9 (0.3s), 0:16.1–0:16.5 (0.5s), 0:19.2–0:19.7 (0.5s), 0:22.0–0:22.5 (0.5s), 0:25.2–0:25.6 (0.4s), 0:27.3–0:27.8 (0.5s), 0:31.8–0:32.7 (0.9s), 0:35.0–0:35.5 (0.5s), 0:36.8–0:37.1 (0.3s), 0:43.5–0:43.9 (0.4s), 0:45.0–0:45.5 (0.5s), 0:50.0–0:50.3 (0.3s), 0:51.4–0:51.7 (0.3s), 0:53.2–0:53.6 (0.3s), 0:55.2–0:55.6 (0.5s), 0:57.9–0:58.2 (0.4s), 1:00.7–1:01.2 (0.5s), 1:04.2–1:04.7 (0.5s), 1:06.1–1:06.5 (0.4s), 1:11.0–1:11.5 (0.5s), 1:12.6–1:13.5 (0.9s), 1:14.6–1:15.1 (0.4s), 1:16.1–1:16.5 (0.4s), 1:19.6–1:20.1 (0.5s), 1:22.8–1:23.3 (0.5s), 1:24.9–1:25.4 (0.5s), 1:26.7–1:28.4 (1.7s), 1:30.0–1:30.5 (0.5s), 1:32.7–1:33.0 (0.4s), 1:34.3–1:34.8 (0.5s), 1:37.1–1:37.6 (0.5s), 1:42.0–1:43.3 (1.2s), 1:46.8–1:48.4 (1.5s), 1:49.7–1:51.6 (1.9s), 1:54.2–1:55.7 (1.5s), 1:58.2–1:59.7 (1.5s), 2:03.1–2:03.5 (0.4s), 2:04.7–2:05.2 (0.5s), 2:09.8–2:10.2 (0.4s), 2:14.0–2:14.5 (0.5s), 2:18.9–2:19.4 (0.5s), 2:22.1–2:22.5 (0.4s), 2:28.4–2:28.9 (0.5s), 2:32.8–2:33.3 (0.4s), 2:35.8–2:37.4 (1.6s), 2:40.3–2:40.9 (0.6s), 2:45.1–2:45.5 (0.5s), 2:49.5–2:50.0 (0.5s), 2:57.3–2:57.7 (0.4s), 2:59.4–3:00.6 (1.2s), 3:04.0–3:04.5 (0.5s), 3:07.2–3:07.7 (0.5s), 3:10.4–3:10.9 (0.5s), 3:12.4–3:14.3 (2.0s), 3:15.0–3:15.4 (0.3s), 3:18.9–3:19.4 (0.5s), 3:20.3–3:20.8 (0.4s), 3:27.7–3:28.2 (0.5s), 3:31.8–3:33.0 (1.2s), 3:34.7–3:35.2 (0.5s), 3:36.5–3:36.9 (0.4s), 3:38.9–3:39.4 (0.4s), 3:41.5–3:43.2 (1.7s)
 
 ### Static stretches ≥ 3 s
 
-2:12.4–2:16.0 (3.7s), 3:02.8–3:06.4 (3.6s), 3:17.1–3:20.7 (3.6s), 3:28.9–3:32.6 (3.6s)
+2:12.4–2:16.0 (3.7s), 3:02.8–3:06.4 (3.6s), 3:17.1–3:20.7 (3.6s), 3:28.9–3:32.6 (3.7s)
 
 ## Layout audit (automatic overlap check, BAR §5)
 
-0 issue(s): 0 overlapping/touching, 0 closer than 0.15, 0 outside the safe area, 0 in the caption zone; 0 allowed by the producer. 229 frames checked (after every animation and hold).
+0 issue(s): 0 overlapping/touching, 0 closer than 0.15, 0 outside the safe area, 0 in the caption zone; 0 allowed by the producer. 231 frames checked (after every animation and hold).
 
 
 ## Contact sheets (one frame every 2s; words spoken ±1s under each)
@@ -51,7 +51,7 @@ Generated 2026-10-22 07:37 by videos/toolkit/review_kit.sh. Frames are evidence;
 - `sheets/sheet_10.png` — 2:43.0–2:59.0
 - `sheets/sheet_11.png` — 3:01.0–3:17.0
 - `sheets/sheet_12.png` — 3:19.0–3:35.0
-- `sheets/sheet_13.png` — 3:37.0–3:41.0
+- `sheets/sheet_13.png` — 3:37.0–3:43.0
 
 ## Keyframes (full resolution, frames where the picture settles)
 
@@ -78,7 +78,7 @@ Generated 2026-10-22 07:37 by videos/toolkit/review_kit.sh. Frames are evidence;
 - `keyframes/kf_21_01-47.9.png` — 1:47.9
 - `keyframes/kf_22_01-52.7.png` — 1:52.7
 - `keyframes/kf_23_01-57.7.png` — 1:57.7
-- `keyframes/kf_24_02-05.2.png` — 2:05.2
+- `keyframes/kf_24_02-05.3.png` — 2:05.3
 - `keyframes/kf_25_02-17.6.png` — 2:17.6
 - `keyframes/kf_26_02-27.1.png` — 2:27.1
 - `keyframes/kf_27_02-45.4.png` — 2:45.4
@@ -91,10 +91,10 @@ Generated 2026-10-22 07:37 by videos/toolkit/review_kit.sh. Frames are evidence;
 - `keyframes/kf_34_03-19.8.png` — 3:19.8
 - `keyframes/kf_35_03-22.2.png` — 3:22.2
 - `keyframes/kf_36_03-27.9.png` — 3:27.9
-- `keyframes/kf_37_03-31.6.png` — 3:31.6
-- `keyframes/kf_38_03-35.7.png` — 3:35.7
-- `keyframes/kf_39_03-41.3.png` — 3:41.3
-- `keyframes/kf_40_03-42.7.png` — 3:42.7
+- `keyframes/kf_37_03-31.7.png` — 3:31.7
+- `keyframes/kf_38_03-36.1.png` — 3:36.1
+- `keyframes/kf_39_03-41.7.png` — 3:41.7
+- `keyframes/kf_40_03-43.2.png` — 3:43.2
 
 ## Transcript (whisper-large-v3-turbo, word timings in transcript_words.tsv)
 
@@ -125,44 +125,39 @@ Generated 2026-10-22 07:37 by videos/toolkit/review_kit.sh. Frames are evidence;
 [1:37.6–1:40.3] In round two, our household leaves,
 [1:40.3–1:42.3] and this one drops to two sevenths.
 [1:43.3–1:45.7] Then the next one, also at three eighths,
-[1:45.7–1:56.8] tips in round three Now run the whole town After round seven nobody wants to move That whole town
-[1:56.8–2:05.6] is one point on this chart. Demand a quarter and the same starting town barely sorts, 58%.
-[2:05.6–2:11.6] Demand a third and it jumps to 76. To see why that happens, sort the random start by
-[2:11.6–2:14.5] each household's share of matching neighbors.
-[2:14.5–2:16.2] With at most eight neighbors,
-[2:16.2–2:19.4] these are the only shares up to 60%.
-[2:19.4–2:24.4] At a third, everyone left of it is unhappy, 238,
-[2:24.4–2:27.4] including the neighbor that started our corners chain
-[2:27.4–2:28.9] at two sevenths.
-[2:28.9–2:31.1] Every household at three eighths
-[2:31.1–2:33.3] is one lost match away from it.
-[2:33.3–2:36.0] At a quarter, how many would start unhappy?
-[2:37.4–2:40.9] Only these two bars change sides and they're tall.
-[2:40.9–2:45.5] Now just 95 start unhappy, and that chain never starts.
-[2:45.5–2:50.0] In his 1971 paper, Thomas Schelling ran this model.
-[2:50.0–2:53.9] His households moved to the nearest square that suited them,
-[2:53.9–2:57.7] on emptier boards, and there, the jump came later,
-[2:57.7–2:59.6] between about a third and a half.
-[3:00.6–3:04.5] Two simulated towns, both 76%.
-[3:04.5–3:07.7] In one town, households demand a third.
-[3:07.7–3:10.9] In the other, nobody minds their neighbors at all.
-[3:10.9–3:12.6] Which one wanted a third?
-[3:14.3–3:17.4] This one, the other was placed by a rule
-[3:17.4–3:19.4] with no preferences at all.
-[3:19.4–3:24.4] In real cities, one study finds that 1930s federal lending maps
-[3:24.9–3:28.2] increased racial segregation for decades.
-[3:28.2–3:32.6] It traces this to reduced credit in the areas marked in red.
-[3:32.6–3:34.8] Look again at the first town.
-[3:34.8–3:38.9] As Schelling argued, whatever you guessed its people demanded,
-[3:38.9–3:41.1] The map alone could not have told you.
+[1:45.7–2:00.1] tips in round three Now run the whole town After round 7 nobody wants to move That whole town is one point on this chart
+[2:00.1–2:05.6] Demand a quarter and the same starting town barely sorts, 58%.
+[2:05.6–2:08.4] Demand a third and it jumps to 76.
+[2:08.4–2:14.6] To see why that happens, sort the random start by each household's share of matching neighbors.
+[2:14.6–2:19.5] With at most eight neighbors, these are the only shares up to 60%.
+[2:19.5–2:26.1] At a third, everyone left of it is unhappy, 238, including the neighbor that started our
+[2:26.1–2:29.1] corner's chain, at two-sevenths.
+[2:29.1–2:33.4] Every household at three-eighths is one lost match away from it.
+[2:33.4–2:37.6] At a quarter, how many would start unhappy?
+[2:37.6–2:41.1] Only these two bars change sides, and they're tall.
+[2:41.1–2:45.6] Now just 95 start unhappy, and that chain never starts.
+[2:45.6–2:50.2] In his 1971 paper, Thomas Schelling ran this model.
+[2:50.2–2:56.1] His households moved to the nearest square that suited them, on emptier boards, and there
+[2:56.1–3:00.7] the jump came later, between about a third and a half.
+[3:00.7–3:04.6] Two simulated towns, both 76 percent.
+[3:04.6–3:07.8] In one town, households demand a third.
+[3:07.8–3:11.0] In the other, nobody minds their neighbors at all.
+[3:11.0–3:14.6] Which one wanted a third?
+[3:14.6–3:19.5] This one, the other was placed by a rule, with no preferences at all.
+[3:19.5–3:26.8] In real cities, one study finds that 1930s federal lending maps increased racial segregation
+[3:26.8–3:28.3] for decades.
+[3:28.3–3:33.2] It traces this to reduced credit in the areas marked in red.
+[3:33.2–3:35.4] Look again at the first town.
+[3:35.4–3:40.7] As Schelling argued, whatever you guessed its people demanded, the map alone could not
+[3:40.7–3:41.6] have told you.
 ```
 
-## Narration vs transcript (WER 0.2%)
+## Narration vs transcript (WER 0.0%)
 
 Differences (numbers spelled out, 'and' ignored). A technical term heard wrong usually means it was mispronounced:
 
 ```
-[2:26.2] replace  script: "corner's"                               heard: 'corners'
+no differences
 ```
 
-_review kit ran in 137s_
+_review kit ran in 208s_

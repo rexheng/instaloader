@@ -127,8 +127,8 @@ T H fly to the title; the stack rises into the TH-weighted skyline (axis zooms o
 
 - E flashes yellow; the ? box flags on "impossible".
 - "long runs of letters": the ? box widens into a run of three holding a real run from Shannon's passage, **E ␣ O** (THE OTHER, after T H); the chart dims to 25 % and the 68 % brace leaves. Over the empty top of the chart the run's bill is laid out: each letter (flashing in the row as its copy appears) and, under it, its cost given the two before it, in yellow MathTex 36: **0.5, 0.6, 3.8**.
-- "the fractions add up": the "+" signs are written and the three costs flow under the row into one total, **= 4.9 → 5 questions**.
-- "these three, not six": each cost drops one row and cross-fades into its whole-question count, grey **1 + 1 + 4 = 6 · one at a time**, with 6 under 5; 5 flags.
+- "the fractions add up": the sum is built left to right, each cost pulsing as the "+" after it is written; "= 4.9" arrives once every term is in, then **→ 5 questions** on "five questions".
+- "these three, not six": under each cost, as it pulses, its whole-question count drops in: grey **1 + 1 + 4 = 6 · one at a time**, with 6 under 5; 5 flags.
 - "After TH": the chart returns to full strength and the TH skyline pours (the bill stays); on "the average" the level is born at 1.67, the bill and run box step back to 30 %, and 1.67 is copied into the equation.
 
 > But averaged over every two-letter context, it's still two point eight.
@@ -150,7 +150,7 @@ Shannon's own record (p. 56), glyphs 12 % larger (pitch 0.33, two-digit counts i
 > each guess count as a symbol, *[pause 0.8]* and the same skyline pours flat at about one point
 > four bits. A better guesser could only lower it.
 
-Twin: letters fade to 12 % and return left to right. The record steps up with its letters at 12 % while the new axes are drawn (no titles yet). The counts then fly by guess number, each dipping under its own row before curving down into the foot of its column: all 79 ones into the 1st column (1.1 s), then the 2s (0.6 s), then the rest (0.8 s), each column growing as its counts land (width = share of guesses, height = log₂(1/share)); the axis titles and 1st/2nd/3rd+ arrive after the flight. Right of the tail columns, yellow **log₂(1/q) = 3.67**, its value copied from the 2nd-guess column, held until "flat". It pours flat, and the label leaves with the columns it describes; the small axis zooms to 0–2.1 with Shannon's ≈1 band; the level is labelled **≈ 1.42**; on "better guesser" a yellow double arrow measures **0.42 extra**; on "lower" a down arrow and a grey **upper estimate**.
+Twin: letters fade to 12 % and return left to right. The record steps up with its letters at 12 % while the new axes are drawn (no titles yet). The counts then fly by guess number, each leaving its row straight down and curving into the foot of its column, landing straight down (never rising over its own row): all 79 ones into the 1st column (1.1 s), then the 2s (0.6 s), then the rest (0.8 s), each column growing as its counts land (width = share of guesses, height = log₂(1/share)); the axis titles and 1st/2nd/3rd+ arrive after the flight. Right of the tail columns, yellow **log₂(1/q) = 3.67**, its value copied from the 2nd-guess column, held until "flat". It pours flat, and the label leaves with the columns it describes; the small axis zooms to 0–2.1 with Shannon's ≈1 band; the level is labelled **≈ 1.42**; on "better guesser" a yellow double arrow measures **0.42 extra**; on "lower" a down arrow and a grey **upper estimate**.
 
 > Shannon's tests, with a hundred letters of context, put English between point six and one
 > point three bits per character.

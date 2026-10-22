@@ -10,7 +10,7 @@ bell, the data-first bill and the bell-first bill, kept side by side. As the bel
 to B, one bill drains while the other swells into a mountain: each order has its own closest
 bell.
 
-Runtime 3:27 · 544 words · 164 wpm over speech time (157 overall) · voice af_heart, speed 0.84.
+Runtime ≈ 3:32 · 545 words · ≈ 162 wpm over speech time · voice af_heart, speed 0.84.
 Pronunciation overrides: Kullback, Leibler ("lie-bler"), Blei ("bly"), the letter A (/eɪ/, misaki
 reads a lone "A" as the article), "imagines" (misaki says "im-AY-jen-eez"). Sentence gaps are
 varied on purpose: ≈ 0.25 s inside a thought, ≈ 0.7–1.0 s after a payoff number or at a beat
@@ -59,8 +59,8 @@ hold (a three-way spatial bet the title does not answer).
 
 ### 2. Stakes (0:14–0:27)
 > The D is KL divergence, named for Kullback and Leibler. Every maximum-likelihood fit shrinks
-> it with the data first, and Bayesian machine learning shrinks it with the order flipped. It's
-> often called a distance.
+> it with the data first, and much of Bayesian machine learning shrinks it with the order
+> flipped. It's often called a distance.
 
 The ghosts, numbers and data label leave; the D flags. "KL divergence" label; citation
 *Kullback & Leibler, 1951 · Annals of Mathematical Statistics*; "maximum-likelihood fit" pinned
@@ -72,7 +72,8 @@ lights with a grey "variational inference" tag and the Blei citation; "a distanc
 > it, and that number only grows, so this is bell A: three and a half minutes, give or take one
 > point one. *[0.8 s]*
 
-"a distance?" loses its "?"; "KL divergence" dims. `= 0.76 bits` (red, live). The bell shifts
+"a distance?" loses its "?"; "KL divergence" dims; the "variational inference" tag and the Blei
+citation leave with their topic. `= 0.76 bits` (red, live). The bell shifts
 0.8 min left (the number climbs to 1.12 and flashes yellow during a 0.5 s hold) and back, then
 widens ×1.8 (1.11, flash) and back. The dashed mean line completes the pin; the pinned label
 becomes `A: 3.49 ± 1.14 min`.
@@ -98,18 +99,21 @@ line at p's top. `log₂(p/q) = 1.98` is assembled: the p swings up from the pul
 around the outside, the q drops in from its readout.
 
 ### 6. Every length, weighted (1:13–1:30)
-> Do that at every length. Then weight each one by how often eruptions last that long, which is
-> p, and add it all up. Where the bell rises above the data, the grey dips pay a little back.
+> *[1.0 s]* Do that at every length. *[0.9 s]* Then weight each one by how often eruptions last
+> that long, which is p, and add it all up. Where the bell rises above the data, the grey dips pay a little back.
 > That's the divergence: point seven six bits.
 
-Two panels: chart on top, the bill underneath (shared x labels 1–6 and "eruption length
-(minutes)" under the bottom panel; "bits", later "bits/min", inside the panel's top-left
-corner). The scanner sweeps drawing log₂(p/q); where it runs off the panel floor the line is
+Two panels: the chart's own x labels fade first, the chart rises (the scanner rides along back to
+0.3 min, the p/q readouts dim to 30 %), and only then does the bill's panel draw underneath it
+(shared x labels 1–6 and "eruption length (minutes)" under the bottom panel; "bits", later
+"bits/min", inside the panel's top-left corner): nothing slides through the panel. Over "every
+length" and the pause after it (≈ 1.9 s) the scanner sweeps drawing log₂(p/q); where it runs off the panel floor the line is
 faint with grey true depths (↓ −45, ↓ −6.2, ↓ −20); `log₂(p/q)` flies into the formula row. The
 curve is multiplied by p; the readout's p swings round the left of the readouts into the weight
 (the flash runs along the humps); ∫ and dx write; the area fills left to right while
-`= 0.76 bits` counts up. On "grey dips" a grey "refund" tag sits under the largest dip. On
-"divergence" `D(data ‖ bell)` lands on top of the formula block, which is centred on the bill.
+`D(data ‖ bell) = 0.76 bits` counts up (the D-line faint, so the running total has its subject).
+On "grey dips" a grey "refund" tag sits under the largest dip. On "divergence" the D-line comes
+to full strength; the block is centred on the bill.
 
 ### 7. A bell that skips a hump (1:30–1:46)
 > Try a bell that ignores the short eruptions and sits on the long hump. At two minutes, it falls
@@ -169,7 +173,7 @@ crown), an arrow runs 1 → 3, and B sits exactly in ghost 3: the bet, answered 
 > settle on one hump.
 
 > Blei and colleagues note that variational inference generally underestimates posterior
-> variance. In a real ad-conversion model, it matched MCMC's average for one effect, but its
+> variance. In a real ad-conversion model, its average for one effect matched MCMC, but its
 > spread was only a fifth as wide.
 
 The bills, blocks and their labels fade first (the yellow **3** stays on B's crown and rides it
@@ -182,8 +186,9 @@ On "posterior" the bars and axis titles dim, the tag becomes "if this were a pos
 hump" B returns solid with its fill sweep, A back to dashed. On "Blei" the 3 leaves and the Blei
 citation replaces Bishop's; on "underestimates" ±1 SD brackets: "±1.14" on the curve (blue) and
 "±0.44" on B (purple), and A steps out. On "real" the legend and the toy brackets leave and a measured case comes in
-top right, above B's crown: "real ad-conversion model", MCMC `0.110 ± 0.020` (blue) and VI `0.110 ± 0.004`
-(purple) as brackets on one shared mean line; on "a fifth" five copies of the VI spread tile the
+top right, above B's crown: "real ad-conversion model"; on "average" MCMC (blue) and VI (purple)
+brackets on one shared mean line, on "matched" their values `0.110 ± 0.020` and `0.110 ± 0.004`
+(the mean line flags); on "a fifth" five copies of the VI spread tile the
 MCMC spread. Citation *Giordano, Broderick & Jordan, 2018 · JMLR, Tables 2–3*.
 
 ### 12. Honest limit (3:00–3:13)

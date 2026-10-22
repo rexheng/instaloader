@@ -1156,7 +1156,9 @@ class Episode(NarratedScene):
                       small_on.animate.set_value(1.0), big_alpha.animate.set_value(0.15),
                       btri.animate.set_stroke(opacity=0.0), binc.animate.set_stroke(opacity=0.0),
                       head_s.animate.set_opacity(1.0),
-                      ReplacementTransform(dashes["straws"], qmarks), FadeIn(syms["straws"]),
+                      # dashes cross-fade to "? = ?" (a morph drew a breve-like glyph in between)
+                      FadeOut(dashes["straws"], rate_func=window(0.0, 0.3, smooth)),
+                      FadeIn(qmarks, rate_func=window(0.25, 0.55, smooth)), FadeIn(syms["straws"]),
                       run_time=max(1.0, beat.until("big", offset=0.1)))
             self.remove(ghost, halo_in)
             self.add(shalo, scirc, sinc)
@@ -1307,13 +1309,16 @@ class Episode(NarratedScene):
             self.play(FadeOut(scirc), FadeOut(sinc), FadeOut(shalo), FadeOut(head_s), FadeOut(head_b),
                       FadeOut(sb_title), FadeOut(qmarks[1]), FadeOut(syms["straws"]), FadeOut(failed),
                       FadeOut(rows["radial"][2]), FadeOut(syms["radial"]),
+                      # the big circle's gold rule comes back as the small one leaves (no frame
+                      # without a gold circle)
+                      binc.animate(rate_func=window(0.4, 1.0, smooth)).set_stroke(opacity=1.0),
                       small_on.animate.set_value(0.0), run_time=0.6)
             # 2. real tosses now: the simulation's tag leaves (its straws are already gone), one
             #    plain circle with its gold rule stays on the floor, the radius row moves up under
             #    the straws row, and the predicted histogram's empty axis waits at 30 % below them
             for m in th_frame:
                 m.set_opacity(0.3) if m is not th.ref else m.set_stroke(opacity=0.6 * 0.3)
-            self.play(binc.animate.set_stroke(opacity=1.0), FadeOut(sim_tag),
+            self.play(FadeOut(sim_tag),
                       floor_rect.animate.set_stroke(opacity=0.3), big_alpha.animate.set_value(1.0),
                       rows["radial"][:2].animate.shift(UP * (SB_ROWS[1] - SB_ROWS[3])),
                       FadeIn(th_frame), run_time=0.8)
@@ -1447,13 +1452,16 @@ class Episode(NarratedScene):
             # draws in the centre (baseline, then its three bars), its title and tag fade in, the
             # promise "average class 40 or 147" comes back on the right and "at random" is written
             # in its slot under the chart, so the frame never empties
+            # (a true cross-dissolve: the baseline starts 0.08 s in and all three bars grow from
+            # 0.15 s while the board is still fading, so no frame is ever near-empty; text that
+            # shares the board's places -- the promise, "at random", the citation -- arrives only
+            # after the board's text has gone, so nothing is overprinted)
             rt0 = 1.5
-            self.play(*[FadeOut(m, rate_func=window(0, 0.3 / rt0, smooth)) for m in self.visible()],
-                      Create(cbase, rate_func=window(0.3 / rt0, 0.75 / rt0, smooth)),
-                      *[GrowFromEdge(b, DOWN, rate_func=window((0.45 + 0.15 * i) / rt0, (1.1 + 0.15 * i) / rt0,
-                                                               smooth)) for i, b in enumerate(bars)],
+            self.play(*[FadeOut(m, rate_func=window(0, 0.55 / rt0, smooth)) for m in self.visible()],
+                      Create(cbase, rate_func=window(0.08 / rt0, 0.45 / rt0, smooth)),
+                      *[GrowFromEdge(b, DOWN, rate_func=window(0.15 / rt0, 0.8 / rt0, smooth)) for b in bars],
                       FadeIn(VGroup(ytitle, ex_tag), rate_func=window(0.4 / rt0, 1.0 / rt0, smooth)),
-                      FadeIn(cite_fg, shift=0.1 * UP, rate_func=window(0.45 / rt0, 1.05 / rt0, smooth)),
+                      FadeIn(cite_fg, shift=0.1 * UP, rate_func=window(0.58 / rt0, 1.15 / rt0, smooth)),
                       FadeIn(sk_blk, shift=0.1 * UP, rate_func=window(0.6 / rt0, 1.0, smooth)),
                       Write(atr2, rate_func=window(0.6 / rt0, 1.0, linear)), run_time=rt0)
             # "the same two words": underlined on their word, as at 0:16

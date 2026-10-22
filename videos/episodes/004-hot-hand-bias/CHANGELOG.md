@@ -376,3 +376,41 @@ vote, HTTT's lone tails stretched to a whole one, the yellow sliding onto 40.5%)
 the live 50% → 40.5% marker → "cold −9.5 points"; the half-turn mirror and the two lanes slid into
 the difference axis, ending on the purple +12 brace with "no defenders"; the landing on the
 cold-open frame, now with the test's formula beside its 17/42 marker.
+
+## Round 6 revisions
+
+Reviews: `reviews/round6-craft.md` (8.5) and `reviews/round6-substance.md` (8.6). No caps, no
+factual errors (substance re-derived every number and checked every citation). Both say all fixes
+together reach 9 "narrowly" with no structural change; both name the payoff (2:14–3:10) as the
+weak minute and the 1:36–1:47 "fewer rows, fewer votes" step as the one asserted link.
+
+**Climb plan (BAR §3 "9" anchor → shortfall → upgrade)**
+- *Clarity 8.5* ("re-derive it after one watch"): 17/42 arrived as a parked number after "fewer
+  rows, fewer votes" (a row count, not the dilution); the payoff showed nine numbers and three
+  axis states in 49 s plus an uncounted simulated record; the landing dot read as "this row is
+  hot". → Count the votes on the strip (yellow 5⅔ votes, grey 8⅓ votes), carry 5⅔ and the 14
+  vote outlines into 5⅔/14 = 17/42; "Crowded heads split their votes" with the five third-vote
+  slices pulsing; cut the record and the 40–60% zoom (one share axis, then the difference axis on
+  the same tick marks); write 49 − 45 = +4 from Cornell's own numbers; landing row dims, the dot
+  gets an "average over rows" tag.
+- *Visual 8 / 8.5* ("one focal point; nothing to remove"): the 1:37–1:44 frame had ~8 groups at
+  full strength; left-heavy payoff after the right column left; ink "hot" arrows (ink = the
+  assumption); a near-invisible landing ghost; "Cornell, 1985" over non-Cornell data; GVT's
+  citation dimmed under GVT's own numbers. → Dim rows without a checked heads (then tails), the
+  pooled strip, its formula and "the obvious guess" while each count is made; the chart re-centres
+  on x = 0 when the right column goes; "hot" arrows blue (the test's reading); landing ghost at
+  coin radius 0.15 / 60% in the cold-open layout; header "1985 design · 26 players · up to 100
+  shots" in grey until Cornell's 49/45, then purple "Cornell, 1985"; GVT bright with its data,
+  citations never dimmed after that.
+- *Motion 8.5* ("every motion encodes a relation"): 49/45 copies superposed then shrank to debris;
+  the regroup tiles crossed the 40.5% label; 14 row ratios flew as 20 px debris; doubled H at 0:04.9.
+  → 49 and 45 fly whole into "49 − 45", "= +4" lands as the marker grows; labels step back while
+  tiles pass; one HHHH 3/3 at table size becomes hᵢ/nᵢ while all 14 ratios answer in place;
+  copies that leave their source fade in as they leave (`emerge`), so no glyph is ever doubled.
+- *Audio 8.5*: the 1:36–1:53 run was heard as one sentence → split into four clips (lineup, split,
+  pack, formula) with 0.5–0.65 s gaps; holds of 0.8 s after "minus eight points." and "no hot hand."
+- *Concision 8.5*: the record (10 s teaching the ring rule twice) and the zoom are cut; the hook's
+  procedure is shortened to "Do this for every four flip run, and average."
+- *Hook 8.5*: the prediction prompt is one instruction shorter; the big row fades while the
+  sixteen-run ghost (now readable, r = 0.15) deals, so the viewer looks at one thing.
+- *Originality 8.5–9*: unchanged ideas (keep items) made sharper by the vote count.

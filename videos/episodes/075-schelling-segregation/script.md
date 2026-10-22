@@ -125,8 +125,11 @@ replayed movers are already home, so they do not move twice). The counter reache
 > Now run the whole town. [pause 1.8] After round seven, nobody wants to move.
 
 ### 8 · Generalise: the tipping curve (2:03–2:18)
-*Screen:* the HUD fades (0.4 s) while the town shrinks into its thumbnail slot; the axes are
-fully drawn by "point", where a copy of the town lands as the dot (33.3, 75.5). After "chart" the
+*Screen:* the HUD fades (0.4 s) while the town shrinks into its thumbnail slot; the axes start
+drawing halfway through the shrink (x-axis and y-axis first, below and left of the moving town;
+titles last, after it lands), so the chart is complete before the line starts and the frame
+never holds a lone thumbnail. A copy of the town leaves on "whole" and lands as the dot
+(33.3, 75.5) on "point". After "chart" the
 30-town clouds fade in under the note "each dot: one simulated town" (no narration), and only then
 does "⅓ → 76 %" appear beside the thumbnail (round 5: the flying copy used to pass over it while
 it faded in; likewise "→ 58 %" arrives after the ¼ town's copy has landed as its dot). On "a
@@ -142,12 +145,14 @@ town re-run at ¼ sorts in the lower thumbnail ("¼ → 58 %").
 
 ### 9 · Why the jump: the share ladder (2:12–2:45)
 *Screen:* the ladder is its own chart, about 1.3× the dot chart and 0.8 units higher. On "sort",
-the two thumbnails and their labels leave with the dot chart (one focal region), and the dot chart leaves completely (dots, y-axis, its title, the x numbers and ticks, the
-random-mix line, 0.45 s); then its x-axis line moves up and stretches into the ladder's GRAY
-baseline while both ladder titles fade in (round 5: the frame is never a lone line), and the bars
-grow within 1.3 s of the line landing,
-from the baseline, one per share a household of the random start actually has (k of n,
-n ≤ 8). The vertical is named where a y-axis title sits: INK "households (simulated start)". On "these" a highlight sweeps along
+one 1.5 s move: the two thumbnails and their labels leave with the dot chart (one focal region),
+and the dot chart leaves completely (dots, y-axis, its title, the x numbers and ticks, the
+random-mix line; 0–0.35 s); its x-axis line rises and stretches into the ladder's GRAY baseline
+(0.15–0.75 s; it reaches the old label row and the dot rows only after they are gone); both
+ladder titles fade in (0.4–1.0 s, after the old x title has left); and the bars sprout from the
+line as it lands, left to right, standing on it (0.5–1.35 s). The frame never holds a lone line
+(round 5 cont.: the previous cut showed the bare line for about 0.9 s). One bar per share a
+household of the random start actually has (k of n, n ≤ 8). The vertical is named where a y-axis title sits: INK "households (simulated start)". On "these" a highlight sweeps along
 the bars; on "sixty percent" the ends are marked "0%" and "60%".
 
 The rung fractions sit in one row under the baseline. GRAY counts (MathTex 32) sit centred
@@ -225,7 +230,8 @@ Schelling town's texture (no stray tiles), so the picture cannot give the answer
 
 ### 12 · Landing (3:48–3:56)
 *Screen:* the rule-made town and every label fade first (0.45 s; round 5: the growing town no
-longer passes over fading labels). Ours then grows back into the opening position, the meter and
+longer passes over fading labels) while ours returns to full strength, so the one town left is the
+focus of "Look again at the first town", not a dim leftover. Ours then grows back into the opening position, the meter and
 the "simulated" tag return, and the PURPLE marker goes back to "?" at 76 %: the exact opening
 frame.
 

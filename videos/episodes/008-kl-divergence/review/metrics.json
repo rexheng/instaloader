@@ -8,7 +8,7 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 9.19,
+ "size_mb": 9.16,
  "integrated_lufs": -14.0,
  "lra_lu": 2.3,
  "true_peak_dbtp": -1.7,
@@ -30,7 +30,7 @@
   ]
  ],
  "frames": 6314,
- "longest_static_s": 3.7,
+ "longest_static_s": 3.77,
  "static_stretches_over_3s": [
   [
    39.9,
@@ -43,14 +43,19 @@
    3.33
   ],
   [
-   103.37,
-   107.07,
+   103.33,
+   107.03,
    3.7
   ],
   [
-   184.07,
-   187.17,
-   3.1
+   164.53,
+   168.2,
+   3.67
+  ],
+  [
+   173.8,
+   177.57,
+   3.77
   ]
  ],
  "black_frame_runs": [],
@@ -68,10 +73,10 @@
  "banned_phrase_hits": 0,
  "slop_hits": [],
  "layout_audit": {
-  "count": 10,
+  "count": 0,
   "counts": {
-   "overlap": 6,
-   "clearance": 4,
+   "overlap": 0,
+   "clearance": 0,
    "safe-area": 0,
    "caption-zone": 0
   },
@@ -174,15 +179,15 @@
    "file": "keyframes/kf_20_02-02.7.png"
   },
   {
-   "t": 125.07,
-   "file": "keyframes/kf_21_02-05.1.png"
+   "t": 125.23,
+   "file": "keyframes/kf_21_02-05.2.png"
   },
   {
    "t": 135.13,
    "file": "keyframes/kf_22_02-15.1.png"
   },
   {
-   "t": 141.97,
+   "t": 142.0,
    "file": "keyframes/kf_23_02-22.0.png"
   },
   {
@@ -194,44 +199,44 @@
    "file": "keyframes/kf_25_02-31.4.png"
   },
   {
-   "t": 162.6,
-   "file": "keyframes/kf_26_02-42.6.png"
+   "t": 162.5,
+   "file": "keyframes/kf_26_02-42.5.png"
   },
   {
-   "t": 167.77,
-   "file": "keyframes/kf_27_02-47.8.png"
+   "t": 167.27,
+   "file": "keyframes/kf_27_02-47.3.png"
   },
   {
-   "t": 171.13,
-   "file": "keyframes/kf_28_02-51.1.png"
+   "t": 171.17,
+   "file": "keyframes/kf_28_02-51.2.png"
   },
   {
    "t": 173.07,
    "file": "keyframes/kf_29_02-53.1.png"
   },
   {
-   "t": 176.93,
-   "file": "keyframes/kf_30_02-56.9.png"
+   "t": 176.6,
+   "file": "keyframes/kf_30_02-56.6.png"
   },
   {
-   "t": 180.03,
-   "file": "keyframes/kf_31_03-00.0.png"
+   "t": 180.1,
+   "file": "keyframes/kf_31_03-00.1.png"
   },
   {
    "t": 182.33,
    "file": "keyframes/kf_32_03-02.3.png"
   },
   {
-   "t": 186.37,
-   "file": "keyframes/kf_33_03-06.4.png"
+   "t": 186.57,
+   "file": "keyframes/kf_33_03-06.6.png"
   },
   {
    "t": 191.93,
    "file": "keyframes/kf_34_03-11.9.png"
   },
   {
-   "t": 195.47,
-   "file": "keyframes/kf_35_03-15.5.png"
+   "t": 195.37,
+   "file": "keyframes/kf_35_03-15.4.png"
   },
   {
    "t": 198.57,
@@ -254,10 +259,6 @@
    "file": "keyframes/kf_40_03-30.4.png"
   }
  ],
- "flags": [
-  "layout audit: 10 issue(s) — 6 overlapping, 4 < 0.15 apart, 0 outside the safe area, 0 in the caption zone (see 'Layout audit')"
- ],
- "implied_caps": [
-  "cap 7 (text overlapping/overflowing, layout audit)"
- ]
+ "flags": [],
+ "implied_caps": []
 }

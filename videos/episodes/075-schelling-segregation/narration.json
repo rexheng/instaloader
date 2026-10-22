@@ -2,7 +2,7 @@
  "scene": "Episode",
  "episode": 75,
  "title": "Mild Preferences, Segregated Towns",
- "video_duration": 222.767,
+ "video_duration": 223.233,
  "beats": [
   {
    "index": 0,
@@ -2774,142 +2774,137 @@
   },
   {
    "index": 23,
-   "start": 212.533,
+   "start": 213.0,
    "duration": 8.59,
-   "end": 221.123,
+   "end": 221.59,
    "text": "Look again at the first town. As Schelling argued, whatever you guessed its people demanded, the map alone could not have told you.",
    "voice": "af_heart",
    "words": [
     {
      "w": "Look",
-     "t": 212.623,
-     "end": 212.798
+     "t": 213.09,
+     "end": 213.265
     },
     {
      "w": "again",
-     "t": 212.823,
-     "end": 213.173
+     "t": 213.29,
+     "end": 213.64
     },
     {
      "w": "at",
-     "t": 213.198,
-     "end": 213.261
+     "t": 213.665,
+     "end": 213.728
     },
     {
      "w": "the",
-     "t": 213.273,
-     "end": 213.36
+     "t": 213.74,
+     "end": 213.827
     },
     {
      "w": "first",
-     "t": 213.398,
-     "end": 213.698
+     "t": 213.865,
+     "end": 214.165
     },
     {
      "w": "town",
-     "t": 213.723,
-     "end": 214.343
+     "t": 214.19,
+     "end": 214.81
     },
     {
      "w": "As",
-     "t": 214.773,
-     "end": 214.998
+     "t": 215.24,
+     "end": 215.465
     },
     {
      "w": "Schelling",
-     "t": 215.048,
-     "end": 215.423
+     "t": 215.515,
+     "end": 215.89
     },
     {
      "w": "argued",
-     "t": 215.448,
-     "end": 216.273
+     "t": 215.915,
+     "end": 216.74
     },
     {
      "w": "whatever",
-     "t": 216.423,
-     "end": 216.773
+     "t": 216.89,
+     "end": 217.24
     },
     {
      "w": "you",
-     "t": 216.798,
-     "end": 216.935
+     "t": 217.265,
+     "end": 217.402
     },
     {
      "w": "guessed",
-     "t": 216.973,
-     "end": 217.273
+     "t": 217.44,
+     "end": 217.74
     },
     {
      "w": "its",
-     "t": 217.298,
-     "end": 217.473
+     "t": 217.765,
+     "end": 217.94
     },
     {
      "w": "people",
-     "t": 217.498,
-     "end": 217.848
+     "t": 217.965,
+     "end": 218.315
     },
     {
      "w": "demanded",
-     "t": 217.873,
-     "end": 218.698
+     "t": 218.34,
+     "end": 219.165
     },
     {
      "w": "the",
-     "t": 218.848,
-     "end": 218.948
+     "t": 219.315,
+     "end": 219.415
     },
     {
      "w": "map",
-     "t": 218.973,
-     "end": 219.248
+     "t": 219.44,
+     "end": 219.715
     },
     {
      "w": "alone",
-     "t": 219.273,
-     "end": 219.785
+     "t": 219.74,
+     "end": 220.252
     },
     {
      "w": "could",
-     "t": 219.823,
-     "end": 219.998
+     "t": 220.29,
+     "end": 220.465
     },
     {
      "w": "not",
-     "t": 220.023,
-     "end": 220.235
+     "t": 220.49,
+     "end": 220.702
     },
     {
      "w": "have",
-     "t": 220.248,
-     "end": 220.373
+     "t": 220.715,
+     "end": 220.84
     },
     {
      "w": "told",
-     "t": 220.398,
-     "end": 220.748
+     "t": 220.865,
+     "end": 221.215
     },
     {
      "w": "you",
-     "t": 220.773,
-     "end": 221.123
+     "t": 221.24,
+     "end": 221.59
     }
    ],
    "wav": "/root/.cache/sample_space/tts/e1/e1b9d55f8b2be1df7ae079a1.wav"
   }
  ],
- "warnings": [
-  {
-   "t": 212.53,
-   "msg": "beat 23: animations reached 'first' 0.50s after it was spoken - narration and visuals out of sync; shorten the preceding animations"
-  }
- ],
+ "warnings": [],
  "layout_audit": {
   "clearance": 0.15,
   "checks": 231,
-  "audit_seconds": 7.3,
-  "render_seconds": 1016.2,
+  "audit_seconds": 6.866,
+  "render_seconds": 935.6,
   "errors": 0,
   "count": 0,
   "counts": {

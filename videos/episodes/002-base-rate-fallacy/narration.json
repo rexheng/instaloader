@@ -2868,8 +2868,8 @@
  "layout_audit": {
   "clearance": 0.15,
   "checks": 208,
-  "audit_seconds": 1.755,
-  "render_seconds": 717.0,
+  "audit_seconds": 1.934,
+  "render_seconds": 661.1,
   "errors": 0,
   "count": 0,
   "counts": {

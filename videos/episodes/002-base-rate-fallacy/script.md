@@ -4,8 +4,10 @@
 sample space to everyone who tested positive, and when the condition is rare that crowd is
 mostly false alarms, which is all Bayes' theorem (and a model's *precision*) says.
 
-Runtime target ≈ 3:35 · ≈ 505 words · voice af_heart, speed 0.84 (cold open 0.88; the reveal
-sentences and the two insight sentences 0.80; 0.2 s pauses inside a thought).
+Runtime target ≤ 3:35 · ≈ 475 words · voice af_heart, speed 0.84, `CADENCE = "shaped"` (gaps follow
+the sense; "hundred and twenty" is read "hundred twenty"); the reveal sentences and the two insight
+sentences 0.80, the "red share" sentence 0.81; 1.0 s after "Seventeen percent" and "Six times too
+high", 0.9 s after the thesis (PRODUCTION_GUIDE §13).
 
 Premise: **1 in 500** sick, the test catches **99 %** and wrongly flags **1 %** of the
 healthy → per 10,000 people, 20 sick → 19.8 positive, 9,980 healthy → 99.8 positive →
@@ -34,7 +36,7 @@ untitled: titles change fade-out-then-fade-in, and the fill is emptied before a 
 ### 1. Cold open + commit (0:00–0:18)
 > One in five hundred people has this disease. A test catches ninety-nine percent of the sick and
 > wrongly flags one percent of the healthy. If yours says positive, what's the chance you're sick?
-> Pick a number. *[1.6 s hold]*
+> *[0.3]* Pick a number. *[1.6 s hold]*
 > Most doctors and medical students given a problem like this got it wrong.
 
 Visual: frame 1 holds red "sick" node with "1 in 500", blue "healthy" node, and the empty meter
@@ -56,8 +58,8 @@ the "95%" morphs into "99%" as it travels round the right end of the meter onto 
 marker at 99 % ("naive"); the waffle clears. "you" pulses on "treatment".
 
 ### 3. Naive build: it works when half are sick (0:27–0:45)
-> Check that rule by counting. Here are ten thousand people, and suppose half of them are sick.
-> Test everyone. Ninety-nine percent of the sick light up, and one percent of the healthy.
+> Check that rule by counting: ten thousand people, half of them sick.
+> Test everyone, and watch who lights up.
 > Of the five thousand who lit up, ninety-nine percent are sick. Here, the rule holds.
 
 Visual: one 1.5 s morph turns the diagram into a counting table (each node + label → row bullet +
@@ -70,8 +72,7 @@ the right half dims but for a sprinkle of 50; counts tick to 4,950 and 50; a gre
 
 ### 4. Fail: the same test, a rarer disease (0:45–1:17)
 > Now keep the same test, and make the disease rarer and rarer, down to yours: one in five hundred.
-> About twenty sick people light up, plus one percent of the nine thousand nine hundred eighty
-> healthy ones: about a hundred.
+> About twenty sick people light up, plus one percent of the healthy ones: about a hundred.
 > So of a hundred and twenty positives, only twenty are sick. **Seventeen percent.** *[1 s]*
 > **The rule said ninety-nine. Six times too high.** *[1 s]*
 > One percent sounds small, but here it's one percent of nearly everyone.
@@ -92,11 +93,10 @@ only the 100 ringed blue squares pulse, on "nearly everyone" the 9,980.
 > hundred. *[1.1, the 17 % flies in silently]*
 > Unrounded, the red count is twenty sick people times ninety-nine percent, and the blue, every
 > healthy person times one percent.
-> Divide everything by the ten thousand. Counts become shares: two in a thousand sick, nine
-> hundred ninety-eight healthy. The share can't change.
+> Divide everything by ten thousand: counts become shares. *[0.4]* The share can't change.
 > These are how common each group is, and these, how often each group tests positive. Name them,
 > and you have Bayes' theorem.
-> All it does is shrink the sample space to what the evidence allows, then take the share. *[0.8]*
+> All it does is shrink the sample space to what the evidence allows, then take the share. *[0.9]*
 
 Visual (the one picture): the negatives vanish, the 120 ringed survivors become dots, the header
 swaps to "120 people who tested +"; they line up in a 24 × 5 strip, the meter rises to the strip's
@@ -108,16 +108,18 @@ columns sit under the 17 % red segment. The formula is built from the picture:
    the 20 flies out of the table's people column and the 0.99 off the red arrow (the denominator
    repeats the term in place; the table's 20 positives become 19.8); on "every healthy person times
    one percent" the 9,980 and the 0.01 arrive the same way and the table's 100 becomes 99.8.
-3. ÷ 10,000: the people column's header becomes "÷ 10,000"; on "two in a thousand" the sick row
-   (20 → 0.002, 19.8 → 0.00198) and both 20s in the formula change in one move; on "nine hundred
-   ninety-eight" the healthy row (9,980 → 0.998, 99.8 → 0.00998) and the formula's 9,980. No number in
+3. ÷ 10,000: the people column's header becomes "÷ 10,000"; on "counts" the sick row
+   (20 → 0.002, 19.8 → 0.00198) and both 20s in the formula change in one move; on "shares" the
+   healthy row (9,980 → 0.998, 99.8 → 0.00998) and the formula's 9,980 (each number rolls out and
+   its share rolls in; nothing morphs glyph by glyph). No number in
    the table is left undivided. The 17 % pulses on "the share can't change".
 4. Grey braces grow on the spoken words: "how common" under 0.002 and 0.998, "how often" under 0.99
    and 0.01. On "Name them" each number turns into its name in place (0.002 → P(sick), 0.99 →
-   P(+∣sick), 0.998 → P(healthy), 0.01 → P(+∣healthy); numerator first), the braces stretch with their
-   terms and "≈ 17 %" stays at the right end. "Bayes' theorem" under the left side. The braces leave;
+   P(+∣sick), 0.998 → P(healthy), 0.01 → P(+∣healthy); numerator first; each number's box grows into
+   its name's box as one fades into the other, so no glyph is ever half-morphed), the braces stretch with their
+   terms and "≈ 17 %" stays at the right end. "Bayes' theorem" above the left side. The braces leave;
    a yellow box on the denominator on "shrink", a red box on the numerator on "take the share"; the
-   strip's outline pulses in the 0.8 s pause.
+   strip's outline pulses in the 0.9 s pause.
 
 ### 6. Consequence: precision, Cardiff 2017 (2:10–3:05)
 > Swap the disease for a police watch list.
@@ -126,7 +128,7 @@ columns sit under the 17 % red segment. The formula is built from the picture:
 > would swamp the real matches.
 > Face-recognition cameras scanned the crowds. *[0.3]* Over four days, they raised two thousand four
 > hundred and seventy alerts.
-> Shrink to the alerts, and take the red share. The police counted a hundred and seventy-three as
+> Shrink to the alerts. Take the red share. The police counted a hundred and seventy-three as
 > right: seven percent.
 > In machine learning, the share of alerts that are right is called precision.
 > Cardiff University's evaluators counted only alerts the logbooks confirmed: three percent.
@@ -147,7 +149,7 @@ flagged pulse; the legend steps aside and the 145 file, rings on, one by one int
 95 raster of exactly 2,470 alerts (red first, then left to right). "Shrink to the alerts": the crowd
 fades out, the meter + raster move to the centre and the meter comes up to full strength; straight
 red/blue brackets on "red share"; "173 right" / "2,297 wrong"; the meter fills to 7 %, its red segment
-over the red columns. On "precision" the title turns into "precision", a small ghost of the disease
+over the red columns. On "precision" the title rolls out and "precision" rolls in, a small ghost of the disease
 meter appears beside it ("your test", 17 %) and the word is copied under it: "precision too". Then the
 ghost leaves, the main bar is tagged "police count / 2,470 alerts", and a second, thin bar below is
 tagged the same way, "evaluators' count / final week · 2,632 alerts"; it fills to 3 % on "three
@@ -158,9 +160,8 @@ percent", its second tag line becomes "Six Nations 2018 · 48 alerts" on "Months
 
 ### 7. Landing: the opening, re-seen (3:05–3:36)
 > Back to your test. *[1.6, the first frame is re-seen in silence]*
-> Your seventeen percent assumes a random screen. Symptoms raise the one in five hundred, and the
-> answer climbs: at one in a hundred, fifty percent; at one in two, ninety-nine, where the rule
-> held. *[1.2]*
+> Your seventeen percent assumes a random screen. Symptoms raise the one in five hundred: at one in
+> a hundred, fifty percent; at one in two, ninety-nine, where the rule held. *[1.2]*
 > The title's ninety-nine percent is the test's recall: how often the sick test positive. Seventeen
 > percent is its precision: how often the positive are sick.
 

@@ -42,6 +42,6 @@
 
 [02:58.8] So the slope is rise over run. [pause 1.0] Plug in his numbers, and it's one half.
 
-[03:04.5] All four of his datasets share these five numbers, so they share the ellipse and the line. [pause 0.3] A trend, a curve, an outlier, and one point doing all the work.
+[03:04.8] All four of his datasets share these five numbers, so they share the ellipse and the line. [pause 0.3] A trend, a curve, an outlier, and one point doing all the work.
 
-[03:15.4] Your line was exactly right: five numbers fix its slope, minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.
+[03:15.8] Your line was exactly right: five numbers fix its slope, minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.

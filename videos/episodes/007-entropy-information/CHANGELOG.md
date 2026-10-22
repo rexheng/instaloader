@@ -186,3 +186,14 @@ Round 6 scored craft 8.8 and substance 8.6, with no caps and no factual errors; 
 
 **Audio and concision**
 - "Like three point three doublings" is cut (craft 3, substance 4). The voice speed is 0.85 instead of 0.84, so the added words keep the runtime under 3:58.
+
+### Round 6 revisions, verification pass
+
+The first round-6 pass was interrupted after its 09:27 render. This pass re-rendered the current scene and swept the frames during motion with 4–6 fps strips at every fixed timestamp, then fixed what was still wrong. No narration and no claim changed.
+
+- **The run's sum (substance 1, 6; BAR §11.1).** In the 09:27 render the running tally rolled through 0.7, 1.2, 2.7 and 4.8 between the true partial sums, so for a few frames the bill showed sums of nothing on screen. A trial "costs flow into the total" version stacked half-faded copies of 4.9, so it was dropped too. The sum is now built left to right: each cost pulses as the "+" after it is written, then "= 4.9" arrives once every term is in. 0.5 + 0.6 + 3.8 = 4.9 holds as displayed (asserted in `scene.py`). The whole-question row no longer cross-fades "0.5" into "1" in one spot ("0̶1̶5̶"). Each whole number drops in under its own cost as that cost pulses.
+- **Copies never stack (craft 5, 6; substance 7).** `fly_morph` keeps a copy invisible until its box is clear of the source's box. The old rule (opacity grows with distance) still showed a half-strength 2.81 on top of the gutter's 2.81 at 2:44. When the copy changes glyph (3.3 → 2ᵏ), the old glyph now dims out completely before the new one brightens, so the two are never superimposed.
+- **Count flight (craft 1, substance 3).** Each count's path was a spline through a waypoint 0.3 under its start, and it overshot: the right-hand counts of each row first rose over their own row. Each path is now a cubic Bézier that leaves straight down and lands straight down into its column.
+- **Value swaps.** "0.16 → ?" and "1.67 → ?" (the context changes) and "average → H" were cross-fades in place, which stacked the two glyphs for about 0.3 s, and the sliding "=" passed over the fading "average". Now the old term leaves upward first, and the rest of the formula slides only once it is almost gone.
+- **One baseline per label row.** The payoff tags and the green 0.6–1.3 sat on their centres, so "person" (a descender and no ascender) rode about 5 px high. The LLM note's "1924 book" also sat 5 px below "· on Gutenberg May 2023". Each row now shares a measured baseline.
+- **Landing, 3:41.** The bits-per-character line faded out before Shannon's record faded back in, which left about a second of near-empty frame under "The hidden character from the start". The two now overlap, so THE OTHER DAY is already bright as the line leaves.

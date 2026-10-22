@@ -17,10 +17,10 @@ otherwise.
 |---|---|
 | YELLOW | heads / a hit: coin faces, "hit" glyphs, yellow tiles, hᵢ, numerators |
 | GRAY (hollow) | tails / a miss: coin faces, "miss" glyphs, gray tiles; also axes. Secondary grey *text* uses #A9AEB6 (8.1:1) |
-| BLUE | the streak test and what it reads: rings on checked flips (and on the simulated record's checked shots), row scores, nᵢ, the averages 17/42 and 25/42, the random shooter's 46% / 54% and its −8 gap, the streak-length ghost ticks, the landing's shooter dot |
+| BLUE | the streak test and what it reads: rings on checked flips, row scores, nᵢ, the averages 17/42 and 25/42, the random shooter's 46% / 54% and its −8 gap, the streak-length ghost ticks, the test's "hot" verdict arrows (0:28 and the landing), the landing's shooter dot |
 | RED | the bias: the −9.5-point gap, the −19-point and −8-point gaps, the "bias" arrow |
 | PURPLE | the real Cornell shooters (GVT 1985 data): 49%, 45%, +4, the +12 brace |
-| YELLOW dots | hits in a row (●, ●●, ●●●) flagged on the ghost ticks, with a grey "hits in a row" legend — yellow keeps its meaning, a hit |
+| YELLOW dots | hits in a row (●, ●●, ●●●): the "after 3 hits" lane's condition and the flags on the ghost ticks, with a grey "hits in a row" legend — yellow keeps its meaning, a hit; hollow grey dots (○○○) mark the "after 3 misses" lane |
 | INK | the assumption (dashed: one half / gap 0, "the obvious guess"); the 14 equal vote outlines and the 1/14 they become |
 
 Never red vs green; red is always labelled.
@@ -29,15 +29,15 @@ Never red vs green; red is always labelled.
 
 ### 1. Cold open (0:00–0:13) — *open*
 > Flip a fair coin four times. After each heads, check the next flip: here, one of the two is
-> heads. Average the shares over all sixteen sequences. Below, at, or above one half? *[pause 1.6]*
+> heads. Do this for every four flip run, and average. Below, at, or above one half? *[pause 1.6]*
 
 Visual: the row of four large coins flips in at the vertical centre of the frame (H H T H).
 Blue arcs jump from each eligible heads to the next flip; those flips get blue rings; the
 ringed heads lifts into a yellow 1, both rings into a blue 2 → "1/2". On "Do it" the row rises
-and the share axis (0–100%, "checked flips that are heads") draws under it; on "all sixteen
-sequences" a ghost of all 16 sequences (coin radius 0.12, 60% opacity, compact 4 × 4) deals in
-under the row; on "average the shares" the ghosts collapse onto the line as one "?" (question
-ends ≈ 0:12.2). On "Below", "at", "above" the three answers "< 1/2", "= 1/2", "> 1/2" appear on
+and the share axis (0–100%, "checked flips that are heads") draws under it; on "every four flip
+run" a ghost of all 16 runs (coin radius 0.15, 60% opacity, compact 4 × 4) deals in under the row
+while the row fades to 40%; on "and average" the ghosts collapse onto the line as one "?" and the
+row returns (question ends ≈ 0:12.0). On "Below", "at", "above" the three answers "< 1/2", "= 1/2", "> 1/2" appear on
 the line where they sit. Prediction hold.
 
 ### 2. Stakes (0:13–0:25) — *stakes*
@@ -87,8 +87,10 @@ on "nine".
 > The skew comes from scoring row by row, because each row gets one vote, however many flips it checked.
 > And checked heads come in crowds, since a heads gets the next flip checked too. This row's three
 > heads share a single vote, while this lone tails gets a whole one.
-> Twelve heads crowd into eight rows. Twelve tails spread across eleven. Fewer rows, fewer votes:
-> line them up, and heads hold seventeen out of forty two.
+> Twelve heads crowd into eight rows. Twelve tails spread across eleven.
+> Crowded heads split their votes.
+> Line them up, and the heads hold five and two thirds of the fourteen votes. That's seventeen
+> out of forty two.
 > So the test takes an average of ratios, one per row, instead of the ratio of totals.
 
 Visual (the one picture): during "Yet no flip is biased" the line and its markers slide left to
@@ -99,14 +101,19 @@ letters stay in the table); only once they have landed do the yellow tiles fly i
 and the table's 14 numerators fly into Σᵢhᵢ, the 14 denominators into Σᵢnᵢ; the "=" joins only on
 "exactly half", so Σᵢhᵢ/Σᵢnᵢ = 12/24 sits beside the pooled strip from 1:17 on. A copy regroups row by row, then every row is
 resized to one equal vote (1/14): HHHH's three heads squeeze into one vote, HTTT's lone tails
-stretches to a whole one (row and segment boxed together). The 8 rows holding heads, then the 11
-holding tails, are outlined, with the counts "12 heads · 8 rows" (yellow) and "12 tails · 11 rows"
-(grey) written in the right column; on "fewer votes" the thin heads slices pulse. On "line them
-up" the counts, the outlines and "the obvious guess" text leave, the table dims to 30%, and the
-yellow parts slide left and stop exactly on the blue 40.5% marker; the packed yellow, as one block,
-flies into "17/42", parked at the right of the formula to come. On "an average" 14 equal ink
-outlines draw over the strip and fly into the ink 1/14 (the Σ joins); on "of ratios" the 14 row
-scores fly, whole, into hᵢ/nᵢ; on "one per row" the "=" joins it to 17/42. Both formulas are
+stretches to a whole one (row and segment boxed together). While the tiles regroup, the "40.5%"
+and "the obvious guess" labels step back to 25% (nothing crosses them at full strength). The 8 rows
+holding heads are boxed while the other rows, the pooled strip, its formula and "the obvious guess"
+dim; then the 11 rows holding tails (dimming swaps); counts "12 heads · 8 rows" (yellow) and "12
+tails · 11 rows" (grey) in the right column. On "Crowded heads split their votes" only HHHH and
+HHHT stay bright and their five third-of-a-vote heads slices pulse with their 3/3 and 2/3. On
+"Line them up" the table dims and the yellow parts slide left and stop exactly on the blue 40.5%
+marker; its label hands over to "5⅔ votes" over the packed yellow, whose 5⅔ travels to the right
+column as a numerator; on "fourteen" "8⅓ votes" appears over the grey and the 14 vote outlines fly
+into the denominator 14; on "seventeen" 5⅔/14 = 17/42 completes. That working then steps aside
+(17/42 stays). On "an average" the 14 vote outlines flash and fly into the ink 1/14 (the Σ joins);
+on "of ratios" HHHH's own 3/3, at table size, becomes hᵢ/nᵢ; on "one per row" all 14 row ratios
+flash in the table and the "=" joins it to 17/42. Both formulas are
 displaystyle at one size with their "=" signs on one vertical. On "instead" the 1/14 Σ pulses, on
 "ratio of totals" the two Σ inside the pooled fraction pulse. The table fades out.
 
@@ -128,57 +135,57 @@ to the after-heads cursor: "−19 points".
 ### 8. Payoff (2:07–3:00) — *cornell*, *minus8*, *observed*, *hot*
 > The nineteen eighty five study ran the same comparison on twenty six Cornell players: up to a
 > hundred shots each, from where they'd hit about half. After three hits, versus after three misses.
-> For a random shooter, the same crowding pulls those, on average, to forty six and fifty four percent. Miller and
-> Sanjurjo's twenty eighteen paper puts the gap at about minus eight points. Longer streaks grow the
-> bias. *[pause 0.9]* Longer records shrink it, *[pause 0.5]* but a hundred shots isn't long.
+> For a random shooter, the same crowding pulls after hits down to forty six percent on average,
+> and after misses up to fifty four. Miller and Sanjurjo's twenty eighteen paper puts the gap at
+> about minus eight points. *[pause 0.8]* Longer streaks grow the bias. *[pause 0.9]* Longer records
+> shrink it, *[pause 0.5]* but a hundred shots isn't long.
 > Cornell's players hit forty nine percent after three hits, and forty five after three misses. The
 > study took that plus four to mean no hot hand.
 > Measured from minus eight, it's twelve points hot. That's evidence for a hot hand in a gym, not
 > proof it survives defenders in a game.
 
-Visual: header "Cornell, 1985 · 26 players · up to 100 shots" in ink, built phrase by phrase and
-kept centred. The strips fade to two thin lanes ("sliders"); both cursors glide back to 50% (the
-obvious guess), values become "?"; on "the same comparison" the lane labels become "after 3 hits" /
-"after 3 misses" and the axis title "checked shots that are hits". On "up to a hundred shots" one
-simulated 100-shot record (two rows of 50 hit/miss tiles, labelled "simulated / random shooter")
-deals in above the lanes. On "from where" the line zooms to 40–60%: each tick slides to its new
-place as its label changes, so the axis is never unlabeled. On "about half" the dashed 50% line and
-its tick pulse. On "After three hits" blue rings mark every shot that follows three hits in the
-record; on "after three misses" those dim and rings mark the shots after three misses; the header
-details dim to 30%. On "the same crowding" the after-3-hits cursor slides 50 → 46% and the
-after-3-misses cursor 50 → 54%, the red arrow growing between them; values 46% / 54%. A blue
-"random" column head replaces the record's label on "For a random shooter", before any number
-lands in it (the record fades as the cursors move), and the M&S citation comes in on "the same crowding" (GVT's dims on "Miller"). On
-"gap": the percent labels fade out, the pair slides left until the after-misses cursor sits on the
-dashed line, and the same tick marks are relabelled −10 … +10 ("after-hits − after-misses (points)",
-one line): the after-hits cursor is now the blue random-shooter marker at −8, the arrow the red
-"bias"; the right column dims to 30% (no lanes left to label). On "Longer streaks grow the bias"
-three dim blue ghost ticks slide out of zero to −1.0, −3.1 and −8 (the last lands exactly under the
-−8 marker); each carries a flag of yellow hit dots (●, ●●, ●●●) hung on the left of its own tick top
-by an updater, and a grey "hits in a row" legend sits above ●●; the picture holds ≈ 1.8 s. On
-"Longer records shrink it" the 1- and 2-hit ghosts step aside and the 3-hit ghost slides with its
-flag to its 1,000-shot position (−0.7, labelled "1,000 shots"), held ≈ 2.2 s; on "isn't" it slides
-back under −8 and "up to 100 shots" in the header flashes. Cornell: the last ghost clears, the
-header details fade (the title re-centres and turns purple: Cornell's data arrives), the right column returns with a purple "Cornell" column
-head beside "random", and purple 49% / 45% appear under it, then fly (arced clear of the other
-labels) into a purple marker at +4 ("+4"); the dashed 0 pulses on "no hot hand". A purple brace
-from −8 to +4 above the two marker tops; "+12 points" fades down onto it as the brace finishes
-(the right column fades out). On "evidence" the title and citations dim to 30%; on "in a gym" a grey "no
-defenders" tag appears under +4 and pulses on "defenders".
+Visual (round 6: no simulated record, no zoom). On "nineteen eighty five" the strips clear to two
+thin lanes on the same 0–100% axis, both cursors glide back to 50% and the values become "?", while
+the grey header "1985 design" and the GVT citation come in. On "the same comparison" the lane labels
+become "after 3 hits" / "after 3 misses" (axis title "checked shots that are hits") and each lane
+gets its condition at its left end (●●● yellow hits, ○○○ hollow grey misses). "· 26 players" and
+"· up to 100 shots" join the header phrase by phrase, kept centred. On "about half" the dashed 50%
+line and its tick pulse; on "After three hits" / "after three misses" each lane's glyph and label
+pulse (the header details dim). On "For a random shooter" a blue "random" column head; the M&S
+citation on "the same crowding"; on "pulls after hits down" the top cursor slides 50 → 46% (value
+46%), on "after misses up" the bottom one 50 → 54%, the red arrow growing between them. On "gap"
+the pair slides until after-misses sits on the dashed line, then the same tick marks are relabelled
+−10 … +10 (each % label hands over to its point label in place, so the axis is never unlabeled):
+the after-hits cursor stretches out into the blue random-shooter marker at −8, the arrow becomes
+the red "bias"; the right column dims to 30%. Silent 0.8 s on the −8 picture. Ghost ticks as
+before (1, 2, 3 hits in a row → −1.0, −3.1, −8; the 3-hit one slides to its 1,000-shot place −0.7
+and back). Cornell: the ghost clears, "1985 design" becomes the purple "Cornell, 1985" (details
+fade), the GVT citation returns to full and M&S dims; the column head "random" becomes "Cornell" and
+on the spoken numbers 46% → 49% and 54% → 45% in the same slots. After "three misses" whole copies
+of 49 and 45 travel to the right of where Cornell's marker will stand and "49 − 45" is written; on
+"plus four" "= +4" lands as the purple marker grows up from the axis; the dashed 0 pulses on "no
+hot hand", then a silent 0.8 s. On "Measured from minus eight" the right column leaves, the chart
+re-centres under its title (+1.4 units) and "+4" sheds its working; a purple brace from −8 to +4
+grows, "+12 points" on "twelve". On "in a gym" a grey "no defenders" tag under +4, pulsing on
+"defenders". Citations stay at full strength.
 
 ### 9. Landing (3:00–3:14) — *landing*
-> One half is what a fair coin does. Seventeen out of forty two is what this test sees. A fifty
-> percent shooter *[pause 0.3]* who averages one half on this test *[pause 0.2]* is already running hot.
+> One half is what a fair coin does. *[pause 0.5]* Seventeen out of forty two is what this test
+> sees. A fifty percent shooter *[pause 0.3]* who averages one half on this test *[pause 0.2]* is
+> already running hot.
 
-Visual: the payoff clears (0.5 s) except its number line and dashed zero line, which transform
-(1.0 s) into the cold open's 0–100% share axis and its dashed one-half guess while H H T H with its
-1/2 fades back in. On "fair" the ghost of the sixteen rows returns left of the line; on "Seventeen"
-its fourteen scored rows fly into (1/14) Σᵢ hᵢ/nᵢ while the blue marker draws at 40.5%, and
-"= 17/42" joins from the marker: the cold-open question, answered on its own image, with the test's
-formula. On "A fifty percent shooter" the row becomes hit/hit/miss/hit, the axis title "checked
-shots that are hits", and the dashed 50% line pulses; on "averages one half" a blue dot (the
-shooter's average) grows on it; on "already running hot" a thick arrow grows from the 17/42 marker
-to it: "hot". Hold ≈ 1.25 s on that frame; no end card over it.
+Visual: the payoff clears (0.5 s) except its number line, tick marks and dashed zero line, which
+drop (1.0 s) into the cold open's 0–100% share axis and its dashed one-half guess (the re-centred
+chart already sits where the cold-open axis sits) while H H T H with its 1/2 fades back in. On "fair"
+the cold open's ghost of the sixteen runs returns in the cold open's place and size (coin radius
+0.15, 60%) while the row fades to 40% and the guess label leaves; held ≈ 1 s. On "Seventeen" its
+fourteen scored rows fly into (1/14) Σᵢ hᵢ/nᵢ while the blue marker draws at 40.5%, and "= 17/42"
+joins from the marker: the cold-open question, answered on its own image, with the test's formula.
+On "A fifty percent shooter" the row becomes hit/hit/miss/hit and the axis title "checked shots
+that are hits"; on "averages one half on this test" the row dims to 30% and a blue dot grows on the
+one-half line at the formula's height, tagged in grey "its rows average 1/2"; on "already running
+hot" a thick blue arrow grows from the 17/42 marker to it: "hot". Hold ≈ 2.2 s on that frame; no
+end card over it.
 
 ## Sources (on screen)
 - Gilovich, Vallone & Tversky, 1985 · Cognitive Psychology 17(3):295–314 (shown as "Gilovich et al., 1985 · Cognitive Psychology")

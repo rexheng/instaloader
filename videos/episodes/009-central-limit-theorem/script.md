@@ -58,9 +58,12 @@ Definition built term by term from a mean line and x - mu arrows; skew bars 1.90
 > So average instead. *[pause 0.5]* Four bus waits: the one long wait gets diluted by three short
 > ones. *[pause 0.8]* Drop that one number here. Do that ten thousand times.
 
-Panels n = 1, 4, 16, 64 with a rotated gray "share (%)" and y ticks (10 and 20 on panel 1, 10 on
-the others). Four chips (25.7 in red) become (5.2 + 1.8 + 25.7 + 5.3) / 4 = 9.5, which drops into
-panel 2.
+On "So average" the skewness chart fades and one wait's 1.98 drops straight out of it (late, so
+it never crosses a visible bar), then slides along the readings row to sit under panel 1 as the
+big histogram shrinks into that panel; "skew =" fades in only when it arrives. Panels n = 1, 4, 16,
+64 with a rotated gray "share (%)" and y ticks (10 and 20 on panel 1, 10 on the others). Four
+chips (25.7 in red) come out of their bars (shallow arc) and become (5.2 + 1.8 + 25.7 + 5.3) / 4 =
+9.5, which drops into panel 2.
 
 ### 6. Readings (0:55-1:05)
 > These averages lean less: skewness one. Sixteen per average: point five. Sixty-four: point two
@@ -73,9 +76,10 @@ The n = 4 bell is drawn whole: its part below 0 minutes (no average gets there) 
 > skewness of one wait.
 
 "x4" arrows between the headers on "grows four times", "/2" arrows between the readings on
-"halves"; 2/sqrt(n) is written under each reading while that panel's n pulses (nothing flies
-through the panels); the four 2/sqrt(n) become one, then "skew(x-bar) =" arrives in the cleared
-space; on "skewness of one wait" the 1.98 reading pulses and the 2 becomes skew(x).
+"halves"; on "two over root n" 2/sqrt(n) is written under each reading while that panel's n
+pulses (nothing flies through the panels) and holds about 1.6 s; on "skewness of" the four
+2/sqrt(n) become one, then "skew(x-bar) =" arrives in the cleared space; on "one wait" the 1.98
+reading pulses and the 2 becomes skew(x).
 
 ### 8. Why root n, drawn as cubes (1:14-1:29)
 > The root comes from the cubes. Add four bus waits: their cubed gaps add up to four times one
@@ -85,8 +89,8 @@ space; on "skewness of one wait" the 1.98 reading pulses and the 2 becomes skew(
 The formula opens in place (dashed slot); one blue cube grows out of E[(x-mu)^3] and one gray
 cube out of sigma^3 ("cubed gaps", "spread^3"); four blue cubes ("x4"); sigma -> 2 sigma ("x2");
 2 x 2 x 2 gray cube ("x8"); x n and x n^{3/2} fly into the slot. In the pause after the beat the
-proof closes back to skew(x-bar) = skew(x)/sqrt(n) and the cubes leave, so the next beat starts
-from one formula and the panels.
+cubes and the middle of the expansion leave first, then the two ends close up into skew(x-bar) =
+skew(x)/sqrt(n), so the next beat starts from one formula and the panels.
 
 ### 9. Why it is a bell (1:30-1:45)
 > Kurtosis, the extra tail weight, fades faster: it quarters each time. Every finer difference
@@ -123,15 +127,16 @@ into the low bar (7.2%); the high bar rises to 1.0%.
 
 ### 12. Kohavi's rule is our formula (2:14-2:41)
 > Ron Kohavi and colleagues want each side between two and three percent. Their rule: n at least
-> three hundred fifty-five times the skewness squared. *[pause 0.3]* Divide by n and take the
+> three hundred fifty-five times the skewness, squared. *[pause 0.3]* Divide by n and take the
 > root: *[pause 1.0]* it's our formula: the average's skewness at most point oh five three. At
 > three hundred, the lean is point one two: still too much. For these waits: fourteen twenty,
 > lean point oh five three, and both misses reach the band. *[pause 1.2]*
 
-Citation: "Kohavi, Deng, Longbotham & Xu, 2014 · KDD (rule after Boos & Hughes-Oliver, 2000)".
+Citation: "Kohavi et al., 2014 · KDD; rule from Boos & Hughes-Oliver, 2000".
 On "each side" the tails and both meter readings flash; "2.5%" becomes a gray "2-3%" beside a
-gray band. On "Their rule" the panel dims to 35% and skew(x-bar) = 0.37 moves from the right
-column to sit right above the meter (the meter's driver). The rule n >= 355 · skew(x)^2 is
+gray band. On "Their rule" the panel dims to 35% and 2/sqrt(30) leaves; then skew(x-bar) = 0.37
+moves from the right column to sit right above the meter (the meter's driver), while the meter's
+title steps back for the 0.8 s it is crossed. The rule n >= 355 · skew(x)^2 is
 written on the lower row; a copy arcs up and becomes skew(x)^2/n <= 1/355 ("Divide by n"), then
 skew(x)/sqrt(n) <= 1/sqrt(355) ~ 0.053 ("take the root"). On "our formula" the dimmed formula at
 the top lights up with the matching side and comes down into the line, which now reads
@@ -140,18 +145,21 @@ the axis returns, a gray 300 marker lands, the dimmed panel morphs to n = 300, t
 becomes 0.12 (flagged with the 0.053 bound on "point one two") and the meter 3.7% / 1.7%. On
 "these waits" the rule becomes n >= 355 · 2^2 = 1,420; on "fourteen" the 1,420 marker, the panel
 and the readout 0.053 (flagged with the bound on "lean"), the meter at 3.0% / 2.1%. On "band" a
-green ring flashes around the bars and the band; the answer holds about 2.5 s.
+green ring flashes around the bars and the band; the answer holds about 2.5 s. Every changed
+number (the readout 0.37 -> 0.12 -> 0.053, the panel's n, the rule's right-hand side, and later
+17.9^2 -> 5.2^2) rolls: the old value leaves upward, then the new one rises in, so no frame shows
+two numbers printed over each other.
 
 ### 13. Bing, and the third answer (2:42-2:57)
 > Bing's revenue per user had a skewness near eighteen: a hundred and fourteen thousand users.
 > Capping each user at ten dollars a week: under ten thousand. And for some data, no number on
 > this axis is enough.
 
-On "Bing's" the panel, meter, readout and inequality leave; the sample-size axis rises to the
-middle of the frame and the rule moves to the top centre. n >= 355 · 17.9^2 ~ 114,000 (marker),
+On "Bing's" the panel, meter, readout and inequality leave first; then the sample-size axis rises
+to the middle of the frame (shifted a little left) and the rule moves to the top centre. n >= 355 · 17.9^2 ~ 114,000 (marker),
 then n >= 355 · 5.2^2 ~ 9,600 (the dot travels to "capped"). On "no number" a bright sweep runs
-along the whole axis; on "enough" a red dashed extension and a red "never" marker appear past
-its end.
+along the whole axis and off its end into a red dashed extension and a red "never" marker, which
+flags on "enough" and holds about 2 s.
 
 ### 14. The condition: the lighthouse (2:58-3:43)
 > A lighthouse one mile off a straight shore flashes at random angles, and each flash lands

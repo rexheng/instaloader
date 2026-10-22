@@ -52,10 +52,10 @@ B = dict(
     london="Chance predicted two hundred twenty-seven empty squares; Clarke counted two "
            "hundred twenty-nine. [pause 0.2] Single hits: two hundred eleven, exactly as "
            "predicted. [pause 0.2] Same test: p equals point eight eight.",
-    limit="The bombs were aimed, at Tower Bridge, but half fell outside this circle, "
-          "more than twelve kilometres away. And the test needs one lambda everywhere: "
-          "farther north, hits were about half as dense, so Clarke chose an area where lambda "
-          "held steady.",
+    limit="The bombs were aimed at Tower Bridge, but half fell more than twelve kilometres "
+          "away, outside this circle and off this map. And the test needs one lambda "
+          "everywhere: farther north, hits were about half as dense, so Clarke chose an area "
+          "where lambda held steady.",
     landing="So look again. [pause 1.2] The clumps in map A are what no aim at all looks like. "
             "If you chose map B, you chose the one following a rule.",
 )

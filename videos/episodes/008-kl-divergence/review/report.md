@@ -1,20 +1,20 @@
 # Review kit — `final.mp4`
 
-Generated 2026-10-22 08:38 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
+Generated 2026-10-22 11:31 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
 
 ## Mechanics (BAR §3 caps / §5 standards)
 
 | metric | value | bar | status |
 |---|---|---|---|
 | runtime | 3:30.5 (210.5s) | 2:30–4:00 | ok |
-| video | 1920x1080 @ 30 fps, h264/yuv420p, 9.19 MB | 1920x1080 @ 30 | ok |
+| video | 1920x1080 @ 30 fps, h264/yuv420p, 9.16 MB | 1920x1080 @ 30 | ok |
 | pace | 163 wpm (speech time) · 155 overall · 183 excl. all pauses; 543 words | 140–165 (cap <120/>180) | ok |
 | loudness | -14.0 LUFS, LRA 2.3 LU | −14 ±1 | ok |
 | true peak | -1.7 dBTP | ≤ −1.5 | ok |
 | leading silence | 0.00s | ≤ 1 s | ok |
 | trailing silence | 0.90s | ≤ 2 s | ok |
 | longest internal silence | 2.22s | ≤ 2.5 s | ok |
-| longest fully static stretch | 3.70s | ≤ 4 s (cap ≥ 8 s) | ok |
+| longest fully static stretch | 3.77s | ≤ 4 s (cap ≥ 8 s) | ok |
 | black frames | 0 run(s) | none | ok |
 | background-only stretches > 1 s | 0 | none | ok |
 | transcript vs script | WER 2.1% (522 words) | ≲ 8 % | ok |
@@ -22,9 +22,7 @@ Generated 2026-10-22 08:38 by videos/toolkit/review_kit.sh. Frames are evidence;
 
 ## Flags
 
-- layout audit: 10 issue(s) — 6 overlapping, 4 < 0.15 apart, 0 outside the safe area, 0 in the caption zone (see 'Layout audit')
-
-Implied hard caps: cap 7 (text overlapping/overflowing, layout audit)
+- none
 
 ### Silences ≥ 0.3 s
 
@@ -32,26 +30,12 @@ Implied hard caps: cap 7 (text overlapping/overflowing, layout audit)
 
 ### Static stretches ≥ 3 s
 
-0:39.9–0:43.0 (3.1s), 0:60.0–1:03.3 (3.3s), 1:43.4–1:47.1 (3.7s), 3:04.1–3:07.2 (3.1s)
+0:39.9–0:43.0 (3.1s), 0:60.0–1:03.3 (3.3s), 1:43.3–1:47.0 (3.7s), 2:44.5–2:48.2 (3.7s), 2:53.8–2:57.6 (3.8s)
 
 ## Layout audit (automatic overlap check, BAR §5)
 
-10 issue(s): 6 overlapping/touching, 4 closer than 0.15, 0 outside the safe area, 0 in the caption zone; 1 allowed by the producer. 196 frames checked (after every animation and hold).
+0 issue(s): 0 overlapping/touching, 0 closer than 0.15, 0 outside the safe area, 0 in the caption zone; 1 allowed by the producer. 196 frames checked (after every animation and hold).
 
-`overlap`, `safe-area` and `caption-zone` are cap-7 defects (text overlapping another element or leaving the frame); `clearance` is cramped spacing under BAR's 0.15 (Visual points). Fix each, or declare a deliberate one in scene.py with `self.allow_overlap(a, b, reason=...)`.
-
-| # | time | held | kind | text | other / detail | gap |
-|---|---|---|---|---|---|---|
-| 1 | 1:37.7–2:12.2 | 34.6s | overlap | Text 'bits/min' @(-4.86, -0.33) | VMobject @(-2.25, -0.62) | -0.04 |
-| 2 | 1:37.7–2:12.2 | 34.6s | overlap | Text 'bits/min' @(-4.86, -0.33) | VMobject (55% opacity) @(-2.25, -0.63) | -0.02 |
-| 3 | 2:30.6–2:38.9 | 8.3s | overlap | Text 'bits/min' @(-4.86, -0.33) | VMobject @(-2.25, -0.62) | -0.04 |
-| 4 | 2:30.6–2:38.9 | 8.3s | overlap | Text 'bits/min' @(-4.86, -0.33) | VMobject (55% opacity) @(-2.25, -0.63) | -0.02 |
-| 5 | 2:07.3–2:12.2 | 4.9s | overlap | Text 'bits/min' @(-4.86, -1.69) | Rectangle of DashedVMobject @(-4.18, -1.81) | +0.02 |
-| 6 | 2:49.1–2:53.1 | 4.0s | overlap | MathTex '3' @(1.1, 2.26) | MathTex '\text{posterior}' @(1.08, 2.4) | -0.01 |
-| 7 | 1:43.4–1:50.6 | 7.2s | clearance | MathTex '36\%' @(-4.87, 1.49) | MathTex 'A' @(-5.0, 1.09) | +0.12 |
-| 8 | 2:34.2–2:38.9 | 4.7s | clearance | MathTex '2' @(-4.11, 2.58) | VMobject of DashedVMobject (25% opacity) @(-3.88, 2.44) | +0.12 |
-| 9 | 2:36.2–2:38.9 | 2.7s | clearance | MathTex '1' @(-2.26, 1.37) | CurvedArrow @(-2.05, 2.22) | +0.13 |
-| 10 | 1:19.7–1:20.1 | 0.4s | clearance | MathTex '\downarrow\,-6.2' @(-2.75, -1.63) | VMobject @(-3.8, -1.63) | +0.11 |
 
 Allowed by the producer (check that each reason holds):
 
@@ -94,21 +78,21 @@ Allowed by the producer (check that each reason holds):
 - `keyframes/kf_18_01-42.2.png` — 1:42.2
 - `keyframes/kf_19_01-59.9.png` — 1:59.9
 - `keyframes/kf_20_02-02.7.png` — 2:02.7
-- `keyframes/kf_21_02-05.1.png` — 2:05.1
+- `keyframes/kf_21_02-05.2.png` — 2:05.2
 - `keyframes/kf_22_02-15.1.png` — 2:15.1
 - `keyframes/kf_23_02-22.0.png` — 2:22.0
 - `keyframes/kf_24_02-24.1.png` — 2:24.1
 - `keyframes/kf_25_02-31.4.png` — 2:31.4
-- `keyframes/kf_26_02-42.6.png` — 2:42.6
-- `keyframes/kf_27_02-47.8.png` — 2:47.8
-- `keyframes/kf_28_02-51.1.png` — 2:51.1
+- `keyframes/kf_26_02-42.5.png` — 2:42.5
+- `keyframes/kf_27_02-47.3.png` — 2:47.3
+- `keyframes/kf_28_02-51.2.png` — 2:51.2
 - `keyframes/kf_29_02-53.1.png` — 2:53.1
-- `keyframes/kf_30_02-56.9.png` — 2:56.9
-- `keyframes/kf_31_03-00.0.png` — 3:00.0
+- `keyframes/kf_30_02-56.6.png` — 2:56.6
+- `keyframes/kf_31_03-00.1.png` — 3:00.1
 - `keyframes/kf_32_03-02.3.png` — 3:02.3
-- `keyframes/kf_33_03-06.4.png` — 3:06.4
+- `keyframes/kf_33_03-06.6.png` — 3:06.6
 - `keyframes/kf_34_03-11.9.png` — 3:11.9
-- `keyframes/kf_35_03-15.5.png` — 3:15.5
+- `keyframes/kf_35_03-15.4.png` — 3:15.4
 - `keyframes/kf_36_03-18.6.png` — 3:18.6
 - `keyframes/kf_37_03-21.6.png` — 3:21.6
 - `keyframes/kf_38_03-26.1.png` — 3:26.1
@@ -190,4 +174,4 @@ Differences (numbers spelled out, 'and' ignored). A technical term heard wrong u
 [3:03.1] replace  script: "mcmc's"                                 heard: 'mcm cease'
 ```
 
-_review kit ran in 122s_
+_review kit ran in 173s_

@@ -2,7 +2,7 @@
  "scene": "Episode",
  "episode": 20,
  "title": "A Dinosaur Hiding in Your Summary Statistics",
- "video_duration": 215.467,
+ "video_duration": 215.933,
  "beats": [
   {
    "index": 0,
@@ -11,6 +11,8 @@
    "end": 13.45,
    "text": "A hundred and forty-two points with two averages, two standard deviations, and a correlation of minus point oh six. Picture the cloud. Which way does its best-fit line tilt? [pause 1.5]",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "A",
@@ -167,6 +169,8 @@
    "end": 25.43,
    "text": "You probably pictured a shapeless oval, with a nearly flat line. Here are the real points. [pause 1.1] A dinosaur, drawn by Alberto Cairo, with these same five numbers.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "You",
@@ -313,6 +317,8 @@
    "end": 37.427,
    "text": "In a review of seven hundred and three physiology papers, eighty-six percent used bar graphs: an average and an error bar. Only thirteen percent showed the points.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "In",
@@ -459,6 +465,8 @@
    "end": 46.097,
    "text": "So how much can five numbers hide? Let's hide a star in them, and demand that all five still match the dinosaur's to two decimals.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "So",
@@ -595,6 +603,8 @@
    "end": 50.42,
    "text": "Version one slides every point onto its own spot on a star.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Version",
@@ -666,6 +676,8 @@
    "end": 59.207,
    "text": "We got the star, and lost all five numbers. [pause 0.2] The center moved, the x spread grew, and the y spread shrank by almost a quarter.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "We",
@@ -802,6 +814,8 @@
    "end": 62.557,
    "text": "So what exactly do five numbers pin down?",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "So",
@@ -853,6 +867,8 @@
    "end": 67.07,
    "text": "The two averages mark a single point: the cloud's balance point.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "The",
@@ -919,6 +935,8 @@
    "end": 73.133,
    "text": "The two standard deviations reach one deviation out on each side, and draw a box.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "The",
@@ -1005,6 +1023,8 @@
    "end": 98.283,
    "text": "Many ellipses touch all four walls. [pause 0.2] The correlation picks one. Correlation r means one standard deviation to the right, on average r standard deviations up. That's the best-fit line, through the middle of every vertical slice. At the wall, the slice is just the touch point, r times ess why above the center. For minus point oh six, that's just below the middle.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Many",
@@ -1331,6 +1351,8 @@
    "end": 101.513,
    "text": "That ellipse is everything the five numbers know.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "That",
@@ -1382,6 +1404,8 @@
    "end": 104.787,
    "text": "Now replay version one, and watch the ellipse.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Now",
@@ -1433,6 +1457,8 @@
    "end": 108.43,
    "text": "How would you fix the star? [pause 1.5]",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "How",
@@ -1474,6 +1500,8 @@
    "end": 118.197,
    "text": "Slide it until the centers meet. Stretch it until the boxes match. Then tip it, a slight shear, until it touches the walls at the same height.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Slide",
@@ -1620,6 +1648,8 @@
    "end": 121.643,
    "text": "All five match now, to every decimal place.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "All",
@@ -1671,6 +1701,8 @@
    "end": 126.99,
    "text": "But add a sixth number, the median of y, and our star misses it by six.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "But",
@@ -1762,6 +1794,8 @@
    "end": 144.073,
    "text": "In 2017, Justin Matejka and George Fitzmaurice built a search that keeps these five numbers fixed. It nudges a random point toward a target shape, and undoes any nudge that breaks them. Repeat it enough times, and the dinosaur becomes a circle.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "In",
@@ -1983,6 +2017,8 @@
    "end": 159.383,
    "text": "From the dinosaur they grew twelve shapes, like this star, [pause 1.0] this bullseye, [pause 0.8] this X, [pause 1.0] these stripes, [pause 0.8] and these dots. Every one of them has this same ellipse, and a different median.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "From",
@@ -2149,6 +2185,8 @@
    "end": 165.5,
    "text": "Francis Anscombe made the point in 1973, with eleven points of his own.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Francis",
@@ -2225,6 +2263,8 @@
    "end": 170.49,
    "text": "His correlation is point eight two, so the ellipse touches the right wall high up.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "His",
@@ -2311,6 +2351,8 @@
    "end": 178.643,
    "text": "His best-fit line follows the same rule: one ess ex across, r ess why up, through the center and that touch point.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "His",
@@ -2432,6 +2474,8 @@
    "end": 184.153,
    "text": "So the slope is rise over run. [pause 1.0] Plug in his numbers, and it's one half.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "So",
@@ -2513,432 +2557,504 @@
   },
   {
    "index": 22,
-   "start": 184.5,
+   "start": 184.767,
    "duration": 9.6,
-   "end": 194.1,
+   "end": 194.367,
    "text": "All four of his datasets share these five numbers, so they share the ellipse and the line. [pause 0.3] A trend, a curve, an outlier, and one point doing all the work.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "All",
-     "t": 184.515,
-     "end": 184.753
+     "t": 184.782,
+     "end": 185.02
     },
     {
      "w": "four",
-     "t": 184.79,
-     "end": 184.952
+     "t": 185.057,
+     "end": 185.219
     },
     {
      "w": "of",
-     "t": 184.965,
-     "end": 185.028
+     "t": 185.232,
+     "end": 185.295
     },
     {
      "w": "his",
-     "t": 185.04,
-     "end": 185.19
+     "t": 185.307,
+     "end": 185.457
     },
     {
      "w": "datasets",
-     "t": 185.215,
-     "end": 185.84
+     "t": 185.482,
+     "end": 186.107
     },
     {
      "w": "share",
-     "t": 185.89,
-     "end": 186.115
+     "t": 186.157,
+     "end": 186.382
     },
     {
      "w": "these",
-     "t": 186.14,
-     "end": 186.365
+     "t": 186.407,
+     "end": 186.632
     },
     {
      "w": "five",
-     "t": 186.39,
-     "end": 186.69
+     "t": 186.657,
+     "end": 186.957
     },
     {
      "w": "numbers",
-     "t": 186.715,
-     "end": 187.49
+     "t": 186.982,
+     "end": 187.757
     },
     {
      "w": "so",
-     "t": 187.665,
-     "end": 187.79
+     "t": 187.932,
+     "end": 188.057
     },
     {
      "w": "they",
-     "t": 187.815,
-     "end": 187.965
+     "t": 188.082,
+     "end": 188.232
     },
     {
      "w": "share",
-     "t": 188.015,
-     "end": 188.24
+     "t": 188.282,
+     "end": 188.507
     },
     {
      "w": "the",
-     "t": 188.265,
-     "end": 188.39
+     "t": 188.532,
+     "end": 188.657
     },
     {
      "w": "ellipse",
-     "t": 188.415,
-     "end": 188.927
+     "t": 188.682,
+     "end": 189.194
     },
     {
      "w": "and",
-     "t": 188.965,
-     "end": 189.052
+     "t": 189.232,
+     "end": 189.319
     },
     {
      "w": "the",
-     "t": 189.065,
-     "end": 189.14
+     "t": 189.332,
+     "end": 189.407
     },
     {
      "w": "line",
-     "t": 189.165,
-     "end": 189.7
+     "t": 189.432,
+     "end": 189.967
     },
     {
      "w": "A",
-     "t": 190.015,
-     "end": 190.102
+     "t": 190.282,
+     "end": 190.369
     },
     {
      "w": "trend",
-     "t": 190.14,
-     "end": 190.665
+     "t": 190.407,
+     "end": 190.932
     },
     {
      "w": "a",
-     "t": 190.765,
-     "end": 190.853
+     "t": 191.032,
+     "end": 191.12
     },
     {
      "w": "curve",
-     "t": 190.89,
-     "end": 191.44
+     "t": 191.157,
+     "end": 191.707
     },
     {
      "w": "an",
-     "t": 191.565,
-     "end": 191.652
+     "t": 191.832,
+     "end": 191.919
     },
     {
      "w": "outlier",
-     "t": 191.69,
-     "end": 192.315
+     "t": 191.957,
+     "end": 192.582
     },
     {
      "w": "and",
-     "t": 192.39,
-     "end": 192.503
+     "t": 192.657,
+     "end": 192.77
     },
     {
      "w": "one",
-     "t": 192.54,
-     "end": 192.778
+     "t": 192.807,
+     "end": 193.045
     },
     {
      "w": "point",
-     "t": 192.815,
-     "end": 193.115
+     "t": 193.082,
+     "end": 193.382
     },
     {
      "w": "doing",
-     "t": 193.14,
-     "end": 193.365
+     "t": 193.407,
+     "end": 193.632
     },
     {
      "w": "all",
-     "t": 193.39,
-     "end": 193.528
+     "t": 193.657,
+     "end": 193.795
     },
     {
      "w": "the",
-     "t": 193.54,
-     "end": 193.615
+     "t": 193.807,
+     "end": 193.882
     },
     {
      "w": "work",
-     "t": 193.64,
-     "end": 194.1
+     "t": 193.907,
+     "end": 194.367
     }
    ],
    "wav": "/root/.cache/sample_space/tts/7f/7fc1e68b818ee7131907e9e0.wav"
   },
   {
    "index": 23,
-   "start": 195.367,
+   "start": 195.833,
    "duration": 18.34,
-   "end": 213.707,
+   "end": 214.173,
    "text": "Your line was exactly right: five numbers fix its slope, minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.",
    "voice": "af_heart",
+   "speed": 0.84,
+   "cadence": "flat",
    "words": [
     {
      "w": "Your",
-     "t": 195.397,
-     "end": 195.572
+     "t": 195.863,
+     "end": 196.038
     },
     {
      "w": "line",
-     "t": 195.597,
-     "end": 195.897
+     "t": 196.063,
+     "end": 196.363
     },
     {
      "w": "was",
-     "t": 195.922,
-     "end": 196.072
+     "t": 196.388,
+     "end": 196.538
     },
     {
      "w": "exactly",
-     "t": 196.097,
-     "end": 196.672
+     "t": 196.563,
+     "end": 197.138
     },
     {
      "w": "right",
-     "t": 196.697,
-     "end": 197.347
+     "t": 197.163,
+     "end": 197.813
     },
     {
      "w": "five",
-     "t": 197.572,
-     "end": 197.897
+     "t": 198.038,
+     "end": 198.363
     },
     {
      "w": "numbers",
-     "t": 197.922,
-     "end": 198.297
+     "t": 198.388,
+     "end": 198.763
     },
     {
      "w": "fix",
-     "t": 198.322,
-     "end": 198.535
+     "t": 198.788,
+     "end": 199.001
     },
     {
      "w": "its",
-     "t": 198.547,
-     "end": 198.71
+     "t": 199.013,
+     "end": 199.176
     },
     {
      "w": "slope",
-     "t": 198.747,
-     "end": 199.247
+     "t": 199.213,
+     "end": 199.713
     },
     {
      "w": "minus",
-     "t": 199.397,
-     "end": 199.747
+     "t": 199.863,
+     "end": 200.213
     },
     {
      "w": "point",
-     "t": 199.772,
-     "end": 200.022
+     "t": 200.238,
+     "end": 200.488
     },
     {
      "w": "one",
-     "t": 200.047,
-     "end": 200.527
+     "t": 200.513,
+     "end": 200.993
     },
     {
      "w": "Your",
-     "t": 200.922,
-     "end": 201.072
+     "t": 201.388,
+     "end": 201.538
     },
     {
      "w": "cloud",
-     "t": 201.097,
-     "end": 201.409
+     "t": 201.563,
+     "end": 201.875
     },
     {
      "w": "was",
-     "t": 201.422,
-     "end": 201.572
+     "t": 201.888,
+     "end": 202.038
     },
     {
      "w": "wrong",
-     "t": 201.597,
-     "end": 202.247
+     "t": 202.063,
+     "end": 202.713
     },
     {
      "w": "a",
-     "t": 202.422,
-     "end": 202.509
+     "t": 202.888,
+     "end": 202.975
     },
     {
      "w": "blur",
-     "t": 202.547,
-     "end": 202.872
+     "t": 203.013,
+     "end": 203.338
     },
     {
      "w": "around",
-     "t": 202.897,
-     "end": 203.159
+     "t": 203.363,
+     "end": 203.625
     },
     {
      "w": "this",
-     "t": 203.172,
-     "end": 203.322
+     "t": 203.638,
+     "end": 203.788
     },
     {
      "w": "ellipse",
-     "t": 203.347,
-     "end": 203.847
+     "t": 203.813,
+     "end": 204.313
     },
     {
      "w": "all",
-     "t": 203.947,
-     "end": 204.109
+     "t": 204.413,
+     "end": 204.575
     },
     {
      "w": "that",
-     "t": 204.122,
-     "end": 204.347
+     "t": 204.588,
+     "end": 204.813
     },
     {
      "w": "five",
-     "t": 204.397,
-     "end": 204.772
+     "t": 204.863,
+     "end": 205.238
     },
     {
      "w": "numbers",
-     "t": 204.797,
-     "end": 205.122
+     "t": 205.263,
+     "end": 205.588
     },
     {
      "w": "can",
-     "t": 205.147,
-     "end": 205.322
+     "t": 205.613,
+     "end": 205.788
     },
     {
      "w": "draw",
-     "t": 205.347,
-     "end": 205.867
+     "t": 205.813,
+     "end": 206.333
     },
     {
      "w": "Most",
-     "t": 206.522,
-     "end": 206.809
+     "t": 206.988,
+     "end": 207.275
     },
     {
      "w": "of",
-     "t": 206.822,
-     "end": 206.897
+     "t": 207.288,
+     "end": 207.363
     },
     {
      "w": "those",
-     "t": 206.922,
-     "end": 207.147
+     "t": 207.388,
+     "end": 207.613
     },
     {
      "w": "papers",
-     "t": 207.172,
-     "end": 207.622
+     "t": 207.638,
+     "end": 208.088
     },
     {
      "w": "used",
-     "t": 207.647,
-     "end": 207.859
+     "t": 208.113,
+     "end": 208.325
     },
     {
      "w": "a",
-     "t": 207.872,
-     "end": 207.922
+     "t": 208.338,
+     "end": 208.388
     },
     {
      "w": "bar",
-     "t": 207.947,
-     "end": 208.197
+     "t": 208.413,
+     "end": 208.663
     },
     {
      "w": "graph",
-     "t": 208.222,
-     "end": 208.847
+     "t": 208.688,
+     "end": 209.313
     },
     {
      "w": "which",
-     "t": 208.972,
-     "end": 209.147
+     "t": 209.438,
+     "end": 209.613
     },
     {
      "w": "draws",
-     "t": 209.172,
-     "end": 209.547
+     "t": 209.638,
+     "end": 210.013
     },
     {
      "w": "only",
-     "t": 209.572,
-     "end": 209.897
+     "t": 210.038,
+     "end": 210.363
     },
     {
      "w": "two",
-     "t": 209.947,
-     "end": 210.407
+     "t": 210.413,
+     "end": 210.873
     },
     {
      "w": "The",
-     "t": 211.007,
-     "end": 211.102
+     "t": 211.473,
+     "end": 211.568
     },
     {
      "w": "dinosaur",
-     "t": 211.127,
-     "end": 211.777
+     "t": 211.593,
+     "end": 212.243
     },
     {
      "w": "lived",
-     "t": 211.827,
-     "end": 212.102
+     "t": 212.293,
+     "end": 212.568
     },
     {
      "w": "in",
-     "t": 212.127,
-     "end": 212.264
+     "t": 212.593,
+     "end": 212.73
     },
     {
      "w": "everything",
-     "t": 212.302,
-     "end": 212.827
+     "t": 212.768,
+     "end": 213.293
     },
     {
      "w": "they",
-     "t": 212.852,
-     "end": 212.977
+     "t": 213.318,
+     "end": 213.443
     },
     {
      "w": "leave",
-     "t": 213.002,
-     "end": 213.252
+     "t": 213.468,
+     "end": 213.718
     },
     {
      "w": "out",
-     "t": 213.277,
-     "end": 213.707
+     "t": 213.743,
+     "end": 214.173
     }
    ],
    "wav": "/root/.cache/sample_space/tts/4b/4b2cbf84edc566ccb1c07a0f.wav"
   }
  ],
- "warnings": [],
+ "warnings": [
+  {
+   "t": 178.83,
+   "msg": "beat 21: reached 'half' 0.31s after it was spoken - shorten the preceding animations"
+  },
+  {
+   "t": 215.93,
+   "msg": "concision budget: 531 words, 3:35.9. Critics docked Concision for runtime in 16 of 28 round-5/6 reviews (9 of 10 episodes >= 3:41); budget <= 500 words and <= 3:35 (PRODUCTION_GUIDE §13)"
+  }
+ ],
+ "budget": {
+  "words": 531,
+  "runtime_s": 215.9,
+  "budget_words": 500,
+  "budget_runtime_s": 215.0,
+  "over": true
+ },
+ "glyph_morphs": [
+  {
+   "t": 175.13,
+   "animation": "ReplacementTransform",
+   "from": "s_y",
+   "to": "\\,s_y"
+  }
+ ],
+ "deictic_sync": {
+  "window": [
+   -0.8,
+   0.4
+  ],
+  "deictics": 12,
+  "unlanded": []
+ },
  "layout_audit": {
   "clearance": 0.15,
-  "checks": 251,
-  "audit_seconds": 3.349,
-  "render_seconds": 1065.3,
+  "checks": 250,
+  "audit_seconds": 3.891,
+  "render_seconds": 1242.6,
   "errors": 0,
-  "count": 0,
+  "count": 2,
   "counts": {
    "overlap": 0,
-   "clearance": 0,
+   "clearance": 1,
    "safe-area": 0,
-   "caption-zone": 0
+   "caption-zone": 0,
+   "text-size": 1,
+   "small-label": 0
   },
-  "issues": [],
+  "issues": [
+   {
+    "kind": "clearance",
+    "start": 65.33,
+    "end": 67.6,
+    "held": 2.27,
+    "text": "MathTex ','",
+    "text_pos": [
+     -1.9,
+     0.65
+    ],
+    "other": "MathTex '\\bar{x}'",
+    "other_pos": [
+     -2.07,
+     0.78
+    ],
+    "gap": 0.051,
+    "need": 0.15,
+    "msg": "clearance 1:05.3-1:07.6 (held 2.3s) MathTex ',' @(-1.90, +0.65) vs MathTex '\\bar{x}' @(-2.07, +0.78): gap 0.05 (need >= 0.15)"
+   },
+   {
+    "kind": "text-size",
+    "start": 132.7,
+    "end": 140.37,
+    "held": 7.67,
+    "text": "MathTex '\\neq'",
+    "text_pos": [
+     6.15,
+     -1.75
+    ],
+    "detail": "cap height ≈ 11 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)",
+    "msg": "text-size 2:12.7-2:20.4 (held 7.7s) MathTex '\\neq' @(+6.15, -1.75) cap height ≈ 11 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)"
+   }
+  ],
+  "advisory": [],
   "allowed": [],
   "excluded": []
  }

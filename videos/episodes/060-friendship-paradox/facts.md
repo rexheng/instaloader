@@ -117,8 +117,8 @@ Betty: one token), not tags beside the nodes, where they read as labels of the w
   by the real Harvard curves.
 - Marketville's whole network (146 girls; mean 2.7 vs 3.4 among friends; 80 fewer vs 41 more) is
   verified in Feld but not used, to keep one example.
-- Facebook's "92.7 % of users have fewer friends than their friends' average" (verified) is a
-  separate individual-level claim; not used.
+- Facebook's "92.7 % of users have fewer friends than their friends' average" (verified) was left
+  out until round 6; it is now used (see "Round 6 additions").
 
 ## Second review cycle, round 1 additions (every new number and claim)
 
@@ -142,3 +142,18 @@ or claim; every on-screen value is unchanged. Two measurement notes for the revi
 |---|---|
 | Whisper drops the first word of "Divide top and bottom by the eight girls" (report: `delete 'divide'` at 1:25). | The word is spoken at full level: RMS over 84.6–85.1 s of the preview is −11.8 to −14.7 dBFS (the gap before it, 84.1–84.5 s, is digital silence). Kokoro's own word timing puts "Divide" at 84.60–85.10 s. It is a transcription drop, not a swallowed word. |
 | Pace. The 0.82-speed master of 16 Oct was flagged at 166 wpm. | That transcript repeated 1:41–1:53 ("…the variance, sigma squared, Split Sue's count…" twice), 566 words for a 509-word script. With the same speed and no repeat, the round-5 preview measures 160 wpm on speech time and 152 overall (WER 0.8 %). |
+
+## Round 6 additions (every new number and claim)
+
+| Claim (spoken or on screen) | Check | Source |
+|---|---|---|
+| "And ninety three percent of users had fewer friends than their friends averaged." On screen: BLUE "92.7%" / "had fewer friends than" / "their friends' average", beside the "average user" row; the Ugander citation is on screen throughout. | Re-read in the arXiv PDF text (Oct 2026), Section "Degree correlations": "we observe that 83.6% of users have less friends than the median friend count of their friends ... For completeness, we also note that 92.7% of users have less friends than the average friend count of their friends." Users = active members (logged in within 28 days of May 2011, at least one friend), n ≈ 721 million. 92.7 % is spoken rounded to 93 %. This is the per-person comparison the landing makes for the eight girls (5 of 8 below their friends' average). | Ugander, Karrer, Backstrom & Marlow 2011, arXiv:1111.4503 |
+| "Odds are, that includes you." | A hedge, not a claim: for a randomly chosen active Facebook user the probability is 0.927. The script never says the mean inequality forces a majority (it does not: Feld notes the individual-level count depends on the network); it reports the measured share. | Ugander et al. 2011 |
+| Facebook reorder: "...about a hundred and ninety friends, and a few had thousands. If every friendship sent tokens, what would the tokens average?" then "About six hundred and thirty five: the spread term is more than twice the mean itself." | Same numbers as before (190, 635, thousands, 5,000 limit; 445 > 380); only the order changed, so the spread cue precedes the prediction. | Ugander et al. 2011 |
+| Count ruler under the beam: GRAY ticks 1, 2, 3, 4 at BX(k) | The girls sit at BX(k) ± 0.4, two per count, so each pair is centred on its tick; the BLUE fulcrum (2.5) is midway between ticks 2 and 3, and the YELLOW one ends on tick 3. The PURPLE distances are drawn along the ruler from 2.5 to each tick: 1.5, 0.5, 0.5, 1.5. | geometry (scene.py BX) |
+| "Measure each girl's distance from the girls' balance point, two and a half" | Names which balance point (round 6 critic: both 2.5 and 3.0 were on screen); the YELLOW 3.0 fulcrum is dimmed to 30 % for the variance step. | definition |
+| C&F illustration (2:5x): the class centred, Jane "random" with the arrow to Alice "named friend" (the 0:19 picture), then every girl names one friend: Betty→Sue, Sue→Alice, Alice→Sue, Jane→Alice, Pam→Alice, Dale→Sue, Carol→Pam, Tina→Carol; tokens pile 3 on Sue, 3 on Alice, 1 on Pam, 1 on Carol; tagged "one possible draw" on screen | Illustrative, not data: each named friend is one of the sender's real friends in Feld's network (Betty and Tina have only one friend each, so theirs are forced). In expectation, if each girl names a uniformly random friend, the tokens received are Sue 1.92, Alice 1.42, Carol 1.33, Dale 1.0, Pam 1.0, Jane 0.58, Tina 0.5, Betty 0.25 (sum 8), so Sue and Alice do collect the most. C&F's design: a random sample, then "a 'friends' sample (N = 425) composed of individuals who were named as a friend at least once by a member of this random sample". | C&F 2010, Methods; computed |
+| "so they sit closer to everyone else": a flash runs out from Sue and Alice: one step reaches Betty, Dale, Pam and Jane, a second Carol, a third Tina | Shortest-path distances in Feld's network from {Sue, Alice}: Betty, Dale, Pam, Jane 1; Carol 2; Tina 3. (From Betty: Sue 1; Alice, Dale, Pam 2; Jane, Carol 3; Tina 4.) | computed from the edge list |
+| Landing: Carol's GRAY "2 = 2" | Carol has 2 friends (Pam, Tina) with 3 and 1 friends: average 2 = her own count, the one tie in Feld's text ("one (Carol) has as many"). | Feld 1991, p. 1465 |
+| Closing line "three counts the tokens" (was "the friendships") | 3 = 60/20, the average over the 20 tokens (each of the 10 friendships sent a token both ways), exactly the episode's token average. | Feld 1991, Table 1 |
+| Cut | "Two and a quarter at the ends, a quarter in the middle" (the area labels show it) and "Back to the eight girls". | presentation |

@@ -1,20 +1,20 @@
 # Review kit — `final.mp4`
 
-Generated 2026-10-22 09:06 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
+Generated 2026-10-22 11:58 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
 
 ## Mechanics (BAR §3 caps / §5 standards)
 
 | metric | value | bar | status |
 |---|---|---|---|
 | runtime | 3:57.6 (237.6s) | 2:30–4:00 | ok |
-| video | 1920x1080 @ 30 fps, h264/yuv420p, 10.27 MB | 1920x1080 @ 30 | ok |
+| video | 1920x1080 @ 30 fps, h264/yuv420p, 10.24 MB | 1920x1080 @ 30 | ok |
 | pace | 160 wpm (speech time) · 156 overall · 188 excl. all pauses; 618 words | 140–165 (cap <120/>180) | ok |
 | loudness | -14.0 LUFS, LRA 2.2 LU | −14 ±1 | ok |
 | true peak | -2.0 dBTP | ≤ −1.5 | ok |
 | leading silence | 0.00s | ≤ 1 s | ok |
 | trailing silence | 0.74s | ≤ 2 s | ok |
 | longest internal silence | 2.09s | ≤ 2.5 s | ok |
-| longest fully static stretch | 4.03s | ≤ 4 s (cap ≥ 8 s) | **FLAG** |
+| longest fully static stretch | 3.17s | ≤ 4 s (cap ≥ 8 s) | ok |
 | black frames | 0 run(s) | none | ok |
 | background-only stretches > 1 s | 0 | none | ok |
 | transcript vs script | WER 1.3% (603 words) | ≲ 8 % | ok |
@@ -22,7 +22,7 @@ Generated 2026-10-22 09:06 by videos/toolkit/review_kit.sh. Frames are evidence;
 
 ## Flags
 
-- static frame: 4.0s fully static (limit 4 s, cap at 8 s)
+- none
 
 ### Silences ≥ 0.3 s
 
@@ -30,7 +30,7 @@ Generated 2026-10-22 09:06 by videos/toolkit/review_kit.sh. Frames are evidence;
 
 ### Static stretches ≥ 3 s
 
-0:04.2–0:07.4 (3.2s), 3:32.5–3:36.6 (4.0s), 3:54.4–3:57.6 (3.1s)
+0:04.2–0:07.4 (3.2s), 3:54.4–3:57.6 (3.1s)
 
 ## Layout audit (automatic overlap check, BAR §5)
 
@@ -81,7 +81,7 @@ Generated 2026-10-22 09:06 by videos/toolkit/review_kit.sh. Frames are evidence;
 - `keyframes/kf_23_02-19.8.png` — 2:19.8
 - `keyframes/kf_24_02-22.0.png` — 2:22.0
 - `keyframes/kf_25_02-29.5.png` — 2:29.5
-- `keyframes/kf_26_02-34.7.png` — 2:34.7
+- `keyframes/kf_26_02-32.8.png` — 2:32.8
 - `keyframes/kf_27_02-40.4.png` — 2:40.4
 - `keyframes/kf_28_02-47.0.png` — 2:47.0
 - `keyframes/kf_29_02-51.3.png` — 2:51.3
@@ -93,7 +93,7 @@ Generated 2026-10-22 09:06 by videos/toolkit/review_kit.sh. Frames are evidence;
 - `keyframes/kf_35_03-23.2.png` — 3:23.2
 - `keyframes/kf_36_03-30.3.png` — 3:30.3
 - `keyframes/kf_37_03-40.3.png` — 3:40.3
-- `keyframes/kf_38_03-46.1.png` — 3:46.1
+- `keyframes/kf_38_03-46.3.png` — 3:46.3
 - `keyframes/kf_39_03-51.9.png` — 3:51.9
 - `keyframes/kf_40_03-57.5.png` — 3:57.5
 
@@ -165,4 +165,4 @@ Differences (numbers spelled out, 'and' ignored). A technical term heard wrong u
 [3:50.3] replace  script: 'y'                                      heard: 'why'
 ```
 
-_review kit ran in 129s_
+_review kit ran in 162s_

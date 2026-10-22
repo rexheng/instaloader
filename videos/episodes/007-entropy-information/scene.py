@@ -321,23 +321,32 @@ def fly_morph(src: VMobject, tgt: VMobject, path: VMobject, rate=smooth, fade=(0
     a0, b0 = src.copy(), tgt.copy()
     a_m, b_m = a0.copy(), b0.copy()
     ha, hb = max(a0.height, 1e-3), max(b0.height, 1e-3)
-    p0, span = path.point_from_proportion(0), max(1.0 * max(a0.width, a0.height), 0.15)
+    s_c, s_w, s_h = src.get_center(), src.width, src.height
     oa = [m.get_fill_opacity() for m in a0.family_members_with_points()]
     ob = [m.get_fill_opacity() for m in b0.family_members_with_points()]
     g = VGroup(a_m, b_m)
+
+    def clear_of_source(p, k):
+        """Gap between the copy's box (scaled by k, centred at p) and the source's box."""
+        w, h = a0.width * k, a0.height * k
+        return max(abs(p[0] - s_c[0]) - (w + s_w) / 2, abs(p[1] - s_c[1]) - (h + s_h) / 2)
 
     def upd(_m, t):
         t = rate(t)
         p = path.point_from_proportion(t)
         h = ha + (hb - ha) * t
-        f = float(np.clip((t - fade[0]) / (fade[1] - fade[0]), 0, 1))
-        e = float(np.clip(np.linalg.norm(p - p0) / span, 0, 1))   # emerges as it clears its source
+        # the old glyph dims out completely before the new one brightens: never superimposed
+        mid = (fade[0] + fade[1]) / 2
+        fa = float(np.clip((t - fade[0]) / max(mid - fade[0], 1e-6), 0, 1))
+        fb = float(np.clip((t - mid) / max(fade[1] - mid, 1e-6), 0, 1))
+        # invisible while it still overlaps its source; fully visible once 0.12 clear
+        e = float(np.clip(clear_of_source(p, h / ha) / 0.12, 0, 1))
         a_m.become(a0).scale(h / ha).move_to(p)
         b_m.become(b0).scale(h / hb).move_to(p)
         for m, o in zip(a_m.family_members_with_points(), oa):
-            m.set_fill(opacity=o * (1 - f) * e).set_stroke(opacity=0)
+            m.set_fill(opacity=o * (1 - fa) * e).set_stroke(opacity=0)
         for m, o in zip(b_m.family_members_with_points(), ob):
-            m.set_fill(opacity=o * f * e).set_stroke(opacity=0)
+            m.set_fill(opacity=o * fb * e).set_stroke(opacity=0)
     upd(None, 0)
     return g, UpdateFromAlphaFunc(g, upd, rate_func=linear)     # `rate` is the only easing
 
@@ -1186,9 +1195,15 @@ class Episode(NarratedScene):
                           "per yes-or-no answer. For English letters, it's [pause 0.3] four point "
                           "one one.") as beat:
             beat.wait_until("entropy", offset=-0.25)
-            # 'average' and 'H' share no glyphs: a cross-fade in place, not a glyph morph
-            self.play(FadeTransform(self.f3[0], f4[0]),
-                      *[ReplacementTransform(self.f3[i], f4[i]) for i in range(1, 5)], run_time=1.0)
+            # 'average' and 'H' share no glyphs: the word steps out before the symbol steps in
+            # (no frame stacks the two)
+            # and the rest of the formula only slides left once the word is (almost) gone
+            self.play(FadeOut(self.f3[0], shift=0.15 * UP, rate_func=lambda t: smooth(min(1.0, t / 0.4))),
+                      *[ReplacementTransform(self.f3[i], f4[i],
+                                             rate_func=lambda t: smooth(max(0.0, (t - 0.32) / 0.68)))
+                        for i in range(1, 5)],
+                      FadeIn(f4[0], shift=0.15 * UP, rate_func=lambda t: smooth(max(0.0, (t - 0.55) / 0.45))),
+                      run_time=1.2)
             self.remove(self.f3)
             self.add(f4)
             beat.wait_until("bits", offset=-0.15)
@@ -1198,9 +1213,20 @@ class Episode(NarratedScene):
             beat.wait_until("answer", offset=-0.3)
             self.play(Indicate(self.level_line, color=INK, scale_factor=1.0), flag(self.level_num),
                       run_time=0.9)
-            beat.wait_until("four", offset=-0.15)
-            self.play(TransformFromCopy(self.level_num, eq_val), FadeIn(eq_tail[0]),
-                      FadeIn(eq_tail[2]), run_time=0.9)
+            # the level's value is copied into the equation: the copy leaves the gutter to the
+            # right and rises outside the chart, so it never crosses the 4.75 line
+            beat.wait_until("English", offset=-0.1)
+            a0, b0, y0 = self.level_num.get_center(), eq_val.get_center(), self.level_num.get_y()
+            path = route([(a0[0], a0[1]), (COL_A + 0.75, y0 + 0.2), (COL_A + 0.95, y0 + 0.9),
+                          (COL_A + 0.6, b0[1] - 0.62), (3.3, b0[1] - 0.64), (b0[0] + 0.1, b0[1] - 0.6),
+                          (b0[0], b0[1])])
+            cp, cp_anim = fly_morph(self.level_num, eq_val, path, rate=smooth, fade=(0.0, 0.001))
+            self.add(cp)
+            self.play(cp_anim, FadeIn(eq_tail[0], rate_func=lambda t: smooth(max(0.0, (t - 0.5) / 0.5))),
+                      FadeIn(eq_tail[2], rate_func=lambda t: smooth(max(0.0, (t - 0.5) / 0.5))),
+                      run_time=beat.until("four", offset=0.45, min_time=1.3))
+            self.remove(cp)
+            self.add(eq_val)
         self.f4, self.eq_tail, self.eq_val = f4, eq_tail, eq_val
         self.eq_eq, self.eq_bits = eq_tail[0], eq_tail[2]
         self.eq_y, self.bits_y = eq_val.get_y(), eq_tail[2].get_y()
@@ -1266,7 +1292,9 @@ class Episode(NarratedScene):
         number.  Returns the animations."""
         q = MathTex("?", font_size=FS_TOP, color=YELLOW)
         q.next_to(self.eq_eq, RIGHT, buff=0.18).set_y(self.eq_y)
-        anims = [FadeTransform(self.eq_val, q),          # a cross-fade, not a glyph morph
+        # the old value leaves before the '?' arrives: the two never share the slot
+        anims = [FadeOut(self.eq_val, shift=0.15 * UP, rate_func=lambda t: smooth(min(1.0, 2 * t))),
+                 FadeIn(q, shift=0.15 * UP, rate_func=lambda t: smooth(max(0.0, 2 * t - 1))),
                  self.eq_bits.animate.next_to(q, RIGHT, buff=0.18).set_y(self.bits_y)]
         self.eq_val = q
         return anims
@@ -1499,43 +1527,31 @@ class Episode(NarratedScene):
                                                    FadeIn(A[2 * k], shift=0.2 * DOWN))
                                     for k in range(nr)], lag_ratio=0.3),
                       run_time=beat.until("fractions", offset=-0.25, min_time=1.0))
-            # ... and the fractions add up: the sum is built term by term with a running tally
-            # beside it (0.5, then 0.5 + 0.6 = 1.1, then 4.9); the '=' is written once every
-            # term is in, so the line never shows an equation that is not yet true
+            # ... and the fractions add up: the sum is built left to right, each cost lighting up
+            # as the '+' after it is written; the '=' and the total come once every term is in,
+            # so the line never shows an equation that is not yet true (and no glyph morphs)
             beat.wait_until("fractions", offset=-0.15)
-            shown = [round(r["cost"], 1) for r in RUN["letters"]]
-            partial = [round(sum(shown[:k + 1]), 1) for k in range(nr)]
-            run_sum = ValueTracker(partial[0])
-            total = DecimalNumber(partial[0], num_decimal_places=1, font_size=36, color=YELLOW)
-            total.add_updater(lambda m: m.set_value(run_sum.get_value()).move_to(A[TOT]))
-            total.update()
-            step = max(0.45, beat.until("up", end=True, offset=0.0, min_time=1.35) / nr)
-            self.play(FadeIn(total, shift=0.1 * RIGHT), Indicate(A[0], color=YELLOW, scale_factor=1.25),
-                      run_time=step)
-            for k in range(1, nr):
-                self.play(Write(A[2 * k - 1]), run_sum.animate(rate_func=smooth).set_value(partial[k]),
-                          Indicate(A[2 * k], color=YELLOW, scale_factor=1.25), run_time=step)
-            total.clear_updaters()
-            self.remove(total)
-            self.add(A[TOT])
-            self.play(Write(A[2 * nr - 1]), run_time=0.35)
+            assert abs(sum(round(r["cost"], 1) for r in RUN["letters"]) - round(RUN["total"], 1)) < 1e-9
+            build = []
+            for k in range(nr):
+                build.append(Indicate(A[2 * k], color=YELLOW, scale_factor=1.2))
+                if k < nr - 1:
+                    build.append(Write(A[2 * k + 1]))
+            self.play(LaggedStart(*build, lag_ratio=0.35),
+                      run_time=beat.until("up", end=True, offset=-0.15, min_time=1.2))
+            self.play(Write(A[2 * nr - 1]), FadeIn(A[TOT], shift=0.12 * LEFT), run_time=0.5)
             # whole questions for the whole run
             self.play(Write(A[ARW]), FadeIn(A[Q], shift=0.1 * RIGHT), FadeIn(A_unit, shift=0.1 * RIGHT),
                       run_time=beat.until("questions", end=True, offset=-0.1, min_time=0.6))
             # one letter at a time, each cost rounds up to a whole question
             beat.wait_until("these", offset=-0.2)
-            drops, d_anims = [], []
-            for k in range(nr):
-                a0, b0 = A[2 * k].get_center(), B[2 * k].get_center()
-                g, anim = fly_morph(A[2 * k], B[2 * k], Line(a0, b0), rate=smooth, fade=(0.2, 0.8))
-                drops.append(g)
-                d_anims.append(anim)
-            self.add(*drops)
-            self.play(LaggedStart(*d_anims, lag_ratio=0.15),
+            # each whole number drops in under its own cost as that cost pulses: column =
+            # correspondence, and no two different digits ever share a place
+            self.play(LaggedStart(*[AnimationGroup(Indicate(A[2 * k], color=YELLOW, scale_factor=1.2),
+                                                   FadeIn(B[2 * k], shift=0.25 * DOWN))
+                                    for k in range(nr)], lag_ratio=0.3),
                       LaggedStart(*[FadeIn(B[i]) for i in range(1, 2 * nr - 1, 2)], lag_ratio=0.2),
                       run_time=beat.until("six", offset=-0.2, min_time=0.8))
-            self.remove(*drops)
-            self.add(*[B[2 * k] for k in range(nr)])
             # ... not six
             self.play(FadeIn(B[2 * nr - 1]), FadeIn(B[2 * nr], shift=0.1 * RIGHT),
                       FadeIn(B_lab, shift=0.1 * RIGHT),
@@ -1843,8 +1859,9 @@ class Episode(NarratedScene):
             """A guess count falls into the foot of its column: it first dips under its own
             row, then curves down, shrinking, and fades as it lands."""
             a = d.get_center()
-            pth = route([(a[0], a[1]), (a[0] + 0.1 * np.sign(x_to - a[0]), a[1] - 0.3),
-                         (x_to, y_to)])
+            # leaves straight down (never up over its own row) and lands straight down
+            pth = CubicBezier(a, a + DOWN * 0.7, np.array([x_to, y_to + 0.9, 0.0]),
+                              np.array([x_to, y_to, 0.0]))
             start = d.copy()
 
             def upd(m, t):
@@ -1942,7 +1959,8 @@ class Episode(NarratedScene):
         nband = Rectangle(width=u * (HI - LO), height=0.3, stroke_color=GREEN, stroke_width=2,
                           fill_color=GREEN, fill_opacity=0.35).move_to([nx((LO + HI) / 2), nl_y, 0])
         nband_lab = MathTex(r"0.6\text{--}1.3", font_size=36, color=GREEN)
-        nband_lab.move_to([nx((LO + HI) / 2), tag_y, 0])          # under the band
+        nband_lab.move_to([nx((LO + HI) / 2), tag_y, 0])          # under the band, on the
+        nband_lab.shift(UP * (tag_y - 0.1 - nband_lab.get_bottom()[1]))   # tags' baseline
 
         def marker(v, color, lab, tag=None, left=None, right=None):
             """A triangle on the line, its value above it, and a grey tag (what it measured)
@@ -1952,6 +1970,10 @@ class Episode(NarratedScene):
             g = VGroup(tri, lab)
             if tag is not None:
                 t = text(tag, size=28, color=GRAY).move_to([nx(v), tag_y, 0])
+                # one shared baseline for the tag row (descenders such as the p of 'person'
+                # must not lift a tag above its neighbours)
+                flat = [g for g, ch in zip(t, tag.replace(" ", "")) if ch in "acemnorsuvwxz"]
+                t.shift(UP * (tag_y - 0.1 - flat[0].get_bottom()[1]))
                 if left is not None:
                     t.align_to([left, 0, 0], LEFT)
                 if right is not None:
@@ -1974,6 +1996,10 @@ class Episode(NarratedScene):
         llm_note = VGroup(text("1924 book", size=26, color=GRAY),
                           text("· on Gutenberg May 2023", size=26, color=GRAY),
                           text("· 27 symbols", size=26, color=GRAY)).arrange(RIGHT, buff=0.14)
+        # one baseline for the three parts (descenders must not lift 'on Gutenberg May')
+        for part, s, k in zip(llm_note, ("1924book", "·onGutenbergMay2023", "·27symbols"), (5, 1, 3)):
+            assert len(part) == len(s) and s[k] in "acemnorsuvwxz"
+            part.shift(UP * (llm_note[0][5].get_bottom()[1] - part[k].get_bottom()[1]))
         llm_note.next_to(llm_name, UP, buff=0.22).align_to(llm_name, LEFT)
         cite_llm = citation("Valmeekam et al., 2023 · arXiv:2306.04050 (LLMZip), Table IV")
         with self.narrate("Shannon's tests, with a hundred letters of context, put English "
@@ -2086,7 +2112,9 @@ class Episode(NarratedScene):
             # 0. the summary line goes and Shannon's record comes back (faint), with THE OTHER
             #    DAY at full strength: the hidden character was in it all along
             out_first = lambda t: smooth(min(1.0, t / 0.4))
-            in_after = lambda t: smooth(max(0.0, (t - 0.4) / 0.6))
+            # (overlapping, so the frame is never empty: the phrase is already bright as the
+            #  line finishes leaving)
+            in_after = lambda t: smooth(min(1.0, max(0.0, (t - 0.15) / 0.55)))
             back_in = []
             for c in self.cells:
                 o = 1.0 if any(c is k for k in keep_cells) else 0.22

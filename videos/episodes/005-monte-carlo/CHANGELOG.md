@@ -251,3 +251,30 @@ no caps, no factual errors (every number and all three citations re-verified by 
 - Craft 8 / substance 9: the Bergstra & Bengio panel fades out completely (0.5 s) before the limit chart's axes are
   drawn; no axis morph.
 - Narrator 0.86 -> 0.87, boundary pause 0.6 -> 0.5 s: runtime 3:57 -> about 3:51.
+
+### Round 5 revisions, render pass (after the interrupted attempt)
+
+The interrupted attempt rendered the round-5 cut once (09:33: 3:55.0, 166 wpm FLAG, one sync warning at 0:42) and
+then edited scene.py without re-rendering. This pass audits that render as a fresh critic would (all 14 sheets,
+keyframes, and 4-8 fps strips across every transition), plans the remaining climb, applies it, and re-renders.
+
+**Plan (BAR §3 "9" anchors vs the 09:33 render), written before editing.**
+- Audio ("natural cadence at 140-165 wpm; each deictic lands"): 166 wpm over speech time, a 0.32 s late cue on "two"
+  (0:42). -> narrator 0.87 -> 0.86 (~164 wpm, runtime stays under 4:00); grid counter lands before "two".
+- Motion ("every motion encodes a relation; reading time respected"): frames pulled during motion still show
+  (a) the square's four edges flipping through bow-tie shapes on their way to the cube's back face, with "true
+  answer" crossing them (0:54.5-0:55.5); (b) the 2-D squares growing over the still-visible chart (1:27.4) and the
+  darts square sliding over the fading grid square (1:41.5); (c) 99 faint polylines collapsing into one bright blob
+  (2:03.5-2:04.5); (d) the coin line crossing the fading histogram (2:24); (e) "0.05 points" scrambling glyph by
+  glyph on its way to the chart (3:11.8), after the full answer was legible for only ~1 s; (f) the dots flying across
+  the fading chart (3:13.5); (g) the 1/N line melting into the header through glyph soup over the fading limit chart
+  (3:47.8); (h) the whole 100-point polyline squashing into the 2-D dart (0:32). -> each becomes a staggered or
+  one-to-one move: edge-to-edge lines for the cube face, the truth row moving first; fades finish before the next
+  picture grows; FadeTransform for the 99 darts -> coins; the answer holds ~1.9 s, then flies as one rigid object
+  (scale + move, same glyphs); the limit chart clears before its 1/N line becomes the header; only the two dots on
+  inputs 1 and 2 merge into the 2-D dart.
+- Visual ("one focal point; >= 0.15 clearance, nothing reads as clutter"): the walk's "sqrt(N) halves" sat 0.5 units
+  from the coin line's red "1/2", reading as "sqrt(N) halves 1/2" (2:31-2:43). -> coin line moved right, walk steps
+  0.42 -> 0.40 wide (gap ~1.1 units).
+- Clarity: "Their estimate is a share of heads" had an ambiguous antecedent (coordinates or darts). -> "So each dart
+  is a coin flip; the estimate is the share of heads in N flips", with the first coins appearing on "coin flip".

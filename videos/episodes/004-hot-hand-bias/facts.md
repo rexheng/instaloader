@@ -34,6 +34,7 @@ directory recomputes all of the computed ones (exact fractions + a seeded numpy 
 ## Simulated vs real on screen
 
 - The 16 sequences and their scores are exhaustive enumeration (exact, not sampled).
+- Round 6: the simulated 100-shot record was removed; nothing simulated is shown.
 - The ghost ticks for 1 and 2 hits in a row and their 1,000-shot positions are exact expectations (dynamic programming), shown as positions only.
 - The −8 point baseline is Miller & Sanjurjo's computed value (cited). The 46% / 54% marker positions are exact expectations (dynamic programming, no sampling), the curves of Miller & Sanjurjo's Fig. 1. No simulated value is shown on screen (the v1 "1,000 shots" ghost was removed).
 - 49 % / 45 % / +4 are real (GVT's Cornell data as reproduced by Miller & Sanjurjo, Table 2).
@@ -79,3 +80,27 @@ directory recomputes all of the computed ones (exact fractions + a seeded numpy 
 | 33 | Landing, on screen: (1/14) Σᵢ hᵢ/nᵢ = 17/42 beside the blue marker; the HHTH row becomes hit/hit/miss/hit and the axis title "checked shots that are hits" on "A fifty percent shooter". | Same formula and value as row 28; the coin→shooter mapping is the one from 0:22. | arithmetic |
 
 On-screen colour change (no claim): secondary grey text is #A9AEB6, 8.1:1 on the background #14161B, up from 5.8:1.
+
+## Round-6 revision: new, reworded or removed claims
+
+No claim was found wrong in round 6 (substance re-derived every number and re-checked both
+citations: "the cleanest fact sheet I have seen in this series"). Changes are wording and on-screen
+working only; every value below is recomputed by `check_numbers.py` (section 1 and 4 asserts).
+
+| # | Claim (as spoken / shown) | Verification | Source |
+|---|---|---|---|
+| 34 | Cold open: "Do this for every four flip run, and average." (was "Average the shares over all sixteen sequences") | Same procedure; "every four flip run" = the 16 equally likely sequences shown as the ghost (row 1). The two runs with no share are handled at 0:48 (row 3). | — |
+| 35 | "Twelve heads crowd into eight rows. Twelve tails spread across eleven." On screen the 8 (then 11) rows are boxed while the other rows dim; "12 heads · 8 rows", "12 tails · 11 rows". | Row 9. | arithmetic |
+| 36 | "Crowded heads split their votes." On screen the five thinnest heads slices pulse (HHHH's three and HHHT's two, a third of a vote each) with those two rows' 3/3 and 2/3; every other row dims. | Each checked flip holds 1/nᵢ of its row's single vote; the rows that check three flips are HHHH and HHHT, holding 3 + 2 = 5 checked heads at 1/3 vote each. Average vote per checked heads 17/3 ÷ 12 = 0.47, per checked tails 25/3 ÷ 12 = 0.69 (row 12). | arithmetic; M&S 2018 p. 3 (row 11) |
+| 37 | "Line them up, and the heads hold five and two thirds of the fourteen votes. That's seventeen out of forty two." On screen "5⅔ votes" over the packed yellow, "8⅓ votes" over the grey, then 5⅔ / 14 = 17/42 built from the yellow count and the 14 vote outlines. | Σ hᵢ/nᵢ = 3·1 + 2/3 + 4·½ = 17/3 = 5⅔; tails Σ (nᵢ − hᵢ)/nᵢ = 25/3 = 8⅓; 17/3 + 25/3 = 14; (17/3)/14 = 17/42. Replaces round 5's "Fewer rows, fewer votes", which named a row count rather than the dilution (round-6 substance fix 2). | arithmetic; `check_numbers.py` §1 |
+| 38 | "For a random shooter, the same crowding pulls after hits down to forty six percent on average, and after misses up to fifty four." (was "pulls those, on average, to forty six and fifty four percent") | Exact DP, n = 100, p = .5: 46.03% / 53.97% (row 17). Direction per M&S §3.2. | M&S 2018 §3.2, Fig. 1 |
+| 39 | Payoff header (round 6): "1985 design · 26 players · up to 100 shots" in grey while the random shooter's numbers are on screen; it becomes the purple "Cornell, 1985" only when Cornell's 49% / 45% arrive. | Design facts as row 15. The random shooter is computed on that design (n = 100, p = .5), so the header names the design, not Cornell data (round-6 substance fix 4). | M&S 2018 §3.1 |
+| 40 | On screen: "49 − 45 = +4" written from Cornell's own 49% and 45%, beside the purple +4 marker. | GVT's averages .49 and .45 (row 16); 49 − 45 = 4 points. | M&S 2018 §3.1 |
+| 41 | Difference axis: −10, −5, 0, +5, +10 points on the same tick marks as the 0–100% share axis (0.45 units per point); the 46% / 54% cursors run on the 0–100% axis (no 40–60% zoom). | Tick positions asserted in `scene.py`; −8 is drawn at −8.0 (exact −7.94, row 17b). | — |
+| 42 | Landing: blue dot on the one-half line tagged "its rows average 1/2"; the hit/hit/miss/hit row dims to 30% as it appears. | Same claim as row 23: the shooter's test score is an average over its rows, not one 4-shot row (round-6 substance fix 3). | rows 6, 23 |
+| — | **Removed:** the simulated 100-shot record (row 30) and its rings. | Both critics: it taught the ring rule twice and no count from it was used. No simulated data is on screen any more. | — |
+
+Citations on screen (unchanged, both verified in round 6): "Gilovich et al., 1985 · Cognitive
+Psychology" (17(3):295–314) and "Miller & Sanjurjo, 2018 · Econometrica" (86(6):2019–2047). Round 6:
+GVT's citation is at full strength whenever GVT's own numbers are on screen (49%, 45%, +4), and
+neither citation is dimmed after Cornell's data arrives.

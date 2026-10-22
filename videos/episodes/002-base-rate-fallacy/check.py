@@ -113,3 +113,19 @@ print("positives / 10,000: 19.8 ->", 19.8 / 10000, " 99.8 ->", 99.8 / 10000,
 # stopped and found false by intervention teams -> at most 15 of 48 confirmed true by that later test
 print("Six Nations, operators' Y:", f"{22 / 48:.3f}", "; if the 7 later found false are removed:",
       f"{15 / 48:.3f}", "(still 10x the final's 3 %)")
+# ---- round 6 revisions, self-check: the live meters (fail-beat slider and landing sweep) are
+# driven from the DISPLAYED whole-person counts, so every frame re-derives: meter = red / (red + blue)
+# as shown.  (Driven from the exact P(sick|+) at N instead, 59 of the 499 integer N in 2..500 showed
+# a meter 1 point off the displayed counts, e.g. 1 in 388: 26 / 126 = 20.6 % -> 21 % but 20 %.)
+mism = 0
+for n in range(2, 501):
+    s = 10000 / n
+    sp, hp = round(0.99 * s), round(0.01 * (10000 - s))
+    shown = round(100 * sp / (sp + hp))
+    exact = round(100 * float(ppv(F(1, n))))
+    mism += shown != exact
+    assert abs(shown - exact) <= 1
+print("live meter from displayed counts: 1 in 388 ->", round(0.99 * 10000 / 388), "/",
+      round(0.99 * 10000 / 388) + round(0.01 * (10000 - 10000 / 388)), "=",
+      f"{100 * 26 / 126:.1f} % -> 21 %", "; 1 in 340 -> 29 / 129 =", f"{100 * 29 / 129:.1f} % -> 22 %",
+      f"; exact-vs-shown differs by 1 point at {mism} of 499 N (now the counts govern)")

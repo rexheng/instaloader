@@ -435,3 +435,47 @@ bars return at "exactly" (no overlap at 2:19). The Facebook friend read-out appe
   stacked glyph or text crossing full-strength text.
 - What remains is copies in flight that cross a bar, or text dimmed to 30 %, for at most 0.2 s.
   That is deliberate.
+
+## Round 6 revisions
+
+Round 6: craft 8.4, substance 8.7. No caps and no factual errors; both critics said every fix
+together reaches about 9.0, narrowly.
+
+**Plan (BAR §3 "9" anchors, for each dimension scored below 9)**
+- **Hook** (8.5/8.5). Anchor: "commits by 0:12; ending resolves the opening exactly". Short of it
+  because frame 0 was eight dim circles, the title's "you" was never paid off, the Facebook
+  prediction was a blind guess, and the flu stakes vanished for 2.5 minutes. Upgrades:
+  - frame 0 shows the friendships and the two question rows as ghosts;
+  - the spread cue comes before the Facebook "?";
+  - Ugander's 92.7 % pays off the "you";
+  - the 0:19 stakes picture returns at Harvard.
+- **Clarity** (8.5/9). Anchor: "re-derive after one watch". Short of it because the algebra
+  collapse came too fast, "the balance point" was ambiguous, the beam had no scale, the scale tag
+  vanished early, and the landing tally did not close. Upgrades:
+  - reading pauses, and one collapse;
+  - "the girls' balance point, two and a half", with the 3.0 dimmed;
+  - a count ruler;
+  - the scale tag kept;
+  - Carol's tie shown.
+- **Visual** (8/8.5). Anchor: "every frame has one focal point; §5 met". Short of it because of
+  the crowded 1:13-1:33 and 2:26 frames, tight boxes, small labels and a GRAY data arrow. Upgrades:
+  - the panel dimmed in both stretches;
+  - box buffs at 0.15;
+  - labels at MathTex 36;
+  - the self-report arrow in INK.
+- **Motion** (8.5/9). Anchor: "every motion encodes a relation; reading time respected". Short of
+  it because six states came in 9 s, copies struck labels, and Facebook narration ran over girl
+  data. Upgrades:
+  - holds of at least 3 s;
+  - labels dip during the drop;
+  - one synced change on "Facebook".
+- **Audio** (8.5/8.5). Anchor: "each deictic lands; pauses intentional". Short of it because of
+  the weak "Divide" onset and the Facebook deictic lag. Upgrades:
+  - "Now divide";
+  - every Facebook change is cued to its word.
+- **Concision** (8.5/8.5). Anchor: "cutting any sentence loses something". Upgrade: cut "two and
+  a quarter at the ends, a quarter in the middle" and "Back to the eight girls".
+- **Originality** (8.5/8.5). Anchor: "a non-obvious image viewers would remember". Short of it
+  because the payoff never reused the tokens and the examples were Strogatz's trio. Upgrades:
+  - C&F's design runs on the token machine;
+  - the 92.7 % personal turn.

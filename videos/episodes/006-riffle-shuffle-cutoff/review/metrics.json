@@ -8,7 +8,7 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 10.27,
+ "size_mb": 10.23,
  "integrated_lufs": -14.2,
  "lra_lu": 2.4,
  "true_peak_dbtp": -2.7,
@@ -117,8 +117,8 @@
    "file": "keyframes/kf_09_01-11.6.png"
   },
   {
-   "t": 76.97,
-   "file": "keyframes/kf_10_01-17.0.png"
+   "t": 76.83,
+   "file": "keyframes/kf_10_01-16.8.png"
   },
   {
    "t": 84.03,

@@ -140,6 +140,25 @@ def consolidate(scene, group):
     return group
 
 
+def _first_half(t):
+    return smooth(min(1.0, t / 0.45))
+
+
+def _second_half(t):
+    return smooth(max(0.0, (t - 0.55) / 0.45))
+
+
+def roll(old, new, dist=0.22):
+    """Swap a changed term without a double exposure: the old one leaves upward in the first
+    half of the animation, the new one rises into place in the second half."""
+    return [FadeOut(old, shift=UP * dist, rate_func=_first_half),
+            FadeIn(new, shift=UP * dist, rate_func=_second_half)]
+
+
+def late_in(t):
+    return smooth(max(0.0, (t - 0.6) / 0.4))
+
+
 def chip(value: str, color, size=MATH, width=1.0) -> VGroup:
     t = MathTex(value, font_size=size, color=INK)
     box_ = RoundedRectangle(width=max(width, t.width + 0.4), height=0.56, corner_radius=0.1,
@@ -471,16 +490,28 @@ class Episode(NarratedScene):
                                     fill_color=YELLOW, fill_opacity=0.16)
         big = self.src_ax
         keep = self.vlabs[3]                                   # the 1.98 reading travels on
-        tmp = reads[0].copy().move_to(P(3.9, READ_Y))          # full size while it travels
+        # full size, straight below its own bar: it drops out of the chart as the chart fades
+        # (late, so it never crosses a bar that is still visible), then slides along the
+        # readings row to panel 1 once the shrinking histogram has risen above that row
+        mid = MathTex(f"{D['src_skew'][3]:.2f}", font_size=MATH, color=BLUE)
+        mid.move_to(P(keep.get_center()[0], READ_Y))
+
+        def drop_late(t):
+            return smooth(max(0.0, (t - 0.35) / 0.65))
+
+        def slide_late(t):
+            return smooth(max(0.0, (t - 0.3) / 0.65)) if t < 0.95 else 1.0
         with self.beat("average") as beat:
-            self.play(FadeOut(self.chart), FadeOut(self.sbars), FadeOut(VGroup(*self.vlabs[:3])),
-                      FadeOut(self.curve), FadeOut(self.count), FadeOut(self.sim_tag), FadeOut(big),
-                      ReplacementTransform(keep, tmp[1]), FadeIn(tmp[0]), run_time=0.6)
+            self.play(FadeOut(self.chart, rate_func=_first_half), FadeOut(self.sbars, rate_func=_first_half),
+                      FadeOut(VGroup(*self.vlabs[:3])), FadeOut(self.curve), FadeOut(self.count),
+                      FadeOut(self.sim_tag), FadeOut(big),
+                      ReplacementTransform(keep, mid, rate_func=drop_late), run_time=0.7)
             self.play(ReplacementTransform(self.src_bars, new_src), *[FadeIn(a) for a in pax],
                       FadeIn(heads), FadeIn(xshared), FadeIn(ylab), FadeIn(sim_tag2),
-                      ReplacementTransform(tmp, reads[0]), run_time=1.1)
+                      ReplacementTransform(mid, reads[0][1], rate_func=slide_late),
+                      FadeIn(reads[0][0], rate_func=late_in), run_time=1.2)
             beat.wait_until("Four", offset=-0.1)
-            self.play(LaggedStart(*[TransformFromCopy(new_src[b], c, path_arc=0.8) for b, c in zip(bins, chips)],
+            self.play(LaggedStart(*[TransformFromCopy(new_src[b], c, path_arc=0.4) for b, c in zip(bins, chips)],
                                   lag_ratio=0.15), run_time=beat.until("the one", offset=-0.1, min_time=1.0))
             beat.wait_until("long", offset=-0.15)
             self.play(emph(chips[2], 1.18), run_time=0.8)
@@ -566,26 +597,26 @@ class Episode(NarratedScene):
             beat.wait_until("halves", offset=-0.3)
             self.play(LaggedStart(*[GrowArrow(g[0]) for g in d2], lag_ratio=0.2),
                       LaggedStart(*[FadeIn(g[1]) for g in d2], lag_ratio=0.2), run_time=0.7)
-            beat.wait_until("two over", offset=-0.15)
+            beat.wait_until("two over", offset=-0.3)
             # 2 / root n under each reading: the 2 is one wait's skewness (blue), the radicand is
             # that panel's n (each header pulses as its fraction is written; nothing flies)
             self.play(LaggedStart(*[AnimationGroup(Write(f), emph(heads[i][2], 1.3))
-                                    for i, f in enumerate(fracs)], lag_ratio=0.15),
-                      run_time=beat.until("and two", offset=-0.1, min_time=1.0))
-            # first the four 2 / root n become one, then skew(x-bar) = arrives in the cleared space
+                                    for i, f in enumerate(fracs)], lag_ratio=0.1), run_time=0.8)
+            # held while "and two is" is spoken; then the four 2 / root n become one, and
+            # skew(x-bar) = arrives in the cleared space
+            beat.wait_until("skewness of", offset=-0.2)
             self.play(ReplacementTransform(VGroup(*[f[0][0] for f in fracs]), t1[2][0]),
                       ReplacementTransform(VGroup(*[f[0][1] for f in fracs]), t1[2][1]),
                       ReplacementTransform(VGroup(*[f[0][2] for f in fracs]), t1[2][2]),
                       ReplacementTransform(VGroup(*[f[0][3] for f in fracs]), t1[2][3]),
                       *[FadeOut(f[0][4:]) for f in fracs], *[FadeOut(f[1:], shift=0.12 * DOWN) for f in fracs],
-                      FadeIn(t1[2][4]), run_time=0.55)
-            self.play(FadeIn(t1[0:2], shift=0.3 * RIGHT), run_time=beat.until("skewness of", offset=-0.1,
-                                                                                min_time=0.4))
-            # "two is the skewness of one wait": the 2 becomes skew(x)
+                      FadeIn(t1[2][4]), run_time=0.5)
+            self.play(FadeIn(t1[0:2], shift=0.3 * RIGHT), run_time=0.35)
+            # "... of one wait": the 2 becomes skew(x) while one wait's 1.98 pulses
             self.play(emph(reads[0][1], 1.25), ReplacementTransform(t1[0], gen[0]),
                       ReplacementTransform(t1[1], gen[1]), FadeTransform(t1[2][0], gen[2][0:7]),
-                      ReplacementTransform(t1[2][1:], gen[2][7:]), run_time=0.8)
-            self.play(Indicate(gen[2][0:7], color=BLUE, scale_factor=1.1), run_time=0.7)
+                      ReplacementTransform(t1[2][1:], gen[2][7:]), run_time=0.7)
+            self.play(Indicate(gen[2][0:7], color=BLUE, scale_factor=1.1), run_time=0.6)
             gen = swap_clean(self, gen, gen_clean)
 
         # ---- beat 7b: why root n, drawn: four waits -> cubed gaps x4; spread x2, so its cube x8
@@ -675,8 +706,11 @@ class Episode(NarratedScene):
         # the proof has made its point: it closes back to skew(x-bar) = skew(x)/root n (in the
         # pause), so the next beat starts from one formula and the panels, nothing else
         gen = gen_home.copy().scale(42 / (EQ - 6)).move_to(P(3.2, FORM_Y))
+        # first the middle of the expansion and the cubes leave, then the two ends close up
+        # (nothing slides through a term that is still fading)
+        self.play(FadeOut(genx[1:5]), FadeOut(picture), run_time=0.4)
         self.play(ReplacementTransform(genx[0], gen[0]), ReplacementTransform(genx[5], gen[1]),
-                  ReplacementTransform(genx[6], gen[2]), FadeOut(genx[1:5]), FadeOut(picture), run_time=0.8)
+                  ReplacementTransform(genx[6], gen[2]), run_time=0.6)
 
         # ---- beat 8: the extra tail weight fades faster still; only the bell survives
         kv = ["6", "1.5", "0.375", "0.094"]                 # exact: excess kurtosis of an average = 6/n
@@ -738,7 +772,7 @@ class Episode(NarratedScene):
         gen = self.gen
         top = gen.copy().move_to(P(RX, 2.85))
         cite1 = citation("Montgomery & Runger, 2010, via Kohavi et al., 2014")
-        cite2 = citation("Kohavi, Deng, Longbotham & Xu, 2014 · KDD (rule after Boos & Hughes-Oliver, 2000)")
+        cite2 = citation("Kohavi et al., 2014 · KDD; rule from Boos & Hughes-Oliver, 2000")
 
         # exact distribution of the average of n waits (Gamma), for n = 30, 300, 1,420
         NS3 = (30, 300, 1420)
@@ -826,6 +860,7 @@ class Episode(NarratedScene):
         for r in RD.values():
             r[0].set_color(YELLOW)
             r[2].set_color(YELLOW)
+            r.align_to(RD[30], LEFT)
         rd = RD[30]
 
         # log axis: sample size needed
@@ -863,16 +898,16 @@ class Episode(NarratedScene):
                         print("[ep9] removing VISIBLE leftover", type(m).__name__, m.get_center())
                     self.remove(m)
             self.play(FadeTransform(p16[0], ax30), ReplacementTransform(p16[1], bars30),
-                      ReplacementTransform(p16[2], bell30), TransformMatchingTex(p16[3], head30),
-                      gen.animate.move_to(top),
-                      *[FadeIn(m) for m in (line, ticks, tl, ttl, cite1, exact_tag, xl30)],
+                      ReplacementTransform(p16[2], bell30), ReplacementTransform(p16[3][0:2], head30[0:2]),
+                      FadeTransform(p16[3][2], head30[2]), gen.animate.move_to(top),
+                      *[FadeIn(m) for m in (line, ticks, tl, ttl, cite1, xl30)],
                       FadeIn(m30, shift=0.1 * UP), run_time=beat.until("Two", offset=-0.3, min_time=1.2))
+            # the formula's copy becomes 2 / root 30 on its way down (no doubled formula)
             cp = gen.copy()
-            self.play(cp.animate(path_arc=0.9).move_to(sub[0:3], aligned_edge=LEFT), run_time=0.55)
-            self.play(ReplacementTransform(cp[0], sub[0]), ReplacementTransform(cp[1], sub[1]),
-                      FadeTransform(cp[2][0:7], sub[2][0]), ReplacementTransform(cp[2][7:10], sub[2][1:4]),
+            self.play(ReplacementTransform(cp[0], sub[0], path_arc=0.6), ReplacementTransform(cp[1], sub[1], path_arc=0.6),
+                      FadeTransform(cp[2][0:7], sub[2][0]), ReplacementTransform(cp[2][7:10], sub[2][1:4], path_arc=0.6),
                       FadeOut(cp[2][10]), TransformFromCopy(head30[2], sub[2][4:]), FadeIn(sub[3]),
-                      run_time=beat.until("point", offset=-0.1, min_time=0.8))
+                      FadeIn(exact_tag), run_time=beat.until("point", offset=-0.1, min_time=1.0))
             self.play(Write(ans), run_time=0.6)
             sub = swap_clean(self, sub, sub_clean)
             beat.wait_until("Close", offset=-0.2)
@@ -893,6 +928,8 @@ class Episode(NarratedScene):
             self.play(glow(areas30, 0.5, 0.8), flag(ref_lbl, color=GREEN), run_time=0.8)
             beat.wait_until("Tests", 2, offset=-0.1)
             self.play(Create(mu_line), FadeIn(mu_lbl, shift=0.1 * DOWN), run_time=0.6)
+            beat.wait_until("lopsided", offset=-0.15)
+            self.play(glow(VGroup(*bars30[15:]), 0.5, 0.8), run_time=0.8)
             beat.wait_until("low average", offset=-0.25)
             self.play(GrowFromCenter(ex_dot), GrowFromCenter(iv_known), FadeIn(lab_k), run_time=0.6)
             beat.wait_until("small", offset=-0.15)
@@ -934,15 +971,18 @@ class Episode(NarratedScene):
         S4 = MathTex("n", r"\ge", "355", r"\cdot", "2^2", "=", r"1{,}420", font_size=MATH)
         S4[4][0].set_color(BLUE)
         S4.move_to(P(RX, ROW_R))
-        state = {"n": 30}
+        state = {"n": 30, "rd2": rd[2]}
 
         def to_panel(n):
-            """Morph the (dimmed) panel, the skew readout and the meter to the average of n waits."""
+            """Morph the (dimmed) panel, the skew readout and the meter to the average of n waits.
+            Changed numbers roll (old out upward, then new in), so no digits are ever doubled."""
             o = state["n"]
-            state["n"] = n
+            old_rd = state["rd2"]
+            state["n"], state["rd2"] = n, RD[n][2]
             return [FadeTransform(AX[o], AX[n]), ReplacementTransform(BARS[o], BARS[n]),
                     ReplacementTransform(BELL[o], BELL[n]), ReplacementTransform(AREAS[o], AREAS[n]),
-                    TransformMatchingTex(HEAD[o], HEAD[n]), Transform(rd[2], RD[n][2]),
+                    ReplacementTransform(HEAD[o][0:2], HEAD[n][0:2]), *roll(HEAD[o][2], HEAD[n][2]),
+                    *roll(old_rd, RD[n][2]),
                     trk[0].animate.set_value(miss[n][0]), trk[1].animate.set_value(miss[n][1])]
         panel30 = VGroup(ax30, bars30, bell30, areas30, head30, exact_tag, xl30)
         with self.beat("kohavi") as beat:
@@ -957,13 +997,18 @@ class Episode(NarratedScene):
             self.bring_to_front(mbars, m_ref)
             beat.wait_until("Their rule", offset=-0.2)
             # the panel steps back; the lean of an average of 30 becomes the meter's driver
-            self.play(dimmed(panel30, PDIM), ReplacementTransform(sub[0], rd[0]), ReplacementTransform(sub[1], rd[1]),
-                      ReplacementTransform(ans, rd[2]), FadeOut(sub[2:]), run_time=0.8)
+            # 2 / root 30 has done its job and leaves first (the meter's title steps back so the
+            # travelling readout never runs over live text); then "skew(x-bar) = 0.37" moves to sit
+            # right above the meter, and the title returns
+            self.play(dimmed(panel30, PDIM), FadeOut(sub[2:], shift=0.1 * DOWN), dimmed(m_ttl, 0.15),
+                      run_time=0.4)
+            self.play(ReplacementTransform(sub[0], rd[0]), ReplacementTransform(sub[1], rd[1]),
+                      ReplacementTransform(ans, rd[2]), run_time=0.8)
+            self.play(dimmed(m_ttl, 1 / 0.15), run_time=0.3)
             self.play(Write(S1), run_time=beat.until("squared", end=True, offset=-0.1, min_time=1.2))
             beat.wait_until("Divide", offset=-0.2)
             s1c = S1.copy()
-            self.play(s1c.animate(path_arc=0.9).move_to(P(RX, ROW_D)), run_time=0.5)
-            self.play(TransformMatchingShapes(s1c, S2), run_time=0.8)
+            self.play(TransformMatchingShapes(s1c, S2), run_time=1.0)
             beat.wait_until("root", offset=-0.15)
             self.play(TransformMatchingShapes(S2, S3[0:3]), FadeIn(S3[3:]), run_time=0.9)
             beat.wait_until("our formula", offset=-0.45)
@@ -982,17 +1027,19 @@ class Episode(NarratedScene):
             self.play(dimmed(axis_ctx, 1 / 0.35), FadeIn(m300[0], scale=0.5), FadeIn(m300[1], shift=0.2 * UP),
                       *to_panel(300), run_time=1.0)
             beat.wait_until("point", 2, offset=-0.2)
-            self.play(flag(rd[2], color=YELLOW), flag(S3b[4], color=YELLOW), run_time=0.7)
+            self.play(flag(state["rd2"], color=YELLOW), flag(S3b[4], color=YELLOW), run_time=0.7)
             beat.wait_until("still", offset=-0.2)
             self.play(flag(live[0], color=YELLOW), run_time=0.6)
             beat.wait_until("these waits", offset=-0.2)
-            self.play(TransformMatchingTex(S1, S4), run_time=0.9)
+            # the general skewness becomes these waits' 2; the result rolls in (no doubled glyphs)
+            self.play(ReplacementTransform(S1[0:4], S4[0:4]), *roll(S1[4], S4[4:]), run_time=0.9)
+            consolidate(self, S4)
             beat.wait_until("fourteen", offset=-0.2)
             self.play(flag(S4[6], color=INK), FadeIn(m1420[0], scale=0.5),
                       FadeIn(m1420[1], shift=0.25 * UP), FadeIn(m1420[2], shift=0.1 * UP), *to_panel(1420),
                       run_time=1.1)
             beat.wait_until("lean", 2, offset=-0.15)
-            self.play(flag(rd[2], color=YELLOW), flag(S3b[4], color=YELLOW), run_time=0.7)
+            self.play(flag(state["rd2"], color=YELLOW), flag(S3b[4], color=YELLOW), run_time=0.7)
             beat.wait_until("band", offset=-0.3)
             for m in (*live, *mbars):
                 m.clear_updaters()
@@ -1002,7 +1049,7 @@ class Episode(NarratedScene):
             self.play(FadeOut(ring), run_time=0.4)
 
         # ---- beat 12: Bing's revenue, and the cap: the sample-size axis becomes the subject
-        UP_AX = 1.9
+        UP_AX, AX_DX = 1.9, 0.5                 # the axis rises, and moves left to make room for "never"
         S5 = MathTex("n", r"\ge", "355", r"\cdot", r"17.9^2", r"\approx", r"114{,}000", font_size=MATH)
         S5[4][0:4].set_color(BLUE)
         S5.move_to(P(0, 2.45))
@@ -1010,21 +1057,24 @@ class Episode(NarratedScene):
         S6[4][0:3].set_color(BLUE)
         S6.move_to(P(0, 2.45))
         for m in (mbing, mcap):
-            m.shift(UP * UP_AX)
-        payoff = VGroup(AX[1420], BARS[1420], BELL[1420], AREAS[1420], HEAD[1420], exact_tag, xl30, rd,
+            m.shift(UP * UP_AX + LEFT * AX_DX)
+        payoff = VGroup(AX[1420], BARS[1420], BELL[1420], AREAS[1420], HEAD[1420], exact_tag, xl30,
+                        rd[0], rd[1], state["rd2"],
                         band_lbl, m_base, m_band, m_ref, mbars, live, m_lr, m_ttl, S3b)
         axis_all = VGroup(axis_ctx, m300, m1420)
         with self.beat("bing") as beat:
-            self.play(FadeOut(payoff), axis_all.animate.shift(UP * UP_AX), S4.animate.move_to(P(0, 2.45)),
-                      run_time=0.9)
+            self.play(FadeOut(payoff), run_time=0.45)
+            self.play(axis_all.animate.shift(UP * UP_AX + LEFT * AX_DX), S4.animate.move_to(P(0, 2.45)),
+                      run_time=0.7)
             beat.wait_until("eighteen", offset=-0.4)
-            self.play(TransformMatchingTex(S4, S5), run_time=1.0)
+            self.play(ReplacementTransform(S4[0:4], S5[0:4]), *roll(S4[4:], S5[4:]), run_time=1.0)
+            consolidate(self, S5)
             beat.wait_until("hundred", offset=-0.2)
             self.play(flag(S5[6], color=INK), FadeIn(mbing[0], scale=0.5),
                       FadeIn(mbing[1], shift=0.25 * UP), run_time=0.8)
             self.play(FadeIn(mbing[2], shift=0.1 * UP), run_time=0.4)
             beat.wait_until("Capping", offset=-0.2)
-            self.play(TransformMatchingTex(S5, S6),
+            self.play(ReplacementTransform(S5[0:4], S6[0:4]), *roll(S5[4:], S6[4:]),
                       run_time=beat.until("under", offset=-0.2, min_time=1.0))
             travel = mbing[0].copy()
             self.play(travel.animate(path_arc=0.9).move_to(mcap[0]), run_time=0.8)
@@ -1033,17 +1083,19 @@ class Episode(NarratedScene):
             self.play(FadeIn(mcap[1:], shift=0.1 * UP), flag(S6[6], color=INK), run_time=0.6)
 
         # ---- the third answer to the cold open: for some data, no sample size is enough
-        ay = AX_Y + UP_AX
-        sweep = Line(P(L0, ay), P(L1, ay), color=INK, stroke_width=6)
-        ext = DashedLine(P(L1 + 0.05, ay), P(5.75, ay), color=RED, stroke_width=3, dash_length=0.08)
-        nd = Circle(radius=0.09, color=RED, stroke_width=3).move_to(P(5.9, ay))
-        nlab = Text("never", font_size=LABEL - 2, color=RED).next_to(nd, UP, buff=0.22)
+        ay, l0, l1 = AX_Y + UP_AX, L0 - AX_DX, L1 - AX_DX
+        sweep = Line(P(l0, ay), P(l1, ay), color=INK, stroke_width=6)
+        ext = DashedLine(P(l1 + 0.05, ay), P(l1 + 0.6, ay), color=RED, stroke_width=3, dash_length=0.08)
+        nd = Circle(radius=0.09, color=RED, stroke_width=3).move_to(P(l1 + 0.75, ay))
+        nlab = Text("never", font_size=LABEL - 2, color=RED).next_to(nd, UP, buff=0.27)
         with self.beat("never") as beat:
-            beat.wait_until("no number", offset=-0.2)
-            self.play(Create(sweep), dimmed(S6, 0.35), run_time=0.9, rate_func=smooth)
-            self.play(FadeOut(sweep), run_time=0.3)
-            beat.wait_until("enough", offset=-0.35)
-            self.play(Create(ext), FadeIn(nd, scale=0.5), FadeIn(nlab, shift=0.1 * UP), run_time=0.6)
+            beat.wait_until("no number", offset=-0.25)
+            # every number on the axis is swept past; the sweep runs off its end into "never"
+            self.play(Create(sweep), dimmed(S6, 0.35), run_time=0.8, rate_func=smooth)
+            self.play(FadeOut(sweep), Create(ext), FadeIn(nd, scale=0.5), FadeIn(nlab, shift=0.1 * UP),
+                      run_time=0.6)
+            beat.wait_until("enough", offset=-0.2)
+            self.play(flag(nlab, color=RED), run_time=0.7)
         self.ss_line = line
 
     # ================================================================== 10 lighthouse

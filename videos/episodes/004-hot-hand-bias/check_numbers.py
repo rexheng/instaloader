@@ -7,7 +7,8 @@ Sections
      k = 1, 2, 3 (the ghost ticks in the payoff: n = 1000 takes about a minute)
   3. the expected per-player DIFFERENCE  P(hit|3 hits) - P(hit|3 misses), which needs both
      streak types in the same record: Monte Carlo with 1,000,000 sequences (seeded)
-  4. Cornell's numbers;  5. the simulated 100-shot record shown in the payoff (seed 292)
+  4. Cornell's numbers (49 - 45 = +4, and +4 - (-8) = +12)
+  (round 6: the simulated 100-shot record is no longer shown, so its section was removed)
 """
 from fractions import Fraction as F
 from itertools import product
@@ -43,9 +44,16 @@ rows_with_h = sum(1 for s, h, n in scored if h > 0)
 rows_with_t = sum(1 for s, h, n in scored if n - h > 0)
 print("rows holding a checked heads:", rows_with_h, " rows holding a checked tails:", rows_with_t)
 
-# votes held (round 5: "Fewer rows, fewer votes"): heads 17/3 of 14, tails 25/3 of 14
-print("votes held by heads:", sum(F(h, n) for _, h, n in scored),
-      " by tails:", sum(F(n - h, n) for _, h, n in scored), " of", len(scored))
+# votes held (round 6, on screen "5 2/3 votes" / "8 1/3 votes", then 5 2/3 / 14 = 17/42)
+votes_h = sum(F(h, n) for _, h, n in scored)
+votes_t = sum(F(n - h, n) for _, h, n in scored)
+assert votes_h == F(17, 3) and votes_t == F(25, 3) and votes_h + votes_t == 14
+assert votes_h / 14 == F(17, 42)
+print("votes held by heads:", votes_h, "= 5 2/3", " by tails:", votes_t, "= 8 1/3", " of", len(scored),
+      "->", votes_h, "/ 14 =", votes_h / 14)
+# the five thinnest heads slices (a third of a vote each): HHHH's three and HHHT's two
+thin = [(s, h, n) for s, h, n in scored if n == 3 and h > 0]
+print("rows that check 3 flips:", [s for s, _, _ in thin], " heads among them:", sum(h for _, h, _ in thin))
 
 rows_t = share_rows("T")
 scored_t = [(s, h, n) for s, h, n in rows_t if n > 0]
@@ -122,12 +130,5 @@ for n in (100, 1000):
           f"E[P(hit|3 hits) - P(hit|3 misses)] = {100 * d:+.2f} pts (s.e. {100 * se:.3f})")
 
 # ---- 4. Cornell numbers (Miller & Sanjurjo 2018, Table 2, reproducing GVT Table 4) ----
-print("Cornell: after 3 hits .49, after 3 misses .45 -> +4 pts; baseline -8 -> gap",
-      4 - (-8), "pts")
-
-# ---- 5. the simulated 100-shot record shown at 2:22 (scene.py REC; counts not shown on screen) --
-rec = np.random.default_rng(292).random(100) < 0.5
-ah = [i for i in range(3, 100) if rec[i - 3:i].all()]
-am = [i for i in range(3, 100) if (~rec[i - 3:i]).all()]
-print(f"record (seed 292): {rec.sum()} hits of 100; after 3 hits {rec[ah].sum()}/{len(ah)}, "
-      f"after 3 misses {rec[am].sum()}/{len(am)}")
+print("Cornell: after 3 hits .49, after 3 misses .45 -> 49 - 45 =", 49 - 45,
+      "pts; measured from the random baseline -8:", (49 - 45) - (-8), "pts")

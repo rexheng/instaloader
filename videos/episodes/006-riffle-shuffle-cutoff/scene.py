@@ -1023,10 +1023,16 @@ class Episode(NarratedScene):
         # ---- why the cliff: the gap measured in blue spreads, at 4 riffles and now
         halves = MathTex(r"(\text{each step} \approx \div 2)", font_size=MATH_SMALL, color=TGRAY)
         halves.next_to(row, RIGHT, buff=0.4)
-        spread_y = 0.607 * float(U_PMF[26])          # a bell is 61 % of its peak one spread out
-        spread = bracket(ax.c2p(MEAN_U, spread_y), ax.c2p(MEAN_U + SD_U, spread_y), BLUE, tick=0.1)
+        # blue's spread as a ruler on the gap's own level: it starts where the gap ends (blue's
+        # centre) and runs one standard deviation to the right, so gap and spread sit side by side
+        # (on the bell's flank it ran along the purple outline)
+        spread_y, _ = gap_y(7.0)
+        sp_a, sp_b = ax.c2p(MEAN_U, spread_y), ax.c2p(MEAN_U + SD_U, spread_y)
+        spread = VGroup(Line(sp_a, sp_b, color=BLUE, stroke_width=3.5),
+                        Line(sp_a, sp_a + UP * 0.12, color=BLUE, stroke_width=3.5),
+                        Line(sp_b + UP * 0.12, sp_b + DOWN * 0.12, color=BLUE, stroke_width=3.5))
         spread_num = MathTex(r"\text{spread } 2.1", font_size=MATH_SMALL + 2, color=BLUE)
-        spread_num.next_to(ax.c2p(30.0, spread_y), RIGHT, buff=0.05)
+        spread_num.next_to(sp_b, RIGHT, buff=0.22)
         HOP_H = 0.17
 
         def hops_at(k, opacity=1.0):
@@ -1056,7 +1062,10 @@ class Episode(NarratedScene):
             m[0].set_color(YELLOW)
             m[1].set_color(BLUE)
             yb, _ = gap_y(k)
-            return m.next_to(ax.c2p(MEAN_U, yb), RIGHT, buff=0.3).shift(0.12 * UP)
+            if k == 4:
+                return m.next_to(ax.c2p(MEAN_U, yb), RIGHT, buff=0.3).shift(0.12 * UP)
+            # at 7 riffles the spread ruler is on the right, so the count sits left of the gap
+            return m.next_to(ax.c2p(mean_of(k), yb), LEFT, buff=0.25).shift(0.16 * UP)
 
         ghost_full = gap_at(4, opacity=0.6)
         hops4, hops7 = hops_at(4, 0.8), hops_at(7)
@@ -1128,7 +1137,10 @@ class Episode(NarratedScene):
                           "spread after just under seven.") as beat:
             self.play(FadeOut(VGroup(hops4, hops7, r4, r7, ghost_full, halves)), run_time=0.4)
             self.play(Write(prod_head), run_time=0.5)
-            self.play(LaggedStart(*[AnimationGroup(*self.fly_copy(row[2 * i + 1], prods[i]))
+            # each gap flashes and its product drops out of it into the row below (the product
+            # row never shows a gap value)
+            self.play(LaggedStart(*[AnimationGroup(Indicate(row[2 * i + 1], color=YELLOW, scale_factor=1.1),
+                                                   FadeIn(prods[i], shift=0.15 * DOWN))
                                     for i in range(4)], lag_ratio=0.35),
                       LaggedStart(*[FadeIn(a) for a in prod_arrows], lag_ratio=0.35),
                       run_time=beat.until("two hundred", offset=-0.3, min_time=1.4))
@@ -1200,8 +1212,9 @@ class Episode(NarratedScene):
             [big.c2p(k, TV[k - 1]) for k in range(1, 11)])
         big_half = DashedLine(big.c2p(0, 0.5), big.c2p(10.5, 0.5), color=GRAY, stroke_width=2.5,
                               dash_length=0.1)
+        # only the two values that straddle the half line (the rest were read off the inset)
         vals = VGroup(*[MathTex(f"{TV[k - 1]:.2f}", font_size=MATH_SMALL, color=RED)
-                        .next_to(big.c2p(k, TV[k - 1]), UR, buff=0.22) for k in (5, 6, 7, 8)])
+                        .next_to(big.c2p(k, TV[k - 1]), UR, buff=0.22) for k in (6, 7)])
         EQX = 4.05
         small_dots = VGroup(*early, *[dots[k] for k in (4, 5, 6, 7, 8)])
         eq_final = VGroup(eqN[1], frN[1], frN[2], lhsN, numN, sq, rt_n, kN)
@@ -1224,11 +1237,11 @@ class Episode(NarratedScene):
             self.play(FadeIn(big_dots[8:], scale=1.5), Indicate(big_cliff, color=RED, scale_factor=1.0),
                       run_time=0.8)
             beat.wait_until("fifty two", offset=-0.3)
-            self.play(LaggedStart(*[FadeIn(v, shift=0.1 * LEFT) for v in vals], lag_ratio=0.25),
-                      run_time=1.2)
+            self.play(LaggedStart(*[FadeIn(v, shift=0.1 * LEFT) for v in vals], lag_ratio=0.4),
+                      run_time=1.0)
             beat.wait_until("seven", offset=-0.2)
             self.play(Indicate(big_dots[6], color=RED, scale_factor=1.8),
-                      Indicate(vals[2], color=RED, scale_factor=1.2), run_time=0.9)
+                      Indicate(vals[1], color=RED, scale_factor=1.2), run_time=0.9)
             beat.wait_until("below", offset=-0.2)
             self.play(Indicate(big_half, color=INK, scale_factor=1.0), run_time=0.8)
 
@@ -1241,7 +1254,7 @@ class Episode(NarratedScene):
         band.move_to((big.c2p(5, 0) + big.c2p(6, 1)) / 2)
         with self.narrate("Trefethen and Trefethen measured information instead: no cliff, and five "
                           "or six shuffles do a reasonable job.") as beat:
-            self.play(FadeOut(bd2), FadeOut(VGroup(vals[0], vals[1], vals[3])), run_time=0.3)
+            self.play(FadeOut(bd2), FadeOut(vals[0]), run_time=0.3)
             self.play(FadeIn(tref), run_time=0.4)
             beat.wait_until("information", offset=-0.2)
             self.play(FadeIn(info[0], shift=0.1 * UP), Indicate(big.y_title, color=INK, scale_factor=1.1),
@@ -1264,14 +1277,19 @@ class Episode(NarratedScene):
         with self.narrate("Many Markov chains share this cliff, and samplers share the trap: one "
                           "statistic can settle, like the top card, long before the whole chain "
                           "has.") as beat:
-            self.play(FadeOut(tref), FadeOut(info), FadeOut(band), FadeOut(vals[2]),
+            self.play(FadeOut(tref), FadeOut(info), FadeOut(band), FadeOut(vals[1]),
                       eq_final.animate.set_opacity(0.3), run_time=0.4)
-            self.play(FadeIn(dia), Indicate(big_cliff, color=RED, scale_factor=1.0),
+            self.play(FadeIn(dia), run_time=0.4)
+            beat.wait_until("cliff", offset=-0.3)
+            self.play(Indicate(big_cliff, color=RED, scale_factor=1.0),
                       LaggedStart(*[Indicate(d, color=RED, scale_factor=1.5) for d in big_dots[3:8]],
                                   lag_ratio=0.2), run_time=1.2)
-            beat.wait_until("statistic", offset=-0.3)
-            self.play(Create(top_curve), FadeIn(top_dots), FadeIn(top_lbl), FadeIn(whole_lbl),
-                      run_time=1.4)
+            # the trap is drawn as it is named: the top card's own distance settles by 4 riffles
+            beat.wait_until("trap", offset=-0.4)
+            self.play(Create(top_curve), FadeIn(top_dots), run_time=1.3)
+            beat.wait_until("statistic", offset=-0.2)
+            self.play(FadeIn(top_lbl, shift=0.1 * LEFT), FadeIn(whole_lbl, shift=0.1 * LEFT),
+                      run_time=0.6)
             beat.wait_until("top card", offset=-0.2)
             self.play(Indicate(top_dots[3], color=INK, scale_factor=1.6), run_time=0.8)
             beat.wait_until("whole chain", offset=-0.2)

@@ -195,10 +195,10 @@ In real cities, one study finds that 1930s federal lending maps increased racial
 It traces this to reduced credit in the areas marked in red.
 
 50
-00:03:32,533 --> 00:03:34,343
+00:03:33,000 --> 00:03:34,810
 Look again at the first town.
 
 51
-00:03:34,723 --> 00:03:41,123
+00:03:35,190 --> 00:03:41,590
 As Schelling argued, whatever you guessed its people demanded, the map alone could not have told you.
 

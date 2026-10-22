@@ -1,6 +1,13 @@
-WER 0.8% over 509 script words (numbers spelled out, 'and' ignored)
+WER 3.5% over 512 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/060-friendship-paradox/narration.json
 
-[1:25.0] delete   script: 'divide'                                 heard: '∅'
-[2:29.5] replace  script: 'a'                                      heard: 'one'
-[2:47.4] replace  script: 'twenty oh'                              heard: 'two thousand'
+[1:30.5] replace  script: 'a half'                                 heard: 'one two'
+[1:32.9] replace  script: 'a half'                                 heard: 'one two'
+[1:35.9] replace  script: 'girls'                                  heard: "girl's"
+[1:37.6] replace  script: 'a half'                                 heard: 'one two'
+[1:42.2] replace  script: 'a quarter'                              heard: 'one four'
+[1:49.4] replace  script: 'a half'                                 heard: 'one two'
+[1:51.6] replace  script: 'a half'                                 heard: 'one two'
+[1:53.6] replace  script: 'a half'                                 heard: 'one two'
+[2:31.5] replace  script: 'a'                                      heard: 'one'
+[2:56.0] replace  script: 'twenty oh'                              heard: 'two thousand'

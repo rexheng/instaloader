@@ -139,54 +139,54 @@ Edwin Jaynes argued that a physical process picks one.
 Straws tossed from a standing height can't be aimed, so the answer can't depend on where the circle sits or how big it is.
 
 36
-00:02:41,033 --> 00:02:49,923
-One rain lands on both circles at once, and each judges with its own gold circle, so a fair recipe must score the same on both.
+00:02:41,033 --> 00:02:43,613
+One rain lands on both circles at once.
 
 37
-00:02:50,303 --> 00:02:53,263
-Midpoint gives a quarter, then point four one.
+00:02:43,993 --> 00:02:49,473
+Each judges with its own gold circle, so a fair program must score the same on both.
 
 38
-00:02:54,063 --> 00:02:57,123
-Endpoints give a third, then point four seven.
+00:02:49,853 --> 00:02:52,813
+Midpoint gives a quarter, then point four one.
 
 39
-00:02:57,923 --> 00:03:00,763
-Only the radius program gives a half on both.
+00:02:53,913 --> 00:02:56,973
+Endpoints give a third, then point four seven.
 
 40
-00:03:01,633 --> 00:03:12,403
-Jaynes and Charles Tyler tossed real broom straws at a five-inch circle, and the hundred and twenty-eight that crossed it matched the radius program's flat spread.
+00:02:58,073 --> 00:03:00,913
+Only the radius program gives a half on both.
 
 41
-00:03:13,466 --> 00:03:15,596
-Surveys hide the same two words.
+00:03:02,066 --> 00:03:12,836
+Jaynes and Charles Tyler tossed real broom straws at a five-inch circle, and the hundred and twenty-eight that crossed it matched the radius program's flat spread.
 
 42
-00:03:15,976 --> 00:03:18,776
-Take classes of ten, ten and a hundred.
+00:03:13,900 --> 00:03:16,030
+Surveys hide the same two words.
 
 43
-00:03:19,156 --> 00:03:22,686
-Pick a class at random, and the average size is forty.
+00:03:16,410 --> 00:03:19,210
+Take classes of ten, ten and a hundred.
 
 44
-00:03:23,066 --> 00:03:29,556
-Pick a student at random, spread evenly over students instead of classes, and it's eighty-five.
+00:03:19,590 --> 00:03:23,120
+Pick a class at random, and the average size is forty.
 
 45
-00:03:29,936 --> 00:03:36,146
-At Stony Brook in nineteen seventy-four, those two picks gave forty and a hundred forty-seven.
+00:03:23,500 --> 00:03:29,990
+Pick a student at random, spread evenly over students instead of classes, and it's eighty-five.
 
 46
-00:03:36,933 --> 00:03:41,123
-So whatever number you picked, some way of drawing chords makes it right.
+00:03:30,370 --> 00:03:36,580
+At Stony Brook in nineteen seventy-four, those two picks gave forty and a hundred forty-seven.
 
 47
-00:03:41,503 --> 00:03:43,533
-Name the way, and only one is.
+00:03:37,366 --> 00:03:41,556
+So whatever number you picked, some way of drawing chords makes it right.
 
 48
-00:03:43,913 --> 00:03:47,123
-Both averages are right, once you say who's picked.
+00:03:41,936 --> 00:03:49,236
+Name the way, and the answer is fixed: a half for tossed straws, a hundred forty-seven for a random student.
 

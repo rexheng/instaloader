@@ -214,3 +214,19 @@ Round 5 reviews: craft 8.5, substance 8.6, no caps, no factual errors (the same 
 - **Labels crossed by flying copies.** At 1:57 the town's copy flew over "⅓ → 76%" while it faded in. At 2:04 the ¼ town's copy flew over "→ 58%". Both labels now arrive after their copy lands.
 - **Landing (3:33).** Our growing town passed over the fading rule town and its labels. Those now fade first (0.45 s), then the town grows home.
 - **Dot dimming.** The no-op dims on our two town dots were removed, so the code matches the picture.
+
+## Round 5 revisions (continued)
+
+The previous attempt was interrupted after its last master render (final.mp4 09:49, from the 08:48 scene.py) and before the review pack was rebuilt (review/ was from 07:37). This pass rebuilt the pack for that master, checked every round-5 fix on its sheets, keyframes and 4 fps strips across each transition, and then fixed what the frames still showed.
+
+### Plan (written before editing)
+
+| Dimension (round-5 low) | BAR "9" anchor | Where the 09:49 master still falls short | Upgrade |
+|---|---|---|---|
+| Visual (8 / 8.5) | "Every frame has one focal point; nothing to remove" | All round-5 items landed (ladder has one focal region, the vertical is named, Schelling frame has one rules label and a hatched band). New: the sheet frame at 2:11.0 is a bare baseline under two titles, about 0.9 s with no bars (BAR §11.5: never a near-empty frame while narration speaks) | Make the ladder entrance one move in which the bars sprout from the rising line |
+| Motion (8.5 / 8.5) | "Every motion encodes a relation" | The garbled 2/7 → 3/8 morph and the superimposed jump labels are gone (10 fps and 5 fps strips). New: at 1:55.2–1:56.0 the shrunken town sits alone on an empty frame before the axes start drawing; at 3:32.6–3:33.2 the dimmed town is left alone before it grows home | Draw the axes during the shrink, once the town is clear of them; bring our town back to full strength while the rest fades |
+| Concision (8 / 8) | "Cutting any sentence loses something" | The four restatements the critics named are cut, and so is "The matching share jumps to sixty-four percent" (3:50 → 3:43). Every remaining sentence carries a step the picture needs | Trim the silence before the chart (beat gap 0.5 → 0.25 s) rather than cut a load-bearing sentence |
+| Clarity, Audio (8.5) | "Viewer could re-derive it…" / "each deictic lands" | All round-5 items landed (38 spoken, matching texture, no zone pulses, "this counter" pulses, "In the other" transcribed) | No change |
+
+### Every round-5 fix, re-checked on the 09:49 master
+Garbled morph at 1:44.8 (strip 1:41.6–1:44.6, 4 fps: the old fraction slides out, then D's slides in; never two digit sets) · jump labels at 3:04.8 (sheet 2:55–2:59: "our jump" gone before the bracket slides, then "Schelling's jump: 35–50%") · ladder focal regions (kf 2:27.1, 2:45.4: thumbnails gone, A's patch in the right column, counts only as spoken) · "households (simulated start)" (kf 2:17.6) · Schelling frame (kf 2:57.7: one rules label; sheet 2:59: hatched band, our columns dimmed) · subject outline (kf 1:17.5, 1:38.4) · "this chart" (kf 1:57.7: axes drawn) · spoken columns (kf 2:05.3: ¼ mark and bright column) · counter pulse · "In the other" (whisper: "In the other, nobody minds their neighbors at all.") · 38 spoken + "38 content by their turn" (kf 0:55.4–1:06.4) · rule-town texture (kf 3:05.5, 3:13.6) · no zone pulses, towns dimmed (kf 3:31.7) · HUD centred beside the board (kf 1:06.4). All landed. Mechanics of that master: 3:43.2, 158 wpm, −14.0 LUFS / −1.7 dBTP, max silence 1.96 s, max static 3.67 s, WER 0.0 %, 0 render warnings, layout audit 0 issues in 231 checks, 0 banned phrases.

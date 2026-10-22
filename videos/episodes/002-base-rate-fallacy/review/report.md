@@ -1,20 +1,20 @@
 # Review kit — `final.mp4`
 
-Generated 2026-10-22 09:09 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
+Generated 2026-10-22 12:10 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
 
 ## Mechanics (BAR §3 caps / §5 standards)
 
 | metric | value | bar | status |
 |---|---|---|---|
 | runtime | 3:40.7 (220.7s) | 2:30–4:00 | ok |
-| video | 1920x1080 @ 30 fps, h264/yuv420p, 14.62 MB | 1920x1080 @ 30 | ok |
+| video | 1920x1080 @ 30 fps, h264/yuv420p, 14.66 MB | 1920x1080 @ 30 | ok |
 | pace | 151 wpm (speech time) · 142 overall · 175 excl. all pauses; 522 words | 140–165 (cap <120/>180) | ok |
 | loudness | -14.0 LUFS, LRA 2.6 LU | −14 ±1 | ok |
 | true peak | -2.1 dBTP | ≤ −1.5 | ok |
 | leading silence | 0.00s | ≤ 1 s | ok |
 | trailing silence | 1.95s | ≤ 2 s | ok |
 | longest internal silence | 2.16s | ≤ 2.5 s | ok |
-| longest fully static stretch | 4.27s | ≤ 4 s (cap ≥ 8 s) | **FLAG** |
+| longest fully static stretch | 2.73s | ≤ 4 s (cap ≥ 8 s) | ok |
 | black frames | 0 run(s) | none | ok |
 | background-only stretches > 1 s | 0 | none | ok |
 | transcript vs script | WER 2.6% (503 words) | ≲ 8 % | ok |
@@ -22,19 +22,31 @@ Generated 2026-10-22 09:09 by videos/toolkit/review_kit.sh. Frames are evidence;
 
 ## Flags
 
-- static frame: 4.3s fully static (limit 4 s, cap at 8 s)
+- concision budget: 508 words / 3:40.7 (target ≤ 500 words, ≤ 3:35)
+- cadence: full stops 0.40 s (variation 0.06), beat turns 0.41 s — metronomic, turns get no more air than full stops
+- breathless run: 18 s of speech with no pause ≥ 0.35 s at 1:37.0 (whisper hears one run-on sentence)
 
 ### Silences ≥ 0.3 s
 
 0:02.5–0:03.0 (0.5s), 0:05.6–0:06.0 (0.4s), 0:08.4–0:08.9 (0.5s), 0:11.7–0:12.2 (0.5s), 0:13.0–0:15.0 (2.1s), 0:19.4–0:19.9 (0.5s), 0:23.0–0:23.5 (0.5s), 0:24.9–0:25.4 (0.5s), 0:27.2–0:27.6 (0.4s), 0:28.9–0:29.4 (0.5s), 0:31.0–0:31.3 (0.3s), 0:33.0–0:33.3 (0.4s), 0:35.0–0:35.5 (0.5s), 0:36.5–0:36.8 (0.3s), 0:39.1–0:39.4 (0.4s), 0:40.9–0:41.4 (0.5s), 0:43.0–0:43.3 (0.3s), 0:45.1–0:45.5 (0.4s), 0:46.9–0:47.4 (0.5s), 0:52.0–0:52.5 (0.5s), 0:53.8–0:54.7 (0.9s), 1:00.9–1:01.5 (0.5s), 1:02.3–1:02.8 (0.5s), 1:08.1–1:09.3 (1.1s), 1:10.9–1:11.2 (0.3s), 1:12.7–1:13.8 (1.1s), 1:15.4–1:15.8 (0.5s), 1:18.3–1:18.7 (0.5s), 1:23.2–1:23.9 (0.7s), 1:26.5–1:27.0 (0.4s), 1:28.9–1:29.4 (0.5s), 1:32.6–1:33.0 (0.4s), 1:35.3–1:37.0 (1.7s), 1:41.6–1:42.2 (0.5s), 1:45.6–1:46.0 (0.5s), 1:48.2–1:48.5 (0.3s), 1:49.8–1:50.2 (0.4s), 1:53.7–1:54.0 (0.3s), 1:55.3–1:55.8 (0.5s), 1:58.4–1:58.8 (0.4s), 2:01.1–2:01.5 (0.4s), 2:03.6–2:04.1 (0.5s), 2:07.9–2:08.2 (0.3s), 2:09.3–2:10.5 (1.3s), 2:12.9–2:13.4 (0.5s), 2:16.3–2:16.8 (0.5s), 2:20.4–2:20.8 (0.3s), 2:23.5–2:23.9 (0.4s), 2:28.2–2:28.7 (0.5s), 2:31.3–2:31.8 (0.4s), 2:36.0–2:36.5 (0.5s), 2:39.0–2:39.4 (0.4s), 2:42.4–2:42.9 (0.5s), 2:43.9–2:44.4 (0.5s), 2:45.5–2:45.8 (0.3s), 2:48.6–2:49.5 (0.9s), 2:54.4–2:54.9 (0.5s), 2:55.8–2:56.3 (0.5s), 2:57.2–2:57.6 (0.4s), 3:03.1–3:03.5 (0.4s), 3:05.6–3:06.1 (0.5s), 3:08.6–3:09.1 (0.5s), 3:10.2–3:12.3 (2.1s), 3:15.4–3:15.8 (0.4s), 3:19.8–3:20.3 (0.5s), 3:22.5–3:22.9 (0.4s), 3:25.8–3:27.9 (2.2s), 3:30.9–3:31.5 (0.5s), 3:33.6–3:34.0 (0.4s), 3:36.3–3:36.8 (0.5s), 3:38.7–3:40.7 (2.0s)
 
-### Static stretches ≥ 3 s
+## Narration craft (PRODUCTION_GUIDE §13: the systemic 9-blockers)
 
-2:57.1–3:01.3 (4.3s)
+Measured from narration.json (Kokoro's own word timings). Each line names the defect critics docked and the target that scored 9.
+
+- **Budget:** 508 words in 3:40.7. Target ≤ 500 words, 3:15–3:35. **Over.** 16 of 28 round-5/6 reviews docked Concision for length; 9 of the 10 episodes at ≥ 3:41 were told to cut, none at ≤ 3:37 was.
+- **Pace between pauses:** median sentence 166 wpm (episodes 165–178; number-dense sentences run faster), 2 sentence(s) above 200 wpm. 9 of 28 reviews called the delivery hurried; the Audio 9s were at the same 160–164 wpm, with planned pauses and no run-ons.
+  - 1:29.4 216 wpm: “Your chance of being sick is the…”
+  - 2:36.5 214 wpm: “Shrink to the alerts and take the…”
+- **Cadence:** full stops 0.40 s median (variation 0.06), beat turns 0.41 s; longest stretch without a ≥ 0.35 s breath 18.4 s at 1:37.0. Audio 9 went to episodes with 0.9–1.4 s after key results and every turn audibly longer than a full stop; flat 0.4 s gaps were called 'metronomic' (use CADENCE = "shaped" and [pause 1.0] after results).
+- **Held function words** (≥ 0.5 s; can sound like odd emphasis): “these” 0.67s @1:58.0
+- **Number load:** 43 spoken numbers; busiest 20 s from 0:53.0 has 7 different ones. Critics docked Clarity where 3+ new figures arrived inside ~20 s without a picture for each.
+- **Repeated phrases** (each repeat must be a deliberate callback; restating what the screen or an earlier line already said was the most common Concision deduction, 24 of 28 reviews): “one in five hundred” 0:00.0, 0:52.6, 3:17.0; “ninety-nine percent of the” 0:04.1, 0:36.9; “percent of the sick” 0:04.7, 0:37.6; “percent of the healthy” 0:07.4, 0:39.9
+- **'and' inside numbers:** 5 (e.g. “hundred and twenty”). Write US style (“five hundred seventy-six”) or use CADENCE = "shaped", which drops it.
 
 ## Layout audit (automatic overlap check, BAR §5)
 
-0 issue(s): 0 overlapping/touching, 0 closer than 0.15, 0 outside the safe area, 0 in the caption zone; 0 allowed by the producer. 208 frames checked (after every animation and hold).
+0 issue(s): 0 overlapping/touching, 0 closer than 0.15, 0 outside the safe area, 0 in the caption zone, 0 text(s) under the 24 px cap-height floor; 0 allowed by the producer. 208 frames checked (after every animation and hold).
 
 
 ## Contact sheets (one frame every 2s; words spoken ±1s under each)
@@ -66,7 +78,7 @@ Generated 2026-10-22 09:09 by videos/toolkit/review_kit.sh. Frames are evidence;
 - `keyframes/kf_09_00-50.1.png` — 0:50.1
 - `keyframes/kf_10_00-50.8.png` — 0:50.8
 - `keyframes/kf_11_00-54.9.png` — 0:54.9
-- `keyframes/kf_12_00-57.1.png` — 0:57.1
+- `keyframes/kf_12_00-57.2.png` — 0:57.2
 - `keyframes/kf_13_01-11.1.png` — 1:11.1
 - `keyframes/kf_14_01-23.8.png` — 1:23.8
 - `keyframes/kf_15_01-29.0.png` — 1:29.0
@@ -74,7 +86,7 @@ Generated 2026-10-22 09:09 by videos/toolkit/review_kit.sh. Frames are evidence;
 - `keyframes/kf_17_01-37.7.png` — 1:37.7
 - `keyframes/kf_18_01-42.8.png` — 1:42.8
 - `keyframes/kf_19_01-49.4.png` — 1:49.4
-- `keyframes/kf_20_01-51.4.png` — 1:51.4
+- `keyframes/kf_20_01-51.5.png` — 1:51.5
 - `keyframes/kf_21_01-55.7.png` — 1:55.7
 - `keyframes/kf_22_02-04.4.png` — 2:04.4
 - `keyframes/kf_23_02-07.8.png` — 2:07.8
@@ -173,4 +185,4 @@ Differences (numbers spelled out, 'and' ignored). A technical term heard wrong u
 [3:20.8] replace  script: 'a'                                      heard: 'one'
 ```
 
-_review kit ran in 113s_
+_review kit ran in 144s_

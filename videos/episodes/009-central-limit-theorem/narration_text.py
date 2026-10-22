@@ -3,8 +3,9 @@
 Kept separate so the script can be synthesized and timed without rendering:
     python videos/episodes/009-central-limit-theorem/narration_text.py
 
-Cadence (round 3; round 5 rewrote the coin beat as "kurt"): sentences inside a beat are joined by "[pause 0.15]" (about 0.27 s of
-silence once the clip trim pads are added), and GAP_AFTER gives the silence after each narrate
+Cadence (round 3; round 5 rewrote the coin beat as "kurt" and put a comma in "the skewness,
+squared", which whisper heard as "skewn squared"): sentences inside a beat are joined by
+"[pause 0.15]" (about 0.27 s of silence once the clip trim pads are added), and GAP_AFTER gives the silence after each narrate
 block: short inside a story beat, about 0.9 s at the seven story-beat boundaries.
 """
 
@@ -58,7 +59,7 @@ BEATS = {
               S + "With lopsided waits, a low average comes with a small spread, so its interval "
               "stops short. [pause 0.8] With thirty waits: seven percent low, one percent high."),
     "kohavi": ("Ron Kohavi and colleagues want each side between two and three percent." + S +
-               "Their rule: n at least three hundred fifty-five times the skewness squared. "
+               "Their rule: n at least three hundred fifty-five times the skewness, squared. "
                "[pause 0.3] Divide by n and take the root: [pause 1.0] it's our formula: the "
                "average's skewness at most point oh five three." + S + "At three hundred, the "
                "lean is point one two: still too much." + S + "For these waits: fourteen twenty, "
@@ -88,8 +89,8 @@ BEATS = {
 # silence after each narrate block (s); about 0.9 s at story-beat boundaries
 GAP_AFTER = {
     "open": 0.12, "stakes": 0.35, "collect": 0.2, "fail": 0.8, "average": 0.15, "avg": 0.2,
-    "formula": 0.8, "why": 0.9, "kurt": 0.8, "thirty": 0.2, "tails": 0.2, "kohavi": 0.05,
-    "bing": 0.3, "never": 0.6, "lighthouse": 0.2, "runmean": 0.2, "dilute": 0.8, "variance": 0.05,
+    "formula": 1.1, "why": 0.9, "kurt": 0.8, "thirty": 0.2, "tails": 0.2, "kohavi": 0.05,
+    "bing": 0.3, "never": 0.9, "lighthouse": 0.2, "runmean": 0.2, "dilute": 0.8, "variance": 0.05,
     "landing": 0.35,
 }
 

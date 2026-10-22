@@ -1371,7 +1371,7 @@ class Episode(NarratedScene):
             h.align_to(rowB[0].get_left() + 0.22 * LEFT, RIGHT).set_y(r[0].get_y())
         lond, ilond = obs_bars(ax, CLARKE), inset_obs(ax, CLARKE)
         rL = formula(r"\chi^2 = 1.17,", r"\ \ p = 0.88", size=36)
-        rL.next_to(E5, RIGHT, buff=0.5).align_to(E5[0], DOWN)
+        rL.next_to(E5, RIGHT, buff=0.4).align_to(E5[0], DOWN)
         assert rL.get_right()[0] < SAFE_X - 0.05, rL.get_right()
         with self.say_beat("london") as beat:
             self.play(FadeIn(hdrP),
@@ -1400,9 +1400,8 @@ class Episode(NarratedScene):
         R_cep = CEP_KM * RM_S
         xmark = VGroup(Line(LEFT, RIGHT), Line(DOWN, UP)).scale(0.16).rotate(PI / 4)
         xmark.set_stroke(RED, 5).move_to(tbx).set_z_index(5)
-        cep = Circle(radius=R_cep, stroke_color=RED, stroke_width=3.5).move_to(tbx)
+        cep = Circle(radius=R_cep, stroke_color=RED, stroke_width=3.5)
         cep.set_z_index(4)
-        assert cep.get_top()[1] < rtitle.get_bottom()[1] - 0.15
         cep_lbl = Text("12.5 km", font_size=26, color=RED)
         # radius drawn up and to the right, where the label sits outside the circle, clear of hits
         best_a = None
@@ -1420,6 +1419,8 @@ class Episode(NarratedScene):
         assert best_a is not None
         u = np.array([np.cos(np.radians(best_a)), np.sin(np.radians(best_a)), 0])
         rad = Line(tbx, tbx + R_cep * u, stroke_color=RED, stroke_width=3).set_z_index(4)
+        cep.rotate(np.radians(best_a), about_point=ORIGIN).move_to(tbx)   # drawn from the tip
+        assert cep.get_top()[1] < rtitle.get_bottom()[1] - 0.15
         cep_lbl.next_to(tbx + R_cep * u, u, buff=0.18)
         citeE = cite("Evans & Delaney, 2018 · Applied Geography 99", size=20)
         citeE.next_to(cite2, RIGHT, buff=0.5).align_to(cite2, DOWN)
@@ -1452,11 +1453,14 @@ class Episode(NarratedScene):
                       run_time=0.8)
             beat.wait_until("Tower", offset=-0.2)
             self.play(GrowFromCenter(xmark), FadeIn(citeE, shift=0.1 * UP), run_time=0.6)
-            beat.wait_until("half", offset=-0.15)
-            # (the "Thames" label sits where the circle passes: it steps out while the circle
-            # is up)
-            self.play(Create(cep), Create(rad), FadeIn(cep_lbl, rate_func=window(0.5, 0.5)),
-                      FadeOut(tl, rate_func=window(0, 0.3)), run_time=1.3)
+            # "half fell more than twelve kilometres from it": the radius reaches out 12.5 km;
+            # "outside this circle": it sweeps the circle round from its tip.  (The "Thames"
+            # label sits where the circle passes: it steps out while the circle is up.)
+            beat.wait_until("twelve", offset=-0.2)
+            self.play(Create(rad), FadeIn(cep_lbl, rate_func=window(0.5, 0.5)),
+                      FadeOut(tl, rate_func=window(0, 0.3)), run_time=0.9)
+            beat.wait_until("outside", offset=-0.1)
+            self.play(Create(cep), run_time=1.2)
             beat.wait_until("one lambda", offset=-0.2)
             self.play(FadeOut(VGroup(cep, rad, cep_lbl, xmark)), FadeIn(tl),
                       flag(E5[2][0]), flag(E5[3]), run_time=0.9)

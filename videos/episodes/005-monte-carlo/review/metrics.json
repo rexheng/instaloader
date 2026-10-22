@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/005-monte-carlo/final.mp4",
- "duration_s": 237.067,
+ "duration_s": 235.033,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,48 +8,52 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 14.74,
+ "size_mb": 15.0,
  "integrated_lufs": -14.0,
  "lra_lu": 2.5,
- "true_peak_dbtp": -2.0,
+ "true_peak_dbtp": -2.1,
  "leading_silence_s": 0.0,
- "trailing_silence_s": 1.8,
- "longest_internal_silence_s": 1.73,
+ "trailing_silence_s": 1.78,
+ "longest_internal_silence_s": 1.94,
  "silences_over_1_5s": [
   [
-   11.27,
-   13.0
+   10.81,
+   12.53
   ],
   [
-   177.96,
-   179.67
+   86.41,
+   88.04
   ],
   [
-   185.99,
-   187.61
+   186.54,
+   188.16
+  ],
+  [
+   191.35,
+   193.3
   ]
  ],
- "frames": 7112,
- "longest_static_s": 3.23,
+ "frames": 7051,
+ "longest_static_s": 3.17,
  "static_stretches_over_3s": [
   [
-   184.3,
-   187.53,
-   3.23
+   184.9,
+   188.07,
+   3.17
   ]
  ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": null,
- "transcript_words": 617,
+ "background_luma": 22.091996527777777,
+ "transcript_words": 613,
  "first_word_s": 0,
- "last_word_s": 235.69867,
- "wpm_speech": 162.8,
- "wpm_overall": 156.2,
- "wpm_excluding_all_pauses": 184.0,
+ "last_word_s": 233.43466,
+ "wpm_speech": 165.7,
+ "wpm_overall": 156.5,
+ "wpm_excluding_all_pauses": 184.8,
  "narration_file": "videos/episodes/005-monte-carlo/narration.json",
- "wer": 0.0246,
- "narration_words": 609,
+ "wer": 0.0282,
+ "narration_words": 603,
  "banned_phrase_hits": 0,
  "slop_hits": [],
  "layout_audit": {
@@ -60,8 +64,8 @@
    "safe-area": 0,
    "caption-zone": 0
   },
-  "allowed": 4,
-  "checks": 223
+  "allowed": 6,
+  "checks": 233
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -81,166 +85,169 @@
  ],
  "keyframes": [
   {
-   "t": 4.13,
-   "file": "keyframes/kf_01_00-04.1.png"
+   "t": 4.37,
+   "file": "keyframes/kf_01_00-04.4.png"
   },
   {
-   "t": 12.63,
-   "file": "keyframes/kf_02_00-12.6.png"
+   "t": 8.7,
+   "file": "keyframes/kf_02_00-08.7.png"
   },
   {
-   "t": 15.47,
-   "file": "keyframes/kf_03_00-15.5.png"
+   "t": 15.0,
+   "file": "keyframes/kf_03_00-15.0.png"
   },
   {
-   "t": 21.23,
-   "file": "keyframes/kf_04_00-21.2.png"
+   "t": 20.67,
+   "file": "keyframes/kf_04_00-20.7.png"
   },
   {
-   "t": 25.53,
-   "file": "keyframes/kf_05_00-25.5.png"
+   "t": 25.6,
+   "file": "keyframes/kf_05_00-25.6.png"
   },
   {
-   "t": 34.1,
-   "file": "keyframes/kf_06_00-34.1.png"
+   "t": 29.93,
+   "file": "keyframes/kf_06_00-29.9.png"
   },
   {
-   "t": 37.13,
-   "file": "keyframes/kf_07_00-37.1.png"
+   "t": 39.0,
+   "file": "keyframes/kf_07_00-39.0.png"
   },
   {
-   "t": 46.0,
-   "file": "keyframes/kf_08_00-46.0.png"
+   "t": 47.1,
+   "file": "keyframes/kf_08_00-47.1.png"
   },
   {
-   "t": 54.23,
-   "file": "keyframes/kf_09_00-54.2.png"
+   "t": 52.3,
+   "file": "keyframes/kf_09_00-52.3.png"
   },
   {
-   "t": 59.4,
-   "file": "keyframes/kf_10_00-59.4.png"
+   "t": 57.03,
+   "file": "keyframes/kf_10_00-57.0.png"
   },
   {
-   "t": 64.3,
-   "file": "keyframes/kf_11_01-04.3.png"
+   "t": 60.77,
+   "file": "keyframes/kf_11_01-00.8.png"
   },
   {
-   "t": 67.47,
-   "file": "keyframes/kf_12_01-07.5.png"
+   "t": 67.93,
+   "file": "keyframes/kf_12_01-07.9.png"
   },
   {
-   "t": 74.73,
-   "file": "keyframes/kf_13_01-14.7.png"
+   "t": 75.67,
+   "file": "keyframes/kf_13_01-15.7.png"
   },
   {
-   "t": 77.57,
-   "file": "keyframes/kf_14_01-17.6.png"
+   "t": 77.4,
+   "file": "keyframes/kf_14_01-17.4.png"
   },
   {
-   "t": 83.13,
-   "file": "keyframes/kf_15_01-23.1.png"
+   "t": 91.83,
+   "file": "keyframes/kf_15_01-31.8.png"
   },
   {
-   "t": 84.87,
-   "file": "keyframes/kf_16_01-24.9.png"
+   "t": 97.53,
+   "file": "keyframes/kf_16_01-37.5.png"
   },
   {
-   "t": 92.27,
-   "file": "keyframes/kf_17_01-32.3.png"
+   "t": 102.57,
+   "file": "keyframes/kf_17_01-42.6.png"
   },
   {
-   "t": 103.2,
-   "file": "keyframes/kf_18_01-43.2.png"
+   "t": 105.43,
+   "file": "keyframes/kf_18_01-45.4.png"
   },
   {
-   "t": 111.17,
-   "file": "keyframes/kf_19_01-51.2.png"
+   "t": 113.43,
+   "file": "keyframes/kf_19_01-53.4.png"
   },
   {
-   "t": 114.07,
-   "file": "keyframes/kf_20_01-54.1.png"
+   "t": 115.8,
+   "file": "keyframes/kf_20_01-55.8.png"
   },
   {
-   "t": 119.27,
-   "file": "keyframes/kf_21_01-59.3.png"
+   "t": 122.27,
+   "file": "keyframes/kf_21_02-02.3.png"
   },
   {
-   "t": 123.37,
-   "file": "keyframes/kf_22_02-03.4.png"
+   "t": 125.83,
+   "file": "keyframes/kf_22_02-05.8.png"
   },
   {
-   "t": 128.27,
-   "file": "keyframes/kf_23_02-08.3.png"
+   "t": 130.2,
+   "file": "keyframes/kf_23_02-10.2.png"
   },
   {
-   "t": 136.07,
-   "file": "keyframes/kf_24_02-16.1.png"
+   "t": 139.13,
+   "file": "keyframes/kf_24_02-19.1.png"
   },
   {
-   "t": 146.2,
-   "file": "keyframes/kf_25_02-26.2.png"
+   "t": 143.7,
+   "file": "keyframes/kf_25_02-23.7.png"
   },
   {
-   "t": 151.07,
-   "file": "keyframes/kf_26_02-31.1.png"
+   "t": 151.4,
+   "file": "keyframes/kf_26_02-31.4.png"
   },
   {
-   "t": 155.63,
-   "file": "keyframes/kf_27_02-35.6.png"
+   "t": 157.5,
+   "file": "keyframes/kf_27_02-37.5.png"
   },
   {
-   "t": 161.2,
-   "file": "keyframes/kf_28_02-41.2.png"
+   "t": 166.63,
+   "file": "keyframes/kf_28_02-46.6.png"
   },
   {
-   "t": 169.3,
-   "file": "keyframes/kf_29_02-49.3.png"
+   "t": 175.13,
+   "file": "keyframes/kf_29_02-55.1.png"
   },
   {
-   "t": 179.23,
-   "file": "keyframes/kf_30_02-59.2.png"
+   "t": 180.1,
+   "file": "keyframes/kf_30_03-00.1.png"
   },
   {
-   "t": 182.4,
-   "file": "keyframes/kf_31_03-02.4.png"
+   "t": 183.1,
+   "file": "keyframes/kf_31_03-03.1.png"
   },
   {
-   "t": 186.7,
-   "file": "keyframes/kf_32_03-06.7.png"
+   "t": 187.27,
+   "file": "keyframes/kf_32_03-07.3.png"
   },
   {
-   "t": 192.5,
-   "file": "keyframes/kf_33_03-12.5.png"
+   "t": 191.47,
+   "file": "keyframes/kf_33_03-11.5.png"
   },
   {
-   "t": 195.9,
-   "file": "keyframes/kf_34_03-15.9.png"
+   "t": 196.1,
+   "file": "keyframes/kf_34_03-16.1.png"
   },
   {
-   "t": 200.17,
-   "file": "keyframes/kf_35_03-20.2.png"
+   "t": 202.87,
+   "file": "keyframes/kf_35_03-22.9.png"
   },
   {
-   "t": 209.67,
-   "file": "keyframes/kf_36_03-29.7.png"
+   "t": 206.8,
+   "file": "keyframes/kf_36_03-26.8.png"
   },
   {
-   "t": 218.57,
-   "file": "keyframes/kf_37_03-38.6.png"
+   "t": 212.73,
+   "file": "keyframes/kf_37_03-32.7.png"
   },
   {
-   "t": 225.83,
-   "file": "keyframes/kf_38_03-45.8.png"
+   "t": 223.87,
+   "file": "keyframes/kf_38_03-43.9.png"
   },
   {
-   "t": 231.53,
-   "file": "keyframes/kf_39_03-51.5.png"
+   "t": 229.57,
+   "file": "keyframes/kf_39_03-49.6.png"
   },
   {
-   "t": 237.03,
-   "file": "keyframes/kf_40_03-57.0.png"
+   "t": 235.0,
+   "file": "keyframes/kf_40_03-55.0.png"
   }
  ],
- "flags": [],
+ "flags": [
+  "pace: 166 wpm outside 140–165",
+  "1 scene warning(s) from NarratedScene (timing/layout)"
+ ],
  "implied_caps": []
 }

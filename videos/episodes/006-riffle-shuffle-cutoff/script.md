@@ -5,7 +5,7 @@ each riffle roughly halves the gap between that count and a random deck's while 
 deck's spread stays fixed, so the deck stays almost perfectly detectable for four riffles and
 then falls off a cliff around seven, even though the top card already looks random after four.
 
-Runtime ≈ 3:38 · ≈ 545 words · voice af_heart, speed 0.84.
+Runtime ≈ 3:47 · ≈ 556 words · voice af_heart, speed 0.84.
 
 ## Palette (one meaning each, whole episode)
 
@@ -108,7 +108,7 @@ and the ghost returns to full; caps flash on "order between cards".
 > thirty two percent of perfect ones. Accuracy is a half, plus half the difference, and the
 > difference is the red area.
 
-> Each riffle roughly halved the gap, but blue's spread, its standard deviation, stays about two.
+> Each riffle roughly halved the gap, but blue's spread, its standard deviation, stayed about two.
 > While the gap spans several spreads, the distance stays near one. Within about one spread, it
 > halves every riffle: that's the cliff.
 
@@ -137,11 +137,12 @@ into `= ½ + ½(0.65 − 0.32)`; (0.65 − 0.32) flashes red on "the difference 
 the rest of line 1 leaves, then the difference shrinks into a red `d` while the two lines close
 up into `accuracy = ½ + ½ d` under a fixed "accuracy =" (red area flashes), held ≥ 3.5 s; it
 leaves when the spread bracket draws. **Mechanism, no rewind:** row flashes + "(each step ≈ ÷2)"; blue
-"spread 2.1" bracket on the bell (centre to one sd); on "several spreads" the 4-riffle ghost
+"spread 2.1" ruler on the gap's own level, from blue's centre one sd to the right, so the yellow gap (1.79)
+and the blue spread (2.1) sit side by side; on "several spreads" the 4-riffle ghost
 brightens and spread-long hops are laid along it, "5.9 spreads", dots 1–4 at d = 1; on "Within
-about one spread" one hop on the 7-riffle gap, "0.85 spreads"; dots 6, 7 flash and dot 8 appears; the cliff
-is drawn through the dots. **One equation line:** "× 2^k ≈ 198 → 220 → 227 → 229 → 230" from the
-gap row; `gap ≈ 230/2^k` built from the bracket and the 230 (held ~3 s); on "one spread" the word
+about one spread" one hop on the 7-riffle gap, "0.85 spreads" (left of the gap); dots 6, 7 flash and dot 8 appears; the cliff
+is drawn through the dots. **One equation line:** "× 2^k ≈ 198 → 220 → 227 → 229 → 230" (each gap flashes and its product drops out of it into the
+row below); `gap ≈ 230/2^k` built from the bracket and the 230 (held ~3 s); on "one spread" the word
 "gap" is replaced by the blue 2.1 flown from the spread label: `2.1 ≈ 230/2^k`; `⇒ k ≈ 6.8` and a
 dashed line at 6.77 on the d-plot. For n: the chart dims; 230 → `n(n+1)/12` ("∼ n²" above it),
 2.1 → `√((n+1)/12)` ("∼ √n"), `k ≈ 6.8` → `k ≈ (3/2) log₂ n − 1.8`, grey "(gap = spread rule)".
@@ -159,11 +160,11 @@ dashed line at 6.77 on the d-plot. For n: the chart dims; 230 → `n(n+1)/12` ("
 Visual: the d-plot grows into the full distance curve (Table 1 values), the equations stay top
 right at 45 %. *Aldous, 1983 · Séminaire de Probabilités XVII* while `k ≈ (3/2) log₂ n − 1.8`
 flashes; on "Bayer" it is replaced (fade out, then fade in — never crossfaded) by *Bayer &
-Diaconis, 1992 · Ann. Appl. Probab.*; dots 9–10 on "exact curve"; values 0.92/0.61/0.33/0.17; the
+Diaconis, 1992 · Ann. Appl. Probab.*; dots 9–10 on "exact curve"; values 0.61 and 0.33 only (the pair that straddles ½); the
 k = 7 dot and the ½ line flag. Then *Trefethen & Trefethen, 2000 · Proc. R. Soc. A*, grey note
 "information yardstick: no cliff, 5–6 riffles" and a grey band over 5–6. Then *Diaconis, 1996 ·
-PNAS*, the cliff flashes, and the grey dashed "top card only (computed)" curve drops early beside
-the red "whole deck".
+PNAS*, the cliff flashes on "cliff", the grey dashed "top card only (computed)" curve draws on "trap"
+and drops early beside the red "whole deck" (labels on "statistic").
 
 ### 7. Landing (3:17–3:38)
 > Back to the coin flip. After four riffles you'd almost never be wrong, same as with an

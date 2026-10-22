@@ -1,4 +1,4 @@
-WER 0.2% over 528 script words (numbers spelled out, 'and' ignored)
+WER 0.0% over 528 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/075-schelling-segregation/narration.json
 
-[2:26.2] replace  script: "corner's"                               heard: 'corners'
+no differences
