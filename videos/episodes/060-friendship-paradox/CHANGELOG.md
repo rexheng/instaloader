@@ -686,3 +686,75 @@ YELLOW-outlined friend bar carried to Facebook; the landing on the cold-open can
   hold the full-strength parked row and no 3.0 fulcrum; kf_37's raw steps are full colour.
 - "+0.5 ?" is on screen at full strength from 1:33 to 2:21, filled by the result's 0.5 and
   returned to the PURPLE segment by 2:23.
+
+## Round 8 revisions
+
+Round-8 critics: craft 8.8, substance 8.9 (no caps, no factual errors). Both said every fix
+together reaches 9.0 and no structural change is needed. Kept: the token-weighted beam and the 0
+that kills the cross term; the "+0.5 ?" target; the YELLOW-outlined friend bar carried to Facebook.
+
+**Plan against BAR's 9 anchors**
+- *Visual 8.5* (9: "every frame has one focal point; all §5 standards met"). Short of it: a 19 px
+  stacked ¼, a truncated, navy-dimmed ring callback, the end card dissolving over the class, YELLOW
+  going khaki on every fade, area labels reading as one digit string, an 18-word Facebook frame.
+  Upgrade: inline "1/4" at label size (plus a sub-part height check in the local audit); whole row
+  out and back complete, bars at 45 %; scene out, then card in; YELLOW enters and leaves by growing
+  or shrinking at full colour or with ≤ 0.2 s ramps; zigzag area labels; a 5-word 92.7 % line with
+  the brace and tags gone.
+- *Motion 8.5–9* (9: "every motion encodes a relation; reading time respected"). Short of it: the
+  colliding sort at 1:02, the C&F pile-up at 3:05.8, a four-move landing in 1.2 s, the 635 copy
+  on the axis. Upgrade: a two-stage sort on nested half circles; a contract-then-two-passes
+  hand-off above the axis; a three-step silent resolution in a 2.1 s pause; copies invisible until
+  below the tick labels.
+- *Audio 8.5* (9: "pauses intentional, deictics land"). Short of it: "Splitsus", a 0.17 s comma
+  before "Sue", an 11.2 s breathless payoff, a last line that fought the animation. Upgrade: "Take
+  Sue's four"; "[pause 0.3] Sue"; breaths after "named." and "rose first."; the last line only on
+  Betty.
+
+**Applied (craft numbering)**
+1. Landing: "[pause 2.1]" after "sees four" (2.2 s measured, under the 2.5 s dead-air line, so
+   not the suggested 2.6) holds three silent moves: (a) the 2.5 candidate's drop line goes and
+   the 2.5 rises into the girl bar's 2.5, which flashes with the bar; (b) every friendship
+   flashes, the "?" and drop lines go, and the friend bar grows to 3 at one smooth rate (one
+   width, BLUE to 2.5 and PURPLE beyond, under its YELLOW outline) while the 3 steps aside;
+   (c) the 3 is ringed as the 4 shrinks away. "Most of us are Betty" then has only Betty and her
+   token pulsing. The answered frame holds 0.7 s before the card (trailing silence must stay
+   under 2 s, so not 1.5 s).
+2. Sort: two stages. Tokens shrink into the girls they landed on and the names leave; "Line the
+   girls up": each girl moves onto the beam row in her present left-to-right order (x stays
+   close; Dale and Pam share an x, so the row order, not a straight drop, is what keeps the paths
+   apart); "by friend count": left-movers arc over the row and right-movers under it, each on a
+   half circle centred on her own move, so the paths nest one slot apart (min edge-to-edge node
+   gap 0.13 in the first stage and 0.17 in the second, simulated in numpy). Names return under their girls after landing. Alternating ±0.35 arcs
+   were tried on paper and rejected: their sagitta (0.04–0.18) is smaller than a node.
+3. Ring callback: the whole result row goes to 0 in 0.2 s and comes back whole; the ring's
+   "2 + 0/2 = 2" also leaves whole; bars and panel text at 45 %, beam picture at 35 %. At the
+   Facebook cut the row's right side "= 2.5 + 0.5 = 3.0" leaves in one 0.2 s move.
+4. End card: the whole scene fades out (0.4 s), then the card fades in; no frame holds both.
+5. YELLOW: `y_in`/`y_out` (≤ 0.2 s ramps), `shrink_out` (shrink at full colour, then removed),
+   `GrowFromCenter`/`GrowFromEdge` and tokens that grow from a quarter size as they leave the
+   sender, applied to every YELLOW entrance and exit (candidates, "named friend", arrow, "?",
+   read-outs, counter, stack tokens, the 3.0 fulcrum, "4 × 4 = 16", the result's 3.0, "= 2",
+   635, legend, origin dot, curves). Alice's and the named friends' YELLOW rings are drawn over
+   the BLUE outline (a BLUE → YELLOW stroke recolour passed through khaki).
+6. "Take Sue, and split her four, [pause 0.5] into ..." (no possessive: "Take Sue's four" came
+   back from Whisper as "Take Sue 4"); "her one friend, [pause 0.3] Sue, and sees four".
+7. Area labels zigzag: the right girl of each pair 0.38 lower (MathTex 36 kept; 30 is the tick
+   size and the labels are read as values).
+8. 92.7 % block: "92.7%" / "below their own friends' average"; brace, "a few users" and
+   "Facebook's limit" go to 0 as it is written (11 prose words on screen).
+9. Facebook copies: invisible until 0.3 below the tick labels (all three, not only 635).
+
+**Applied (substance numbering)**
+1. "sides at 1/4 scale" inline, MathTex 36 (35 px digits); a script-size check (scripts and
+   \tfrac at 70 % of the formula size must clear 24 px) added to the scene's own audit.
+2. C&F hand-off in four moves: tokens merge into the girls they named; the class contracts to
+   0.55 inside the plot area, every node above the coming x-axis (digits kept at 27 px); the axes
+   draw while the named friends fly one after another (lag 0.09 s, 0.5 s each) into the YELLOW
+   origin; then the random students into the BLUE one while the legend entries glide to their
+   curves, each after the girls in its way have left. Every path stays 0.25 above the axis until
+   its last 0.16 s; moving rings keep ≥ 0.54 apart (simulated). Each ring keeps its own fill and
+   stroke opacity while it shrinks.
+3. "[pause 0.5]" after "the students named." and "[pause 0.4]" after "rose first."; the flash
+   along the friends' curve lands on "rose first".
+4. As craft 6. 5. The re-opened guess box settles before "guess" is written. 6. As craft 5.

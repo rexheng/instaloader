@@ -149,3 +149,20 @@ output.
 | 51 | On screen from "But each row gets one vote": "1 vote per row" above the vote strip's left end, until "5⅔ votes" replaces it. | Same claim as row 11. | M&S 2018 p. 3 |
 | — | **Removed:** "Crowded heads split their votes." (restated 1:25–1:32), "The skew comes from scoring row by row:" (the formula line names the cause), "but a hundred shots isn't long" (replaced by row 47). | Concision (craft fix 2, substance fixes 2–3). | — |
 | — | During Cornell's numbers the header stays the grey "1985 design · 26 players · up to 100 shots" (no purple "Cornell, 1985" title); the column head "Cornell" later tags the +4 marker. | Design facts as row 15; "Cornell" is printed once (craft fix 4). | M&S 2018 §3.1 |
+
+## Round-9 revision: new, reworded or removed claims
+
+No claim was found wrong in round 9 (substance recomputed every number by exact enumeration, an
+exact 100-shot DP and a 200,000-sequence 1,000-shot simulation, and re-checked both citations,
+including M&S's "-8 percentage points", ".49 / .45, p = .49" and "+12 percentage points"
+quotes). `check_numbers.py` was re-run this round; every value on screen is unchanged.
+
+| # | Claim (as spoken / shown) | Verification | Source |
+|---|---|---|---|
+| 52 | "A fair coin can't tell heads from tails, so the strip flips over one half: the test reads high, twenty five out of forty two." (was "Swap heads and tails, and the strip flips over one half") | The reason for the mirror: with p = 1/2 every sequence and its heads-tails swap both have probability 1/16, so swapping H and T maps the 16 equally likely sequences onto themselves. The after-tails share of *tails* therefore has the same average as the after-heads share of heads, 17/42, and the after-tails share of heads is 1 − 17/42 = 25/42 (exact enumeration agrees, row 12b). On screen the copy is recoloured on "can't tell heads from tails" and turned over the dashed one-half line on "flips over one half". | arithmetic; M&S 2018 §3.2 ("… greater than p (by symmetry)") |
+| 53 | "Miller and Sanjurjo put the gap at about minus eight points." (was "Miller and Sanjurjo's twenty eighteen paper puts the gap …") | Same claim as row 17b; the year stays in the on-screen citation "Miller & Sanjurjo, 2018 · Econometrica" (substance fix 7). | M&S 2018 §3.2 |
+| 54 | On screen, silent, after "a whole one": the 8 rows holding a checked heads boxed with "12 heads · 8 rows", then the 11 rows holding a checked tails with "12 tails · 11 rows". The spoken "Twelve heads crowd into eight rows. Twelve tails spread across eleven." is cut. | Row 9 (8 and 11 rows, enumerated; asserted in `scene.py`). | arithmetic |
+| 55 | Pool (1:06): the 24 checked flips pour one card column at a time into a block of the strip under their column, then the strip sorts into 12 heads (left) and 12 tails (right), the boundary on the dashed 50% line. | Same 24 flips, 12 H / 12 T (row 8). Column blocks hold 8, 8, 4, 4 flips (7H 1T, 3H 5T, 1H 3T, 1H 3T); the sort keeps each colour's order. | arithmetic; `scene.py` (`pour_plan`) |
+| 56 | Payoff ghosts: the −8 marker's ghost slides to −0.71 (1,000 shots); the streak ghost goes −1.01 → −3.14 → −7.94 (1, 2, 3 hits in a row, 100 shots). Now 1.0 unit tall (2.2× before) at 60%, each streak slide ≥ 1.0 s. | Positions unchanged: exact DP (rows 18, 48, 49). | `check_numbers.py` §2 |
+| 57 | Landing tag: "its 4-shot rows average 1/2" (was "its rows average 1/2"). | The baseline it is read against is the 4-flip 17/42 drawn on the same axis (rows 6, 23). For real 100-shot records the one-hit bias is only about −1 point (row 18), so the tag now names the 4-shot rows it refers to (substance fix 6). | rows 6, 18, 23 |
+| — | On screen, payoff: the after-hits / after-misses cursors leave with the coin strips at 2:10 and grow back out of the dashed 50% line on "For a random shooter"; the right column's values turn into purple "?" the moment its head becomes "Cornell", then 49% and 45% on the spoken numbers. | No new claim: 46% / 54% are only ever shown under "random", 49% / 45% only under "Cornell" (rows 16, 17). | — |

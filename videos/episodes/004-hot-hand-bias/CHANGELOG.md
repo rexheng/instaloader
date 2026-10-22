@@ -697,3 +697,78 @@ positions (−1.01, −3.14, −7.94) and the 1,000-shot position (−0.71) are 
 half-turn mirror of the vote strip into −19; the landing that answers the cold-open question on
 the cold-open image with (1/14) Σᵢ hᵢ/nᵢ = 17/42 and the blue "hot" arrow; the payoff chain
 −8 → 49 − 45 = +4 → +12 with "vs 0: p = .49", "no defenders" and both citations at full strength.
+
+## Round 9 revisions
+
+Craft scored 8.9 (Visual and Motion 8.5, the rest 9) and substance 9.0 (Concision 8.5, at the
+line by rounding). Neither found a factual error or a cap; both said the listed fixes reach 9
+with no structural change. The plan per dimension below 9:
+- **Visual (craft 8.5):** BAR's 9 anchor is "every frame has one focal point; nothing to
+  remove". Three local frames broke it: a "Cornell" head over the random shooter's 46% / 54%
+  (2:46–2:50), the dashed 50% line hidden under two placeholder cursors while the narration
+  names it (2:10–2:20), and "1 vote per row" reading into "40.5%" (1:16–1:36).
+- **Motion (craft 8.5):** "every motion encodes a relation". The 24-disc pour at 1:06 read as
+  particles, and the 2:19 pulse could not be seen.
+- **Concision (substance 8.5):** "cutting any sentence loses something". The spoken row count
+  restated the HHHH / HTTT example.
+
+**Fixes, by critic item** (r9c = craft, r9s = substance)
+- r9c 1 (Cornell head over 46% / 54%): on "The Cornell players" the head "random" → "Cornell"
+  and both values → purple "?" in one 0.8 s move; "?" → 49% on "forty nine", "?" → 45% on
+  "forty five". No number is ever under the wrong head.
+- r9c 2 (cursors cover the dashed line): the two cursors and the −19 gap now leave with the coin
+  strips at 2:10, where they stand. On "about half" the dashed line itself thickens 3 → 8 → 3
+  (0.8 s) with its 50% tick and label. On "For a random shooter" both cursors grow out of the
+  dashed line at 50%, then the crowding pulls them to 46% and 54% as before.
+- r9c 3 (24 discs at once): the pour now runs one card column at a time (columns 2 and 3, four
+  flips each, together: 8 / 8 / 8 discs, 0.74 s apart, 0.72 s each, 2.2 s in all), the other
+  columns stepped back to 30%. Each column pours into a block of the strip right under it, by
+  the nearer channel beside its card, so routes are 3–4 units (were up to 7.6); start offsets
+  are scheduled so no two discs come within 0.24 of each other (`pour_plan`). In the new
+  [pause 0.6] after "checked flips:" the strip sorts: heads slide left along its upper half,
+  tails right along its lower half (each keeps its order, so no tile crosses another), and the
+  boundary lands on the dashed 50% line before "twelve heads, twelve tails".
+- r9c 4 ("1 vote per row" + "40.5%"): from "But each row" the stepped-back readout moves to sit
+  centred over its marker's top, 1.1 units clear of the tag (the strip's underside has only 0.5
+  units to the axis, too little for the tag with 0.15 clearance).
+- r9c 5 / r9s 2 (ghosts too small and fast): both ghosts are 1.0 unit tall (2.2× before) at
+  60%, with their tags ("1,000 shots", the yellow hit dots, now radius 0.07) at mid-height under
+  the red gap. Not the suggested 70% of the marker: at that height the sliding streak ghost
+  struck through the red arrow and its "bias" label (seen on the preview at 2:40). The
+  1,000-shot tag rides with its ghost (no line crosses it), the ghost holds 1.6 s at −0.71
+  ([pause 1.2] after "shrink it"), and each streak slide (−1.01 → −3.14 → −7.94) lasts ≥ 1.0 s,
+  with [pause 1.3] after "grow it".
+- r9s 1 (crowding shown twice): cut "Twelve heads crowd into eight rows. Twelve tails spread
+  across eleven." As "a whole one" ends, the 8 heads rows are boxed with "12 heads · 8 rows" (held
+  1 s), then the 11 tails rows with "12 tails · 11 rows", held while "Line them up:" is said; the
+  votes pack as "up:" ends. Both counts stay until "five" (2.5–3 s each). The silence after "a
+  whole one" is about 1.9 s, all of it moving picture.
+- r9s 3 (mirror asserted): "A fair coin can't tell heads from tails, so the strip flips over one
+  half". The recolour lands on "can't tell heads from tails".
+- r9s 4 (zoom pile-up at 2:38.7): the 0/25/75/100% labels, their marks and the share title are
+  gone in the first 0.4 s; "50%" hands over to "0" at the centre; −10/−5/+5/+10 fade in only once
+  their marks are ≥ 1 unit apart, riding with them; the gap title arrives after the share title
+  has left, so two titles never share the frame.
+- r9s 5 (near-empty dip at 3:10.3): the number line, ticks and dashed line stay at full and drop
+  into place by 0.8 s; the payoff fades over 0.4 s while the cold open fades in from 0.26 s.
+- r9s 6: landing tag "its 4-shot rows average 1/2".
+- r9s 7: "Miller and Sanjurjo [pause 0.4] put the gap at about minus eight points"; the year
+  stays in the citation.
+
+**Found on the preview (not in the reviews)**
+- Removing the pour's animation group took the whole table with it (Manim had re-parented the
+  cards under it); now only the discs are removed.
+- The cursors regrown at 50% were drawn at their old 17/42 / 25/42 for a frozen wait (a FadeOut
+  restores its mobject on removal, and a frozen wait runs no non-time updaters); they are now
+  redrawn as they are added.
+- At the zoom the axis had no label at all for 2 frames between "50%" and "0"; the handover is
+  now back to back.
+- On the preview the streak ghost, at 70% of the marker's height, struck through "bias" as it
+  slid; it is now 1.0 unit tall, under the red gap.
+
+**Found on the first master (stepped at 1–10 fps)**
+- The heads-rows boxes were fully formed for only 0.1 s before the tails boxes replaced them,
+  and the tails boxes for 0.1 s before the pack cleared them. The heads boxes now start inside
+  the "a whole one" beat (right after its pulse) and hold 1 s; the tails boxes hold through "Line
+  them up:" and the pack starts as "up:" ends.
+- The landing's two pictures now overlap only while both are under 15%, with no empty frame.

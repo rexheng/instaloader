@@ -173,7 +173,7 @@ rectangle whose sides shrink and corners grow into the circle) and the raster sh
 disk fills, then the cross; "you" closes round the landed badge. The meter empties in place and is
 retitled "chance you're sick" and slides back while the cold-open diagram re-forms around the + (it
 starts re-forming while the Cardiff picture is still leaving, so no frame is empty). In the pause the
-first frame is re-seen: each arrow swells into a flow as wide as the people it carries into the +, the
+first frame is re-seen: each arrow fades as a flow swells out of its shaft as wide as the people it carries into the +, the
 thin 99 % flow labelled "20", the fat 1 % flow "100", with "per 10,000 people" between them. The meter
 grows its 17 % on "seventeen percent". On "Symptoms" the naive 99 % marker returns as the climb's target
 and the prevalence label goes live: one updater drives label, flows, counts and meter from the same

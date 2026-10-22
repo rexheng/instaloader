@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/002-base-rate-fallacy/final.mp4",
- "duration_s": 214.733,
+ "duration_s": 214.167,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,9 +8,9 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 14.24,
+ "size_mb": 14.17,
  "integrated_lufs": -14.0,
- "lra_lu": 2.8,
+ "lra_lu": 2.7,
  "true_peak_dbtp": -2.1,
  "leading_silence_s": 0.0,
  "trailing_silence_s": 1.62,
@@ -30,23 +30,29 @@
   ],
   [
    200.15,
-   202.29
+   201.73
   ]
  ],
- "frames": 6442,
- "longest_static_s": 2.8,
- "static_stretches_over_3s": [],
+ "frames": 6425,
+ "longest_static_s": 3.03,
+ "static_stretches_over_3s": [
+  [
+   210.23,
+   213.27,
+   3.03
+  ]
+ ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.05984375,
+ "background_luma": 22.059722222222224,
  "transcript_words": 487,
  "first_word_s": 0.04,
- "last_word_s": 213.53067,
- "wpm_speech": 146.9,
- "wpm_overall": 136.1,
- "wpm_excluding_all_pauses": 172.3,
+ "last_word_s": 213.11334,
+ "wpm_speech": 146.8,
+ "wpm_overall": 136.4,
+ "wpm_excluding_all_pauses": 172.1,
  "narration_file": "videos/episodes/002-base-rate-fallacy/narration.json",
- "wer": 0.0191,
+ "wer": 0.0212,
  "narration_words": 472,
  "banned_phrase_hits": 0,
  "slop_hits": [],
@@ -79,7 +85,7 @@
    "small-label": 0
   },
   "allowed": 0,
-  "checks": 214
+  "checks": 216
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -149,8 +155,8 @@
    "file": "keyframes/kf_13_00-56.5.png"
   },
   {
-   "t": 68.67,
-   "file": "keyframes/kf_14_01-08.7.png"
+   "t": 68.6,
+   "file": "keyframes/kf_14_01-08.6.png"
   },
   {
    "t": 81.4,
@@ -165,32 +171,32 @@
    "file": "keyframes/kf_17_01-28.8.png"
   },
   {
-   "t": 101.37,
-   "file": "keyframes/kf_18_01-41.4.png"
+   "t": 96.1,
+   "file": "keyframes/kf_18_01-36.1.png"
   },
   {
-   "t": 111.33,
-   "file": "keyframes/kf_19_01-51.3.png"
+   "t": 101.37,
+   "file": "keyframes/kf_19_01-41.4.png"
+  },
+  {
+   "t": 110.77,
+   "file": "keyframes/kf_20_01-50.8.png"
   },
   {
    "t": 119.57,
-   "file": "keyframes/kf_20_01-59.6.png"
+   "file": "keyframes/kf_21_01-59.6.png"
   },
   {
-   "t": 123.0,
-   "file": "keyframes/kf_21_02-03.0.png"
+   "t": 123.03,
+   "file": "keyframes/kf_22_02-03.0.png"
   },
   {
    "t": 125.83,
-   "file": "keyframes/kf_22_02-05.8.png"
+   "file": "keyframes/kf_23_02-05.8.png"
   },
   {
    "t": 128.9,
-   "file": "keyframes/kf_23_02-08.9.png"
-  },
-  {
-   "t": 130.4,
-   "file": "keyframes/kf_24_02-10.4.png"
+   "file": "keyframes/kf_24_02-08.9.png"
   },
   {
    "t": 132.37,
@@ -213,8 +219,8 @@
    "file": "keyframes/kf_29_02-33.9.png"
   },
   {
-   "t": 161.3,
-   "file": "keyframes/kf_30_02-41.3.png"
+   "t": 161.23,
+   "file": "keyframes/kf_30_02-41.2.png"
   },
   {
    "t": 165.5,
@@ -233,11 +239,11 @@
    "file": "keyframes/kf_34_02-51.4.png"
   },
   {
-   "t": 187.83,
-   "file": "keyframes/kf_35_03-07.8.png"
+   "t": 187.87,
+   "file": "keyframes/kf_35_03-07.9.png"
   },
   {
-   "t": 191.47,
+   "t": 191.5,
    "file": "keyframes/kf_36_03-11.5.png"
   },
   {
@@ -249,16 +255,14 @@
    "file": "keyframes/kf_38_03-18.8.png"
   },
   {
-   "t": 204.37,
-   "file": "keyframes/kf_39_03-24.4.png"
+   "t": 203.77,
+   "file": "keyframes/kf_39_03-23.8.png"
   },
   {
-   "t": 214.7,
-   "file": "keyframes/kf_40_03-34.7.png"
+   "t": 214.13,
+   "file": "keyframes/kf_40_03-34.1.png"
   }
  ],
- "flags": [
-  "2 scene warning(s) from NarratedScene (timing/layout)"
- ],
+ "flags": [],
  "implied_caps": []
 }

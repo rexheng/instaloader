@@ -83,27 +83,27 @@ Measure each girl's distance from the girls' balance point, two and a half, and 
 The squares average one and a quarter, the variance, sigma squared.
 
 22
-00:01:46,200 --> 00:01:47,840
-Split Sue's count, four,
+00:01:46,200 --> 00:01:47,320
+Take Sue's four,
 
 23
-00:01:48,240 --> 00:01:50,550
-into the balance point, two and a half,
+00:01:47,620 --> 00:01:50,570
+and split it into the balance point, two and a half,
 
 24
-00:01:50,950 --> 00:01:53,090
+00:01:50,970 --> 00:01:53,110
 plus her distance, one and a half.
 
 25
-00:01:53,590 --> 00:01:58,280
+00:01:53,610 --> 00:01:58,300
 Squaring gives two and a half squared, her distance squared, and a cross term.
 
 26
-00:01:58,880 --> 00:02:00,700
+00:01:58,900 --> 00:02:00,720
 Every girl splits this way.
 
 27
-00:02:01,000 --> 00:02:06,710
+00:02:01,020 --> 00:02:06,730
 Because the beam balances, the distances add to zero, and the cross terms cancel.
 
 28
@@ -127,50 +127,58 @@ plus a half: exactly the extra half friend we measured.
 With no spread, the ring had no gap.
 
 33
-00:02:28,833 --> 00:02:35,873
+00:02:28,533 --> 00:02:35,573
 In twenty eleven, Facebook users averaged about a hundred ninety friends, and a few had thousands.
 
 34
-00:02:36,273 --> 00:02:40,473
+00:02:35,973 --> 00:02:40,173
 If every friendship sent tokens, what would the tokens average?
 
 35
-00:02:42,533 --> 00:02:47,453
+00:02:42,233 --> 00:02:47,153
 About six hundred thirty five: the spread term is more than twice the mean.
 
 36
-00:02:48,353 --> 00:02:53,523
+00:02:48,053 --> 00:02:53,223
 And ninety three percent of users had fewer friends than their friends averaged.
 
 37
-00:02:53,823 --> 00:02:55,733
+00:02:53,523 --> 00:02:55,433
 Odds are, that includes you.
 
 38
-00:02:56,433 --> 00:02:59,593
+00:02:56,133 --> 00:02:59,293
 Christakis and Fowler put this to work at Harvard.
 
 39
-00:02:59,893 --> 00:03:06,143
+00:02:59,593 --> 00:03:05,843
 Named friends have more friends, so they sit closer to everyone else, and should catch flu first.
 
 40
-00:03:06,643 --> 00:03:12,063
+00:03:06,343 --> 00:03:11,763
 They tracked flu diagnoses in random students, and in the friends the students named.
 
 41
-00:03:12,363 --> 00:03:17,843
-The friends' curve rose first: fitted curves put them thirteen point nine days ahead.
+00:03:12,263 --> 00:03:14,143
+The friends' curve rose first.
 
 42
-00:03:18,743 --> 00:03:22,553
-With self-reported symptoms, the lead shrank to about three.
+00:03:14,543 --> 00:03:17,803
+Fitted curves put them thirteen point nine days ahead.
 
 43
-00:03:24,366 --> 00:03:27,586
-Betty looks at her one friend, Sue, and sees four.
+00:03:18,703 --> 00:03:22,513
+With self-reported symptoms, the lead shrank to about three.
 
 44
-00:03:28,386 --> 00:03:29,976
+00:03:24,300 --> 00:03:26,080
+Betty looks at her one friend,
+
+45
+00:03:26,380 --> 00:03:27,720
+Sue, and sees four.
+
+46
+00:03:29,820 --> 00:03:31,410
 Most of us are Betty.
 

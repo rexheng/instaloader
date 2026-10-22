@@ -761,3 +761,84 @@ deictic check had listed all five).
 
 **Kept:** everything in the round-6 keep lists (strip under the meter, the unbroken object chain, the
 half-sick control and the 6× bracket, the live slider and sweep, the recall/precision tags).
+
+## Round 6 revisions (continued: rendered, audited and polished)
+
+The second pass above had edited scene.py (shaped cadence, 508 → 470 words, deictic fixes) but never
+rendered it: final.mp4 (12:07) and review/ predated those edits. This pass rendered them, read every
+frame the way a fresh critic would (BAR §5, guide §11.6 and §13), re-checked the sources, and fixed
+what the frames showed. No critic claim was left open. The round-6 fact items stand as fixed, and
+both are re-verified below.
+
+### Climb plan (written before editing)
+
+| Dimension | BAR "9" anchor | Where the cut still fell short | Upgrade |
+|---|---|---|---|
+| Visual | "every frame has one focal point; all §5 standards met" | brace labels "how common / how often" at MathTex 28 (27 px) though the narration points at them; lower-right quadrant empty for ~20 s in the Cardiff build-up (meter + legend at the top right); the "precision too" ghost at 24–30 px and up ~1 s | labels MathTex 36 with room made for them; meter + legend centred in the right column; ghost labels at label size, held ~3 s |
+| Motion | "every motion encodes a relation" | scale pulses that grow into their neighbours (the "≤ 1 in 140" pulse's "·" ran into "watch list" on the contact sheet at 2:21; table counts and the meter value pulse toward their arrows and bar); the landing's arrow → flow morph left a detached, jagged arrowhead (3:07) | pulses grow away from the neighbour they face; each flow swells evenly out of its arrow's shaft |
+| Clarity | "all numbers check out; sources correct" (and every paused frame true) | "1 in 500" over an all-healthy grid (0:33); "most doctors" generalised from one hospital's 61 respondents; whisper heard "The share can change" | the grid appears at the header's own 1 in 500 (20 red); "At one Boston-area hospital, …" (the paper's words); "The share stays the same." |
+| Concision / Audio | "cutting any sentence loses something"; pauses intentional | 3:36.7 after the additions; the precision definition repeated the meter title on screen; "and" inside spoken numbers; two timing warnings | "In machine learning, that share is called precision."; US-style numbers; warnings fixed |
+
+### What changed
+
+- **Sources re-verified (2026-10-22).** Manrai et al. 2014 (PMC4955674, Methods): "a convenience
+  sample of 24 attending physicians, 26 house officers, 10 medical students, and 1 retired physician
+  at a Boston-area hospital"; 14 of 61 right; the most common answer was 95 %, 27 of 61. The four-day
+  alert count again, from three sources: Wired UK ("During the UEFA Champions League Final week …
+  2,470 alerts"), the EFF (2022, same figures) and Davies et al. ("Champions League (2,470 total
+  matches, 173 'true')"; their own logbook count of 2,632 / 78 covers "Champions League (4 days)").
+  facts.md §B and §C record the quotes.
+- **Narration.** "At one Boston-area hospital, most doctors and medical students …". "The share
+  stays the same." (the full-file transcript now hears it). "In machine learning, that share is
+  called precision. [0.8]" (was "the share of alerts that are right": the meter's title says it on
+  screen as the word replaces it). Numbers are written US style ("a hundred twenty", "two thousand
+  four hundred seventy"). The landing's result pause is 1.0 s, and the return sweep to 1 in 500 now
+  runs inside it.
+- **Grid (0:33–0:36).** The 10,000 people fade in at the header's 1 in 500, with 20 red: the same 20
+  the slider drains back to. "Half of them sick" then floods the left half as the header rolls to
+  "1 in 2", so no frame shows "1 in 500" over an all-healthy grid.
+- **Braces (1:51–2:01).** "how common" / "how often" are MathTex 36 (34 px). Stage 3's products get
+  `\;\;\;` round × and +, which puts the four labels ≥ 0.38 apart. The formula spans ±6.14. In the
+  named form, the label under the narrow P(sick) leans 0.33 left so it clears "how often" by 0.20.
+- **Cardiff layout (2:05–3:05).** The meter now travels across above the people, then down. It ends
+  in the middle of the right column, beside the crowd, at y = 0.5, with the legend 0.5 under it, so
+  the right half is balanced for the whole 20 s build-up. The 145 flagged squares now file into a
+  raster that sits lower right. After "Shrink to the alerts" everything sits 0.4 lower than before
+  (meter at y = 1.75), so the frame is vertically centred before the evaluators' bar arrives.
+- **"precision too" (2:42–2:49).** The ghost of the disease meter uses label sizes ("precision too"
+  Text 28, "17%" MathTex 36, "your test" Text 26). It stays up until "logbooks", about 3 s, and only
+  then hands its place to the police bar's tag. The evaluators' bar arrives first, below it.
+- **Pulses (guide §11.6).** `emph()` now grows away from the edge a label faces (`anchor()`): the
+  base rate keeps its left edge ("·" next to "watch list"); the table's counts and shares their right
+  edge, the positives their left edge, the rates the edge on their arrow; the meter's and the
+  evaluators' values their right edge (next to their bars); the naive labels their bottom edge (on
+  their markers); the sum its top edge (under its rule); the landing's live N its left edge (after
+  "1 in"). The table's "1 in N" pulses as one piece. The strip's red columns pulse at 1.3× (at 1.4×
+  neighbouring dots touched). The "173 right" bracket pulse grows downwards, away from the raster's
+  outline.
+- **Landing (3:06–3:08).** Each flow now starts as wide as its arrow's shaft (5 px) and widens
+  evenly to the people it carries, while the thin arrow, head included, fades out on top of it.
+  The old point morph of arrow into band grew each flow as a skewed wedge from the + end and left a
+  detached, jagged arrowhead (seen at 4 fps in the first master; popping the heads alone still left
+  the wedge).
+
+### Self-check (review kit on the final 1080p master)
+
+- render.sh: 0 warnings; layout audit 0 issues in 216 checks.
+- Runtime 3:34.2, 470 words; 147 wpm on speech time; median sentence 158 wpm, none above 200 wpm.
+  −14.0 LUFS / −2.1 dBTP; leading 0.0 s, trailing 1.62 s. Longest internal silence 2.24 s (the
+  planned "Pick a number" hold); longest static stretch 3.0 s. WER 2.1 % (only "a" heard as "one",
+  "watch list" as one word and "practised" as "practiced"); 0 banned phrases; Narration-craft section
+  with no flagged line (cadence: beat turns 0.64 s against full stops 0.43 s; longest breathless run
+  12.4 s).
+- Looked at all 12 contact sheets, and at keyframes and extracted frames at each fixed spot: 0:35.6
+  (20 red at 1 in 500), 1:59.6 (braces at 36), 2:24.2 (centred right column), 2:47.8 ("precision
+  too" with the evaluators' bar), 3:07.8 (re-seen first frame). Frames stepped at 4 fps through the
+  "≤ 1 in 140" pulse (2:20–2:22: it grows rightwards, so the "·" keeps its gap) and the landing's
+  swell (3:05.6–3:08.0: the flows widen evenly out of the shafts, with no wedge and no stray
+  arrowhead).
+
+**Kept:** the 120 positives lining up under the 17 % meter; the unbroken object chain (cold-open
+diagram → table → grid → strip → crowd → raster → + badge → the diagram with flows); the half-sick
+control, the live prevalence slider and the bracketed 6×; the landing's live sweep and the
+recall / precision tags on the opening frame's 99 % and 17 %.

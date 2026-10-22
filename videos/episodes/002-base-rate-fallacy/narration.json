@@ -2,7 +2,7 @@
  "scene": "Episode",
  "episode": 2,
  "title": "When a 99% Accurate Test Says You're Sick",
- "video_duration": 214.733,
+ "video_duration": 214.167,
  "beats": [
   {
    "index": 0,
@@ -2595,9 +2595,9 @@
   },
   {
    "index": 28,
-   "start": 202.267,
+   "start": 201.7,
    "duration": 10.94,
-   "end": 213.207,
+   "end": 212.64,
    "text": "The title's ninety-nine percent is the test's recall: how often the sick test positive. [pause 0.3] Seventeen percent is its precision: how often the positive are sick.",
    "voice": "af_heart",
    "speed": 0.84,
@@ -2605,146 +2605,137 @@
    "words": [
     {
      "w": "The",
-     "t": 202.292,
-     "end": 202.405
+     "t": 201.725,
+     "end": 201.838
     },
     {
      "w": "title's",
-     "t": 202.442,
-     "end": 202.854
+     "t": 201.875,
+     "end": 202.287
     },
     {
      "w": "ninety-nine",
-     "t": 202.892,
-     "end": 203.492
+     "t": 202.325,
+     "end": 202.925
     },
     {
      "w": "percent",
-     "t": 203.517,
-     "end": 204.117
+     "t": 202.95,
+     "end": 203.55
     },
     {
      "w": "is",
-     "t": 204.167,
-     "end": 204.28
+     "t": 203.6,
+     "end": 203.713
     },
     {
      "w": "the",
-     "t": 204.292,
-     "end": 204.367
+     "t": 203.725,
+     "end": 203.8
     },
     {
      "w": "test's",
-     "t": 204.392,
-     "end": 204.742
+     "t": 203.825,
+     "end": 204.175
     },
     {
      "w": "recall",
-     "t": 204.767,
-     "end": 205.617
+     "t": 204.2,
+     "end": 205.05
     },
     {
      "w": "how",
-     "t": 205.817,
-     "end": 206.117
+     "t": 205.25,
+     "end": 205.55
     },
     {
      "w": "often",
-     "t": 206.167,
-     "end": 206.592
+     "t": 205.6,
+     "end": 206.025
     },
     {
      "w": "the",
-     "t": 206.617,
-     "end": 206.742
+     "t": 206.05,
+     "end": 206.175
     },
     {
      "w": "sick",
-     "t": 206.792,
-     "end": 207.017
+     "t": 206.225,
+     "end": 206.45
     },
     {
      "w": "test",
-     "t": 207.042,
-     "end": 207.292
+     "t": 206.475,
+     "end": 206.725
     },
     {
      "w": "positive",
-     "t": 207.317,
-     "end": 208.087
+     "t": 206.75,
+     "end": 207.52
     },
     {
      "w": "Seventeen",
-     "t": 208.462,
-     "end": 209.112
+     "t": 207.895,
+     "end": 208.545
     },
     {
      "w": "percent",
-     "t": 209.137,
-     "end": 209.649
+     "t": 208.57,
+     "end": 209.082
     },
     {
      "w": "is",
-     "t": 209.687,
-     "end": 209.787
+     "t": 209.12,
+     "end": 209.22
     },
     {
      "w": "its",
-     "t": 209.812,
-     "end": 209.987
+     "t": 209.245,
+     "end": 209.42
     },
     {
      "w": "precision",
-     "t": 210.012,
-     "end": 210.912
+     "t": 209.445,
+     "end": 210.345
     },
     {
      "w": "how",
-     "t": 211.112,
-     "end": 211.412
+     "t": 210.545,
+     "end": 210.845
     },
     {
      "w": "often",
-     "t": 211.462,
-     "end": 211.875
+     "t": 210.895,
+     "end": 211.308
     },
     {
      "w": "the",
-     "t": 211.887,
-     "end": 211.962
+     "t": 211.32,
+     "end": 211.395
     },
     {
      "w": "positive",
-     "t": 211.987,
-     "end": 212.512
+     "t": 211.42,
+     "end": 211.945
     },
     {
      "w": "are",
-     "t": 212.537,
-     "end": 212.662
+     "t": 211.97,
+     "end": 212.095
     },
     {
      "w": "sick",
-     "t": 212.712,
-     "end": 213.207
+     "t": 212.145,
+     "end": 212.64
     }
    ],
    "wav": "/root/.cache/sample_space/tts/34/34628aaa8abb2453229a9239.wav"
   }
  ],
- "warnings": [
-  {
-   "t": 160.43,
-   "msg": "beat 24: reached 'precision' 0.38s after it was spoken - shorten the preceding animations"
-  },
-  {
-   "t": 202.27,
-   "msg": "beat 27: animations ran 1.0s past the narration (13.3s) - silence gap"
-  }
- ],
+ "warnings": [],
  "budget": {
   "words": 470,
-  "runtime_s": 214.7,
+  "runtime_s": 214.2,
   "budget_words": 500,
   "budget_runtime_s": 215.0,
   "over": false
@@ -2760,9 +2751,9 @@
  },
  "layout_audit": {
   "clearance": 0.15,
-  "checks": 214,
-  "audit_seconds": 1.952,
-  "render_seconds": 523.1,
+  "checks": 216,
+  "audit_seconds": 1.65,
+  "render_seconds": 425.8,
   "errors": 0,
   "count": 0,
   "counts": {

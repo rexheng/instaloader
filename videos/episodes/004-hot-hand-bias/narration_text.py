@@ -33,23 +33,24 @@ BEATS = {
                "forty two.",
     "cold": "On a fair coin, the test reads cold, by nine and a half points.",
     # insight
-    "pool": "Yet no flip is biased. [pause 0.5] Gather all twenty four checked flips: twelve heads, twelve "
-            "tails. Total heads over total flips: exactly half.",
+    # round 9: a breath after "checked flips:" while the poured strip sorts (craft fix 3)
+    "pool": "Yet no flip is biased. [pause 0.5] Gather all twenty four checked flips: [pause 0.6] "
+            "twelve heads, twelve tails. Total heads over total flips: exactly half.",
     # round 8: "The skew comes from scoring row by row:" cut (the formula line names the cause)
     "votes": "But each row gets one vote, however many flips it checked.",
     "crowds": "Checked heads come in crowds, since a heads gets the next flip checked too. "
               "Here, three heads share a single vote, while this lone tails gets a whole one.",
-    # round 6: three clips (craft 9: the densest run was heard as one run-on sentence);
-    # round 8: "Crowded heads split their votes." cut (it restated "three heads share a single vote")
-    "lineup": "Twelve heads crowd into eight rows. [pause 0.3] Twelve tails spread across eleven.",
+    # round 9 (substance fix 1): "Twelve heads crowd into eight rows. Twelve tails spread across
+    # eleven." is cut; its boxed rows and the two count labels run silently after "a whole one"
     # round 7: breaths after "Line them up:" and after the vote count (both critics)
     "pack": "Line them up: [pause 0.8] the heads hold five and two thirds of the fourteen "
             "votes. [pause 1.0] That's seventeen out of forty two.",
     "formula": "So the test takes an average of ratios, one per row, [pause 0.3] instead of the "
                "ratio of totals. [pause 0.5]",
     # the mirror: after tails
-    "mirror": "Now score the flip after each tails. Swap heads and tails, and the strip flips "
-              "over one half: the test reads high, twenty five out of forty two.",
+    # round 9 (substance fix 3): the mirror is given its reason (the coin's symmetry)
+    "mirror": "Now score the flip after each tails. A fair coin can't tell heads from tails, so "
+              "the strip flips over one half: the test reads high, twenty five out of forty two.",
     # round 7: "a fair coin shows" cut (the coin is the only subject on screen)
     "gap": "Subtract the averages: a gap of minus nineteen points.",
     # payoff
@@ -57,9 +58,11 @@ BEATS = {
                "players: up to a hundred shots each, from where they'd hit about half. After "
                "three hits, versus after three misses.",
     "minus8": "For a random shooter, the same crowding pulls after hits down to forty six percent "
-              "on average, and after misses up to fifty four. [pause 0.45] Miller and Sanjurjo's "
-              "twenty eighteen paper [pause 0.5] puts the gap at about minus eight points. "
-              "[pause 0.9] Longer records shrink it; [pause 0.9] longer streaks grow it. [pause 0.5]",
+              "on average, and after misses up to fifty four. [pause 0.45] Miller and Sanjurjo "
+              "[pause 0.4] put the gap at about minus eight points. [pause 0.9] Longer records "
+              "shrink it; [pause 1.2] longer streaks grow it. [pause 1.3]",
+    # round 9: "'s twenty eighteen paper" cut (the year is in the citation, substance fix 7); the
+    # two ghosts get longer holds (substance fix 2)
     # "The Cornell players": a beat-initial "Cornell's" was heard as "Daniel's" (round 6 v2)
     # round 8: breaths after the two readings and after "plus four" (substance fix 5)
     "observed": "The Cornell players hit forty nine percent after three hits, and forty five "
@@ -81,5 +84,6 @@ SPEEDS = {"undefined": 0.80, "cold": 0.80, "crowds": 0.80, "mirror": 0.80, "obse
 # breathing room after a beat (s); default NarratedScene.BEAT_GAP = 0.35
 # (round 6: CADENCE = "shaped", whose default beat gap is 0.45 s; 0.9-1.0 s after the key results)
 # round 7: "split" 0.9 (a breath after "split their votes"), "pack" 1.3 (17/42 held >= 3.2 s)
-GAPS = {"stakes": 0.6, "cold": 0.9, "crowds": 0.6, "lineup": 0.6, "pack": 1.3,
+# round 9: "crowds" 0.1, since the lineup's silent boxes follow it (about 1.6 s of picture)
+GAPS = {"stakes": 0.6, "cold": 0.9, "crowds": 0.1, "pack": 1.3,
         "formula": 1.0, "gap": 0.8, "observed": 0.8, "hot": 0.3}

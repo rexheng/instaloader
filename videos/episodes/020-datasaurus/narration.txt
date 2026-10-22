@@ -14,34 +14,34 @@
 
 [01:04.1] The two averages mark a single point: the cloud's balance point.
 
-[01:08.9] The two standard deviations reach one deviation out on each side, and draw a box.
+[01:08.9] The two standard deviations reach out on each side, and draw a box.
 
-[01:15.5] Many ellipses touch all four walls. [pause 0.2] The correlation, r, picks one. [pause 0.6]
+[01:14.2] Many ellipses touch all four walls. [pause 0.2] The correlation, r, picks one. [pause 0.6]
 
-[01:21.5] Say r is point eight. Go one standard deviation right. On average, the cloud rises r times a standard deviation. [pause 0.7] That's the best-fit line, through the middle of every vertical slice. [pause 0.7] At the wall, the slices shrink to the touch point, r times ess why above the center. [pause 0.4] For the dinosaur, it's just below the middle.
+[01:20.1] Say r is point five. Go one standard deviation right. [pause 0.4] On average, the cloud rises r times ess why. [pause 0.7] That's the best-fit line, through the middle of every slice of the ellipse. [pause 0.7] At the wall, the slices shrink to the touch point. [pause 0.4] For the dinosaur, it's just below the middle.
 
-[01:44.5] That ellipse is everything the five numbers know. [pause 1.0]
+[01:41.7] That ellipse is everything the five numbers know. [pause 1.0]
 
-[01:48.9] Now replay the first version, and watch the ellipse.
+[01:46.0] Now replay the first version, and watch the ellipse.
 
-[01:52.6] How would you fix it? [pause 1.5]
+[01:49.7] How would you fix it? [pause 1.5]
 
-[01:55.8] Slide it until the centers meet. Stretch it until the boxes match. Then tip it, keeping the box, [pause 0.2] until it touches the walls at the same height.
+[01:53.0] Slide it until the centers meet. Stretch it until the boxes match. Then tip it, keeping the box, [pause 0.2] until it touches the walls at the same height.
 
-[02:06.0] All five match now, to every decimal place. [pause 0.6]
+[02:03.1] All five match now, to every decimal place. [pause 0.6]
 
-[02:10.3] But add a sixth number: the median of y. Our star misses it by six.
+[02:07.4] But add a sixth number: the median of y. Our star misses it by six.
 
-[02:15.7] In 2017, Justin Matejka and George Fitzmaurice built a search. [pause 0.4] It keeps these five numbers fixed while it nudges points toward a target.
+[02:12.9] In 2017, Justin Matejka and George Fitzmaurice built a search. [pause 0.4] It keeps these five numbers fixed while it nudges points toward a target.
 
-[02:26.1] From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this star, [pause 0.8] this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Each one has this same ellipse, and a different median.
+[02:23.2] From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this star, [pause 0.8] this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Each one has this same ellipse, and a different median.
 
-[02:40.8] Francis Anscombe made the same point in 1973, with eleven points. [pause 1.2]
+[02:37.9] Francis Anscombe made the same point in 1973, with eleven points. [pause 1.2]
 
-[02:47.9] Same rule: ess ex across, [pause 0.3] r times ess why up. [pause 0.5]
+[02:45.0] Same rule: ess ex across, [pause 0.3] r times ess why up. [pause 0.5]
 
-[02:52.8] So the slope is the rise [pause 0.3] over the run. [pause 1.0]
+[02:49.9] So the slope is the rise [pause 0.3] over the run. [pause 1.0]
 
-[02:57.2] All four of his datasets share these five numbers, so they share the ellipse and line. [pause 0.5] A trend, a curve, an outlier, and one point doing all the work.
+[02:54.3] All four of his datasets share these five numbers. [pause 0.5] A trend, a curve, an outlier, and one point doing all the work.
 
-[03:08.9] Your line was right: five numbers fix it exactly, slope minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.
+[03:04.1] Your line was right: five numbers fix it exactly, slope minus point one. Your cloud was wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they leave out.

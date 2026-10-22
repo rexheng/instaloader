@@ -6,7 +6,10 @@ results), no deictic without an animation on it.
 Round 6: "force pile-ups ... a hundred eighty-three hits" (only the extra hits are forced),
 "Call that P of zero", "London's clusters were no sign of precise aim" (the stakes answered),
 breaths in the gaps, two-hit and limits beats; paid for by cutting "Both are simulated. The
-question isn't." and "So look again."."""
+question isn't." and "So look again.".
+Round 7: no spoken 354 (on screen 537 - (576 - 222)); "To judge London, chance must predict every
+bar" cut; "because short bars wobble less" (the whiskers); the limit is measured - the north box
+scored alone fits chance too (p = 0.45), so the aim shows only in lambda."""
 
 PRON = {"Poisson": "/pwɑsˈOn/", "A": "/ˈA/"}   # map name A, never the article
 SPEED = 0.84
@@ -36,9 +39,8 @@ B = dict(
     guess="Guess how many squares stay empty. [pause 1.1]",
     empty="About two hundred twenty-seven. [pause 0.3] Map A has two hundred twenty-two. "
           "[pause 0.5]",
-    gaps="Those empty squares force pile-ups: [pause 0.3] the other three hundred fifty-four share all "
-         "the hits, so a hundred eighty-three must land where another already did. To judge "
-         "London, chance must predict every bar.",
+    gaps="Those empty squares force pile-ups: [pause 0.3] a hundred eighty-three hits must land "
+         "where another already did. [pause 0.6]",
     lam="Let's call the average hits per square lambda. [pause 0.5] One minus a small slice, raised "
         "to a big power, is e to the minus lambda, almost exactly. Call that P of zero.",
     two="For two hits in this square, pick two bombs: five thirty-seven times five thirty-six "
@@ -50,9 +52,9 @@ B = dict(
             "predicts these purple bars.",
     fix="The honest detector compares whole histograms. [pause 0.4] Thirty-nine targets, and "
         "chance predicts thirty-nine. [pause 0.4] The chi-squared misfit squares each bar's gap "
-        "and divides by chance's bar, so a miss on a short bar counts more. Map A scores [pause 0.2] two "
-        "point oh. Three out of four simulated chance maps score worse. That share, p, "
-        "is point seven four. [pause 0.7]",
+        "and divides by chance's bar, because short bars wobble less. So a miss on a short bar "
+        "counts more. Map A scores [pause 0.2] two point oh. [pause 0.3] Three out of four "
+        "simulated chance maps score worse. That share, p, is point seven four. [pause 0.7]",
     fixb="Now map B: half the expected empty squares, a tower of single hits, misfit two hundred "
          "seventy-two. [pause 0.3] A pattern this even is the fingerprint of a spacing rule.",
     clarke="Aimed bombs would miss the other way: extra empty squares, extra pile-ups. [pause 0.4] "
@@ -62,8 +64,9 @@ B = dict(
            "hundred twenty-nine. [pause 0.3] Overall, p equals point eight eight. [pause 0.5] "
            "London's clusters were no sign of precise aim.",
     limit="The bombs were aimed at central London but tended to fall short, so farther north, "
-          "hits were about half as dense. [pause 0.6] The test needs one lambda: Clarke chose an area "
-          "where it held steady.",
+          "hits were about half as dense. [pause 0.6] Score the north alone, and it fits chance "
+          "too: p equals point four five. [pause 0.3] The aim hides in lambda, which the test "
+          "holds fixed.",
     landing="The clumps in map A [pause 0.4] are what no aim at all looks like. If you chose "
             "map B, [pause 0.3] you chose the rule.",
 )

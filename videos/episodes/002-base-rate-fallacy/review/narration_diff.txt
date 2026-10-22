@@ -1,12 +1,12 @@
-WER 1.9% over 472 script words (numbers spelled out, 'and' ignored)
+WER 2.1% over 472 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/002-base-rate-fallacy/narration.json
 
 [0:59.0] replace  script: 'a'                                      heard: 'one'
 [1:00.7] replace  script: 'a'                                      heard: 'one'
 [1:25.1] insert   script: '∅'                                      heard: 'one'
 [1:32.9] replace  script: 'a'                                      heard: 'one'
+[2:07.6] replace  script: 'watch list'                             heard: 'watchlist'
 [2:12.7] replace  script: 'a'                                      heard: 'one'
 [2:36.3] replace  script: 'a'                                      heard: 'one'
 [2:55.5] replace  script: 'practised'                              heard: 'practiced'
-[3:08.2] delete   script: 'your'                                   heard: '∅'
-[3:15.1] replace  script: 'a'                                      heard: 'one'
+[3:15.0] replace  script: 'a'                                      heard: 'one'

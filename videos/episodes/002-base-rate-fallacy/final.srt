@@ -167,10 +167,10 @@ Your seventeen percent assumes a random screen.
 Symptoms raise the one in five hundred: at one in a hundred, fifty percent; at one in two, ninety-nine, where the rule held.
 
 43
-00:03:22,266 --> 00:03:28,086
+00:03:21,700 --> 00:03:27,520
 The title's ninety-nine percent is the test's recall: how often the sick test positive.
 
 44
-00:03:28,386 --> 00:03:33,206
+00:03:27,820 --> 00:03:32,640
 Seventeen percent is its precision: how often the positive are sick.
 

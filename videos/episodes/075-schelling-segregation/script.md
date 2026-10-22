@@ -17,7 +17,7 @@ baseline is strong, not extreme, and Schelling himself called his one-third resu
 |---|---|
 | BLUE `#5AA9E6` | blue households |
 | YELLOW `#F5C451` | gold households (and the count of gold neighbors in every fraction) |
-| RED `#EF6F61` | unhappy: a ring drawn *outside* an unhappy household's tile (the tile keeps its colour), the "unhappy" counts, the share-ladder bars of unhappy households |
+| RED `#EF6F61` | unhappy: a ring drawn *outside* an unhappy household's tile, after a 1 px gap of background colour (the tile keeps its colour; round 6: red right against gold read as orange), the "unhappy" counts, the share-ladder bars of unhappy households |
 | PURPLE `#B394E8` | the demand: the share of matching neighbors a household insists on (marker, ⅓ / ¼, the demand line on the ladder, chart x-axis, "demanded" labels) |
 | INK (off-white) | the measured outcome (average share of neighbors that match: meter, chart dots and mean ticks); focus boxes; fractions; the zone lines of the rule-made town |
 | GRAY / DIM | axes, captions, "plan predicts 0", "round", notes, ladder bars of content households, the random-mix baseline, Schelling's band, citations; the end-card Ω is INK (not BLUE) |
@@ -47,13 +47,18 @@ rings on the 2 gold neighbors, "2 of 6 match".
 > match, it moves, so it is happy to be outnumbered two to one.
 
 ### 3 · Stakes (0:23–0:32)
+*Screen (round 6):* on "real city maps" the rule inset and the meter dim to 35 % and the board's
+frame pulses once (the town is read as a map); the demand marker returns on "motives", the
+match readout on "patterns", the rule inset on "a demand of one third".
+
 > We read real city maps the same way, guessing motives from patterns. So how can a demand
 > of one third build a town of three quarters?
 
 ### 4 · Naive build (0:33–0:58)
 *Screen:* every tile flies back to its starting square; the meter falls 76 % → 50 %, docks;
 the meter docks during "half … above"; the RED "unhappy" counter arrives on "these" and counts
-to 238 as RED rings draw round those tiles. The HUD sits beside the board's middle (first row
+to 238 as RED rings draw round those tiles, while the content households dim to 55 % so the 238
+stand out as a set (they return on "Round one"). The HUD sits beside the board's middle (first row
 y = 0.45), four rows: unhappy, plan predicts, round, moves. One real
 round-1 move is previewed as a dashed arc (the same arc it flies in round one; every hop bends toward the board's centre, so no tile ever swings out over the board's edge). The HUD under the meter is a two-column table:
 labels ("unhappy", "plan predicts", "round") right-aligned on one edge, numbers right-aligned
@@ -63,7 +68,9 @@ on the meter's 100 % end, so "plan predicts 0" has its 0 directly under the coun
 > a third. Still, these two hundred thirty-eight are unhappy.
 >
 > The obvious plan is to move each one to a random empty square where it would be
-> content. Then everyone is content, and the town stays mixed.
+> content, so the town stays mixed.
+
+("plan predicts 0" arrives on "content". Round 6 merged "Then everyone is content" into the plan.)
 
 ### 5 · Run + measured failure (0:58–1:17)
 *Screen:* round 1: 200 tiles hop (each arc bent toward the board's centre and kept on the board) while the GRAY "moves" row counts live to 200; the meter
@@ -81,7 +88,7 @@ during the round, so the sentence only read the screen aloud.)
 > Sixty-seven of these were content before round one. They never moved. Their neighbors did.
 
 ### 6 · Insight: the domino (1:16–1:51)
-*Screen:* "Replay one corner": the board parks at the left edge at 0.7 scale and dims to 30 %
+*Screen:* "Replay one block" (round 6: "corner" was wrong, the patch sits mid-top): the board parks at the left edge at 0.7 scale and dims to 30 %
 except the corner; the HUD and the meter's 64 % readout fade out completely (only "⅓ demanded"
 stays, the source of the formula's ⅓). A white box lands on the corner, and the corner
 **rewinds**: household A flies home from where round 1 sent it, and the rings return to the
@@ -99,12 +106,12 @@ The formula is built from the tiles: square copies of the 3 gold neighbors fly t
 the demand marker. Each fraction state holds ≥ 1.5 s; C's 2/7 < ⅓ holds through a 0.9 s pause
 into the next beat.
 
-> Replay one corner. At the start, this gold household had three gold neighbors out of
+> Replay one block. [pause 0.3] At the start, this gold household had three gold neighbors out of
 > eight. Three eighths beats a third, so it stayed.
 >
-> Then this neighbor moved away. Is it still content? [pause 1.2]
+> Then this neighbor moved away. Is it still content? [pause 1.0]
 >
-> Two gold out of seven. Two sevenths is less than a third, so now it wants out.
+> Two gold out of seven, less than a third, so now it wants out. (speed 0.80)
 >
 > Its neighbor here also has three eighths. In round two, our household leaves, and this one
 > drops to two sevenths. [pause 0.9]
@@ -118,12 +125,14 @@ fade, then the new household's slide in from the right; the ⅓ stays. The same 
 (3/8 → 2/7) fade out, then the new digits fade in, in place, each half ≥ 0.3 s. No glyph morph.)
 
 ### 7 · The cascade completes (1:51–2:02)
-*Screen:* on "Now" the inset folds away, then the board grows back to full size and strength
-and the HUD returns; rounds 2–7 run in the 1.4 s pause (moves row 72, 41, 16, 9, 2, 1; the
-replayed movers are already home, so they do not move twice). The counter reaches 0 on
-"nobody"; the 76 % pulses after "move".
+*Screen (round 6):* in the gap before "Now" the inset folds away (0.35 s) and the board grows
+back to full size and strength while the HUD returns, so rounds 2–7 start on "Now" and run
+through the 1.9 s pause, each at least 0.6 s plus 0.15 s for its counts to settle before the
+round number advances. The "moves" row is cumulative (200 → 272, 313, 329, 338, 340, 341), so
+it never shows a stale per-round value (the replayed movers are already home, so they do not
+move twice). The counter reaches 0 on "nobody"; the 76 % pulses after "move".
 
-> Now run the whole town. [pause 1.4] After round seven, nobody wants to move.
+> Now run the whole town. [pause 1.9] After round seven, nobody wants to move.
 
 ### 8 · Generalise: the tipping curve (2:03–2:18)
 *Screen:* the HUD fades (0.4 s) while the town shrinks into its thumbnail slot; the axes start
@@ -134,18 +143,23 @@ never holds a lone thumbnail. A copy of the town leaves on "whole" and lands as 
 30-town clouds fade in under the note "each dot: one simulated town" (no narration), and only then
 does "⅓ → 76 %" appear beside the thumbnail (round 5: the flying copy used to pass over it while
 it faded in; likewise "→ 58 %" arrives after the ¼ town's copy has landed as its dot). On "a
-quarter" the PURPLE ¼ flies from the lower thumbnail's label to a mark at its column, which
-brightens while the others dim to 40 %; on "a third" the ⅓ does the same from the upper label. 30 simulated towns per demand: dots r = 0.05 at 38 %
-opacity, ±0.6 pp jitter, INK mean tick and GRAY min–max whisker per column. The same starting
+quarter" the lower thumbnail's PURPLE ¼ pulses while its column brightens and the others dim to
+40 %; on "a third" the ⅓ does the same from the upper label (round 6: the small PURPLE ¼ / ⅓
+marks inside the plot read as stray glyphs beside "random mix" and are gone; each column is also
+the one our own town's dot lands in). 30 simulated towns per demand: dots r = 0.05 at 60 %
+opacity, ±0.3 pp jitter (round 6; were 38 % and ±0.6, "smudges"), INK mean tick and GRAY min–max whisker per column. The same starting
 town re-run at ¼ sorts in the lower thumbnail ("¼ → 58 %").
 
-> That whole town is one point on this chart.
+> That whole town is one point on this chart. (speed 0.78; it ran 208 wpm at 0.84)
 >
 > Demand a quarter, and the same starting town barely sorts: fifty-eight percent. Demand a
 > third, and it jumps to seventy-six. [pause 0.9]
 
 ### 9 · Why the jump: the share ladder (2:12–2:45)
-*Screen:* the ladder is its own chart, about 1.3× the dot chart and 0.8 units higher. On "sort",
+*Screen:* the ladder is its own chart, about 1.3× the dot chart and 0.8 units higher, built
+centred (round 6: its right third used to sit empty for 12 s); on "including" it slides left
+(0.8 s) to make room for household A's patch, which fades in only once the right-hand bars have
+passed its column. On "sort",
 one move that runs from "sort" to "With": the two thumbnails and their labels leave with the dot
 chart (one focal region), and the dot chart leaves completely (dots, y-axis, its title, the x
 numbers and ticks, the random-mix line; 0–0.3 s); its x-axis line rises and stretches into the
@@ -154,8 +168,8 @@ has left); and the bars sprout from the line, left to right, standing on it, one
 across "by each household's share of matching neighbors" (from 0.25 s to "With"). The frame is
 never a bare line and never static for 4 s (round 5 cont.: the 09:49 cut showed the bare line for
 about 0.9 s, and a first fix left the finished bars static for 4.5 s before "these"). One bar per
-share a household of the random start actually has (k of n, n ≤ 8). The vertical is named where a y-axis title sits: INK "households (simulated start)". On "these" a highlight sweeps along
-the bars; on "sixty percent" the ends are marked "0%" and "60%".
+share a household of the random start actually has (k of n, n ≤ 8). The vertical is named where a y-axis title sits: INK "households (simulated start)". On "shares come in steps" a
+highlight sweeps along the bars and the ends are marked "0%" and "60%".
 
 The rung fractions sit in one row under the baseline. GRAY counts (MathTex 32) sit centred
 above their own bars: "2/7" and "67" on "two sevenths", "3/8" and "125" on "three eighths".
@@ -164,26 +178,36 @@ round the threshold bar; its fraction is in the row under the caret. Every bar l
 turns RED, and "unhappy 238" sits above the red group. A curved GRAY arrow "lose one match"
 runs from the 3/8 count down to the 2/7 count. Household A (2 gold of 7 at the start) appears
 in the right column the thumbnails vacated, beside the bars' middle, with 2/7 < ⅓ built from its
-tiles (its ⅓ copied from the caret's ⅓).
+tiles (its ⅓ appears as the caret's ⅓ pulses; round 6: a copy flying from the caret crossed the
+2/7 on its way).
 
 The prediction: a 50 % caret, a dashed PURPLE outline on the ¼ bar, its "¼" and the count "76"
-appear, so all three counts are visible; 1.2 s hold. The ⅓ outline and label lift off, the
-caret slides to ¼ and crosses exactly two bars, 2/7 (67) and ¼ (76: 66 at 2/8, 10 at 1/4).
-They turn grey, the arrow and its label fade with the slide, the count falls 238 → 171 → 95,
-the dashed outline turns solid, and A's formula flips to 2/7 ≥ ¼.
+appear, so all three counts are visible, while A's patch, its formula and the arrow dim to 35 %
+(round 6: one focal point, the dashed ¼ outline with 76 and 67); 1.5 s hold. The ⅓ outline and
+label lift off, the caret slides to ¼ and crosses exactly two bars, 2/7 (67) and ¼ (76: 66 at
+2/8, 10 at 1/4), and the dimmed context returns. The two bars turn grey and flash, the count
+falls 238 → 171 → 95, the dashed outline turns solid, and A's formula flips to 2/7 ≥ ¼.
+Round 6, the mechanism: the "lose one match" arrow stays. On "three eighths" the 3/8 rung
+pulses; on "lose a match" the arrow brightens and its target, the now-grey 2/7 bar, flashes; on
+"stay" "lose one match" moves up a line and "still content" fades in under it; on "never
+starts" A's 2/7 ≥ ¼ flashes.
 
-> To see why that happens, sort the random start by each household's share of matching
-> neighbors. With at most eight neighbors, these are the only shares up to sixty percent.
+> To see why, sort the random start by each household's share of matching neighbors. With
+> at most eight neighbors, shares come in steps.
 >
 > At a third, everyone left of it is unhappy, including the neighbor that started our
-> corner's chain, at two sevenths.
+> block's chain, at two sevenths.
 >
-> Every household at three eighths is one lost match away from it.
+> Every household at three eighths is one lost match away from two sevenths.
 >
 > At a quarter, how many would start unhappy? [pause 1.5]
 >
-> Only these two bars change sides, and they're tall: just ninety-five start unhappy, and
-> that chain never starts. [pause 0.9]
+> Only these two bars change sides: just ninety-five start unhappy. Now a household at three
+> eighths can lose a match and stay, so that chain never starts. [pause 0.9]
+
+(Round 6: both critics found that the ¼ side explained the jump by the starting count alone.
+The new sentence names the mechanism: 2/7 ≥ ¼, so the 3/8 → 2/7 step that drove A → B → C no
+longer tips anyone. "and they're tall" was cut; the count falling 238 → 95 shows it.)
 
 ### 10 · Payoff + honest limits (2:45–3:01)
 *Screen:* the 2:12 morph in reverse: the bars sink into the baseline and the ladder labels
@@ -211,7 +235,9 @@ now carries the landing.)
 
 ### 11 · The test: two towns, one picture (3:16–3:47)
 *Screen:* a cross-fade to two simulated towns side by side, both "76% match", with nothing to
-say which is which (ours is on the right). One GRAY "simulated" tag sits centred in the gap, on
+say which is which (ours is on the right, turned a quarter turn: round 6, so the test is blind;
+the viewer has watched the unturned town for 90 s, and a 90° turn changes neither the 76 % nor the
+texture). One GRAY "simulated" tag sits centred in the gap, on
 the row of the "76% match" labels. The two candidate labels "⅓ demanded" and "0 demanded" wait
 unassigned in the gap with a "?". Prediction hold 1.5 s.
 
@@ -220,27 +246,33 @@ above the towns, never over tiles. "0 demanded" does the same to the left town w
 lines draw on. "· placed by a rule" appears only after it lands. Both headers are centred on
 their boards, with "demanded" on one baseline 0.25 above the boards. Citation "Aaronson, Hartley
 & Mazumder, 2021 · AEJ: Economic Policy" on "study"; both toy towns dim to 30 % slowly across
-"1930s federal lending maps" (the toy rule is not a model of the 1930s maps, so the zone lines no
-longer pulse); the two "76% match" labels, the segregation measure, pulse on "segregation"; the
-citation is underlined on "credit". No stretch of this beat is static for more than about 2.2 s. The rule town's grain matches a
+"Real segregation has other causes" to 55 %, then to 30 % across "1930s federal lending maps"
+(the toy rule is not a model of the 1930s maps, so the zone lines no longer pulse); the two "76% match" labels, the segregation measure,
+pulse on the study's "segregation"; the citation is underlined on "credit". No stretch of this beat is static for more than about 2.2 s. The rule town's grain matches a
 Schelling town's texture (no stray tiles), so the picture cannot give the answer away.
 
 > Two simulated towns, both seventy-six percent. In one town, households demand a third. In the
-> other, nobody minds their neighbors at all. Which one wanted a third? [pause 1.5]
+> other, nobody minds their neighbors. Which one wanted a third? [pause 1.5]
 >
-> This one. The other was placed by a rule, with no preferences. In real cities, one study
-> finds that 1930s federal lending maps increased racial segregation for decades, through
-> reduced credit.
+> This one. The other was placed by a rule, with no preferences. Real segregation has other
+> causes. One study finds that 1930s federal lending maps increased racial segregation for
+> decades, through reduced credit.
+
+(Round 6: the link sentence ties the rule-made town to the study, and splits a 14.7 s run with
+no breath. About 0.95 s of silence follows "credit.")
 
 ### 12 · Landing (3:48–3:56)
 *Screen:* the rule-made town and every label fade first (0.45 s; round 5: the growing town no
 longer passes over fading labels) while ours returns to full strength, so the one town left is the
-focus of "Look again at the first town", not a dim leftover. Ours then grows back into the opening position, the meter and
-the "simulated" tag return, and the PURPLE marker goes back to "?" at 76 %: the exact opening
-frame.
+focus of "Look again at the first town", not a dim leftover. Ours then turns back its quarter
+turn while it grows into the opening position (one move, landing on "first"), the meter and the
+"simulated" tag return on "town", and in the 1.2 s pause the PURPLE marker goes back to "?" at
+76 %: the exact opening frame, seen in silence. The "? demanded" marker pulses on "guessed" and the board's
+frame on "map". The frame holds 1.2 s after the last word, then fades to the background (round
+6: no series card dissolving over the board; trailing silence under 2 s).
 
-> Look again at the first town. As Schelling argued, whatever you guessed its people demanded,
-> the map alone could not have told you.
+> Look again at the first town. [pause 1.2] As Schelling argued, whatever you guessed its people
+> demanded, [pause 0.3] the map alone could not have told you. (speed 0.80; it ran 215 wpm)
 
 ## Sources
 - Schelling, T. C. (1971). Dynamic models of segregation. *Journal of Mathematical Sociology*

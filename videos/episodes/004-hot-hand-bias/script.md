@@ -89,12 +89,12 @@ leaves at "Gather". Red arrow from 50% to the marker; "cold" on "reads cold", "�
 on "nine".
 
 ### 6. Insight: one vote per row (1:07–1:50) — *pool*, *votes*, *crowds*, *lineup*, *formula*
-> Yet no flip is biased. Gather all twenty four checked flips: twelve heads, twelve tails. Total
-> heads over total flips: exactly half.
+> Yet no flip is biased. Gather all twenty four checked flips: *[pause 0.6]* twelve heads, twelve
+> tails. Total heads over total flips: exactly half.
 > But each row gets one vote, however many flips it checked.
 > Checked heads come in crowds, since a heads gets the next flip checked too. Here, three heads
-> share a single vote, while this lone tails gets a whole one.
-> Twelve heads crowd into eight rows. Twelve tails spread across eleven.
+> share a single vote, while this lone tails gets a whole one. *[≈1.9 s: the 8 heads rows, then
+> the 11 tails rows, boxed with their counts, silently]*
 > Line them up: *[pause 0.8]* the heads hold five and two thirds of the fourteen votes.
 > *[pause 1.0]* That's seventeen out of forty two. *[1.6 s]*
 > So the test takes an average of ratios, one per row, instead of the ratio of totals.
@@ -139,8 +139,8 @@ strips and become 1/14 and Σ. 5⅔ / 14 = 17/42 is held complete ≥ 3.2 s. The
 take the rings in, 0.13 clear of them.
 
 ### 7. The mirror (1:50–2:07) — *mirror*, *gap*
-> Now score the flip after each tails. Swap heads and tails, and the strip flips over one half:
-> the test reads high, twenty five out of forty two.
+> Now score the flip after each tails. A fair coin can't tell heads from tails, so the strip
+> flips over one half: the test reads high, twenty five out of forty two.
 > Subtract the averages: a fair coin shows a gap of minus nineteen points.
 
 Visual: on "score" the pooled strip, its formula and the left side of the row-average formula fade
@@ -158,9 +158,9 @@ to the after-heads cursor: "−19 points".
 > The nineteen eighty five study ran the same comparison on twenty six Cornell players: up to a
 > hundred shots each, from where they'd hit about half. After three hits, versus after three misses.
 > For a random shooter, the same crowding pulls after hits down to forty six percent on average,
-> and after misses up to fifty four. Miller and Sanjurjo's twenty eighteen paper *[pause 0.5]* puts
-> the gap at about minus eight points. *[pause 0.9]* Longer records shrink it; *[pause 0.9]* longer
-> streaks grow it.
+> and after misses up to fifty four. Miller and Sanjurjo *[pause 0.4]* put the gap at about minus
+> eight points. *[pause 0.9]* Longer records shrink it; *[pause 1.2]* longer streaks grow it.
+> *[pause 1.3]*
 > The Cornell players hit forty nine percent after three hits, and forty five after three misses.
 > *[pause 0.6]* The study found plus four, *[pause 0.4]* too close to zero to count, so no hot hand.
 > Measured from minus eight, it's twelve points hot. *[pause 0.9]* That's evidence for a hot hand
@@ -264,6 +264,33 @@ Round-8 changes (both critics' fixes; see CHANGELOG):
 - **Landing:** the 14 scored rows leave one after another, left-most column first (lag 0.22),
   each stepping back to 40% and arcing up and over into (1/14) Σᵢ hᵢ/nᵢ; "= 17/42" lands on "this
   test".
+
+Round-9 changes (both critics' fixes; see CHANGELOG):
+- **Pool (1:06):** the 24 flips pour one card column at a time (columns 2 and 3, four flips each,
+  together), the other columns at 30%, into a block of the strip under their own column; each disc
+  takes the nearer channel beside its card (at most 8 in flight, none crossing a coin). The strip
+  then sorts, heads along its upper half to the left, tails along its lower half to the right,
+  in the [pause 0.6] after "checked flips:".
+- **Votes:** the stepped-back 40.5% readout moves to sit over its marker's top, ≥ 1.1 units clear
+  of "1 vote per row" at the strip's left end.
+- **Lineup:** the spoken count is cut; as "a whole one" ends the 8 heads rows are boxed with "12
+  heads · 8 rows" (held 1 s), then the 11 tails rows with "12 tails · 11 rows", held while "Line
+  them up:" is said; the votes pack as "up:" ends; both counts stay until "five".
+- **Mirror:** the recolour lands on "can't tell heads from tails" (the reason for the mirror).
+- **Cornell (2:10):** the two cursors and the −19 gap leave with the coin strips; on "about half"
+  the dashed line itself thickens (3 → 8 → 3) with its 50% tick; the cursors grow back out of the
+  dashed line on "For a random shooter".
+- **Zoom:** the share labels and title are gone in the first 0.4 s; "0" then the −10/−5/+5/+10
+  labels fade in riding with their marks once they are ≥ 1 unit apart; never two titles at once.
+- **Ghosts:** 1.0 unit tall (2.2× before; taller and the sliding streak ghost would strike through
+  the red gap and its "bias" label) at 60%; tags ("1,000 shots", the yellow hit dots, radius 0.07)
+  at mid-height under the gap; the 1,000-shot tag rides with its ghost; each streak slide lasts
+  ≥ 1.0 s.
+- **Cornell data:** "random" → "Cornell" and 46% / 54% → purple "?" in one move; 49% and 45% on
+  the spoken numbers.
+- **Landing:** the axis, its ticks and the dashed line stay at full and are in place by 0.8 s;
+  the payoff fades out over 0.4 s while the cold open fades in from 0.2 s (both faint where they
+  overlap). Tag: "its 4-shot rows average 1/2".
 
 ## Sources (on screen)
 - Gilovich, Vallone & Tversky, 1985 · Cognitive Psychology 17(3):295–314 (shown as "Gilovich et al., 1985 · Cognitive Psychology")

@@ -199,3 +199,17 @@ the row's "= 3.0" in the ring callback; the parked friend-average row stays at 1
 on the bottom edge; the C&F raw steps keep full colour at stroke 1.5 under the stroke-4 dashed
 fits; the landing's "4" candidate leaves instead of dimming; the cold open's "?" is full YELLOW
 from frame 0.
+
+## Round 8 (wording and presentation; no new claims)
+
+Neither round-8 critic found a factual error; both re-verified every number (Feld 1991; Ugander et
+al. 2011: 190, 635 = ⟨k²⟩/⟨k⟩, 92.7 %, the 5,000 cap; Christakis & Fowler 2010: 319 / 425, 13.9 d,
+3.2 d). The changes below reword without changing any claim.
+
+| Claim (spoken or on screen) | Check | Source |
+|---|---|---|
+| "Take Sue, and split her four into the balance point, two and a half, plus her distance, one and a half." (was "Split Sue's count, four, into ...") | Same identity: 4 = 2.5 + 1.5. Reworded because "Split Sue's" ran together ("Splitsus", a 0.02 s gap); a first rewording, "Take Sue's four", came back from Whisper as "Take Sue 4", so the possessive is gone. | computed |
+| Facebook block: "92.7%" / "below their own friends' average" (was "had fewer friends than / their own friends' average") | Ugander et al.: "92.7% of users have less friends than the average friend count of their friends", a per-user comparison; "below their own friends' average", beside the "average user" row, says the same in 5 words. Spoken: "ninety three percent of users had fewer friends than their friends averaged." | Ugander et al. 2011, arXiv:1111.4503 |
+| "... in the friends the students named. The friends' curve rose first. Fitted curves put them thirteen point nine days ahead." | Same claims as round 7, split into sentences with breaths. 13.9 days is C&F's fitted lead for clinical diagnoses (95 % CI 9.9–16.6). | C&F 2010, Abstract |
+| Landing resolution (silent): the 2.5 candidate rises into the girl bar's 2.5; the friend bar grows to the ringed 3; the 4 leaves | 2.5 = μ (the girls), 3 = the token average (60/20), 4 = Sue's count, what Betty sees. All verified above. | Feld 1991 |
+| "sides at 1/4 scale" (inline, was a stacked ¼) | The squares' sides are drawn at 1/4 of the ruler's scale (SQ_SCALE = BEAM_PER/4 in scene.py); unchanged. | presentation |

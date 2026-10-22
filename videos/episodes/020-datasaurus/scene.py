@@ -549,7 +549,7 @@ class Episode(NarratedScene):
                       FadeIn(line_lbl, shift=0.1 * LEFT),
                       run_time=beat.until("Here", offset=-0.1))
             # the reveal: 1.8 s from "real", then a 0.4 s look before it is named
-            beat.wait_until("real", offset=-0.1)
+            beat.wait_until("real", offset=-0.25)              # lands on "Here are the real…"
             self.go(lambda a: lerp(guess, dino, a), 1.8, smooth,
                     FadeOut(guess_lbl, rate_func=window(0.0, 0.25)),
                     FadeOut(guess_line, rate_func=window(0.0, 0.25)),
@@ -603,12 +603,12 @@ class Episode(NarratedScene):
             beat.wait_until("average", offset=-0.1)
             self.play(flag(rows[1]), run_time=0.8)
             beat.wait_until("error", offset=-0.15)
-            self.play(Create(err_bar), flag(rows[3]), FadeIn(sd_tag, rate_func=window(0.4, 1.0)),
+            self.play(Create(err_bar), flag(rows[3]), FadeIn(sd_tag, rate_func=window(0.0, 0.5)),
                       run_time=0.8)
             # "Only thirteen percent showed the points": the bar and its error bar leave (they
             # come back at the landing), so the points alone carry the 13 %
             beat.wait_until("Only", offset=-0.05)
-            self.play(FadeOut(VGroup(bar_rect, err_bar, sd_tag, pct86)),
+            self.play(FadeOut(VGroup(bar_rect, err_bar, sd_tag, pct86), rate_func=window(0.2, 0.9)),
                       self.dots.animate.set_opacity(1.0), Write(pct13),
                       run_time=beat.until("points", offset=0.1))
 
@@ -995,7 +995,7 @@ class Episode(NarratedScene):
             # ... and averaged: copies converge on their mean while the rise grows beside the wall
             avg_cp = VGroup(*[d.copy().set_z_index(4) for d in band_dots])
             self.add(avg_cp)
-            T_c = max(0.9, beat.until_end_of("rises", offset=0.05))
+            T_c = max(0.9, beat.until("r times", offset=-0.35))
             t_rise = min(0.5, max(0.0, beat.until("rises", offset=-0.15) / T_c))
             self.play(*[c.animate.move_to(band_avg).scale(0.075 / 0.055) for c in avg_cp],
                       Create(rise9, rate_func=window(t_rise, 1.0)), run_time=T_c)
@@ -1050,7 +1050,10 @@ class Episode(NarratedScene):
             tL.add_updater(touch_upd(-1))
             bfl.add_updater(lambda m: m.become(bfl_line(rt.get_value())).set_stroke(
                 opacity=wop.get_value()))
+            # (the "r = …" readout is driven explicitly: the dip on its r glyph broke the group
+            # apart in the scene, so its own updater no longer runs)
             self.play(rt.animate.set_value(float(T[4])), wop.animate.set_value(1.0),
+                      UpdateFromFunc(r_live, upd_live),
                       FadeOut(VGroup(run9, rise9, rs_lbl), rate_func=window(0.0, 0.4)),
                       run_time=0.9, rate_func=smooth)
             for m in (self.ell, tR, tL, r_live, bfl):
@@ -1661,7 +1664,7 @@ class Episode(NarratedScene):
         AX_RATE = window(0.05, 0.75)
 
         def ride_nums(m, a):
-            al_, op_ = AX_RATE(a), window(0.3, 0.75)(a)
+            al_, op_ = AX_RATE(a), window(0.22, 0.6)(a)
             for num, q0, q1 in ride:
                 num.move_to(q0 + (q1 - q0) * al_)
                 num.set_opacity(op_)
@@ -1675,7 +1678,7 @@ class Episode(NarratedScene):
                   # his readout and citation stay a little longer (the right half is never empty
                   # for long); they are gone before the formula reaches their slot
                   FadeOut(Group(*late_out), rate_func=window(0.0, 0.5)),
-                  FadeOut(p0_nums, rate_func=window(0.0, 0.28)),
+                  FadeOut(p0_nums, rate_func=window(0.0, 0.2)),
                   ReplacementTransform(src_x, dst_x, rate_func=AX_RATE),
                   ReplacementTransform(src_y, dst_y, rate_func=AX_RATE),
                   ReplacementTransform(p_yt, dst_yname, rate_func=AX_RATE),
@@ -1692,7 +1695,7 @@ class Episode(NarratedScene):
         self.remove(dst_x, dst_y, ax_late, dst_yname, dst_nums)
         self.add(ax)
         with self.narrate("Your line was right: five numbers fix it exactly, slope minus point "
-                          "one. Your cloud was wrong: a blur around this ellipse, all that five "
+                          "one. [pause 0.8] Your cloud was wrong: a blur around this ellipse, all that five "
                           "numbers can draw. [pause 0.6] Most of those papers used a bar graph, "
                           "which draws only two. [pause 0.6] The dinosaur lived in everything they "
                           "leave out.") as beat:

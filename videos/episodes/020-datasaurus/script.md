@@ -5,8 +5,9 @@
 that ellipse (a dinosaur, a star, Anscombe's four datasets) has the same five numbers and even the
 same best-fit line. Only a plot shows the shape.
 
-Runtime 3:29.1 · 471 words (budget ≤ 500, PRODUCTION_GUIDE §13) · narrator af_heart @ 0.84,
-`CADENCE = "shaped"` (B20 and B21 at 0.82, so the letter names are not rushed).
+Runtime ≈ 3:25 · 456 words (budget ≤ 500, PRODUCTION_GUIDE §13) · narrator af_heart @ 0.84,
+`CADENCE = "shaped"` (B9b at 0.80, the densest beat; B20 and B21 at 0.82, so the letter names are
+not rushed). Round 7: B9b's what-if is r = 0.50 (was 0.80; facts #36).
 
 ## Palette (colour → one meaning, whole episode)
 
@@ -172,7 +173,7 @@ outlier, and one point doing all the work.
 > round the readout; tags; outlier and lever point ringed.
 
 ### Landing (3:07–3:28)
-**B23.** Your line was right: five numbers fix it exactly, slope minus point one. Your cloud was
+**B23.** Your line was right: five numbers fix it exactly, slope minus point one. [pause 0.8] Your cloud was
 wrong: a blur around this ellipse, all that five numbers can draw. [pause 0.6] Most of those
 papers used a bar graph, which draws only two. [pause 0.6] The dinosaur lived in everything they
 leave out.

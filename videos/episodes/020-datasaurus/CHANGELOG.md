@@ -650,3 +650,97 @@ check that a shear alone would push s_y to 26.99, verified with numpy).
     comes down the open middle;
   - the bar parking (3:24.5–3:26.1), where the bar fades in place and reappears beside the plot
     without touching "x".
+
+## Round 7 revisions
+
+Round 7 scored 8.7 from both critics (craft: Clarity, Visual, Motion, Concision 8.5; substance:
+Clarity, Visual, Audio, Concision 8.5). No caps, no factual errors. Both said the fixes would
+reach 9.
+
+### Plan of the climb (written before editing)
+- **Clarity (8.5/8.5).** Anchor: "viewer could re-derive it after one watch". Short: the central
+  step at 1:21–1:42 said "rises r times a standard deviation" (which one?), the rise sat on the
+  box wall with no label until 1:38.8, the averaged slice point landed on a touch dot drawn at
+  1:21, the "now" column showed r = −0.06 with a bright "=" next to a cloud tagged r = 0.80, and
+  "the middle of every vertical slice" was true only of the ellipse's chords. Upgrade: say "r
+  times ess why" while the label r s_y is built beside the rise; hide the touch dots so the slice
+  average lands as a new dot that becomes the touch dot; dim the dinosaur's live column to 25 %;
+  "every slice of the ellipse".
+- **Visual (8.5/8.5).** Anchor: "every frame has one focal point". Short: wall, rise, band and
+  touch dot in one 20 px column; the s_x plate clipping dots into half-moons; a knot of strokes at
+  r = −0.06 (kf_17); the bar under full-strength dots at 0:35 (kf_07); an 8-element last frame.
+  Upgrade: the rise moves 0.15 right of the wall and the box steps back; no plates, the simulated
+  cloud leaves the label spots bare; run, rise and label leave on the sweep back; the bar leaves on
+  "Only thirteen percent"; the three rows a bar cannot draw step back at the end.
+- **Motion (8.5/9).** Anchor: "every motion encodes a relation". Short: tick numbers and readout
+  fade out before the new ones arrive (2:41.5–2:44.5); the readout jump at 2:52.9; a tickless
+  hand-off frame (3:07.6). Upgrade: tick numbers cross-fade in place; the readout builds in its
+  final slot while the dinosaur's rows step back; the 0–100 numbers ride their ticks during the
+  hand-off.
+- **Audio (9/8.5).** Short: 6.7 s without a breath in B9b. Upgrade: [pause 0.4] after "Go one
+  standard deviation right." and B9b at speed 0.80.
+- **Concision (8.5/8.5).** Short: "so they share the ellipse and line", "reach one deviation out",
+  the repeated "r times ess why above the center". Upgrade: cut all three.
+
+### What changed (craft = C, substance = S)
+1. *B9b, the one hard step (C1, C2, C3, C7, S1, S2, S3, S4).* New narration: "Say r is point
+   five. Go one standard deviation right. [pause 0.4] On average, the cloud rises r times ess why.
+   [pause 0.7] That's the best-fit line, through the middle of every slice of the ellipse.
+   [pause 0.7] At the wall, the slices shrink to the touch point. [pause 0.4] For the dinosaur,
+   it's just below the middle." (speed 0.80).
+   - On "Say": the dinosaur's "now" column, all five = marks, "matching 5/5" and its own r row
+     step back to 25 % (green and yellow go grey first, so nothing reads olive); the yellow
+     "r = 0.50" is the only live r. The SD box steps back to a 40 % grey and both touch dots go.
+   - The run is labelled s_x under its left third, with no backing plate; the label stays until
+     the slices start.
+   - The rise stands 0.15 right of the wall (stroke 6) as a dimension, with thin ticks back to the
+     wall at ȳ and at the touch height. "r s_y" is built beside it on "r times ess why": its r
+     flies from "r = 0.50", its s_y from the readout (each source dips while its copy leaves).
+   - The 14 slice points' copies merge into one new white dot at their average (61.27 vs 61.30),
+     which turns yellow and becomes the touch dot; the left touch dot appears as the dashed line
+     reaches it.
+   - "At the wall": the box returns to full strength as the slices collapse; the touch dot and
+     "r s_y" flag on "touch point".
+   - "For the dinosaur": the run, the rise and its label fade as r sweeps back; only the dashed
+     line, the centre and the two touch dots remain, and the touch dot flags on "middle".
+   - **r = 0.50 instead of 0.80, and why.** With the plate removed, the s_x label has to keep
+     0.15 clear of the ellipse, the dashed line, the run and the centre dot. A grid search over
+     label positions found no such spot within ~0.3 units of the run at r = 0.80 (the thin ellipse
+     and steep line cut through every candidate); at r = 0.50 there is one under the run's left
+     third. The simulated cloud draws again any point that would land under the three labels or
+     outside the plot (2 of 142 for seed 13458; facts #36). Bonus: at r = 0.50 the touch point is
+     visibly halfway up the half-box.
+2. *Stakes (C4, S8).* A grey "± 1 SD" tag beside the error bar's top cap (most reviewed bar
+   graphs drew ± SE). On "Only thirteen percent" the bar, error bar, tag and "86%" fade to 0 and
+   the strip alone carries "13% showed points"; they return at the landing.
+3. *Anscombe entry (C5, C6).* The median row leaves first. Old and new tick numbers cross-fade in
+   place over the same 0.8 s (the one shared spot, x 75 / 12, hands over in sequence). The
+   dinosaur's rows step back to 30 % and drift up while his readout builds entry by entry in its
+   final bottom-right slot; it never moves again (the B20 copies now rise straight out of it).
+4. *B22 (C8, S5).* "All four of his datasets share these five numbers." The quartet forms on "All
+   four", the ellipse and line copies start on "share", the readout is boxed on "these".
+5. *Hand-off (C9).* Each 0–100 tick number rides its own spot on the growing axes and fades in
+   during the transform (window 0.22–0.6 of the 1.5 s), so no tickless frame remains.
+6. *B8 (S6).* "The two standard deviations reach out on each side, and draw a box."
+7. *Landing (S7, S8).* On "only" the x̄, s_x and r rows step back to a 30 % grey, so ȳ and s_y
+   are the two bright rows on "two" and through the end card; the parked bar carries "± 1 SD"
+   beside its top cap.
+8. *Sync.* "Here are the real points": the reveal now starts 0.25 s before "real" (the deictic
+   check had it at +0.46 s).
+
+**Not changed, with reasons.**
+- Substance fix 9 (retitle) was marked optional; the title is fixed in curriculum.json, and the
+  commit asks for a shape and a tilt, not for "dinosaur".
+- "r times ess why" now occurs in B9b and in B20 ("Same rule: ess ex across, r times ess why
+  up"). The second is a deliberate callback, introduced by "Same rule".
+- Craft fix 7 asked for the s_x label "0.2 below the midpoint of the run". At r = 0.50 that spot
+  is 0.06 from the ellipse; the label sits under the run's left third instead (≥ 0.15 from every
+  stroke, asserted).
+- With the readout in its final bottom-right slot, the upper right is empty from about 2:41 until
+  "slope =" at 2:50.5; the action in those 9 s is in the plot and the flights out of the readout.
+
+**Facts.** Neither critic claimed a factual error. facts.md #36 is rewritten for the r = 0.50
+cloud (seed, redraw rule, exact five numbers, least-squares line through the touch point at
+61.300, slice average 61.27, and the label-clearance search that ruled out 0.80); #26 gains the
+r = 0.50 slice numbers; #38 records the wording changes and the ± SE / ± SD figures (77.6 % /
+15.3 %) behind the new tag.

@@ -485,3 +485,29 @@ one-square derivation, and one histogram reused for A, B, the aimed map and Clar
     used to slide across the growing map.
   - In the λ beat the red 3+ outlines no longer flash back for one frame. A stale dimming
     function had set them to full opacity at the start of the map's step back.
+
+**Mechanics** (final master, review kit, 0 render warnings)
+
+| Metric | Value |
+|---|---|
+| Runtime | 3:34.6 |
+| Words | 496 |
+| Pace | 158 wpm on speech time (152 overall) |
+| Sentences above 200 wpm | 0 |
+| Full stops vs beat turns | 0.34 s vs 0.58 s median |
+| Longest run without a ≥ 0.35 s breath | 13.2 s (gaps beat; was 12.1 s in the limits beat, which now breaks at "half as dense") |
+| Loudness / true peak | −14.0 LUFS / −1.9 dBTP |
+| Longest silence | 1.76 s (the planned prediction hold) |
+| Longest static stretch | 2.7 s |
+| WER | 2.9 % |
+| Banned phrases | 0 |
+| Glyph morphs | 0 |
+| Deictics on an animation | 6/6 |
+| Layout audit | 0 issues in 235 checks (two declared fraction-bar/parenthesis pairs) |
+
+- *Two-hit beat.* Measured silences are 0.9 s after "each pair counts twice" (1:43.4–1:44.3) and 0.9 s after "e to the minus lambda again" (1:49.0–1:50.0). Whisper now ends a segment after "over two" and capitalises "Each" and "E to the minus…". It still writes the 11 s window between them without full stops, which is its own punctuation choice and not a missing pause.
+- *Transcript fixes.* The transcript no longer contains "doesn matter". An intermediate master's "Thank you" hallucination after the last line, and its doubled "Map B", are gone in the final transcript.
+- *Frames checked.*
+  - All 12 contact sheets.
+  - Keyframes at 1:13, 3:22 and 3:33.
+  - Frame strips across the re-rain (0:35–0:39), the gaps beat (1:08–1:20), the λ / P(0) / two-hit build (1:29–1:48), map B (2:32–2:42), the aimed header, the stakes answer (3:09–3:11) and the landing (3:19–3:28).

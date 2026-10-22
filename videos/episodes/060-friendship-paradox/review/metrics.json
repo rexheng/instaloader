@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/060-friendship-paradox/final.mp4",
- "duration_s": 211.8,
+ "duration_s": 213.367,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,12 +8,12 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 9.71,
- "integrated_lufs": -14.0,
- "lra_lu": 2.6,
- "true_peak_dbtp": -2.1,
+ "size_mb": 9.42,
+ "integrated_lufs": -14.2,
+ "lra_lu": 2.7,
+ "true_peak_dbtp": -2.4,
  "leading_silence_s": 0.0,
- "trailing_silence_s": 1.9,
+ "trailing_silence_s": 2.03,
  "longest_internal_silence_s": 2.22,
  "silences_over_1_5s": [
   [
@@ -30,57 +30,56 @@
   ],
   [
    146.74,
-   148.87
+   148.56
   ],
   [
-   160.39,
-   162.57
+   160.09,
+   162.27
   ],
   [
-   202.46,
-   204.4
+   202.42,
+   204.33
+  ],
+  [
+   207.63,
+   209.85
   ]
  ],
- "frames": 6354,
- "longest_static_s": 3.4,
+ "frames": 6401,
+ "longest_static_s": 3.1,
  "static_stretches_over_3s": [
   [
-   53.23,
-   56.63,
-   3.4
-  ],
-  [
-   171.63,
-   174.77,
-   3.13
+   171.37,
+   174.47,
+   3.1
   ]
  ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.112821180555557,
- "transcript_words": 495,
+ "background_luma": 22.069583333333334,
+ "transcript_words": 501,
  "first_word_s": 0.02,
- "last_word_s": 210.26935,
- "wpm_speech": 154.9,
- "wpm_overall": 140.2,
+ "last_word_s": 213.86801,
+ "wpm_speech": 155.3,
+ "wpm_overall": 140.9,
  "wpm_excluding_all_pauses": 179.4,
  "narration_file": "videos/episodes/060-friendship-paradox/narration.json",
- "wer": 0.0298,
- "narration_words": 470,
+ "wer": 0.0361,
+ "narration_words": 471,
  "banned_phrase_hits": 0,
  "slop_hits": [],
  "narration_craft": {
-  "narration_words": 495,
+  "narration_words": 497,
   "voice_speeds": [
    0.74,
    0.82
   ],
-  "sentence_wpm_median": 171.4,
+  "sentence_wpm_median": 171.7,
   "sentences_over_200wpm": 0,
-  "sentence_gap_median_s": 0.39,
-  "sentence_gap_cv": 0.27,
+  "sentence_gap_median_s": 0.4,
+  "sentence_gap_cv": 0.26,
   "beat_gap_median_s": 0.74,
-  "longest_breathless_run_s": 11.2,
+  "longest_breathless_run_s": 10.7,
   "max_distinct_numbers_20s": 6,
   "repeated_phrases": 5,
   "glyph_morphs": 0,
@@ -98,7 +97,7 @@
    "small-label": 0
   },
   "allowed": 0,
-  "checks": 206
+  "checks": 213
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -144,44 +143,44 @@
    "file": "keyframes/kf_07_00-31.2.png"
   },
   {
-   "t": 35.43,
-   "file": "keyframes/kf_08_00-35.4.png"
+   "t": 35.5,
+   "file": "keyframes/kf_08_00-35.5.png"
   },
   {
-   "t": 40.87,
-   "file": "keyframes/kf_09_00-40.9.png"
+   "t": 42.57,
+   "file": "keyframes/kf_09_00-42.6.png"
   },
   {
-   "t": 49.03,
+   "t": 49.0,
    "file": "keyframes/kf_10_00-49.0.png"
   },
   {
-   "t": 60.07,
-   "file": "keyframes/kf_11_01-00.1.png"
+   "t": 54.57,
+   "file": "keyframes/kf_11_00-54.6.png"
   },
   {
-   "t": 68.37,
-   "file": "keyframes/kf_12_01-08.4.png"
+   "t": 62.73,
+   "file": "keyframes/kf_12_01-02.7.png"
   },
   {
-   "t": 76.0,
-   "file": "keyframes/kf_13_01-16.0.png"
+   "t": 70.67,
+   "file": "keyframes/kf_13_01-10.7.png"
+  },
+  {
+   "t": 80.03,
+   "file": "keyframes/kf_14_01-20.0.png"
   },
   {
    "t": 84.47,
-   "file": "keyframes/kf_14_01-24.5.png"
-  },
-  {
-   "t": 87.37,
-   "file": "keyframes/kf_15_01-27.4.png"
+   "file": "keyframes/kf_15_01-24.5.png"
   },
   {
    "t": 91.13,
    "file": "keyframes/kf_16_01-31.1.png"
   },
   {
-   "t": 97.03,
-   "file": "keyframes/kf_17_01-37.0.png"
+   "t": 97.13,
+   "file": "keyframes/kf_17_01-37.1.png"
   },
   {
    "t": 100.63,
@@ -196,71 +195,71 @@
    "file": "keyframes/kf_20_02-01.5.png"
   },
   {
+   "t": 127.53,
+   "file": "keyframes/kf_21_02-07.5.png"
+  },
+  {
    "t": 134.07,
-   "file": "keyframes/kf_21_02-14.1.png"
+   "file": "keyframes/kf_22_02-14.1.png"
   },
   {
    "t": 135.9,
-   "file": "keyframes/kf_22_02-15.9.png"
+   "file": "keyframes/kf_23_02-15.9.png"
   },
   {
    "t": 137.73,
-   "file": "keyframes/kf_23_02-17.7.png"
+   "file": "keyframes/kf_24_02-17.7.png"
   },
   {
    "t": 139.67,
-   "file": "keyframes/kf_24_02-19.7.png"
+   "file": "keyframes/kf_25_02-19.7.png"
   },
   {
-   "t": 140.77,
-   "file": "keyframes/kf_25_02-20.8.png"
+   "t": 140.73,
+   "file": "keyframes/kf_26_02-20.7.png"
   },
   {
    "t": 144.07,
-   "file": "keyframes/kf_26_02-24.1.png"
+   "file": "keyframes/kf_27_02-24.1.png"
   },
   {
-   "t": 147.33,
-   "file": "keyframes/kf_27_02-27.3.png"
+   "t": 147.1,
+   "file": "keyframes/kf_28_02-27.1.png"
   },
   {
-   "t": 148.63,
-   "file": "keyframes/kf_28_02-28.6.png"
+   "t": 148.33,
+   "file": "keyframes/kf_29_02-28.3.png"
   },
   {
-   "t": 152.47,
-   "file": "keyframes/kf_29_02-32.5.png"
+   "t": 152.17,
+   "file": "keyframes/kf_30_02-32.2.png"
   },
   {
-   "t": 156.3,
-   "file": "keyframes/kf_30_02-36.3.png"
+   "t": 155.83,
+   "file": "keyframes/kf_31_02-35.8.png"
   },
   {
-   "t": 168.13,
-   "file": "keyframes/kf_31_02-48.1.png"
+   "t": 167.83,
+   "file": "keyframes/kf_32_02-47.8.png"
   },
   {
-   "t": 170.43,
-   "file": "keyframes/kf_32_02-50.4.png"
+   "t": 170.13,
+   "file": "keyframes/kf_33_02-50.1.png"
   },
   {
-   "t": 176.27,
-   "file": "keyframes/kf_33_02-56.3.png"
+   "t": 178.03,
+   "file": "keyframes/kf_34_02-58.0.png"
   },
   {
-   "t": 178.33,
-   "file": "keyframes/kf_34_02-58.3.png"
+   "t": 184.07,
+   "file": "keyframes/kf_35_03-04.1.png"
   },
   {
-   "t": 184.37,
-   "file": "keyframes/kf_35_03-04.4.png"
+   "t": 194.4,
+   "file": "keyframes/kf_36_03-14.4.png"
   },
   {
-   "t": 194.47,
-   "file": "keyframes/kf_36_03-14.5.png"
-  },
-  {
-   "t": 198.5,
+   "t": 198.47,
    "file": "keyframes/kf_37_03-18.5.png"
   },
   {
@@ -268,14 +267,16 @@
    "file": "keyframes/kf_38_03-24.8.png"
   },
   {
-   "t": 210.83,
-   "file": "keyframes/kf_39_03-30.8.png"
+   "t": 212.2,
+   "file": "keyframes/kf_39_03-32.2.png"
   },
   {
-   "t": 211.77,
-   "file": "keyframes/kf_40_03-31.8.png"
+   "t": 213.33,
+   "file": "keyframes/kf_40_03-33.3.png"
   }
  ],
- "flags": [],
+ "flags": [
+  "trailing silence: 2.0s > 2 s"
+ ],
  "implied_caps": []
 }

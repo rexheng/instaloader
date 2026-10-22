@@ -19,23 +19,28 @@
 [1:16.6–1:21.9] Your positive result ruled out everyone who tested negative.
 [1:21.9–1:27.1] What's left is a smaller sample space, these 120 people.
 [1:27.1–1:35.5] Your chance of being sick is the red share of this crowd, 20 out of 20 plus 100.
-[1:35.5–1:57.3] Unrounded the red count is 20 sick people times 99 and the blue every healthy person times 1 Divide everything by 10 counts become shares The share stays the same These are how common each group is and these are how often each group tests positive Name them
-[1:57.5–2:02.9] and you have Bayes' theorem. All it does is shrink the sample space to what the evidence allows,
-[2:02.9–2:11.5] then take the share. Swap the disease for a police watch list. For the 2017 Champions League
-[2:11.5–2:19.8] final, about 170,000 people came to Cardiff. The watch lists held about 1,200 photos, so
-[2:19.8–2:24.6] even a small error rate per face would swamp the real matches.
-[2:24.6–2:32.4] Face recognition cameras scanned the crowds. Over four days, they raised 2,470 alerts.
-[2:32.4–2:40.6] Shrink to the alerts. Take the red share. The police counted 173 as right, 7 percent.
+[1:35.5–1:57.0] Unrounded the red count is 20 sick people times 99 and the blue every healthy person times 1 Divide everything by 10 counts become shares The share stays the same These are how common each group is and these are how often each group tests positive
+[1:57.0–1:59.5] Name them and you have Bayes' theorem.
+[1:59.5–2:06.1] All it does is shrink the sample space to what the evidence allows, then take the share.
+[2:06.1–2:09.0] Swap the disease for a police watchlist.
+[2:09.0–2:16.4] For the 2017 Champions League final, about 170,000 people came to Cardiff.
+[2:16.4–2:22.8] The watch lists held about 1,200 photos, so even a small error rate per face would swamp
+[2:22.8–2:24.6] the real matches.
+[2:24.6–2:27.7] Face recognition cameras scanned the crowds.
+[2:27.7–2:32.4] Over four days, they raised 2,470 alerts.
+[2:32.4–2:34.0] Shrink to the alerts.
+[2:34.0–2:35.4] Take the red share.
+[2:35.4–2:40.6] The police counted 173 as right, 7%.
 [2:40.6–2:44.8] In machine learning, that share is called precision.
-[2:44.8–2:52.0] Cardiff University's evaluators counted only alerts the logbooks confirmed, 3%.
-[2:52.0–2:57.6] Months later, a new algorithm, better photos and practiced operators thinned out the false
-[2:57.6–3:05.0] alarms, the blue term in Bayes' denominator, and their count rose to 46%.
+[2:44.8–2:51.7] Cardiff University's evaluators counted only alerts the logbooks confirmed, 3%.
+[2:51.7–2:57.6] Months later, a new algorithm, better photos and practiced operators thinned out the false
+[2:57.6–3:05.0] alarms, the blue term in Bayes Denominator, and their count rose to 46%.
 [3:05.0–3:08.2] Back to your test.
-[3:08.2–3:11.2] 17% assumes a random screen.
-[3:11.2–3:14.2] Symptoms raise the 1 in 500.
-[3:14.2–3:17.2] At 1 in 100, 50%.
-[3:17.2–3:20.2] At 1 in 2, 99, where the rule held.
-[3:22.2–3:25.2] The title's 99% is the test's recall.
-[3:25.2–3:28.2] How often the sick test positive.
-[3:28.2–3:31.2] 17% is its precision.
-[3:31.2–3:33.2] How often the positive are sick.
+[3:08.2–3:12.2] Your 17% assumes a random screen.
+[3:12.2–3:14.6] Symptoms raise the 1 in 500.
+[3:14.6–3:17.3] At 1 in 100, 50%.
+[3:17.3–3:21.8] At 1 in 2, 99 where the rule held.
+[3:21.8–3:25.4] The title's 99% is the test's recall.
+[3:25.4–3:28.0] How often the sick test positive.
+[3:28.0–3:30.7] 17% is its precision.
+[3:30.7–3:32.6] How often the positive are sick.

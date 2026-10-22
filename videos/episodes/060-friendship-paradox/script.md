@@ -81,14 +81,14 @@ Sue's, Alice's and Betty's tokens pulse as named. Sue's name label now sits up-l
 > Where does the extra half come from?
 > Measure each girl's distance from the girls' balance point, two and a half, and square it.
 > *[pause 1.5]* The squares average one and a quarter, the variance, sigma squared. *[pause]*
-> Split Sue's count, four, *[pause 0.4]* into the balance point, two and a half, *[pause 0.4]* plus her
-> distance, one and a half.
+> Take Sue, and split her four, *[pause 0.5]* into the balance point, two and a half, *[pause 0.4]*
+> plus her distance, one and a half.
 > Squaring gives two and a half squared, her distance squared, and a cross term. *[pause]* Every
 > girl splits this way. Because the beam balances, the distances add to zero, and the cross terms
 > cancel. *[pause]*
 > So the average of k squared is mu squared plus sigma squared. *[pause 1.6]* And friends average mu,
 > plus sigma squared over mu. *[pause 1.2]* Here that's two and a half, *[pause 0.3]* plus a half: exactly the
-> extra half friend we measured. *[pause 0.9]* With no spread, the ring had no gap. *[pause 1.3]*
+> extra half friend we measured. *[pause 0.9]* With no spread, the ring had no gap. *[pause 1.0]*
 
 Visual (the one picture): the girls slide onto a beam (0.8 apart), each name riding along to sit
 under her node (Text 20). Round 6: a GRAY count ruler draws under the beam, ticks 1, 2, 3, 4 at the
@@ -164,9 +164,9 @@ Citation: Ugander et al., 2011 · arXiv:1111.4503.
 ### 7. Payoff
 > Christakis and Fowler put this to work at Harvard. Named friends have more friends, so they sit
 > closer to everyone else, and should catch flu first. *[pause 0.5]* They tracked flu diagnoses in
-> random students, and in the friends those students named. The friends' curve rose first: fitted
-> curves put them thirteen point nine days ahead. *[pause 0.9]* With self-reported symptoms, the lead
-> shrank to about three.
+> random students, and in the friends the students named. *[pause 0.5]* The friends' curve rose
+> first. *[pause 0.4]* Fitted curves put them thirteen point nine days ahead. *[pause 0.9]* With
+> self-reported symptoms, the lead shrank to about three.
 
 (Round 6b: the year is on the chart's axis and the group sizes are on its labels, so neither is
 spoken; the labels become "319 random students" and "425 friends they named" as the groups are named.)
@@ -189,7 +189,7 @@ length, ending at "3.2 days".
 Citation: Christakis & Fowler, 2010 · PLoS ONE · Fig. 3 redrawn, logistic refit.
 
 ### 8. Landing (one move, round 6b)
-> Betty looks at her one friend, Sue, and sees four. *[pause 0.8]* Most of us are Betty.
+> Betty looks at her one friend, *[pause 0.3]* Sue, and sees four. *[pause 2.1]* Most of us are Betty.
 
 Visual: the chart fades out, then the cold-open frame itself fades back in (round 5: no
 cross-dissolve): the network, "average girl 2.5", and "average friend ?" with the drop lines and
@@ -256,3 +256,35 @@ candidates: 4 is what Betty sees, 2.5 counts the girls, 3 counts the tokens.)
   in the breath that follows, silently, the girl bar and the 2.5 candidate flash BLUE, every
   friendship flashes, the friend bar grows to the ringed 3 and the 4 leaves; on "Most of us are
   Betty" Betty and her token pulse. End card.
+
+## Round 8 changes (visual plan)
+
+- **Sort (1:00-1:03), two stages.** The tokens shrink into the girls they landed on and the names
+  leave; on "Line the girls up" every girl moves onto the beam row in her present left-to-right
+  order (Dale, above Pam, first), so no two paths cross; on "by friend count" the row reorders:
+  girls moving left arc over the row and girls moving right under it, each on a half circle
+  centred on her own move, so the paths nest one slot (0.8) apart and never meet. The names
+  return under their girls once the row has landed, and the ruler draws on "two at each count".
+- **YELLOW never fades.** Every YELLOW object enters and leaves either by growing or shrinking at
+  full colour (candidates, stack tokens, the 3.0 fulcrum, tokens, which grow from a quarter size
+  as they leave their sender) or with an opacity ramp of at most 0.2 s (labels, read-outs, the
+  outline). Alice's and the C&F named friends' YELLOW rings are drawn over the BLUE outline
+  (a BLUE -> YELLOW recolour passed through khaki).
+- **Variance squares:** the eight area labels zigzag (the right girl of each pair 0.38 lower), and
+  the scale tag is inline, "sides at 1/4 scale" at MathTex 36 (the stacked 1/4 was 19 px).
+- **Ring callback:** the whole result row leaves and comes back complete; the bars and their
+  labels step back to 45 % (BLUE stays BLUE), the beam picture to 35 %.
+- **Facebook:** the 92.7 % block is "92.7%" / "below their own friends' average"; the brace,
+  "a few users" and "Facebook's limit" leave as it is written (11 words of prose on screen).
+  The three numbers that drop into the row are invisible until 0.3 below the tick labels.
+- **C&F hand-off, four moves:** the tokens merge into the girls they named and the friendships,
+  names and caption leave (0.35 s); the class contracts to 0.55 inside the plot area, every node
+  above the coming x-axis (0.5 s); the axes draw while the named friends fly one after another
+  into the YELLOW origin (0.85 s); then the random students into the BLUE origin (0.7 s); then
+  the legend entries move to their curves. Every path stays 0.25 above the axis until its last
+  0.15 s. A 0.5 s breath after "the students named" and 0.4 s after "rose first".
+- **Landing:** in the 2.1 s silence after "sees four": (a) the 2.5 candidate rises into the girl
+  bar's 2.5, which flashes with the bar; (b) every friendship flashes, the "?" and drop lines go,
+  the friend bar grows to 3 at one smooth rate and the 3 steps to its end; (c) the 3 is ringed as
+  the 4 leaves. "Most of us are Betty" has only Betty and her token pulsing. The scene fades out
+  completely before the end card fades in.

@@ -67,134 +67,130 @@ On a fair coin, the test reads cold, by nine and a half points.
 Yet no flip is biased.
 
 18
-00:01:05,860 --> 00:01:10,280
-Gather all twenty four checked flips: twelve heads, twelve tails.
+00:01:05,860 --> 00:01:08,010
+Gather all twenty four checked flips:
 
 19
-00:01:10,580 --> 00:01:13,770
-Total heads over total flips: exactly half.
+00:01:08,610 --> 00:01:10,610
+twelve heads, twelve tails.
 
 20
-00:01:14,366 --> 00:01:17,976
-But each row gets one vote, however many flips it checked.
+00:01:11,010 --> 00:01:14,200
+Total heads over total flips: exactly half.
 
 21
-00:01:18,433 --> 00:01:23,073
-Checked heads come in crowds, since a heads gets the next flip checked too.
+00:01:14,800 --> 00:01:18,410
+But each row gets one vote, however many flips it checked.
 
 22
-00:01:23,573 --> 00:01:29,153
-Here, three heads share a single vote, while this lone tails gets a whole one.
+00:01:18,866 --> 00:01:23,506
+Checked heads come in crowds, since a heads gets the next flip checked too.
 
 23
-00:01:29,900 --> 00:01:32,170
-Twelve heads crowd into eight rows.
+00:01:24,006 --> 00:01:29,586
+Here, three heads share a single vote, while this lone tails gets a whole one.
 
 24
-00:01:32,470 --> 00:01:34,840
-Twelve tails spread across eleven.
-
-25
-00:01:35,600 --> 00:01:36,550
+00:01:31,333 --> 00:01:32,283
 Line them up:
 
-26
-00:01:37,350 --> 00:01:40,690
+25
+00:01:33,083 --> 00:01:36,423
 the heads hold five and two thirds of the fourteen votes.
 
-27
-00:01:41,690 --> 00:01:43,980
+26
+00:01:37,423 --> 00:01:39,713
 That's seventeen out of forty two.
 
-28
-00:01:45,433 --> 00:01:49,173
+27
+00:01:41,166 --> 00:01:44,906
 So the test takes an average of ratios, one per row,
 
-29
-00:01:49,473 --> 00:01:51,563
+28
+00:01:45,206 --> 00:01:47,296
 instead of the ratio of totals.
 
-30
-00:01:53,066 --> 00:01:55,546
+29
+00:01:48,800 --> 00:01:51,280
 Now score the flip after each tails.
 
-31
-00:01:55,846 --> 00:02:04,246
-Swap heads and tails, and the strip flips over one half: the test reads high, twenty five out of forty two.
+30
+00:01:51,580 --> 00:02:01,510
+A fair coin can't tell heads from tails, so the strip flips over one half: the test reads high, twenty five out of forty two.
 
-32
-00:02:04,833 --> 00:02:08,913
+31
+00:02:02,100 --> 00:02:06,180
 Subtract the averages: a gap of minus nineteen points.
 
-33
-00:02:09,866 --> 00:02:20,096
+32
+00:02:07,133 --> 00:02:17,363
 The nineteen eighty five study ran the same comparison on twenty six Cornell players: up to a hundred shots each, from where they'd hit about half.
 
-34
-00:02:20,596 --> 00:02:23,786
+33
+00:02:17,863 --> 00:02:21,053
 After three hits, versus after three misses.
 
-35
-00:02:24,233 --> 00:02:33,243
+34
+00:02:21,500 --> 00:02:30,510
 For a random shooter, the same crowding pulls after hits down to forty six percent on average, and after misses up to fifty four.
 
+35
+00:02:30,960 --> 00:02:32,370
+Miller and Sanjurjo
+
 36
-00:02:33,693 --> 00:02:36,783
-Miller and Sanjurjo's twenty eighteen paper
+00:02:32,770 --> 00:02:34,990
+put the gap at about minus eight points.
 
 37
-00:02:37,283 --> 00:02:39,673
-puts the gap at about minus eight points.
-
-38
-00:02:40,573 --> 00:02:42,193
+00:02:35,890 --> 00:02:37,510
 Longer records shrink it;
 
-39
-00:02:43,093 --> 00:02:44,653
+38
+00:02:38,710 --> 00:02:40,270
 longer streaks grow it.
 
-40
-00:02:45,600 --> 00:02:52,950
+39
+00:02:42,033 --> 00:02:49,383
 The Cornell players hit forty nine percent after three hits, and forty five after three misses.
 
-41
-00:02:53,550 --> 00:02:55,450
+40
+00:02:49,983 --> 00:02:51,883
 The study found plus four,
 
-42
-00:02:55,850 --> 00:02:59,200
+41
+00:02:52,283 --> 00:02:55,633
 too close to zero to count, so no hot hand.
 
-43
-00:03:00,000 --> 00:03:03,130
+42
+00:02:56,433 --> 00:02:59,563
 Measured from minus eight, it's twelve points hot.
 
-44
-00:03:04,030 --> 00:03:09,480
+43
+00:03:00,463 --> 00:03:05,913
 That's evidence for a hot hand in a gym, not proof it survives defenders in a game.
 
-45
-00:03:11,066 --> 00:03:12,026
+44
+00:03:07,500 --> 00:03:08,460
 One half
 
-46
-00:03:12,176 --> 00:03:13,876
+45
+00:03:08,610 --> 00:03:10,310
 is what a fair coin does.
 
-47
-00:03:14,676 --> 00:03:18,526
+46
+00:03:11,110 --> 00:03:14,960
 Seventeen out of forty two is what this test sees.
 
-48
-00:03:18,826 --> 00:03:20,506
+47
+00:03:15,260 --> 00:03:16,940
 A fifty percent shooter
 
-49
-00:03:20,806 --> 00:03:23,056
+48
+00:03:17,240 --> 00:03:19,490
 who averages one half on this test
 
-50
-00:03:23,256 --> 00:03:24,946
+49
+00:03:19,690 --> 00:03:21,380
 is already running hot.
 

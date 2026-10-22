@@ -94,10 +94,20 @@ def rgb255(c) -> np.ndarray:
     return np.array(ManimColor(c).to_rgb(), dtype=np.float32) * 255
 
 
-def emph(m: Mobject, color=None, scale: float = 1.15, run_time: float = 0.8):
+def emph(m: Mobject, color=None, scale: float = 1.15, run_time: float = 0.8, about_edge=None):
     """A <= 1 s scale pulse that keeps the object's own colours (yellow means 'tested +'
-    in this episode, so the house yellow flag() is not used)."""
-    return m.animate(rate_func=there_and_back, run_time=run_time).scale(scale)
+    in this episode, so the house yellow flag() is not used).  A label that sits beside an
+    arrow, a bar or another label carries `ss_anchor` (the edge that faces its neighbour), and
+    the pulse grows away from that edge, so it never grows into the neighbour (guide §11.6)."""
+    edge = about_edge if about_edge is not None else getattr(m, "ss_anchor", None)
+    anim = m.animate(rate_func=there_and_back, run_time=run_time)
+    return anim.scale(scale, about_edge=edge) if edge is not None else anim.scale(scale)
+
+
+def anchor(edge, *ms):
+    """Mark labels whose pulse must keep `edge` fixed (it faces an arrow, bar or label)."""
+    for m in ms:
+        m.ss_anchor = edge
 
 
 def early(t: float) -> float:
@@ -547,7 +557,9 @@ class Meter:
         self.value = DecimalNumber(0, num_decimal_places=0, unit=r"\%", font_size=MATH,
                                    color=INK)
         self.value.add_updater(self._place_value)
+        self.value.ss_anchor = RIGHT               # it sits left of the bar: pulse away from it
         self.qmark = MathTex("?", font_size=EQ, color=INK)
+        self.qmark.ss_anchor = RIGHT
         self.qmark.add_updater(lambda m: m.next_to(self.track, LEFT, buff=0.22))
         self.title = label("chance you're sick", size=LABEL)
         self.title.move_to(self.title_at(center))
@@ -851,6 +863,7 @@ class Episode(NarratedScene):
         naive_word = label("naive", size=26, color=GRAY)
         naive_word.next_to(naive_pct, LEFT, buff=0.18).align_to(naive_pct, DOWN)
         naive_lbl = VGroup(naive_word, naive_pct)
+        anchor(DOWN, naive_lbl)
         meter_naive = VGroup(marker, naive_lbl)
 
         # their answer (95 %, the doctors' test's own accuracy) becomes ours (99 %): a copy of the
@@ -890,7 +903,8 @@ class Episode(NarratedScene):
             beat.wait_until("test's", offset=-0.2)
             self.play(FadeIn(their_test, shift=0.08 * UP), run_time=0.7)
             beat.wait_until("ninety-five", offset=-0.15)
-            self.play(emph(src95, scale=1.2), emph(their_test[-11:-8], scale=1.2), run_time=0.8)
+            self.play(emph(src95, scale=1.2, about_edge=LEFT), emph(their_test[-11:-8], scale=1.1),
+                      run_time=0.8)
             beat.wait_until("our test", offset=-0.1)
             self.play(emph(D["r99"]), emph(D["r1"]), run_time=0.7)
             beat.wait_until("ninety-nine", offset=-0.5)
@@ -944,6 +958,11 @@ class Episode(NarratedScene):
         cnt_h = counter("healthy", right=X_COUNT_R, y=ROW_Y["healthy"])
         res_s = counter("sick+", left=X_RES_L, y=ROW_Y["sick"])
         res_h = counter("healthy+", left=X_RES_L, y=ROW_Y["healthy"])
+        # pulses grow away from the arrows between the columns (and the rates off their arrows)
+        anchor(RIGHT, cnt_s, cnt_h)
+        anchor(LEFT, res_s, res_h)
+        anchor(DOWN, rate_s)
+        anchor(UP, rate_h)
 
         grid_lbl = VGroup(label("10,000 people"), label("expected counts", size=26, color=GRAY))
         grid_lbl.arrange(RIGHT, buff=0.3, aligned_edge=DOWN)
@@ -1040,6 +1059,7 @@ class Episode(NarratedScene):
             m.move_to([X_RES_L + m.width / 2, sum_y - 0.18 - m.height / 2, 0])
         sum_num.add_updater(upd_sum)
         sum_num.update()
+        anchor(UP, sum_num)                        # it hangs under its rule
         with self.narrate("Of the five thousand who lit up, ninety-nine percent are sick. "
                           "[pause 0.3] Here, the rule holds.") as beat:
             beat.wait_until("five", offset=-0.1)
@@ -1077,7 +1097,7 @@ class Episode(NarratedScene):
             self.remove(driver)
             meter.share.set_value(N_RARE / N_POS)      # the counted picture: 20 of 120 (17 %)
             self.hold(beat.until_end_of("five hundred", offset=0.15))
-            self.play(emph(tbl_prev[:2], scale=1.15), emph(prev_num, scale=1.15), run_time=0.7)
+            self.play(emph(VGroup(tbl_prev[0], tbl_prev[1], prev_num), scale=1.15), run_time=0.7)
 
         # everyone who tests positive at 1 in 500 is drawn as a vector square: the 20 sick grow 3x
         # as they are named, then the 100 healthy positives (left to right); every positive, sick or
@@ -1227,7 +1247,7 @@ class Episode(NarratedScene):
                       FadeIn(eq1), FadeOut(strip_lbl, shift=0.1 * DOWN), run_time=1.2)
             beat.wait_until("red share", offset=-0.1)
             self.play(Create(br_r), FadeIn(n20, shift=0.1 * DOWN),
-                      LaggedStart(*[emph(d, scale=1.4) for d in red_dots], lag_ratio=0.04),
+                      LaggedStart(*[emph(d, scale=1.3) for d in red_dots], lag_ratio=0.04),
                       run_time=0.9)
             beat.wait_until("crowd", offset=-0.2)
             self.play(Create(br_b), FadeIn(n100, shift=0.1 * DOWN), run_time=0.8)
@@ -1267,6 +1287,7 @@ class Episode(NarratedScene):
         S2 = build_stage("2")
         exact_s = MathTex("19.8", font_size=MATH - 4).move_to(res_s, aligned_edge=LEFT)
         exact_h = MathTex("99.8", font_size=MATH - 4).move_to(res_h, aligned_edge=LEFT)
+        anchor(LEFT, exact_s, exact_h)
 
         def move_eq(live, new, rate_func=smooth):
             """The on-screen lhs / = / bar / tail carried onto stage `new`'s layout."""
@@ -1355,6 +1376,8 @@ class Episode(NarratedScene):
         sh_h.move_to([X_COUNT_R - sh_h.width / 2, ROW_Y["healthy"], 0])
         shp_s = MathTex("0.00198", font_size=MATH - 4, color=INK).move_to(res_s, aligned_edge=LEFT)
         shp_h = MathTex("0.00998", font_size=MATH - 4, color=INK).move_to(res_h, aligned_edge=LEFT)
+        anchor(RIGHT, sh_s, sh_h)
+        anchor(LEFT, shp_s, shp_h)
         num_l = [num2[0], num2[1], num2[2]]           # the live glyphs, updated as they change
         den_l = [den2[i] for i in range(7)]
         with self.narrate("Divide everything by ten thousand: counts become shares. [pause 0.4] "
@@ -1463,7 +1486,7 @@ class Episode(NarratedScene):
             self.play(FadeOut(braces, shift=0.08 * DOWN, rate_func=window(0.0, 0.35)),
                       Create(den_box, rate_func=window(0.3, 1.0)), run_time=1.2)
             beat.wait_until("take the share", offset=-0.1)
-            self.play(Create(num_box), LaggedStart(*[emph(d, scale=1.4) for d in red_dots],
+            self.play(Create(num_box), LaggedStart(*[emph(d, scale=1.3) for d in red_dots],
                                                    lag_ratio=0.04), run_time=1.1)
             # the pause after the thesis: the shrunk sample space itself pulses once
             self.hold(beat.until_end_of("share", offset=0.1))
@@ -1505,6 +1528,7 @@ class Episode(NarratedScene):
         leg_scale.arrange(RIGHT, buff=0.15)
         leg_scale.next_to(leg_list, DOWN, buff=0.3).align_to(leg_list, LEFT)
         base_rate = leg_count                       # "≤ 1 in 140"
+        anchor(LEFT, base_rate)                     # its "·" faces "watch list": grow rightwards
         cite_bbc = citation("South Wales Police figures, 2018 · BBC News")
         cite_dav = citation("Davies et al., 2018 · Cardiff University")
         cite_dav.next_to(cite_bbc, RIGHT, buff=0.6).align_to(cite_bbc, DOWN)
@@ -1726,7 +1750,8 @@ class Episode(NarratedScene):
             # "that share": the red share pulses, short enough that the title can roll over on
             # "precision" itself
             beat.wait_until("share", offset=-0.25)
-            self.play(emph(VGroup(br_r2, right_lbl), scale=1.15), emph(meter.value, scale=1.2),
+            self.play(emph(VGroup(br_r2, right_lbl), scale=1.15, about_edge=UP),
+                      emph(meter.value, scale=1.2),
                       run_time=max(0.5, min(0.8, beat.until("precision", offset=-0.35))))
             beat.wait_until("precision", offset=-0.3)
             self.play(*swap(title_alert, title_prec, shift=0.14 * UP, t_out=(0.0, 0.4),
@@ -1770,6 +1795,7 @@ class Episode(NarratedScene):
         ev_red.update()
         ev_blue.update()
         ev_val.update()
+        anchor(RIGHT, ev_val)
         ev_tag = tag("evaluators' count", "final week · 2,632 alerts").next_to(ev_track, RIGHT,
                                                                                buff=0.3)
         # two lines, so the larger (>= 24 px) type still ends inside the safe area
@@ -1858,6 +1884,7 @@ class Episode(NarratedScene):
             m.shift([n_left - m.get_left()[0], n_base - m[0].get_bottom()[1], 0])
         num.add_updater(upd_num)
         num.update()
+        anchor(LEFT, num)
 
         # live head counts per 10,000 people, OUTSIDE the flows beside the band that carries them:
         # 20 / 100 at 1 in 500, 99 / 99 at 1 in 100, 4,950 / 50 at 1 in 2 (the half-sick table)
@@ -1948,12 +1975,28 @@ class Episode(NarratedScene):
             # in the pause, the first frame is re-seen: each arrow swells to the width of the
             # people it carries into the +; the thin 99 % arrow brings 20, the 1 % arrow 100.
             # "you" closes round the landed badge at the same time
-            self.play(ReplacementTransform(L2["ra"], red_band0),
-                      ReplacementTransform(L2["ba"], blue_band0),
+            # each flow starts as wide as the arrow's shaft (5 px) and widens uniformly to the
+            # people it carries, while the thin arrow (head first) fades out under it.  (A point
+            # morph of the arrow into the band grew it as a skewed wedge from the + end, and the
+            # head turned into a detached, jagged tip.)
+            swell = ValueTracker(0.0)
+            shaft_w = 5 * PX
+
+            def flow(a, b, full, col):
+                return lambda: band(a, b, shaft_w + (full - shaft_w) * swell.get_value(), col)
+            red_grow = always_redraw(flow(red_c, plus_c, W * ppv(PREV_N), RED))
+            blue_grow = always_redraw(flow(blue_c, plus_c, W * (1 - ppv(PREV_N)), BLUE))
+            self.add(red_grow, blue_grow)
+            self.bring_to_front(L2["ra"], L2["ba"])
+            self.play(swell.animate(rate_func=smooth).set_value(1.0),
+                      FadeOut(L2["ra"], rate_func=window(0.0, 0.3)),
+                      FadeOut(L2["ba"], rate_func=window(0.0, 0.3)),
                       Create(L2["ring"], rate_func=window(0.0, 0.7)),
                       FadeIn(L2["you"], shift=0.1 * UP, rate_func=window(0.2, 0.8)),
                       FadeIn(cnt_r, rate_func=late), FadeIn(cnt_b, rate_func=late),
                       FadeIn(per_lbl, rate_func=late), run_time=1.0)
+            self.remove(red_grow, blue_grow)
+            self.add(red_band0, blue_band0)
 
         # (built now that the meter is back at its landing place)
         naive_x2 = meter.x_at(0.99)
@@ -1961,6 +2004,7 @@ class Episode(NarratedScene):
                              [naive_x2, METER_LAND[1] + METER_H / 2 + 0.14, 0],
                              color=GRAY, stroke_width=3, dash_length=0.06)
         naive2 = naive_lbl.copy()
+        anchor(DOWN, naive2)
         naive2.next_to(marker2, UP, buff=0.1).align_to(meter.track, RIGHT)
         with self.narrate("Your seventeen percent assumes a random screen. [pause 0.4] Symptoms "
                           "raise the one in five hundred: at one in a hundred, fifty percent; at one "
