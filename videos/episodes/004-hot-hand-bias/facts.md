@@ -104,3 +104,13 @@ Citations on screen (unchanged, both verified in round 6): "Gilovich et al., 198
 Psychology" (17(3):295–314) and "Miller & Sanjurjo, 2018 · Econometrica" (86(6):2019–2047). Round 6:
 GVT's citation is at full strength whenever GVT's own numbers are on screen (49%, 45%, +4), and
 neither citation is dimmed after Cornell's data arrives.
+
+Round-6 wording trims for the 500-word budget (PRODUCTION_GUIDE §13; no claim changed): "a famous
+study" → "a study"; "So first" → "First"; "two of them are heads" → "two are heads"; "Two rows never
+show a heads" → "Two rows show no heads"; the spoken "about forty point five percent" is cut (the
+live readout shows 40.5%); "perfectly fair" → "fair"; "This row's three heads" → "Here, three
+heads" (whisper had heard "rows"); "after a tails, the test reads high" → "the test reads high";
+"Subtract the two averages, and" → "Subtract the averages:"; "Cornell's players" → "The Cornell
+players" (a beat-initial "Cornell's" was heard as "Daniel's"). Payoff, on screen: "the obvious
+guess" (ink) labels the one-half line while both cursors sit on it and rides down with it to the
+zero gap, i.e. what GVT's test assumed a random shooter reads (row 16: +4 was read against zero).

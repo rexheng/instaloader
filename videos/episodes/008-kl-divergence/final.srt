@@ -23,158 +23,158 @@ Or does it move to two, or three?
 The D is KL divergence, named for Kullback and Leibler.
 
 7
-00:00:19,033 --> 00:00:26,613
-Every maximum-likelihood fit shrinks it with the data first, and Bayesian machine learning shrinks it with the order flipped.
+00:00:19,033 --> 00:00:27,163
+Every maximum-likelihood fit shrinks it with the data first, and much of Bayesian machine learning shrinks it with the order flipped.
 
 8
-00:00:26,813 --> 00:00:28,603
+00:00:27,363 --> 00:00:29,153
 It's often called a distance.
 
 9
-00:00:28,966 --> 00:00:30,326
+00:00:29,500 --> 00:00:30,860
 So treat it as one.
 
 10
-00:00:30,706 --> 00:00:34,106
+00:00:31,240 --> 00:00:34,640
 Data first, this bell is point seven six bits away.
 
 11
-00:00:34,226 --> 00:00:42,086
+00:00:34,760 --> 00:00:42,620
 Shift it or stretch it, and that number only grows, so this is bell A: three and a half minutes, give or take one point one.
 
 12
-00:00:42,900 --> 00:00:45,680
+00:00:43,433 --> 00:00:46,213
 But a distance reads the same both ways.
 
 13
-00:00:45,830 --> 00:00:52,170
+00:00:46,363 --> 00:00:52,703
 Put the bell first, and the same two curves are one point seven bits apart, more than twice as far.
 
 14
-00:00:52,920 --> 00:00:57,160
+00:00:53,453 --> 00:00:57,693
 Only the order changed, so the order must be built into the formula.
 
 15
-00:00:57,500 --> 00:01:01,600
+00:00:58,033 --> 00:01:02,133
 To see why, open it up at one real eruption, two minutes long.
 
 16
-00:01:01,980 --> 00:01:04,550
+00:01:02,513 --> 00:01:05,083
 The data's curve gives that length a height, p.
 
 17
-00:01:04,670 --> 00:01:07,620
+00:01:05,203 --> 00:01:08,153
 The bell gives it q, about a quarter as much.
 
 18
-00:01:08,000 --> 00:01:15,750
+00:01:08,533 --> 00:01:16,283
 Double q twice and you reach p, so log base two of p over q is about two: two doublings, or two bits.
 
 19
-00:01:16,100 --> 00:01:17,710
+00:01:16,633 --> 00:01:18,243
 Do that at every length.
 
 20
-00:01:17,830 --> 00:01:23,770
+00:01:19,143 --> 00:01:25,083
 Then weight each one by how often eruptions last that long, which is p, and add it all up.
 
 21
-00:01:24,070 --> 00:01:28,130
+00:01:25,383 --> 00:01:29,443
 Where the bell rises above the data, the grey dips pay a little back.
 
 22
-00:01:28,630 --> 00:01:31,600
+00:01:29,943 --> 00:01:32,913
 That's the divergence: point seven six bits.
 
 23
-00:01:32,500 --> 00:01:37,370
+00:01:33,800 --> 00:01:38,670
 Try a bell that ignores the short eruptions and sits on the long hump.
 
 24
-00:01:37,750 --> 00:01:41,900
+00:01:39,050 --> 00:01:43,200
 At two minutes, it falls short by eighteen and a half doublings.
 
 25
-00:01:42,500 --> 00:01:49,560
+00:01:43,800 --> 00:01:50,860
 More than a third of all eruptions are short ones like this, so the bill comes to five point eight bits.
 
 26
-00:01:50,566 --> 00:01:53,926
+00:01:51,866 --> 00:01:55,226
 Now keep that bill, and swap the order for a second one.
 
 27
-00:01:54,046 --> 00:01:56,076
+00:01:55,346 --> 00:01:57,376
 Every p trades places with q.
 
 28
-00:01:56,376 --> 00:01:59,576
+00:01:57,676 --> 00:02:00,876
 The bell supplies the lengths, and the data judges them.
 
 29
-00:02:00,076 --> 00:02:01,426
+00:02:01,376 --> 00:02:02,726
 Which bell wins now?
 
 30
-00:02:03,266 --> 00:02:04,666
+00:02:04,566 --> 00:02:05,966
 Take bell B first.
 
 31
-00:02:04,816 --> 00:02:09,936
+00:02:06,116 --> 00:02:11,236
 It almost never imagines a short eruption, so ignoring them costs it nothing.
 
 32
-00:02:10,056 --> 00:02:11,666
+00:02:11,356 --> 00:02:12,966
 It pays point six two.
 
 33
-00:02:12,266 --> 00:02:18,866
+00:02:13,566 --> 00:02:20,166
 Bell A imagines eruptions in the gap and out in the tails, lengths the data almost never shows.
 
 34
-00:02:19,066 --> 00:02:21,176
+00:02:20,366 --> 00:02:22,476
 That costs one point seven bits.
 
 35
-00:02:22,066 --> 00:02:26,736
+00:02:23,366 --> 00:02:28,036
 Now start from A, and let the bell slide downhill on the bell-first bill.
 
 36
-00:02:26,856 --> 00:02:33,286
+00:02:28,156 --> 00:02:34,586
 As that bill drains, the other one swells, and the bell settles on the long hump, less than half as wide.
 
 37
-00:02:33,586 --> 00:02:36,806
+00:02:34,886 --> 00:02:38,106
 Flip the order, and the closest bell moves to three.
 
 38
-00:02:38,900 --> 00:02:44,740
+00:02:39,766 --> 00:02:45,606
 Maximum likelihood puts the data first, so a one-bell fit stretches over every hump.
 
 39
-00:02:44,940 --> 00:02:52,780
+00:02:45,806 --> 00:02:53,646
 Variational inference approximates a Bayesian posterior with the model first, so it tends to settle on one hump.
 
 40
-00:02:53,133 --> 00:02:59,993
+00:02:54,000 --> 00:03:00,860
 Blei and colleagues note that variational inference generally underestimates posterior variance.
 
 41
-00:03:00,293 --> 00:03:08,943
-In a real ad-conversion model, it matched MCMC's average for one effect, but its spread was only a fifth as wide.
+00:03:01,160 --> 00:03:09,810
+In a real ad-conversion model, its average for one effect matched MCMC, but its spread was only a fifth as wide.
 
 42
-00:03:09,733 --> 00:03:15,373
+00:03:10,600 --> 00:03:16,240
 Against raw points, every bell-first score is infinite, so the data must be smoothed.
 
 43
-00:03:15,573 --> 00:03:22,573
+00:03:16,440 --> 00:03:23,440
 Smooth it more heavily, the gap partly fills, and the best bell-first fit spreads wide, almost back to A.
 
 44
-00:03:23,366 --> 00:03:26,436
+00:03:24,233 --> 00:03:27,303
 Bell A never misses an eruption that happens.
 
 45
-00:03:26,536 --> 00:03:29,656
+00:03:27,403 --> 00:03:30,523
 Bell B almost never imagines one that doesn't.
 

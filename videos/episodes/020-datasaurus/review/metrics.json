@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/020-datasaurus/final.mp4",
- "duration_s": 215.467,
+ "duration_s": 215.933,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,10 +8,10 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 10.89,
+ "size_mb": 10.83,
  "integrated_lufs": -14.0,
  "lra_lu": 2.4,
- "true_peak_dbtp": -1.8,
+ "true_peak_dbtp": -1.7,
  "leading_silence_s": 0.0,
  "trailing_silence_s": 1.85,
  "longest_internal_silence_s": 1.97,
@@ -23,35 +23,58 @@
   [
    106.84,
    108.8
+  ],
+  [
+   194.28,
+   195.86
   ]
  ],
- "frames": 6464,
+ "frames": 6478,
  "longest_static_s": 2.5,
  "static_stretches_over_3s": [],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.02353298611111,
- "transcript_words": 536,
+ "background_luma": 22.03559895833333,
+ "transcript_words": 538,
  "first_word_s": 0,
- "last_word_s": 213.71335,
- "wpm_speech": 157.8,
- "wpm_overall": 149.3,
- "wpm_excluding_all_pauses": 185.2,
+ "last_word_s": 215.668,
+ "wpm_speech": 157.0,
+ "wpm_overall": 149.5,
+ "wpm_excluding_all_pauses": 184.4,
  "narration_file": "videos/episodes/020-datasaurus/narration.json",
  "wer": 0.0404,
  "narration_words": 520,
  "banned_phrase_hits": 0,
  "slop_hits": [],
+ "narration_craft": {
+  "narration_words": 531,
+  "voice_speeds": [
+   0.84
+  ],
+  "sentence_wpm_median": 177.8,
+  "sentences_over_200wpm": 7,
+  "sentence_gap_median_s": 0.42,
+  "sentence_gap_cv": 0.05,
+  "beat_gap_median_s": 0.39,
+  "longest_breathless_run_s": 14.5,
+  "max_distinct_numbers_20s": 5,
+  "repeated_phrases": 1,
+  "glyph_morphs": 1,
+  "deictics": 12,
+  "deictics_unlanded": 0
+ },
  "layout_audit": {
-  "count": 0,
+  "count": 2,
   "counts": {
    "overlap": 0,
-   "clearance": 0,
+   "clearance": 1,
    "safe-area": 0,
-   "caption-zone": 0
+   "caption-zone": 0,
+   "text-size": 1,
+   "small-label": 0
   },
   "allowed": 0,
-  "checks": 251
+  "checks": 250
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -101,7 +124,7 @@
    "file": "keyframes/kf_08_00-37.6.png"
   },
   {
-   "t": 40.03,
+   "t": 40.0,
    "file": "keyframes/kf_09_00-40.0.png"
   },
   {
@@ -117,32 +140,32 @@
    "file": "keyframes/kf_12_00-53.6.png"
   },
   {
-   "t": 62.73,
-   "file": "keyframes/kf_13_01-02.7.png"
+   "t": 62.5,
+   "file": "keyframes/kf_13_01-02.5.png"
   },
   {
-   "t": 67.17,
-   "file": "keyframes/kf_14_01-07.2.png"
+   "t": 67.13,
+   "file": "keyframes/kf_14_01-07.1.png"
   },
   {
    "t": 75.83,
    "file": "keyframes/kf_15_01-15.8.png"
   },
   {
-   "t": 80.93,
-   "file": "keyframes/kf_16_01-20.9.png"
+   "t": 77.73,
+   "file": "keyframes/kf_16_01-17.7.png"
   },
   {
-   "t": 92.23,
-   "file": "keyframes/kf_17_01-32.2.png"
+   "t": 81.97,
+   "file": "keyframes/kf_17_01-22.0.png"
   },
   {
-   "t": 98.63,
-   "file": "keyframes/kf_18_01-38.6.png"
+   "t": 86.3,
+   "file": "keyframes/kf_18_01-26.3.png"
   },
   {
-   "t": 105.27,
-   "file": "keyframes/kf_19_01-45.3.png"
+   "t": 98.6,
+   "file": "keyframes/kf_19_01-38.6.png"
   },
   {
    "t": 108.67,
@@ -161,74 +184,81 @@
    "file": "keyframes/kf_23_02-02.3.png"
   },
   {
+   "t": 127.37,
+   "file": "keyframes/kf_24_02-07.4.png"
+  },
+  {
    "t": 133.83,
-   "file": "keyframes/kf_24_02-13.8.png"
+   "file": "keyframes/kf_25_02-13.8.png"
   },
   {
-   "t": 137.77,
-   "file": "keyframes/kf_25_02-17.8.png"
+   "t": 137.7,
+   "file": "keyframes/kf_26_02-17.7.png"
   },
   {
-   "t": 145.8,
-   "file": "keyframes/kf_26_02-25.8.png"
+   "t": 145.5,
+   "file": "keyframes/kf_27_02-25.5.png"
   },
   {
    "t": 151.07,
-   "file": "keyframes/kf_27_02-31.1.png"
+   "file": "keyframes/kf_28_02-31.1.png"
   },
   {
    "t": 155.07,
-   "file": "keyframes/kf_28_02-35.1.png"
+   "file": "keyframes/kf_29_02-35.1.png"
   },
   {
-   "t": 163.77,
-   "file": "keyframes/kf_29_02-43.8.png"
+   "t": 170.5,
+   "file": "keyframes/kf_30_02-50.5.png"
   },
   {
    "t": 172.87,
-   "file": "keyframes/kf_30_02-52.9.png"
+   "file": "keyframes/kf_31_02-52.9.png"
   },
   {
-   "t": 185.9,
-   "file": "keyframes/kf_31_03-05.9.png"
+   "t": 186.17,
+   "file": "keyframes/kf_32_03-06.2.png"
   },
   {
-   "t": 188.17,
-   "file": "keyframes/kf_32_03-08.2.png"
+   "t": 194.17,
+   "file": "keyframes/kf_33_03-14.2.png"
   },
   {
-   "t": 193.93,
-   "file": "keyframes/kf_33_03-13.9.png"
+   "t": 197.43,
+   "file": "keyframes/kf_34_03-17.4.png"
   },
   {
-   "t": 196.93,
-   "file": "keyframes/kf_34_03-16.9.png"
+   "t": 203.27,
+   "file": "keyframes/kf_35_03-23.3.png"
   },
   {
-   "t": 202.8,
-   "file": "keyframes/kf_35_03-22.8.png"
+   "t": 206.53,
+   "file": "keyframes/kf_36_03-26.5.png"
   },
   {
-   "t": 206.07,
-   "file": "keyframes/kf_36_03-26.1.png"
+   "t": 208.07,
+   "file": "keyframes/kf_37_03-28.1.png"
   },
   {
-   "t": 207.6,
-   "file": "keyframes/kf_37_03-27.6.png"
+   "t": 211.33,
+   "file": "keyframes/kf_38_03-31.3.png"
   },
   {
-   "t": 210.87,
-   "file": "keyframes/kf_38_03-30.9.png"
+   "t": 214.2,
+   "file": "keyframes/kf_39_03-34.2.png"
   },
   {
-   "t": 213.73,
-   "file": "keyframes/kf_39_03-33.7.png"
-  },
-  {
-   "t": 215.43,
-   "file": "keyframes/kf_40_03-35.4.png"
+   "t": 215.9,
+   "file": "keyframes/kf_40_03-35.9.png"
   }
  ],
- "flags": [],
+ "flags": [
+  "2 scene warning(s) from NarratedScene (timing/layout)",
+  "concision budget: 531 words / 3:35.9 (target ≤ 500 words, ≤ 3:35)",
+  "pace: median sentence 178 wpm, 7 sentence(s) > 200 wpm, speed 0.84 (critics: 'hurried'; keep speed ≤ 0.84, break the fast sentences, add pauses at turns)",
+  "cadence: full stops 0.42 s (variation 0.05), beat turns 0.39 s — metronomic, turns get no more air than full stops",
+  "glyph morphs: 1 Transform(s) between different strings",
+  "layout audit: 2 issue(s) — 0 overlapping, 1 < 0.15 apart, 0 outside the safe area, 0 in the caption zone, 1 under 24 px (see 'Layout audit')"
+ ],
  "implied_caps": []
 }

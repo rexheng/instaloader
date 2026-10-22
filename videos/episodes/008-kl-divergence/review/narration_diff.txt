@@ -1,11 +1,10 @@
-WER 2.1% over 522 script words (numbers spelled out, 'and' ignored)
+WER 1.9% over 524 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/008-kl-divergence/narration.json
 
 [0:17.3] replace  script: 'kullback leibler'                       heard: 'callback lie blur'
-[0:32.4] insert   script: '∅'                                      heard: 'zero'
-[1:26.5] replace  script: 'grey'                                   heard: 'gray'
-[1:29.9] insert   script: '∅'                                      heard: 'zero'
-[2:10.5] insert   script: '∅'                                      heard: 'zero'
-[2:39.5] delete   script: 'maximum'                                heard: '∅'
-[2:52.7] replace  script: 'blei'                                   heard: 'bly'
-[3:03.1] replace  script: "mcmc's"                                 heard: 'mcm cease'
+[0:32.9] insert   script: '∅'                                      heard: 'zero'
+[1:27.8] replace  script: 'grey'                                   heard: 'gray'
+[1:31.2] insert   script: '∅'                                      heard: 'zero'
+[2:08.9] insert   script: '∅'                                      heard: 'so'
+[2:54.0] replace  script: 'blei'                                   heard: 'bly'
+[3:01.8] replace  script: 'ad conversion'                          heard: 'adconversion'

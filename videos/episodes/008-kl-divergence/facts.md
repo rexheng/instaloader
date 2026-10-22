@@ -143,3 +143,20 @@ argument is the distribution whose samples are averaged over (the weight in the 
 | "so the data must be smoothed. Smooth it more heavily, the gap partly fills" | Mass in the 2.5–3.5 min gap: two-normal fit (the curve used all episode) 3.2 %, raw data 4.4 %, R's default kernel smoothing (bw.nrd0 = 0.3348 min) 9.8 % | data.py |
 | "and the best bell-first fit spreads wide, almost back to A"; label "best bell-first fit: 3.55 ± 0.99 min"; dashed A returns beside it | Under R's default smoothing the global minimum of D(bell ‖ data) is 3.547 ± 0.991 min (0.567 bits); A = 3.488 ± 1.139 min. The bell moves straight from B to that fit (an interpolation showing which bell is best, not a descent: a descent started *from B* would stop at the narrow local minimum 4.188 ± 0.615, see above). Tag "R's default smoothing"; citation "Silverman, 1986 · Density Estimation (R's default bandwidth)": R's `bw.nrd0` documentation calls its formula "Silverman's 'rule of thumb', Silverman (1986, page 48, eqn (3.31))" and `density()` uses it by default | data.json rdef; R `stats::bw.nrd0` docs |
 | Landing: "Bell A never misses an eruption that happens. Bell B almost never imagines one that doesn't." with `D(data ‖ bell) → A` / `D(bell ‖ data) → B` and the yellow 1 / 3 | A covers both humps (A's density at every observed length is ≥ 0.089 per min, its lowest at 1.6 and 5.1 min); B puts 0.20 % of its mass below 3 min, where 35.7 % of eruptions are | data.json |
+
+## Round-5 continuation: the 498-word cut (claims whose wording changed)
+
+The narration was cut from 535 to 498 words (PRODUCTION_GUIDE §13 budget). Every claim below is
+the same quantity as above, only reworded; nothing new is claimed.
+
+| Claim (narration / screen) | Verification |
+|---|---|
+| "Shift it or stretch it, and that number only grows, so bell A is the closest." A's stats are no longer spoken; the label `A: 3.49 ± 1.14 min` stays on screen | A = the data-first optimum (mean 3.4878, SD 1.1393 min); D(data ‖ bell) is strictly convex in (μ, log σ) with its minimum at the moments (closed form above) |
+| "The data's curve stands this high there: call it p. The bell gives it q, about a quarter as much." | p(2.0) = 0.588, q_A(2.0) = 0.149, q/p = 0.254 |
+| "That's the divergence: the same point seven six." (callback to the naive build's 0.76) | the integral ∫ p log₂(p/q) dx over the plotted bill = D(data ‖ A) = 0.762 bits, the number shown at 0:33 |
+| "Try a bell that skips the short eruptions." | B (4.27 ± 0.44 min) puts 0.20 % of its mass below 3 min |
+| "Bell A imagines eruptions in the gap and the tails, where the data has almost none. That's its one point seven." | A puts 31.1 % of its mass in 2.5–3.5 min (raw data 4.4 %, smoothed curve 3.2 %) and 2.8 % outside 1–6 min (data: none); D(A ‖ data) = 1.695 bits, the 1.7 shown in the fail beat |
+| "the bell settles into B, less than half as wide" | descent from A ends at B = 4.27 ± 0.44; 0.4408 / 1.1393 = 0.387 |
+| "much of Bayesian machine learning shrinks it with the order flipped" | variational inference: q* = argmin KL(q ‖ p(z∣x)) (Blei et al. 2017 eq. 1); "much of" because MCMC, the other workhorse, minimises no KL |
+| Honest-limit tag "heavier smoothing" (was "R's default smoothing"; the guide's §13.5.3 lists "R's default" as an undefined term) | the curve is R's default kernel smoothing, bw.nrd0 = 0.3348 min; citation on screen: Silverman, 1986 · Density Estimation (R's default bandwidth); best bell-first fit 3.547 ± 0.991 min |
+| "Smooth it more heavily and the gap partly fills: the best bell-first fit spreads almost back to A." | gap mass 3.2 % → 9.8 %; fit 3.55 ± 0.99 vs A 3.49 ± 1.14 |

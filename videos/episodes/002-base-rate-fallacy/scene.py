@@ -796,7 +796,8 @@ class Episode(NarratedScene):
                           "says positive, what's the chance you're sick? [pause 0.3] Pick a number. "
                           "[pause 1.6]") as beat:
             beat.wait_until("five hundred", offset=-0.15)
-            self.play(emph(D["prev"]), emph(D["red"]), run_time=0.9)
+            self.play(emph(D["prev"]), run_time=0.8)
+            beat.on("this", emph(D["red"], scale=1.25), emph(D["sick"]), run_time=0.8)
             beat.wait_until("catches", offset=-0.1)
             self.play(GrowArrow(D["ra"]), FadeIn(D["plus"], scale=0.6),
                       run_time=beat.until("ninety-nine", offset=-0.05))
@@ -825,9 +826,12 @@ class Episode(NarratedScene):
                           "wrong.") as beat:
             self.play(FadeOut(guess, rate_func=early),
                       LaggedStart(*[FadeIn(d, scale=0.5) for d in ghost], lag_ratio=0.012),
-                      FadeIn(g_lbls, shift=0.1 * RIGHT), FadeIn(g_unit, shift=0.1 * UP),
                       FadeIn(cite_g, shift=0.1 * UP),
-                      run_time=beat.until("wrong", offset=0.1))
+                      run_time=beat.until("this", offset=-0.15))
+            # "a problem like this": the problem's three numbers pulse as the waffle's labels land
+            self.play(emph(D["prev"]), emph(D["r99"]), emph(D["r1"]),
+                      FadeIn(g_lbls, shift=0.1 * RIGHT), FadeIn(g_unit, shift=0.1 * UP),
+                      run_time=max(0.8, beat.until("wrong", offset=0.1)))
 
         # ============================================================ 2. stakes + naive rule
         naive_x = meter.x_at(0.99)
@@ -985,11 +989,14 @@ class Episode(NarratedScene):
             beat.wait_until("ten thousand", offset=-0.1)
             self.add(pop.image)
             self.play(pop.opacity.animate.set_value(1.0), FadeIn(grid_lbl, shift=0.1 * DOWN),
-                      FadeIn(head_people), FadeIn(cnt_s), FadeIn(cnt_h),
-                      run_time=beat.until("half", offset=-0.1))
-            # half of them: the left half fills with red, and the label reads 1 in 2
+                      FadeIn(head_people), run_time=beat.until("half", offset=-0.1))
+            # half of them: the left half fills with red, and the label reads 1 in 2.  The head
+            # counts arrive only once the label says 1 in 2, so no paused frame shows "1 in 500"
+            # over 0 sick
             self.play(pop.flip_in.animate(rate_func=EASE).set_value(1.0),
                       *swap_num(tbl_prev[2], prev_num, t_out=(0.0, 0.3), t_in=(0.2, 0.5)),
+                      FadeIn(cnt_s, rate_func=window(0.45, 0.7)),
+                      FadeIn(cnt_h, rate_func=window(0.45, 0.7)),
                       run_time=beat.remaining() + 0.2)
         prev_num.add_updater(lambda m: place_prev(m.set_value(pop.n_int())))
 
@@ -1025,8 +1032,7 @@ class Episode(NarratedScene):
             self.add(meter.red, meter.blue, meter.track)
             self.play(meter.fill.animate.set_value(1.0), FadeOut(meter.qmark, rate_func=early),
                       FadeIn(meter.value, rate_func=late), run_time=1.2)
-            beat.wait_until("holds", offset=-0.1)
-            self.play(emph(naive_lbl), emph(meter.value), run_time=0.9)
+            beat.on("Here", emph(naive_lbl), emph(meter.value), run_time=0.9)
 
         # ============================================================ 4. fail: the same test, rarer
         # ONE slider: the prevalence runs 1 in 2 -> 1 in 500 (log-spaced).  The block drains from
@@ -1069,8 +1075,8 @@ class Episode(NarratedScene):
                                     fill_opacity=0).move_to(pop.cell_center(i))
                              for i in red_idx + blue_idx])
         sick_rings, fp_rings = pos_rings[:N_RARE], pos_rings[N_RARE:]
-        with self.narrate("About twenty sick people light up, plus one percent of the healthy "
-                          "ones: about a hundred.") as beat:
+        with self.narrate("About twenty sick people light up, plus one percent of everyone else: "
+                          "about a hundred.") as beat:
             pop.hidden[red_idx] = True
             pop.hidden[blue_idx] = True
             self.add(fp_sq, sick_sq, pos_rings)
@@ -1194,7 +1200,7 @@ class Episode(NarratedScene):
         n20 = MathTex("20", font_size=FS - 4, color=RED).next_to(br_r, DOWN, buff=0.16)
         n100 = MathTex("100", font_size=FS - 4, color=BLUE).next_to(br_b, DOWN, buff=0.16)
         with self.narrate("Your chance of being sick is the red share of this crowd. [pause 0.3] "
-                          "Twenty, out of twenty plus a hundred. [pause 1.1]", speed=0.81) as beat:
+                          "Twenty, out of twenty plus a hundred. [pause 1.1]", speed=0.80) as beat:
             beat.wait_until("chance", offset=-0.1)
             # the meter's title becomes the left-hand side: it pulses while P(sick | +) arrives
             self.play(emph(meter.title, scale=1.08), FadeIn(lhs1, shift=0.15 * DOWN),
@@ -1319,7 +1325,6 @@ class Episode(NarratedScene):
         # TOGETHER, row by row, each on its spoken number: on "two in a thousand" the sick row
         # (20 -> 0.002, its positives 19.8 -> 0.00198) and both 20s in the formula; on "nine
         # hundred ninety-eight" the healthy row (9,980 -> 0.998, 99.8 -> 0.00998) and the 9,980.
-        S2b = build_stage("2b")
         S3 = build_stage("3")
         lhs3, eq3, num3, bar3, den3, tail3 = S3
         div_tag = MathTex(r"\div\,10{,}000", font_size=34, color=INK)
@@ -1343,25 +1348,21 @@ class Episode(NarratedScene):
                       emph(res_s, scale=1.15), emph(res_h, scale=1.15),
                       emph(num_l[0], scale=1.12), emph(den_l[0], scale=1.12),
                       emph(den_l[4], scale=1.12), run_time=0.8)
-            # "counts": the sick row and both 20s in the formula, one move
+            # "counts become shares": both rows and every count in the formula divide in ONE
+            # move, so the formula on screen is never a false mix of counts and shares
             beat.wait_until("counts", offset=-0.35)
-            new_n0, new_d0 = S2b[2][0], S2b[4][0]
-            self.play(*swap(cnt_s, sh_s), *swap(res_s, shp_s), *move_eq((lhs, eq, bar, tail), S2b),
+            new_n0, new_d0, new_d4 = num3[0], den3[0], den3[4]
+            self.play(*swap(cnt_s, sh_s), *swap(res_s, shp_s),
+                      *swap(cnt_h, sh_h, t_out=(0.1, 0.55), t_in=(0.45, 1.0)),
+                      *swap(res_h, shp_h, t_out=(0.1, 0.55), t_in=(0.45, 1.0)),
+                      *move_eq((lhs, eq, bar, tail), S3),
                       *swap_num(num_l[0], new_n0, t_out=(0.0, 0.45), t_in=(0.35, 1.0)),
                       *swap_den(den_l[0], new_d0, t_out=(0.0, 0.45), t_in=(0.35, 1.0)),
-                      *[num_l[i].animate.move_to(S2b[2][i]) for i in (1, 2)],
-                      *[den_l[i].animate.move_to(S2b[4][i]) for i in range(1, 7)],
-                      run_time=0.9)
-            num_l[0], den_l[0] = new_n0, new_d0
-            # "shares": the healthy row and the 9,980 the same way
-            beat.wait_until("shares", offset=-0.35)
-            new_d4 = den3[4]
-            self.play(*swap(cnt_h, sh_h), *swap(res_h, shp_h), *move_eq((lhs, eq, bar, tail), S3),
-                      *swap_den(den_l[4], new_d4, t_out=(0.0, 0.45), t_in=(0.35, 1.0)),
-                      *[num_l[i].animate.move_to(num3[i]) for i in range(3)],
-                      *[den_l[i].animate.move_to(den3[i]) for i in range(7) if i != 4],
-                      run_time=0.9)
-            den_l[4] = new_d4
+                      *swap_den(den_l[4], new_d4, t_out=(0.1, 0.55), t_in=(0.45, 1.0)),
+                      *[num_l[i].animate.move_to(num3[i]) for i in (1, 2)],
+                      *[den_l[i].animate.move_to(den3[i]) for i in range(7) if i not in (0, 4)],
+                      run_time=max(1.2, beat.until("shares", end=True, offset=0.1)))
+            num_l[0], den_l[0], den_l[4] = new_n0, new_d0, new_d4
             beat.wait_until("share can't", offset=-0.2)
             self.play(emph(tail, scale=1.15), run_time=0.8)
         num3 = VGroup(*num_l)
@@ -1388,25 +1389,33 @@ class Episode(NarratedScene):
         bayes_lbl = label("Bayes' theorem", size=LABEL, color=GRAY)
         bayes_lbl.next_to(lhs4, UP, buff=0.4, aligned_edge=LEFT)
         braces = VGroup(br_c1, br_c2, br_o1, br_o2)
-        with self.narrate("These are how common each group is, and these, how often each group "
-                          "tests positive. [pause 0.3] Name them, and you have Bayes' theorem.") as beat:
+        with self.narrate("These are how common each group is, and these are how often each "
+                          "group tests positive. [pause 0.3] Name them, and you have Bayes' "
+                          "theorem.") as beat:
             beat.wait_until("how common", offset=-0.2)
             self.play(*[GrowFromCenter(b[0]) for b in (br_c1, br_c2)],
                       *[FadeIn(b[1], shift=0.08 * UP) for b in (br_c1, br_c2)],
                       emph(sh_s, scale=1.12), emph(sh_h, scale=1.12), run_time=0.6)
-            beat.wait_until("how often", offset=-0.2)
+            beat.wait_until("these", occurrence=2, offset=-0.1)
             self.play(*[GrowFromCenter(b[0]) for b in (br_o1, br_o2)],
                       *[FadeIn(b[1], shift=0.08 * UP) for b in (br_o1, br_o2)],
                       emph(rate_s, scale=1.12), emph(rate_h, scale=1.12), run_time=0.6)
             beat.wait_until("Name", offset=-0.15)
 
             def name_it(a, b):
-                """A number turns into its name IN PLACE without passing through glyph soup:
-                same glyphs (the +) carry over, unlike strings cross-fade while the number's
-                box grows into the name's box (PRODUCTION_GUIDE §13.2.6)."""
-                if getattr(a, "tex_string", None) == getattr(b, "tex_string", 0):
-                    return ReplacementTransform(a, b)
-                return FadeTransform(a, b, stretch=False)
+                """A number turns into its name where it stands, with no glyph soup and no
+                superimposed cross-fade (PRODUCTION_GUIDE §13.2.5-6): the number rolls up and
+                out on its way to the name's slot, and the name rolls in from there, so the two
+                are never both legible at once.  The same glyph (the +) just slides over."""
+                ta = (getattr(a, "tex_string", "") or "").replace(r"\;", "").strip()
+                tb = (getattr(b, "tex_string", "") or "").replace(r"\;", "").strip()
+                if ta == tb:
+                    return allow_morph(ReplacementTransform(a, b))
+                d = b.get_center() - a.get_center()
+                return AnimationGroup(FadeOut(a, shift=0.5 * d + 0.14 * UP,
+                                              rate_func=window(0.0, 0.5)),
+                                      FadeIn(b, shift=0.5 * d + 0.14 * UP,
+                                             rate_func=window(0.4, 1.0)))
             pairs_num = [(num3[0], num4[0]), (num3[2], num4[1])]
             pairs_den = [(den3[0], den4[0]), (den3[2], den4[1]), (den3[3], den4[2]),
                          (den3[4], den4[3]), (den3[6], den4[4])]
@@ -1671,7 +1680,7 @@ class Episode(NarratedScene):
         gh_val = MathTex(r"17\%", font_size=30).next_to(gh_track, LEFT, buff=0.18)
         gh_tag = label("precision too", size=24, color=INK).next_to(gh_track, UP, buff=0.2)
         gh_tag.align_to(gh_track, LEFT)
-        gh_title = label("your test", size=20, color=GRAY).next_to(gh_track, DOWN, buff=0.18)
+        gh_title = label("your test", size=24, color=GRAY).next_to(gh_track, DOWN, buff=0.18)
         gh_title.align_to(gh_track, LEFT)
         ghost = VGroup(gh_red, gh_blue, gh_track, gh_val, gh_title, gh_tag)
         with self.narrate("In machine learning, the share of alerts that are right is called "
@@ -1695,7 +1704,7 @@ class Episode(NarratedScene):
         # where far fewer false alarms per face (the blue term of Bayes' denominator) shrank the
         # blue share.  Both bars are named the same way: whose count, and of how many alerts.
         def tag(name, detail):
-            g = VGroup(label(name, size=22, color=GRAY), label(detail, size=18, color=GRAY))
+            g = VGroup(label(name, size=22, color=GRAY), label(detail, size=21, color=GRAY))
             g.arrange(DOWN, buff=0.18, aligned_edge=LEFT)
             return g
         police_tag = tag("police count", "2,470 alerts").next_to(tr, RIGHT, buff=0.3)
@@ -1723,7 +1732,10 @@ class Episode(NarratedScene):
         ev_val.update()
         ev_tag = tag("evaluators' count", "final week · 2,632 alerts").next_to(ev_track, RIGHT,
                                                                                buff=0.3)
-        ev_tag2 = label("Six Nations 2018 · 48 alerts", size=18, color=GRAY)
+        # two lines, so the larger (>= 24 px) type still ends inside the safe area
+        ev_tag2 = VGroup(label("Six Nations 2018", size=21, color=GRAY),
+                         label("48 alerts", size=21, color=GRAY))
+        ev_tag2.arrange(DOWN, buff=0.14, aligned_edge=LEFT)
         ev_tag2.move_to(ev_tag[1], aligned_edge=UL)
         # the term that moved, in the formula's own notation: false alarms per unlisted face
         fa_term = MathTex(r"P(", "+", r"\mid\text{not listed})\,\downarrow", font_size=36,
@@ -1950,7 +1962,7 @@ class Episode(NarratedScene):
         prec_ul = underline(prec_lbl, color=INK, buff=0.1, stroke_width=3)
         with self.narrate("The title's ninety-nine percent is the test's recall: how often the sick "
                           "test positive. [pause 0.3] Seventeen percent is its precision: how often "
-                          "the positive are sick.") as beat:
+                          "the positive are sick.", gap=0.3) as beat:
             beat.wait_until("Ninety-nine", offset=-0.15)
             self.play(emph(L2["r99"], scale=1.2), run_time=0.8)
             # "recall" is written as the red flow (the sick who test positive) pulses

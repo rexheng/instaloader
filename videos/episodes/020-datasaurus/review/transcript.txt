@@ -8,7 +8,8 @@
 [0:32.9–0:35.4] An average and an error bar.
 [0:35.4–0:37.9] Only 13% showed the points.
 [0:37.9–0:40.6] So how much can five numbers hide?
-[0:40.6–0:46.7] Let's hide a star in them, and demand that all five still match the dinosaurs to two decimals.
+[0:40.6–0:45.3] Let's hide a star in them, and demand that all five still match the dinosaurs to two
+[0:45.3–0:46.7] decimals.
 [0:46.7–0:50.9] Version 1 slides every point onto its own spot on a star.
 [0:50.9–0:54.0] We got the star, and lost all five numbers.
 [0:54.0–1:00.0] The center moved, the X spread grew, and the Y spread shrank by almost a quarter.
@@ -21,29 +22,31 @@
 [1:22.2–1:27.9] average r standard deviations up. That's the best fit line, through the middle of every
 [1:27.9–1:34.0] vertical slice. At the wall, the slice is just the touchpoint, r times s y above the
 [1:34.0–1:40.2] center. For minus .06, that's just below the middle. That ellipse is everything the
-[1:40.2–1:56.7] five numbers know Now replay version 1 and watch the ellipse How would you fix the star Slide it until the centers meet Stretch it until the boxes match Then tip it a slight shear until it touches the
-[1:56.7–2:03.9] walls at the same height. All five match now, to every decimal place. But add a sixth number,
-[2:03.9–2:11.5] the median of Y, and our star misses it by 6. In 2017, Justin Matejka and George Fitzmaurice
-[2:11.5–2:14.9] built a search that keeps these five numbers fixed.
-[2:14.9–2:18.0] It nudges a random point toward a target shape
-[2:18.0–2:20.5] and undoes any nudge that breaks them.
-[2:20.5–2:24.5] Repeated enough times, and the dinosaur becomes a circle.
-[2:24.5–2:27.9] From the dinosaur, they grew 12 shapes like this star.
-[2:28.8–2:33.8] This bullseye, this X, these stripes, and these dots.
-[2:35.8–2:38.2] Every one of them has the same ellipse
-[2:38.2–2:40.1] and a different median.
-[2:40.1–2:45.7] Francis Anscombe made the point in 1973, with 11 points of his own.
-[2:45.7–2:50.9] His correlation is 0.82, so the ellipse touches the right wall high up.
-[2:50.9–2:53.7] His best fit line follows the same rule.
-[2:53.7–2:58.9] 1sx across, rsy up, through the center and that touch point.
-[2:58.9–3:01.9] So the slope is rise over run.
-[3:01.9–3:04.5] Plug in his numbers, and it's one half.
-[3:04.5–3:07.8] All four of his data sets share these five numbers, so
-[3:07.8–3:10.1] they share the ellipse and the line.
-[3:10.1–3:14.1] A trend, a curve, an outlier, and one point doing all the work.
-[3:15.4–3:17.6] Your line was exactly right.
-[3:17.6–3:21.0] Five numbers fix its slope, minus point one.
-[3:21.0–3:22.5] Your cloud was wrong.
-[3:22.5–3:26.5] A blur around this ellipse, all that five numbers can draw.
-[3:26.5–3:31.1] Most of those papers used a bar graph, which draws only two.
-[3:31.1–3:33.7] The dinosaur lived in everything they leave out.
+[1:40.2–1:57.1] five numbers know Now replay version 1 and watch the ellipse How would you fix the star Slide it until the centers meet Stretch it until the boxes match Then tip it a slight shear until it touches the walls
+[1:57.1–2:03.9] at the same height. All five match now, to every decimal place. But add a sixth number,
+[2:03.9–2:10.9] the median of Y, and our star misses it by six. In 2017, Justin Matejka and George Fitzmaurice
+[2:10.9–2:15.0] Francis Morris built a search that keeps these five numbers fixed.
+[2:15.0–2:20.6] It nudges a random point toward a target shape and undoes any nudge that breaks them.
+[2:20.6–2:24.6] Repeated enough times, and the dinosaur becomes a circle.
+[2:24.6–2:28.9] From the dinosaur, they grew twelve shapes like this star.
+[2:28.9–2:30.8] This bullseye.
+[2:30.8–2:32.7] This X.
+[2:32.7–2:34.5] These stripes.
+[2:34.5–2:36.1] And these dots.
+[2:36.1–2:40.2] Every one of them has this same ellipse and a different median.
+[2:40.2–2:45.9] Francis Anscombe made the point in 1973, with 11 points of his own.
+[2:45.9–2:51.0] His correlation is .82, so the ellipse touches the right wall high up.
+[2:51.0–2:53.9] His best fit line follows the same rule.
+[2:53.9–2:59.0] 1sx across, rsy up, through the center and that touch point.
+[2:59.0–3:02.0] So the slope is rise over run.
+[3:02.0–3:05.0] Plug in his numbers, and it's one half.
+[3:05.0–3:09.7] All four of his datasets share these five numbers, so they share the ellipse and the
+[3:09.7–3:10.7] line.
+[3:10.7–3:16.0] A trend, a curve, an outlier, and one point doing all the work.
+[3:16.0–3:18.3] Your line was exactly right.
+[3:18.3–3:21.5] Five numbers fix its slope, minus point one.
+[3:21.5–3:22.9] Your cloud was wrong.
+[3:22.9–3:27.3] A blur around this ellipse, all that five numbers can draw.
+[3:27.3–3:31.6] Most of those papers used a bar graph, which draws only two.
+[3:31.6–3:34.6] The dinosaur lived in everything they leave out.
+[3:35.0–4:05.0] Thank you.

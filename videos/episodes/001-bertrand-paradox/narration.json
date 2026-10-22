@@ -2,3153 +2,2791 @@
  "scene": "Episode",
  "episode": 1,
  "title": "Three Right Answers to One Probability Question",
- "video_duration": 230.5,
+ "video_duration": 208.167,
  "beats": [
   {
    "index": 0,
    "start": 0.0,
-   "duration": 9.4,
-   "end": 9.4,
-   "text": "Draw a chord across this circle at random. What's the chance it comes out longer than a side of this triangle? Pick a number. [pause 1.5]",
+   "duration": 8.93,
+   "end": 8.93,
+   "text": "Draw a chord across this circle at random. What's the chance it's longer than a side of this triangle? Pick a number. [pause 1.5]",
    "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
+   "speed": 0.83,
+   "cadence": "shaped",
    "words": [
     {
      "w": "Draw",
-     "t": 0.055,
-     "end": 0.305
+     "t": 0.04,
+     "end": 0.29
     },
     {
      "w": "a",
-     "t": 0.33,
-     "end": 0.418
+     "t": 0.315,
+     "end": 0.39
     },
     {
      "w": "chord",
-     "t": 0.455,
-     "end": 0.718
+     "t": 0.415,
+     "end": 0.678
     },
     {
      "w": "across",
-     "t": 0.73,
-     "end": 1.105
+     "t": 0.69,
+     "end": 1.065
     },
     {
      "w": "this",
-     "t": 1.13,
-     "end": 1.255
+     "t": 1.09,
+     "end": 1.215
     },
     {
      "w": "circle",
-     "t": 1.28,
-     "end": 1.642
+     "t": 1.24,
+     "end": 1.602
     },
     {
      "w": "at",
-     "t": 1.68,
-     "end": 1.78
+     "t": 1.64,
+     "end": 1.74
     },
     {
      "w": "random",
-     "t": 1.805,
-     "end": 2.46
+     "t": 1.765,
+     "end": 2.42
     },
     {
      "w": "What's",
-     "t": 2.86,
-     "end": 3.135
+     "t": 2.75,
+     "end": 3.025
     },
     {
      "w": "the",
-     "t": 3.16,
-     "end": 3.272
+     "t": 3.05,
+     "end": 3.162
     },
     {
      "w": "chance",
-     "t": 3.31,
-     "end": 3.672
-    },
-    {
-     "w": "it",
-     "t": 3.685,
-     "end": 3.76
-    },
-    {
-     "w": "comes",
-     "t": 3.785,
-     "end": 4.035
-    },
-    {
-     "w": "out",
-     "t": 4.06,
-     "end": 4.385
-    },
-    {
-     "w": "longer",
-     "t": 4.435,
-     "end": 4.885
-    },
-    {
-     "w": "than",
-     "t": 4.91,
-     "end": 4.998
-    },
-    {
-     "w": "a",
-     "t": 5.01,
-     "end": 5.11
-    },
-    {
-     "w": "side",
-     "t": 5.16,
-     "end": 5.448
-    },
-    {
-     "w": "of",
-     "t": 5.46,
-     "end": 5.522
-    },
-    {
-     "w": "this",
-     "t": 5.535,
-     "end": 5.722
-    },
-    {
-     "w": "triangle",
-     "t": 5.76,
-     "end": 6.55
-    },
-    {
-     "w": "Pick",
-     "t": 6.98,
-     "end": 7.192
-    },
-    {
-     "w": "a",
-     "t": 7.205,
-     "end": 7.255
-    },
-    {
-     "w": "number",
-     "t": 7.28,
-     "end": 7.9
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/8f/8f523260f79039351e4422d5.wav"
-  },
-  {
-   "index": 1,
-   "start": 9.667,
-   "duration": 14.15,
-   "end": 23.817,
-   "text": "Joseph Bertrand published this puzzle in eighteen eighty-nine, as a warning about two words: at random. Leave them vague, and one college can report an average class of forty, or a hundred forty-seven.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Joseph",
-     "t": 9.747,
-     "end": 10.197
-    },
-    {
-     "w": "Bertrand",
-     "t": 10.222,
-     "end": 10.835
-    },
-    {
-     "w": "published",
-     "t": 10.872,
-     "end": 11.272
-    },
-    {
-     "w": "this",
-     "t": 11.297,
-     "end": 11.472
-    },
-    {
-     "w": "puzzle",
-     "t": 11.497,
-     "end": 11.909
-    },
-    {
-     "w": "in",
-     "t": 11.947,
-     "end": 12.085
-    },
-    {
-     "w": "eighteen",
-     "t": 12.122,
-     "end": 12.672
-    },
-    {
-     "w": "eighty-nine",
-     "t": 12.697,
-     "end": 13.697
-    },
-    {
-     "w": "as",
-     "t": 13.847,
-     "end": 13.947
-    },
-    {
-     "w": "a",
-     "t": 13.972,
-     "end": 14.072
-    },
-    {
-     "w": "warning",
-     "t": 14.122,
-     "end": 14.522
-    },
-    {
-     "w": "about",
-     "t": 14.547,
-     "end": 14.847
-    },
-    {
-     "w": "two",
-     "t": 14.897,
-     "end": 15.072
-    },
-    {
-     "w": "words",
-     "t": 15.097,
-     "end": 15.872
-    },
-    {
-     "w": "at",
-     "t": 16.072,
-     "end": 16.172
-    },
-    {
-     "w": "random",
-     "t": 16.197,
-     "end": 16.847
-    },
-    {
-     "w": "Leave",
-     "t": 17.282,
-     "end": 17.594
-    },
-    {
-     "w": "them",
-     "t": 17.607,
-     "end": 17.794
-    },
-    {
-     "w": "vague",
-     "t": 17.832,
-     "end": 18.457
-    },
-    {
-     "w": "and",
-     "t": 18.607,
-     "end": 18.707
-    },
-    {
-     "w": "one",
-     "t": 18.732,
-     "end": 18.969
-    },
-    {
-     "w": "college",
-     "t": 19.007,
-     "end": 19.532
-    },
-    {
-     "w": "can",
-     "t": 19.557,
-     "end": 19.707
-    },
-    {
-     "w": "report",
-     "t": 19.732,
-     "end": 20.119
-    },
-    {
-     "w": "an",
-     "t": 20.132,
-     "end": 20.257
-    },
-    {
-     "w": "average",
-     "t": 20.307,
-     "end": 20.732
-    },
-    {
-     "w": "class",
-     "t": 20.757,
-     "end": 21.094
-    },
-    {
-     "w": "of",
-     "t": 21.107,
-     "end": 21.219
-    },
-    {
-     "w": "forty",
-     "t": 21.257,
-     "end": 21.982
-    },
-    {
-     "w": "or",
-     "t": 22.182,
-     "end": 22.332
-    },
-    {
-     "w": "a",
-     "t": 22.357,
-     "end": 22.445
-    },
-    {
-     "w": "hundred",
-     "t": 22.482,
-     "end": 22.895
-    },
-    {
-     "w": "forty-seven",
-     "t": 22.932,
-     "end": 23.817
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/e2/e255871a94a5869845dae77c.wav"
-  },
-  {
-   "index": 2,
-   "start": 24.1,
-   "duration": 9.41,
-   "end": 33.51,
-   "text": "Start with the obvious simulation. Pick two points on the rim at random, and join them. If the chord beats the triangle's side, it turns gold.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Start",
-     "t": 24.17,
-     "end": 24.482
-    },
-    {
-     "w": "with",
-     "t": 24.495,
-     "end": 24.582
-    },
-    {
-     "w": "the",
-     "t": 24.595,
-     "end": 24.745
-    },
-    {
-     "w": "obvious",
-     "t": 24.795,
-     "end": 25.245
-    },
-    {
-     "w": "simulation",
-     "t": 25.27,
-     "end": 26.17
-    },
-    {
-     "w": "Pick",
-     "t": 26.555,
-     "end": 26.792
-    },
-    {
-     "w": "two",
-     "t": 26.83,
-     "end": 27.018
-    },
-    {
-     "w": "points",
-     "t": 27.055,
-     "end": 27.342
-    },
-    {
-     "w": "on",
-     "t": 27.355,
-     "end": 27.442
-    },
-    {
-     "w": "the",
-     "t": 27.455,
-     "end": 27.53
-    },
-    {
-     "w": "rim",
-     "t": 27.555,
-     "end": 27.768
-    },
-    {
-     "w": "at",
-     "t": 27.78,
-     "end": 27.855
-    },
-    {
-     "w": "random",
-     "t": 27.88,
-     "end": 28.555
-    },
-    {
-     "w": "and",
-     "t": 28.68,
-     "end": 28.792
-    },
-    {
-     "w": "join",
-     "t": 28.83,
-     "end": 29.13
-    },
-    {
-     "w": "them",
-     "t": 29.155,
-     "end": 29.54
-    },
-    {
-     "w": "If",
-     "t": 29.945,
-     "end": 30.12
-    },
-    {
-     "w": "the",
-     "t": 30.145,
-     "end": 30.22
-    },
-    {
-     "w": "chord",
-     "t": 30.245,
-     "end": 30.52
-    },
-    {
-     "w": "beats",
-     "t": 30.545,
-     "end": 30.795
-    },
-    {
-     "w": "the",
-     "t": 30.82,
-     "end": 30.895
-    },
-    {
-     "w": "triangle's",
-     "t": 30.92,
-     "end": 31.532
-    },
-    {
-     "w": "side",
-     "t": 31.57,
-     "end": 32.195
-    },
-    {
-     "w": "it",
-     "t": 32.37,
-     "end": 32.47
-    },
-    {
-     "w": "turns",
-     "t": 32.495,
-     "end": 32.87
-    },
-    {
-     "w": "gold",
-     "t": 32.895,
-     "end": 33.51
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/ba/ba3983c40b36270e29456dc1.wav"
-  },
-  {
-   "index": 3,
-   "start": 33.767,
-   "duration": 4.5,
-   "end": 38.267,
-   "text": "Run ten thousand chords, and the gold share settles near point three three.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Run",
-     "t": 33.822,
-     "end": 34.122
-    },
-    {
-     "w": "ten",
-     "t": 34.172,
-     "end": 34.397
-    },
-    {
-     "w": "thousand",
-     "t": 34.422,
-     "end": 34.822
-    },
-    {
-     "w": "chords",
-     "t": 34.847,
-     "end": 35.622
-    },
-    {
-     "w": "and",
-     "t": 35.747,
-     "end": 35.835
-    },
-    {
-     "w": "the",
-     "t": 35.847,
-     "end": 35.922
-    },
-    {
-     "w": "gold",
-     "t": 35.947,
-     "end": 36.259
-    },
-    {
-     "w": "share",
-     "t": 36.297,
-     "end": 36.559
-    },
-    {
-     "w": "settles",
-     "t": 36.597,
-     "end": 36.997
-    },
-    {
-     "w": "near",
-     "t": 37.022,
-     "end": 37.222
-    },
-    {
-     "w": "point",
-     "t": 37.247,
-     "end": 37.497
-    },
-    {
-     "w": "three",
-     "t": 37.522,
-     "end": 37.747
-    },
-    {
-     "w": "three",
-     "t": 37.797,
-     "end": 38.267
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/31/3125759f98420783f2bf95a5.wav"
-  },
-  {
-   "index": 4,
-   "start": 38.933,
-   "duration": 11.19,
-   "end": 50.123,
-   "text": "Geometry agrees. Put a corner of the triangle on the first point. The chord is long only when the second point lands on this far arc, a third of the rim. [pause 1.0]",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Geometry",
-     "t": 38.988,
-     "end": 39.563
-    },
-    {
-     "w": "agrees",
-     "t": 39.588,
-     "end": 40.283
-    },
-    {
-     "w": "Put",
-     "t": 40.663,
-     "end": 40.795
-    },
-    {
-     "w": "a",
-     "t": 40.808,
-     "end": 40.895
-    },
-    {
-     "w": "corner",
-     "t": 40.933,
-     "end": 41.308
-    },
-    {
-     "w": "of",
-     "t": 41.333,
-     "end": 41.395
-    },
-    {
-     "w": "the",
-     "t": 41.408,
-     "end": 41.483
-    },
-    {
-     "w": "triangle",
-     "t": 41.508,
-     "end": 42.183
-    },
-    {
-     "w": "on",
-     "t": 42.208,
-     "end": 42.295
-    },
-    {
-     "w": "the",
-     "t": 42.308,
-     "end": 42.395
-    },
-    {
-     "w": "first",
-     "t": 42.433,
-     "end": 42.733
-    },
-    {
-     "w": "point",
-     "t": 42.758,
-     "end": 43.293
-    },
-    {
-     "w": "The",
-     "t": 43.698,
-     "end": 43.81
-    },
-    {
-     "w": "chord",
-     "t": 43.848,
-     "end": 44.248
-    },
-    {
-     "w": "is",
-     "t": 44.273,
-     "end": 44.423
-    },
-    {
-     "w": "long",
-     "t": 44.473,
-     "end": 44.86
-    },
-    {
-     "w": "only",
-     "t": 44.898,
-     "end": 45.261
-    },
-    {
-     "w": "when",
-     "t": 45.273,
-     "end": 45.385
-    },
-    {
-     "w": "the",
-     "t": 45.398,
-     "end": 45.498
-    },
-    {
-     "w": "second",
-     "t": 45.548,
-     "end": 45.848
-    },
-    {
-     "w": "point",
-     "t": 45.873,
-     "end": 46.273
-    },
-    {
-     "w": "lands",
-     "t": 46.323,
-     "end": 46.635
-    },
-    {
-     "w": "on",
-     "t": 46.648,
-     "end": 46.735
-    },
-    {
-     "w": "this",
-     "t": 46.748,
-     "end": 46.898
-    },
-    {
-     "w": "far",
-     "t": 46.923,
-     "end": 47.198
-    },
-    {
-     "w": "arc",
-     "t": 47.223,
-     "end": 47.848
-    },
-    {
-     "w": "a",
-     "t": 48.048,
-     "end": 48.148
-    },
-    {
-     "w": "third",
-     "t": 48.198,
-     "end": 48.435
-    },
-    {
-     "w": "of",
-     "t": 48.448,
-     "end": 48.511
-    },
-    {
-     "w": "the",
-     "t": 48.523,
-     "end": 48.623
-    },
-    {
-     "w": "rim",
-     "t": 48.648,
-     "end": 49.123
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/d1/d100dda929b3446ed972bb36.wav"
-  },
-  {
-   "index": 5,
-   "start": 50.4,
-   "duration": 10.12,
-   "end": 60.52,
-   "text": "Case closed, until you code it a second way. Pick a random radius, a random point along it, and draw the chord through that point at right angles.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Case",
-     "t": 50.43,
-     "end": 50.792
-    },
-    {
-     "w": "closed",
-     "t": 50.83,
-     "end": 51.58
-    },
-    {
-     "w": "until",
-     "t": 51.705,
-     "end": 51.93
-    },
-    {
-     "w": "you",
-     "t": 51.955,
-     "end": 52.055
-    },
-    {
-     "w": "code",
-     "t": 52.08,
-     "end": 52.292
-    },
-    {
-     "w": "it",
-     "t": 52.305,
-     "end": 52.368
-    },
-    {
-     "w": "a",
-     "t": 52.38,
-     "end": 52.468
-    },
-    {
-     "w": "second",
-     "t": 52.505,
-     "end": 52.83
-    },
-    {
-     "w": "way",
-     "t": 52.855,
-     "end": 53.34
-    },
-    {
-     "w": "Pick",
-     "t": 53.72,
-     "end": 53.94
-    },
-    {
-     "w": "a",
-     "t": 53.965,
-     "end": 54.052
-    },
-    {
-     "w": "random",
-     "t": 54.09,
-     "end": 54.515
-    },
-    {
-     "w": "radius",
-     "t": 54.54,
-     "end": 55.465
-    },
-    {
-     "w": "a",
-     "t": 55.64,
-     "end": 55.74
-    },
-    {
-     "w": "random",
-     "t": 55.79,
-     "end": 56.215
-    },
-    {
-     "w": "point",
-     "t": 56.24,
-     "end": 56.515
-    },
-    {
-     "w": "along",
-     "t": 56.54,
-     "end": 56.902
-    },
-    {
-     "w": "it",
-     "t": 56.94,
-     "end": 57.365
-    },
-    {
-     "w": "and",
-     "t": 57.515,
-     "end": 57.615
-    },
-    {
-     "w": "draw",
-     "t": 57.64,
-     "end": 57.915
-    },
-    {
-     "w": "the",
-     "t": 57.94,
-     "end": 58.027
-    },
-    {
-     "w": "chord",
-     "t": 58.065,
-     "end": 58.415
-    },
-    {
-     "w": "through",
-     "t": 58.44,
-     "end": 58.615
-    },
-    {
-     "w": "that",
-     "t": 58.64,
-     "end": 58.89
-    },
-    {
-     "w": "point",
-     "t": 58.915,
-     "end": 59.315
-    },
-    {
-     "w": "at",
-     "t": 59.365,
-     "end": 59.515
-    },
-    {
-     "w": "right",
-     "t": 59.565,
-     "end": 59.815
-    },
-    {
-     "w": "angles",
-     "t": 59.84,
-     "end": 60.52
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/92/922cc7d0ce664ab61e8563a0.wav"
-  },
-  {
-   "index": 6,
-   "start": 60.8,
-   "duration": 2.06,
-   "end": 62.86,
-   "text": "This one settles near point five.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "This",
-     "t": 60.84,
-     "end": 61.04
-    },
-    {
-     "w": "one",
-     "t": 61.065,
-     "end": 61.315
-    },
-    {
-     "w": "settles",
-     "t": 61.365,
-     "end": 61.74
-    },
-    {
-     "w": "near",
-     "t": 61.765,
-     "end": 61.965
-    },
-    {
-     "w": "point",
-     "t": 61.99,
-     "end": 62.252
-    },
-    {
-     "w": "five",
-     "t": 62.29,
-     "end": 62.86
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/8e/8eebd7b6f2f11b2a7590c03c.wav"
-  },
-  {
-   "index": 7,
-   "start": 63.1,
-   "duration": 8.19,
-   "end": 71.29,
-   "text": "A third program picks a random point anywhere inside, and makes it the chord's midpoint. That settles near point two five.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "A",
-     "t": 63.13,
-     "end": 63.23
-    },
-    {
-     "w": "third",
-     "t": 63.28,
-     "end": 63.555
-    },
-    {
-     "w": "program",
-     "t": 63.58,
-     "end": 64.117
-    },
-    {
-     "w": "picks",
-     "t": 64.155,
-     "end": 64.418
-    },
-    {
-     "w": "a",
-     "t": 64.43,
-     "end": 64.518
-    },
-    {
-     "w": "random",
-     "t": 64.555,
-     "end": 64.98
-    },
-    {
-     "w": "point",
-     "t": 65.005,
-     "end": 65.405
-    },
-    {
-     "w": "anywhere",
-     "t": 65.455,
-     "end": 65.968
-    },
-    {
-     "w": "inside",
-     "t": 66.005,
-     "end": 67.005
-    },
-    {
-     "w": "and",
-     "t": 67.155,
-     "end": 67.255
-    },
-    {
-     "w": "makes",
-     "t": 67.28,
-     "end": 67.53
-    },
-    {
-     "w": "it",
-     "t": 67.555,
-     "end": 67.642
-    },
-    {
-     "w": "the",
-     "t": 67.655,
-     "end": 67.73
-    },
-    {
-     "w": "chord's",
-     "t": 67.755,
-     "end": 68.105
-    },
-    {
-     "w": "midpoint",
-     "t": 68.13,
-     "end": 68.86
-    },
-    {
-     "w": "That",
-     "t": 69.29,
-     "end": 69.565
-    },
-    {
-     "w": "settles",
-     "t": 69.59,
-     "end": 69.965
-    },
-    {
-     "w": "near",
-     "t": 69.99,
-     "end": 70.19
-    },
-    {
-     "w": "point",
-     "t": 70.215,
-     "end": 70.465
-    },
-    {
-     "w": "two",
-     "t": 70.49,
-     "end": 70.678
-    },
-    {
-     "w": "five",
-     "t": 70.715,
-     "end": 71.29
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/25/25d97a29ffe2b94964d0a90f.wav"
-  },
-  {
-   "index": 8,
-   "start": 71.567,
-   "duration": 13.5,
-   "end": 85.067,
-   "text": "Bertrand printed all three, and wrote that none is wrong, and none is right. Each tally is good to about one percentage point. They disagree by twenty-five percentage points, and none of the code has a bug.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Bertrand",
-     "t": 71.617,
-     "end": 72.192
-    },
-    {
-     "w": "printed",
-     "t": 72.217,
-     "end": 72.567
-    },
-    {
-     "w": "all",
-     "t": 72.592,
-     "end": 72.792
-    },
-    {
-     "w": "three",
-     "t": 72.842,
-     "end": 73.417
-    },
-    {
-     "w": "and",
-     "t": 73.567,
-     "end": 73.667
-    },
-    {
-     "w": "wrote",
-     "t": 73.692,
-     "end": 73.892
-    },
-    {
-     "w": "that",
-     "t": 73.917,
-     "end": 74.105
-    },
-    {
-     "w": "none",
-     "t": 74.142,
-     "end": 74.367
-    },
-    {
-     "w": "is",
-     "t": 74.392,
-     "end": 74.517
-    },
-    {
-     "w": "wrong",
-     "t": 74.542,
-     "end": 74.992
-    },
-    {
-     "w": "and",
-     "t": 75.142,
-     "end": 75.267
-    },
-    {
-     "w": "none",
-     "t": 75.292,
-     "end": 75.517
-    },
-    {
-     "w": "is",
-     "t": 75.542,
-     "end": 75.667
-    },
-    {
-     "w": "right",
-     "t": 75.692,
-     "end": 76.227
-    },
-    {
-     "w": "Each",
-     "t": 76.617,
-     "end": 76.879
-    },
-    {
-     "w": "tally",
-     "t": 76.917,
-     "end": 77.292
-    },
-    {
-     "w": "is",
-     "t": 77.317,
-     "end": 77.442
-    },
-    {
-     "w": "good",
-     "t": 77.467,
-     "end": 77.667
-    },
-    {
-     "w": "to",
-     "t": 77.692,
-     "end": 77.817
-    },
-    {
-     "w": "about",
-     "t": 77.842,
-     "end": 78.142
-    },
-    {
-     "w": "one",
-     "t": 78.167,
-     "end": 78.392
-    },
-    {
-     "w": "percentage",
-     "t": 78.417,
-     "end": 78.917
-    },
-    {
-     "w": "point",
-     "t": 78.942,
-     "end": 79.467
-    },
-    {
-     "w": "They",
-     "t": 79.897,
-     "end": 80.072
-    },
-    {
-     "w": "disagree",
-     "t": 80.097,
-     "end": 80.735
-    },
-    {
-     "w": "by",
-     "t": 80.772,
-     "end": 80.972
-    },
-    {
-     "w": "twenty-five",
-     "t": 81.022,
-     "end": 81.797
-    },
-    {
-     "w": "percentage",
-     "t": 81.822,
-     "end": 82.347
-    },
-    {
-     "w": "points",
-     "t": 82.372,
-     "end": 83.147
-    },
-    {
-     "w": "and",
-     "t": 83.322,
-     "end": 83.435
-    },
-    {
-     "w": "none",
-     "t": 83.472,
-     "end": 83.635
-    },
-    {
-     "w": "of",
-     "t": 83.647,
-     "end": 83.71
-    },
-    {
-     "w": "the",
-     "t": 83.722,
-     "end": 83.81
-    },
-    {
-     "w": "code",
-     "t": 83.847,
-     "end": 84.272
-    },
-    {
-     "w": "has",
-     "t": 84.297,
-     "end": 84.46
-    },
-    {
-     "w": "a",
-     "t": 84.472,
-     "end": 84.522
-    },
-    {
-     "w": "bug",
-     "t": 84.547,
-     "end": 85.067
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/47/470785b54e03dbc4efe27f68.wav"
-  },
-  {
-   "index": 9,
-   "start": 85.333,
-   "duration": 13.86,
-   "end": 99.193,
-   "text": "One point sets a chord's length: its midpoint. Slide it outward and the chord shrinks. It matches the triangle's side when the midpoint is half a radius out, on the circle that fits inside the triangle.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "One",
-     "t": 85.408,
-     "end": 85.633
-    },
-    {
-     "w": "point",
-     "t": 85.658,
-     "end": 85.958
-    },
-    {
-     "w": "sets",
-     "t": 85.983,
-     "end": 86.221
-    },
-    {
-     "w": "a",
-     "t": 86.233,
-     "end": 86.283
-    },
-    {
-     "w": "chord's",
-     "t": 86.308,
-     "end": 86.633
-    },
-    {
-     "w": "length",
-     "t": 86.658,
-     "end": 87.208
-    },
-    {
-     "w": "its",
-     "t": 87.383,
-     "end": 87.558
-    },
-    {
-     "w": "midpoint",
-     "t": 87.583,
-     "end": 88.333
-    },
-    {
-     "w": "Slide",
-     "t": 88.798,
-     "end": 89.111
-    },
-    {
-     "w": "it",
-     "t": 89.123,
-     "end": 89.198
-    },
-    {
-     "w": "outward",
-     "t": 89.223,
-     "end": 89.848
-    },
-    {
-     "w": "and",
-     "t": 89.898,
-     "end": 89.985
-    },
-    {
-     "w": "the",
-     "t": 89.998,
-     "end": 90.073
-    },
-    {
-     "w": "chord",
-     "t": 90.098,
-     "end": 90.398
-    },
-    {
-     "w": "shrinks",
-     "t": 90.448,
-     "end": 91.063
-    },
-    {
-     "w": "It",
-     "t": 91.443,
-     "end": 91.616
-    },
-    {
-     "w": "matches",
-     "t": 91.653,
-     "end": 92.178
-    },
-    {
-     "w": "the",
-     "t": 92.203,
-     "end": 92.291
-    },
-    {
-     "w": "triangle's",
-     "t": 92.328,
-     "end": 93.053
-    },
-    {
-     "w": "side",
-     "t": 93.103,
-     "end": 93.715
-    },
-    {
-     "w": "when",
-     "t": 93.753,
-     "end": 93.865
-    },
-    {
-     "w": "the",
-     "t": 93.878,
-     "end": 93.953
-    },
-    {
-     "w": "midpoint",
-     "t": 93.978,
-     "end": 94.628
-    },
-    {
-     "w": "is",
-     "t": 94.678,
-     "end": 94.828
-    },
-    {
-     "w": "half",
-     "t": 94.878,
-     "end": 95.141
-    },
-    {
-     "w": "a",
-     "t": 95.153,
-     "end": 95.241
-    },
-    {
-     "w": "radius",
-     "t": 95.278,
-     "end": 95.791
-    },
-    {
-     "w": "out",
-     "t": 95.828,
-     "end": 96.503
-    },
-    {
-     "w": "on",
-     "t": 96.653,
-     "end": 96.766
-    },
-    {
-     "w": "the",
-     "t": 96.778,
-     "end": 96.878
-    },
-    {
-     "w": "circle",
-     "t": 96.928,
-     "end": 97.328
-    },
-    {
-     "w": "that",
-     "t": 97.353,
-     "end": 97.553
-    },
-    {
-     "w": "fits",
-     "t": 97.603,
-     "end": 97.853
-    },
-    {
-     "w": "inside",
-     "t": 97.878,
-     "end": 98.316
-    },
-    {
-     "w": "the",
-     "t": 98.328,
-     "end": 98.403
-    },
-    {
-     "w": "triangle",
-     "t": 98.428,
-     "end": 99.193
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/9e/9e5d99633933eed47aee7c8d.wav"
-  },
-  {
-   "index": 10,
-   "start": 99.467,
-   "duration": 8.74,
-   "end": 108.207,
-   "text": "So a chord is long exactly when its midpoint lands in this gold circle, and each program is just a way of scattering midpoints.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "So",
-     "t": 99.517,
-     "end": 99.692
-    },
-    {
-     "w": "a",
-     "t": 99.717,
-     "end": 99.804
-    },
-    {
-     "w": "chord",
-     "t": 99.842,
-     "end": 100.267
-    },
-    {
-     "w": "is",
-     "t": 100.292,
-     "end": 100.442
-    },
-    {
-     "w": "long",
-     "t": 100.492,
-     "end": 100.817
-    },
-    {
-     "w": "exactly",
-     "t": 100.842,
-     "end": 101.642
-    },
-    {
-     "w": "when",
-     "t": 101.667,
-     "end": 101.779
-    },
-    {
-     "w": "its",
-     "t": 101.792,
-     "end": 101.967
-    },
-    {
-     "w": "midpoint",
-     "t": 101.992,
-     "end": 102.492
-    },
-    {
-     "w": "lands",
-     "t": 102.517,
-     "end": 102.992
-    },
-    {
-     "w": "in",
-     "t": 103.017,
-     "end": 103.105
-    },
-    {
-     "w": "this",
-     "t": 103.117,
-     "end": 103.292
-    },
-    {
-     "w": "gold",
-     "t": 103.317,
-     "end": 103.605
-    },
-    {
-     "w": "circle",
-     "t": 103.642,
-     "end": 104.542
-    },
-    {
-     "w": "and",
-     "t": 104.717,
-     "end": 104.855
-    },
-    {
-     "w": "each",
-     "t": 104.892,
-     "end": 105.142
-    },
-    {
-     "w": "program",
-     "t": 105.167,
-     "end": 105.829
-    },
-    {
-     "w": "is",
-     "t": 105.867,
-     "end": 106.005
-    },
-    {
-     "w": "just",
-     "t": 106.042,
-     "end": 106.292
-    },
-    {
-     "w": "a",
-     "t": 106.317,
-     "end": 106.392
-    },
-    {
-     "w": "way",
-     "t": 106.417,
-     "end": 106.642
-    },
-    {
-     "w": "of",
-     "t": 106.667,
-     "end": 106.805
-    },
-    {
-     "w": "scattering",
-     "t": 106.842,
-     "end": 107.392
-    },
-    {
-     "w": "midpoints",
-     "t": 107.417,
-     "end": 108.207
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/08/08f8898c494fa509a49476d4.wav"
-  },
-  {
-   "index": 11,
-   "start": 108.467,
-   "duration": 9.81,
-   "end": 118.277,
-   "text": "Shrink every chord to its midpoint. The midpoint program spreads them evenly, so this circle, with a quarter of the area, catches a quarter of them.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Shrink",
-     "t": 108.577,
-     "end": 108.952
-    },
-    {
-     "w": "every",
-     "t": 109.002,
-     "end": 109.277
-    },
-    {
-     "w": "chord",
-     "t": 109.302,
-     "end": 109.602
-    },
-    {
-     "w": "to",
-     "t": 109.627,
-     "end": 109.739
-    },
-    {
-     "w": "its",
-     "t": 109.752,
-     "end": 109.927
-    },
-    {
-     "w": "midpoint",
-     "t": 109.952,
-     "end": 110.687
-    },
-    {
-     "w": "The",
-     "t": 111.102,
-     "end": 111.202
-    },
-    {
-     "w": "midpoint",
-     "t": 111.227,
-     "end": 111.702
-    },
-    {
-     "w": "program",
-     "t": 111.727,
-     "end": 112.252
-    },
-    {
-     "w": "spreads",
-     "t": 112.277,
-     "end": 112.639
-    },
-    {
-     "w": "them",
-     "t": 112.652,
-     "end": 112.84
-    },
-    {
-     "w": "evenly",
-     "t": 112.877,
-     "end": 113.802
-    },
-    {
-     "w": "so",
-     "t": 114.002,
-     "end": 114.177
-    },
-    {
-     "w": "this",
-     "t": 114.202,
-     "end": 114.402
-    },
-    {
-     "w": "circle",
-     "t": 114.452,
-     "end": 115.077
-    },
-    {
-     "w": "with",
-     "t": 115.202,
-     "end": 115.315
-    },
-    {
-     "w": "a",
-     "t": 115.327,
-     "end": 115.415
-    },
-    {
-     "w": "quarter",
-     "t": 115.452,
-     "end": 115.84
-    },
-    {
-     "w": "of",
-     "t": 115.852,
-     "end": 115.915
-    },
-    {
-     "w": "the",
-     "t": 115.927,
-     "end": 116.052
-    },
-    {
-     "w": "area",
-     "t": 116.077,
-     "end": 116.577
-    },
-    {
-     "w": "catches",
-     "t": 116.752,
-     "end": 117.177
-    },
-    {
-     "w": "a",
-     "t": 117.202,
-     "end": 117.277
-    },
-    {
-     "w": "quarter",
-     "t": 117.302,
-     "end": 117.727
-    },
-    {
-     "w": "of",
-     "t": 117.752,
-     "end": 117.877
-    },
-    {
-     "w": "them",
-     "t": 117.902,
-     "end": 118.277
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/d3/d3d6fd27735cd7800ce29e48.wav"
-  },
-  {
-   "index": 12,
-   "start": 118.533,
-   "duration": 14.37,
-   "end": 132.903,
-   "text": "The radius program spreads them evenly along the radius. Where will they crowd? [pause 1.3] Toward the center: every ring gets an equal share, and inner rings are small. Half the radius, so one half.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "The",
-     "t": 118.553,
-     "end": 118.653
-    },
-    {
-     "w": "radius",
-     "t": 118.678,
-     "end": 119.178
-    },
-    {
-     "w": "program",
-     "t": 119.203,
-     "end": 119.878
-    },
-    {
-     "w": "spreads",
-     "t": 119.928,
-     "end": 120.29
-    },
-    {
-     "w": "them",
-     "t": 120.303,
-     "end": 120.503
-    },
-    {
-     "w": "evenly",
-     "t": 120.553,
-     "end": 121.141
-    },
-    {
-     "w": "along",
-     "t": 121.178,
-     "end": 121.515
-    },
-    {
-     "w": "the",
-     "t": 121.528,
-     "end": 121.603
-    },
-    {
-     "w": "radius",
-     "t": 121.628,
-     "end": 122.373
-    },
-    {
-     "w": "Where",
-     "t": 122.818,
-     "end": 123.043
-    },
-    {
-     "w": "will",
-     "t": 123.068,
-     "end": 123.243
-    },
-    {
-     "w": "they",
-     "t": 123.268,
-     "end": 123.405
-    },
-    {
-     "w": "crowd",
-     "t": 123.443,
-     "end": 124.083
-    },
-    {
-     "w": "Toward",
-     "t": 125.393,
-     "end": 125.631
-    },
-    {
-     "w": "the",
-     "t": 125.643,
-     "end": 125.731
-    },
-    {
-     "w": "center",
-     "t": 125.768,
-     "end": 126.593
-    },
-    {
-     "w": "every",
-     "t": 126.818,
-     "end": 127.131
-    },
-    {
-     "w": "ring",
-     "t": 127.168,
-     "end": 127.443
-    },
-    {
-     "w": "gets",
-     "t": 127.468,
-     "end": 127.655
-    },
-    {
-     "w": "an",
-     "t": 127.668,
-     "end": 127.78
-    },
-    {
-     "w": "equal",
-     "t": 127.818,
-     "end": 128.193
-    },
-    {
-     "w": "share",
-     "t": 128.243,
-     "end": 128.768
-    },
-    {
-     "w": "and",
-     "t": 128.893,
-     "end": 129.03
-    },
-    {
-     "w": "inner",
-     "t": 129.068,
-     "end": 129.318
-    },
-    {
-     "w": "rings",
-     "t": 129.343,
-     "end": 129.693
-    },
-    {
-     "w": "are",
-     "t": 129.718,
-     "end": 129.843
-    },
-    {
-     "w": "small",
-     "t": 129.893,
-     "end": 130.453
-    },
-    {
-     "w": "Half",
-     "t": 130.883,
-     "end": 131.133
-    },
-    {
-     "w": "the",
-     "t": 131.158,
-     "end": 131.233
-    },
-    {
-     "w": "radius",
-     "t": 131.258,
-     "end": 131.858
-    },
-    {
-     "w": "so",
-     "t": 132.008,
-     "end": 132.183
-    },
-    {
-     "w": "one",
-     "t": 132.208,
-     "end": 132.333
-    },
-    {
-     "w": "half",
-     "t": 132.358,
-     "end": 132.903
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/2c/2c08cff06dcf1ad9092f6abd.wav"
-  },
-  {
-   "index": 13,
-   "start": 133.167,
-   "duration": 6.82,
-   "end": 139.987,
-   "text": "And the endpoints program piles them against the rim, so only a third land inside, the third we found.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "And",
-     "t": 133.187,
-     "end": 133.324
-    },
-    {
-     "w": "the",
-     "t": 133.337,
-     "end": 133.45
-    },
-    {
-     "w": "endpoints",
-     "t": 133.487,
-     "end": 133.962
-    },
-    {
-     "w": "program",
-     "t": 133.987,
-     "end": 134.537
-    },
-    {
-     "w": "piles",
-     "t": 134.587,
-     "end": 134.949
-    },
-    {
-     "w": "them",
-     "t": 134.962,
-     "end": 135.087
-    },
-    {
-     "w": "against",
-     "t": 135.112,
-     "end": 135.425
-    },
-    {
-     "w": "the",
-     "t": 135.437,
-     "end": 135.512
-    },
-    {
-     "w": "rim",
-     "t": 135.537,
-     "end": 136.162
-    },
-    {
-     "w": "so",
-     "t": 136.337,
-     "end": 136.525
-    },
-    {
-     "w": "only",
-     "t": 136.562,
-     "end": 136.837
-    },
-    {
-     "w": "a",
-     "t": 136.862,
-     "end": 136.975
-    },
-    {
-     "w": "third",
-     "t": 137.037,
-     "end": 137.362
-    },
-    {
-     "w": "land",
-     "t": 137.387,
-     "end": 137.712
-    },
-    {
-     "w": "inside",
-     "t": 137.737,
-     "end": 138.562
-    },
-    {
-     "w": "the",
-     "t": 138.712,
-     "end": 138.837
-    },
-    {
-     "w": "third",
-     "t": 138.887,
-     "end": 139.187
-    },
-    {
-     "w": "we",
-     "t": 139.212,
-     "end": 139.349
-    },
-    {
-     "w": "found",
-     "t": 139.387,
-     "end": 139.987
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/44/44d6722956843aed4275319c.wav"
-  },
-  {
-   "index": 14,
-   "start": 140.267,
-   "duration": 8.12,
-   "end": 148.387,
-   "text": "Three programs, three things spread evenly: rim, radius, area. At random never said which. [pause 0.8]",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Three",
-     "t": 140.362,
-     "end": 140.587
-    },
-    {
-     "w": "programs",
-     "t": 140.612,
-     "end": 141.212
-    },
-    {
-     "w": "three",
-     "t": 141.337,
-     "end": 141.562
-    },
-    {
-     "w": "things",
-     "t": 141.587,
-     "end": 141.812
-    },
-    {
-     "w": "spread",
-     "t": 141.837,
-     "end": 142.137
-    },
-    {
-     "w": "evenly",
-     "t": 142.162,
-     "end": 143.037
-    },
-    {
-     "w": "rim",
-     "t": 143.287,
-     "end": 143.737
-    },
-    {
-     "w": "radius",
-     "t": 143.887,
-     "end": 144.487
-    },
-    {
-     "w": "area",
-     "t": 144.562,
-     "end": 145.197
-    },
-    {
-     "w": "At",
-     "t": 145.577,
-     "end": 145.759
-    },
-    {
-     "w": "random",
-     "t": 145.797,
-     "end": 146.409
-    },
-    {
-     "w": "never",
-     "t": 146.472,
-     "end": 146.809
-    },
-    {
-     "w": "said",
-     "t": 146.847,
-     "end": 147.072
-    },
-    {
-     "w": "which",
-     "t": 147.097,
-     "end": 147.587
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/15/154e41e6a27904912c4692f4.wav"
-  },
-  {
-   "index": 15,
-   "start": 148.667,
-   "duration": 12.11,
-   "end": 160.777,
-   "text": "Edwin Jaynes argued that a physical process picks one. Straws tossed from a standing height can't be aimed, so the answer can't depend on where the circle sits or how big it is.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Edwin",
-     "t": 148.677,
-     "end": 149.027
-    },
-    {
-     "w": "Jaynes",
-     "t": 149.077,
-     "end": 149.777
-    },
-    {
-     "w": "argued",
-     "t": 149.827,
-     "end": 150.227
-    },
-    {
-     "w": "that",
-     "t": 150.252,
-     "end": 150.339
-    },
-    {
-     "w": "a",
-     "t": 150.352,
-     "end": 150.452
-    },
-    {
-     "w": "physical",
-     "t": 150.502,
-     "end": 150.927
-    },
-    {
-     "w": "process",
-     "t": 150.952,
-     "end": 151.565
-    },
-    {
-     "w": "picks",
-     "t": 151.602,
-     "end": 151.877
-    },
-    {
-     "w": "one",
-     "t": 151.902,
-     "end": 152.367
-    },
-    {
-     "w": "Straws",
-     "t": 152.807,
-     "end": 153.295
-    },
-    {
-     "w": "tossed",
-     "t": 153.332,
-     "end": 153.732
-    },
-    {
-     "w": "from",
-     "t": 153.757,
-     "end": 153.87
-    },
-    {
-     "w": "a",
-     "t": 153.882,
-     "end": 153.932
-    },
-    {
-     "w": "standing",
-     "t": 153.957,
-     "end": 154.445
-    },
-    {
-     "w": "height",
-     "t": 154.482,
-     "end": 155.019
-    },
-    {
-     "w": "can't",
-     "t": 155.082,
-     "end": 155.357
-    },
-    {
-     "w": "be",
-     "t": 155.382,
-     "end": 155.532
-    },
-    {
-     "w": "aimed",
-     "t": 155.582,
-     "end": 156.432
-    },
-    {
-     "w": "so",
-     "t": 156.632,
-     "end": 156.745
-    },
-    {
-     "w": "the",
-     "t": 156.757,
-     "end": 156.907
-    },
-    {
-     "w": "answer",
-     "t": 156.957,
-     "end": 157.407
-    },
-    {
-     "w": "can't",
-     "t": 157.457,
-     "end": 157.732
-    },
-    {
-     "w": "depend",
-     "t": 157.757,
-     "end": 158.195
-    },
-    {
-     "w": "on",
-     "t": 158.207,
-     "end": 158.319
-    },
-    {
-     "w": "where",
-     "t": 158.332,
-     "end": 158.445
-    },
-    {
-     "w": "the",
-     "t": 158.457,
-     "end": 158.569
-    },
-    {
-     "w": "circle",
-     "t": 158.607,
-     "end": 158.982
-    },
-    {
-     "w": "sits",
-     "t": 159.032,
-     "end": 159.582
-    },
-    {
-     "w": "or",
-     "t": 159.632,
-     "end": 159.782
-    },
-    {
-     "w": "how",
-     "t": 159.807,
-     "end": 159.995
-    },
-    {
-     "w": "big",
-     "t": 160.032,
-     "end": 160.219
-    },
-    {
-     "w": "it",
-     "t": 160.232,
-     "end": 160.345
-    },
-    {
-     "w": "is",
-     "t": 160.382,
-     "end": 160.777
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/32/327505f92ddadeeb237b19fc.wav"
-  },
-  {
-   "index": 16,
-   "start": 161.033,
-   "duration": 20.78,
-   "end": 181.813,
-   "text": "One rain lands on both circles at once. Each judges with its own gold circle, so a fair program must score the same on both. Midpoint gives a quarter, then point four one. [pause 1.1] Endpoints give a third, then point four seven. [pause 1.1] Only the radius program gives a half on both. [pause 0.9]",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "One",
-     "t": 161.068,
-     "end": 161.355
-    },
-    {
-     "w": "rain",
-     "t": 161.393,
-     "end": 161.718
-    },
-    {
-     "w": "lands",
-     "t": 161.743,
-     "end": 162.08
-    },
-    {
-     "w": "on",
-     "t": 162.093,
-     "end": 162.218
-    },
-    {
-     "w": "both",
-     "t": 162.243,
-     "end": 162.543
-    },
-    {
-     "w": "circles",
-     "t": 162.568,
-     "end": 162.943
-    },
-    {
-     "w": "at",
-     "t": 162.968,
-     "end": 163.043
-    },
-    {
-     "w": "once",
-     "t": 163.068,
-     "end": 163.613
-    },
-    {
-     "w": "Each",
-     "t": 164.003,
-     "end": 164.291
-    },
-    {
-     "w": "judges",
-     "t": 164.328,
-     "end": 164.753
-    },
-    {
-     "w": "with",
-     "t": 164.778,
-     "end": 164.891
-    },
-    {
-     "w": "its",
-     "t": 164.903,
-     "end": 165.103
-    },
-    {
-     "w": "own",
-     "t": 165.153,
-     "end": 165.428
-    },
-    {
-     "w": "gold",
-     "t": 165.453,
-     "end": 165.728
-    },
-    {
-     "w": "circle",
-     "t": 165.753,
-     "end": 166.503
-    },
-    {
-     "w": "so",
-     "t": 166.678,
-     "end": 166.778
-    },
-    {
-     "w": "a",
-     "t": 166.803,
-     "end": 166.903
-    },
-    {
-     "w": "fair",
-     "t": 166.953,
-     "end": 167.203
-    },
-    {
-     "w": "program",
-     "t": 167.228,
-     "end": 167.778
-    },
-    {
-     "w": "must",
-     "t": 167.803,
-     "end": 168.041
-    },
-    {
-     "w": "score",
-     "t": 168.078,
-     "end": 168.353
-    },
-    {
-     "w": "the",
-     "t": 168.378,
-     "end": 168.491
-    },
-    {
-     "w": "same",
-     "t": 168.528,
-     "end": 168.765
-    },
-    {
-     "w": "on",
-     "t": 168.778,
-     "end": 168.928
-    },
-    {
-     "w": "both",
-     "t": 168.953,
-     "end": 169.473
-    },
-    {
-     "w": "Midpoint",
-     "t": 169.928,
-     "end": 170.478
-    },
-    {
-     "w": "gives",
-     "t": 170.503,
-     "end": 170.691
-    },
-    {
-     "w": "a",
-     "t": 170.703,
-     "end": 170.753
-    },
-    {
-     "w": "quarter",
-     "t": 170.778,
-     "end": 171.378
-    },
-    {
-     "w": "then",
-     "t": 171.528,
-     "end": 171.728
-    },
-    {
-     "w": "point",
-     "t": 171.753,
-     "end": 172.028
-    },
-    {
-     "w": "four",
-     "t": 172.053,
-     "end": 172.278
-    },
-    {
-     "w": "one",
-     "t": 172.303,
-     "end": 172.813
-    },
-    {
-     "w": "Endpoints",
-     "t": 173.988,
-     "end": 174.513
-    },
-    {
-     "w": "give",
-     "t": 174.538,
-     "end": 174.675
-    },
-    {
-     "w": "a",
-     "t": 174.688,
-     "end": 174.788
-    },
-    {
-     "w": "third",
-     "t": 174.838,
-     "end": 175.438
-    },
-    {
-     "w": "then",
-     "t": 175.588,
-     "end": 175.763
-    },
-    {
-     "w": "point",
-     "t": 175.788,
-     "end": 176.075
-    },
-    {
-     "w": "four",
-     "t": 176.113,
-     "end": 176.338
-    },
-    {
-     "w": "seven",
-     "t": 176.388,
-     "end": 176.973
-    },
-    {
-     "w": "Only",
-     "t": 178.078,
-     "end": 178.403
-    },
-    {
-     "w": "the",
-     "t": 178.428,
-     "end": 178.541
-    },
-    {
-     "w": "radius",
-     "t": 178.578,
-     "end": 179.053
-    },
-    {
-     "w": "program",
-     "t": 179.078,
-     "end": 179.665
-    },
-    {
-     "w": "gives",
-     "t": 179.703,
-     "end": 179.866
-    },
-    {
-     "w": "a",
-     "t": 179.878,
-     "end": 179.928
-    },
-    {
-     "w": "half",
-     "t": 179.953,
-     "end": 180.191
-    },
-    {
-     "w": "on",
-     "t": 180.203,
-     "end": 180.353
-    },
-    {
-     "w": "both",
-     "t": 180.378,
-     "end": 180.913
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/f1/f191d13622e133d0d6e78b8b.wav"
-  },
-  {
-   "index": 17,
-   "start": 182.067,
-   "duration": 11.57,
-   "end": 193.637,
-   "text": "Jaynes and Charles Tyler tossed real broom straws at a five-inch circle, and the hundred and twenty-eight that crossed it matched the radius program's flat spread. [pause 0.8]",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Jaynes",
-     "t": 182.147,
-     "end": 182.672
-    },
-    {
-     "w": "and",
-     "t": 182.697,
-     "end": 182.809
-    },
-    {
-     "w": "Charles",
-     "t": 182.847,
-     "end": 183.285
-    },
-    {
-     "w": "Tyler",
-     "t": 183.322,
-     "end": 183.897
-    },
-    {
-     "w": "tossed",
-     "t": 183.947,
-     "end": 184.372
-    },
-    {
-     "w": "real",
-     "t": 184.422,
-     "end": 184.709
-    },
-    {
-     "w": "broom",
-     "t": 184.747,
-     "end": 185.097
-    },
-    {
-     "w": "straws",
-     "t": 185.122,
-     "end": 185.647
-    },
-    {
-     "w": "at",
-     "t": 185.672,
-     "end": 185.735
-    },
-    {
-     "w": "a",
-     "t": 185.747,
-     "end": 185.847
-    },
-    {
-     "w": "five-inch",
-     "t": 185.897,
-     "end": 186.422
-    },
-    {
-     "w": "circle",
-     "t": 186.447,
-     "end": 187.347
-    },
-    {
-     "w": "and",
-     "t": 187.522,
-     "end": 187.609
-    },
-    {
-     "w": "the",
-     "t": 187.622,
-     "end": 187.709
-    },
-    {
-     "w": "hundred",
-     "t": 187.747,
-     "end": 188.147
-    },
-    {
-     "w": "and",
-     "t": 188.172,
-     "end": 188.272
-    },
-    {
-     "w": "twenty-eight",
-     "t": 188.297,
-     "end": 188.947
-    },
-    {
-     "w": "that",
-     "t": 188.972,
-     "end": 189.097
-    },
-    {
-     "w": "crossed",
-     "t": 189.122,
-     "end": 189.572
-    },
-    {
-     "w": "it",
-     "t": 189.597,
-     "end": 190.047
-    },
-    {
-     "w": "matched",
-     "t": 190.122,
-     "end": 190.547
-    },
-    {
-     "w": "the",
-     "t": 190.572,
-     "end": 190.685
-    },
-    {
-     "w": "radius",
-     "t": 190.722,
-     "end": 191.247
-    },
-    {
-     "w": "program's",
-     "t": 191.272,
-     "end": 191.872
-    },
-    {
-     "w": "flat",
-     "t": 191.922,
-     "end": 192.247
-    },
-    {
-     "w": "spread",
-     "t": 192.272,
-     "end": 192.837
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/49/4922c2db28f2e6bae2e8cc55.wav"
-  },
-  {
-   "index": 18,
-   "start": 193.9,
-   "duration": 23.18,
-   "end": 217.08,
-   "text": "Surveys hide the same two words. Take classes of ten, ten and a hundred. Pick a class at random, and the average size is forty. Pick a student at random, spread evenly over students instead of classes, and it's eighty-five. At Stony Brook in nineteen seventy-four, those two picks gave forty and a hundred forty-seven. [pause 0.5]",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "Surveys",
-     "t": 193.98,
-     "end": 194.53
-    },
-    {
-     "w": "hide",
-     "t": 194.555,
-     "end": 194.767
-    },
-    {
-     "w": "the",
-     "t": 194.78,
-     "end": 194.868
-    },
-    {
-     "w": "same",
-     "t": 194.905,
-     "end": 195.218
-    },
-    {
-     "w": "two",
-     "t": 195.255,
-     "end": 195.43
-    },
-    {
-     "w": "words",
-     "t": 195.455,
-     "end": 196.03
-    },
-    {
-     "w": "Take",
-     "t": 196.42,
-     "end": 196.645
-    },
-    {
-     "w": "classes",
-     "t": 196.67,
-     "end": 197.12
-    },
-    {
-     "w": "of",
-     "t": 197.145,
-     "end": 197.282
-    },
-    {
-     "w": "ten",
-     "t": 197.32,
-     "end": 197.795
-    },
-    {
-     "w": "ten",
-     "t": 197.97,
-     "end": 198.382
-    },
-    {
-     "w": "and",
-     "t": 198.42,
-     "end": 198.508
-    },
-    {
-     "w": "a",
-     "t": 198.52,
-     "end": 198.57
-    },
-    {
-     "w": "hundred",
-     "t": 198.595,
-     "end": 199.21
-    },
-    {
-     "w": "Pick",
-     "t": 199.59,
-     "end": 199.772
-    },
-    {
-     "w": "a",
-     "t": 199.785,
-     "end": 199.835
-    },
-    {
-     "w": "class",
-     "t": 199.86,
-     "end": 200.197
-    },
-    {
-     "w": "at",
-     "t": 200.21,
-     "end": 200.285
-    },
-    {
-     "w": "random",
-     "t": 200.31,
-     "end": 201.06
-    },
-    {
-     "w": "and",
-     "t": 201.185,
-     "end": 201.272
-    },
-    {
-     "w": "the",
-     "t": 201.285,
-     "end": 201.41
-    },
-    {
-     "w": "average",
-     "t": 201.46,
-     "end": 201.898
-    },
-    {
-     "w": "size",
-     "t": 201.935,
-     "end": 202.335
-    },
-    {
-     "w": "is",
-     "t": 202.36,
-     "end": 202.522
-    },
-    {
-     "w": "forty",
-     "t": 202.56,
-     "end": 203.12
-    },
-    {
-     "w": "Pick",
-     "t": 203.5,
-     "end": 203.682
-    },
-    {
-     "w": "a",
-     "t": 203.695,
-     "end": 203.77
-    },
-    {
-     "w": "student",
-     "t": 203.795,
-     "end": 204.17
-    },
-    {
-     "w": "at",
-     "t": 204.195,
-     "end": 204.295
-    },
-    {
-     "w": "random",
-     "t": 204.32,
-     "end": 205.12
-    },
-    {
-     "w": "spread",
-     "t": 205.32,
-     "end": 205.67
-    },
-    {
-     "w": "evenly",
-     "t": 205.72,
-     "end": 206.17
-    },
-    {
-     "w": "over",
-     "t": 206.195,
-     "end": 206.42
-    },
-    {
-     "w": "students",
-     "t": 206.445,
-     "end": 206.945
-    },
-    {
-     "w": "instead",
-     "t": 206.97,
-     "end": 207.258
-    },
-    {
-     "w": "of",
-     "t": 207.27,
-     "end": 207.345
-    },
-    {
-     "w": "classes",
-     "t": 207.37,
-     "end": 208.345
-    },
-    {
-     "w": "and",
-     "t": 208.52,
-     "end": 208.645
+     "t": 3.2,
+     "end": 3.55
     },
     {
      "w": "it's",
-     "t": 208.67,
-     "end": 208.858
+     "t": 3.575,
+     "end": 3.762
     },
     {
-     "w": "eighty-five",
-     "t": 208.895,
-     "end": 209.99
+     "w": "longer",
+     "t": 3.8,
+     "end": 4.225
     },
     {
-     "w": "At",
-     "t": 210.375,
-     "end": 210.588
-    },
-    {
-     "w": "Stony",
-     "t": 210.625,
-     "end": 211.012
-    },
-    {
-     "w": "Brook",
-     "t": 211.05,
-     "end": 211.4
-    },
-    {
-     "w": "in",
-     "t": 211.425,
-     "end": 211.525
-    },
-    {
-     "w": "nineteen",
-     "t": 211.55,
-     "end": 211.975
-    },
-    {
-     "w": "seventy-four",
-     "t": 212.0,
-     "end": 213.075
-    },
-    {
-     "w": "those",
-     "t": 213.225,
-     "end": 213.538
-    },
-    {
-     "w": "two",
-     "t": 213.575,
-     "end": 213.75
-    },
-    {
-     "w": "picks",
-     "t": 213.775,
-     "end": 214.05
-    },
-    {
-     "w": "gave",
-     "t": 214.075,
-     "end": 214.375
-    },
-    {
-     "w": "forty",
-     "t": 214.425,
-     "end": 215.0
-    },
-    {
-     "w": "and",
-     "t": 215.05,
-     "end": 215.137
+     "w": "than",
+     "t": 4.25,
+     "end": 4.338
     },
     {
      "w": "a",
-     "t": 215.15,
-     "end": 215.2
+     "t": 4.35,
+     "end": 4.45
     },
     {
-     "w": "hundred",
-     "t": 215.225,
-     "end": 215.637
-    },
-    {
-     "w": "forty-seven",
-     "t": 215.675,
-     "end": 216.58
-    }
-   ],
-   "wav": "/root/.cache/sample_space/tts/8e/8eff1237af2c9ff54f98fbc9.wav"
-  },
-  {
-   "index": 19,
-   "start": 217.367,
-   "duration": 11.87,
-   "end": 229.237,
-   "text": "So whatever number you picked, some way of drawing chords makes it right. Name the way, and the answer is fixed: a half for tossed straws, a hundred forty-seven for a random student.",
-   "voice": "af_heart",
-   "speed": 0.82,
-   "cadence": "flat",
-   "words": [
-    {
-     "w": "So",
-     "t": 217.452,
-     "end": 217.627
-    },
-    {
-     "w": "whatever",
-     "t": 217.652,
-     "end": 218.027
-    },
-    {
-     "w": "number",
-     "t": 218.052,
-     "end": 218.302
-    },
-    {
-     "w": "you",
-     "t": 218.327,
-     "end": 218.465
-    },
-    {
-     "w": "picked",
-     "t": 218.502,
-     "end": 219.152
-    },
-    {
-     "w": "some",
-     "t": 219.377,
-     "end": 219.602
-    },
-    {
-     "w": "way",
-     "t": 219.627,
-     "end": 219.765
+     "w": "side",
+     "t": 4.5,
+     "end": 4.788
     },
     {
      "w": "of",
-     "t": 219.777,
-     "end": 219.877
+     "t": 4.8,
+     "end": 4.862
     },
     {
-     "w": "drawing",
-     "t": 219.902,
-     "end": 220.252
+     "w": "this",
+     "t": 4.875,
+     "end": 5.062
     },
     {
-     "w": "chords",
-     "t": 220.277,
-     "end": 220.627
+     "w": "triangle",
+     "t": 5.1,
+     "end": 5.86
     },
     {
-     "w": "makes",
-     "t": 220.652,
-     "end": 220.889
-    },
-    {
-     "w": "it",
-     "t": 220.902,
-     "end": 221.002
-    },
-    {
-     "w": "right",
-     "t": 221.027,
-     "end": 221.557
-    },
-    {
-     "w": "Name",
-     "t": 222.017,
-     "end": 222.279
-    },
-    {
-     "w": "the",
-     "t": 222.292,
-     "end": 222.367
-    },
-    {
-     "w": "way",
-     "t": 222.392,
-     "end": 222.742
-    },
-    {
-     "w": "and",
-     "t": 222.842,
-     "end": 222.929
-    },
-    {
-     "w": "the",
-     "t": 222.942,
-     "end": 223.055
-    },
-    {
-     "w": "answer",
-     "t": 223.092,
-     "end": 223.542
-    },
-    {
-     "w": "is",
-     "t": 223.567,
-     "end": 223.705
-    },
-    {
-     "w": "fixed",
-     "t": 223.742,
-     "end": 224.617
+     "w": "Pick",
+     "t": 6.51,
+     "end": 6.722
     },
     {
      "w": "a",
-     "t": 224.817,
-     "end": 224.892
+     "t": 6.735,
+     "end": 6.785
     },
     {
-     "w": "half",
-     "t": 224.917,
-     "end": 225.192
+     "w": "number",
+     "t": 6.81,
+     "end": 7.43
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/c1/c16c4f4b33ce82d2458619a4.wav"
+  },
+  {
+   "index": 1,
+   "start": 9.367,
+   "duration": 12.85,
+   "end": 22.217,
+   "text": "Bertrand posed this puzzle in eighteen eighty-nine, as a warning about two words: at random. Leave them vague, and one college's average class is forty, or a hundred forty-seven.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Bertrand",
+     "t": 9.417,
+     "end": 10.042
     },
     {
-     "w": "for",
-     "t": 225.217,
-     "end": 225.355
+     "w": "posed",
+     "t": 10.092,
+     "end": 10.517
     },
     {
-     "w": "tossed",
-     "t": 225.392,
-     "end": 225.792
+     "w": "this",
+     "t": 10.542,
+     "end": 10.717
     },
     {
-     "w": "straws",
-     "t": 225.817,
-     "end": 226.542
+     "w": "puzzle",
+     "t": 10.742,
+     "end": 11.117
+    },
+    {
+     "w": "in",
+     "t": 11.142,
+     "end": 11.279
+    },
+    {
+     "w": "eighteen",
+     "t": 11.317,
+     "end": 11.817
+    },
+    {
+     "w": "eighty-nine",
+     "t": 11.842,
+     "end": 12.767
+    },
+    {
+     "w": "as",
+     "t": 12.917,
+     "end": 13.042
     },
     {
      "w": "a",
-     "t": 226.692,
-     "end": 226.767
+     "t": 13.067,
+     "end": 13.167
     },
     {
-     "w": "hundred",
-     "t": 226.792,
-     "end": 227.205
+     "w": "warning",
+     "t": 13.217,
+     "end": 13.617
     },
     {
-     "w": "forty-seven",
-     "t": 227.242,
-     "end": 227.942
+     "w": "about",
+     "t": 13.642,
+     "end": 13.929
     },
     {
-     "w": "for",
-     "t": 227.967,
-     "end": 228.067
+     "w": "two",
+     "t": 13.967,
+     "end": 14.142
     },
     {
-     "w": "a",
-     "t": 228.092,
-     "end": 228.167
+     "w": "words",
+     "t": 14.167,
+     "end": 14.892
+    },
+    {
+     "w": "at",
+     "t": 15.092,
+     "end": 15.192
     },
     {
      "w": "random",
-     "t": 228.192,
-     "end": 228.617
+     "t": 15.217,
+     "end": 15.877
+    },
+    {
+     "w": "Leave",
+     "t": 16.257,
+     "end": 16.544
+    },
+    {
+     "w": "them",
+     "t": 16.557,
+     "end": 16.744
+    },
+    {
+     "w": "vague",
+     "t": 16.782,
+     "end": 17.432
+    },
+    {
+     "w": "and",
+     "t": 17.557,
+     "end": 17.657
+    },
+    {
+     "w": "one",
+     "t": 17.682,
+     "end": 17.919
+    },
+    {
+     "w": "college's",
+     "t": 17.957,
+     "end": 18.469
+    },
+    {
+     "w": "average",
+     "t": 18.507,
+     "end": 18.882
+    },
+    {
+     "w": "class",
+     "t": 18.907,
+     "end": 19.307
+    },
+    {
+     "w": "is",
+     "t": 19.332,
+     "end": 19.507
+    },
+    {
+     "w": "forty",
+     "t": 19.557,
+     "end": 20.257
+    },
+    {
+     "w": "or",
+     "t": 20.457,
+     "end": 20.582
+    },
+    {
+     "w": "a",
+     "t": 20.607,
+     "end": 20.682
+    },
+    {
+     "w": "hundred",
+     "t": 20.707,
+     "end": 21.119
+    },
+    {
+     "w": "forty-seven",
+     "t": 21.157,
+     "end": 22.067
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/55/55e1a4c6436fcf184784517d.wav"
+  },
+  {
+   "index": 2,
+   "start": 22.667,
+   "duration": 8.49,
+   "end": 31.157,
+   "text": "Start with the obvious simulation: two random points on the rim, joined. If the chord beats the triangle's side, it turns gold.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Start",
+     "t": 22.737,
+     "end": 22.999
+    },
+    {
+     "w": "with",
+     "t": 23.012,
+     "end": 23.099
+    },
+    {
+     "w": "the",
+     "t": 23.112,
+     "end": 23.237
+    },
+    {
+     "w": "obvious",
+     "t": 23.287,
+     "end": 23.737
+    },
+    {
+     "w": "simulation",
+     "t": 23.762,
+     "end": 24.812
+    },
+    {
+     "w": "two",
+     "t": 25.037,
+     "end": 25.3
+    },
+    {
+     "w": "random",
+     "t": 25.337,
+     "end": 25.762
+    },
+    {
+     "w": "points",
+     "t": 25.787,
+     "end": 26.074
+    },
+    {
+     "w": "on",
+     "t": 26.087,
+     "end": 26.175
+    },
+    {
+     "w": "the",
+     "t": 26.187,
+     "end": 26.262
+    },
+    {
+     "w": "rim",
+     "t": 26.287,
+     "end": 26.637
+    },
+    {
+     "w": "joined",
+     "t": 26.762,
+     "end": 27.337
+    },
+    {
+     "w": "If",
+     "t": 27.662,
+     "end": 27.837
+    },
+    {
+     "w": "the",
+     "t": 27.862,
+     "end": 27.937
+    },
+    {
+     "w": "chord",
+     "t": 27.962,
+     "end": 28.237
+    },
+    {
+     "w": "beats",
+     "t": 28.262,
+     "end": 28.512
+    },
+    {
+     "w": "the",
+     "t": 28.537,
+     "end": 28.612
+    },
+    {
+     "w": "triangle's",
+     "t": 28.637,
+     "end": 29.212
+    },
+    {
+     "w": "side",
+     "t": 29.237,
+     "end": 29.837
+    },
+    {
+     "w": "it",
+     "t": 30.012,
+     "end": 30.112
+    },
+    {
+     "w": "turns",
+     "t": 30.137,
+     "end": 30.512
+    },
+    {
+     "w": "gold",
+     "t": 30.537,
+     "end": 31.157
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f2/f29604237a1f91e3dc9326fd.wav"
+  },
+  {
+   "index": 3,
+   "start": 31.6,
+   "duration": 4.44,
+   "end": 36.04,
+   "text": "Ten thousand chords in, the gold share settles near point three three.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Ten",
+     "t": 31.62,
+     "end": 31.92
+    },
+    {
+     "w": "thousand",
+     "t": 31.945,
+     "end": 32.395
+    },
+    {
+     "w": "chords",
+     "t": 32.42,
+     "end": 32.72
+    },
+    {
+     "w": "in",
+     "t": 32.745,
+     "end": 33.245
+    },
+    {
+     "w": "the",
+     "t": 33.395,
+     "end": 33.47
+    },
+    {
+     "w": "gold",
+     "t": 33.495,
+     "end": 33.832
+    },
+    {
+     "w": "share",
+     "t": 33.87,
+     "end": 34.158
+    },
+    {
+     "w": "settles",
+     "t": 34.195,
+     "end": 34.595
+    },
+    {
+     "w": "near",
+     "t": 34.62,
+     "end": 34.82
+    },
+    {
+     "w": "point",
+     "t": 34.845,
+     "end": 35.095
+    },
+    {
+     "w": "three",
+     "t": 35.12,
+     "end": 35.345
+    },
+    {
+     "w": "three",
+     "t": 35.395,
+     "end": 35.89
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/cd/cd169274900833971b9f1cd5.wav"
+  },
+  {
+   "index": 4,
+   "start": 36.5,
+   "duration": 9.49,
+   "end": 45.99,
+   "text": "Geometry agrees. Put a corner on the first point, and the chord is long only when it ends on this far arc, a third of the rim. [pause 1.0]",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Geometry",
+     "t": 36.555,
+     "end": 37.13
+    },
+    {
+     "w": "agrees",
+     "t": 37.155,
+     "end": 37.85
+    },
+    {
+     "w": "Put",
+     "t": 38.25,
+     "end": 38.378
+    },
+    {
+     "w": "a",
+     "t": 38.39,
+     "end": 38.44
+    },
+    {
+     "w": "corner",
+     "t": 38.465,
+     "end": 38.827
+    },
+    {
+     "w": "on",
+     "t": 38.84,
+     "end": 38.928
+    },
+    {
+     "w": "the",
+     "t": 38.94,
+     "end": 39.028
+    },
+    {
+     "w": "first",
+     "t": 39.065,
+     "end": 39.34
+    },
+    {
+     "w": "point",
+     "t": 39.365,
+     "end": 40.09
+    },
+    {
+     "w": "and",
+     "t": 40.265,
+     "end": 40.352
+    },
+    {
+     "w": "the",
+     "t": 40.365,
+     "end": 40.452
+    },
+    {
+     "w": "chord",
+     "t": 40.49,
+     "end": 40.89
+    },
+    {
+     "w": "is",
+     "t": 40.915,
+     "end": 41.065
+    },
+    {
+     "w": "long",
+     "t": 41.115,
+     "end": 41.552
+    },
+    {
+     "w": "only",
+     "t": 41.59,
+     "end": 41.99
+    },
+    {
+     "w": "when",
+     "t": 42.015,
+     "end": 42.127
+    },
+    {
+     "w": "it",
+     "t": 42.14,
+     "end": 42.278
+    },
+    {
+     "w": "ends",
+     "t": 42.315,
+     "end": 42.578
+    },
+    {
+     "w": "on",
+     "t": 42.59,
+     "end": 42.678
+    },
+    {
+     "w": "this",
+     "t": 42.69,
+     "end": 42.89
+    },
+    {
+     "w": "far",
+     "t": 42.915,
+     "end": 43.19
+    },
+    {
+     "w": "arc",
+     "t": 43.215,
+     "end": 43.79
+    },
+    {
+     "w": "a",
+     "t": 43.965,
+     "end": 44.065
+    },
+    {
+     "w": "third",
+     "t": 44.115,
+     "end": 44.328
+    },
+    {
+     "w": "of",
+     "t": 44.34,
+     "end": 44.402
+    },
+    {
+     "w": "the",
+     "t": 44.415,
+     "end": 44.49
+    },
+    {
+     "w": "rim",
+     "t": 44.515,
+     "end": 44.99
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/f1/f171ccadc85f61b810fc9385.wav"
+  },
+  {
+   "index": 5,
+   "start": 46.433,
+   "duration": 7.76,
+   "end": 54.193,
+   "text": "Case closed, until you code it a second way: a random radius, a point on it, and the chord through it at right angles.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Case",
+     "t": 46.463,
+     "end": 46.825
+    },
+    {
+     "w": "closed",
+     "t": 46.863,
+     "end": 47.463
+    },
+    {
+     "w": "until",
+     "t": 47.563,
+     "end": 47.788
+    },
+    {
+     "w": "you",
+     "t": 47.813,
+     "end": 47.913
+    },
+    {
+     "w": "code",
+     "t": 47.938,
+     "end": 48.151
+    },
+    {
+     "w": "it",
+     "t": 48.163,
+     "end": 48.225
+    },
+    {
+     "w": "a",
+     "t": 48.238,
+     "end": 48.325
+    },
+    {
+     "w": "second",
+     "t": 48.363,
+     "end": 48.688
+    },
+    {
+     "w": "way",
+     "t": 48.713,
+     "end": 49.438
+    },
+    {
+     "w": "a",
+     "t": 49.688,
+     "end": 49.776
+    },
+    {
+     "w": "random",
+     "t": 49.813,
+     "end": 50.238
+    },
+    {
+     "w": "radius",
+     "t": 50.263,
+     "end": 50.963
+    },
+    {
+     "w": "a",
+     "t": 51.063,
+     "end": 51.15
+    },
+    {
+     "w": "point",
+     "t": 51.188,
+     "end": 51.501
+    },
+    {
+     "w": "on",
+     "t": 51.513,
+     "end": 51.663
+    },
+    {
+     "w": "it",
+     "t": 51.688,
+     "end": 52.013
+    },
+    {
+     "w": "and",
+     "t": 52.138,
+     "end": 52.225
+    },
+    {
+     "w": "the",
+     "t": 52.238,
+     "end": 52.325
+    },
+    {
+     "w": "chord",
+     "t": 52.363,
+     "end": 52.701
+    },
+    {
+     "w": "through",
+     "t": 52.738,
+     "end": 52.913
+    },
+    {
+     "w": "it",
+     "t": 52.938,
+     "end": 53.063
+    },
+    {
+     "w": "at",
+     "t": 53.088,
+     "end": 53.225
+    },
+    {
+     "w": "right",
+     "t": 53.263,
+     "end": 53.488
+    },
+    {
+     "w": "angles",
+     "t": 53.513,
+     "end": 54.193
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/d3/d384ae20b609aaa8d02b50c4.wav"
+  },
+  {
+   "index": 6,
+   "start": 54.633,
+   "duration": 2.21,
+   "end": 56.843,
+   "text": "This one settles near point five.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "This",
+     "t": 54.673,
+     "end": 54.873
+    },
+    {
+     "w": "one",
+     "t": 54.898,
+     "end": 55.148
+    },
+    {
+     "w": "settles",
+     "t": 55.198,
+     "end": 55.573
+    },
+    {
+     "w": "near",
+     "t": 55.598,
+     "end": 55.798
+    },
+    {
+     "w": "point",
+     "t": 55.823,
+     "end": 56.085
+    },
+    {
+     "w": "five",
+     "t": 56.123,
+     "end": 56.693
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/95/95c32e6ab16df878829e15b2.wav"
+  },
+  {
+   "index": 7,
+   "start": 57.3,
+   "duration": 6.82,
+   "end": 64.12,
+   "text": "A third program picks any point inside as the chord's midpoint. That settles near point two five.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "A",
+     "t": 57.325,
+     "end": 57.425
+    },
+    {
+     "w": "third",
+     "t": 57.475,
+     "end": 57.725
+    },
+    {
+     "w": "program",
+     "t": 57.75,
+     "end": 58.425
+    },
+    {
+     "w": "picks",
+     "t": 58.475,
+     "end": 58.762
+    },
+    {
+     "w": "any",
+     "t": 58.8,
+     "end": 58.975
+    },
+    {
+     "w": "point",
+     "t": 59.0,
+     "end": 59.275
+    },
+    {
+     "w": "inside",
+     "t": 59.3,
+     "end": 60.238
+    },
+    {
+     "w": "as",
+     "t": 60.3,
+     "end": 60.425
+    },
+    {
+     "w": "the",
+     "t": 60.45,
+     "end": 60.525
+    },
+    {
+     "w": "chord's",
+     "t": 60.55,
+     "end": 60.875
+    },
+    {
+     "w": "midpoint",
+     "t": 60.9,
+     "end": 61.64
+    },
+    {
+     "w": "That",
+     "t": 61.99,
+     "end": 62.265
+    },
+    {
+     "w": "settles",
+     "t": 62.29,
+     "end": 62.665
+    },
+    {
+     "w": "near",
+     "t": 62.69,
+     "end": 62.89
+    },
+    {
+     "w": "point",
+     "t": 62.915,
+     "end": 63.14
+    },
+    {
+     "w": "two",
+     "t": 63.165,
+     "end": 63.352
+    },
+    {
+     "w": "five",
+     "t": 63.39,
+     "end": 63.97
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/17/17e7c6fc263505095d066fd9.wav"
+  },
+  {
+   "index": 8,
+   "start": 64.567,
+   "duration": 11.15,
+   "end": 75.717,
+   "text": "Bertrand printed all three, and wrote that none is wrong and none is right. Each tally is good to about one point. They disagree by twenty-five, and the code has no bug.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Bertrand",
+     "t": 64.617,
+     "end": 65.192
+    },
+    {
+     "w": "printed",
+     "t": 65.217,
+     "end": 65.567
+    },
+    {
+     "w": "all",
+     "t": 65.592,
+     "end": 65.792
+    },
+    {
+     "w": "three",
+     "t": 65.842,
+     "end": 66.442
+    },
+    {
+     "w": "and",
+     "t": 66.592,
+     "end": 66.692
+    },
+    {
+     "w": "wrote",
+     "t": 66.717,
+     "end": 66.905
+    },
+    {
+     "w": "that",
+     "t": 66.917,
+     "end": 67.105
+    },
+    {
+     "w": "none",
+     "t": 67.142,
+     "end": 67.367
+    },
+    {
+     "w": "is",
+     "t": 67.392,
+     "end": 67.53
+    },
+    {
+     "w": "wrong",
+     "t": 67.567,
+     "end": 68.03
+    },
+    {
+     "w": "and",
+     "t": 68.067,
+     "end": 68.192
+    },
+    {
+     "w": "none",
+     "t": 68.217,
+     "end": 68.442
+    },
+    {
+     "w": "is",
+     "t": 68.467,
+     "end": 68.592
+    },
+    {
+     "w": "right",
+     "t": 68.617,
+     "end": 69.147
+    },
+    {
+     "w": "Each",
+     "t": 69.457,
+     "end": 69.682
+    },
+    {
+     "w": "tally",
+     "t": 69.707,
+     "end": 70.057
+    },
+    {
+     "w": "is",
+     "t": 70.082,
+     "end": 70.207
+    },
+    {
+     "w": "good",
+     "t": 70.232,
+     "end": 70.432
+    },
+    {
+     "w": "to",
+     "t": 70.457,
+     "end": 70.582
+    },
+    {
+     "w": "about",
+     "t": 70.607,
+     "end": 70.857
+    },
+    {
+     "w": "one",
+     "t": 70.882,
+     "end": 71.082
+    },
+    {
+     "w": "point",
+     "t": 71.107,
+     "end": 71.647
+    },
+    {
+     "w": "They",
+     "t": 72.197,
+     "end": 72.347
+    },
+    {
+     "w": "disagree",
+     "t": 72.372,
+     "end": 72.872
+    },
+    {
+     "w": "by",
+     "t": 72.897,
+     "end": 73.047
+    },
+    {
+     "w": "twenty-five",
+     "t": 73.072,
+     "end": 74.072
+    },
+    {
+     "w": "and",
+     "t": 74.222,
+     "end": 74.309
+    },
+    {
+     "w": "the",
+     "t": 74.322,
+     "end": 74.41
+    },
+    {
+     "w": "code",
+     "t": 74.447,
+     "end": 74.797
+    },
+    {
+     "w": "has",
+     "t": 74.822,
+     "end": 74.997
+    },
+    {
+     "w": "no",
+     "t": 75.022,
+     "end": 75.197
+    },
+    {
+     "w": "bug",
+     "t": 75.222,
+     "end": 75.717
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/4c/4cd93e0d5e684dca225c7398.wav"
+  },
+  {
+   "index": 9,
+   "start": 76.167,
+   "duration": 10.59,
+   "end": 86.757,
+   "text": "One point sets a chord's length: its midpoint. Slide it outward and the chord shrinks. It matches the side at half a radius, on the circle inside the triangle.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "One",
+     "t": 76.242,
+     "end": 76.467
+    },
+    {
+     "w": "point",
+     "t": 76.492,
+     "end": 76.792
+    },
+    {
+     "w": "sets",
+     "t": 76.817,
+     "end": 77.055
+    },
+    {
+     "w": "a",
+     "t": 77.067,
+     "end": 77.117
+    },
+    {
+     "w": "chord's",
+     "t": 77.142,
+     "end": 77.467
+    },
+    {
+     "w": "length",
+     "t": 77.492,
+     "end": 78.017
+    },
+    {
+     "w": "its",
+     "t": 78.192,
+     "end": 78.367
+    },
+    {
+     "w": "midpoint",
+     "t": 78.392,
+     "end": 79.137
+    },
+    {
+     "w": "Slide",
+     "t": 79.522,
+     "end": 79.835
+    },
+    {
+     "w": "it",
+     "t": 79.847,
+     "end": 79.922
+    },
+    {
+     "w": "outward",
+     "t": 79.947,
+     "end": 80.547
+    },
+    {
+     "w": "and",
+     "t": 80.597,
+     "end": 80.685
+    },
+    {
+     "w": "the",
+     "t": 80.697,
+     "end": 80.772
+    },
+    {
+     "w": "chord",
+     "t": 80.797,
+     "end": 81.085
+    },
+    {
+     "w": "shrinks",
+     "t": 81.122,
+     "end": 81.737
+    },
+    {
+     "w": "It",
+     "t": 82.037,
+     "end": 82.197
+    },
+    {
+     "w": "matches",
+     "t": 82.222,
+     "end": 82.722
+    },
+    {
+     "w": "the",
+     "t": 82.747,
+     "end": 82.872
+    },
+    {
+     "w": "side",
+     "t": 82.922,
+     "end": 83.235
+    },
+    {
+     "w": "at",
+     "t": 83.247,
+     "end": 83.335
+    },
+    {
+     "w": "half",
+     "t": 83.372,
+     "end": 83.635
+    },
+    {
+     "w": "a",
+     "t": 83.647,
+     "end": 83.697
+    },
+    {
+     "w": "radius",
+     "t": 83.722,
+     "end": 84.597
+    },
+    {
+     "w": "on",
+     "t": 84.747,
+     "end": 84.859
+    },
+    {
+     "w": "the",
+     "t": 84.872,
+     "end": 84.959
+    },
+    {
+     "w": "circle",
+     "t": 84.997,
+     "end": 85.459
+    },
+    {
+     "w": "inside",
+     "t": 85.497,
+     "end": 85.885
+    },
+    {
+     "w": "the",
+     "t": 85.897,
+     "end": 85.972
+    },
+    {
+     "w": "triangle",
+     "t": 85.997,
+     "end": 86.757
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/d4/d4d80ca9cc2376ef459a436f.wav"
+  },
+  {
+   "index": 10,
+   "start": 87.2,
+   "duration": 8.02,
+   "end": 95.22,
+   "text": "So a chord is long exactly when its midpoint lands in this gold circle. Each program is a way of scattering midpoints.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "So",
+     "t": 87.25,
+     "end": 87.4
+    },
+    {
+     "w": "a",
+     "t": 87.425,
+     "end": 87.513
+    },
+    {
+     "w": "chord",
+     "t": 87.55,
+     "end": 87.925
+    },
+    {
+     "w": "is",
+     "t": 87.95,
+     "end": 88.1
+    },
+    {
+     "w": "long",
+     "t": 88.15,
+     "end": 88.425
+    },
+    {
+     "w": "exactly",
+     "t": 88.45,
+     "end": 89.4
+    },
+    {
+     "w": "when",
+     "t": 89.45,
+     "end": 89.563
+    },
+    {
+     "w": "its",
+     "t": 89.575,
+     "end": 89.75
+    },
+    {
+     "w": "midpoint",
+     "t": 89.775,
+     "end": 90.25
+    },
+    {
+     "w": "lands",
+     "t": 90.275,
+     "end": 90.838
+    },
+    {
+     "w": "in",
+     "t": 90.875,
+     "end": 90.962
+    },
+    {
+     "w": "this",
+     "t": 90.975,
+     "end": 91.15
+    },
+    {
+     "w": "gold",
+     "t": 91.175,
+     "end": 91.45
+    },
+    {
+     "w": "circle",
+     "t": 91.475,
+     "end": 92.06
+    },
+    {
+     "w": "Each",
+     "t": 92.37,
+     "end": 92.62
+    },
+    {
+     "w": "program",
+     "t": 92.645,
+     "end": 93.37
+    },
+    {
+     "w": "is",
+     "t": 93.42,
+     "end": 93.508
+    },
+    {
+     "w": "a",
+     "t": 93.52,
+     "end": 93.57
+    },
+    {
+     "w": "way",
+     "t": 93.595,
+     "end": 93.758
+    },
+    {
+     "w": "of",
+     "t": 93.77,
+     "end": 93.87
+    },
+    {
+     "w": "scattering",
+     "t": 93.895,
+     "end": 94.395
+    },
+    {
+     "w": "midpoints",
+     "t": 94.42,
+     "end": 95.22
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/e6/e6f553be89d2f45f6c332799.wav"
+  },
+  {
+   "index": 11,
+   "start": 95.667,
+   "duration": 9.66,
+   "end": 105.327,
+   "text": "Shrink every chord to its midpoint. The midpoint program fills the disk evenly, so this circle, a quarter of the area, catches a quarter.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Shrink",
+     "t": 95.777,
+     "end": 96.152
+    },
+    {
+     "w": "every",
+     "t": 96.202,
+     "end": 96.477
+    },
+    {
+     "w": "chord",
+     "t": 96.502,
+     "end": 96.802
+    },
+    {
+     "w": "to",
+     "t": 96.827,
+     "end": 96.939
+    },
+    {
+     "w": "its",
+     "t": 96.952,
+     "end": 97.127
+    },
+    {
+     "w": "midpoint",
+     "t": 97.152,
+     "end": 97.887
+    },
+    {
+     "w": "The",
+     "t": 98.222,
+     "end": 98.322
+    },
+    {
+     "w": "midpoint",
+     "t": 98.347,
+     "end": 98.797
+    },
+    {
+     "w": "program",
+     "t": 98.822,
+     "end": 99.372
+    },
+    {
+     "w": "fills",
+     "t": 99.422,
+     "end": 99.772
+    },
+    {
+     "w": "the",
+     "t": 99.797,
+     "end": 99.872
+    },
+    {
+     "w": "disk",
+     "t": 99.897,
+     "end": 100.285
+    },
+    {
+     "w": "evenly",
+     "t": 100.322,
+     "end": 101.272
+    },
+    {
+     "w": "so",
+     "t": 101.497,
+     "end": 101.672
+    },
+    {
+     "w": "this",
+     "t": 101.697,
+     "end": 101.897
+    },
+    {
+     "w": "circle",
+     "t": 101.947,
+     "end": 102.647
+    },
+    {
+     "w": "a",
+     "t": 102.822,
+     "end": 102.909
+    },
+    {
+     "w": "quarter",
+     "t": 102.947,
+     "end": 103.335
+    },
+    {
+     "w": "of",
+     "t": 103.347,
+     "end": 103.409
+    },
+    {
+     "w": "the",
+     "t": 103.422,
+     "end": 103.547
+    },
+    {
+     "w": "area",
+     "t": 103.572,
+     "end": 103.997
+    },
+    {
+     "w": "catches",
+     "t": 104.122,
+     "end": 104.497
+    },
+    {
+     "w": "a",
+     "t": 104.522,
+     "end": 104.572
+    },
+    {
+     "w": "quarter",
+     "t": 104.597,
+     "end": 105.177
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/30/30118ee91a14735d6535d1fd.wav"
+  },
+  {
+   "index": 12,
+   "start": 105.767,
+   "duration": 14.29,
+   "end": 120.057,
+   "text": "The radius program spreads them evenly along the radius. Where will they crowd? [pause 1.5] Toward the center: every ring gets an equal share, and inner rings are small. Half the radius: one half.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "The",
+     "t": 105.767,
+     "end": 105.852
+    },
+    {
+     "w": "radius",
+     "t": 105.877,
+     "end": 106.377
+    },
+    {
+     "w": "program",
+     "t": 106.402,
+     "end": 107.077
+    },
+    {
+     "w": "spreads",
+     "t": 107.127,
+     "end": 107.489
+    },
+    {
+     "w": "them",
+     "t": 107.502,
+     "end": 107.702
+    },
+    {
+     "w": "evenly",
+     "t": 107.752,
+     "end": 108.315
+    },
+    {
+     "w": "along",
+     "t": 108.352,
+     "end": 108.69
+    },
+    {
+     "w": "the",
+     "t": 108.702,
+     "end": 108.777
+    },
+    {
+     "w": "radius",
+     "t": 108.802,
+     "end": 109.527
+    },
+    {
+     "w": "Where",
+     "t": 109.877,
+     "end": 110.102
+    },
+    {
+     "w": "will",
+     "t": 110.127,
+     "end": 110.302
+    },
+    {
+     "w": "they",
+     "t": 110.327,
+     "end": 110.465
+    },
+    {
+     "w": "crowd",
+     "t": 110.502,
+     "end": 111.137
+    },
+    {
+     "w": "Toward",
+     "t": 112.647,
+     "end": 112.885
+    },
+    {
+     "w": "the",
+     "t": 112.897,
+     "end": 112.984
+    },
+    {
+     "w": "center",
+     "t": 113.022,
+     "end": 113.847
+    },
+    {
+     "w": "every",
+     "t": 114.072,
+     "end": 114.385
+    },
+    {
+     "w": "ring",
+     "t": 114.422,
+     "end": 114.697
+    },
+    {
+     "w": "gets",
+     "t": 114.722,
+     "end": 114.909
+    },
+    {
+     "w": "an",
+     "t": 114.922,
+     "end": 115.022
+    },
+    {
+     "w": "equal",
+     "t": 115.047,
+     "end": 115.422
+    },
+    {
+     "w": "share",
+     "t": 115.472,
+     "end": 115.972
+    },
+    {
+     "w": "and",
+     "t": 116.097,
+     "end": 116.235
+    },
+    {
+     "w": "inner",
+     "t": 116.272,
+     "end": 116.522
+    },
+    {
+     "w": "rings",
+     "t": 116.547,
+     "end": 116.897
+    },
+    {
+     "w": "are",
+     "t": 116.922,
+     "end": 117.047
+    },
+    {
+     "w": "small",
+     "t": 117.097,
+     "end": 117.657
+    },
+    {
+     "w": "Half",
+     "t": 118.007,
+     "end": 118.257
+    },
+    {
+     "w": "the",
+     "t": 118.282,
+     "end": 118.357
+    },
+    {
+     "w": "radius",
+     "t": 118.382,
+     "end": 119.007
+    },
+    {
+     "w": "one",
+     "t": 119.107,
+     "end": 119.332
+    },
+    {
+     "w": "half",
+     "t": 119.357,
+     "end": 119.907
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/0b/0b55ef5479bcb55479660ac4.wav"
+  },
+  {
+   "index": 13,
+   "start": 120.5,
+   "duration": 6.81,
+   "end": 127.31,
+   "text": "The endpoints program piles them against the rim, so only a third land inside, the third we found.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "The",
+     "t": 120.515,
+     "end": 120.665
+    },
+    {
+     "w": "endpoints",
+     "t": 120.715,
+     "end": 121.19
+    },
+    {
+     "w": "program",
+     "t": 121.215,
+     "end": 121.765
+    },
+    {
+     "w": "piles",
+     "t": 121.815,
+     "end": 122.228
+    },
+    {
+     "w": "them",
+     "t": 122.24,
+     "end": 122.365
+    },
+    {
+     "w": "against",
+     "t": 122.39,
+     "end": 122.752
+    },
+    {
+     "w": "the",
+     "t": 122.765,
+     "end": 122.84
+    },
+    {
+     "w": "rim",
+     "t": 122.865,
+     "end": 123.49
+    },
+    {
+     "w": "so",
+     "t": 123.665,
+     "end": 123.852
+    },
+    {
+     "w": "only",
+     "t": 123.89,
+     "end": 124.165
+    },
+    {
+     "w": "a",
+     "t": 124.19,
+     "end": 124.302
+    },
+    {
+     "w": "third",
+     "t": 124.365,
+     "end": 124.69
+    },
+    {
+     "w": "land",
+     "t": 124.715,
+     "end": 125.04
+    },
+    {
+     "w": "inside",
+     "t": 125.065,
+     "end": 125.89
+    },
+    {
+     "w": "the",
+     "t": 126.04,
+     "end": 126.165
+    },
+    {
+     "w": "third",
+     "t": 126.215,
+     "end": 126.515
+    },
+    {
+     "w": "we",
+     "t": 126.54,
+     "end": 126.678
+    },
+    {
+     "w": "found",
+     "t": 126.715,
+     "end": 127.31
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/8c/8c21b9b16b434866e29aa104.wav"
+  },
+  {
+   "index": 14,
+   "start": 127.767,
+   "duration": 8.19,
+   "end": 135.957,
+   "text": "Three programs, three things spread evenly: rim, radius, area. At random never said which. [pause 0.9]",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Three",
+     "t": 127.862,
+     "end": 128.087
+    },
+    {
+     "w": "programs",
+     "t": 128.112,
+     "end": 128.737
+    },
+    {
+     "w": "three",
+     "t": 128.862,
+     "end": 129.087
+    },
+    {
+     "w": "things",
+     "t": 129.112,
+     "end": 129.362
+    },
+    {
+     "w": "spread",
+     "t": 129.387,
+     "end": 129.687
+    },
+    {
+     "w": "evenly",
+     "t": 129.712,
+     "end": 130.587
+    },
+    {
+     "w": "rim",
+     "t": 130.837,
+     "end": 131.287
+    },
+    {
+     "w": "radius",
+     "t": 131.437,
+     "end": 132.037
+    },
+    {
+     "w": "area",
+     "t": 132.112,
+     "end": 132.747
+    },
+    {
+     "w": "At",
+     "t": 133.047,
+     "end": 133.229
+    },
+    {
+     "w": "random",
+     "t": 133.267,
+     "end": 133.88
+    },
+    {
+     "w": "never",
+     "t": 133.942,
+     "end": 134.279
+    },
+    {
+     "w": "said",
+     "t": 134.317,
+     "end": 134.542
+    },
+    {
+     "w": "which",
+     "t": 134.567,
+     "end": 135.057
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/29/29fd9a15c96ca3aa0af1b160.wav"
+  },
+  {
+   "index": 15,
+   "start": 136.4,
+   "duration": 10.18,
+   "end": 146.58,
+   "text": "Edwin Jaynes argued that a physical process picks one. Tossed straws can't be aimed, so the answer can't depend on where the circle sits, or its size.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Edwin",
+     "t": 136.41,
+     "end": 136.76
+    },
+    {
+     "w": "Jaynes",
+     "t": 136.81,
+     "end": 137.485
+    },
+    {
+     "w": "argued",
+     "t": 137.535,
+     "end": 137.935
+    },
+    {
+     "w": "that",
+     "t": 137.96,
+     "end": 138.048
+    },
+    {
+     "w": "a",
+     "t": 138.06,
+     "end": 138.16
+    },
+    {
+     "w": "physical",
+     "t": 138.21,
+     "end": 138.635
+    },
+    {
+     "w": "process",
+     "t": 138.66,
+     "end": 139.26
+    },
+    {
+     "w": "picks",
+     "t": 139.285,
+     "end": 139.56
+    },
+    {
+     "w": "one",
+     "t": 139.585,
+     "end": 140.05
+    },
+    {
+     "w": "Tossed",
+     "t": 140.56,
+     "end": 140.885
+    },
+    {
+     "w": "straws",
+     "t": 140.91,
+     "end": 141.36
+    },
+    {
+     "w": "can't",
+     "t": 141.385,
+     "end": 141.598
+    },
+    {
+     "w": "be",
+     "t": 141.61,
+     "end": 141.748
+    },
+    {
+     "w": "aimed",
+     "t": 141.785,
+     "end": 142.51
+    },
+    {
+     "w": "so",
+     "t": 142.685,
+     "end": 142.798
+    },
+    {
+     "w": "the",
+     "t": 142.81,
+     "end": 142.948
+    },
+    {
+     "w": "answer",
+     "t": 142.985,
+     "end": 143.398
+    },
+    {
+     "w": "can't",
+     "t": 143.435,
+     "end": 143.71
+    },
+    {
+     "w": "depend",
+     "t": 143.735,
+     "end": 144.122
+    },
+    {
+     "w": "on",
+     "t": 144.135,
+     "end": 144.223
+    },
+    {
+     "w": "where",
+     "t": 144.235,
+     "end": 144.348
+    },
+    {
+     "w": "the",
+     "t": 144.36,
+     "end": 144.473
+    },
+    {
+     "w": "circle",
+     "t": 144.51,
+     "end": 144.885
+    },
+    {
+     "w": "sits",
+     "t": 144.935,
+     "end": 145.46
+    },
+    {
+     "w": "or",
+     "t": 145.61,
+     "end": 145.76
+    },
+    {
+     "w": "its",
+     "t": 145.785,
+     "end": 145.935
+    },
+    {
+     "w": "size",
+     "t": 145.96,
+     "end": 146.58
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/6f/6f9cb4582c1c0fd5798a8247.wav"
+  },
+  {
+   "index": 16,
+   "start": 147.033,
+   "duration": 19.6,
+   "end": 166.633,
+   "text": "One rain lands on both circles. Each judges with its own gold circle, so a fair program scores the same on both. Midpoint: a quarter, then point four one. [pause 1.0] Endpoints: a third, then point four seven. [pause 1.0] Only the radius program gives a half on both. [pause 0.9]",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "One",
+     "t": 147.078,
+     "end": 147.316
+    },
+    {
+     "w": "rain",
+     "t": 147.353,
+     "end": 147.653
+    },
+    {
+     "w": "lands",
+     "t": 147.678,
+     "end": 147.991
+    },
+    {
+     "w": "on",
+     "t": 148.003,
+     "end": 148.103
+    },
+    {
+     "w": "both",
+     "t": 148.128,
+     "end": 148.403
+    },
+    {
+     "w": "circles",
+     "t": 148.428,
+     "end": 149.143
+    },
+    {
+     "w": "Each",
+     "t": 149.453,
+     "end": 149.753
+    },
+    {
+     "w": "judges",
+     "t": 149.803,
+     "end": 150.228
+    },
+    {
+     "w": "with",
+     "t": 150.253,
+     "end": 150.365
+    },
+    {
+     "w": "its",
+     "t": 150.378,
+     "end": 150.578
+    },
+    {
+     "w": "own",
+     "t": 150.628,
+     "end": 150.903
+    },
+    {
+     "w": "gold",
+     "t": 150.928,
+     "end": 151.203
+    },
+    {
+     "w": "circle",
+     "t": 151.228,
+     "end": 151.978
+    },
+    {
+     "w": "so",
+     "t": 152.153,
+     "end": 152.253
+    },
+    {
+     "w": "a",
+     "t": 152.278,
+     "end": 152.378
+    },
+    {
+     "w": "fair",
+     "t": 152.428,
+     "end": 152.653
+    },
+    {
+     "w": "program",
+     "t": 152.678,
+     "end": 153.241
+    },
+    {
+     "w": "scores",
+     "t": 153.278,
+     "end": 153.628
+    },
+    {
+     "w": "the",
+     "t": 153.653,
+     "end": 153.765
+    },
+    {
+     "w": "same",
+     "t": 153.803,
+     "end": 154.041
+    },
+    {
+     "w": "on",
+     "t": 154.053,
+     "end": 154.203
+    },
+    {
+     "w": "both",
+     "t": 154.228,
+     "end": 154.753
+    },
+    {
+     "w": "Midpoint",
+     "t": 155.128,
+     "end": 155.828
+    },
+    {
+     "w": "a",
+     "t": 155.928,
+     "end": 156.003
+    },
+    {
+     "w": "quarter",
+     "t": 156.028,
+     "end": 156.553
+    },
+    {
+     "w": "then",
+     "t": 156.678,
+     "end": 156.853
+    },
+    {
+     "w": "point",
+     "t": 156.878,
+     "end": 157.141
+    },
+    {
+     "w": "four",
+     "t": 157.178,
+     "end": 157.403
+    },
+    {
+     "w": "one",
+     "t": 157.428,
+     "end": 157.923
+    },
+    {
+     "w": "Endpoints",
+     "t": 158.998,
+     "end": 159.698
+    },
+    {
+     "w": "a",
+     "t": 159.798,
+     "end": 159.898
+    },
+    {
+     "w": "third",
+     "t": 159.948,
+     "end": 160.448
+    },
+    {
+     "w": "then",
+     "t": 160.573,
+     "end": 160.748
+    },
+    {
+     "w": "point",
+     "t": 160.773,
+     "end": 161.023
+    },
+    {
+     "w": "four",
+     "t": 161.048,
+     "end": 161.273
+    },
+    {
+     "w": "seven",
+     "t": 161.323,
+     "end": 161.903
+    },
+    {
+     "w": "Only",
+     "t": 162.908,
+     "end": 163.233
+    },
+    {
+     "w": "the",
+     "t": 163.258,
+     "end": 163.371
+    },
+    {
+     "w": "radius",
+     "t": 163.408,
+     "end": 163.883
+    },
+    {
+     "w": "program",
+     "t": 163.908,
+     "end": 164.496
+    },
+    {
+     "w": "gives",
+     "t": 164.533,
+     "end": 164.695
+    },
+    {
+     "w": "a",
+     "t": 164.708,
+     "end": 164.758
+    },
+    {
+     "w": "half",
+     "t": 164.783,
+     "end": 165.021
+    },
+    {
+     "w": "on",
+     "t": 165.033,
+     "end": 165.183
+    },
+    {
+     "w": "both",
+     "t": 165.208,
+     "end": 165.733
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/03/03a7e9bc58386007ea109298.wav"
+  },
+  {
+   "index": 17,
+   "start": 167.1,
+   "duration": 9.43,
+   "end": 176.53,
+   "text": "Jaynes and Charles Tyler tossed real straws at a five-inch circle. The hundred twenty-eight that crossed it matched the radius program. [pause 0.9]",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Jaynes",
+     "t": 167.18,
+     "end": 167.605
+    },
+    {
+     "w": "and",
+     "t": 167.63,
+     "end": 167.73
+    },
+    {
+     "w": "Charles",
+     "t": 167.755,
+     "end": 168.13
+    },
+    {
+     "w": "Tyler",
+     "t": 168.155,
+     "end": 168.718
+    },
+    {
+     "w": "tossed",
+     "t": 168.755,
+     "end": 169.155
+    },
+    {
+     "w": "real",
+     "t": 169.205,
+     "end": 169.48
+    },
+    {
+     "w": "straws",
+     "t": 169.505,
+     "end": 170.092
+    },
+    {
+     "w": "at",
+     "t": 170.13,
+     "end": 170.193
+    },
+    {
+     "w": "a",
+     "t": 170.205,
+     "end": 170.305
+    },
+    {
+     "w": "five-inch",
+     "t": 170.355,
+     "end": 170.855
+    },
+    {
+     "w": "circle",
+     "t": 170.88,
+     "end": 171.46
+    },
+    {
+     "w": "The",
+     "t": 171.775,
+     "end": 171.85
+    },
+    {
+     "w": "hundred",
+     "t": 171.875,
+     "end": 172.25
+    },
+    {
+     "w": "twenty-eight",
+     "t": 172.275,
+     "end": 173.088
+    },
+    {
+     "w": "that",
+     "t": 173.125,
+     "end": 173.25
+    },
+    {
+     "w": "crossed",
+     "t": 173.275,
+     "end": 173.65
+    },
+    {
+     "w": "it",
+     "t": 173.675,
+     "end": 173.85
+    },
+    {
+     "w": "matched",
+     "t": 173.9,
+     "end": 174.3
+    },
+    {
+     "w": "the",
+     "t": 174.325,
+     "end": 174.438
+    },
+    {
+     "w": "radius",
+     "t": 174.475,
+     "end": 174.925
+    },
+    {
+     "w": "program",
+     "t": 174.95,
+     "end": 175.63
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/11/117cbb7c74a19a565192dace.wav"
+  },
+  {
+   "index": 18,
+   "start": 176.967,
+   "duration": 17.78,
+   "end": 194.747,
+   "text": "Surveys hide the same two words. Take classes of ten, ten and a hundred. Pick a class at random, and the average is forty. Pick a student instead, and it's eighty-five. At Stony Brook, the same two picks gave forty and a hundred forty-seven. [pause 0.5]",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Surveys",
+     "t": 177.042,
+     "end": 177.592
+    },
+    {
+     "w": "hide",
+     "t": 177.617,
+     "end": 177.829
+    },
+    {
+     "w": "the",
+     "t": 177.842,
+     "end": 177.929
+    },
+    {
+     "w": "same",
+     "t": 177.967,
+     "end": 178.279
+    },
+    {
+     "w": "two",
+     "t": 178.317,
+     "end": 178.492
+    },
+    {
+     "w": "words",
+     "t": 178.517,
+     "end": 179.087
+    },
+    {
+     "w": "Take",
+     "t": 179.397,
+     "end": 179.622
+    },
+    {
+     "w": "classes",
+     "t": 179.647,
+     "end": 180.097
+    },
+    {
+     "w": "of",
+     "t": 180.122,
+     "end": 180.259
+    },
+    {
+     "w": "ten",
+     "t": 180.297,
+     "end": 180.797
+    },
+    {
+     "w": "ten",
+     "t": 180.972,
+     "end": 181.385
+    },
+    {
+     "w": "and",
+     "t": 181.422,
+     "end": 181.509
+    },
+    {
+     "w": "a",
+     "t": 181.522,
+     "end": 181.572
+    },
+    {
+     "w": "hundred",
+     "t": 181.597,
+     "end": 182.207
+    },
+    {
+     "w": "Pick",
+     "t": 182.707,
+     "end": 182.889
+    },
+    {
+     "w": "a",
+     "t": 182.902,
+     "end": 182.952
+    },
+    {
+     "w": "class",
+     "t": 182.977,
+     "end": 183.302
+    },
+    {
+     "w": "at",
+     "t": 183.327,
+     "end": 183.402
+    },
+    {
+     "w": "random",
+     "t": 183.427,
+     "end": 184.152
+    },
+    {
+     "w": "and",
+     "t": 184.277,
+     "end": 184.365
+    },
+    {
+     "w": "the",
+     "t": 184.377,
+     "end": 184.502
+    },
+    {
+     "w": "average",
+     "t": 184.552,
+     "end": 185.027
+    },
+    {
+     "w": "is",
+     "t": 185.052,
+     "end": 185.215
+    },
+    {
+     "w": "forty",
+     "t": 185.252,
+     "end": 185.827
+    },
+    {
+     "w": "Pick",
+     "t": 186.332,
+     "end": 186.519
+    },
+    {
+     "w": "a",
+     "t": 186.532,
+     "end": 186.607
     },
     {
      "w": "student",
-     "t": 228.642,
-     "end": 229.237
+     "t": 186.632,
+     "end": 187.007
+    },
+    {
+     "w": "instead",
+     "t": 187.032,
+     "end": 187.732
+    },
+    {
+     "w": "and",
+     "t": 187.857,
+     "end": 187.945
+    },
+    {
+     "w": "it's",
+     "t": 187.957,
+     "end": 188.082
+    },
+    {
+     "w": "eighty-five",
+     "t": 188.107,
+     "end": 189.027
+    },
+    {
+     "w": "At",
+     "t": 189.532,
+     "end": 189.732
+    },
+    {
+     "w": "Stony",
+     "t": 189.757,
+     "end": 190.082
+    },
+    {
+     "w": "Brook",
+     "t": 190.107,
+     "end": 190.682
+    },
+    {
+     "w": "the",
+     "t": 190.807,
+     "end": 190.932
+    },
+    {
+     "w": "same",
+     "t": 190.982,
+     "end": 191.319
+    },
+    {
+     "w": "two",
+     "t": 191.357,
+     "end": 191.532
+    },
+    {
+     "w": "picks",
+     "t": 191.557,
+     "end": 191.832
+    },
+    {
+     "w": "gave",
+     "t": 191.857,
+     "end": 192.094
+    },
+    {
+     "w": "forty",
+     "t": 192.132,
+     "end": 192.682
+    },
+    {
+     "w": "and",
+     "t": 192.732,
+     "end": 192.819
+    },
+    {
+     "w": "a",
+     "t": 192.832,
+     "end": 192.882
+    },
+    {
+     "w": "hundred",
+     "t": 192.907,
+     "end": 193.307
+    },
+    {
+     "w": "forty-seven",
+     "t": 193.332,
+     "end": 194.247
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/70/70d30456ea9f8af26c7543d8.wav"
+   "wav": "/root/.cache/sample_space/tts/ae/ae1777ae992f3c6b2c4f4872.wav"
+  },
+  {
+   "index": 19,
+   "start": 195.2,
+   "duration": 11.52,
+   "end": 206.72,
+   "text": "Whatever number you picked, some way of drawing chords makes it right. Name the way, and the answer is fixed: a half for tossed straws, a hundred forty-seven for a random student.",
+   "voice": "af_heart",
+   "speed": 0.83,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Whatever",
+     "t": 195.24,
+     "end": 195.64
+    },
+    {
+     "w": "number",
+     "t": 195.665,
+     "end": 195.915
+    },
+    {
+     "w": "you",
+     "t": 195.94,
+     "end": 196.078
+    },
+    {
+     "w": "picked",
+     "t": 196.115,
+     "end": 196.74
+    },
+    {
+     "w": "some",
+     "t": 196.94,
+     "end": 197.165
+    },
+    {
+     "w": "way",
+     "t": 197.19,
+     "end": 197.328
+    },
+    {
+     "w": "of",
+     "t": 197.34,
+     "end": 197.44
+    },
+    {
+     "w": "drawing",
+     "t": 197.465,
+     "end": 197.815
+    },
+    {
+     "w": "chords",
+     "t": 197.84,
+     "end": 198.24
+    },
+    {
+     "w": "makes",
+     "t": 198.265,
+     "end": 198.502
+    },
+    {
+     "w": "it",
+     "t": 198.515,
+     "end": 198.59
+    },
+    {
+     "w": "right",
+     "t": 198.615,
+     "end": 199.14
+    },
+    {
+     "w": "Name",
+     "t": 199.52,
+     "end": 199.783
+    },
+    {
+     "w": "the",
+     "t": 199.795,
+     "end": 199.87
+    },
+    {
+     "w": "way",
+     "t": 199.895,
+     "end": 200.245
+    },
+    {
+     "w": "and",
+     "t": 200.345,
+     "end": 200.432
+    },
+    {
+     "w": "the",
+     "t": 200.445,
+     "end": 200.558
+    },
+    {
+     "w": "answer",
+     "t": 200.595,
+     "end": 201.045
+    },
+    {
+     "w": "is",
+     "t": 201.07,
+     "end": 201.208
+    },
+    {
+     "w": "fixed",
+     "t": 201.245,
+     "end": 202.12
+    },
+    {
+     "w": "a",
+     "t": 202.32,
+     "end": 202.395
+    },
+    {
+     "w": "half",
+     "t": 202.42,
+     "end": 202.695
+    },
+    {
+     "w": "for",
+     "t": 202.72,
+     "end": 202.858
+    },
+    {
+     "w": "tossed",
+     "t": 202.895,
+     "end": 203.27
+    },
+    {
+     "w": "straws",
+     "t": 203.295,
+     "end": 204.02
+    },
+    {
+     "w": "a",
+     "t": 204.17,
+     "end": 204.245
+    },
+    {
+     "w": "hundred",
+     "t": 204.27,
+     "end": 204.682
+    },
+    {
+     "w": "forty-seven",
+     "t": 204.72,
+     "end": 205.42
+    },
+    {
+     "w": "for",
+     "t": 205.445,
+     "end": 205.545
+    },
+    {
+     "w": "a",
+     "t": 205.57,
+     "end": 205.645
+    },
+    {
+     "w": "random",
+     "t": 205.67,
+     "end": 206.095
+    },
+    {
+     "w": "student",
+     "t": 206.12,
+     "end": 206.72
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/be/be0c6e45a2a5c3dce167af8a.wav"
   }
  ],
  "warnings": [
   {
-   "t": 230.5,
-   "msg": "concision budget: 568 words, 3:50.5. Critics docked Concision for runtime in 16 of 28 round-5/6 reviews (9 of 10 episodes >= 3:41); budget <= 500 words and <= 3:35 (PRODUCTION_GUIDE §13)"
-  },
-  {
-   "t": 230.5,
-   "msg": "deictic sync: 1 of 8 deictic words have no animation starting within -0.8..+0.4 s ('those two' 3:33.2). Use beat.on(word, anim) so the highlight lands on the word"
+   "t": 46.43,
+   "msg": "beat 5: reached 'radius' 0.32s after it was spoken - shorten the preceding animations"
   }
  ],
  "budget": {
-  "words": 568,
-  "runtime_s": 230.5,
+  "words": 499,
+  "runtime_s": 208.2,
   "budget_words": 500,
   "budget_runtime_s": 215.0,
-  "over": true
+  "over": false
  },
- "glyph_morphs": [
-  {
-   "t": 189.97,
-   "animation": "ReplacementTransform",
-   "from": "?",
-   "to": "\\approx radius"
-  }
- ],
+ "glyph_morphs": [],
  "deictic_sync": {
   "window": [
    -0.8,
    0.4
   ],
-  "deictics": 8,
-  "unlanded": [
-   {
-    "t": 213.22,
-    "phrase": "those two",
-    "nearest_animation_start": 1.01
-   }
-  ]
+  "deictics": 7,
+  "unlanded": []
  },
  "layout_audit": {
   "clearance": 0.15,
   "checks": 245,
-  "audit_seconds": 2.375,
-  "render_seconds": 750.8,
+  "audit_seconds": 2.913,
+  "render_seconds": 825.7,
   "errors": 0,
   "count": 0,
   "counts": {

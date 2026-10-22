@@ -10,7 +10,7 @@ bell, the data-first bill and the bell-first bill, kept side by side. As the bel
 to B, one bill drains while the other swells into a mountain: each order has its own closest
 bell.
 
-Runtime ≈ 3:32 · 545 words · ≈ 162 wpm over speech time · voice af_heart, speed 0.84.
+Runtime ≈ 3:25 · 498 words (budget ≤ 500) · voice af_heart, speed 0.83, CADENCE = "shaped".
 Pronunciation overrides: Kullback, Leibler ("lie-bler"), Blei ("bly"), the letter A (/eɪ/, misaki
 reads a lone "A" as the article), "imagines" (misaki says "im-AY-jen-eez"). Sentence gaps are
 varied on purpose: ≈ 0.25 s inside a thought, ≈ 0.7–1.0 s after a payoff number or at a beat
@@ -43,8 +43,8 @@ are always italic math letters.
 ## Beats
 
 ### 1. Cold open: the bet (0:00–0:14)
-> Old Faithful's eruptions. Data first, the closest bell is this one. Swap the order. If
-> closeness is a distance, order can't matter: it stays at one. Or does it move to two, or
+> Old Faithful's eruptions. Data first, the closest bell is this one. Swap the order. If closeness
+> is a distance, order can't matter: it stays at one. Or does it move to two, *[0.25 s]* or to
 > three? *[pause 1.5]*
 
 First frame: axes and the 272 eruption bars (faint), which brighten as the smoothed curve
@@ -58,9 +58,9 @@ dashed narrow bells appear on the short and the long hump, numbered **2** and **
 hold (a three-way spatial bet the title does not answer).
 
 ### 2. Stakes (0:14–0:27)
-> The D is KL divergence, named for Kullback and Leibler. Every maximum-likelihood fit shrinks
-> it with the data first, and much of Bayesian machine learning shrinks it with the order
-> flipped. It's often called a distance.
+> The D is KL divergence, named for Kullback and Leibler. Every maximum-likelihood fit shrinks it
+> with the data first. Much of Bayesian machine learning shrinks it with the order flipped. It's
+> often called a distance.
 
 The ghosts, numbers and data label leave; the D flags. "KL divergence" label; citation
 *Kullback & Leibler, 1951 · Annals of Mathematical Statistics*; "maximum-likelihood fit" pinned
@@ -68,28 +68,28 @@ above bell A's crown by a dashed leader; flash along the bell; on "Bayesian" the
 lights with a grey "variational inference" tag and the Blei citation; "a distance?" (yellow).
 
 ### 3. Naive build (0:27–0:40)
-> So treat it as one. Data first, this bell is point seven six bits away. Shift it or stretch
-> it, and that number only grows, so this is bell A: three and a half minutes, give or take one
-> point one. *[0.8 s]*
+> So treat it as one. Data first, this bell is point seven six bits away. *[0.5 s]* Shift it or
+> stretch it, and that number only grows, so bell A is the closest. *[0.8 s]* (A's mean and spread
+> are on its label, not read out.)
 
 "a distance?" loses its "?"; "KL divergence" dims; the "variational inference" tag and the Blei
 citation leave with their topic. `= 0.76 bits` (red, live). The bell shifts
 0.8 min left (the number climbs to 1.12 and flashes yellow during a 0.5 s hold) and back, then
-widens ×1.8 (1.11, flash) and back. The dashed mean line completes the pin; the pinned label
-becomes `A: 3.49 ± 1.14 min`.
+widens ×1.8 (1.11, flash) and back. On "bell A" the dashed mean line completes the pin and the
+pinned label swaps (fade out, then in: never superimposed) to `A: 3.49 ± 1.14 min`.
 
 ### 4. Fail (0:40–0:55)
 > But a distance reads the same both ways. Put the bell first, and the same two curves are one
-> point seven bits apart, more than twice as far. *[0.75 s]* Only the order changed, so the
-> order must be built into the formula.
+> point seven bits apart, more than twice as far. *[1.0 s]* Only the order changed, so the formula
+> must care about order.
 
 The A label dims. `D(bell ‖ data) = 1.69 bits`, yellow `×2.2`. On "order changed" both whole
 D-lines are boxed (unfilled boxes, 0.12 clear of every glyph).
 
 ### 5. Insight: one length (0:55–1:13)
-> To see why, open it up at one real eruption, two minutes long. The data's curve gives that
-> length a height, p. The bell gives it q, about a quarter as much. Double q twice and you reach
-> p, so log base two of p over q is about two: two doublings, or two bits.
+> To see why, take one eruption two minutes long. The data's curve stands this high there: call it
+> p. The bell gives it q, *[0.3 s]* about a quarter as much. Double q twice and you reach p. So
+> log base two of p over q is about two: two doublings, or two bits.
 
 The numbers fade first, then the chart shrinks left and `D(data ‖ bell)` heads the right column.
 The axis number 2 flags; scanner at 2.0 min. The blue bar `p` grows and is pulled out, same
@@ -99,9 +99,9 @@ line at p's top. `log₂(p/q) = 1.98` is assembled: the p swings up from the pul
 around the outside, the q drops in from its readout.
 
 ### 6. Every length, weighted (1:13–1:30)
-> *[1.0 s]* Do that at every length. *[0.9 s]* Then weight each one by how often eruptions last
-> that long, which is p, and add it all up. Where the bell rises above the data, the grey dips pay a little back.
-> That's the divergence: point seven six bits.
+> *(silent turn: the chart rises)* Do that at every length. *[0.9 s]* Then weight each one by p,
+> how often eruptions last that long, and add it all up. Where the bell rises above the data,
+> *[0.45 s]* the grey dips pay a little back. That's the divergence: the same point seven six.
 
 Two panels: the chart's own x labels fade first, the chart rises (the scanner rides along back to
 0.3 min, the p/q readouts dim to 30 %), and only then does the bill's panel draw underneath it
@@ -116,10 +116,9 @@ On "grey dips" a grey "refund" tag sits under the largest dip. On "divergence" t
 to full strength; the block is centred on the bill.
 
 ### 7. A bell that skips a hump (1:30–1:46)
-> Try a bell that ignores the short eruptions and sits on the long hump. At two minutes, it falls
-> short by eighteen and a half doublings. More than a third of all eruptions are short ones like
-> this, so the bill comes to five point eight bits. *[1.0 s]* (spoken at speed 0.80: the densest
-> stretch)
+> Try a bell that skips the short eruptions. At two minutes, it falls short by eighteen and a half
+> doublings. More than a third of all eruptions are short, so the bill comes to five point eight
+> bits. *[1.1 s]* (spoken at speed 0.80: the densest stretch)
 
 The p/q/log₂ readouts, dimmed to 30 % while the scanner swept away from 2 min in beat 6, return
 to full strength with the scanner at 2.00 min before the bell moves (so log₂(p/q) starts at 1.98).
@@ -129,7 +128,7 @@ by zero; the bill grows into a clipped red mountain with a live "peak ≈ 11" (a
 the plateau's shoulder); total 5.77. Box over the short hump, "36%".
 
 ### 8. Keep that bill, swap for a second one (1:46–1:59)
-> Now keep that bill, and swap the order for a second one. Every p trades places with q. The bell
+> Now keep that bill. For a second bill, swap the order: every p trades places with q. The bell
 > supplies the lengths, and the data judges them. Which bell wins now? *[pause 1.5]*
 
 The readouts leave first; then the panels make room. The chart (the subject) grows to 2.85
@@ -145,8 +144,8 @@ Prediction hold.
 
 ### 9. Bell first, scored (1:59–2:17)
 > Take bell B first. It almost never imagines a short eruption, so ignoring them costs it nothing.
-> It pays point six two. Bell A imagines eruptions in the gap and out in the tails, lengths the
-> data almost never shows. That costs one point seven bits.
+> It pays point six two. *[0.9 s]* Bell A imagines eruptions in the gap and the tails, where the
+> data has almost none. That's its one point seven.
 
 The "?" fades out before the number arrives. A returns to dashed, B fills; the bell-first panel
 comes to full strength and its bill fills left to right, total counting to 0.62 (dashed box:
@@ -155,9 +154,9 @@ both tails (boxes; grey refunds under the humps) to 1.69 while the data-first bi
 from 5.77 to 0.76 — both totals live.
 
 ### 10. Slide downhill: one bill drains, the other swells (2:17–2:34)
-> Now start from A, and let the bell slide downhill on the bell-first bill. As that bill drains,
-> the other one swells, and the bell settles on the long hump, less than half as wide. Flip the
-> order, and the closest bell moves to three. *[pause 1.2]*
+> *(silent turn: the blocks collapse to their D-lines)* Now let bell A slide downhill on the bell-
+> first bill. As that bill drains, the other swells, and the bell settles into B, less than half
+> as wide. Flip the order, and the closest bell moves to three. *[pause 1.2]*
 
 Both integrals have now been read, so each block collapses to its D-line and total, centred on
 its own bill: the frame is the bell and its two bills. Gradient descent on D(bell ‖ data) from A
@@ -168,7 +167,7 @@ dashed leader. On "Flip" the cold-open picture returns (dashed ghosts 2 and 3, y
 crown), an arrow runs 1 → 3, and B sits exactly in ghost 3: the bet, answered on the same image.
 
 ### 11. Payoff (2:34–3:00)
-> Maximum likelihood puts the data first, so a one-bell fit stretches over every hump.
+> Maximum likelihood puts the data first, so a one-bell fit stretches over every hump. *[0.5 s]*
 > Variational inference approximates a Bayesian posterior with the model first, so it tends to
 > settle on one hump.
 
@@ -193,23 +192,24 @@ MCMC spread. Citation *Giordano, Broderick & Jordan, 2018 · JMLR, Tables 2–3*
 
 ### 12. Honest limit (3:00–3:13)
 > Against raw points, every bell-first score is infinite, so the data must be smoothed. Smooth it
-> more heavily, the gap partly fills, and the best bell-first fit spreads wide, almost back to A.
+> more heavily and the gap partly fills: the best bell-first fit spreads almost back to A.
 
 The panel, brackets and tag leave. On "raw points" the curve and bars dim and the 272 eruptions
 appear as blue ticks on the length axis ("272 raw points"); on "infinite" `D(bell ‖ data) = ∞`
 writes in its cold-open place. On "smoothed" the ticks leave and the curve returns. On "Smooth it
-more heavily" the curve morphs into R's default kernel smoothing (tag "R's default smoothing",
-citation *Silverman, 1986 · Density Estimation (R's default bandwidth)*); a box marks the gap. On
-"best" the bell moves from B to the best bell-first fit under that smoothing, pinned "best
-bell-first fit: 3.55 ± 0.99 min"; on "back to A" dashed A returns beside it (3.49 ± 1.14). One
+more heavily" the curve morphs into R's default kernel smoothing (tag "heavier smoothing": no
+undefined term is spoken or tagged; the citation *Silverman, 1986 · Density Estimation (R's
+default bandwidth)* names the setting); a box marks the gap. On "best" the bell spreads from B to
+the best bell-first fit under that smoothing; on "back to A" it is pinned "best bell-first fit:
+3.55 ± 0.99 min" and dashed A returns beside it (3.49 ± 1.14). One
 morph out, one back (beat 13); no fourth curve.
 
 ### 13. Landing (3:13–3:22)
-> *[pause 1.2]* Bell A never misses an eruption that happens. Bell B almost never imagines one
-> that doesn't.
+> *(silent turn, 1.3 s: the smoothing and the bell return)* Bell A never misses an eruption that
+> happens. Bell B almost never imagines one that doesn't.
 
-During the pause the smoothing returns to the original curve, the fit returns to B and the tags
-leave. On "Bell A" `D(data ‖ bell) → A` writes in its cold-open place, the yellow **1** returns
+In the silent beat turn (1.3 s) the smoothing returns to the original curve, the fit returns to B
+and the tags leave. On "Bell A" `D(data ‖ bell) → A` writes in its cold-open place, the yellow **1** returns
 to A's crown, A turns solid and its fill sweeps across both humps (underline under "data"). On
 "Bell B" `D(bell ‖ data) → B` writes below it, the yellow **3** returns to B's crown, A goes back
 to dashed and B's fill sweeps over its one hump (underline under "bell"). The last two lines are

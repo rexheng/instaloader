@@ -108,10 +108,10 @@ columns sit under the 17 % red segment. The formula is built from the picture:
    the 20 flies out of the table's people column and the 0.99 off the red arrow (the denominator
    repeats the term in place; the table's 20 positives become 19.8); on "every healthy person times
    one percent" the 9,980 and the 0.01 arrive the same way and the table's 100 becomes 99.8.
-3. ÷ 10,000: the people column's header becomes "÷ 10,000"; on "counts" the sick row
-   (20 → 0.002, 19.8 → 0.00198) and both 20s in the formula change in one move; on "shares" the
-   healthy row (9,980 → 0.998, 99.8 → 0.00998) and the formula's 9,980 (each number rolls out and
-   its share rolls in; nothing morphs glyph by glyph). No number in
+3. ÷ 10,000: the people column's header becomes "÷ 10,000"; on "counts become shares"
+   both rows (20 → 0.002, 19.8 → 0.00198; 9,980 → 0.998, 99.8 → 0.00998) and every count in the
+   formula divide in ONE move, so no paused frame shows a false mix of counts and shares (each
+   number rolls out and its share rolls in; nothing morphs glyph by glyph). No number in
    the table is left undivided. The 17 % pulses on "the share can't change".
 4. Grey braces grow on the spoken words: "how common" under 0.002 and 0.998, "how often" under 0.99
    and 0.01. On "Name them" each number turns into its name in place (0.002 → P(sick), 0.99 →

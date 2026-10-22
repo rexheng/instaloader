@@ -229,8 +229,8 @@ class Rain:
 class Episode(NarratedScene):
     EPISODE = 1
     TITLE = "Three Right Answers to One Probability Question"
-    SPEED = 0.82
-    BEAT_GAP = 0.27
+    SPEED = 0.83
+    CADENCE = "shaped"           # PRODUCTION_GUIDE §13: gaps follow the sense (default beat gap)
 
     # ------------------------------------------------------------------ data
     def prepare(self):
@@ -652,13 +652,13 @@ class Episode(NarratedScene):
             p2dot = Dot(rim(BIG_C, BIG_R, phi.get_value()), radius=0.08, color=INK).set_z_index(5)
             self.add(sw_static, p2dot)
             # the arc and its equation hold through "Case closed" (BAR: >= 3.2 s for 3 terms)
-            beat.wait_until("way", offset=-0.35)
+            beat.wait_until("code", offset=-0.1)       # (the colon brings "radius" close to "way")
             # 1. the geometry argument is put away in place: the question, the caption,
             #    "120/360 =", the sweep and the arc fade, and the triangle turns back upright
             #    (undoing "put a corner on the first point") before anything moves
             self.play(FadeOut(arc_eq[0]), FadeOut(arc_eq[1]), FadeOut(q, shift=0.2 * UP),
                       FadeOut(cap), *[FadeOut(m) for m in (sw_static, p2dot, P1, far)],
-                      Rotate(big.tri, angle=-(a1 - PI / 2), about_point=BIG_C), run_time=0.6)
+                      Rotate(big.tri, angle=-(a1 - PI / 2), about_point=BIG_C), run_time=0.5)
             self.remove(sw_static, p2dot, P1, far)
             # 2. one move: the big circle becomes panel 1 (rain dimmed to context), and its
             #    label, its tally and the exact third travel with it
@@ -669,7 +669,7 @@ class Episode(NarratedScene):
             self.play(MoveToTarget(big.group),
                       ReplacementTransform(lab1, labs[0], path_arc=0.5),        # over the circle
                       ReplacementTransform(tally1, t1_target, path_arc=-0.6),   # under it
-                      ReplacementTransform(arc_eq[2], small_frac), run_time=0.95)
+                      ReplacementTransform(arc_eq[2], small_frac), run_time=0.9)
             tally1 = t1_target
             self.play(FadeIn(ap1), Create(nl), FadeIn(nl_title), FadeIn(shared_cap),
                       Create(p2.circle), Create(p2.tri), FadeIn(labs[1], shift=0.1 * DOWN),
@@ -686,9 +686,9 @@ class Episode(NarratedScene):
                             color=INK, stroke_width=2).set_z_index(5)
             beat.wait_until("radius", offset=-0.15)
             self.play(Create(rad), run_time=0.7)
-            beat.wait_until("random point", offset=-0.1)
+            beat.wait_until("point", offset=-0.1)
             self.play(GrowFromCenter(pdot), run_time=0.5)
-            beat.wait_until("draw", offset=-0.1)
+            beat.wait_until("chord", offset=-0.1)
             col = ch.get_color()
             ch.set_color(INK)
             self.play(GrowFromCenter(ch), Create(ra), run_time=beat.until("right angles", offset=0.2))
@@ -726,9 +726,9 @@ class Episode(NarratedScene):
             m = r3["mid"][0]
             mdot = Dot(p3.pt(m), radius=0.07, color=INK).set_z_index(5)
             ch = self.chord_line(p3, r3["p"][0], r3["q"][0], r3["long"][0], width=4)
-            beat.wait_until("random point", offset=-0.1)
+            beat.wait_until("point", offset=-0.1)
             self.play(GrowFromCenter(mdot), run_time=0.5)
-            beat.wait_until("makes", offset=-0.1)
+            beat.wait_until("chord's", offset=-0.1)
             self.play(GrowFromCenter(ch), run_time=0.9)
             beat.wait_until("That", offset=-0.5)
             img3 = p3.make_texture(self.stages["midpoint"][0])
@@ -777,7 +777,7 @@ class Episode(NarratedScene):
             self.play(FadeOut(q1), FadeOut(q2), FadeOut(cite_b2), run_time=0.35)
             self.play(GrowFromCenter(gap_brace), *[m.animate.set_opacity(0.35) for m in tally_row],
                       run_time=0.5)
-            self.play(Write(gap_lbl), run_time=beat.until("points", occurrence=1, offset=0.2))
+            self.play(Write(gap_lbl), run_time=max(0.5, beat.until("twenty-five", end=True)))
             beat.wait_until("code", offset=-0.3)
             self.play(*[lb.animate.set_opacity(1.0) for lb in labs],
                       *[m.animate.set_opacity(1.0) for m in tally_row], run_time=0.3)
@@ -1159,7 +1159,7 @@ class Episode(NarratedScene):
                       # dashes cross-fade to "? = ?" (a morph drew a breve-like glyph in between)
                       FadeOut(dashes["straws"], rate_func=window(0.0, 0.3, smooth)),
                       FadeIn(qmarks, rate_func=window(0.25, 0.55, smooth)), FadeIn(syms["straws"]),
-                      run_time=max(1.0, beat.until("big", offset=0.1)))
+                      run_time=max(1.0, beat.until("size", offset=0.1)))
             self.remove(ghost, halo_in)
             self.add(shalo, scirc, sinc)
 
@@ -1328,7 +1328,7 @@ class Episode(NarratedScene):
             self.play(FadeIn(real1, shift=0.1 * UP), run_time=0.6)
             # "matched": the real tosses answer the straws' "?" -- the radius program
             beat.wait_until("matched", offset=-0.15)
-            self.play(ReplacementTransform(qmarks[0], straw_ans), run_time=0.55)
+            self.play(swap(qmarks[0], straw_ans, run_time=0.6))     # no glyph morph
             # "the radius program's flat spread": the green row flags and its predicted histogram
             # grows, 10 % in every band
             beat.wait_until("radius", offset=-0.1)
@@ -1525,7 +1525,7 @@ class Episode(NarratedScene):
             mlab.set_opacity(0)
             self.add(mline, mlab)
             rt = max(1.6, beat.until("eighty-five", offset=0.3))
-            a = float(np.clip((beat.time_of("over students") + 0.35 - beat.elapsed()) / rt, 0, 0.85))
+            a = float(np.clip((beat.time_of("student") - beat.elapsed()) / rt, 0, 0.85))
             self.play(wt.animate.set_value(1.0),
                       FadeOut(sp_c[NPRE:], shift=0.12 * UP, rate_func=window(a, a + 0.45 / rt, smooth)),
                       FadeIn(sp_s[NPRE:], shift=0.12 * UP, rate_func=window(a, a + 0.45 / rt, smooth)),

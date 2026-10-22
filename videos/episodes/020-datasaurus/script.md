@@ -5,27 +5,28 @@
 that ellipse (a dinosaur, a star, Anscombe's four datasets) has the same five numbers and even the
 same best-fit line. Only a plot shows the shape.
 
-Runtime 3:35.5 · 536 words · narrator af_heart @ 0.84.
+Runtime about 3:31 · 494 words (budget ≤ 500, PRODUCTION_GUIDE §13) · narrator af_heart @ 0.84,
+`CADENCE = "shaped"` (B21 at 0.82 so no sentence runs above 200 wpm).
 
 ## Palette (colour → one meaning, whole episode)
 
 | colour | meaning |
 |---|---|
-| YELLOW | the summary: the dinosaur's five numbers and the geometry they pin down (centre, mean ± SD error bars, SD box, ellipse, touch dots, the run along the centre line and the rise r s_y, the dashed best-fit line and the vertical slices with their midpoints in B9, best-fit line, the bar graph built from ȳ and s_y); the live r label during the sweep; Anscombe's five numbers, his summary geometry and the slope formula terms and substituted values in the payoff; the dinosaur's values substituted into the slope at the landing |
+| YELLOW | the summary: the dinosaur's five numbers and the geometry they pin down (centre, mean ± SD error bars, SD box, ellipse, touch dots, the run along the centre line and the rise r s_y, the dashed best-fit line and the vertical slices with their midpoints in B9, best-fit line, the bar graph built from ȳ and s_y); the live r label during the sweep; Anscombe's five numbers, his summary geometry and the slope formula terms in the payoff; the dinosaur's values substituted into the slope at the landing |
 | BLUE | actual data points (whatever dataset is on screen) |
 | RED | a summary that has drifted away from the dinosaur's (live values that no longer match, the star's own drifting centre/error bars/box/ellipse, the missed median); the drifted cross turns yellow as it slides back onto the dinosaur's, so it is never red over a matching readout |
 | GREEN | "matches" marks (always paired with the = glyph; RED always paired with ≠) |
 | GRAY | axes and ticks, the cold-open "?", the viewer's guess cloud and its dashed line, the two ghost ellipses, the target star and circle outlines. Grey TEXT (tick numbers, axis names, "your guess", "your line", headers, citations, the sourced percentages, the decimals note) uses a lighter grey, #A6ADB7 (8.0 : 1 on the background) |
-| INK | live "now" values while they still match, words, the white rings that single out one point (the nudged point; Anscombe's outlier and lever point) |
+| INK | live "now" values while they still match, words, the white rings that single out one point (Anscombe's outlier and lever point) |
 
 Never red vs green alone: every RED/GREEN mark is also a ≠ / = glyph.
 
 ## Beats
 
 ### Cold open (0:00–0:27; commit ends about 0:12)
-**B0.** A hundred and forty-two points with two averages, two standard deviations, and a
-correlation of minus point oh six. Picture the cloud. Which way does its best-fit line tilt?
-[pause 1.5]
+**B0.** A hundred forty-two points with two averages, two standard deviations, and a
+correlation of minus point oh six. Picture the cloud, and its best-fit line. Which way does it
+tilt? [pause 1.5]
 > Frame 1: empty axes (0–100 × 0–100) with "n = 142" inside and the five symbol slots beside them.
 > Each value is written (YELLOW) on its spoken words (the published values: first two decimals,
 > facts.md #2). "n = 142" fades on "Picture the cloud" (the viewer draws the cloud in their head:
@@ -41,21 +42,21 @@ correlation of minus point oh six. Picture the cloud. Which way does its best-fi
 > "drawn by".
 
 ### Stakes (0:27–0:39)
-**B2.** In a review of seven hundred and three physiology papers, eighty-six percent used bar
+**B2.** In a review of seven hundred three physiology papers, eighty-six percent used bar
 graphs: an average and an error bar. Only thirteen percent showed the points.
 > As before: Weissgerber citation; the dinosaur squeezes into a strip of its y-values (x ticks
 > dimmed); a YELLOW bar to ȳ with "86% / used bars"; the error bar ±s_y on "error bar"; "13% /
 > showed points" as the points return.
 
-**B3.** So how much can five numbers hide? Let's hide a star in them, and demand that all five
-still match the dinosaur's to two decimals.
+**B3.** How much can five numbers hide? Let's hide a star in them, and demand that all five
+match the dinosaur's to two decimals.
 > The strip springs back; dashed star outline; the "dinosaur | now" readout with = marks and
 > "matching 5/5"; grey note "first two decimals, as published".
 
 ### Naive build and fail (0:48–1:01)
 **B4.** Version one slides every point onto its own spot on a star.
 
-**B5.** We got the star, and lost all five numbers. [pause 0.2] The center moved, the x spread
+**B5.** We got the star, and lost all five numbers. [pause 0.9] The center moved, the x spread
 grew, and the y spread shrank by almost a quarter.
 > Counter 0/5; YELLOW dot and mean ± SD error bars for the dinosaur, RED ones sliding to the star's
 > centre (50, 50), stretching in x (16.76 → 20.51) and shrinking in y (26.93 → 20.50, −24 %).
@@ -80,7 +81,7 @@ grew, and the y spread shrank by almost a quarter.
 **B9.** Many ellipses touch all four walls. The correlation picks one. Correlation r means one
 standard deviation to the right, on average r standard deviations up. That's the best-fit line,
 through the middle of every vertical slice. At the wall, the slice is just the touch point, r
-times ess why above the center. For minus point oh six, that's just below the middle.
+times ess why above the center. For the dinosaur, it's just below the middle.
 > Ghost ellipses on "Many", the YELLOW ellipse on "picks one", drawn from the right touch point
 > round to the left one, each touch dot appearing as the stroke reaches its wall. On "Correlation r
 > means" the ellipse becomes a "what if" (dinosaur faded, r row dimmed, live "r = …" label), r goes
@@ -91,17 +92,18 @@ times ess why above the center. For minus point oh six, that's just below the mi
 > their midpoints appear, all on the dashed line. On "At the wall" the slices slide right and
 > shrink until each one collapses onto the touch dot, which is flagged on "touch point"; "r s_y" is
 > written beside the rise on "r times" while the live "r = 0.80" label steps up to the box's
-> top-right corner (one label per object). On "minus point oh six" r sweeps back to −0.06 with the
-> dashed line still through the touch dot; the r row returns and is Indicated; the touch dot flags
-> on "middle".
+> top-right corner (one label per object). On "dinosaur" r sweeps back to −0.06 with the dashed
+> line still through the touch dot and the r row returns; on "middle" the touch dot and the
+> dinosaur's own r values flag together. (The old "For minus point oh six" repeated the cold
+> open's phrase.)
 
-**B10.** That ellipse is everything the five numbers know.
+**B10.** That ellipse is everything the five numbers know. [pause 1.0]
 > Run, rise, label and dashed line fade; ellipse pulsed; the dinosaur returns around it.
 
 **B11.** Now replay version one, and watch the ellipse.
 > A RED centre/box/ellipse, computed live, drifts off the YELLOW one.
 
-**B12.** How would you fix the star? [pause 1.5]
+**B12.** How would you fix it? [pause 1.5]
 > Both boxes fade out and the star dims to 40 %, so the two ellipses and centres alone carry the
 > prediction hold; the star returns to full strength during "Slide".
 
@@ -110,25 +112,26 @@ shear, until it touches the walls at the same height.
 > Translate (x̄, ȳ go green), scale about the centre (the boxes come back on "Stretch"; s_x, s_y go
 > green), shear (r goes green).
 
-**B14.** All five match now, to every decimal place.
+**B14.** All five match now, to every decimal place. [pause 0.6]
 
 ### Limit + payoff (1:55–3:17)
-**B15.** But add a sixth number, the median of y, and our star misses it by six.
+**B15.** But add a sixth number: the median of y. Our star misses it by six.
 
 **B16.** In 2017, Justin Matejka and George Fitzmaurice built a search that keeps these five
-numbers fixed. It nudges a random point toward a target shape, and undoes any nudge that breaks
-them. Repeat it enough times, and the dinosaur becomes a circle.
+numbers fixed while it nudges points toward a target.
 > Citation on "Matejka"; our star walks back to the dinosaur with the five held; the readout's five
-> rows are boxed in YELLOW on "these" (no scale flash). On "nudges" a tail point is ringed and the dashed target circle drawn;
-> on "toward" it steps 5.5 units toward the circle (x̄ and s_x turn RED ≠); on "undoes" it steps
-> back (all =); on "breaks" the column and ellipse are Indicated. On "Repeat" the points set off one
-> by one into the real `circle` set; the five = never change, the median wanders.
+> rows are boxed in YELLOW on "these" (no scale flash). On "nudges" the dashed target circle is
+> drawn and the points set off one by one, on slightly wandering paths, into the real `circle`
+> set; the five = never change, the median wanders. (Cut this round: the one-point nudge-and-undo
+> demonstration and its two sentences, a retelling of the hold-the-five idea the star fix already
+> proved.)
 
-**B17.** From the dinosaur they grew twelve shapes, like this star, [pause 1.0] this bullseye,
-[pause 0.8] this X, [pause 1.0] these stripes, [pause 0.8] and these dots. Every one of them has
-this same ellipse, and a different median.
-> Each real dataset lands 0.2 s before its name (0.5 s moves). The YELLOW ellipse, box and touch
-> dots never visibly move; the median jumps 50.11, 47.38, 39.87, 50.47, 51.29 (all ≠ 46.02).
+**B17.** From the dinosaur they grew twelve shapes: this circle, [pause 0.8] this star, [pause 0.8]
+this bullseye, [pause 0.8] this X, [pause 0.8] and these stripes. Every one has this same ellipse,
+and a different median.
+> "this circle": the dashed target leaves and the circle pulses. Each next real dataset lands
+> 0.2 s before its name (0.5 s moves). The YELLOW ellipse, box and touch dots never visibly move;
+> the median jumps 51.02, 50.11, 47.38, 39.87, 50.47 (all ≠ 46.02).
 
 **B18.** Francis Anscombe made the point in 1973, with eleven points of his own.
 > As before: 11 of the points travel to Anscombe's dataset I. His readout arrives whole, entry by
@@ -141,20 +144,22 @@ this same ellipse, and a different median.
 
 **B20.** His best-fit line follows the same rule: one ess ex across, r ess why up, through the
 center and that touch point.
-> The readout steps down to make room. On "one ess ex across" the s_x symbol is Indicated in his
-> readout, and a copy lifts straight up out of the readout row before travelling to label the run as
-> it is drawn; on "r ess why up" r and s_y are flagged one by one and lift out the same way to label
-> the rise as it grows; on "center" the centre flags and the best-fit line grows
-> out of it through the touch point. (B9's picture, recognised.)
+> The readout stays mid-right (so the top right is never empty). On "one ess ex across" the s_x
+> symbol is Indicated in his readout, and a copy rises out of it, crosses above the entries to its
+> left and drops onto the run as it is drawn; on "r ess why up" r and s_y are flagged one by one
+> and travel the same way to label the rise as it grows; on "center" the centre flags and the
+> best-fit line grows out of it through the touch point while the readout steps down to make room
+> for the formula. (B9's picture, recognised.)
 
-**B21.** So the slope is rise over run. [pause 1.0] Plug in his numbers, and it's one half.
+**B21.** So the slope is rise, over run. [pause 1.0]
 > "slope =" on "slope"; on "rise" a copy of the r s_y label climbs straight up from the rise,
 > crosses high above "slope =" and drops into the numerator (it never passes through the formula);
-> the s_x label arcs under into the denominator on "run" (slope = r s_y / s_x, every term from its segment). The
-> formula holds alone, then 0.82 × 2.03 / 3.32 ≈ 0.50 is built from the readout; the fraction bar
-> grows with the first value's flight, so the template is never empty.
+> the s_x label arcs under into the denominator on "run" (slope = r s_y / s_x, every term from
+> its segment). The formula holds alone through the pause. (Cut this round: "Plug in his numbers,
+> and it's one half" and its substitution; the landing plugs in the dinosaur's numbers, the one
+> substitution the story needs.)
 
-**B22.** All four of his datasets share these five numbers, so they share the ellipse and the line.
+**B22.** All four of his datasets share these five numbers, so they share the ellipse and line.
 [pause 0.3] A trend, a curve, an outlier, and one point doing all the work.
 > Box round the readout on "these five numbers". Panel I forms: the zoomed axis lines crossfade
 > into panel I's over the same 0.8 s (tick numbers hand over in sequence, never overprinting);
@@ -177,10 +182,10 @@ leave out.
 > the dashed one; "minus point one": "≈ −0.10". "cloud": "your guess" is flagged; "this ellipse":
 > pulsed while the cloud dims around it; "all that": the guess labels go. "Most of those papers":
 > the Weissgerber citation and "86% used bars" return, the formula leaves, the line steps back to
-> 30 % and the ellipse to 60 % (restored on "dinosaur"); "bar graph": a copy
+> 55 % and the ellipse to 60 % (restored on "dinosaur"); "bar graph": a copy
 > of the ellipse is squeezed to its vertical extent, exactly the ±s_y error bar, as the ȳ bar grows
 > under it; "two": the ȳ and s_y rows flag. "dinosaur": the points return to the dinosaur while the
-> bar and its error bar step out of the plot (40 %) and sit beside the 142 points. End card.
+> bar and its error bar step out of the plot (60 %) and sit beside the 142 points. End card.
 
 ## Sources
 - Matejka, J. & Fitzmaurice, G. (2017). Same Stats, Different Graphs: Generating Datasets with

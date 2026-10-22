@@ -192,8 +192,8 @@ def bill_unit(oy, yu, s="bits/min") -> VMobject:
 
 def order_tag(oy, yu, first: str) -> VGroup:
     """'data first' / 'bell first' in a stacked bill's top-right corner: which bill is which."""
-    w = text(first, size=26, color=BLUE if first == "data" else PURPLE)
-    g = VGroup(w, text("first", size=26, color=INK)).arrange(RIGHT, buff=0.12)
+    w = text(first, size=LABEL, color=BLUE if first == "data" else PURPLE)
+    g = VGroup(w, text("first", size=LABEL, color=INK)).arrange(RIGHT, buff=0.12)
     g[1].align_to(g[0], DOWN)
     g.move_to([TWO[0] + 7 * TWO[2] - 0.05, oy + B_HI * yu, 0], aligned_edge=UR)
     return g
@@ -240,7 +240,8 @@ def place_block(lhs, f, tot, rows, x=COLX):
 class Episode(NarratedScene):
     EPISODE = 8
     TITLE = "The Distance That Isn't Symmetric"
-    SPEED = 0.84
+    SPEED = 0.83
+    CADENCE = "shaped"           # gaps follow the sense (PRODUCTION_GUIDE §13.3)
     # misaki reads a lone "A" as the article and "imagines" as "im-AY-jen-eez"
     PRONUNCIATIONS = {"Leibler": "lie bler", "Kullback": "cull back", "Blei": "bly", "A": "/ˈA/",
                       "imagines": "/ɪmˈæʤənz/"}
@@ -616,7 +617,7 @@ class Episode(NarratedScene):
 
         # ============================================================ 1. cold open: the bet
         n_lab = VGroup(text("272 eruptions", size=LABEL, color=BLUE),
-                       text("curve: smoothed", size=26, color=GRAY)
+                       text("curve: smoothed", size=LABEL, color=GRAY)
                        ).arrange(DOWN, aligned_edge=LEFT, buff=0.12)
         n_lab.move_to([2.45, 1.15, 0], aligned_edge=LEFT)
         cite_data = citation("Härdle, 1991 · Old Faithful data (R: faithful)")
@@ -638,8 +639,8 @@ class Episode(NarratedScene):
         self.add(self.ax, bars)
         with self.narrate("Old Faithful's eruptions. [pause 0.12] Data first, the closest bell is "
                           "this one. [pause 0.2] Swap the order. If closeness is a distance, order "
-                          "can't matter: it stays at one. Or does it move to two, or three? "
-                          "[pause 1.5]") as beat:
+                          "can't matter: it stays at one. Or does it move to two, [pause 0.25] or to "
+                          "three? [pause 1.5]") as beat:
             # the order the bet is about is on screen from the first second
             self.play(self.bar_op.animate.set_value(0.42), Create(static_p), Write(n1),
                       FadeIn(n_lab, shift=0.1 * DOWN), FadeIn(cite_data),
@@ -671,22 +672,22 @@ class Episode(NarratedScene):
         dist_lab.align_to(kl_lab, LEFT)
         cite_kl = citation("Kullback & Leibler, 1951 · Annals of Mathematical Statistics")
         cite_vi = citation("Blei et al., 2017 · J. American Statistical Association")
-        vi_lab = text("variational inference", size=26, color=GRAY)
+        vi_lab = text("variational inference", size=LABEL, color=GRAY)
         vi_lab.next_to(n2, DOWN, buff=0.25).align_to(n2, LEFT)
-        ml_lab = text("maximum-likelihood fit", size=26, color=PURPLE).move_to([crown[0], PIN_Y, 0])
+        ml_lab = text("maximum-likelihood fit", size=LABEL, color=PURPLE).move_to([crown[0], PIN_Y, 0])
         leader = DashedLine(crown + UP * 0.12, ml_lab.get_bottom() + DOWN * 0.15, dash_length=0.07,
                             stroke_color=PURPLE, stroke_width=2)
         with self.narrate("The D is KL divergence, named for Kullback and Leibler. [pause 0.2] "
-                          "Every maximum-likelihood fit shrinks it with the data first, and much of "
-                          "Bayesian machine learning shrinks it with the order flipped. [pause 0.2] It's often "
-                          "called a distance.") as beat:
+                          "Every maximum-likelihood fit shrinks it with the data first. [pause 0.2] "
+                          "Much of Bayesian machine learning shrinks it with the order flipped. "
+                          "[pause 0.2] It's often called a distance.") as beat:
             self.play(FadeOut(VGroup(ghost2, ghost3, mk1, mk2, mk3, n_lab)),
                       n2.animate.set_opacity(0.3), Indicate(n1[0], color=YELLOW, scale_factor=1.25),
                       run_time=0.8)
             beat.wait_until("KL", offset=-0.15)
             self.play(FadeIn(kl_lab, shift=0.1 * RIGHT), run_time=0.7)
             beat.wait_until("Kullback", offset=-0.2)
-            self.play(FadeOut(cite_data), FadeIn(cite_kl), run_time=0.7)
+            self.play(swap(cite_data, cite_kl), run_time=0.7)      # never superimposed
             beat.wait_until("maximum", offset=-0.1)
             self.play(FadeIn(ml_lab, shift=0.1 * UP), Create(leader), flag(n1), run_time=1.0)
             beat.wait_until("shrinks", offset=-0.1)
@@ -696,7 +697,7 @@ class Episode(NarratedScene):
             # the stakes of the order: Bayesian approximations put the model first
             beat.wait_until("Bayesian", offset=-0.1)
             self.play(n2.animate.set_opacity(1.0), FadeIn(vi_lab, shift=0.1 * UP),
-                      FadeOut(cite_kl), FadeIn(cite_vi), run_time=0.8)
+                      swap(cite_kl, cite_vi), run_time=0.8)
             beat.wait_until("flipped", offset=-0.15)
             self.play(flag(n2[1]), flag(n2[3]), run_time=0.8)
             beat.wait_until("distance", offset=-0.15)
@@ -711,9 +712,10 @@ class Episode(NarratedScene):
                                stroke_color=PURPLE, stroke_width=2)
         dist_lab2 = text("a distance", size=LABEL, color=YELLOW).move_to(dist_lab, aligned_edge=LEFT)
         NV = D["naive"]
+        # (A's mean and spread are on its label; the narration does not read them out)
         with self.narrate("So treat it as one. Data first, this bell is point seven six bits away. "
-                          "[pause 0.12] Shift it or stretch it, and that number only grows, so this "
-                          "is bell A: three and a half minutes, give or take one point one.", gap=0.8) as beat:
+                          "[pause 0.5] Shift it or stretch it, and that number only grows, so bell A "
+                          "is the closest.", gap=0.8) as beat:
             # the VI tag and its citation leave with the topic (the naive build cites nothing)
             self.play(TransformMatchingShapes(dist_lab, dist_lab2), FadeOut(vi_lab), FadeOut(cite_vi),
                       n2.animate.set_opacity(0.3), kl_lab.animate.set_opacity(0.35), run_time=0.8)
@@ -725,15 +727,14 @@ class Episode(NarratedScene):
             # each excursion: out, hold and flag the raised number, back
             for tracker, val in ((self.mu, MA + NV["shift"]), (self.sd, SA * NV["stretch"])):
                 home = tracker.get_value()
-                self.play(tracker.animate.set_value(val), run_time=0.6, rate_func=SMOOTH)
+                self.play(tracker.animate.set_value(val), run_time=0.55, rate_func=SMOOTH)
                 num1.suspend_updating()
                 self.play(Indicate(num1, color=YELLOW, scale_factor=1.15), run_time=0.5)
                 num1.resume_updating()
-                self.play(tracker.animate.set_value(home), run_time=0.55, rate_func=SMOOTH)
+                self.play(tracker.animate.set_value(home), run_time=0.5, rate_func=SMOOTH)
+            # "bell A": the pin completes and the label swaps (never superimposed) to A's stats
             beat.wait_until("bell A", offset=-0.2)
-            self.play(Create(mean_line), run_time=0.5)
-            beat.wait_until("three", offset=-0.15)
-            self.play(FadeTransform(ml_lab, a_lab), run_time=0.9)
+            self.play(Create(mean_line), swap(ml_lab, a_lab), run_time=0.9)
         num1.clear_updaters()
         num1.set_value(D["A"]["fwd"])
 
@@ -742,8 +743,8 @@ class Episode(NarratedScene):
         times.align_to(r2[1], LEFT)
         with self.narrate("But a distance reads the same both ways. [pause 0.15] Put the bell first, "
                           "and the same two curves are one point seven bits apart, more than twice "
-                          "as far. [pause 0.75] Only the order changed, so the order must be built "
-                          "into the formula.") as beat:
+                          "as far. [pause 1.0] Only the order changed, so the formula must care about "
+                          "order.") as beat:
             self.play(n2.animate.set_opacity(1.0), flag(dist_lab2),
                       VGroup(a_lab, leader, mean_line).animate.set_opacity(0.3), run_time=0.9)
             beat.wait_until("bell first", offset=-0.1)
@@ -805,16 +806,16 @@ class Episode(NarratedScene):
         q_sym = MathTex("q", font_size=40, color=PURPLE).next_to(big_q, RIGHT, buff=0.2)
         hq = big_q.height
 
-        with self.narrate("To see why, open it up at one real eruption, two minutes long. The data's "
-                          "curve gives that length a height, p. [pause 0.12] The bell gives it q, "
-                          "about a quarter as much. Double q twice and you reach p, so log base two "
-                          "of p over q is about two: two doublings, or two bits.") as beat:
+        with self.narrate("To see why, take one eruption two minutes long. The data's curve stands "
+                          "this high there: call it p. [pause 0.2] The bell gives it q, [pause 0.3] "
+                          "about a quarter as much. Double q twice and you reach p. [pause 0.2] So log "
+                          "base two of p over q is about two: two doublings, or two bits.") as beat:
             # numbers leave first, then the chart shrinks (nothing slides over a label)
             self.play(FadeOut(VGroup(kl_lab, dist_lab2, strike, n2, r2, times, a_lab, leader,
                                      mean_line, r1)), run_time=0.4)
             # the pull-out's empty baseline is drawn as the chart makes room: the right side has a
             # destination before p arrives (it starts once the chart's right end has passed it)
-            rt = beat.until("one real", offset=-0.1)
+            rt = beat.until("two minutes", offset=-0.15, min_time=1.0)
             self.play(*self.to_layout(MID), self.move_axes(MID),
                       lhs.animate.scale(40 / 36).move_to([RX, 3.2, 0]),
                       self.bar_op.animate.set_value(0.1),
@@ -826,7 +827,8 @@ class Episode(NarratedScene):
             scanner.update()
             self.play(Create(scanner), run_time=0.6)
             self.add(pq_bars)
-            beat.wait_until("height", offset=-0.35)
+            # "this high": the data's bar rises at the scanner as the word lands
+            beat.wait_until("this high", offset=-0.3)
             self.play(self.p_h.animate.set_value(1.0), run_time=0.6)
             self.play(TransformFromCopy(pq_bars[0], big_p), FadeIn(p_sym),
                       FadeIn(rp, shift=0.1 * LEFT), run_time=0.8)
@@ -870,7 +872,7 @@ class Episode(NarratedScene):
                            self.weighted, self.reveal, self.fill_reveal, self.area_fill,
                            self.area_op)
         tot_num = tot.num
-        refund = text("refund", size=26, color=GRAY)
+        refund = text("refund", size=LABEL, color=GRAY)
 
         # where log2(p/q) runs off the bottom of the panel: say how far it really goes
         LRD = D["log2_p_over_qA"]
@@ -888,44 +890,46 @@ class Episode(NarratedScene):
                 * (1 - self.weighted.get_value()) * self.area_op.get_value()))
             clip_marks.add(mk)
 
-        with self.narrate("[pause 1.0] Do that at every length. [pause 0.9] Then weight each one by "
-                          "how often eruptions last that long, which is p, and add it all up. [pause 0.3] "
-                          "Where the bell rises above the data, the grey dips pay a little back. "
-                          "[pause 0.5] That's the divergence: point seven six bits.", gap=0.9) as beat:
-            # the one-length numbers and the chart's own x labels leave first, so nothing slides
-            # through the bill's panel while the chart moves up
-            self.play(FadeOut(pullout), FadeOut(lhs), self.ax.x_axis.numbers.animate.set_opacity(0),
-                      self.ax.x_title.animate.set_opacity(0), run_time=0.3)
-            # the chart rises; the scanner rides along back to the left end, and the readouts (which
-            # describe 2 min only) dim while it is away
-            self.play(*self.to_layout(TWO), self.move_axes(TWO, xlab=False),
-                      self.bar_op.animate.set_value(0.25), self.scan.animate.set_value(0.3),
-                      self.ro_op.animate.set_value(0.3), lr_lab.animate.set_opacity(0.3),
-                      run_time=0.8, rate_func=SMOOTH)
-            # ...then the bill's panel draws in the room the chart left
+        # the one-length numbers and the chart's own x labels leave first, so nothing slides
+        # through the bill's panel while the chart moves up (a silent beat turn)
+        self.play(FadeOut(pullout), FadeOut(lhs), self.ax.x_axis.numbers.animate.set_opacity(0),
+                  self.ax.x_title.animate.set_opacity(0), run_time=0.3)
+        # the chart rises; the scanner rides along back to the left end, and the readouts (which
+        # describe 2 min only) dim while it is away
+        self.play(*self.to_layout(TWO), self.move_axes(TWO, xlab=False),
+                  self.bar_op.animate.set_value(0.25), self.scan.animate.set_value(0.3),
+                  self.ro_op.animate.set_value(0.3), lr_lab.animate.set_opacity(0.3),
+                  run_time=0.8, rate_func=SMOOTH)
+        with self.narrate("Do that at every length. [pause 0.9] Then weight each one by p, how often "
+                          "eruptions last that long, and add it all up. [pause 0.3] Where the bell "
+                          "rises above the data, [pause 0.45] the grey dips pay a little back. "
+                          "[pause 0.5] That's the divergence: the same point seven six.", gap=0.9) as beat:
+            # the bill's panel draws in the room the chart left
             self.play(Create(ax_b1), FadeIn(unit1), FadeIn(xlab),
                       self.bot_scan_op.animate.set_value(1.0), run_time=0.5)
             self.reveal.set_value(0.3)
             self.add(area, clip_marks)
-            # the sweep runs over "every length" and the pause after it
+            # the sweep runs over "every length" and the pause after it; log2 and the ratio fly
+            # into the formula row (carried, never morphed glyph by glyph)
             Ts = beat.until("Then", offset=-0.1, min_time=1.2)
             tf = max(0.6, min(1.4, Ts - 0.4))
             self.play(self.scan.animate(rate_func=LINEAR, run_time=Ts).set_value(7.0),
                       self.reveal.animate(rate_func=LINEAR, run_time=Ts).set_value(7.0),
-                      Succession(Wait(0.3), TransformFromCopy(lr_lab[0], f_fwd[2], run_time=tf),
+                      Succession(Wait(0.3), allow_morph(TransformFromCopy(lr_lab[0], f_fwd[2],
+                                                                          run_time=tf)),
                                  Wait(max(0.01, Ts - 0.3 - tf))),
-                      Succession(Wait(0.3), TransformFromCopy(lr_lab[1], VGroup(*f_fwd[3:8]),
-                                                              run_time=tf),
+                      Succession(Wait(0.3), carry(lr_lab[1], VGroup(*f_fwd[3:8]), run_time=tf),
                                  Wait(max(0.01, Ts - 0.3 - tf))))
+            # "weight each one": the scanner leaves and the curve is multiplied by p
             self.play(self.scan_op.animate.set_value(0.0), self.pq_op.animate.set_value(0.0),
-                      run_time=0.4)
+                      self.weighted.animate.set_value(1.0), swap(unit1, unit1b),
+                      run_time=beat.until("by p", offset=-0.3, min_time=0.8), rate_func=SMOOTH)
             self.scan.set_value(2.0)
-            self.play(self.weighted.animate.set_value(1.0), FadeOut(unit1), FadeIn(unit1b),
-                      run_time=beat.until("which is", offset=-0.05), rate_func=SMOOTH)
             self.remove(clip_marks)
-            # the weight p swings out around the readouts' left edge into the formula
-            self.play(TransformFromCopy(rp[0][0], f_fwd[1], path_arc=-1.7), self.flash_p(),
-                      run_time=1.0)
+            # "by p": the weight p swings out around the readouts' left edge into the formula
+            self.play(TransformFromCopy(rp[0][0], f_fwd[1], path_arc=-1.7), run_time=0.7)
+            # "how often eruptions last that long": the flash runs along the data's humps
+            self.play(self.flash_p(), run_time=1.0)
             beat.wait_until("add it", offset=-0.1)
             tot_num.set_value(0.0)
             # the running total has its subject from the start (faint until it is named)
@@ -968,10 +972,10 @@ class Episode(NarratedScene):
         pct = MathTex(r"36\%", font_size=36, color=YELLOW).next_to(short_box, LEFT, buff=0.15)
         pct.shift(0.22 * UP)                                    # clear of A's tail label
         ptag = self.peak_tag()
-        with self.narrate("Try a bell that ignores the short eruptions and sits on the long hump. At "
-                          "two minutes, it falls short by eighteen and a half doublings. [pause 0.6] "
-                          "More than a third of all eruptions are short ones like this, so the bill "
-                          "comes to five point eight bits.", gap=1.0, speed=0.8) as beat:
+        with self.narrate("Try a bell that skips the short eruptions. At two minutes, it falls short "
+                          "by eighteen and a half doublings. [pause 0.6] More than a third of all "
+                          "eruptions are short, so the bill comes to five point eight bits.",
+                          gap=1.1, speed=0.8) as beat:
             self.add(ghost, lab_A, lab_B, ptag)
             lab_A.update()
             lab_B.update()
@@ -1012,9 +1016,9 @@ class Episode(NarratedScene):
         place_block(lhs2, f2, q_tot, ROWS2_THREE)
         lhs_r = note("bell", "data", size=BLK).move_to(lhs2, aligned_edge=LEFT)
         f_rev = rhs("q", "q", "p", size=BLK).move_to(f2, aligned_edge=LEFT)
-        with self.narrate("Now keep that bill, and swap the order for a second one. [pause 0.12] "
-                          "Every p trades places with q. [pause 0.3] The bell supplies the lengths, "
-                          "and the data judges them. [pause 0.5] Which bell wins now? "
+        with self.narrate("Now keep that bill. [pause 0.12] For a second bill, swap the order: "
+                          "[pause 0.2] every p trades places with q. [pause 0.3] The bell supplies the "
+                          "lengths, and the data judges them. [pause 0.5] Which bell wins now? "
                           "[pause 1.5]") as beat:
             # readouts, markers and the bill's tick labels leave first, then the panels make room
             self.play(FadeOut(VGroup(rp, rq, lr, short_box, pct, ax_b1.y_axis.numbers)),
@@ -1041,10 +1045,10 @@ class Episode(NarratedScene):
                       ReplacementTransform(lhs2[1], lhs_r[3], path_arc=-1.3),
                       ReplacementTransform(lhs2[3], lhs_r[1], path_arc=-1.3),
                       *[ReplacementTransform(f2[i], f_rev[i]) for i in (0, 2, 3, 5, 7, 8)],
-                      ReplacementTransform(f2[1], f_rev[1]),
+                      swap(f2[1], f_rev[1]),          # the weight p -> q: no glyph morph
                       ReplacementTransform(f2[4], f_rev[6], path_arc=-2.0),
                       ReplacementTransform(f2[6], f_rev[4], path_arc=-2.0), run_time=1.6)
-            beat.wait_until("Every p", offset=-0.1)
+            beat.wait_until("places", offset=-0.1)
             self.play(*[Indicate(f_rev[i], color=YELLOW, scale_factor=1.3) for i in (1, 4, 6)],
                       run_time=0.8)
             # the bell is the one doing the sampling: both bells pulse (stroke + fill) on "supplies"
@@ -1079,9 +1083,9 @@ class Episode(NarratedScene):
         tot2_num = tot2.num
         with self.narrate("Take bell B first. [pause 0.15] It almost never imagines a short eruption, "
                           "so ignoring them costs it nothing. [pause 0.12] It pays point six two. "
-                          "[pause 0.6] Bell A imagines eruptions in the gap and out in the tails, "
-                          "lengths the data almost never shows. [pause 0.2] That costs one point "
-                          "seven bits.", gap=0.9) as beat:
+                          "[pause 0.9] Bell A imagines eruptions in the gap and the tails, where the "
+                          "data has almost none. [pause 0.2] That's its one point seven.",
+                          gap=0.5) as beat:
             self.area2_op.set_value(1.0)
             self.fill2_reveal.set_value(0.0)
             tot2_num.set_value(0.0)
@@ -1105,7 +1109,7 @@ class Episode(NarratedScene):
             self.play(Create(gap_box), run_time=0.6)
             beat.wait_until("tails", offset=-0.1)
             self.play(Create(tail_boxes), run_time=0.6)
-            beat.wait_until("That costs", offset=-0.1)
+            beat.wait_until("That's its", offset=-0.1)
             self.pulse(tot2_num, extra=(FadeOut(VGroup(gap_box, tail_boxes)),))
 
         # ============================================================ 10. slide downhill
@@ -1135,22 +1139,21 @@ class Episode(NarratedScene):
         m2b.set_opacity(0.4)
         moved = CurvedArrow(m1b.get_top() + UP * 0.26, m3b.get_left() + LEFT * 0.17, angle=-0.6,
                             color=YELLOW, stroke_width=4, tip_length=0.18)
-        with self.narrate("Now start from A, and let the bell slide downhill on the bell-first bill. "
-                          "[pause 0.12] As that bill drains, the other one swells, and the bell "
-                          "settles on the long hump, less than half as wide. [pause 0.3] Flip the "
-                          "order, and the closest bell moves to three. [pause 1.2]", gap=0.45) as beat:
-            # both integrals have been read: each block collapses to its D-line and total, centred
-            # on its own bill, so the frame is the bell and its two bills
-            tot_num.suspend_updating()
-            tot2_num.suspend_updating()
-            row1, row2 = VGroup(lhs, tot), VGroup(lhs_r, tot2)
-            self.play(FadeOut(f_fwd), FadeOut(f_rev), row1.animate.shift((MID1_THREE - lhs.get_y()) * UP),
-                      row2.animate.shift((MID2_THREE - lhs_r.get_y()) * UP), run_time=0.7)
-            tot_num.resume_updating()
-            tot2_num.resume_updating()
-            beat.wait_until("A", offset=-0.1)
-            self.play(Indicate(lab_A, color=YELLOW), self.flash_bell(MA, SA), run_time=0.9)
-            beat.wait_until("slide", offset=-0.2)
+        # both integrals have been read: each block collapses to its D-line and total, centred
+        # on its own bill, so the frame is the bell and its two bills (in the beat turn)
+        tot_num.suspend_updating()
+        tot2_num.suspend_updating()
+        row1, row2 = VGroup(lhs, tot), VGroup(lhs_r, tot2)
+        self.play(FadeOut(f_fwd), FadeOut(f_rev), row1.animate.shift((MID1_THREE - lhs.get_y()) * UP),
+                  row2.animate.shift((MID2_THREE - lhs_r.get_y()) * UP), run_time=0.7)
+        tot_num.resume_updating()
+        tot2_num.resume_updating()
+        with self.narrate("Now let bell A slide downhill on the bell-first bill. [pause 0.12] As that "
+                          "bill drains, the other swells, and the bell settles into B, less than half "
+                          "as wide. [pause 0.3] Flip the order, and the closest bell moves to three. "
+                          "[pause 1.2]", gap=0.45) as beat:
+            beat.wait_until("bell A", offset=-0.15)
+            self.play(Indicate(lab_A, color=YELLOW), self.flash_bell(MA, SA), run_time=0.6)
             driver = Mobject()
             driver.add_updater(follow(PATH, t))
             self.add(driver)
@@ -1180,21 +1183,21 @@ class Episode(NarratedScene):
         tot_num.clear_updaters()
 
         # ============================================================ 11. payoff
-        LEG_X = -1.0                               # well clear of the y-axis title (ends at -2.09)
+        LEG_X = -1.25                              # clear of the y-axis title (ends at -2.09)
         to_a = MathTex(r"\to\ A", font_size=36, color=PURPLE)
         to_b = MathTex(r"\to\ B", font_size=36, color=PURPLE)
-        legend1 = VGroup(note("data", "bell"), text("maximum likelihood", size=26), to_a)
-        legend2 = VGroup(note("bell", "posterior"), text("variational inference", size=26), to_b)
+        legend1 = VGroup(note("data", "bell"), text("maximum likelihood", size=LABEL), to_a)
+        legend2 = VGroup(note("bell", "posterior"), text("variational inference", size=LABEL), to_b)
         for lg in (legend1, legend2):
             lg.arrange(RIGHT, buff=0.2)
         legend1.move_to([LEG_X, 3.38, 0], aligned_edge=LEFT)     # high: the yellow 3 stays on
         legend2.move_to([LEG_X, 2.74, 0], aligned_edge=LEFT)     # B's crown under row 2
         legend1[1].align_to(legend2[1], LEFT)
         legend1[2].next_to(legend1[1], RIGHT, buff=0.2)
-        TAG_L, TAG_Y = 2.55, -0.3                  # blue tag, right of the long hump (full layout)
+        TAG_L, TAG_Y = 2.45, -0.3                  # blue tag, right of the long hump (full layout)
         tag_data = text("data", size=LABEL, color=BLUE)
         tag_data.move_to([TAG_L, TAG_Y, 0], aligned_edge=LEFT)
-        tag_post = text("if this were a posterior", size=26, color=BLUE)
+        tag_post = text("if this were a posterior", size=LABEL, color=BLUE)
         tag_post.move_to([TAG_L, TAG_Y, 0], aligned_edge=LEFT)
         cite_blei = citation("Blei et al., 2017 · J. American Statistical Association")
         cite_bishop = citation("Bishop, 2006 · Pattern Recognition and Machine Learning, §10.1")
@@ -1202,7 +1205,7 @@ class Episode(NarratedScene):
         bill_stuff = VGroup(lhs, tot, lhs_r, tot2, b_lab, b_leader, m1b, m2b, moved, ghost2b,
                             ghost3b, xlab3, unit1_3, ord1, ord2, ax_b1_3, b1_nums, ax_b2)
         with self.narrate("Maximum likelihood puts the data first, so a one-bell fit stretches over "
-                          "every hump. [pause 0.2] Variational inference approximates a Bayesian "
+                          "every hump. [pause 0.5] Variational inference approximates a Bayesian "
                           "posterior with the model first, so it tends to settle on one hump.") as beat:
             # first everything that belonged to the bills leaves, chart at full strength (the answer,
             # the yellow 3, rides B's crown through the regrowth)...
@@ -1254,12 +1257,12 @@ class Episode(NarratedScene):
         l044 = MathTex(r"\pm 0.44", font_size=36, color=PURPLE).next_to(br_B, LEFT, buff=0.2)
         # Giordano, Broderick & Jordan 2018 (JMLR), Table 3: logistic GLMM on ad-conversion logs,
         # covariate effect beta_3: MCMC 0.110 +- 0.020, mean-field VI 0.110 +- 0.004
-        PANEL_X, HEAD_Y, R1Y, R2Y = -1.2, 3.36, 2.9, 2.46        # all above B's crown and label
+        PANEL_X, HEAD_Y, R1Y, R2Y = -1.45, 3.36, 2.9, 2.46       # all above B's crown and label
         BCX, UNIT = 1.8, 80.0                       # shared mean's x; scene units per unit of effect
-        head = text("real ad-conversion model", size=26)
+        head = text("real ad-conversion model", size=LABEL)
         head.move_to([PANEL_X, HEAD_Y, 0], aligned_edge=LEFT)
-        lab_mc = text("MCMC", size=26, color=BLUE).move_to([PANEL_X, R1Y, 0], aligned_edge=LEFT)
-        lab_vi = text("VI", size=26, color=PURPLE).move_to([PANEL_X, R2Y, 0], aligned_edge=LEFT)
+        lab_mc = text("MCMC", size=LABEL, color=BLUE).move_to([PANEL_X, R1Y, 0], aligned_edge=LEFT)
+        lab_vi = text("VI", size=LABEL, color=PURPLE).move_to([PANEL_X, R2Y, 0], aligned_edge=LEFT)
         sd_mc, sd_vi = 0.020 * UNIT, 0.004 * UNIT
         bar_mc = bracket([BCX - sd_mc, R1Y, 0], [BCX + sd_mc, R1Y, 0], color=BLUE, width=5)
         bar_vi = bracket([BCX - sd_vi, R2Y, 0], [BCX + sd_vi, R2Y, 0], color=PURPLE, width=5)
@@ -1275,18 +1278,18 @@ class Episode(NarratedScene):
                               color=PURPLE, stroke_width=7) for k in range(5)])
         cite_g = citation("Giordano, Broderick & Jordan, 2018 · JMLR, Tables 2–3")
         with self.narrate("Blei and colleagues note that variational inference generally "
-                          "underestimates posterior variance. [pause 0.3] In a real ad-conversion "
+                          "underestimates posterior variance. [pause 0.4] In a real ad-conversion "
                           "model, its average for one effect matched MCMC, but its spread was only a "
-                          "fifth as wide.", gap=0.8) as beat:
+                          "fifth as wide.", gap=1.0) as beat:
             beat.wait_until("Blei", offset=-0.2)
-            self.play(FadeOut(cite_bishop), FadeIn(cite_blei), FadeOut(m3b), run_time=0.7)
+            self.play(swap(cite_bishop, cite_blei), FadeOut(m3b), run_time=0.7)
             beat.wait_until("underestimates", offset=-0.1)
             # only the curve and B are compared: A steps out
             self.play(Create(br_P), Create(br_B), self.a_op.animate.set_value(0.0),
                       self.lab_a_op.animate.set_value(0.0), run_time=0.9)
             self.play(FadeIn(l114), FadeIn(l044), run_time=0.5)
             beat.wait_until("real", offset=-0.15)
-            self.play(FadeOut(VGroup(legend1, legend2)), FadeOut(cite_blei), FadeIn(cite_g),
+            self.play(FadeOut(VGroup(legend1, legend2)), swap(cite_blei, cite_g),
                       FadeOut(VGroup(br_P, br_B, l114, l044)), tag_post.animate.set_opacity(0.35),
                       run_time=0.6)
             self.play(Write(head), run_time=0.7)
@@ -1306,7 +1309,7 @@ class Episode(NarratedScene):
         # one morph out and back: why the data is smoothed at all, then what heavier smoothing does
         gap_box2 = Rectangle(width=1.0 * FULL[2], height=0.42 * FULL[3], color=YELLOW,
                              stroke_width=3).move_to(self.pt(3.0, 0.21))
-        tag_rdef = VGroup(text("R's default", size=LABEL, color=BLUE),
+        tag_rdef = VGroup(text("heavier", size=LABEL, color=BLUE),       # R's default (cited)
                           text("smoothing", size=LABEL, color=BLUE)
                           ).arrange(DOWN, aligned_edge=LEFT, buff=0.1)
         tag_rdef.move_to([TAG_L, TAG_Y, 0], aligned_edge=LEFT)
@@ -1325,15 +1328,15 @@ class Episode(NarratedScene):
         inf_line = VGroup(inf_d, inf_v)
         # the best bell-first fit under heavier smoothing: label pinned above its crown
         w_crown = self.pt(MW, math.exp(log_norm(MW, MW, SW)))
-        fit_lab = VGroup(text("best bell-first fit:", size=26, color=PURPLE),
+        fit_lab = VGroup(text("best bell-first fit:", size=LABEL, color=PURPLE),
                          MathTex(r"%.2f \pm %.2f\ \text{min}" % (MW, SW), font_size=36, color=PURPLE)
                          ).arrange(DOWN, buff=0.14)
         fit_lab.move_to(w_crown + UP * 1.05, aligned_edge=DOWN)
         fl_leader = DashedLine(w_crown + UP * 0.14, fit_lab.get_bottom() + DOWN * 0.15,
                                dash_length=0.07, stroke_color=PURPLE, stroke_width=2)
         with self.narrate("Against raw points, every bell-first score is infinite, so the data must "
-                          "be smoothed. [pause 0.2] Smooth it more heavily, the gap partly fills, and "
-                          "the best bell-first fit spreads wide, almost back to A.", gap=0.8) as beat:
+                          "be smoothed. [pause 0.3] Smooth it more heavily and the gap partly fills: "
+                          "the best bell-first fit spreads almost back to A.", gap=0.5) as beat:
             # the measured case leaves as the raw eruptions come in
             self.play(FadeOut(VGroup(cite_g, panel, tag_post)),
                       self.bell_fill.animate.set_value(0.0),
@@ -1350,12 +1353,13 @@ class Episode(NarratedScene):
                       run_time=beat.until("gap", offset=-0.1), rate_func=SMOOTH)
             self.play(Create(gap_box2), run_time=0.6)
             beat.wait_until("best", offset=-0.1)
+            # "spreads": the bell widens to the best bell-first fit under this smoothing...
             self.play(FadeOut(gap_box2), self.mu.animate.set_value(MW), self.sd.animate.set_value(SW),
-                      run_time=beat.until("wide", offset=0.1), rate_func=SMOOTH)
-            self.play(FadeIn(fit_lab, shift=0.1 * DOWN), Create(fl_leader), run_time=0.6)
-            # ...nearly where the data-first fit A sits
-            beat.wait_until("back to", offset=-0.1)
-            self.play(self.a_op.animate.set_value(0.6), self.lab_a_op.animate.set_value(1.0), run_time=0.6)
+                      run_time=beat.until("back to", offset=-0.1, min_time=0.9), rate_func=SMOOTH)
+            # ..."almost back to A": its stats and the dashed data-first fit A, side by side
+            self.play(FadeIn(fit_lab, shift=0.1 * DOWN), Create(fl_leader),
+                      self.a_op.animate.set_value(0.6), self.lab_a_op.animate.set_value(1.0),
+                      run_time=0.7)
 
         # ============================================================ 13. landing
         LX = NX + 0.3
@@ -1372,12 +1376,12 @@ class Episode(NarratedScene):
         one = MathTex("1", font_size=44, color=YELLOW).next_to(self.pt(MA, D["qA_peak"]), UP, buff=0.2)
         three = MathTex("3", font_size=44, color=YELLOW).next_to(self.pt(MB, D["qB_peak"]), UP,
                                                                   buff=0.2)
-        with self.narrate("[pause 1.2] Bell A never misses an eruption that happens. [pause 0.1] "
+        # in the beat turn: back to the eruptions' own curve and to the two bells of the bet
+        self.play(self.sm_r.animate.set_value(0.0), FadeOut(VGroup(tag_rdef, fit_lab, fl_leader, cite_r)),
+                  self.mu.animate.set_value(MB), self.sd.animate.set_value(SB),
+                  run_time=1.3, rate_func=SMOOTH)
+        with self.narrate("Bell A never misses an eruption that happens. [pause 0.1] "
                           "Bell B almost never imagines one that doesn't.", gap=0) as beat:
-            # back to the eruptions' own curve and to the two bells of the bet
-            self.play(self.sm_r.animate.set_value(0.0), FadeOut(VGroup(tag_rdef, fit_lab, fl_leader, cite_r)),
-                      self.mu.animate.set_value(MB), self.sd.animate.set_value(SB),
-                      run_time=beat.until("Bell A", offset=-0.2), rate_func=SMOOTH)
             # "Bell A never misses...": data first, the answer was 1; A solid, its fill over both humps
             self.a_fill.set_value(0.25)
             self.a_fill_x.set_value(0.0)

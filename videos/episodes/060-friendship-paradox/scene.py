@@ -165,9 +165,9 @@ NARR = {
              "two: the guess holds.",
     "recount": "Now restore the real friendships and send the tokens again. They read one, two, "
                "three, or four, and average three.",
-    "fail": "The guess fell short, by half a friend. The tokens piled up unevenly: four on Sue, "
-            "four on Alice, one on Betty.",
-    "line": "Line the girls up by friend count, two at each count. They balance at two and a "
+    "fail": "The guess fell short by half a friend, because the tokens piled up unevenly: four on "
+            "Sue, four on Alice, one on Betty.",
+    "line": "Line the girls up by friend count, two at each count: they balance at two and a "
             "half.",
     "stack": "The tokens stack higher on the right, one per friend, so they balance at three.",
     "sue": "Sue holds four tokens, each worth four: sixteen. A girl with k friends adds k "
@@ -188,8 +188,8 @@ NARR = {
     # collapses happen in one move on "Here that's two and a half, plus a half"
     "result": "So the average of k squared is mu squared plus sigma squared. [pause 1.6] And friends "
               "average mu, plus sigma squared over mu. [pause 1.2] Here that's two and a half, plus "
-              "a half: exactly the extra half friend we measured. [pause 0.9] The ring had no "
-              "spread, so there was no gap. [pause 1.3]",
+              "a half: exactly the extra half friend we measured. [pause 0.9] And the ring? No "
+              "spread, so no gap. [pause 1.3]",
     # round 6: the spread cue ("a few had thousands") comes before the prediction, and the
     # title's "you" is paid off with Ugander et al.'s 92.7 % (no "so": the mean inequality does
     # not force a majority)
@@ -203,7 +203,7 @@ NARR = {
     # is spoken; [pause] marks give the 25 s beat its breaths
     "cf": "Christakis and Fowler put this to work at Harvard. Named friends have more friends, so "
           "they sit closer to everyone else, and should catch flu first. [pause 0.5] They tracked "
-          "flu diagnoses in random students, and in the friends those students named. The "
+          "flu diagnoses in random students, and in the friends the students named. The "
           "friends' curve rose first: fitted curves put them thirteen point nine days ahead. "
           "[pause 0.9] With self-reported symptoms, the lead shrank to about three.",
     # round 6b: the landing is one move (the per-girl tally is cut; Facebook's 93 % now makes
@@ -354,6 +354,17 @@ def assert_token_clearance():
 def tfc(src, dst, **kw):
     """TransformFromCopy that is safe for objects with updaters (DecimalNumber etc.)."""
     return ReplacementTransform(src.copy().clear_updaters(), dst, **kw)
+
+
+def RT_same(*a, **k):
+    """ReplacementTransform between the SAME glyphs whose TeX strings differ only by an
+    invisible strut or a TeX space (trow rows); exempt from the glyph-morph lint."""
+    return allow_morph(ReplacementTransform(*a, **k))
+
+
+def TFC_same(*a, **k):
+    """TransformFromCopy between the same glyphs (see RT_same)."""
+    return allow_morph(TransformFromCopy(*a, **k))
 
 
 def net_token(val):
@@ -1059,16 +1070,18 @@ class Episode(NarratedScene):
             # tally flashes as the last token lands, the bar grows on "average three")
             self.play(self.fly_tokens(real_toks, beat.until("and average", offset=-0.15, min_time=3.5),
                                       self.n_tr, self.s_tr, K))
-            self.play(Indicate(self.c_den, color=YELLOW, scale_factor=1.25),
-                      Indicate(self.c_num, color=YELLOW, scale_factor=1.25),
-                      FadeOut(guess_lab), FadeOut(qmark), run_time=0.7)
             beat.wait_until("average three", offset=-0.25)
             self.c_res.set_value(3.0)
             self.Fop.set_value(0.0)
             self.fv.set_value(3.0)
             self.add(self.fnum)
             # the YELLOW outline overshoots the guess; the box closes onto its tick at 2.5
-            self.play(self.Lf.animate.set_value(3.0 * UNIT),
+            # (the tally flashes in the same move)
+            self.play(Indicate(self.c_den, color=YELLOW, scale_factor=1.25),
+                      Indicate(self.c_num, color=YELLOW, scale_factor=1.25),
+                      FadeOut(guess_lab, rate_func=window(0, 0.4, 1.4)),
+                      FadeOut(qmark, rate_func=window(0, 0.4, 1.4)),
+                      self.Lf.animate.set_value(3.0 * UNIT),
                       self.Fop.animate(rate_func=window(1.0, 1.4, 1.4)).set_value(1.0),
                       FadeIn(VGroup(self.c_eq2, self.c_res)), *self.collapse(guess, gt, 1.4),
                       run_time=1.4)
@@ -1679,18 +1692,18 @@ class Episode(NarratedScene):
             beat.wait_until("is mu", offset=-0.6)
             T = 1.6
             self.play(FadeOut(VGroup(B[0].num, B[2].num), shift=0.12 * UP, rate_func=window(0, 0.35, T)),
-                      ReplacementTransform(B[0].bar, C[0].bar, rate_func=window(0.15, 0.9, T)),
-                      ReplacementTransform(B[0].den, C[0].den, rate_func=window(0.15, 0.9, T)),
-                      ReplacementTransform(B[1][0], C[1], rate_func=window(0.15, 0.9, T)),
-                      ReplacementTransform(B[2].bar, C[2].bar, rate_func=window(0.15, 0.9, T)),
-                      ReplacementTransform(B[2].den, C[2].den, rate_func=window(0.15, 0.9, T)),
-                      ReplacementTransform(B[3][0], C[3], rate_func=window(0.15, 0.9, T)),
-                      ReplacementTransform(B[4][0], C[4], rate_func=window(0.15, 0.9, T)),
-                      TransformFromCopy(VGroup(*S4[2:5]), cnum, rate_func=window(0.5, 1.6, T, leave)),
-                      TransformFromCopy(B[2].den[0].copy(), nnum[0], path_arc=-1.2,
+                      RT_same(B[0].bar, C[0].bar, rate_func=window(0.15, 0.9, T)),
+                      RT_same(B[0].den, C[0].den, rate_func=window(0.15, 0.9, T)),
+                      RT_same(B[1][0], C[1], rate_func=window(0.15, 0.9, T)),
+                      RT_same(B[2].bar, C[2].bar, rate_func=window(0.15, 0.9, T)),
+                      RT_same(B[2].den, C[2].den, rate_func=window(0.15, 0.9, T)),
+                      RT_same(B[3][0], C[3], rate_func=window(0.15, 0.9, T)),
+                      RT_same(B[4][0], C[4], rate_func=window(0.15, 0.9, T)),
+                      TFC_same(VGroup(*S4[2:5]), cnum, rate_func=window(0.5, 1.6, T, leave)),
+                      TFC_same(B[2].den[0].copy(), nnum[0], path_arc=-1.2,
                                         rate_func=window(0.5, 1.6, T, leave)),
                       FadeIn(VGroup(nnum[1], nnum[2]), rate_func=window(0.9, 1.6, T)),
-                      TransformFromCopy(Vrow[6], nnum[3], rate_func=window(0.5, 1.6, T, leave)),
+                      TFC_same(Vrow[6], nnum[3], rate_func=window(0.5, 1.6, T, leave)),
                       run_time=T)
             # round 6: the rebuilt row holds through a 1.6 s pause; it splits on "mu"
             beat.wait_until("average mu", offset=0.25)
@@ -1699,23 +1712,23 @@ class Episode(NarratedScene):
             cL, cR = C[0], C[2]
             T = 1.3
             mv = window(0.0, 0.85, T)
-            self.play(ReplacementTransform(cL.num[0], D1[0].num, rate_func=mv),
-                      ReplacementTransform(cL.num[1], D1[1], rate_func=window(0.25, 0.95, T)),
-                      ReplacementTransform(cL.num[2], D1[2].num[0], rate_func=mv),
-                      ReplacementTransform(cL.bar, D1[0].bar, rate_func=window(0, 0.55, T)),
-                      ReplacementTransform(cL.den, D1[0].den, rate_func=window(0, 0.55, T)),
+            self.play(RT_same(cL.num[0], D1[0].num, rate_func=mv),
+                      RT_same(cL.num[1], D1[1], rate_func=window(0.25, 0.95, T)),
+                      RT_same(cL.num[2], D1[2].num[0], rate_func=mv),
+                      RT_same(cL.bar, D1[0].bar, rate_func=window(0, 0.55, T)),
+                      RT_same(cL.den, D1[0].den, rate_func=window(0, 0.55, T)),
                       GrowFromCenter(D1[2].bar, rate_func=window(0.75, 1.05, T)),
                       FadeIn(D1[2].den, shift=0.15 * UP, rate_func=window(0.85, 1.3, T)),
-                      ReplacementTransform(C[1], D1[3], rate_func=mv),
-                      ReplacementTransform(VGroup(cR.num[0], cR.num[1]), D1[4].num, rate_func=mv),
-                      ReplacementTransform(cR.num[2], D1[5], rate_func=window(0.25, 0.95, T)),
-                      ReplacementTransform(cR.num[3], D1[6].num[0], rate_func=mv),
-                      ReplacementTransform(cR.bar, D1[4].bar, rate_func=window(0, 0.55, T)),
-                      ReplacementTransform(cR.den, D1[4].den, rate_func=window(0, 0.55, T)),
+                      RT_same(C[1], D1[3], rate_func=mv),
+                      RT_same(VGroup(cR.num[0], cR.num[1]), D1[4].num, rate_func=mv),
+                      RT_same(cR.num[2], D1[5], rate_func=window(0.25, 0.95, T)),
+                      RT_same(cR.num[3], D1[6].num[0], rate_func=mv),
+                      RT_same(cR.bar, D1[4].bar, rate_func=window(0, 0.55, T)),
+                      RT_same(cR.den, D1[4].den, rate_func=window(0, 0.55, T)),
                       GrowFromCenter(D1[6].bar, rate_func=window(0.75, 1.05, T)),
                       FadeIn(D1[6].den, shift=0.15 * UP, rate_func=window(0.85, 1.3, T)),
-                      ReplacementTransform(C[3], D1[7], rate_func=mv),
-                      ReplacementTransform(C[4], D1[8], rate_func=mv),
+                      RT_same(C[3], D1[7], rate_func=mv),
+                      RT_same(C[4], D1[8], rate_func=mv),
                       FadeOut(Vrow, rate_func=window(0, 0.5, T)),
                       run_time=T)
             # the two fractions that cancel are boxed while "over mu" is said ...
@@ -1731,9 +1744,9 @@ class Episode(NarratedScene):
                                      box2, D1[4].num[1], D1[4].bar, D1[4].den),
                               shift=0.12 * UP, rate_func=window(0, 0.45, T)),
                       FadeOut(S4, rate_func=window(0, 0.45, T)),
-                      ReplacementTransform(D1[0].num[0], D4[0], rate_func=go),
-                      ReplacementTransform(D1[4].num[0], D4[4], rate_func=go),
-                      *[ReplacementTransform(D1[i], D4[i], rate_func=go) for i in (1, 2, 3, 5, 7, 8)],
+                      RT_same(D1[0].num[0], D4[0], rate_func=go),
+                      RT_same(D1[4].num[0], D4[4], rate_func=go),
+                      *[RT_same(D1[i], D4[i], rate_func=go) for i in (1, 2, 3, 5, 7, 8)],
                       *swap(D1[6], D4[6], T, t_out=0.4, t_in=(0.5, 1.05)),
                       run_time=T)
             # back to the measured class: the picture moves left again, the bars return, and
@@ -2051,7 +2064,7 @@ class Episode(NarratedScene):
                 ("Alice", "Pam"), ("Alice", "Dale")]
         hop2 = [("Pam", "Carol")]
         hop3 = [("Carol", "Tina")]
-        with self.narrate(NARR["cf"], gap=BREAK) as beat:
+        with self.narrate(NARR["cf"], gap=0.45) as beat:
             T = 1.4
             self.play(FadeOut(fade_out, rate_func=window(0, 0.5, T)),
                       FadeOut(ugander, rate_func=window(0, 0.35, T)),
@@ -2104,7 +2117,7 @@ class Episode(NarratedScene):
             t_end = beat.time_of("rose first") - 0.1
             TC = max(4.0, t_end - t0)
             a_u = float(np.clip(beat.time_of("random students") - 0.15 - t0, 0.0, TC - 0.8))
-            a_f = float(np.clip(beat.time_of("friends those") - 0.15 - t0, 0.0, TC - 0.9))
+            a_f = float(np.clip(beat.time_of("friends the students") - 0.15 - t0, 0.0, TC - 0.9))
             self.play(cal.animate(rate_func=linear).set_value(125),
                       FadeOut(VGroup(origin_b, origin_y), rate_func=window(0.3, 0.9, TC)),
                       ReplacementTransform(lab_r3, lab_rand[3:9], rate_func=window(a_u, a_u + 0.7, TC)),
@@ -2180,40 +2193,43 @@ class Episode(NarratedScene):
         three_to = [X0 + 3.0 * UNIT + 0.45, Y_FRIEND, 0]
         ring3 = Circle(radius=0.31, color=INK, stroke_width=3).move_to(three_to)
         ring3.ss_bg = True
-        # Round 6b: the landing is one move.  Betty's one friend, Sue, sends her a token that
-        # reads 4 (the 4 candidate); the girl bar is the 2.5; the friend bar grows to the 3.
+        # Round 6b: the landing is one move.  Betty follows her one friendship: her token lands
+        # on Sue and reads 4, as every token reads the count where it lands (the 4 candidate);
+        # the girl bar is the 2.5; the friend bar grows to the 3.
         be = edges2[frozenset(("Betty", "Sue"))]
-        tok_b = net_token(K["Sue"]).move_to(tok_start("Sue", "Betty", P))
+        tok_b = net_token(K["Sue"]).move_to(tok_start("Betty", "Sue", P))
         tok_b[1].ss_host = tok_b[0]
         tok_b[0].set_fill(opacity=0)
         tok_b[1].set_opacity(0)
-        tok_b_fl = [("Sue", "Betty", tok_b, tok_start("Sue", "Betty", P), tok_end("Sue", "Betty", P))]
+        tok_b_fl = [("Betty", "Sue", tok_b, tok_start("Betty", "Sue", P), tok_end("Betty", "Sue", P))]
         chart = VGroup(ax, fr_live, rd_live, fit_fr, fit_rd, lab_rand, lab_fr, lead_arrow, ro_arrow,
                        lead_lab, ro2_live, self_lab, self_num, days_lab)
+        # round 5: the chart is mostly gone before the class fades back in (the two used to
+        # cross-dissolve, double-exposing "425 friends they named" over the nodes).  Round 6b:
+        # the change happens in the breath before the landing line, so "Betty" lands on it
+        TL = 1.2
+        w_in = window(0.4, 1.1, TL)
+        self.play(FadeOut(chart, rate_func=window(0, 0.5, TL)),
+                  FadeOut(cf_cite, rate_func=window(0, 0.35, TL)),
+                  FadeIn(feld, rate_func=window(0.5, 1.0, TL)),
+                  *[FadeIn(circ2[n], rate_func=w_in) for n in NAMES],
+                  *[FadeIn(num2[n], rate_func=w_in) for n in NAMES],
+                  *[FadeIn(name2[n], rate_func=w_in) for n in NAMES],
+                  *[Create(e, rate_func=window(0.6, TL, TL)) for e in edges2.values()],
+                  FadeIn(panel2, rate_func=w_in), run_time=TL)
         with self.narrate(NARR["land"]) as beat:
-            # round 5: the chart is mostly gone before the class fades back in (the two used to
-            # cross-dissolve, double-exposing "425 friends they named" over the nodes)
-            TL = 1.2
-            w_in = window(0.4, 1.1, TL)
-            self.play(FadeOut(chart, rate_func=window(0, 0.5, TL)),
-                      FadeOut(cf_cite, rate_func=window(0, 0.35, TL)),
-                      FadeIn(feld, rate_func=window(0.5, 1.0, TL)),
-                      *[FadeIn(circ2[n], rate_func=w_in) for n in NAMES],
-                      *[FadeIn(num2[n], rate_func=w_in) for n in NAMES],
-                      *[FadeIn(name2[n], rate_func=w_in) for n in NAMES],
-                      *[Create(e, rate_func=window(0.6, TL, TL)) for e in edges2.values()],
-                      FadeIn(panel2, rate_func=w_in), run_time=TL)
             # Betty looks at her one friend ...
             beat.wait_until("one friend", offset=-0.2)
             self.play(circ2["Betty"].animate.set_stroke(INK, width=6), be.animate.set_stroke(INK, width=5),
                       run_time=0.6)
-            # ... Sue, whose token travels their friendship and reads four: the 4 candidate
+            # ... Sue: Betty's token travels their friendship, lands on Sue and reads four,
+            # the 4 candidate
             beat.wait_until("Sue", offset=-0.25)
             self.add(tok_b)
-            self.play(Indicate(num2["Sue"], color=INK, scale_factor=1.3),
-                      self.fly_tokens(tok_b_fl, beat.until("four", offset=-0.05, min_time=0.9),
+            self.play(self.fly_tokens(tok_b_fl, beat.until("four", offset=-0.05, min_time=0.9),
                                       ValueTracker(0), ValueTracker(0), K))
-            self.play(pulse(tok_b, 1.3), Indicate(cands2[2], color=YELLOW, scale_factor=1.3), run_time=0.8)
+            self.play(pulse(tok_b, 1.3), Indicate(num2["Sue"], color=INK, scale_factor=1.3),
+                      Indicate(cands2[2], color=YELLOW, scale_factor=1.3), run_time=0.8)
             # two and a half counts the girls ...
             beat.wait_until("Two and a half", offset=-0.1)
             self.play(ShowPassingFlash(SurroundingRectangle(end_g, buff=0.03, color=INK, stroke_width=4),

@@ -175,26 +175,26 @@ So the slope is rise over run.
 Plug in his numbers, and it's one half.
 
 45
-00:03:04,500 --> 00:03:09,700
+00:03:04,766 --> 00:03:09,966
 All four of his datasets share these five numbers, so they share the ellipse and the line.
 
 46
-00:03:10,000 --> 00:03:14,100
+00:03:10,266 --> 00:03:14,366
 A trend, a curve, an outlier, and one point doing all the work.
 
 47
-00:03:15,366 --> 00:03:20,526
+00:03:15,833 --> 00:03:20,993
 Your line was exactly right: five numbers fix its slope, minus point one.
 
 48
-00:03:20,906 --> 00:03:25,866
+00:03:21,373 --> 00:03:26,333
 Your cloud was wrong: a blur around this ellipse, all that five numbers can draw.
 
 49
-00:03:26,466 --> 00:03:30,406
+00:03:26,933 --> 00:03:30,873
 Most of those papers used a bar graph, which draws only two.
 
 50
-00:03:31,006 --> 00:03:33,706
+00:03:31,473 --> 00:03:34,173
 The dinosaur lived in everything they leave out.
 

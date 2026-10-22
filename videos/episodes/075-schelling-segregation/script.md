@@ -31,8 +31,8 @@ always a ring or a count, never a household colour.
 (under the board's lower-left corner).
 On "simulated" it slides left as the meter enters. The meter bar is drawn already at 76 % and
 the number is written on (it never counts up from a 0 % that never existed), so the puzzle's
-number is on screen before it is spoken. "three quarters" pulses the 76 %. On the question a
-PURPLE marker "? demanded" appears at the same height. 1.5 s hold.
+number is on screen before it is spoken. "three quarters" pulses the 76 %. On "these households"
+the PURPLE marker "? demanded" appears (deictic sync), and it pulses on "demand". 1.5 s hold.
 
 > In this simulated town, on average, three quarters of a household's neighbors match its
 > color. How much matching do these households demand? [pause 1.5]
@@ -43,11 +43,11 @@ flies out, magnified; the two empty squares get grey × marks and "empty: not co
 rings on the 2 gold neighbors, "2 of 6 match".
 
 > Just a third. Each household counts the occupied squares around it. If fewer than a third
-> of them match, it moves. It is happy to be outnumbered two to one.
+> match, it moves, so it is happy to be outnumbered two to one.
 
 ### 3 · Stakes (0:23–0:32)
-> We read maps of real cities the same way, guessing motives from patterns. So how does a
-> demand of a third build a town of three quarters?
+> We read real city maps the same way, guessing motives from patterns. So how can a demand
+> of one third build a town of three quarters?
 
 ### 4 · Naive build (0:33–0:58)
 *Screen:* every tile flies back to its starting square; the meter falls 76 % → 50 %, docks;
@@ -58,11 +58,10 @@ round-1 move is previewed as a dashed arc. The HUD under the meter is a two-colu
 labels ("unhappy", "plan predicts", "round") right-aligned on one edge, numbers right-aligned
 on the meter's 100 % end, so "plan predicts 0" has its 0 directly under the count.
 
-> Rewind to the start, a random mix. Here, on average, half of a household's neighbors
-> match, well above a third. Still, these two hundred and thirty-eight are unhappy, about one
-> in six.
+> Rewind to the start, a random mix. Here, on average, half the neighbors match, well above
+> a third. Still, these two hundred thirty-eight are unhappy.
 >
-> The obvious plan is to move each of them to a random empty square where it would be
+> The obvious plan is to move each one to a random empty square where it would be
 > content. Then everyone is content, and the town stays mixed.
 
 ### 5 · Run + measured failure (0:58–1:17)
@@ -77,8 +76,8 @@ rings remain, and the 38 note gives its slot to "67 content at the start" (out, 
 (Round 5 cut "The matching share jumps to sixty-four percent": the meter climbs to 64 % live
 during the round, so the sentence only read the screen aloud.)
 >
-> If the plan had worked, this counter would read zero. It reads seventy-four, and
-> sixty-seven of these were content before round one. They never moved. Their neighbors did.
+> If the plan had worked, this counter would read zero. It reads seventy-four. [pause 0.9]
+> Sixty-seven of these were content before round one. They never moved. Their neighbors did.
 
 ### 6 · Insight: the domino (1:16–1:51)
 *Screen:* "Replay one corner": the board parks at the left edge at 0.7 scale and dims to 30 %
@@ -88,31 +87,31 @@ stays, the source of the formula's ⅓). A white box lands on the corner, and th
 start state. The corner's 4×5 squares fly out into a large inset (675 px wide), formula to its
 right, state caption ("before round 1", "after round 2"…) under the formula. The inset flies
 out of the corner box while the corner rewinds (one move). The subject household carries a white
-inner outline (B, then C, then D); A's ring stays at 50 % until "Then this neighbor moved away". The board's corner and the inset stay
+inner outline (B, then C); A's ring stays at 50 % until "Then this neighbor moved away". The board's corner and the inset stay
 in step for the whole replay, using the real tiles and the real moves: A flies out to its
-round-1 square, B to its round-2 square while a blue household flies into A's old square, and
-C to its round-3 square, each in the same animation as the inset departure and the "?".
+round-1 square, and B to its round-2 square while a blue household flies into A's old square,
+each in the same animation as the inset departure and the "?".
 Rings appear on the board when they appear in the inset.
 The formula is built from the tiles: square copies of the 3 gold neighbors fly to the YELLOW
 3 and fade into it (copies of all 8 do the same for the 8), then ≥, then PURPLE ⅓ copied from
-the demand marker. Each fraction state holds ≥ 1.5 s: C's 2/7 < ⅓ through a 1 s pause, D's
-3/8 ≥ ⅓ through "the next one, also at three eighths", D's 2/7 < ⅓ into the next beat.
+the demand marker. Each fraction state holds ≥ 1.5 s; C's 2/7 < ⅓ holds through a 0.9 s pause
+into the next beat.
 
-> Replay one corner. Before round one, this gold household had three gold neighbors out of
-> eight. Three eighths is more than a third, so it stayed.
+> Replay one corner. At the start, this gold household had three gold neighbors out of
+> eight. Three eighths beats a third, so it stayed.
 >
 > Then this neighbor moved away. Is it still content? [pause 1.2]
 >
 > Two gold out of seven. Two sevenths is less than a third, so now it wants out.
 >
 > Its neighbor here also has three eighths. In round two, our household leaves, and this one
-> drops to two sevenths. [pause 1.1] Then the next one, also at three eighths, tips in round three.
+> drops to two sevenths. [pause 0.9]
 
-(Round 5: "tips" used to stand alone after a 0.3 s pause, and the full-track whisper heard "It ips".
-Inside the clause it transcribes cleanly; "also" and "in round three" keep D's 3/8 ≥ ⅓ on screen
-about 1.9 s, and the move starts 0.7 s before "Then" so C's 2/7 < ⅓ still holds about 1.6 s.)
+(Round 5, continued: the third step, "Then the next one, also at three eighths, tips in round
+three", was cut for the concision budget. Two links, A → B → C, already make the chain, and a
+round-3 critic had called the third step a repeat of the first two.)
 
-(A new subject household (B → C, C → D): the old fraction and relation slide out to the left and
+(A new subject household (B → C): the old fraction and relation slide out to the left and
 fade, then the new household's slide in from the right; the ⅓ stays. The same household's numbers
 (3/8 → 2/7) fade out, then the new digits fade in, in place, each half ≥ 0.3 s. No glyph morph.)
 
@@ -141,7 +140,7 @@ town re-run at ¼ sorts in the lower thumbnail ("¼ → 58 %").
 > That whole town is one point on this chart.
 >
 > Demand a quarter, and the same starting town barely sorts: fifty-eight percent. Demand a
-> third, and it jumps to seventy-six.
+> third, and it jumps to seventy-six. [pause 0.9]
 
 ### 9 · Why the jump: the share ladder (2:12–2:45)
 *Screen:* the ladder is its own chart, about 1.3× the dot chart and 0.8 units higher. On "sort",
@@ -173,15 +172,15 @@ the dashed outline turns solid, and A's formula flips to 2/7 ≥ ¼.
 > To see why that happens, sort the random start by each household's share of matching
 > neighbors. With at most eight neighbors, these are the only shares up to sixty percent.
 >
-> At a third, everyone left of it is unhappy, two hundred and thirty-eight, including the
-> neighbor that started our corner's chain, at two sevenths.
+> At a third, everyone left of it is unhappy, including the neighbor that started our
+> corner's chain, at two sevenths.
 >
 > Every household at three eighths is one lost match away from it.
 >
-> At a quarter, how many would start unhappy? [pause 1.2]
+> At a quarter, how many would start unhappy? [pause 1.5]
 >
-> Only these two bars change sides, and they're tall: now just ninety-five start unhappy,
-> and that chain never starts.
+> Only these two bars change sides, and they're tall: just ninety-five start unhappy, and
+> that chain never starts. [pause 0.9]
 
 ### 10 · Payoff + honest limits (2:45–3:01)
 *Screen:* the 2:12 morph in reverse: the bars sink into the baseline and the ladder labels
@@ -189,17 +188,19 @@ fade while the two thumbnails return to their column (0.5 s); the baseline shrin
 x-axis while the x title returns to PURPLE "demanded (% of neighbors)" (0.6 s); only then do the
 dots, y-axis and random-mix line return (0.7 s). Citation "Schelling, 1971 · Journal of Mathematical Sociology" appears on "paper",
 and a box flashes the two towns on "model". A GRAY "our jump" bracket over ¼–⅓ appears on
-"His households", its label on the bracket's own row to its left. One GRAY label "nearest move · 25–30% empty" appears in two parts on "nearest" and "emptier",
-right-aligned under that row. On "the jump": "our jump" fades out (0.3 s), then the bracket
-slides to 35–50 % (0.6 s), then "Schelling's jump: 35–50%" fades in once it has stopped. The band
+"His households", its label on the bracket's own row to its left. On "nearest" the citation is underlined: his rules come from his paper (round 5, continued:
+the rules label "nearest move · 25–30% empty" was cut; at the new Text-27 label floor it did not
+fit left of his band, and it repeated the narration). On "the jump": "our jump" fades out
+(0.3 s), then the bracket slides to 35–50 % (0.6 s), then "Schelling: 35–50%" fades in once it
+has stopped. The band
 (a light GRAY hatch, fill 7 %) sweeps from 35 to 50 exactly on "between about a third and a half"
 while our 30-town dots and mean ticks dim to about 30 %, so it reads as his model's result. Our
 two towns' dots (¼ → 58 %, ⅓ → 76 %) stay at full strength: they are the ends of "our jump", left
 of his band, and the two thumbnails they belong to are still on screen.
 
 > In his 1971 paper, Thomas Schelling ran this model. His households moved to the nearest
-> square that suited them, on emptier boards, and there the jump came later, between about a
-> third and a half.
+> suitable square, on emptier boards, and there the jump came later, between about a third
+> and a half.
 
 (Round 3 cut the quote sentence "He wrote that inferences about individual motives can usually
 not be drawn from aggregate patterns": the thesis was stated three times in 45 s. Its source
@@ -218,15 +219,15 @@ their boards, with "demanded" on one baseline 0.25 above the boards. Citation "A
 & Mazumder, 2021 · AEJ: Economic Policy" on "study"; both toy towns dim to 30 % slowly across
 "1930s federal lending maps" (the toy rule is not a model of the 1930s maps, so the zone lines no
 longer pulse); the two "76% match" labels, the segregation measure, pulse on "segregation"; the
-citation is underlined on "traces". No stretch of this beat is static for more than about 2.2 s. The rule town's grain matches a
+citation is underlined on "credit". No stretch of this beat is static for more than about 2.2 s. The rule town's grain matches a
 Schelling town's texture (no stray tiles), so the picture cannot give the answer away.
 
 > Two simulated towns, both seventy-six percent. In one town, households demand a third. In the
 > other, nobody minds their neighbors at all. Which one wanted a third? [pause 1.5]
 >
-> This one. The other was placed by a rule, with no preferences at all. In real cities, one
-> study finds that 1930s federal lending maps increased racial segregation for decades. It
-> traces this to reduced credit in the areas marked in red.
+> This one. The other was placed by a rule, with no preferences. In real cities, one study
+> finds that 1930s federal lending maps increased racial segregation for decades, through
+> reduced credit.
 
 ### 12 · Landing (3:48–3:56)
 *Screen:* the rule-made town and every label fade first (0.45 s; round 5: the growing town no

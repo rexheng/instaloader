@@ -58,8 +58,8 @@ friend bar fills BLUE exactly to the girl bar.
 ### 4. Fail (0:44–1:06)
 > Now restore the real friendships and send the tokens again. They read one, two, three, or four,
 > and average three.
-> The guess fell short, by half a friend. The tokens piled up unevenly: four on Sue, four on Alice,
-> one on Betty.
+> The guess fell short by half a friend, because the tokens piled up unevenly: four on Sue, four on
+> Alice, one on Betty.
 
 Visual: the ring's friend bar and its readout fade (no count-down through 1.9); the real network
 returns while the girl read-out holds 2.0; then the girl bar grows to 2.5 (its read-out swaps while
@@ -72,7 +72,7 @@ tick at 2.5 (no doubled outline); the bar fills BLUE to the tick and PURPLE beyo
 Sue's, Alice's and Betty's tokens pulse as named. Sue's name label now sits up-left of her node.
 
 ### 5. Insight (1:06–2:24): the beam, the variance, why the cross terms vanish
-> Line the girls up by friend count, two at each count. They balance at two and a half.
+> Line the girls up by friend count, two at each count: they balance at two and a half.
 > The tokens stack higher on the right, one per friend, so they balance at three.
 > Sue holds four tokens, each worth four: sixteen. A girl with k friends adds k squared on top, and k
 > on the bottom.
@@ -86,8 +86,7 @@ Sue's, Alice's and Betty's tokens pulse as named. Sue's name label now sits up-l
 > cancel. *[pause]*
 > So the average of k squared is mu squared plus sigma squared. *[pause 1.6]* And friends average mu,
 > plus sigma squared over mu. *[pause 1.2]* Here that's two and a half, plus a half: exactly the
-> extra half friend we measured. *[pause 0.9]* The ring had no spread, so there was no gap.
-> *[pause 1.3]*
+> extra half friend we measured. *[pause 0.9]* And the ring? No spread, so no gap. *[pause 1.3]*
 
 Visual (the one picture): the girls slide onto a beam (0.8 apart), each name riding along to sit
 under her node (Text 20). Round 6: a GRAY count ruler draws under the beam, ticks 1, 2, 3, 4 at the
@@ -192,8 +191,9 @@ Citation: Christakis & Fowler, 2010 · PLoS ONE · Fig. 3 redrawn, logistic refi
 Visual: the chart fades out, then the cold-open frame itself fades back in (round 5: no
 cross-dissolve): the network, "average girl 2.5", and "average friend ?" with the drop lines and
 the YELLOW candidates 2.5 / 3 / 4 from 0:11. On "one friend" Betty is outlined in INK and the
-Betty–Sue friendship brightens; on "Sue" Sue's 4 pulses and her token travels their friendship to
-Betty, reading 4 as it lands on "sees four", while the 4 candidate flashes. "Two and a half counts
+Betty–Sue friendship brightens; on "Sue" Betty's token travels their friendship and lands on Sue,
+reading 4 (a token reads the count where it lands) on "sees four", while Sue's 4 and the 4
+candidate flash. "Two and a half counts
 the girls": the girl bar, its 2.5 and the 2.5 candidate flash BLUE. "three counts the tokens": every
 friendship flashes, the "?" and drop lines leave, the friend bar grows (YELLOW outline, BLUE to 2.5,
 PURPLE beyond) to the 3, which slides to the bar's end and is ringed; the 4 dims. End card.

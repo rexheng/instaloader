@@ -157,3 +157,18 @@ or claim; every on-screen value is unchanged. Two measurement notes for the revi
 | Landing: Carol's GRAY "2 = 2" | Carol has 2 friends (Pam, Tina) with 3 and 1 friends: average 2 = her own count, the one tie in Feld's text ("one (Carol) has as many"). | Feld 1991, p. 1465 |
 | Closing line "three counts the tokens" (was "the friendships") | 3 = 60/20, the average over the 20 tokens (each of the 10 friendships sent a token both ways), exactly the episode's token average. | Feld 1991, Table 1 |
 | Cut | "Two and a quarter at the ends, a quarter in the middle" (the area labels show it) and "Back to the eight girls". | presentation |
+
+## Round 6b (concision pass to the PRODUCTION_GUIDE §13 budget; no new claims)
+
+No number changed. Every cut below removes a spoken restatement of something the frame shows; the
+on-screen values and citations are the ones already sourced above.
+
+| Change | Check | Source |
+|---|---|---|
+| "Twenty tokens add up to sixty" cut; the line is now "They read one, two, three, or four, and average three." | The counter still shows 60/20 = 3.0 as the last token lands; the tokens' average is the friend average, Σk²/Σk = 60/20 = 3. | Feld 1991, Table 1 |
+| "In twenty oh nine" and the spoken group sizes cut from the C&F beat; the labels still read "319 random students" and "425 friends they named", the x-axis "days since 1 September 2009", the citation "Christakis & Fowler, 2010 · PLoS ONE". | N = 319 and N = 425 and the 2009 study period as verified above. | C&F 2010, Methods |
+| "They tracked flu diagnoses in random students, and in the friends those students named." | C&F's friend sample is "individuals who were named as a friend at least once by a member of this random sample". | C&F 2010, Methods |
+| The per-girl tally ("Seat by seat, five have fewer ... only Sue and Alice have more") is cut from the landing. Facebook's 92.7 % (verified above) carries the per-person point. | Feld's count (5 fewer, 2 more, 1 equal) is no longer shown or spoken, so there is nothing left to tally. | Feld 1991, p. 1465 |
+| Landing: "Betty looks at her one friend, Sue, and sees four." Betty's YELLOW token travels the Betty–Sue friendship, lands on Sue and reads 4. | Betty's only friend is Sue; Sue has 4 friends (Feld: "Betty's only friend, Sue"). As everywhere in the episode, a token reads the friend count of the girl it lands on. | Feld 1991 |
+| "About six hundred thirty five: the spread term is more than twice the mean." ("itself" cut) | 635 − 190 = 445 > 2 × 190 = 380. | Ugander et al. 2011 |
+| Text-grade grey is now the series GRAY #A2AAB5 (7.7:1 on BG); lines use AXIS #8B939E. | Toolkit style.py (Oct 2026). | presentation |

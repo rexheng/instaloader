@@ -11,6 +11,8 @@
    "end": 9.55,
    "text": "You've read an English sentence up to one hidden character. With yes-or-no questions, how many do you need per character, on average? [pause 1.5]",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "You've",
@@ -132,6 +134,8 @@
    "end": 17.49,
    "text": "The natural answer is five. Each answer can cut what's left in half, and five cuts take twenty-seven down to one.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "The",
@@ -248,6 +252,8 @@
    "end": 23.023,
    "text": "The ideal is log base two of twenty-seven, about four point seven five.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "The",
@@ -324,6 +330,8 @@
    "end": 36.517,
    "text": "In 1951, Claude Shannon estimated the true figure at about one. Whatever it is, no text compressor can beat it on average, and guessing what comes next is how language models are trained.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "In",
@@ -500,6 +508,8 @@
    "end": 49.837,
    "text": "So where do four of every five questions go? Splitting the alphabet evenly charges every character the same price. Z costs as much as E, yet E turns up a hundred and thirty times as often.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "So",
@@ -691,6 +701,8 @@
    "end": 60.71,
    "text": "Instead, ask questions that split the probability, not the alphabet. Is it a space, E, T, A, or O? Those five make up nearly half of all text.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "Instead",
@@ -842,6 +854,8 @@
    "end": 73.037,
    "text": "E starts near a tenth of the bar. Each ideal answer keeps half the probability, so E doubles its share of what's left. Three point three ideal doublings, and E fills the whole bar.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "E",
@@ -1023,6 +1037,8 @@
    "end": 77.95,
    "text": "Z starts at one in twelve hundred and sixty, and needs ten point three.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "Z",
@@ -1104,6 +1120,8 @@
    "end": 93.033,
    "text": "In general, a character with probability p needs k questions, where p times two to the k equals one. [pause 1.5] So two to the k equals one over p, and k equals log base two of one over p.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "In",
@@ -1305,6 +1323,8 @@
    "end": 96.25,
    "text": "Now give each character its own cost as a height.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "Now",
@@ -1366,6 +1386,8 @@
    "end": 106.28,
    "text": "The widths add up to one, so the total area is the average number of questions per character. Pour the skyline flat, and its height is that average.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "The",
@@ -1517,6 +1539,8 @@
    "end": 116.113,
    "text": "Shannon called that average the entropy, counted in bits, one bit per yes-or-no answer. For English letters, it's [pause 0.3] four point one one.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "Shannon",
@@ -1638,6 +1662,8 @@
    "end": 125.457,
    "text": "That beats four point seven five, but it's still four times Shannon's estimate: it prices every character as if nothing came before it.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "That",
@@ -1764,6 +1790,8 @@
    "end": 128.9,
    "text": "What comes after a Q? [pause 1.6]",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "What",
@@ -1800,6 +1828,8 @@
    "end": 139.787,
    "text": "It's U, ninety-eight times out of a hundred. U swallows the bar, its cost drops to almost nothing, and the average falls to point one six bits. [pause 0.45]",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "It's",
@@ -1946,6 +1976,8 @@
    "end": 145.863,
    "text": "After TH, E takes two thirds of the bar, and its cost shrinks to about half a question.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "After",
@@ -2047,6 +2079,8 @@
    "end": 160.19,
    "text": "Half a question sounds impossible, but a compressor asks about long runs of letters, and the fractions add up: five questions for these three, not six. After TH, the average is one point seven.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "Half",
@@ -2228,6 +2262,8 @@
    "end": 165.113,
    "text": "But averaged over every two-letter context, it's still two point eight.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "But",
@@ -2294,6 +2330,8 @@
    "end": 174.487,
    "text": "Contexts of a hundred letters need more text than any corpus holds, so Shannon used a predictor that already knows English: a person.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "Contexts",
@@ -2420,6 +2458,8 @@
    "end": 183.673,
    "text": "His subject read a passage letter by letter, guessing each next one until right. Seventy-nine of a hundred and two came on the first guess.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "His",
@@ -2556,6 +2596,8 @@
    "end": 198.713,
    "text": "A twin who guesses the same way could rebuild the passage from these counts alone. Treat each guess count as a symbol, [pause 0.8] and the same skyline pours flat at about one point four bits. A better guesser could only lower it.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "A",
@@ -2772,6 +2814,8 @@
    "end": 206.627,
    "text": "Shannon's tests, with a hundred letters of context, put English between point six and one point three bits per character.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "Shannon's",
@@ -2883,6 +2927,8 @@
    "end": 220.107,
    "text": "In twenty twenty-three, a language model compressing part of a book that reached Project Gutenberg after its training, in the same twenty-seven symbols, needed point eight four bits, inside that range.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "In",
@@ -3049,6 +3095,8 @@
    "end": 236.917,
    "text": "The hidden character from the start is the Y at the end of the other day. Shannon's subject got it on the first guess, a single yes-or-no question: is it Y? Splitting the alphabet took five. In English, almost no letter arrives without a past.",
    "voice": "af_heart",
+   "speed": 0.85,
+   "cadence": "flat",
    "words": [
     {
      "w": "The",
@@ -3279,21 +3327,305 @@
    "wav": "/root/.cache/sample_space/tts/c0/c0334dbbba776c7e6b16c53c.wav"
   }
  ],
- "warnings": [],
+ "warnings": [
+  {
+   "t": 0.0,
+   "msg": "voice speed 0.85 > 0.84: every Audio 9 was spoken at 0.82-0.84 with planned pauses; faster delivery was called hurried. Keep 0.82-0.84, shape the pauses and cut words (PRODUCTION_GUIDE §13.3)"
+  },
+  {
+   "t": 237.57,
+   "msg": "concision budget: 602 words, 3:57.6. Critics docked Concision for runtime in 16 of 28 round-5/6 reviews (9 of 10 episodes >= 3:41); budget <= 500 words and <= 3:35 (PRODUCTION_GUIDE §13)"
+  }
+ ],
+ "budget": {
+  "words": 602,
+  "runtime_s": 237.6,
+  "budget_words": 500,
+  "budget_runtime_s": 215.0,
+  "over": true
+ },
+ "glyph_morphs": [
+  {
+   "t": 10.9,
+   "animation": "ReplacementTransform",
+   "from": "?",
+   "to": "5"
+  }
+ ],
+ "deictic_sync": {
+  "window": [
+   -0.8,
+   0.4
+  ],
+  "deictics": 3,
+  "unlanded": []
+ },
  "layout_audit": {
   "clearance": 0.15,
   "checks": 224,
-  "audit_seconds": 2.946,
-  "render_seconds": 737.0,
+  "audit_seconds": 4.296,
+  "render_seconds": 697.0,
   "errors": 0,
-  "count": 0,
+  "count": 4,
   "counts": {
    "overlap": 0,
    "clearance": 0,
    "safe-area": 0,
-   "caption-zone": 0
+   "caption-zone": 0,
+   "text-size": 4,
+   "small-label": 15
   },
-  "issues": [],
+  "issues": [
+   {
+    "kind": "text-size",
+    "start": 98.47,
+    "end": 99.17,
+    "held": 0.7,
+    "text": "Text 'J'",
+    "text_pos": [
+     5.54,
+     -2.17
+    ],
+    "detail": "cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)",
+    "msg": "text-size 1:38.5-1:39.2 (held 0.7s) Text 'J' @(+5.54, -2.17) cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "text-size",
+    "start": 98.47,
+    "end": 99.17,
+    "held": 0.7,
+    "text": "Text 'Q'",
+    "text_pos": [
+     5.89,
+     -2.17
+    ],
+    "detail": "cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)",
+    "msg": "text-size 1:38.5-1:39.2 (held 0.7s) Text 'Q' @(+5.89, -2.17) cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "text-size",
+    "start": 98.47,
+    "end": 99.17,
+    "held": 0.7,
+    "text": "Text 'X'",
+    "text_pos": [
+     5.09,
+     -2.17
+    ],
+    "detail": "cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)",
+    "msg": "text-size 1:38.5-1:39.2 (held 0.7s) Text 'X' @(+5.09, -2.17) cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "text-size",
+    "start": 98.47,
+    "end": 99.17,
+    "held": 0.7,
+    "text": "Text 'Z'",
+    "text_pos": [
+     6.17,
+     -2.17
+    ],
+    "detail": "cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)",
+    "msg": "text-size 1:38.5-1:39.2 (held 0.7s) Text 'Z' @(+6.17, -2.17) cap height ≈ 23 px < 24 px (BAR floor for ticks/citations; labels need 34 px: Text >= 27, MathTex >= 36)"
+   }
+  ],
+  "advisory": [
+   {
+    "kind": "small-label",
+    "start": 47.27,
+    "end": 61.07,
+    "held": 13.8,
+    "text": "MathTex '0\\%'",
+    "text_pos": [
+     -5.2,
+     -2.57
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 0:47.3-1:01.1 (held 13.8s) MathTex '0\\%' @(-5.20, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 47.27,
+    "end": 61.07,
+    "held": 13.8,
+    "text": "MathTex '100\\%'",
+    "text_pos": [
+     4.4,
+     -2.57
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 0:47.3-1:01.1 (held 13.8s) MathTex '100\\%' @(+4.40, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 47.27,
+    "end": 61.07,
+    "held": 13.8,
+    "text": "MathTex '25\\%'",
+    "text_pos": [
+     -2.8,
+     -2.57
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 0:47.3-1:01.1 (held 13.8s) MathTex '25\\%' @(-2.80, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 47.27,
+    "end": 61.07,
+    "held": 13.8,
+    "text": "MathTex '50\\%'",
+    "text_pos": [
+     -0.4,
+     -2.57
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 0:47.3-1:01.1 (held 13.8s) MathTex '50\\%' @(-0.40, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 47.27,
+    "end": 61.07,
+    "held": 13.8,
+    "text": "MathTex '75\\%'",
+    "text_pos": [
+     2.0,
+     -2.57
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 0:47.3-1:01.1 (held 13.8s) MathTex '75\\%' @(+2.00, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 94.8,
+    "end": 171.57,
+    "held": 76.77,
+    "text": "MathTex '0\\%'",
+    "text_pos": [
+     -5.2,
+     -2.57
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 1:34.8-2:51.6 (held 76.8s) MathTex '0\\%' @(-5.20, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 94.8,
+    "end": 171.57,
+    "held": 76.77,
+    "text": "MathTex '100\\%'",
+    "text_pos": [
+     4.4,
+     -2.57
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 1:34.8-2:51.6 (held 76.8s) MathTex '100\\%' @(+4.40, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 94.8,
+    "end": 171.57,
+    "held": 76.77,
+    "text": "MathTex '25\\%'",
+    "text_pos": [
+     -2.8,
+     -2.57
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 1:34.8-2:51.6 (held 76.8s) MathTex '25\\%' @(-2.80, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 94.8,
+    "end": 171.57,
+    "held": 76.77,
+    "text": "MathTex '50\\%'",
+    "text_pos": [
+     -0.4,
+     -2.57
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 1:34.8-2:51.6 (held 76.8s) MathTex '50\\%' @(-0.40, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 94.8,
+    "end": 171.57,
+    "held": 76.77,
+    "text": "MathTex '75\\%'",
+    "text_pos": [
+     2.0,
+     -2.57
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 1:34.8-2:51.6 (held 76.8s) MathTex '75\\%' @(+2.00, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 189.33,
+    "end": 199.07,
+    "held": 9.73,
+    "text": "MathTex '0'",
+    "text_pos": [
+     -5.22,
+     -1.9
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 3:09.3-3:19.1 (held 9.7s) MathTex '0' @(-5.22, -1.90) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 189.33,
+    "end": 199.07,
+    "held": 9.73,
+    "text": "MathTex '0\\%'",
+    "text_pos": [
+     -5.0,
+     -2.57
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 3:09.3-3:19.1 (held 9.7s) MathTex '0\\%' @(-5.00, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 189.33,
+    "end": 199.07,
+    "held": 9.73,
+    "text": "MathTex '100\\%'",
+    "text_pos": [
+     2.6,
+     -2.57
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 3:09.3-3:19.1 (held 9.7s) MathTex '100\\%' @(+2.60, -2.57) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 189.33,
+    "end": 194.87,
+    "held": 5.53,
+    "text": "MathTex '5'",
+    "text_pos": [
+     -5.21,
+     -0.8
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 3:09.3-3:14.9 (held 5.5s) MathTex '5' @(-5.21, -0.80) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   },
+   {
+    "kind": "small-label",
+    "start": 195.67,
+    "end": 199.07,
+    "held": 3.4,
+    "text": "MathTex '2'",
+    "text_pos": [
+     -5.21,
+     -0.3
+    ],
+    "detail": "cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)",
+    "msg": "small-label 3:15.7-3:19.1 (held 3.4s) MathTex '2' @(-5.21, -0.30) cap height ≈ 25 px: reads as a footnote; a label the viewer must read needs 34 px (Text >= 27, MathTex >= 36)"
+   }
+  ],
   "allowed": [],
   "excluded": [
    {

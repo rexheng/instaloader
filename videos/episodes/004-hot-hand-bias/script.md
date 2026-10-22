@@ -7,9 +7,10 @@ crowd the same way, so the 1985 hot-hand test (after 3 hits − after 3 misses) 
 random shooter, and measured from that baseline Cornell's +4 becomes +12.
 
 Narration strings live in `narration_text.py` (one per beat, used verbatim by `scene.py`),
-voice af_heart, speed 0.81. Sentence gaps vary: `[pause 0.12]` inside a thought, 0.55–0.8 s
-after the beats that close a section or the densest run (`GAPS`, "across eleven."), 0.38 s
-otherwise.
+voice af_heart, `CADENCE = "shaped"` (gaps follow the sense) at speed 0.82; the beats whose
+short plain sentences ran above 200 wpm (`SPEEDS`: undefined, cold, crowds, observed, landing) at
+0.80. 0.9–1.0 s after each key result (`GAPS`, and `[pause 0.9]` after "minus eight points" and
+"twelve points hot").
 
 ## Palette (one meaning each, whole episode)
 
@@ -41,8 +42,8 @@ row returns (question ends ≈ 0:12.0). On "Below", "at", "above" the three answ
 the line where they sit. Prediction hold.
 
 ### 2. Stakes (0:13–0:25) — *stakes*
-> One half feels obvious, since a coin has no memory. In nineteen eighty five, a famous study
-> ran this kind of check on basketball shots, and called the hot hand an illusion.
+> One half feels obvious, since a coin has no memory. In nineteen eighty five, a study ran this
+> kind of check on basketball shots, and called the hot hand an illusion.
 
 Visual: the "= 1/2" answer becomes "the obvious guess" while the "?" and the other two answers
 fade, and the dashed ink line grows up from 50%; "every flip: 1/2 heads" (inline MathTex, 38) under the row on "no memory"; citation
@@ -60,7 +61,7 @@ the line, about its left edge); on "match it" the row's 1/2 pulses. No "cold" ar
 first spent on the measured −9.5.
 
 ### 4. Calibrate (0:32–0:41) — *calibrate*
-> So first, test the test on a shooter we know is random: a fair coin. Four flips can land
+> First, test the test on a shooter we know is random: a fair coin. Four flips can land
 > sixteen ways, all equally likely.
 
 Visual: arrow and citation clear; "hit/miss" morph back into H/T (and the title back to
@@ -69,11 +70,10 @@ flips" the big row shrinks into its slot of the 4 × 4 table and the other fifte
 Table coins are radius 0.185 at pitch 0.49, so each blue check ring clears its neighbours.
 
 ### 5. Fail (0:41–1:07) — *score*, *undefined*, *average*, *cold*
-> This row checks three flips, and two of them are heads. Score every row the same way.
-> Two rows never show a heads before the last flip, so they get no score.
-> Drop the other fourteen scores onto the line. Their average is seventeen out of forty two:
-> about forty point five percent.
-> On a perfectly fair coin, the test reads cold, by nine and a half points.
+> This row checks three flips, and two are heads. Score every row the same way.
+> Two rows show no heads before the last flip, so they get no score.
+> Drop the other fourteen scores onto the line. Their average is seventeen out of forty two.
+> On a fair coin, the test reads cold, by nine and a half points.
 
 Visual: HHHT worked slowly (3 rings, 2/3 built from them), the rest score in a cascade; TTTH and
 TTTT dim with "–". Each of the 14 scores shrinks into a blue dot in place, then the dots fall onto
@@ -84,12 +84,12 @@ on "nine".
 ### 6. Insight: one vote per row (1:07–1:50) — *pool*, *votes*, *crowds*, *lineup*, *formula*
 > Yet no flip is biased. Gather all twenty four checked flips: twelve heads, twelve tails. Total
 > heads over total flips: exactly half.
-> The skew comes from scoring row by row, because each row gets one vote, however many flips it checked.
-> And checked heads come in crowds, since a heads gets the next flip checked too. This row's three
-> heads share a single vote, while this lone tails gets a whole one.
+> The skew comes from scoring row by row: each row gets one vote, however many flips it checked.
+> Checked heads come in crowds, since a heads gets the next flip checked too. Here, three heads
+> share a single vote, while this lone tails gets a whole one.
 > Twelve heads crowd into eight rows. Twelve tails spread across eleven.
 > Crowded heads split their votes.
-> Line them up, and the heads hold five and two thirds of the fourteen votes. That's seventeen
+> Line them up: the heads hold five and two thirds of the fourteen votes. That's seventeen
 > out of forty two.
 > So the test takes an average of ratios, one per row, instead of the ratio of totals.
 
@@ -119,8 +119,8 @@ displaystyle at one size with their "=" signs on one vertical. On "instead" the 
 
 ### 7. The mirror (1:50–2:07) — *mirror*, *gap*
 > Now score the flip after each tails. Swap heads and tails, and the strip flips over one half:
-> after a tails, the test reads high, twenty five out of forty two.
-> Subtract the two averages, and a fair coin shows a gap of minus nineteen points.
+> the test reads high, twenty five out of forty two.
+> Subtract the averages: a fair coin shows a gap of minus nineteen points.
 
 Visual: on "score" the pooled strip, its formula and the left side of the row-average formula fade
 out in place (0.5 s, drifting up 0.3); the whole picture rises 1 unit while the formula's 17/42
@@ -137,12 +137,12 @@ to the after-heads cursor: "−19 points".
 > hundred shots each, from where they'd hit about half. After three hits, versus after three misses.
 > For a random shooter, the same crowding pulls after hits down to forty six percent on average,
 > and after misses up to fifty four. Miller and Sanjurjo's twenty eighteen paper puts the gap at
-> about minus eight points. *[pause 0.8]* Longer streaks grow the bias. *[pause 0.9]* Longer records
+> about minus eight points. *[pause 0.9]* Longer streaks grow the bias. *[pause 0.9]* Longer records
 > shrink it, *[pause 0.5]* but a hundred shots isn't long.
-> Cornell's players hit forty nine percent after three hits, and forty five after three misses. The
-> study took that plus four to mean no hot hand.
-> Measured from minus eight, it's twelve points hot. That's evidence for a hot hand in a gym, not
-> proof it survives defenders in a game.
+> The Cornell players hit forty nine percent after three hits, and forty five after three misses.
+> The study took that plus four *[pause 0.3]* to mean no hot hand.
+> Measured from minus eight, it's twelve points hot. *[pause 0.9]* That's evidence for a hot hand
+> in a gym, not proof it survives defenders in a game.
 
 Visual (round 6: no simulated record, no zoom). On "nineteen eighty five" the strips clear to two
 thin lanes on the same 0–100% axis, both cursors glide back to 50% and the values become "?", while
@@ -150,27 +150,30 @@ the grey header "1985 design" and the GVT citation come in. On "the same compari
 become "after 3 hits" / "after 3 misses" (axis title "checked shots that are hits") and each lane
 gets its condition at its left end (●●● yellow hits, ○○○ hollow grey misses). "· 26 players" and
 "· up to 100 shots" join the header phrase by phrase, kept centred. On "about half" the dashed 50%
-line and its tick pulse; on "After three hits" / "after three misses" each lane's glyph and label
-pulse (the header details dim). On "For a random shooter" a blue "random" column head; the M&S
+line and its tick pulse and "the obvious guess" (ink, as in the cold open) labels its top: what the
+1985 test assumed a random shooter reads. On "After three hits" / "after three misses" each lane's
+glyph and label pulse (the header details dim). On "For a random shooter" a blue "random" column head; the M&S
 citation on "the same crowding"; on "pulls after hits down" the top cursor slides 50 → 46% (value
 46%), on "after misses up" the bottom one 50 → 54%, the red arrow growing between them. On "gap"
 the pair slides until after-misses sits on the dashed line, then the same tick marks are relabelled
 −10 … +10 (each % label hands over to its point label in place, so the axis is never unlabeled):
 the after-hits cursor stretches out into the blue random-shooter marker at −8, the arrow becomes
-the red "bias"; the right column dims to 30%. Silent 0.8 s on the −8 picture. Ghost ticks as
+the red "bias"; "the obvious guess" rides down with the dashed line, now the zero gap; the right
+column dims to 30%. Silent 0.8 s on the −8 picture. Ghost ticks as
 before (1, 2, 3 hits in a row → −1.0, −3.1, −8; the 3-hit one slides to its 1,000-shot place −0.7
 and back). Cornell: the ghost clears, "1985 design" becomes the purple "Cornell, 1985" (details
 fade), the GVT citation returns to full and M&S dims; the column head "random" becomes "Cornell" and
 on the spoken numbers 46% → 49% and 54% → 45% in the same slots. After "three misses" whole copies
 of 49 and 45 travel to the right of where Cornell's marker will stand and "49 − 45" is written; on
-"plus four" "= +4" lands as the purple marker grows up from the axis; the dashed 0 pulses on "no
-hot hand", then a silent 0.8 s. On "Measured from minus eight" the right column leaves, the chart
-re-centres under its title (+1.4 units) and "+4" sheds its working; a purple brace from −8 to +4
+"plus four" "= +4" lands as the purple marker grows up from the axis; the dashed 0 and "the obvious
+guess" pulse on "no hot hand" (GVT measured +4 from zero), then a silent 0.9 s. On "Measured from minus eight" the right column leaves (its "Cornell" head travels to tag
+the +4 marker, mirroring "random shooter" at −8), "the obvious guess" leaves, the chart re-centres
+under its title (+1.4 units) and "+4" sheds its working; a purple brace from −8 to +4
 grows, "+12 points" on "twelve". On "in a gym" a grey "no defenders" tag under +4, pulsing on
 "defenders". Citations stay at full strength.
 
 ### 9. Landing (3:00–3:14) — *landing*
-> One half is what a fair coin does. *[pause 0.5]* Seventeen out of forty two is what this test
+> One half *[pause 0.15]* is what a fair coin does. *[pause 0.5]* Seventeen out of forty two is what this test
 > sees. A fifty percent shooter *[pause 0.3]* who averages one half on this test *[pause 0.2]* is
 > already running hot.
 

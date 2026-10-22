@@ -479,3 +479,75 @@ together reaches about 9.0, narrowly.
   because the payoff never reused the tokens and the examples were Strogatz's trio. Upgrades:
   - C&F's design runs on the token machine;
   - the 92.7 % personal turn.
+
+**Applied: the round-6 fixes (craft numbering)**
+1. Algebra pacing: a 1.6 s pause after "mu squared plus sigma squared" holds the rebuilt row
+   (μ² + σ²)/μ = (2.5² + 1.25)/2.5 about 3.5 s; a 1.2 s pause after "over mu" holds the split row
+   (its two cancelling fractions boxed) about 3 s; then all three collapses happen in one 1.5 s
+   move on "Here that's two and a half, plus a half".
+2. Closing pause of the insight: only the result row and the bars return to full strength; the beam
+   picture and the ring stay at 30 % and clear as Facebook starts.
+3. On "Facebook" the citation (Feld → Ugander), the row label (girl → user) and the axis (0–4 →
+   0–800) change in one move.
+4. Every highlight box (cross term, the two cancels) has buff 0.15, with widened TeX spaces so the
+   neighbouring "+" and "=" stay clear of it.
+5. "sides at ¼ scale" is MathTex 30 and stays (at 40 %) as long as the squares; distance and area
+   labels are MathTex 36.
+6. Frame 0 already poses the question: friendships at 40 %, "average girl" / "average friend ?" as
+   30 % ghosts.
+7. The Harvard payoff runs on the token machine: the 0:19 stakes picture returns (Jane "random",
+   arrow to Alice "named friend"); each girl names one friend ("one possible draw"), the tokens pile
+   on Sue and Alice; a flash runs out one, two, three steps from them ("closer to everyone else");
+   the girls and the pile fly into the BLUE and YELLOW curves' origins and the two labels become the
+   curve labels.
+8. The count labels dip to 40 % while the distance copies drop through them.
+9. Carol's tie: superseded in 6b (the per-girl tally is cut, see below).
+10. The self-report arrow is INK at 50 % (GRAY stays the guess and the axes).
+11. Cut "Two and a quarter at the ends, a quarter in the middle" and "Back to the eight girls".
+
+**Applied: the round-6 fixes (substance numbering)**
+1. The title's "you": "And ninety three percent of users had fewer friends than their friends
+   averaged. Odds are, that includes you." with a BLUE "92.7%" block (re-verified in the arXiv text,
+   facts.md). No "so": the mean inequality does not force a majority.
+2. The Facebook question is now a transfer test: "...and a few had thousands" (axis break, 5,000
+   limit, "a few users" brace) comes before "what would the tokens average?".
+3. "Measure each girl's distance from the girls' balance point, two and a half"; the YELLOW 3.0
+   fulcrum dims to 30 % for the variance step.
+4. A GRAY count ruler (ticks 1–4) under the beam; each pair of girls sits either side of its tick
+   and the PURPLE distances are drawn on the ruler, so they visibly end at 1, 2, 3, 4.
+5. The bar panel steps back to 35 % from "three" (1:16) to "the extra half friend we measured".
+6. Landing: superseded in 6b; the closing words are "three counts the tokens" (60/20, exact).
+7. "Now divide ..." gives "divide" a lead-in.
+8. The stakes picture returns at Harvard (item 7 above).
+9. The cancel boxes clear the exponent; the surviving 2.5 slides to the baseline in the same move.
+
+**Round 6b (same revision, after the toolkit added PRODUCTION_GUIDE §13 budgets mid-pass)**
+The first master of this revision (3:40, 542 words) had 0 warnings, but the new review kit flagged
+the 500-word / 3:35 budget, four sentences above 200 wpm, a 29 s breathless run and metronomic
+full stops. So:
+- *Cut to budget* (mute test): "Twenty tokens add up to sixty" (the counter shows it); "In twenty oh
+  nine" and the spoken group sizes (axis and labels show them); "from one to four" (the ruler shows
+  it); "left and right"; "itself"; and the whole per-girl tally "Seat by seat, five have fewer ...",
+  because Facebook's 93 % now makes the per-person point. 542 → 494 words.
+- *Landing is one move*: "Betty looks at her one friend, Sue, and sees four" (Betty's token lands on
+  Sue and reads 4, the 4 candidate flashes); "Two and a half counts the girls" (girl bar, 2.5);
+  "three counts the tokens" (the friend bar grows to the ringed 3). All three candidates are
+  accounted for. The chart → class change now happens in the breath before the line.
+- *Voice*: CADENCE = "shaped"; [pause 0.9] after "more than twice the mean", "thirteen point nine
+  days ahead" and "the extra half friend we measured"; a [pause 0.5] breath in the Harvard beat;
+  the fast sentences rewritten ("The guess fell short by half a friend, because ...", "Line the girls
+  up ...: they balance at two and a half", "And the ring? No spread, so no gap.") and measured under
+  200 wpm in Kokoro's timings.
+- *Render warnings fixed*: "d = k − μ" touched the ruler's end (moved 0.22 past it); the variance
+  beat reached "variance" 0.9 s late (the areas now complete within 1.4 s, are read through a 1.5 s
+  pause and fly on "The squares average"); "average three" and the landing cues were late (re-timed).
+- *Motion*: the signed distances merge into the 0 along the lane above the ruler, shrinking and
+  fading (no doubled glyphs, no label crossing another); the Harvard transition clears the network
+  before the axes draw and moves its two labels one after the other.
+- *Glyph morphs*: the ring formula is carried beside the ring with a cross-fade (no μ → 2 morph);
+  the trow algebra transforms pair identical glyphs whose TeX differs only by an invisible strut, so
+  they are exempted (RT_same / TFC_same).
+- *Deictics*: "these same eight girls" lands on its highlight (beat.on); "those students" became
+  "the students".
+- *Type and contrast*: labels Text 27 (34 px), beam names 21 (27 px), "Facebook's limit" 22; grey
+  text is the series GRAY #A2AAB5 (7.7:1), lines AXIS.
