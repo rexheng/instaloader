@@ -1,8 +1,8 @@
 {
  "task": "transcribe",
  "language": "English",
- "duration": 211.73334220200002,
- "text": " Draw a chord across this circle, at random. What's the chance it's longer than a side of this triangle? Pick a number. Bertrand posed this puzzle in 1889 as a warning about two words, at random. Leave them vague, and one college's average class is 40, or 147. Start with the obvious simulation, two random points on the rim joined. If the chord beats the triangle side, it turns gold. 10,000 chords in, the gold share settles near point 3-3. Geometry agrees. With a corner on the first point, the chord is long only when its other end lands on this arc, a third of the rim. Case closed until you code it a second way. A random radius, a point on it, and the chord through it at right angles. This one settles near point five. A third program picks any point inside as the chord's midpoint. That settles near point two five. Bertrand printed all three, writing that none is wrong and none is right. Each tally is good to about one percentage point. They disagree by 25 and the code has no bug. One point sets a chord's length, its midpoint. Slide it outward and the chord shrinks. It matches the side at half a radius on the circle inside the triangle. So a chord is long exactly when its midpoint lands in this gold circle. Each program is a way of scattering midpoints. Shrink every chord to its midpoint. The midpoint program fills the disk evenly So this circle a quarter of the area catches a quarter The radius program spreads them evenly along the radius Where will they crowd? Toward the center. Every ring gets an equal share and inner rings are small. Half the radius, one half. The endpoints program piles them against the rim. Only a third land inside, the third we found. programs three things spread evenly rim radius area at random never said which edwin janes argued a physical process picks one straws tossed from a standing height can't be aimed so the answer can't depend on where the circle sits or its size one rain lands on both circles each judges with its own gold circle so a fair program scores the same on both midpoint a quarter, then .41. Endpoints, a third, then .47. Only the radius program gives a half on both. Janes and Charles Tyler tossed real straws at a five-inch circle. The 128 that crossed it matched the radius program. Surveys hide the same two words. Take classes of 10, 10, and 100. pick a class at random the average is 40 pick a student instead and it's 85 at Stony Brook the same two picks gave 40 and 147 whatever number you picked some way of drawing chords makes it right name the way and the answer is fixed a half for toss straws 147 for a random student",
+ "duration": 213.46134425,
+ "text": " Draw a chord across this circle, at random. What's the chance it's longer than a side of this triangle? Pick a number. Bertrand posed this puzzle in 1889 as a warning about two words, at random. Leave them vague, and one college's average class is 40, or 147. Start with the obvious simulation, two random points on the rim joined. If the chord beats the triangle side, it turns gold. 10,000 chords in, the gold share settles near point 3-3. Geometry agrees. With a corner on the first point, the chord is long only when its other end lands on this arc, a third of the rim. Case closed until you code it a second way. A random radius, a point on it, and the chord through it at right angles. This one settles near point five. A third program picks any point inside as the chord's midpoint. That settles near point two five. Bertrand printed all three, writing that none is wrong, none is right. Each tally is good to about one percentage point. They disagree by 25, and the code has no bug. One point sets a chord's length, its midpoint. Slide it outward, and the chord shrinks. It matches the side at half a radius on the circle inside the triangle. So a chord is long exactly when its midpoint lands in this gold circle. Each program is a way of scattering midpoints. Shrink every chord to its midpoint. The midpoint program fills the disk evenly So this circle a quarter of the area catches a quarter The radius program spreads them evenly along the radius Where will they crowd? Toward the center. Every ring gets an equal share and inner rings are small. Half the radius, one half. The endpoints program piles them against the rim. Only a a third land inside, the third we found. Three programs, three things spread evenly. Rim, radius, area. At random, never said which. Edwin Janes argued a physical process picks one. Straws tossed from a standing height can't be aimed, so the answer can't depend on where the circle sits or its size. One program's rain lands on both circles. Each Each judges with its own gold circle, so a fair program scores the same on both. Midpoint, a quarter, then .41. Endpoints, a third, then .47. Only the radius program gives a half on both. Janes and Charles Tyler tossed real straws at a 5-inch circle. The 128 that crossed it matched the radius program. surveys hide the same two words. Take classes of 10, 10, and 100. Pick a class at random, the average is 40. Pick a student instead, and it's 85. At Stony Brook, the same two picks gave 40 and 100 47. Whatever number you picked, some way of drawing chords makes it right. Name the way and the answer is fixed. A half for un-aimed straws, 147 for a random student.",
  "words": [
   {
    "word": "Draw",
@@ -687,7 +687,7 @@
   {
    "word": "five.",
    "start": 57.88,
-   "end": 58.54
+   "end": 58.56
   },
   {
    "word": "A",
@@ -722,7 +722,7 @@
   {
    "word": "inside",
    "start": 61.12,
-   "end": 61.58
+   "end": 61.56
   },
   {
    "word": "as",
@@ -742,16 +742,16 @@
   {
    "word": "midpoint.",
    "start": 62.76,
-   "end": 63.48
+   "end": 63.5
   },
   {
    "word": "That",
    "start": 63.34,
-   "end": 64.12
+   "end": 64.1
   },
   {
    "word": "settles",
-   "start": 64.12,
+   "start": 64.1,
    "end": 64.5
   },
   {
@@ -762,11 +762,11 @@
   {
    "word": "point",
    "start": 64.72,
-   "end": 64.94
+   "end": 64.96
   },
   {
    "word": "two",
-   "start": 64.94,
+   "start": 64.96,
    "end": 65.16
   },
   {
@@ -787,1632 +787,1652 @@
   {
    "word": "all",
    "start": 67.36,
-   "end": 67.6
+   "end": 67.58
   },
   {
    "word": "three,",
-   "start": 67.6,
-   "end": 68.22
+   "start": 67.58,
+   "end": 68.18
   },
   {
    "word": "writing",
-   "start": 68.02,
-   "end": 68.84
+   "start": 67.92,
+   "end": 68.74
   },
   {
    "word": "that",
-   "start": 68.84,
-   "end": 69.06
+   "start": 68.74,
+   "end": 68.94
   },
   {
    "word": "none",
-   "start": 69.06,
-   "end": 69.26
+   "start": 68.94,
+   "end": 69.12
   },
   {
    "word": "is",
-   "start": 69.26,
-   "end": 69.46
+   "start": 69.12,
+   "end": 69.3
   },
   {
-   "word": "wrong",
-   "start": 69.46,
-   "end": 69.86
-  },
-  {
-   "word": "and",
-   "start": 69.86,
-   "end": 70.14
+   "word": "wrong,",
+   "start": 69.3,
+   "end": 69.78
   },
   {
    "word": "none",
-   "start": 70.14,
-   "end": 70.34
+   "start": 69.78,
+   "end": 70.1
   },
   {
    "word": "is",
-   "start": 70.34,
-   "end": 70.54
+   "start": 70.1,
+   "end": 70.3
   },
   {
    "word": "right.",
-   "start": 70.54,
-   "end": 71.06
+   "start": 70.3,
+   "end": 70.76
   },
   {
    "word": "Each",
-   "start": 70.92,
-   "end": 71.64
+   "start": 70.64,
+   "end": 71.36
   },
   {
    "word": "tally",
-   "start": 71.64,
-   "end": 72.04
+   "start": 71.36,
+   "end": 71.76
   },
   {
    "word": "is",
-   "start": 72.04,
-   "end": 72.24
+   "start": 71.76,
+   "end": 71.96
   },
   {
    "word": "good",
-   "start": 72.24,
-   "end": 72.42
+   "start": 71.96,
+   "end": 72.14
   },
   {
    "word": "to",
-   "start": 72.42,
-   "end": 72.58
+   "start": 72.14,
+   "end": 72.3
   },
   {
    "word": "about",
-   "start": 72.58,
+   "start": 72.3,
+   "end": 72.56
+  },
+  {
+   "word": "one",
+   "start": 72.56,
    "end": 72.84
   },
   {
-   "word": "one",
-   "start": 72.84,
-   "end": 73.12
-  },
-  {
    "word": "percentage",
-   "start": 73.12,
-   "end": 73.56
+   "start": 72.84,
+   "end": 73.28
   },
   {
    "word": "point.",
-   "start": 73.56,
-   "end": 74.16
+   "start": 73.28,
+   "end": 73.88
   },
   {
    "word": "They",
-   "start": 74.4,
-   "end": 74.9
+   "start": 74.08,
+   "end": 74.62
   },
   {
    "word": "disagree",
-   "start": 74.9,
-   "end": 75.36
+   "start": 74.62,
+   "end": 75.08
   },
   {
    "word": "by",
-   "start": 75.36,
-   "end": 75.6
+   "start": 75.08,
+   "end": 75.32
   },
   {
-   "word": "25",
-   "start": 75.6,
-   "end": 76.08
+   "word": "25,",
+   "start": 75.32,
+   "end": 76.22
   },
   {
    "word": "and",
-   "start": 76.08,
-   "end": 76.88
+   "start": 76.22,
+   "end": 76.62
   },
   {
    "word": "the",
-   "start": 76.88,
-   "end": 76.98
+   "start": 76.62,
+   "end": 76.7
   },
   {
    "word": "code",
-   "start": 76.98,
-   "end": 77.3
+   "start": 76.7,
+   "end": 77.02
   },
   {
    "word": "has",
-   "start": 77.3,
-   "end": 77.54
+   "start": 77.02,
+   "end": 77.26
   },
   {
    "word": "no",
-   "start": 77.54,
-   "end": 77.74
+   "start": 77.26,
+   "end": 77.46
   },
   {
    "word": "bug.",
-   "start": 77.74,
-   "end": 78.28
+   "start": 77.46,
+   "end": 77.98
   },
   {
    "word": "One",
-   "start": 78.26,
-   "end": 79.04
+   "start": 79.24,
+   "end": 79.54
   },
   {
    "word": "point",
-   "start": 79.04,
-   "end": 79.34
+   "start": 79.54,
+   "end": 79.84
   },
   {
    "word": "sets",
-   "start": 79.34,
-   "end": 79.6
+   "start": 79.84,
+   "end": 80.1
   },
   {
    "word": "a",
-   "start": 79.6,
-   "end": 79.74
+   "start": 80.1,
+   "end": 80.24
   },
   {
    "word": "chord's",
-   "start": 79.74,
-   "end": 80.04
+   "start": 80.24,
+   "end": 80.54
   },
   {
    "word": "length,",
-   "start": 80.04,
-   "end": 80.52
+   "start": 80.54,
+   "end": 81.02
   },
   {
    "word": "its",
-   "start": 80.52,
-   "end": 80.9
+   "start": 81.02,
+   "end": 81.4
   },
   {
    "word": "midpoint.",
-   "start": 80.9,
-   "end": 81.72
+   "start": 81.4,
+   "end": 82.24
   },
   {
    "word": "Slide",
-   "start": 81.52,
-   "end": 82.38
+   "start": 82.02,
+   "end": 82.88
   },
   {
    "word": "it",
-   "start": 82.38,
-   "end": 82.54
+   "start": 82.88,
+   "end": 83.04
   },
   {
-   "word": "outward",
-   "start": 82.54,
-   "end": 82.86
+   "word": "outward,",
+   "start": 83.04,
+   "end": 83.56
   },
   {
    "word": "and",
-   "start": 82.86,
-   "end": 83.28
+   "start": 83.56,
+   "end": 83.8
   },
   {
    "word": "the",
-   "start": 83.28,
-   "end": 83.4
+   "start": 83.8,
+   "end": 83.9
   },
   {
    "word": "chord",
-   "start": 83.4,
-   "end": 83.6
+   "start": 83.9,
+   "end": 84.1
   },
   {
    "word": "shrinks.",
-   "start": 83.6,
-   "end": 84.3
-  },
-  {
-   "word": "It",
-   "start": 84.62,
+   "start": 84.1,
    "end": 84.78
   },
   {
+   "word": "It",
+   "start": 85.12,
+   "end": 85.24
+  },
+  {
    "word": "matches",
-   "start": 84.78,
-   "end": 85.22
+   "start": 85.24,
+   "end": 85.68
   },
   {
    "word": "the",
-   "start": 85.22,
-   "end": 85.44
+   "start": 85.68,
+   "end": 85.94
   },
   {
    "word": "side",
-   "start": 85.44,
-   "end": 85.78
+   "start": 85.94,
+   "end": 86.28
   },
   {
    "word": "at",
-   "start": 85.78,
-   "end": 85.98
+   "start": 86.28,
+   "end": 86.48
   },
   {
    "word": "half",
-   "start": 85.98,
-   "end": 86.18
+   "start": 86.48,
+   "end": 86.68
   },
   {
    "word": "a",
-   "start": 86.18,
-   "end": 86.32
+   "start": 86.68,
+   "end": 86.82
   },
   {
    "word": "radius",
-   "start": 86.32,
-   "end": 86.78
+   "start": 86.82,
+   "end": 87.26
   },
   {
    "word": "on",
-   "start": 86.84,
-   "end": 87.46
-  },
-  {
-   "word": "the",
-   "start": 87.46,
-   "end": 87.56
-  },
-  {
-   "word": "circle",
-   "start": 87.56,
+   "start": 87.26,
    "end": 87.94
   },
   {
-   "word": "inside",
+   "word": "the",
    "start": 87.94,
+   "end": 88.06
+  },
+  {
+   "word": "circle",
+   "start": 88.06,
    "end": 88.4
   },
   {
-   "word": "the",
+   "word": "inside",
    "start": 88.4,
-   "end": 88.56
+   "end": 88.8
+  },
+  {
+   "word": "the",
+   "start": 88.8,
+   "end": 89.06
   },
   {
    "word": "triangle.",
-   "start": 88.56,
-   "end": 89.4
+   "start": 89.06,
+   "end": 89.82
   },
   {
    "word": "So",
-   "start": 89.28,
-   "end": 89.98
+   "start": 89.78,
+   "end": 90.48
   },
   {
    "word": "a",
-   "start": 89.98,
-   "end": 90.16
+   "start": 90.48,
+   "end": 90.66
   },
   {
    "word": "chord",
-   "start": 90.16,
-   "end": 90.42
+   "start": 90.66,
+   "end": 90.92
   },
   {
    "word": "is",
-   "start": 90.42,
-   "end": 90.62
+   "start": 90.92,
+   "end": 91.12
   },
   {
    "word": "long",
-   "start": 90.62,
-   "end": 90.98
+   "start": 91.12,
+   "end": 91.46
   },
   {
    "word": "exactly",
-   "start": 90.98,
-   "end": 91.56
+   "start": 91.46,
+   "end": 92.06
   },
   {
    "word": "when",
-   "start": 91.54,
-   "end": 92.18
+   "start": 92.06,
+   "end": 92.66
   },
   {
    "word": "its",
-   "start": 92.18,
-   "end": 92.3
+   "start": 92.66,
+   "end": 92.8
   },
   {
    "word": "midpoint",
-   "start": 92.3,
-   "end": 92.78
-  },
-  {
-   "word": "lands",
-   "start": 92.78,
+   "start": 92.8,
    "end": 93.26
   },
   {
-   "word": "in",
+   "word": "lands",
    "start": 93.26,
-   "end": 93.56
+   "end": 93.76
+  },
+  {
+   "word": "in",
+   "start": 93.76,
+   "end": 94.06
   },
   {
    "word": "this",
-   "start": 93.56,
-   "end": 93.72
+   "start": 94.06,
+   "end": 94.2
   },
   {
    "word": "gold",
-   "start": 93.72,
-   "end": 93.94
+   "start": 94.2,
+   "end": 94.44
   },
   {
    "word": "circle.",
-   "start": 93.94,
-   "end": 94.64
+   "start": 94.44,
+   "end": 95.16
   },
   {
    "word": "Each",
-   "start": 94.44,
-   "end": 95.18
+   "start": 94.94,
+   "end": 95.66
   },
   {
    "word": "program",
-   "start": 95.18,
-   "end": 95.72
+   "start": 95.66,
+   "end": 96.22
   },
   {
    "word": "is",
-   "start": 95.72,
-   "end": 96.1
+   "start": 96.22,
+   "end": 96.58
   },
   {
    "word": "a",
-   "start": 96.1,
-   "end": 96.18
+   "start": 96.58,
+   "end": 96.68
   },
   {
    "word": "way",
-   "start": 96.18,
-   "end": 96.3
+   "start": 96.68,
+   "end": 96.8
   },
   {
    "word": "of",
-   "start": 96.3,
-   "end": 96.42
+   "start": 96.8,
+   "end": 96.92
   },
   {
    "word": "scattering",
-   "start": 96.42,
-   "end": 96.86
+   "start": 96.92,
+   "end": 97.36
   },
   {
    "word": "midpoints.",
-   "start": 96.86,
-   "end": 97.78
+   "start": 97.36,
+   "end": 98.22
   },
   {
    "word": "Shrink",
-   "start": 98.2,
-   "end": 98.66
+   "start": 98.56,
+   "end": 99.16
   },
   {
    "word": "every",
-   "start": 98.66,
-   "end": 99.02
-  },
-  {
-   "word": "chord",
-   "start": 99.02,
-   "end": 99.3
-  },
-  {
-   "word": "to",
-   "start": 99.3,
+   "start": 99.16,
    "end": 99.52
   },
   {
-   "word": "its",
+   "word": "chord",
    "start": 99.52,
-   "end": 99.66
+   "end": 99.8
+  },
+  {
+   "word": "to",
+   "start": 99.8,
+   "end": 100.02
+  },
+  {
+   "word": "its",
+   "start": 100.02,
+   "end": 100.18
   },
   {
    "word": "midpoint.",
-   "start": 99.66,
-   "end": 100.42
+   "start": 100.18,
+   "end": 100.9
   },
   {
    "word": "The",
-   "start": 100.28,
-   "end": 100.92
+   "start": 100.78,
+   "end": 101.42
   },
   {
    "word": "midpoint",
-   "start": 100.92,
-   "end": 101.34
+   "start": 101.42,
+   "end": 101.84
   },
   {
    "word": "program",
-   "start": 101.34,
-   "end": 101.8
+   "start": 101.84,
+   "end": 102.3
   },
   {
    "word": "fills",
-   "start": 101.8,
-   "end": 102.26
+   "start": 102.3,
+   "end": 102.76
   },
   {
    "word": "the",
-   "start": 102.26,
-   "end": 102.48
+   "start": 102.76,
+   "end": 102.98
   },
   {
    "word": "disk",
-   "start": 102.48,
-   "end": 102.74
+   "start": 102.98,
+   "end": 103.24
   },
   {
    "word": "evenly.",
-   "start": 102.74,
-   "end": 103.68
+   "start": 103.24,
+   "end": 104.14
   },
   {
    "word": "So",
-   "start": 103.52,
-   "end": 104.22
+   "start": 104.02,
+   "end": 104.72
   },
   {
    "word": "this",
-   "start": 104.22,
-   "end": 104.44
+   "start": 104.72,
+   "end": 104.94
   },
   {
    "word": "circle,",
-   "start": 104.44,
-   "end": 105.1
+   "start": 104.94,
+   "end": 105.56
   },
   {
    "word": "a",
-   "start": 105.1,
-   "end": 105.5
+   "start": 105.56,
+   "end": 106
   },
   {
    "word": "quarter",
-   "start": 105.5,
-   "end": 105.82
+   "start": 106,
+   "end": 106.32
   },
   {
    "word": "of",
-   "start": 105.806656,
-   "end": 106.02666
+   "start": 106.32,
+   "end": 106.52
   },
   {
    "word": "the",
-   "start": 106.02666,
-   "end": 106.126656
+   "start": 106.51066,
+   "end": 106.61066
   },
   {
    "word": "area,",
-   "start": 106.126656,
-   "end": 106.66666
+   "start": 106.61066,
+   "end": 107.15066
   },
   {
    "word": "catches",
-   "start": 106.66666,
-   "end": 106.96665
+   "start": 107.15066,
+   "end": 107.47066
   },
   {
    "word": "a",
-   "start": 106.96665,
-   "end": 107.20665
+   "start": 107.47066,
+   "end": 107.65066
   },
   {
    "word": "quarter.",
-   "start": 107.20665,
-   "end": 107.70665
+   "start": 107.11066,
+   "end": 108.19066
   },
   {
    "word": "The",
-   "start": 107.96665,
-   "end": 108.48666
+   "start": 108.19066,
+   "end": 108.97066
   },
   {
    "word": "radius",
-   "start": 108.48666,
-   "end": 108.86665
+   "start": 108.97066,
+   "end": 109.37066
   },
   {
    "word": "program",
-   "start": 108.86665,
-   "end": 109.36665
+   "start": 109.37066,
+   "end": 109.890656
   },
   {
    "word": "spreads",
-   "start": 109.36665,
-   "end": 110.00665
+   "start": 109.890656,
+   "end": 110.51066
   },
   {
    "word": "them",
-   "start": 110.00665,
-   "end": 110.20665
+   "start": 110.51066,
+   "end": 110.69066
   },
   {
    "word": "evenly",
-   "start": 110.20665,
-   "end": 110.66666
+   "start": 110.69066,
+   "end": 111.15066
   },
   {
    "word": "along",
-   "start": 110.66666,
-   "end": 111.16666
+   "start": 111.15066,
+   "end": 111.63066
   },
   {
    "word": "the",
-   "start": 111.16666,
-   "end": 111.36665
+   "start": 111.63066,
+   "end": 111.85066
   },
   {
    "word": "radius.",
-   "start": 111.36665,
-   "end": 112.086655
+   "start": 111.85066,
+   "end": 112.55066
   },
   {
    "word": "Where",
-   "start": 112.16666,
-   "end": 112.68665
+   "start": 112.55066,
+   "end": 113.11066
   },
   {
    "word": "will",
-   "start": 112.68665,
-   "end": 112.84665
+   "start": 113.11066,
+   "end": 113.33066
   },
   {
    "word": "they",
-   "start": 112.84665,
-   "end": 113.02666
+   "start": 113.33066,
+   "end": 113.49066
   },
   {
    "word": "crowd?",
-   "start": 113.02666,
-   "end": 113.64665
+   "start": 113.01066,
+   "end": 114.15066
   },
   {
    "word": "Toward",
-   "start": 115.14665,
-   "end": 115.46665
+   "start": 114.15066,
+   "end": 115.95066
   },
   {
    "word": "the",
-   "start": 115.46665,
-   "end": 115.586655
+   "start": 115.95066,
+   "end": 116.09066
   },
   {
    "word": "center.",
-   "start": 115.586655,
-   "end": 116.20665
+   "start": 116.09066,
+   "end": 116.69066
   },
   {
    "word": "Every",
-   "start": 116.56665,
-   "end": 116.946655
+   "start": 116.69066,
+   "end": 117.41066
   },
   {
    "word": "ring",
-   "start": 116.946655,
-   "end": 117.20665
+   "start": 117.41066,
+   "end": 117.69066
   },
   {
    "word": "gets",
-   "start": 117.20665,
-   "end": 117.446655
+   "start": 117.69066,
+   "end": 117.95066
   },
   {
    "word": "an",
-   "start": 117.446655,
-   "end": 117.586655
+   "start": 117.95066,
+   "end": 118.09066
   },
   {
    "word": "equal",
-   "start": 117.586655,
-   "end": 117.88666
+   "start": 118.09066,
+   "end": 118.33066
   },
   {
    "word": "share",
-   "start": 117.88666,
-   "end": 118.306656
+   "start": 118.33066,
+   "end": 118.77066
   },
   {
    "word": "and",
-   "start": 118.306656,
-   "end": 118.78665
+   "start": 118.77066,
+   "end": 119.27066
   },
   {
    "word": "inner",
-   "start": 118.78665,
-   "end": 119.06665
+   "start": 119.27066,
+   "end": 119.530655
   },
   {
    "word": "rings",
-   "start": 119.06665,
-   "end": 119.38666
+   "start": 119.530655,
+   "end": 119.85066
   },
   {
    "word": "are",
-   "start": 119.38666,
-   "end": 119.586655
+   "start": 119.85066,
+   "end": 120.07066
   },
   {
    "word": "small.",
-   "start": 119.586655,
-   "end": 120.18665
+   "start": 120.07066,
+   "end": 120.69066
   },
   {
    "word": "Half",
-   "start": 120.48666,
-   "end": 120.82665
+   "start": 121.030655,
+   "end": 121.27066
   },
   {
    "word": "the",
-   "start": 120.82665,
-   "end": 120.96665
+   "start": 121.27066,
+   "end": 121.47066
   },
   {
    "word": "radius,",
-   "start": 120.96665,
-   "end": 121.74665
+   "start": 121.47066,
+   "end": 122.21066
   },
   {
    "word": "one",
-   "start": 121.74665,
-   "end": 121.946655
+   "start": 122.21066,
+   "end": 122.41066
   },
   {
    "word": "half.",
-   "start": 121.946655,
-   "end": 122.446655
+   "start": 122.41066,
+   "end": 122.930664
   },
   {
    "word": "The",
-   "start": 122.70665,
-   "end": 123.266655
+   "start": 122.930664,
+   "end": 123.73066
   },
   {
    "word": "endpoints",
-   "start": 123.266655,
-   "end": 123.66666
+   "start": 123.73066,
+   "end": 124.17066
   },
   {
    "word": "program",
-   "start": 123.66666,
-   "end": 124.126656
+   "start": 124.17066,
+   "end": 124.61066
   },
   {
    "word": "piles",
-   "start": 124.126656,
-   "end": 124.64665
+   "start": 124.61066,
+   "end": 125.13066
   },
   {
    "word": "them",
-   "start": 124.64665,
-   "end": 124.84665
+   "start": 125.13066,
+   "end": 125.33066
   },
   {
    "word": "against",
-   "start": 124.84665,
-   "end": 125.16666
+   "start": 125.33066,
+   "end": 125.61066
   },
   {
    "word": "the",
-   "start": 125.16666,
-   "end": 125.36665
+   "start": 125.61066,
+   "end": 125.87066
   },
   {
    "word": "rim.",
-   "start": 125.36665,
-   "end": 125.86665
+   "start": 125.87066,
+   "end": 126.390656
   },
   {
    "word": "Only",
-   "start": 126.20665,
-   "end": 126.60665
+   "start": 126.390656,
+   "end": 127.05066
   },
   {
    "word": "a",
-   "start": 126.60665,
-   "end": 126.74665
+   "start": 127.05066,
+   "end": 127.19066
+  },
+  {
+   "word": "a",
+   "start": 127.11066,
+   "end": 127.250656
   },
   {
    "word": "third",
-   "start": 126.74665,
-   "end": 127.06665
+   "start": 127.250656,
+   "end": 127.57066
   },
   {
    "word": "land",
-   "start": 127.06665,
-   "end": 127.46665
+   "start": 127.57066,
+   "end": 127.97066
   },
   {
    "word": "inside,",
-   "start": 127.46665,
-   "end": 128.30666
+   "start": 127.97066,
+   "end": 129.03065
   },
   {
    "word": "the",
-   "start": 128.30666,
-   "end": 128.64665
+   "start": 129.03065,
+   "end": 129.13066
   },
   {
    "word": "third",
-   "start": 128.64665,
-   "end": 128.88666
+   "start": 129.13066,
+   "end": 129.39066
   },
   {
    "word": "we",
-   "start": 128.88666,
-   "end": 129.10666
+   "start": 129.39066,
+   "end": 129.59067
   },
   {
    "word": "found.",
-   "start": 129.10666,
-   "end": 129.76665
+   "start": 129.59067,
+   "end": 130.29066
   },
   {
-   "word": "programs",
-   "start": 130.46666,
-   "end": 130.96666
+   "word": "Three",
+   "start": 130.29066,
+   "end": 131.01067
+  },
+  {
+   "word": "programs,",
+   "start": 131.01067,
+   "end": 131.71066
   },
   {
    "word": "three",
-   "start": 130.96666,
-   "end": 131.48665
+   "start": 131.71066,
+   "end": 131.95065
   },
   {
    "word": "things",
-   "start": 131.48665,
-   "end": 131.72665
+   "start": 131.95065,
+   "end": 132.23065
   },
   {
    "word": "spread",
-   "start": 131.72665,
-   "end": 132.08665
+   "start": 132.23065,
+   "end": 132.53065
   },
   {
-   "word": "evenly",
-   "start": 132.08665,
-   "end": 132.50665
+   "word": "evenly.",
+   "start": 132.53065,
+   "end": 133.33066
   },
   {
-   "word": "rim",
-   "start": 132.50665,
-   "end": 133.56665
+   "word": "Rim,",
+   "start": 133.33066,
+   "end": 134.23065
   },
   {
-   "word": "radius",
-   "start": 133.56665,
-   "end": 134.32666
+   "word": "radius,",
+   "start": 134.35066,
+   "end": 135.05066
   },
   {
-   "word": "area",
-   "start": 134.32666,
-   "end": 134.94666
+   "word": "area.",
+   "start": 135.05066,
+   "end": 135.63066
   },
   {
-   "word": "at",
-   "start": 134.94666,
-   "end": 135.66666
+   "word": "At",
+   "start": 135.63066,
+   "end": 136.17065
   },
   {
-   "word": "random",
-   "start": 135.66666,
-   "end": 136.08665
+   "word": "random,",
+   "start": 136.17065,
+   "end": 137.01065
   },
   {
    "word": "never",
-   "start": 136.08665,
-   "end": 136.60666
+   "start": 137.01065,
+   "end": 137.11066
   },
   {
    "word": "said",
-   "start": 136.60666,
-   "end": 136.96664
+   "start": 137.11066,
+   "end": 137.49066
   },
   {
-   "word": "which",
-   "start": 136.96664,
-   "end": 137.26666
+   "word": "which.",
+   "start": 137.49066,
+   "end": 138.03065
   },
   {
-   "word": "edwin",
-   "start": 138.86665,
-   "end": 139.12665
-  },
-  {
-   "word": "janes",
-   "start": 139.12665,
-   "end": 139.64665
-  },
-  {
-   "word": "argued",
-   "start": 139.64665,
-   "end": 140.28665
-  },
-  {
-   "word": "a",
-   "start": 140.28665,
-   "end": 140.44666
-  },
-  {
-   "word": "physical",
-   "start": 140.44666,
-   "end": 140.74666
-  },
-  {
-   "word": "process",
-   "start": 140.74666,
-   "end": 141.26666
-  },
-  {
-   "word": "picks",
-   "start": 141.26666,
-   "end": 141.64665
-  },
-  {
-   "word": "one",
-   "start": 141.64665,
-   "end": 141.98665
-  },
-  {
-   "word": "straws",
-   "start": 141.98665,
-   "end": 143.22665
-  },
-  {
-   "word": "tossed",
-   "start": 143.22665,
-   "end": 143.52666
-  },
-  {
-   "word": "from",
-   "start": 143.52666,
-   "end": 143.76666
-  },
-  {
-   "word": "a",
-   "start": 143.76666,
-   "end": 143.90665
-  },
-  {
-   "word": "standing",
-   "start": 143.90665,
-   "end": 144.22665
-  },
-  {
-   "word": "height",
-   "start": 144.22665,
-   "end": 144.64665
-  },
-  {
-   "word": "can't",
-   "start": 144.64665,
-   "end": 145.14665
-  },
-  {
-   "word": "be",
-   "start": 145.14665,
-   "end": 145.24666
-  },
-  {
-   "word": "aimed",
-   "start": 144.76666,
-   "end": 145.66666
-  },
-  {
-   "word": "so",
-   "start": 145.66666,
-   "end": 146.40665
-  },
-  {
-   "word": "the",
-   "start": 146.40665,
-   "end": 146.52666
-  },
-  {
-   "word": "answer",
-   "start": 146.52666,
-   "end": 146.92665
-  },
-  {
-   "word": "can't",
-   "start": 146.92665,
-   "end": 147.36665
-  },
-  {
-   "word": "depend",
-   "start": 147.36665,
-   "end": 147.70665
-  },
-  {
-   "word": "on",
-   "start": 147.70665,
-   "end": 147.94666
-  },
-  {
-   "word": "where",
-   "start": 147.94666,
-   "end": 148.04666
-  },
-  {
-   "word": "the",
-   "start": 148.04666,
-   "end": 148.20665
-  },
-  {
-   "word": "circle",
-   "start": 148.20665,
-   "end": 148.52666
-  },
-  {
-   "word": "sits",
-   "start": 148.52666,
-   "end": 148.98665
-  },
-  {
-   "word": "or",
-   "start": 148.98665,
-   "end": 149.44666
-  },
-  {
-   "word": "its",
-   "start": 149.44666,
-   "end": 149.66666
-  },
-  {
-   "word": "size",
-   "start": 149.66666,
-   "end": 150.04666
-  },
-  {
-   "word": "one",
-   "start": 150.04666,
-   "end": 151.00665
-  },
-  {
-   "word": "rain",
-   "start": 151.00665,
-   "end": 151.28665
-  },
-  {
-   "word": "lands",
-   "start": 151.28665,
-   "end": 151.70665
-  },
-  {
-   "word": "on",
-   "start": 151.70665,
-   "end": 151.84665
-  },
-  {
-   "word": "both",
-   "start": 151.84665,
-   "end": 152.02666
-  },
-  {
-   "word": "circles",
-   "start": 151.56665,
-   "end": 152.56665
-  },
-  {
-   "word": "each",
-   "start": 152.56665,
-   "end": 153.40665
-  },
-  {
-   "word": "judges",
-   "start": 153.40665,
-   "end": 153.82666
-  },
-  {
-   "word": "with",
-   "start": 153.82666,
-   "end": 154.10666
-  },
-  {
-   "word": "its",
-   "start": 154.10666,
-   "end": 154.22665
-  },
-  {
-   "word": "own",
-   "start": 154.22665,
-   "end": 154.58665
-  },
-  {
-   "word": "gold",
-   "start": 154.58665,
-   "end": 154.82666
-  },
-  {
-   "word": "circle",
-   "start": 154.82666,
-   "end": 155.28665
-  },
-  {
-   "word": "so",
-   "start": 155.28665,
-   "end": 155.96664
-  },
-  {
-   "word": "a",
-   "start": 155.96664,
-   "end": 156.16666
-  },
-  {
-   "word": "fair",
-   "start": 156.16666,
-   "end": 156.32666
-  },
-  {
-   "word": "program",
-   "start": 156.32666,
-   "end": 156.74666
-  },
-  {
-   "word": "scores",
-   "start": 156.74666,
-   "end": 157.24666
-  },
-  {
-   "word": "the",
-   "start": 157.24666,
-   "end": 157.46664
-  },
-  {
-   "word": "same",
-   "start": 157.46664,
-   "end": 157.70665
-  },
-  {
-   "word": "on",
-   "start": 157.70665,
-   "end": 157.88666
-  },
-  {
-   "word": "both",
-   "start": 157.88666,
-   "end": 158.16666
-  },
-  {
-   "word": "midpoint",
-   "start": 158.16666,
-   "end": 159.36665
-  },
-  {
-   "word": "a",
-   "start": 159.70665,
-   "end": 159.72665
-  },
-  {
-   "word": "quarter,",
-   "start": 159.72665,
-   "end": 160.48665
-  },
-  {
-   "word": "then .41.",
-   "start": 160.48665,
-   "end": 161.30666
-  },
-  {
-   "word": "Endpoints,",
-   "start": 161.30666,
-   "end": 163.48665
-  },
-  {
-   "word": "a",
-   "start": 163.48665,
-   "end": 163.58665
-  },
-  {
-   "word": "third,",
-   "start": 163.58665,
-   "end": 164.12665
-  },
-  {
-   "word": "then .47.",
-   "start": 164.12665,
-   "end": 165.30666
-  },
-  {
-   "word": "Only",
-   "start": 165.30666,
-   "end": 166.86665
-  },
-  {
-   "word": "the",
-   "start": 166.86665,
-   "end": 167.06665
-  },
-  {
-   "word": "radius",
-   "start": 167.06665,
-   "end": 167.48666
-  },
-  {
-   "word": "program",
-   "start": 167.48666,
-   "end": 167.94666
-  },
-  {
-   "word": "gives",
-   "start": 167.94666,
-   "end": 168.38666
-  },
-  {
-   "word": "a",
-   "start": 168.38666,
-   "end": 168.54666
-  },
-  {
-   "word": "half",
-   "start": 168.54666,
-   "end": 168.66666
-  },
-  {
-   "word": "on",
-   "start": 168.66666,
-   "end": 168.86665
-  },
-  {
-   "word": "both.",
-   "start": 168.86665,
-   "end": 169.38666
+   "word": "Edwin",
+   "start": 138.03065,
+   "end": 139.63066
   },
   {
    "word": "Janes",
-   "start": 170.84665,
-   "end": 171.22665
+   "start": 139.63066,
+   "end": 140.15067
   },
   {
-   "word": "and",
-   "start": 171.22665,
-   "end": 171.40665
-  },
-  {
-   "word": "Charles",
-   "start": 171.40665,
-   "end": 171.72665
-  },
-  {
-   "word": "Tyler",
-   "start": 171.72665,
-   "end": 172.14665
-  },
-  {
-   "word": "tossed",
-   "start": 172.14665,
-   "end": 172.72665
-  },
-  {
-   "word": "real",
-   "start": 172.72665,
-   "end": 173.10666
-  },
-  {
-   "word": "straws",
-   "start": 173.10666,
-   "end": 173.68665
-  },
-  {
-   "word": "at",
-   "start": 173.68665,
-   "end": 173.90665
+   "word": "argued",
+   "start": 140.15067,
+   "end": 140.73065
   },
   {
    "word": "a",
-   "start": 173.90665,
-   "end": 173.96664
+   "start": 140.73065,
+   "end": 140.91066
   },
   {
-   "word": "five-inch",
-   "start": 173.96664,
-   "end": 174.48666
+   "word": "physical",
+   "start": 140.91066,
+   "end": 141.19066
   },
   {
-   "word": "circle.",
-   "start": 174.48666,
-   "end": 175.08665
-  },
-  {
-   "word": "The",
-   "start": 175.08665,
-   "end": 175.54666
-  },
-  {
-   "word": "128",
-   "start": 175.54666,
-   "end": 176.10666
-  },
-  {
-   "word": "that",
-   "start": 176.10666,
-   "end": 176.90665
-  },
-  {
-   "word": "crossed",
-   "start": 176.90665,
-   "end": 177.22665
-  },
-  {
-   "word": "it",
-   "start": 177.22665,
-   "end": 177.44666
-  },
-  {
-   "word": "matched",
-   "start": 177.00665,
-   "end": 177.90665
-  },
-  {
-   "word": "the",
-   "start": 177.90665,
-   "end": 178.12665
-  },
-  {
-   "word": "radius",
-   "start": 178.12665,
-   "end": 178.52666
-  },
-  {
-   "word": "program.",
-   "start": 178.52666,
-   "end": 179.28665
-  },
-  {
-   "word": "Surveys",
-   "start": 179.28665,
-   "end": 181.16666
-  },
-  {
-   "word": "hide",
-   "start": 181.16666,
-   "end": 181.48666
-  },
-  {
-   "word": "the",
-   "start": 181.48666,
-   "end": 181.64665
-  },
-  {
-   "word": "same",
-   "start": 181.64665,
-   "end": 181.86665
-  },
-  {
-   "word": "two",
-   "start": 181.86665,
-   "end": 182.10666
-  },
-  {
-   "word": "words.",
-   "start": 182.10666,
-   "end": 182.70665
-  },
-  {
-   "word": "Take",
-   "start": 182.70665,
-   "end": 183.26666
-  },
-  {
-   "word": "classes",
-   "start": 183.26666,
-   "end": 183.66666
-  },
-  {
-   "word": "of",
-   "start": 183.66666,
-   "end": 183.90665
-  },
-  {
-   "word": "10,",
-   "start": 183.90665,
-   "end": 184.52666
-  },
-  {
-   "word": "10,",
-   "start": 184.52666,
-   "end": 185.10666
-  },
-  {
-   "word": "and",
-   "start": 185.10666,
-   "end": 185.18665
-  },
-  {
-   "word": "100.",
-   "start": 185.18665,
-   "end": 185.82666
-  },
-  {
-   "word": "pick",
-   "start": 186.40665,
-   "end": 186.52666
-  },
-  {
-   "word": "a",
-   "start": 186.52666,
-   "end": 186.66666
-  },
-  {
-   "word": "class",
-   "start": 186.66666,
-   "end": 186.94666
-  },
-  {
-   "word": "at",
-   "start": 186.94666,
-   "end": 187.12665
-  },
-  {
-   "word": "random",
-   "start": 187.12665,
-   "end": 187.46664
-  },
-  {
-   "word": "the",
-   "start": 187.46664,
-   "end": 188.04666
-  },
-  {
-   "word": "average",
-   "start": 188.04666,
-   "end": 188.50665
-  },
-  {
-   "word": "is",
-   "start": 188.50665,
-   "end": 188.76666
-  },
-  {
-   "word": "40",
-   "start": 188.76666,
-   "end": 189.10666
-  },
-  {
-   "word": "pick",
-   "start": 189.10666,
-   "end": 190.08665
-  },
-  {
-   "word": "a",
-   "start": 190.08665,
-   "end": 190.22665
-  },
-  {
-   "word": "student",
-   "start": 190.22665,
-   "end": 190.50665
-  },
-  {
-   "word": "instead",
-   "start": 190.50665,
-   "end": 190.96664
-  },
-  {
-   "word": "and",
-   "start": 190.96664,
-   "end": 191.54666
-  },
-  {
-   "word": "it's",
-   "start": 191.54666,
-   "end": 191.70665
-  },
-  {
-   "word": "85",
-   "start": 191.70665,
-   "end": 192.08665
-  },
-  {
-   "word": "at",
-   "start": 192.08665,
-   "end": 193.28665
-  },
-  {
-   "word": "Stony",
-   "start": 193.12665,
-   "end": 193.66666
-  },
-  {
-   "word": "Brook",
-   "start": 193.66666,
-   "end": 193.84665
-  },
-  {
-   "word": "the",
-   "start": 193.84665,
-   "end": 194.50665
-  },
-  {
-   "word": "same",
-   "start": 194.50665,
-   "end": 194.84665
-  },
-  {
-   "word": "two",
-   "start": 194.84665,
-   "end": 195.10666
+   "word": "process",
+   "start": 141.19066,
+   "end": 141.73065
   },
   {
    "word": "picks",
-   "start": 195.10666,
-   "end": 195.38666
+   "start": 141.73065,
+   "end": 141.93066
   },
   {
-   "word": "gave",
-   "start": 195.38666,
-   "end": 195.60666
+   "word": "one.",
+   "start": 141.63066,
+   "end": 142.73065
   },
   {
-   "word": "40",
-   "start": 195.60666,
-   "end": 195.96664
+   "word": "Straws",
+   "start": 142.73065,
+   "end": 143.71066
   },
   {
-   "word": "and",
-   "start": 195.96664,
-   "end": 196.40665
+   "word": "tossed",
+   "start": 143.71066,
+   "end": 144.05066
   },
   {
-   "word": "147",
-   "start": 196.40665,
-   "end": 197.52666
+   "word": "from",
+   "start": 144.05066,
+   "end": 144.27066
   },
   {
-   "word": "whatever",
-   "start": 197.52666,
-   "end": 199.06665
+   "word": "a",
+   "start": 144.27066,
+   "end": 144.43066
   },
   {
-   "word": "number",
-   "start": 199.06665,
-   "end": 199.42665
+   "word": "standing",
+   "start": 144.43066,
+   "end": 144.77066
   },
   {
-   "word": "you",
-   "start": 199.42665,
-   "end": 199.62665
+   "word": "height",
+   "start": 144.77066,
+   "end": 145.15067
   },
   {
-   "word": "picked",
-   "start": 199.62665,
-   "end": 200.02666
+   "word": "can't",
+   "start": 145.15067,
+   "end": 145.63066
   },
   {
-   "word": "some",
-   "start": 200.02666,
-   "end": 200.66666
+   "word": "be",
+   "start": 145.63066,
+   "end": 145.75066
   },
   {
-   "word": "way",
-   "start": 200.42665,
-   "end": 200.90665
+   "word": "aimed,",
+   "start": 145.75066,
+   "end": 146.41066
   },
   {
-   "word": "of",
-   "start": 200.90665,
-   "end": 201.04666
-  },
-  {
-   "word": "drawing",
-   "start": 201.04666,
-   "end": 201.32666
-  },
-  {
-   "word": "chords",
-   "start": 201.32666,
-   "end": 201.74664
-  },
-  {
-   "word": "makes",
-   "start": 201.74664,
-   "end": 202.04666
-  },
-  {
-   "word": "it",
-   "start": 202.04666,
-   "end": 202.20665
-  },
-  {
-   "word": "right",
-   "start": 202.20665,
-   "end": 202.50665
-  },
-  {
-   "word": "name",
-   "start": 202.50665,
-   "end": 203.32666
+   "word": "so",
+   "start": 146.41066,
+   "end": 146.89066
   },
   {
    "word": "the",
-   "start": 203.32666,
-   "end": 203.48666
-  },
-  {
-   "word": "way",
-   "start": 203.48666,
-   "end": 203.70665
-  },
-  {
-   "word": "and",
-   "start": 203.70665,
-   "end": 204.00665
-  },
-  {
-   "word": "the",
-   "start": 204.00665,
-   "end": 204.10666
+   "start": 146.89066,
+   "end": 147.01065
   },
   {
    "word": "answer",
-   "start": 204.10666,
-   "end": 204.52666
+   "start": 147.01065,
+   "end": 147.41066
   },
   {
-   "word": "is",
-   "start": 204.52666,
-   "end": 204.76666
+   "word": "can't",
+   "start": 147.41066,
+   "end": 147.83066
   },
   {
-   "word": "fixed",
-   "start": 204.76666,
-   "end": 205.24664
+   "word": "depend",
+   "start": 147.83066,
+   "end": 148.19066
+  },
+  {
+   "word": "on",
+   "start": 147.79066,
+   "end": 148.43066
+  },
+  {
+   "word": "where",
+   "start": 148.43066,
+   "end": 148.55066
+  },
+  {
+   "word": "the",
+   "start": 148.55066,
+   "end": 148.67065
+  },
+  {
+   "word": "circle",
+   "start": 148.67065,
+   "end": 148.97066
+  },
+  {
+   "word": "sits",
+   "start": 148.97066,
+   "end": 149.47066
+  },
+  {
+   "word": "or",
+   "start": 149.47066,
+   "end": 149.93066
+  },
+  {
+   "word": "its",
+   "start": 149.93066,
+   "end": 150.11066
+  },
+  {
+   "word": "size.",
+   "start": 150.11066,
+   "end": 150.99066
+  },
+  {
+   "word": "One",
+   "start": 150.99066,
+   "end": 151.51065
+  },
+  {
+   "word": "program's",
+   "start": 151.51065,
+   "end": 152.13066
+  },
+  {
+   "word": "rain",
+   "start": 152.13066,
+   "end": 152.47066
+  },
+  {
+   "word": "lands",
+   "start": 152.47066,
+   "end": 152.87067
+  },
+  {
+   "word": "on",
+   "start": 152.87067,
+   "end": 153.09067
+  },
+  {
+   "word": "both",
+   "start": 153.09067,
+   "end": 153.25066
+  },
+  {
+   "word": "circles.",
+   "start": 153.25066,
+   "end": 154.09067
+  },
+  {
+   "word": "Each",
+   "start": 154.09067,
+   "end": 154.59067
+  },
+  {
+   "word": "Each",
+   "start": 154.55066,
+   "end": 154.57066
+  },
+  {
+   "word": "judges",
+   "start": 154.57066,
+   "end": 155.03065
+  },
+  {
+   "word": "with",
+   "start": 155.03065,
+   "end": 155.31067
+  },
+  {
+   "word": "its",
+   "start": 155.31067,
+   "end": 155.43066
+  },
+  {
+   "word": "own",
+   "start": 155.43066,
+   "end": 155.79066
+  },
+  {
+   "word": "gold",
+   "start": 155.79066,
+   "end": 156.03065
+  },
+  {
+   "word": "circle,",
+   "start": 156.03065,
+   "end": 156.69066
+  },
+  {
+   "word": "so",
+   "start": 156.69066,
+   "end": 157.17065
   },
   {
    "word": "a",
-   "start": 205.24664,
-   "end": 205.94666
+   "start": 157.17065,
+   "end": 157.37067
+  },
+  {
+   "word": "fair",
+   "start": 157.37067,
+   "end": 157.51065
+  },
+  {
+   "word": "program",
+   "start": 157.51065,
+   "end": 157.95065
+  },
+  {
+   "word": "scores",
+   "start": 157.95065,
+   "end": 158.45065
+  },
+  {
+   "word": "the",
+   "start": 158.45065,
+   "end": 158.67065
+  },
+  {
+   "word": "same",
+   "start": 158.67065,
+   "end": 158.89066
+  },
+  {
+   "word": "on",
+   "start": 158.89066,
+   "end": 159.09067
+  },
+  {
+   "word": "both.",
+   "start": 159.09067,
+   "end": 159.63066
+  },
+  {
+   "word": "Midpoint,",
+   "start": 160.19066,
+   "end": 161.11066
+  },
+  {
+   "word": "a",
+   "start": 161.11066,
+   "end": 161.27066
+  },
+  {
+   "word": "quarter,",
+   "start": 161.27066,
+   "end": 161.75066
+  },
+  {
+   "word": "then .41.",
+   "start": 161.75066,
+   "end": 162.81067
+  },
+  {
+   "word": "Endpoints,",
+   "start": 164.09067,
+   "end": 164.99066
+  },
+  {
+   "word": "a",
+   "start": 164.99066,
+   "end": 165.31067
+  },
+  {
+   "word": "third,",
+   "start": 165.31067,
+   "end": 165.63066
+  },
+  {
+   "word": "then .47.",
+   "start": 165.63066,
+   "end": 166.95065
+  },
+  {
+   "word": "Only",
+   "start": 168.09067,
+   "end": 168.45065
+  },
+  {
+   "word": "the",
+   "start": 168.45065,
+   "end": 168.61066
+  },
+  {
+   "word": "radius",
+   "start": 168.61066,
+   "end": 169.03067
+  },
+  {
+   "word": "program",
+   "start": 169.03067,
+   "end": 169.45065
+  },
+  {
+   "word": "gives",
+   "start": 169.45065,
+   "end": 169.91066
+  },
+  {
+   "word": "a",
+   "start": 169.91066,
+   "end": 170.03067
   },
   {
    "word": "half",
-   "start": 205.92665,
-   "end": 206.26666
+   "start": 170.03067,
+   "end": 170.19066
   },
   {
-   "word": "for",
-   "start": 206.26666,
-   "end": 206.42665
+   "word": "on",
+   "start": 170.19066,
+   "end": 170.39066
   },
   {
-   "word": "toss",
-   "start": 206.42665,
-   "end": 206.72665
+   "word": "both.",
+   "start": 170.39066,
+   "end": 170.93066
+  },
+  {
+   "word": "Janes",
+   "start": 172.29065,
+   "end": 172.75066
+  },
+  {
+   "word": "and",
+   "start": 172.75066,
+   "end": 172.93066
+  },
+  {
+   "word": "Charles",
+   "start": 172.93066,
+   "end": 173.27066
+  },
+  {
+   "word": "Tyler",
+   "start": 173.27066,
+   "end": 173.69066
+  },
+  {
+   "word": "tossed",
+   "start": 173.69066,
+   "end": 174.27066
+  },
+  {
+   "word": "real",
+   "start": 174.27066,
+   "end": 174.63066
   },
   {
    "word": "straws",
-   "start": 206.72665,
-   "end": 207.42665
+   "start": 174.63066,
+   "end": 175.23065
   },
   {
-   "word": "147",
-   "start": 207.42665,
-   "end": 208.88666
-  },
-  {
-   "word": "for",
-   "start": 208.88666,
-   "end": 209.10666
+   "word": "at",
+   "start": 175.23065,
+   "end": 175.41066
   },
   {
    "word": "a",
-   "start": 209.10666,
-   "end": 209.26666
+   "start": 175.41066,
+   "end": 175.49066
   },
   {
-   "word": "random",
-   "start": 209.26666,
-   "end": 209.60666
+   "word": "5-inch",
+   "start": 175.49066,
+   "end": 176.03067
+  },
+  {
+   "word": "circle.",
+   "start": 176.03067,
+   "end": 176.65067
+  },
+  {
+   "word": "The",
+   "start": 176.55066,
+   "end": 177.11066
+  },
+  {
+   "word": "128",
+   "start": 177.11066,
+   "end": 177.65067
+  },
+  {
+   "word": "that",
+   "start": 177.65067,
+   "end": 178.45065
+  },
+  {
+   "word": "crossed",
+   "start": 178.45065,
+   "end": 178.77066
+  },
+  {
+   "word": "it",
+   "start": 178.77066,
+   "end": 178.99066
+  },
+  {
+   "word": "matched",
+   "start": 178.99066,
+   "end": 179.43066
+  },
+  {
+   "word": "the",
+   "start": 179.43066,
+   "end": 179.65067
+  },
+  {
+   "word": "radius",
+   "start": 179.65067,
+   "end": 180.05066
+  },
+  {
+   "word": "program.",
+   "start": 180.05066,
+   "end": 180.85066
+  },
+  {
+   "word": "surveys",
+   "start": 182.49066,
+   "end": 182.67065
+  },
+  {
+   "word": "hide",
+   "start": 182.67065,
+   "end": 183.01065
+  },
+  {
+   "word": "the",
+   "start": 183.01065,
+   "end": 183.15067
+  },
+  {
+   "word": "same",
+   "start": 183.15067,
+   "end": 183.41066
+  },
+  {
+   "word": "two",
+   "start": 183.41066,
+   "end": 183.65067
+  },
+  {
+   "word": "words.",
+   "start": 183.65067,
+   "end": 184.25066
+  },
+  {
+   "word": "Take",
+   "start": 184.25066,
+   "end": 184.77066
+  },
+  {
+   "word": "classes",
+   "start": 184.77066,
+   "end": 185.21066
+  },
+  {
+   "word": "of",
+   "start": 185.21066,
+   "end": 185.45065
+  },
+  {
+   "word": "10,",
+   "start": 185.45065,
+   "end": 185.95065
+  },
+  {
+   "word": "10,",
+   "start": 185.95065,
+   "end": 186.63066
+  },
+  {
+   "word": "and",
+   "start": 186.63066,
+   "end": 186.73065
+  },
+  {
+   "word": "100.",
+   "start": 186.73065,
+   "end": 187.37067
+  },
+  {
+   "word": "Pick",
+   "start": 187.37067,
+   "end": 188.07065
+  },
+  {
+   "word": "a",
+   "start": 188.07065,
+   "end": 188.19066
+  },
+  {
+   "word": "class",
+   "start": 188.19066,
+   "end": 188.43066
+  },
+  {
+   "word": "at",
+   "start": 188.43066,
+   "end": 188.63066
+  },
+  {
+   "word": "random,",
+   "start": 188.63066,
+   "end": 189.23065
+  },
+  {
+   "word": "the",
+   "start": 189.15067,
+   "end": 189.61066
+  },
+  {
+   "word": "average",
+   "start": 189.61066,
+   "end": 190.05066
+  },
+  {
+   "word": "is",
+   "start": 190.05066,
+   "end": 190.29065
+  },
+  {
+   "word": "40.",
+   "start": 190.29065,
+   "end": 190.93066
+  },
+  {
+   "word": "Pick",
+   "start": 190.93066,
+   "end": 191.63066
+  },
+  {
+   "word": "a",
+   "start": 191.63066,
+   "end": 191.75066
   },
   {
    "word": "student",
-   "start": 209.60666,
-   "end": 210.06665
+   "start": 191.75066,
+   "end": 192.05066
+  },
+  {
+   "word": "instead,",
+   "start": 192.05066,
+   "end": 192.79065
+  },
+  {
+   "word": "and",
+   "start": 192.79065,
+   "end": 193.09067
+  },
+  {
+   "word": "it's",
+   "start": 193.09067,
+   "end": 193.21066
+  },
+  {
+   "word": "85.",
+   "start": 193.21066,
+   "end": 194.09067
+  },
+  {
+   "word": "At",
+   "start": 194.09067,
+   "end": 194.85066
+  },
+  {
+   "word": "Stony",
+   "start": 194.85066,
+   "end": 195.17065
+  },
+  {
+   "word": "Brook,",
+   "start": 195.17065,
+   "end": 195.95065
+  },
+  {
+   "word": "the",
+   "start": 195.95065,
+   "end": 196.05066
+  },
+  {
+   "word": "same",
+   "start": 196.05066,
+   "end": 196.33066
+  },
+  {
+   "word": "two",
+   "start": 196.33066,
+   "end": 196.59067
+  },
+  {
+   "word": "picks",
+   "start": 196.07065,
+   "end": 196.89066
+  },
+  {
+   "word": "gave",
+   "start": 196.89066,
+   "end": 197.17065
+  },
+  {
+   "word": "40",
+   "start": 197.17065,
+   "end": 197.57065
+  },
+  {
+   "word": "and",
+   "start": 197.57065,
+   "end": 197.95065
+  },
+  {
+   "word": "100",
+   "start": 197.95065,
+   "end": 198.21066
+  },
+  {
+   "word": "47.",
+   "start": 198.21066,
+   "end": 199.35066
+  },
+  {
+   "word": "Whatever",
+   "start": 199.35066,
+   "end": 200.67065
+  },
+  {
+   "word": "number",
+   "start": 200.67065,
+   "end": 200.95065
+  },
+  {
+   "word": "you",
+   "start": 200.95065,
+   "end": 201.13066
+  },
+  {
+   "word": "picked,",
+   "start": 201.13066,
+   "end": 202.07065
+  },
+  {
+   "word": "some",
+   "start": 202.07065,
+   "end": 202.25066
+  },
+  {
+   "word": "way",
+   "start": 202.25066,
+   "end": 202.41066
+  },
+  {
+   "word": "of",
+   "start": 202.41066,
+   "end": 202.55066
+  },
+  {
+   "word": "drawing",
+   "start": 202.55066,
+   "end": 202.81067
+  },
+  {
+   "word": "chords",
+   "start": 202.81067,
+   "end": 203.23065
+  },
+  {
+   "word": "makes",
+   "start": 203.23065,
+   "end": 203.55066
+  },
+  {
+   "word": "it",
+   "start": 203.09067,
+   "end": 203.73065
+  },
+  {
+   "word": "right.",
+   "start": 203.73065,
+   "end": 204.21066
+  },
+  {
+   "word": "Name",
+   "start": 204.21066,
+   "end": 204.87067
+  },
+  {
+   "word": "the",
+   "start": 204.87067,
+   "end": 205.01065
+  },
+  {
+   "word": "way",
+   "start": 205.01065,
+   "end": 205.27066
+  },
+  {
+   "word": "and",
+   "start": 205.27066,
+   "end": 205.53067
+  },
+  {
+   "word": "the",
+   "start": 205.53067,
+   "end": 205.65067
+  },
+  {
+   "word": "answer",
+   "start": 205.65067,
+   "end": 206.05066
+  },
+  {
+   "word": "is",
+   "start": 206.05066,
+   "end": 206.31067
+  },
+  {
+   "word": "fixed.",
+   "start": 206.31067,
+   "end": 207.17065
+  },
+  {
+   "word": "A",
+   "start": 207.17065,
+   "end": 207.57065
+  },
+  {
+   "word": "half",
+   "start": 207.57065,
+   "end": 207.73065
+  },
+  {
+   "word": "for",
+   "start": 207.73065,
+   "end": 207.95065
+  },
+  {
+   "word": "un-aimed",
+   "start": 207.95065,
+   "end": 208.53067
+  },
+  {
+   "word": "straws,",
+   "start": 208.53067,
+   "end": 209.17065
+  },
+  {
+   "word": "147",
+   "start": 209.17065,
+   "end": 210.65067
+  },
+  {
+   "word": "for",
+   "start": 210.65067,
+   "end": 210.85066
+  },
+  {
+   "word": "a",
+   "start": 210.85066,
+   "end": 210.97066
+  },
+  {
+   "word": "random",
+   "start": 210.97066,
+   "end": 211.31067
+  },
+  {
+   "word": "student.",
+   "start": 211.59067,
+   "end": 212.29065
   }
  ],
  "segments": [
@@ -2826,8 +2846,8 @@
     50499
    ],
    "temperature": 0,
-   "avg_logprob": -0.07559628,
-   "compression_ratio": 1.6796536,
+   "avg_logprob": -0.086062394,
+   "compression_ratio": 1.6826087,
    "no_speech_prob": 0
   },
   {
@@ -2848,8 +2868,8 @@
     50647
    ],
    "temperature": 0,
-   "avg_logprob": -0.07559628,
-   "compression_ratio": 1.6796536,
+   "avg_logprob": -0.086062394,
+   "compression_ratio": 1.6826087,
    "no_speech_prob": 0
   },
   {
@@ -2870,8 +2890,8 @@
     50731
    ],
    "temperature": 0,
-   "avg_logprob": -0.07559628,
-   "compression_ratio": 1.6796536,
+   "avg_logprob": -0.086062394,
+   "compression_ratio": 1.6826087,
    "no_speech_prob": 0
   },
   {
@@ -2893,15 +2913,15 @@
     50862
    ],
    "temperature": 0,
-   "avg_logprob": -0.07559628,
-   "compression_ratio": 1.6796536,
+   "avg_logprob": -0.086062394,
+   "compression_ratio": 1.6826087,
    "no_speech_prob": 0
   },
   {
    "id": 19,
    "seek": 5652,
    "start": 66.46,
-   "end": 68.52,
+   "end": 68.42,
    "text": " Bertrand printed all three,",
    "tokens": [
     50862,
@@ -2911,46 +2931,46 @@
     439,
     1045,
     11,
-    50965
+    50960
    ],
    "temperature": 0,
-   "avg_logprob": -0.07559628,
-   "compression_ratio": 1.6796536,
+   "avg_logprob": -0.086062394,
+   "compression_ratio": 1.6826087,
    "no_speech_prob": 0
   },
   {
    "id": 20,
    "seek": 5652,
-   "start": 68.52,
-   "end": 71.42,
-   "text": " writing that none is wrong and none is right.",
+   "start": 68.42,
+   "end": 71.14,
+   "text": " writing that none is wrong, none is right.",
    "tokens": [
-    50965,
+    50960,
     3579,
     300,
     6022,
     307,
     2085,
-    293,
+    11,
     6022,
     307,
     558,
     13,
-    51110
+    51096
    ],
    "temperature": 0,
-   "avg_logprob": -0.07559628,
-   "compression_ratio": 1.6796536,
+   "avg_logprob": -0.086062394,
+   "compression_ratio": 1.6826087,
    "no_speech_prob": 0
   },
   {
    "id": 21,
    "seek": 5652,
-   "start": 71.42,
-   "end": 74.74,
+   "start": 71.14,
+   "end": 74.46,
    "text": " Each tally is good to about one percentage point.",
    "tokens": [
-    51110,
+    51096,
     6947,
     256,
     379,
@@ -2962,25 +2982,26 @@
     9668,
     935,
     13,
-    51276
+    51262
    ],
    "temperature": 0,
-   "avg_logprob": -0.07559628,
-   "compression_ratio": 1.6796536,
+   "avg_logprob": -0.086062394,
+   "compression_ratio": 1.6826087,
    "no_speech_prob": 0
   },
   {
    "id": 22,
    "seek": 5652,
-   "start": 74.74,
-   "end": 78.76,
-   "text": " They disagree by 25 and the code has no bug.",
+   "start": 74.46,
+   "end": 78.1,
+   "text": " They disagree by 25, and the code has no bug.",
    "tokens": [
-    51276,
+    51262,
     814,
     14091,
     538,
     3552,
+    11,
     293,
     264,
     3089,
@@ -2988,21 +3009,21 @@
     572,
     7426,
     13,
-    51477
+    51444
    ],
    "temperature": 0,
-   "avg_logprob": -0.07559628,
-   "compression_ratio": 1.6796536,
+   "avg_logprob": -0.086062394,
+   "compression_ratio": 1.6826087,
    "no_speech_prob": 0
   },
   {
    "id": 23,
    "seek": 5652,
-   "start": 78.76,
-   "end": 82.02,
+   "start": 79.26,
+   "end": 82.52,
    "text": " One point sets a chord's length, its midpoint.",
    "tokens": [
-    51477,
+    51502,
     1485,
     935,
     6352,
@@ -3015,43 +3036,44 @@
     2062,
     6053,
     13,
-    51640
+    51665
    ],
    "temperature": 0,
-   "avg_logprob": -0.07559628,
-   "compression_ratio": 1.6796536,
+   "avg_logprob": -0.086062394,
+   "compression_ratio": 1.6826087,
    "no_speech_prob": 0
   },
   {
    "id": 24,
    "seek": 5652,
-   "start": 82.02,
-   "end": 84.62,
-   "text": " Slide it outward and the chord shrinks.",
+   "start": 82.52,
+   "end": 85.12,
+   "text": " Slide it outward, and the chord shrinks.",
    "tokens": [
-    51640,
+    51665,
     26405,
     309,
     26914,
+    11,
     293,
     264,
     14137,
     9884,
     16431,
     13,
-    51770
+    51795
    ],
    "temperature": 0,
-   "avg_logprob": -0.07559628,
-   "compression_ratio": 1.6796536,
+   "avg_logprob": -0.086062394,
+   "compression_ratio": 1.6826087,
    "no_speech_prob": 0
   },
   {
    "id": 25,
-   "seek": 8462,
-   "start": 84.62,
-   "end": 87.34,
-   "text": " It matches the side at half a radius",
+   "seek": 8512,
+   "start": 85.12,
+   "end": 90.28,
+   "text": " It matches the side at half a radius on the circle inside the triangle.",
    "tokens": [
     50365,
     467,
@@ -3062,21 +3084,6 @@
     1922,
     257,
     15845,
-    50501
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.073216975,
-   "compression_ratio": 1.7729468,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 26,
-   "seek": 8462,
-   "start": 87.34,
-   "end": 89.78,
-   "text": " on the circle inside the triangle.",
-   "tokens": [
-    50501,
     322,
     264,
     6329,
@@ -3087,16 +3094,16 @@
     50623
    ],
    "temperature": 0,
-   "avg_logprob": -0.073216975,
-   "compression_ratio": 1.7729468,
+   "avg_logprob": -0.121221125,
+   "compression_ratio": 1.7725118,
    "no_speech_prob": 0
   },
   {
-   "id": 27,
-   "seek": 8462,
-   "start": 89.78,
-   "end": 92.03999,
-   "text": " So a chord is long exactly",
+   "id": 26,
+   "seek": 8512,
+   "start": 90.28,
+   "end": 95.439995,
+   "text": " So a chord is long exactly when its midpoint lands in this gold circle.",
    "tokens": [
     50623,
     407,
@@ -3105,21 +3112,6 @@
     307,
     938,
     2293,
-    50736
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.073216975,
-   "compression_ratio": 1.7729468,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 28,
-   "seek": 8462,
-   "start": 92.03999,
-   "end": 94.939995,
-   "text": " when its midpoint lands in this gold circle.",
-   "tokens": [
-    50736,
     562,
     1080,
     2062,
@@ -3133,15 +3125,15 @@
     50881
    ],
    "temperature": 0,
-   "avg_logprob": -0.073216975,
-   "compression_ratio": 1.7729468,
+   "avg_logprob": -0.121221125,
+   "compression_ratio": 1.7725118,
    "no_speech_prob": 0
   },
   {
-   "id": 29,
-   "seek": 8462,
-   "start": 94.939995,
-   "end": 98.259995,
+   "id": 27,
+   "seek": 8512,
+   "start": 95.439995,
+   "end": 98.759995,
    "text": " Each program is a way of scattering midpoints.",
    "tokens": [
     50881,
@@ -3158,15 +3150,15 @@
     51047
    ],
    "temperature": 0,
-   "avg_logprob": -0.073216975,
-   "compression_ratio": 1.7729468,
+   "avg_logprob": -0.121221125,
+   "compression_ratio": 1.7725118,
    "no_speech_prob": 0
   },
   {
-   "id": 30,
-   "seek": 8462,
-   "start": 98.259995,
-   "end": 100.77999,
+   "id": 28,
+   "seek": 8512,
+   "start": 98.759995,
+   "end": 101.27999,
    "text": " Shrink every chord to its midpoint.",
    "tokens": [
     51047,
@@ -3183,16 +3175,16 @@
     51173
    ],
    "temperature": 0,
-   "avg_logprob": -0.073216975,
-   "compression_ratio": 1.7729468,
+   "avg_logprob": -0.121221125,
+   "compression_ratio": 1.7725118,
    "no_speech_prob": 0
   },
   {
-   "id": 31,
-   "seek": 100,
-   "start": 100.77999,
-   "end": 112.64665,
-   "text": " The midpoint program fills the disk evenly So this circle a quarter of the area catches a quarter The radius program spreads them evenly along the radius",
+   "id": 29,
+   "seek": 101,
+   "start": 101.27999,
+   "end": 113.51066,
+   "text": " The midpoint program fills the disk evenly So this circle a quarter of the area catches a quarter The radius program spreads them evenly along the radius Where will they",
    "tokens": [
     51173,
     440,
@@ -3218,10 +3210,10 @@
     11,
     25496,
     257,
+    50659,
+    50659,
     6555,
     13,
-    50742,
-    50742,
     440,
     15845,
     1461,
@@ -3232,61 +3224,31 @@
     264,
     15845,
     13,
-    50954
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.13129635,
-   "compression_ratio": 1.6902655,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 32,
-   "seek": 100,
-   "start": 112.64665,
-   "end": 115.446655,
-   "text": " Where will they crowd?",
-   "tokens": [
-    50954,
     2305,
     486,
     436,
-    6919,
-    30,
-    51094
+    50954
    ],
    "temperature": 0,
-   "avg_logprob": -0.13129635,
-   "compression_ratio": 1.6902655,
+   "avg_logprob": -0.17679258,
+   "compression_ratio": 1.6256157,
    "no_speech_prob": 0
   },
   {
-   "id": 33,
-   "seek": 100,
-   "start": 115.446655,
-   "end": 116.88666,
-   "text": " Toward the center.",
+   "id": 30,
+   "seek": 101,
+   "start": 113.51066,
+   "end": 120.41066,
+   "text": " crowd? Toward the center. Every ring gets an equal share and inner rings are small.",
    "tokens": [
-    51094,
+    50954,
+    6919,
+    30,
     33814,
     515,
     264,
     3056,
     13,
-    51166
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.13129635,
-   "compression_ratio": 1.6902655,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 34,
-   "seek": 100,
-   "start": 116.88666,
-   "end": 120.78665,
-   "text": " Every ring gets an equal share and inner rings are small.",
-   "tokens": [
-    51166,
     2048,
     4875,
     2170,
@@ -3299,21 +3261,21 @@
     366,
     1359,
     13,
-    51361
+    51299
    ],
    "temperature": 0,
-   "avg_logprob": -0.13129635,
-   "compression_ratio": 1.6902655,
+   "avg_logprob": -0.17679258,
+   "compression_ratio": 1.6256157,
    "no_speech_prob": 0
   },
   {
-   "id": 35,
-   "seek": 100,
-   "start": 120.78665,
-   "end": 123.16666,
-   "text": " Half the radius, one half.",
+   "id": 31,
+   "seek": 101,
+   "start": 120.41066,
+   "end": 127.11066,
+   "text": " Half the radius, one half. The endpoints program piles them against the rim. Only a",
    "tokens": [
-    51361,
+    51299,
     15917,
     264,
     15845,
@@ -3321,21 +3283,6 @@
     472,
     1922,
     13,
-    51480
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.13129635,
-   "compression_ratio": 1.6902655,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 36,
-   "seek": 100,
-   "start": 123.16666,
-   "end": 126.54665,
-   "text": " The endpoints program piles them against the rim.",
-   "tokens": [
-    51480,
     440,
     917,
     20552,
@@ -3346,22 +3293,23 @@
     264,
     15982,
     13,
-    51649
+    5686,
+    257,
+    51634
    ],
    "temperature": 0,
-   "avg_logprob": -0.13129635,
-   "compression_ratio": 1.6902655,
+   "avg_logprob": -0.17679258,
+   "compression_ratio": 1.6256157,
    "no_speech_prob": 0
   },
   {
-   "id": 37,
-   "seek": 100,
-   "start": 126.54665,
-   "end": 130.46664,
-   "text": " Only a third land inside, the third we found.",
+   "id": 32,
+   "seek": 2639,
+   "start": 127.11066,
+   "end": 134.11066,
+   "text": " a third land inside, the third we found. Three programs, three things spread evenly. Rim,",
    "tokens": [
-    51649,
-    5686,
+    50365,
     257,
     2636,
     2117,
@@ -3372,60 +3320,69 @@
     321,
     1352,
     13,
-    51845
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.13129635,
-   "compression_ratio": 1.6902655,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 38,
-   "seek": 3060,
-   "start": 130.46664,
-   "end": 137.18665,
-   "text": " programs three things spread evenly rim radius area at random never said which",
-   "tokens": [
-    50365,
+    6244,
     4268,
+    11,
     1045,
     721,
     3974,
     17658,
-    15982,
-    15845,
-    1859,
-    412,
-    4974,
-    1128,
-    848,
-    597,
-    50701
+    13,
+    44034,
+    11,
+    50715
    ],
    "temperature": 0,
-   "avg_logprob": -0.10563137,
-   "compression_ratio": 1.675926,
+   "avg_logprob": -0.15817223,
+   "compression_ratio": 1.5152838,
    "no_speech_prob": 0
   },
   {
-   "id": 39,
-   "seek": 3060,
-   "start": 138.70665,
-   "end": 145.26665,
-   "text": " edwin janes argued a physical process picks one straws tossed from a standing height can't be",
+   "id": 33,
+   "seek": 2639,
+   "start": 134.45065,
+   "end": 141.45065,
+   "text": " radius, area. At random, never said which. Edwin Janes argued a physical process picks",
    "tokens": [
-    50777,
-    1257,
+    50732,
+    15845,
+    11,
+    1859,
+    13,
+    1711,
+    4974,
+    11,
+    1128,
+    848,
+    597,
+    13,
+    3977,
     9136,
-    361,
-    12779,
+    4956,
+    279,
     20219,
     257,
     4001,
     1399,
     16137,
+    51082
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15817223,
+   "compression_ratio": 1.5152838,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 34,
+   "seek": 2639,
+   "start": 142.13066,
+   "end": 148.29065,
+   "text": " one. Straws tossed from a standing height can't be aimed, so the answer can't depend",
+   "tokens": [
+    51116,
     472,
-    10099,
+    13,
+    35104,
     82,
     42768,
     490,
@@ -3435,28 +3392,29 @@
     393,
     380,
     312,
-    51105
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.10563137,
-   "compression_ratio": 1.675926,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 40,
-   "seek": 3060,
-   "start": 145.26665,
-   "end": 152.06665,
-   "text": " aimed so the answer can't depend on where the circle sits or its size one rain lands on both",
-   "tokens": [
-    51105,
     20540,
+    11,
     370,
     264,
     1867,
     393,
     380,
     5672,
+    51424
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.15817223,
+   "compression_ratio": 1.5152838,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 35,
+   "seek": 2639,
+   "start": 148.29065,
+   "end": 154.55066,
+   "text": " on where the circle sits or its size. One program's rain lands on both circles. Each",
+   "tokens": [
+    51424,
     322,
     689,
     264,
@@ -3465,34 +3423,40 @@
     420,
     1080,
     2744,
-    472,
+    13,
+    1485,
+    1461,
+    311,
     4830,
     5949,
     322,
     1293,
-    51445
+    13040,
+    13,
+    6947,
+    51737
    ],
    "temperature": 0,
-   "avg_logprob": -0.10563137,
-   "compression_ratio": 1.675926,
+   "avg_logprob": -0.15817223,
+   "compression_ratio": 1.5152838,
    "no_speech_prob": 0
   },
   {
-   "id": 41,
-   "seek": 3060,
-   "start": 152.06665,
-   "end": 159.50665,
-   "text": " circles each judges with its own gold circle so a fair program scores the same on both midpoint",
+   "id": 36,
+   "seek": 5383,
+   "start": 154.55066,
+   "end": 160.43066,
+   "text": " Each judges with its own gold circle, so a fair program scores the same on both.",
    "tokens": [
-    51445,
-    13040,
-    1184,
+    50365,
+    6947,
     14449,
     365,
     1080,
     1065,
     3821,
     6329,
+    11,
     370,
     257,
     3143,
@@ -3502,23 +3466,25 @@
     912,
     322,
     1293,
-    2062,
-    6053,
-    51817
+    13,
+    50659
    ],
    "temperature": 0,
-   "avg_logprob": -0.10563137,
-   "compression_ratio": 1.675926,
+   "avg_logprob": -0.1740474,
+   "compression_ratio": 1.515,
    "no_speech_prob": 0
   },
   {
-   "id": 42,
-   "seek": 5964,
-   "start": 159.50665,
-   "end": 169.18665,
-   "text": " a quarter, then .41. Endpoints, a third, then .47. Only the radius program gives a half on both.",
+   "id": 37,
+   "seek": 5383,
+   "start": 160.43066,
+   "end": 164.41066,
+   "text": " Midpoint, a quarter, then .41.",
    "tokens": [
-    50365,
+    50659,
+    7033,
+    6053,
+    11,
     257,
     6555,
     11,
@@ -3526,6 +3492,21 @@
     2411,
     17344,
     13,
+    50858
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1740474,
+   "compression_ratio": 1.515,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 38,
+   "seek": 5383,
+   "start": 164.41066,
+   "end": 168.39066,
+   "text": " Endpoints, a third, then .47.",
+   "tokens": [
+    50858,
     6967,
     20552,
     11,
@@ -3536,6 +3517,21 @@
     2411,
     14060,
     13,
+    51057
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1740474,
+   "compression_ratio": 1.515,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 39,
+   "seek": 5383,
+   "start": 168.39066,
+   "end": 172.37067,
+   "text": " Only the radius program gives a half on both.",
+   "tokens": [
+    51057,
     5686,
     264,
     15845,
@@ -3546,21 +3542,21 @@
     322,
     1293,
     13,
-    50849
+    51256
    ],
    "temperature": 0,
-   "avg_logprob": -0.13287692,
-   "compression_ratio": 1.4410256,
+   "avg_logprob": -0.1740474,
+   "compression_ratio": 1.515,
    "no_speech_prob": 0
   },
   {
-   "id": 43,
-   "seek": 5964,
-   "start": 170.78665,
-   "end": 177.50665,
-   "text": " Janes and Charles Tyler tossed real straws at a five-inch circle. The 128 that crossed it",
+   "id": 40,
+   "seek": 5383,
+   "start": 172.37067,
+   "end": 177.05066,
+   "text": " Janes and Charles Tyler tossed real straws at a 5-inch circle.",
    "tokens": [
-    50929,
+    51256,
     4956,
     279,
     293,
@@ -3572,39 +3568,52 @@
     82,
     412,
     257,
-    1732,
+    1025,
     12,
     12415,
     6329,
     13,
+    51490
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1740474,
+   "compression_ratio": 1.515,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 41,
+   "seek": 5383,
+   "start": 177.05066,
+   "end": 182.49066,
+   "text": " The 128 that crossed it matched the radius program.",
+   "tokens": [
+    51490,
     440,
     29810,
     300,
     14622,
     309,
-    51265
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.13287692,
-   "compression_ratio": 1.4410256,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 44,
-   "seek": 5964,
-   "start": 177.50665,
-   "end": 185.66666,
-   "text": " matched the radius program. Surveys hide the same two words. Take classes of 10, 10, and 100.",
-   "tokens": [
-    51265,
     21447,
     264,
     15845,
     1461,
     13,
-    6732,
-    303,
-    749,
+    51762
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1740474,
+   "compression_ratio": 1.515,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 42,
+   "seek": 8177,
+   "start": 182.49066,
+   "end": 189.49066,
+   "text": " surveys hide the same two words. Take classes of 10, 10, and 100. Pick a class at random,",
+   "tokens": [
+    50365,
+    22711,
     6479,
     264,
     912,
@@ -3621,94 +3630,102 @@
     293,
     2319,
     13,
-    51673
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.13287692,
-   "compression_ratio": 1.4410256,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 45,
-   "seek": 8580,
-   "start": 185.66666,
-   "end": 193.16666,
-   "text": " pick a class at random the average is 40 pick a student instead and it's 85 at",
-   "tokens": [
-    50365,
-    1888,
+    14129,
     257,
     1508,
     412,
     4974,
+    11,
+    50715
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.14576246,
+   "compression_ratio": 1.5434783,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 43,
+   "seek": 8177,
+   "start": 189.49066,
+   "end": 196.57065,
+   "text": " the average is 40. Pick a student instead, and it's 85. At Stony Brook, the same two",
+   "tokens": [
+    50715,
     264,
     4274,
     307,
     3356,
-    1888,
+    13,
+    14129,
     257,
     3107,
     2602,
+    11,
     293,
     309,
     311,
     14695,
-    412,
-    50740
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.13052544,
-   "compression_ratio": 1.5384616,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 46,
-   "seek": 8580,
-   "start": 193.16666,
-   "end": 200.70665,
-   "text": " Stony Brook the same two picks gave 40 and 147 whatever number you picked some",
-   "tokens": [
-    50740,
+    13,
+    1711,
     745,
     2526,
     13945,
+    11,
     264,
     912,
     732,
+    51069
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.14576246,
+   "compression_ratio": 1.5434783,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 44,
+   "seek": 8177,
+   "start": 196.57065,
+   "end": 203.59065,
+   "text": " picks gave 40 and 100 47. Whatever number you picked, some way of drawing chords makes",
+   "tokens": [
+    51069,
     16137,
     2729,
     3356,
     293,
-    3499,
-    22,
-    2035,
+    2319,
+    16953,
+    13,
+    8541,
     1230,
     291,
     6183,
+    11,
     512,
-    51117
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.13052544,
-   "compression_ratio": 1.5384616,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 47,
-   "seek": 8580,
-   "start": 200.70665,
-   "end": 205.46664,
-   "text": " way of drawing chords makes it right name the way and the answer is fixed a",
-   "tokens": [
-    51117,
     636,
     295,
     6316,
     21733,
     1669,
+    51420
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.14576246,
+   "compression_ratio": 1.5434783,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 45,
+   "seek": 8177,
+   "start": 203.59065,
+   "end": 211.59065,
+   "text": " it right. Name the way and the answer is fixed. A half for un-aimed straws, 147 for a random",
+   "tokens": [
+    51420,
     309,
     558,
-    1315,
+    13,
+    13866,
     264,
     636,
     293,
@@ -3716,42 +3733,49 @@
     1867,
     307,
     6806,
-    257,
-    51355
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.13052544,
-   "compression_ratio": 1.5384616,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 48,
-   "seek": 8580,
-   "start": 205.46664,
-   "end": 210.28665,
-   "text": " half for toss straws 147 for a random student",
-   "tokens": [
-    51355,
+    13,
+    316,
     1922,
     337,
-    14432,
+    517,
+    12,
+    64,
+    332,
+    292,
     10099,
     82,
+    11,
     3499,
     22,
     337,
     257,
     4974,
-    3107,
-    51596
+    51820
    ],
    "temperature": 0,
-   "avg_logprob": -0.13052544,
-   "compression_ratio": 1.5384616,
+   "avg_logprob": -0.14576246,
+   "compression_ratio": 1.5434783,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 46,
+   "seek": 11087,
+   "start": 211.59067,
+   "end": 212.59067,
+   "text": " student.",
+   "tokens": [
+    50365,
+    3107,
+    13,
+    50415
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.655459,
+   "compression_ratio": 0.5294118,
    "no_speech_prob": 0
   }
  ],
  "x_groq": {
-  "id": "req_01m5j8kz3te7mtdbrsgngjw6jt"
+  "id": "req_01m5jf1vwwe0ea8cx0wc581sxh"
  }
 }

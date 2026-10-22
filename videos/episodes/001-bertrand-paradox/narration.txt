@@ -14,26 +14,26 @@
 
 [00:59.2] A third program picks any point inside as the chord's midpoint. That settles near point two five.
 
-[01:06.4] Bertrand printed all three, writing that none is wrong and none is right. Each tally is good to about one percentage point. They disagree by twenty-five, and the code has no bug.
+[01:06.4] Bertrand printed all three, writing that none is wrong, none is right. Each tally is good to about one percentage point. They disagree by twenty-five, and the code has no bug. [pause 0.8]
 
-[01:18.7] One point sets a chord's length: its midpoint. Slide it outward and the chord shrinks. It matches the side at half a radius, on the circle inside the triangle.
+[01:19.2] One point sets a chord's length: its midpoint. Slide it outward and the chord shrinks. It matches the side at half a radius, on the circle inside the triangle.
 
-[01:29.8] So a chord is long exactly when its midpoint lands in this gold circle. Each program is a way of scattering midpoints.
+[01:30.3] So a chord is long exactly when its midpoint lands in this gold circle. Each program is a way of scattering midpoints.
 
-[01:38.2] Shrink every chord to its midpoint. The midpoint program fills the disk evenly, so this circle, a quarter of the area, catches a quarter.
+[01:38.7] Shrink every chord to its midpoint. The midpoint program fills the disk evenly, so this circle, a quarter of the area, catches a quarter.
 
-[01:48.3] The radius program spreads them evenly along the radius. Where will they crowd? [pause 1.5] Toward the center: every ring gets an equal share, and inner rings are small. Half the radius: one half.
+[01:48.8] The radius program spreads them evenly along the radius. Where will they crowd? [pause 1.5] Toward the center: every ring gets an equal share, and inner rings are small. Half the radius: one half.
 
-[02:03.1] The endpoints program piles them against the rim: only a third land inside, the third we found.
+[02:03.6] The endpoints program piles them against the rim: only a third land inside, the third we found.
 
-[02:10.2] Three programs, three things spread evenly: rim, radius, area. At random never said which. [pause 0.9]
+[02:10.7] Three programs, three things spread evenly: rim, radius, area. At random never said which. [pause 0.9]
 
-[02:18.8] Edwin Jaynes argued a physical process picks one. Straws tossed from a standing height can't be aimed, so the answer can't depend on where the circle sits, or its size.
+[02:19.3] Edwin Jaynes argued a physical process picks one. Straws tossed from a standing height can't be aimed, so the answer can't depend on where the circle sits, or its size.
 
-[02:30.7] One rain lands on both circles. Each judges with its own gold circle, so a fair program scores the same on both. Midpoint: a quarter, then point four one. [pause 1.0] Endpoints: a third, then point four seven. [pause 1.0] Only the radius program gives a half on both. [pause 0.9]
+[02:31.2] One program's rain lands on both circles. Each judges with its own gold circle, so a fair program scores the same on both. [pause 0.6] Midpoint: a quarter, then point four one. [pause 1.0] Endpoints: a third, then point four seven. [pause 1.0] Only the radius program gives a half on both. [pause 0.9]
 
-[02:50.8] Jaynes and Charles Tyler tossed real straws at a five-inch circle. The hundred twenty-eight that crossed it matched the radius program. [pause 0.9]
+[02:52.3] Jaynes and Charles Tyler tossed real straws at a five-inch circle. The hundred twenty-eight that crossed it matched the radius program. [pause 0.9]
 
-[03:00.6] Surveys hide the same two words. Take classes of ten, ten and a hundred. Pick a class at random: the average is forty. Pick a student instead, and it's eighty-five. At Stony Brook, the same two picks gave forty and a hundred forty-seven. [pause 0.5]
+[03:02.2] Surveys hide the same two words. Take classes of ten, ten and a hundred. Pick a class at random: the average is forty. Pick a student instead, and it's eighty-five. At Stony Brook, the same two picks gave forty and a hundred forty-seven. [pause 0.5]
 
-[03:18.8] Whatever number you picked, some way of drawing chords makes it right. Name the way, and the answer is fixed: a half for tossed straws, a hundred forty-seven for a random student.
+[03:20.3] Whatever number you picked, some way of drawing chords makes it right. Name the way, and the answer is fixed: a half for unaimed straws, a hundred forty-seven for a random student.

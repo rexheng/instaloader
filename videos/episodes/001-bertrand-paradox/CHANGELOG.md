@@ -250,3 +250,31 @@ Round 7 split: craft 8.8 (fail; Clarity 8.5, Visual 8.5), substance 9.0 (pass, n
 - *Histogram caption (substance 5).* "midpoints by distance from center", which keeps the panel frames at 12 prose words.
 - *Title (substance 7, nitpick).* Unchanged. It lives in `videos/curriculum.json`, outside this episode's directory, which this revision may not touch.
 - *Budget.* "writing that none is wrong, none is right" (the quote's own shape, −1 word) pays for "program's". The narration is 500 words.
+
+**Checked in my own frame review**
+- *Preview 1.* "long" touched the small rule's dark halo (overlap). The fix: the halo now arrives with the first rain, the label is Text 22, and its offset accounts for the line's tilt.
+- *Preview 2.* "long" sat 0.11 from the gold piece, and "5 in" sat 0.12 from the circle (clearance). Both now clear the 0.15 threshold.
+- *1080p master: 0 render warnings, 0 layout-audit issues in 247 checks.*
+- *Sweeps on the master, all clean:*
+  - 4 fps over 2:27.6–2:30.4: one gold circle in every frame, no halo smear, and the straws at 25 % before the copy moves.
+  - 8 fps over 2:52.2–2:53.6: the small rule leaves, then the big one arrives.
+  - 10 fps over 3:20.2–3:21.3: the header is gone by 3:20.5 and the question starts at 3:20.7.
+  - 8 fps over 2:19.2–2:20.6: the board text is up while the panels clear.
+  - 2 fps over 1:51.9–1:57.4: panels 1 and 3 sit at 40 % during the prediction and nothing moves.
+- *Whisper.* The full-file transcript has "Each Each judges" at 2:34. The second "Each" lasts 0.02 s, a long-form artifact: the isolated TTS clip and a 9 s cut of the mixed master both transcribe as a single "Each judges".
+
+**Mechanics (review/report.md, final master):**
+- Runtime 3:33.5, 500 words, voice speed 0.83 (0.80 for the open and the arc beat).
+- Pace 156 wpm in speech, 145 overall; no sentence above 200 wpm.
+- Loudness −14.0 LUFS, true peak −1.9 dBTP.
+- Silence: longest 2.08 s (the planned "Pick a number" hold), trailing 1.54 s.
+- Longest static stretch 3.17 s (the same hold).
+- Breaths: 1.4 s after "no bug" and 0.6 s after "the same on both".
+- 0 glyph morphs; 7 of 7 deictics landed; 0 banned phrases; 0 flags.
+- WER 2.4 %: homophones and number formatting ("Janes", "a"/"one", "un aimed").
+
+**Honest self-score (BAR §3):** Hook 9 · Clarity 9 · Visual 9 · Motion 9 · Audio 9 · Concision 9 · Originality 9, so 9.0, with no caps. Remaining risks:
+- At 25 %, the 60 straws still cover the whole floor as a light texture.
+- "long" sits snugly inside the small gold rule, about 0.15 clear on each side.
+- "128 straws crossed it" stands just above the Jaynes citation, about 0.25 apart.
+- The title (curriculum.json) still announces "three" answers.

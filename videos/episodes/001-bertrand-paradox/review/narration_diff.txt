@@ -1,13 +1,14 @@
-WER 2.0% over 497 script words (numbers spelled out, 'and' ignored)
+WER 2.4% over 498 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/001-bertrand-paradox/narration.json
 
 [0:21.5] replace  script: 'a'                                      heard: 'one'
 [0:29.6] replace  script: "triangle's"                             heard: 'triangle'
-[2:10.5] delete   script: 'three'                                  heard: '∅'
-[2:19.1] replace  script: 'jaynes'                                 heard: 'janes'
-[2:50.8] replace  script: 'jaynes'                                 heard: 'janes'
-[2:55.5] insert   script: '∅'                                      heard: 'one'
-[3:05.2] replace  script: 'a'                                      heard: 'one'
-[3:16.4] replace  script: 'a'                                      heard: 'one'
-[3:26.4] replace  script: 'tossed'                                 heard: 'toss'
-[3:27.4] replace  script: 'a'                                      heard: 'one'
+[2:07.1] insert   script: '∅'                                      heard: 'a'
+[2:19.6] replace  script: 'jaynes'                                 heard: 'janes'
+[2:34.1] insert   script: '∅'                                      heard: 'each'
+[2:52.3] replace  script: 'jaynes'                                 heard: 'janes'
+[2:57.1] insert   script: '∅'                                      heard: 'one'
+[3:06.7] replace  script: 'a'                                      heard: 'one'
+[3:18.0] replace  script: 'a'                                      heard: 'one'
+[3:28.0] replace  script: 'unaimed'                                heard: 'un aimed'
+[3:29.2] replace  script: 'a'                                      heard: 'one'

@@ -17,33 +17,31 @@
 [0:59.2–1:02.2] A third program picks any point inside
 [1:02.2–1:03.8] as the chord's midpoint.
 [1:03.8–1:06.5] That settles near point two five.
-[1:06.5–1:08.5] Bertrand printed all three,
-[1:08.5–1:11.4] writing that none is wrong and none is right.
-[1:11.4–1:14.7] Each tally is good to about one percentage point.
-[1:14.7–1:18.8] They disagree by 25 and the code has no bug.
-[1:18.8–1:22.0] One point sets a chord's length, its midpoint.
-[1:22.0–1:24.6] Slide it outward and the chord shrinks.
-[1:24.6–1:27.3] It matches the side at half a radius
-[1:27.3–1:29.8] on the circle inside the triangle.
-[1:29.8–1:32.0] So a chord is long exactly
-[1:32.0–1:34.9] when its midpoint lands in this gold circle.
-[1:34.9–1:38.3] Each program is a way of scattering midpoints.
-[1:38.3–1:40.8] Shrink every chord to its midpoint.
-[1:40.8–1:52.6] The midpoint program fills the disk evenly So this circle a quarter of the area catches a quarter The radius program spreads them evenly along the radius
-[1:52.6–1:55.4] Where will they crowd?
-[1:55.4–1:56.9] Toward the center.
-[1:56.9–2:00.8] Every ring gets an equal share and inner rings are small.
-[2:00.8–2:03.2] Half the radius, one half.
-[2:03.2–2:06.5] The endpoints program piles them against the rim.
-[2:06.5–2:10.5] Only a third land inside, the third we found.
-[2:10.5–2:17.2] programs three things spread evenly rim radius area at random never said which
-[2:18.7–2:25.3] edwin janes argued a physical process picks one straws tossed from a standing height can't be
-[2:25.3–2:32.1] aimed so the answer can't depend on where the circle sits or its size one rain lands on both
-[2:32.1–2:39.5] circles each judges with its own gold circle so a fair program scores the same on both midpoint
-[2:39.5–2:49.2] a quarter, then .41. Endpoints, a third, then .47. Only the radius program gives a half on both.
-[2:50.8–2:57.5] Janes and Charles Tyler tossed real straws at a five-inch circle. The 128 that crossed it
-[2:57.5–3:05.7] matched the radius program. Surveys hide the same two words. Take classes of 10, 10, and 100.
-[3:05.7–3:13.2] pick a class at random the average is 40 pick a student instead and it's 85 at
-[3:13.2–3:20.7] Stony Brook the same two picks gave 40 and 147 whatever number you picked some
-[3:20.7–3:25.5] way of drawing chords makes it right name the way and the answer is fixed a
-[3:25.5–3:30.3] half for toss straws 147 for a random student
+[1:06.5–1:08.4] Bertrand printed all three,
+[1:08.4–1:11.1] writing that none is wrong, none is right.
+[1:11.1–1:14.5] Each tally is good to about one percentage point.
+[1:14.5–1:18.1] They disagree by 25, and the code has no bug.
+[1:19.3–1:22.5] One point sets a chord's length, its midpoint.
+[1:22.5–1:25.1] Slide it outward, and the chord shrinks.
+[1:25.1–1:30.3] It matches the side at half a radius on the circle inside the triangle.
+[1:30.3–1:35.4] So a chord is long exactly when its midpoint lands in this gold circle.
+[1:35.4–1:38.8] Each program is a way of scattering midpoints.
+[1:38.8–1:41.3] Shrink every chord to its midpoint.
+[1:41.3–1:53.5] The midpoint program fills the disk evenly So this circle a quarter of the area catches a quarter The radius program spreads them evenly along the radius Where will they
+[1:53.5–2:00.4] crowd? Toward the center. Every ring gets an equal share and inner rings are small.
+[2:00.4–2:07.1] Half the radius, one half. The endpoints program piles them against the rim. Only a
+[2:07.1–2:14.1] a third land inside, the third we found. Three programs, three things spread evenly. Rim,
+[2:14.5–2:21.5] radius, area. At random, never said which. Edwin Janes argued a physical process picks
+[2:22.1–2:28.3] one. Straws tossed from a standing height can't be aimed, so the answer can't depend
+[2:28.3–2:34.6] on where the circle sits or its size. One program's rain lands on both circles. Each
+[2:34.6–2:40.4] Each judges with its own gold circle, so a fair program scores the same on both.
+[2:40.4–2:44.4] Midpoint, a quarter, then .41.
+[2:44.4–2:48.4] Endpoints, a third, then .47.
+[2:48.4–2:52.4] Only the radius program gives a half on both.
+[2:52.4–2:57.1] Janes and Charles Tyler tossed real straws at a 5-inch circle.
+[2:57.1–3:02.5] The 128 that crossed it matched the radius program.
+[3:02.5–3:09.5] surveys hide the same two words. Take classes of 10, 10, and 100. Pick a class at random,
+[3:09.5–3:16.6] the average is 40. Pick a student instead, and it's 85. At Stony Brook, the same two
+[3:16.6–3:23.6] picks gave 40 and 100 47. Whatever number you picked, some way of drawing chords makes
+[3:23.6–3:31.6] it right. Name the way and the answer is fixed. A half for un-aimed straws, 147 for a random
+[3:31.6–3:32.6] student.
