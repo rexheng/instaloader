@@ -224,3 +224,23 @@ al. 2011: 190, 635 = ⟨k²⟩/⟨k⟩, 92.7 %, the 5,000 cap; Christakis & Fowl
 | Distances drawn as four separate segments (1.5s in a lower lane, 0.5s in an upper lane, each labelled over its own stretch) | Same values as before: \|k − 2.5\| = 1.5, 0.5, 0.5, 1.5; their signed sum −1.5 − 0.5 + 0.5 + 1.5 = 0 now lands under the balance point. | computed |
 | "Sue holds four tokens, each worth four: sixteen." then "A girl with k friends adds k squared on top": Sue's 16 flies into Σk² | 4 × 4 = 16 is Sue's term in Σk² = 1 + 1 + 4 + 4 + 9 + 9 + 16 + 16 = 60. | computed |
 | "Measure each girl's distance from the balance point, two and a half" (was "from the girls' balance point") | Wording only; the balance point of the girls is 2.5 (μ). | — |
+
+## Round 10 (presentation and wording; no new empirical claims)
+
+Neither round-10 critic found a factual error. The substance critic re-verified every citation
+online on 2026-10-22 (Feld 1991 *AJS* 96(6):1464-77, "a total of 20 friends, with a mean of 2.5";
+Ugander et al. 2011 arXiv:1111.4503, n = 721 million, 68.7 billion edges, ~190 friends,
+⟨k²⟩/⟨k⟩ = 635, "92.7% of users have less friends than the average friend count of their
+friends", the 5,000 cap; Christakis & Fowler 2010 *PLoS ONE* 5(9):e12948, N = 319 / 425, NLS
+lead 13.9 d (95 % CI 9.9-16.6) for medical-staff diagnoses, 3.2 d (2.2-4.3) self-reported) and
+recomputed every network number from the edge list. The changes below re-present the same claims.
+
+| Claim / change | Check | Source |
+|---|---|---|
+| "Every friend is one of these eight girls, so two and a half sounds right." (was "The natural guess is two and a half again: every friend is one of these eight girls.") | Same reasoning, voiced as the viewer's (the title already says friends have more). The friend list is drawn from the same eight girls, whose mean is 2.5; the guess is the one the episode then tests. | Feld 1991 Fig. 1 |
+| "Odds are, that includes you." cut | No claim removed from the screen: "92.7% / below their own friends' average" stays, and the spoken "ninety three percent of users had fewer friends than their friends averaged" stays. | Ugander et al. 2011 |
+| "avg(d) = 0" (PURPLE, under "d = k − μ", replaces the bare "0" under the balance point) | d = k − 2.5 for the eight girls: −1.5, −1.5, −0.5, −0.5, +0.5, +0.5, +1.5, +1.5; sum 0, so avg(d) = 0/8 = 0 exactly (μ is the balance point by definition: Σ(k − μ) = Σk − 8μ = 20 − 20 = 0). | computed |
+| Area labels "2.25 ×2", "0.25 ×2", "0.25 ×2", "2.25 ×2" (one per pair of equal squares; were eight labels) | 1.5² = 2.25, 0.5² = 0.25; 2(2.25 + 0.25 + 0.25 + 2.25) = 10; σ² = 10/8 = 1.25. | computed |
+| Ring callback: μ + σ²/μ carried from the result row and changed into 2 + 0/2 = 2 | The ring: every count 2, so μ = 2, σ² = 0, μ + σ²/μ = 2 (same as round 9). | computed |
+| C&F dashed fits drawn from each group's second case (day 7.6 for both; were the first case) | At day 7.6 the friends' fit is 0.94 % against a step that rises from 0.24 % to 0.71 % (3/425); the random fit is 0.52 % against a step from 0.31 % to 0.63 % (2/319). At the first case the friends' fit sat at 0.79 % against 0.24 %. The fit parameters are unchanged (c = 8.320 %, m = 52.79 d, s = 21.86 d, shift 13.9 d); the axis still reads "Fig. 3 redrawn, logistic refit". | cf_fig3_digitized.json; sim.py |
+| The count ruler sits 0.35 under the fulcrum labels during the beam beats (was 1.3 lower) | Presentation only; its ticks 1-4 are still at the counts' beam positions. | scene.py |

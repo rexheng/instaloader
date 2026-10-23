@@ -308,3 +308,37 @@ to this yardstick"; the landing's riffles drop straight onto the new levels (≈
 - S9 see C7.
 - Also: two-line "top card only / (computed)" label keeps clear of the cliff; e3 left-aligned so
   "accuracy =" never moves; TAG row raised so "k riffles" clears the y-axis title.
+
+### Round 5, continuation (audit of the interrupted attempt's 14:45 master)
+The round-5 edits above had been rendered (14:45 master: 3:32.8, 0 warnings, 0 layout findings)
+but never reviewed. Fresh review pack, all 12 contact sheets, the 40 keyframes and 0.5 s strips
+through the landing were checked against every round-5 fix: all landed (contiguous 5 → 6 → 7,
+accuracy line held ~6 s, pile bridge, one-line equation, sequential citations, slide-swapped
+counters, Aldous/B&D split, "(computed)", centred cold open, one-size ghost). Remaining defects
+found and fixed:
+- **Audio — homophones in the transcript.** "Each riffle roughly halved the gap" was heard as
+  "have the gap" → "roughly halves the gap … stays about two" (present tense, as heard correctly
+  in "it halves every riffle"). "two times in three" lost its "in" ("two times and three") →
+  "two times out of three".
+- **Audio — cadence flag** (report: full stops 0.50 s, beat turns 0.47 s, "metronomic"). The
+  eight real section turns (stakes → naive, naive → fail, fail → insight, red area → question,
+  mechanism → formula, general n → payoff, limit → consequence, consequence → landing) now get a
+  0.68 s gap (`TURN_GAP`); beats that continue a thought 0.37 s. The two prediction holds go
+  1.5 → 1.35 s (still 1.7–1.8 s of silence) so the runtime stays inside 3:35.
+- **Clarity — k never defined.** The × 2^k row now ends with a grey "(k = riffles)".
+- **Sync — "Aldous proved that law"** was said while the formula was already dimming to 45 %: the
+  formula and Aldous's citation now flash at full strength during "that law" and the equations
+  step back only afterwards.
+- **Visual — right third empty for ~8 s** during the pile (1:33–1:43): the chart is centred while
+  it is the only picture and steps left (bars, outline, tags follow) on "is the distance", just
+  before the distance plot draws in the space it leaves.
+
+### Final mechanics (review/report.md)
+Runtime 3:34.8 · 494 words · 148 wpm (speech) · −14.0 LUFS / −2.1 dBTP · lead 0.00 s / trail
+1.77 s · max silence 1.84 s (the two planned prediction holds) · max static 3.23 s · beat turns
+0.71 s vs full stops 0.50 s · WER 1.0 % (remaining diffs: "a"/"one", "stopped"/"stop", "Aldous"
+as the intended ALL-dus, "Trefethen" spelling) · 0 banned phrases · 0 render warnings · 0 review
+flags · layout audit 0 issues in 267 checks. One master this pass; all 12 contact sheets, the
+keyframes at every changed beat and 0.25 s strips through the chart slide (1:41–1:44), the Aldous
+flash (2:49–2:52) and the landing (3:19–3:31, meter settles at 96.2 / 80.7 / 66.7 / 58.4 / 54.3 /
+52.1 %) were checked.

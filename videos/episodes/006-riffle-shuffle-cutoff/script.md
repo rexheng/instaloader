@@ -5,8 +5,9 @@ each riffle roughly halves the gap between that count and a random deck's while 
 deck's spread stays fixed, so the deck stays almost perfectly detectable for four riffles and
 then falls off a cliff around seven, even though the top card already looks random after four.
 
-Runtime ≈ 3:33 · 493 words · voice af_heart, speed 0.84, CADENCE "shaped" (beat gap 0.4 s, 0.9 s after
-the key results), the prediction question at 0.80.
+Runtime ≈ 3:34 · 494 words · voice af_heart, speed 0.84, CADENCE "shaped" (beat gap 0.37 s inside a
+section, 0.68 s at the eight section turns so every turn is longer than a full stop; 0.9 s after the
+key results), the prediction question at 0.80.
 
 ## Palette (one meaning each, whole episode)
 
@@ -32,7 +33,7 @@ the key results), the prediction question at 0.80.
 ### 1. Cold open (0:00–0:15, commit at 0:10–0:13)
 > Heads, I riffle shuffle a sorted deck four times. Tails, a computer shuffles it perfectly.
 > From the deck alone, how often could you tell which? Pick fifty, seventy five, or a hundred
-> percent. *[pause 1.5]*
+> percent. *[pause 1.35]*
 
 Visual: first frame is TWO sorted decks side by side (52 bars each, height and shade = card
 number), centred vertically, "1"/"52" over the left deck's end cards, "top"/"bottom" under it.
@@ -98,7 +99,7 @@ and the ghost returns to full; on "this" the two counts 14 and 26 flash; caps fl
 
 > The red area, purple above blue, is the distance from random.
 
-> How many more riffles until it's below a half? *[pause 1.5]* (spoken at 0.80)
+> How many more riffles until it's below a half? *[pause 1.35]* (spoken at 0.80)
 
 > A fifth riffle: point nine two. A sixth: point six one. A seventh: point three three. *[pause 0.9]*
 
@@ -106,7 +107,7 @@ and the ghost returns to full; on "this" the two counts 14 and 26 flash; caps fl
 > flag thirty two percent of perfect ones. Accuracy is a half, plus half the difference, and the
 > difference is the red area.
 
-> Each riffle roughly halved the gap; blue's spread, its standard deviation, stayed about two.
+> Each riffle roughly halves the gap; blue's spread, its standard deviation, stays about two.
 > While the gap spans several spreads, the distance stays near one. Within one spread, it halves
 > every riffle: that's the cliff.
 
@@ -139,7 +140,7 @@ leaves when the spread bracket draws. **Mechanism, no rewind:** row flashes + "(
 and the blue spread (2.1) sit side by side; on "several spreads" the 4-riffle ghost
 brightens and spread-long hops are laid along it, "5.9 spreads", dots 1–4 at d = 1; on "Within
 about one spread" one hop on the 7-riffle gap, "0.85 spreads" (left of the gap); dots 6, 7 flash and dot 8 appears; the cliff
-is drawn through the dots. **One equation line:** "× 2^k ≈ 198 → 220 → 227 → 229 → 230" (each gap flashes and its product drops out of it into the
+is drawn through the dots. **One equation line:** "× 2^k ≈ 198 → 220 → 227 → 229 → 230" with a grey "(k = riffles)" at its end (each gap flashes and its product drops out of it into the
 row below); `gap ≈ 230/2^k` built from the bracket and the 230 (held ~3 s); on "one spread" the word
 "gap" is replaced by the blue 2.1 flown from the spread label: `2.1 ≈ 230/2^k`; `⇒ k ≈ 6.8` and a
 dashed line at 6.77 on the d-plot. For n: the chart dims; 230 → `n(n+1)/12` ("∼ n²" above it),
@@ -157,7 +158,7 @@ dashed line at 6.77 on the d-plot. For n: the chart dims; 230 → `n(n+1)/12` ("
 
 Visual: the d-plot grows into the full distance curve (Table 1 values), the equations stay top
 right at 45 %. *Aldous, 1983 · Séminaire de Probabilités XVII* while `k ≈ (3/2) log₂ n − 1.8`
-flashes; on "Bayer" it is replaced (fade out, then fade in — never crossfaded) by *Bayer &
+flashes at full strength on "that law" (the equations step back to 45 % only after it); on "Bayer" it is replaced (fade out, then fade in — never crossfaded) by *Bayer &
 Diaconis, 1992 · Ann. Appl. Probab.*; dots 9–10 on "exact curve"; values 0.61 and 0.33 only (the pair that straddles ½); the
 k = 7 dot and the ½ line flag. Then *Trefethen & Trefethen, 2000 · Proc. R. Soc. A*, grey note
 "information yardstick: no cliff, 5–6 riffles" and a grey band over 5–6. Then *Diaconis, 1996 ·
@@ -165,8 +166,8 @@ PNAS*, the cliff flashes on "cliff", the grey dashed "top card only (computed)" 
 and drops early beside the red "whole deck" (labels on "statistic").
 
 ### 7. Landing (3:17–3:38)
-> Back to the coin flip. Three more riffles, *[pause 1.2]* and you'd be right only two times in
-> three.
+> Back to the coin flip. Three more riffles, *[pause 1.2]* and you'd be right only two times out
+> of three.
 
 > Four riffles fool someone watching the top card. Fooling someone who counts sequences takes ten.
 

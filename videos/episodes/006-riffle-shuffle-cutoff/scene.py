@@ -326,7 +326,9 @@ class Episode(NarratedScene):
     PRONUNCIATIONS = {"Diaconis": "/dˌIəkˈOnɪs/", "Trefethen": "/tɹəfˈɛθən/", "Aldous": "/ˈɔldʌs/"}
     SPEED = 0.84
     CADENCE = "shaped"                 # gaps follow the sense (PRODUCTION_GUIDE §13.3)
-    BEAT_GAP = 0.4                     # shaped turns stay >= 0.15 s longer than its full stops
+    BEAT_GAP = 0.37                    # gap after a beat that continues the same thought
+    TURN_GAP = 0.68                    # gap after a beat that ends a section (a real turn): every
+                                       # turn is audibly longer than a full stop (0.5 s median)
 
     # ------------------------------------------------------------------ helpers
     def riffle(self, deck: Deck, k: int, t_cut=0.4, t_drop=0.65, lift=0.3, extra=(), extra_drop=(),
@@ -417,7 +419,7 @@ class Episode(NarratedScene):
         self.add(deck.group, perfect0.group, top_lbl, bot_lbl, one, fifty2)
         with self.narrate("Heads, I riffle shuffle a sorted deck four times. Tails, a computer "
                           "shuffles it perfectly. From the deck alone, how often could you tell "
-                          "which? Pick fifty, seventy five, or a hundred percent. [pause 1.5]") as beat:
+                          "which? Pick fifty, seventy five, or a hundred percent. [pause 1.35]") as beat:
             self.play(FadeIn(heads, shift=0.15 * DOWN), run_time=0.6)
             beat.wait_until("sorted", offset=-0.15)
             self.play(FadeOut(one), FadeOut(fifty2), run_time=0.3)
@@ -459,7 +461,7 @@ class Episode(NarratedScene):
             return MathTex(rf"\text{{step }} {i}", font_size=MATH_SMALL + 4, color=PURPLE).move_to(step_pos)
 
         with self.narrate("Monte Carlo samplers move by random steps, like these riffles. Stopped "
-                          "too early, they still remember where they started.") as beat:
+                          "too early, they still remember where they started.", gap=self.TURN_GAP) as beat:
             beat.wait_until("move", offset=-0.1)
             # the same four riffles, replayed as numbered random steps
             self.play(*deck.relayout(order=range(1, N + 1)), run_time=0.45, rate_func=SMOOTH)
@@ -520,7 +522,7 @@ class Episode(NarratedScene):
 
         with self.narrate("Only the old top card stands out: one time in fifteen. Judge by it, and "
                           "you're right [pause 0.3] fifty two percent of the time. [pause 0.9] Four "
-                          "riffles look like plenty.") as beat:
+                          "riffles look like plenty.", gap=self.TURN_GAP) as beat:
             beat.wait_until("old top card", offset=-0.2)
             self.play(FadeIn(excess), Indicate(hb[0], color=RED, scale_factor=1.0), run_time=0.7)
             beat.wait_until("fifteen", offset=-0.4)
@@ -710,7 +712,7 @@ class Episode(NarratedScene):
         acc4 = 1 - DATA["p_uniform_le16"] / 2
         with self.narrate("Call sixteen or fewer riffled, and you'd be wrong once in four million "
                           "games. [pause 0.9] The top card can't see this: it lives in the order "
-                          "between cards.") as beat:
+                          "between cards.", gap=self.TURN_GAP) as beat:
             below = Rectangle(width=line16_full.width, height=line16_y - SIDE_A["by"], stroke_width=0,
                               fill_color=PURPLE, fill_opacity=0.12)
             below.move_to(line16_full.get_center(), aligned_edge=UP)
@@ -740,6 +742,10 @@ class Episode(NarratedScene):
                   x_label="rising sequences", y_label="share of decks")
         regray(ax)
         ax.shift(np.array([-5.72, -1.6, 0]) - ax.c2p(7.5, 0))
+        # while the pile is the only picture it sits in the middle of the frame; it steps left
+        # (everything drawn from it follows) when the distance plot it feeds arrives
+        CHART_DX = 1.9
+        ax.shift(CHART_DX * RIGHT)
         bd_cite = citation("Bayer & Diaconis, 1992 · Ann. Appl. Probab.", size=20, color=TGRAY)
         blue_bars = VGroup(*[bar_rect(ax, r, 0, U_PMF[r - 1], 0.86, stroke_width=0, fill_color=BLUE,
                                       fill_opacity=0.28) for r in range(8, 37)])
@@ -879,10 +885,13 @@ class Episode(NarratedScene):
             return m.next_to(inset.c2p(k, v), UR if v > 0.5 else DL, buff=0.2)
 
         dlab = d_label(4)
-        with self.narrate("The red area, purple above blue, is the distance from random.") as beat:
+        with self.narrate("The red area, purple above blue, is the distance from random.",
+                          gap=self.TURN_GAP) as beat:
             beat.wait_until("red area", offset=-0.2)
             self.play(red_op.animate.set_value(1.0), run_time=0.9)
-            beat.wait_until("distance", offset=-0.2)
+            beat.wait_until("is the distance", offset=-0.25)
+            self.play(VGroup(ax, blue_bars, blue_line, tagB).animate.shift(CHART_DX * LEFT),
+                      run_time=0.5, rate_func=SMOOTH)
             self.play(Create(inset), run_time=0.9)
             # right now (4 riffles) it is one: the dot and its value, on the screen not in words
             dot4 = Dot(inset.c2p(4, TV[3]), radius=0.075, color=RED)
@@ -920,7 +929,7 @@ class Episode(NarratedScene):
             fades into the value."""
             return self.fly_into(gap_now()[0], row[i], arc=1.4)
 
-        with self.narrate("How many more riffles until it's below a half? [pause 1.5]",
+        with self.narrate("How many more riffles until it's below a half? [pause 1.35]",
                           speed=0.80) as beat:
             beat.wait_until("below a half", offset=-0.3)
             self.play(Create(half), Indicate(inset.y_axis.numbers[1], color=INK, scale_factor=1.3),
@@ -1073,13 +1082,13 @@ class Episode(NarratedScene):
         gap7 = gap_at(7)
         cliff = VMobject(stroke_color=RED, stroke_width=3.5)
         early = VGroup(*[Dot(inset.c2p(k, TV[k - 1]), radius=0.075, color=RED) for k in (1, 2, 3)])
-        with self.narrate("Each riffle roughly halved the gap; blue's spread, its standard "
-                          "deviation, stayed about two. While the gap spans several spreads, the "
+        with self.narrate("Each riffle roughly halves the gap; blue's spread, its standard "
+                          "deviation, stays about two. While the gap spans several spreads, the "
                           "distance stays near one. Within one spread, it halves every riffle: "
-                          "that's the cliff.") as beat:
+                          "that's the cliff.", gap=self.TURN_GAP) as beat:
             self.play(FadeOut(VGroup(zA, zB, zA_lbl, zB_lbl)), row.animate.set_opacity(1.0),
                       FadeIn(gap7), run_time=0.6)
-            beat.wait_until("halved", offset=-0.3)
+            beat.wait_until("halves", offset=-0.3)
             self.play(Indicate(VGroup(*row[1:8]), color=YELLOW, scale_factor=1.06),
                       FadeIn(halves, shift=0.1 * LEFT), run_time=0.9)
             beat.wait_until("blue's spread", offset=-0.2)
@@ -1113,6 +1122,9 @@ class Episode(NarratedScene):
         prod_arrows = VGroup(*[MathTex(r"\to", font_size=MATH_SMALL + 6, color=YELLOW)
                                .move_to([row[2 * i].get_center()[0], 2.6, 0]) for i in (1, 2, 3)])
         p230 = MathTex(r"\to 230", font_size=MATH_SMALL + 6, color=YELLOW).next_to(prods[3], RIGHT, buff=0.18)
+        # k is the riffle count (the row's four entries are k = 4, 5, 6, 7)
+        ktag = MathTex(r"(k = \text{riffles})", font_size=MATH_SMALL + 2, color=TGRAY)
+        ktag.next_to(p230, RIGHT, buff=0.4)
         ES = MATH + 4
 
         def frac_of(num_tex, den_tex=r"2^k", size=ES):
@@ -1136,7 +1148,7 @@ class Episode(NarratedScene):
                           "thirty. [pause 1.6] Set the gap equal to one spread, and k is just "
                           "under seven.") as beat:
             self.play(FadeOut(VGroup(hops4, hops7, r4, r7, ghost_full, halves)), Write(prod_head),
-                      run_time=0.5)
+                      FadeIn(ktag, shift=0.1 * LEFT), run_time=0.5)
             # each gap flashes and its product drops out of it into the row below (the product
             # row never shows a gap value)
             self.play(LaggedStart(*[AnimationGroup(Indicate(row[2 * i + 1], color=YELLOW, scale_factor=1.1),
@@ -1148,7 +1160,7 @@ class Episode(NarratedScene):
             beat.wait_until("two hundred", offset=-0.2)
             # gap ≈ 230 / 2^k, each term from what it measures: the 230 from the row, "gap" from
             # the bracket; then the rows step back (one equation in focus)
-            rows = VGroup(row, prod_head, prods, prod_arrows, p230)
+            rows = VGroup(row, prod_head, prods, prod_arrows, p230, ktag)
             self.play(*self.fly_copy(p230[0][1:], fr[0], arc=-0.7), Create(fr[1]), Write(fr[2]),
                       *self.fly_into(gap7[0], lhsA, arc=-0.8), Write(apx), run_time=0.9)
             self.play(rows.animate.set_opacity(0.3), run_time=0.4)
@@ -1178,7 +1190,7 @@ class Episode(NarratedScene):
         heur.align_to(kN, RIGHT)
         with self.narrate("For n cards, two hundred thirty grows like n squared, but the spread "
                           "like root n, so the cliff sits near three halves log base two of "
-                          "n.") as beat:
+                          "n.", gap=self.TURN_GAP) as beat:
             purple.clear_updaters()
             tagK.clear_updaters()
             ctx = VGroup(ax, blue_bars, blue_line, purple, gap7, tagK, spread, spread_num)
@@ -1226,12 +1238,14 @@ class Episode(NarratedScene):
             # the dimmed chart leaves first, then the d-plot grows into the full curve
             self.play(FadeOut(VGroup(ax, blue_bars, blue_line, purple, tagK, gap7, spread,
                                      spread_num, k68, dlive, dlab)),
-                      FadeOut(heur), eq_final.animate.set_opacity(0.45), run_time=0.4)
+                      FadeOut(heur), run_time=0.4)
+            # "that law": the formula flashes at full strength (with Aldous's citation) while the
+            # d-plot grows into the full curve; the equations step back only after "law"
             self.play(ReplacementTransform(inset, big), ReplacementTransform(small_dots, big_dots[:8]),
                       ReplacementTransform(cliff, big_cliff), ReplacementTransform(half, big_half),
-                      run_time=0.8)
-            self.play(Indicate(kN, color=INK, scale_factor=1.08), Indicate(ald_cite, color=INK, scale_factor=1.05),
-                      run_time=0.6)
+                      Indicate(kN, color=INK, scale_factor=1.08),
+                      Indicate(ald_cite, color=INK, scale_factor=1.05), run_time=0.9)
+            self.play(eq_final.animate.set_opacity(0.45), run_time=0.4)
             beat.wait_until("Bayer", offset=-0.3)
             self.cite_swap(ald_cite, bd2)
             beat.wait_until("exact curve", offset=-0.2)
@@ -1254,7 +1268,7 @@ class Episode(NarratedScene):
                          stroke_width=0, fill_color=GRAY, fill_opacity=0.22)
         band.move_to((big.c2p(5, 0) + big.c2p(6, 1)) / 2)
         with self.narrate("Trefethen and Trefethen measured information instead: no cliff; five or "
-                          "six shuffles do a reasonable job.") as beat:
+                          "six shuffles do a reasonable job.", gap=self.TURN_GAP) as beat:
             self.play(FadeOut(bd2), FadeOut(vals[0]), run_time=0.3)
             self.play(FadeIn(tref), run_time=0.4)
             beat.wait_until("information", offset=-0.2)
@@ -1276,7 +1290,8 @@ class Episode(NarratedScene):
             big.c2p(8.25, TV[7] + 0.06), RIGHT, buff=0.15)
         dia = citation("Diaconis, 1996 · PNAS", size=20, color=TGRAY)
         with self.narrate("Many Markov chains share this cliff, and samplers share the trap: one "
-                          "statistic, like the top card, settles long before the whole chain.") as beat:
+                          "statistic, like the top card, settles long before the whole chain.",
+                          gap=self.TURN_GAP) as beat:
             self.play(FadeOut(tref), FadeOut(info), FadeOut(band), FadeOut(vals[1]),
                       eq_final.animate.set_opacity(0.3), run_time=0.4)
             self.play(FadeIn(dia), run_time=0.4)
@@ -1336,7 +1351,7 @@ class Episode(NarratedScene):
 
         # one move: the opening deck and meter return, and the riffles carry on
         with self.narrate("Back to the coin flip. Three more riffles, [pause 1.2] and "
-                          "you'd be right only two times in three.") as beat:
+                          "you'd be right only two times out of three.") as beat:
             meter.acc.set_value(acc4)
             meter.make_live()
             meter.value.clear_updaters()

@@ -131,58 +131,58 @@ plus a half: exactly the extra half friend we measured.
 With no spread, the ring had no gap.
 
 34
-00:02:30,100 --> 00:02:37,140
+00:02:30,266 --> 00:02:37,306
 In twenty eleven, Facebook users averaged about a hundred ninety friends, and a few had thousands.
 
 35
-00:02:37,540 --> 00:02:41,740
+00:02:37,706 --> 00:02:41,906
 If every friendship sent tokens, what would the tokens average?
 
 36
-00:02:43,633 --> 00:02:48,553
+00:02:43,800 --> 00:02:48,720
 About six hundred thirty five: the spread term is more than twice the mean.
 
 37
-00:02:49,453 --> 00:02:54,623
+00:02:49,620 --> 00:02:54,790
 And ninety three percent of users had fewer friends than their friends averaged.
 
 38
-00:02:54,923 --> 00:02:56,833
+00:02:55,090 --> 00:02:57,000
 Odds are, that includes you.
 
 39
-00:02:57,533 --> 00:03:00,693
+00:02:57,700 --> 00:03:00,860
 Christakis and Fowler put this to work at Harvard.
 
 40
-00:03:00,993 --> 00:03:07,243
+00:03:01,160 --> 00:03:07,410
 Named friends have more friends, so they sit closer to everyone else, and should catch flu first.
 
 41
-00:03:07,743 --> 00:03:13,163
+00:03:07,910 --> 00:03:13,330
 They tracked flu diagnoses in random students, and in the friends the students named.
 
 42
-00:03:13,663 --> 00:03:15,543
+00:03:13,830 --> 00:03:15,710
 The friends' curve rose first.
 
 43
-00:03:15,943 --> 00:03:19,203
+00:03:16,110 --> 00:03:19,370
 Fitted curves put them thirteen point nine days ahead.
 
 44
-00:03:19,903 --> 00:03:23,713
+00:03:20,070 --> 00:03:23,880
 With self-reported symptoms, the lead shrank to about three.
 
 45
-00:03:25,500 --> 00:03:27,280
+00:03:25,666 --> 00:03:27,446
 Betty looks at her one friend,
 
 46
-00:03:27,580 --> 00:03:28,920
+00:03:27,746 --> 00:03:29,086
 Sue, and sees four.
 
 47
-00:03:31,020 --> 00:03:32,610
+00:03:31,186 --> 00:03:32,776
 Most of us are Betty.
 

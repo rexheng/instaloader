@@ -1,23 +1,23 @@
 # Review kit — `final.mp4`
 
-Generated 2026-10-22 11:31 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
+Generated 2026-10-22 23:54 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
 
 ## Mechanics (BAR §3 caps / §5 standards)
 
 | metric | value | bar | status |
 |---|---|---|---|
-| runtime | 3:47.1 (227.1s) | 2:30–4:00 | ok |
-| video | 1920x1080 @ 30 fps, h264/yuv420p, 10.23 MB | 1920x1080 @ 30 | ok |
-| pace | 154 wpm (speech time) · 147 overall · 181 excl. all pauses; 558 words | 140–165 (cap <120/>180) | ok |
-| loudness | -14.2 LUFS, LRA 2.4 LU | −14 ±1 | ok |
-| true peak | -2.7 dBTP | ≤ −1.5 | ok |
+| runtime | 3:34.8 (214.8s) | 2:30–4:00 | ok |
+| video | 1920x1080 @ 30 fps, h264/yuv420p, 9.71 MB | 1920x1080 @ 30 | ok |
+| pace | 148 wpm (speech time) · 138 overall · 177 excl. all pauses; 496 words | 140–165 (cap <120/>180) | ok |
+| loudness | -14.0 LUFS, LRA 2.6 LU | −14 ±1 | ok |
+| true peak | -2.1 dBTP | ≤ −1.5 | ok |
 | leading silence | 0.00s | ≤ 1 s | ok |
-| trailing silence | 1.89s | ≤ 2 s | ok |
-| longest internal silence | 1.98s | ≤ 2.5 s | ok |
-| longest fully static stretch | 3.37s | ≤ 4 s (cap ≥ 8 s) | ok |
+| trailing silence | 1.77s | ≤ 2 s | ok |
+| longest internal silence | 1.84s | ≤ 2.5 s | ok |
+| longest fully static stretch | 3.23s | ≤ 4 s (cap ≥ 8 s) | ok |
 | black frames | 0 run(s) | none | ok |
 | background-only stretches > 1 s | 0 | none | ok |
-| transcript vs script | WER 0.7% (542 words) | ≲ 8 % | ok |
+| transcript vs script | WER 1.0% (484 words) | ≲ 8 % | ok |
 | banned phrases (§4) | 0 | 0 | ok |
 
 ## Flags
@@ -26,15 +26,28 @@ Generated 2026-10-22 11:31 by videos/toolkit/review_kit.sh. Frames are evidence;
 
 ### Silences ≥ 0.3 s
 
-0:03.1–0:03.6 (0.5s), 0:06.2–0:06.7 (0.5s), 0:09.7–0:10.2 (0.5s), 0:13.2–0:15.2 (2.0s), 0:18.0–0:18.4 (0.3s), 0:19.4–0:19.9 (0.5s), 0:23.4–0:23.9 (0.5s), 0:25.8–0:26.2 (0.3s), 0:27.2–0:27.7 (0.5s), 0:31.4–0:31.9 (0.5s), 0:32.9–0:33.4 (0.5s), 0:35.4–0:35.7 (0.4s), 0:37.1–0:37.6 (0.5s), 0:39.1–0:39.5 (0.4s), 0:41.6–0:42.1 (0.5s), 0:44.0–0:44.4 (0.5s), 0:47.2–0:47.7 (0.5s), 0:49.2–0:49.6 (0.4s), 0:53.0–0:53.4 (0.5s), 0:57.9–0:58.5 (0.6s), 1:01.8–1:02.2 (0.5s), 1:04.0–1:04.5 (0.5s), 1:08.9–1:09.4 (0.5s), 1:10.4–1:11.3 (0.9s), 1:11.8–1:12.3 (0.5s), 1:13.3–1:14.0 (0.7s), 1:16.7–1:17.1 (0.5s), 1:19.9–1:20.3 (0.5s), 1:23.7–1:24.2 (0.5s), 1:26.2–1:26.7 (0.5s), 1:29.5–1:30.0 (0.5s), 1:31.6–1:31.9 (0.4s), 1:33.8–1:34.3 (0.5s), 1:37.0–1:37.4 (0.4s), 1:40.0–1:41.2 (1.2s), 1:43.0–1:43.8 (0.7s), 1:46.8–1:47.3 (0.5s), 1:51.3–1:51.7 (0.5s), 1:52.9–1:53.3 (0.5s), 1:55.7–1:57.7 (2.0s), 1:59.7–2:00.2 (0.5s), 2:01.9–2:02.4 (0.5s), 2:04.1–2:04.6 (0.5s), 2:06.7–2:07.2 (0.6s), 2:13.0–2:13.5 (0.5s), 2:16.2–2:16.5 (0.4s), 2:18.4–2:19.4 (1.0s), 2:25.2–2:25.7 (0.5s), 2:29.5–2:30.0 (0.5s), 2:32.7–2:33.1 (0.4s), 2:34.0–2:34.5 (0.5s), 2:36.9–2:37.4 (0.5s), 2:39.3–2:40.6 (1.3s), 2:42.6–2:43.1 (0.5s), 2:45.8–2:46.2 (0.5s), 2:49.9–2:50.4 (0.5s), 2:52.3–2:52.7 (0.5s), 2:56.2–2:56.7 (0.5s), 2:58.1–2:58.6 (0.5s), 3:01.7–3:02.3 (0.6s), 3:06.7–3:07.1 (0.5s), 3:10.4–3:11.1 (0.6s), 3:15.1–3:15.6 (0.4s), 3:19.8–3:20.5 (0.6s), 3:25.3–3:25.8 (0.5s), 3:27.1–3:27.6 (0.5s), 3:30.2–3:30.7 (0.4s), 3:32.6–3:33.1 (0.5s), 3:34.3–3:35.6 (1.3s), 3:37.9–3:38.4 (0.5s), 3:41.2–3:41.7 (0.5s), 3:45.2–3:47.1 (1.9s)
+0:03.1–0:03.8 (0.6s), 0:06.4–0:06.8 (0.4s), 0:09.7–0:10.5 (0.7s), 0:13.5–0:15.3 (1.8s), 0:18.2–0:18.5 (0.3s), 0:19.6–0:20.0 (0.4s), 0:23.0–0:23.8 (0.8s), 0:25.9–0:26.4 (0.5s), 0:29.9–0:30.4 (0.5s), 0:32.4–0:32.7 (0.4s), 0:34.1–0:34.8 (0.6s), 0:36.2–0:36.6 (0.4s), 0:38.5–0:39.6 (1.0s), 0:41.4–0:42.2 (0.8s), 0:43.7–0:44.1 (0.4s), 0:47.5–0:48.0 (0.5s), 0:52.5–0:53.0 (0.6s), 0:54.9–0:55.4 (0.5s), 0:57.2–0:57.6 (0.4s), 1:02.6–1:03.2 (0.6s), 1:04.2–1:05.1 (0.9s), 1:05.7–1:06.4 (0.7s), 1:07.3–1:08.0 (0.7s), 1:10.7–1:11.4 (0.7s), 1:15.7–1:16.2 (0.5s), 1:18.3–1:18.8 (0.5s), 1:21.2–1:22.2 (1.0s), 1:23.8–1:24.2 (0.4s), 1:26.0–1:26.9 (0.8s), 1:29.6–1:30.0 (0.4s), 1:32.6–1:33.8 (1.2s), 1:35.6–1:36.3 (0.7s), 1:39.4–1:39.9 (0.5s), 1:43.8–1:44.6 (0.8s), 1:47.4–1:49.2 (1.8s), 1:51.3–1:52.0 (0.6s), 1:53.7–1:54.3 (0.6s), 1:56.0–1:57.4 (1.4s), 1:59.4–1:59.9 (0.5s), 2:02.8–2:03.2 (0.4s), 2:06.4–2:06.8 (0.4s), 2:09.5–2:09.8 (0.4s), 2:11.7–2:12.7 (1.0s), 2:14.5–2:14.9 (0.4s), 2:18.8–2:19.4 (0.6s), 2:23.1–2:23.8 (0.6s), 2:27.3–2:28.1 (0.8s), 2:30.6–2:31.0 (0.5s), 2:33.0–2:34.7 (1.7s), 2:36.6–2:36.9 (0.3s), 2:38.8–2:39.4 (0.6s), 2:40.4–2:40.7 (0.3s), 2:45.0–2:45.5 (0.5s), 2:49.0–2:49.8 (0.8s), 2:51.2–2:51.7 (0.5s), 2:54.9–2:55.4 (0.6s), 2:59.7–3:01.1 (1.4s), 3:04.4–3:04.9 (0.5s), 3:05.8–3:06.2 (0.4s), 3:09.1–3:09.9 (0.8s), 3:14.1–3:14.7 (0.6s), 3:19.2–3:20.0 (0.8s), 3:21.3–3:21.7 (0.4s), 3:22.9–3:24.2 (1.3s), 3:26.6–3:27.2 (0.6s), 3:30.0–3:30.4 (0.4s), 3:33.0–3:34.8 (1.8s)
 
 ### Static stretches ≥ 3 s
 
-2:40.1–2:43.4 (3.2s), 3:17.1–3:20.5 (3.4s)
+3:06.7–3:10.0 (3.2s)
+
+## Narration craft (PRODUCTION_GUIDE §13: the systemic 9-blockers)
+
+Measured from narration.json (Kokoro's own word timings). Each line names the defect critics docked and the target that scored 9.
+
+- **Budget:** 494 words in 3:34.8. Target ≤ 500 words, 3:15–3:35. 16 of 28 round-5/6 reviews docked Concision for length; 9 of the 10 episodes at ≥ 3:41 were told to cut, none at ≤ 3:37 was.
+- **Pace between pauses:** voice speed 0.8, 0.84; median sentence 166 wpm (episodes 165–178; number-dense sentences run faster), 1 sentence(s) above 200 wpm. 9 of 28 reviews called the delivery hurried; the Audio 9s were at the same 160–164 wpm, with planned pauses and no run-ons.
+  - 1:22.3 201 wpm: “The top card can't see this it…”
+- **Cadence:** full stops 0.50 s median (variation 0.26), beat turns 0.71 s; longest stretch without a ≥ 0.35 s breath 14.4 s at 1:57.4. Audio 9 went to episodes with 0.9–1.4 s after key results and every turn audibly longer than a full stop; flat 0.4 s gaps were called 'metronomic' (use CADENCE = "shaped" and [pause 1.0] after results).
+- **Held function words** (≥ 0.5 s; can sound like odd emphasis): “which” 0.51s @0:09.3, “this” 0.53s @1:23.5, “one” 0.54s @1:53.2
+- **Number load:** 39 spoken numbers; busiest 20 s from 1:02.2 has 7 different ones. Critics docked Clarity where 3+ new figures arrived inside ~20 s without a picture for each.
+- **Glyph morphs:** 0 Transform(s) between different strings (render as glyph soup; 13 of 28 reviews docked one). Use swap() / carry() / live_number() / TransformMatchingTex.
+- **Deictic sync:** 5 deictic words; 0 with no animation starting within −0.8…+0.4 s (Audio 9 required every one to land within ~0.6 s).
 
 ## Layout audit (automatic overlap check, BAR §5)
 
-0 issue(s): 0 overlapping/touching, 0 closer than 0.15, 0 outside the safe area, 0 in the caption zone; 0 allowed by the producer. 272 frames checked (after every animation and hold).
+0 issue(s): 0 overlapping/touching, 0 closer than 0.15, 0 outside the safe area, 0 in the caption zone, 0 text(s) under the 24 px cap-height floor; 0 allowed by the producer. 267 frames checked (after every animation and hold).
 
 
 ## Contact sheets (one frame every 2s; words spoken ±1s under each)
@@ -50,118 +63,122 @@ Generated 2026-10-22 11:31 by videos/toolkit/review_kit.sh. Frames are evidence;
 - `sheets/sheet_09.png` — 2:25.0–2:41.0
 - `sheets/sheet_10.png` — 2:43.0–2:59.0
 - `sheets/sheet_11.png` — 3:01.0–3:17.0
-- `sheets/sheet_12.png` — 3:19.0–3:35.0
-- `sheets/sheet_13.png` — 3:37.0–3:47.0
+- `sheets/sheet_12.png` — 3:19.0–3:33.0
 
 ## Keyframes (full resolution, frames where the picture settles)
 
 - `keyframes/kf_01_00-06.6.png` — 0:06.6
-- `keyframes/kf_02_00-15.8.png` — 0:15.8
-- `keyframes/kf_03_00-26.4.png` — 0:26.4
-- `keyframes/kf_04_00-31.6.png` — 0:31.6
-- `keyframes/kf_05_00-35.7.png` — 0:35.7
-- `keyframes/kf_06_00-47.9.png` — 0:47.9
-- `keyframes/kf_07_00-55.7.png` — 0:55.7
-- `keyframes/kf_08_01-06.5.png` — 1:06.5
-- `keyframes/kf_09_01-11.6.png` — 1:11.6
-- `keyframes/kf_10_01-16.8.png` — 1:16.8
-- `keyframes/kf_11_01-24.0.png` — 1:24.0
-- `keyframes/kf_12_01-26.3.png` — 1:26.3
-- `keyframes/kf_13_01-29.6.png` — 1:29.6
-- `keyframes/kf_14_01-35.4.png` — 1:35.4
-- `keyframes/kf_15_01-47.2.png` — 1:47.2
-- `keyframes/kf_16_01-49.4.png` — 1:49.4
-- `keyframes/kf_17_01-51.5.png` — 1:51.5
-- `keyframes/kf_18_01-57.4.png` — 1:57.4
-- `keyframes/kf_19_01-59.9.png` — 1:59.9
-- `keyframes/kf_20_02-02.1.png` — 2:02.1
-- `keyframes/kf_21_02-04.7.png` — 2:04.7
-- `keyframes/kf_22_02-07.1.png` — 2:07.1
-- `keyframes/kf_23_02-10.3.png` — 2:10.3
-- `keyframes/kf_24_02-14.4.png` — 2:14.4
-- `keyframes/kf_25_02-16.4.png` — 2:16.4
-- `keyframes/kf_26_02-26.0.png` — 2:26.0
-- `keyframes/kf_27_02-28.0.png` — 2:28.0
-- `keyframes/kf_28_02-42.5.png` — 2:42.5
-- `keyframes/kf_29_02-48.9.png` — 2:48.9
-- `keyframes/kf_30_02-56.4.png` — 2:56.4
-- `keyframes/kf_31_03-00.3.png` — 3:00.3
-- `keyframes/kf_32_03-08.7.png` — 3:08.7
-- `keyframes/kf_33_03-10.6.png` — 3:10.6
-- `keyframes/kf_34_03-12.2.png` — 3:12.2
-- `keyframes/kf_35_03-14.9.png` — 3:14.9
-- `keyframes/kf_36_03-19.6.png` — 3:19.6
-- `keyframes/kf_37_03-25.6.png` — 3:25.6
-- `keyframes/kf_38_03-32.5.png` — 3:32.5
-- `keyframes/kf_39_03-39.7.png` — 3:39.7
-- `keyframes/kf_40_03-47.0.png` — 3:47.0
+- `keyframes/kf_02_00-12.0.png` — 0:12.0
+- `keyframes/kf_03_00-28.4.png` — 0:28.4
+- `keyframes/kf_04_00-32.7.png` — 0:32.7
+- `keyframes/kf_05_00-42.0.png` — 0:42.0
+- `keyframes/kf_06_00-47.7.png` — 0:47.7
+- `keyframes/kf_07_00-55.0.png` — 0:55.0
+- `keyframes/kf_08_00-59.7.png` — 0:59.7
+- `keyframes/kf_09_01-05.5.png` — 1:05.5
+- `keyframes/kf_10_01-12.4.png` — 1:12.4
+- `keyframes/kf_11_01-15.9.png` — 1:15.9
+- `keyframes/kf_12_01-18.2.png` — 1:18.2
+- `keyframes/kf_13_01-21.8.png` — 1:21.8
+- `keyframes/kf_14_01-26.6.png` — 1:26.6
+- `keyframes/kf_15_01-30.3.png` — 1:30.3
+- `keyframes/kf_16_01-34.7.png` — 1:34.7
+- `keyframes/kf_17_01-39.8.png` — 1:39.8
+- `keyframes/kf_18_01-42.0.png` — 1:42.0
+- `keyframes/kf_19_01-45.7.png` — 1:45.7
+- `keyframes/kf_20_01-51.6.png` — 1:51.6
+- `keyframes/kf_21_01-54.0.png` — 1:54.0
+- `keyframes/kf_22_01-57.3.png` — 1:57.3
+- `keyframes/kf_23_01-59.8.png` — 1:59.8
+- `keyframes/kf_24_02-03.5.png` — 2:03.5
+- `keyframes/kf_25_02-07.4.png` — 2:07.4
+- `keyframes/kf_26_02-09.7.png` — 2:09.7
+- `keyframes/kf_27_02-14.6.png` — 2:14.6
+- `keyframes/kf_28_02-21.5.png` — 2:21.5
+- `keyframes/kf_29_02-31.7.png` — 2:31.7
+- `keyframes/kf_30_02-35.1.png` — 2:35.1
+- `keyframes/kf_31_02-42.1.png` — 2:42.1
+- `keyframes/kf_32_02-49.5.png` — 2:49.5
+- `keyframes/kf_33_02-53.4.png` — 2:53.4
+- `keyframes/kf_34_03-02.6.png` — 3:02.6
+- `keyframes/kf_35_03-04.5.png` — 3:04.5
+- `keyframes/kf_36_03-09.1.png` — 3:09.1
+- `keyframes/kf_37_03-13.1.png` — 3:13.1
+- `keyframes/kf_38_03-19.8.png` — 3:19.8
+- `keyframes/kf_39_03-28.6.png` — 3:28.6
+- `keyframes/kf_40_03-34.8.png` — 3:34.8
 
 ## Transcript (whisper-large-v3-turbo, word timings in transcript_words.tsv)
 
 ```
 [0:00.0–0:03.1] Heads, I riffle shuffle a sorted deck four times.
-[0:03.7–0:06.0] Tails, a computer shuffles it perfectly.
+[0:03.8–0:06.2] Tails, a computer shuffles it perfectly.
 [0:06.8–0:09.6] From the deck alone, how often could you tell which?
-[0:10.2–0:13.2] Pick 50, 75, or 100%.
-[0:13.2–0:19.3] Monte Carlo samplers move by random steps, like these riffles.
-[0:19.9–0:23.2] Stop them too early, and they still remember where they started.
-[0:23.4–0:27.1] The obvious check is the top card, the one you'd be dealt.
-[0:27.7–0:31.3] Here's how often each card ends up there after four riffles.
-[0:31.9–0:32.8] Almost flat.
-[0:33.4–0:36.9] Only the old top card stands out, one time in 15.
-[0:37.7–0:41.5] Judging by the top card, you'd be right 52% of the time.
-[0:42.1–0:43.7] Four riffles look like plenty.
-[0:44.4–0:47.1] A guesser who sees the whole deck does far better.
-[0:47.7–0:52.9] The model cuts near the middle, then drops cards from each half in proportion to its size.
-[0:52.9–0:57.6] Each half stays in order, so one riffle leaves two rising sequences.
-[0:58.5–1:01.7] Runs of consecutive cards, reading left to right.
-[1:02.3–1:03.9] Give each sequence its own level.
-[1:04.5–1:08.8] The cut crosses each level once, so a riffle can at most split it in two.
-[1:09.4–1:10.3] Three riffles.
-[1:11.2–1:11.7] Eight.
-[1:12.3–1:13.2] Four riffles.
-[1:14.0–1:16.4] At most 16, this deck has 14.
-[1:16.4–1:24.3] A perfect shuffle averages 26 and a half and gives 16 or fewer once in 2 million decks.
-[1:24.3–1:30.1] Call 16 or fewer Riffled and you'd be wrong about once in 4 million games.
-[1:30.1–1:32.0] The top card can't see this.
-[1:32.0–1:34.3] It lives in the order between cards.
-[1:34.3–1:41.4] Bayer and Diaconis proved that in this model, decks with the same count are equally likely.
-[1:41.4–1:44.0] So pile decks onto their counts.
-[1:44.0–2:03.0] every possible deck weighted by its chance The red area purple above blue is the distance from random Right now it one how many more riffles to bring it below a half a fifth riffle 0 a sixth point six one a seventh
-[2:03.0–2:09.3] point three three guess riffled where purple is higher you catch 65 percent of
-[2:09.3–2:15.4] riffled decks and flag 32 percent of perfect ones accuracy is a half plus half
-[2:15.4–2:19.5] the difference, and the difference is the red area.
-[2:19.5–2:25.0] Each riffle roughly halved the gap, but blue's spread, its standard deviation, stayed about
-[2:25.0–2:26.0] 2.
-[2:26.0–2:30.3] While the gap spans several spreads, the distance stays near 1.
-[2:30.3–2:35.0] Within about one spread, it halves every riffle, that's the cliff.
-[2:35.0–2:41.0] Multiply each gap by 2 to the K, and it settles near 230.
-[2:41.0–2:46.3] divide that by two each riffle, and it reaches one spread after just under seven.
-[2:46.3–2:53.3] For n cards, 230 grows like n squared, but the spread only like root n, so the cliff
-[2:53.3–2:56.8] sits near three halves log base two of n.
-[2:56.8–2:58.7] Aldus proved that law.
-[2:58.7–3:02.3] Bayer and Diaconis computed the exact curve.
-[3:02.3–3:07.2] For 52 cards, seven riffles is the first count below a half.
-[3:07.2–3:10.2] Trefethen and Trefethen measured information instead.
-[3:11.1–3:15.1] No cliff, and five or six shuffles do a reasonable job.
-[3:15.6–3:19.8] Many Markov chains share this cliff, and samplers share the trap.
-[3:20.4–3:25.2] One statistic can settle, like the top card, long before the whole chain has.
-[3:25.7–3:27.0] Back to the coin flip.
-[3:27.5–3:32.5] After four riffles, you'd almost never be wrong, same as with an unshuffled deck.
-[3:32.5–3:37.8] three more riffles, and you'd be right only two times out of three.
-[3:38.5–3:41.1] Four riffles fool someone watching the top card,
-[3:41.8–3:45.1] fooling someone who counts sequences that well takes ten,
+[0:10.4–0:13.5] Pick 50, 75, or 100%.
+[0:13.5–0:19.4] Monte Carlo samplers move by random steps, like these riffles.
+[0:20.0–0:22.8] Stop too early, they still remember where they started.
+[0:23.2–0:25.8] The obvious check is the top card.
+[0:26.4–0:29.8] Here's how often each card lands there after four riffles.
+[0:30.0–0:33.9] Only the old top card stands out, one time in 15.
+[0:34.7–0:38.5] Judge by it and you're right, 52% of the time.
+[0:39.5–0:41.2] Four riffles look like plenty.
+[0:42.2–0:43.6] The model cuts near the middle,
+[0:44.1–0:47.4] then drops cards from each half in proportion to its size.
+[0:48.0–0:49.3] Each half stays in order,
+[0:49.7–0:52.2] so one riffle leaves two rising sequences,
+[0:53.1–0:54.7] runs of consecutive cards.
+[0:55.4–0:57.1] Give each sequence its own level.
+[0:57.1–0:59.5] The cut crosses each level once,
+[0:59.5–1:02.5] so a riffle can at most split each level in two.
+[1:03.3–1:04.1] Three riffles.
+[1:05.1–1:05.5] Eight.
+[1:06.3–1:07.2] Four riffles.
+[1:08.0–1:10.4] At most 16, this deck has 14.
+[1:11.3–1:15.6] A perfect shuffle gives 16 or fewer once in 2 million decks.
+[1:16.2–1:18.2] Call 16 or fewer riffled,
+[1:18.5–1:21.1] and you'd be wrong once in 4 million games.
+[1:21.8–1:23.8] The top card can't see this.
+[1:24.2–1:25.9] It lives in the order between cards.
+[1:25.9–1:29.4] Bayer and Diaconis proved that in this model,
+[1:29.4–1:32.9] decks with the same count are equally likely.
+[1:32.9–1:35.9] So pile decks onto their counts.
+[1:35.9–1:39.9] Then every possible deck, weighted by its chance.
+[1:39.9–1:57.7] The red area purple above blue is the distance from random How many more riffles until it below a half A fifth riffle A sixth A seventh
+[1:57.7–2:05.6] Guess riffled where purple is higher. You catch 65% of riffled decks. You also flag 32% of
+[2:05.6–2:11.2] perfect ones. Accuracy is a half plus half the difference, and the difference is the red
+[2:11.2–2:18.0] area. Each riffle roughly halves the gap. Blue's spread, its standard deviation, stays
+[2:18.0–2:24.9] about 2. While the gap spans several spreads, the distance stays near 1. Within one spread,
+[2:24.9–2:31.7] it halves every riffle, that's the cliff. Multiply each gap by 2 to the K, and it settles
+[2:31.7–2:34.9] near 230.
+[2:34.9–2:39.5] Set the gap equal to one spread, and k is just under 7.
+[2:39.5–2:46.4] For n cards, 230 grows like n squared, but the spread like root n, so the cliff sits
+[2:46.4–2:49.9] near 3 halves log base 2 of n.
+[2:49.9–2:51.8] Aldus proved that law.
+[2:51.8–2:55.5] Bayer and Diaconis computed the exact curve.
+[2:55.5–3:01.2] For 52 cards, 7 riffles is the first below a half.
+[3:01.2–3:04.9] Trafethen and Trafethen measured information instead.
+[3:04.9–3:06.3] No cliff.
+[3:06.3–3:09.9] Five or six shuffles do a reasonable job.
+[3:09.9–3:12.4] Many Markov chains share this cliff,
+[3:12.4–3:14.7] and samplers share the trap.
+[3:14.7–3:17.1] One statistic, like the top card,
+[3:17.1–3:20.0] settles long before the whole chain.
+[3:20.0–3:21.7] Back to the coin flip.
+[3:21.7–3:23.1] Three more riffles,
+[3:24.2–3:27.2] and you'd be right only two times out of three.
+[3:27.2–3:30.4] Four riffles fool someone watching the top card,
+[3:30.4–3:33.1] Fooling someone who counts sequences takes 10.
 ```
 
-## Narration vs transcript (WER 0.7%)
+## Narration vs transcript (WER 1.0%)
 
 Differences (numbers spelled out, 'and' ignored). A technical term heard wrong usually means it was mispronounced:
 
 ```
-[0:12.1] replace  script: 'a'                                      heard: 'one'
-[1:44.1] delete   script: 'then'                                   heard: '∅'
-[1:58.5] insert   script: '∅'                                      heard: 'zero'
-[2:56.6] replace  script: 'aldous'                                 heard: 'aldus'
+[0:12.4] replace  script: 'a'                                      heard: 'one'
+[0:20.0] replace  script: 'stopped'                                heard: 'stop'
+[2:49.7] replace  script: 'aldous'                                 heard: 'aldus'
+[3:01.2] replace  script: 'trefethen trefethen'                    heard: 'trafethen trafethen'
 ```
 
-_review kit ran in 202s_
+_review kit ran in 112s_

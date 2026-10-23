@@ -1,7 +1,7 @@
-WER 0.7% over 542 script words (numbers spelled out, 'and' ignored)
+WER 1.0% over 484 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/006-riffle-shuffle-cutoff/narration.json
 
-[0:12.1] replace  script: 'a'                                      heard: 'one'
-[1:44.1] delete   script: 'then'                                   heard: '∅'
-[1:58.5] insert   script: '∅'                                      heard: 'zero'
-[2:56.6] replace  script: 'aldous'                                 heard: 'aldus'
+[0:12.4] replace  script: 'a'                                      heard: 'one'
+[0:20.0] replace  script: 'stopped'                                heard: 'stop'
+[2:49.7] replace  script: 'aldous'                                 heard: 'aldus'
+[3:01.2] replace  script: 'trefethen trefethen'                    heard: 'trafethen trafethen'

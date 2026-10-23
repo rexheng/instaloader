@@ -2702,12 +2702,7 @@
    "wav": "/root/.cache/sample_space/tts/b2/b27ff6e8bbd3bc0fe9714ab8.wav"
   }
  ],
- "warnings": [
-  {
-   "t": 90.77,
-   "msg": "beat 10: animations reached 'win' 0.34s after it was spoken - narration and visuals out of sync; shorten the preceding animations"
-  }
- ],
+ "warnings": [],
  "budget": {
   "words": 490,
   "runtime_s": 213.6,
@@ -2727,8 +2722,8 @@
  "layout_audit": {
   "clearance": 0.15,
   "checks": 210,
-  "audit_seconds": 1.838,
-  "render_seconds": 376.7,
+  "audit_seconds": 1.645,
+  "render_seconds": 227.7,
   "errors": 0,
   "count": 0,
   "counts": {

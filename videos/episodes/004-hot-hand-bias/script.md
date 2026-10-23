@@ -29,9 +29,9 @@ Never red vs green; red is always labelled.
 ## Beats
 
 ### 1. Cold open (0:00–0:13) — *open*
-> Flip a fair coin four times. After each heads, check the next flip: *[pause 0.35]* here, one of
-> the two is heads. *[pause 0.35]* Do this for every four flip run, and average. Below, at, or above
-> one half? *[pause 1.6]*
+> Flip a fair coin four times. After each heads, check the next flip: *[pause 0.3]* here, one of
+> the two is heads. *[pause 0.15]* Do this for every four flip run, and average. *[pause 0.15]*
+> Below, at, or above one half? *[pause 1.6]*
 
 Visual: the row of four large coins flips in at the vertical centre of the frame (H H T H).
 Blue arcs jump from each eligible heads to the next flip; those flips get blue rings; while the
@@ -291,6 +291,29 @@ Round-9 changes (both critics' fixes; see CHANGELOG):
 - **Landing:** the axis, its ticks and the dashed line stay at full and are in place by 0.8 s;
   the payoff fades out over 0.4 s while the cold open fades in from 0.2 s (both faint where they
   overlap). Tag: "its 4-shot rows average 1/2".
+
+Round-10 changes (both critics' fixes; see CHANGELOG):
+- **Cold open:** the breaths after "one of the two is heads" and after "and average" are
+  0.15 s (were 0.3 s and the 0.30 s sentence gap), so the question ends ≈ 0:12.4; the 1.6 s
+  prediction hold is unchanged.
+- **Score (0:41):** the HHHT box is drawn in 0.35 s from "This", complete by "row".
+- **Pool (1:09):** no inline "12/24": the 12 yellow tiles fly into the stacked numerator, all
+  24 into the denominator, and the bar grows between them, where Σᵢhᵢ/Σᵢnᵢ = 12/24 will stand.
+- **Votes:** "1 vote per row" sits 0.04 lower and the stepped-back 40.5% readout 0.08 higher,
+  so they never share a baseline.
+- **Cornell (2:07):** the two coin strips are not cleared: on "The nineteen eighty five study"
+  each shrinks into its lane (height ×0.3, half strength; the grey tracks replace it on "For a random shooter") while "after" stays and "heads"/"tails" give
+  way to "3 hits"/"3 misses"; the cursors and the −19 gap leave as before and the values become
+  "?". No header sentence: on "twenty six Cornell players" the right column gets the grey head
+  "26 Cornell players", on "a hundred shots" "up to 100 shots" under it; both step back on
+  "about half". On "For a random shooter" the head hands over to blue "random" and the faint
+  strips leave as the cursors grow out of the dashed line. On "Longer records" "up to 100 shots"
+  answers; it leaves on "The Cornell players" as "random" becomes "Cornell".
+- **Observed:** as "= +4" lands the right column (Cornell, the two lane labels, 49%, 45%)
+  steps back to 30%; the p-value tag reads "1985 test: p = .49"; on "Measured from minus
+  eight" "Cornell" returns to full as it travels to tag the +4 marker.
+- **Landing:** "1/14 Σ" is written first, the 14 rows land on the Σ, and hᵢ/nᵢ is written
+  only after the last has landed.
 
 ## Sources (on screen)
 - Gilovich, Vallone & Tversky, 1985 · Cognitive Psychology 17(3):295–314 (shown as "Gilovich et al., 1985 · Cognitive Psychology")

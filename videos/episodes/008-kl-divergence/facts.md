@@ -160,3 +160,12 @@ the same quantity as above, only reworded; nothing new is claimed.
 | "much of Bayesian machine learning shrinks it with the order flipped" | variational inference: q* = argmin KL(q ‖ p(z∣x)) (Blei et al. 2017 eq. 1); "much of" because MCMC, the other workhorse, minimises no KL |
 | Honest-limit tag "heavier smoothing" (was "R's default smoothing"; the guide's §13.5.3 lists "R's default" as an undefined term) | the curve is R's default kernel smoothing, bw.nrd0 = 0.3348 min; citation on screen: Silverman, 1986 · Density Estimation (R's default bandwidth); best bell-first fit 3.547 ± 0.991 min |
 | "Smooth it more heavily and the gap partly fills: the best bell-first fit spreads almost back to A." | gap mass 3.2 % → 9.8 %; fit 3.55 ± 0.99 vs A 3.49 ± 1.14 |
+
+## Round-5 continuation 2 (claims whose wording or placement changed)
+
+| Claim (narration / screen) | Verification |
+|---|---|
+| Chart key during the two-bill stretch: `A: 3.49 ± 1.14 min`, `B: 4.27 ± 0.44 min`; on "less than half as wide" the 0.44 and the 1.14 flag together | A = mean 3.4878, SD 1.1393 min (the data-first optimum); B = 4.2712 ± 0.4408 min (the bell-first optimum, where the descent from A stops); 0.4408 / 1.1393 = 0.387 < 1/2, and from the displayed values 0.44 / 1.14 = 0.386 |
+| "Against raw points, with the bell first, every score is infinite, so the data must be smoothed." (was "every bell-first score is infinite": same claim, reworded for the voice) | KL(bell ‖ empirical) = ∞ for every bell (the bell is not absolutely continuous w.r.t. a measure on 272 points); see "Why the data is smoothed at all" above |
+| "Smooth it more heavily and the gap partly fills: the best fit spreads almost back to A." (on screen still "best bell-first fit: 3.55 ± 0.99 min") | gap mass 3.2 % → 9.8 % under R's default kernel smoothing; best bell-first fit 3.547 ± 0.991 min vs A 3.488 ± 1.139 min |
+| Giordano, Broderick & Jordan 2018, β₃: MCMC 0.110 ± 0.020, VI 0.110 ± 0.004 | Re-checked against the JMLR PDF (jmlr.org/papers/volume19/17-670/17-670.pdf) on 2026-10-22, third reading: Table 2 row "β3 0.110 0.110 0.103 0.00028 5000" (MCMC, MFVB, MAP, MCMC s.e., effective draws); Table 3 row "β3 0.020 0.020 0.004" (MCMC, LRVB, uncorrected MFVB); §5.3: "a custom subsample of the 2014 Criteo Labs conversion logs data set"; §5.3.5: "The uncorrected MFVB variance estimates of β are particularly inaccurate" |

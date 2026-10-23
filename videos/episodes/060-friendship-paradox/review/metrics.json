@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/060-friendship-paradox/final.mp4",
- "duration_s": 214.333,
+ "duration_s": 214.5,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -8,9 +8,9 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 9.45,
+ "size_mb": 9.44,
  "integrated_lufs": -14.0,
- "lra_lu": 2.6,
+ "lra_lu": 2.7,
  "true_peak_dbtp": -2.1,
  "leading_silence_s": 0.0,
  "trailing_silence_s": 1.8,
@@ -26,22 +26,22 @@
   ],
   [
    148.47,
-   150.13
+   150.3
   ],
   [
-   161.65,
-   163.67
+   161.82,
+   163.84
   ],
   [
-   203.62,
-   205.53
+   203.79,
+   205.7
   ],
   [
-   208.83,
-   211.05
+   209.0,
+   211.21
   ]
  ],
- "frames": 6430,
+ "frames": 6435,
  "longest_static_s": 3.5,
  "static_stretches_over_3s": [
   [
@@ -55,22 +55,22 @@
    3.43
   ],
   [
-   172.57,
-   175.9,
-   3.33
+   172.67,
+   176.07,
+   3.4
   ]
  ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.06699652777778,
+ "background_luma": 22.067413194444445,
  "transcript_words": 495,
  "first_word_s": 0.02,
- "last_word_s": 212.62799,
- "wpm_speech": 153.2,
- "wpm_overall": 138.6,
- "wpm_excluding_all_pauses": 179.4,
+ "last_word_s": 212.45334,
+ "wpm_speech": 153.4,
+ "wpm_overall": 138.5,
+ "wpm_excluding_all_pauses": 179.8,
  "narration_file": "videos/episodes/060-friendship-paradox/narration.json",
- "wer": 0.0277,
+ "wer": 0.0256,
  "narration_words": 469,
  "banned_phrase_hits": 0,
  "slop_hits": [],
@@ -194,92 +194,92 @@
    "file": "keyframes/kf_18_01-44.7.png"
   },
   {
-   "t": 118.73,
-   "file": "keyframes/kf_19_01-58.7.png"
-  },
-  {
    "t": 123.43,
-   "file": "keyframes/kf_20_02-03.4.png"
+   "file": "keyframes/kf_19_02-03.4.png"
   },
   {
    "t": 128.0,
-   "file": "keyframes/kf_21_02-08.0.png"
+   "file": "keyframes/kf_20_02-08.0.png"
   },
   {
    "t": 130.8,
-   "file": "keyframes/kf_22_02-10.8.png"
+   "file": "keyframes/kf_21_02-10.8.png"
   },
   {
    "t": 135.07,
-   "file": "keyframes/kf_23_02-15.1.png"
+   "file": "keyframes/kf_22_02-15.1.png"
   },
   {
    "t": 137.63,
-   "file": "keyframes/kf_24_02-17.6.png"
+   "file": "keyframes/kf_23_02-17.6.png"
   },
   {
    "t": 139.37,
-   "file": "keyframes/kf_25_02-19.4.png"
+   "file": "keyframes/kf_24_02-19.4.png"
   },
   {
    "t": 141.43,
-   "file": "keyframes/kf_26_02-21.4.png"
+   "file": "keyframes/kf_25_02-21.4.png"
   },
   {
    "t": 142.5,
-   "file": "keyframes/kf_27_02-22.5.png"
+   "file": "keyframes/kf_26_02-22.5.png"
   },
   {
-   "t": 149.9,
-   "file": "keyframes/kf_28_02-29.9.png"
+   "t": 148.87,
+   "file": "keyframes/kf_27_02-28.9.png"
   },
   {
-   "t": 153.73,
-   "file": "keyframes/kf_29_02-33.7.png"
+   "t": 150.1,
+   "file": "keyframes/kf_28_02-30.1.png"
   },
   {
-   "t": 157.57,
-   "file": "keyframes/kf_30_02-37.6.png"
+   "t": 153.9,
+   "file": "keyframes/kf_29_02-33.9.png"
   },
   {
-   "t": 169.23,
-   "file": "keyframes/kf_31_02-49.2.png"
+   "t": 157.73,
+   "file": "keyframes/kf_30_02-37.7.png"
   },
   {
-   "t": 171.4,
-   "file": "keyframes/kf_32_02-51.4.png"
+   "t": 169.4,
+   "file": "keyframes/kf_31_02-49.4.png"
   },
   {
-   "t": 177.3,
-   "file": "keyframes/kf_33_02-57.3.png"
+   "t": 172.03,
+   "file": "keyframes/kf_32_02-52.0.png"
   },
   {
-   "t": 179.4,
-   "file": "keyframes/kf_34_02-59.4.png"
+   "t": 177.47,
+   "file": "keyframes/kf_33_02-57.5.png"
   },
   {
-   "t": 185.47,
-   "file": "keyframes/kf_35_03-05.5.png"
+   "t": 179.57,
+   "file": "keyframes/kf_34_02-59.6.png"
   },
   {
-   "t": 195.8,
-   "file": "keyframes/kf_36_03-15.8.png"
+   "t": 185.63,
+   "file": "keyframes/kf_35_03-05.6.png"
   },
   {
-   "t": 199.73,
-   "file": "keyframes/kf_37_03-19.7.png"
+   "t": 195.97,
+   "file": "keyframes/kf_36_03-16.0.png"
   },
   {
-   "t": 206.03,
-   "file": "keyframes/kf_38_03-26.0.png"
+   "t": 199.9,
+   "file": "keyframes/kf_37_03-19.9.png"
   },
   {
-   "t": 212.93,
-   "file": "keyframes/kf_39_03-32.9.png"
+   "t": 206.27,
+   "file": "keyframes/kf_38_03-26.3.png"
   },
   {
-   "t": 214.3,
-   "file": "keyframes/kf_40_03-34.3.png"
+   "t": 213.1,
+   "file": "keyframes/kf_39_03-33.1.png"
+  },
+  {
+   "t": 214.47,
+   "file": "keyframes/kf_40_03-34.5.png"
   }
  ],
  "flags": [],

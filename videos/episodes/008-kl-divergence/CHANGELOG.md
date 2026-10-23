@@ -202,3 +202,37 @@ never rendered. This round renders those edits together with every round-5 fix.
   consequence; the restating line before the closing pair is cut (the D-lines with → A / → B
   and the yellow 1 / 3 return silently, each with its sentence).
 
+
+
+## Round 5 revisions (final pass)
+
+Picked up an interrupted pass: scene.py and script.md had been edited after the 14:30 master and
+not rendered. This pass rendered those edits together with the fixes below.
+
+- **Rendered the pending edits.** The bet is now one question, "Or does the closest bell move to
+  two, or to three?", spoken at 0.77. Whisper used to hear two questions and the slop scan
+  flagged a question chain; the transcript now has one. The 18 s breathless run at 0:57 is split
+  (0.45 s after "call it p" and after "you reach p"). In the honest limit, "272 raw points" now
+  swaps with "if this were a posterior". The two tags were superimposed at 3:08.
+- **Label flying through a formula (2:01, caught on the contact sheet).** On "Which" the
+  x-axis name used to slide from the data-first bill to the bottom row, through
+  `= ∫ q log₂(q/p) dx`. Now the numbers drop and the name fades out, then fades back in at its
+  new place. Checked at 4 fps.
+- **Empty top-right quadrant (1:50–2:37, about 47 s).** The chart's key now sits where the p/q
+  readouts stood: `A: 3.49 ± 1.14 min` over `B: 4.27 ± 0.44 min`. On "less than half as wide"
+  0.44 and 1.14 flag together, so the claim can be read off the screen. This replaces B's crown
+  label, which had shown B's spread with no A to compare it to.
+- **Audio.** The closing pair gets 0.5 s between its sentences (was 0.1 s). Before, "Bell B" was
+  crushed and whisper heard "be"; now it hears "Bell B". The honest limit no longer says
+  "bell-first", which whisper heard as "belfirst". It now says "with the bell first, every score
+  is infinite … the best fit spreads almost back to A". The on-screen label is unchanged.
+- **Facts.** Re-read Giordano, Broderick & Jordan 2018 (JMLR PDF): β₃ is 0.110 / 0.110 in
+  Table 2 and has SDs 0.020 / 0.004 in Table 3; the data are the Criteo 2014 conversion logs.
+  Recomputed the naive shift and stretch (1.118 and 1.111 bits; the 1.11 on the old contact
+  sheet was a mid-move frame). Added the key's numbers (0.4408 / 1.1393 = 0.387) to facts.md.
+- **Result.** 3:30.6, 500 words, 159 wpm over speech, −14.0 LUFS / −1.9 dBTP, longest silence
+  2.09 s (the planned prediction hold), longest static 3.4 s, WER 1.6 %. The report has 0 flags,
+  0 banned phrases or patterns, 0 render warnings, and the layout audit found 0 issues in 192
+  checks. Looked at all 12 contact sheets, the keyframes at 2:06, 2:19, 2:32, 2:56, 3:12, 3:21
+  and 3:26, and 4 fps strips across the label swap (2:01), the key flag (2:31), the collapse
+  (2:20), the teardown (2:36) and the tag swap (3:08).

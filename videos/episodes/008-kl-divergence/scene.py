@@ -1019,6 +1019,12 @@ class Episode(NarratedScene):
         place_block(lhs2, f2, q_tot, ROWS2_THREE)
         lhs_r = note("bell", "data", size=BLK).move_to(lhs2, aligned_edge=LEFT)
         f_rev = rhs("q", "q", "p", size=BLK).move_to(f2, aligned_edge=LEFT)
+        # the chart's own key, beside the chart where the p / q readouts stood: the two contenders
+        # with their mean and spread (so "less than half as wide" can be read off: 0.44 vs 1.14)
+        key_a = MathTex(r"A\!:\ 3.49 \pm", r"1.14", r"\ \text{min}", font_size=BLK, color=PURPLE)
+        key_b = MathTex(r"B\!:\ 4.27 \pm", r"0.44", r"\ \text{min}", font_size=BLK, color=PURPLE)
+        key = VGroup(key_a, key_b).arrange(DOWN, aligned_edge=LEFT, buff=0.34)
+        key.move_to([2.15, THREE[1] + 0.62 * THREE[3], 0], aligned_edge=LEFT)
         with self.narrate("Now keep that bill. [pause 0.12] For a second bill, swap the order: "
                           "[pause 0.2] every p trades places with q. [pause 0.3] The bell supplies the "
                           "lengths, and the data judges them. [pause 0.5] Which bell wins now? "
@@ -1035,6 +1041,7 @@ class Episode(NarratedScene):
                       ReplacementTransform(ax_b1, ax_b1_3), ReplacementTransform(unit1b, unit1_3),
                       ReplacementTransform(xlab, xlab_p1), Transform(block1, tgt1),
                       self.a_solid.animate.set_value(1.0), self.a_op.animate.set_value(1.0),
+                      FadeIn(key, shift=0.1 * LEFT),
                       run_time=beat.until("swap", offset=-0.45, min_time=0.85), rate_func=SMOOTH)
             tot_num.add_updater(lambda m: m.set_value(self.total(1)))
             # the copy appears once the first block has moved clear of its rows
@@ -1067,8 +1074,13 @@ class Episode(NarratedScene):
                       self.p_fill.animate(rate_func=there_and_back).set_value(0.35), run_time=0.9)
             # the empty bell-first panel appears as the question is asked
             beat.wait_until("Which", offset=-0.1)
-            self.play(FadeIn(ax_b2), FadeIn(ord2), ReplacementTransform(xlab_p1, xlab3),
+            # the shared x numbers drop to the new lowest panel; the axis name fades out and back in
+            # at its new place (moving, it would fly through the second formula block)
+            self.play(FadeIn(ax_b2), FadeIn(ord2), ReplacementTransform(xlab_p1[0], xlab3[0]),
+                      swap(xlab_p1[1], xlab3[1], run_time=0.9),
                       Indicate(lab_A, color=YELLOW), Indicate(lab_B, color=YELLOW), run_time=0.9)
+            self.remove(xlab3[0], xlab3[1])
+            self.add(xlab3)
 
         # ============================================================ 9. B then A, bell first
         self.add(area2)
@@ -1130,10 +1142,6 @@ class Episode(NarratedScene):
 
         crown_a3 = np.array([THREE[0] + THREE[2] * MA, THREE[1] + THREE[3] * D["qA_peak"], 0])
         crown_b3 = np.array([THREE[0] + THREE[2] * MB, THREE[1] + THREE[3] * D["qB_peak"], 0])
-        b_lab = MathTex(r"B\!:\ 4.27 \pm 0.44\ \text{min}", font_size=36, color=PURPLE)
-        b_lab.next_to(crown_b3, RIGHT, buff=0.55).shift(0.05 * UP)
-        b_leader = DashedLine(crown_b3 + RIGHT * 0.12, b_lab.get_left() + LEFT * 0.12,
-                              dash_length=0.07, stroke_color=PURPLE, stroke_width=2)
         crown_g2 = np.array([THREE[0] + THREE[2] * MU[0], THREE[1] + THREE[3] * D["qB_peak"], 0])
         m1b = MathTex("1", font_size=40, color=YELLOW).next_to(crown_a3, UP, buff=0.2)
         m3b = MathTex("3", font_size=40, color=YELLOW).next_to(crown_b3, UP, buff=0.2)
@@ -1170,9 +1178,10 @@ class Episode(NarratedScene):
                                                          run_time=0.8), Wait(T - t_swell - 0.8)))
             driver.clear_updaters()
             self.remove(driver)
+            # "less than half as wide": the two spreads in the key, side by side
             beat.wait_until("less", offset=-0.1)
-            self.play(FadeIn(b_lab, shift=0.1 * LEFT), Create(b_leader),
-                      self.lab_b_op.animate.set_value(0.0), run_time=0.7)
+            self.play(Indicate(key_b[1], color=YELLOW, scale_factor=1.25),
+                      Indicate(key_a[1], color=YELLOW, scale_factor=1.25), run_time=0.9)
             # the cold-open picture returns: the same dashed ghosts, B now sitting exactly in 3
             ghost2b = self.bell_shape(MU[0], SB, width=3, opacity=0.25, dashed=True)
             ghost3b = self.bell_shape(MB, SB, width=3, opacity=0.6, dashed=True)
@@ -1205,7 +1214,7 @@ class Episode(NarratedScene):
         cite_blei = citation("Blei et al., 2017 · J. American Statistical Association")
         cite_bishop = citation("Bishop, 2006 · Pattern Recognition and Machine Learning, §10.1")
         # (the integral lines already left in beat 10; the yellow 3 stays on B's crown)
-        bill_stuff = VGroup(lhs, tot, lhs_r, tot2, b_lab, b_leader, m1b, m2b, moved, ghost2b,
+        bill_stuff = VGroup(lhs, tot, lhs_r, tot2, key, m1b, m2b, moved, ghost2b,
                             ghost3b, xlab3, unit1_3, ord1, ord2, ax_b1_3, b1_nums, ax_b2)
         with self.narrate("Maximum likelihood puts the data first, so a one-bell fit stretches over "
                           "every hump. [pause 0.5] Variational inference approximates a Bayesian "
@@ -1337,9 +1346,10 @@ class Episode(NarratedScene):
         fit_lab.move_to(w_crown + UP * 1.05, aligned_edge=DOWN)
         fl_leader = DashedLine(w_crown + UP * 0.14, fit_lab.get_bottom() + DOWN * 0.15,
                                dash_length=0.07, stroke_color=PURPLE, stroke_width=2)
-        with self.narrate("Against raw points, every bell-first score is infinite, so the data must "
-                          "be smoothed. [pause 0.3] Smooth it more heavily and the gap partly fills: "
-                          "the best bell-first fit spreads almost back to A.", gap=0.5) as beat:
+        # (no spoken "bell-first": Kokoro runs the compound together, whisper heard "belfirst")
+        with self.narrate("Against raw points, with the bell first, every score is infinite, so the "
+                          "data must be smoothed. [pause 0.3] Smooth it more heavily and the gap partly "
+                          "fills: the best fit spreads almost back to A.", gap=0.5) as beat:
             # the measured case leaves as the raw eruptions come in
             self.play(FadeOut(VGroup(cite_g, panel)), swap(tag_post, raw_tag),   # tags never overlap
                       self.bell_fill.animate.set_value(0.0),
@@ -1383,7 +1393,8 @@ class Episode(NarratedScene):
         self.play(self.sm_r.animate.set_value(0.0), FadeOut(VGroup(tag_rdef, fit_lab, fl_leader, cite_r)),
                   self.mu.animate.set_value(MB), self.sd.animate.set_value(SB),
                   run_time=1.3, rate_func=SMOOTH)
-        with self.narrate("Bell A never misses an eruption that happens. [pause 0.1] "
+        # a real breath between the pair: at 0.1 s "Bell B" was crushed (heard as "be")
+        with self.narrate("Bell A never misses an eruption that happens. [pause 0.5] "
                           "Bell B almost never imagines one that doesn't.", gap=0) as beat:
             # "Bell A never misses...": data first, the answer was 1; A solid, its fill over both humps
             self.a_fill.set_value(0.25)

@@ -13,9 +13,11 @@ PRONUNCIATIONS = {
 BEATS = {
     # cold open
     # round 7: 0.3 s breaths after the two clauses of the rule (substance fix 9)
+    # round 10 (craft fix 6): the two breaths before the question shortened (0.4 -> 0.25 s
+    # measured), so the commitment lands by about 0:12.4; the prediction hold is unchanged
     "open": "Flip a fair coin four times. [pause 0.12] After each heads, check the next flip: "
-            "[pause 0.3] here, one of the two is heads. [pause 0.3] Do this for every four flip "
-            "run, and average. Below, at, or above one half? [pause 1.6]",
+            "[pause 0.3] here, one of the two is heads. [pause 0.15] Do this for every four flip "
+            "run, and average. [pause 0.15] Below, at, or above one half? [pause 1.6]",
     # stakes
     "stakes": "One half feels obvious, since a coin has no memory. In nineteen eighty five, a "
               "study ran this kind of check on basketball shots, and called the hot hand "

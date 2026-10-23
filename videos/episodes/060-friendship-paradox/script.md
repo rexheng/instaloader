@@ -5,7 +5,7 @@ so the average friend has avg(k²)/μ = μ + σ²/μ friends (the cross terms va
 distances from the balance point sum to zero), which is more than the average person whenever friend
 counts vary, and epidemiologists can use this to see an outbreak coming.
 
-Runtime ~3:34.5 · 495 words (round 9; 3:33.3 · 497 in round 8) · voice af_heart, speed 0.82, the one question at 0.74 (round 7; 155 wpm on speech time), sentence gaps 0.26 s inside a beat and
+Runtime ~3:34 · 489 words (round 10; 3:34.5 · 495 in round 9) · voice af_heart, speed 0.82, the one question at 0.74 (round 7; 155 wpm on speech time), sentence gaps 0.26 s inside a beat and
 0.7 s at section boundaries; 0.6 s holds after each new equation row in the algebra (round 3).
 Pronunciation override: Christakis → /kɹɪstˈɑkɪs/.
 
@@ -44,7 +44,7 @@ Citation: Feld, 1991 · Am. J. Sociology · data: Coleman, 1961.
 Visual: a BLUE ring "random" on Jane; a YELLOW arrow along her friendship to Alice, "named friend".
 
 ### 3. Naive build: the guess works on an easy case (0:22–0:44)
-> The natural guess is two and a half again: every friend is one of these eight girls.
+> Every friend is one of these eight girls, so two and a half sounds right. *(round 10)*
 > Check that on a rewired class where every girl has two friends. Send a token both ways along every
 > friendship.
 > Each token reads the friend count where it lands: always two. Both averages are two: the guess
@@ -58,8 +58,8 @@ friend bar fills BLUE exactly to the girl bar.
 ### 4. Fail (0:44–1:06)
 > Now restore the real friendships and send the tokens again. They read one, two, three, or four,
 > and average three.
-> The guess fell short by half a friend, because the tokens piled up unevenly: four on Sue, four on
-> Alice, one on Betty.
+> The guess fell short by half a friend, *[pause 0.5]* because the tokens piled up unevenly:
+> *[pause 0.4]* four on Sue, four on Alice, one on Betty. *(round 10)*
 
 Visual: the ring's friend bar and its readout fade (no count-down through 1.9); the real network
 returns while the girl read-out holds 2.0; then the girl bar grows to 2.5 (its read-out swaps while
@@ -84,11 +84,11 @@ Sue's, Alice's and Betty's tokens pulse as named. Sue's name label now sits up-l
 > *[pause 1.6]* The squares average one and a quarter, the variance, sigma squared. *[pause]*
 > Take Sue, and split her four, *[pause 0.5]* into the balance point, two and a half, *[pause 0.4]*
 > plus her distance, one and a half.
-> Squaring gives two and a half squared, her distance squared, and a cross term. *[pause]* Every
+> Squaring gives two and a half squared, her distance squared, and a cross term. *[pause 0.8]* Every
 > girl splits this way. Because the beam balances, the distances add to zero, and the cross terms
 > cancel. *[pause]*
 > So the average of k squared is mu squared plus sigma squared. *[pause 1.6]* And friends average mu,
-> plus sigma squared over mu. *[pause 1.2]* Here that's two and a half, *[pause 0.3]* plus a half: exactly the
+> plus sigma squared over mu. *[pause 1.8]* Here that's two and a half, *[pause 0.3]* plus a half: exactly the
 > extra half friend we measured. *[pause 0.9]* With no spread, the ring had no gap. *[pause 1.0]*
 
 Visual (the one picture): the girls slide onto a beam (0.8 apart), each name riding along to sit
@@ -141,8 +141,8 @@ row and the bars brighten; the beam picture and the ring stay at 30 % and clear 
 > In twenty eleven, Facebook users averaged about a hundred ninety friends, and a few had
 > thousands. *[pause 0.4]* If every friendship sent tokens, what would the tokens average? *[pause 1.6]*
 > About six hundred thirty five: the spread term is more than twice the mean. *[pause 0.9]* And
-> ninety three percent of users had fewer friends than their friends averaged. Odds are, that
-> includes you.
+> ninety three percent of users had fewer friends than their friends averaged. *(round 10: "Odds
+> are, that includes you." cut; it pre-empted the landing line)*
 
 Round 6: the spread cue comes before the question, so the prediction applies μ + σ²/μ. The beam
 picture clears while the panel moves; on "Facebook" the citation (Feld → Ugander), the label
@@ -319,3 +319,35 @@ candidates: 4 is what Betty sees, 2.5 counts the girls, 3 counts the tokens.)
   ≥ 0.15 from both rings (stroke 0.06). Hand-off: the random students into the BLUE origin
   first, then the named friends into the YELLOW one (simulated: rings never closer than 0.146).
 - **Fits** start at each group's first case. **End card** holds 0.4 s once it is in.
+
+## Round 10 changes (visual plan)
+
+- **Generalisation (2:01):** "Every girl splits this way" changes Sue's row into the general one
+  term by term, left to right (lag 0.15 s): each number pinches in its own slot into its symbol
+  (4² → avg(k²), 2.5² → μ², 1.5² → σ², ·2.5 → μ, 1.5 → avg(d) inside the box) while the operators
+  and the box slide; σ² then flashes with the eight squares it averages. No frame shows the
+  operators without their terms.
+- **avg(d) = 0:** the signed distances ride their segments into the balance point and cancel there
+  (the BLUE mark flashes); "d = k − μ" is copied one line down and averaged into "avg(d) = 0" (its
+  k − μ pinching into the 0), right of the ruler, so the tick row stays 1, 2, 3, 4. The box's
+  avg(d) then pinches into 0 while the label's 0 flashes.
+- **One focal point (2:09–2:23):** on "So" the whole picture (girls, beam, ruler, distances, squares
+  and their labels) steps back to 35 %; the identity, σ² = 1.25 and the "+0.5 ?" target stay full.
+  The picture moves back left still dimmed; the YELLOW 3.0 fulcrum does not return.
+- **Areas:** one label per pair, "2.25 ×2", "0.25 ×2", ..., on one row under its two squares; the
+  four fly into the 10.
+- **Ring callback:** the ring appears, its spread collapses to a point, then a copy of the result
+  row's μ + σ²/μ flies down beside it and pinches, symbol by symbol, into 2 + 0/2, and "= 2" grows.
+  The row and the bars stay as they are; the ring and its equation leave (the equation
+  shrinking whole, at full colour) as the Facebook beat begins, before the row slides through.
+- **Ring → real class (0:43):** the ring's friend bar retracts into the axis origin at full colour
+  and its 2.0, 32, 16 and 2.0 shrink away (no YELLOW opacity ramp).
+- **Ruler:** 0.35 under the fulcrum labels while the beam is the picture; it drops back to its
+  lane spacing as the picture lifts for the variance.
+- **C&F fits:** drawn from each group's second case (day 7.6), where each fit is within 0.25
+  percentage points of its step.
+- **C&F → landing:** the 3:07 hand-off in reverse. The curves and group labels contract into the
+  chart's origin, the read-outs and axes leave, and the eight girls fly back out of the origin to
+  their places (BLUE rings on Betty, Dale, Carol; YELLOW rings on the five named friends), growing
+  with their distance from it; the rings relax to BLUE, the friendships draw on, and the cold-open
+  panel grows from its axis before "Betty looks".

@@ -19,27 +19,30 @@
 [1:12.4–1:16.5] Sue holds four tokens, each worth four, sixteen.
 [1:16.5–1:22.4] A girl with K friends adds K squared on top, and K on the bottom.
 [1:22.4–1:26.3] Now divide top and bottom by the eight girls.
-[1:26.3–1:33.0] The average of k squared, 7 1⁄2, over the average count, 2 1⁄2.
-[1:33.0–1:36.3] Where does the extra 1⁄2 come from?
-[1:36.3–1:52.3] Measure each girl distance from the balance point 2 1 and square it The squares average 1 1 the variance sigma squared Take Sue and split her four into the balance point two and a half
+[1:26.3–1:29.4] The average of k squared, 7 1⁄2,
+[1:29.4–1:32.9] over the average count, 2 1⁄2.
+[1:32.9–1:36.0] Where does the extra 1⁄2 come from?
+[1:36.0–1:39.0] Measure each girl's distance from the balance point,
+[1:39.0–1:41.0] 2 1⁄2, and square it.
+[1:42.5–1:52.3] The squares average 1 1 the variance sigma squared Take Sue and split her four into the balance point two and a half
 [1:52.8–1:54.8] plus her distance one and a half.
-[1:55.7–2:00.0] Squaring gives two and a half squared, her distance squared, and a cross term.
-[2:00.9–2:02.5] Every girl splits this way.
-[2:02.9–2:08.4] Because the beam balances, the distances add to zero, and the cross terms cancel.
-[2:08.4–2:13.4] So the average of k squared is mu squared plus sigma squared.
-[2:14.5–2:18.4] And friends average mu plus sigma squared over mu.
-[2:19.7–2:25.0] Here that's two and a half, plus a half, exactly the extra half friend we measured.
-[2:26.1–2:28.4] With no spread, the ring had no gap.
-[2:30.0–2:36.8] In 2011, Facebook users averaged about 190 friends, and a few had thousands.
-[2:36.8–2:41.8] If every friendship sent tokens, what would the tokens average?
-[2:41.8–2:48.8] About 635. The spread term is more than twice the mean.
-[2:48.8–2:54.8] And 93% of users had fewer friends than their friends averaged.
-[2:54.8–2:56.8] Odds are that includes you.
-[2:56.8–3:00.8] Christakis and Fowler put this to work at Harvard.
-[3:00.8–3:07.6] Named friends have more friends, so they sit closer to everyone else and should catch flu first.
-[3:07.6–3:13.5] They tracked flu diagnoses in random students and in the friends the students named.
-[3:13.5–3:15.8] The friends curve rose first.
-[3:15.8–3:19.8] Fitted curves put them 13.9 days ahead.
-[3:19.8–3:25.3] With self-reported symptoms, the lead shrank to about three.
-[3:25.3–3:29.1] Betty looks at her one friend, Sue and C's four,
-[3:30.8–3:32.6] Most of us are Betty.
+[1:55.7–1:60.0] Squaring gives two and a half squared, her distance squared, and a cross term.
+[2:00.8–2:02.5] Every girl splits this way.
+[2:03.0–2:08.4] Because the beam balances, the distances add to zero, and the cross terms cancel.
+[2:08.4–2:15.2] So the average of k squared is mu squared plus sigma squared.
+[2:15.2–2:20.0] And friends average mu plus sigma squared over mu.
+[2:20.0–2:26.3] Here that's two and a half, plus a half, exactly the extra half friend we measured.
+[2:26.3–2:30.4] With no spread, the ring had no gap.
+[2:30.4–2:37.9] In 2011, Facebook users averaged about 190 friends, and a few had thousands.
+[2:37.9–2:44.1] If every friendship sent tokens, what would the tokens average?
+[2:44.1–2:46.3] About 635.
+[2:46.3–2:49.8] The spread term is more than twice the mean.
+[2:49.8–2:55.5] And 93% of users had fewer friends than their friends averaged.
+[2:55.5–2:57.9] Odds are that includes you.
+[2:57.9–3:01.6] Christakis and Fowler put this to work at Harvard.
+[3:01.6–3:06.7] Named friends have more friends, so they sit closer to everyone else and should catch flu
+[3:06.7–3:12.3] first they tracked flu diagnoses in random students and in the friends the
+[3:12.3–3:18.7] students named the friends curve rose first fitted curves put them 13.9 days
+[3:18.7–3:25.4] ahead with self-reported symptoms the lead shrank to about three
+[3:25.4–3:30.7] Betty looks at her one friend sue and sees four
+[3:30.7–3:34.4] most of us are Betty

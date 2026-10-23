@@ -258,8 +258,10 @@ class Episode(NarratedScene):
         num.add_updater(nupd)
         num.update()
         self.counter = VGroup(word, num)
-        # the plan's prediction: same columns, its 0 directly under the count's last digit
-        pword = text("plan predicts", size=28, color=GRAY)
+        # the obvious guess: same columns, its 0 directly under the count's last digit
+        # (round 8: "plan predicts" -> "guess": the model has no planner; the households move
+        # themselves, and the viewer is the one guessing)
+        pword = text("guess", size=28, color=GRAY)
         pword.move_to([LAB_R - pword.width / 2, Y0 - 0.72, 0])
         pnum = MathTex("0", font_size=40, color=GRAY)
         right_at(pnum, pword)
@@ -685,17 +687,17 @@ class Episode(NarratedScene):
                                  num_dashes=24, color=INK).set_stroke(width=4)
         dest_box = Square(TILE + 0.14, stroke_color=INK, stroke_width=4).move_to(b0)
         src_box = Square(TILE + 0.14, stroke_color=INK, stroke_width=4).move_to(a0)
-        # (round 6: "Then everyone is content" merged into one sentence; "plan predicts 0" is
-        # what "where it would be content" promises)
-        with self.narrate("The obvious plan is to move each one to a random empty square "
-                          "where it would be content, so the town stays mixed.", speed=0.82) as beat:
-            beat.wait_until("each", offset=-0.2)
+        # (round 8) the move rule is the model's (a fact); only the outcome is a guess: the
+        # "guess 0" row arrives on "zero", the 50 % meter pulses on "mixed"
+        with self.narrate("Each one moves to a random empty square where it would be content. "
+                          "The obvious guess: zero unhappy, and the town stays mixed.",
+                          speed=0.82) as beat:
             self.play(Create(src_box), run_time=0.6)
             beat.wait_until("random", offset=-0.2)
             self.play(Create(preview), Create(dest_box), run_time=1.0)
-            beat.wait_until("content", offset=-0.2)
-            self.play(FadeIn(self.plan, shift=0.1 * DOWN), run_time=0.8)
-            beat.wait_until("stays", offset=-0.2)
+            beat.wait_until("zero", offset=-0.3)
+            self.play(FadeIn(self.plan, shift=0.1 * DOWN), run_time=0.7)
+            beat.wait_until("mixed", offset=-0.2)
             self.pulse(self.ink_lab, 1.1)
 
         # 5 - run round one, and the measured failure -----------------------------------
@@ -713,14 +715,16 @@ class Episode(NarratedScene):
         self.play(FadeOut(preview), FadeOut(src_box), FadeOut(dest_box),
                   FadeIn(self.round_lab), FadeIn(self.moves_lab),
                   self.fade_fill(content0, 1.0), run_time=0.4)
-        with self.narrate("Round one: two hundred moves. The unhappy count stalls at "
-                          "seventy-four. [pause 1.2] Sixty-seven of these were content before "
-                          "round one. [pause 0.15] They never moved. Their neighbors did.",
+        # (round 8: "stalls at seventy-four" -> "stops at seventy-four, not zero": the count falls
+        # 238 -> 74 in round one; the failure is "not zero" and, on the meter, "not mixed")
+        with self.narrate("Round one: two hundred moves. The unhappy count stops at "
+                          "seventy-four, not zero. [pause 1.2] Sixty-seven of these were content "
+                          "before round one. [pause 0.15] They never moved. Their neighbors did.",
                           gap=0.45) as beat:
             # the bulk of the round runs under "Round one: two hundred moves"; the last twelve
             # hops land one by one under "The unhappy count", and the count freezes at 74 on
-            # "stalls" (the moves row reaches 200 at the same moment)
-            t_round = beat.until("stalls", offset=0.0, min_time=2.6)
+            # "stops" (the moves row reaches 200 at the same moment)
+            t_round = beat.until("stops", offset=0.0, min_time=2.6)
             t_tail = t_round - beat.until("unhappy", offset=-0.25)
             self.play_round(0, run_time=t_round, flight=0.7, tail=(12, max(1.0, t_tail)))
             others = [self.tiles[h] for h in self.tiles if h not in self.cur_unhappy]
@@ -736,9 +740,11 @@ class Episode(NarratedScene):
                       FadeIn(note38, shift=0.1 * UP), run_time=0.5)
             beat.wait_until("seventy", offset=-0.2)
             self.pulse(self.counter, 1.1, run_time=0.8)
-            # the plan's prediction pulses in the silence after the failure number
-            beat.wait_until("seventy", offset=1.0)
-            self.pulse(self.plan, 1.15, run_time=0.8)
+            # "not zero": the guess's 0 pulses; then, in the silence, the meter (50 % -> 64 %):
+            # the town did not stay mixed either
+            beat.wait_until("not", offset=-0.15)
+            self.pulse(self.plan, 1.15, run_time=0.75)
+            self.pulse(self.ink_lab, 1.12, run_time=0.8)
             beat.wait_until("sixty", offset=-0.2)
             # keep red rings on the 67 that were content at the start; the other 7 go grey
             # the 38 note leaves before the 67 note arrives in its slot (never superimposed)
@@ -986,6 +992,18 @@ class Episode(NarratedScene):
                       run_time=0.9)
             beat.wait_until("three", offset=-0.2)
             self.play(flag(F["num"]), run_time=0.6)
+            # (round 8) "our household" is B, no longer the outlined subject: its red ring
+            # pulses once (the ring brightens and thickens in place) before B flies out
+            b_tile = mtiles[B_]
+            b_bw = b_tile.get_stroke_width(background=True)
+
+            def b_pulse(m, a):
+                k = there_and_back(a)
+                m.set_stroke(interpolate_color(ManimColor(RED), ManimColor(INK), 0.45 * k),
+                             width=b_bw * (1 + 0.3 * k), background=True)
+            beat.wait_until("our", offset=-0.2)
+            self.play(UpdateFromAlphaFunc(b_tile, b_pulse), run_time=0.5, rate_func=linear)
+            b_tile.set_stroke(RED, width=b_bw, background=True)
             beat.wait_until("leaves", offset=-0.4)
             b_in = mtiles.pop(B_)
             arr = []
@@ -1057,7 +1075,7 @@ class Episode(NarratedScene):
 
         # 8 - the tipping curve ------------------------------------------------------------
         ax = axes((0, 60), (40, 100), x_ticks=[0, 20, 40, 60], y_ticks=[40, 60, 80, 100],
-                  x_length=7.0, y_length=4.5, x_label="demanded (% of neighbors)",
+                  x_length=7.0, y_length=4.5, x_label="demanded (%)",
                   y_label="neighbors matching (%)")
         ax.shift(np.array([-5.3, -1.62, 0]) - ax.c2p(0, 40))
         ax.x_title.set_color(PURPLE)
@@ -1597,7 +1615,7 @@ class Episode(NarratedScene):
         with self.narrate("In his 1971 paper, Thomas Schelling ran this model. [pause 0.4] His "
                           "households moved to the nearest square that suited them, on far "
                           "emptier boards. [pause 0.5] There the jump came later, between about a "
-                          "third and a half.", speed=0.82, gap=0.25) as beat:
+                          "third and a half.", speed=0.80, gap=0.25) as beat:
             # the 2:19 morph in reverse: bars sink into the baseline, the baseline becomes the
             # x-axis again, and only then does the dot chart come back (never both at once)
             # (the ladder's x title leaves with the bars, before the chart's title returns: the
@@ -1621,18 +1639,23 @@ class Episode(NarratedScene):
                       run_time=0.7)
             self.remove(x_line)
             beat.wait_until("model", offset=-0.2)
-            self.flash_box(self.town, qtown, buff=0.05, run_time=0.8)
-            # our jump, on our own two towns' columns (in the pause before his rules)
-            self.play(Create(ours_br), Create(ours_drop), FadeIn(ours_br_lab), run_time=0.7)
-            # his rules, each on its word
+            # "this model": a box on our two towns, and our jump drawn on their two columns
+            boxes = [SurroundingRectangle(m, color=INK, buff=0.05, corner_radius=0.06,
+                                          stroke_width=3) for m in (self.town, qtown)]
+            self.play(*[Create(b) for b in boxes], Create(ours_br), Create(ours_drop),
+                      FadeIn(ours_br_lab), run_time=0.7)
+            self.play(*[FadeOut(b) for b in boxes], run_time=0.4)
+            # his rules, each on its word; the tag "our jump" gives its words to them (the
+            # bracket and its drop stay on our two columns), so the frame carries <= 12 words
+            # of prose counting the citation
             beat.wait_until("nearest", offset=-0.2)
-            self.play(FadeIn(rule1, shift=0.1 * LEFT), run_time=0.5)
+            self.play(FadeIn(rule1, shift=0.1 * LEFT), FadeOut(ours_br_lab), run_time=0.5)
             beat.wait_until("emptier", offset=-0.2)
             self.play(FadeIn(rule2, shift=0.1 * LEFT), run_time=0.5)
             # one thing at a time: our label and its drop leave, the bracket rises and slides to
             # his range, his rules step down a row, and only then does his label arrive
             beat.wait_until("There", offset=-0.15)
-            self.play(FadeOut(ours_br_lab), FadeOut(ours_drop), run_time=0.3)
+            self.play(FadeOut(ours_drop), run_time=0.3)
             # (the path bends right, away from his rules' text on the upper left)
             self.play(ReplacementTransform(ours_br, his_br, path_arc=-0.7), run_time=0.6)
             self.play(rule1.animate.shift(DOWN * ROW), rule2.animate.shift(DOWN * ROW),

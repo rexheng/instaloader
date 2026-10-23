@@ -653,7 +653,7 @@ class Episode(NarratedScene):
             #    priced), so the handover never leaves an empty frame
             # (it starts once the halving labels have gone, so it never underlines the fading
             #  'questions per character' line)
-            grow = lambda t: smooth(float(np.clip((t - 0.5) / 0.4, 0, 1)))
+            grow = lambda t: smooth(float(np.clip((t - 0.4) / 0.3, 0, 1)))
             out = lambda t: smooth(min(1.0, t / 0.45))      # gone before the baseline passes
             self.play(FadeOut(self.chain, rate_func=out), FadeOut(self.cuts, rate_func=out),
                       FadeOut(self.qlabel, rate_func=out), FadeOut(self.tile_lab, rate_func=out),

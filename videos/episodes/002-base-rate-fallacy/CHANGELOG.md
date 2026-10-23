@@ -962,3 +962,91 @@ borderline cap 6: the evaluators' single bar kept its final-week 3 % for about 8
 | Originality 8.5 / 8.5 | "an image viewers would remember" | ending image not memorable on its own | the closing crowd streaming out of the + |
 
 ### What changed
+
+**The 3 % under the wrong tag (craft 1, substance 1; borderline cap 6).** The lever now has one bar
+per event. "evaluators' count / final week · 2,632 alerts" sits 0.6 under the police bar and fills to
+3 % on "three percent". On "Months later" it dims to 45 % and a second, empty bar with a "?" is drawn
+under it, tagged "Six Nations 2018 / 48 alerts"; it fills, red to 46 %, on "rose". No frame shows a
+number under another event's tag, and the fill is never re-used for a new quantity.
+
+**The police raster between the bars (craft 6).** On "evaluators" the 173 / 2,297 labels leave and the
+2,470-cell raster, with its yellow outline, folds up into the police bar it measures (same width, same
+red 7 %), tagged "police count / 2,470 alerts". The three bars then share one clean column, with the
+ghost denominator in its own band below.
+
+**Ghost denominator in Cardiff's words (craft 9).** It fades in as P(sick)P(+∣sick) + P(healthy)P(+∣healthy),
+then only the four group words roll over (sick → listed, healthy → not listed; every other token stays
+put, the box stretches), 0.7 s. On "the blue term" the rest of the ghost dims to 30 %,
+P(not listed)P(+∣not listed) rises into "P(+ ∣ not listed) ↓" under the Six Nations bar, and once it
+has lifted clear a 30 % copy fades back into its slot, so the whole denominator stays as context and
+the lower band is not left empty (no two copies are ever legible on top of each other).
+
+**"7 of 22 later proved false" cut (craft 3, substance 4).** It was on screen ~1.7 s, unnarrated; the
+caveat stays in facts.md with its source.
+
+**Ending (craft 2, substance 5).** On "you're in this crowd" the 120 people (20 red, 100 blue: the
+counts beside the flows) stream out of the + disk into the 24 × 5 strip under the 17 % meter, red
+columns under its red segment, and the yellow outline closes round them. The deictic now points at a
+crowd, it is the same strip as "the red share of this crowd" at 1:40, and the last image has the cold
+open's shape: a yellow-outlined block of positives under a share meter, now with its answer. (The
+pulse of the flows on "this crowd" is gone.) The landing's handover no longer collapses a raster into
+the + (the raster folded into the police bar); a yellow ring is drawn where the + returns.
+
+**Cold open and the real prediction (craft 4, substance 2).** "What percent were right? [0.3] Pick a
+number." over a meter with "0%" and "100%" under its ends (MathTex 30, grey, ghosted with the meter
+until the question); the guess marker slides along that scale; the hold is 1.2 s (was 1.6). The scale
+rides with the bar into "chance you're sick", and after "what's the chance you're sick?" a 1.5 s hold
+lets the same guess marker slide along the empty disease meter. Guess and scale leave as the waffle
+arrives.
+
+**Waffle legend (craft 5).** "doctors & students" deleted (spoken); "23% right" (green) beside the green
+rows, "44% said 95%" beside the grey rows; "their test: 5% false alarms" under the waffle as its own
+block; "1 dot = 1%" moved into the citation line; the waffle moved up 0.46 so the new block clears the
+citation.
+
+**Watch-list legend (substance 7, 8).** The scale line "□ = 17 people · illustration" (a hollow grey
+square: red and blue squares are 17 people too) comes first, on "came"; "■ watch list · ≤ 1 in 140"
+arrives below it with the 71 red squares on "twelve hundred photos".
+
+**Narration (craft 7, 8, 10; substance 3, 4, 6, 9).**
+- Manrai beat split: "At one Boston-area hospital, doctors and students got a problem like this.
+  [0.4] Their most common answer was the test's own accuracy: [0.3] ninety-five percent." (The
+  critic's "Most answered…" was not used: 44 % is the modal answer, not a majority.) Longest breathless
+  run now 8.9 s (was 10.7).
+- "Even a small error rate per face would swamp the real matches." cut.
+- "Your chance of being sick is the red share of this crowd. Twenty, out of twenty plus a hundred." →
+  "Your chance is the red share of this crowd. [1.5]"; the brackets land on "red" and "this", and the
+  fraction 20 / (20 + 100) ≈ 17 % is built from them in one 1.6 s move in the pause (the 17 % leaves
+  the meter while the counts are still landing, so the finished fraction holds ~3 s).
+- "…thinned out the false alarms" → "…cut the false alarms. [0.6]" (room for the ghost's re-reading).
+- "That ninety-nine percent, the test's accuracy, is also its recall: how often the sick test
+  positive." bridges the naive answer's "accuracy" and the landing's "recall".
+- "These are how common each group is, [0.3] and these…": "is" was held 0.55 s, now 0.40 s before a
+  pause.
+
+script.md (beats, palette, visuals) and facts.md ("Round 8" table) are updated.
+
+### Self-check (review kit on the final 1080p master)
+
+- render.sh: 0 warnings; layout audit 0 issues in 208 checks; 0 glyph morphs; deictic sync 9 / 9.
+- Runtime 3:34.8 (was 3:40.3), 459 narration words (was 479); 148 wpm on speech time; median sentence
+  163 wpm, 0 above 200 wpm; −14.0 LUFS / −1.8 dBTP; leading 0.0 s, trailing 1.58 s; longest internal
+  silence 2.25 s (the planned 1.2 s "Pick a number" hold plus the beat gap); longest static 3.1 s;
+  longest breathless run 8.9 s (was 10.7); no held function word (the "is" at 2:04 and a "here" in a
+  draft landing line were both removed). WER 2.4 %: "a" → "one" normalisations, "watchlist(s)", and
+  "twenty sick people" heard as "twenty six people" at 1:45.7. That clip is byte-identical to round
+  8's (same TTS cache file `ef03532a…wav`, which round 8's whisper transcribed as "sick"); the change
+  is whisper's context, not the voice.
+- Looked at all 12 contact sheets and keyframes kf_02 (0:08.9 cold open with 0–100 % scale), kf_05
+  (0:36.3 per-row waffle tags), kf_34–35 (3:00.4 / 3:03.1 two evaluator bars, dim ghost), kf_39
+  (3:34.1 closing strip), plus 4–5 fps strips through the raster fold (2:45–2:47.5), the ghost's
+  re-reading and the blue term's rise (2:55.3–2:58.6: no double-struck text), the fraction build
+  (1:41–1:44: complete by 1:43.0, held until the next step at ~1:46.3) and the closing stream
+  (3:30.4–3:33.4: the dots leave the + below-right, clear of "you" and "precision").
+- Every frame of the lever is true if paused: 3 % only ever sits beside "final week · 2,632 alerts",
+  46 % only beside "Six Nations 2018 · 48 alerts"; the Six Nations bar reads "?" until "rose".
+
+**Kept:** the prevalence slider draining the half-sick block while the meter falls from the naive 99 %
+to 17 %; the cold-open raster collapsing into the + and returning coloured as the shrunk sample space
+(2:38–2:45) to answer the opening question; counts → shares → names building Bayes' theorem in place
+with "≈ 17 %" fixed on screen.

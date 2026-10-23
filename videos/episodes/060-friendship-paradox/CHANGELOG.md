@@ -880,3 +880,56 @@ is cut from "one of these eight girls", and the holds after "mu squared plus sig
 (1.4), the Facebook question (1.45) and "days ahead" (0.7) are 0.15-0.2 s shorter. The ring's
 "2 + 0/2 = 2" now stays whole until the Facebook beat (the shorter closing pause had cut it to
 0.5 s on screen in the first master); the self-reported arrow starts shrinking on "lead".
+
+**Verified on the master** (review/report.md, all 12 sheets, keyframes kf_14-21, 28, 34-35,
+39-40; 2.5-8 fps strips over 1:16-1:21, 1:23-1:28, 1:38-1:44, 2:04-2:09, 2:21-2:31,
+2:55-3:00, 3:03-3:09, 3:17-3:26, 3:32-3:34.5)
+- Runtime 3:34.5, 495 words (budget 500 / 3:35, no budget warning); 153 wpm on speech time;
+  0 sentences above 200 wpm (the k-squared sentence 168 wpm, was 199); longest run without a
+  breath 8.5 s (was 10.7, the cold open now has 0.6 s and 0.8 s breaths); -14.0 LUFS /
+  -2.1 dBTP; leading 0.00 s, trailing 1.80 s; longest silence 2.22 s; longest static 3.5 s.
+- 0 render warnings, 0 layout-audit issues in 218 checks, 0 review-kit flags, 0 banned
+  phrases, 0 glyph morphs; WER 2.6 % (number formatting only; "girl's distance from the balance
+  point" heard cleanly).
+- 1:18-1:21: the 16 leaves "4 × 4 =", flies down the gap and pinches into Σk²; the label is gone
+  by 1:20. 1:23-1:28: the "÷ 8" row holds ~3 s, the ÷ 8s flash BLUE, every term pinches in
+  place; no frame without a numerator. 1:38-1:44: four separate segments in two lanes; sides
+  drop first, then the squares grow down from them, then the areas. 2:06-2:09: the signed
+  distances slide along their segments into the 0 under the balance point. 2:22: squares and
+  scale tag leave together. 2:28-2:30: "2 + 0/2 = 2" holds ~2 s and leaves whole. 2:57-2:59:
+  the BLUE bar becomes the eight nodes, no empty frame. 3:03: C&F tokens mid-edge, >= 0.15 from
+  every ring; random students (1, 3, 2) leave first, then the named friends. 3:17: the fits start
+  at the first cases. 3:23-3:25: "3.2 days" settled ~1.9 s. 3:34.5: the card held 0.4 s.
+
+## Round 10 revisions
+
+Round-10 critics: craft 8.8 (Visual 8.5, Motion 8.5, Audio 8.5), substance 9.0 (pass). No caps, no
+factual errors; both said every fix together reaches 9.0 with no structural change. Kept: the
+token-weighted beam (fulcrum 2.5 -> 2.7 -> 2.9 -> 3.0), the sides-then-squares variance and the
+signed distances cancelling at the balance point, the BLUE/PURPLE/YELLOW-outlined friend bar
+carried to Facebook and back into the silent landing.
+
+**Plan against BAR's 9 anchors**
+- *Motion 8.5* (9: "every motion encodes a relation"). Short of it: three transitions still
+  vanish and reappear: the generalisation row passes through "= + + [2 ·]" with empty slots
+  (2:01), the C&F chart dips through a near-empty frame into the landing (3:25), and the ring's
+  formula fades out and a fresh one fades in (2:26-2:28). Upgrade: the in-slot `pinch()` term by
+  term for the generalisation; the 3:07 hand-off played in reverse (curves into the origin, the
+  girls fly back out of it in their C&F rings); the row's own mu + sigma^2/mu carried to the ring
+  and pinched there into 2 + 0/2.
+- *Visual 8.5* (9: "every frame has one focal point"). Short of it: the PURPLE "0" sat in the
+  tick row ("1 2 0 3 4"); 11 full-strength groups at 2:09-2:22; eight zigzagged area labels;
+  the ruler detached 180 px under the beam (substance); the ring's YELLOW fading through olive
+  at 0:43 (substance); fits starting 0.55 pp above their first step (substance). Upgrade:
+  "avg(d) = 0" under "d = k - mu", built from it; the picture steps back to 35 % on "So"; one
+  "2.25 ×2" label per pair; the ruler 0.35 under the fulcra until the variance; the ring bar
+  retracts and its numbers shrink at full colour; fits from the second case.
+- *Audio 8.5* (9: "pauses intentional"). Short of it: median sentence 170 wpm, uniform 0.39 s
+  stops, 0:51-0:59 one breath group, inside a 3:34.5 budget. Upgrade: cut "Odds are, that
+  includes you." (it pre-empts "Most of us are Betty") and spend it: 0.5 s after "half a
+  friend", 0.4 s after "unevenly", 0.8 s after "a cross term"; the rebuilt and split rows get
+  1.6 s and 1.8 s (substance 1, their equation holds); "With no spread" keeps its 1.0 s close,
+  so "2 + 0/2 = 2" holds about 2 s.
+- *Hook* (substance 4): the title already rules out 2.5, so the guess is voiced as the viewer's
+  reasoning: "Every friend is one of these eight girls, so two and a half sounds right."
+- *Pinch hand-over* (substance 3): a cut at 30 % size, so old and new glyphs never overlap.

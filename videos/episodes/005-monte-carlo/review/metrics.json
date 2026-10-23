@@ -8,7 +8,7 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 12.67,
+ "size_mb": 12.68,
  "integrated_lufs": -14.0,
  "lra_lu": 2.9,
  "true_peak_dbtp": -2.0,
@@ -172,8 +172,8 @@
    "file": "keyframes/kf_18_01-29.6.png"
   },
   {
-   "t": 93.73,
-   "file": "keyframes/kf_19_01-33.7.png"
+   "t": 93.77,
+   "file": "keyframes/kf_19_01-33.8.png"
   },
   {
    "t": 98.83,
@@ -260,8 +260,6 @@
    "file": "keyframes/kf_40_03-33.6.png"
   }
  ],
- "flags": [
-  "1 scene warning(s) from NarratedScene (timing/layout)"
- ],
+ "flags": [],
  "implied_caps": []
 }

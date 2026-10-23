@@ -384,3 +384,34 @@ Round 7 failed at 8.9 (craft) and 8.7 (substance). Neither critic found a factua
 | Concision (9 / 8.5) | "Cutting any sentence loses something" | "If the plan had worked, this counter would read zero" restated the HUD row; "the other thirty-eight were content by their turn" restated the note; "both seventy-six percent" read the labels aloud | all three cut; the stall is shown live instead |
 | Hook (9 / 9) | "tension rises through build and fail" | the 74 sat on screen 6 s before it was spoken | the count stalls on screen as "The unhappy count stalls at seventy-four" is spoken, then "plan predicts 0" pulses in the silence |
 | Originality (9 / 8.5) | "a non-obvious angle viewers would remember" | the real-world sentence read as an appended disclaimer ("Real segregation has other causes") | "Real cities have rules too", with the rule town's "· placed by a rule" header pulsing: the study follows from the two-town test |
+
+### What changed (every round-7 fix, both critics)
+
+| Fix (critic #) | Change | Checked on the final master |
+|---|---|---|
+| Word load at 2:34 (craft 1) | Ladder y title "households" (was "households (simulated start)"): 11 prose words at the ¼ mechanism frame | ladder keyframes 2:27–2:31 |
+| Near-empty frame under "Two" (craft 2) | The chart cuts out (0.6 s), then both towns, the tag and both "76% match" labels fade in (0.6 s) before the beat starts, so they are at 100 % on "Two" | sheet 10 (2:49) |
+| Ladder scale (craft 3) | GRAY "256" (MathTex 32) over the ½ bar, the tallest, arriving once the highlight sweep has passed it (in the first preview it sat in the path of the bar's 1.18× stretch) | sheet 7 (2:03) |
+| Breathless Schelling sentence (craft 4, substance 1) | Three sentences: "In his 1971 paper, Thomas Schelling ran this model. [pause 0.4] His households moved to the nearest square that suited them, on far emptier boards. [pause 0.5] There the jump came later, between about a third and a half." at 0.80. GRAY "nearest move" on "nearest" and "25–30% empty" on "emptier", under "Schelling: 35–50%" | sheets 9–10, Schelling keyframes |
+| "both seventy-six percent" (craft 5) | Cut to "Two simulated towns. [pause 0.6]"; both "76% match" labels pulse together in the silence | sheet 10 (2:49–2:51) |
+| Floating "our jump" (craft 6) | Bracket at 82 %, ends over the ¼ and ⅓ columns, with a dotted drop from its left end to the ¼ column; drawn on "model" with the box on the two towns; it rises to the top row and slides to 35–50 % on "There", on a path that bends away from his rules' text | sheets 9–10 |
+| Unused 125 (substance 2) | "All one hundred twenty-five households at three eighths are one lost match from two sevenths." The 125 fades in and pulses with its bar on "one hundred twenty-five", the 3/8 rung pulses on "three eighths", the arrow draws on "lost match" | sheet 8 (2:11–2:15) |
+| HOLC pivot and "finds … through" (substance 3) | "Real cities have rules too. One study finds that 1930s federal lending maps raised racial segregation for decades. Its authors point to reduced credit." The rule town's "· placed by a rule" pulses on "rules too" (about its left edge; zone lines not pulsed); the two-stage dim is kept | sheet 11 |
+| Failure read out late (substance 4) | "If the plan had worked, this counter would read zero. It reads seventy-four." → "The unhappy count stalls at seventy-four." The last 12 hops of round one land one by one under "The unhappy count", so the count visibly slows (82 → 74) while "moves" ticks to 200, and freezes on "stalls"; "plan predicts 0" pulses in the 1.2 s after "seventy-four" | sheet 4 (0:55–0:57), frames 52.3–58.6 |
+| 38 restated (substance 5) | "Round one: two hundred moves." The note "38 content by their turn" arrives as "moves" reaches 200 and holds ≈ 2.5 s before it gives its slot to "67 content at the start" | sheet 4 (0:57) |
+| Glowing crosses (substance 6) | Each demand's 30 towns are solid dots (r 0.05, 100 %, a 1.6 px background rim, ± 1 pp spread by rank). The mean tick and whisker are gone. Dimming recolours the dots instead of lowering their opacity, so overlaps never build a brighter core. Our two towns are ringed markers on a small background disc, so they stay visible inside their columns | kf 1:50, 2:45, 2:47 |
+| Busy HUD at the stall (substance 7) | "round" and "moves" dim to 35 % as the count freezes; both return at full strength for rounds 2–7 | kf 0:55, 1:02 |
+| Word load counting the citation (found while checking) | Past critics counted the citation as prose (this episode, round 5: "about 22 words"). The x title is now "demanded (%)" and the "our jump" tag fades as "nearest move" arrives (bracket and drop stay), so no Schelling frame carries more than 12 words, counting the 5-word citation | Schelling keyframes |
+
+### Found on the first round-7 master and fixed before the final one
+- One sentence at 202 wpm ("There the jump came later…", at 0.82). The Schelling beat is now spoken at 0.80, as the craft critic suggested.
+- The Schelling frame came to 13–14 words counting the citation (see the last table row).
+- whisper wrote "a quarter" for "Demand a quarter" and repeated "happy" after "unhappy" at a segment boundary. Kokoro's own timings give "Demand" 0.39 s, and these clips are byte-identical to round 7, where whisper heard both correctly.
+
+### Mechanics of the final master
+Runtime 3:30.9 (was 3:34.5), 467 narration words (was 479). Pace is 153 wpm over speech time, with no sentence above 200 wpm (the median sentence runs 168). Loudness is −14.0 LUFS with a −1.9 dBTP true peak. Leading silence is 0.00 s and trailing silence 1.77 s. The longest internal silence is 2.09 s (the planned prediction holds) and the longest static stretch 3.63 s (the cold-open prediction hold). The longest run without a breath is 11.7 s (was 13.6 s). WER is 0.2 %: whisper writes "blocks" for "block's". There are 0 render warnings, and the layout audit found 0 issues in 232 checks. There are 0 glyph morphs, 13 of 13 deictics land, review-kit flags are 0, and banned phrases are 0.
+
+### Left as is, by judgment
+- The HOLC frame (3:09–3:20) carries the two towns' headers, the two "76% match" labels, the "simulated" tag and the 6-word citation. Counting the citation, that is about 15 words. Rounds 6 and 7 accepted it, and each label is needed there: "· placed by a rule" is what "rules too" points at, and "76% match" is what pulses on "segregation".
+- "a quarter empty" (a critic's wording) was not used: "a quarter" is a demand level in this episode. The narration says "far emptier boards", and the label gives his 25–30 %.
+- The critic's dashed short hop on the thumbnail for "nearest" was not drawn. At 2 units wide a one-square hop is 0.05 units, too small to see, so the rule is shown as the label "nearest move" on its word.

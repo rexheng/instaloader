@@ -1,13 +1,13 @@
 # Review kit — `final.mp4`
 
-Generated 2026-10-22 23:20 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
+Generated 2026-10-22 23:31 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
 
 ## Mechanics (BAR §3 caps / §5 standards)
 
 | metric | value | bar | status |
 |---|---|---|---|
 | runtime | 3:33.6 (213.6s) | 2:30–4:00 | ok |
-| video | 1920x1080 @ 30 fps, h264/yuv420p, 12.67 MB | 1920x1080 @ 30 | ok |
+| video | 1920x1080 @ 30 fps, h264/yuv420p, 12.68 MB | 1920x1080 @ 30 | ok |
 | pace | 149 wpm (speech time) · 139 overall · 173 excl. all pauses; 496 words | 140–165 (cap <120/>180) | ok |
 | loudness | -14.0 LUFS, LRA 2.9 LU | −14 ±1 | ok |
 | true peak | -2.0 dBTP | ≤ −1.5 | ok |
@@ -22,7 +22,7 @@ Generated 2026-10-22 23:20 by videos/toolkit/review_kit.sh. Frames are evidence;
 
 ## Flags
 
-- 1 scene warning(s) from NarratedScene (timing/layout)
+- none
 
 ### Silences ≥ 0.3 s
 
@@ -39,10 +39,6 @@ Measured from narration.json (Kokoro's own word timings). Each line names the de
 - **Number load:** 51 spoken numbers; busiest 20 s from 0:32.3 has 8 different ones. Critics docked Clarity where 3+ new figures arrived inside ~20 s without a picture for each.
 - **Glyph morphs:** 0 Transform(s) between different strings (render as glyph soup; 13 of 28 reviews docked one). Use swap() / carry() / live_number() / TransformMatchingTex.
 - **Deictic sync:** 5 deictic words; 0 with no animation starting within −0.8…+0.4 s (Audio 9 required every one to land within ~0.6 s).
-
-## Scene warnings (NarratedScene timing / layout self-check)
-
-- [1:30.8] beat 10: animations reached 'win' 0.34s after it was spoken - narration and visuals out of sync; shorten the preceding animations
 
 ## Layout audit (automatic overlap check, BAR §5)
 
@@ -93,7 +89,7 @@ Allowed by the producer (check that each reason holds):
 - `keyframes/kf_16_01-19.1.png` — 1:19.1
 - `keyframes/kf_17_01-26.5.png` — 1:26.5
 - `keyframes/kf_18_01-29.6.png` — 1:29.6
-- `keyframes/kf_19_01-33.7.png` — 1:33.7
+- `keyframes/kf_19_01-33.8.png` — 1:33.8
 - `keyframes/kf_20_01-38.8.png` — 1:38.8
 - `keyframes/kf_21_01-44.9.png` — 1:44.9
 - `keyframes/kf_22_01-48.0.png` — 1:48.0
@@ -188,4 +184,4 @@ Differences (numbers spelled out, 'and' ignored). A technical term heard wrong u
 [3:27.6] replace  script: 'noticed'                                heard: 'notice'
 ```
 
-_review kit ran in 102s_
+_review kit ran in 96s_

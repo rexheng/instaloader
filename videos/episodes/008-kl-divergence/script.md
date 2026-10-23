@@ -10,7 +10,7 @@ bell, the data-first bill and the bell-first bill, kept side by side. As the bel
 to B, one bill drains while the other swells into a mountain: each order has its own closest
 bell.
 
-Runtime ≈ 3:25 · 498 words (budget ≤ 500) · voice af_heart, speed 0.83, CADENCE = "shaped".
+Runtime ≈ 3:31 · 500 words (budget ≤ 500) · voice af_heart, speed 0.83, CADENCE = "shaped".
 Pronunciation overrides: Kullback, Leibler ("lie-bler"), Blei ("bly"), the letter A (/eɪ/, misaki
 reads a lone "A" as the article), "imagines" (misaki says "im-AY-jen-eez"). Sentence gaps are
 varied on purpose: ≈ 0.25 s inside a thought, ≈ 0.7–1.0 s after a payoff number or at a beat
@@ -134,14 +134,17 @@ the plateau's shoulder); total 5.77. Box over the short hump, "36%".
 
 The readouts leave first; then the panels make room. The chart (the subject) grows to 2.85
 units tall on top; the data-first bill moves under it; a bell-first bill panel waits hidden
-until the question. Each bill panel carries its order in its top-right corner, "**data** first" /
+until the question. Beside the chart, where the p / q readouts stood, the chart's key fades in:
+`A: 3.49 ± 1.14 min` over `B: 4.27 ± 0.44 min` (the two contenders, so their spreads can be
+compared later; no quadrant of the frame stays empty through the two-bill stretch). Each bill panel carries its order in its top-right corner, "**data** first" /
 "**bell** first", and its unit "bits / per min" top-left (two short lines, clear of the mountain); the shared x labels sit under the lowest panel.
 The second formula block drops in already reading `= ?`; in one move the arguments arc past each
 other (`D(bell ‖ data)`), the weight p becomes q and the fraction's p and q swap places
 (`= ∫ q log₂(q/p) dx = ?`). No frame pairs the new order with the old integrand or number. During
 the question A and B are both solid and equally bright. "supplies": both bells pulse (stroke +
-fill); "judges": the data curve pulses. On "Which" the bell-first panel fades in at 30 %.
-Prediction hold.
+fill); "judges": the data curve pulses. On "Which" the bell-first panel fades in at 30 %; the shared x numbers drop to the new lowest
+panel while the axis name fades out and back in at its new place (moving, it would cross the
+second formula block). Prediction hold.
 
 ### 9. Bell first, scored (1:59–2:17)
 > Take bell B first. It almost never imagines a short eruption, so ignoring them costs nothing.
@@ -163,8 +166,8 @@ Both integrals have now been read, so each block collapses to its D-line and tot
 its own bill: the frame is the bell and its two bills. Gradient descent on D(bell ‖ data) from A
 (precomputed path): the bell narrows and slides right; the bell-first bill drains 1.69 → 0.62
 while the data-first bill swells into the mountain, 0.76 → 5.77, its live "peak ≈" counting up to
-11. The two D-lines flag on "drains" / "swells". `B: 4.27 ± 0.44 min` pinned to B's crown by a
-dashed leader. On "Flip" the cold-open picture returns (dashed ghosts 2 and 3, yellow 1 on A's
+11. The two D-lines flag on "drains" / "swells". On "less than half as wide" the two spreads in the
+key, 0.44 and 1.14, flag together. On "Flip" the cold-open picture returns (dashed ghosts 2 and 3, yellow 1 on A's
 crown), an arrow runs 1 → 3, and B sits exactly in ghost 3: the bet, answered on the same image.
 
 ### 11. Payoff (2:34–3:00)
@@ -192,8 +195,9 @@ brackets on one shared mean line, on "matched" their values `0.110 ± 0.020` and
 MCMC spread. Citation *Giordano, Broderick & Jordan, 2018 · JMLR, Tables 2–3*.
 
 ### 12. Honest limit (3:00–3:13)
-> Against raw points, every bell-first score is infinite, so the data must be smoothed. Smooth it
-> more heavily and the gap partly fills: the best bell-first fit spreads almost back to A.
+> Against raw points, with the bell first, every score is infinite, so the data must be smoothed.
+> Smooth it more heavily and the gap partly fills: the best fit spreads almost back to A.
+> (No spoken "bell-first": Kokoro runs the compound together and whisper heard "belfirst".)
 
 The panel and brackets leave; the posterior tag swaps (out, then in) for "272 raw points". On "raw points" the curve and bars dim and the 272 eruptions
 appear as blue ticks on the length axis ("272 raw points"); on "infinite" `D(bell ‖ data) = ∞`
@@ -207,14 +211,15 @@ morph out, one back (beat 13); no fourth curve.
 
 ### 13. Landing (3:13–3:22)
 > *(silent turn, 1.3 s: the smoothing and the bell return)* Bell A never misses an eruption that
-> happens. Bell B almost never imagines one that doesn't.
+> happens. *[0.5 s]* Bell B almost never imagines one that doesn't. (At 0.1 s "Bell B" was
+> crushed and heard as "be".)
 
 In the silent beat turn (1.3 s) the smoothing returns to the original curve, the fit returns to B
 and the tags leave. On "Bell A" `D(data ‖ bell) → A` writes in its cold-open place, the yellow **1** returns
 to A's crown, A turns solid and its fill sweeps across both humps (underline under "data"). On
 "Bell B" `D(bell ‖ data) → B` writes below it, the yellow **3** returns to B's crown, A goes back
 to dashed and B's fill sweeps over its one hump (underline under "bell"). The last two lines are
-spoken as a pair. End card.
+spoken as a pair, with a 0.5 s breath between them. End card.
 
 ## Sources
 

@@ -343,7 +343,43 @@ on that master, read all 12 sheets and the keyframes, and pulled 4-5 fps strips 
   fixed radius contrasts with the half-volume ball's 0.80 -> 5.77), with the chart title flashing on "radius at
   one", the d = 30 dot on "thirty" and "2 x 10^-14" on "two parts in a hundred trillion".
 
-**Verification (final master).** review_kit: 3:33.6, 149 wpm over speech, -14.0 LUFS / -2.0 dBTP, longest silence
+**Verification (final master, 23:30; 0 [sample_space] warnings after the second pass-3 render's 0.34 s "win"
+sync warning was fixed).** review_kit: 0 flags; 3:33.6, 149 wpm over speech, -14.0 LUFS / -2.0 dBTP, longest silence
 2.06 s, longest static 2.97 s, WER 2.5 %, 0 banned phrases, 0 glyph morphs, 5/5 deictics landed, layout audit 0
 issues (6 producer-allowed LaTeX-internal spacings). Frames were checked at 4-6 fps across every transition listed
 in the plan above (0:14, 0:44, 0:56, 1:21, 1:31, 1:54-1:58, 2:10, 2:47-2:50, 2:54-2:58, 3:08, 3:24-3:28).
+
+## Round 6 revisions
+
+Both round-6 critics scored 8.6 (no caps, no factual errors) and listed 11 + 8 fixes; both said "reaches 9 if fixed:
+yes", narrowly. Everything below was applied; where a fix was improved on, the reason is given.
+
+**Plan (BAR §3 "9" anchors vs the round-6 master), written before editing.**
+- Clarity ("the viewer could re-derive it after one watch"): the √N law rested on one 16-step window (darts 62-77)
+  that happened to land exactly on +4 halves, and "partly cancel" explains *less than N*, not √N. -> all twelve
+  consecutive 16-dart groups of the two runs as walks from one start (RMS stray 3.96 halves vs √16 = 4), a ±4 band,
+  and the reason drawn: each miss's half-by-half square; sixteen of them tile one square four halves wide ("what adds
+  is their squares"). The Bergstra-Bengio payoff re-used the per-axis argument the diagonal had refuted -> "Only a
+  few settings really matter. With one, the search is one-dimensional: ..." (the paper's own finding, re-read on
+  jmlr.org) with the important axis flashed. The limit switched from absolute to relative error silently -> "a tiny
+  miss, but the whole answer".
+- Motion ("every motion encodes a relation; reading time respected"): the ±4.8 brackets were legible ~0.5 s, and the
+  later "measured 4.8" was a fresh Write -> brackets grow during "spread this wide", hold ~2 s (flagged side by side),
+  then both labels fly into one parked "measured: ±4.8 pts" tag, the same object that returns beside the check.
+  Disc-to-ball showed two concentric arcs -> one parametrised family (flat disc at s = 0 bulges into the eighth
+  ball), so only one boundary exists at any moment; "d = 2" -> "d = 3" is a swap (was a cross-fade). The returning
+  chart drew its lines before its axes -> frame first (0.6 s), lines after.
+- Visual ("one focal point; ≤ 12 words"): the d = 20-100 corner carried ~20 words -> "grid says 1.000" leaves, the
+  stack is two lines, the 524,288 cost swaps into the table's d = 20 "points used" cell, the table dims to 30 %. The
+  BLUE line was drawn unlabelled 18 s before the darts were mentioned -> drawn only on "The darts stay ...", all at
+  once with its label; the PURPLE line is named "grid" from its first point. Check line used an inline "½ /√100" ->
+  stacked \frac{1/2}{\sqrt{100}} built from the formula's own parts with N swapped for 100. Straight apostrophe ->
+  "ball’s edge".
+- Audio ("each deictic lands; pauses intentional"): counters landed ~1 s after "52" / "44" -> each count starts on
+  "puts" / "put" and ends on the number. 13.6 s breathless stretch -> [pause 0.8] after the voiced misconception
+  (its picture holds through it) and the 27-word dart sentence split in three. "Berkstra" -> override /bˈɜɹɡstɹɑ/
+  (whisper-checked). "noticed" heard as "notice" -> the landing says "The darts never counted the axes" while the
+  YELLOW counter counts the regrowing axes 1 -> 100 as in the first frame.
+- Concision (budget): the additions cost ~25 words; paid for by cutting the spoken restated question in the
+  prediction beat (the on-screen "= ?" carries the 1.6 s hold), "is ... while" in the rescue line, "Darts do have"
+  -> "Darts have", and by merging the walk and the division into one beat.

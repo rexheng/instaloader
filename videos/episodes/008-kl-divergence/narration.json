@@ -2,14 +2,14 @@
  "scene": "Episode",
  "episode": 8,
  "title": "The Distance That Isn't Symmetric",
- "video_duration": 210.067,
+ "video_duration": 210.6,
  "beats": [
   {
    "index": 0,
    "start": 0.0,
-   "duration": 15.64,
-   "end": 15.64,
-   "text": "Old Faithful's eruptions. [pause 0.12] Data first, the closest bell is this one. [pause 0.2] Swap the order. If closeness is a distance, order can't matter: it stays at one. Or does it move to two, [pause 0.25] or to three? [pause 1.5]",
+   "duration": 10.97,
+   "end": 10.97,
+   "text": "Old Faithful's eruptions. [pause 0.12] Data first, the closest bell is this one. [pause 0.2] Swap the order. If closeness is a distance, order can't matter: it stays at one.",
    "voice": "af_heart",
    "speed": 0.83,
    "cadence": "shaped",
@@ -143,60 +143,83 @@
      "w": "one",
      "t": 10.335,
      "end": 10.82
-    },
-    {
-     "w": "Or",
-     "t": 11.34,
-     "end": 11.565
-    },
-    {
-     "w": "does",
-     "t": 11.59,
-     "end": 11.765
-    },
-    {
-     "w": "it",
-     "t": 11.79,
-     "end": 11.89
-    },
-    {
-     "w": "move",
-     "t": 11.915,
-     "end": 12.19
-    },
-    {
-     "w": "to",
-     "t": 12.215,
-     "end": 12.328
-    },
-    {
-     "w": "two",
-     "t": 12.365,
-     "end": 12.89
-    },
-    {
-     "w": "or",
-     "t": 13.225,
-     "end": 13.375
-    },
-    {
-     "w": "to",
-     "t": 13.4,
-     "end": 13.55
-    },
-    {
-     "w": "three",
-     "t": 13.6,
-     "end": 14.14
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/54/54350f1fbab1c633c5a4d02a.wav"
+   "wav": "/root/.cache/sample_space/tts/0e/0eb0d43185f868cbea12d1f3.wav"
   },
   {
    "index": 1,
-   "start": 16.1,
+   "start": 11.333,
+   "duration": 5.26,
+   "end": 16.593,
+   "text": "Or does the closest bell move to two, or to three? [pause 1.5]",
+   "voice": "af_heart",
+   "speed": 0.77,
+   "cadence": "shaped",
+   "words": [
+    {
+     "w": "Or",
+     "t": 11.378,
+     "end": 11.578
+    },
+    {
+     "w": "does",
+     "t": 11.603,
+     "end": 11.815
+    },
+    {
+     "w": "the",
+     "t": 11.828,
+     "end": 11.915
+    },
+    {
+     "w": "closest",
+     "t": 11.953,
+     "end": 12.565
+    },
+    {
+     "w": "bell",
+     "t": 12.603,
+     "end": 12.853
+    },
+    {
+     "w": "move",
+     "t": 12.878,
+     "end": 13.165
+    },
+    {
+     "w": "to",
+     "t": 13.203,
+     "end": 13.353
+    },
+    {
+     "w": "two",
+     "t": 13.403,
+     "end": 13.903
+    },
+    {
+     "w": "or",
+     "t": 14.103,
+     "end": 14.265
+    },
+    {
+     "w": "to",
+     "t": 14.303,
+     "end": 14.478
+    },
+    {
+     "w": "three",
+     "t": 14.528,
+     "end": 15.093
+    }
+   ],
+   "wav": "/root/.cache/sample_space/tts/15/15e942b393e3c12c38445f08.wav"
+  },
+  {
+   "index": 2,
+   "start": 17.033,
    "duration": 14.2,
-   "end": 30.3,
+   "end": 31.233,
    "text": "The D is KL divergence, named for Kullback and Leibler. [pause 0.2] Every maximum-likelihood fit shrinks it with the data first. [pause 0.2] Much of Bayesian machine learning shrinks it with the order flipped. [pause 0.2] It's often called a distance.",
    "voice": "af_heart",
    "speed": 0.83,
@@ -204,187 +227,187 @@
    "words": [
     {
      "w": "The",
-     "t": 16.14,
-     "end": 16.253
+     "t": 17.073,
+     "end": 17.186
     },
     {
      "w": "D",
-     "t": 16.29,
-     "end": 16.565
+     "t": 17.223,
+     "end": 17.498
     },
     {
      "w": "is",
-     "t": 16.59,
-     "end": 16.74
+     "t": 17.523,
+     "end": 17.673
     },
     {
      "w": "KL",
-     "t": 16.79,
-     "end": 17.24
+     "t": 17.723,
+     "end": 18.173
     },
     {
      "w": "divergence",
-     "t": 17.265,
-     "end": 18.115
+     "t": 18.198,
+     "end": 19.048
     },
     {
      "w": "named",
-     "t": 18.265,
-     "end": 18.465
+     "t": 19.198,
+     "end": 19.398
     },
     {
      "w": "for",
-     "t": 18.49,
-     "end": 18.615
+     "t": 19.423,
+     "end": 19.548
     },
     {
      "w": "Kullback",
-     "t": 18.64,
-     "end": 19.277
+     "t": 19.573,
+     "end": 20.21
     },
     {
      "w": "and",
-     "t": 19.315,
-     "end": 19.415
+     "t": 20.248,
+     "end": 20.348
     },
     {
      "w": "Leibler",
-     "t": 19.44,
-     "end": 20.19
+     "t": 20.373,
+     "end": 21.123
     },
     {
      "w": "Every",
-     "t": 20.41,
-     "end": 20.71
+     "t": 21.343,
+     "end": 21.643
     },
     {
      "w": "maximum-likelihood",
-     "t": 20.735,
-     "end": 21.81
+     "t": 21.668,
+     "end": 22.743
     },
     {
      "w": "fit",
-     "t": 21.86,
-     "end": 22.435
+     "t": 22.793,
+     "end": 23.368
     },
     {
      "w": "shrinks",
-     "t": 22.51,
-     "end": 22.81
+     "t": 23.443,
+     "end": 23.743
     },
     {
      "w": "it",
-     "t": 22.835,
-     "end": 22.922
+     "t": 23.768,
+     "end": 23.855
     },
     {
      "w": "with",
-     "t": 22.935,
-     "end": 23.048
+     "t": 23.868,
+     "end": 23.981
     },
     {
      "w": "the",
-     "t": 23.06,
-     "end": 23.135
+     "t": 23.993,
+     "end": 24.068
     },
     {
      "w": "data",
-     "t": 23.16,
-     "end": 23.473
+     "t": 24.093,
+     "end": 24.406
     },
     {
      "w": "first",
-     "t": 23.51,
-     "end": 24.11
+     "t": 24.443,
+     "end": 25.043
     },
     {
      "w": "Much",
-     "t": 24.35,
-     "end": 24.587
+     "t": 25.283,
+     "end": 25.52
     },
     {
      "w": "of",
-     "t": 24.6,
-     "end": 24.712
+     "t": 25.533,
+     "end": 25.645
     },
     {
      "w": "Bayesian",
-     "t": 24.75,
-     "end": 25.275
+     "t": 25.683,
+     "end": 26.208
     },
     {
      "w": "machine",
-     "t": 25.3,
-     "end": 25.7
+     "t": 26.233,
+     "end": 26.633
     },
     {
      "w": "learning",
-     "t": 25.725,
-     "end": 26.5
+     "t": 26.658,
+     "end": 27.433
     },
     {
      "w": "shrinks",
-     "t": 26.6,
-     "end": 26.925
+     "t": 27.533,
+     "end": 27.858
     },
     {
      "w": "it",
-     "t": 26.95,
-     "end": 27.075
+     "t": 27.883,
+     "end": 28.008
     },
     {
      "w": "with",
-     "t": 27.1,
-     "end": 27.212
+     "t": 28.033,
+     "end": 28.145
     },
     {
      "w": "the",
-     "t": 27.225,
-     "end": 27.325
+     "t": 28.158,
+     "end": 28.258
     },
     {
      "w": "order",
-     "t": 27.35,
-     "end": 27.7
+     "t": 28.283,
+     "end": 28.633
     },
     {
      "w": "flipped",
-     "t": 27.75,
-     "end": 28.31
+     "t": 28.683,
+     "end": 29.243
     },
     {
      "w": "It's",
-     "t": 28.51,
-     "end": 28.73
+     "t": 29.443,
+     "end": 29.663
     },
     {
      "w": "often",
-     "t": 28.78,
-     "end": 29.155
+     "t": 29.713,
+     "end": 30.088
     },
     {
      "w": "called",
-     "t": 29.18,
-     "end": 29.417
+     "t": 30.113,
+     "end": 30.35
     },
     {
      "w": "a",
-     "t": 29.43,
-     "end": 29.48
+     "t": 30.363,
+     "end": 30.413
     },
     {
      "w": "distance",
-     "t": 29.505,
-     "end": 30.3
+     "t": 30.438,
+     "end": 31.233
     }
    ],
    "wav": "/root/.cache/sample_space/tts/37/372934e0f73fd6b5fa272f02.wav"
   },
   {
-   "index": 2,
-   "start": 30.767,
+   "index": 3,
+   "start": 31.7,
    "duration": 11.0,
-   "end": 41.767,
+   "end": 42.7,
    "text": "So treat it as one. Data first, this bell is point seven six bits away. [pause 0.5] Shift it or stretch it, and that number only grows, so bell A is the closest.",
    "voice": "af_heart",
    "speed": 0.83,
@@ -392,167 +415,167 @@
    "words": [
     {
      "w": "So",
-     "t": 30.842,
-     "end": 31.042
+     "t": 31.775,
+     "end": 31.975
     },
     {
      "w": "treat",
-     "t": 31.092,
-     "end": 31.342
+     "t": 32.025,
+     "end": 32.275
     },
     {
      "w": "it",
-     "t": 31.367,
-     "end": 31.479
+     "t": 32.3,
+     "end": 32.412
     },
     {
      "w": "as",
-     "t": 31.517,
-     "end": 31.642
+     "t": 32.45,
+     "end": 32.575
     },
     {
      "w": "one",
-     "t": 31.667,
-     "end": 32.127
+     "t": 32.6,
+     "end": 33.06
     },
     {
      "w": "Data",
-     "t": 32.702,
-     "end": 33.015
+     "t": 33.635,
+     "end": 33.948
     },
     {
      "w": "first",
-     "t": 33.052,
-     "end": 33.627
+     "t": 33.985,
+     "end": 34.56
     },
     {
      "w": "this",
-     "t": 33.752,
-     "end": 33.927
+     "t": 34.685,
+     "end": 34.86
     },
     {
      "w": "bell",
-     "t": 33.952,
-     "end": 34.177
+     "t": 34.885,
+     "end": 35.11
     },
     {
      "w": "is",
-     "t": 34.202,
-     "end": 34.327
+     "t": 35.135,
+     "end": 35.26
     },
     {
      "w": "point",
-     "t": 34.352,
-     "end": 34.627
+     "t": 35.285,
+     "end": 35.56
     },
     {
      "w": "seven",
-     "t": 34.652,
-     "end": 34.989
+     "t": 35.585,
+     "end": 35.922
     },
     {
      "w": "six",
-     "t": 35.027,
-     "end": 35.302
+     "t": 35.96,
+     "end": 36.235
     },
     {
      "w": "bits",
-     "t": 35.327,
-     "end": 35.515
+     "t": 36.26,
+     "end": 36.448
     },
     {
      "w": "away",
-     "t": 35.527,
-     "end": 36.047
+     "t": 36.46,
+     "end": 36.98
     },
     {
      "w": "Shift",
-     "t": 36.647,
-     "end": 36.947
+     "t": 37.58,
+     "end": 37.88
     },
     {
      "w": "it",
-     "t": 36.972,
-     "end": 37.097
+     "t": 37.905,
+     "end": 38.03
     },
     {
      "w": "or",
-     "t": 37.122,
-     "end": 37.26
+     "t": 38.055,
+     "end": 38.193
     },
     {
      "w": "stretch",
-     "t": 37.297,
-     "end": 37.659
+     "t": 38.23,
+     "end": 38.592
     },
     {
      "w": "it",
-     "t": 37.697,
-     "end": 38.022
+     "t": 38.63,
+     "end": 38.955
     },
     {
      "w": "and",
-     "t": 38.147,
-     "end": 38.235
+     "t": 39.08,
+     "end": 39.168
     },
     {
      "w": "that",
-     "t": 38.247,
-     "end": 38.447
+     "t": 39.18,
+     "end": 39.38
     },
     {
      "w": "number",
-     "t": 38.472,
-     "end": 38.747
+     "t": 39.405,
+     "end": 39.68
     },
     {
      "w": "only",
-     "t": 38.772,
-     "end": 39.047
+     "t": 39.705,
+     "end": 39.98
     },
     {
      "w": "grows",
-     "t": 39.072,
-     "end": 39.697
+     "t": 40.005,
+     "end": 40.63
     },
     {
      "w": "so",
-     "t": 39.872,
-     "end": 40.059
+     "t": 40.805,
+     "end": 40.992
     },
     {
      "w": "bell",
-     "t": 40.097,
-     "end": 40.36
+     "t": 41.03,
+     "end": 41.293
     },
     {
      "w": "A",
-     "t": 40.397,
-     "end": 40.697
+     "t": 41.33,
+     "end": 41.63
     },
     {
      "w": "is",
-     "t": 40.722,
-     "end": 40.847
+     "t": 41.655,
+     "end": 41.78
     },
     {
      "w": "the",
-     "t": 40.872,
-     "end": 40.947
+     "t": 41.805,
+     "end": 41.88
     },
     {
      "w": "closest",
-     "t": 40.972,
-     "end": 41.767
+     "t": 41.905,
+     "end": 42.7
     }
    ],
    "wav": "/root/.cache/sample_space/tts/3b/3b42bff1d168d8495554b833.wav"
   },
   {
-   "index": 3,
-   "start": 42.567,
+   "index": 4,
+   "start": 43.5,
    "duration": 14.5,
-   "end": 57.067,
+   "end": 58.0,
    "text": "But a distance reads the same both ways. [pause 0.15] Put the bell first, and the same two curves are one point seven bits apart, more than twice as far. [pause 1.0] Only the order changed, so the formula must care about order.",
    "voice": "af_heart",
    "speed": 0.83,
@@ -560,713 +583,708 @@
    "words": [
     {
      "w": "But",
-     "t": 42.572,
-     "end": 42.685
+     "t": 43.505,
+     "end": 43.618
     },
     {
      "w": "a",
-     "t": 42.697,
-     "end": 42.784
+     "t": 43.63,
+     "end": 43.717
     },
     {
      "w": "distance",
-     "t": 42.822,
-     "end": 43.635
+     "t": 43.755,
+     "end": 44.568
     },
     {
      "w": "reads",
-     "t": 43.697,
-     "end": 44.035
+     "t": 44.63,
+     "end": 44.968
     },
     {
      "w": "the",
-     "t": 44.047,
-     "end": 44.147
+     "t": 44.98,
+     "end": 45.08
     },
     {
      "w": "same",
-     "t": 44.172,
-     "end": 44.447
+     "t": 45.105,
+     "end": 45.38
     },
     {
      "w": "both",
-     "t": 44.472,
-     "end": 44.747
+     "t": 45.405,
+     "end": 45.68
     },
     {
      "w": "ways",
-     "t": 44.772,
-     "end": 45.357
+     "t": 45.705,
+     "end": 46.29
     },
     {
      "w": "Put",
-     "t": 45.512,
-     "end": 45.662
+     "t": 46.445,
+     "end": 46.595
     },
     {
      "w": "the",
-     "t": 45.687,
-     "end": 45.762
+     "t": 46.62,
+     "end": 46.695
     },
     {
      "w": "bell",
-     "t": 45.787,
-     "end": 46.062
+     "t": 46.72,
+     "end": 46.995
     },
     {
      "w": "first",
-     "t": 46.112,
-     "end": 46.912
+     "t": 47.045,
+     "end": 47.845
     },
     {
      "w": "and",
-     "t": 47.062,
-     "end": 47.149
+     "t": 47.995,
+     "end": 48.082
     },
     {
      "w": "the",
-     "t": 47.162,
-     "end": 47.249
+     "t": 48.095,
+     "end": 48.182
     },
     {
      "w": "same",
-     "t": 47.287,
-     "end": 47.6
+     "t": 48.22,
+     "end": 48.533
     },
     {
      "w": "two",
-     "t": 47.637,
-     "end": 47.85
+     "t": 48.57,
+     "end": 48.783
     },
     {
      "w": "curves",
-     "t": 47.887,
-     "end": 48.312
+     "t": 48.82,
+     "end": 49.245
     },
     {
      "w": "are",
-     "t": 48.337,
-     "end": 48.487
+     "t": 49.27,
+     "end": 49.42
     },
     {
      "w": "one",
-     "t": 48.537,
-     "end": 48.775
+     "t": 49.47,
+     "end": 49.708
     },
     {
      "w": "point",
-     "t": 48.812,
-     "end": 49.149
+     "t": 49.745,
+     "end": 50.082
     },
     {
      "w": "seven",
-     "t": 49.187,
-     "end": 49.487
+     "t": 50.12,
+     "end": 50.42
     },
     {
      "w": "bits",
-     "t": 49.512,
-     "end": 49.737
+     "t": 50.445,
+     "end": 50.67
     },
     {
      "w": "apart",
-     "t": 49.762,
-     "end": 50.462
+     "t": 50.695,
+     "end": 51.395
     },
     {
      "w": "more",
-     "t": 50.637,
-     "end": 50.837
+     "t": 51.57,
+     "end": 51.77
     },
     {
      "w": "than",
-     "t": 50.862,
-     "end": 51.012
+     "t": 51.795,
+     "end": 51.945
     },
     {
      "w": "twice",
-     "t": 51.037,
-     "end": 51.437
+     "t": 51.97,
+     "end": 52.37
     },
     {
      "w": "as",
-     "t": 51.462,
-     "end": 51.587
+     "t": 52.395,
+     "end": 52.52
     },
     {
      "w": "far",
-     "t": 51.612,
-     "end": 52.117
+     "t": 52.545,
+     "end": 53.05
     },
     {
      "w": "Only",
-     "t": 53.117,
-     "end": 53.417
+     "t": 54.05,
+     "end": 54.35
     },
     {
      "w": "the",
-     "t": 53.442,
-     "end": 53.567
+     "t": 54.375,
+     "end": 54.5
     },
     {
      "w": "order",
-     "t": 53.592,
-     "end": 53.929
+     "t": 54.525,
+     "end": 54.862
     },
     {
      "w": "changed",
-     "t": 53.967,
-     "end": 54.742
+     "t": 54.9,
+     "end": 55.675
     },
     {
      "w": "so",
-     "t": 54.917,
-     "end": 55.005
+     "t": 55.85,
+     "end": 55.938
     },
     {
      "w": "the",
-     "t": 55.017,
-     "end": 55.142
+     "t": 55.95,
+     "end": 56.075
     },
     {
      "w": "formula",
-     "t": 55.192,
-     "end": 55.667
+     "t": 56.125,
+     "end": 56.6
     },
     {
      "w": "must",
-     "t": 55.692,
-     "end": 55.955
+     "t": 56.625,
+     "end": 56.888
     },
     {
      "w": "care",
-     "t": 55.992,
-     "end": 56.217
+     "t": 56.925,
+     "end": 57.15
     },
     {
      "w": "about",
-     "t": 56.242,
-     "end": 56.542
+     "t": 57.175,
+     "end": 57.475
     },
     {
      "w": "order",
-     "t": 56.567,
-     "end": 57.067
+     "t": 57.5,
+     "end": 58.0
     }
    ],
    "wav": "/root/.cache/sample_space/tts/b1/b10a80dbe4278e82f04d5fa6.wav"
   },
   {
-   "index": 4,
-   "start": 57.533,
-   "duration": 18.15,
-   "end": 75.683,
-   "text": "To see why, take one eruption two minutes long. The data's curve stands this high there: call it p. [pause 0.2] The bell gives it q, [pause 0.3] about a quarter as much. Double q twice and you reach p. [pause 0.2] So log base two of p over q is about two: two doublings, or two bits.",
+   "index": 5,
+   "start": 58.467,
+   "duration": 18.65,
+   "end": 77.117,
+   "text": "To see why, take one eruption two minutes long. The data's curve stands this high there: call it p. [pause 0.45] The bell gives it q, [pause 0.3] about a quarter as much. Double q twice and you reach p. [pause 0.45] So log base two of p over q is about two: two doublings, or two bits.",
    "voice": "af_heart",
    "speed": 0.83,
    "cadence": "shaped",
    "words": [
     {
      "w": "To",
-     "t": 57.543,
-     "end": 57.68
+     "t": 58.477,
+     "end": 58.614
     },
     {
      "w": "see",
-     "t": 57.718,
-     "end": 57.893
+     "t": 58.652,
+     "end": 58.827
     },
     {
      "w": "why",
-     "t": 57.918,
-     "end": 58.368
+     "t": 58.852,
+     "end": 59.302
     },
     {
      "w": "take",
-     "t": 58.518,
-     "end": 58.743
+     "t": 59.452,
+     "end": 59.677
     },
     {
      "w": "one",
-     "t": 58.768,
-     "end": 58.918
+     "t": 59.702,
+     "end": 59.852
     },
     {
      "w": "eruption",
-     "t": 58.943,
-     "end": 59.481
+     "t": 59.877,
+     "end": 60.415
     },
     {
      "w": "two",
-     "t": 59.518,
-     "end": 59.681
+     "t": 60.452,
+     "end": 60.615
     },
     {
      "w": "minutes",
-     "t": 59.693,
-     "end": 59.993
+     "t": 60.627,
+     "end": 60.927
     },
     {
      "w": "long",
-     "t": 60.018,
-     "end": 60.513
+     "t": 60.952,
+     "end": 61.447
     },
     {
      "w": "The",
-     "t": 60.848,
-     "end": 60.948
+     "t": 61.782,
+     "end": 61.882
     },
     {
      "w": "data's",
-     "t": 60.973,
-     "end": 61.348
+     "t": 61.907,
+     "end": 62.282
     },
     {
      "w": "curve",
-     "t": 61.373,
-     "end": 61.698
+     "t": 62.307,
+     "end": 62.632
     },
     {
      "w": "stands",
-     "t": 61.723,
-     "end": 62.073
+     "t": 62.657,
+     "end": 63.007
     },
     {
      "w": "this",
-     "t": 62.098,
-     "end": 62.273
+     "t": 63.032,
+     "end": 63.207
     },
     {
      "w": "high",
-     "t": 62.298,
-     "end": 62.523
+     "t": 63.232,
+     "end": 63.457
     },
     {
      "w": "there",
-     "t": 62.548,
-     "end": 62.998
+     "t": 63.482,
+     "end": 63.932
     },
     {
      "w": "call",
-     "t": 63.198,
-     "end": 63.385
+     "t": 64.132,
+     "end": 64.319
     },
     {
      "w": "it",
-     "t": 63.398,
-     "end": 63.498
+     "t": 64.332,
+     "end": 64.432
     },
     {
      "w": "p.",
-     "t": 63.523,
-     "end": 64.023
+     "t": 64.457,
+     "end": 64.957
     },
     {
      "w": "The",
-     "t": 64.273,
-     "end": 64.373
+     "t": 65.457,
+     "end": 65.557
     },
     {
      "w": "bell",
-     "t": 64.398,
-     "end": 64.648
+     "t": 65.582,
+     "end": 65.832
     },
     {
      "w": "gives",
-     "t": 64.673,
-     "end": 64.873
+     "t": 65.857,
+     "end": 66.057
     },
     {
      "w": "it",
-     "t": 64.898,
-     "end": 65.035
+     "t": 66.082,
+     "end": 66.219
     },
     {
      "w": "q",
-     "t": 65.073,
-     "end": 65.613
+     "t": 66.257,
+     "end": 66.797
     },
     {
      "w": "about",
-     "t": 65.943,
-     "end": 66.206
+     "t": 67.127,
+     "end": 67.39
     },
     {
      "w": "a",
-     "t": 66.218,
-     "end": 66.268
+     "t": 67.402,
+     "end": 67.452
     },
     {
      "w": "quarter",
-     "t": 66.293,
-     "end": 66.693
+     "t": 67.477,
+     "end": 67.877
     },
     {
      "w": "as",
-     "t": 66.718,
-     "end": 66.843
+     "t": 67.902,
+     "end": 68.027
     },
     {
      "w": "much",
-     "t": 66.868,
-     "end": 67.423
+     "t": 68.052,
+     "end": 68.607
     },
     {
      "w": "Double",
-     "t": 67.773,
-     "end": 68.098
+     "t": 68.957,
+     "end": 69.282
     },
     {
      "w": "q",
-     "t": 68.123,
-     "end": 68.298
+     "t": 69.307,
+     "end": 69.482
     },
     {
      "w": "twice",
-     "t": 68.323,
-     "end": 68.861
+     "t": 69.507,
+     "end": 70.045
     },
     {
      "w": "and",
-     "t": 68.898,
-     "end": 68.998
+     "t": 70.082,
+     "end": 70.182
     },
     {
      "w": "you",
-     "t": 69.023,
-     "end": 69.148
+     "t": 70.207,
+     "end": 70.332
     },
     {
      "w": "reach",
-     "t": 69.173,
-     "end": 69.461
+     "t": 70.357,
+     "end": 70.645
     },
     {
      "w": "p.",
-     "t": 69.498,
-     "end": 69.973
+     "t": 70.682,
+     "end": 71.157
     },
     {
      "w": "So",
-     "t": 70.273,
-     "end": 70.448
+     "t": 71.707,
+     "end": 71.882
     },
     {
      "w": "log",
-     "t": 70.473,
-     "end": 70.748
+     "t": 71.907,
+     "end": 72.182
     },
     {
      "w": "base",
-     "t": 70.773,
-     "end": 71.085
+     "t": 72.207,
+     "end": 72.519
     },
     {
      "w": "two",
-     "t": 71.123,
-     "end": 71.348
+     "t": 72.557,
+     "end": 72.782
     },
     {
      "w": "of",
-     "t": 71.373,
-     "end": 71.511
+     "t": 72.807,
+     "end": 72.945
     },
     {
      "w": "p",
-     "t": 71.548,
-     "end": 71.773
+     "t": 72.982,
+     "end": 73.207
     },
     {
      "w": "over",
-     "t": 71.798,
-     "end": 72.061
+     "t": 73.232,
+     "end": 73.495
     },
     {
      "w": "q",
-     "t": 72.098,
-     "end": 72.373
+     "t": 73.532,
+     "end": 73.807
     },
     {
      "w": "is",
-     "t": 72.398,
-     "end": 72.485
+     "t": 73.832,
+     "end": 73.919
     },
     {
      "w": "about",
-     "t": 72.498,
-     "end": 72.823
+     "t": 73.932,
+     "end": 74.257
     },
     {
      "w": "two",
-     "t": 72.873,
-     "end": 73.423
+     "t": 74.307,
+     "end": 74.857
     },
     {
      "w": "two",
-     "t": 73.698,
-     "end": 73.873
+     "t": 75.132,
+     "end": 75.307
     },
     {
      "w": "doublings",
-     "t": 73.898,
-     "end": 74.473
+     "t": 75.332,
+     "end": 75.907
     },
     {
      "w": "or",
-     "t": 74.573,
-     "end": 74.723
+     "t": 76.007,
+     "end": 76.157
     },
     {
      "w": "two",
-     "t": 74.773,
-     "end": 74.948
+     "t": 76.207,
+     "end": 76.382
     },
     {
      "w": "bits",
-     "t": 74.973,
-     "end": 75.533
+     "t": 76.407,
+     "end": 76.967
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/14/14f118cc0417c2ad1aae4769.wav"
+   "wav": "/root/.cache/sample_space/tts/f3/f338cc4a70774ed9e30a1e22.wav"
   },
   {
-   "index": 5,
-   "start": 77.233,
-   "duration": 16.63,
-   "end": 93.863,
-   "text": "Do that at every length. [pause 0.9] Then weight each one by p, how often eruptions last that long, and add it all up. [pause 0.3] Where the bell rises above the data, [pause 0.45] the grey dips pay a little back. [pause 0.5] That's the divergence: the same point seven six.",
+   "index": 6,
+   "start": 78.667,
+   "duration": 16.33,
+   "end": 94.997,
+   "text": "Do that at every length. [pause 0.9] Then weight each by p, how often eruptions last that long, and add it all up. [pause 0.3] Where the bell rises above the data, [pause 0.45] the grey dips pay a little back. [pause 0.5] That's the divergence: the same point seven six.",
    "voice": "af_heart",
    "speed": 0.83,
    "cadence": "shaped",
    "words": [
     {
      "w": "Do",
-     "t": 77.293,
-     "end": 77.468
+     "t": 78.727,
+     "end": 78.902
     },
     {
      "w": "that",
-     "t": 77.493,
-     "end": 77.743
+     "t": 78.927,
+     "end": 79.177
     },
     {
      "w": "at",
-     "t": 77.768,
-     "end": 77.918
+     "t": 79.202,
+     "end": 79.352
     },
     {
      "w": "every",
-     "t": 77.968,
-     "end": 78.268
+     "t": 79.402,
+     "end": 79.702
     },
     {
      "w": "length",
-     "t": 78.293,
-     "end": 78.853
+     "t": 79.727,
+     "end": 80.287
     },
     {
      "w": "Then",
-     "t": 79.793,
-     "end": 79.993
+     "t": 81.227,
+     "end": 81.439
     },
     {
      "w": "weight",
-     "t": 80.018,
-     "end": 80.231
+     "t": 81.477,
+     "end": 81.689
     },
     {
      "w": "each",
-     "t": 80.243,
-     "end": 80.468
-    },
-    {
-     "w": "one",
-     "t": 80.493,
-     "end": 80.693
+     "t": 81.702,
+     "end": 81.927
     },
     {
      "w": "by",
-     "t": 80.718,
-     "end": 80.943
+     "t": 81.952,
+     "end": 82.177
     },
     {
      "w": "p",
-     "t": 80.993,
-     "end": 81.568
+     "t": 82.227,
+     "end": 82.802
     },
     {
      "w": "how",
-     "t": 81.743,
-     "end": 81.918
+     "t": 82.977,
+     "end": 83.152
     },
     {
      "w": "often",
-     "t": 81.968,
-     "end": 82.318
+     "t": 83.202,
+     "end": 83.552
     },
     {
      "w": "eruptions",
-     "t": 82.343,
-     "end": 82.943
+     "t": 83.577,
+     "end": 84.152
     },
     {
      "w": "last",
-     "t": 82.968,
-     "end": 83.318
+     "t": 84.177,
+     "end": 84.477
     },
     {
      "w": "that",
-     "t": 83.343,
-     "end": 83.543
+     "t": 84.502,
+     "end": 84.702
     },
     {
      "w": "long",
-     "t": 83.568,
-     "end": 84.068
+     "t": 84.727,
+     "end": 85.202
     },
     {
      "w": "and",
-     "t": 84.193,
-     "end": 84.343
+     "t": 85.327,
+     "end": 85.477
     },
     {
      "w": "add",
-     "t": 84.393,
-     "end": 84.581
+     "t": 85.527,
+     "end": 85.715
     },
     {
      "w": "it",
-     "t": 84.593,
-     "end": 84.668
+     "t": 85.727,
+     "end": 85.802
     },
     {
      "w": "all",
-     "t": 84.693,
-     "end": 84.868
+     "t": 85.827,
+     "end": 86.002
     },
     {
      "w": "up",
-     "t": 84.893,
-     "end": 85.303
+     "t": 86.027,
+     "end": 86.437
     },
     {
      "w": "Where",
-     "t": 85.603,
-     "end": 85.711
+     "t": 86.737,
+     "end": 86.845
     },
     {
      "w": "the",
-     "t": 85.723,
-     "end": 85.836
+     "t": 86.857,
+     "end": 86.969
     },
     {
      "w": "bell",
-     "t": 85.873,
-     "end": 86.248
+     "t": 87.007,
+     "end": 87.382
     },
     {
      "w": "rises",
-     "t": 86.298,
-     "end": 86.823
+     "t": 87.432,
+     "end": 87.957
     },
     {
      "w": "above",
-     "t": 86.848,
-     "end": 87.111
+     "t": 87.982,
+     "end": 88.245
     },
     {
      "w": "the",
-     "t": 87.123,
-     "end": 87.198
+     "t": 88.257,
+     "end": 88.332
     },
     {
      "w": "data",
-     "t": 87.223,
-     "end": 87.773
+     "t": 88.357,
+     "end": 88.907
     },
     {
      "w": "the",
-     "t": 88.258,
-     "end": 88.333
+     "t": 89.392,
+     "end": 89.467
     },
     {
      "w": "grey",
-     "t": 88.358,
-     "end": 88.658
+     "t": 89.492,
+     "end": 89.792
     },
     {
      "w": "dips",
-     "t": 88.683,
-     "end": 88.933
+     "t": 89.817,
+     "end": 90.067
     },
     {
      "w": "pay",
-     "t": 88.958,
-     "end": 89.146
+     "t": 90.092,
+     "end": 90.279
     },
     {
      "w": "a",
-     "t": 89.158,
-     "end": 89.195
+     "t": 90.292,
+     "end": 90.329
     },
     {
      "w": "little",
-     "t": 89.208,
-     "end": 89.383
+     "t": 90.342,
+     "end": 90.517
     },
     {
      "w": "back",
-     "t": 89.408,
-     "end": 89.953
+     "t": 90.542,
+     "end": 91.087
     },
     {
      "w": "That's",
-     "t": 90.513,
-     "end": 90.838
+     "t": 91.647,
+     "end": 91.972
     },
     {
      "w": "the",
-     "t": 90.863,
-     "end": 90.938
+     "t": 91.997,
+     "end": 92.072
     },
     {
      "w": "divergence",
-     "t": 90.963,
-     "end": 91.863
+     "t": 92.097,
+     "end": 92.997
     },
     {
      "w": "the",
-     "t": 92.013,
-     "end": 92.126
+     "t": 93.147,
+     "end": 93.26
     },
     {
      "w": "same",
-     "t": 92.163,
-     "end": 92.438
+     "t": 93.297,
+     "end": 93.572
     },
     {
      "w": "point",
-     "t": 92.463,
-     "end": 92.713
+     "t": 93.597,
+     "end": 93.847
     },
     {
      "w": "seven",
-     "t": 92.738,
-     "end": 93.088
+     "t": 93.872,
+     "end": 94.222
     },
     {
      "w": "six",
-     "t": 93.138,
-     "end": 93.713
+     "t": 94.272,
+     "end": 94.847
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/6d/6d5027ab2df123a73b3a797d.wav"
+   "wav": "/root/.cache/sample_space/tts/96/964a578bc48d57c5d16dae47.wav"
   },
   {
-   "index": 6,
-   "start": 94.767,
+   "index": 7,
+   "start": 95.9,
    "duration": 14.59,
-   "end": 109.357,
+   "end": 110.49,
    "text": "Try a bell that skips the short eruptions. At two minutes, it falls short by eighteen and a half doublings. [pause 0.6] More than a third of all eruptions are short, so the bill comes to five point eight bits.",
    "voice": "af_heart",
    "speed": 0.8,
@@ -1274,202 +1292,202 @@
    "words": [
     {
      "w": "Try",
-     "t": 94.777,
-     "end": 95.077
+     "t": 95.91,
+     "end": 96.21
     },
     {
      "w": "a",
-     "t": 95.102,
-     "end": 95.177
+     "t": 96.235,
+     "end": 96.31
     },
     {
      "w": "bell",
-     "t": 95.202,
-     "end": 95.527
+     "t": 96.335,
+     "end": 96.66
     },
     {
      "w": "that",
-     "t": 95.552,
-     "end": 95.739
+     "t": 96.685,
+     "end": 96.872
     },
     {
      "w": "skips",
-     "t": 95.777,
-     "end": 96.152
+     "t": 96.91,
+     "end": 97.285
     },
     {
      "w": "the",
-     "t": 96.177,
-     "end": 96.302
+     "t": 97.31,
+     "end": 97.435
     },
     {
      "w": "short",
-     "t": 96.352,
-     "end": 96.565
+     "t": 97.485,
+     "end": 97.698
     },
     {
      "w": "eruptions",
-     "t": 96.577,
-     "end": 97.477
+     "t": 97.71,
+     "end": 98.61
     },
     {
      "w": "At",
-     "t": 97.827,
-     "end": 98.015
+     "t": 98.96,
+     "end": 99.148
     },
     {
      "w": "two",
-     "t": 98.052,
-     "end": 98.215
+     "t": 99.185,
+     "end": 99.348
     },
     {
      "w": "minutes",
-     "t": 98.227,
-     "end": 98.777
+     "t": 99.36,
+     "end": 99.91
     },
     {
      "w": "it",
-     "t": 98.927,
-     "end": 99.064
+     "t": 100.06,
+     "end": 100.197
     },
     {
      "w": "falls",
-     "t": 99.102,
-     "end": 99.477
+     "t": 100.235,
+     "end": 100.61
     },
     {
      "w": "short",
-     "t": 99.527,
-     "end": 99.89
+     "t": 100.66,
+     "end": 101.023
     },
     {
      "w": "by",
-     "t": 99.927,
-     "end": 100.152
+     "t": 101.06,
+     "end": 101.285
     },
     {
      "w": "eighteen",
-     "t": 100.202,
-     "end": 100.739
+     "t": 101.335,
+     "end": 101.872
     },
     {
      "w": "and",
-     "t": 100.752,
-     "end": 100.839
+     "t": 101.885,
+     "end": 101.972
     },
     {
      "w": "a",
-     "t": 100.852,
-     "end": 100.902
+     "t": 101.985,
+     "end": 102.035
     },
     {
      "w": "half",
-     "t": 100.927,
-     "end": 101.265
+     "t": 102.06,
+     "end": 102.398
     },
     {
      "w": "doublings",
-     "t": 101.302,
-     "end": 102.097
+     "t": 102.435,
+     "end": 103.23
     },
     {
      "w": "More",
-     "t": 102.767,
-     "end": 103.042
+     "t": 103.9,
+     "end": 104.175
     },
     {
      "w": "than",
-     "t": 103.067,
-     "end": 103.167
+     "t": 104.2,
+     "end": 104.3
     },
     {
      "w": "a",
-     "t": 103.192,
-     "end": 103.329
+     "t": 104.325,
+     "end": 104.462
     },
     {
      "w": "third",
-     "t": 103.392,
-     "end": 103.767
+     "t": 104.525,
+     "end": 104.9
     },
     {
      "w": "of",
-     "t": 103.792,
-     "end": 103.967
+     "t": 104.925,
+     "end": 105.1
     },
     {
      "w": "all",
-     "t": 104.017,
-     "end": 104.292
+     "t": 105.15,
+     "end": 105.425
     },
     {
      "w": "eruptions",
-     "t": 104.317,
-     "end": 105.017
+     "t": 105.45,
+     "end": 106.15
     },
     {
      "w": "are",
-     "t": 105.042,
-     "end": 105.192
+     "t": 106.175,
+     "end": 106.325
     },
     {
      "w": "short",
-     "t": 105.242,
-     "end": 105.992
+     "t": 106.375,
+     "end": 107.125
     },
     {
      "w": "so",
-     "t": 106.192,
-     "end": 106.342
+     "t": 107.325,
+     "end": 107.475
     },
     {
      "w": "the",
-     "t": 106.367,
-     "end": 106.479
+     "t": 107.5,
+     "end": 107.612
     },
     {
      "w": "bill",
-     "t": 106.517,
-     "end": 106.854
+     "t": 107.65,
+     "end": 107.987
     },
     {
      "w": "comes",
-     "t": 106.892,
-     "end": 107.305
+     "t": 108.025,
+     "end": 108.438
     },
     {
      "w": "to",
-     "t": 107.342,
-     "end": 107.492
+     "t": 108.475,
+     "end": 108.625
     },
     {
      "w": "five",
-     "t": 107.542,
-     "end": 108.005
+     "t": 108.675,
+     "end": 109.138
     },
     {
      "w": "point",
-     "t": 108.042,
-     "end": 108.317
+     "t": 109.175,
+     "end": 109.45
     },
     {
      "w": "eight",
-     "t": 108.342,
-     "end": 108.579
+     "t": 109.475,
+     "end": 109.712
     },
     {
      "w": "bits",
-     "t": 108.617,
-     "end": 109.207
+     "t": 109.75,
+     "end": 110.34
     }
    ],
    "wav": "/root/.cache/sample_space/tts/c7/c7d76df74d5307ab0cae887a.wav"
   },
   {
-   "index": 7,
-   "start": 110.467,
+   "index": 8,
+   "start": 111.6,
    "duration": 12.97,
-   "end": 123.437,
+   "end": 124.57,
    "text": "Now keep that bill. [pause 0.12] For a second bill, swap the order: [pause 0.2] every p trades places with q. [pause 0.3] The bell supplies the lengths, and the data judges them. [pause 0.5] Which bell wins now? [pause 1.5]",
    "voice": "af_heart",
    "speed": 0.83,
@@ -1477,395 +1495,390 @@
    "words": [
     {
      "w": "Now",
-     "t": 110.562,
-     "end": 110.762
+     "t": 111.695,
+     "end": 111.895
     },
     {
      "w": "keep",
-     "t": 110.787,
-     "end": 111.012
+     "t": 111.92,
+     "end": 112.145
     },
     {
      "w": "that",
-     "t": 111.037,
-     "end": 111.287
+     "t": 112.17,
+     "end": 112.42
     },
     {
      "w": "bill",
-     "t": 111.312,
-     "end": 111.837
+     "t": 112.445,
+     "end": 112.97
     },
     {
      "w": "For",
-     "t": 112.027,
-     "end": 112.14
+     "t": 113.16,
+     "end": 113.273
     },
     {
      "w": "a",
-     "t": 112.152,
-     "end": 112.24
+     "t": 113.285,
+     "end": 113.373
     },
     {
      "w": "second",
-     "t": 112.277,
-     "end": 112.602
+     "t": 113.41,
+     "end": 113.735
     },
     {
      "w": "bill",
-     "t": 112.627,
-     "end": 113.052
+     "t": 113.76,
+     "end": 114.185
     },
     {
      "w": "swap",
-     "t": 113.227,
-     "end": 113.515
+     "t": 114.36,
+     "end": 114.648
     },
     {
      "w": "the",
-     "t": 113.527,
-     "end": 113.652
+     "t": 114.66,
+     "end": 114.785
     },
     {
      "w": "order",
-     "t": 113.677,
-     "end": 114.197
+     "t": 114.81,
+     "end": 115.33
     },
     {
      "w": "every",
-     "t": 114.417,
-     "end": 114.717
+     "t": 115.55,
+     "end": 115.85
     },
     {
      "w": "p",
-     "t": 114.742,
-     "end": 114.942
+     "t": 115.875,
+     "end": 116.075
     },
     {
      "w": "trades",
-     "t": 114.967,
-     "end": 115.367
+     "t": 116.1,
+     "end": 116.5
     },
     {
      "w": "places",
-     "t": 115.392,
-     "end": 115.805
+     "t": 116.525,
+     "end": 116.938
     },
     {
      "w": "with",
-     "t": 115.817,
-     "end": 115.98
+     "t": 116.95,
+     "end": 117.113
     },
     {
      "w": "q.",
-     "t": 116.017,
-     "end": 116.507
+     "t": 117.15,
+     "end": 117.64
     },
     {
      "w": "The",
-     "t": 116.832,
-     "end": 116.932
+     "t": 117.965,
+     "end": 118.065
     },
     {
      "w": "bell",
-     "t": 116.957,
-     "end": 117.207
+     "t": 118.09,
+     "end": 118.34
     },
     {
      "w": "supplies",
-     "t": 117.232,
-     "end": 117.757
+     "t": 118.365,
+     "end": 118.89
     },
     {
      "w": "the",
-     "t": 117.782,
-     "end": 117.882
+     "t": 118.915,
+     "end": 119.015
     },
     {
      "w": "lengths",
-     "t": 117.907,
-     "end": 118.532
+     "t": 119.04,
+     "end": 119.665
     },
     {
      "w": "and",
-     "t": 118.657,
-     "end": 118.745
+     "t": 119.79,
+     "end": 119.878
     },
     {
      "w": "the",
-     "t": 118.757,
-     "end": 118.845
+     "t": 119.89,
+     "end": 119.978
     },
     {
      "w": "data",
-     "t": 118.882,
-     "end": 119.257
+     "t": 120.015,
+     "end": 120.39
     },
     {
      "w": "judges",
-     "t": 119.307,
-     "end": 119.682
+     "t": 120.44,
+     "end": 120.815
     },
     {
      "w": "them",
-     "t": 119.707,
-     "end": 120.067
+     "t": 120.84,
+     "end": 121.2
     },
     {
      "w": "Which",
-     "t": 120.612,
-     "end": 120.862
+     "t": 121.745,
+     "end": 121.995
     },
     {
      "w": "bell",
-     "t": 120.887,
-     "end": 121.112
+     "t": 122.02,
+     "end": 122.245
     },
     {
      "w": "wins",
-     "t": 121.137,
-     "end": 121.412
+     "t": 122.27,
+     "end": 122.545
     },
     {
      "w": "now",
-     "t": 121.437,
-     "end": 121.937
+     "t": 122.57,
+     "end": 123.07
     }
    ],
    "wav": "/root/.cache/sample_space/tts/49/4987fd4957e2225cf2a770e2.wav"
   },
   {
-   "index": 8,
-   "start": 123.9,
-   "duration": 16.97,
-   "end": 140.87,
-   "text": "Take bell B first. [pause 0.15] It almost never imagines a short eruption, so ignoring them costs it nothing. [pause 0.12] It pays point six two. [pause 0.9] Bell A imagines eruptions in the gap and the tails, where the data has almost none. [pause 0.2] That's its one point seven.",
+   "index": 9,
+   "start": 125.033,
+   "duration": 16.75,
+   "end": 141.783,
+   "text": "Take bell B first. [pause 0.15] It almost never imagines a short eruption, so ignoring them costs nothing. [pause 0.12] It pays point six two. [pause 0.9] Bell A imagines eruptions in the gap and the tails, where the data has almost none. [pause 0.2] That's its one point seven.",
    "voice": "af_heart",
    "speed": 0.83,
    "cadence": "shaped",
    "words": [
     {
      "w": "Take",
-     "t": 123.975,
-     "end": 124.2
+     "t": 125.108,
+     "end": 125.333
     },
     {
      "w": "bell",
-     "t": 124.225,
-     "end": 124.45
+     "t": 125.358,
+     "end": 125.583
     },
     {
      "w": "B",
-     "t": 124.475,
-     "end": 124.662
+     "t": 125.608,
+     "end": 125.795
     },
     {
      "w": "first",
-     "t": 124.7,
-     "end": 125.33
+     "t": 125.833,
+     "end": 126.463
     },
     {
      "w": "It",
-     "t": 125.48,
-     "end": 125.58
+     "t": 126.613,
+     "end": 126.713
     },
     {
      "w": "almost",
-     "t": 125.605,
-     "end": 126.118
+     "t": 126.738,
+     "end": 127.238
     },
     {
      "w": "never",
-     "t": 126.18,
-     "end": 126.505
+     "t": 127.288,
+     "end": 127.588
     },
     {
      "w": "imagines",
-     "t": 126.53,
-     "end": 127.13
+     "t": 127.613,
+     "end": 128.188
     },
     {
      "w": "a",
-     "t": 127.155,
-     "end": 127.255
+     "t": 128.213,
+     "end": 128.313
     },
     {
      "w": "short",
-     "t": 127.305,
-     "end": 127.555
+     "t": 128.363,
+     "end": 128.613
     },
     {
      "w": "eruption",
-     "t": 127.58,
-     "end": 128.455
+     "t": 128.638,
+     "end": 129.513
     },
     {
      "w": "so",
-     "t": 128.63,
-     "end": 128.805
+     "t": 129.688,
+     "end": 129.863
     },
     {
      "w": "ignoring",
-     "t": 128.83,
-     "end": 129.33
+     "t": 129.888,
+     "end": 130.351
     },
     {
      "w": "them",
-     "t": 129.355,
-     "end": 129.568
+     "t": 130.363,
+     "end": 130.551
     },
     {
      "w": "costs",
-     "t": 129.605,
-     "end": 129.968
-    },
-    {
-     "w": "it",
-     "t": 129.98,
-     "end": 130.08
+     "t": 130.588,
+     "end": 130.988
     },
     {
      "w": "nothing",
-     "t": 130.105,
-     "end": 130.65
+     "t": 131.013,
+     "end": 131.563
     },
     {
      "w": "It",
-     "t": 130.775,
-     "end": 130.9
+     "t": 131.688,
+     "end": 131.813
     },
     {
      "w": "pays",
-     "t": 130.925,
-     "end": 131.25
+     "t": 131.838,
+     "end": 132.163
     },
     {
      "w": "point",
-     "t": 131.275,
-     "end": 131.525
+     "t": 132.188,
+     "end": 132.438
     },
     {
      "w": "six",
-     "t": 131.55,
-     "end": 131.838
+     "t": 132.463,
+     "end": 132.751
     },
     {
      "w": "two",
-     "t": 131.875,
-     "end": 132.38
+     "t": 132.788,
+     "end": 133.293
     },
     {
      "w": "Bell",
-     "t": 133.335,
-     "end": 133.648
+     "t": 134.248,
+     "end": 134.561
     },
     {
      "w": "A",
-     "t": 133.685,
-     "end": 133.948
+     "t": 134.598,
+     "end": 134.861
     },
     {
      "w": "imagines",
-     "t": 133.985,
-     "end": 134.56
+     "t": 134.898,
+     "end": 135.473
     },
     {
      "w": "eruptions",
-     "t": 134.585,
-     "end": 135.223
+     "t": 135.498,
+     "end": 136.135
     },
     {
      "w": "in",
-     "t": 135.235,
-     "end": 135.298
+     "t": 136.148,
+     "end": 136.211
     },
     {
      "w": "the",
-     "t": 135.31,
-     "end": 135.398
+     "t": 136.223,
+     "end": 136.311
     },
     {
      "w": "gap",
-     "t": 135.435,
-     "end": 135.785
+     "t": 136.348,
+     "end": 136.698
     },
     {
      "w": "and",
-     "t": 135.81,
-     "end": 135.898
+     "t": 136.723,
+     "end": 136.811
     },
     {
      "w": "the",
-     "t": 135.91,
-     "end": 135.985
+     "t": 136.823,
+     "end": 136.898
     },
     {
      "w": "tails",
-     "t": 136.01,
-     "end": 136.885
+     "t": 136.923,
+     "end": 137.798
     },
     {
      "w": "where",
-     "t": 137.035,
-     "end": 137.148
+     "t": 137.948,
+     "end": 138.061
     },
     {
      "w": "the",
-     "t": 137.16,
-     "end": 137.272
+     "t": 138.073,
+     "end": 138.185
     },
     {
      "w": "data",
-     "t": 137.31,
-     "end": 137.735
+     "t": 138.223,
+     "end": 138.648
     },
     {
      "w": "has",
-     "t": 137.76,
-     "end": 137.935
+     "t": 138.673,
+     "end": 138.848
     },
     {
      "w": "almost",
-     "t": 137.96,
-     "end": 138.385
+     "t": 138.873,
+     "end": 139.298
     },
     {
      "w": "none",
-     "t": 138.41,
-     "end": 138.87
+     "t": 139.323,
+     "end": 139.783
     },
     {
      "w": "That's",
-     "t": 139.12,
-     "end": 139.382
+     "t": 140.033,
+     "end": 140.295
     },
     {
      "w": "its",
-     "t": 139.395,
-     "end": 139.57
+     "t": 140.308,
+     "end": 140.483
     },
     {
      "w": "one",
-     "t": 139.595,
-     "end": 139.82
+     "t": 140.508,
+     "end": 140.733
     },
     {
      "w": "point",
-     "t": 139.845,
-     "end": 140.108
+     "t": 140.758,
+     "end": 141.02
     },
     {
      "w": "seven",
-     "t": 140.145,
-     "end": 140.72
+     "t": 141.058,
+     "end": 141.633
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/6f/6f6f42830a21959315babc02.wav"
+   "wav": "/root/.cache/sample_space/tts/95/95fe2a0165c0a97f315c9959.wav"
   },
   {
-   "index": 9,
-   "start": 142.067,
+   "index": 10,
+   "start": 142.967,
    "duration": 14.23,
-   "end": 156.297,
+   "end": 157.197,
    "text": "Now let bell A slide downhill on the bell-first bill. [pause 0.12] As that bill drains, the other swells, and the bell settles into B, less than half as wide. [pause 0.3] Flip the order, and the closest bell moves to three. [pause 1.2]",
    "voice": "af_heart",
    "speed": 0.83,
@@ -1873,202 +1886,202 @@
    "words": [
     {
      "w": "Now",
-     "t": 142.112,
-     "end": 142.312
+     "t": 143.012,
+     "end": 143.212
     },
     {
      "w": "let",
-     "t": 142.337,
-     "end": 142.487
-    },
-    {
-     "w": "bell",
-     "t": 142.512,
-     "end": 142.749
-    },
-    {
-     "w": "A",
-     "t": 142.787,
-     "end": 142.999
-    },
-    {
-     "w": "slide",
-     "t": 143.037,
+     "t": 143.237,
      "end": 143.387
     },
     {
-     "w": "downhill",
+     "w": "bell",
      "t": 143.412,
-     "end": 144.099
+     "end": 143.649
+    },
+    {
+     "w": "A",
+     "t": 143.687,
+     "end": 143.899
+    },
+    {
+     "w": "slide",
+     "t": 143.937,
+     "end": 144.287
+    },
+    {
+     "w": "downhill",
+     "t": 144.312,
+     "end": 144.999
     },
     {
      "w": "on",
-     "t": 144.137,
-     "end": 144.224
+     "t": 145.037,
+     "end": 145.124
     },
     {
      "w": "the",
-     "t": 144.237,
-     "end": 144.312
+     "t": 145.137,
+     "end": 145.212
     },
     {
      "w": "bell-first",
-     "t": 144.337,
-     "end": 144.937
+     "t": 145.237,
+     "end": 145.837
     },
     {
      "w": "bill",
-     "t": 144.962,
-     "end": 145.427
+     "t": 145.862,
+     "end": 146.327
     },
     {
      "w": "As",
-     "t": 145.547,
-     "end": 145.742
+     "t": 146.447,
+     "end": 146.642
     },
     {
      "w": "that",
-     "t": 145.767,
-     "end": 145.967
+     "t": 146.667,
+     "end": 146.867
     },
     {
      "w": "bill",
-     "t": 145.992,
-     "end": 146.205
+     "t": 146.892,
+     "end": 147.105
     },
     {
      "w": "drains",
-     "t": 146.242,
-     "end": 146.892
+     "t": 147.142,
+     "end": 147.792
     },
     {
      "w": "the",
-     "t": 146.992,
-     "end": 147.117
+     "t": 147.892,
+     "end": 148.017
     },
     {
      "w": "other",
-     "t": 147.142,
-     "end": 147.392
+     "t": 148.042,
+     "end": 148.292
     },
     {
      "w": "swells",
-     "t": 147.417,
-     "end": 147.942
+     "t": 148.317,
+     "end": 148.842
     },
     {
      "w": "and",
-     "t": 148.017,
-     "end": 148.105
+     "t": 148.917,
+     "end": 149.005
     },
     {
      "w": "the",
-     "t": 148.117,
-     "end": 148.192
+     "t": 149.017,
+     "end": 149.092
     },
     {
      "w": "bell",
-     "t": 148.217,
-     "end": 148.517
+     "t": 149.117,
+     "end": 149.417
     },
     {
      "w": "settles",
-     "t": 148.567,
-     "end": 148.967
+     "t": 149.467,
+     "end": 149.867
     },
     {
      "w": "into",
-     "t": 148.992,
-     "end": 149.255
+     "t": 149.892,
+     "end": 150.155
     },
     {
      "w": "B",
-     "t": 149.292,
-     "end": 149.842
+     "t": 150.192,
+     "end": 150.742
     },
     {
      "w": "less",
-     "t": 150.092,
-     "end": 150.367
+     "t": 150.992,
+     "end": 151.267
     },
     {
      "w": "than",
-     "t": 150.392,
-     "end": 150.542
+     "t": 151.292,
+     "end": 151.442
     },
     {
      "w": "half",
-     "t": 150.567,
-     "end": 150.829
+     "t": 151.467,
+     "end": 151.729
     },
     {
      "w": "as",
-     "t": 150.842,
-     "end": 150.979
+     "t": 151.742,
+     "end": 151.879
     },
     {
      "w": "wide",
-     "t": 151.017,
-     "end": 151.557
+     "t": 151.917,
+     "end": 152.457
     },
     {
      "w": "Flip",
-     "t": 151.952,
-     "end": 152.177
+     "t": 152.852,
+     "end": 153.077
     },
     {
      "w": "the",
-     "t": 152.202,
-     "end": 152.327
+     "t": 153.102,
+     "end": 153.227
     },
     {
      "w": "order",
-     "t": 152.352,
-     "end": 152.902
+     "t": 153.252,
+     "end": 153.802
     },
     {
      "w": "and",
-     "t": 153.027,
-     "end": 153.115
+     "t": 153.927,
+     "end": 154.015
     },
     {
      "w": "the",
-     "t": 153.127,
-     "end": 153.202
+     "t": 154.027,
+     "end": 154.102
     },
     {
      "w": "closest",
-     "t": 153.227,
-     "end": 153.702
+     "t": 154.127,
+     "end": 154.602
     },
     {
      "w": "bell",
-     "t": 153.727,
-     "end": 154.027
+     "t": 154.627,
+     "end": 154.927
     },
     {
      "w": "moves",
-     "t": 154.052,
-     "end": 154.377
+     "t": 154.952,
+     "end": 155.277
     },
     {
      "w": "to",
-     "t": 154.402,
-     "end": 154.527
+     "t": 155.302,
+     "end": 155.427
     },
     {
      "w": "three",
-     "t": 154.577,
-     "end": 155.097
+     "t": 155.477,
+     "end": 155.997
     }
    ],
    "wav": "/root/.cache/sample_space/tts/b2/b256566642a91fe523771883.wav"
   },
   {
-   "index": 10,
-   "start": 156.733,
+   "index": 11,
+   "start": 157.633,
    "duration": 14.25,
-   "end": 170.983,
+   "end": 171.883,
    "text": "Maximum likelihood puts the data first, so a one-bell fit stretches over every hump. [pause 0.5] Variational inference approximates a Bayesian posterior with the model first, so it tends to settle on one hump.",
    "voice": "af_heart",
    "speed": 0.83,
@@ -2076,172 +2089,172 @@
    "words": [
     {
      "w": "Maximum",
-     "t": 156.813,
-     "end": 157.388
+     "t": 157.713,
+     "end": 158.288
     },
     {
      "w": "likelihood",
-     "t": 157.413,
-     "end": 157.988
+     "t": 158.313,
+     "end": 158.888
     },
     {
      "w": "puts",
-     "t": 158.013,
-     "end": 158.238
+     "t": 158.913,
+     "end": 159.138
     },
     {
      "w": "the",
-     "t": 158.263,
-     "end": 158.338
+     "t": 159.163,
+     "end": 159.238
     },
     {
      "w": "data",
-     "t": 158.363,
-     "end": 158.65
+     "t": 159.263,
+     "end": 159.55
     },
     {
      "w": "first",
-     "t": 158.688,
-     "end": 159.463
+     "t": 159.588,
+     "end": 160.363
     },
     {
      "w": "so",
-     "t": 159.638,
-     "end": 159.788
+     "t": 160.538,
+     "end": 160.688
     },
     {
      "w": "a",
-     "t": 159.813,
-     "end": 159.913
+     "t": 160.713,
+     "end": 160.813
     },
     {
      "w": "one-bell",
-     "t": 159.963,
-     "end": 160.525
+     "t": 160.863,
+     "end": 161.425
     },
     {
      "w": "fit",
-     "t": 160.588,
-     "end": 160.975
+     "t": 161.488,
+     "end": 161.875
     },
     {
      "w": "stretches",
-     "t": 161.013,
-     "end": 161.488
+     "t": 161.913,
+     "end": 162.388
     },
     {
      "w": "over",
-     "t": 161.513,
-     "end": 161.801
+     "t": 162.413,
+     "end": 162.701
     },
     {
      "w": "every",
-     "t": 161.838,
-     "end": 162.138
+     "t": 162.738,
+     "end": 163.038
     },
     {
      "w": "hump",
-     "t": 162.163,
-     "end": 162.613
+     "t": 163.063,
+     "end": 163.513
     },
     {
      "w": "Variational",
-     "t": 163.168,
-     "end": 164.005
+     "t": 164.068,
+     "end": 164.905
     },
     {
      "w": "inference",
-     "t": 164.043,
-     "end": 164.743
+     "t": 164.943,
+     "end": 165.643
     },
     {
      "w": "approximates",
-     "t": 164.793,
-     "end": 165.618
+     "t": 165.693,
+     "end": 166.518
     },
     {
      "w": "a",
-     "t": 165.643,
-     "end": 165.743
+     "t": 166.543,
+     "end": 166.643
     },
     {
      "w": "Bayesian",
-     "t": 165.793,
-     "end": 166.393
+     "t": 166.693,
+     "end": 167.293
     },
     {
      "w": "posterior",
-     "t": 166.418,
-     "end": 167.305
+     "t": 167.318,
+     "end": 168.205
     },
     {
      "w": "with",
-     "t": 167.343,
-     "end": 167.455
+     "t": 168.243,
+     "end": 168.355
     },
     {
      "w": "the",
-     "t": 167.468,
-     "end": 167.543
+     "t": 168.368,
+     "end": 168.443
     },
     {
      "w": "model",
-     "t": 167.568,
-     "end": 167.943
+     "t": 168.468,
+     "end": 168.843
     },
     {
      "w": "first",
-     "t": 167.993,
-     "end": 168.793
+     "t": 168.893,
+     "end": 169.693
     },
     {
      "w": "so",
-     "t": 168.993,
-     "end": 169.105
+     "t": 169.893,
+     "end": 170.005
     },
     {
      "w": "it",
-     "t": 169.118,
-     "end": 169.193
+     "t": 170.018,
+     "end": 170.093
     },
     {
      "w": "tends",
-     "t": 169.218,
-     "end": 169.518
+     "t": 170.118,
+     "end": 170.418
     },
     {
      "w": "to",
-     "t": 169.543,
-     "end": 169.668
+     "t": 170.443,
+     "end": 170.568
     },
     {
      "w": "settle",
-     "t": 169.718,
-     "end": 170.068
+     "t": 170.618,
+     "end": 170.968
     },
     {
      "w": "on",
-     "t": 170.093,
-     "end": 170.268
+     "t": 170.993,
+     "end": 171.168
     },
     {
      "w": "one",
-     "t": 170.293,
-     "end": 170.518
+     "t": 171.193,
+     "end": 171.418
     },
     {
      "w": "hump",
-     "t": 170.543,
-     "end": 170.983
+     "t": 171.443,
+     "end": 171.883
     }
    ],
    "wav": "/root/.cache/sample_space/tts/e4/e42ebbddcfc7c6ce820bb68f.wav"
   },
   {
-   "index": 11,
-   "start": 171.433,
+   "index": 12,
+   "start": 172.333,
    "duration": 16.29,
-   "end": 187.723,
+   "end": 188.623,
    "text": "Blei and colleagues note that variational inference generally underestimates posterior variance. [pause 0.4] In a real ad-conversion model, its average for one effect matched MCMC, but its spread was only a fifth as wide.",
    "voice": "af_heart",
    "speed": 0.83,
@@ -2249,438 +2262,448 @@
    "words": [
     {
      "w": "Blei",
-     "t": 171.473,
-     "end": 171.911
+     "t": 172.373,
+     "end": 172.811
     },
     {
      "w": "and",
-     "t": 171.948,
-     "end": 172.061
+     "t": 172.848,
+     "end": 172.961
     },
     {
      "w": "colleagues",
-     "t": 172.098,
-     "end": 172.898
+     "t": 172.998,
+     "end": 173.798
     },
     {
      "w": "note",
-     "t": 172.948,
-     "end": 173.223
+     "t": 173.848,
+     "end": 174.123
     },
     {
      "w": "that",
-     "t": 173.248,
-     "end": 173.435
+     "t": 174.148,
+     "end": 174.335
     },
     {
      "w": "variational",
-     "t": 173.473,
-     "end": 174.223
+     "t": 174.373,
+     "end": 175.123
     },
     {
      "w": "inference",
-     "t": 174.248,
-     "end": 174.86
+     "t": 175.148,
+     "end": 175.76
     },
     {
      "w": "generally",
-     "t": 174.923,
-     "end": 175.923
+     "t": 175.823,
+     "end": 176.823
     },
     {
      "w": "underestimates",
-     "t": 175.998,
-     "end": 176.861
+     "t": 176.898,
+     "end": 177.761
     },
     {
      "w": "posterior",
-     "t": 176.898,
-     "end": 177.598
+     "t": 177.798,
+     "end": 178.498
     },
     {
      "w": "variance",
-     "t": 177.623,
-     "end": 178.393
+     "t": 178.523,
+     "end": 179.293
     },
     {
      "w": "In",
-     "t": 178.818,
-     "end": 178.918
+     "t": 179.718,
+     "end": 179.818
     },
     {
      "w": "a",
-     "t": 178.943,
-     "end": 179.043
+     "t": 179.843,
+     "end": 179.943
     },
     {
      "w": "real",
-     "t": 179.093,
-     "end": 179.381
+     "t": 179.993,
+     "end": 180.281
     },
     {
      "w": "ad-conversion",
-     "t": 179.418,
-     "end": 180.168
+     "t": 180.318,
+     "end": 181.068
     },
     {
      "w": "model",
-     "t": 180.193,
-     "end": 180.843
-    },
-    {
-     "w": "its",
-     "t": 181.018,
-     "end": 181.205
-    },
-    {
-     "w": "average",
-     "t": 181.243,
+     "t": 181.093,
      "end": 181.743
     },
     {
+     "w": "its",
+     "t": 181.918,
+     "end": 182.105
+    },
+    {
+     "w": "average",
+     "t": 182.143,
+     "end": 182.643
+    },
+    {
      "w": "for",
-     "t": 181.768,
-     "end": 181.931
+     "t": 182.668,
+     "end": 182.831
     },
     {
      "w": "one",
-     "t": 181.968,
-     "end": 182.143
+     "t": 182.868,
+     "end": 183.043
     },
     {
      "w": "effect",
-     "t": 182.168,
-     "end": 182.593
+     "t": 183.068,
+     "end": 183.493
     },
     {
      "w": "matched",
-     "t": 182.643,
-     "end": 183.168
+     "t": 183.543,
+     "end": 184.068
     },
     {
      "w": "MCMC",
-     "t": 183.218,
-     "end": 184.868
-    },
-    {
-     "w": "but",
-     "t": 185.068,
-     "end": 185.181
-    },
-    {
-     "w": "its",
-     "t": 185.193,
-     "end": 185.305
-    },
-    {
-     "w": "spread",
-     "t": 185.343,
+     "t": 184.118,
      "end": 185.768
     },
     {
+     "w": "but",
+     "t": 185.968,
+     "end": 186.081
+    },
+    {
+     "w": "its",
+     "t": 186.093,
+     "end": 186.205
+    },
+    {
+     "w": "spread",
+     "t": 186.243,
+     "end": 186.668
+    },
+    {
      "w": "was",
-     "t": 185.793,
-     "end": 185.981
+     "t": 186.693,
+     "end": 186.881
     },
     {
      "w": "only",
-     "t": 186.018,
-     "end": 186.318
+     "t": 186.918,
+     "end": 187.218
     },
     {
      "w": "a",
-     "t": 186.343,
-     "end": 186.455
+     "t": 187.243,
+     "end": 187.355
     },
     {
      "w": "fifth",
-     "t": 186.518,
-     "end": 186.931
+     "t": 187.418,
+     "end": 187.831
     },
     {
      "w": "as",
-     "t": 186.968,
-     "end": 187.118
+     "t": 187.868,
+     "end": 188.018
     },
     {
      "w": "wide",
-     "t": 187.168,
-     "end": 187.723
+     "t": 188.068,
+     "end": 188.623
     }
    ],
    "wav": "/root/.cache/sample_space/tts/60/605aff6375d756b9a055cf8d.wav"
   },
   {
-   "index": 12,
-   "start": 188.733,
-   "duration": 12.39,
-   "end": 201.123,
-   "text": "Against raw points, every bell-first score is infinite, so the data must be smoothed. [pause 0.3] Smooth it more heavily and the gap partly fills: the best bell-first fit spreads almost back to A.",
+   "index": 13,
+   "start": 189.633,
+   "duration": 11.62,
+   "end": 201.253,
+   "text": "Against raw points, with the bell first, every score is infinite, so the data must be smoothed. [pause 0.3] Smooth it more heavily and the gap partly fills: the best fit spreads almost back to A.",
    "voice": "af_heart",
    "speed": 0.83,
    "cadence": "shaped",
    "words": [
     {
      "w": "Against",
-     "t": 188.758,
-     "end": 189.108
+     "t": 189.663,
+     "end": 190.038
     },
     {
      "w": "raw",
-     "t": 189.133,
-     "end": 189.371
+     "t": 190.063,
+     "end": 190.301
     },
     {
      "w": "points",
-     "t": 189.408,
-     "end": 190.033
+     "t": 190.338,
+     "end": 190.838
+    },
+    {
+     "w": "with",
+     "t": 190.938,
+     "end": 191.051
+    },
+    {
+     "w": "the",
+     "t": 191.063,
+     "end": 191.138
+    },
+    {
+     "w": "bell",
+     "t": 191.163,
+     "end": 191.4
+    },
+    {
+     "w": "first",
+     "t": 191.438,
+     "end": 191.963
     },
     {
      "w": "every",
-     "t": 190.208,
-     "end": 190.508
-    },
-    {
-     "w": "bell-first",
-     "t": 190.533,
-     "end": 191.083
+     "t": 192.138,
+     "end": 192.451
     },
     {
      "w": "score",
-     "t": 191.108,
-     "end": 191.433
+     "t": 192.488,
+     "end": 192.838
     },
     {
      "w": "is",
-     "t": 191.458,
-     "end": 191.583
+     "t": 192.863,
+     "end": 192.988
     },
     {
      "w": "infinite",
-     "t": 191.608,
-     "end": 192.383
+     "t": 193.013,
+     "end": 193.663
     },
     {
      "w": "so",
-     "t": 192.558,
-     "end": 192.683
+     "t": 193.788,
+     "end": 193.913
     },
     {
      "w": "the",
-     "t": 192.708,
-     "end": 192.821
+     "t": 193.938,
+     "end": 194.05
     },
     {
      "w": "data",
-     "t": 192.858,
-     "end": 193.208
+     "t": 194.088,
+     "end": 194.438
     },
     {
      "w": "must",
-     "t": 193.233,
-     "end": 193.458
+     "t": 194.463,
+     "end": 194.688
     },
     {
      "w": "be",
-     "t": 193.483,
-     "end": 193.633
+     "t": 194.713,
+     "end": 194.863
     },
     {
      "w": "smoothed",
-     "t": 193.683,
-     "end": 194.383
+     "t": 194.913,
+     "end": 195.603
     },
     {
      "w": "Smooth",
-     "t": 194.778,
-     "end": 195.115
+     "t": 195.998,
+     "end": 196.31
     },
     {
      "w": "it",
-     "t": 195.128,
-     "end": 195.203
+     "t": 196.323,
+     "end": 196.385
     },
     {
      "w": "more",
-     "t": 195.228,
-     "end": 195.403
+     "t": 196.398,
+     "end": 196.573
     },
     {
      "w": "heavily",
-     "t": 195.428,
-     "end": 196.078
+     "t": 196.598,
+     "end": 197.11
     },
     {
      "w": "and",
-     "t": 196.128,
-     "end": 196.215
+     "t": 197.148,
+     "end": 197.235
     },
     {
      "w": "the",
-     "t": 196.228,
-     "end": 196.303
+     "t": 197.248,
+     "end": 197.323
     },
     {
      "w": "gap",
-     "t": 196.328,
-     "end": 196.603
+     "t": 197.348,
+     "end": 197.623
     },
     {
      "w": "partly",
-     "t": 196.628,
-     "end": 197.015
+     "t": 197.648,
+     "end": 198.035
     },
     {
      "w": "fills",
-     "t": 197.053,
-     "end": 197.878
+     "t": 198.073,
+     "end": 198.898
     },
     {
      "w": "the",
-     "t": 198.028,
-     "end": 198.128
+     "t": 199.073,
+     "end": 199.148
     },
     {
      "w": "best",
-     "t": 198.153,
-     "end": 198.453
-    },
-    {
-     "w": "bell-first",
-     "t": 198.478,
-     "end": 199.091
+     "t": 199.173,
+     "end": 199.448
     },
     {
      "w": "fit",
-     "t": 199.128,
-     "end": 199.403
+     "t": 199.473,
+     "end": 199.673
     },
     {
      "w": "spreads",
-     "t": 199.428,
-     "end": 199.778
+     "t": 199.698,
+     "end": 200.048
     },
     {
      "w": "almost",
-     "t": 199.803,
-     "end": 200.178
+     "t": 200.073,
+     "end": 200.448
     },
     {
      "w": "back",
-     "t": 200.203,
-     "end": 200.478
+     "t": 200.473,
+     "end": 200.748
     },
     {
      "w": "to",
-     "t": 200.503,
-     "end": 200.615
+     "t": 200.773,
+     "end": 200.885
     },
     {
      "w": "A.",
-     "t": 200.653,
-     "end": 201.078
+     "t": 200.923,
+     "end": 201.223
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/45/457e166ea3ab0f2f47525bc1.wav"
+   "wav": "/root/.cache/sample_space/tts/4a/4a7e8571fe4fee1c77875508.wav"
   },
   {
-   "index": 13,
-   "start": 202.933,
-   "duration": 6.32,
-   "end": 209.253,
-   "text": "Bell A never misses an eruption that happens. [pause 0.1] Bell B almost never imagines one that doesn't.",
+   "index": 14,
+   "start": 203.067,
+   "duration": 6.72,
+   "end": 209.787,
+   "text": "Bell A never misses an eruption that happens. [pause 0.5] Bell B almost never imagines one that doesn't.",
    "voice": "af_heart",
    "speed": 0.83,
    "cadence": "shaped",
    "words": [
     {
      "w": "Bell",
-     "t": 202.978,
-     "end": 203.328
+     "t": 203.112,
+     "end": 203.462
     },
     {
      "w": "A",
-     "t": 203.378,
-     "end": 203.715
+     "t": 203.512,
+     "end": 203.849
     },
     {
      "w": "never",
-     "t": 203.778,
-     "end": 204.078
+     "t": 203.912,
+     "end": 204.212
     },
     {
      "w": "misses",
-     "t": 204.103,
-     "end": 204.44
+     "t": 204.237,
+     "end": 204.574
     },
     {
      "w": "an",
-     "t": 204.453,
-     "end": 204.528
+     "t": 204.587,
+     "end": 204.662
     },
     {
      "w": "eruption",
-     "t": 204.553,
-     "end": 205.103
+     "t": 204.687,
+     "end": 205.237
     },
     {
      "w": "that",
-     "t": 205.128,
-     "end": 205.253
+     "t": 205.262,
+     "end": 205.387
     },
     {
      "w": "happens",
-     "t": 205.278,
-     "end": 206.013
+     "t": 205.412,
+     "end": 206.147
     },
     {
      "w": "Bell",
-     "t": 206.153,
-     "end": 206.378
+     "t": 206.687,
+     "end": 206.912
     },
     {
      "w": "B",
-     "t": 206.403,
-     "end": 206.591
+     "t": 206.937,
+     "end": 207.125
     },
     {
      "w": "almost",
-     "t": 206.628,
-     "end": 207.315
+     "t": 207.162,
+     "end": 207.849
     },
     {
      "w": "never",
-     "t": 207.378,
-     "end": 207.678
+     "t": 207.912,
+     "end": 208.212
     },
     {
      "w": "imagines",
-     "t": 207.703,
-     "end": 208.228
+     "t": 208.237,
+     "end": 208.762
     },
     {
      "w": "one",
-     "t": 208.253,
-     "end": 208.453
+     "t": 208.787,
+     "end": 208.987
     },
     {
      "w": "that",
-     "t": 208.478,
-     "end": 208.641
+     "t": 209.012,
+     "end": 209.175
     },
     {
      "w": "doesn't",
-     "t": 208.653,
-     "end": 209.253
+     "t": 209.187,
+     "end": 209.787
     }
    ],
-   "wav": "/root/.cache/sample_space/tts/4f/4f4138f558dabc7c5866cb73.wav"
+   "wav": "/root/.cache/sample_space/tts/30/30cffef350921688c0a08b8e.wav"
   }
  ],
  "warnings": [],
  "budget": {
-  "words": 498,
-  "runtime_s": 210.1,
+  "words": 500,
+  "runtime_s": 210.6,
   "budget_words": 500,
   "budget_runtime_s": 215.0,
   "over": false
@@ -2696,9 +2719,9 @@
  },
  "layout_audit": {
   "clearance": 0.15,
-  "checks": 191,
-  "audit_seconds": 5.518,
-  "render_seconds": 1764.9,
+  "checks": 192,
+  "audit_seconds": 4.018,
+  "render_seconds": 1279.0,
   "errors": 0,
   "count": 0,
   "counts": {
@@ -2714,8 +2737,8 @@
   "allowed": [
    {
     "kind": "overlap",
-    "start": 51.9,
-    "end": 57.53,
+    "start": 52.83,
+    "end": 58.47,
     "held": 5.63,
     "text": "Text 'a distance'",
     "text_pos": [
@@ -2730,7 +2753,7 @@
     "gap": -0.111,
     "need": 0.02,
     "allowed": "strike-through: the claim just refuted",
-    "msg": "overlap 0:51.9-0:57.5 (held 5.6s) Text 'a distance' @(-0.13, +2.40) vs Line @(-0.13, +2.42): overlapping by 0.11 (must not touch)"
+    "msg": "overlap 0:52.8-0:58.5 (held 5.6s) Text 'a distance' @(-0.13, +2.40) vs Line @(-0.13, +2.42): overlapping by 0.11 (must not touch)"
    }
   ],
   "excluded": []

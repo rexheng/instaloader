@@ -66,7 +66,7 @@ METER_LAND = METER_OPEN + np.array([0, LAND_DY, 0])
 TITLE_BUFF = 0.62                           # meter title always sits ABOVE the bar
 STRIP_TITLE_BUFF = 0.3
 GHOST = 0.3                                 # a meter waiting for its number: ghosted to 30 %
-WAFFLE_OPEN = np.array([1.5, -1.36, 0])    # the surveyed doctors, under the cold-open meter
+WAFFLE_OPEN = np.array([1.5, -1.26, 0])    # the surveyed doctors, under the cold-open meter
 
 # Cardiff 2017 (South Wales Police figures, BBC News 4 May 2018; Davies et al. 2018)
 ALERTS, ALERTS_RIGHT = 2470, 173            # 2,297 wrong, 173 counted right (7.0 %)
@@ -1407,7 +1407,7 @@ class Episode(NarratedScene):
         n100 = MathTex("100", font_size=FS - 4, color=BLUE).next_to(br_b, DOWN, buff=0.16)
         # (round 8: the share was counted aloud once already, at "of a hundred twenty positives,
         # only twenty are sick"; here the brackets and the fraction carry the numbers)
-        with self.narrate("Your chance is the red share of this crowd. [pause 1.2]",
+        with self.narrate("Your chance is the red share of this crowd. [pause 1.5]",
                           speed=0.80) as beat:
             beat.wait_until("chance", offset=-0.1)
             # the meter's title becomes the left-hand side: it pulses while P(sick | +) arrives
@@ -1426,21 +1426,24 @@ class Episode(NarratedScene):
             lb = lhs1.get_bottom()[1]
             d2 = den1[2].get_center()
             bar_r = bar1.get_right()[0]
-            self.fly([Flight(n20, num1, lift=-0.3),
-                      Flight(n20, den1[0], lift=-0.3,
-                             via=[(lhs1.get_left()[0] - 0.75, lb + 0.2, 0),
-                                  (lhs1.get_x(), lb - 0.65, 0), (d0[0], lb - 0.75, 0)]),
-                      Flight(n100, den1[2], lift=-0.3,
-                             via=[(num1.get_x() - 0.6, -0.45, 0), (bar_r + 0.7, -0.85, 0),
-                                  (bar_r + 0.75, d2[1], 0)])],
-                     Create(bar1, rate_func=window(0.0, 0.5)),
-                     FadeIn(den1[1], rate_func=window(0.3, 0.8)), run_time=1.1)
+            # (the 17 % leaves the meter while the counts are still landing, so the finished
+            # fraction holds longer before the next step opens it up; it crosses the band above
+            # the fraction only after the 20 has dropped into the numerator)
             v0 = meter.value.get_center()
             t1 = tail1[1].get_center()
-            self.fly([Flight(meter.value, tail1[1], lift=0.0,
+            self.fly([Flight(n20, num1, lift=-0.3, rate_func=window(0.0, 0.6)),
+                      Flight(n20, den1[0], lift=-0.3, rate_func=window(0.0, 0.65),
+                             via=[(lhs1.get_left()[0] - 0.75, lb + 0.2, 0),
+                                  (lhs1.get_x(), lb - 0.65, 0), (d0[0], lb - 0.75, 0)]),
+                      Flight(n100, den1[2], lift=-0.3, rate_func=window(0.0, 0.65),
+                             via=[(num1.get_x() - 0.6, -0.45, 0), (bar_r + 0.7, -0.85, 0),
+                                  (bar_r + 0.75, d2[1], 0)]),
+                      Flight(meter.value, tail1[1], lift=0.0, rate_func=window(0.4, 1.0),
                              via=[(v0[0], -0.05, 0), (v0[0] + 1.7, -0.55, 0),
                                   (t1[0] - 1.2, -0.55, 0), (t1[0], -0.95, 0)])],
-                     FadeIn(tail1[0], rate_func=late), run_time=0.9)
+                     Create(bar1, rate_func=window(0.0, 0.35)),
+                     FadeIn(den1[1], rate_func=window(0.2, 0.5)),
+                     FadeIn(tail1[0], rate_func=window(0.8, 1.0)), run_time=1.6)
 
         # stage 2: each head count = people x rate (exact: 19.8 / 119.6), both counts in ONE move
         # on one sentence: the layout opens once, the red term's 20 and 0.99 fly out of the table on
@@ -1751,7 +1754,7 @@ class Episode(NarratedScene):
             self.remove(*arrive)                   # the raster now draws those faces
 
         with self.narrate("About a hundred seventy thousand people came, and the watch lists "
-                          "held about twelve hundred photos. [pause 0.5]") as beat:
+                          "held about twelve hundred photos. [pause 0.3]") as beat:
             beat.wait_until("hundred seventy", offset=-0.3)
             self.play(FadeIn(crowd_lbl, shift=0.1 * DOWN), FadeIn(cite_bbc, shift=0.1 * UP),
                       FadeIn(leg_scale, shift=0.1 * LEFT, rate_func=late),
@@ -2018,9 +2021,9 @@ class Episode(NarratedScene):
             # still empty bar underneath
             beat.wait_until("Months", offset=-0.1)
             self.add(ev2_red, ev2_blue, ev2_track)
-            self.play(ev_track.animate(rate_func=window(0.0, 0.6)).set_stroke(opacity=0.35),
+            self.play(ev_track.animate(rate_func=window(0.0, 0.6)).set_stroke(opacity=0.45),
                       VGroup(ev_red, ev_blue, ev_val, ev_tag).animate(rate_func=window(0.0, 0.6))
-                      .set_opacity(0.35),
+                      .set_opacity(0.45),
                       Create(ev2_track, rate_func=window(0.2, 0.9)),
                       FadeIn(ev2_q, rate_func=window(0.5, 1.0)),
                       FadeIn(ev2_tag, shift=0.08 * UP, rate_func=window(0.4, 1.0)),
@@ -2036,14 +2039,20 @@ class Episode(NarratedScene):
                 else:
                     rel.append(allow_morph(ReplacementTransform(gden[i], gden_b[i])))
             self.play(*rel, run_time=0.7)
-            # "the blue term": it pulses, then rises into the label under the second bar,
-            # while the rest of the ghost fades
+            # "the blue term": the rest of the ghost dims so the blue term stands alone (no
+            # scale pulse: it would grow into the "+" beside it), then it rises into the label
+            # under the second bar while the rest fades
             beat.wait_until("blue term", offset=-0.15)
             d = fa_term.get_center() - g_blue.get_center()
-            self.play(emph(g_blue, scale=1.12), run_time=0.6)
+            self.play(g_rest.animate.set_opacity(0.3), gbox.animate.set_stroke(opacity=0.3),
+                      run_time=0.6)
+            # the blue term rises into the label; once it has lifted clear, a 30 % copy of it
+            # fades back into its slot, so the denominator stays behind as context (it fills the
+            # lower band until the landing) and no two copies are ever legible on top of each other
+            g_stay = g_blue.copy().set_opacity(0.3)
             self.play(FadeOut(g_blue, shift=0.5 * d, rate_func=window(0.0, 0.55)),
                       FadeIn(fa_term, shift=0.5 * d, rate_func=window(0.35, 1.0)),
-                      FadeOut(VGroup(g_rest, gbox), rate_func=window(0.0, 0.7)), run_time=1.0)
+                      FadeIn(g_stay, rate_func=window(0.5, 1.0)), run_time=1.0)
             # their count rose: the Six Nations bar fills, red to 46 %
             beat.wait_until("rose", offset=-0.15)
             self.play(ev2_fill.animate(rate_func=SMOOTH).set_value(1.0),
@@ -2052,7 +2061,8 @@ class Episode(NarratedScene):
             self.play(emph(ev2_val, scale=1.2), run_time=0.8)
         for m in (ev2_red, ev2_blue):
             m.clear_updaters()
-        ev_grp = VGroup(ev1, ev2_track, ev2_red, ev2_blue, ev2_val, ev2_tag, police_tag, fa_term)
+        ev_grp = VGroup(ev1, ev2_track, ev2_red, ev2_blue, ev2_val, ev2_tag, police_tag, fa_term,
+                        g_rest, g_stay, gbox)
 
         # ============================================================ 8. landing
         L2 = self.build_diagram(dy=LAND_DY, rate_at=0.28)
@@ -2243,7 +2253,7 @@ class Episode(NarratedScene):
         prec_lbl.next_to(meter.track, DOWN, buff=0.28).align_to(meter.track, LEFT)
         rec_ul = underline(recall_lbl, color=INK, buff=0.1, stroke_width=3)
         prec_ul = underline(prec_lbl, color=INK, buff=0.1, stroke_width=3)
-        with self.narrate("That ninety-nine percent, the test's accuracy, is its recall here: how "
+        with self.narrate("That ninety-nine percent, the test's accuracy, is also its recall: how "
                           "often the sick test positive. [pause 0.3] Seventeen percent describes "
                           "your result: its precision. [pause 0.4]", gap=0.3) as beat:
             beat.wait_until("ninety-nine", offset=-0.15)

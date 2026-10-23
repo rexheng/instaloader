@@ -25,7 +25,10 @@ BEAT_SPEED: dict[str, float] = {"landing": 0.82, "score": 0.80}
 # breathing room after the beats that end where the story turns (into the insight, into the
 # honest detector, into aim and the real data): longer than a full stop, so the turns are heard
 # ("two": the 536 -> 537 step runs in this gap, on screen only)
-BEAT_GAP_AFTER: dict[str, float] = {"reveal": 0.55, "two": 1.0, "poisson": 0.55, "fixb": 0.55,
+BEAT_GAP_AFTER: dict[str, float] = {"reveal": 0.55, "two": 0.9, "poisson": 0.55, "fixb": 0.55,
+                                    # the score is one sentence of the honest-detector beat:
+                                    # sentence-length gaps around it
+                                    "fix": 0.35, "score": 0.3,
                                     # the landing transform (Clarke's area squares up) runs here
                                     "limit": 0.9}
 
@@ -42,20 +45,20 @@ B = dict(
     reveal="Backwards. [pause 0.6] I dropped every hit on map A at random, so all thirty-nine "
            "targets are false alarms. Map B's rule: no two hits closer than four fifths of a "
            "square. Your eye, like the detector, expects chance to look that even.",
-    guess="Almost one hit per square. Guess how many squares stay empty. [pause 1.2]",
+    guess="Almost one hit per square. Guess how many squares stay empty. [pause 1.1]",
     square="Each bomb has a one in five seventy-six chance of landing in this square. "
            "To stay empty, all five hundred thirty-seven must miss. [pause 0.4]",
     empty="About two hundred twenty-seven: four squares in ten. [pause 0.3] Map A has two "
-          "hundred twenty-two. [pause 0.4]",
+          "hundred twenty-two. [pause 0.3]",
     gaps="Those empty squares force pile-ups: [pause 0.3] a hundred eighty-three hits must land "
-         "where another already did. [pause 0.6]",
+         "where another already did. [pause 0.5]",
     lam="Let's call the average hits per square lambda. [pause 0.5] One minus a small slice, raised "
         "to a big power, is e to the minus lambda, almost exactly. Call that P of zero.",
     two="For two hits in this square, pick two bombs: five thirty-seven times five thirty-six "
         "ways, over two, since each pair counts twice. [pause 0.6] Each has that same chance, "
         "and the rest miss: e to the minus lambda again.",
-    poisson="For three hits, each two becomes a three; for any k, a k. [pause 0.5] The powers merge into lambda to the "
-            "k: the Poisson distribution. [pause 0.5] Times five seventy-six squares, it "
+    poisson="For three hits, each two becomes a three; for any k, a k. [pause 0.5] The powers "
+            "merge into lambda to the k: the Poisson distribution. [pause 0.5] Times five seventy-six squares, it "
             "predicts these purple bars.",
     fix="The honest detector compares whole histograms. [pause 0.4] Thirty-nine targets, and "
         "chance predicts thirty-nine. [pause 0.4] The chi-squared misfit squares each bar's gap "

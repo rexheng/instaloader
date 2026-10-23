@@ -170,7 +170,7 @@ The Shannon citation fades out completely, then *Valmeekam et al., 2023 · arXiv
 > Shannon's subject needed one guess: *[pause 0.3]* is it Y? Splitting the alphabet took five.
 > In English, almost no letter arrives without a past.
 
-0. (Round 10: a continuous handover.) The whole bits-per-character line fades at once (0.45 s, the person's 1.42 marker with it), and in the same move the cold-open row returns, faint (boxes at 40 %, the ? box and its ? at 55 %), where it last stood, at the top of the frame where it read along with the subject; so the row is on screen before "from the start" is spoken. Shannon's record comes back under it (letters at 22 %) with THE OTHER DAY at full strength once the line is gone.
+0. (Round 10: a continuous handover.) The whole bits-per-character line fades at once (0.45 s, the person's 1.42 marker with it), and in the same move the cold-open row returns, legible but not yet full (boxes at 55 %, the ? box and its ? at 75 %), where it last stood, at the top of the frame where it read along with the subject; so the row is on screen before "from the start" is spoken. Shannon's record comes back under it (letters at 22 %) with THE OTHER DAY at full strength once the line is gone.
 1. The rest of the record goes; THE OTHER DA steps up under its boxes (the Y under the ? box).
 2. The phrase rises straight into the waiting boxes; the ? leaves and the Y lands in the ? box on the spoken "Y".
 3. The row comes to full strength and moves down to its frame-one place as the 27 candidate tiles (the Y at full blue with a white outline, to the end) return, with the 27→1 chain and a grey "5 questions" faint under them: frame one (as at 0:17), re-seen; the Y flags.

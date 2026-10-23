@@ -624,3 +624,41 @@ pass, while their densities differ 2:1. The aim shows only in λ.
 - The rows' e^−λ crossed the surviving 1/576. It now climbs on an arc after the rows fade.
 - The map's shrink-back left Clarke's rectangle at the enlarged size, because a second animation on the same object overrode it. One MoveToTarget now carries the dimmed rectangle.
 - The null thumbnails are slowed so each score can be read (0.3 s in, 0.3 s hold, 0.4 s drop), with 0.6 s after "two point oh".
+
+## Round 8 revisions
+
+Round 8 scored 8.8 (craft) and 8.6 (substance). No caps and no factual errors. Both critics
+said the fixes reach 9, narrowly.
+
+**Plan of the climb** (PRODUCTION_GUIDE §12.2: every dimension below 9, its 9 anchor, the gap,
+the upgrade)
+- Hook 9 / Originality 8.5 (substance 1): "viewer commits to a likely-wrong prediction". The
+  second prediction showed P(empty) ≈ 0.3933 and "0.3933 × 576 ≈ ?" during the hold, so the
+  viewer multiplied instead of guessing, and 227 was never set against intuition. Upgrade: ask
+  before computing ("Almost one hit per square. Guess how many squares stay empty." over a lone
+  "empty squares ≈ ?" and the data line "537 hits · 576 squares"), derive, then answer "About two
+  hundred twenty-seven: four squares in ten."
+- Clarity 8.5 (substance 2–5, 10; craft 6): "could re-derive it after one watch". The limit
+  asserted "fits chance too" on a 0–400 axis with bars ≤ 115, "hides in lambda" had no λ on
+  screen, the stakes glued two claims with "and", "miss the other way" read as bombs missing, the
+  whisker numbers invited a failing check, and the 227 lost its unit. Upgrade: λ labels (0.48 /
+  0.93) on the two areas, the north's own 0–120 chart with both rows of numbers, two stakes
+  sentences, "break the fit the other way", unlabelled whiskers, "empty squares ≈ 576 × 0.3933 ≈
+  227" as one line.
+- Visual 8.5 (substance 6; craft 9–11): "one focal point; nothing to remove". The empty-region
+  outlines read as a maze, the ×5 inset was empty during the north chart, the left half stood
+  near-empty at 2:47, the end-card Ω was BLUE. Upgrade: a yellow fill (no outline), no inset on
+  the north chart, London rains in under the aimed map's exit, an INK Ω.
+- Motion 8.5 (craft 1, 2, 5, 7; substance 7): "every motion encodes a relation". Four in-motion
+  collisions: the second row born as a copy on the first (1:19), P(empty) → P(0) in one slot
+  (1:27), the null thumbnails colliding with their tags and vanishing as slivers (2:22), "north"
+  crossing "Thames" with a stranded "· 1.9 hits/km²" (3:17); plus (1/576)² overlapping its own
+  incoming copy (1:39). Upgrade: the second row written in place (λ and 537 written as their
+  sources light up), a three-step rename, thumbnails that shrink into dots and stay in their
+  bins, labels that ride with their boxes, a copy that lands on its own glyphs.
+- Audio 8.5 (craft 3, 4; substance 9): the landing's two sentences ran together, the density
+  labels landed after "half", "Map A scores [0.2] two point oh" was heard as two sentences.
+  Upgrade: a 0.9 s hold in the landing, the λ labels written on "about half", the score its own
+  beat at 0.80 with no pause.
+- Concision 9 (substance 8): cut "Five thirty-six is almost five thirty-seven." (the screen does
+  it in the breath after the two-hit beat), which pays for the guess.

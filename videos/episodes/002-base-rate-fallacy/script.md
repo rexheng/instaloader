@@ -20,7 +20,7 @@ Premise of the countable case: **1 in 500** sick, the test catches **99 %** and 
 the healthy → per 10,000 people, 20 sick → 19.8 positive, 9,980 healthy → 99.8 positive →
 P(sick∣+) = 16.6 % (**17 %**, "six times too high"). Accuracy is 99 % (9,900 of 10,000 right), and so
 are recall (sensitivity) and specificity: the landing bridges the two names ("That ninety-nine
-percent, the test's accuracy, is its recall here"; it is P(+ ∣ sick)).
+percent, the test's accuracy, is also its recall"; it is P(+ ∣ sick)).
 
 ## Palette (one meaning each, whole episode)
 
@@ -97,7 +97,7 @@ on their words, "99 ÷ 17 ≈ 6×", and the 100 false alarms pulse on "one perce
 ### 6. Insight: shrink the sample space (1:29–2:15)
 > Your positive result ruled out everyone who tested negative.
 > What's left is a smaller sample space: these hundred twenty people.
-> Your chance is the red share of this crowd. *[1.2]*
+> Your chance is the red share of this crowd. *[1.5]*
 > Unrounded, the red count is twenty sick people times ninety-nine percent, and the blue, every healthy
 > person times one percent.
 > Divide everything by ten thousand: counts become shares. *[0.4]* The share stays the same. *[0.6]*
@@ -113,7 +113,7 @@ share stays the same" the formula's fraction bar, its "≈ 17 %" and the meter's
 
 ### 7. Payoff: back to Cardiff, precision (2:21–3:13)
 > Swap the disease for a police watch list.
-> About a hundred seventy thousand people came, and the watch lists held about twelve hundred photos. *[0.5]*
+> About a hundred seventy thousand people came, and the watch lists held about twelve hundred photos. *[0.3]*
 > For four days, face-recognition cameras scanned the crowds. *[0.3]* Every face they flagged joined the alerts.
 > Shrink to the alerts. Take the red share.
 > The police counted a hundred seventy-three as right: seven percent. *[1.0]*
@@ -140,15 +140,16 @@ thin bar 0.6 under it, "evaluators' count / final week · 2,632 alerts", fills t
 that bar dims to 35 % and a second, empty bar ("?") is drawn under it, tagged "Six Nations 2018 / 48
 alerts". On "false alarms" a ghost of the boxed Bayes denominator fades into its own band in the
 disease's words, then is re-read in Cardiff's (sick → listed, healthy → not listed; only those four words
-roll over); on "blue term" its blue P(not listed)P(+∣not listed) pulses and rises into "P(+ ∣ not listed) ↓"
-under the second bar's right half; on "rose" the second bar fills, red to 46 %. No frame shows a number
+roll over); on "blue term" the rest of it dims to 30 % and its blue P(not listed)P(+∣not listed) rises
+into "P(+ ∣ not listed) ↓" under the second bar's right half, a 30 % copy fading back into its slot so the
+ghost stays as context; on "rose" the second bar fills, red to 46 %. No frame shows a number
 under the wrong event's tag; the "7 of 22 later proved false" tag is cut (facts.md keeps the caveat).
 
 ### 8. Landing: your test (3:13–3:36)
 > Back to your test. *[1.6]*
 > Symptoms raise the one in five hundred: at one in a hundred, fifty percent; at one in two,
 > ninety-nine, where the rule held. *[0.9]*
-> That ninety-nine percent, the test's accuracy, is its recall here: how often the sick test positive. *[0.3]*
+> That ninety-nine percent, the test's accuracy, is also its recall: how often the sick test positive. *[0.3]*
 > Seventeen percent describes your result: its precision. *[0.4]*
 > Your test didn't say you're sick. *[0.4]* It said: you're in this crowd. *(speed 0.78: the punch line is
 > not hurried)*

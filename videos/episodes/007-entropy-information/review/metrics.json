@@ -8,7 +8,7 @@
  "pix_fmt": "yuv420p",
  "audio_codec": "aac",
  "audio_rate": 48000,
- "size_mb": 9.77,
+ "size_mb": 9.78,
  "integrated_lufs": -14.0,
  "lra_lu": 2.3,
  "true_peak_dbtp": -1.8,
@@ -215,7 +215,7 @@
    "file": "keyframes/kf_29_02-42.3.png"
   },
   {
-   "t": 164.43,
+   "t": 164.4,
    "file": "keyframes/kf_30_02-44.4.png"
   },
   {
@@ -247,8 +247,8 @@
    "file": "keyframes/kf_37_03-19.2.png"
   },
   {
-   "t": 205.2,
-   "file": "keyframes/kf_38_03-25.2.png"
+   "t": 205.27,
+   "file": "keyframes/kf_38_03-25.3.png"
   },
   {
    "t": 210.8,

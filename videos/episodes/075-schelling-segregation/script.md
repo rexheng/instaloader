@@ -4,11 +4,11 @@
 match still build a town where three quarters match, because each departure tips a neighbor
 that was content; so a segregated map cannot tell you what its people wanted.
 
-Runtime 3:34.5 · 479 words (budget ≤ 500, 3:15–3:35) · narrator af_heart @ 0.84 (0.78–0.84 per
-beat: the two short lines that ran over 200 wpm, "That whole town is one point on this chart" and
-"Two gold out of seven…", are at 0.78 and 0.80, the landing at 0.80) with CADENCE = "shaped": full
-stops ≈ 0.47 s, beat turns ≈ 0.73 s, a 0.9 s hold after each of the three key results (74, 76 %,
-the ¼ mechanism), prediction holds 1.5 s, 1.2 s of silence before the last sentence.
+Runtime 3:30.9 · 467 words (budget ≤ 500, 3:15–3:35) · narrator af_heart @ 0.84 (0.78–0.84 per
+beat: the short lines that ran over 200 wpm are slower: "That whole town is one point on this
+chart" 0.78, "Two gold out of seven…" 0.80, the Schelling beat 0.80, the landing 0.80) with
+CADENCE = "shaped"; a 0.9–1.2 s hold after each key result (74, 76 %, the ¼ mechanism), prediction
+holds 1.5 s, 1.2 s of silence before the last sentence. Round 7: 479 → 467 words, 3:34.5 → 3:30.9.
 
 (Round 1 title "Mild Preferences, Extreme Segregation" overclaimed: 76 % against a 50 % random
 baseline is strong, not extreme, and Schelling himself called his one-third result "slight".)
@@ -226,10 +226,13 @@ longer tips anyone. "and they're tall" was cut; the count falling 238 → 95 sho
 *Screen (round 7):* the 30-town columns are swarms of solid dots (r 0.05, 100 %, a 1.6 px
 background rim, ±1 pp spread; no mean tick or whisker); dims change colour, not opacity. Our two
 towns are ringed markers on a background disc, so they stay visible inside their columns. On
-"model" (after the box on the two towns) a GRAY bracket "our jump" is drawn at 82 % with its ends
+"model" a box goes on the two towns and a GRAY bracket "our jump" is drawn at 82 % with its ends
 over the ¼ and ⅓ columns and a dotted drop from its left end to the ¼ column. On "nearest" GRAY
-"nearest move" and on "emptier" "25–30% empty" appear in the top-left of the plot. On "There":
-"our jump" and the drop fade, the bracket rises and slides to 35–50 %, the rules step down a row,
+"nearest move" appears in the top-left of the plot while the tag "our jump" fades (bracket and
+drop stay), and on "emptier" "25–30% empty". The x title is now "demanded (%)" (was "demanded (%
+of neighbors)"), so no frame of this beat carries more than 12 words of prose, counting the
+5-word citation. On "There":
+the drop fades, the bracket rises and slides to 35–50 %, the rules step down a row,
 then "Schelling: 35–50%" fades in above them (one thing at a time). The band sweeps on "between …
 half" while our swarms dim to 30 %. (Below: the round-6 screen notes, kept for the record.)
 *Screen:* the 2:12 morph in reverse: the bars sink into the baseline and the ladder labels
@@ -249,7 +252,7 @@ of his band, and the two thumbnails they belong to are still on screen.
 
 > In his 1971 paper, Thomas Schelling ran this model. [pause 0.4] His households moved to the
 > nearest square that suited them, on far emptier boards. [pause 0.5] There the jump came later,
-> between about a third and a half. (speed 0.82)
+> between about a third and a half. (speed 0.80; at 0.82 the last sentence ran 202 wpm)
 
 (Round 7: one 14.7 s sentence with three qualifiers became three sentences with pauses, and each
 of his two rules has a label on its word. "a quarter empty" (a critic's wording) was not used:

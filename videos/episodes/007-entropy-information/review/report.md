@@ -1,13 +1,13 @@
 # Review kit — `final.mp4`
 
-Generated 2026-10-22 23:22 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
+Generated 2026-10-23 00:05 by videos/toolkit/review_kit.sh. Frames are evidence; numbers are measured, not judged.
 
 ## Mechanics (BAR §3 caps / §5 standards)
 
 | metric | value | bar | status |
 |---|---|---|---|
 | runtime | 3:34.8 (214.8s) | 2:30–4:00 | ok |
-| video | 1920x1080 @ 30 fps, h264/yuv420p, 9.77 MB | 1920x1080 @ 30 | ok |
+| video | 1920x1080 @ 30 fps, h264/yuv420p, 9.78 MB | 1920x1080 @ 30 | ok |
 | pace | 151 wpm (speech time) · 144 overall · 181 excl. all pauses; 515 words | 140–165 (cap <120/>180) | ok |
 | loudness | -14.0 LUFS, LRA 2.3 LU | −14 ±1 | ok |
 | true peak | -1.8 dBTP | ≤ −1.5 | ok |
@@ -104,7 +104,7 @@ Measured from narration.json (Kokoro's own word timings). Each line names the de
 - `keyframes/kf_35_03-10.5.png` — 3:10.5
 - `keyframes/kf_36_03-12.4.png` — 3:12.4
 - `keyframes/kf_37_03-19.2.png` — 3:19.2
-- `keyframes/kf_38_03-25.2.png` — 3:25.2
+- `keyframes/kf_38_03-25.3.png` — 3:25.3
 - `keyframes/kf_39_03-30.8.png` — 3:30.8
 - `keyframes/kf_40_03-34.8.png` — 3:34.8
 
@@ -185,4 +185,4 @@ Differences (numbers spelled out, 'and' ignored). A technical term heard wrong u
 [3:16.1] insert   script: '∅'                                      heard: 'zero'
 ```
 
-_review kit ran in 100s_
+_review kit ran in 91s_
