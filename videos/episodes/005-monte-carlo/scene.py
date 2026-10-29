@@ -603,7 +603,7 @@ class Episode(NarratedScene):
 
         # ---- step through dimensions
         # the grid's line is named the moment its first point appears; the darts join later, on "darts"
-        g_name = text("grid", size=27, color=PURPLE).next_to(gp[3], DR, buff=0.12)
+        g_name = text("grid", size=27, color=PURPLE).next_to(gp[3], DR, buff=0.2)
 
         def step(i):
             anims = [cur.animate.move_to(ax.c2p(xs[i], 2.5)), xl[i].animate.set_color(YELLOW),
@@ -619,8 +619,8 @@ class Episode(NarratedScene):
                            text("in every dimension", size=27)).arrange(RIGHT, buff=0.18)
         truth_top.move_to([0, 3.3, 0]).align_to([6.3, 0, 0], RIGHT)
         thumb_c = np.array([5.42, 2.08, 0])
-        with self.narrate("The grid's million points give each axis a thousand values in two dimensions, then "
-                          "a hundred, ten, three.") as beat:
+        with self.narrate("Per axis, the grid gets a thousand values in two dimensions, then a hundred, ten, "
+                          "three.") as beat:
             # the ball shrinks to a thumbnail beside the true answer; only then is the chart drawn
             self.play(LaggedStart(
                 AnimationGroup(inset.animate.scale(0.48).move_to(thumb_c).fade(0.6), FadeOut(d_in3, run_time=0.4),
@@ -628,8 +628,8 @@ class Episode(NarratedScene):
                                FadeOut(truth, shift=0.1 * DOWN), FadeIn(row_t, shift=0.15 * UP)),
                 AnimationGroup(Create(ax), FadeIn(xl), FadeIn(yl), FadeIn(y_title), FadeIn(x_title),
                                FadeIn(truth_top, shift=0.1 * DOWN)),
-                lag_ratio=0.5), run_time=beat.until("thousand", offset=-0.75, min_time=1.4))
-            self.play(FadeIn(cur), Indicate(row_t[0], color=PURPLE, scale_factor=1.05), run_time=0.45)
+                lag_ratio=0.5), run_time=beat.until("thousand", offset=-0.65, min_time=1.1))
+            self.play(FadeIn(cur), Indicate(row_t[0], color=PURPLE, scale_factor=1.05), run_time=0.35)
             for i, w in enumerate(["thousand", "hundred", "ten", "three"]):
                 self.wait_beat(beat, w, offset=-0.3)
                 self.play(*step(i), run_time=0.55)
@@ -1002,7 +1002,7 @@ class Episode(NarratedScene):
         VGroup(meas0, lab_at).arrange(RIGHT, buff=0.2).move_to(PARK)
         meas = VGroup(meas0, brR.lab)
         with self.narrate("Repeat the hundred-dart experiment three hundred times. [pause 0.2] In both, the "
-                          "estimates spread this wide. [pause 1.4]") as beat:
+                          "estimates spread this wide. [pause 1.25]") as beat:
             self.play(Transform(coin_line, slot_dim), t2.animate.set_x(-HIST_X), t100.animate.set_x(HIST_X),
                       FadeOut(self.coin_cap), FadeOut(self.coin_box), Create(hL), Create(hR), FadeIn(labL),
                       FadeIn(labR), FadeIn(x_name), FadeIn(scL), FadeIn(scR), FadeIn(n_txt, shift=0.1 * DOWN),
@@ -1246,8 +1246,8 @@ class Episode(NarratedScene):
         no_d_c = no_d.copy()
         no_d_c.next_to(eq_c, RIGHT, buff=0.3).align_to(eq_c[3:5], DOWN)
         pred, pred_lab = chart["pred"], chart["pred_lab"]
-        with self.narrate("So, back to our ball: a million darts, any dimension. [pause 1.5] One half over a "
-                          "thousand: five hundredths of a point. [pause 1.0]") as beat:
+        with self.narrate("Back to our ball: a million darts, any dimension. [pause 1.5] One half over a "
+                          "thousand: five hundredths of a point. [pause 0.9]") as beat:
             # the walk leaves; the darts' law takes the top centre
             self.play(FadeOut(self.walk_all), FadeOut(self.sig_tag), Transform(eq_s, eq_c), Transform(no_d, no_d_c),
                       run_time=beat.until("ball", offset=-0.05, min_time=0.7))
@@ -1338,7 +1338,7 @@ class Episode(NarratedScene):
         shR, onR = hits(cR, rpts, BLUE)
         cite = citation("Bergstra & Bengio, 2012 · Journal of Machine Learning Research")
         with self.narrate("In 2012, Bergstra and Bengio found random search tuned neural networks as well as "
-                          "grid search, in a fraction of the time. [pause 0.45] Few settings really matter; with "
+                          "grid search in a fraction of the time. [pause 0.45] Few settings really matter; with "
                           "one, the search is one-dimensional: nine grid trials test three values of it; nine random "
                           "trials test nine. [pause 0.3]") as beat:
             # the chart's grid points become the grid's trials, its darts the random trials

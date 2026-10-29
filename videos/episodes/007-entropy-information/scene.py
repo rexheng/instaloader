@@ -690,24 +690,36 @@ class Episode(NarratedScene):
             self.add_label_updater()
             beat.wait_until("about one", offset=-0.2)
             self.play(FadeIn(self.band), FadeIn(self.band_lab, shift=0.1 * LEFT), run_time=0.9)
-            # no compressor beats it: a ghost of the price line is pushed down and stops at
-            # the true figure, ~1 (the floor), as the band flashes
+            # no compressor beats it: a ghost of the price line is pushed down INTO Shannon's
+            # band and dissolves there as the band brightens; the floor is tagged on the band
+            # itself, a brace over 0.6-1.3 ("floor is in here"): a region, never a line at 1.0,
+            # so a compressor measured later inside the band can only push it lower
             beat.wait_until("compressor", offset=-0.25)
             floor = self.avg_line.copy().set_stroke(opacity=0.8)
-            floor_lab = text("floor", size=28, color=GRAY)
-            floor_lab.move_to([COL_A, cy(1.0), 0])
+            f0, dy = floor.copy(), cy(1.0) - self.avg_line.get_y()
+
+            def sink(m, a):
+                m.become(f0).shift(UP * dy * smooth(min(1.0, a / 0.5)))
+                m.set_stroke(opacity=0.8 * (1 - smooth(float(np.clip((a - 0.5) / 0.4, 0, 1)))))
+            # a square bracket ']' spanning the band (a curly brace this short reads as '>')
+            bx = X1 + 0.3
+            fbrace = VMobject(stroke_color=GRAY, stroke_width=3)
+            fbrace.set_points_as_corners([[bx - 0.12, cy(HI), 0], [bx, cy(HI), 0], [bx, cy(LO), 0],
+                                          [bx - 0.12, cy(LO), 0]])
+            floor_lab = VGroup(text("floor is", size=28, color=GRAY), text("in here", size=28, color=GRAY))
+            floor_lab.arrange(DOWN, buff=0.12, aligned_edge=LEFT).next_to(fbrace, RIGHT, buff=0.15)
             self.add(floor)
-            land = lambda t: smooth(float(np.clip((t - 0.45) / 0.55, 0, 1)))
-            pulse = lambda t: there_and_back_with_pause(float(np.clip((t - 0.45) / 0.55, 0, 1)))
-            self.play(floor.animate.move_to([self.avg_line.get_x(), cy(1.0), 0]),
-                      FadeIn(floor_lab, shift=0.1 * LEFT, rate_func=land),
+            land = lambda t: smooth(float(np.clip((t - 0.45) / 0.5, 0, 1)))
+            pulse = lambda t: there_and_back_with_pause(float(np.clip((t - 0.42) / 0.58, 0, 1)))
+            self.play(UpdateFromAlphaFunc(floor, sink),
+                      self.band_fill.animate(rate_func=pulse).set_fill(opacity=0.6),
                       Indicate(self.band_edges, color=GREEN, scale_factor=1.0, rate_func=pulse),
                       Indicate(self.band_lab, color=GREEN, scale_factor=1.08, rate_func=pulse),
-                      run_time=1.1)
+                      Create(fbrace, rate_func=land),
+                      FadeIn(floor_lab, shift=0.1 * LEFT, rate_func=land), run_time=1.2)
+            self.remove(floor)
             beat.wait_until("guessing", offset=-0.15)
-            gone = lambda t: smooth(min(1.0, t / 0.3))
             self.play(LaggedStart(*[pflash(b) for b in self.hidden], lag_ratio=0.12),
-                      FadeOut(floor, rate_func=gone), FadeOut(floor_lab, rate_func=gone),
                       run_time=beat.until("language", offset=-0.15, min_time=1.2))
             # ... which is exactly what a language model is trained to fill
             llm = text("LLM", size=28, color=INK)
@@ -715,8 +727,10 @@ class Episode(NarratedScene):
             llm_arrow = Arrow([llm.get_left()[0] - 0.12, llm.get_y(), 0],
                               [self.qbox.get_right()[0] + 0.12, llm.get_y(), 0], buff=0,
                               color=INK, stroke_width=3, max_tip_length_to_length_ratio=0.4)
+            # (the floor's brace and tag leave as the model arrives, about 3.3 s on screen)
             self.play(FadeIn(llm, shift=0.15 * LEFT), GrowArrow(llm_arrow),
-                      flag(VGroup(self.qbox, self.qmark)), run_time=0.8)
+                      flag(VGroup(self.qbox, self.qmark)), FadeOut(fbrace), FadeOut(floor_lab),
+                      run_time=0.8)
         self.llm_tag = VGroup(llm, llm_arrow)
 
     def make_ytick(self, v: float) -> VGroup:
@@ -1015,23 +1029,25 @@ class Episode(NarratedScene):
         # Z's starting share, named under its sliver (the sliver itself is ~1 px wide)
         z_one = MathTex(r"1/1260", font_size=36, color=BLUE)
         z_one.next_to(fZ, DOWN, buff=0.16).align_to(fZ, LEFT)
-        with self.narrate("Z, one in every twelve hundred sixty, needs ten point three.") as beat:
-            # the strip, Z's sliver and its share arrive together; the share is in by "one in"
+        # (round 11: the spoken "one in every twelve hundred sixty" is cut; the 1/1260 label
+        #  under the sliver carries the number, and "the rarest" says why it needs so many)
+        with self.narrate("Z, the rarest, [pause 0.3] needs ten point three.") as beat:
+            # the strip, Z's sliver and its share arrive together on "Z"
             self.play(Create(fZ), FadeIn(lZ), TransformFromCopy(self.cols["Z"], pZ),
                       self.cols["Z"].animate.set_fill(opacity=0.85), FadeIn(nZ),
                       FadeIn(z_one, shift=0.1 * UP, rate_func=lambda t: smooth(max(0.0, (t - 0.35) / 0.65))),
-                      run_time=beat.until("one in", offset=0.15, min_time=0.8))
-            # the doublings start on "twelve" and land on 10.3 as "ten point three" begins
+                      run_time=beat.until("rarest", offset=0.0, min_time=0.6))
+            # the doublings run from "rarest" and land on 10.3 as "ten point three" begins
             # (the counter is time-like: linear); the starting share steps back to 40 % once
-            # the counter has passed 1 (it is then no longer the bar's share)
-            beat.wait_until("twelve", offset=-0.05)
+            # the counter has passed 4 (the strip is still a sliver then; past it, 1/1260 is
+            # no longer the bar's share)
             pZ.add_updater(uZ)
             kz_end = -math.log2(P["Z"])
-            past1 = 1.0 / kz_end
+            past1 = 4.0 / kz_end
             self.play(kZ.animate(rate_func=linear).set_value(kz_end),
                       z_one.animate(rate_func=lambda t: smooth(float(np.clip((t - past1) / 0.15, 0, 1))))
                       .set_opacity(0.4),
-                      run_time=beat.until("ten", offset=0.0, min_time=1.6))
+                      run_time=beat.until("ten", offset=0.0, min_time=1.2))
             pZ.clear_updaters()
             self.play(flag(nZ), run_time=0.8)
         nE.clear_updaters()
@@ -1093,64 +1109,39 @@ class Episode(NarratedScene):
             self.play(outline_flash(full), flag(f1[4]), run_time=0.9)
             # hold the complete equation (pause in the narration) before any glyph moves
             beat.wait_until("So two", offset=0.15)
-            # step 1: divide by p -- p dips under the '=' and lands under the 1
+            # step 1: divide by p -- p dips under the '=' and lands under the 1; its '·' goes
+            # as p leaves (never a lone '·' beside 2^k = 1)
             self.play(ReplacementTransform(f1[2], mid[0]), ReplacementTransform(f1[3], mid[1]),
                       ReplacementTransform(f1[4], m_one),
                       ReplacementTransform(f1[0], m_p, path_arc=0.6 * PI),
-                      FadeOut(f1[1]), GrowFromCenter(m_bar),
+                      FadeOut(f1[1], rate_func=lambda t: smooth(min(1.0, t / 0.22))),
+                      GrowFromCenter(m_bar),
                       run_time=beat.until("over p", offset=0.0, end=True, min_time=1.0))
-            beat.wait_until("and k", offset=0.0)
-            # step 2: take log base 2, in three moves.  (1) The 2 steps down and LEFT out of the
-            # exponent's base, shrinking to subscript size, while the fraction slides right to
-            # make room; (2) only once the 2 is well clear (below-left) does k drop out of the
-            # exponent into its place; (3) then the 2 runs right along a lane well below the
-            # baseline (under the k, the '=' and the fraction's old place) and rises into the
-            # base's subscript.  The k is never stacked over the 2 at rest (no 'k/2' frame) and
-            # never stands beside it on the baseline (no '2k' frame); 'log' is written 0.3 s
-            # after the 2 has landed
-            rt2 = beat.until("two", occurrence=3, end=True, offset=0.15, min_time=2.2)
-
+            # step 2: take log base 2, ONE continuous 1.4 s move (round 11).  The 2 swings out of
+            # the base on a downward arc (under the '=', clear of it) into the log's subscript
+            # slot; in the same move k drops out of the exponent into its place (once the 2 is
+            # past it, so k never sits over a 2), the fraction slides right, and 'log' is written
+            # over the second half, so it is complete as the 2 lands.  No resting frame ever
+            # reads 'k = 1/p' without its log.
+            beat.wait_until("and k", offset=-0.1)
+            rt2 = 1.4
             a2, b2 = mid[0][0].get_center(), fg["two"].get_center()
-            # (the lane: the 2's top 0.38 below k's baseline, the 2's foot 0.15 above the dimmed
-            #  4.75 line; it waits 0.45 left of k, so it is at speed when it passes under k)
-            path_a = route([(a2[0], a2[1]), (a2[0] - 0.25, a2[1] - 0.25), (a2[0] - 0.4, 0.1)])
-            path_b = route([(a2[0] - 0.4, 0.1), (0.3, 0.08), (b2[0] - 0.5, b2[1] - 0.3),
-                            (b2[0], b2[1])])
-            # the 2 flies as a rigid top-level copy (a path_arc would rotate the glyph mid-way),
-            # and is removed once f2 stands; it lands at LaTeX's own subscript place
+            arc = ArcBetweenPoints(a2, b2, angle=1.2)      # counter-clockwise: bulges downward
             two = mid[0][0].copy()
-            two0 = two.copy()
-            h_a, h_b = two0.height, fg["two"].height
             self.add(two)
             self.remove(mid[0][0])
             self.allow_overlap(two, reason="the 2 of 2^k lands as the subscript of log2, at LaTeX's "
                                "own spacing from the fraction bar (the final formula's layout)")
-            T_DOWN, T_WAIT, T_RUN = 0.42, 0.62, 0.75     # seconds: the dip, k's drop, the run
 
-            def two_upd(m, al):
-                sec = al * rt2
-                if sec < T_DOWN:
-                    u = smooth(sec / T_DOWN)
-                    pt, h = path_a.point_from_proportion(u), h_a + (h_b - h_a) * u
-                elif sec < T_WAIT:
-                    pt, h = path_a.get_end(), h_b
-                else:
-                    u = smooth(min(1.0, (sec - T_WAIT) / T_RUN))
-                    pt, h = path_b.point_from_proportion(u), h_b
-                m.become(two0)
-                m.scale(h / h_a)
-                m.move_to(pt)
-
-            def win(a, b):                    # this part of the move, in seconds of rt2
-                a, b = a / rt2, min(1.0, b / rt2)
+            def win(a, b):                    # this part of the move, as fractions of rt2
                 return lambda t: smooth(float(np.clip((t - a) / max(b - a, 1e-6), 0, 1)))
             self.play(ReplacementTransform(mid[1], f2[1]),
-                      ReplacementTransform(m_one, fg["one"], rate_func=win(0.0, 0.75)),
-                      ReplacementTransform(m_bar, fg["bar"], rate_func=win(0.0, 0.75)),
-                      ReplacementTransform(m_p, fg["p"], rate_func=win(0.0, 0.75)),
-                      UpdateFromAlphaFunc(two, two_upd, rate_func=linear),
-                      ReplacementTransform(mid[0][1], f2[0], rate_func=win(0.22, 0.55)),
-                      Write(fg["log"], rate_func=win(T_WAIT + T_RUN + 0.3, 2.2)), run_time=rt2)
+                      ReplacementTransform(m_one, fg["one"], rate_func=win(0.0, 0.6)),
+                      ReplacementTransform(m_bar, fg["bar"], rate_func=win(0.0, 0.6)),
+                      ReplacementTransform(m_p, fg["p"], rate_func=win(0.0, 0.6)),
+                      fly(two, fg["two"], arc, rate=linear, size_by=0.5),
+                      ReplacementTransform(mid[0][1], f2[0], rate_func=win(0.32, 0.8)),
+                      Write(fg["log"], rate_func=win(0.4, 0.95)), run_time=rt2)
             self.remove(f1, mid, two, *mid.get_family())
             self.add(f2)                       # one clean formula object from here on
             # k is the counter: 3.3 for E, 10.3 for Z
@@ -1771,25 +1762,28 @@ class Episode(NarratedScene):
                 mult.append(Indicate(Pr[2 * k], color=BLUE, scale_factor=1.2))
                 if k < nr - 1:
                     mult.append(Write(Pr[2 * k + 1]))
+            # (round 11: the whole product row, its '= 0.0329' and the run's own price
+            #  log2(1/0.0329) = 4.93, is complete by the end of "multiply" and is read alone
+            #  until "costs"; only then is the sum row written under it)
             self.play(LaggedStart(*mult, lag_ratio=0.35),
                       FadeOut(brackets[nr - 1], rate_func=lambda t: smooth(min(1.0, 3 * t))),
-                      run_time=beat.until("multiply", end=True, offset=-0.55, min_time=1.0))
-            self.play(Write(Pr[2 * nr - 1]), FadeIn(Pr[2 * nr], shift=0.12 * LEFT), run_time=0.45)
+                      run_time=beat.until("multiply", offset=-0.2, min_time=0.8))
+            self.play(Write(Pr[2 * nr - 1]), FadeIn(Pr[2 * nr], shift=0.12 * LEFT), run_time=0.4)
             # the run as ONE symbol of that probability costs log2(1/p) -- the formula above
             # (its log2(1/p) flags as the price is written)
-            self.play(Write(L), flag(self.f4[4]),
-                      run_time=beat.until("costs", offset=-0.1, min_time=0.5))
-            # ... so their costs add: the sum is built the same way
+            self.play(Write(L), flag(self.f4[4]), run_time=0.55)
+            # ... so their costs add: the sum is built the same way, from "costs"
+            beat.wait_until("costs", offset=-0.05)
             build = []
             for k in range(nr):
                 build.append(Indicate(A[2 * k], color=YELLOW, scale_factor=1.2))
                 if k < nr - 1:
                     build.append(Write(A[2 * k + 1]))
             self.play(LaggedStart(*build, lag_ratio=0.35),
-                      run_time=beat.until("add", end=True, offset=-0.35, min_time=0.6))
+                      run_time=beat.until("add", end=True, offset=-0.3, min_time=0.6))
             self.play(Write(A[2 * nr - 1]), FadeIn(A[TOT], shift=0.12 * LEFT), run_time=0.35)
-            # the two totals agree: the sum of the costs IS the run's own price
-            self.play(flag(A[TOT], run_time=0.5), flag(L[2], run_time=0.5), run_time=0.5)
+            # the two totals agree: the sum of the costs IS the run's own price (both flag 0.6 s)
+            self.play(flag(A[TOT], run_time=0.6), flag(L[2], run_time=0.6), run_time=0.6)
             # whole questions for the whole run
             beat.wait_until("five", offset=-0.15)
             self.play(Write(A[ARW]), FadeIn(A[Q], shift=0.1 * RIGHT), FadeIn(A_unit, shift=0.1 * RIGHT),
@@ -1846,7 +1840,6 @@ class Episode(NarratedScene):
 
         # honest limits: Q and TH are the best cases; the average over every two-letter
         # context (Brown, recomputed) is 2.81 -- between them and the no-context 4.11
-        c2_lab = text("all two-letter contexts", size=26, color=YELLOW)
         # the reading shows only once it is 0.15 clear of the TH level it rises past (full
         # at 0.3), so it never grazes the 1.67 line while it counts
         top, garrow, glab = self.gap_meter(clear=lambda: cy(H_TH), clear_ramp=(0.15, 0.3))
@@ -1874,12 +1867,15 @@ class Episode(NarratedScene):
                                  dash_length=0.14).set_z_index(3)
             c2_num = DecimalNumber(H_C2, num_decimal_places=2, font_size=36, color=YELLOW)
             c2_num.move_to([COL_A, cy(H_C2), 0])
-            c2_lab.next_to(c2_line, UP, buff=0.2).align_to([X0 + 0.35, 0, 0], LEFT)
             # the average over every two-letter context is drawn, and the gap meter measures
-            # it once, growing from ~1 straight to it (its reading counting 0 -> 1.81)
+            # it once, growing from ~1 straight to it (its reading counting 0 -> 1.81).  Round
+            # 11: no in-plot label (the gutter value and the note under the equation say what
+            # it is), and the TH level with its tag steps back to 40 % as the new level is born
             self.add(garrow, glab)
-            self.play(Create(c2_line), FadeIn(c2_lab, shift=0.1 * UP),
+            self.play(Create(c2_line),
                       FadeIn(c2_num, shift=0.1 * LEFT), top.animate.set_value(H_C2),
+                      line.animate.set_stroke(opacity=0.4), num.animate.set_opacity(0.4),
+                      th_tag.animate.set_opacity(0.4),
                       ref_line.animate.set_stroke(opacity=0.6), ref_num.animate.set_opacity(0.6),
                       # over the dimmed stack the band is its two green edges and a faint fill
                       # (a 28 % fill under the 26 % blue stack mixes to teal).  (Not in the zoom's
@@ -1893,16 +1889,30 @@ class Episode(NarratedScene):
                                         via=[(COL_A + 0.75, y0 + 0.2), (COL_A + 0.95, y0 + 0.9),
                                              (COL_A + 0.85, ref_num.get_y() + 0.72),
                                              (3.3, ref_num.get_y() + 0.74)])
-            self.play(*anims, run_time=beat.until("eight", end=True, min_time=1.2))
-            done()
-            # ... and says what it is: not one distribution's H, but H averaged over contexts
-            c2_note = MathTex("H", r"\ \text{averaged over contexts}", font_size=36, color=GRAY)
+            # ... and the equation says what it now holds: not one distribution's H but its
+            # average over contexts, H-bar (the H steps out before H-bar steps in, as the value
+            # flies), defined by the note under it
+            hbar = MathTex(r"\bar{H}", font_size=FS_TOP, color=YELLOW)
+            hbar.move_to(self.f4[0]).align_to(self.f4[0], DOWN)
+            c2_note = MathTex(r"\bar{H}", r"=", "H", r"\ \text{averaged over contexts}",
+                              font_size=36, color=GRAY)
             c2_note[0].set_color(YELLOW)
+            c2_note[2].set_color(YELLOW)
             c2_note.next_to(VGroup(self.f4, self.eq_eq, self.eq_val, self.eq_bits), DOWN, buff=0.2)
             c2_note.align_to(self.eq_bits, RIGHT)
+            w = lambda a, b: (lambda t: smooth(float(np.clip((t - a) / (b - a), 0, 1))))
+            # (H leaves only as the value is almost in, and H-bar lands with it; the slot is
+            #  empty while the value flies, as at every earlier copy)
+            self.play(*anims, FadeOut(self.f4[0], shift=0.12 * UP, rate_func=w(0.6, 0.8)),
+                      FadeIn(hbar, shift=0.12 * UP, rate_func=w(0.8, 1.0)),
+                      run_time=beat.until("eight", end=True, min_time=1.2))
+            done()
             self.play(FadeIn(c2_note, shift=0.1 * UP), run_time=0.5)
-        self.c2 = VGroup(c2_line, c2_num, c2_lab, th_tag)
-        self.c2_note = c2_note
+            # (the old H was swapped out: the equation group is H-bar's from here on, so a
+            #  later FadeOut of it never brings the H back)
+            self.f4 = VGroup(*self.f4[1:])
+        self.c2 = VGroup(c2_line, c2_num, th_tag)
+        self.c2_note = VGroup(c2_note, hbar)
 
         self.gap = (top, garrow, glab)
 
@@ -2021,9 +2031,8 @@ class Episode(NarratedScene):
             # the arithmetic is the one focal point: before it is written, the equation leaves,
             # the gap meter and the 2.81 label (their job done) leave, and the whole chart steps
             # back to 25 % (only the Brown citation stays bright: 5.75 M is a Brown count)
-            c2_lab = self.c2[2]
             eq_parts = [self.f4, self.eq_eq, self.eq_val, self.eq_bits, self.c2_note]
-            leaving = [garrow, glab, c2_lab]
+            leaving = [garrow, glab]
             skip = {id(f) for m in [*eq_parts, *leaving, self.cite_br, *self.row_now()]
                     for f in m.get_family()}
             backdrop = [m for m in self.mobjects if isinstance(m, VMobject)
@@ -2165,13 +2174,14 @@ class Episode(NarratedScene):
                      text("context 0–101", size=24, color=GRAY)).arrange(DOWN, buff=0.12, aligned_edge=LEFT)
         why.next_to(mnum, DOWN, buff=0.3).align_to(mnum, LEFT)
         # Shannon's ~1 on this axis too, drawn OVER the poured stack (it lies inside it): two
-        # green edges, the strongest lines on the chart (the stack's separators step back to
-        # 25 % as it zooms), running past both ends of the stack so the band reads as a band;
+        # green edges (the stack's separators step back to 25 % as it zooms), running past both
+        # ends of the stack so the band reads as a band;
         # no fill (green over the blue stack mixes to teal)
         m_band = VGroup()
         m_edges = VGroup(Line([X2 - 0.25, mmap(LO), 0], [X2 + W2 + 0.12, mmap(LO), 0]),
                          Line([X2 - 0.25, mmap(HI), 0], [X2 + W2 + 0.12, mmap(HI), 0]))
-        m_edges.set_stroke(GREEN, 5).set_z_index(5)
+        m_edges.set_stroke(GREEN, 3, opacity=0.7).set_z_index(5)   # round 11: 3 px at 70 %,
+        # so they are not a third heavy rule beside the 1.42 level and the meter
         m_band_lab = MathTex(r"\approx\!1", font_size=36, color=GREEN)
         m_band_lab.move_to([0, mmap((LO + HI) / 2), 0]).align_to([X2 - 0.18, 0, 0], RIGHT)
         new_ticks = VGroup(mtick(0, U2Z), mtick(2, U2Z))
@@ -2339,7 +2349,8 @@ class Episode(NarratedScene):
 
         def nx(v):
             return -6.125 + u * v
-        nline = Line([nx(0), nl_y, 0], [nx(5), nl_y, 0], color=GRAY, stroke_width=3)
+        # (drawn from 5 down to 0: the line is built in the order the estimates fell)
+        nline = Line([nx(5), nl_y, 0], [nx(0), nl_y, 0], color=GRAY, stroke_width=3)
         nt = VGroup()
         for v in range(6):
             tk = Line([nx(v), nl_y - 0.07, 0], [nx(v), nl_y + 0.07, 0], color=GRAY, stroke_width=2.5)
@@ -2400,47 +2411,59 @@ class Episode(NarratedScene):
         llm_note.next_to(llm_name, UP, buff=0.22).align_to(llm_name, LEFT)
         cite_llm = citation("Valmeekam et al., 2023 · arXiv:2306.04050 (LLMZip), Table IV · 27 symbols")
 
-        # the act turn (silent, 0.9 s): the guess chart leaves (its verdict last), the person's
-        # 1.42 rises over the top of the frame and waits above its own place on the line, and
-        # the line grows left to right, each tick appearing as the line reaches it
+        # the act turn (silent, 1.5 s).  Round 11: the whole line is built HERE, before
+        # "Shannon's tests" is spoken (it used to be built under those words).  The guess chart
+        # leaves first (its verdict last, all gone by 0.5 s), and only then does the line grow,
+        # from 5 down to 0, so the estimates appear in story order as it passes them: 4.75
+        # halving, 4.11 no context, 2.81 two letters (each triangle and value drops 0.3, its
+        # tag only settles 0.08, so none passes through the tick numbers).  The person's 1.42
+        # flies up over the frame and comes down onto its own marker as the line reaches it;
+        # the axis title comes last
+        turn = 1.5
+        T_L0, T_L1, DROP = 0.5, 1.15, 0.4            # the line grows 5 -> 0; each marker lands
         a = mnum[1].get_center()
         park = np.array([nx(H_GUESS), nl_y + 1.95, 0])
+        dst = m142[1].get_center()
         p142 = route([(a[0], a[1]), (a[0] - 0.3, 2.35), (1.0, 2.5), (park[0] + 0.6, park[1] + 0.12),
-                      (park[0], park[1])])
-        parked = m142[1].copy().move_to(park)
-        x_end = lambda t: nx(0) + (nx(5) - nx(0)) * t
+                      (park[0], park[1]), (dst[0], dst[1])])
+        span = nx(5) - nx(0)
+        x_end = lambda sec: nx(5) - span * float(np.clip((sec - T_L0) / (T_L1 - T_L0), 0, 1))
+        reach = lambda x: T_L0 + (nx(5) - x) / span * (T_L1 - T_L0)
+        reveal = []                                  # (mobject, its final state, drop, x)
+        for g in (m475, m411, m281):
+            for m in g:
+                reveal.append((m, m.copy(), 0.3 if m.get_y() > nl_y else 0.08, g[0].get_x()))
+        for m in (m142[0], m142[2], m142[3]):
+            reveal.append((m, m.copy(), 0.3 if m.get_y() > nl_y else 0.08, m142[0].get_x()))
+        build_group = VGroup(nt, *[r[0] for r in reveal])
 
-        def ticks_follow(m, t):
-            for g in m:                       # a tick appears only once the line reaches it
-                o = 0.0 if t <= 0 else float(np.clip((x_end(t) - g[0].get_x()) / 0.15 + 1.0, 0, 1))
+        def build(_g, al):
+            sec = al * turn
+            xe = x_end(sec)
+            for g in nt:                      # a tick appears only once the line reaches it
+                o = 0.0 if sec <= T_L0 else float(np.clip((g[0].get_x() - xe) / 0.15 + 1.0, 0, 1))
                 g.set_opacity(o)
-        nt.set_opacity(0)
-        self.add(nt)
-        turn = self.TURN_GAP
-        self.play(FadeOut(mini_first, rate_func=lambda t: smooth(min(1.0, t / 0.45))),
-                  FadeOut(mini_last, rate_func=lambda t: smooth(float(np.clip((t - 0.3) / 0.4, 0, 1)))),
-                  fly(mnum[1], parked, p142, rate=lambda t: smooth(max(0.0, (t - 0.15) / 0.85))),
-                  Create(nline, rate_func=lambda t: float(np.clip((t - 0.15) / 0.85, 0, 1))),
-                  UpdateFromAlphaFunc(nt, lambda m, t: ticks_follow(m, float(np.clip((t - 0.15) / 0.85, 0, 1)))),
+            for m, fin, dy, vx in reveal:
+                k = smooth(float(np.clip((sec - reach(vx)) / DROP, 0, 1)))
+                m.become(fin).shift(UP * dy * (1 - k)).set_opacity(k)
+        build(None, 0.0)
+        fly142 = fly(mnum[1], m142[1], p142, rate=lambda t: smooth(float(np.clip((t * turn - 0.05) / 1.2, 0, 1))))
+        fly142.rate_func = linear             # (its own rate is the only easing)
+        self.play(FadeOut(mini_first, rate_func=lambda t: smooth(min(1.0, t * turn / 0.45))),
+                  FadeOut(mini_last, rate_func=lambda t: smooth(float(np.clip((t * turn - 0.15) / 0.35, 0, 1)))),
+                  fly142,
+                  Create(nline, rate_func=lambda t: float(np.clip((t * turn - T_L0) / (T_L1 - T_L0), 0, 1))),
+                  UpdateFromAlphaFunc(build_group, build, rate_func=linear),
+                  FadeIn(ntitle, shift=0.1 * UP, rate_func=lambda t: smooth(float(np.clip((t * turn - 1.15) / 0.35, 0, 1)))),
                   run_time=turn)
         self.remove(mnum[1], mnum)
-        self.add(parked)
+        self.add(m142[1])
 
-        def drop(g, dy=0.3):
-            # triangles and values drop from above; the tags under the line only settle
-            # (0.08), so none ever passes through the tick numbers
-            return [FadeIn(m, shift=(dy if m.get_y() > nl_y else 0.08) * DOWN) for m in g]
         with self.narrate("Shannon's tests, with a hundred letters of context, put English between "
                           "point six and one point three bits.") as beat:
-            # the three estimates drop in, in story order, each with its value and its tag
-            self.play(LaggedStart(*[AnimationGroup(*drop(m)) for m in (m475, m411, m281)],
-                                  lag_ratio=0.35), run_time=0.8)
-            # ... then the person's 1.42 drops onto its own marker, with its tags
-            self.play(parked.animate.move_to(m142[1]), *drop([m142[0]], 0.3),
-                      *drop([m142[2], m142[3]], 0.3), run_time=0.5)
-            self.remove(parked)
-            self.add(m142[1])
-            self.play(FadeIn(ntitle, shift=0.1 * UP), run_time=0.35)
+            # Shannon's tests: his source (on screen since his record) flags
+            beat.wait_until("Shannon's", offset=-0.1)
+            self.play(flag(self.cite, color=INK), run_time=0.8)
             # a hundred letters of context: Shannon's band grows outward from ~1 to 0.6-1.3
             beat.wait_until("hundred", offset=-0.1)
             l0, r0 = nx(1.0), nx(1.0)
@@ -2492,7 +2515,7 @@ class Episode(NarratedScene):
         quiet = [m475[2], m411[2], m281[2]]
         with self.narrate("A language model compressed part of a book "
                           "[pause 0.3] posted to Project Gutenberg after the model was trained. "
-                          "[pause 0.4] It needed point eight four bits, inside that range.",
+                          "[pause 0.4] It needed point eight four bits, so the floor is lower still.",
                           gap=0.5) as beat:
             beat.wait_until("language", offset=-0.2)
             self.add(born)
@@ -2517,11 +2540,39 @@ class Episode(NarratedScene):
                       run_time=rt)
             self.remove(s_tri, s_name, s_note)
             self.add(mllm[0], llm_name, llm_note)
-            beat.wait_until("inside", offset=-0.2)
-            self.play(Indicate(nband, color=GREEN, scale_factor=1.15), flag(mllm, color=INK),
-                      run_time=0.9)
+            # ... so the floor is lower still: a compressor's rate is a ceiling on the true
+            # figure, so the floor (tagged on the band at 0:28) can only be in 0.6-0.84 now.
+            # On "floor" the span under the band is bracketed and named; on "lower still" the
+            # band above 0.84 steps back and the 0.6-0.84 segment lights up (white edge flash)
+            seg_l, seg_r = nx(LO), nx(LLM_BPC)
+            seg = Rectangle(width=seg_r - seg_l, height=nband.height, stroke_color=GREEN,
+                            stroke_width=2, fill_color=GREEN, fill_opacity=0.8)
+            seg.move_to([(seg_l + seg_r) / 2, nl_y, 0])
+            y_b = nl_y - 0.28
+            fb = VMobject(stroke_color=GRAY, stroke_width=3)
+            fb.set_points_as_corners([[seg_l, y_b + 0.09, 0], [seg_l, y_b, 0], [seg_r, y_b, 0],
+                                      [seg_r, y_b + 0.09, 0]])
+            f_lab = text("floor", size=28, color=GRAY)
+            f_lab.move_to([0, nl_y - 0.31, 0]).align_to([seg_l - 0.17, 0, 0], RIGHT)
+            beat.wait_until("floor", offset=-0.2)
+            self.play(Create(fb), FadeIn(f_lab, shift=0.1 * RIGHT), run_time=0.5)
+            seg0 = seg.copy()
+
+            def seg_in(m, a):
+                k = smooth(min(1.0, a / 0.45))
+                f = there_and_back(a)
+                m.become(seg0)
+                m.set_fill(GREEN, opacity=0.8 * k)
+                m.set_stroke(interpolate_color(ManimColor(GREEN), ManimColor(INK), f), width=2 + 2 * f,
+                             opacity=k)
+            seg_in(seg, 0.0)
+            self.add(seg)
+            beat.wait_until("lower", offset=-0.15)
+            self.play(UpdateFromAlphaFunc(seg, seg_in, rate_func=linear),
+                      nband.animate.set_fill(opacity=0.12).set_stroke(opacity=0.35),
+                      run_time=0.8)
         self.meter = VGroup(nline, nt, ntitle, nband, nband_lab, m475, m411, m281, m142, mllm,
-                            llm_note, cite_llm)
+                            llm_note, cite_llm, seg, fb, f_lab)
         self.m142 = m142
 
     # ============================================================== 8 landing
@@ -2575,23 +2626,24 @@ class Episode(NarratedScene):
                           "day.", speed=0.8) as beat:
             # 0. the whole summary line fades at once (0.45 s; the person's marker with it), and
             #    in the same move the cold-open row returns, faint, with its ? box, so the row is
-            #    on screen before "from the start"; Shannon's record comes back (faint) under it
-            #    with THE OTHER DAY at full strength once the line is gone
+            #    on screen before "from the start"; THE OTHER DAY comes back at full strength
+            #    in its place in Shannon's record once the line is gone
             out_first = lambda t: smooth(min(1.0, t / 0.45))
             row_in = lambda t: smooth(float(np.clip((t - 0.1) / 0.5, 0, 1)))
             in_after = lambda t: smooth(float(np.clip((t - 0.45) / 0.55, 0, 1)))
+            # (round 11: only THE OTHER DAY comes back, at full strength in its record place;
+            #  the rest of the record stays gone, so nothing flickers up and away)
             back_in = []
-            for c in self.cells:
-                o = 1.0 if any(c is k for k in keep_cells) else 0.22
-                back_in.append(c.animate(rate_func=in_after).set_opacity(o) if isinstance(c, Text)
-                               else c.animate(rate_func=in_after).set_stroke(opacity=o))
+            for c in keep_cells:
+                back_in.append(c.animate(rate_func=in_after).set_opacity(1.0) if isinstance(c, Text)
+                               else c.animate(rate_func=in_after).set_stroke(opacity=1.0))
             self.play(*[FadeOut(m, rate_func=out_first) for m in rest],
                       *[FadeIn(b, rate_func=row_in) for b in dim_boxes],
                       FadeIn(dim_q, rate_func=row_in), FadeIn(dim_qmark, rate_func=row_in),
                       FadeIn(dim_lead, rate_func=row_in), *back_in, run_time=1.1)
             rest = []
-            # 1. the rest of the record goes; THE OTHER DAY steps up under the boxes it belongs
-            #    to (the Y under the ? box), clear of the row
+            # 1. THE OTHER DAY steps up under the boxes it belongs to (the Y under the ? box),
+            #    clear of the row
             stage_y = ROW_Y_TOP - 0.78
             staged = []
             go = lambda t: smooth(float(np.clip((t - 0.2) / 0.8, 0, 1)))
@@ -2602,10 +2654,9 @@ class Episode(NarratedScene):
                 else:                               # the open-box space: stroke only
                     staged.append(c.animate(rate_func=go).set_stroke(opacity=1.0)
                                   .move_to([x, stage_y - 0.07, 0]))
-            # the record's other letters are gone before the phrase passes their rows
-            gone = lambda t: smooth(min(1.0, t / 0.4))
-            self.play(*[FadeOut(c, rate_func=gone) for c in drop_cells], *staged,
-                      run_time=beat.until("is", offset=-0.35, min_time=0.9))
+            # (the record's other letters are already invisible: they are simply removed)
+            self.remove(*drop_cells)
+            self.play(*staged, run_time=beat.until("is", offset=-0.35, min_time=0.9))
             # 2. the phrase rises straight into its boxes, and the Y into the ? box as it is
             #    named (the ? leaves first: never two letters in one box)
             q_out = lambda t: smooth(min(1.0, t / 0.4))
@@ -2627,7 +2678,8 @@ class Episode(NarratedScene):
                       FadeIn(five, shift=0.1 * UP), run_time=1.0)
             lead, qbox = lead_final, qbox_final
             self.play(flag(ybox_letter, color=YELLOW), run_time=0.6)
-        one = MathTex(r"1\ \text{guess}", font_size=MATH, color=GREEN).next_to(qbox, RIGHT, buff=0.3)
+        # one question with its past ("is it Y?") against five without: like units (round 11)
+        one = MathTex(r"1\ \text{question}", font_size=MATH, color=GREEN).next_to(qbox, RIGHT, buff=0.3)
         with self.narrate("Shannon's subject needed one guess: [pause 0.3] is it Y? Splitting "
                           "the alphabet took five. In English, almost no letter arrives without "
                           "a past.") as beat:

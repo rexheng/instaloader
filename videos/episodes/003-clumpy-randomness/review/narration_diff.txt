@@ -1,15 +1,16 @@
-WER 3.1% over 514 script words (numbers spelled out, 'and' ignored)
+WER 3.3% over 519 script words (numbers spelled out, 'and' ignored)
 script: videos/episodes/003-clumpy-randomness/narration.json
 
-[1:10.2] replace  script: 'pile ups a'                             heard: 'pileups one'
-[1:28.9] replace  script: 'this'                                   heard: 'the'
-[1:30.6] insert   script: '∅'                                      heard: 'hundred'
-[1:32.5] insert   script: '∅'                                      heard: 'hundred'
-[1:43.0] insert   script: '∅'                                      heard: 'hundred'
-[1:45.2] insert   script: '∅'                                      heard: 'hundred'
-[1:56.7] insert   script: '∅'                                      heard: 'hundred'
-[2:10.3] insert   script: '∅'                                      heard: 'bars gap'
-[2:19.7] replace  script: 'oh'                                     heard: 'zero'
-[2:44.9] replace  script: 'pile ups'                               heard: 'pileups'
-[2:51.4] insert   script: '∅'                                      heard: 'hundred'
-[2:53.5] insert   script: '∅'                                      heard: 'hundred'
+[1:14.1] replace  script: 'pile ups a'                             heard: 'pileups one'
+[1:32.7] replace  script: 'this'                                   heard: 'the'
+[1:34.9] insert   script: '∅'                                      heard: 'hundred'
+[1:36.4] insert   script: '∅'                                      heard: 'hundred'
+[1:57.2] insert   script: '∅'                                      heard: 'hundred'
+[2:11.1] insert   script: '∅'                                      heard: 'gap'
+[2:20.0] replace  script: 'oh'                                     heard: 'zero'
+[2:40.1] insert   script: '∅'                                      heard: 'rule'
+[2:45.7] replace  script: 'pile ups'                               heard: 'pileups'
+[2:52.3] insert   script: '∅'                                      heard: 'hundred'
+[2:54.3] insert   script: '∅'                                      heard: 'hundred'
+[3:05.2] insert   script: '∅'                                      heard: "london's"
+[3:36.1] insert   script: '∅'                                      heard: 'thank you'

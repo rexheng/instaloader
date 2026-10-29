@@ -734,12 +734,12 @@ class Episode(NarratedScene):
             assert all(h not in movers1 for h in self.cur_unhappy if h not in self.unh0)
             note67 = self.note(f"{n_content0} content at the start")
             # one number is the subject: "round" and "moves" dim to 35 %; the note (why 200
-            # moves for 238 unhappy) arrives as the moves row reaches 200
-            self.play(self.round_lab.animate.set_opacity(0.35),
-                      self.moves_lab.animate.set_opacity(0.35),
-                      FadeIn(note38, shift=0.1 * UP), run_time=0.5)
-            beat.wait_until("seventy", offset=-0.2)
-            self.pulse(self.counter, 1.1, run_time=0.8)
+            # moves for 238 unhappy) arrives as the moves row reaches 200, and the count pulses
+            # through "stops at seventy-four" (its peak lands on "seventy")
+            self.play(self.round_lab.animate(run_time=0.5).set_opacity(0.35),
+                      self.moves_lab.animate(run_time=0.5).set_opacity(0.35),
+                      FadeIn(note38, shift=0.1 * UP, run_time=0.5),
+                      self.counter.animate(rate_func=there_and_back, run_time=0.8).scale(1.1))
             # "not zero": the guess's 0 pulses; then, in the silence, the meter (50 % -> 64 %):
             # the town did not stay mixed either
             beat.wait_until("not", offset=-0.15)
@@ -1253,7 +1253,17 @@ class Episode(NarratedScene):
         F12 = Fraction(1, 2)
         assert self.ladder[F12] == max(self.ladder[f] for f in rungs) == 256
         c12 = count_lab(F12)
-        assert c27.get_left()[0] - c14.get_right()[0] >= 0.15, (c14.get_right(), c27.get_left())
+        # (round 8) "76" and "67" sat 0.15 apart and read as one string "76 67": each moves
+        # half the shortfall away from the other, so >= 0.32 separates them (each still
+        # covers its own bar's column)
+        gap_c = c27.get_left()[0] - c14.get_right()[0]
+        if gap_c < 0.32:
+            c14.shift(LEFT * (0.32 - gap_c) / 2)
+            c27.shift(RIGHT * (0.32 - gap_c) / 2)
+        assert c27.get_left()[0] - c14.get_right()[0] >= 0.32 - 1e-6
+        for cc, bb in ((c14, b14), (c27, b27)):     # each count still sits over its own bar
+            ov = min(cc.get_right()[0], bb.get_right()[0]) - max(cc.get_left()[0], bb.get_left()[0])
+            assert ov >= 0.8 * bb.width, (ov, bb.width)
 
         # under-baseline row: rung fractions (INK), the demand's fraction (PURPLE), the ends
         CARET_H = 0.18
@@ -1271,6 +1281,14 @@ class Episode(NarratedScene):
                           l27.get_bottom()[1] - 0.2 - xt_share.height / 2, 0])
         assert xt_share.get_bottom()[1] >= -3.2, xt_share.get_bottom()
         assert bot_lab.get_left()[0] - max(end60.get_right()[0], xt_share.get_right()[0]) >= 0.3
+        # (round 8) the ladder stops at 60 %: the households above it are counted, not hidden
+        n_shown = sum(self.ladder[f] for f in rungs)
+        n_above = sum(self.ladder.values()) - n_shown
+        assert (n_shown, n_above, n_shown + n_above) == (1019, 421, 1440), (n_shown, n_above)
+        more60 = text(f"+{n_above} above 60%", size=20, color=GRAY)
+        more60.ss_role = "tick"                    # an axis-end note: held to the 24 px floor
+        more60.next_to(end60, RIGHT, buff=0.3)
+        more60.align_to(end60, DOWN)
 
         def caret_at(d, opacity=1.0):
             t = Triangle().set_stroke(width=0).set_fill(PURPLE, opacity=opacity)
@@ -1315,19 +1333,21 @@ class Episode(NarratedScene):
                            angle=PI / 2, color=GRAY, stroke_width=3, tip_length=0.18)
         drop_lab = text("lose one match", size=TEXT_LABEL_MIN, color=GRAY).next_to(drop, UP, buff=0.22)
         assert drop_lab.get_top()[1] < bars_note.get_bottom()[1] - 0.15
-        # (round 6) at a quarter the same arrow lands on a content bar: "still content" takes
-        # the label's slot and "lose one match" moves up one line
-        still_lab = text("still content", size=TEXT_LABEL_MIN, color=GRAY).move_to(drop_lab)
-        LIFT = still_lab.height + 0.2
-        assert drop_lab.get_top()[1] + LIFT < bars_note.get_bottom()[1] - 0.15
+        # (round 8) at a quarter the movers keep their places, so the step 3/8 -> 2/7 is not
+        # taken: the arrow withdraws into the 3/8 count and "keeps its match" sits over it
+        keeps_lab = text("keeps its match", size=TEXT_LABEL_MIN, color=GRAY).next_to(c38, UP, buff=0.22)
+        assert keeps_lab.get_top()[1] < bars_note.get_bottom()[1] - 0.15
+        assert keeps_lab.get_right()[0] <= bars[F12].get_left()[0] - 0.2, keeps_lab.get_right()
 
         # (round 6) the ladder is built centred (the right third used to sit empty for 12 s);
         # it slides left to make room for household A's patch on "including"
         LSH = 2.1
-        early = [lbase, bar_grp, xt_share, bars_note, end0, end60, caret, out13, dlab, unh_lab, c12]
+        early = [lbase, bar_grp, xt_share, bars_note, end0, end60, more60, caret, out13, dlab,
+                 unh_lab, c12]
         for m in early:
             m.shift(RIGHT * LSH)
         assert xt_share.get_right()[0] <= 6.35 and bars_note.get_left()[0] >= -6.35
+        assert more60.get_right()[0] <= 6.35, more60.get_right()
 
         def ladder_state(d):
             """Bars strictly left of the demand are unhappy (share < demand); returns count."""
@@ -1390,7 +1410,8 @@ class Episode(NarratedScene):
             self.play(LaggedStart(*[b.animate(rate_func=there_and_back).stretch(
                 1.18, 1, about_edge=DOWN) for b in bar_grp], lag_ratio=0.12),
                 Succession(Wait(run_time=0.5), AnimationGroup(
-                    FadeIn(end0, shift=0.1 * UP), FadeIn(end60, shift=0.1 * UP), run_time=0.6)),
+                    FadeIn(end0, shift=0.1 * UP), FadeIn(end60, shift=0.1 * UP),
+                    FadeIn(more60, shift=0.1 * UP), run_time=0.6)),
                 run_time=1.3)
             # (round 7) the height scale: the tallest bar (1/2) carries its count, once the
             # highlight has passed it (the 1.18x stretch would reach into the label)
@@ -1451,8 +1472,8 @@ class Episode(NarratedScene):
             # bars have passed its column
             lbase.shift(LEFT * LSH)
             self.play(*[m.animate(run_time=0.8, rate_func=SMOOTH).shift(LEFT * LSH)
-                        for m in (x_line, bar_grp, xt_share, bars_note, end0, end60, caret, out13,
-                                  dlab, unh_lab, c12)],
+                        for m in (x_line, bar_grp, xt_share, bars_note, end0, end60, more60, caret,
+                                  out13, dlab, unh_lab, c12)],
                       Succession(Wait(run_time=0.45), FadeIn(w_patch, scale=0.6, run_time=0.5)))
             self.fly_into([(w_gold, w_num), (w_all, w_den)], extra=[Create(w_bar)], run_time=1.0)
             # its demand comes from the town that demanded a third (top right), a short clear path
@@ -1496,11 +1517,17 @@ class Episode(NarratedScene):
             self.pulse(unh_lab, 1.1, run_time=0.8)
 
         out14 = outline_on(F14)
-        # (round 6) the mechanism, not just the count: at a quarter the 3/8 -> 2/7 arrow lands on
-        # a content bar, so a household at 3/8 can lose a match and stay (2/7 >= 1/4)
+        # (round 8) the mechanism is the spark, not the fragile rung (190 content households are
+        # one lost match from tipping at 1/4, against 210 at 1/3): the two bars that change sides
+        # were the only movers with two matching neighbours (k/n < 1/4 with n <= 8 allows k <= 1).
+        # At a quarter they stay, so their neighbours keep those matches. A's patch is the
+        # example: A (2/7) and its two gold neighbours, one of them B
+        gold_boxes = VGroup(*[Square(WT + 0.06, stroke_color=INK, stroke_width=3).move_to(t)
+                              for t in w_gold])
         with self.narrate("Only these two bars change sides: just ninety-five start unhappy. "
-                          "Now a household at three eighths can lose a match and stay, so that "
-                          "chain never starts. [pause 0.9]") as beat:
+                          "These were the movers with two matching neighbors. Now they stay, so "
+                          "those neighbors keep their matches, and our chain never starts. "
+                          "[pause 0.9]") as beat:
             # the threshold's outline and label lift off; the caret carries the demand to 1/4;
             # the 3/8 -> 2/7 arrow stays (it is about to land on a content bar)
             self.play(FadeOut(dlab), FadeOut(out13), run_time=0.3)
@@ -1531,20 +1558,24 @@ class Episode(NarratedScene):
             self.play(FadeOut(box2), run_time=0.5)
             beat.wait_until("ninety", offset=-0.2)
             self.pulse(unh_lab, 1.1, run_time=0.8)
-            # the 3/8 rung, its arrow, and where the arrow now lands: a content bar
-            beat.wait_until("three", offset=-0.2)
-            self.play(*[m.animate(rate_func=there_and_back).scale(1.18) for m in (c38, l38)],
-                      run_time=0.7)
-            beat.wait_until("lose", offset=-0.2)
-            # the arrow brightens and its target, the (now grey, content) 2/7 bar, flashes
-            self.play(drop.animate(rate_func=there_and_back).set_color(INK),
-                      b27.animate(rate_func=there_and_back).set_fill(INK),
-                      c27.animate(rate_func=there_and_back).scale(1.18), run_time=0.8)
+            # "These were the movers": the two bars flash; "two matching neighbors": A's two gold
+            # neighbours are boxed and A's YELLOW 2 (its matching count) flags
+            beat.on("These", b14.animate(rate_func=there_and_back).set_fill(INK),
+                    b27.animate(rate_func=there_and_back).set_fill(INK),
+                    *[m.animate(rate_func=there_and_back).scale(1.18) for m in (c14, c27)],
+                    lead=0.15, occurrence=2, run_time=0.8)
+            beat.wait_until("two", occurrence=2, offset=-0.2)
+            self.play(Create(gold_boxes), flag(w_num), run_time=0.7)
+            # "Now they stay": A, a 2/7 household, is content at a quarter
             beat.wait_until("stay", offset=-0.25)
-            self.play(drop_lab.animate.shift(UP * LIFT), FadeIn(still_lab, shift=0.1 * UP),
-                      run_time=0.6)
-            beat.wait_until("never", offset=-0.2)
-            self.flash_box(w_eq, buff=0.08)
+            self.flash_box(w_eq, buff=0.08, run_time=1.0)
+            # "those neighbors" are the boxed ones; they "keep" their match, so the step
+            # 3/8 -> 2/7 is never taken: the arrow withdraws into the 3/8 count
+            beat.on("those", *[b.animate(rate_func=there_and_back).set_stroke(width=6)
+                               for b in gold_boxes], lead=0.15, run_time=0.6)
+            beat.wait_until("keep", offset=-0.15)
+            self.play(Uncreate(drop), FadeOut(drop_lab), run_time=0.5)
+            self.play(FadeIn(keeps_lab, shift=0.08 * DOWN), run_time=0.5)
 
         # 9 - payoff: Schelling ---------------------------------------------------------
         # his band is a different model's result: a light hatched band (not a solid block),
@@ -1571,13 +1602,16 @@ class Episode(NarratedScene):
         hatch.set_stroke(GRAY, width=2, opacity=0.5).set_z_index(-1)
 
         def bracket(x0, x1, y=96.5):
+            """Both brackets (ours and his) come from here: same stroke, same 0.1 tick height."""
             p0, p1 = ax.c2p(x0, y), ax.c2p(x1, y)
             return VGroup(Line(p0, p1), Line(p0 + DOWN * 0.1, p0 + UP * 0.1),
                           Line(p1 + DOWN * 0.1, p1 + UP * 0.1)).set_stroke(GRAY, 3)
-        # each bracket's label sits on the bracket's own row, to its left, inside the plot.
-        # (round 7) "our jump" sits just above our 1/3 column (82 %), its ends over the 1/4 and
+        # (round 7) our bracket sits just above our 1/3 column (82 %), its ends over the 1/4 and
         # 1/3 columns, and a dotted drop runs from its left end down to the 1/4 column, so it
-        # visibly joins our two towns; it rises to the top row as it becomes his band
+        # visibly joins our two towns.  (round 8) its tag is "ours", on its row to its left, and it
+        # stays on until the bracket leaves on "There"; the bracket then rises and slides to
+        # 35-50 % as ONE level bar (width and centre set each frame, never a Transform between two
+        # differently shaped brackets), and "Schelling: 35-50%" arrives over the band as it lands
         OUR_Y = 82
         ours_br = bracket(25, 100 / 3, y=OUR_Y)
         q_top = ax.c2p(25, 100 * max(self.sweep[k_q]))[1] + 0.05
@@ -1585,29 +1619,66 @@ class Episode(NarratedScene):
         assert ax.c2p(0, OUR_Y)[1] - 0.1 - t_top >= 0.12, (ax.c2p(0, OUR_Y), t_top)
         ours_drop = DashedLine(ax.c2p(25, OUR_Y) + DOWN * 0.12, [ax.c2p(25, 0)[0], q_top + 0.15, 0],
                                dash_length=0.06, dashed_ratio=0.5).set_stroke(GRAY, 2)
-        ours_br_lab = text("our jump", size=TEXT_LABEL_MIN, color=GRAY).next_to(ours_br, LEFT, buff=0.2)
+        ours_br_lab = text("ours", size=TEXT_LABEL_MIN, color=GRAY).next_to(ours_br, LEFT, buff=0.2)
         his_br = bracket(35, 50)
+        # his label sits above the band's top edge, left-aligned with the band (inside the band it
+        # would cross the hatch; beside the bracket it would share a row with his rules)
         band_lab = text("Schelling: 35–50%", size=TEXT_LABEL_MIN, color=GRAY)
-        band_lab.next_to(his_br, LEFT, buff=0.2)
-        # (round 7) his two rules, each on its spoken word, under his band's label: they first
-        # use the label's row and the one below; when his label arrives they step down a row
+        band_lab.move_to([bx0 + band_lab.width / 2, by1 + 0.2 + band_lab.height / 2, 0])
+        # his two rules, each on its spoken word, in the plot's empty upper-left corner (rows of
+        # 96.5 % and one below), left-aligned 0.25 right of the y-axis.  They never move: the
+        # sliding bracket stays >= 0.29 to their right
         ROW = 0.52
         rule1 = text("nearest move", size=TEXT_LABEL_MIN, color=GRAY)
         rule2 = text("25–30% empty", size=TEXT_LABEL_MIN, color=GRAY)
-        xl = band_lab.get_left()[0]
+        xl = ax.c2p(0, 40)[0] + 0.25
         for i, m in enumerate((rule1, rule2)):
-            m.move_to([xl + m.width / 2, band_lab.get_y() - i * ROW, 0])
-        assert rule2.get_bottom()[1] - ours_br_lab.get_top()[1] >= 0.15, (rule2.get_bottom(), ours_br_lab.get_top())
+            m.move_to([xl + m.width / 2, his_br.get_y() - i * ROW, 0])
         assert rule1.get_bottom()[1] - rule2.get_top()[1] >= 0.15
-        # after the step down: clear of our 1/3 column (dots and our ring)
-        assert rule2.get_right()[0] <= ax.c2p(100 / 3 - 1, 0)[0] - 0.05 - 0.15 - 0.15
-        assert band_lab.get_left()[0] >= ax.c2p(0, 40)[0] + 0.2, band_lab.get_left()
-        assert band_lab.get_top()[1] <= ax.y_title.get_bottom()[1] - 0.2
-        assert band_lab.get_right()[0] <= bx0 - 0.15 and ours_br_lab.get_left()[0] >= ax.c2p(0, 40)[0] + 0.2
-        assert ours_br_lab.get_right()[0] <= ax.c2p(25, 0)[0] - 0.15
-        cite1 = citation("Schelling, 1971 · Journal of Mathematical Sociology")
+        assert rule2.get_bottom()[1] - ours_br_lab.get_top()[1] >= 0.15, (rule2.get_bottom(), ours_br_lab.get_top())
+        assert ours_br.get_left()[0] - max(rule1.get_right()[0], rule2.get_right()[0]) >= 0.25
+        assert ours_br_lab.get_left()[0] >= xl - 0.01 and ours_br_lab.get_right()[0] <= ax.c2p(25, 0)[0] - 0.15
+        assert rule1.get_top()[1] <= ax.y_title.get_bottom()[1] - 0.2
+        assert band_lab.get_left()[0] - ax.y_title.get_right()[0] >= 0.3, (band_lab.get_left(), ax.y_title.get_right())
+        assert band_lab.get_bottom()[1] - band.get_top()[1] >= 0.15 and band_lab.get_top()[1] <= 3.55
+        assert band_lab.get_right()[0] <= top_lab.get_left()[0] - 0.4, (band_lab.get_right(), top_lab.get_left())
+        p60 = ax.c2p(60, 100 * max(self.sweep[0.6]))
+        assert band_lab.get_bottom()[1] - (p60[1] + 0.05) >= 0.2
+        # (round 8) the venue abbreviated: the Schelling frame carries <= 12 prose words
+        cite1 = citation("Schelling, 1971 · J. Math. Sociology")
         ladder_lab = VGroup(bars_note, caret, out14, q_lab, l27, l38, c14, c27, c38, unh_lab, why,
-                            end0, end60, drop, drop_lab, still_lab)
+                            end0, end60, more60, keeps_lab, gold_boxes)
+        his_w, his_c = his_br.width, his_br.get_center().copy()
+        our_w, our_c = ours_br.width, ours_br.get_center().copy()
+
+        def slide_bracket(m, a):
+            """Rise first, then slide right (the bar stays level; its right end clears the 40 %
+            column's top dots because it is already at 96.5 % when it reaches them)."""
+            uy = smooth(float(np.clip(a / 0.55, 0, 1)))
+            ux = smooth(float(np.clip((a - 0.2) / 0.8, 0, 1)))
+            m.stretch_to_fit_width(our_w + (his_w - our_w) * ux)
+            m.move_to([our_c[0] + (his_c[0] - our_c[0]) * ux, our_c[1] + (his_c[1] - our_c[1]) * uy, 0])
+        for a_ in np.linspace(0, 1, 41):        # the path never meets a rule or the 40 % column
+            probe = ours_br.copy()
+            slide_bracket(probe, a_)
+            assert probe.get_left()[0] - rule2.get_right()[0] >= 0.25
+            c40 = ax.c2p(40, 100 * max(self.sweep[0.4]))
+            if probe.get_right()[0] >= c40[0] - 0.2:
+                assert probe.get_bottom()[1] - (c40[1] + 0.05) >= 0.2, a_
+        # the two thumbnails and their labels: context while his model is described
+        thumb_tiles = [t for t in self.board] + [t for t in qboard]
+        thumb_rest = [self.frame, qframe, top_lab, bot_lab]
+
+        def thumbs_to(k):
+            """Thumbnails and their labels to k x full strength (tiles never overlap, so an
+            opacity dim reads the same as a colour dim)."""
+            o0 = [t.get_fill_opacity() for t in thumb_tiles]
+
+            def f(_m, a):
+                for t, o in zip(thumb_tiles, o0):
+                    t.set_fill(opacity=o + (k - o) * a)
+            return [UpdateFromAlphaFunc(VGroup(self.board, qboard), f),
+                    *self.soft_dim(VGroup(*thumb_rest), k)]
         # (round 6: kept as "In his 1971 paper": "In 1971, ... ran" would misdate the runs, which
         # were first issued as a 1969 RAND memo.  Round 7: one 14.7 s sentence became three, with
         # pauses; each of his two rules gets a label on its word, and "our jump" is drawn on our
@@ -1639,28 +1710,29 @@ class Episode(NarratedScene):
                       run_time=0.7)
             self.remove(x_line)
             beat.wait_until("model", offset=-0.2)
-            # "this model": a box on our two towns, and our jump drawn on their two columns
+            # "this model": a box on our two towns, and our bracket drawn on their two columns
             boxes = [SurroundingRectangle(m, color=INK, buff=0.05, corner_radius=0.06,
                                           stroke_width=3) for m in (self.town, qtown)]
             self.play(*[Create(b) for b in boxes], Create(ours_br), Create(ours_drop),
                       FadeIn(ours_br_lab), run_time=0.7)
             self.play(*[FadeOut(b) for b in boxes], run_time=0.4)
-            # his rules, each on its word; the tag "our jump" gives its words to them (the
-            # bracket and its drop stay on our two columns), so the frame carries <= 12 words
-            # of prose counting the citation
+            # (round 8) "His households": the thumbnails and their labels dim to 35 %, so the one
+            # focal region is the plot (our bracket, then his band)
+            beat.wait_until("His", offset=-0.2)
+            self.play(*thumbs_to(0.35), run_time=0.6)
+            # his rules, each on its word; "ours" stays on its bracket
             beat.wait_until("nearest", offset=-0.2)
-            self.play(FadeIn(rule1, shift=0.1 * LEFT), FadeOut(ours_br_lab), run_time=0.5)
+            self.play(FadeIn(rule1, shift=0.1 * LEFT), run_time=0.5)
             beat.wait_until("emptier", offset=-0.2)
             self.play(FadeIn(rule2, shift=0.1 * LEFT), run_time=0.5)
-            # one thing at a time: our label and its drop leave, the bracket rises and slides to
-            # his range, his rules step down a row, and only then does his label arrive
-            beat.wait_until("There", offset=-0.15)
-            self.play(FadeOut(ours_drop), run_time=0.3)
-            # (the path bends right, away from his rules' text on the upper left)
-            self.play(ReplacementTransform(ours_br, his_br, path_arc=-0.7), run_time=0.6)
-            self.play(rule1.animate.shift(DOWN * ROW), rule2.animate.shift(DOWN * ROW),
-                      run_time=0.45)
-            self.play(FadeIn(band_lab, shift=0.1 * LEFT), run_time=0.4)
+            # "There": "ours" and its drop leave as the bracket starts to move; the bracket rises
+            # and slides to his range; "Schelling: 35-50%" arrives as it lands (never both tags)
+            beat.wait_until("There", offset=-0.2)
+            self.play(UpdateFromAlphaFunc(ours_br, slide_bracket, run_time=1.0, rate_func=linear),
+                      FadeOut(ours_br_lab, run_time=0.3), FadeOut(ours_drop, run_time=0.3),
+                      Succession(Wait(run_time=0.55), FadeIn(band_lab, shift=0.08 * DOWN,
+                                                             run_time=0.45)))
+            his_br = ours_br                  # the same bracket, now on his range
             beat.wait_until("between", offset=-0.1)
             band.stretch_to_fit_width(0.01).move_to(band_l, aligned_edge=LEFT)
             self.add(band)
@@ -1759,6 +1831,11 @@ class Episode(NarratedScene):
 
         # cut at the beat boundary (sequential: nothing tells the viewer which town is which)
         self.play(FadeOut(chart), FadeOut(self.town), run_time=0.6)
+        # (round 8) the thumbnail was dimmed to 35 % for the Schelling beat; the test town is
+        # shown at full strength (FadeOut leaves a mobject in its pre-fade state)
+        for t in self.board:
+            t.set_fill(opacity=1.0)
+        self.frame.set_stroke(opacity=1.0)
         # (round 6) a blind test: our town is turned a quarter turn, so it cannot be recognised
         # from the 90 s the viewer has watched it (the share of matching neighbours and the
         # texture do not change under rotation: 76 % exactly); it turns back in the landing
@@ -1820,6 +1897,11 @@ class Episode(NarratedScene):
                       run_time=beat.until("rules", offset=-0.2, min_time=0.6))
             self.play(z_rule.animate(rate_func=there_and_back).scale(1.12, about_edge=LEFT),
                       run_time=0.6)
+            # (round 8) on "One study" the rule town's suffix (it has pulsed on "rules too") and
+            # the centre "simulated" tag leave: the frame carries <= 12 prose words with the
+            # citation in
+            beat.wait_until("One", occurrence=2, offset=-0.25)
+            self.play(FadeOut(z_rule), FadeOut(tt_tag), run_time=0.4)
             beat.wait_until("study", offset=-0.3)
             self.play(FadeIn(cite2, shift=0.1 * UP), run_time=0.7)
             beat.wait_until("1930s", offset=-0.2)
@@ -1845,7 +1927,6 @@ class Episode(NarratedScene):
         # the growing town used to pass over them while they faded); our town returns to full
         # strength as the rest fades, so the one town left is the focus of "Look again"
         self.play(FadeOut(ztown), FadeOut(zmatch), FadeOut(omatch), FadeOut(z_dem_full[0]),
-                  FadeOut(z_rule), FadeOut(tt_tag),
                   FadeOut(cite2), FadeOut(cite_ul), FadeOut(o_dem),
                   self.board.animate.set_fill(opacity=1.0), run_time=0.45)
         # (round 6) one move: the town turns back the quarter turn it made for the blind test

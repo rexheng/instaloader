@@ -415,3 +415,16 @@ Runtime 3:30.9 (was 3:34.5), 467 narration words (was 479). Pace is 153 wpm over
 - The HOLC frame (3:09–3:20) carries the two towns' headers, the two "76% match" labels, the "simulated" tag and the 6-word citation. Counting the citation, that is about 15 words. Rounds 6 and 7 accepted it, and each label is needed there: "· placed by a rule" is what "rules too" points at, and "76% match" is what pulses on "segregation".
 - "a quarter empty" (a critic's wording) was not used: "a quarter" is a demand level in this episode. The narration says "far emptier boards", and the label gives his 25–30 %.
 - The critic's dashed short hop on the thumbnail for "nearest" was not drawn. At 2 units wide a one-square hop is 0.05 units, too small to see, so the rule is shown as the label "nearest move" on its word.
+
+## Round 8 revisions
+
+Round 8 failed at 8.9 (craft) and 8.8 (substance). Neither critic found a factual error or a cap, and both said their fixes would reach 9. This pass applies every fix from both reviews and keeps the "keep" items: the "? demanded" marker sliding 76 % → ⅓ and returning on the restored first frame, the "guess 0" row (was "plan predicts 0") against the live 74 with the dim-all-but-the-67 frame, the real-tile domino with fractions built from tile copies, the town-to-dot flight, the x-axis-to-baseline morph, the caret crossing exactly two bars to 2/7 ≥ ¼, and the blind two-town test.
+
+### Plan (written before editing)
+
+| Dimension (round-8 scores) | BAR "9" anchor | Where the round-8 master fell short | Upgrade |
+|---|---|---|---|
+| Clarity (9 / 8.5) | "Viewer could re-derive it after one watch; all numbers check out" | the ¼ side said a 3/8 household "can lose a match and stay", which is true but not why the curve jumps: 190 content households are still one lost match from tipping at ¼ (210 at ⅓). "plan" implied a planner; "stalls" implied the count was stuck | the mechanism is the spark: the two bars that change sides were the only movers with two matching neighbors (274 matches stripped at ⅓ against 62 at ¼, verified in facts R8-1); "The obvious guess: zero unhappy …"; "stops at seventy-four, not zero" with the meter pulsed |
+| Visual (8.5 / 8.5) | "Every frame has one focal point; all §5 standards met" | full-strength thumbnails beside the hatched band; the "our jump" bracket unlabelled for 4 s; 15 prose words on the HOLC frame; "76 67" read as one string; the ladder silently cropped at 60 % | thumbnails dim to 35 % on "His households"; "ours" stays until the slide; "· placed by a rule" and the centre tag leave on "One study"; counts ≥ 0.32 apart; "+421 above 60%" |
+| Motion (9 / 9) | "Every motion encodes a relation" | the bracket skewed mid-slide (Transform between differently shaped brackets) and grazed "25–30% empty" | one level bar (width and centre set each frame), rise then slide, rules placed so the path stays ≥ 0.25 clear; asserted over 41 samples of the path |
+| Audio (9 / 9) | "each deictic lands as the element highlights" | "our household" pointed at B after the outline had moved to C | B's red ring pulses on "our household" |

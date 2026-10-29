@@ -797,3 +797,79 @@ lineup strip, keyframes kf_22, kf_32, kf_33 and kf_40 of the final one.
 line into 25/42 and −19; the payoff chain 46/54 → −8 → 49 − 45 = +4 → +12 with "vs 0: p = .49",
 "no defenders" and both citations; the landing that answers the cold-open question on the
 cold-open row and axis with (1/14) Σᵢ hᵢ/nᵢ = 17/42 and the blue "hot" arrow.
+
+## Round 10 revisions
+
+Round 10: craft 9.0 (pass), substance 8.9 (Visual 8.5). No cap, no factual error. Both critics
+said every fix is polish and that nothing structural is missing.
+
+**Plan (BAR §12.2), the one dimension below 9.**
+- **Visual 8.5 (substance).** The BAR 9 anchor reads: "Every frame has one focal point; all §5
+  standards met; nothing to remove." The episode missed it in two places:
+  - The payoff frame at 2:51–2:56 had about 16 words of full-strength prose and three focal
+    points: the −8 marker, the +4 working and the bright right column. The dimmed 8-word header
+    sat above them.
+  - At 2:09–2:21 two empty lanes and a header sentence growing word by word did the picture's
+    job.
+
+  The upgrade:
+  - The header is gone. The design is tagged where it belongs, the strips themselves become
+    the lanes, and the right column steps back once its numbers live in "49 − 45".
+- **Margin items from both critics** (all at 9): the 12/24 glyph tumble, the landing rows
+  flying over hᵢ/nᵢ, the "This row" box timing, the hook ending at 0:12.8, the "1 vote per row"
+  baseline, and the p = .49 tag's precision.
+
+**Substance fixes**
+- **r10s 1 / r10c 2, payoff word load.** The payoff frame at 2:51–2:56 had too much full-strength prose and three focal points.
+  - The header is gone (see r10s 5).
+  - As "= +4" lands, the right column steps back to 30%: Cornell, both lane labels, 49% and 45%. Its two numbers now live in "49 − 45".
+  - On "Measured from minus eight", "Cornell" returns to full as it travels to tag the +4 marker.
+  - At 2:54 the full-strength prose is "the obvious guess", "random shooter", "bias" and "1985 test", plus the axis title. The column is at 30%.
+- **r10s 2, "the same comparison".** The after-heads and after-tails coin strips are no longer cleared.
+  - On "The nineteen eighty five study" each strip shrinks into its own lane (height ×0.3, half strength).
+  - "after" stays in place while "heads" and "tails" rise out and "3 hits" and "3 misses" rise in. `lane_label()` builds "after" as its own piece, so there is no glyph morph.
+  - The values become "?" and the cursors and −19 leave as before (the round-9 fix).
+  - On "For a random shooter" the plain grey tracks replace the faint strips.
+- **r10s 3, the p-value tag.** The tag now reads "1985 test: p = .49" (was "vs 0: p = .49").
+  - I re-read M&S §3.1 and Table 2 (arXiv PDF). p = .49 is GVT's paired t-test on the players' own differences, with a mean of +.03 in Table 2's Average row. +4 is the difference of the two averages. The critic is right.
+  - The tag now names the study's test rather than reading as a test of "49 − 45". The evidence is in facts.md row 58.
+- **r10s 4 / r10c 1, 12/24 glyph tumble.** There is no inline "12/24" any more. The 12 yellow tiles fly into the stacked numerator, all 24 into the denominator, and the bar grows between them, in the place where Σᵢhᵢ/Σᵢnᵢ = 12/24 will stand. On "Total" only the sums are written.
+- **r10s 5 / r10c 3, empty lanes and header sentence.** The design is tagged in the right column, which now always says whose lanes these are, and the header sentence is gone:
+  - On "twenty six Cornell players" a grey head "26 Cornell players" appears. "Cornell" is now on screen from 2:11 (was 2:43).
+  - On "a hundred shots" "up to 100 shots" appears under it. Both step back on "about half".
+  - The head becomes blue "random" on "For a random shooter", then purple "Cornell" on "The Cornell players".
+  - "up to 100 shots" answers "Longer records shrink it" (pulses to full) and leaves on "The Cornell players".
+  - The lanes are no longer empty from 2:09 to 2:21: they are the faint coin strips.
+
+**Craft fixes**
+- **r10c 4, landing.** "1/14 Σ" is written first, only once the left-most ghost column (which stands where the sum goes) has left. The rows land on the Σ, and hᵢ/nᵢ is written (0.35 s) only after the last row has landed.
+- **r10c 5, "This row".** The HHHT box is drawn in 0.35 s from the beat start. "This" is at 0:41.45 and the box is complete at 0:41.8, by "row". The critic's 0:41.2 word time was early: the word starts at 0:41.7 in the round-10 cut.
+- **r10c 6, hook timing.** The breaths after "one of the two is heads" and after "and average" are now [pause 0.15]. The question ends at 0:12.4 (was 0:12.8) and the 2.2 s prediction hold is unchanged (0:12.4–0:14.5). No words changed.
+- **r10c 7, "1 vote per row".** The stepped-back 40.5% readout sits 0.11 higher, so the two labels no longer share a baseline.
+  - The tag itself cannot drop: 0.04 lower measured 0.11 from the vote outlines on the preview (clearance warning). It stays at its old height, already in grey #A9AEB6.
+
+**Found on the preview (not in the reviews)**
+- On the first try the strips at 20% with the grey track drawn over them read as a dotted olive line. Now they stand alone at half strength and height ×0.3, and the tracks fade in only as they leave.
+- The landing's "1/14 Σ" first faded in over the left-most column of the ghost table. It now waits until that column has left.
+- The column head block ("26 Cornell players / up to 100 shots / after 3 hits") read as one list. It now has a 0.32 gap before the lane labels.
+
+**Self-review loop.** One preview and one 1080p master.
+- On the preview I stepped through the "This row" box (5 fps), the 12/24 build (2 fps), the Cornell beat (1 fps), the random-shooter and observed beats (1 fps) and the landing flight (4 fps).
+- On the master I read:
+  - all 12 contact sheets;
+  - keyframe kf_29 (2:21.1);
+  - full frames at 1:19.0 and 2:54.3;
+  - strips of 2:06.9–2:08.4 (6 fps: squash, word swap, retitle), 1:08.4–1:10.2 (6 fps: 12/24) and 3:10.8–3:13.2 (5 fps: landing).
+
+**Mechanics (final master).**
+- Runtime 3:22.8. 462 words, 151 wpm over speech time, 0 sentences above 200 wpm.
+- −14.1 LUFS / −2.1 dBTP.
+- Leading silence 0.00 s, trailing 1.74 s. Longest silence 2.17 s (the prediction hold). Longest static stretch 3.5 s.
+- 0 render warnings, 0 layout-audit issues in 219 checks, 0 glyph morphs, 7/7 deictics, 0 review flags, WER 0.7%, no banned phrases.
+- `check_numbers.py` was re-run: every value is unchanged.
+
+**Kept.**
+- The vote strip packing onto the 40.5% marker into 5⅔/14 = 17/42 and (1/14) Σᵢ hᵢ/nᵢ beside Σᵢhᵢ/Σᵢnᵢ = 12/24.
+- The half-turn mirror into 25/42 and −19.
+- The payoff chain −8 → 49 − 45 = +4 → +12 with "no defenders" and both citations.
+- The landing that answers the cold-open question on the cold-open row.

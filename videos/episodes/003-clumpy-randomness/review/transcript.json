@@ -1,8 +1,8 @@
 {
  "task": "transcribe",
  "language": "English",
- "duration": 214.634718214,
- "text": " Each map holds 537 bomb hits. One is pure chance, the other follows a rule. Which is chance? In 1944, Londoners claimed flying bombs fell in clusters, and precise aim would put factories at risk. Build the detector your eye is running. Cut each map into 576 squares, and flag any square with three or more hits, like this one. Map A lights up with 39 targets, map B with none. So A looks aimed. Backwards. I dropped every hit on map A at random, so all 39 targets are false alarms. Map B's rule, no two hits closer than four-fifths of a square. Your eye, like the detector, expects chance to look that even. Each bomb has a one in five 76 chance of landing in this square. To stay empty, all 537 must miss. Guess how many squares stay empty? About 227. Map A has 222. Those empty squares force pileups. 183 hits must land where another already did. Let's call the average hits per square lambda. One minus a small slice raised to a big power is e to the minus lambda, almost exactly, Call that p of 0. For two hits in the square, pick two bombs. 537 times 536 ways, over 2, since each pair counts twice. Each has that same chance, and the rest miss. E to the minus lambda again 536 is almost 537 For three hits each two becomes a 3 For any k a k The powers merge into lambda to the k the Poisson distribution. Times 576 squares, it predicts these purple bars. The honest detector compares whole histograms. 39 targets, and chance predicts 39. The chi-squared misfit squares each bar's gap bars gap and divides by chance's bar because short bars wobble less. A miss on a short bar counts more. Map A scores. 2.0. Three out of four simulated chance maps score worse. That share P is .74. Now map B. Half the expected empty squares, a tower of single hits, misfit 272. A pattern this even is the fingerprint of a spacing rule. Aimed bombs would miss the other way. Extra empty squares, extra pileups. In 1946, R. D. Clarke published the same test on London's real hits. 537 in 576 squares. Chance predicted 227 empty squares. Clarke counted 229. Overall, p equals .88. London's clusters were no sign of precise aim. The bombs were aimed at central London, but tended to fall short, so farther north, hits were about half as dense. Score the north alone and it fits chance too, p equals .45. The aim hides in lambda, which the test holds fixed. The clumps in map A are what no aim at all looks like if you chose map B. You chose the rule.",
+ "duration": 216.106720262,
+ "text": " Each map holds 537 bomb hits. One is pure chance, the other follows a rule. Which is chance? In 1944, Londoners saw flying bombs land in clusters. If that meant precise aim, factories were at risk. Build the detector your eye is running. Cut each map into 576 squares, and flag any square with three or more hits, like this one. Map A lights up with 39 targets, map B with none. So A looks aimed. Backwards. I dropped every hit on map A at random, so all 39 targets are false alarms. Map B's rule, no two hits closer than four-fifths of a square. Your eye, like the detector, expects chance to look that even. Almost one hit per square. Guess how many squares stay empty? Each bomb has a 1 in 5 76 chance of landing in this square. To stay empty, all 537 must miss. About 227, four squares in 10, map A has 222. Those empty squares force pileups. 183 hits must land where another already did. Let's call the average hits per square lambda. 1 minus a small slice raised to a big power is e to the minus lambda, almost exactly. Call that p of 0. For two hits in the square, pick two bombs. 537 times 536 ways over 2 since each pair counts twice. Each has that same chance and the rest miss e to the minus lambda again For three hits each two becomes a three For any k a k The powers merge into lambda to the k the Poisson distribution. Times 576 squares, it predicts these purple bars. The honest detector compares whole histograms. 39 targets, and chance predicts 39. The chi-squared misfit squares each bar's gap gap and divides by chance's bar because short bars wobble less. A miss on a short bar counts more. Map A scores 2.0. 3 out of 4 simulated chance maps score worse. That share P is .74. Now map B, half the expected empty squares, a tower of single hits, misfit 272. A pattern this even is the fingerprint of a spacing rule. rule. Aimed bombs would break the fit the other way. Extra empty squares, extra pileups. In 1946, R. D. Clarke published the same test on London's real hits. 537 in 576 squares. Chance predicted 227 empty squares. Clarke counted 229. Overall, P equals .88. London's London's clusters were no sign of precise aim. The bombs were aimed at central London, but tended to fall short, so farther north, hits were about half as dense. Score the north alone and it fits chance too, p equals .45. The aim hides in lambda, which the test holds fixed. The clumps in map A are what no aim at all looks like. If you chose map B, you chose the rule. Thank you.",
  "words": [
   {
    "word": "Each",
@@ -27,16 +27,16 @@
   {
    "word": "bomb",
    "start": 2.12,
-   "end": 2.58
+   "end": 2.56
   },
   {
    "word": "hits.",
-   "start": 2.58,
+   "start": 2.56,
    "end": 3.08
   },
   {
    "word": "One",
-   "start": 2.94,
+   "start": 3.04,
    "end": 3.7
   },
   {
@@ -52,11 +52,11 @@
   {
    "word": "chance,",
    "start": 4.14,
-   "end": 4.76
+   "end": 4.78
   },
   {
    "word": "the",
-   "start": 4.76,
+   "start": 4.78,
    "end": 5.08
   },
   {
@@ -81,7 +81,7 @@
   },
   {
    "word": "Which",
-   "start": 6.84,
+   "start": 6.64,
    "end": 7.2
   },
   {
@@ -96,2198 +96,2253 @@
   },
   {
    "word": "In",
-   "start": 9.64,
+   "start": 9.66,
    "end": 9.84
   },
   {
    "word": "1944,",
    "start": 9.84,
-   "end": 11.08
+   "end": 10.98
   },
   {
    "word": "Londoners",
-   "start": 11.08,
-   "end": 11.96
+   "start": 10.98,
+   "end": 11.92
   },
   {
-   "word": "claimed",
-   "start": 11.96,
-   "end": 12.38
+   "word": "saw",
+   "start": 11.92,
+   "end": 12.14
   },
   {
    "word": "flying",
-   "start": 12.38,
-   "end": 12.78
+   "start": 12.14,
+   "end": 12.54
   },
   {
    "word": "bombs",
-   "start": 12.78,
-   "end": 13.3
-  },
-  {
-   "word": "fell",
-   "start": 13.3,
-   "end": 13.6
-  },
-  {
-   "word": "in",
-   "start": 13.6,
-   "end": 13.76
-  },
-  {
-   "word": "clusters,",
-   "start": 13.76,
-   "end": 14.62
-  },
-  {
-   "word": "and",
-   "start": 14.46,
-   "end": 15.12
-  },
-  {
-   "word": "precise",
-   "start": 15.12,
-   "end": 15.6
-  },
-  {
-   "word": "aim",
-   "start": 15.6,
-   "end": 16.04
-  },
-  {
-   "word": "would",
-   "start": 16.04,
-   "end": 16.28
-  },
-  {
-   "word": "put",
-   "start": 16.28,
-   "end": 16.46
-  },
-  {
-   "word": "factories",
-   "start": 16.46,
-   "end": 17.04
-  },
-  {
-   "word": "at",
-   "start": 17.04,
-   "end": 17.28
-  },
-  {
-   "word": "risk.",
-   "start": 17.28,
-   "end": 17.86
-  },
-  {
-   "word": "Build",
-   "start": 18.26,
-   "end": 18.58
-  },
-  {
-   "word": "the",
-   "start": 18.58,
-   "end": 18.72
-  },
-  {
-   "word": "detector",
-   "start": 18.72,
-   "end": 19.2
-  },
-  {
-   "word": "your",
-   "start": 19.2,
-   "end": 19.48
-  },
-  {
-   "word": "eye",
-   "start": 19.48,
-   "end": 19.78
-  },
-  {
-   "word": "is",
-   "start": 19.78,
-   "end": 20.06
-  },
-  {
-   "word": "running.",
-   "start": 20.06,
-   "end": 20.58
-  },
-  {
-   "word": "Cut",
-   "start": 20.86,
-   "end": 21.2
-  },
-  {
-   "word": "each",
-   "start": 21.2,
-   "end": 21.54
-  },
-  {
-   "word": "map",
-   "start": 21.54,
-   "end": 21.98
-  },
-  {
-   "word": "into",
-   "start": 21.98,
-   "end": 22.18
-  },
-  {
-   "word": "576",
-   "start": 22.18,
-   "end": 23.58
-  },
-  {
-   "word": "squares,",
-   "start": 23.58,
-   "end": 24.4
-  },
-  {
-   "word": "and",
-   "start": 24.24,
-   "end": 24.9
-  },
-  {
-   "word": "flag",
-   "start": 24.9,
-   "end": 25.22
-  },
-  {
-   "word": "any",
-   "start": 25.22,
-   "end": 25.46
-  },
-  {
-   "word": "square",
-   "start": 25.46,
-   "end": 25.8
-  },
-  {
-   "word": "with",
-   "start": 25.8,
-   "end": 26.02
-  },
-  {
-   "word": "three",
-   "start": 26.02,
-   "end": 26.36
-  },
-  {
-   "word": "or",
-   "start": 26.36,
-   "end": 26.58
-  },
-  {
-   "word": "more",
-   "start": 26.58,
-   "end": 26.76
-  },
-  {
-   "word": "hits,",
-   "start": 26.76,
-   "end": 27.36
-  },
-  {
-   "word": "like",
-   "start": 27.36,
-   "end": 27.74
-  },
-  {
-   "word": "this",
-   "start": 27.74,
-   "end": 27.96
-  },
-  {
-   "word": "one.",
-   "start": 27.96,
-   "end": 28.42
-  },
-  {
-   "word": "Map",
-   "start": 29,
-   "end": 29.32
-  },
-  {
-   "word": "A",
-   "start": 29.32,
-   "end": 29.48
-  },
-  {
-   "word": "lights",
-   "start": 29.48,
-   "end": 29.84
-  },
-  {
-   "word": "up",
-   "start": 29.84,
-   "end": 30.02
-  },
-  {
-   "word": "with",
-   "start": 30.02,
-   "end": 30.16
-  },
-  {
-   "word": "39",
-   "start": 30.16,
-   "end": 30.54
-  },
-  {
-   "word": "targets,",
-   "start": 30.54,
-   "end": 31.34
-  },
-  {
-   "word": "map",
-   "start": 31.34,
-   "end": 31.86
-  },
-  {
-   "word": "B",
-   "start": 31.86,
-   "end": 32.1
-  },
-  {
-   "word": "with",
-   "start": 32.1,
-   "end": 32.32
-  },
-  {
-   "word": "none.",
-   "start": 32.32,
-   "end": 32.76
-  },
-  {
-   "word": "So",
-   "start": 33.12,
-   "end": 33.6
-  },
-  {
-   "word": "A",
-   "start": 33.6,
-   "end": 33.76
-  },
-  {
-   "word": "looks",
-   "start": 33.76,
-   "end": 34.02
-  },
-  {
-   "word": "aimed.",
-   "start": 34.02,
-   "end": 34.58
-  },
-  {
-   "word": "Backwards.",
-   "start": 35.1,
-   "end": 36.2
-  },
-  {
-   "word": "I",
-   "start": 36.16,
-   "end": 36.78
-  },
-  {
-   "word": "dropped",
-   "start": 36.78,
-   "end": 37.16
-  },
-  {
-   "word": "every",
-   "start": 37.16,
-   "end": 37.52
-  },
-  {
-   "word": "hit",
-   "start": 37.52,
-   "end": 37.72
-  },
-  {
-   "word": "on",
-   "start": 37.72,
-   "end": 37.88
-  },
-  {
-   "word": "map",
-   "start": 37.88,
-   "end": 38.12
-  },
-  {
-   "word": "A",
-   "start": 38.12,
-   "end": 38.38
-  },
-  {
-   "word": "at",
-   "start": 38.38,
-   "end": 38.58
-  },
-  {
-   "word": "random,",
-   "start": 38.58,
-   "end": 39.16
-  },
-  {
-   "word": "so",
-   "start": 39,
-   "end": 39.68
-  },
-  {
-   "word": "all",
-   "start": 39.68,
-   "end": 39.98
-  },
-  {
-   "word": "39",
-   "start": 39.98,
-   "end": 40.52
-  },
-  {
-   "word": "targets",
-   "start": 40.52,
-   "end": 41.06
-  },
-  {
-   "word": "are",
-   "start": 41.06,
-   "end": 41.24
-  },
-  {
-   "word": "false",
-   "start": 41.24,
-   "end": 41.6
-  },
-  {
-   "word": "alarms.",
-   "start": 41.6,
-   "end": 42.38
-  },
-  {
-   "word": "Map",
-   "start": 42.68,
-   "end": 43.08
-  },
-  {
-   "word": "B's",
-   "start": 43.08,
-   "end": 43.44
-  },
-  {
-   "word": "rule,",
-   "start": 43.44,
-   "end": 43.82
-  },
-  {
-   "word": "no",
-   "start": 43.82,
-   "end": 44.36
-  },
-  {
-   "word": "two",
-   "start": 44.36,
-   "end": 44.66
-  },
-  {
-   "word": "hits",
-   "start": 44.66,
-   "end": 44.92
-  },
-  {
-   "word": "closer",
-   "start": 44.92,
-   "end": 45.28
-  },
-  {
-   "word": "than",
-   "start": 45.28,
-   "end": 45.52
-  },
-  {
-   "word": "four-fifths",
-   "start": 45.52,
-   "end": 46.12
-  },
-  {
-   "word": "of",
-   "start": 46.12,
-   "end": 46.24
-  },
-  {
-   "word": "a",
-   "start": 46.24,
-   "end": 46.32
-  },
-  {
-   "word": "square.",
-   "start": 46.32,
-   "end": 46.9
-  },
-  {
-   "word": "Your",
-   "start": 46.7,
-   "end": 47.42
-  },
-  {
-   "word": "eye,",
-   "start": 47.42,
-   "end": 47.8
-  },
-  {
-   "word": "like",
-   "start": 47.8,
-   "end": 47.96
-  },
-  {
-   "word": "the",
-   "start": 47.96,
-   "end": 48.08
-  },
-  {
-   "word": "detector,",
-   "start": 48.08,
-   "end": 48.78
-  },
-  {
-   "word": "expects",
-   "start": 48.78,
-   "end": 49.56
-  },
-  {
-   "word": "chance",
-   "start": 49.56,
-   "end": 49.94
-  },
-  {
-   "word": "to",
-   "start": 49.94,
-   "end": 50.14
-  },
-  {
-   "word": "look",
-   "start": 50.14,
-   "end": 50.3
-  },
-  {
-   "word": "that",
-   "start": 50.3,
-   "end": 50.52
-  },
-  {
-   "word": "even.",
-   "start": 50.52,
-   "end": 51.2
-  },
-  {
-   "word": "Each",
-   "start": 51.6,
-   "end": 51.9
-  },
-  {
-   "word": "bomb",
-   "start": 51.9,
-   "end": 52.28
-  },
-  {
-   "word": "has",
-   "start": 52.28,
-   "end": 52.52
-  },
-  {
-   "word": "a",
-   "start": 52.52,
-   "end": 52.66
-  },
-  {
-   "word": "one",
-   "start": 52.66,
-   "end": 52.9
-  },
-  {
-   "word": "in",
-   "start": 52.9,
-   "end": 53.04
-  },
-  {
-   "word": "five",
-   "start": 53.04,
-   "end": 53.46
-  },
-  {
-   "word": "76",
-   "start": 53.46,
-   "end": 53.96
-  },
-  {
-   "word": "chance",
-   "start": 53.96,
-   "end": 54.68
-  },
-  {
-   "word": "of",
-   "start": 54.68,
-   "end": 54.8
-  },
-  {
-   "word": "landing",
-   "start": 54.8,
-   "end": 55.14
-  },
-  {
-   "word": "in",
-   "start": 55.14,
-   "end": 55.36
-  },
-  {
-   "word": "this",
-   "start": 55.36,
-   "end": 55.48
-  },
-  {
-   "word": "square.",
-   "start": 55.48,
-   "end": 56.06
-  },
-  {
-   "word": "To",
-   "start": 56.32,
-   "end": 56.44
-  },
-  {
-   "word": "stay",
-   "start": 56.44,
-   "end": 56.7
-  },
-  {
-   "word": "empty,",
-   "start": 56.7,
-   "end": 57.7
-  },
-  {
-   "word": "all",
-   "start": 57.7,
-   "end": 57.88
-  },
-  {
-   "word": "537",
-   "start": 57.88,
-   "end": 58.68
-  },
-  {
-   "word": "must",
-   "start": 58.68,
-   "end": 59.34
-  },
-  {
-   "word": "miss.",
-   "start": 59.34,
-   "end": 59.92
-  },
-  {
-   "word": "Guess",
-   "start": 60.3,
-   "end": 60.62
-  },
-  {
-   "word": "how",
-   "start": 60.62,
-   "end": 60.78
-  },
-  {
-   "word": "many",
-   "start": 60.78,
-   "end": 60.94
-  },
-  {
-   "word": "squares",
-   "start": 60.94,
-   "end": 61.3
-  },
-  {
-   "word": "stay",
-   "start": 61.3,
-   "end": 61.6
-  },
-  {
-   "word": "empty?",
-   "start": 61.6,
-   "end": 62.3
-  },
-  {
-   "word": "About",
-   "start": 63.78,
-   "end": 64.16
-  },
-  {
-   "word": "227.",
-   "start": 64.16,
-   "end": 65.58
-  },
-  {
-   "word": "Map",
-   "start": 65.84,
-   "end": 66.22
-  },
-  {
-   "word": "A",
-   "start": 66.22,
-   "end": 66.38
-  },
-  {
-   "word": "has",
-   "start": 66.38,
-   "end": 66.64
-  },
-  {
-   "word": "222.",
-   "start": 66.64,
-   "end": 68.18
-  },
-  {
-   "word": "Those",
-   "start": 68.78,
-   "end": 69.18
-  },
-  {
-   "word": "empty",
-   "start": 69.18,
-   "end": 69.5
-  },
-  {
-   "word": "squares",
-   "start": 69.5,
-   "end": 69.88
-  },
-  {
-   "word": "force",
-   "start": 69.88,
-   "end": 70.18
-  },
-  {
-   "word": "pileups.",
-   "start": 70.18,
-   "end": 70.86
-  },
-  {
-   "word": "183",
-   "start": 71.18,
-   "end": 72.38
-  },
-  {
-   "word": "hits",
-   "start": 72.38,
-   "end": 72.82
-  },
-  {
-   "word": "must",
-   "start": 72.82,
-   "end": 73.38
+   "start": 12.54,
+   "end": 13
   },
   {
    "word": "land",
-   "start": 73.38,
-   "end": 73.78
-  },
-  {
-   "word": "where",
-   "start": 73.78,
-   "end": 73.96
-  },
-  {
-   "word": "another",
-   "start": 73.96,
-   "end": 74.26
-  },
-  {
-   "word": "already",
-   "start": 74.26,
-   "end": 74.66
-  },
-  {
-   "word": "did.",
-   "start": 74.66,
-   "end": 75.24
-  },
-  {
-   "word": "Let's",
-   "start": 76.24,
-   "end": 76.6
-  },
-  {
-   "word": "call",
-   "start": 76.6,
-   "end": 76.8
-  },
-  {
-   "word": "the",
-   "start": 76.8,
-   "end": 76.94
-  },
-  {
-   "word": "average",
-   "start": 76.94,
-   "end": 77.32
-  },
-  {
-   "word": "hits",
-   "start": 77.32,
-   "end": 77.6
-  },
-  {
-   "word": "per",
-   "start": 77.6,
-   "end": 77.8
-  },
-  {
-   "word": "square",
-   "start": 77.8,
-   "end": 78.16
-  },
-  {
-   "word": "lambda.",
-   "start": 78.16,
-   "end": 78.74
-  },
-  {
-   "word": "One",
-   "start": 79.08,
-   "end": 79.54
-  },
-  {
-   "word": "minus",
-   "start": 79.54,
-   "end": 79.82
-  },
-  {
-   "word": "a",
-   "start": 79.82,
-   "end": 80
-  },
-  {
-   "word": "small",
-   "start": 80,
-   "end": 80.38
-  },
-  {
-   "word": "slice",
-   "start": 80.38,
-   "end": 80.98
-  },
-  {
-   "word": "raised",
-   "start": 80.98,
-   "end": 81.58
-  },
-  {
-   "word": "to",
-   "start": 81.58,
-   "end": 81.74
-  },
-  {
-   "word": "a",
-   "start": 81.74,
-   "end": 81.82
-  },
-  {
-   "word": "big",
-   "start": 81.82,
-   "end": 81.94
-  },
-  {
-   "word": "power",
-   "start": 81.94,
-   "end": 82.34
-  },
-  {
-   "word": "is",
-   "start": 82.46,
-   "end": 83.16
-  },
-  {
-   "word": "e",
-   "start": 83.16,
-   "end": 83.36
-  },
-  {
-   "word": "to",
-   "start": 83.36,
-   "end": 83.48
-  },
-  {
-   "word": "the",
-   "start": 83.48,
-   "end": 83.6
-  },
-  {
-   "word": "minus",
-   "start": 83.6,
-   "end": 83.86
-  },
-  {
-   "word": "lambda,",
-   "start": 83.86,
-   "end": 84.62
-  },
-  {
-   "word": "almost",
-   "start": 84.62,
-   "end": 85.02
-  },
-  {
-   "word": "exactly,",
-   "start": 85.02,
-   "end": 86.3
-  },
-  {
-   "word": "Call",
-   "start": 86.18,
-   "end": 86.38
-  },
-  {
-   "word": "that",
-   "start": 86.38,
-   "end": 86.62
-  },
-  {
-   "word": "p",
-   "start": 86.62,
-   "end": 86.8
-  },
-  {
-   "word": "of",
-   "start": 86.8,
-   "end": 86.96
-  },
-  {
-   "word": "0.",
-   "start": 86.96,
-   "end": 87.5
-  },
-  {
-   "word": "For",
-   "start": 87.5,
-   "end": 88.32
-  },
-  {
-   "word": "two",
-   "start": 88.32,
-   "end": 88.5
-  },
-  {
-   "word": "hits",
-   "start": 88.5,
-   "end": 88.76
+   "start": 13,
+   "end": 13.38
   },
   {
    "word": "in",
-   "start": 88.76,
-   "end": 88.9
+   "start": 13.38,
+   "end": 13.54
   },
   {
-   "word": "the",
-   "start": 88.9,
-   "end": 88.98
+   "word": "clusters.",
+   "start": 13.54,
+   "end": 14.26
   },
   {
-   "word": "square,",
-   "start": 88.98,
-   "end": 89.56
-  },
-  {
-   "word": "pick",
-   "start": 89.56,
-   "end": 89.74
-  },
-  {
-   "word": "two",
-   "start": 89.74,
-   "end": 89.94
-  },
-  {
-   "word": "bombs.",
-   "start": 89.94,
-   "end": 90.64
-  },
-  {
-   "word": "537",
-   "start": 90.64,
-   "end": 92.02
-  },
-  {
-   "word": "times",
-   "start": 92.02,
-   "end": 92.48
-  },
-  {
-   "word": "536",
-   "start": 92.48,
-   "end": 93.52
-  },
-  {
-   "word": "ways,",
-   "start": 93.52,
-   "end": 94.18
-  },
-  {
-   "word": "over",
-   "start": 94.18,
-   "end": 94.54
-  },
-  {
-   "word": "2,",
-   "start": 94.54,
-   "end": 95.48
-  },
-  {
-   "word": "since",
-   "start": 95,
-   "end": 95.6
-  },
-  {
-   "word": "each",
-   "start": 95.6,
-   "end": 95.86
-  },
-  {
-   "word": "pair",
-   "start": 95.86,
-   "end": 96.14
-  },
-  {
-   "word": "counts",
-   "start": 96.14,
-   "end": 96.46
-  },
-  {
-   "word": "twice.",
-   "start": 96.46,
-   "end": 97.24
-  },
-  {
-   "word": "Each",
-   "start": 97.24,
-   "end": 98.22
-  },
-  {
-   "word": "has",
-   "start": 98.22,
-   "end": 98.38
+   "word": "If",
+   "start": 14.1,
+   "end": 14.78
   },
   {
    "word": "that",
-   "start": 98.38,
-   "end": 98.64
+   "start": 14.78,
+   "end": 15.04
   },
   {
-   "word": "same",
-   "start": 98.64,
-   "end": 98.94
-  },
-  {
-   "word": "chance,",
-   "start": 98.94,
-   "end": 99.66
-  },
-  {
-   "word": "and",
-   "start": 99.66,
-   "end": 99.78
-  },
-  {
-   "word": "the",
-   "start": 99.78,
-   "end": 99.88
-  },
-  {
-   "word": "rest",
-   "start": 99.88,
-   "end": 100.08
-  },
-  {
-   "word": "miss.",
-   "start": 100.08,
-   "end": 100.62
-  },
-  {
-   "word": "E",
-   "start": 100.62,
-   "end": 101.28
-  },
-  {
-   "word": "to",
-   "start": 101.28,
-   "end": 101.36
-  },
-  {
-   "word": "the",
-   "start": 101.36,
-   "end": 101.5
-  },
-  {
-   "word": "minus",
-   "start": 101.5,
-   "end": 101.82
-  },
-  {
-   "word": "lambda",
-   "start": 101.48,
-   "end": 102.14
-  },
-  {
-   "word": "again.",
-   "start": 102.14,
-   "end": 102.96
-  },
-  {
-   "word": "536",
-   "start": 102.96,
-   "end": 104.48
-  },
-  {
-   "word": "is",
-   "start": 104.48,
-   "end": 104.78
-  },
-  {
-   "word": "almost",
-   "start": 104.78,
-   "end": 105.16
-  },
-  {
-   "word": "537.",
-   "start": 105.16,
-   "end": 106.56
-  },
-  {
-   "word": "For",
-   "start": 106.56,
-   "end": 107
-  },
-  {
-   "word": "three",
-   "start": 107,
-   "end": 107.18
-  },
-  {
-   "word": "hits,",
-   "start": 107.18,
-   "end": 107.72
-  },
-  {
-   "word": "each",
-   "start": 107.72,
-   "end": 107.98
-  },
-  {
-   "word": "two",
-   "start": 107.97734,
-   "end": 108.15735
-  },
-  {
-   "word": "becomes",
-   "start": 108.15735,
-   "end": 108.537346
-  },
-  {
-   "word": "a",
-   "start": 108.537346,
-   "end": 108.69734
-  },
-  {
-   "word": "3.",
-   "start": 108.69734,
-   "end": 109.19734
-  },
-  {
-   "word": "For",
-   "start": 108.817345,
-   "end": 109.65735
-  },
-  {
-   "word": "any",
-   "start": 109.65735,
-   "end": 109.817345
-  },
-  {
-   "word": "k,",
-   "start": 109.817345,
-   "end": 110.15735
-  },
-  {
-   "word": "a",
-   "start": 110.15735,
-   "end": 110.317345
-  },
-  {
-   "word": "k.",
-   "start": 110.317345,
-   "end": 110.77734
-  },
-  {
-   "word": "The",
-   "start": 111.25735,
-   "end": 111.51734
-  },
-  {
-   "word": "powers",
-   "start": 111.51734,
-   "end": 112.01734
-  },
-  {
-   "word": "merge",
-   "start": 112.01734,
-   "end": 112.457344
-  },
-  {
-   "word": "into",
-   "start": 112.457344,
-   "end": 112.71735
-  },
-  {
-   "word": "lambda",
-   "start": 112.71735,
-   "end": 113.01734
-  },
-  {
-   "word": "to",
-   "start": 113.01734,
-   "end": 113.23734
-  },
-  {
-   "word": "the",
-   "start": 113.23734,
-   "end": 113.357346
-  },
-  {
-   "word": "k,",
-   "start": 113.357346,
-   "end": 113.79735
-  },
-  {
-   "word": "the",
-   "start": 112.817345,
-   "end": 114.317345
-  },
-  {
-   "word": "Poisson",
-   "start": 114.317345,
-   "end": 114.73734
-  },
-  {
-   "word": "distribution.",
-   "start": 114.73734,
-   "end": 115.75735
-  },
-  {
-   "word": "Times",
-   "start": 116.27734,
-   "end": 116.677345
-  },
-  {
-   "word": "576",
-   "start": 116.677345,
-   "end": 117.83734
-  },
-  {
-   "word": "squares,",
-   "start": 117.83734,
-   "end": 118.51735
-  },
-  {
-   "word": "it",
-   "start": 118.51735,
-   "end": 118.957344
-  },
-  {
-   "word": "predicts",
-   "start": 118.957344,
-   "end": 119.37734
-  },
-  {
-   "word": "these",
-   "start": 119.37734,
-   "end": 119.51735
-  },
-  {
-   "word": "purple",
-   "start": 119.51735,
-   "end": 119.857346
-  },
-  {
-   "word": "bars.",
-   "start": 119.857346,
-   "end": 120.537346
-  },
-  {
-   "word": "The",
-   "start": 121.09734,
-   "end": 121.357346
-  },
-  {
-   "word": "honest",
-   "start": 121.357346,
-   "end": 121.61734
-  },
-  {
-   "word": "detector",
-   "start": 121.61734,
-   "end": 122.15735
-  },
-  {
-   "word": "compares",
-   "start": 122.15735,
-   "end": 122.83734
-  },
-  {
-   "word": "whole",
-   "start": 122.83734,
-   "end": 123.19734
-  },
-  {
-   "word": "histograms.",
-   "start": 123.19734,
-   "end": 124.15735
-  },
-  {
-   "word": "39",
-   "start": 124.637344,
-   "end": 125.09734
-  },
-  {
-   "word": "targets,",
-   "start": 125.09734,
-   "end": 125.89735
-  },
-  {
-   "word": "and",
-   "start": 125.89735,
-   "end": 126.23734
-  },
-  {
-   "word": "chance",
-   "start": 126.23734,
-   "end": 126.55734
-  },
-  {
-   "word": "predicts",
-   "start": 126.55734,
-   "end": 127.05734
-  },
-  {
-   "word": "39.",
-   "start": 127.05734,
-   "end": 127.69734
-  },
-  {
-   "word": "The",
-   "start": 128.13734,
-   "end": 128.37735
-  },
-  {
-   "word": "chi-squared",
-   "start": 128.37735,
-   "end": 128.97734
-  },
-  {
-   "word": "misfit",
-   "start": 128.97734,
-   "end": 129.41734
-  },
-  {
-   "word": "squares",
-   "start": 129.41734,
-   "end": 129.79735
-  },
-  {
-   "word": "each",
-   "start": 129.79735,
-   "end": 130.21735
-  },
-  {
-   "word": "bar's",
-   "start": 130.21735,
-   "end": 130.71735
-  },
-  {
-   "word": "gap",
-   "start": 130.71735,
-   "end": 130.79735
-  },
-  {
-   "word": "bars",
-   "start": 130.31735,
-   "end": 130.61734
-  },
-  {
-   "word": "gap",
-   "start": 130.61734,
-   "end": 131.07735
-  },
-  {
-   "word": "and",
-   "start": 131.07735,
-   "end": 131.43735
-  },
-  {
-   "word": "divides",
-   "start": 131.43735,
-   "end": 131.91734
-  },
-  {
-   "word": "by",
-   "start": 131.91734,
-   "end": 132.09735
-  },
-  {
-   "word": "chance's",
-   "start": 132.09735,
-   "end": 132.65735
-  },
-  {
-   "word": "bar",
-   "start": 132.65735,
-   "end": 133.01735
-  },
-  {
-   "word": "because",
-   "start": 133.01735,
-   "end": 133.69734
-  },
-  {
-   "word": "short",
-   "start": 133.69734,
-   "end": 134.09735
-  },
-  {
-   "word": "bars",
-   "start": 134.09735,
-   "end": 134.41734
-  },
-  {
-   "word": "wobble",
-   "start": 134.41734,
-   "end": 134.85735
-  },
-  {
-   "word": "less.",
-   "start": 134.85735,
-   "end": 135.43735
-  },
-  {
-   "word": "A",
-   "start": 135.43735,
-   "end": 136.07735
-  },
-  {
-   "word": "miss",
-   "start": 136.07735,
-   "end": 136.35735
-  },
-  {
-   "word": "on",
-   "start": 136.35735,
-   "end": 136.59735
-  },
-  {
-   "word": "a",
-   "start": 136.59735,
-   "end": 136.69734
-  },
-  {
-   "word": "short",
-   "start": 136.69734,
-   "end": 136.95734
-  },
-  {
-   "word": "bar",
-   "start": 136.81735,
-   "end": 137.33734
-  },
-  {
-   "word": "counts",
-   "start": 137.33734,
-   "end": 137.73734
-  },
-  {
-   "word": "more.",
-   "start": 137.73734,
-   "end": 138.23734
-  },
-  {
-   "word": "Map",
-   "start": 138.23734,
-   "end": 138.93735
-  },
-  {
-   "word": "A",
-   "start": 138.93735,
-   "end": 139.07735
-  },
-  {
-   "word": "scores.",
-   "start": 139.07735,
-   "end": 139.65735
-  },
-  {
-   "word": "2.0.",
-   "start": 139.65735,
-   "end": 140.87735
-  },
-  {
-   "word": "Three",
-   "start": 140.87735,
-   "end": 141.77734
-  },
-  {
-   "word": "out",
-   "start": 141.77734,
-   "end": 142.07735
-  },
-  {
-   "word": "of",
-   "start": 142.07735,
-   "end": 142.21735
-  },
-  {
-   "word": "four",
-   "start": 142.21735,
-   "end": 142.47734
-  },
-  {
-   "word": "simulated",
-   "start": 142.47734,
-   "end": 143.13734
-  },
-  {
-   "word": "chance",
-   "start": 143.13734,
-   "end": 143.57735
-  },
-  {
-   "word": "maps",
-   "start": 143.57735,
-   "end": 143.89734
-  },
-  {
-   "word": "score",
-   "start": 143.89734,
-   "end": 144.21735
-  },
-  {
-   "word": "worse.",
-   "start": 144.21735,
-   "end": 144.75734
-  },
-  {
-   "word": "That",
-   "start": 144.97734,
-   "end": 145.45734
-  },
-  {
-   "word": "share",
-   "start": 145.45734,
-   "end": 145.67734
-  },
-  {
-   "word": "P",
-   "start": 145.67734,
-   "end": 145.91734
-  },
-  {
-   "word": "is .74.",
-   "start": 145.91734,
-   "end": 148.19734
-  },
-  {
-   "word": "Now",
-   "start": 148.19734,
-   "end": 149.11734
-  },
-  {
-   "word": "map",
-   "start": 149.11734,
-   "end": 149.35735
-  },
-  {
-   "word": "B.",
-   "start": 149.35735,
-   "end": 149.87735
-  },
-  {
-   "word": "Half",
-   "start": 149.87735,
-   "end": 150.47734
-  },
-  {
-   "word": "the",
-   "start": 150.47734,
-   "end": 150.65735
-  },
-  {
-   "word": "expected",
-   "start": 150.65735,
-   "end": 151.15735
-  },
-  {
-   "word": "empty",
-   "start": 151.15735,
-   "end": 151.47734
-  },
-  {
-   "word": "squares,",
-   "start": 151.47734,
-   "end": 152.09735
-  },
-  {
-   "word": "a",
-   "start": 152.09735,
-   "end": 152.37735
-  },
-  {
-   "word": "tower",
-   "start": 152.37735,
-   "end": 152.69734
-  },
-  {
-   "word": "of",
-   "start": 152.69734,
-   "end": 152.93735
-  },
-  {
-   "word": "single",
-   "start": 152.93735,
-   "end": 153.27734
-  },
-  {
-   "word": "hits,",
-   "start": 153.27734,
-   "end": 153.89734
-  },
-  {
-   "word": "misfit",
-   "start": 153.89734,
-   "end": 154.57735
-  },
-  {
-   "word": "272.",
-   "start": 154.63734,
-   "end": 156.05734
-  },
-  {
-   "word": "A",
-   "start": 156.05734,
-   "end": 156.59735
-  },
-  {
-   "word": "pattern",
-   "start": 156.59735,
-   "end": 157.05734
-  },
-  {
-   "word": "this",
-   "start": 157.05734,
-   "end": 157.35735
-  },
-  {
-   "word": "even",
-   "start": 157.35735,
-   "end": 157.79735
-  },
-  {
-   "word": "is",
-   "start": 157.79735,
-   "end": 158.01735
-  },
-  {
-   "word": "the",
-   "start": 158.01735,
-   "end": 158.13734
-  },
-  {
-   "word": "fingerprint",
-   "start": 158.13734,
-   "end": 158.65735
-  },
-  {
-   "word": "of",
-   "start": 158.65735,
-   "end": 159.01735
-  },
-  {
-   "word": "a",
-   "start": 159.01735,
-   "end": 159.05734
-  },
-  {
-   "word": "spacing",
-   "start": 159.05734,
-   "end": 159.45734
-  },
-  {
-   "word": "rule.",
-   "start": 159.45734,
-   "end": 160.05734
-  },
-  {
-   "word": "Aimed",
-   "start": 160.05734,
-   "end": 160.95734
-  },
-  {
-   "word": "bombs",
-   "start": 160.95734,
-   "end": 161.25734
-  },
-  {
-   "word": "would",
-   "start": 161.25734,
-   "end": 161.55734
-  },
-  {
-   "word": "miss",
-   "start": 161.55734,
-   "end": 161.77734
-  },
-  {
-   "word": "the",
-   "start": 161.77734,
-   "end": 161.93735
-  },
-  {
-   "word": "other",
-   "start": 161.43735,
-   "end": 162.11734
-  },
-  {
-   "word": "way.",
-   "start": 162.11734,
-   "end": 162.65735
-  },
-  {
-   "word": "Extra",
-   "start": 162.65735,
-   "end": 163.37735
-  },
-  {
-   "word": "empty",
-   "start": 163.37735,
-   "end": 163.67734
-  },
-  {
-   "word": "squares,",
-   "start": 163.67734,
-   "end": 164.43735
-  },
-  {
-   "word": "extra",
-   "start": 164.43735,
-   "end": 164.87735
-  },
-  {
-   "word": "pileups.",
-   "start": 164.87735,
-   "end": 165.65735
-  },
-  {
-   "word": "In",
-   "start": 165.65735,
-   "end": 166.17734
-  },
-  {
-   "word": "1946,",
-   "start": 166.17734,
-   "end": 167.91734
-  },
-  {
-   "word": "R.",
-   "start": 167.91734,
-   "end": 168.13734
-  },
-  {
-   "word": "D.",
-   "start": 168.13734,
-   "end": 168.41734
-  },
-  {
-   "word": "Clarke",
-   "start": 168.41734,
-   "end": 168.57735
-  },
-  {
-   "word": "published",
-   "start": 168.57735,
-   "end": 168.97736
-  },
-  {
-   "word": "the",
-   "start": 168.97736,
-   "end": 169.15735
-  },
-  {
-   "word": "same",
-   "start": 169.15735,
-   "end": 169.43735
-  },
-  {
-   "word": "test",
-   "start": 169.43735,
-   "end": 169.95734
-  },
-  {
-   "word": "on",
-   "start": 169.57735,
-   "end": 170.23734
-  },
-  {
-   "word": "London's",
-   "start": 170.23734,
-   "end": 170.69734
-  },
-  {
-   "word": "real",
-   "start": 170.69734,
-   "end": 170.91734
-  },
-  {
-   "word": "hits.",
-   "start": 170.91734,
-   "end": 171.43735
-  },
-  {
-   "word": "537",
-   "start": 171.43735,
-   "end": 172.91734
-  },
-  {
-   "word": "in",
-   "start": 172.91734,
-   "end": 173.45734
-  },
-  {
-   "word": "576",
-   "start": 173.45734,
-   "end": 174.61734
-  },
-  {
-   "word": "squares.",
-   "start": 174.61734,
-   "end": 175.53735
-  },
-  {
-   "word": "Chance",
-   "start": 175.53735,
-   "end": 176.21735
-  },
-  {
-   "word": "predicted",
-   "start": 176.21735,
-   "end": 176.69734
-  },
-  {
-   "word": "227",
-   "start": 176.69734,
-   "end": 178.09735
-  },
-  {
-   "word": "empty",
-   "start": 178.09735,
-   "end": 178.49734
-  },
-  {
-   "word": "squares.",
-   "start": 178.49734,
-   "end": 179.23734
-  },
-  {
-   "word": "Clarke",
-   "start": 179.23734,
-   "end": 179.95734
-  },
-  {
-   "word": "counted",
-   "start": 179.99734,
-   "end": 180.37735
-  },
-  {
-   "word": "229.",
-   "start": 180.37735,
-   "end": 181.81735
-  },
-  {
-   "word": "Overall,",
-   "start": 181.81735,
-   "end": 182.95734
-  },
-  {
-   "word": "p",
-   "start": 182.95734,
-   "end": 183.01733
-  },
-  {
-   "word": "equals .88.",
-   "start": 183.01733,
-   "end": 184.37735
-  },
-  {
-   "word": "London's",
-   "start": 184.37735,
-   "end": 185.37735
-  },
-  {
-   "word": "clusters",
-   "start": 185.37735,
-   "end": 185.77734
-  },
-  {
-   "word": "were",
-   "start": 185.77734,
-   "end": 186.33734
-  },
-  {
-   "word": "no",
-   "start": 186.33734,
-   "end": 186.49734
-  },
-  {
-   "word": "sign",
-   "start": 186.49734,
-   "end": 186.83734
-  },
-  {
-   "word": "of",
-   "start": 186.83734,
-   "end": 187.01733
+   "word": "meant",
+   "start": 15.04,
+   "end": 15.24
   },
   {
    "word": "precise",
-   "start": 187.01733,
-   "end": 187.37735
+   "start": 15.24,
+   "end": 15.72
   },
   {
-   "word": "aim.",
-   "start": 187.37735,
-   "end": 188.03735
+   "word": "aim,",
+   "start": 15.72,
+   "end": 16.44
   },
   {
-   "word": "The",
-   "start": 188.03735,
-   "end": 188.65735
-  },
-  {
-   "word": "bombs",
-   "start": 188.65735,
-   "end": 188.99734
+   "word": "factories",
+   "start": 16.44,
+   "end": 17.04
   },
   {
    "word": "were",
-   "start": 188.59735,
-   "end": 189.25735
-  },
-  {
-   "word": "aimed",
-   "start": 189.25735,
-   "end": 189.55734
+   "start": 17.04,
+   "end": 17.24
   },
   {
    "word": "at",
-   "start": 189.55734,
-   "end": 189.75735
+   "start": 17.24,
+   "end": 17.36
   },
   {
-   "word": "central",
-   "start": 189.75735,
-   "end": 190.07735
+   "word": "risk.",
+   "start": 17.36,
+   "end": 18.14
   },
   {
-   "word": "London,",
-   "start": 190.07735,
-   "end": 190.65735
-  },
-  {
-   "word": "but",
-   "start": 190.65735,
-   "end": 191.23734
-  },
-  {
-   "word": "tended",
-   "start": 191.23734,
-   "end": 191.49734
-  },
-  {
-   "word": "to",
-   "start": 191.49734,
-   "end": 191.71735
-  },
-  {
-   "word": "fall",
-   "start": 191.71735,
-   "end": 191.87735
-  },
-  {
-   "word": "short,",
-   "start": 191.87735,
-   "end": 192.45734
-  },
-  {
-   "word": "so",
-   "start": 192.45734,
-   "end": 192.81735
-  },
-  {
-   "word": "farther",
-   "start": 192.81735,
-   "end": 193.15735
-  },
-  {
-   "word": "north,",
-   "start": 193.15735,
-   "end": 193.79735
-  },
-  {
-   "word": "hits",
-   "start": 193.79735,
-   "end": 194.35735
-  },
-  {
-   "word": "were",
-   "start": 194.35735,
-   "end": 194.57735
-  },
-  {
-   "word": "about",
-   "start": 194.57735,
-   "end": 194.73734
-  },
-  {
-   "word": "half",
-   "start": 194.31735,
-   "end": 195.07735
-  },
-  {
-   "word": "as",
-   "start": 195.07735,
-   "end": 195.31735
-  },
-  {
-   "word": "dense.",
-   "start": 195.31735,
-   "end": 196.21735
-  },
-  {
-   "word": "Score",
-   "start": 196.21735,
-   "end": 196.89734
+   "word": "Build",
+   "start": 18.34,
+   "end": 18.68
   },
   {
    "word": "the",
-   "start": 196.89734,
-   "end": 197.03735
+   "start": 18.68,
+   "end": 18.82
   },
   {
-   "word": "north",
-   "start": 197.03735,
-   "end": 197.21735
+   "word": "detector",
+   "start": 18.82,
+   "end": 19.3
   },
   {
-   "word": "alone",
-   "start": 197.21735,
-   "end": 197.63734
+   "word": "your",
+   "start": 19.3,
+   "end": 19.58
+  },
+  {
+   "word": "eye",
+   "start": 19.58,
+   "end": 19.88
+  },
+  {
+   "word": "is",
+   "start": 19.88,
+   "end": 20.16
+  },
+  {
+   "word": "running.",
+   "start": 20.16,
+   "end": 20.68
+  },
+  {
+   "word": "Cut",
+   "start": 20.54,
+   "end": 21.3
+  },
+  {
+   "word": "each",
+   "start": 21.3,
+   "end": 21.64
+  },
+  {
+   "word": "map",
+   "start": 21.64,
+   "end": 22.08
+  },
+  {
+   "word": "into",
+   "start": 22.08,
+   "end": 22.28
+  },
+  {
+   "word": "576",
+   "start": 22.28,
+   "end": 23.68
+  },
+  {
+   "word": "squares,",
+   "start": 23.68,
+   "end": 24.52
   },
   {
    "word": "and",
-   "start": 197.63734,
-   "end": 197.91734
+   "start": 24.34,
+   "end": 25
   },
   {
-   "word": "it",
-   "start": 197.91734,
-   "end": 198.05734
+   "word": "flag",
+   "start": 25,
+   "end": 25.32
   },
   {
-   "word": "fits",
-   "start": 198.05734,
-   "end": 198.25735
+   "word": "any",
+   "start": 25.32,
+   "end": 25.56
   },
   {
-   "word": "chance",
-   "start": 198.25735,
-   "end": 198.59735
+   "word": "square",
+   "start": 25.56,
+   "end": 25.9
   },
   {
-   "word": "too,",
-   "start": 198.59735,
-   "end": 199.17734
+   "word": "with",
+   "start": 25.9,
+   "end": 26.1
   },
   {
-   "word": "p",
-   "start": 199.17734,
-   "end": 199.57735
+   "word": "three",
+   "start": 26.1,
+   "end": 26.46
   },
   {
-   "word": "equals .45.",
-   "start": 199.57735,
-   "end": 201.11734
+   "word": "or",
+   "start": 26.46,
+   "end": 26.68
   },
   {
-   "word": "The",
-   "start": 201.11734,
-   "end": 201.61734
+   "word": "more",
+   "start": 26.68,
+   "end": 26.86
   },
   {
-   "word": "aim",
-   "start": 201.61734,
-   "end": 201.89734
-  },
-  {
-   "word": "hides",
-   "start": 201.41734,
-   "end": 202.25735
-  },
-  {
-   "word": "in",
-   "start": 202.25735,
-   "end": 202.45734
-  },
-  {
-   "word": "lambda,",
-   "start": 202.45734,
-   "end": 202.97736
-  },
-  {
-   "word": "which",
-   "start": 202.97736,
-   "end": 203.33734
-  },
-  {
-   "word": "the",
-   "start": 203.33734,
-   "end": 203.49734
-  },
-  {
-   "word": "test",
-   "start": 203.49734,
-   "end": 203.79735
-  },
-  {
-   "word": "holds",
-   "start": 203.79735,
-   "end": 204.11734
-  },
-  {
-   "word": "fixed.",
-   "start": 204.11734,
-   "end": 204.85735
-  },
-  {
-   "word": "The",
-   "start": 204.85735,
-   "end": 205.87735
-  },
-  {
-   "word": "clumps",
-   "start": 205.87735,
-   "end": 206.15735
-  },
-  {
-   "word": "in",
-   "start": 206.15735,
-   "end": 206.41734
-  },
-  {
-   "word": "map",
-   "start": 206.41734,
-   "end": 206.65735
-  },
-  {
-   "word": "A",
-   "start": 206.65735,
-   "end": 207.09735
-  },
-  {
-   "word": "are",
-   "start": 207.09735,
-   "end": 207.93735
-  },
-  {
-   "word": "what",
-   "start": 207.93735,
-   "end": 208.09735
-  },
-  {
-   "word": "no",
-   "start": 208.09735,
-   "end": 208.27734
-  },
-  {
-   "word": "aim",
-   "start": 208.27734,
-   "end": 208.53735
-  },
-  {
-   "word": "at",
-   "start": 208.53735,
-   "end": 208.71735
-  },
-  {
-   "word": "all",
-   "start": 208.71735,
-   "end": 208.87735
-  },
-  {
-   "word": "looks",
-   "start": 208.87735,
-   "end": 209.11734
+   "word": "hits,",
+   "start": 26.86,
+   "end": 27.46
   },
   {
    "word": "like",
-   "start": 209.11734,
-   "end": 209.51733
+   "start": 27.46,
+   "end": 27.84
   },
   {
-   "word": "if",
-   "start": 209.51733,
-   "end": 210.17734
+   "word": "this",
+   "start": 27.84,
+   "end": 28.06
   },
   {
-   "word": "you",
-   "start": 210.17734,
-   "end": 210.31735
+   "word": "one.",
+   "start": 28.06,
+   "end": 28.84
   },
   {
-   "word": "chose",
-   "start": 210.31735,
-   "end": 210.73734
+   "word": "Map",
+   "start": 29.1,
+   "end": 29.42
+  },
+  {
+   "word": "A",
+   "start": 29.42,
+   "end": 29.58
+  },
+  {
+   "word": "lights",
+   "start": 29.58,
+   "end": 29.94
+  },
+  {
+   "word": "up",
+   "start": 29.94,
+   "end": 30.12
+  },
+  {
+   "word": "with",
+   "start": 30.12,
+   "end": 30.26
+  },
+  {
+   "word": "39",
+   "start": 30.26,
+   "end": 30.6
+  },
+  {
+   "word": "targets,",
+   "start": 30.6,
+   "end": 31.52
   },
   {
    "word": "map",
-   "start": 210.73734,
-   "end": 211.03735
+   "start": 31.52,
+   "end": 31.96
   },
   {
-   "word": "B.",
-   "start": 211.03735,
-   "end": 211.55734
+   "word": "B",
+   "start": 31.96,
+   "end": 32.2
   },
   {
-   "word": "You",
-   "start": 211.55734,
-   "end": 212.07735
+   "word": "with",
+   "start": 32.2,
+   "end": 32.42
   },
   {
-   "word": "chose",
-   "start": 212.07735,
-   "end": 212.39734
+   "word": "none.",
+   "start": 32.42,
+   "end": 32.72
+  },
+  {
+   "word": "So",
+   "start": 33.3,
+   "end": 33.7
+  },
+  {
+   "word": "A",
+   "start": 33.7,
+   "end": 33.86
+  },
+  {
+   "word": "looks",
+   "start": 33.86,
+   "end": 34.12
+  },
+  {
+   "word": "aimed.",
+   "start": 34.12,
+   "end": 34.62
+  },
+  {
+   "word": "Backwards.",
+   "start": 35.2,
+   "end": 36.28
+  },
+  {
+   "word": "I",
+   "start": 36.26,
+   "end": 36.88
+  },
+  {
+   "word": "dropped",
+   "start": 36.88,
+   "end": 37.24
+  },
+  {
+   "word": "every",
+   "start": 37.24,
+   "end": 37.62
+  },
+  {
+   "word": "hit",
+   "start": 37.62,
+   "end": 37.82
+  },
+  {
+   "word": "on",
+   "start": 37.82,
+   "end": 37.98
+  },
+  {
+   "word": "map",
+   "start": 37.98,
+   "end": 38.22
+  },
+  {
+   "word": "A",
+   "start": 38.22,
+   "end": 38.48
+  },
+  {
+   "word": "at",
+   "start": 38.48,
+   "end": 38.68
+  },
+  {
+   "word": "random,",
+   "start": 38.68,
+   "end": 39.26
+  },
+  {
+   "word": "so",
+   "start": 39.1,
+   "end": 39.78
+  },
+  {
+   "word": "all",
+   "start": 39.78,
+   "end": 40.08
+  },
+  {
+   "word": "39",
+   "start": 40.08,
+   "end": 40.62
+  },
+  {
+   "word": "targets",
+   "start": 40.62,
+   "end": 41.16
+  },
+  {
+   "word": "are",
+   "start": 41.16,
+   "end": 41.34
+  },
+  {
+   "word": "false",
+   "start": 41.34,
+   "end": 41.7
+  },
+  {
+   "word": "alarms.",
+   "start": 41.7,
+   "end": 42.48
+  },
+  {
+   "word": "Map",
+   "start": 42.34,
+   "end": 43.18
+  },
+  {
+   "word": "B's",
+   "start": 43.18,
+   "end": 43.54
+  },
+  {
+   "word": "rule,",
+   "start": 43.54,
+   "end": 43.94
+  },
+  {
+   "word": "no",
+   "start": 43.94,
+   "end": 44.46
+  },
+  {
+   "word": "two",
+   "start": 44.46,
+   "end": 44.76
+  },
+  {
+   "word": "hits",
+   "start": 44.76,
+   "end": 45
+  },
+  {
+   "word": "closer",
+   "start": 45,
+   "end": 45.38
+  },
+  {
+   "word": "than",
+   "start": 45.38,
+   "end": 45.62
+  },
+  {
+   "word": "four-fifths",
+   "start": 45.62,
+   "end": 46.22
+  },
+  {
+   "word": "of",
+   "start": 46.22,
+   "end": 46.34
+  },
+  {
+   "word": "a",
+   "start": 46.34,
+   "end": 46.42
+  },
+  {
+   "word": "square.",
+   "start": 46.42,
+   "end": 46.98
+  },
+  {
+   "word": "Your",
+   "start": 46.8,
+   "end": 47.52
+  },
+  {
+   "word": "eye,",
+   "start": 47.52,
+   "end": 47.9
+  },
+  {
+   "word": "like",
+   "start": 47.9,
+   "end": 48.06
   },
   {
    "word": "the",
-   "start": 212.39734,
-   "end": 212.59735
+   "start": 48.06,
+   "end": 48.18
+  },
+  {
+   "word": "detector,",
+   "start": 48.18,
+   "end": 48.96
+  },
+  {
+   "word": "expects",
+   "start": 48.96,
+   "end": 49.66
+  },
+  {
+   "word": "chance",
+   "start": 49.66,
+   "end": 50.04
+  },
+  {
+   "word": "to",
+   "start": 50.04,
+   "end": 50.24
+  },
+  {
+   "word": "look",
+   "start": 50.24,
+   "end": 50.4
+  },
+  {
+   "word": "that",
+   "start": 50.4,
+   "end": 50.62
+  },
+  {
+   "word": "even.",
+   "start": 50.62,
+   "end": 51.22
+  },
+  {
+   "word": "Almost",
+   "start": 51.74,
+   "end": 52.18
+  },
+  {
+   "word": "one",
+   "start": 52.18,
+   "end": 52.48
+  },
+  {
+   "word": "hit",
+   "start": 52.48,
+   "end": 52.7
+  },
+  {
+   "word": "per",
+   "start": 52.7,
+   "end": 52.86
+  },
+  {
+   "word": "square.",
+   "start": 52.86,
+   "end": 53.46
+  },
+  {
+   "word": "Guess",
+   "start": 53.28,
+   "end": 53.98
+  },
+  {
+   "word": "how",
+   "start": 53.98,
+   "end": 54.18
+  },
+  {
+   "word": "many",
+   "start": 54.18,
+   "end": 54.34
+  },
+  {
+   "word": "squares",
+   "start": 54.34,
+   "end": 54.72
+  },
+  {
+   "word": "stay",
+   "start": 54.72,
+   "end": 54.98
+  },
+  {
+   "word": "empty?",
+   "start": 54.98,
+   "end": 55.62
+  },
+  {
+   "word": "Each",
+   "start": 57.24,
+   "end": 57.46
+  },
+  {
+   "word": "bomb",
+   "start": 57.46,
+   "end": 57.82
+  },
+  {
+   "word": "has",
+   "start": 57.82,
+   "end": 58.1
+  },
+  {
+   "word": "a",
+   "start": 58.1,
+   "end": 58.22
+  },
+  {
+   "word": "1",
+   "start": 58.22,
+   "end": 58.5
+  },
+  {
+   "word": "in",
+   "start": 58.5,
+   "end": 58.62
+  },
+  {
+   "word": "5",
+   "start": 58.62,
+   "end": 59
+  },
+  {
+   "word": "76",
+   "start": 59,
+   "end": 59.6
+  },
+  {
+   "word": "chance",
+   "start": 59.6,
+   "end": 60.22
+  },
+  {
+   "word": "of",
+   "start": 60.22,
+   "end": 60.36
+  },
+  {
+   "word": "landing",
+   "start": 60.36,
+   "end": 60.7
+  },
+  {
+   "word": "in",
+   "start": 60.7,
+   "end": 60.92
+  },
+  {
+   "word": "this",
+   "start": 60.92,
+   "end": 61.04
+  },
+  {
+   "word": "square.",
+   "start": 61.04,
+   "end": 61.34
+  },
+  {
+   "word": "To",
+   "start": 61.84,
+   "end": 62.02
+  },
+  {
+   "word": "stay",
+   "start": 62.02,
+   "end": 62.26
+  },
+  {
+   "word": "empty,",
+   "start": 62.26,
+   "end": 62.94
+  },
+  {
+   "word": "all",
+   "start": 62.94,
+   "end": 63.42
+  },
+  {
+   "word": "537",
+   "start": 63.42,
+   "end": 64.24
+  },
+  {
+   "word": "must",
+   "start": 64.24,
+   "end": 64.9
+  },
+  {
+   "word": "miss.",
+   "start": 64.9,
+   "end": 65.4
+  },
+  {
+   "word": "About",
+   "start": 66.36,
+   "end": 66.68
+  },
+  {
+   "word": "227,",
+   "start": 66.68,
+   "end": 68.08
+  },
+  {
+   "word": "four",
+   "start": 68.08,
+   "end": 68.52
+  },
+  {
+   "word": "squares",
+   "start": 68.52,
+   "end": 68.9
+  },
+  {
+   "word": "in",
+   "start": 68.9,
+   "end": 69.16
+  },
+  {
+   "word": "10,",
+   "start": 69.16,
+   "end": 69.74
+  },
+  {
+   "word": "map",
+   "start": 69.74,
+   "end": 70.34
+  },
+  {
+   "word": "A",
+   "start": 70.34,
+   "end": 70.54
+  },
+  {
+   "word": "has",
+   "start": 70.54,
+   "end": 70.78
+  },
+  {
+   "word": "222.",
+   "start": 70.78,
+   "end": 72.18
+  },
+  {
+   "word": "Those",
+   "start": 72.82,
+   "end": 73.1
+  },
+  {
+   "word": "empty",
+   "start": 73.1,
+   "end": 73.42
+  },
+  {
+   "word": "squares",
+   "start": 73.42,
+   "end": 73.8
+  },
+  {
+   "word": "force",
+   "start": 73.8,
+   "end": 74.1
+  },
+  {
+   "word": "pileups.",
+   "start": 74.1,
+   "end": 74.8
+  },
+  {
+   "word": "183",
+   "start": 75.18,
+   "end": 76.3
+  },
+  {
+   "word": "hits",
+   "start": 76.3,
+   "end": 76.72
+  },
+  {
+   "word": "must",
+   "start": 76.72,
+   "end": 77.32
+  },
+  {
+   "word": "land",
+   "start": 77.32,
+   "end": 77.66
+  },
+  {
+   "word": "where",
+   "start": 77.66,
+   "end": 77.9
+  },
+  {
+   "word": "another",
+   "start": 77.9,
+   "end": 78.16
+  },
+  {
+   "word": "already",
+   "start": 78.16,
+   "end": 78.58
+  },
+  {
+   "word": "did.",
+   "start": 78.58,
+   "end": 79.06
+  },
+  {
+   "word": "Let's",
+   "start": 80.16,
+   "end": 80.42
+  },
+  {
+   "word": "call",
+   "start": 80.42,
+   "end": 80.62
+  },
+  {
+   "word": "the",
+   "start": 80.62,
+   "end": 80.78
+  },
+  {
+   "word": "average",
+   "start": 80.78,
+   "end": 81.12
+  },
+  {
+   "word": "hits",
+   "start": 81.12,
+   "end": 81.42
+  },
+  {
+   "word": "per",
+   "start": 81.42,
+   "end": 81.64
+  },
+  {
+   "word": "square",
+   "start": 81.64,
+   "end": 81.98
+  },
+  {
+   "word": "lambda.",
+   "start": 81.98,
+   "end": 82.34
+  },
+  {
+   "word": "1",
+   "start": 83.2,
+   "end": 83.3
+  },
+  {
+   "word": "minus",
+   "start": 83.3,
+   "end": 83.6
+  },
+  {
+   "word": "a",
+   "start": 83.6,
+   "end": 83.82
+  },
+  {
+   "word": "small",
+   "start": 83.82,
+   "end": 84.2
+  },
+  {
+   "word": "slice",
+   "start": 84.2,
+   "end": 84.76
+  },
+  {
+   "word": "raised",
+   "start": 84.76,
+   "end": 85.3
+  },
+  {
+   "word": "to",
+   "start": 85.3,
+   "end": 85.56
+  },
+  {
+   "word": "a",
+   "start": 85.56,
+   "end": 85.64
+  },
+  {
+   "word": "big",
+   "start": 85.64,
+   "end": 85.76
+  },
+  {
+   "word": "power",
+   "start": 85.76,
+   "end": 86.16
+  },
+  {
+   "word": "is",
+   "start": 86.16,
+   "end": 86.92
+  },
+  {
+   "word": "e",
+   "start": 86.92,
+   "end": 87.16
+  },
+  {
+   "word": "to",
+   "start": 87.16,
+   "end": 87.32
+  },
+  {
+   "word": "the",
+   "start": 87.32,
+   "end": 87.42
+  },
+  {
+   "word": "minus",
+   "start": 87.42,
+   "end": 87.66
+  },
+  {
+   "word": "lambda,",
+   "start": 87.66,
+   "end": 88.36
+  },
+  {
+   "word": "almost",
+   "start": 88.36,
+   "end": 88.82
+  },
+  {
+   "word": "exactly.",
+   "start": 88.82,
+   "end": 89.86
+  },
+  {
+   "word": "Call",
+   "start": 89.86,
+   "end": 90.26
+  },
+  {
+   "word": "that",
+   "start": 90.26,
+   "end": 90.46
+  },
+  {
+   "word": "p",
+   "start": 90.46,
+   "end": 90.64
+  },
+  {
+   "word": "of",
+   "start": 90.64,
+   "end": 90.8
+  },
+  {
+   "word": "0.",
+   "start": 90.8,
+   "end": 91.38
+  },
+  {
+   "word": "For",
+   "start": 91.6,
+   "end": 92.18
+  },
+  {
+   "word": "two",
+   "start": 92.18,
+   "end": 92.34
+  },
+  {
+   "word": "hits",
+   "start": 92.34,
+   "end": 92.6
+  },
+  {
+   "word": "in",
+   "start": 92.6,
+   "end": 92.74
+  },
+  {
+   "word": "the",
+   "start": 92.74,
+   "end": 92.82
+  },
+  {
+   "word": "square,",
+   "start": 92.82,
+   "end": 93.42
+  },
+  {
+   "word": "pick",
+   "start": 93.42,
+   "end": 93.58
+  },
+  {
+   "word": "two",
+   "start": 93.58,
+   "end": 93.8
+  },
+  {
+   "word": "bombs.",
+   "start": 93.8,
+   "end": 94.46
+  },
+  {
+   "word": "537",
+   "start": 94.92,
+   "end": 95.86
+  },
+  {
+   "word": "times",
+   "start": 95.86,
+   "end": 96.36
+  },
+  {
+   "word": "536",
+   "start": 96.36,
+   "end": 97.36
+  },
+  {
+   "word": "ways",
+   "start": 97.36,
+   "end": 97.98
+  },
+  {
+   "word": "over",
+   "start": 97.98,
+   "end": 98.36
+  },
+  {
+   "word": "2",
+   "start": 98.36,
+   "end": 98.76
+  },
+  {
+   "word": "since",
+   "start": 98.76,
+   "end": 99.4
+  },
+  {
+   "word": "each",
+   "start": 99.4,
+   "end": 99.66
+  },
+  {
+   "word": "pair",
+   "start": 99.66,
+   "end": 99.92
+  },
+  {
+   "word": "counts",
+   "start": 99.92,
+   "end": 100.28
+  },
+  {
+   "word": "twice.",
+   "start": 100.28,
+   "end": 101.06
+  },
+  {
+   "word": "Each",
+   "start": 101.3,
+   "end": 101.88
+  },
+  {
+   "word": "has",
+   "start": 101.88,
+   "end": 102.04
+  },
+  {
+   "word": "that",
+   "start": 102.04,
+   "end": 102.28
+  },
+  {
+   "word": "same",
+   "start": 102.28,
+   "end": 102.58
+  },
+  {
+   "word": "chance",
+   "start": 102.58,
+   "end": 103.08
+  },
+  {
+   "word": "and",
+   "start": 103.08,
+   "end": 103.4
+  },
+  {
+   "word": "the",
+   "start": 103.4,
+   "end": 103.5
+  },
+  {
+   "word": "rest",
+   "start": 103.5,
+   "end": 103.74
+  },
+  {
+   "word": "miss,",
+   "start": 103.74,
+   "end": 104.72
+  },
+  {
+   "word": "e",
+   "start": 104.72,
+   "end": 104.9
+  },
+  {
+   "word": "to",
+   "start": 104.9,
+   "end": 105.02
+  },
+  {
+   "word": "the",
+   "start": 105.02,
+   "end": 105.12
+  },
+  {
+   "word": "minus",
+   "start": 105.12,
+   "end": 105.46
+  },
+  {
+   "word": "lambda",
+   "start": 105.46,
+   "end": 105.84
+  },
+  {
+   "word": "again.",
+   "start": 105.84,
+   "end": 106.42
+  },
+  {
+   "word": "For",
+   "start": 106.98,
+   "end": 107.54
+  },
+  {
+   "word": "three",
+   "start": 107.54,
+   "end": 107.76
+  },
+  {
+   "word": "hits,",
+   "start": 107.76,
+   "end": 108.32
+  },
+  {
+   "word": "each",
+   "start": 108.31335,
+   "end": 108.53335
+  },
+  {
+   "word": "two",
+   "start": 108.53335,
+   "end": 108.733345
+  },
+  {
+   "word": "becomes",
+   "start": 108.733345,
+   "end": 109.11334
+  },
+  {
+   "word": "a",
+   "start": 109.11334,
+   "end": 109.33334
+  },
+  {
+   "word": "three.",
+   "start": 109.33334,
+   "end": 109.773346
+  },
+  {
+   "word": "For",
+   "start": 109.553345,
+   "end": 110.193344
+  },
+  {
+   "word": "any",
+   "start": 110.193344,
+   "end": 110.373344
+  },
+  {
+   "word": "k,",
+   "start": 110.373344,
+   "end": 110.71335
+  },
+  {
+   "word": "a",
+   "start": 110.71335,
+   "end": 110.873344
+  },
+  {
+   "word": "k.",
+   "start": 110.873344,
+   "end": 111.33334
+  },
+  {
+   "word": "The",
+   "start": 111.81335,
+   "end": 112.093346
+  },
+  {
+   "word": "powers",
+   "start": 112.093346,
+   "end": 112.57335
+  },
+  {
+   "word": "merge",
+   "start": 112.57335,
+   "end": 113.01334
+  },
+  {
+   "word": "into",
+   "start": 113.01334,
+   "end": 113.25334
+  },
+  {
+   "word": "lambda",
+   "start": 113.25334,
+   "end": 113.61334
+  },
+  {
+   "word": "to",
+   "start": 113.61334,
+   "end": 113.79334
+  },
+  {
+   "word": "the",
+   "start": 113.79334,
+   "end": 113.913345
+  },
+  {
+   "word": "k,",
+   "start": 113.913345,
+   "end": 114.373344
+  },
+  {
+   "word": "the",
+   "start": 113.553345,
+   "end": 114.873344
+  },
+  {
+   "word": "Poisson",
+   "start": 114.873344,
+   "end": 115.273346
+  },
+  {
+   "word": "distribution.",
+   "start": 115.273346,
+   "end": 116.35335
+  },
+  {
+   "word": "Times",
+   "start": 116.83334,
+   "end": 117.233345
+  },
+  {
+   "word": "576",
+   "start": 117.233345,
+   "end": 118.29334
+  },
+  {
+   "word": "squares,",
+   "start": 118.29334,
+   "end": 119.053345
+  },
+  {
+   "word": "it",
+   "start": 119.053345,
+   "end": 119.49335
+  },
+  {
+   "word": "predicts",
+   "start": 119.49335,
+   "end": 119.95335
+  },
+  {
+   "word": "these",
+   "start": 119.95335,
+   "end": 120.07335
+  },
+  {
+   "word": "purple",
+   "start": 120.07335,
+   "end": 120.413345
+  },
+  {
+   "word": "bars.",
+   "start": 120.413345,
+   "end": 121.093346
+  },
+  {
+   "word": "The",
+   "start": 121.65334,
+   "end": 121.913345
+  },
+  {
+   "word": "honest",
+   "start": 121.913345,
+   "end": 122.21335
+  },
+  {
+   "word": "detector",
+   "start": 122.21335,
+   "end": 122.733345
+  },
+  {
+   "word": "compares",
+   "start": 122.733345,
+   "end": 123.39334
+  },
+  {
+   "word": "whole",
+   "start": 123.39334,
+   "end": 123.773346
+  },
+  {
+   "word": "histograms.",
+   "start": 123.773346,
+   "end": 124.733345
+  },
+  {
+   "word": "39",
+   "start": 125.15334,
+   "end": 125.67335
+  },
+  {
+   "word": "targets,",
+   "start": 125.67335,
+   "end": 126.67335
+  },
+  {
+   "word": "and",
+   "start": 126.67335,
+   "end": 126.81335
+  },
+  {
+   "word": "chance",
+   "start": 126.81335,
+   "end": 127.11334
+  },
+  {
+   "word": "predicts",
+   "start": 127.11334,
+   "end": 127.63335
+  },
+  {
+   "word": "39.",
+   "start": 127.63335,
+   "end": 128.27335
+  },
+  {
+   "word": "The",
+   "start": 128.71335,
+   "end": 128.93335
+  },
+  {
+   "word": "chi-squared",
+   "start": 128.93335,
+   "end": 129.53334
+  },
+  {
+   "word": "misfit",
+   "start": 129.53334,
+   "end": 129.99335
+  },
+  {
+   "word": "squares",
+   "start": 129.99335,
+   "end": 130.37335
+  },
+  {
+   "word": "each",
+   "start": 130.37335,
+   "end": 130.77335
+  },
+  {
+   "word": "bar's",
+   "start": 130.77335,
+   "end": 131.31334
+  },
+  {
+   "word": "gap",
+   "start": 131.31334,
+   "end": 131.53334
+  },
+  {
+   "word": "gap",
+   "start": 131.05334,
+   "end": 131.43335
+  },
+  {
+   "word": "and",
+   "start": 131.43335,
+   "end": 131.99335
+  },
+  {
+   "word": "divides",
+   "start": 131.99335,
+   "end": 132.49335
+  },
+  {
+   "word": "by",
+   "start": 132.49335,
+   "end": 132.67334
+  },
+  {
+   "word": "chance's",
+   "start": 132.67334,
+   "end": 133.23334
+  },
+  {
+   "word": "bar",
+   "start": 133.23334,
+   "end": 133.57335
+  },
+  {
+   "word": "because",
+   "start": 133.57335,
+   "end": 134.27335
+  },
+  {
+   "word": "short",
+   "start": 134.27335,
+   "end": 134.67334
+  },
+  {
+   "word": "bars",
+   "start": 134.67334,
+   "end": 134.99335
+  },
+  {
+   "word": "wobble",
+   "start": 134.99335,
+   "end": 135.43335
+  },
+  {
+   "word": "less.",
+   "start": 135.43335,
+   "end": 135.99335
+  },
+  {
+   "word": "A",
+   "start": 136.49335,
+   "end": 136.69334
+  },
+  {
+   "word": "miss",
+   "start": 136.69334,
+   "end": 136.97334
+  },
+  {
+   "word": "on",
+   "start": 136.97334,
+   "end": 137.17334
+  },
+  {
+   "word": "a",
+   "start": 137.17334,
+   "end": 137.29335
+  },
+  {
+   "word": "short",
+   "start": 137.29335,
+   "end": 137.59335
+  },
+  {
+   "word": "bar",
+   "start": 137.59335,
+   "end": 137.85335
+  },
+  {
+   "word": "counts",
+   "start": 137.85335,
+   "end": 138.29335
+  },
+  {
+   "word": "more.",
+   "start": 138.29335,
+   "end": 138.81334
+  },
+  {
+   "word": "Map",
+   "start": 138.81334,
+   "end": 139.53334
+  },
+  {
+   "word": "A",
+   "start": 139.53334,
+   "end": 139.69334
+  },
+  {
+   "word": "scores",
+   "start": 139.69334,
+   "end": 140.03334
+  },
+  {
+   "word": "2.0.",
+   "start": 140.03334,
+   "end": 141.01334
+  },
+  {
+   "word": "3",
+   "start": 141.93335,
+   "end": 142.19334
+  },
+  {
+   "word": "out",
+   "start": 142.19334,
+   "end": 142.49335
+  },
+  {
+   "word": "of",
+   "start": 142.49335,
+   "end": 142.61334
+  },
+  {
+   "word": "4",
+   "start": 142.61334,
+   "end": 142.87335
+  },
+  {
+   "word": "simulated",
+   "start": 142.87335,
+   "end": 143.57335
+  },
+  {
+   "word": "chance",
+   "start": 143.57335,
+   "end": 144.01334
+  },
+  {
+   "word": "maps",
+   "start": 144.01334,
+   "end": 144.33334
+  },
+  {
+   "word": "score",
+   "start": 144.33334,
+   "end": 144.63335
+  },
+  {
+   "word": "worse.",
+   "start": 144.63335,
+   "end": 145.17334
+  },
+  {
+   "word": "That",
+   "start": 145.03334,
+   "end": 145.81334
+  },
+  {
+   "word": "share",
+   "start": 145.81334,
+   "end": 146.07335
+  },
+  {
+   "word": "P",
+   "start": 146.07335,
+   "end": 146.33334
+  },
+  {
+   "word": "is .74.",
+   "start": 146.33334,
+   "end": 148.01334
+  },
+  {
+   "word": "Now",
+   "start": 149.15335,
+   "end": 149.51334
+  },
+  {
+   "word": "map",
+   "start": 149.51334,
+   "end": 149.79335
+  },
+  {
+   "word": "B,",
+   "start": 149.79335,
+   "end": 150.27335
+  },
+  {
+   "word": "half",
+   "start": 150.27335,
+   "end": 150.89334
+  },
+  {
+   "word": "the",
+   "start": 150.89334,
+   "end": 151.05334
+  },
+  {
+   "word": "expected",
+   "start": 151.05334,
+   "end": 151.57335
+  },
+  {
+   "word": "empty",
+   "start": 151.57335,
+   "end": 151.89334
+  },
+  {
+   "word": "squares,",
+   "start": 151.89334,
+   "end": 152.53334
+  },
+  {
+   "word": "a",
+   "start": 151.71335,
+   "end": 152.77335
+  },
+  {
+   "word": "tower",
+   "start": 152.77335,
+   "end": 153.13335
+  },
+  {
+   "word": "of",
+   "start": 153.13335,
+   "end": 153.35335
+  },
+  {
+   "word": "single",
+   "start": 153.35335,
+   "end": 153.71335
+  },
+  {
+   "word": "hits,",
+   "start": 153.71335,
+   "end": 154.67334
+  },
+  {
+   "word": "misfit",
+   "start": 154.67334,
+   "end": 154.99335
+  },
+  {
+   "word": "272.",
+   "start": 154.99335,
+   "end": 156.37335
+  },
+  {
+   "word": "A",
+   "start": 156.77335,
+   "end": 157.01334
+  },
+  {
+   "word": "pattern",
+   "start": 157.01334,
+   "end": 157.49335
+  },
+  {
+   "word": "this",
+   "start": 157.49335,
+   "end": 157.79335
+  },
+  {
+   "word": "even",
+   "start": 157.79335,
+   "end": 158.19334
+  },
+  {
+   "word": "is",
+   "start": 158.19334,
+   "end": 158.43335
+  },
+  {
+   "word": "the",
+   "start": 158.43335,
+   "end": 158.57335
+  },
+  {
+   "word": "fingerprint",
+   "start": 158.57335,
+   "end": 159.07335
+  },
+  {
+   "word": "of",
+   "start": 159.07335,
+   "end": 159.41335
+  },
+  {
+   "word": "a",
+   "start": 159.41335,
+   "end": 159.51334
+  },
+  {
+   "word": "spacing",
+   "start": 159.51334,
+   "end": 159.87335
   },
   {
    "word": "rule.",
-   "start": 212.59735,
-   "end": 213.39734
+   "start": 159.87335,
+   "end": 160.47334
+  },
+  {
+   "word": "rule.",
+   "start": 160.05334,
+   "end": 160.59335
+  },
+  {
+   "word": "Aimed",
+   "start": 160.59335,
+   "end": 161.39334
+  },
+  {
+   "word": "bombs",
+   "start": 161.39334,
+   "end": 161.75334
+  },
+  {
+   "word": "would",
+   "start": 161.75334,
+   "end": 162.01334
+  },
+  {
+   "word": "break",
+   "start": 162.01334,
+   "end": 162.23334
+  },
+  {
+   "word": "the",
+   "start": 162.23334,
+   "end": 162.41335
+  },
+  {
+   "word": "fit",
+   "start": 162.41335,
+   "end": 162.59335
+  },
+  {
+   "word": "the",
+   "start": 162.59335,
+   "end": 162.73334
+  },
+  {
+   "word": "other",
+   "start": 162.73334,
+   "end": 162.87335
+  },
+  {
+   "word": "way.",
+   "start": 162.87335,
+   "end": 163.43335
+  },
+  {
+   "word": "Extra",
+   "start": 163.43335,
+   "end": 164.19334
+  },
+  {
+   "word": "empty",
+   "start": 164.19334,
+   "end": 164.53334
+  },
+  {
+   "word": "squares,",
+   "start": 164.53334,
+   "end": 165.27335
+  },
+  {
+   "word": "extra",
+   "start": 165.27335,
+   "end": 165.73334
+  },
+  {
+   "word": "pileups.",
+   "start": 165.73334,
+   "end": 166.53334
+  },
+  {
+   "word": "In",
+   "start": 166.83334,
+   "end": 167.07333
+  },
+  {
+   "word": "1946,",
+   "start": 167.07333,
+   "end": 168.39334
+  },
+  {
+   "word": "R.",
+   "start": 168.39334,
+   "end": 169.01334
+  },
+  {
+   "word": "D.",
+   "start": 169.01334,
+   "end": 169.29333
+  },
+  {
+   "word": "Clarke",
+   "start": 169.29333,
+   "end": 169.43335
+  },
+  {
+   "word": "published",
+   "start": 169.43335,
+   "end": 169.85335
+  },
+  {
+   "word": "the",
+   "start": 169.85335,
+   "end": 170.03336
+  },
+  {
+   "word": "same",
+   "start": 170.03336,
+   "end": 170.33334
+  },
+  {
+   "word": "test",
+   "start": 170.33334,
+   "end": 170.83334
+  },
+  {
+   "word": "on",
+   "start": 170.83334,
+   "end": 171.07333
+  },
+  {
+   "word": "London's",
+   "start": 171.07333,
+   "end": 171.57333
+  },
+  {
+   "word": "real",
+   "start": 171.57333,
+   "end": 171.77335
+  },
+  {
+   "word": "hits.",
+   "start": 171.77335,
+   "end": 172.33334
+  },
+  {
+   "word": "537",
+   "start": 172.33334,
+   "end": 173.79333
+  },
+  {
+   "word": "in",
+   "start": 173.79333,
+   "end": 174.31335
+  },
+  {
+   "word": "576",
+   "start": 174.31335,
+   "end": 175.49335
+  },
+  {
+   "word": "squares.",
+   "start": 175.49335,
+   "end": 176.45334
+  },
+  {
+   "word": "Chance",
+   "start": 176.67334,
+   "end": 177.13335
+  },
+  {
+   "word": "predicted",
+   "start": 177.13335,
+   "end": 177.57333
+  },
+  {
+   "word": "227",
+   "start": 177.57333,
+   "end": 178.97334
+  },
+  {
+   "word": "empty",
+   "start": 178.97334,
+   "end": 179.37335
+  },
+  {
+   "word": "squares.",
+   "start": 179.37335,
+   "end": 180.11334
+  },
+  {
+   "word": "Clarke",
+   "start": 180.11334,
+   "end": 180.83334
+  },
+  {
+   "word": "counted",
+   "start": 180.83334,
+   "end": 181.25334
+  },
+  {
+   "word": "229.",
+   "start": 181.25334,
+   "end": 182.81335
+  },
+  {
+   "word": "Overall,",
+   "start": 182.81335,
+   "end": 183.57333
+  },
+  {
+   "word": "P",
+   "start": 183.57333,
+   "end": 183.89334
+  },
+  {
+   "word": "equals .88.",
+   "start": 183.89334,
+   "end": 185.21335
+  },
+  {
+   "word": "London's",
+   "start": 185.21335,
+   "end": 186.25334
+  },
+  {
+   "word": "London's",
+   "start": 186.05334,
+   "end": 186.23334
+  },
+  {
+   "word": "clusters",
+   "start": 186.23334,
+   "end": 186.71335
+  },
+  {
+   "word": "were",
+   "start": 186.71335,
+   "end": 187.21335
+  },
+  {
+   "word": "no",
+   "start": 187.21335,
+   "end": 187.37335
+  },
+  {
+   "word": "sign",
+   "start": 187.37335,
+   "end": 187.73334
+  },
+  {
+   "word": "of",
+   "start": 187.73334,
+   "end": 187.89334
+  },
+  {
+   "word": "precise",
+   "start": 187.89334,
+   "end": 188.33334
+  },
+  {
+   "word": "aim.",
+   "start": 188.33334,
+   "end": 188.91335
+  },
+  {
+   "word": "The",
+   "start": 189.25334,
+   "end": 189.55334
+  },
+  {
+   "word": "bombs",
+   "start": 189.55334,
+   "end": 189.93335
+  },
+  {
+   "word": "were",
+   "start": 189.93335,
+   "end": 190.13335
+  },
+  {
+   "word": "aimed",
+   "start": 190.13335,
+   "end": 190.45334
+  },
+  {
+   "word": "at",
+   "start": 190.45334,
+   "end": 190.63335
+  },
+  {
+   "word": "central",
+   "start": 190.63335,
+   "end": 190.93335
+  },
+  {
+   "word": "London,",
+   "start": 190.93335,
+   "end": 191.57333
+  },
+  {
+   "word": "but",
+   "start": 191.57333,
+   "end": 192.09335
+  },
+  {
+   "word": "tended",
+   "start": 192.09335,
+   "end": 192.35335
+  },
+  {
+   "word": "to",
+   "start": 192.35335,
+   "end": 192.57333
+  },
+  {
+   "word": "fall",
+   "start": 192.57333,
+   "end": 192.75334
+  },
+  {
+   "word": "short,",
+   "start": 192.75334,
+   "end": 193.31335
+  },
+  {
+   "word": "so",
+   "start": 193.31335,
+   "end": 193.69334
+  },
+  {
+   "word": "farther",
+   "start": 193.69334,
+   "end": 194.01334
+  },
+  {
+   "word": "north,",
+   "start": 194.01334,
+   "end": 194.67334
+  },
+  {
+   "word": "hits",
+   "start": 194.67334,
+   "end": 195.25334
+  },
+  {
+   "word": "were",
+   "start": 194.87335,
+   "end": 195.41335
+  },
+  {
+   "word": "about",
+   "start": 195.41335,
+   "end": 195.63335
+  },
+  {
+   "word": "half",
+   "start": 195.63335,
+   "end": 195.97334
+  },
+  {
+   "word": "as",
+   "start": 195.97334,
+   "end": 196.19334
+  },
+  {
+   "word": "dense.",
+   "start": 196.19334,
+   "end": 197.09335
+  },
+  {
+   "word": "Score",
+   "start": 197.39334,
+   "end": 197.77335
+  },
+  {
+   "word": "the",
+   "start": 197.77335,
+   "end": 197.93335
+  },
+  {
+   "word": "north",
+   "start": 197.93335,
+   "end": 198.07333
+  },
+  {
+   "word": "alone",
+   "start": 198.07333,
+   "end": 198.49335
+  },
+  {
+   "word": "and",
+   "start": 198.49335,
+   "end": 198.79333
+  },
+  {
+   "word": "it",
+   "start": 198.79333,
+   "end": 198.93335
+  },
+  {
+   "word": "fits",
+   "start": 198.93335,
+   "end": 199.13335
+  },
+  {
+   "word": "chance",
+   "start": 199.13335,
+   "end": 199.49335
+  },
+  {
+   "word": "too,",
+   "start": 199.49335,
+   "end": 199.99335
+  },
+  {
+   "word": "p",
+   "start": 199.99335,
+   "end": 200.49335
+  },
+  {
+   "word": "equals .45.",
+   "start": 200.49335,
+   "end": 201.99335
+  },
+  {
+   "word": "The",
+   "start": 201.93335,
+   "end": 202.49335
+  },
+  {
+   "word": "aim",
+   "start": 202.49335,
+   "end": 202.75334
+  },
+  {
+   "word": "hides",
+   "start": 202.75334,
+   "end": 203.15335
+  },
+  {
+   "word": "in",
+   "start": 203.15335,
+   "end": 203.33334
+  },
+  {
+   "word": "lambda,",
+   "start": 203.33334,
+   "end": 203.85335
+  },
+  {
+   "word": "which",
+   "start": 203.85335,
+   "end": 204.21335
+  },
+  {
+   "word": "the",
+   "start": 204.21335,
+   "end": 204.35335
+  },
+  {
+   "word": "test",
+   "start": 204.35335,
+   "end": 204.65335
+  },
+  {
+   "word": "holds",
+   "start": 204.65335,
+   "end": 204.97334
+  },
+  {
+   "word": "fixed.",
+   "start": 204.97334,
+   "end": 205.69334
+  },
+  {
+   "word": "The",
+   "start": 206.23334,
+   "end": 206.79333
+  },
+  {
+   "word": "clumps",
+   "start": 206.79333,
+   "end": 207.05334
+  },
+  {
+   "word": "in",
+   "start": 207.05334,
+   "end": 207.29333
+  },
+  {
+   "word": "map",
+   "start": 207.29333,
+   "end": 207.57333
+  },
+  {
+   "word": "A",
+   "start": 207.57333,
+   "end": 207.99335
+  },
+  {
+   "word": "are",
+   "start": 207.99335,
+   "end": 208.81335
+  },
+  {
+   "word": "what",
+   "start": 208.81335,
+   "end": 208.97334
+  },
+  {
+   "word": "no",
+   "start": 208.97334,
+   "end": 209.17334
+  },
+  {
+   "word": "aim",
+   "start": 209.17334,
+   "end": 209.43335
+  },
+  {
+   "word": "at",
+   "start": 209.43335,
+   "end": 209.59335
+  },
+  {
+   "word": "all",
+   "start": 209.59335,
+   "end": 209.73334
+  },
+  {
+   "word": "looks",
+   "start": 209.73334,
+   "end": 209.99335
+  },
+  {
+   "word": "like.",
+   "start": 209.99335,
+   "end": 210.59335
+  },
+  {
+   "word": "If",
+   "start": 211.11334,
+   "end": 211.67334
+  },
+  {
+   "word": "you",
+   "start": 211.67334,
+   "end": 211.77335
+  },
+  {
+   "word": "chose",
+   "start": 211.77335,
+   "end": 212.17334
+  },
+  {
+   "word": "map",
+   "start": 212.17334,
+   "end": 212.51334
+  },
+  {
+   "word": "B,",
+   "start": 212.51334,
+   "end": 213.03336
+  },
+  {
+   "word": "you",
+   "start": 213.03336,
+   "end": 213.55334
+  },
+  {
+   "word": "chose",
+   "start": 213.55334,
+   "end": 213.87335
+  },
+  {
+   "word": "the",
+   "start": 213.87335,
+   "end": 214.07333
+  },
+  {
+   "word": "rule.",
+   "start": 214.07333,
+   "end": 214.87335
+  },
+  {
+   "word": "Thank",
+   "start": 216.05334,
+   "end": 216.41335
+  },
+  {
+   "word": "you.",
+   "start": 216.41335,
+   "end": 216.73334
   }
  ],
  "segments": [
@@ -2310,8 +2365,8 @@
     50537
    ],
    "temperature": 0,
-   "avg_logprob": -0.09165945,
-   "compression_ratio": 1.4469026,
+   "avg_logprob": -0.08618901,
+   "compression_ratio": 1.4242424,
    "no_speech_prob": 0
   },
   {
@@ -2336,8 +2391,8 @@
     50711
    ],
    "temperature": 0,
-   "avg_logprob": -0.09165945,
-   "compression_ratio": 1.4469026,
+   "avg_logprob": -0.08618901,
+   "compression_ratio": 1.4242424,
    "no_speech_prob": 0
   },
   {
@@ -2355,16 +2410,16 @@
     50773
    ],
    "temperature": 0,
-   "avg_logprob": -0.09165945,
-   "compression_ratio": 1.4469026,
+   "avg_logprob": -0.08618901,
+   "compression_ratio": 1.4242424,
    "no_speech_prob": 0
   },
   {
    "id": 3,
    "seek": 0,
    "start": 9.719999,
-   "end": 14.719999,
-   "text": " In 1944, Londoners claimed flying bombs fell in clusters,",
+   "end": 14.599999,
+   "text": " In 1944, Londoners saw flying bombs land in clusters.",
    "tokens": [
     50851,
     682,
@@ -2372,52 +2427,54 @@
     11,
     7042,
     433,
-    12941,
+    1866,
     7137,
     19043,
-    5696,
+    2117,
     294,
     23313,
-    11,
-    51101
+    13,
+    51095
    ],
    "temperature": 0,
-   "avg_logprob": -0.09165945,
-   "compression_ratio": 1.4469026,
+   "avg_logprob": -0.08618901,
+   "compression_ratio": 1.4242424,
    "no_speech_prob": 0
   },
   {
    "id": 4,
    "seek": 0,
-   "start": 14.96,
-   "end": 18.32,
-   "text": " and precise aim would put factories at risk.",
+   "start": 14.599999,
+   "end": 18.42,
+   "text": " If that meant precise aim, factories were at risk.",
    "tokens": [
-    51113,
-    293,
+    51095,
+    759,
+    300,
+    4140,
     13600,
     5939,
-    576,
-    829,
+    11,
     24813,
+    645,
     412,
     3148,
     13,
-    51281
+    51286
    ],
    "temperature": 0,
-   "avg_logprob": -0.09165945,
-   "compression_ratio": 1.4469026,
+   "avg_logprob": -0.08618901,
+   "compression_ratio": 1.4242424,
    "no_speech_prob": 0
   },
   {
    "id": 5,
    "seek": 0,
-   "start": 18.32,
-   "end": 20.939999,
+   "start": 18.42,
+   "end": 21.039999,
    "text": " Build the detector your eye is running.",
    "tokens": [
-    51281,
+    51286,
     11875,
     264,
     25712,
@@ -2426,21 +2483,21 @@
     307,
     2614,
     13,
-    51412
+    51417
    ],
    "temperature": 0,
-   "avg_logprob": -0.09165945,
-   "compression_ratio": 1.4469026,
+   "avg_logprob": -0.08618901,
+   "compression_ratio": 1.4242424,
    "no_speech_prob": 0
   },
   {
    "id": 6,
    "seek": 0,
-   "start": 20.939999,
-   "end": 24.74,
+   "start": 21.039999,
+   "end": 24.84,
    "text": " Cut each map into 576 squares,",
    "tokens": [
-    51412,
+    51417,
     9431,
     1184,
     4471,
@@ -2449,21 +2506,21 @@
     21,
     19368,
     11,
-    51602
+    51607
    ],
    "temperature": 0,
-   "avg_logprob": -0.09165945,
-   "compression_ratio": 1.4469026,
+   "avg_logprob": -0.08618901,
+   "compression_ratio": 1.4242424,
    "no_speech_prob": 0
   },
   {
    "id": 7,
    "seek": 0,
-   "start": 24.74,
-   "end": 28.98,
+   "start": 24.84,
+   "end": 29.08,
    "text": " and flag any square with three or more hits, like this one.",
    "tokens": [
-    51602,
+    51607,
     293,
     7166,
     604,
@@ -2478,18 +2535,18 @@
     341,
     472,
     13,
-    51814
+    51819
    ],
    "temperature": 0,
-   "avg_logprob": -0.09165945,
-   "compression_ratio": 1.4469026,
+   "avg_logprob": -0.08618901,
+   "compression_ratio": 1.4242424,
    "no_speech_prob": 0
   },
   {
    "id": 8,
-   "seek": 2898,
-   "start": 28.98,
-   "end": 33.38,
+   "seek": 2908,
+   "start": 29.08,
+   "end": 33.48,
    "text": " Map A lights up with 39 targets, map B with none.",
    "tokens": [
     50365,
@@ -2509,15 +2566,15 @@
     50585
    ],
    "temperature": 0,
-   "avg_logprob": -0.13188785,
-   "compression_ratio": 1.4849786,
+   "avg_logprob": -0.13837887,
+   "compression_ratio": 1.504386,
    "no_speech_prob": 0
   },
   {
    "id": 9,
-   "seek": 2898,
-   "start": 33.38,
-   "end": 35.16,
+   "seek": 2908,
+   "start": 33.48,
+   "end": 35.26,
    "text": " So A looks aimed.",
    "tokens": [
     50585,
@@ -2529,15 +2586,15 @@
     50674
    ],
    "temperature": 0,
-   "avg_logprob": -0.13188785,
-   "compression_ratio": 1.4849786,
+   "avg_logprob": -0.13837887,
+   "compression_ratio": 1.504386,
    "no_speech_prob": 0
   },
   {
    "id": 10,
-   "seek": 2898,
-   "start": 35.16,
-   "end": 36.66,
+   "seek": 2908,
+   "start": 35.26,
+   "end": 36.76,
    "text": " Backwards.",
    "tokens": [
     50674,
@@ -2547,15 +2604,15 @@
     50749
    ],
    "temperature": 0,
-   "avg_logprob": -0.13188785,
-   "compression_ratio": 1.4849786,
+   "avg_logprob": -0.13837887,
+   "compression_ratio": 1.504386,
    "no_speech_prob": 0
   },
   {
    "id": 11,
-   "seek": 2898,
-   "start": 36.66,
-   "end": 39.5,
+   "seek": 2908,
+   "start": 36.76,
+   "end": 39.6,
    "text": " I dropped every hit on map A at random,",
    "tokens": [
     50749,
@@ -2572,15 +2629,15 @@
     50891
    ],
    "temperature": 0,
-   "avg_logprob": -0.13188785,
-   "compression_ratio": 1.4849786,
+   "avg_logprob": -0.13837887,
+   "compression_ratio": 1.504386,
    "no_speech_prob": 0
   },
   {
    "id": 12,
-   "seek": 2898,
-   "start": 39.5,
-   "end": 42.739998,
+   "seek": 2908,
+   "start": 39.6,
+   "end": 42.84,
    "text": " so all 39 targets are false alarms.",
    "tokens": [
     50891,
@@ -2595,15 +2652,15 @@
     51053
    ],
    "temperature": 0,
-   "avg_logprob": -0.13188785,
-   "compression_ratio": 1.4849786,
+   "avg_logprob": -0.13837887,
+   "compression_ratio": 1.504386,
    "no_speech_prob": 0
   },
   {
    "id": 13,
-   "seek": 2898,
-   "start": 42.739998,
-   "end": 47.2,
+   "seek": 2908,
+   "start": 42.84,
+   "end": 47.3,
    "text": " Map B's rule, no two hits closer than four-fifths of a square.",
    "tokens": [
     51053,
@@ -2629,15 +2686,15 @@
     51276
    ],
    "temperature": 0,
-   "avg_logprob": -0.13188785,
-   "compression_ratio": 1.4849786,
+   "avg_logprob": -0.13837887,
+   "compression_ratio": 1.504386,
    "no_speech_prob": 0
   },
   {
    "id": 14,
-   "seek": 2898,
-   "start": 47.2,
-   "end": 51.68,
+   "seek": 2908,
+   "start": 47.3,
+   "end": 51.82,
    "text": " Your eye, like the detector, expects chance to look that even.",
    "tokens": [
     51276,
@@ -2655,28 +2712,71 @@
     300,
     754,
     13,
-    51500
+    51502
    ],
    "temperature": 0,
-   "avg_logprob": -0.13188785,
-   "compression_ratio": 1.4849786,
+   "avg_logprob": -0.13837887,
+   "compression_ratio": 1.504386,
    "no_speech_prob": 0
   },
   {
    "id": 15,
-   "seek": 2898,
-   "start": 51.68,
-   "end": 56.32,
-   "text": " Each bomb has a one in five 76 chance of landing in this square.",
+   "seek": 2908,
+   "start": 51.82,
+   "end": 53.78,
+   "text": " Almost one hit per square.",
    "tokens": [
-    51500,
+    51502,
+    12627,
+    472,
+    2045,
+    680,
+    3732,
+    13,
+    51600
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13837887,
+   "compression_ratio": 1.504386,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 16,
+   "seek": 2908,
+   "start": 53.78,
+   "end": 57.239998,
+   "text": " Guess how many squares stay empty?",
+   "tokens": [
+    51600,
+    17795,
+    577,
+    867,
+    19368,
+    1754,
+    6707,
+    30,
+    51773
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.13837887,
+   "compression_ratio": 1.504386,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 17,
+   "seek": 5724,
+   "start": 57.239998,
+   "end": 61.399998,
+   "text": " Each bomb has a 1 in 5 76 chance of landing in this square.",
+   "tokens": [
+    50365,
     6947,
     7851,
     575,
     257,
-    472,
+    502,
     294,
-    1732,
+    1025,
     24733,
     2931,
     295,
@@ -2685,21 +2785,21 @@
     341,
     3732,
     13,
-    51732
+    50573
    ],
    "temperature": 0,
-   "avg_logprob": -0.13188785,
-   "compression_ratio": 1.4849786,
+   "avg_logprob": -0.22546834,
+   "compression_ratio": 1.4179894,
    "no_speech_prob": 0
   },
   {
-   "id": 16,
-   "seek": 5632,
-   "start": 56.32,
-   "end": 60.399998,
+   "id": 18,
+   "seek": 5724,
+   "start": 61.899998,
+   "end": 65.32,
    "text": " To stay empty, all 537 must miss.",
    "tokens": [
-    50365,
+    50598,
     1407,
     1754,
     6707,
@@ -2710,83 +2810,51 @@
     1633,
     1713,
     13,
-    50569
+    50769
    ],
    "temperature": 0,
-   "avg_logprob": -0.13873199,
-   "compression_ratio": 1.4739337,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 17,
-   "seek": 5632,
-   "start": 60.399998,
-   "end": 62.399998,
-   "text": " Guess how many squares stay empty?",
-   "tokens": [
-    50569,
-    17795,
-    577,
-    867,
-    19368,
-    1754,
-    6707,
-    30,
-    50669
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.13873199,
-   "compression_ratio": 1.4739337,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 18,
-   "seek": 5632,
-   "start": 63.86,
-   "end": 65.92,
-   "text": " About 227.",
-   "tokens": [
-    50742,
-    7769,
-    5853,
-    22,
-    13,
-    50845
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.13873199,
-   "compression_ratio": 1.4739337,
+   "avg_logprob": -0.22546834,
+   "compression_ratio": 1.4179894,
    "no_speech_prob": 0
   },
   {
    "id": 19,
-   "seek": 5632,
-   "start": 65.92,
-   "end": 67.96,
-   "text": " Map A has 222.",
+   "seek": 5724,
+   "start": 66.36,
+   "end": 71.84,
+   "text": " About 227, four squares in 10, map A has 222.",
    "tokens": [
-    50845,
-    22053,
+    50821,
+    7769,
+    5853,
+    22,
+    11,
+    1451,
+    19368,
+    294,
+    1266,
+    11,
+    4471,
     316,
     575,
     5853,
     17,
     13,
-    50947
+    51095
    ],
    "temperature": 0,
-   "avg_logprob": -0.13873199,
-   "compression_ratio": 1.4739337,
+   "avg_logprob": -0.22546834,
+   "compression_ratio": 1.4179894,
    "no_speech_prob": 0
   },
   {
    "id": 20,
-   "seek": 5632,
-   "start": 68.86,
-   "end": 71.26,
+   "seek": 5724,
+   "start": 72.759995,
+   "end": 74.659996,
    "text": " Those empty squares force pileups.",
    "tokens": [
-    50992,
+    51141,
     3950,
     6707,
     19368,
@@ -2794,21 +2862,21 @@
     14375,
     7528,
     13,
-    51112
+    51236
    ],
    "temperature": 0,
-   "avg_logprob": -0.13873199,
-   "compression_ratio": 1.4739337,
+   "avg_logprob": -0.22546834,
+   "compression_ratio": 1.4179894,
    "no_speech_prob": 0
   },
   {
    "id": 21,
-   "seek": 5632,
-   "start": 71.26,
-   "end": 75.3,
+   "seek": 5724,
+   "start": 75.579994,
+   "end": 78.979996,
    "text": " 183 hits must land where another already did.",
    "tokens": [
-    51112,
+    51282,
     2443,
     18,
     8664,
@@ -2819,21 +2887,21 @@
     1217,
     630,
     13,
-    51314
+    51452
    ],
    "temperature": 0,
-   "avg_logprob": -0.13873199,
-   "compression_ratio": 1.4739337,
+   "avg_logprob": -0.22546834,
+   "compression_ratio": 1.4179894,
    "no_speech_prob": 0
   },
   {
    "id": 22,
-   "seek": 5632,
-   "start": 76.3,
-   "end": 79.32,
+   "seek": 5724,
+   "start": 79.799995,
+   "end": 82.399994,
    "text": " Let's call the average hits per square lambda.",
    "tokens": [
-    51364,
+    51493,
     961,
     311,
     818,
@@ -2844,22 +2912,22 @@
     3732,
     13607,
     13,
-    51515
+    51623
    ],
    "temperature": 0,
-   "avg_logprob": -0.13873199,
-   "compression_ratio": 1.4739337,
+   "avg_logprob": -0.22546834,
+   "compression_ratio": 1.4179894,
    "no_speech_prob": 0
   },
   {
    "id": 23,
-   "seek": 5632,
-   "start": 79.32,
-   "end": 82.96,
-   "text": " One minus a small slice raised to a big power",
+   "seek": 8240,
+   "start": 82.4,
+   "end": 90.22,
+   "text": " 1 minus a small slice raised to a big power is e to the minus lambda, almost exactly.",
    "tokens": [
-    51515,
-    1485,
+    50365,
+    502,
     3175,
     257,
     1359,
@@ -2869,21 +2937,6 @@
     257,
     955,
     1347,
-    51697
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.13873199,
-   "compression_ratio": 1.4739337,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 24,
-   "seek": 5632,
-   "start": 82.96,
-   "end": 86.18,
-   "text": " is e to the minus lambda, almost exactly,",
-   "tokens": [
-    51697,
     307,
     308,
     281,
@@ -2893,28 +2946,43 @@
     11,
     1920,
     2293,
-    11,
-    51858
+    13,
+    50756
    ],
    "temperature": 0,
-   "avg_logprob": -0.13873199,
-   "compression_ratio": 1.4739337,
+   "avg_logprob": -0.20136742,
+   "compression_ratio": 1.5809524,
    "no_speech_prob": 0
   },
   {
-   "id": 25,
-   "seek": 8618,
-   "start": 86.18,
-   "end": 95.5,
-   "text": " Call that p of 0. For two hits in the square, pick two bombs. 537 times 536 ways, over 2,",
+   "id": 24,
+   "seek": 8240,
+   "start": 90.22,
+   "end": 92.1,
+   "text": " Call that p of 0.",
    "tokens": [
-    50365,
+    50756,
     7807,
     300,
     280,
     295,
     1958,
     13,
+    50850
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.20136742,
+   "compression_ratio": 1.5809524,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 25,
+   "seek": 8240,
+   "start": 92.1,
+   "end": 95.06,
+   "text": " For two hits in the square, pick two bombs.",
+   "tokens": [
+    50850,
     1171,
     732,
     8664,
@@ -2926,77 +2994,69 @@
     732,
     19043,
     13,
+    50998
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.20136742,
+   "compression_ratio": 1.5809524,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 26,
+   "seek": 8240,
+   "start": 95.06,
+   "end": 101.8,
+   "text": " 537 times 536 ways over 2 since each pair counts twice.",
+   "tokens": [
+    50998,
     1025,
     12851,
     1413,
     1025,
     11309,
     2098,
-    11,
     670,
     568,
-    11,
-    50831
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.14397508,
-   "compression_ratio": 1.480663,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 26,
-   "seek": 8618,
-   "start": 95.5,
-   "end": 101.86,
-   "text": " since each pair counts twice. Each has that same chance, and the rest miss. E to the minus",
-   "tokens": [
-    50831,
     1670,
     1184,
     6119,
     14893,
     6091,
     13,
+    51335
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.20136742,
+   "compression_ratio": 1.5809524,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 27,
+   "seek": 103,
+   "start": 101.8,
+   "end": 114.053345,
+   "text": " Each has that same chance and the rest miss e to the minus lambda again For three hits each two becomes a three For any k a k The powers merge into lambda to the k",
+   "tokens": [
+    51335,
     6947,
     575,
     300,
     912,
     2931,
-    11,
     293,
     264,
     1472,
     1713,
-    13,
-    462,
+    11,
+    308,
     281,
     264,
     3175,
-    51149
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.14397508,
-   "compression_ratio": 1.480663,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 27,
-   "seek": 102,
-   "start": 101.86,
-   "end": 113.317345,
-   "text": " lambda again 536 is almost 537 For three hits each two becomes a 3 For any k a k The powers merge into lambda to the k",
-   "tokens": [
-    51149,
     13607,
     797,
     13,
-    1025,
-    11309,
-    307,
-    1920,
-    1025,
-    12851,
-    13,
+    51619,
+    51619,
     1171,
     1045,
     8664,
@@ -3005,7 +3065,7 @@
     732,
     3643,
     257,
-    805,
+    1045,
     13,
     50715,
     50715,
@@ -3030,15 +3090,15 @@
     50915
    ],
    "temperature": 0,
-   "avg_logprob": -0.14208512,
-   "compression_ratio": 1.4813085,
+   "avg_logprob": -0.15583465,
+   "compression_ratio": 1.5695068,
    "no_speech_prob": 0
   },
   {
    "id": 28,
-   "seek": 102,
-   "start": 113.317345,
-   "end": 116.317345,
+   "seek": 103,
+   "start": 114.053345,
+   "end": 117.053345,
    "text": " the Poisson distribution.",
    "tokens": [
     50915,
@@ -3050,21 +3110,21 @@
     51065
    ],
    "temperature": 0,
-   "avg_logprob": -0.14208512,
-   "compression_ratio": 1.4813085,
+   "avg_logprob": -0.15583465,
+   "compression_ratio": 1.5695068,
    "no_speech_prob": 0
   },
   {
    "id": 29,
-   "seek": 102,
-   "start": 116.317345,
-   "end": 120.317345,
+   "seek": 103,
+   "start": 117.053345,
+   "end": 121.053345,
    "text": " Times 576 squares, it predicts these purple bars.",
    "tokens": [
     51065,
     11366,
-    21423,
-    21,
+    1025,
+    25026,
     19368,
     11,
     309,
@@ -3077,15 +3137,15 @@
     51265
    ],
    "temperature": 0,
-   "avg_logprob": -0.14208512,
-   "compression_ratio": 1.4813085,
+   "avg_logprob": -0.15583465,
+   "compression_ratio": 1.5695068,
    "no_speech_prob": 0
   },
   {
    "id": 30,
-   "seek": 102,
-   "start": 120.317345,
-   "end": 124.317345,
+   "seek": 103,
+   "start": 121.053345,
+   "end": 125.053345,
    "text": " The honest detector compares whole histograms.",
    "tokens": [
     51265,
@@ -3100,15 +3160,15 @@
     51465
    ],
    "temperature": 0,
-   "avg_logprob": -0.14208512,
-   "compression_ratio": 1.4813085,
+   "avg_logprob": -0.15583465,
+   "compression_ratio": 1.5695068,
    "no_speech_prob": 0
   },
   {
    "id": 31,
-   "seek": 102,
-   "start": 124.317345,
-   "end": 127.317345,
+   "seek": 103,
+   "start": 125.053345,
+   "end": 128.05334,
    "text": " 39 targets, and chance predicts 39.",
    "tokens": [
     51465,
@@ -3124,15 +3184,15 @@
     51615
    ],
    "temperature": 0,
-   "avg_logprob": -0.14208512,
-   "compression_ratio": 1.4813085,
+   "avg_logprob": -0.15583465,
+   "compression_ratio": 1.5695068,
    "no_speech_prob": 0
   },
   {
    "id": 32,
-   "seek": 102,
-   "start": 127.317345,
-   "end": 130.31735,
+   "seek": 103,
+   "start": 128.05334,
+   "end": 131.05334,
    "text": " The chi-squared misfit squares each bar's gap",
    "tokens": [
     51615,
@@ -3151,19 +3211,18 @@
     51765
    ],
    "temperature": 0,
-   "avg_logprob": -0.14208512,
-   "compression_ratio": 1.4813085,
+   "avg_logprob": -0.15583465,
+   "compression_ratio": 1.5695068,
    "no_speech_prob": 0
   },
   {
    "id": 33,
-   "seek": 2902,
-   "start": 130.31735,
-   "end": 137.31735,
-   "text": " bars gap and divides by chance's bar because short bars wobble less. A miss on a short",
+   "seek": 2903,
+   "start": 131.05334,
+   "end": 136.05334,
+   "text": " gap and divides by chance's bar because short bars wobble less.",
    "tokens": [
     50365,
-    10228,
     7417,
     293,
     41347,
@@ -3178,26 +3237,26 @@
     638,
     1570,
     13,
+    50615
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12640677,
+   "compression_ratio": 1.4570136,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 34,
+   "seek": 2903,
+   "start": 136.05334,
+   "end": 141.05334,
+   "text": " A miss on a short bar counts more. Map A scores 2.0.",
+   "tokens": [
+    50615,
     316,
     1713,
     322,
     257,
     2099,
-    50715
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.16163266,
-   "compression_ratio": 1.4020618,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 34,
-   "seek": 2902,
-   "start": 137.31735,
-   "end": 145.41734,
-   "text": " bar counts more. Map A scores. 2.0. Three out of four simulated chance maps score worse.",
-   "tokens": [
-    50715,
     2159,
     14893,
     544,
@@ -3205,36 +3264,50 @@
     22053,
     316,
     13444,
-    13,
     568,
     13,
     15,
     13,
-    6244,
+    50865
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12640677,
+   "compression_ratio": 1.4570136,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 35,
+   "seek": 2903,
+   "start": 141.05334,
+   "end": 145.05334,
+   "text": " 3 out of 4 simulated chance maps score worse.",
+   "tokens": [
+    50865,
+    805,
     484,
     295,
-    1451,
+    1017,
     41713,
     2931,
     11317,
     6175,
     5324,
     13,
-    51120
+    51065
    ],
    "temperature": 0,
-   "avg_logprob": -0.16163266,
-   "compression_ratio": 1.4020618,
+   "avg_logprob": -0.12640677,
+   "compression_ratio": 1.4570136,
    "no_speech_prob": 0
   },
   {
-   "id": 35,
-   "seek": 2902,
-   "start": 145.41734,
-   "end": 154.61734,
-   "text": " That share P is .74. Now map B. Half the expected empty squares, a tower of single hits, misfit",
+   "id": 36,
+   "seek": 2903,
+   "start": 145.05334,
+   "end": 148.05334,
+   "text": " That share P is .74.",
    "tokens": [
-    51120,
+    51065,
     663,
     2073,
     430,
@@ -3242,16 +3315,46 @@
     2411,
     34026,
     13,
+    51215
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12640677,
+   "compression_ratio": 1.4570136,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 37,
+   "seek": 2903,
+   "start": 148.05334,
+   "end": 152.05334,
+   "text": " Now map B, half the expected empty squares,",
+   "tokens": [
+    51215,
     823,
     4471,
     363,
-    13,
-    15917,
+    11,
+    1922,
     264,
     5176,
     6707,
     19368,
     11,
+    51415
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12640677,
+   "compression_ratio": 1.4570136,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 38,
+   "seek": 2903,
+   "start": 152.05334,
+   "end": 156.05334,
+   "text": " a tower of single hits, misfit 272.",
+   "tokens": [
+    51415,
     257,
     10567,
     295,
@@ -3260,24 +3363,24 @@
     11,
     3346,
     6845,
-    51580
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.16163266,
-   "compression_ratio": 1.4020618,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 36,
-   "seek": 5332,
-   "start": 154.61734,
-   "end": 161.93735,
-   "text": " 272. A pattern this even is the fingerprint of a spacing rule. Aimed bombs would miss the",
-   "tokens": [
-    50365,
     7634,
     17,
     13,
+    51615
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12640677,
+   "compression_ratio": 1.4570136,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 39,
+   "seek": 2903,
+   "start": 156.05334,
+   "end": 160.05334,
+   "text": " A pattern this even is the fingerprint of a spacing rule.",
+   "tokens": [
+    51615,
     316,
     5102,
     341,
@@ -3290,27 +3393,31 @@
     27739,
     4978,
     13,
+    51815
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.12640677,
+   "compression_ratio": 1.4570136,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 40,
+   "seek": 5803,
+   "start": 160.05334,
+   "end": 167.05334,
+   "text": " rule. Aimed bombs would break the fit the other way. Extra empty squares, extra pileups.",
+   "tokens": [
+    50365,
+    4978,
+    13,
     47796,
     292,
     19043,
     576,
-    1713,
+    1821,
     264,
-    50731
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.14432925,
-   "compression_ratio": 1.386598,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 37,
-   "seek": 5332,
-   "start": 161.93735,
-   "end": 170.07735,
-   "text": " other way. Extra empty squares, extra pileups. In 1946, R. D. Clarke published the same test",
-   "tokens": [
-    50731,
+    3318,
+    264,
     661,
     636,
     13,
@@ -3322,6 +3429,21 @@
     14375,
     7528,
     13,
+    50715
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1782119,
+   "compression_ratio": 1.4148936,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 41,
+   "seek": 5803,
+   "start": 167.05334,
+   "end": 177.05334,
+   "text": " In 1946, R. D. Clarke published the same test on London's real hits. 537 in 576 squares.",
+   "tokens": [
+    50715,
     682,
     46062,
     11,
@@ -3335,21 +3457,6 @@
     264,
     912,
     1500,
-    51138
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.14432925,
-   "compression_ratio": 1.386598,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 38,
-   "seek": 5332,
-   "start": 170.07735,
-   "end": 179.99734,
-   "text": " on London's real hits. 537 in 576 squares. Chance predicted 227 empty squares. Clarke",
-   "tokens": [
-    51138,
     322,
     7042,
     311,
@@ -3363,6 +3470,21 @@
     21,
     19368,
     13,
+    51215
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1782119,
+   "compression_ratio": 1.4148936,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 42,
+   "seek": 5803,
+   "start": 177.05334,
+   "end": 186.05334,
+   "text": " Chance predicted 227 empty squares. Clarke counted 229. Overall, P equals .88. London's",
+   "tokens": [
+    51215,
     16428,
     19147,
     5853,
@@ -3372,32 +3494,34 @@
     13,
     28410,
     330,
-    51634
-   ],
-   "temperature": 0,
-   "avg_logprob": -0.14432925,
-   "compression_ratio": 1.386598,
-   "no_speech_prob": 0
-  },
-  {
-   "id": 39,
-   "seek": 7870,
-   "start": 179.99734,
-   "end": 189.09735,
-   "text": " counted 229. Overall, p equals .88. London's clusters were no sign of precise aim. The bombs",
-   "tokens": [
-    50365,
     20150,
     5853,
     24,
     13,
     18420,
     11,
-    280,
+    430,
     6915,
     2411,
     16919,
     13,
+    7042,
+    311,
+    51665
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.1782119,
+   "compression_ratio": 1.4148936,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 43,
+   "seek": 8403,
+   "start": 186.05334,
+   "end": 189.49335,
+   "text": " London's clusters were no sign of precise aim.",
+   "tokens": [
+    50365,
     7042,
     311,
     23313,
@@ -3408,23 +3532,23 @@
     13600,
     5939,
     13,
-    440,
-    19043,
-    50820
+    50537
    ],
    "temperature": 0,
-   "avg_logprob": -0.1151424,
-   "compression_ratio": 1.5391304,
+   "avg_logprob": -0.14220591,
+   "compression_ratio": 1.5677966,
    "no_speech_prob": 0
   },
   {
-   "id": 40,
-   "seek": 7870,
-   "start": 189.09735,
-   "end": 194.81735,
-   "text": " were aimed at central London, but tended to fall short, so farther north, hits were about",
+   "id": 44,
+   "seek": 8403,
+   "start": 189.49335,
+   "end": 195.27335,
+   "text": " The bombs were aimed at central London, but tended to fall short, so farther north, hits",
    "tokens": [
-    50820,
+    50537,
+    440,
+    19043,
     645,
     20540,
     412,
@@ -3442,27 +3566,42 @@
     6830,
     11,
     8664,
-    645,
-    466,
-    51106
+    50826
    ],
    "temperature": 0,
-   "avg_logprob": -0.1151424,
-   "compression_ratio": 1.5391304,
+   "avg_logprob": -0.14220591,
+   "compression_ratio": 1.5677966,
    "no_speech_prob": 0
   },
   {
-   "id": 41,
-   "seek": 7870,
-   "start": 194.81735,
-   "end": 201.91734,
-   "text": " half as dense. Score the north alone and it fits chance too, p equals .45. The aim",
+   "id": 45,
+   "seek": 8403,
+   "start": 195.27335,
+   "end": 197.73334,
+   "text": " were about half as dense.",
    "tokens": [
-    51106,
+    50826,
+    645,
+    466,
     1922,
     382,
     18011,
     13,
+    50949
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.14220591,
+   "compression_ratio": 1.5677966,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 46,
+   "seek": 8403,
+   "start": 197.73334,
+   "end": 202.43335,
+   "text": " Score the north alone and it fits chance too, p equals .45.",
+   "tokens": [
+    50949,
     47901,
     264,
     6830,
@@ -3478,23 +3617,23 @@
     2411,
     8465,
     13,
-    440,
-    5939,
-    51461
+    51184
    ],
    "temperature": 0,
-   "avg_logprob": -0.1151424,
-   "compression_ratio": 1.5391304,
+   "avg_logprob": -0.14220591,
+   "compression_ratio": 1.5677966,
    "no_speech_prob": 0
   },
   {
-   "id": 42,
-   "seek": 7870,
-   "start": 201.91734,
-   "end": 208.87735,
-   "text": " hides in lambda, which the test holds fixed. The clumps in map A are what no aim at all",
+   "id": 47,
+   "seek": 8403,
+   "start": 202.43335,
+   "end": 206.73334,
+   "text": " The aim hides in lambda, which the test holds fixed.",
    "tokens": [
-    51461,
+    51184,
+    440,
+    5939,
     35953,
     294,
     13607,
@@ -3505,6 +3644,21 @@
     9190,
     6806,
     13,
+    51399
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.14220591,
+   "compression_ratio": 1.5677966,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 48,
+   "seek": 8403,
+   "start": 206.73334,
+   "end": 211.61334,
+   "text": " The clumps in map A are what no aim at all looks like.",
+   "tokens": [
+    51399,
     440,
     596,
     16951,
@@ -3517,43 +3671,62 @@
     5939,
     412,
     439,
-    51809
+    1542,
+    411,
+    13,
+    51643
    ],
    "temperature": 0,
-   "avg_logprob": -0.1151424,
-   "compression_ratio": 1.5391304,
+   "avg_logprob": -0.14220591,
+   "compression_ratio": 1.5677966,
    "no_speech_prob": 0
   },
   {
-   "id": 43,
-   "seek": 10758,
-   "start": 208.87735,
-   "end": 213.11734,
-   "text": " looks like if you chose map B. You chose the rule.",
+   "id": 49,
+   "seek": 8403,
+   "start": 211.61334,
+   "end": 214.59335,
+   "text": " If you chose map B, you chose the rule.",
    "tokens": [
-    50365,
-    1542,
-    411,
-    498,
+    51643,
+    759,
     291,
     5111,
     4471,
     363,
-    13,
-    509,
+    11,
+    291,
     5111,
     264,
     4978,
     13,
-    50577
+    51792
    ],
    "temperature": 0,
-   "avg_logprob": -0.33721116,
-   "compression_ratio": 0.9807692,
+   "avg_logprob": -0.14220591,
+   "compression_ratio": 1.5677966,
+   "no_speech_prob": 0
+  },
+  {
+   "id": 50,
+   "seek": 11403,
+   "start": 216.05334,
+   "end": 246.03334,
+   "text": " Thank you.",
+   "tokens": [
+    50365,
+    1044,
+    291,
+    13,
+    51864
+   ],
+   "temperature": 0,
+   "avg_logprob": -0.21301015,
+   "compression_ratio": 0.57894737,
    "no_speech_prob": 0
   }
  ],
  "x_groq": {
-  "id": "req_01m5jwmy92edyr8sy7mmj2bw3p"
+  "id": "req_01m5k3c476e9nb37553px66x0z"
  }
 }

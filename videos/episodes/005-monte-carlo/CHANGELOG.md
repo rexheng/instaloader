@@ -383,3 +383,32 @@ yes", narrowly. Everything below was applied; where a fix was improved on, the r
 - Concision (budget): the additions cost ~25 words; paid for by cutting the spoken restated question in the
   prediction beat (the on-screen "= ?" carries the 1.6 s hold), "is ... while" in the rescue line, "Darts do have"
   -> "Darts have", and by merging the walk and the division into one beat.
+
+**What changed (scene.py, script.md, facts.md).**
+- √N (2:10-2:25): twelve walks (darts 1-96 of both runs, 16 at a time; ends −10 … +4, RMS 3.96 halves) fan out from
+  one start, "12 groups of 16 darts (simulated)"; the bold one (darts 17-32 of the 2-D run, ends +2) is built from
+  copies of the coin's ½ bracket; RED band "±4 halves"; the 30 % staircase "16 halves / if they never cancelled" none
+  reaches; new sentence "What adds is their squares: sixteen of them fill a square four halves wide." with each step
+  growing a half-by-half square and the sixteen tiling a 4 × 4 square whose top is the band's +4; then 16 -> N,
+  ±4 -> ±√N, and the numerator √N · ½ is copied from the band's √N and the coin's ½ (as before).
+- Measured spread (2:05-2:12): brackets grow during "spread this wide", are flagged together, hold through a
+  [pause 1.25] (~1.9 s legible), then both labels fly into one parked "measured: ±4.8 pts" tag (60 %) that returns
+  beside the check line at "We measured four point eight".
+- Check line: \frac{1/2}{\sqrt{100}} = 0.05 = 5 pts, its fraction, root and closing copied from ½/√N and N swapped
+  for 100 (no glyph morph).
+- Climb: grid line labelled "grid" at d = 10; the BLUE darts line drawn only on "The darts stay ..." (LaggedStart,
+  1.2 s, with "darts (simulated)"); rescue corner = "2 values on 19 axes" / "18 points off", cost 524,288 swapped into
+  the "points used" cell, table at 30 %, "grid says 1.000" removed first.
+- Disc -> ball: `ball_inset(...)["at"](s)` builds the whole family; an updater grows s 0 -> 1 with the radius readout.
+- Counters: both start on "puts"/"put" and end on "fifty-two"/"forty-four".
+- Diagonal: [pause 0.8] after the voiced misconception, "100 values on one axis" holds through it; "ball’s edge".
+- Prediction: chart frame fades in first (0.6 s), then lines are drawn with the N -> 1,000,000 swap; the spoken
+  question is cut, the "= ?" holds through a 1.5 s pause.
+- Payoff: "Few settings really matter; with one, the search is one-dimensional: ..."; on "one-dimensional" the
+  "important setting" labels flash and its axis lines pulse, "unimportant" dims to 30 %.
+- Limit: "... so they usually report zero: a tiny miss, but the whole answer." ("darts report 0:" flagged on "zero",
+  "off by the whole answer" lands on "answer").
+- Landing: "The darts never counted the axes", with the YELLOW d counter counting the regrowing axes 1 -> 100.
+- Voice: SPEED 0.84 (top of the guide's band) and narration trims to stay near the 3:35 budget.
+- facts.md: #12, #13, #16, #19a, #19b, #21, #24 (d = 18 corrected to 3.13e-7 and 0.73), #29 rewritten; round-6
+  claims section added.

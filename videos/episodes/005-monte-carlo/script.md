@@ -47,7 +47,7 @@ points. [pause 0.6]
 > "?" leaves and "1" arrives (a swap, never superimposed); a PURPLE dot at ½ on every axis, "the centre"; ghost dots at ¼ and ¾; 2^100 written
 > out (31 digits) on "two to the hundredth" and held.
 
-**B2.** Since Metropolis and Ulam's 1949 paper, the standard tool has been random points, like this one. How
+**B2.** Since Metropolis and Ulam in 1949, the standard tool has been random points, like this one. How
 far off would a million random points land?
 > Both sources on one citation line, bottom-left (≈5 s); a BLUE polyline (one random point) drawn as "like this
 > one" is spoken, "a random point: one value per input"; "a million random points: off by ?" (BLUE "?").
@@ -71,7 +71,7 @@ box.
 > the depth edges; the flat disc itself bulges into the exact r = 0.985 eighth-ball (one
 > family of shapes, so only one boundary at any moment) while "ball radius 0.80" ticks to 0.98; "d = 2" -> "d = 3" is a swap.
 
-**B7.** The grid's million points give each axis a thousand values in two dimensions, then a hundred, ten, three.
+**B7.** Per axis, the grid gets a thousand values in two dimensions, then a hundred, ten, three.
 > The cube shrinks to a thumbnail; the log-log chart ("miss (percentage points)" vs "dimensions") and its rows
 > "values per axis / points used / ball radius" are drawn; each spoken number lands with its column.
 
@@ -80,7 +80,7 @@ Fifty points off. [pause 0.8]
 > Rows "1", "1"; the thumbnail's centre dot lights, "centre is / inside the ball"; copies of it fly onto the chart
 > as the d = 20 and d = 100 grid points ("grid says 1.000", RED "50 points off").
 
-**B9.** Even two values on nineteen axes: eighteen points off. [pause 0.3] The darts stay under a tenth of a point.
+**B9.** Even two values on nineteen axes: eighteen points off. The darts stay under a tenth of a point.
 > "grid says 1.000" leaves and the table dims to 30 %; a hollow PURPLE dot drops 50 -> 17.6 at d = 20 with two lines
 > beside it, "2 values on 19 axes" and RED "18 points off"; its cost 524,288 swaps into the "points used" cell at
 > d = 20. On "darts" the whole BLUE line (all six d) is drawn at once with "darts (simulated)"; the 0.1 tick flashes.
@@ -103,10 +103,10 @@ equal to the answer, in any dimension. [pause 0.4] Each dart is a coin flip. [pa
 > rigidly into its coin as the coin grows); then the other 99 of each run become coins (each faint 100-D polyline
 > shrinks into its own coin): "44/100" and "48/100".
 
-**B14.** One flip is either zero or one. Its average is a half, so every flip misses by exactly a half.
+**B14.** A flip is zero or one. Its average is a half, so every flip misses by exactly a half.
 > One coin on a 0–1 line, flips 0 -> 1; dashed ½; a RED "½" bracket that swaps side with the coin.
 
-**B15.** Repeat the hundred-dart experiment three hundred times. In both, the estimates spread this wide. [pause 1.4]
+**B15.** Repeat the hundred-dart experiment three hundred times. In both, the estimates spread this wide. [pause 1.25]
 > The coin line waits at 30 % above the histograms; "N = 100 darts"; 300 simulated runs fill both histograms
 > (one "10 runs" scale bar); both brackets "±4.8 pts" grow during "spread this wide", are flagged side by side and
 > hold ~2 s; then both labels fly together into one tag "measured: ±4.8 pts", parked at the right at 60 %.
@@ -127,8 +127,8 @@ half for its own spread, sigma; there's still no d.
 > formula with N swapped for 100: \frac{1/2}{\sqrt{100}} = 0.05 = 5 pts; the parked "measured: ±4.8 pts" tag returns
 > under it. Then the walks dim to 30 %, ½ is flagged and becomes σ ("σ = one dart's spread"), and "no d" appears.
 
-**B17.** So, back to our ball: a million darts, any dimension. [pause 1.6] One half over a thousand: five hundredths
-of a point. [pause 1.0]
+**B17.** Back to our ball: a million darts, any dimension. [pause 1.5] One half over a thousand: five hundredths
+of a point. [pause 0.9]
 > The walk leaves; the formula takes the top centre; σ -> ½ while the dimension chart's frame (axes, ticks, titles)
 > returns beneath it, then its two data lines are drawn; N -> 1,000,000; "no d" flashes on "any dimension"; the open question returns as a BLUE "= ?" for the
 > 1.5 s prediction hold; √1,000,000 -> 1000; the "?" becomes "typical miss = 0.0005 = 0.05 points" (each change is a
@@ -137,8 +137,8 @@ of a point. [pause 1.0]
 > runs, all under it, flash. (This closes the B2 question.)
 
 ### Payoff + honest limit (2:40–3:22)
-**B18.** In 2012, Bergstra and Bengio found random search tuned neural networks as well as grid search, in a
-fraction of the time. [pause 0.45] Only a few settings really matter. [pause 0.2] With one, the search is
+**B18.** In 2012, Bergstra and Bengio found random search tuned neural networks as well as grid search in a
+fraction of the time. [pause 0.45] Few settings really matter; with one, the search is
 one-dimensional: nine grid trials test three values of it; nine random trials test nine. [pause 0.3]
 > (Round 6: this says why per-axis values matter here but did not rescue the diagonal: the search has one real
 > input. On "one-dimensional" the "important setting" axis flashes and the "unimportant" axis dims to 30 %.)

@@ -96,11 +96,12 @@ def runs(mask):
 FULL = (-5.0, -1.7, 10.0 / 7.0, 4.0)        # one big chart (x title clears the citation slot)
 MID = (-5.85, -2.0, 7.6 / 7.0, 4.2)         # one length examined, right column for the pull-out
 TWO = (-5.75, 0.65, 1.0, 2.2)               # chart on top, the data-first bill underneath
-THREE = (-5.75, 0.05, 1.0, 2.8)             # chart on top (the subject, 2.8 tall), both bills under
+THREE = (-5.75, 0.62, 1.0, 2.23)            # chart on top (2.23 tall), both bills (1.2 each) under
 # bills: (origin y, units per bit/minute); y runs over [B_LO, B_HI] bits per minute
-# (stacked bills run over [B3_LO, B_HI]: along the A -> B path no bill dips below -0.37)
-B1_TWO, B1_THREE, B2_THREE = (-1.3, 0.66), (-1.10, 0.38), (-2.46, 0.38)
-B_LO, B_HI, B3_LO = -1.0, 2.5, -0.5
+# (stacked bills run over [B3_LO, B3_HI]: along the A -> B path no bill dips below -0.37 and
+#  the bell-first bill never rises above 1.98; only the data-first mountain clips)
+B1_TWO, B1_THREE, B2_THREE = (-1.3, 0.66), (-0.59, 0.48), (-1.99, 0.48)
+B_LO, B_HI, B3_LO, B3_HI = -1.0, 2.5, -0.5, 2.0
 SCAN_HI = 1.8                               # lower scanner line stops under the unit label
 RX = 4.4                                    # right column centre
 COLX = 1.7                                  # left edge of the formula blocks (stacked panels)
@@ -112,14 +113,14 @@ PX, QX, PW = 3.35, 4.45, 0.7                # pulled-out p and q bars (one-lengt
 Y_RP, Y_RQ, Y_LR = 2.6, 1.95, 1.15          # readouts (beats 5-7)
 
 
-def panel_mid(b, lo=B_LO):
+def panel_mid(b, lo=B_LO, hi=B_HI):
     """Vertical centre of a bill panel (origin y, units per bit/min)."""
-    return b[0] + 0.5 * (lo + B_HI) * b[1]
+    return b[0] + 0.5 * (lo + hi) * b[1]
 
 
 # two-line formula blocks ("D(.||.) = x bits" over "= int ..."), each centred on its own panel
 ROWS_TWO = (panel_mid(B1_TWO) + 0.3, panel_mid(B1_TWO) - 0.3)
-MID1_THREE, MID2_THREE = panel_mid(B1_THREE, B3_LO), panel_mid(B2_THREE, B3_LO)
+MID1_THREE, MID2_THREE = panel_mid(B1_THREE, B3_LO, B3_HI), panel_mid(B2_THREE, B3_LO, B3_HI)
 ROWS1_THREE = (MID1_THREE + 0.34, MID1_THREE - 0.26)     # (a hair high: the shared x label
 ROWS2_THREE = (MID2_THREE + 0.34, MID2_THREE - 0.26)     #  runs under the lower block)
 
@@ -167,50 +168,50 @@ def chart_axes(lay, xlab=True, ytop=1.0) -> Axes:
     return ax
 
 
-def bill_axes(oy, yu, sparse=False, lo=B_LO) -> Axes:
-    ax = axes((0, 7), (lo, B_HI), x_length=7 * TWO[2], y_length=(B_HI - lo) * yu,
+def bill_axes(oy, yu, sparse=False, lo=B_LO, hi=B_HI) -> Axes:
+    ax = axes((0, 7), (lo, hi), x_length=7 * TWO[2], y_length=(hi - lo) * yu,
               x_ticks=[1, 2, 3, 4, 5, 6], y_ticks=[-1, 0, 1, 2] if lo <= -1 else [0, 1, 2])
     ax.x_axis.remove(ax.x_axis.numbers)
     ax.shift(np.array([TWO[0], oy, 0]) - ax.c2p(0, 0))
-    if sparse:                       # short panels: label only 0 and 2
-        for num in [n for n in ax.y_axis.numbers if abs(n.get_value()) == 1]:
+    if sparse:                       # stacked panels: label 0 and 1 (the 2 sits on the panel top,
+        for num in [n for n in ax.y_axis.numbers if abs(n.get_value()) == 2]:   # under the chart)
             ax.y_axis.numbers.remove(num)
     return ax
 
 
-def bill_unit(oy, yu, s="bits/min") -> VMobject:
+def bill_unit(oy, yu, s="bits/min", hi=B_HI) -> VMobject:
     """The bill's unit in its top-left corner; 'bits / per min' on two short lines, so it stays
     clear of the clipped data-first mountain (which rises at 1.5 min)."""
     if s == "bits":
         t = MathTex(r"\text{bits}", font_size=34, color=GRAY)
     else:                                   # a stacked unit: narrow enough to clear the mountain
         t = MathTex(r"\dfrac{\text{bits}}{\text{min}}", font_size=34, color=GRAY)
-    top = oy + B_HI * yu
+    top = oy + hi * yu
     t.move_to([TWO[0] + 0.22, top, 0], aligned_edge=UL)
     return t
 
 
-def order_tag(oy, yu, first: str) -> VGroup:
+def order_tag(oy, yu, first: str, hi=B_HI) -> VGroup:
     """'data first' / 'bell first' in a stacked bill's top-right corner: which bill is which."""
     w = text(first, size=LABEL, color=BLUE if first == "data" else PURPLE)
     g = VGroup(w, text("first", size=LABEL, color=INK)).arrange(RIGHT, buff=0.12)
     g[1].align_to(g[0], DOWN)
-    g.move_to([TWO[0] + 7 * TWO[2] - 0.05, oy + B_HI * yu, 0], aligned_edge=UR)
+    g.move_to([TWO[0] + 7 * TWO[2] - 0.05, oy + hi * yu, 0], aligned_edge=UR)
     return g
 
 
-def x_labels(y_bottom, side=False) -> VGroup:
-    """Shared x-axis labels (1-6 and the name) under the lowest panel; side=True puts the name
-    on the numbers' row, right of the 6 (stacked layout: no height to spare)."""
+def x_labels(y_bottom, side=False, gap=0.16) -> VGroup:
+    """Shared x-axis labels (1-6 and the name) under the lowest panel, the name right-aligned
+    to the axis end as in every layout (side=True: on the numbers' row; no longer used)."""
     nums = VGroup(*[MathTex(str(k), font_size=MATH_SMALL, color=GRAY) for k in range(1, 7)])
     for k, m in zip(range(1, 7), nums):
-        m.move_to([TWO[0] + TWO[2] * k, y_bottom - 0.16, 0], aligned_edge=UP)
+        m.move_to([TWO[0] + TWO[2] * k, y_bottom - 0.14, 0], aligned_edge=UP)
     name = Text("eruption length (minutes)", font=SERIF, font_size=LABEL, color=GRAY)
     if side:
         name.next_to(nums[-1], RIGHT, buff=0.4)
         name.shift((nums[-1].get_bottom()[1] - name[0].get_bottom()[1]) * UP)   # one baseline
     else:
-        name.next_to(nums, DOWN, buff=0.16).align_to([TWO[0] + 7 * TWO[2], 0, 0], RIGHT)
+        name.next_to(nums, DOWN, buff=gap).align_to([TWO[0] + 7 * TWO[2], 0, 0], RIGHT)
     return VGroup(nums, name)
 
 
@@ -400,12 +401,12 @@ class Episode(NarratedScene):
 
     def make_area(self, k):
         raw = self.integrand_x(k)
-        f = np.clip(raw, B_LO, B_HI)
+        f = np.clip(raw, B_LO, self.bhi.get_value())
         if k == 1:
             rv, frv = self.reveal.get_value(), self.fill_reveal.get_value()
             fill, op = self.area_fill.get_value(), self.area_op.get_value()
-        else:
-            rv, frv = 7.0, self.fill2_reveal.get_value()
+        else:                        # the bell-first bill: its curve and fill write in one move
+            rv = frv = self.fill2_reveal.get_value()
             fill, op = 1.0, self.area2_op.get_value()
         g = VGroup()
         if op < 0.005:
@@ -518,6 +519,7 @@ class Episode(NarratedScene):
 
         def upd(m):
             k = self.ro_op.get_value()            # dimmed while the scanner is away from 2 min
+            kn = k * self.ro_num.get_value()      # the numbers vanish during the sweep
             if k < 0.999 or state["dim"]:
                 lab.set_opacity(k)
                 state["dim"] = k < 0.999
@@ -536,9 +538,9 @@ class Episode(NarratedScene):
             else:
                 dec.set_value(v)
                 dec.next_to(lab, RIGHT, buff=0.18).set_y(lab[1].get_y())
-            dec.set_opacity(0.0 if sci else k)
+            dec.set_opacity(0.0 if sci else kn)
             for x in (mant, times, expo):
-                x.set_opacity(k if sci else 0.0)
+                x.set_opacity(kn if sci else 0.0)
         g.add_updater(upd)
         upd(g)
         return g
@@ -549,26 +551,44 @@ class Episode(NarratedScene):
         num = DecimalNumber(11, num_decimal_places=0, font_size=36, color=RED)
         arrow = Arrow(ORIGIN, RIGHT, buff=0, color=RED, stroke_width=3,
                       max_tip_length_to_length_ratio=0.25)
-        g = VGroup(tag, num, arrow)
+        # a break mark where the mountain runs off the panel top: two slanted strokes with a
+        # background notch between them, so the flat top reads as clipped, not as a value
+        notch = Polygon(LEFT, RIGHT, UP, DOWN, stroke_width=0, fill_color=BG, fill_opacity=1)
+        s1 = Line(ORIGIN, RIGHT, color=INK, stroke_width=3)
+        s2 = Line(ORIGIN, RIGHT, color=INK, stroke_width=3)
+        brk = VGroup(notch, s1, s2)
+        g = VGroup(tag, num, arrow, brk)
 
         def upd(m):
             f = self.integrand_x(1)
+            hi = self.bhi.get_value()
             ipk = int(np.argmax(f))
             pk = float(f[ipk])
-            op = float(np.clip((pk - B_HI - 0.5) / 1.0, 0, 1)) * self.peak_op.get_value()
+            # live from the frame the integrand first crosses the panel top
+            op = float(np.clip((pk - hi) / 0.35, 0, 1)) * self.peak_op.get_value()
             num.set_value(pk)
             fr3 = float(np.clip((B1_TWO[1] - self.b1u.get_value()) / (B1_TWO[1] - B1_THREE[1]), 0, 1))
-            yt = 2.0 + (0.85 - 2.0) * fr3          # stacked: mid-height, below the "data first" tag
+            yt = 2.0 + (0.7 - 2.0) * fr3           # stacked: mid-height, below the "data first" tag
             tag.move_to(self.bp(1, 3.35, yt), aligned_edge=LEFT)
             num.next_to(tag, RIGHT, buff=0.12)
             num.shift((tag[0][3].get_bottom()[1] - num.get_bottom()[1]) * UP)
             # the arrow stops short of the clipped plateau's right shoulder (it points, never touches)
-            right = np.nonzero(f[ipk:] < B_HI)[0]
+            right = np.nonzero(f[ipk:] < hi)[0]
             xr = float(XS[ipk + right[0]]) if len(right) else float(XS[ipk])
-            end = self.bp(1, xr, B_HI - 0.08 / max(self.b1u.get_value(), 0.1)) + RIGHT * 0.18
+            end = self.bp(1, xr, hi - 0.08 / max(self.b1u.get_value(), 0.1)) + RIGHT * 0.18
             arrow.put_start_and_end_on(tag.get_left() + LEFT * 0.15, end)
-            for x in (tag, num, arrow):
+            # the break mark sits just inside the plateau's left shoulder
+            left = np.nonzero(f[:ipk + 1] >= hi)[0]
+            xl = float(XS[left[0]]) if len(left) else float(XS[ipk])
+            c = self.bp(1, min(xl + 0.14, float(XS[ipk])), hi)
+            dx, dy, gap = 0.06, 0.13, 0.09
+            s1.put_start_and_end_on(c + np.array([-dx - gap / 2, -dy, 0]), c + np.array([dx - gap / 2, dy, 0]))
+            s2.put_start_and_end_on(c + np.array([-dx + gap / 2, -dy, 0]), c + np.array([dx + gap / 2, dy, 0]))
+            notch.set_points_as_corners([s1.get_start(), s1.get_end(), s2.get_end(), s2.get_start(),
+                                         s1.get_start()])
+            for x in (tag, num, arrow, s1, s2):
                 x.set_opacity(op)
+            notch.set_fill(opacity=op)
         g.add_updater(upd)
         upd(g)
         return g
@@ -606,7 +626,10 @@ class Episode(NarratedScene):
         self.p_w, self.p_fill = ValueTracker(4.5), ValueTracker(0.0)   # whole-curve pulses
         self.bell_w, self.a_w = ValueTracker(4.5), ValueTracker(4.5)
         self.ro_op = ValueTracker(1.0)         # p / q readouts: dimmed while the scanner is away
+        self.ro_num = ValueTracker(1.0)        # ...and their numbers hidden during the sweep
         self.lab_a_op = ValueTracker(1.0)
+        self.bhi = ValueTracker(B_HI)          # top of the bill panels (clip height), bits/min
+        self.tu, self.t_op = ValueTracker(0.0), ValueTracker(0.0)   # the stakes' trial fit
 
         self.ax = chart_axes(FULL)
         bars = self.redraw(self.make_bars, self.bar_h, self.bar_op)
@@ -635,31 +658,44 @@ class Episode(NarratedScene):
         mk2 = MathTex("2", font_size=44, color=YELLOW).next_to(self.pt(MU[0], pk), UP, buff=0.2)
         mk3 = MathTex("3", font_size=44, color=YELLOW).next_to(self.pt(MB, pk), UP, buff=0.2)
 
+        def first_line(slot):
+            """Yellow underline under a D-line's first slot (the landing's own mark)."""
+            return Line(slot.get_corner(DL) + DOWN * 0.12 + RIGHT * 0.05,
+                        slot.get_corner(DR) + DOWN * 0.12 + LEFT * 0.05, color=YELLOW,
+                        stroke_width=4)
+
+        ul1, ul2 = first_line(n1[1]), first_line(n2[1])
+
+        def swap_args(run_time=1.3):
+            """The cold-open move: the two arguments of D(data||bell) trade places, onto line 2."""
+            return AnimationGroup(TransformFromCopy(n1[0], n2[0]), TransformFromCopy(n1[2], n2[2]),
+                                  TransformFromCopy(n1[4], n2[4]),
+                                  TransformFromCopy(n1[1], n2[3], path_arc=-1.6),
+                                  TransformFromCopy(n1[3], n2[1], path_arc=-1.6), run_time=run_time)
+
         static_p = self.make_pcurve()
         self.add(self.ax, bars)
-        with self.narrate("Old Faithful's eruptions. [pause 0.12] Data first, the closest bell is "
-                          "this one. [pause 0.2] Swap the order. If closeness is a distance, order "
-                          "can't matter: it stays at one.", gap=0.35) as beat:
+        with self.narrate("Old Faithful's eruptions. [pause 0.12] Data first, this bell is closest. "
+                          "[pause 0.2] Swap the order. If closeness is a distance, it stays at one.",
+                          gap=0.35) as beat:
             # the order the bet is about is on screen from the first second
             self.play(self.bar_op.animate.set_value(0.42), Create(static_p), Write(n1),
                       FadeIn(n_lab, shift=0.1 * DOWN), FadeIn(cite_data),
                       run_time=beat.until("Data", offset=-0.15), rate_func=SMOOTH)
             self.swap_in(static_p, pcurve)
-            self.play(Indicate(n1[1], color=YELLOW, scale_factor=1.25), run_time=0.8)
-            beat.wait_until("closest", offset=-0.05)
+            # "Data first": the first slot flashes and is underlined (the mark the landing reuses)
+            self.play(Indicate(n1[1], color=YELLOW, scale_factor=1.25), Create(ul1), run_time=0.7)
             static_b = self.make_bell()
-            self.play(Create(static_b), run_time=beat.until("one", offset=0.25))
+            beat.wait_until("this bell", offset=-0.1)          # "this bell": it draws on the word
+            self.play(Create(static_b), run_time=beat.until_end_of("closest", offset=0.15))
             self.swap_in(static_b, bell)
             beat.wait_until("Swap", offset=-0.1)
-            # the two arguments trade places, onto a second line
-            self.play(TransformFromCopy(n1[0], n2[0]), TransformFromCopy(n1[2], n2[2]),
-                      TransformFromCopy(n1[4], n2[4]),
-                      TransformFromCopy(n1[1], n2[3], path_arc=-1.6),
-                      TransformFromCopy(n1[3], n2[1], path_arc=-1.6), run_time=1.3)
-            beat.wait_until("one", occurrence=2, offset=-0.2)
+            # the two arguments trade places, onto a second line; the first-slot mark follows
+            self.play(swap_args(), TransformFromCopy(ul1, ul2), run_time=1.3)
+            beat.wait_until("one", offset=-0.2)
             self.play(FadeIn(mk1, shift=0.15 * DOWN), run_time=0.6)
         # the bet itself, one question, a touch slower (Kokoro rushes questions: 230 wpm at 0.83)
-        with self.narrate("Or does the closest bell move to two, or to three? [pause 1.5]",
+        with self.narrate("Or does it move to two, or to three? [pause 1.5]",
                           speed=0.77) as beat:
             beat.wait_until("two", offset=-0.15)
             self.play(Create(ghost2), FadeIn(mk2, shift=0.15 * DOWN), run_time=0.6)
@@ -679,34 +715,56 @@ class Episode(NarratedScene):
         ml_lab = text("maximum-likelihood fit", size=LABEL, color=PURPLE).move_to([crown[0], PIN_Y, 0])
         leader = DashedLine(crown + UP * 0.12, ml_lab.get_bottom() + DOWN * 0.15, dash_length=0.07,
                             stroke_color=PURPLE, stroke_width=2)
-        with self.narrate("The D is KL divergence, named for Kullback and Leibler. [pause 0.2] "
-                          "Every maximum-likelihood fit shrinks it with the data first. [pause 0.2] "
+        # a trial fit for "every maximum-likelihood fit shrinks it": a bell that starts off to the
+        # left and too narrow and slides (in mean and log-spread) into A, with its live score
+        T0 = (2.7, 0.7)
+
+        def trial_ms():
+            u = self.tu.get_value()
+            return ((1 - u) * T0[0] + u * MA, math.exp((1 - u) * math.log(T0[1]) + u * math.log(SA)))
+
+        trial = self.redraw(lambda: self.bell_shape(*trial_ms(), opacity=self.t_op.get_value())
+                            if self.t_op.get_value() > 0.005 else VGroup(), self.tu, self.t_op)
+        num1 = r1.num
+        num1.add_updater(lambda m: m.set_value(self.total(1, m=trial_ms()[0], s=trial_ms()[1])))
+        with self.narrate("The D is KL divergence, named for Kullback and Leibler. [pause 0.5] "
+                          "Every maximum-likelihood fit shrinks it with the data first. [pause 0.6] "
                           "Much of Bayesian machine learning shrinks it with the order flipped. "
-                          "[pause 0.2] It's often called a distance.") as beat:
-            self.play(FadeOut(VGroup(ghost2, ghost3, mk1, mk2, mk3, n_lab)),
-                      n2.animate.set_opacity(0.3), Indicate(n1[0], color=YELLOW, scale_factor=1.25),
-                      run_time=0.8)
+                          "[pause 0.6] It's often called a distance.") as beat:
+            # the bet's markers leave; the flipped line leaves too (it is re-made on "flipped")
+            self.play(FadeOut(VGroup(ghost2, ghost3, mk1, mk2, mk3, n_lab, ul1, ul2, n2)),
+                      Indicate(n1[0], color=YELLOW, scale_factor=1.25), run_time=0.8)
             beat.wait_until("KL", offset=-0.15)
             self.play(FadeIn(kl_lab, shift=0.1 * RIGHT), run_time=0.7)
             beat.wait_until("Kullback", offset=-0.2)
             self.play(swap(cite_data, cite_kl), run_time=0.7)      # never superimposed
-            beat.wait_until("maximum", offset=-0.1)
-            self.play(FadeIn(ml_lab, shift=0.1 * UP), Create(leader), flag(n1), run_time=1.0)
+            # "Every maximum-likelihood fit": a fit starts off to one side, its score beside D
+            self.add(trial)
+            beat.wait_until("Every", offset=-0.1)
+            self.play(self.t_op.animate.set_value(1.0), self.bell_op.animate.set_value(0.3),
+                      FadeIn(r1, shift=0.1 * LEFT), run_time=0.6)
+            beat.wait_until("maximum", offset=0.2)
+            self.play(FadeIn(ml_lab, shift=0.1 * UP), Create(leader), run_time=0.6)
+            # "shrinks it": the fit slides and widens into A while its score falls to 0.76
             beat.wait_until("shrinks", offset=-0.1)
-            self.play(self.flash_bell(run_time=0.7))
-            beat.wait_until("data first", offset=-0.1)
-            self.play(flag(n1[1]), run_time=0.7)
+            self.play(self.tu.animate.set_value(1.0),
+                      run_time=beat.until("data first", offset=0.1, min_time=1.2), rate_func=SMOOTH)
+            # it lands on A: the trial merges into the bell; "data first" flags the first slot
+            self.play(self.t_op.animate.set_value(0.0), self.bell_op.animate.set_value(1.0),
+                      flag(n1[1]), run_time=0.6)
+            self.remove(trial)
             # the stakes of the order: Bayesian approximations put the model first
             beat.wait_until("Bayesian", offset=-0.1)
-            self.play(n2.animate.set_opacity(1.0), FadeIn(vi_lab, shift=0.1 * UP),
-                      swap(cite_kl, cite_vi), run_time=0.8)
-            beat.wait_until("flipped", offset=-0.15)
-            self.play(flag(n2[1]), flag(n2[3]), run_time=0.8)
+            self.play(FadeIn(vi_lab, shift=0.1 * UP), swap(cite_kl, cite_vi), run_time=0.8)
+            # "order flipped": the cold-open move again, onto the tagged line (no number)
+            n2.set_opacity(1.0)
+            beat.wait_until("flipped", offset=-0.45)
+            self.play(swap_args(run_time=1.2))
             beat.wait_until("distance", offset=-0.15)
             self.play(FadeIn(dist_lab, shift=0.1 * RIGHT), run_time=0.7)
+        num1.clear_updaters()
 
         # ============================================================ 3. naive build
-        num1 = r1.num
         num1.add_updater(lambda m: m.set_value(self.total(1)))
         a_lab = MathTex(r"A\!:\ 3.49 \pm 1.14\ \text{min}", font_size=36, color=PURPLE)
         a_lab.move_to(ml_lab)
@@ -723,9 +781,11 @@ class Episode(NarratedScene):
                       n2.animate.set_opacity(0.3), kl_lab.animate.set_opacity(0.35), run_time=0.8)
             beat.wait_until("Data first", offset=-0.1)
             self.play(flag(n1[1]), run_time=0.6)
-            # "this bell": the bell flashes as its score appears beside the D-line
-            beat.on("this bell", self.flash_bell(run_time=0.7), FadeIn(r1, shift=0.1 * LEFT),
+            # "this bell": the bell flashes with its score beside the D-line
+            num1.suspend_updating()
+            beat.on("this bell", self.flash_bell(run_time=0.7), Indicate(num1, color=YELLOW),
                     run_time=0.7)
+            num1.resume_updating()
             beat.wait_until("Shift", offset=-0.15)
             # each excursion: out, hold and flag the raised number, back
             for tracker, val in ((self.mu, MA + NV["shift"]), (self.sd, SA * NV["stretch"])):
@@ -787,7 +847,7 @@ class Episode(NarratedScene):
         def upd_lr(m):
             m.set_value(math.log2(max(self.p_at(self.scan.get_value()), 1e-300)
                                   / max(self.q_at(self.scan.get_value()), 1e-300)))
-            k = self.ro_op.get_value()            # dims with the p / q readouts
+            k = self.ro_op.get_value() * self.ro_num.get_value()   # dims and hides with p, q
             if k < 0.999 or lr_state["dim"]:
                 m.set_opacity(k)
                 lr_state["dim"] = k < 0.999
@@ -901,9 +961,9 @@ class Episode(NarratedScene):
         # describe 2 min only) dim while it is away
         self.play(*self.to_layout(TWO), self.move_axes(TWO, xlab=False),
                   self.bar_op.animate.set_value(0.25), self.scan.animate.set_value(0.3),
-                  self.ro_op.animate.set_value(0.3), lr_lab.animate.set_opacity(0.3),
-                  run_time=0.8, rate_func=SMOOTH)
-        with self.narrate("Do that at every length. [pause 0.9] Then weight each by p, how often "
+                  self.ro_op.animate.set_value(0.3), self.ro_num.animate.set_value(0.0),
+                  lr_lab.animate.set_opacity(0.3), run_time=0.8, rate_func=SMOOTH)
+        with self.narrate("Do that at every length. [pause 1.2] Then weight each by p, how often "
                           "eruptions last that long, and add it all up. [pause 0.3] Where the bell "
                           "rises above the data, [pause 0.45] the grey dips pay a little back. "
                           "[pause 0.5] That's the divergence: the same point seven six.", gap=0.9) as beat:
@@ -948,8 +1008,11 @@ class Episode(NarratedScene):
             dip_x = 3.55
             refund.move_to(self.bp(1, dip_x, -0.72))
             self.play(FadeIn(refund, shift=0.1 * UP), run_time=0.6)
+            # "the divergence": its first slot and the weight light together (first = the weight)
             beat.wait_until("divergence", offset=-0.15)
-            self.play(lhs_target.animate.set_opacity(1.0), run_time=0.6)
+            self.play(lhs_target.animate.set_opacity(1.0), run_time=0.5)
+            self.play(Indicate(lhs_target[1], color=YELLOW, scale_factor=1.2),
+                      Indicate(f_fwd[1], color=YELLOW, scale_factor=1.4), run_time=0.8)
             beat.wait_until("point seven", offset=-0.15)
             self.pulse(tot_num, run_time=0.8)
         lhs = lhs_target

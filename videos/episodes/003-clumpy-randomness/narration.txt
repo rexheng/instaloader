@@ -1,35 +1,39 @@
 [00:00.0] Each map holds five hundred thirty-seven bomb hits. One is pure chance; the other follows a rule. Which is chance? [pause 1.2]
 
-[00:09.7] In nineteen forty-four, Londoners claimed flying bombs fell in clusters, and precise aim would put factories at risk.
+[00:09.7] In nineteen forty-four, Londoners saw flying bombs land in clusters. If that meant precise aim, factories were at risk.
 
-[00:18.3] Build the detector your eye is running. Cut each map into five hundred seventy-six squares, and flag any square with three or more hits, like this one.
+[00:18.4] Build the detector your eye is running. Cut each map into five hundred seventy-six squares, and flag any square with three or more hits, like this one.
 
-[00:29.0] Map A lights up with thirty-nine targets, map B with none. So A looks aimed.
+[00:29.1] Map A lights up with thirty-nine targets, map B with none. So A looks aimed.
 
-[00:35.1] Backwards. [pause 0.6] I dropped every hit on map A at random, so all thirty-nine targets are false alarms. Map B's rule: no two hits closer than four fifths of a square. Your eye, like the detector, expects chance to look that even.
+[00:35.2] Backwards. [pause 0.6] I dropped every hit on map A at random, so all thirty-nine targets are false alarms. Map B's rule: no two hits closer than four fifths of a square. Your eye, like the detector, expects chance to look that even.
 
-[00:51.7] Each bomb has a one in five seventy-six chance of landing in this square. To stay empty, all five hundred thirty-seven must miss.
+[00:51.8] Almost one hit per square. Guess how many squares stay empty. [pause 1.1]
 
-[01:00.4] Guess how many squares stay empty. [pause 1.1]
+[00:57.2] Each bomb has a one in five seventy-six chance of landing in this square. To stay empty, all five hundred thirty-seven must miss. [pause 0.4]
 
-[01:03.8] About two hundred twenty-seven. [pause 0.3] Map A has two hundred twenty-two. [pause 0.5]
+[01:06.3] About two hundred twenty-seven: four squares in ten. [pause 0.3] Map A has two hundred twenty-two. [pause 0.3]
 
-[01:08.8] Those empty squares force pile-ups: [pause 0.3] a hundred eighty-three hits must land where another already did. [pause 0.6]
+[01:12.8] Those empty squares force pile-ups: [pause 0.3] a hundred eighty-three hits must land where another already did. [pause 0.5]
 
-[01:16.3] Let's call the average hits per square lambda. [pause 0.5] One minus a small slice, raised to a big power, is e to the minus lambda, almost exactly. Call that P of zero.
+[01:20.1] Let's call the average hits per square lambda. [pause 0.5] One minus a small slice, raised to a big power, is e to the minus lambda, almost exactly. Call that P of zero.
 
-[01:28.2] For two hits in this square, pick two bombs: five thirty-seven times five thirty-six ways, over two, since each pair counts twice. [pause 0.8] Each has that same chance, and the rest miss: e to the minus lambda again.
+[01:32.0] For two hits in this square, pick two bombs: five thirty-seven times five thirty-six ways, over two, since each pair counts twice. [pause 0.6] Each has that same chance, and the rest miss: e to the minus lambda again.
 
-[01:43.6] Five thirty-six is almost five thirty-seven. [pause 0.3] For three hits, each two becomes a three; for any k, a k. [pause 0.5] The powers merge into lambda to the k: the Poisson distribution. [pause 0.5] Times five seventy-six squares, it predicts these purple bars.
+[01:47.4] For three hits, each two becomes a three; for any k, a k. [pause 0.5] The powers merge into lambda to the k: the Poisson distribution. [pause 0.5] Times five seventy-six squares, it predicts these purple bars.
 
-[02:01.1] The honest detector compares whole histograms. [pause 0.4] Thirty-nine targets, and chance predicts thirty-nine. [pause 0.4] The chi-squared misfit squares each bar's gap and divides by chance's bar, because short bars wobble less: a miss on a short bar counts more. Map A scores [pause 0.2] two point oh. [pause 0.6] Three out of four simulated chance maps score worse. That share, p, is point seven four. [pause 0.7]
+[02:01.7] The honest detector compares whole histograms. [pause 0.4] Thirty-nine targets, and chance predicts thirty-nine. [pause 0.4] The chi-squared misfit squares each bar's gap and divides by chance's bar, because short bars wobble less: a miss on a short bar counts more.
 
-[02:28.8] Now map B: half the expected empty squares, a tower of single hits, misfit two hundred seventy-two. [pause 0.3] A pattern this even is the fingerprint of a spacing rule.
+[02:19.2] Map A scores two point oh. [pause 0.6]
 
-[02:40.6] Aimed bombs would miss the other way: extra empty squares, extra pile-ups. [pause 0.4] In nineteen forty-six, R D Clarke published the same test on London's real hits: five thirty-seven in five seventy-six squares.
+[02:22.0] Three out of four simulated chance maps score worse. That share, p, is point seven four. [pause 0.7]
 
-[02:55.9] Chance predicted two hundred twenty-seven empty squares; Clarke counted two hundred twenty-nine. [pause 0.3] Overall, p equals point eight eight. [pause 0.5] London's clusters were no sign of precise aim.
+[02:29.2] Now map B: half the expected empty squares, a tower of single hits, misfit two hundred seventy-two. [pause 0.3] A pattern this even is the fingerprint of a spacing rule.
 
-[03:08.5] The bombs were aimed at central London but tended to fall short, so farther north, hits were about half as dense. [pause 0.6] Score the north alone, and it fits chance too: p equals point four five. [pause 0.3] The aim hides in lambda, which the test holds fixed.
+[02:41.0] Aimed bombs would break the fit the other way: extra empty squares, extra pile-ups. [pause 0.4] In nineteen forty-six, R D Clarke published the same test on London's real hits: five thirty-seven in five seventy-six squares.
 
-[03:25.7] The clumps in map A [pause 0.4] are what no aim at all looks like. If you chose map B, [pause 0.3] you chose the rule.
+[02:56.7] Chance predicted two hundred twenty-seven empty squares; Clarke counted two hundred twenty-nine. [pause 0.3] Overall, p equals point eight eight. [pause 0.5] London's clusters were no sign of precise aim.
+
+[03:09.4] The bombs were aimed at central London but tended to fall short, so farther north, hits were about half as dense. [pause 0.6] Score the north alone, and it fits chance too: p equals point four five. [pause 0.3] The aim hides in lambda, which the test holds fixed.
+
+[03:26.6] The clumps in map A [pause 0.4] are what no aim at all looks like. [pause 0.9] If you chose map B, [pause 0.3] you chose the rule.

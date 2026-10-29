@@ -22,7 +22,7 @@ baseline is strong, not extreme, and Schelling himself called his one-third resu
 | RED `#EF6F61` | unhappy: a ring drawn *outside* an unhappy household's tile, after a 1 px gap of background colour (the tile keeps its colour; round 6: red right against gold read as orange), the "unhappy" counts, the share-ladder bars of unhappy households |
 | PURPLE `#B394E8` | the demand: the share of matching neighbors a household insists on (marker, ⅓ / ¼, the demand line on the ladder, chart x-axis, "demanded" labels) |
 | INK (off-white) | the measured outcome (average share of neighbors that match: meter, chart dots, our two towns' ringed markers); focus boxes; fractions; the zone lines of the rule-made town |
-| GRAY / DIM | axes, captions, "plan predicts 0", "round", notes, ladder bars of content households and their counts (67, 76, 125, 256), the random-mix baseline, the "our jump" bracket, Schelling's band and rules, citations |
+| GRAY / DIM | axes, captions, "guess 0", "round", notes, "+421 above 60%", ladder bars of content households and their counts (67, 76, 125, 256), the random-mix baseline, the "ours" bracket, "keeps its match", Schelling's band and rules, citations |
 
 Blue vs gold is colour-blind safe; RED never contrasts with GREEN (GREEN is unused); RED is
 always a ring or a count, never a household colour.
@@ -69,10 +69,12 @@ on the meter's 100 % end, so "plan predicts 0" has its 0 directly under the coun
 > Rewind to the start, a random mix. Here, on average, half the neighbors match, well above
 > a third. Still, these two hundred thirty-eight are unhappy.
 >
-> The obvious plan is to move each one to a random empty square where it would be
-> content, so the town stays mixed.
+> Each one moves to a random empty square where it would be content. The obvious guess:
+> zero unhappy, and the town stays mixed.
 
-("plan predicts 0" arrives on "content". Round 6 merged "Then everyone is content" into the plan.)
+(Round 8: "The obvious plan is to move each one…" implied a planner the model lacks. The move rule
+is now stated as the model's rule, and only the outcome is a guess. The HUD row reads "guess 0" and
+arrives on "zero"; the 50 % meter pulses on "mixed".)
 
 ### 5 · Run + measured failure (0:51–1:06)
 *Screen (round 7):* the "round" and "moves" rows fade in in the breath before the beat, so round 1
@@ -86,8 +88,12 @@ on "seventy-four", and "plan predicts 0" pulses in the 1.2 s silence after it. O
 every content tile dims, the 7 outlined tiles that were already unhappy at the start turn grey,
 67 RED rings remain, and the 38 note gives its slot to "67 content at the start" (out, then in).
 
-> Round one: two hundred moves. The unhappy count stalls at seventy-four. [pause 1.2]
+> Round one: two hundred moves. The unhappy count stops at seventy-four, not zero. [pause 1.2]
 > Sixty-seven of these were content before round one. They never moved. Their neighbors did.
+
+(Round 8: "stalls" suggested the count was stuck for the whole run; it falls 238 → 74 in round one
+and stops there when the round ends. On "not zero" the "guess 0" row pulses, then in the silence the
+meter's 64 % pulses: the town did not stay mixed either.)
 
 (Round 5 cut "The matching share jumps to sixty-four percent": the meter climbs to 64 % live
 during the round. Round 7 cut "the other thirty-eight were content by their turn" (the GRAY note
@@ -123,6 +129,9 @@ into the next beat.
 >
 > Its neighbor here also has three eighths. In round two, our household leaves, and this one
 > drops to two sevenths. [pause 0.9]
+
+(Round 8: on "our household" B's red ring pulses once (it brightens and thickens in place for
+0.5 s) before B flies out, so the pronoun has a visible referent after the outline moved to C.)
 
 (Round 5, continued: the third step, "Then the next one, also at three eighths, tips in round
 three", was cut for the concision budget. Two links, A → B → C, already make the chain, and a
@@ -215,8 +224,19 @@ the tallest bar, ½, carries its count "256" from the moment it has grown, as th
 >
 > At a quarter, how many would start unhappy? [pause 1.5]
 >
-> Only these two bars change sides: just ninety-five start unhappy. Now a household at three
-> eighths can lose a match and stay, so that chain never starts. [pause 0.9]
+> Only these two bars change sides: just ninety-five start unhappy. These were the movers
+> with two matching neighbors. Now they stay, so those neighbors keep their matches, and our
+> chain never starts. [pause 0.9]
+
+(Round 8, substance critic: the old line explained the jump by the 3/8 rung's fragility, but the
+fragile pool barely changes (210 content households one vacated match from tipping at ⅓, 190 at ¼).
+What changes is the spark: at ⅓ the movers include these two bars, the only movers with two matching
+neighbors, and their departures strip 274 matches from content neighbors; at ¼ every mover has at
+most one, 62 matches (facts R8-1). On screen: the two bars flash on "These"; A's two gold neighbors
+are boxed and A's YELLOW 2 flags on "two"; A's 2/7 ≥ ¼ flashes on "stay"; the boxes pulse on
+"those"; on "keep" the 3/8 → 2/7 arrow withdraws into the 3/8 count and "keeps its match" appears
+over it ("still content" is gone). The counts 76 and 67 now sit ≥ 0.32 apart, and a GRAY
+"+421 above 60%" right of the "60%" end mark says the ladder is cropped.)
 
 (Round 6: both critics found that the ¼ side explained the jump by the starting count alone.
 The new sentence names the mechanism: 2/7 ≥ ¼, so the 3/8 → 2/7 step that drove A → B → C no
@@ -254,6 +274,15 @@ of his band, and the two thumbnails they belong to are still on screen.
 > nearest square that suited them, on far emptier boards. [pause 0.5] There the jump came later,
 > between about a third and a half. (speed 0.80; at 0.82 the last sentence ran 202 wpm)
 
+(Round 8 screen: on "His households" both thumbnails and their "⅓ → 76%" / "¼ → 58%" labels dim to
+35 %, so the plot is the one focal region. Our bracket's tag is "ours", on its row to its left, and
+it stays on through "nearest … emptier". His rules sit in the plot's empty upper-left corner (rows
+96.5 % and one below, 0.25 right of the y-axis) and never move. On "There" "ours" and the dotted
+drop fade as the bracket rises and then slides to 35–50 %: one level bar, its width and centre set
+each frame (no Transform between differently shaped brackets); "Schelling: 35–50%" fades in above
+the band as it lands. The citation is "Schelling, 1971 · J. Math. Sociology", so no frame carries
+more than 12 prose words.)
+
 (Round 7: one 14.7 s sentence with three qualifiers became three sentences with pauses, and each
 of his two rules has a label on its word. "a quarter empty" (a critic's wording) was not used:
 "a quarter" is a demand level in this episode.)
@@ -286,6 +315,9 @@ Schelling town's texture (no stray tiles), so the picture cannot give the answer
 > This one. The other was placed by a rule, with no preferences. Real cities have rules too.
 > One study finds that 1930s federal lending maps raised racial segregation for decades. Its
 > authors point to reduced credit.
+
+(Round 8: on "One study" the rule town's "· placed by a rule" (it has pulsed on "rules too") and the
+centre "simulated" tag fade out, so the frame carries ≤ 12 prose words with the citation.)
 
 (Round 7: both towns and both "76% match" labels are fully in before "Two" (the frame was
 near-empty under it); "both seventy-six percent" is no longer read aloud, the two labels pulse

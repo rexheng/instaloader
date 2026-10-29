@@ -1050,3 +1050,20 @@ script.md (beats, palette, visuals) and facts.md ("Round 8" table) are updated.
 to 17 %; the cold-open raster collapsing into the + and returning coloured as the shrunk sample space
 (2:38–2:45) to answer the opening question; counts → shares → names building Bayes' theorem in place
 with "≈ 17 %" fixed on screen.
+
+## Round 9 revisions
+
+Reviews: `reviews/round9-craft.md` (8.8, "reaches 9: true") and `reviews/round9-substance.md` (8.6,
+"reaches 9: yes, narrowly"). No caps, no factual errors; both critics re-verified Manrai 2014, BBC
+4 May 2018 and Davies et al. 2018.
+
+### Climb plan (written before editing)
+
+| Dimension (craft / substance) | BAR "9" anchor | Where round 9 fell short | Upgrade |
+|---|---|---|---|
+| Clarity 8.5 / 8.5 | "viewer could re-derive it; all numbers check out" | two alert totals (2,470 / 2,632) label the same week; "this disease" has no referent; the Cardiff base rate (≤ 1 in 140) is shown but never said or tied to the 7 %; "the blue term" over-credits one cause; "twenty sick" heard as "twenty-six" | evaluators' tag "logbook-confirmed" (no second total); "Take a simpler case: one in five hundred people has a disease."; "At most one person in a hundred forty was on a list." with the legend pulsing on it; "That's mostly the blue term…"; "the twenty who are sick, [pause 0.2] times…" (whisper re-checked) |
+| Motion 8.5 / 8.5 | "every motion encodes a relation" | closing crowd fully seen < 1 s; landing diagram rebuilt from scratch; 6× bracket ~1 s after "six" | stream starts on "It said" and the outline closes on "crowd", then a ~1.7 s hold; the counting table folds back into the disease diagram on "Swap the disease…" and parks as a 30 % ghost, and on "Back to your test" that same object grows back (no Create / GrowArrow rebuild); bracket grows and its label writes in 0.6 s from just before "six" |
+| Visual 9 / 8.5 | "one focal point per frame" | lever frame ~14 prose words, ghost denominator competing with the 46 % fill; flow counts crowd the 99 % rate at 1 in 3 / 1 in 2; 8 words of braces | ghost denominator fades to 0 once its blue term has risen; tag shortened; red count placed further along its flow (f 0.7, buff 0.25 + width/2); the sick-pair braces dim to 40 % once the numerator is named |
+| Audio 8.5 / 8.5 | "pauses intentional, deictics land" | "twenty sick" / "twenty-six" ambiguity | re-synthesised with a pause after "sick"; transcript checked |
+| Concision 9 / 8.5 | "cutting any sentence loses something" | "Cardiff University's" duplicates the citation; two alert totals | "University evaluators…"; second total gone |
+| Hook 9 / 9 | "ending resolves the opening exactly" | the answer image is barely seen | the closing strip holds ≥ 1.5 s before the fade |

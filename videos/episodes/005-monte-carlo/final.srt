@@ -1,172 +1,188 @@
 1
-00:00:00,000 --> 00:00:07,020
+00:00:00,000 --> 00:00:06,940
 A million evaluations to price an option on a hundred stocks: an average over a hundred inputs.
 
 2
-00:00:07,220 --> 00:00:09,820
+00:00:07,140 --> 00:00:09,740
 Spread them as a grid; that feels thorough.
 
 3
-00:00:10,020 --> 00:00:12,360
+00:00:09,940 --> 00:00:12,260
 How many values does each input get?
 
 4
-00:00:14,300 --> 00:00:14,960
+00:00:14,200 --> 00:00:14,850
 One.
 
 5
-00:00:15,160 --> 00:00:17,800
+00:00:15,050 --> 00:00:17,670
 The whole grid is one point: the centre.
 
 6
-00:00:18,000 --> 00:00:21,650
+00:00:17,870 --> 00:00:21,490
 Two values per input would take two to the hundredth points.
 
 7
-00:00:22,700 --> 00:00:30,790
-Since Metropolis and Ulam's 1949 paper, the standard tool has been random points, like this one.
+00:00:22,533 --> 00:00:29,943
+Since Metropolis and Ulam in 1949, the standard tool has been random points, like this one.
 
 8
-00:00:31,290 --> 00:00:34,160
+00:00:30,443 --> 00:00:33,283
 How far off would a million random points land?
 
 9
-00:00:34,800 --> 00:00:36,280
+00:00:33,933 --> 00:00:35,413
 Start with two inputs.
 
 10
-00:00:36,480 --> 00:00:43,610
+00:00:35,613 --> 00:00:42,643
 Our function is one inside this quarter disc, zero outside: its average is exactly one half.
 
 11
-00:00:44,200 --> 00:00:48,610
+00:00:43,233 --> 00:00:47,613
 A grid of a hundred points puts fifty-two inside: two points off.
 
 12
-00:00:49,066 --> 00:00:53,466
+00:00:48,066 --> 00:00:52,466
 A hundred random darts put forty-four inside: six points off.
 
 13
-00:00:53,716 --> 00:00:55,996
+00:00:52,716 --> 00:00:54,966
 In two dimensions, the grid wins.
 
 14
-00:00:56,433 --> 00:00:59,563
+00:00:55,433 --> 00:00:58,533
 Now give each a million points, and add inputs.
 
 15
-00:00:59,763 --> 00:01:03,943
+00:00:58,733 --> 00:01:02,823
 The disc becomes a ball, grown to cover exactly half the box.
 
 16
-00:01:04,400 --> 00:01:11,970
-The grid's million points give each axis a thousand values in two dimensions, then a hundred, ten, three.
+00:01:03,266 --> 00:01:09,546
+Per axis, the grid gets a thousand values in two dimensions, then a hundred, ten, three.
 
 17
-00:01:12,566 --> 00:01:16,346
+00:01:10,133 --> 00:01:13,863
 From twenty dimensions on, just the centre, inside the ball.
 
 18
-00:01:16,496 --> 00:01:18,996
+00:01:14,013 --> 00:01:16,493
 So the grid's estimate is the whole box.
 
 19
-00:01:19,296 --> 00:01:20,616
+00:01:16,793 --> 00:01:18,113
 Fifty points off.
 
 20
-00:01:21,866 --> 00:01:29,086
-Even two values on nineteen axes is eighteen points off, while the darts stay under a tenth of a point.
+00:01:19,366 --> 00:01:23,596
+Even two values on nineteen axes: eighteen points off.
 
 21
-00:01:30,766 --> 00:01:34,466
-Maybe darts win by giving every axis more values.
+00:01:23,896 --> 00:01:25,986
+The darts stay under a tenth of a point.
 
 22
-00:01:34,766 --> 00:01:44,386
-A million points on the diagonal give every axis a million values, and still miss by eight points: their coordinates move in lockstep.
+00:01:27,400 --> 00:01:31,050
+Maybe darts win by giving every axis more values.
 
 23
-00:01:45,133 --> 00:01:56,713
-A dart's coordinates are drawn independently and uniformly, so it lands inside with a chance equal to the answer, in any dimension: each dart is a coin flip.
+00:01:31,850 --> 00:01:41,270
+A million points on the diagonal give every axis a million values, and still miss by eight points: their coordinates move in lockstep.
 
 24
-00:01:57,900 --> 00:02:00,180
-One flip is either zero or one.
+00:01:42,033 --> 00:01:45,793
+A dart's coordinates are drawn independently and uniformly.
 
 25
-00:02:00,330 --> 00:02:04,950
-Its average is a half, so every flip misses by exactly a half.
+00:01:46,093 --> 00:01:50,773
+So it lands inside with a chance equal to the answer, in any dimension.
 
 26
-00:02:05,566 --> 00:02:09,056
-Repeat the hundred-dart experiment three hundred times.
+00:01:51,173 --> 00:01:52,923
+Each dart is a coin flip.
 
 27
-00:02:09,256 --> 00:02:11,646
-In both, the estimates spread this wide.
+00:01:54,133 --> 00:01:55,813
+A flip is zero or one.
 
 28
-00:02:12,100 --> 00:02:20,220
-Those misses fall up or down at random, so they partly cancel: sixteen darts stray about four halves, not sixteen.
+00:01:55,963 --> 00:02:00,433
+Its average is a half, so every flip misses by exactly a half.
 
 29
-00:02:20,620 --> 00:02:22,880
-N darts stray about root N halves.
+00:02:01,033 --> 00:02:04,513
+Repeat the hundred-dart experiment three hundred times.
 
 30
-00:02:23,080 --> 00:02:27,100
-Divide by N, and the typical miss is a half over root N.
+00:02:04,713 --> 00:02:07,063
+In both, the estimates spread this wide.
 
 31
-00:02:27,900 --> 00:02:30,390
-For a hundred darts: five points.
+00:02:08,766 --> 00:02:12,846
+Those misses fall up or down at random, so they partly cancel.
 
 32
-00:02:30,890 --> 00:02:32,490
-We measured four point eight.
+00:02:13,146 --> 00:02:16,876
+Sixteen darts typically stray four halves, not sixteen.
 
 33
-00:02:32,790 --> 00:02:37,760
-Any other function swaps the half for its own spread, sigma; there's still no d.
+00:02:17,176 --> 00:02:21,766
+What adds is their squares: sixteen of them fill a square four halves wide.
 
 34
-00:02:38,200 --> 00:02:41,820
-So, back to our ball: a million darts, any dimension.
+00:02:22,166 --> 00:02:24,426
+N darts stray about root N halves.
 
 35
-00:02:42,020 --> 00:02:44,360
-How far off is a typical estimate?
+00:02:24,726 --> 00:02:28,666
+Divide by N, and the typical miss is a half over root N.
 
 36
-00:02:45,860 --> 00:02:49,450
-One half over a thousand: five hundredths of a point.
+00:02:29,466 --> 00:02:31,876
+For a hundred darts: five points.
 
 37
-00:02:50,900 --> 00:02:59,480
-In 2012, Bergstra and Bengio found random search tuned neural networks as well as grid search, in a fraction of the time.
+00:02:32,376 --> 00:02:33,946
+We measured four point eight.
 
 38
-00:02:59,930 --> 00:03:07,470
-If one setting matters most, nine grid trials test three values of it; nine random trials test nine.
+00:02:34,246 --> 00:02:39,166
+Any other function swaps the half for its own spread, sigma; there's still no d.
 
 39
-00:03:08,233 --> 00:03:11,353
-Darts do have a blind spot: tiny answers.
+00:02:39,633 --> 00:02:42,913
+Back to our ball: a million darts, any dimension.
 
 40
-00:03:11,553 --> 00:03:18,733
-Keep the ball's radius at one, and in thirty dimensions it fills two parts in a hundred trillion of the box.
+00:02:44,413 --> 00:02:47,963
+One half over a thousand: five hundredths of a point.
 
 41
-00:03:19,133 --> 00:03:25,013
-Below this line, a million darts expect under one hit, so they usually report zero.
+00:02:49,300 --> 00:02:57,590
+In 2012, Bergstra and Bengio found random search tuned neural networks as well as grid search in a fraction of the time.
 
 42
-00:03:26,866 --> 00:03:29,006
-The darts never noticed the axes:
+00:02:58,040 --> 00:03:08,540
+Few settings really matter; with one, the search is one-dimensional: nine grid trials test three values of it; nine random trials test nine.
 
 43
-00:03:29,406 --> 00:03:32,086
+00:03:09,300 --> 00:03:12,200
+Darts have a blind spot: tiny answers.
+
+44
+00:03:12,400 --> 00:03:19,480
+Keep the ball's radius at one, and in thirty dimensions it fills two parts in a hundred trillion of the box.
+
+45
+00:03:19,880 --> 00:03:28,440
+Below this line, a million darts expect under one hit, so they usually report zero: a tiny miss, but the whole answer.
+
+46
+00:03:29,966 --> 00:03:32,296
+The darts never counted the axes:
+
+47
+00:03:32,696 --> 00:03:35,326
 a million coin flips, in any dimension.
 

@@ -2011,7 +2011,7 @@ class Episode(NarratedScene):
             # the fall-short arrow between them - two areas, each chance, at two lambdas
             beat.wait_until("holds", offset=-0.15)
             self.play(flag(rN, color=INK), flag(VGroup(lblN[2], lblC[2]), color=INK),
-                      flag(short, color=YELLOW), cbox.animate.set_stroke(opacity=1), run_time=0.7)
+                      flag(short, color=YELLOW), cbox.animate.set_stroke(opacity=1), run_time=0.65)
             # everything but Clarke's area and its hits leaves at once, so the area is alone
             keep = {id(m) for m in (cbox, *rdots.get_family())}
             outgoing = [m for m in list(self.mobjects)
@@ -2020,7 +2020,7 @@ class Episode(NarratedScene):
                 if m not in outgoing:
                     outgoing.append(m)
             self.play(*[FadeOut(m) for m in outgoing], outside.animate.set_opacity(0),
-                      run_time=0.5)
+                      run_time=0.45)
             # the area squares up (equal area) while London's hits hand over to map A's, which
             # appear at their true geometry (the two cross at half strength)
             side = float(np.sqrt(cbox.width * cbox.height))
@@ -2036,7 +2036,7 @@ class Episode(NarratedScene):
             self.play(Transform(cbox, csq),
                       UpdateFromAlphaFunc(inside, lambda m, a: m.set_opacity(1 - smooth(a))),
                       UpdateFromAlphaFunc(adots0, lambda m, a: m.set_opacity(a_in(a))),
-                      run_time=0.9)
+                      run_time=0.8)
             self.remove(rdots)
 
         # ============================================================ 17. landing

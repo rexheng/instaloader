@@ -631,6 +631,32 @@ def pinch(old, new, total, t0=0.0, dur=0.6, to=None, kmin=0.5):
             UpdateFromAlphaFunc(new, upd_new, rate_func=linear)]
 
 
+def pinch_staged(old, new, total, shrink, grow, kmin=0.5):
+    """Round 10: pinch() with separate windows.  During `shrink` = (a, b) seconds the old term
+    shrinks to kmin at full colour while it moves to the new term's centre; it waits there at
+    kmin until grow[0], when it hands over (a cut, never an overlap) to the new term, which
+    grows to full size during `grow`.  Used for rows whose terms change width: every term and
+    operator moves in the same window, so nothing collides, and the reveal is still left to
+    right."""
+    o0, n0 = old.copy(), new.copy()
+    c_old, c_new = old.get_center().copy(), new.get_center().copy()
+
+    def upd_old(m, a):
+        tt = a * total
+        b = smooth(float(np.clip((tt - shrink[0]) / (shrink[1] - shrink[0]), 0, 1)))
+        m.become(o0.copy().scale(1.0 - (1.0 - kmin) * b).move_to(c_old + (c_new - c_old) * b))
+        m.set_opacity(1.0 if tt < grow[0] else 0.0)
+
+    def upd_new(m, a):
+        tt = a * total
+        b = smooth(float(np.clip((tt - grow[0]) / (grow[1] - grow[0]), 0, 1)))
+        m.become(n0.copy().scale(kmin + (1.0 - kmin) * b).move_to(c_new))
+        m.set_opacity(1.0 if tt >= grow[0] else 0.0)
+    new.set_opacity(0.0)
+    return [UpdateFromAlphaFunc(old, upd_old, remover=True, rate_func=linear),
+            UpdateFromAlphaFunc(new, upd_new, rate_func=linear)]
+
+
 def grow_out(new, total, t0, dur):
     """A term grows at full colour out of its own centre between t0 and t0 + dur seconds."""
     n0 = new.copy()
@@ -1995,20 +2021,23 @@ class Episode(NarratedScene):
             # mu^2, 1.5^2 -> sigma^2, .2.5 -> mu and 1.5 -> avg(d) inside the box; the operators
             # and the box slide with the re-centred row
             beat.wait_until("Every girl", offset=-0.1)
+            # (the row re-spaces in one 0.4 s move, Sue's numbers shrinking to half size into
+            # their new slots with the operators; then the symbols grow out of them left to
+            # right, 0.15 s apart, so nothing collides while the reveal still reads in order)
             T = 1.45
-            LP, DP = 0.15, 0.6
+            SH, LP, GD = (0.0, 0.4), 0.15, 0.4
             gen = [(VGroup(S2[0], S2[1]), S3[0]), (VGroup(S2[3], S2[4]), S3[2]),
                    (VGroup(S2[6], S2[7]), S3[4]), (VGroup(S2[10], S2[11]), S3[7]), (S2[13], S3[9])]
             anims = []
             for i, (a_, b_) in enumerate(gen):
-                anims += pinch(a_, b_, T, t0=LP * i, dur=DP)
-            ops = [(S2[2], S3[1], 0.0), (S2[5], S3[3], 1.0), (S2[8], S3[5], 2.0), (S2[9], S3[6], 2.5),
-                   (S2[12], S3[8], 3.5)]
-            anims += [RT_same(a_, b_, rate_func=window(LP * j, LP * j + DP, T)) for a_, b_, j in ops]
+                g0 = SH[1] + LP * i
+                anims += pinch_staged(a_, b_, T, SH, (g0, g0 + GD))
+            ops = [(S2[2], S3[1]), (S2[5], S3[3]), (S2[8], S3[5]), (S2[9], S3[6]), (S2[12], S3[8])]
+            anims += [RT_same(a_, b_, rate_func=window(SH[0], SH[1], T)) for a_, b_ in ops]
             self.play(LaggedStart(*[Indicate(circ[n], color=BLUE, scale_factor=1.1) for n in NAMES],
                                   lag_ratio=0.05, run_time=T),
                       flag(d_lab, color=PURPLE), *anims,
-                      ReplacementTransform(box_c, box_c3, rate_func=window(0.3, 1.2, T)),
+                      ReplacementTransform(box_c, box_c3, rate_func=window(SH[0], SH[1], T)),
                       run_time=T)
             self.remove(*[m for a_, _ in gen for m in a_.get_family()])
             whole(S3)
@@ -2275,19 +2304,32 @@ class Episode(NarratedScene):
             # (the copy is invisible for the first quarter of its path, so it never sits
             # doubled on the row it leaves)
             src = VGroup(D4[0], D4[1], D4[2]).copy()
-            self.play(fly(src, rr_sym, run_time=max(0.6, beat.until("no gap", offset=-0.1)),
-                          rate_func=leave, fade_in=0.25))
+            s0, s1 = src.get_center().copy(), rr_sym.get_center().copy()
+            h0, h1 = src.height, rr_sym.height
+            w0 = src.width
+
+            def ride(m, a):
+                b = leave(a)
+                m.scale_to_fit_height(h0 + (h1 - h0) * b)
+                m.move_to(s0 + (s1 - s0) * b)
+                # invisible until it has cleared the row it leaves (no doubled glyphs)
+                d = float(np.linalg.norm(m.get_center() - s0))
+                m.set_opacity(float(np.clip((d - 0.75 * w0) / 0.35, 0, 1)))
+            src.set_opacity(0.0)
+            self.play(UpdateFromAlphaFunc(src, ride),
+                      run_time=max(0.6, beat.until("no gap", offset=-0.1)))
             self.remove(src)
             self.add(*rr_sym)
             beat.wait_until("no gap", offset=-0.1)
-            T = 0.9
-            self.play(*pinch(rr_sym[0], rr[0], T, t0=0.0, dur=0.55),
-                      RT_same(rr_sym[1], rr[1], rate_func=window(0.05, 0.6, T)),
-                      *pinch(rr_sym[2].num, rr[2].num, T, t0=0.12, dur=0.55),
-                      ReplacementTransform(rr_sym[2].bar, rr[2].bar, rate_func=window(0.12, 0.67, T)),
-                      *pinch(rr_sym[2].den, rr[2].den, T, t0=0.2, dur=0.55),
-                      FadeIn(rr[3], rate_func=window(0.5, 0.8, T)),
-                      grow_out(rr[4], T, 0.55, 0.35), run_time=T)
+            T = 0.95
+            SH = (0.0, 0.3)
+            self.play(*pinch_staged(rr_sym[0], rr[0], T, SH, (0.3, 0.6)),
+                      RT_same(rr_sym[1], rr[1], rate_func=window(SH[0], SH[1], T)),
+                      *pinch_staged(rr_sym[2].num, rr[2].num, T, SH, (0.42, 0.72)),
+                      ReplacementTransform(rr_sym[2].bar, rr[2].bar, rate_func=window(SH[0], SH[1], T)),
+                      *pinch_staged(rr_sym[2].den, rr[2].den, T, SH, (0.42, 0.72)),
+                      FadeIn(rr[3], rate_func=window(0.55, 0.8, T)),
+                      grow_out(rr[4], T, 0.6, 0.35), run_time=T)
             whole(rr)
             self.hold(max(0.0, beat.remaining() - 0.1))
             # (round 9: the ring's "2 + 0/2 = 2" stays whole into the Facebook beat, where it
@@ -2669,7 +2711,7 @@ class Episode(NarratedScene):
                 [gb_l + gb_w * (i + 0.5) / 8, self.gbar.get_y(), 0])
         for e in edges3.values():
             e.set_stroke(opacity=0.0)
-        with self.narrate(NARR["cf"], gap=0.45) as beat:
+        with self.narrate(NARR["cf"], gap=0.3) as beat:
             T = 1.5
             self.remove(self.gbar)
             self.add(*edges3.values(), *pieces.values())
@@ -2929,25 +2971,26 @@ class Episode(NarratedScene):
             return UpdateFromAlphaFunc(grp, upd, rate_func=linear)
         curves = [fr_live, rd_live, fit_fr, fit_rd, lab_fr, lab_rand]
         readouts = VGroup(lead_arrow, ro_arrow, lead_lab, ro2_live, self_lab, self_num, days_lab)
-        # one 1.85 s move, so no frame is near-empty: the axes stay until the girls are out, and
+        # one 1.7 s move (round 10: inside the 2.5 s silence limit), so no frame is near-empty: the axes stay until the girls are out, and
         # the friendships and the panel come in while the girls are still landing
-        TL = 1.85
+        TL = 1.7
+        f = TL / 1.85                        # (times laid out for 1.85 s, scaled)
         panel2_rest = VGroup(glabel2, flabel2, end_gn, ax_nums2, ax_title2)
-        self.play(*[shrink_out(m, rate_func=window(0, 0.65, TL), to=org) for m in curves],
-                  FadeOut(readouts, rate_func=window(0.1, 0.5, TL)),
-                  FadeOut(VGroup(ax, ax_text), rate_func=window(0.5, 1.05, TL)),
-                  FadeOut(cf_cite, rate_func=window(0, 0.35, TL)),
-                  FadeIn(feld, rate_func=window(0.5, 1.0, TL)),
-                  *[fly_out(n, 0.2 + 0.04 * i, 0.8, TL) for i, n in enumerate(out_order)],
-                  *[Create(e, rate_func=window(1.0, 1.6, TL)) for e in edges2.values()],
-                  *[FadeIn(name2[n], rate_func=window(1.05, 1.5, TL)) for n in NAMES],
-                  Create(ax_line2, rate_func=window(0.85, 1.2, TL)),
-                  *[Create(t, rate_func=window(0.95, 1.25, TL)) for t in ax_ticks2],
-                  GrowFromEdge(end_g, LEFT, rate_func=window(1.0, 1.55, TL)),
-                  FadeIn(panel2_rest, rate_func=window(1.05, 1.55, TL)),
-                  Create(ref2, rate_func=window(1.2, 1.7, TL)),
-                  *[Create(g, rate_func=window(1.2, 1.7, TL)) for g in ghosts2],
-                  *[GrowFromCenter(c, rate_func=window(1.35, 1.85, TL)) for c in (q3, *cands2)],
+        self.play(*[shrink_out(m, rate_func=window(0.0*f, 0.65*f, TL), to=org) for m in curves],
+                  FadeOut(readouts, rate_func=window(0.1*f, 0.5*f, TL)),
+                  FadeOut(VGroup(ax, ax_text), rate_func=window(0.5*f, 1.05*f, TL)),
+                  FadeOut(cf_cite, rate_func=window(0.0*f, 0.35*f, TL)),
+                  FadeIn(feld, rate_func=window(0.5*f, 1.0*f, TL)),
+                  *[fly_out(n, (0.2 + 0.04 * i) * f, 0.8 * f, TL, relax=(1.2 * f, 1.5 * f)) for i, n in enumerate(out_order)],
+                  *[Create(e, rate_func=window(1.0*f, 1.6*f, TL)) for e in edges2.values()],
+                  *[FadeIn(name2[n], rate_func=window(1.05*f, 1.5*f, TL)) for n in NAMES],
+                  Create(ax_line2, rate_func=window(0.85*f, 1.2*f, TL)),
+                  *[Create(t, rate_func=window(0.95*f, 1.25*f, TL)) for t in ax_ticks2],
+                  GrowFromEdge(end_g, LEFT, rate_func=window(1.0*f, 1.55*f, TL)),
+                  FadeIn(panel2_rest, rate_func=window(1.05*f, 1.55*f, TL)),
+                  Create(ref2, rate_func=window(1.2*f, 1.7*f, TL)),
+                  *[Create(g, rate_func=window(1.2*f, 1.7*f, TL)) for g in ghosts2],
+                  *[GrowFromCenter(c, rate_func=window(1.35*f, 1.85*f, TL)) for c in (q3, *cands2)],
                   run_time=TL)
         self.remove(*curves, readouts, ax, ax_text)
         self.remove(*yring.values())

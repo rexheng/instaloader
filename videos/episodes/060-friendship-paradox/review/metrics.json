@@ -1,6 +1,6 @@
 {
  "file": "/home/user/instaloader/videos/episodes/060-friendship-paradox/final.mp4",
- "duration_s": 214.5,
+ "duration_s": 213.0,
  "width": 1920,
  "height": 1080,
  "fps": 30.0,
@@ -10,72 +10,75 @@
  "audio_rate": 48000,
  "size_mb": 9.44,
  "integrated_lufs": -14.0,
- "lra_lu": 2.7,
+ "lra_lu": 2.8,
  "true_peak_dbtp": -2.1,
  "leading_silence_s": 0.0,
  "trailing_silence_s": 1.8,
- "longest_internal_silence_s": 2.22,
+ "longest_internal_silence_s": 2.57,
  "silences_over_1_5s": [
   [
    12.82,
    14.83
   ],
   [
-   100.8,
-   102.52
+   99.83,
+   101.55
   ],
   [
-   148.47,
-   150.3
+   132.78,
+   134.48
   ],
   [
-   161.82,
-   163.84
+   137.91,
+   139.82
   ],
   [
-   203.79,
-   205.7
+   148.51,
+   150.33
   ],
   [
-   209.0,
-   211.21
+   161.85,
+   163.87
+  ],
+  [
+   201.62,
+   204.2
+  ],
+  [
+   207.5,
+   209.71
   ]
  ],
- "frames": 6435,
- "longest_static_s": 3.5,
+ "frames": 6390,
+ "longest_static_s": 3.63,
  "static_stretches_over_3s": [
   [
-   53.1,
-   56.6,
-   3.5
+   52.6,
+   56.07,
+   3.47
   ],
   [
-   132.5,
-   135.93,
-   3.43
-  ],
-  [
-   172.67,
-   176.07,
-   3.4
+   131.73,
+   135.37,
+   3.63
   ]
  ],
  "black_frame_runs": [],
  "blank_runs_over_0_5s": [],
- "background_luma": 22.067413194444445,
- "transcript_words": 495,
+ "background_luma": 22.031762152777777,
+ "transcript_words": 489,
  "first_word_s": 0.02,
- "last_word_s": 212.45334,
- "wpm_speech": 153.4,
- "wpm_overall": 138.5,
- "wpm_excluding_all_pauses": 179.8,
+ "last_word_s": 211.28665,
+ "wpm_speech": 153.7,
+ "wpm_overall": 137.7,
+ "wpm_excluding_all_pauses": 180.6,
  "narration_file": "videos/episodes/060-friendship-paradox/narration.json",
- "wer": 0.0256,
- "narration_words": 469,
+ "wer": 0.0108,
+ "narration_words": 462,
  "banned_phrase_hits": 0,
  "slop_hits": [],
  "narration_craft": {
-  "narration_words": 495,
+  "narration_words": 488,
   "voice_speeds": [
    0.74,
    0.78,
@@ -83,12 +86,12 @@
   ],
   "sentence_wpm_median": 170.4,
   "sentences_over_200wpm": 0,
-  "sentence_gap_median_s": 0.39,
-  "sentence_gap_cv": 0.28,
-  "beat_gap_median_s": 0.73,
-  "longest_breathless_run_s": 8.5,
+  "sentence_gap_median_s": 0.38,
+  "sentence_gap_cv": 0.29,
+  "beat_gap_median_s": 0.72,
+  "longest_breathless_run_s": 7.8,
   "max_distinct_numbers_20s": 5,
-  "repeated_phrases": 5,
+  "repeated_phrases": 4,
   "glyph_morphs": 0,
   "deictics": 2,
   "deictics_unlanded": 0
@@ -104,7 +107,7 @@
    "small-label": 0
   },
   "allowed": 0,
-  "checks": 218
+  "checks": 219
  },
  "contact_sheets": [
   "sheets/sheet_01.png",
@@ -142,92 +145,92 @@
    "file": "keyframes/kf_05_00-16.4.png"
   },
   {
-   "t": 27.57,
-   "file": "keyframes/kf_06_00-27.6.png"
+   "t": 26.7,
+   "file": "keyframes/kf_06_00-26.7.png"
   },
   {
-   "t": 31.33,
-   "file": "keyframes/kf_07_00-31.3.png"
+   "t": 30.47,
+   "file": "keyframes/kf_07_00-30.5.png"
   },
   {
-   "t": 35.73,
-   "file": "keyframes/kf_08_00-35.7.png"
+   "t": 34.87,
+   "file": "keyframes/kf_08_00-34.9.png"
   },
   {
-   "t": 42.63,
-   "file": "keyframes/kf_09_00-42.6.png"
+   "t": 48.3,
+   "file": "keyframes/kf_09_00-48.3.png"
   },
   {
-   "t": 49.17,
-   "file": "keyframes/kf_10_00-49.2.png"
+   "t": 59.2,
+   "file": "keyframes/kf_10_00-59.2.png"
   },
   {
-   "t": 60.23,
-   "file": "keyframes/kf_11_01-00.2.png"
+   "t": 65.43,
+   "file": "keyframes/kf_11_01-05.4.png"
   },
   {
-   "t": 64.97,
-   "file": "keyframes/kf_12_01-05.0.png"
+   "t": 70.27,
+   "file": "keyframes/kf_12_01-10.3.png"
   },
   {
-   "t": 74.27,
-   "file": "keyframes/kf_13_01-14.3.png"
+   "t": 76.93,
+   "file": "keyframes/kf_13_01-16.9.png"
   },
   {
-   "t": 81.0,
-   "file": "keyframes/kf_14_01-21.0.png"
+   "t": 80.03,
+   "file": "keyframes/kf_14_01-20.0.png"
   },
   {
-   "t": 85.57,
-   "file": "keyframes/kf_15_01-25.6.png"
+   "t": 84.73,
+   "file": "keyframes/kf_15_01-24.7.png"
   },
   {
-   "t": 93.0,
-   "file": "keyframes/kf_16_01-33.0.png"
+   "t": 92.03,
+   "file": "keyframes/kf_16_01-32.0.png"
   },
   {
-   "t": 102.33,
-   "file": "keyframes/kf_17_01-42.3.png"
+   "t": 101.37,
+   "file": "keyframes/kf_17_01-41.4.png"
   },
   {
-   "t": 104.7,
-   "file": "keyframes/kf_18_01-44.7.png"
+   "t": 103.73,
+   "file": "keyframes/kf_18_01-43.7.png"
   },
   {
-   "t": 123.43,
-   "file": "keyframes/kf_19_02-03.4.png"
+   "t": 117.77,
+   "file": "keyframes/kf_19_01-57.8.png"
   },
   {
-   "t": 128.0,
-   "file": "keyframes/kf_20_02-08.0.png"
+   "t": 122.7,
+   "file": "keyframes/kf_20_02-02.7.png"
   },
   {
-   "t": 130.8,
-   "file": "keyframes/kf_21_02-10.8.png"
+   "t": 127.3,
+   "file": "keyframes/kf_21_02-07.3.png"
   },
   {
-   "t": 135.07,
-   "file": "keyframes/kf_22_02-15.1.png"
+   "t": 130.03,
+   "file": "keyframes/kf_22_02-10.0.png"
   },
   {
-   "t": 137.63,
-   "file": "keyframes/kf_23_02-17.6.png"
+   "t": 134.43,
+   "file": "keyframes/kf_23_02-14.4.png"
   },
   {
-   "t": 139.37,
-   "file": "keyframes/kf_24_02-19.4.png"
+   "t": 137.07,
+   "file": "keyframes/kf_24_02-17.1.png"
   },
   {
-   "t": 141.43,
-   "file": "keyframes/kf_25_02-21.4.png"
+   "t": 139.23,
+   "file": "keyframes/kf_25_02-19.2.png"
   },
   {
-   "t": 142.5,
-   "file": "keyframes/kf_26_02-22.5.png"
+   "t": 141.47,
+   "file": "keyframes/kf_26_02-21.5.png"
   },
   {
-   "t": 148.87,
-   "file": "keyframes/kf_27_02-28.9.png"
+   "t": 145.7,
+   "file": "keyframes/kf_27_02-25.7.png"
   },
   {
    "t": 150.1,
@@ -238,50 +241,54 @@
    "file": "keyframes/kf_29_02-33.9.png"
   },
   {
-   "t": 157.73,
-   "file": "keyframes/kf_30_02-37.7.png"
+   "t": 157.77,
+   "file": "keyframes/kf_30_02-37.8.png"
   },
   {
-   "t": 169.4,
+   "t": 169.43,
    "file": "keyframes/kf_31_02-49.4.png"
   },
   {
-   "t": 172.03,
-   "file": "keyframes/kf_32_02-52.0.png"
+   "t": 171.83,
+   "file": "keyframes/kf_32_02-51.8.png"
   },
   {
-   "t": 177.47,
-   "file": "keyframes/kf_33_02-57.5.png"
+   "t": 175.2,
+   "file": "keyframes/kf_33_02-55.2.png"
   },
   {
-   "t": 179.57,
-   "file": "keyframes/kf_34_02-59.6.png"
+   "t": 177.4,
+   "file": "keyframes/kf_34_02-57.4.png"
   },
   {
-   "t": 185.63,
-   "file": "keyframes/kf_35_03-05.6.png"
+   "t": 183.47,
+   "file": "keyframes/kf_35_03-03.5.png"
   },
   {
-   "t": 195.97,
-   "file": "keyframes/kf_36_03-16.0.png"
+   "t": 193.8,
+   "file": "keyframes/kf_36_03-13.8.png"
   },
   {
-   "t": 199.9,
-   "file": "keyframes/kf_37_03-19.9.png"
+   "t": 197.7,
+   "file": "keyframes/kf_37_03-17.7.png"
   },
   {
-   "t": 206.27,
-   "file": "keyframes/kf_38_03-26.3.png"
+   "t": 204.8,
+   "file": "keyframes/kf_38_03-24.8.png"
   },
   {
-   "t": 213.1,
-   "file": "keyframes/kf_39_03-33.1.png"
+   "t": 210.3,
+   "file": "keyframes/kf_39_03-30.3.png"
   },
   {
-   "t": 214.47,
-   "file": "keyframes/kf_40_03-34.5.png"
+   "t": 212.97,
+   "file": "keyframes/kf_40_03-33.0.png"
   }
  ],
- "flags": [],
- "implied_caps": []
+ "flags": [
+  "dead air: 2.6s silence > 2.5 s"
+ ],
+ "implied_caps": [
+  "cap 7 (dead air)"
+ ]
 }

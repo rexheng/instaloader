@@ -5,7 +5,7 @@ each riffle roughly halves the gap between that count and a random deck's while 
 deck's spread stays fixed, so the deck stays almost perfectly detectable for four riffles and
 then falls off a cliff around seven, even though the top card already looks random after four.
 
-Runtime ≈ 3:34 · 494 words · voice af_heart, speed 0.84, CADENCE "shaped" (beat gap 0.37 s inside a
+Runtime ≈ 3:37 (round 6) · 500 words · voice af_heart, speed 0.84, CADENCE "shaped" (beat gap 0.37 s inside a
 section, 0.68 s at the eight section turns so every turn is longer than a full stop; 0.9 s after the
 key results), the prediction question at 0.80.
 
@@ -18,7 +18,7 @@ key results), the prediction question at 0.80.
 | BLUE | the perfect shuffle: its tag, its chance, its token and stack, the 1-in-52 line, the bell, the spread bracket and its hops, "say perfect", U (0.32), "2.1", √((n+1)/12) |
 | YELLOW | rising sequences: the caps/levels on the deck, the counts, the riffle-2 packet tint, the gap between centres (and its 4-riffle ghost), the gap × 2^k row, 230, n(n+1)/12 |
 | RED | what gives the deck away: purple-above-blue area (= distance d), the meter's edge over a coin flip, the distance curve, "whole deck" |
-| INK / greys | text, axes, ticks, citations; the "top card only" curve (grey dashed); text grey is #A3AAB4 (7.7:1), GRAY #8B939E only for axes and lines |
+| INK / greys | text, axes, ticks, citations; the "top card only" curve (grey dashed); the "information left" curve (grey solid, Trefethen, never on screen with the dashed one); text grey is #A3AAB4 (7.7:1), GRAY #8B939E only for axes and lines |
 
 ## Data and model
 - Gilbert–Shannon–Reeds (GSR) riffle model (Bayer & Diaconis 1992, p. 294).
@@ -43,17 +43,17 @@ often" both decks rise 0.8 as the accuracy meter draws below them (coin flip 50 
 100 %); a "?" hops 50 → 75 → 100 % as each option is spoken, then a 1.5 s hold.
 
 ### 2. Stakes (0:15–0:23)
-> Monte Carlo samplers move by random steps, like these riffles. Stopped too early, they still
-> remember where they started.
+> Monte Carlo samplers move by random steps. Stop them too early, and they still remember where
+> they started.
 
 Visual: on "random steps" the left deck re-sorts and replays its four riffles fast under a purple
-counter "step 1 … step 4"; "step 4" flags on "Stopped too early"; on "remember where they started"
+counter "step 1 … step 4"; "step 4" flags on "Stop them too early"; on "remember where they started"
 the sorted deck's profile (grey dashed diagonal) is drawn over it.
 
 ### 3. Naive build: the top card (0:23–0:43)
-> The obvious check is the top card: here's how often each card lands there after four riffles.
+> The obvious check is the top card: here's how often each card lands there.
 
-> Only the old top card stands out: one time in fifteen. Judge by it, and you're right *[pause 0.3]*
+> The old top card turns up too often: once in fifteen. Judge by it, and you're right *[pause 0.3]*
 > fifty two percent of the time. *[pause 0.9]* Four riffles look like plenty.
 
 Visual: as before (top card boxed; its copy flies into its bar of the purple histogram; blue
@@ -65,16 +65,18 @@ the deck grows into the centre.
 
 > Each half stays in order, so one riffle leaves two rising sequences: runs of consecutive cards.
 
-> Give each sequence its own level. The cut crosses each level once, so a riffle can at most
-> split each level in two.
+> Give each sequence its own level. The cut crosses each level once, so a riffle at most splits
+> each level in two.
 
 > Three riffles, *[pause 0.8]* eight. Four riffles, *[pause 0.6]* at most sixteen; this deck has
 > fourteen.
 
 > A perfect shuffle gives sixteen or fewer once in two million decks.
 
-> Call sixteen or fewer riffled, and you'd be wrong once in four million games. *[pause 0.9]* The
-> top card can't see this: it lives in the order between cards.
+> Call sixteen or fewer riffled, and you'd be wrong once in four million games. *[pause 0.9]*
+
+> The top card can't see this. *[pause 0.5]* It lives in the order between cards. (own beat, spoken
+> at 0.80)
 
 Visual: the top-card chart fades before the deck moves; grey "top card 52.4%" ghost (one font
 size) under the meter track. Slow riffle with the two-line citation *Gilbert–Shannon–Reeds model
@@ -92,30 +94,31 @@ million" the needle jumps to 99.99998 %; on "The top card" the top card is boxed
 and the ghost returns to full; on "this" the two counts 14 and 26 flash; caps flash on "order between cards".
 
 ### 5. Insight (1:31–2:50)
-> Bayer and Diaconis proved that in this model, decks with the same count are equally likely.
-> *[pause 0.7]*
+> Bayer and Diaconis proved that in this model, decks with the same count are equally likely, so
+> the count carries all the evidence. *[pause 0.6]*
 
-> So pile decks onto their counts, *[pause 0.6]* then every possible deck, weighted by its chance.
+> Pile decks onto their counts, *[pause 0.6]* then every possible deck, weighted by its chance.
 
-> The red area, purple above blue, is the distance from random.
+> The red area, purple above blue, is the whole deck's distance from random.
 
 > How many more riffles until it's below a half? *[pause 1.35]* (spoken at 0.80)
 
 > A fifth riffle: point nine two. A sixth: point six one. A seventh: point three three. *[pause 0.9]*
 
 > Guess riffled where purple is higher: you catch sixty five percent of riffled decks. You also
-> flag thirty two percent of perfect ones. Accuracy is a half, plus half the difference, and the
-> difference is the red area.
+> flag thirty two percent of perfect ones. *[pause 0.5]* Accuracy is a half, plus half the
+> difference: the red area. *[pause 0.4]* Below a half, you're right under seventy five percent of
+> the time.
 
 > Each riffle roughly halves the gap; blue's spread, its standard deviation, stays about two.
 > While the gap spans several spreads, the distance stays near one. Within one spread, it halves
 > every riffle: that's the cliff.
 
-> Multiply each gap by two to the k, and it settles near two hundred thirty. *[pause 1.6]* Set
-> the gap equal to one spread, and k is just under seven.
+> Multiply each gap by two to the k: it settles near two hundred thirty. *[pause 1.4]* Set the
+> gap to one spread: k is just under seven.
 
-> For n cards, two hundred thirty grows like n squared, but the spread like root n, so the cliff
-> sits near three halves log base two of n.
+> For n cards, two hundred thirty grows like n squared, the spread like root n, *[pause 0.4]* so
+> the cliff grows like three halves log base two of n.
 
 Visual: meter leaves, then *Bayer & Diaconis, 1992 · Ann. Appl. Probab.* fades in. "chance 3.5 ×
 10⁻⁶⁰" / "chance 1.2 × 10⁻⁶⁸"; on "equally likely" the riffled deck rearranges into another
@@ -148,13 +151,13 @@ dashed line at 6.77 on the d-plot. For n: the chart dims; 230 → `n(n+1)/12` ("
 
 ### 6. Payoff (2:50–3:17)
 > Aldous proved that law. *[pause 0.4]* Bayer and Diaconis computed the exact curve: for fifty two
-> cards, seven riffles is the first below a half. *[pause 0.9]*
+> cards, seven is the first below a half. *[pause 0.9]*
 
-> Trefethen and Trefethen measured information instead: no cliff; five or six shuffles do a
-> reasonable job.
+> Trefethen and Trefethen measured information: no cliff; five or six shuffles do a reasonable
+> job.
 
-> Many Markov chains share this cliff, and samplers share the trap: one statistic, like the top
-> card, settles long before the whole chain.
+> Many Markov chains share this cliff, and this trap: Gelman and Rubin ran a sampler from two
+> starts; both runs looked settled, at different values.
 
 Visual: the d-plot grows into the full distance curve (Table 1 values), the equations stay top
 right at 45 %. *Aldous, 1983 · Séminaire de Probabilités XVII* while `k ≈ (3/2) log₂ n − 1.8`
@@ -187,3 +190,33 @@ beside the ghost before "takes ten"; ghost flashes on "ten"; the scene fades, th
 - Trefethen, L. N. & Trefethen, L. M. (2000). How many shuffles to randomize a deck of cards?
   *Proc. R. Soc. Lond. A* 456, 2561–2568.
 - Diaconis, P. (1996). The cutoff phenomenon in finite Markov chains. *PNAS* 93(4), 1659–1664.
+
+## Round 6 visual changes (see CHANGELOG "Round 6 revisions")
+- Squeeze: the 104 caps fade before the bars squeeze; the count axis draws under the squeezing
+  decks with a grey "count = all the evidence" under its title (held ~2.5 s, leaves as the rain starts).
+- The riffle tag lives inside the chart beside the purple histogram (right of the 4-riffle peak,
+  left of the 5/6/7-riffle flanks), leaves as each slide starts and arrives when it lands; 40 % from
+  the accuracy beat on. No ghost bracket during the slides.
+- Accuracy: inset, gap row and tag step back (35 % / 30 % / 40 %); "accuracy = ½(   )" is written
+  around a reserved slot, the purple area copy shrinks, arcs ABOVE the slot and drops into 0.65 (same
+  for 0.32); line-2 copies bow downward; collapse in place (line-1 tail leaves, line 2 moves up behind
+  the fixed "accuracy =", the bracket "(0.65 − 0.32)" shrinks where it stands into the red d); then
+  `d < ½ ⇒ accuracy < 75%` under it as the d-plot's ½ line flashes (the hook's 75 % option).
+- Mechanism: "(each step ≈ ÷2)" sits under the gap numbers; on "several spreads" the row's 12.4
+  flies down and becomes the 4-riffle bracket (60 %); "0.85 spreads" sits above-left of the 7-riffle
+  gap; on "that's the cliff" the spread-counting scaffolding dims to 30 %.
+- Product row: "× 2^k ≈ 198 → [live]" left-aligned under "gap:" (one label column), the live counter
+  jumps 220 → 227 → 229 as the gaps flash and settles on 230, which flies into `gap ≈ 230/2^k`.
+- General n: `⇒ k ≈ 6.8` dims to 25 %, 230 and 2.1 become n(n+1)/12 and √((n+1)/12) in one staggered
+  move, the general line holds ≥ 4.5 s, then `k ≈ (3/2) log₂ n − 1.8`, "(gap = spread rule)" and the
+  check `n = 52: 8.6 − 1.8 = 6.8`. The inset sits 0.35 lower to make room.
+- Payoff: grey "information left" curve (Trefethen & Trefethen Table 1, recomputed) on the d-plot;
+  "Gelman & Rubin, 1992 · Bayesian Statistics 4" replaces Diaconis on "Gelman".
+- Landing: the d-plot shrinks away while its 4-riffle dot flies into the meter and becomes the needle
+  at 99.99998 %; the deck fades in above it (no empty frame).
+
+## Sources (round 6 additions)
+- Gelman, A. & Rubin, D. B. (1992). A single series from the Gibbs sampler provides a false sense of
+  security. In Bernardo, Berger, Dawid & Smith (eds), *Bayesian Statistics 4*, Oxford Univ. Press,
+  625–631 (preprint read in full; see facts.md #36).
+- Trefethen & Trefethen (2000), Table 1 (information remaining), recomputed exactly (facts.md #35).

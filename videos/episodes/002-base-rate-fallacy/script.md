@@ -51,9 +51,9 @@ citation fade in; "2,470 alerts" lands under the raster. The meter and its scale
 pulses on "Pick a number" and a hollow grey "your guess" marker slides once along the 0–100 % scale.
 
 ### 2. The same question, countable (0:12–0:27)
-> Each alert is a positive test result. *[0.4]* One in five hundred people has this disease. A test
-> catches ninety-nine percent of the sick and wrongly flags one percent of the healthy. *[0.4]* If yours
-> says positive, what's the chance you're sick? *[1.5]*
+> Each alert is a positive test result. *[0.4]* Take a simpler case: one in five hundred people has a
+> disease. A test catches ninety-nine percent of the sick and wrongly flags one percent of the healthy.
+> *[0.4]* If yours says positive, what's the chance you're sick? *[1.5]*
 
 Visual: on "positive" the raster collapses into the + badge (the outline stays one convex shape and
 becomes the disk; the cells shrink into it), the meter is retitled "chance you're sick" and slides to
@@ -98,8 +98,8 @@ on their words, "99 ÷ 17 ≈ 6×", and the 100 false alarms pulse on "one perce
 > Your positive result ruled out everyone who tested negative.
 > What's left is a smaller sample space: these hundred twenty people.
 > Your chance is the red share of this crowd. *[1.5]*
-> Unrounded, the red count is twenty sick people times ninety-nine percent, and the blue, every healthy
-> person times one percent.
+> Unrounded, the red count is the twenty who are sick, *[0.2]* times ninety-nine percent, and the blue,
+> every healthy person times one percent.
 > Divide everything by ten thousand: counts become shares. *[0.4]* The share stays the same. *[0.6]*
 > These are how common each group is, *[0.3]* and these are how often each group tests positive. *[0.3]*
 > Name them, and you have Bayes' theorem.
@@ -114,13 +114,14 @@ share stays the same" the formula's fraction bar, its "≈ 17 %" and the meter's
 ### 7. Payoff: back to Cardiff, precision (2:21–3:13)
 > Swap the disease for a police watch list.
 > About a hundred seventy thousand people came, and the watch lists held about twelve hundred photos. *[0.3]*
-> For four days, face-recognition cameras scanned the crowds. *[0.3]* Every face they flagged joined the alerts.
-> Shrink to the alerts. Take the red share.
+> For four days, face-recognition cameras scanned the crowds. *[0.3]* At most one person in a hundred
+> forty was on a list.
+> Shrink to the alerts. *[0.7]* Take the red share.
 > The police counted a hundred seventy-three as right: seven percent. *[1.0]*
 > In machine learning, that share is called precision. *[0.6]*
-> Cardiff University's evaluators counted only alerts the logbooks confirmed: three percent. *[0.5]*
+> University evaluators counted only alerts the logbooks confirmed: three percent. *[0.5]*
 > Months later, a new algorithm and better photos cut the false alarms. *[0.6]*
-> That's the blue term in Bayes' denominator. *[0.3]* Their count rose to forty-six percent. *[0.6]*
+> That's mostly the blue term in Bayes' denominator. *[0.3]* Their count rose to forty-six percent. *[0.6]*
 
 Visual: the formula and table clear; the 24 × 5 strip shrinks, as one block, into the 24 × 5 squares at
 the centre of a 100 × 100 crowd (■ = 17 people, illustration) that fades in around it, the 20 sick
@@ -146,7 +147,7 @@ ghost stays as context; on "rose" the second bar fills, red to 46 %. No frame sh
 under the wrong event's tag; the "7 of 22 later proved false" tag is cut (facts.md keeps the caveat).
 
 ### 8. Landing: your test (3:13–3:36)
-> Back to your test. *[1.6]*
+> Back to your test. *[1.4]*
 > Symptoms raise the one in five hundred: at one in a hundred, fifty percent; at one in two,
 > ninety-nine, where the rule held. *[0.9]*
 > That ninety-nine percent, the test's accuracy, is also its recall: how often the sick test positive. *[0.3]*
@@ -164,6 +165,25 @@ diagram's nodes fade in round it. Each arrow swells into a flow as wide as the p
 meter, red columns under its red 17 %, and the yellow outline closes round them (round 8: the deictic
 now points at a crowd, and the last image has the cold open's shape). The frame holds 0.7 s and fades
 out over 0.6 s (no end card).
+
+### Round 9 changes (visual)
+
+- **Base rate said** (2:27): on "At most one person in a hundred forty was on a list" the legend
+  "■ watch list · ≤ 1 in 140" pulses, then the 71 listed squares pulse in the crowd. The flagged squares
+  now file into the 2,470-cell raster on "Shrink to the alerts", and the blocks become the raster while it
+  travels with the meter to the centre (no "2,470 alerts" label under it any more).
+- **Lever** (2:45–3:03): evaluators' tag "evaluators' count / logbook-confirmed" (no second alert total);
+  the ghost denominator fades away once its blue term has risen into "P(+ ∣ not listed) ↓".
+- **One diagram, kept** (2:15 → 3:04): on "Swap the disease…" the counting table's bullets, arrows and +
+  fold back into the disease diagram and park, text-free and at 30 %, in the bottom-right corner; on
+  "Back to your test" that same object grows back to the centre-left and its labels return (no ring
+  redraw, no GrowArrow).
+- **6×** (1:20.6): the bracket grows from the 17 % edge and "99 ÷ 17 ≈ 6×" writes in 0.6 s, done as
+  "times" starts.
+- **Braces** (2:06): once the numerator is named, the denominator's sick-pair braces dim to 40 %.
+- **Landing counts**: the red count rides at 70 % of its flow (0.25 + width/2 off it), clear of "99%".
+- **Closing**: the 120 stream out of the + from "It said"; the yellow outline starts on "this" and closes
+  on "crowd"; the finished strip holds ~1.7 s, then fades over 0.5 s.
 
 ## Sources
 - Manrai, A. K., Bhatia, G., Strymish, J., Kohane, I. S., & Jain, S. H. (2014). Medicine's

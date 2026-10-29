@@ -942,10 +942,12 @@ class Episode(NarratedScene):
         # meter becomes "chance you're sick", and the disease diagram forms around the +
         plus_c = D["centers"][2]
         disk, cross = D["plus"][0], D["plus"][1]
-        with self.narrate("Each alert is a positive test result. [pause 0.4] One in five hundred "
-                          "people has this disease. A test catches ninety-nine percent of the sick "
-                          "and wrongly flags one percent of the healthy. [pause 0.4] If yours says positive, "
-                          "what's the chance you're sick? [pause 1.5]") as beat:
+        # (round 9: "has this disease" had no referent; the countable case is now introduced)
+        with self.narrate("Each alert is a positive test result. [pause 0.4] Take a simpler case: "
+                          "one in five hundred people has a disease. A test catches ninety-nine "
+                          "percent of the sick and wrongly flags one percent of the healthy. "
+                          "[pause 0.4] If yours says positive, what's the chance you're sick? "
+                          "[pause 1.5]") as beat:
             beat.wait_until("positive", offset=-0.25)
             col = window(0.0, 0.7)
             ticks.add_updater(place_ticks)          # the scale rides with the bar
@@ -964,11 +966,12 @@ class Episode(NarratedScene):
             self.add(ring_tmp)
             self.play(GrowFromCenter(disk), FadeIn(cross, scale=0.6, rate_func=late), run_time=0.5)
             self.remove(ring_tmp)
-            beat.wait_until("One in five", offset=-0.15)
+            beat.wait_until("one in five", offset=-0.15)
             self.play(FadeIn(D["red"], scale=0.5), FadeIn(D["blue"], scale=0.5),
                       FadeIn(D["sick"], shift=0.1 * RIGHT), FadeIn(D["healthy"], shift=0.1 * RIGHT),
                       FadeIn(D["prev"], shift=0.1 * DOWN, rate_func=late), run_time=0.9)
-            beat.on("this", emph(D["red"], scale=1.25), emph(D["sick"]), run_time=0.8)
+            beat.wait_until("disease", offset=-0.15)
+            self.play(emph(D["red"], scale=1.25), emph(D["sick"]), run_time=0.8)
             beat.wait_until("catches", offset=-0.1)
             self.play(GrowArrow(D["ra"]), run_time=beat.until("ninety-nine", offset=-0.05))
             self.play(Write(D["r99"]), run_time=0.7)
@@ -1319,8 +1322,9 @@ class Episode(NarratedScene):
                           speed=0.80, gap=1.0) as beat:
             beat.wait_until("ninety-nine", offset=-0.1)
             self.play(emph(naive_lbl), run_time=0.8)
-            beat.wait_until("Six", offset=-0.15)
-            self.play(Create(gap_br), FadeIn(gap_lbl, shift=0.1 * DOWN), run_time=0.9)
+            # (round 9: the measured failure is complete as "times" begins, not ~1 s after "six")
+            beat.wait_until("Six", offset=-0.3)
+            self.play(GrowFromEdge(gap_br, LEFT), Write(gap_lbl), run_time=0.6)
 
         with self.narrate("One percent sounds small, but here it's one percent of nearly "
                           "everyone.") as beat:
@@ -1469,12 +1473,15 @@ class Episode(NarratedScene):
         live = (lhs1, eq1, bar1, tail1)
         row_gap = (lab_s.get_bottom()[1] + lab_h.get_top()[1]) / 2
         x_gap = (outline.get_right()[0] + dot_s.get_left()[0]) / 2
-        with self.narrate("Unrounded, the red count is twenty sick people times ninety-nine "
-                          "percent, and the blue, every healthy person times one percent.") as beat:
+        # (round 9: "twenty sick people" was heard as "twenty-six people"; "sick" now carries a
+        # following break, so it cannot fuse with "twenty")
+        with self.narrate("Unrounded, the red count is the twenty who are sick, [pause 0.2] times "
+                          "ninety-nine percent, and the blue, every healthy person times one "
+                          "percent.") as beat:
             beat.wait_until("red count", offset=-0.15)
             self.play(emph(num1, scale=1.12), emph(den1[0], scale=1.12), emph(res_s, scale=1.25),
                       run_time=0.7)
-            beat.wait_until("twenty sick", offset=-0.3)
+            beat.wait_until("twenty who", offset=-0.3)
             T = beat.until("one percent", end=True, offset=0.25)
             fb = min(0.62, max(0.4, (beat.time_of("every") - 0.35 - beat.elapsed()) / T))
 
@@ -1632,6 +1639,10 @@ class Episode(NarratedScene):
                                               rate_func=window(0.0, 0.5)),
                                       FadeIn(b, shift=0.5 * d + 0.14 * UP,
                                              rate_func=window(0.4, 1.0)))
+            # (round 9) once the numerator is named it IS the sick pair, so the denominator's
+            # sick-pair braces dim to 40 % as they stretch: one "how common x how often" per row
+            for b_ in (br_c1n, br_o1n):
+                b_.set_opacity(0.4)
             pairs_num = [(num3[0], num4[0]), (num3[2], num4[1])]
             pairs_den = [(den3[0], den4[0]), (den3[2], den4[1]), (den3[3], den4[2]),
                          (den3[4], den4[3]), (den3[6], den4[4])]
@@ -1665,8 +1676,27 @@ class Episode(NarratedScene):
 
         # ============================================================ 7. Cardiff 2017: precision
         formula_grp = VGroup(lhs4, eq4, num4, bar4, den4, tail4, bayes_lbl, den_box, num_box)
-        table = VGroup(dot_s, dot_h, lab_s, lab_h, arr_s, arr_h, rate_s, rate_h, head_plus,
-                       sh_s, sh_h, shp_s, shp_h, div_tag)
+        table = VGroup(lab_s, lab_h, rate_s, rate_h, sh_s, sh_h, shp_s, shp_h, div_tag)
+        # (round 9) the counting table IS the disease diagram (it was made from it at 0:44): on
+        # "Swap the disease" its bullets, arrows and + fold back into the diagram's shape and park,
+        # small and ghosted, in the free bottom-right corner while Cardiff plays; on "Back to your
+        # test" that same object grows back into the landing diagram (nothing is rebuilt).
+        # The ghost carries no text (it would be under the type floor); the labels return with it.
+        L2 = self.build_diagram(dy=LAND_DY, rate_at=0.28)
+        GHOST_K, GHOST_OP = 0.37, 0.3
+        g_keys = ("red", "blue", "ra", "ba", "plus")
+        g_src = VGroup(*[L2[k] for k in g_keys])
+        park = VGroup(*[L2[k].copy() for k in g_keys])
+        park.scale(GHOST_K, about_point=g_src.get_center())
+        park.move_to([5.3, -2.0, 0])
+        g_plus = plus_badge(0.3 * GHOST_K).move_to(park[4])
+        park.remove(park[4])
+        park.add(g_plus)
+        for m in park[2:4]:
+            m.set_stroke(width=3, family=False)
+        park.set_opacity(GHOST_OP)
+        g_plus[1].set_stroke(opacity=1.0)            # the cross is cut out of the disk (BG)
+        ghost_parts = dict(zip(g_keys, park))
         K = K_CARDIFF
         cb = CARDIFF_BAR
         meter.value.resume_updating()
@@ -1738,8 +1768,12 @@ class Episode(NarratedScene):
                 p = mv(a)
                 m.become(tr_base.copy().scale(1 + (K - 1) * p).move_to(l_path(tr_p0, cb, p)))
                 m.set_stroke(opacity=1 + (GHOST - 1) * p)
+            fold = window(0.0, 0.5)
             self.play(*[FadeOut(m, rate_func=window(0.0, 0.42)) for m in
                         (formula_grp, table, outline, VGroup(br_r, br_b, n20, n100))],
+                      *[ReplacementTransform(a, ghost_parts[k], rate_func=fold) for a, k in
+                        ((dot_s, "red"), (dot_h, "blue"), (arr_s, "ra"), (arr_h, "ba"),
+                         (head_plus, "plus"))],
                       meter.fill.animate(rate_func=window(0.0, 0.3)).set_value(0.0),
                       FadeOut(meter.value, rate_func=window(0.0, 0.15)),
                       UpdateFromAlphaFunc(meter.qmark,
@@ -1802,12 +1836,11 @@ class Episode(NarratedScene):
         c_beam.add_updater(lambda m: m.move_to([crowd.left + CROWD_G * min(1.0,
                                                                      crowd.sweep.get_value()),
                                                 crowd.center[1], 0]))
-        al_lbl = label("2,470 alerts")
-        al_lbl.next_to(al_out, DOWN, buff=0.3).set_x(cb[0])
         unflagged_red = VGroup(*[s for i, s in zip(crowd.red_idx, crowd.red_sq)
                                  if int(i) not in crowd.lit_red])
+        # (round 9) the base rate is said, on its legend, before the alerts are counted
         with self.narrate("For four days, face-recognition cameras scanned the crowds. [pause 0.3] "
-                          "Every face they flagged joined the alerts.", gap=0.4) as beat:
+                          "At most one person in a hundred forty was on a list.", gap=0.4) as beat:
             crowd.start_overlays()
             self.add(*[c for i, c in zip(crowd.lit_idx, crowd.cores) if i not in crowd.lit_red],
                      crowd.rings, c_beam)
@@ -1822,32 +1855,21 @@ class Episode(NarratedScene):
             # pulse (in red, rings on): the red share of the lit crowd is seen in the crowd first
             self.play(FadeOut(c_beam, rate_func=window(0.0, 0.4)),
                       LaggedStart(*[emph(f, scale=1.8) for f in red_flagged], lag_ratio=0.04),
-                      run_time=max(0.6, min(0.8, beat.until("Every", offset=-0.1))))
-            # each flagged square becomes one ~17-alert block of the raster, keeping its colour
-            # and its ring.  They file in one by one in block order (the 10 red first, then the
-            # blue left to right), each move >= 0.5 s; the legend steps aside first, and the
-            # meter's ghosted title and "?" fade further so no square flies across their glyphs
-            beat.wait_until("Every", offset=-0.1)
-            pairs = sorted(zip(crowd.lit_idx, flagged, blocks), key=lambda t: block_of[t[0]])
-            T = max(1.5, beat.until("alerts", end=True, offset=-0.45))
-            each = 0.55
-            lag = max(0.0, (T / each - 1) / (len(pairs) - 1))
-            self.play(*[FadeOut(m, rate_func=window(0.0, 0.15)) for m in
-                        (leg_list, leg_count, leg_scale)],
-                      title_alert.animate(rate_func=window(0.0, 0.15)).set_opacity(0.12),
-                      UpdateFromAlphaFunc(meter.qmark, lambda m, a: m.set_opacity(
-                          GHOST + (0.12 - GHOST) * window(0.0, 0.15)(a))),
-                      LaggedStart(*[Transform(f, b) for _, f, b in pairs], lag_ratio=lag),
-                      run_time=T)
-            self.add(alerts_col, *flagged)
-            self.play(FadeIn(alerts_col), *[FadeOut(f) for f in flagged], Create(al_out),
-                      FadeIn(al_lbl, shift=0.1 * UP), title_alert.animate.set_opacity(GHOST),
-                      UpdateFromAlphaFunc(meter.qmark,
-                                          lambda m, a: m.set_opacity(0.12 + (GHOST - 0.12) * a)),
-                      run_time=0.6)
+                      run_time=max(0.6, min(0.8, beat.until("At most", offset=-0.1))))
+            # "at most one person in a hundred forty": the base-rate legend pulses on its words,
+            # then every listed square (the "list") pulses where it stands in the crowd
+            beat.wait_until("one person", offset=-0.2)
+            self.play(emph(leg_count, scale=1.25), emph(leg_list[0], scale=1.4), run_time=0.9)
+            beat.wait_until("list", offset=-0.2)
+            self.play(LaggedStart(*[emph(s, scale=1.7, run_time=0.6) for s in crowd.red_sq],
+                                  lag_ratio=0.006), run_time=0.9)
 
-        # "shrink to the alerts": the crowd leaves, the alerts + meter take the centre, and the
-        # meter (ghosted while it waited) comes up to full strength: now it gets its number
+        # "shrink to the alerts": each flagged square becomes one ~17-alert block of the raster,
+        # keeping its colour and its ring.  They file in one by one in block order (the 10 red
+        # first, then the blue left to right), each move >= 0.5 s; the legend steps aside first,
+        # and the meter's ghosted title and "?" fade further so no square flies across their
+        # glyphs.  Then the crowd leaves and the alerts + meter take the centre while the blocks
+        # become the raster, and the meter (ghosted while it waited) comes up to full strength
         shift_v = np.array([-cb[0], snap(CARDIFF_TOP_Y - cb[1]), 0])
         cb2 = cb + shift_v
         ob2 = al_out.get_bottom()[1] + shift_v[1]
@@ -1860,20 +1882,38 @@ class Episode(NarratedScene):
         right_lbl.set_x(max(right_lbl.get_x(), br_r2.get_x()))
         wrong_lbl = label("2,297 wrong", color=BLUE)
         wrong_lbl.next_to(br_b2, DOWN, buff=0.18).align_to(right_lbl, DOWN)
-        with self.narrate("Shrink to the alerts. Take the red share.", gap=0.25) as beat:
-            self.play(FadeOut(crowd.image), FadeOut(unflagged_red), FadeOut(crowd_lbl),
-                      run_time=0.6)
+        with self.narrate("Shrink to the alerts. [pause 0.7] Take the red share.",
+                          gap=0.25) as beat:
+            beat.wait_until("Shrink", offset=-0.2)
+            pairs = sorted(zip(crowd.lit_idx, flagged, blocks), key=lambda t: block_of[t[0]])
+            T = 1.4
+            each = 0.55
+            lag = max(0.0, (T / each - 1) / (len(pairs) - 1))
+            self.play(*[FadeOut(m, rate_func=window(0.0, 0.15)) for m in
+                        (leg_list, leg_count, leg_scale)],
+                      title_alert.animate(rate_func=window(0.0, 0.15)).set_opacity(0.12),
+                      UpdateFromAlphaFunc(meter.qmark, lambda m, a: m.set_opacity(
+                          GHOST + (0.12 - GHOST) * window(0.0, 0.15)(a))),
+                      LaggedStart(*[Transform(f, b) for _, f, b in pairs], lag_ratio=lag),
+                      run_time=T)
+            # the blocks become the raster while it travels, with the meter, to the centre; the
+            # crowd around them leaves on the same clock
+            alerts_col.shift(shift_v)
+            al_out.shift(shift_v)
+            gone_c = window(0.0, 0.6)
+            self.play(FadeOut(crowd.image, rate_func=gone_c), FadeOut(unflagged_red, rate_func=gone_c),
+                      FadeOut(crowd_lbl, rate_func=gone_c),
+                      FadeIn(alerts_col, shift=shift_v), FadeOut(VGroup(*flagged), shift=shift_v),
+                      FadeIn(al_out, shift=shift_v),
+                      title_alert.animate.shift(shift_v).set_opacity(1.0),
+                      meter.track.animate.shift(shift_v).set_stroke(opacity=1.0),
+                      UpdateFromAlphaFunc(meter.qmark,
+                                          lambda m, a: m.set_opacity(0.12 + (1 - 0.12) * smooth(a))),
+                      run_time=1.0)
             self.remove(crowd.image)
             crowd.image.clear_updaters()
-            self.play(Group(alerts_col, al_out, al_lbl).animate(rate_func=SMOOTH).shift(shift_v),
-                      title_alert.animate(rate_func=SMOOTH).shift(shift_v).set_opacity(1.0),
-                      meter.track.animate(rate_func=SMOOTH).shift(shift_v).set_stroke(opacity=1.0),
-                      UpdateFromAlphaFunc(meter.qmark,
-                                          lambda m, a: m.set_opacity(GHOST + (1 - GHOST) * a)),
-                      run_time=1.0)
             beat.wait_until("red share", offset=-0.15)
-            self.play(Create(br_r2), Create(br_b2), FadeOut(al_lbl, rate_func=early),
-                      run_time=0.8)
+            self.play(Create(br_r2), Create(br_b2), run_time=0.8)
         with self.narrate("The police counted a hundred seventy-three as right: seven "
                           "percent. [pause 1.0]", pre_roll=0.08) as beat:
             beat.wait_until("hundred seventy-three", offset=-0.2)
@@ -1944,8 +1984,9 @@ class Episode(NarratedScene):
         ev2_q = MathTex("?", font_size=MATH, color=INK).next_to(ev2_track, LEFT, buff=0.22)
         ev2_q.align_to(ev2_val, RIGHT)
         anchor(RIGHT, ev2_q)
-        ev_tag = tag("evaluators' count", "final week · 2,632 alerts").next_to(ev_track, RIGHT,
-                                                                               buff=0.3)
+        # (round 9) the evaluators' tag says why their bar is lower (it counts only alerts the
+        # logbooks confirmed), not a second alert total for the same week (78 / 2,632: facts.md)
+        ev_tag = tag("evaluators' count", "logbook-confirmed").next_to(ev_track, RIGHT, buff=0.3)
         # two lines, so the >= 24 px type still ends inside the safe area
         ev2_tag = tag("Six Nations 2018", "48 alerts", s1=21, buff=0.14)
         ev2_tag.next_to(ev2_track, RIGHT, buff=0.3).align_to(ev_tag, LEFT)
@@ -1993,9 +2034,9 @@ class Episode(NarratedScene):
         changed = (1, 6, 10, 15)
         g_blue = VGroup(*gden_b[9:17])
         g_rest = VGroup(*gden_b[0:9])
-        with self.narrate("Cardiff University's evaluators counted only alerts the logbooks "
-                          "confirmed: three percent. [pause 0.5] Months later, a new algorithm and "
-                          "better photos cut the false alarms. [pause 0.6] That's the blue term "
+        with self.narrate("University evaluators counted only alerts the logbooks confirmed: "
+                          "three percent. [pause 0.5] Months later, a new algorithm and better "
+                          "photos cut the false alarms. [pause 0.6] That's mostly the blue term "
                           "in Bayes' denominator. [pause 0.3] Their count rose to forty-six "
                           "percent. [pause 0.6]") as beat:
             beat.wait_until("evaluators", offset=-0.25)
@@ -2046,13 +2087,12 @@ class Episode(NarratedScene):
             d = fa_term.get_center() - g_blue.get_center()
             self.play(g_rest.animate.set_opacity(0.3), gbox.animate.set_stroke(opacity=0.3),
                       run_time=0.6)
-            # the blue term rises into the label; once it has lifted clear, a 30 % copy of it
-            # fades back into its slot, so the denominator stays behind as context (it fills the
-            # lower band until the landing) and no two copies are ever legible on top of each other
-            g_stay = g_blue.copy().set_opacity(0.3)
+            # the blue term rises into the label; once it has lifted clear, the rest of the
+            # ghost fades away (round 9: the 46 % fill is then the frame's one focal point)
             self.play(FadeOut(g_blue, shift=0.5 * d, rate_func=window(0.0, 0.55)),
                       FadeIn(fa_term, shift=0.5 * d, rate_func=window(0.35, 1.0)),
-                      FadeIn(g_stay, rate_func=window(0.5, 1.0)), run_time=1.0)
+                      FadeOut(g_rest, rate_func=window(0.5, 1.0)),
+                      FadeOut(gbox, rate_func=window(0.5, 1.0)), run_time=1.0)
             # their count rose: the Six Nations bar fills, red to 46 %
             beat.wait_until("rose", offset=-0.15)
             self.play(ev2_fill.animate(rate_func=SMOOTH).set_value(1.0),
@@ -2061,15 +2101,11 @@ class Episode(NarratedScene):
             self.play(emph(ev2_val, scale=1.2), run_time=0.8)
         for m in (ev2_red, ev2_blue):
             m.clear_updaters()
-        ev_grp = VGroup(ev1, ev2_track, ev2_red, ev2_blue, ev2_val, ev2_tag, police_tag, fa_term,
-                        g_rest, g_stay, gbox)
+        ev_grp = VGroup(ev1, ev2_track, ev2_red, ev2_blue, ev2_val, ev2_tag, police_tag, fa_term)
 
         # ============================================================ 8. landing
-        L2 = self.build_diagram(dy=LAND_DY, rate_at=0.28)
+        # (L2, the landing diagram, was built at the Cardiff swap: its ghost has been parked since)
         red_c, blue_c, plus_c = L2["centers"]
-        disk, cross = L2["plus"][0], L2["plus"][1]
-        ring_tmp = Circle(radius=disk.width / 2, stroke_color=YELLOW, stroke_width=3,
-                          fill_opacity=0).move_to(plus_c)
         title_land = label("chance you're sick", size=LABEL)
         title_land.move_to(meter.title_at(cb2, STRIP_TITLE_BUFF, K, title=title_land))
         title_land_at = meter.title_at(METER_LAND, title=title_land)
@@ -2130,12 +2166,14 @@ class Episode(NarratedScene):
         def upd_cnt_r(m):
             n = n_now()
             m.set_value(round(pos_counts(n)[0]))
-            beside(m, red_c, plus_c, W * ppv(n) * (1 + pulse.get_value()), +1)
+            # (round 9) further along its flow than the 99 % rate, and 0.25 + width / 2 off the
+            # flow's centre line, so the swelling red flow never crowds it or the rate
+            beside(m, red_c, plus_c, W * ppv(n) * (1 + pulse.get_value()), +1, f=0.7, gap=0.25)
 
         def upd_cnt_b(m):
             n = n_now()
             m.set_value(round(pos_counts(n)[1]))
-            beside(m, blue_c, plus_c, W * (1 - ppv(n)) * (1 + pulse_b.get_value()), -1)
+            beside(m, blue_c, plus_c, W * (1 - ppv(n)) * (1 + pulse_b.get_value()), -1, gap=0.25)
         cnt_r.add_updater(upd_cnt_r)
         cnt_b.add_updater(upd_cnt_b)
         cnt_r.update()
@@ -2144,11 +2182,12 @@ class Episode(NarratedScene):
         mid = (red_c + blue_c) / 2 + 0.28 * (plus_c - (red_c + blue_c) / 2) + 0.05 * DOWN
         per_lbl = label("per 10,000 people", size=22, color=GRAY).move_to(mid)
 
-        with self.narrate("Back to your test. [pause 1.6]") as beat:
+        with self.narrate("Back to your test. [pause 1.4]") as beat:
             # the police bar becomes your test's meter again: it empties and is retitled in place
-            # (never untitled) on its way to the landing spot, the yellow ring of a positive
-            # result is drawn where the + returns, and the cold-open diagram re-forms around it
-            # while the Cardiff picture is still leaving, so no frame is empty
+            # (never untitled) on its way to the landing spot, and the parked disease diagram (the
+            # same object since 0:17: diagram -> table -> ghost) grows back to the centre-left
+            # while the Cardiff picture is still leaving, so no frame is empty and nothing is
+            # rebuilt
             tl0, tl1 = title_land.get_center(), np.array(title_land_at)
             title_land.set_opacity(0)
             back = window(0.2, 0.9)
@@ -2156,31 +2195,24 @@ class Episode(NarratedScene):
             def tl_upd(m, a):                     # new title fades in, then rides with the bar
                 m.move_to(tl0 + (tl1 - tl0) * back(a))
                 m.set_opacity(window(0.1, 0.22)(a))
-            o_r = disk.width / 2
-            # the Cardiff layer (tags, bars, citations) is fully gone in the first 0.5 s, before
-            # any node of the diagram appears
+            # the Cardiff layer (tags, bars, citations) is fully gone in the first 0.5 s, while
+            # the ghost diagram is still small; its labels return as it reaches full size
             gone = window(0.0, 0.36)
-            appear = window(0.4, 0.75)
+            grow = window(0.22, 0.92)
+            appear = window(0.72, 1.0)
             self.play(*[FadeOut(m, rate_func=gone) for m in (cite_bbc, cite_dav, ev_grp)],
-                      Create(ring_tmp, rate_func=window(0.3, 0.75)),
                       meter.fill.animate(rate_func=window(0.0, 0.25)).set_value(0.0),
                       FadeOut(meter.value, rate_func=window(0.0, 0.12)),
                       FadeOut(title_prec, shift=0.12 * UP, rate_func=window(0.0, 0.12)),
                       UpdateFromAlphaFunc(title_land, tl_upd, rate_func=linear),
                       meter.track.animate(rate_func=back).scale(1 / K).move_to(METER_LAND),
-                      FadeIn(L2["red"], scale=0.5, rate_func=appear),
-                      FadeIn(L2["blue"], scale=0.5, rate_func=appear),
-                      FadeIn(L2["sick"], rate_func=appear), FadeIn(L2["healthy"], rate_func=appear),
-                      FadeIn(L2["prev"], rate_func=appear),
-                      GrowArrow(L2["ra"], rate_func=window(0.6, 1.0)),
-                      GrowArrow(L2["ba"], rate_func=window(0.6, 1.0)), run_time=1.4)
+                      *[ReplacementTransform(ghost_parts[k], L2[k], rate_func=grow)
+                        for k in g_keys],
+                      *[FadeIn(L2[k], rate_func=appear) for k in
+                        ("sick", "healthy", "prev", "r99", "r1")],
+                      run_time=1.6)
             meter.share.set_value(ppv(PREV_N))
             meter.value.update()
-            # the circle fills into the + disk; the cross and the rates arrive once it has landed
-            self.play(GrowFromCenter(disk), FadeIn(cross, scale=0.6, rate_func=late),
-                      FadeIn(L2["r99"], shift=0.08 * UP), FadeIn(L2["r1"], shift=0.08 * UP),
-                      run_time=0.5)
-            self.remove(ring_tmp)
             # in the pause, the first frame is re-seen: each arrow swells to the width of the
             # people it carries into the +; the thin 99 % arrow brings 20, the 1 % arrow 100.
             # "you" closes round the landed badge at the same time
@@ -2285,15 +2317,22 @@ class Episode(NarratedScene):
                                        stroke_width=3)
         wp = np.array([0.55, sl_top + 0.02, 0])     # below-right of the +, clear of "you"
 
-        def stream(dot, k):
-            path = VMobject().set_points_smoothly([plus_c, plus_c + 0.6 * (wp - plus_c), wp,
-                                                   dot.get_center()])
-            base = dot.copy()
+        # (round 9) the stream starts on "It said" and runs on ONE clock (a tracker standing in
+        # for a lagged start), so it can be split at "this": the outline starts closing there and
+        # is complete as "crowd" is spoken; the finished image then holds ~1.7 s before the fade
+        LAG = 0.006
+        tot = 1 + LAG * (len(end_dots) - 1)
+        s_paths = [VMobject().set_points_smoothly([plus_c, plus_c + 0.6 * (wp - plus_c), wp,
+                                                   d_.get_center()]) for d_ in end_dots]
+        s_bases = [d_.copy() for d_ in end_dots]
+        flow_t = ValueTracker(0.0)
 
-            def upd(m, a):
+        def stream_upd(g):
+            s_ = flow_t.get_value()
+            for k, (m, base, path) in enumerate(zip(g, s_bases, s_paths)):
+                a = smooth(float(np.clip(s_ * tot - k * LAG, 0.0, 1.0)))
                 m.become(base.copy().scale(0.3 + 0.7 * a).move_to(path.point_from_proportion(a)))
                 m.set_opacity(min(1.0, a / 0.25))
-            return UpdateFromAlphaFunc(dot, upd)
         with self.narrate("Your test didn't say you're sick. [pause 0.4] It said: you're in this "
                           "crowd.", speed=0.78, gap=0.2) as beat:
             beat.wait_until("sick", offset=-0.2)
@@ -2302,15 +2341,19 @@ class Episode(NarratedScene):
                 d_.set_opacity(0)
             self.add(end_dots)
             self.bring_to_front(L2["plus"])
-            beat.on("this", LaggedStart(*[stream(d_, k) for k, d_ in enumerate(end_dots)],
-                                        lag_ratio=0.006),
-                    Create(end_out, rate_func=window(0.55, 1.0)),
-                    emph(L2["plus"], scale=1.15), lead=0.3, run_time=1.3)
+            end_dots.add_updater(stream_upd)
+            beat.wait_until("It said", offset=-0.1)
+            t1 = beat.until("this", offset=-0.1)
+            t2 = 0.55
+            self.play(flow_t.animate(rate_func=linear).set_value(t1 / (t1 + t2)), run_time=t1)
+            self.play(flow_t.animate(rate_func=linear).set_value(1.0), Create(end_out),
+                      emph(L2["plus"], scale=1.15), run_time=t2)
+            end_dots.clear_updaters()
 
         for m in (num, driver, cnt_r, cnt_b, red_band, blue_band):
             m.clear_updaters()
         self.remove(driver)
-        self.hold(0.7)                              # the closing frame, held, then out
+        self.hold(1.1)                              # the closing frame, held, then out
         self.play(*[FadeOut(m) for m in self.mobjects if m.get_family() and
-                    any(f.has_points() for f in m.get_family())], run_time=0.6)
+                    any(f.has_points() for f in m.get_family())], run_time=0.5)
 
