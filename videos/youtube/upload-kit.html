@@ -1,0 +1,338 @@
+<title>Sample Space Upload Kit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Spectral:wght@600;700&display=swap">
+<style>
+/* Layout: one readable column; a quick-start strip, a download shelf, then one card per video with copy buttons. */
+:root {
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --ink: #17203a;
+  --muted: #55607d;
+  --line: #d9deea;
+  --accent: #2448b0;
+  --accent-ink: #ffffff;
+  --gold: #a66a00;
+  --pass-bg: #e2f4e8; --pass-fg: #17663a;
+  --warn-bg: #fdf0dc; --warn-fg: #8a4b00;
+  --code-bg: #eef1f8;
+  --font-display: "Spectral", Georgia, "Times New Roman", serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Atkinson Hyperlegible Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1424; --surface: #171e33; --ink: #e8ecf7; --muted: #a3acc4; --line: #2b3552;
+    --accent: #8eaaff; --accent-ink: #0f1424; --gold: #f2c15a;
+    --pass-bg: #163524; --pass-fg: #8fe0ad; --warn-bg: #3a2a12; --warn-fg: #f5c27a; --code-bg: #10172a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1424; --surface: #171e33; --ink: #e8ecf7; --muted: #a3acc4; --line: #2b3552;
+  --accent: #8eaaff; --accent-ink: #0f1424; --gold: #f2c15a;
+  --pass-bg: #163524; --pass-fg: #8fe0ad; --warn-bg: #3a2a12; --warn-fg: #f5c27a; --code-bg: #10172a;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.55; }
+.wrap { max-width: 860px; margin: 0 auto; padding-block: 40px 80px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 36px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.2; }
+h1 { font-size: clamp(30px, 6vw, 44px); }
+h2 { font-size: 26px; }
+h3 { font-size: 21px; }
+p { margin: 0; }
+a { color: var(--accent); }
+.lede { color: var(--muted); max-width: 62ch; }
+.eyebrow { font-family: var(--font-mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+header { display: grid; gap: 12px; }
+.steps { display: grid; gap: 10px; margin: 0; padding-left: 1.4em; max-width: 64ch; }
+.steps li::marker { font-family: var(--font-mono); color: var(--gold); font-weight: 600; }
+section { display: grid; gap: 16px; }
+.shelf { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 8px 0; }
+.shelf a.row { display: grid; grid-template-columns: 52px 1fr auto; gap: 12px; align-items: center; padding: 10px 18px; text-decoration: none; color: var(--ink); border-bottom: 1px solid var(--line); }
+.shelf a.row:last-child { border-bottom: 0; }
+.shelf a.row:hover, .shelf a.row:focus-visible { background: var(--code-bg); }
+.shelf .num { font-family: var(--font-mono); color: var(--muted); font-size: 14px; }
+.shelf .name { min-width: 0; }
+.shelf .size { font-family: var(--font-mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.shelf .dl { color: var(--accent); font-weight: 700; }
+.note { font-size: 15px; color: var(--muted); }
+.pill { display: inline-block; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px; white-space: nowrap; }
+.pill.pass { background: var(--pass-bg); color: var(--pass-fg); }
+.pill.warn { background: var(--warn-bg); color: var(--warn-fg); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; display: grid; gap: 18px; }
+.card-head { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; justify-content: space-between; }
+.card-head .meta { font-family: var(--font-mono); font-size: 14px; color: var(--muted); }
+.field { display: grid; gap: 8px; min-width: 0; }
+.field-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.label { font-family: var(--font-mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.box { background: var(--code-bg); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; white-space: pre-wrap; overflow-wrap: anywhere; min-width: 0; }
+.box.title { font-weight: 700; font-size: 18px; }
+.box.desc { font-size: 15.5px; max-height: 260px; overflow-y: auto; }
+.box.tags { font-family: var(--font-mono); font-size: 14px; }
+button.copy { font: inherit; font-size: 14px; font-weight: 700; background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 8px; padding: 7px 14px; cursor: pointer; min-width: 92px; }
+button.copy:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+button.copy.done { background: var(--pass-fg); color: var(--surface); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+a.btn { display: inline-block; font-weight: 700; font-size: 15px; text-decoration: none; border: 2px solid var(--accent); color: var(--accent); border-radius: 8px; padding: 6px 14px; }
+a.btn:hover { background: var(--accent); color: var(--accent-ink); }
+.settings { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; font-size: 15.5px; }
+.settings b { font-weight: 700; }
+@media (max-width: 520px) {
+  .shelf a.row { grid-template-columns: 40px 1fr; }
+  .shelf .size { grid-column: 2; }
+  .card { padding: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Sample Space · 12 videos</span>
+    <h1>YouTube upload kit</h1>
+    <p class="lede">Everything you need to post the videos: a download link for each one, plus a title, description and tags you can copy straight into YouTube Studio.</p>
+  </header>
+
+  <section aria-labelledby="how">
+    <h2 id="how">How to upload one video</h2>
+    <ol class="steps">
+      <li>Click a download link below. The video saves with a clear file name.</li>
+      <li>Go to <a href="https://studio.youtube.com" target="_blank" rel="noopener">studio.youtube.com</a>, click <b>Create</b>, then <b>Upload videos</b>, and pick the file.</li>
+      <li>Press <b>Copy</b> next to the title and paste it. Do the same for the description.</li>
+      <li>Click <b>Show more</b> and paste the tags into the Tags box.</li>
+      <li>Answer the two questions as shown in the settings box, then choose Public, Unlisted or Private.</li>
+    </ol>
+    <ul class="settings">
+      <li><b>Audience:</b> "No, it's not made for kids". These are for a general audience.</li>
+      <li><b>Altered content:</b> "No". The videos are animations with a generic computer voice. They don't show real people or real events that didn't happen.</li>
+      <li><b>Tip:</b> Ep 1 is the only video that passed the 9/10 review. Upload the others as Unlisted first if you want to watch them before going public.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="downloads">
+    <h2 id="downloads">Download the videos</h2>
+    <div class="shelf" id="shelf"></div>
+    <p class="note">Want all of them in one go? <a href="https://github.com/rexheng/instaloader/archive/refs/heads/claude/modest-bardeen-s6wt4b.zip" target="_blank" rel="noopener">Download the whole project as a zip</a>. It is about 300 MB because it holds the full project. The videos are inside the folder <code>videos/youtube</code>. You can also <a href="https://github.com/rexheng/instaloader/tree/claude/modest-bardeen-s6wt4b/videos/youtube" target="_blank" rel="noopener">see the folder on GitHub</a>.</p>
+  </section>
+
+  <section aria-labelledby="meta">
+    <h2 id="meta">Titles, descriptions and tags</h2>
+    <div id="cards" style="display:grid;gap:22px"></div>
+  </section>
+</div>
+
+<script>
+const RAW = "https://raw.githubusercontent.com/rexheng/instaloader/claude/modest-bardeen-s6wt4b/videos/youtube/";
+const FOOTER = "\n\n—\nSample Space: short animated explainers on data science and computational social science.\nAnimated with Manim. Narrated with a computer-generated voice.";
+
+const V = [
+{ ep: 1, file: "ep01-three-right-answers-bertrands-paradox.mp4", mb: 13, len: "3:33", pass: true, scores: "9.0 / 9.0",
+  title: "Three Right Answers to One Probability Question | Bertrand's Paradox",
+  desc: `Draw a chord across a circle at random. What's the chance it's longer than a side of the triangle inside it? Three honest simulations settle on three different answers: about 1/3, 1/2 and 1/4. None of them has a bug.
+
+In 1889, Joseph Bertrand used this puzzle as a warning about two words: "at random". This video shows why each method gives its answer, using one idea: a chord's length is set by its midpoint. Then it follows Edwin Jaynes, who argued that a real physical process, like tossing straws, picks out one answer. The same trap shows up in surveys, where "a random class" and "a random student" give very different average class sizes.
+
+Sources
+• Joseph Bertrand, Calcul des probabilités (1889)
+• E. T. Jaynes, "The Well-Posed Problem", Foundations of Physics (1973)`,
+  hash: "#probability #math #statistics",
+  tags: "bertrand paradox, probability, random chord, geometric probability, edwin jaynes, sample space, statistics, sampling bias, class size paradox, data science, math explained" },
+
+{ ep: 2, file: "ep02-99-percent-accurate-test-bayes-theorem.mp4", mb: 13, len: "3:35", pass: false, scores: "8.8 / 8.6",
+  title: "A 99% Accurate Test Says You're Sick. You Probably Aren't. | Bayes' Theorem",
+  desc: `A disease affects 1 in 500 people. A test catches 99% of sick people and wrongly flags 1% of healthy ones. If your result is positive, what's the chance you're sick? Not 99%. About 17%.
+
+This video counts it out with crowds of people, then shows that Bayes' theorem is one simple move: shrink the sample space to the people the evidence allows, then take the share. The same math explains why face-recognition cameras in Cardiff during the 2017 Champions League final week raised 2,470 alerts, and how few of them were right. It also explains the difference between a test's recall and its precision.
+
+Sources
+• Manrai et al. (2014), "Medicine's uncomfortable relationship with math: calculating positive predictive value", JAMA Internal Medicine
+• Davies, Innes & Dawson (2018), An Evaluation of South Wales Police's Use of Automated Facial Recognition, Cardiff University`,
+  hash: "#bayes #statistics #probability",
+  tags: "bayes theorem, base rate fallacy, false positives, medical test, conditional probability, precision and recall, facial recognition, statistics, probability, data science, machine learning, math explained" },
+
+{ ep: 3, file: "ep03-randomness-looks-clumpier-than-you-think.mp4", mb: 18, len: "3:36", pass: false, scores: "8.8 / 8.6",
+  title: "Randomness Looks Clumpier Than You Think | London's Flying Bombs",
+  desc: `Two maps, each with 537 bomb hits. One is pure chance; the other follows a rule. Which one is chance? Most people pick the wrong one.
+
+In 1944, Londoners saw flying bombs landing in clusters and feared they were being aimed precisely. This video builds the test a statistician used to check: cut the map into 576 squares, count the hits in each, and compare with the Poisson distribution, which is derived step by step on screen. Pure chance leaves empty squares and forces pile-ups. An even spread is the real sign of a rule. In 1946, R. D. Clarke ran this test on London's real hits and found they matched chance.
+
+Sources
+• R. D. Clarke (1946), "An Application of the Poisson Distribution", Journal of the Institute of Actuaries`,
+  hash: "#statistics #probability #history",
+  tags: "poisson distribution, randomness, clustering illusion, flying bombs, london blitz, chi squared test, probability, statistics, r d clarke, data science, hypothesis testing, math explained" },
+
+{ ep: 4, file: "ep04-hidden-bias-that-hid-the-hot-hand.mp4", mb: 11, len: "3:23", pass: false, scores: "9.0 / 8.9",
+  title: "The Hidden Bias That Hid the Hot Hand | Coin Flips & Basketball",
+  desc: `Flip a fair coin four times. After each heads, check whether the next flip is heads too. Average that over every possible run of four. Is the answer below, at, or above one half? It's below: 17 out of 42, about 40%.
+
+A famous 1985 study used this kind of check on basketball shooting and called the "hot hand" an illusion. In 2018, Joshua Miller and Adam Sanjurjo showed the check itself is biased: it averages one ratio per sequence instead of taking the ratio of totals. This video shows exactly where the bias comes from, and why, once you correct for it, the study's own data point toward a hot hand.
+
+Sources
+• Gilovich, Vallone & Tversky (1985), "The Hot Hand in Basketball", Cognitive Psychology
+• Miller & Sanjurjo (2018), "Surprised by the Hot Hand Fallacy? A Truth in the Law of Small Numbers", Econometrica`,
+  hash: "#statistics #probability #basketball",
+  tags: "hot hand, hot hand fallacy, selection bias, coin flips, miller sanjurjo, gilovich tversky, probability, statistics, basketball statistics, behavioral economics, data science, math explained" },
+
+{ ep: 5, file: "ep05-random-darts-beat-grids-monte-carlo.mp4", mb: 13, len: "3:37", pass: false, scores: "8.6 / 8.6",
+  title: "Why Random Darts Beat Grids in 100 Dimensions | Monte Carlo",
+  desc: `You have a million evaluations to average a function of 100 inputs. A grid feels thorough, but with 100 inputs a million grid points give each input just one value. Random points do far better.
+
+This video races a grid against random "darts" as the number of dimensions grows. The grid collapses; the darts keep the same accuracy. It shows why: each dart is like a coin flip, and the typical error shrinks like 1 over the square root of N, with no dimension anywhere in the formula. It also covers why random search beats grid search for tuning neural networks, and the one place darts fail: answers that are tiny.
+
+Sources
+• Metropolis & Ulam (1949), "The Monte Carlo Method", Journal of the American Statistical Association
+• Bergstra & Bengio (2012), "Random Search for Hyper-Parameter Optimization", Journal of Machine Learning Research`,
+  hash: "#montecarlo #statistics #machinelearning",
+  tags: "monte carlo method, curse of dimensionality, random sampling, numerical integration, random search, hyperparameter tuning, statistics, probability, data science, machine learning, math explained" },
+
+{ ep: 6, file: "ep06-seven-shuffles-deck-becomes-random.mp4", mb: 9, len: "3:35", pass: false, scores: "8.6 / 8.4",
+  title: "Seven Shuffles: When a Deck Suddenly Becomes Random",
+  desc: `Riffle-shuffle a sorted deck four times. Could someone tell it apart from a perfectly shuffled deck? Watching the top card, barely. Counting "rising sequences", almost every time.
+
+This video shows how each riffle can at most double the number of rising sequences, why that leaves a fingerprint a perfect shuffle almost never has, and how the distance from random stays near its maximum, then falls off a cliff around seven shuffles. It's a classic example of the "cutoff" in Markov chains, and a warning for anyone running Monte Carlo samplers: one statistic can look settled long before the whole chain is.
+
+Sources
+• Bayer & Diaconis (1992), "Trailing the Dovetail Shuffle to Its Lair", Annals of Applied Probability
+• D. Aldous (1983), "Random walks on finite groups and rapidly mixing Markov chains"
+• Trefethen & Trefethen (2000), "How many shuffles to randomize a deck of cards?", Proceedings of the Royal Society A`,
+  hash: "#probability #math #cards",
+  tags: "riffle shuffle, seven shuffles, markov chains, mixing time, cutoff phenomenon, persi diaconis, rising sequences, total variation distance, probability, mcmc, statistics, math explained" },
+
+{ ep: 7, file: "ep07-information-in-a-letter-shannon-entropy.mp4", mb: 9, len: "3:35", pass: false, scores: "9.0 / 8.9",
+  title: "How Much Information Is in a Letter? | Shannon Entropy",
+  desc: `You've read a sentence up to one hidden character. How many yes-or-no questions do you need to find it, on average? Splitting the alphabet takes about five. In 1951, Claude Shannon estimated that English needs only about one.
+
+This video builds entropy from the ground up: a symbol with probability p costs log₂(1/p) questions, and entropy is the average cost. Then it adds context. After a Q, U is almost certain; after TH, E is likely. With enough context, English falls to around one bit per letter. That's why text compresses so well, and why predicting the next letter is how language models learn.
+
+Sources
+• Claude Shannon (1948), "A Mathematical Theory of Communication"
+• Claude Shannon (1951), "Prediction and Entropy of Printed English"
+• Valmeekam et al. (2023), "LLMZip: Lossless Text Compression using Large Language Models"`,
+  hash: "#informationtheory #math #ai",
+  tags: "shannon entropy, information theory, claude shannon, bits, compression, language models, entropy explained, probability, data science, machine learning, math explained" },
+
+{ ep: 8, file: "ep08-distance-that-isnt-symmetric-kl-divergence.mp4", mb: 9, len: "3:31", pass: false, scores: "8.6 / 8.6",
+  title: "The \"Distance\" That Isn't Symmetric | KL Divergence",
+  desc: `KL divergence is often called a distance between probability distributions. But swap the order and the number changes, here by more than double. And the order you pick decides which model fits best.
+
+Using real eruption times from Old Faithful, this video builds KL divergence as a bill paid in bits: at each point, how many doublings separate the data from the model, weighted by how often that point happens. With the data first, the best single bell stretches over every hump. That's maximum likelihood. With the model first, it locks onto one hump. That's what variational inference does, and why it tends to underestimate uncertainty.
+
+Sources
+• Kullback & Leibler (1951), "On Information and Sufficiency", Annals of Mathematical Statistics
+• C. M. Bishop (2006), Pattern Recognition and Machine Learning, chapters 1 and 10
+• Blei, Kucukelbir & McAuliffe (2017), "Variational Inference: A Review for Statisticians", Journal of the American Statistical Association`,
+  hash: "#machinelearning #statistics #informationtheory",
+  tags: "kl divergence, kullback leibler, information theory, variational inference, maximum likelihood, bayesian statistics, old faithful, machine learning, statistics, data science, math explained" },
+
+{ ep: 9, file: "ep09-bell-curves-central-limit-theorem.mp4", mb: 9, len: "3:54", pass: false, scores: "8.1 / 8.3",
+  title: "Why Bell Curves Are Everywhere, and When They're Not | Central Limit Theorem",
+  desc: `Textbooks say an average of 30 is safe to treat as a bell curve. For lopsided data, like waiting times for a bus, that can be badly wrong.
+
+This video shows that collecting more data never makes the data itself look normal. What becomes normal is the average, and it gets there at a measurable speed: its skewness shrinks like 2 over the square root of n. It covers why that matters for A/B tests, the rule of thumb Ron Kohavi and colleagues use for how many users you need, and a case where averaging never works at all: a lighthouse flashing at random angles, which gives the Cauchy distribution.
+
+Sources
+• Kohavi, Deng, Longbotham & Xu (2014), "Seven Rules of Thumb for Web Site Experimenters", KDD`,
+  hash: "#statistics #datascience #probability",
+  tags: "central limit theorem, bell curve, normal distribution, skewness, ab testing, sample size, cauchy distribution, statistics, probability, data science, confidence intervals, math explained" },
+
+{ ep: 20, file: "ep20-dinosaur-in-your-summary-statistics.mp4", mb: 9, len: "3:22", pass: false, scores: "8.9 / 8.8",
+  title: "A Dinosaur Hiding in Your Summary Statistics | The Datasaurus",
+  desc: `Two averages, two standard deviations, and a correlation of −0.06. What does the data look like? Probably not a dinosaur. But it can be.
+
+This video shows exactly what five summary numbers pin down: a balance point, a box, and one ellipse that fixes the best-fit line. Everything else is free. That's how a star, a circle, a bullseye and stripes can all share the dinosaur's numbers, and why papers that show only bar graphs and error bars can hide nearly everything about their data. Always plot the points.
+
+Sources
+• Matejka & Fitzmaurice (2017), "Same Stats, Different Graphs", CHI 2017 (Datasaurus drawn by Alberto Cairo)
+• F. J. Anscombe (1973), "Graphs in Statistical Analysis", The American Statistician
+• Weissgerber et al. (2015), "Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm", PLOS Biology`,
+  hash: "#datascience #statistics #dataviz",
+  tags: "datasaurus, anscombes quartet, summary statistics, data visualization, correlation, regression line, plot your data, statistics, data science, standard deviation, exploratory data analysis, math explained" },
+
+{ ep: 60, file: "ep60-friends-have-more-friends-friendship-paradox.mp4", mb: 9, len: "3:33", pass: false, scores: "8.8 / 9.0",
+  title: "Why Your Friends Have More Friends Than You | The Friendship Paradox",
+  desc: `On average, your friends have more friends than you do. It isn't because you're unpopular. It's because of how friendships get counted.
+
+Using eight girls from a real high-school friendship network, this video shows where the extra friends come from: popular people appear on many friend lists, so they get counted many times. The exact gap is the variance divided by the mean. In 2011, 93% of Facebook users had fewer friends than their friends did on average. Christakis and Fowler used the same effect to spot a flu outbreak earlier, by watching the friends people named.
+
+Sources
+• Scott Feld (1991), "Why Your Friends Have More Friends Than You Do", American Journal of Sociology
+• Ugander, Karrer, Backstrom & Marlow (2011), "The Anatomy of the Facebook Social Graph"
+• Christakis & Fowler (2010), "Social Network Sensors for Early Detection of Contagious Outbreaks", PLoS ONE`,
+  hash: "#networks #sociology #statistics",
+  tags: "friendship paradox, network science, social networks, scott feld, sampling bias, variance, christakis fowler, facebook, sociology, computational social science, statistics, math explained" },
+
+{ ep: 75, file: "ep75-mild-preferences-extreme-segregation-schelling.mp4", mb: 19, len: "3:31", pass: false, scores: "8.9 / 8.8",
+  title: "Mild Preferences, Extreme Segregation | Schelling's Model",
+  desc: `In this simulated town, three quarters of each household's neighbors match its color, on average. How much matching do the households actually demand? Just a third.
+
+This video replays Thomas Schelling's segregation model one move at a time. A household that was content becomes unhappy when a neighbor leaves, and the chain reaction spreads. Demand a quarter and the town barely sorts. Demand a third and it jumps to three quarters. Then the twist: a town can look just as segregated because of rules, not preferences, like the 1930s federal lending maps. The map alone can't tell you which.
+
+Sources
+• Thomas Schelling (1971), "Dynamic Models of Segregation", Journal of Mathematical Sociology
+• Aaronson, Hartley & Mazumder (2021), "The Effects of the 1930s HOLC 'Redlining' Maps", American Economic Journal: Economic Policy`,
+  hash: "#sociology #socialscience #simulation",
+  tags: "schelling model, segregation, agent based model, thomas schelling, emergence, computational social science, redlining, simulation, sociology, complex systems, economics, math explained" }
+];
+
+const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+const pad = n => String(n).padStart(2, "0");
+
+function copyButton(getText, box, what) {
+  const b = el("button", "copy", "Copy");
+  b.type = "button";
+  b.setAttribute("aria-label", "Copy " + what);
+  b.addEventListener("click", () => {
+    const text = getText();
+    const ok = () => { b.textContent = "Copied"; b.classList.add("done"); setTimeout(() => { b.textContent = "Copy"; b.classList.remove("done"); }, 1600); };
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents(box); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Press Ctrl+C"; };
+    try { navigator.clipboard.writeText(text).then(ok, fallback); } catch (e) { fallback(); }
+  });
+  return b;
+}
+
+function field(label, text, cls, what) {
+  const f = el("div", "field");
+  const top = el("div", "field-top");
+  const box = el("div", "box " + cls, text);
+  top.append(el("span", "label", label), copyButton(() => text, box, what));
+  f.append(top, box);
+  return f;
+}
+
+const shelf = document.getElementById("shelf");
+const cards = document.getElementById("cards");
+for (const v of V) {
+  const a = el("a", "row");
+  a.href = RAW + v.file; a.target = "_blank"; a.rel = "noopener";
+  const name = el("span", "name");
+  name.append(document.createTextNode(v.title.split(" | ")[0] + " "));
+  if (v.pass) name.append(el("span", "pill pass", "Passed"));
+  const right = el("span", "size");
+  right.append(document.createTextNode(v.len + " · " + v.mb + " MB · "), el("span", "dl", "Download"));
+  a.append(el("span", "num", "Ep " + pad(v.ep)), name, right);
+  shelf.append(a);
+
+  const c = el("article", "card");
+  c.id = "ep" + pad(v.ep);
+  const head = el("div", "card-head");
+  const h = el("h3", null, "Ep " + v.ep + " · " + v.title.split(" | ")[0]);
+  const meta = el("div", "actions");
+  meta.append(
+    el("span", "pill " + (v.pass ? "pass" : "warn"), v.pass ? "Passed review · " + v.scores : "Not passed yet · last scores " + v.scores),
+    el("span", "meta", v.len)
+  );
+  head.append(h, meta);
+  const full = v.desc + FOOTER + "\n\n" + v.hash;
+  const dl = el("a", "btn", "Download video");
+  dl.href = RAW + v.file; dl.target = "_blank"; dl.rel = "noopener";
+  const actions = el("div", "actions");
+  actions.append(dl, el("span", "meta", v.file));
+  c.append(head,
+    field("Title", v.title, "title", "title"),
+    field("Description", full, "desc", "description"),
+    field("Tags", v.tags, "tags", "tags"),
+    actions);
+  cards.append(c);
+}
+</script>
